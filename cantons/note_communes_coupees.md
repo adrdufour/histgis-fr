@@ -1,7 +1,7 @@
 # Communes coupées entre plusieurs cantons — décrets de 1973, 1982 et 1984
 
 Extraction du texte intégral des 136 décrets, à partir des JO numérisés déposés
-dans `modif_canton/`. Les PDF portent une couche OCR exploitable.
+dans `sources/modif_canton/`. Les PDF portent une couche OCR exploitable.
 
 ## Fichiers
 
@@ -100,7 +100,7 @@ Deux corrections ont suivi, elles aussi révélées par le contrôle :
   silence possible, jamais une erreur.
 - La colonne `texte` est tronquée à 2 000 caractères. Les délimitations les plus
   longues (Marseille, Limoges) sont coupées ; le texte complet reste dans
-  `build_txt/*_raw.txt`.
+  `jorf_txt/*_raw.txt`.
 
 ---
 

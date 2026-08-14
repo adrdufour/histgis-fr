@@ -76,7 +76,7 @@ réponse — la précision du texte dépasse celle des géométries disponibles.
 
 - Décret n° 82-77 du 25 janvier 1982 —
   https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000883847
-  (JO numérisé : `modif_canton/JORF_19820126_21.pdf`)
+  (JO numérisé : `sources/modif_canton/JORF_19820126_21.pdf`)
 - Décret n° 73-810 du 16 août 1973 —
   https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303616
 - Rattachement canton → circonscription 1986 : `circo/circo_1986.csv`, issu du

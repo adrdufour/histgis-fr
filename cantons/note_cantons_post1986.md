@@ -106,5 +106,5 @@ Deux conséquences pratiques :
 ---
 
 Sources : Légifrance, fonds JORF (recherche par date de signature et en plein
-texte des articles) ; JO numérisés déjà dépouillés dans `modif_canton/`.
+texte des articles) ; JO numérisés déjà dépouillés dans `sources/modif_canton/`.
 Licence etalab-2.0.

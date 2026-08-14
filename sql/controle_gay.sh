@@ -3,7 +3,7 @@
 # histgis — contrôle indépendant contre les cantons dissous par Victor Gay.
 #
 # TRF-GIS livre, pour 1870 et 1940 seulement, les cantons DÉJÀ dissous
-# (`trfgis/cantons/Shapefiles/CANTONS_YYYY.zip`). Ces polygones ne dépendent
+# (`sources/trfgis/cantons/Shapefiles/CANTONS_YYYY.zip`). Ces polygones ne dépendent
 # pas de notre chaîne : les comparer à `snapshot_geom()` teste tout d'un coup,
 # attributions comprises.
 #
@@ -21,8 +21,8 @@ RACINE="${1:-$(dirname "$ICI")}"
 export PGDATABASE="${PGDATABASE:-histgis}"
 
 ANNEES=(1870 1940)
-SHPDIR="$RACINE/trfgis/cantons/Shapefiles"
-NOMDIR="$RACINE/trfgis/cantons/Nomenclatures"
+SHPDIR="$RACINE/sources/trfgis/cantons/Shapefiles"
+NOMDIR="$RACINE/sources/trfgis/cantons/Nomenclatures"
 
 command -v ogr2ogr >/dev/null || { echo "ogr2ogr introuvable (apt install gdal-bin)" >&2; exit 1; }
 
@@ -119,7 +119,7 @@ echo
          -f "$ICI/08_controle_gay.sql"
     psql -v ON_ERROR_STOP=1 -q -f "$ICI/09_ecart_detail.sql"
     psql -v ON_ERROR_STOP=1 -q -f "$ICI/10_couverture.sql"
-} | tee "$RACINE/rapport_controle_gay.txt"
+} | tee "$RACINE/sorties/rapport_controle_gay.txt"
 
 # ---------------------------------------------------------------------------
 # 4. Export cartographique des divergences
@@ -130,7 +130,7 @@ echo
 # ---------------------------------------------------------------------------
 echo
 echo "--- export QGIS ---"
-GPKG="$RACINE/controle_gay.gpkg"
+GPKG="$RACINE/sorties/controle_gay.gpkg"
 rm -f "$GPKG"
 
 ogr2ogr -f GPKG "$GPKG" "PG:dbname=$PGDATABASE" -nln ecarts -nlt MULTIPOLYGON -sql "

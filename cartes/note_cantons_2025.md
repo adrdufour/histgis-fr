@@ -9,7 +9,7 @@ travail.** À prendre comme fond de calage, pas comme économie.
 ## Ce qui a été écarté d'abord
 
 GEOFLA ne sert à rien pour cela, quel que soit le millésime. L'édition 2014
-(`geofla/canton2014`) compte 3 708 polygones dont **295 au code ≥ 90 — les
+(`sources/geofla/canton2014`) compte 3 708 polygones dont **295 au code ≥ 90 — les
 pseudo-cantons de ville**. Bordeaux tombe entièrement dans « 3399 », Toulouse
 dans « 3199 », Lille dans « 5992 », Bourg-en-Bresse dans « 0199 ». L'IGN y
 replie chaque ville divisée exactement comme la couche 1999 déjà en base ; les

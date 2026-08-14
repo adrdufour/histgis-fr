@@ -201,7 +201,7 @@ Tout est reproductible sans PostgreSQL à partir de `build/` :
 | `cartes/couverture_cantons_2025.csv` | villes divisées et couverture 2025 |
 
 Géométrie communale : le shapefile GEOFLA ED111 sous
-`geofla/repro/source_data/GEOFLA/GEOFLA_1-1_SHP_LAMB93_FR-ED111/GEOFLA/1_DONNEES_LIVRAISON_2013-12-00225/GEOFLA_1-1_SHP_LAMB93_FR-ED111/COMMUNES/COMMUNE.SHP`
+`sources/geofla/repro/source_data/GEOFLA/GEOFLA_1-1_SHP_LAMB93_FR-ED111/GEOFLA/1_DONNEES_LIVRAISON_2013-12-00225/GEOFLA_1-1_SHP_LAMB93_FR-ED111/COMMUNES/COMMUNE.SHP`
 — Lambert 93, champs `INSEE_COM`, `NOM_COMM`, `POPULATION` (en milliers),
 `CODE_DEPT`.
 

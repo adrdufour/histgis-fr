@@ -92,7 +92,7 @@ qui a absorbé une commune d'époque disparue.
 
 ### Fusions anciennes — HAC
 
-`geofla/repro/source_data/HAC/communal.tab`, dans le dépôt de reproduction
+`sources/geofla/repro/source_data/HAC/communal.tab`, dans le dépôt de reproduction
 TRF-GIS. Documente les mouvements communaux depuis 1801. Ne contient **aucun
 code INSEE** : le rattachement se fait par nom, avec ce que cela suppose
 d'incertitude.
@@ -105,8 +105,8 @@ Tout se rejoue de zéro. Voir `sql/README.md` pour le détail des commandes.
 
 ```bash
 # une seule fois : extraction et téléchargements
-python3 trfgis_extract.py build trfgis/communes/Nomenclatures \
-    --out build --mapping trfgis/cantons/Nomenclatures --geom-col insee
+python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
+    --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee
 python3 trfgis_fetch_inspect.py fetch repro \
     --match '^COMMUNE\.(SHP|SHX|DBF|PRJ)$' --dest ./geofla
 curl -O https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv
@@ -503,7 +503,7 @@ n'écrit qu'une colonne. Le statut est reconstituable depuis les
 ### Principe
 
 TRF-GIS livre, pour 1870 et 1940 seulement, les cantons **déjà dissous** par
-Victor Gay (`trfgis/cantons/Shapefiles/CANTONS_YYYY.zip`). Ces polygones ne
+Victor Gay (`sources/trfgis/cantons/Shapefiles/CANTONS_YYYY.zip`). Ces polygones ne
 passent par aucune ligne de notre code. Les comparer à `snapshot_geom()` teste
 la chaîne entière — extraction, attributions, rattrapages, dissolution — contre
 une source qui ne dépend pas de nous.
@@ -775,7 +775,7 @@ zéro géométrie invalide. Rapport dans `rapport_chargement.txt`.
 3. **Les communes nées après 1940** — 811 km² en 1870, 610 en 1940, Tende et La
    Brigue exclues (§ 7). Elles n'ont aucun atome. Il faudrait rejouer
    `insee_mvt` en sens inverse (`mod` 20 et 21) pour identifier leur mère, ou
-   passer par HAC (`geofla/repro/source_data/HAC/communal.tab`).
+   passer par HAC (`sources/geofla/repro/source_data/HAC/communal.tab`).
 
 4. ~~Reprendre les 138 atomes `successeur`~~ — **clos par `12`** (§ 7 bis) : le
    `membership` est sain, le défaut est dans la trame, il n'y a rien à

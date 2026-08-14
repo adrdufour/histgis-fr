@@ -63,7 +63,8 @@ DSN_CANDIDATS = [
     "dbname=histgis",
     "dbname=histgis host=localhost",
 ]
-SORTIE = FsPath(__file__).resolve().parent
+SORTIE = FsPath(__file__).resolve().parent / "sorties"
+SORTIE.mkdir(exist_ok=True)
 DATES = [("1870-06-01", "1870", "TRF-GIS"),
          ("1940-06-01", "1940", "TRF-GIS"),
          ("1999-06-01", "1999", "COG Insee")]

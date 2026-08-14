@@ -9,8 +9,8 @@ Deux commandes :
     build   compaction en intervalles + tables unit / membership / atom
 
 Usage :
-    python3 trfgis_extract.py check ./trfgis/communes/Nomenclatures
-    python3 trfgis_extract.py build ./trfgis/communes/Nomenclatures --out ./build
+    python3 trfgis_extract.py check ./sources/trfgis/communes/Nomenclatures
+    python3 trfgis_extract.py build ./sources/trfgis/communes/Nomenclatures --out ./build
 
 Notes de format, tirées de l'inspection réelle des fichiers :
   - séparateur virgule, en-tête nommé en première ligne, encodage latin-1 ;

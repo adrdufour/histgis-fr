@@ -1038,7 +1038,7 @@ recettes existantes.
 
 | source | ce qu'elle apporte | état |
 |---|---|---|
-| **Gaudillère, annexe VII** | *Évolution des arrondissements et cantons* : créations, suppressions, fixations de limites, transferts de chef-lieu et d'arrondissement, **datés au décret**, de 1801 à 1986 | 41 clichés dans `modif_canton/`, dépouillés page par page à la demande |
+| **Gaudillère, annexe VII** | *Évolution des arrondissements et cantons* : créations, suppressions, fixations de limites, transferts de chef-lieu et d'arrondissement, **datés au décret**, de 1801 à 1986 | 41 clichés dans `sources/modif_canton/`, dépouillés page par page à la demande |
 | **Gaudillère, annexe VI** | *Particularités des circonscriptions* : scindées, monocantonales, monocommunales, cantons divisés, 98 villes divisées, 57 circos de 1986 reprises de 1981 | transcrite en partie, `circo/annexe_vi.md` |
 | **Gaudillère, méthodologie p. 828** | l'auteur déclare que son fond cantonal est celui **des années 1980**, corrigé des seules créations de cantons | résout D1 et D4 |
 | **`paris_decoupage.xlsx`** | 19 divisions électorales de Paris, 1815-1986, **par quartier** | mis au propre, `circo/paris_decoupage.csv` |

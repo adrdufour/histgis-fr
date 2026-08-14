@@ -1,7 +1,7 @@
 # Bourg-en-Bresse — les trois fragments de 1986
 
 Texte du **décret n° 82-77 du 25 janvier 1982** (JO du 26 janvier 1982, p. 371),
-art. 1er, transcrit depuis `modif_canton/JORF_19820126_21.pdf`.
+art. 1er, transcrit depuis `sources/modif_canton/JORF_19820126_21.pdf`.
 
 > « En remplacement des cantons de Bourg-en-Bresse-I, Bourg-en-Bresse-II et
 > Bourg-en-Bresse-III, il est créé quatre cantons dénommés et délimités comme suit »

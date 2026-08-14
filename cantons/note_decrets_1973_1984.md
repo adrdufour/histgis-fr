@@ -38,7 +38,7 @@ franchir. Le téléchargement manuel se fait depuis la page du décret, bouton
 **8 PDF à récupérer** — un par date, pas un par décret : tous les décrets d'une
 même date sont dans le même numéro du JO.
 
-Une fois les 8 PDF dans `modif_canton/`, l'OCR et le découpage par décret sont
+Une fois les 8 PDF dans `sources/modif_canton/`, l'OCR et le découpage par décret sont
 automatisables.
 
 ## 3. Sources de repli pour les délimitations

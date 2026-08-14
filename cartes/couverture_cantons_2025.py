@@ -40,7 +40,7 @@ l'intersection sont faites par PostGIS, qui les fait mieux.
 
 Entrée attendue
 ---------------
-`geofla/a-can2025.geojson`, cantons électoraux 2025, source IGN COG CARTO
+`sources/geofla/a-can2025.geojson`, cantons électoraux 2025, source IGN COG CARTO
 PLUS via icem7, Licence Ouverte 2.0 — compatible avec la contrainte du
 projet. Géométrie simplifiée : bonne pour compter, pas pour digitaliser.
 Pour QGIS il faudra ADMIN EXPRESS COG v4 complet.
@@ -55,7 +55,7 @@ from pathlib import Path
 import psycopg2
 
 RACINE = Path(__file__).resolve().parent.parent
-CAN2025 = RACINE / "geofla" / "a-can2025.geojson"
+CAN2025 = RACINE / "sources" / "geofla" / "a-can2025.geojson"
 SORTIE = RACINE / "cartes" / "couverture_cantons_2025.csv"
 
 DSN_CANDIDATS = [

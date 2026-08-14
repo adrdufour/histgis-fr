@@ -78,5 +78,5 @@ l'utiliser autrement que comme piste à vérifier.
 
 ---
 
-Sources : JO numérisés de `modif_canton/` ; Légifrance, fonds JORF ;
-nomenclatures cantonales 1872 et 1932 de `trfgis/`. Licence etalab-2.0.
+Sources : JO numérisés de `sources/modif_canton/` ; Légifrance, fonds JORF ;
+nomenclatures cantonales 1872 et 1932 de `sources/trfgis/`. Licence etalab-2.0.

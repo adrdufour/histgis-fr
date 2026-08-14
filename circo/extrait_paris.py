@@ -49,7 +49,7 @@ from pathlib import Path
 import openpyxl
 
 RACINE = Path(__file__).resolve().parent.parent
-SRC = RACINE / "paris_decoupage.xlsx"
+SRC = RACINE / "circo" / "paris_decoupage.xlsx"
 OUT = RACINE / "circo" / "paris_decoupage.csv"
 VOCAB = RACINE / "circo" / "paris_vocab.csv"
 

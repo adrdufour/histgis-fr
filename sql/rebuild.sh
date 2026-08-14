@@ -29,11 +29,11 @@ PSQL="psql -v ON_ERROR_STOP=1 -q"
 command -v ogr2ogr >/dev/null || { echo "ogr2ogr introuvable (apt install gdal-bin)" >&2; exit 1; }
 
 # --- localisation des deux fichiers externes -------------------------------
-SHP="$(find "$RACINE/geofla" -iname 'COMMUNE.SHP' -print -quit 2>/dev/null || true)"
+SHP="$(find "$RACINE/sources/geofla" -iname 'COMMUNE.SHP' -print -quit 2>/dev/null || true)"
 [[ -n "$SHP" ]] || {
-    echo "COMMUNE.SHP introuvable sous $RACINE/geofla" >&2
+    echo "COMMUNE.SHP introuvable sous $RACINE/sources/geofla" >&2
     echo "  python3 trfgis_fetch_inspect.py fetch repro \\" >&2
-    echo "      --match '^COMMUNE\\.(SHP|SHX|DBF|PRJ)\$' --dest ./geofla" >&2
+    echo "      --match '^COMMUNE\\.(SHP|SHX|DBF|PRJ)\$' --dest ./sources/geofla" >&2
     exit 1
 }
 

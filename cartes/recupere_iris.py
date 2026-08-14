@@ -76,7 +76,8 @@ import urllib.request
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
-SORTIE = RACINE / "cartes" / "iris_villes.geojson"
+SORTIE = RACINE / "cartes" / "sorties" / "iris_villes.geojson"
+SORTIE.parent.mkdir(exist_ok=True)
 RAPPORT = RACINE / "cartes" / "iris_villes.csv"
 
 WFS = "https://data.geopf.fr/wfs/ows"

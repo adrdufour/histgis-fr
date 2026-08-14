@@ -19,7 +19,7 @@ set -euo pipefail
 
 ICI="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RACINE="${1:-$(dirname "$ICI")}"
-COG="$RACINE/cog"
+COG="$RACINE/sources/cog"
 export PGDATABASE="${PGDATABASE:-histgis}"
 PSQL="psql -v ON_ERROR_STOP=1 -q"
 

@@ -43,7 +43,7 @@ ancienne devra être traitée comme telle, et le contrôle par les rues (§ 4 de
 
 Entrée attendue
 ---------------
-`circo/iris_paris.geojson` — extraction WFS de CONTOURS-IRIS sur Paris, en
+`circo/sorties/iris_paris.geojson` — extraction WFS de CONTOURS-IRIS sur Paris, en
 Lambert 93. L'URL est rappelée par le script s'il manque.
 """
 
@@ -59,7 +59,7 @@ from pathlib import Path
 import psycopg2
 
 RACINE = Path(__file__).resolve().parent.parent
-IRIS = RACINE / "circo" / "iris_paris.geojson"
+IRIS = RACINE / "circo" / "sorties" / "iris_paris.geojson"
 VOCAB = RACINE / "circo" / "paris_vocab.csv"
 SORTIE = RACINE / "circo" / "paris_quartiers.csv"
 

@@ -40,7 +40,7 @@
 --   24_canton_moderne.sql, et la couche CANTON de GEOFLA chargée :
 --
 --   ogr2ogr -f PostgreSQL PG:"dbname=histgis" \
---       "$(find geofla/canton2014 -name CANTON.SHP | head -1)" \
+--       "$(find sources/geofla/canton2014 -name CANTON.SHP | head -1)" \
 --       -nln histgis.geofla_canton -nlt MULTIPOLYGON \
 --       -lco GEOMETRY_NAME=geom -a_srs EPSG:2154 -overwrite
 --

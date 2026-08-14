@@ -38,7 +38,7 @@ def norm(s):
 
 # ---------- référentiel communal --------------------------------------------
 REF = defaultdict(dict)
-with open("cog/1999/comsimp1999.txt", encoding="latin-1") as f:
+with open("sources/cog/1999/comsimp1999.txt", encoding="latin-1") as f:
     for row in csv.DictReader(f, delimiter="\t"):
         nom, art = (row.get("NCCENR") or "").strip(), (row.get("ARTMIN") or "").strip("() ")
         if not nom: continue
@@ -46,7 +46,7 @@ with open("cog/1999/comsimp1999.txt", encoding="latin-1") as f:
         REF[row["DEP"]][norm(nom)] = plein
         if art: REF[row["DEP"]][norm(art+nom)] = plein
 try:
-    with open("cog/1999/Corhistoriq1999.txt", encoding="latin-1") as f:
+    with open("sources/cog/1999/Corhistoriq1999.txt", encoding="latin-1") as f:
         for row in csv.DictReader(f, delimiter="\t"):
             for k in ("NCCOFF","NCCANC"):
                 v = (row.get(k) or "").strip()
@@ -54,7 +54,7 @@ try:
 except Exception: pass
 # rang 0 = commune du COG 1999 ; rang 1 = nom ancien de Corhistoriq (plus incertain)
 RANG = {}
-with open("cog/1999/comsimp1999.txt", encoding="latin-1") as f:
+with open("sources/cog/1999/comsimp1999.txt", encoding="latin-1") as f:
     for row in csv.DictReader(f, delimiter="\t"):
         n=(row.get("NCCENR") or "").strip()
         if n: RANG[(row["DEP"], norm(n))] = 0
@@ -98,7 +98,7 @@ def candidats(txt, sig):
     return out
 
 rows = []
-for path in sorted(glob.glob("build_txt/*_raw.txt")):
+for path in sorted(glob.glob("jorf_txt/*_raw.txt")):
     jo  = os.path.basename(path).replace("_raw.txt","")
     sig = PUB2SIG[re.search(r"(\d{8})", jo).group(1)]
     txt = clean(open(path, encoding="utf-8", errors="replace").read())

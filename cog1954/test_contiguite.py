@@ -48,7 +48,7 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent.parent
 TRANSFERTS = RACINE / "cog1954" / "transferts_1954.csv"
 SORTIE = RACINE / "cog1954" / "transferts_contiguite.csv"
-GEOFLA = (RACINE / "geofla" / "repro" / "source_data" / "GEOFLA"
+GEOFLA = (RACINE / "sources" / "geofla" / "repro" / "source_data" / "GEOFLA"
           / "GEOFLA_1-1_SHP_LAMB93_FR-ED111" / "GEOFLA"
           / "1_DONNEES_LIVRAISON_2013-12-00225"
           / "GEOFLA_1-1_SHP_LAMB93_FR-ED111" / "COMMUNES" / "COMMUNE")

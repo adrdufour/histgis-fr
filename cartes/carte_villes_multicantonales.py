@@ -56,7 +56,8 @@ from qgis.core import (
 )
 from qgis.PyQt.QtGui import QColor, QFont
 
-ICI = os.path.dirname(os.path.abspath(__file__))
+ICI = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sorties")
+os.makedirs(ICI, exist_ok=True)   # les sorties binaires sont isolées
 GPKG = os.path.join(ICI, "villes_multicantonales.gpkg")
 PG = "dbname=histgis"
 

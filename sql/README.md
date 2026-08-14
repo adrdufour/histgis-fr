@@ -12,7 +12,7 @@ cd sql && ./rebuild.sh           # tout : 01→04, GEOFLA, 05, 06, 07, 11
 ./controle_gay.sh                # contrôle indépendant, facultatif
 ```
 
-`rebuild.sh` localise seul `COMMUNE.SHP` sous `geofla/` et
+`rebuild.sh` localise seul `COMMUNE.SHP` sous `sources/geofla/` et
 `v_mvt_commune_*.csv` à la racine, et refuse de démarrer sans eux. Pour ne
 charger que les attributions, sans géométrie : `./load.sh`.
 
@@ -108,8 +108,8 @@ Les deux ne peuvent pas être remplies en même temps — l'extracteur n'écrit
 qu'une colonne. Pour la géométrie c'est `insee` qu'il faut :
 
 ```bash
-python3 trfgis_extract.py build trfgis/communes/Nomenclatures \
-    --out build --mapping trfgis/cantons/Nomenclatures --geom-col insee
+python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
+    --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee
 ```
 
 `--mapping` n'est pas optionnel en pratique : sans lui les pseudo-cantons ne
@@ -162,7 +162,7 @@ Retirer `--dry-run` une fois la taille vérifiée (~18 Mo). Puis :
 
 ```bash
 ogr2ogr -f PostgreSQL PG:"dbname=histgis" \
-    geofla/.../COMMUNES/COMMUNE.SHP \
+    sources/geofla/.../COMMUNES/COMMUNE.SHP \
     -nln histgis.geofla_commune -nlt MULTIPOLYGON \
     -lco GEOMETRY_NAME=geom -lco FID=gid -a_srs EPSG:2154 -overwrite
 
@@ -227,7 +227,7 @@ tombera : une trame communale historique rendra les fractions représentables.
 
 ## Contrôle indépendant
 
-`trfgis/cantons/Shapefiles/CANTONS_1870.zip` et `CANTONS_1940.zip` contiennent
+`sources/trfgis/cantons/Shapefiles/CANTONS_1870.zip` et `CANTONS_1940.zip` contiennent
 les cantons déjà dissous par Victor Gay. Ces polygones ne passent par aucune
 ligne de notre code : les comparer à `snapshot_geom()` teste la chaîne
 entière — extraction, attributions, rattrapages de communes disparues,

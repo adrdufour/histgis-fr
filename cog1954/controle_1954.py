@@ -35,7 +35,16 @@ RACINE = Path(__file__).resolve().parent.parent
 # départementales sont établies par l'ordre alphabétique et non par l'OCR des
 # en-têtes, qui confond Haute-Loire avec Loire.
 _RED = RACINE / "cog1954" / "communes_1954_redecoupe.csv"
-LU = _RED if _RED.exists() else RACINE / "cog1954" / "communes_1954.csv"
+if _RED.exists():
+    LU = _RED
+else:
+    # Repli, mais annoncé. Le fichier non redécoupé porte les codes de
+    # département tels que l'OCR les a lus, avec le décalage de 43 lignes
+    # décrit dans note_1954.md. Y retomber sans le savoir fausse tout le
+    # contrôle sans rien faire échouer.
+    LU = RACINE / "cog1954" / "communes_1954.csv"
+    print(f"ATTENTION : {_RED.name} absent, repli sur {LU.name} "
+          f"(codes de département non redécoupés)")
 SORTIE = RACINE / "cog1954" / "controle_1954.csv"
 CREATIONS = RACINE / "cog1954" / "cantons_nouveaux_1954.csv"
 

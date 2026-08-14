@@ -30,7 +30,7 @@ PSQL="psql -v ON_ERROR_STOP=1 -q"
 $PSQL -f "$ICI/01_schema.sql"
 $PSQL -v racine="$RACINE" -f "$ICI/02_load.sql"
 $PSQL -f "$ICI/03_functions.sql"
-$PSQL -f "$ICI/04_checks.sql" | tee "$RACINE/rapport_chargement.txt"
+$PSQL -f "$ICI/04_checks.sql" | tee "$RACINE/sorties/rapport_chargement.txt"
 
 echo
 echo "Terminé. Rapport de recette : $RACINE/rapport_chargement.txt"

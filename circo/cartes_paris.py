@@ -43,7 +43,8 @@ from matplotlib.patches import PathPatch                 # noqa: E402
 from shapely import wkb                                  # noqa: E402
 
 RACINE = Path(__file__).resolve().parent.parent
-SORTIE = RACINE / "circo" / "paris_circo.pdf"
+SORTIE = RACINE / "circo" / "sorties" / "paris_circo.pdf"
+SORTIE.parent.mkdir(exist_ok=True)
 
 sys.path.insert(0, str(RACINE / "cartes"))
 sys.path.insert(0, str(RACINE / "circo"))
