@@ -1,0 +1,81 @@
+quartier,arrondissement,nom_insee,cle_atlas,motif,iris
+1,75101,Saint-Germain l'Auxerrois,saintgermainlauxerrois,direct,6
+2,75101,Les Halles,halles,article retiré,6
+3,75101,Palais Royal,palaisroyal,direct,3
+4,75101,Place Vendôme,placevendome,direct,2
+5,75102,Gaillon,gaillon,direct,3
+6,75102,Vivienne,vivienne,direct,2
+7,75102,Mail,mail,direct,4
+8,75102,Bonne Nouvelle,bonnenouvelle,direct,5
+9,75103,Arts et Métiers,artsetmetiers,direct,5
+10,75103,Enfants Rouges,enfantsrouges,direct,4
+11,75103,Les Archives,archives,article retiré,4
+12,75103,Sainte-Avoye,saintavoye,orthographe,4
+13,75104,Saint-Merri,saintmerri,direct,6
+14,75104,Saint-Gervais,saintgervais,direct,5
+15,75104,Arsenal,arsenal,direct,6
+16,75104,Notre-Dame,notredame,direct,4
+17,75105,Saint-Victor,saintvictor,direct,7
+18,75105,Jardin des Plantes,jardindesplantes,direct,10
+19,75105,Val de Grâce,valdegrace,direct,8
+20,75105,Sorbonne,sorbonne,direct,6
+21,75106,Monnaie,monnaie,direct,4
+22,75106,Odéon,odeon,direct,5
+23,75106,Notre-Dame des Champs,notredamedeschamps,direct,11
+24,75106,Saint-Germain des Prés,saintgermaindespres,direct,3
+25,75107,Saint-Thomas d'Aquin,saintthomasdacquin,orthographe,9
+26,75107,Invalides,invalides,direct,7
+27,75107,École Militaire,ecolemilitaire,direct,7
+28,75107,Gros Caillou,groscaillou,direct,13
+29,75108,Champs Élysées,champselysees,direct,8
+30,75108,Faubourg du Roule,roule,"abréviation ; « le roule » est un autre quartier, d'avant 1860",6
+31,75108,Madeleine,madeleine,direct,8
+32,75108,Europe,europe,direct,10
+33,75109,Saint-Georges,saintgeorges,direct,11
+34,75109,Chaussée d'Antin,chausseedantin,direct,9
+35,75109,Faubourg Montmartre,faubourgmontmartre,direct,4
+36,75109,Rochechouart,rochechouart,direct,10
+37,75110,Saint-Vincent de Paul,saintvincentdepaul,direct,12
+38,75110,Porte Saint-Denis,portedesaintdenis,direct,6
+39,75110,Porte Saint-Martin,portesaintmartin,direct,11
+40,75110,Hôpital Saint-Louis,hopitalsaintlouis,direct,13
+41,75111,Folie Méricourt,lafoliemericourt,article ajouté,15
+42,75111,Saint-Ambroise,saintambroise,direct,14
+43,75111,Roquette,laroquette,article ajouté,21
+44,75111,Sainte-Marguerite,saintemarguerite,direct,13
+45,75112,Bel-Air,belair,direct,15
+46,75112,Picpus,picpus,direct,24
+47,75112,Bercy,bercy,direct,9
+48,75112,Quinze-Vingts,quinzevingts,direct,15
+49,75113,Salpêtrière,salpetriere,direct,9
+50,75113,Gare,lagare,article ajouté,32
+51,75113,Maison Blanche,maisonblanche,direct,25
+52,75113,Croulebarbe,croulebarbe,direct,7
+53,75114,Montparnasse,montparnasse,direct,11
+54,75114,Parc de Montsouris,sante,renommage du quartier 54,7
+55,75114,Petit Montrouge,petitmontrouge,direct,16
+56,75114,Plaisance,plaisance,direct,25
+57,75115,Saint-Lambert,saintlambert,direct,33
+58,75115,Necker,necker,direct,19
+59,75115,Grenelle,grenelle,direct,21
+60,75115,Javel,javel,direct,23
+61,75116,Auteuil,auteuil,direct,33
+62,75116,Muette,lamuette,article ajouté,25
+63,75116,Porte Dauphine,portedauphine,direct,12
+64,75116,Chaillot,chaillot,direct,13
+65,75117,Ternes,ternes,direct,16
+66,75117,Plaine Monceau,plainemonceau,direct,16
+67,75117,Batignolles,batignolles,direct,16
+68,75117,Épinettes,epinettes,direct,17
+69,75118,Grandes Carrières,grandescarrieres,direct,29
+70,75118,Clignancourt,clignancourt,direct,27
+71,75118,Goutte d'Or,gouttedor,direct,10
+72,75118,Chapelle,lachapelle,article ajouté,9
+73,75119,Villette,lavillette,article ajouté,19
+74,75119,Pont de Flandre,pontdeflandre,direct,14
+75,75119,Amérique,amerique,direct,25
+76,75119,Combat,combat,direct,17
+77,75120,Belleville,belleville,direct,14
+78,75120,Saint-Fargeau,saintfargeau,direct,16
+79,75120,Père Lachaise,perelachaise,direct,17
+80,75120,Charonne,charonne,direct,26

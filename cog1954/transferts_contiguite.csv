@@ -1,0 +1,312 @@
+dep,insee,commune,canton_1940,nom_1940,canton_1954,nom_1954,verdict,page,compagnons,contiguite,distance_m,distance_depart_m
+14,14180,Cordey,1418,Falaise-Sud,1417,Falaise-Nord,transfert,187,15,SÉPARÉ,2477,0
+14,14284,Fourneaux-le-Val,1418,Falaise-Sud,1417,Falaise-Nord,transfert,189,15,SÉPARÉ,3279,1620
+14,14343,Isles-Bardel (Les),1418,Falaise-Sud,1417,Falaise-Nord,transfert,190,15,SÉPARÉ,9700,0
+14,14375,Loges-Saulces (Les),1418,Falaise-Sud,1417,Falaise-Nord,transfert,191,15,SÉPARÉ,5356,0
+14,14405,Martigny-sur-l'Ante,1418,Falaise-Sud,1417,Falaise-Nord,transfert,192,15,SÉPARÉ,3053,0
+14,14427,Mesnil-Villement (Le),1418,Falaise-Sud,1417,Falaise-Nord,transfert,192,15,SÉPARÉ,10857,0
+14,14501,Pierrefitte-en-Cinglais,1418,Falaise-Sud,1417,Falaise-Nord,transfert,193,15,SÉPARÉ,9942,0
+14,14502,Pierrepont,1418,Falaise-Sud,1417,Falaise-Nord,transfert,193,15,SÉPARÉ,6365,0
+14,14516,Potigny,1418,Falaise-Sud,1417,Falaise-Nord,transfert,194,15,SÉPARÉ,4609,0
+14,14588,St-Germain-Langot,1418,Falaise-Sud,1417,Falaise-Nord,transfert,195,15,SÉPARÉ,6240,0
+14,14677,Soulangy,1418,Falaise-Sud,1417,Falaise-Nord,transfert,196,15,SÉPARÉ,646,0
+14,14753,Villers-Canivet,1418,Falaise-Sud,1417,Falaise-Nord,transfert,198,15,SÉPARÉ,2854,0
+59,59116,Bry,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,594,9,SÉPARÉ,5178,0
+59,59217,Eth,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,596,9,SÉPARÉ,5258,0
+59,59265,Gommegnies,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,597,9,SÉPARÉ,1134,0
+59,59323,Jenlain,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,598,9,SÉPARÉ,2093,0
+59,59381,Maresches,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,599,9,SÉPARÉ,2128,256
+59,59473,Preux-au-Sart,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,600,9,SÉPARÉ,2160,0
+59,59565,Sepmeries,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,602,9,SÉPARÉ,1554,0
+35,35032,Bourgbarré,3531,Rennes-Sud-Est,3532,Rennes-Sud-Ouest,transfert,386,6,SÉPARÉ,7874,0
+35,35047,Bruz,3531,Rennes-Sud-Est,3532,Rennes-Sud-Ouest,transfert,386,6,SÉPARÉ,1530,1524
+35,35066,Chartres-de-Bretagne,3531,Rennes-Sud-Est,3532,Rennes-Sud-Ouest,transfert,386,6,SÉPARÉ,1851,0
+35,35266,St-Erblon,3531,Rennes-Sud-Est,3532,Rennes-Sud-Ouest,transfert,390,6,SÉPARÉ,4810,0
+36,36037,Champenoise (La),3613,Issoudun-Sud,3612,Issoudun-Nord,transfert,394,6,SÉPARÉ,5055,0
+36,36209,St-Valentin,3613,Issoudun-Sud,3612,Issoudun-Nord,transfert,397,6,SÉPARÉ,1470,0
+14,14289,Fresné-la-Mère,1417,Falaise-Nord,1418,Falaise-Sud,transfert,189,4,SÉPARÉ,1077,0
+14,14498,Pertheville-Ners,1417,Falaise-Nord,1418,Falaise-Sud,transfert,193,4,SÉPARÉ,2397,1091
+35,35001,Acigné,3530,Rennes-Nord-Ouest,3531,Rennes-Sud-Est,transfert,385,4,SÉPARÉ,4348,4348
+36,36003,Ambrault,3612,Issoudun-Nord,3613,Issoudun-Sud,transfert,393,4,SÉPARÉ,4164,0
+36,36019,Bommiers,3612,Issoudun-Nord,3613,Issoudun-Sud,transfert,393,4,SÉPARÉ,5631,0
+36,36169,Pruniers,3612,Issoudun-Nord,3613,Issoudun-Sud,transfert,396,4,SÉPARÉ,8879,0
+80,80718,St-Sauveur,8010,Amiens-4,8008,Amiens-2,transfert,822,3,SÉPARÉ,1591,0
+09,09039,Bastide-de-Bousignac (La),0910,Mirepoix,0919,Varilhes,transfert,148,2,SÉPARÉ,5867,0
+09,09233,Pradettes,0910,Mirepoix,0919,Varilhes,transfert,151,2,SÉPARÉ,5427,0
+30,30134,Issirac,3020,Pont-Saint-Esprit,3029,Saint-Jean-du-Gard,transfert,339,2,SÉPARÉ,40453,0
+30,30143,Laval-St-Roman,3020,Pont-Saint-Esprit,3029,Saint-Jean-du-Gard,transfert,339,2,SÉPARÉ,44715,0
+35,35216,Parthenay-de-Bretagne,3532,Rennes-Sud-Ouest,3530,Rennes-Nord-Ouest,transfert,389,2,SÉPARÉ,7927,7927
+50,50391,Parigny,5032,Saint-Hilaire-du-Harcouët,5022,Montebourg,transfert,502,2,SÉPARÉ,92899,0
+50,50644,Virey,5032,Saint-Hilaire-du-Harcouët,5022,Montebourg,transfert,507,2,SÉPARÉ,92502,0
+01,01351,St-Étienne-sur-Chalaronne,0132,Thoissey,0101,Ambérieu,transfert,89,1,SÉPARÉ,33531,0
+02,02758,Vailly-sur-Aisne,0232,Vailly,0220,Moÿ-de-l'Aisne,transfert,93,1,SÉPARÉ,32551,0
+02,02211,Condé-sur-Suippe,0221,Neufchâtel-sur-Aisne,0201,Anizy-le-Château,transfert,97,1,SÉPARÉ,23067,0
+02,02333,Fresnes,0211,Coucy-le-Château-Auffrique,0215,Fère-en-Tardenois,transfert,99,1,SÉPARÉ,33229,0
+02,02357,Gronard,0234,Vervins,0224,Oulchy-le-Château,transfert,100,1,SÉPARÉ,59412,0
+02,02772,Vaux-en-Vermandois,0233,Vermand,0235,Vic-sur-Aisne,transfert,107,1,SÉPARÉ,36349,0
+04,04162,Revest-des-Brousses,0403,Banon,0402,Annot,transfert,119,1,SÉPARÉ,67773,0
+05,05170,Tallard,0523,Tallard,0515,Orpierre,transfert,122,1,SÉPARÉ,22826,0
+06,06074,Lantosque,0627,Utelle,0615,Nice-2,transfert,126,1,SÉPARÉ,19806,0
+06,06030,Cannet (Le),0606,Cannes,0605,Cagnes-sur-Mer,transfert,127,1,SÉPARÉ,6571,0
+06,06073,Isola,0622,Saint-Étienne-de-Tinée,0623,Saint-Martin-Vésubie,transfert,127,1,SÉPARÉ,5872,0
+07,07129,Lamastre,0710,Lamastre,0719,Saint-Péray,transfert,132,1,SÉPARÉ,4784,0
+08,08045,Ballay,0831,Vouziers,0821,Raucourt-et-Flaba,transfert,138,1,SÉPARÉ,11802,0
+08,08064,Biermes,0823,Rethel,0822,Renwez,transfert,138,1,SÉPARÉ,31199,0
+08,08212,Harcy,0822,Renwez,0823,Rethel,transfert,141,1,SÉPARÉ,28731,0
+10,10233,MérysurSeine,1014,Méry-sur-Seine,1005,Bouilly,transfert,154,1,SÉPARÉ,28184,0
+10,10281,Pavillon-Ste-Julie (Le),1023,Troyes-2,1022,Troyes-1,transfert,159,1,SÉPARÉ,4512,0
+10,10396,Vauchassis,1011,Estissac,1015,Mussy-sur-Seine,transfert,161,1,SÉPARÉ,29600,0
+11,11286,Peyriac-Minervois,1125,Peyriac-Minervois,1115,Durban-Corbières,transfert,163,1,SÉPARÉ,21814,0
+11,11063,Campagne-sur-Aude,1126,Quillan,1125,Peyriac-Minervois,transfert,164,1,SÉPARÉ,38751,0
+11,11385,Soupex,1109,Castelnaudary-Nord,1102,Alzonne,transfert,170,1,SÉPARÉ,19268,0
+14,14764,Pont-d'Ouilly,1431,Thury-Harcourt,1417,Falaise-Nord,transfert,193,1,SÉPARÉ,9400,0
+14,14754,Villers-sur-Mer,1415,Dozulé,1435,Trouville-sur-Mer,transfert,198,1,SÉPARÉ,1611,0
+16,16286,Rouillac,1623,Rouillac,1614,Confolens-Nord,transfert,205,1,SÉPARÉ,46034,0
+16,16018,Ars,1613,Cognac,1612,Châteauneuf-sur-Charente,transfert,205,1,SÉPARÉ,14568,0
+16,16100,Chirac,1609,Chabanais,1605,Baignes-Sainte-Radegonde,transfert,207,1,SÉPARÉ,77798,0
+16,16355,St-Sulpice-de-Cognac,1613,Cognac,1615,Confolens-Sud,transfert,211,1,SÉPARÉ,80438,0
+16,16424,Yviers,1610,Chalais,1619,Montbron,transfert,213,1,SÉPARÉ,40618,0
+17,17385,Saint-Pierre-d'Oléron,1731,Saint-Pierre,1718,Montguyon,transfert,214,1,SÉPARÉ,109482,0
+17,17323,St-Denis-d'Oléron,1731,Saint-Pierre,1721,Rochefort-Nord,transfert,220,1,SÉPARÉ,27651,0
+17,17425,Semussac,1708,Cozes,1703,Ars,transfert,222,1,SÉPARÉ,72624,0
+18,18152,Montlouis,1818,Lignières,1815,Henrichemont,transfert,227,1,SÉPARÉ,49101,0
+18,18157,Morthomiers,1808,Chârost,1805,Bourges,transfert,227,1,SÉPARÉ,2084,0
+19,19017,Bassignac-le-Bas,1916,Mercoeur,1915,Lubersac,transfert,230,1,SÉPARÉ,46017,0
+19,19018,Bassignac-le-Haut,1921,Saint-Privat,1902,Ayen,transfert,230,1,SÉPARÉ,46837,0
+19,19102,Lamazière-Basse,1919,Neuvic,1915,Lubersac,transfert,232,1,SÉPARÉ,50896,0
+19,19222,St-Martin-la-Méanne,1920,La Roche-Canillac,1902,Ayen,transfert,234,1,SÉPARÉ,42004,0
+19,19223,St-Martin-Sepert,1915,Lubersac,1913,Lapleau,transfert,234,1,SÉPARÉ,42907,0
+19,19257,Sérilhac,1904,Beynat,1901,Argentat,transfert,235,1,SÉPARÉ,544,0
+21,21047,Bard-lès-Époisses,2133,Semur-en-Auxois,2113,Fontaine-Française,transfert,246,1,SÉPARÉ,75092,0
+21,21338,Lamargelle,2130,Saint-Seine-l'Abbaye,2136,Venarey,transfert,251,1,SÉPARÉ,6148,0
+21,21661,Velars-sur-Ouche,2111,Dijon-Ouest,2114,Genlis,transfert,257,1,SÉPARÉ,14147,0
+22,22196,Pleudaniel,2221,Lézardrieux,2222,Loudéac,transfert,263,1,SÉPARÉ,59417,0
+24,24372,St-Astier,2430,Saint-Astier,2436,Sarlat,transfert,281,1,SÉPARÉ,45389,0
+25,25612,Vieilley,2513,Marchaux,2512,Maîche,transfert,297,1,SÉPARÉ,37738,0
+26,26093,Clansayes,2625,Saint-Paul-Trois-Châteaux,2601,Bourdeaux,transfert,300,1,SÉPARÉ,25315,0
+26,26294,St-Bardoux,2621,Romans-sur-Isère,2602,Bourg-de-Péage,transfert,304,1,SÉPARÉ,2394,0
+27,27502,Rugles,2731,Rugles,2719,Gaillon,transfert,306,1,SÉPARÉ,46028,0
+27,27013,Amfreville-sous-les-Monts,2718,Fleury-sur-Andelle,2716,Évreux-Nord,transfert,306,1,SÉPARÉ,19799,0
+28,28343,St-Laurent-la-Gâtine,2819,Nogent-le-Roi,2815,Illiers,transfert,326,1,SÉPARÉ,32442,0
+29,29264,St-Servais,2918,Landivisiau,2916,Huelgoat,transfert,335,1,SÉPARÉ,18942,0
+30,30019,Aubais,3032,Sommières,3001,Aigues-Mortes,transfert,336,1,SÉPARÉ,9338,0
+30,30032,Beaucaire,3009,Beaucaire,3005,Anduze,transfert,337,1,SÉPARÉ,41193,0
+30,30039,Bezouce,3016,Marguerittes,3015,Lussan,transfert,337,1,SÉPARÉ,19520,0
+30,30096,Cornillon,3020,Pont-Saint-Esprit,3026,Saint-Chaptes,transfert,338,1,SÉPARÉ,20857,0
+30,30213,Revens,3034,Trèves,3024,Saint-Ambroix,transfert,340,1,SÉPARÉ,58955,0
+31,31483,Saint-Gaudens,3129,Saint-Gaudens,3116,L'Isle-en-Dodon,transfert,344,1,SÉPARÉ,12737,0
+31,31049,Bazus,3119,Montastruc-la-Conseillère,3139,Villemur-sur-Tarn,transfert,345,1,SÉPARÉ,5461,0
+31,31185,Folcarde,3138,Villefranche,3133,Toulouse-Centre,transfert,348,1,SÉPARÉ,27229,0
+31,31291,Léguevin,3118,Léguevin,3115,Grenade,transfert,350,1,SÉPARÉ,3956,0
+32,32457,Urdens,3208,Fleurance,3205,Cologne,transfert,364,1,SÉPARÉ,18113,0
+33,33121,Cessac,3348,Targon,3345,Saint-Symphorien,transfert,370,1,SÉPARÉ,30129,0
+33,33376,St-Aubin-de-Médoc,3306,Blanquefort,3305,Belin,transfert,374,1,SÉPARÉ,23582,0
+33,33411,St-Germain-de-Grave,3343,Saint-Macaire,3301,Arcachon,transfert,375,1,SÉPARÉ,71372,0
+33,33539,Vayres,3330,Libourne,3310,Bordeaux-3,transfert,377,1,SÉPARÉ,14503,0
+34,34293,Salvetat-sur-Agout (La),3434,La Salvetat-sur-l'Agout,3422,Montpellier-1,transfert,378,1,SÉPARÉ,84383,0
+34,34168,Montesquieu,3429,Roujan,3425,Murviel,transfert,381,1,SÉPARÉ,1729,0
+34,34217,Prades-le-Lez,3418,Les Matelles,3415,Lodève,transfert,382,1,SÉPARÉ,26285,0
+35,35059,Chapelle-des-Fougeretz (La),3529,Rennes-Nord-Est,3526,Pleine-Fougères,transfert,386,1,SÉPARÉ,29500,0
+35,35214,Parcé,3513,Fougères-Sud,3515,La Guerche-de-Bretagne,transfert,389,1,SÉPARÉ,23716,0
+37,37044,Celle-Guenand (La),3708,Le Grand-Pressigny,3703,Bléré,transfert,400,1,SÉPARÉ,26438,0
+37,37155,Monthodon,3706,Château-Renault,3704,Bourgueil,transfert,402,1,SÉPARÉ,48946,0
+39,39286,Lavans-lès-St-Claude,3926,Saint-Claude,3925,Saint-Amour,transfert,421,1,SÉPARÉ,22111,0
+39,39333,Moirans-en-Montagne,3916,Moirans-en-Montagne,3915,Lons-le-Saunier,transfert,422,1,SÉPARÉ,19058,0
+40,40231,Port-de-Lanne,4016,Peyrehorade,4018,Pouillon,transfert,432,1,SÉPARÉ,4670,0
+41,41198,Saint-Aignan,4118,Saint-Aignan,4110,Mer,transfert,435,1,SÉPARÉ,39604,0
+41,41214,St-Hilaire-la-Gravelle,4114,Morée,4101,Blois-Est,transfert,439,1,SÉPARÉ,26555,0
+42,42204,Saint-Bonnet-le-Château,4217,Saint-Bonnet-le-Château,4206,Chazelles-sur-Lyon,transfert,441,1,SÉPARÉ,27236,0
+42,42037,Chalain-d'Uzore,4209,Montbrison,4205,Charlieu,transfert,442,1,SÉPARÉ,42338,0
+43,43037,Bouchet-St-Nicolas (Le),4306,Cayres,4301,Allègre,transfert,449,1,SÉPARÉ,23675,0
+44,44010,Batz-sur-Mer,4410,Le Croisic,4419,Moisdon-la-Rivière,transfert,454,1,SÉPARÉ,78120,0
+44,44185,St-Nicolas-de-Redon,4440,Saint-Nicolas-de-Redon,4401,Aigrefeuille-sur-Maine,transfert,458,1,SÉPARÉ,66631,0
+45,45191,Malesherbes,4517,Malesherbes,4507,Châteaurenard,transfert,460,1,SÉPARÉ,42289,0
+45,45194,Mardié,4523,Orléans-Nord-Est,4525,Orléans-Sud,transfert,464,1,SÉPARÉ,2683,0
+46,46170,Leyme,4613,Lacapelle-Marival,4615,Latronquière,transfert,471,1,SÉPARÉ,2316,0
+46,46187,Mauroux,4623,Puy-l'Évêque,4625,Saint-Germain,transfert,472,1,SÉPARÉ,25801,0
+46,46243,Rueyres,4613,Lacapelle-Marival,4612,Labastide-Murat,transfert,473,1,SÉPARÉ,11463,0
+46,46289,St-Pierre-Toirac,4604,Cajarc,4601,Bretenoux,transfert,474,1,SÉPARÉ,35477,0
+47,47053,Castella,4716,Laroque-Timbaut,4715,Laplume,transfert,477,1,SÉPARÉ,10561,0
+47,47077,Cuzorn,4713,Fumel,4715,Laplume,transfert,478,1,SÉPARÉ,44751,0
+48,48083,Laubies (Les),4819,Saint-Amans,4815,Meyrueis,transfert,484,1,SÉPARÉ,42680,0
+49,49162,Jallais,4906,Beaupréau,4905,Beaufort-en-Vallée,transfert,490,1,SÉPARÉ,39217,0
+49,49365,Verchers-sur-Layon (Les),4913,Doué-la-Fontaine,4915,Gennes,transfert,494,1,SÉPARÉ,6513,0
+50,50356,Moon-sur-Elle,5031,Saint-Clair-sur-l'Elle,5021,Marigny,transfert,502,1,SÉPARÉ,6951,0
+50,50532,St-Pair-sur-Mer,5015,Granville,5035,Saint-Lô,transfert,505,1,SÉPARÉ,42296,0
+51,51031,Baconnes,5130,Verzy,5120,Reims-2,transfert,509,1,SÉPARÉ,13632,0
+51,51117,Champigneul-Champagne,5110,Écury-sur-Coole,5116,Marson,transfert,510,1,SÉPARÉ,9385,0
+51,51139,Chaudefontaine,5123,Sainte-Menehould,5125,Sézanne,transfert,511,1,SÉPARÉ,78896,0
+51,51300,Isle-sur-Marne,5128,Thiéblemont-Farémont,5101,Anglure,transfert,514,1,SÉPARÉ,56238,0
+51,51373,Moncetz-l'Abbaye,5128,Thiéblemont-Farémont,5126,Sompuis,transfert,515,1,SÉPARÉ,8608,0
+51,51546,Somme-Suippe,5123,Sainte-Menehould,5122,Reims-4,transfert,518,1,SÉPARÉ,33525,0
+51,51547,Somme-Tourbe,5123,Sainte-Menehould,5103,Ay,transfert,518,1,SÉPARÉ,29445,0
+52,52439,Rouvres-sur-Aube,5203,Auberive,5205,Bourmont,transfert,529,1,SÉPARÉ,44535,0
+53,53255,Sainte-Suzanne,5326,Sainte-Suzanne,5317,Laval-Est,transfert,532,1,SÉPARÉ,23641,0
+53,53036,Bouère,5313,Grez-en-Bouère,5315,Landivy,transfert,533,1,SÉPARÉ,58100,0
+53,53150,Ménil,5306,Château-Gontier,5305,Chailland,transfert,535,1,SÉPARÉ,38762,0
+53,53163,Neau,5311,Évron,5301,Ambrières-le-Grand,transfert,535,1,SÉPARÉ,21026,0
+54,54585,Virecourt,5405,Bayon,5408,Chambley,transfert,549,1,SÉPARÉ,62814,0
+56,56003,Arradon,5638,Vannes-Ouest,5635,Sarzeau,transfert,563,1,SÉPARÉ,5852,0
+56,56138,Monterrein,5619,Malestroit,5615,Josselin,transfert,566,1,SÉPARÉ,4395,0
+56,56144,Naizin,5616,Locminé,5615,Josselin,transfert,566,1,SÉPARÉ,9759,0
+57,57007,Adaincourt,5709,Faulquemont,5705,Cattenom,transfert,569,1,SÉPARÉ,44238,0
+57,57622,St-Privat-la-Montagne,5720,Metz-Campagne,5701,Albestroff,transfert,581,1,SÉPARÉ,53406,0
+58,58286,Tannay,5824,Tannay,5815,Moulins-Engilbert,transfert,584,1,SÉPARÉ,33410,0
+59,59580,Steenvoorde,5960,Steenvoorde,5937,Lille-Nord-Est,transfert,591,1,SÉPARÉ,28745,0
+59,59019,Artres,5967,Valenciennes-Sud,5957,Seclin,transfert,592,1,SÉPARÉ,41391,0
+59,59056,Beaucamps-Ligny,5928,Haubourdin,5923,Douai-Ouest,transfert,593,1,SÉPARÉ,19713,0
+59,59057,Beaudignies,5949,Le Quesnoy-Est,5945,Maubeuge-Sud,transfert,593,1,SÉPARÉ,21257,0
+59,59626,Villers-Pol,5949,Le Quesnoy-Est,5959,Solre-le-Château,transfert,604,1,SÉPARÉ,26230,0
+60,60045,Barbery,6034,Senlis,6024,Mouy,transfert,606,1,SÉPARÉ,18619,0
+60,60494,Plailly,6034,Senlis,6001,Attichy,transfert,614,1,SÉPARÉ,33059,0
+60,60587,St-Martin-Longueau,6020,Liancourt,6029,Noyon,transfert,616,1,SÉPARÉ,30081,0
+61,61494,Trun,6135,Trun,6123,Mortagne-au-Perche,transfert,619,1,SÉPARÉ,43625,0
+61,61136,Couvains,6113,La Ferté-Frênel,6115,Flers,transfert,622,1,SÉPARÉ,72488,0
+61,61265,Ménil-Gondouin,6129,Putanges,6125,Moulins-la-Marche,transfert,624,1,SÉPARÉ,48997,0
+61,61490,Tournai-sur-Dive,6135,Trun,6125,Moulins-la-Marche,transfert,628,1,SÉPARÉ,27063,0
+62,62079,Bancourt,6209,Bapaume,6205,Aubigny-en-Artois,transfert,631,1,SÉPARÉ,30100,0
+62,62289,Écuires,6237,Montreuil,6203,Arras-Nord,transfert,635,1,SÉPARÉ,61022,0
+62,62356,Fresnicourt-le-Dolmen,6228,Houdain,6246,Vitry-en-Artois,transfert,636,1,SÉPARÉ,22097,0
+62,62503,Leubringhen,6236,Marquise,6226,Hesdin,transfert,639,1,SÉPARÉ,47282,0
+62,62712,Rivière,6210,Beaumetz-lès-Loges,6230,Laventie,transfert,642,1,SÉPARÉ,33860,0
+63,63244,Moutade (La),6333,Riom-Est,6332,Randan,transfert,653,1,SÉPARÉ,8170,0
+63,63293,Quartier (Le),6328,Pionsat,6323,Manzat,transfert,654,1,SÉPARÉ,7660,0
+63,63430,THIERS,6346,Thiers,6345,Tauves,transfert,656,1,SÉPARÉ,61439,0
+64,64194,Coslédaà-Lube-Boast,6418,Lembeye,6401,Accous,transfert,662,1,SÉPARÉ,44570,0
+64,64516,Sedzère,6423,Morlaàs,6425,Nay-Est,transfert,668,1,SÉPARÉ,8217,0
+65,65245,Lagrange,6511,Lannemezan,6515,Mauléon-Barousse,transfert,675,1,SÉPARÉ,17451,0
+65,65316,Monlong,6508,Castelnau-Magnoac,6503,Aucun,transfert,676,1,SÉPARÉ,50331,0
+65,65361,Peyrun,6518,Rabastens,6519,Saint-Laurent-de-Neste,transfert,677,1,SÉPARÉ,31056,0
+66,66103,Marquixanes,6618,Vinça,6613,Saillagouse,transfert,682,1,SÉPARÉ,33553,0
+67,67037,Biblisheim,6735,Woerth,6725,Seltz,transfert,686,1,SÉPARÉ,11767,0
+68,68308,Sickert,6815,Masevaux,6801,Altkirch,transfert,703,1,SÉPARÉ,18641,0
+69,69217,St-Just-d'Avray,6906,Le Bois-d'Oingt,6908,Givors,transfert,710,1,SÉPARÉ,42623,0
+70,70421,Port-sur-Saône,7020,Port-sur-Saône,7010,Gy,transfert,712,1,SÉPARÉ,20422,0
+70,70526,Vauvillers,7025,Vauvillers,7016,Mélisey,transfert,712,1,SÉPARÉ,34792,0
+70,70285,Héricourt,7011,Héricourt,7001,Amance,transfert,717,1,SÉPARÉ,48607,0
+70,70315,Magnoncourt,7022,Saint-Loup-sur-Semouse,7001,Amance,transfert,718,1,SÉPARÉ,10405,0
+71,71510,Semur-en-Brionnais,7146,Semur-en-Brionnais,7129,Matour,transfert,723,1,SÉPARÉ,20960,0
+71,71029,Bellevesvre,7139,Pierre,7129,Matour,transfert,724,1,SÉPARÉ,78439,0
+71,71096,Chapelle-sous-Uchon (La),7130,Mesvres,7136,Mont-Saint-Vincent,transfert,725,1,SÉPARÉ,18378,0
+71,71110,Chassigny-sous-Dun,7110,Chauffailles,7119,Givry,transfert,725,1,SÉPARÉ,60821,0
+71,71158,Cuisery,7116,Cuisery,7115,Cuiseaux,transfert,726,1,SÉPARÉ,14788,0
+71,71268,Lugny-lès-Charolles,7109,Charolles,7105,Chagny,transfert,728,1,SÉPARÉ,51908,0
+71,71359,Préty,7149,Tournus,7142,Saint-Germain-du-Bois,transfert,730,1,SÉPARÉ,21512,0
+71,71421,St-Germain-en-Brionnais,7111,La Clayette,7101,Autun,transfert,731,1,SÉPARÉ,55648,0
+71,71551,Uchon,7130,Mesvres,7139,Pierre,transfert,733,1,SÉPARÉ,64601,0
+72,72363,Tuffé,7232,Tuffé,7221,Le Mans-3,transfert,735,1,SÉPARÉ,11280,0
+73,73162,Montailleur,7315,Grésy-sur-Isère,7311,La Chambre,transfert,747,1,SÉPARÉ,15489,0
+74,74185,Monnetier-Mornex,7416,Reignier,7401,Abondance,transfert,754,1,SÉPARÉ,32926,0
+74,74283,Thusy,7418,Rumilly,7410,Cluses,transfert,756,1,SÉPARÉ,36454,0
+76,76410,Maromme,7636,Maromme,7618,Envermeu,transfert,761,1,SÉPARÉ,36260,0
+76,76446,Montigny,7636,Maromme,7601,Argueil,transfert,769,1,SÉPARÉ,26391,0
+76,76660,Sandouville,7648,Saint-Romain-de-Colbosc,7645,Rouen-4,transfert,774,1,SÉPARÉ,51079,0
+76,76675,Sierville,7611,Clères,7601,Argueil,transfert,774,1,SÉPARÉ,25393,0
+80,80052,Baizieux,8018,Corbie,8015,Chaulnes,transfert,810,1,SÉPARÉ,13922,0
+80,80182,Cayeux-sur-Mer,8040,Saint-Valery-sur-Somme,8001,Abbeville-Nord,transfert,813,1,SÉPARÉ,15702,0
+80,80261,Dury,8013,Boves,8015,Chaulnes,transfert,814,1,SÉPARÉ,26886,0
+80,80341,Fourdrinoy,8034,Picquigny,8024,Ham,transfert,816,1,SÉPARÉ,58160,0
+80,80811,Voyennes,8030,Nesle,8039,Rue,transfert,824,1,SÉPARÉ,96266,0
+81,81292,Tanus,8123,Pampelonne,8125,Rabastens,transfert,831,1,SÉPARÉ,46248,0
+81,81305,Vabre,8131,Vabre,8111,Dourgne,transfert,832,1,SÉPARÉ,23846,0
+82,82116,Montagudet,8209,Lauzerte,8205,Caussade,transfert,836,1,SÉPARÉ,22243,0
+84,84139,Fontaine-de-Vaucluse,8413,L'Isle-sur-la-Sorgue,8403,Avignon-Sud,transfert,843,1,SÉPARÉ,14396,0
+85,85194,Sables-d'Olonne (Les),8524,Les Sables-d'Olonne,8514,Montaigu,transfert,846,1,SÉPARÉ,57198,0
+85,85004,Angles,8517,Moutiers-les-Mauxfaits,8501,Beauvoir,transfert,846,1,SÉPARÉ,66112,0
+86,86166,Montreuil-Bonnin,8630,Vouillé,8620,Pleumartin,transfert,856,1,SÉPARÉ,38762,0
+87,87147,St-Gilles-les-Forêts,8706,Châteauneuf-la-Forêt,8705,Châlus,transfert,863,1,SÉPARÉ,40168,0
+88,88038,Battexey,8805,Charmes,8808,Corcieux,transfert,866,1,SÉPARÉ,46157,0
+88,88148,Dommartin-lès-Remiremont,8823,Remiremont,8801,Bains-les-Bains,transfert,868,1,SÉPARÉ,21568,0
+88,88262,Laveline-devant-Bruyères,8803,Bruyères,8805,Charmes,transfert,870,1,SÉPARÉ,31895,0
+88,88472,Thuillières,8828,Vittel,8823,Remiremont,transfert,874,1,SÉPARÉ,32590,0
+88,88474,Tilleux,8818,Neufchâteau,8801,Bains-les-Bains,transfert,874,1,SÉPARÉ,35001,0
+89,89382,Seignelay,8928,Seignelay,8916,Flogny,transfert,876,1,SÉPARÉ,12505,0
+89,89461,Villeneuve-l'Archevêque,8936,Villeneuve-l'Archevêque,8923,Quarré-les-Tombes,transfert,876,1,SÉPARÉ,87251,0
+89,89115,Compigny,8931,Sergines,8921,Noyers,transfert,878,1,SÉPARÉ,77090,0
+89,89122,Courgenay,8936,Villeneuve-l'Archevêque,8935,Vézelay,transfert,878,1,SÉPARÉ,74928,0
+89,89138,Dicy,8910,Charny,8919,Joigny,transfert,879,1,SÉPARÉ,11864,0
+89,89390,Serbonnes,8931,Sergines,8901,Aillant,transfert,883,1,SÉPARÉ,41674,0
+14,14025,Aubigny,1418,Falaise-Sud,1417,Falaise-Nord,transfert,184,15,contigu,0,0
+14,14467,Noron-l'Abbaye,1418,Falaise-Sud,1417,Falaise-Nord,transfert,193,15,contigu,0,0
+14,14627,St-Martin-de-Mieux,1418,Falaise-Sud,1417,Falaise-Nord,transfert,196,15,contigu,0,0
+59,59251,Frasnoy,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,596,9,contigu,0,0
+59,59451,Orsinval,5949,Le Quesnoy-Est,5950,Le Quesnoy-Ouest,transfert,600,9,contigu,0,0
+35,35281,St-Jacques-de-la-Lande,3531,Rennes-Sud-Est,3532,Rennes-Sud-Ouest,transfert,391,6,contigu,0,0
+35,35353,Vezin-le-Coquet,3531,Rennes-Sud-Est,3532,Rennes-Sud-Ouest,transfert,392,6,contigu,0,0
+36,36098,Lizeray,3613,Issoudun-Sud,3612,Issoudun-Nord,transfert,395,6,contigu,0,0
+36,36152,Paudy,3613,Issoudun-Sud,3612,Issoudun-Nord,transfert,396,6,contigu,0,0
+36,36179,St-Aoustrille,3613,Issoudun-Sud,3612,Issoudun-Nord,transfert,396,6,contigu,0,0
+36,36199,Ste-Lizaigne,3613,Issoudun-Sud,3612,Issoudun-Nord,transfert,397,6,contigu,0,0
+14,14244,Eraines,1417,Falaise-Nord,1418,Falaise-Sud,transfert,189,4,contigu,0,0
+14,14332,Hoguette (La),1417,Falaise-Nord,1418,Falaise-Sud,transfert,190,4,contigu,0,0
+35,35051,Cesson-Sévigné,3530,Rennes-Nord-Ouest,3531,Rennes-Sud-Est,transfert,386,4,contigu,0,0
+35,35055,Chantepie,3530,Rennes-Nord-Ouest,3531,Rennes-Sud-Est,transfert,386,4,contigu,0,0
+35,35352,Vern-sur-Seiche,3530,Rennes-Nord-Ouest,3531,Rennes-Sud-Est,transfert,392,4,contigu,0,1141
+36,36181,St-Aubin,3612,Issoudun-Nord,3613,Issoudun-Sud,transfert,396,4,contigu,0,0
+42,42143,Mizérieux,4202,Boën,4207,Feurs,transfert,444,3,contigu,0,0
+42,42155,Nervieux,4202,Boën,4207,Feurs,transfert,444,3,contigu,0,0
+42,42174,Poncins,4202,Boën,4207,Feurs,transfert,444,3,contigu,0,0
+80,80160,Cagny,8008,Amiens-2,8009,Amiens-3,transfert,812,3,contigu,0,0
+80,80256,Dreuil-lès-Amiens,8010,Amiens-4,8008,Amiens-2,transfert,814,3,contigu,0,0
+80,80489,Longueau,8008,Amiens-2,8009,Amiens-3,transfert,818,3,contigu,0,0
+80,80674,Rivery,8008,Amiens-2,8009,Amiens-3,transfert,822,3,contigu,0,0
+80,80730,Saveuse,8010,Amiens-4,8008,Amiens-2,transfert,823,3,contigu,0,0
+14,14079,Blonville-sur-Mer,1427,Pont-l'Évêque,1435,Trouville-sur-Mer,transfert,185,2,contigu,0,0
+14,14701,Tourgeville,1427,Pont-l'Évêque,1435,Trouville-sur-Mer,transfert,197,2,contigu,0,0
+35,35210,Pacé,3532,Rennes-Sud-Ouest,3530,Rennes-Nord-Ouest,transfert,389,2,contigu,0,0
+76,76166,Caule-Ste-Beuve (Le),7605,Blangy,7602,Aumale,transfert,764,2,contigu,0,0
+76,76527,Richemont,7605,Blangy,7602,Aumale,transfert,771,2,contigu,0,0
+01,01146,Dompierre-sur-Chalaronne,0132,Thoissey,0110,Châtillon-sur-Chalaronne,transfert,86,1,contigu,0,351
+01,01387,St-Sulpice,0102,Bâgé-le-Châtel,0121,Montrevel,transfert,90,1,contigu,0,0
+02,02549,Neuville-St-Amand,0220,Moÿ-de-l'Aisne,0228,Saint-Quentin,transfert,103,1,contigu,0,0
+02,02697,Samoussy,0230,Sissonne,0218,Laon,transfert,106,1,contigu,0,0
+03,03083,Contigny,0319,Le Montet,0326,Saint-Pourçain-sur-Sioule,transfert,111,1,contigu,0,0
+03,03242,St-Loup,0325,Neuilly-le-Réal,0328,Varennes-sur-Allier,transfert,114,1,contigu,0,0
+04,04122,Mirabeau,0414,Les Mées,0408,Digne,transfert,118,1,contigu,0,0
+06,06115,St-Antonin,0620,Roquesteron,0618,Puget-Théniers,transfert,128,1,contigu,0,0
+11,11223,Mas-des Cours,1106,Capendu,1107,Carcassonne-Est,transfert,167,1,contigu,88,0
+12,12215,St-Christophe-Vallon,1227,Rignac,1216,Marcillac-Vallon,transfert,176,1,contigu,0,0
+16,16422,Vouzan,1628,Villebois-Lavalette,1603,Angoulême-2,transfert,213,1,contigu,0,0
+21,21142,Chanceaux,2136,Venarey,2130,Saint-Seine-l'Abbaye,transfert,248,1,contigu,0,0
+26,26089,Chaudebonne,2617,La Motte-Chalancon,2618,Nyons,transfert,300,1,contigu,0,0
+26,26287,Roynac,2608,Crest-Sud,2615,Marsanne,transfert,304,1,contigu,0,0
+26,26297,St-Bonnet-de-Valclérieux,2611,Le Grand-Serre,2621,Romans-sur-Isère,transfert,304,1,contigu,0,0
+27,27090,Bosc-Roger-en-Roumois (Le),2707,Bourgtheroulde,2701,Amfreville-la-Campagne,transfert,308,1,contigu,0,0
+27,27422,Muids,2719,Gaillon,2702,Les Andelys,transfert,314,1,contigu,0,0
+31,31403,Ondes,3114,Fronton,3115,Grenade,transfert,352,1,contigu,0,0
+32,32288,Montiron,3226,Samatan,3209,Gimont,transfert,361,1,contigu,0,0
+32,32407,St-Soulan,3213,Lombez,3226,Samatan,transfert,364,1,contigu,0,0
+40,40037,Benquet,4007,Grenade,4011,Mont-de-Marsan,transfert,429,1,contigu,0,1486
+40,40147,Laurède,4012,Montfort,4014,Mugron,transfert,431,1,contigu,0,0
+40,40275,St-Maurice-sur-Adour,4022,Saint-Sever,4007,Grenade,transfert,433,1,contigu,0,0
+42,42290,St-Thomas-la-Garde,4229,Saint-Jean-Soleymieux,4209,Montbrison,transfert,447,1,contigu,0,0
+43,43045,Ceyssac,4319,Le Puy-Nord-Ouest,4312,Loudes,transfert,449,1,contigu,0,0
+43,43108,Jullianges,4307,La Chaise-Dieu,4308,Craponne-sur-Arzon,transfert,450,1,contigu,0,0
+48,48048,Cheylard-l'Évêque,4806,Châteauneuf-de-Randon,4810,Langogne,transfert,484,1,contigu,0,0
+50,50174,Équilly,5006,Bréhal,5017,La Haye-Pesnel,transfert,498,1,contigu,0,0
+55,55581,Willeroncourt,5505,Commercy,5511,Ligny-en-Barrois,transfert,562,1,contigu,0,0
+59,59324,Jeumont,5944,Maubeuge-Nord,5945,Maubeuge-Sud,transfert,598,1,contigu,0,0
+59,59490,Rainsars,5964,Trélon,5904,Avesnes-Sud,transfert,601,1,contigu,0,0
+60,60330,Laboissière-en-Thelle,6028,Noailles,6023,Méru,transfert,611,1,contigu,0,0
+62,62498,Lens,6232,Lens-Ouest,6231,Lens-Est,transfert,638,1,contigu,0,0
+64,64500,Salles-Mongiscard,6437,Salies-de-Béarn,6429,Orthez,transfert,668,1,contigu,0,0
+65,65146,Chis,6517,Pouyastruc,6521,Tarbes-Nord,transfert,673,1,contigu,0,0
+65,65222,Hitte,6523,Tournay,6522,Tarbes-Sud,transfert,674,1,contigu,0,0
+65,65381,Sabarros,6508,Castelnau-Magnoac,6510,Galan,transfert,677,1,contigu,0,0
+67,67091,Diedendorf,6706,Drulingen,6720,Sarre-Union,transfert,687,1,contigu,0,0
+67,67103,Dossenheim-sur-Zinsel,6717,La Petite-Pierre,6704,Bouxwiller,transfert,687,1,contigu,0,0
+69,69204,Saint-Genis-Laval,6926,Saint-Genis-Laval,6914,Lyon-4,transfert,705,1,indécidable,,0
+69,69255,Vaugneray,6931,Vaugneray,6921,Lyon-11,transfert,710,1,indécidable,,0
+74,74033,Bernex,7401,Abondance,7413,Évian-les-Bains,transfert,752,1,contigu,0,0
+76,76055,Baons-le-Comte,7654,Yerville,7655,Yvetot,transfert,762,1,contigu,0,0
+76,76560,St-Aubin-Épinay,7607,Boos,7613,Darnétal,transfert,772,1,contigu,0,0
+77,77062,Carnetin,7706,Claye-Souilly,7714,Lagny,transfert,777,1,contigu,0,0
+77,77176,Faremoutiers,7727,Rozay-en-Brie,7707,Coulommiers,transfert,779,1,contigu,0,0
+80,80588,Neufmoulin,8031,Nouvion,8001,Abbeville-Nord,transfert,820,1,contigu,0,0
+80,80609,Oneux,8031,Nouvion,8004,Ailly-le-Haut-Clocher,transfert,820,1,contigu,0,0
+80,80805,Villers-Tournelle,8005,Ailly-sur-Noye,8027,Montdidier,transfert,824,1,contigu,0,0
+88,88279,Madecourt,8828,Vittel,8816,Mirecourt,transfert,870,1,contigu,0,0
+89,89045,Bleigny-le-Carreau,8920,Ligny-le-Châtel,8903,Auxerre-Est,transfert,877,1,contigu,0,0
+89,89173,Fontaines,8924,Saint-Fargeau,8933,Toucy,transfert,879,1,contigu,0,0
+89,89351,Ste-Magnance,8923,Quarré-les-Tombes,8917,Guillon,transfert,882,1,contigu,0,0
+89,89472,Villiers-St-Benoît,8901,Aillant,8933,Toucy,transfert,885,1,contigu,0,0

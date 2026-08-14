@@ -1,0 +1,502 @@
+
+============================================================
+ CONTRÔLE INDÉPENDANT — cantons dissous par Victor Gay
+============================================================
+
+=== 1. Ce qui a été chargé ===
+ annee | polygones_gay | pseudo_cantons | invalides 
+-------+---------------+----------------+-----------
+  1870 |          3014 |           3014 |         0
+  1940 |          3068 |           3068 |         0
+(2 rows)
+
+
+--- types de pseudo-cantons (pct_type) ---
+ annee |                      pct_type                       | count 
+-------+-----------------------------------------------------+-------
+  1870 | Only entire commune(s)                              |  2640
+  1870 | Fraction of one commune and entire commune(s)       |   233
+  1870 | Pseudo canton                                       |   115
+  1870 | Fraction of one commune                             |    22
+  1870 | Fractions of several communes and entire commune(s) |     4
+  1940 | Only entire commune(s)                              |  2685
+  1940 | Fraction of one commune and entire commune(s)       |   242
+  1940 | Pseudo canton                                       |   118
+  1940 | Fraction of one commune                             |    20
+  1940 | Fractions of several communes and entire commune(s) |     3
+(10 rows)
+
+
+=== 2. Appariement des clés (avant toute géométrie) ===
+    Un écart ici est un problème de nomenclature, pas de tracé.
+ annee | apparies | chez_nous_seulement | chez_gay_seulement 
+-------+----------+---------------------+--------------------
+  1870 |     2775 |                   0 |                  0
+  1940 |     2824 |                   0 |                  0
+(2 rows)
+
+
+--- origine de la correspondance canton → pseudo-canton ---
+ annee | origine  | n_cantons 
+-------+----------+-----------
+  1870 | identite |      2660
+  1870 | mapping  |       288
+  1940 | identite |      2706
+  1940 | mapping  |       322
+(4 rows)
+
+
+--- clés orphelines (20 premières) ---
+ annee | deppct | statut | pct_name | cantons 
+-------+--------+--------+----------+---------
+(0 rows)
+
+
+--- collisions de codes (doit être vide) ---
+ annee | code 
+-------+------
+(0 rows)
+
+
+--- composition des groupes repliés chez Gay ---
+    Un groupe replié = 1 polygone « Pseudo canton » (la ville indivise)
+    + n polygones de cantons réels (leurs communes entières).
+ annee | n_pseudo | n_groupes | polygones_par_groupe 
+-------+----------+-----------+----------------------
+  1870 |        0 |      2660 |                 1.00
+  1870 |        1 |       115 |                 3.08
+  1940 |        0 |      2706 |                 1.00
+  1940 |        1 |       118 |                 3.07
+(4 rows)
+
+
+=== 3. Surfaces d'ensemble ===
+    Le total France valide la trame ; il ne dit rien des attributions.
+ annee | km2_nous | km2_eux | ecart | ecart_pct 
+-------+----------+---------+-------+-----------
+  1870 |   551909 |  548202 |  3707 |     0.676
+  1940 |   552205 |  548202 |  4003 |     0.730
+(2 rows)
+
+
+--- somme des surfaces vs surface de l'union ---
+    La somme compte deux fois les communes revendiquées par deux cantons.
+    L'écart entre les deux colonnes CHIFFRE ce double comptage ; la
+    surface de l'union, elle, doit valoir la France de l'époque
+    (~543 900 km² pour le territoire actuel, trame GEOFLA 2011).
+ annee | cote | km2_somme | km2_union | double_comptage 
+-------+------+-----------+-----------+-----------------
+  1870 | gay  |    548202 |    548202 |               0
+  1870 | nous |    551909 |    547964 |            3945
+  1940 | gay  |    548202 |    548202 |               0
+  1940 | nous |    552205 |    548169 |            4036
+(4 rows)
+
+
+--- codes département hors 01-95 (à identifier) ---
+ annee | dep | n_pct |                      exemples                      
+-------+-----+-------+----------------------------------------------------
+  1870 | 99  |    25 | {ALBESTROFF,BACCARAT,BAYON,BLAMONT,CHATEAU-SALINS}
+(1 row)
+
+
+=== 4. Distribution de l'IoU — le vrai résultat ===
+    IoU = intersection / union. 1 = tracés identiques.
+ annee |  n   | identiques | 999_pour_mille | 99_pour_cent | 90_a_99 | sous_90 |  pire  | moyenne 
+-------+------+------------+----------------+--------------+---------+---------+--------+---------
+  1870 | 2775 |       2622 |              0 |            0 |      78 |      75 | 0.3333 | 0.99281
+  1940 | 2824 |       2692 |              0 |            0 |      58 |      74 | 0.2889 | 0.99325
+(2 rows)
+
+
+=== 5. Les 25 pires écarts ===
+    À lire avec les limites connues : communes partagées entre cantons,
+    communes disparues rattrapées par successeur, choix hac_partage.
+ annee | deppct | dep |         pct_name         | n_cantons | n_polygones | n_sans_geom | km2_nous | km2_eux |   iou   
+-------+--------+-----+--------------------------+-----------+-------------+-------------+----------+---------+---------
+  1940 | 4208   | 42  | FIRMINY                  |         1 |           1 |           0 |   112.27 |   32.43 | 0.28886
+  1870 | 3539   | 35  | SAINT-SERVAN             |         1 |           1 |           0 |    54.88 |   18.29 | 0.33326
+  1940 | 3539   | 35  | SAINT-SERVAN-SUR-MER     |         1 |           1 |           0 |    54.88 |   18.29 | 0.33326
+  1870 | 4204   | 42  | LE CHAMBON-FEUGEROLLES   |         1 |           1 |           0 |   167.34 |   87.50 | 0.52289
+  1870 | 6735   | 67  | WOERTH                   |         1 |           1 |           0 |   185.58 |  101.52 | 0.54707
+  1940 | 6735   | 67  | WOERTH                   |         1 |           1 |           0 |   185.58 |  101.52 | 0.54707
+  1870 | 4406   | 44  | CARQUEFOU                |         1 |           1 |           0 |   149.03 |   82.55 | 0.55393
+  1870 | 5212   | 52  | FAYL-BILLOT              |         1 |           1 |           0 |   416.95 |  239.60 | 0.57464
+  1940 | 5212   | 52  | FAYL-BILLOT              |         1 |           1 |           0 |   416.95 |  239.60 | 0.57464
+  1870 | 0422   | 04  | SAINT-ANDRE-DE-MEOUILLES |         1 |           1 |           0 |   283.34 |  173.68 | 0.61299
+  1940 | 0422   | 04  | SAINT-ANDRE-LES-ALPES    |         1 |           1 |           0 |   283.34 |  173.68 | 0.61299
+  1870 | 6910   | 69  | LIMONEST                 |         1 |           1 |           0 |   134.41 |   86.57 | 0.64404
+  1940 | 6910   | 69  | LIMONEST                 |         1 |           1 |           0 |   134.41 |   86.57 | 0.64404
+  1940 | 5715   | 57  | HAYANGE                  |         1 |           1 |           0 |   149.22 |   98.24 | 0.65836
+  1870 | 5209   | 52  | CLEFMONT                 |         1 |           1 |           0 |   273.85 |  180.72 | 0.65993
+  1940 | 5209   | 52  | CLEFMONT                 |         1 |           1 |           0 |   273.85 |  180.72 | 0.65993
+  1870 | 5523   | 55  | VAUBECOURT               |         1 |           1 |           0 |   274.90 |  187.60 | 0.68241
+  1940 | 5523   | 55  | VAUBECOURT               |         1 |           1 |           0 |   274.90 |  187.60 | 0.68241
+  1870 | 5928   | 59  | HAUBOURDIN               |         1 |           1 |           0 |   113.91 |   78.09 | 0.68552
+  1940 | 5928   | 59  | HAUBOURDIN               |         1 |           1 |           0 |   113.91 |   78.09 | 0.68552
+  1870 | 8702   | 87  | AMBAZAC                  |         1 |           1 |           0 |   260.72 |  179.49 | 0.68843
+  1870 | 5227   | 52  | VIGNORY                  |         1 |           1 |           0 |   251.71 |  176.87 | 0.70268
+  1940 | 5227   | 52  | VIGNORY                  |         1 |           1 |           0 |   251.71 |  176.87 | 0.70268
+  1870 | 7637   | 76  | MONTIVILLIERS            |         1 |           1 |           0 |   187.57 |  132.21 | 0.70486
+  1940 | 7637   | 76  | MONTIVILLIERS            |         1 |           1 |           0 |   187.57 |  132.21 | 0.70486
+(25 rows)
+
+
+--- même chose, hors ensembles urbains (n_pseudo = 0) ---
+    Les cantons ruraux ne subissent aucun repliement : un écart ici
+    met en cause nos attributions, pas la structure de la comparaison.
+ annee | deppct | dep |         pct_name         | n_cantons | n_sans_geom | km2_nous | km2_eux |   iou   
+-------+--------+-----+--------------------------+-----------+-------------+----------+---------+---------
+  1940 | 4208   | 42  | FIRMINY                  |         1 |           0 |   112.27 |   32.43 | 0.28886
+  1870 | 3539   | 35  | SAINT-SERVAN             |         1 |           0 |    54.88 |   18.29 | 0.33326
+  1940 | 3539   | 35  | SAINT-SERVAN-SUR-MER     |         1 |           0 |    54.88 |   18.29 | 0.33326
+  1870 | 4204   | 42  | LE CHAMBON-FEUGEROLLES   |         1 |           0 |   167.34 |   87.50 | 0.52289
+  1870 | 6735   | 67  | WOERTH                   |         1 |           0 |   185.58 |  101.52 | 0.54707
+  1940 | 6735   | 67  | WOERTH                   |         1 |           0 |   185.58 |  101.52 | 0.54707
+  1870 | 4406   | 44  | CARQUEFOU                |         1 |           0 |   149.03 |   82.55 | 0.55393
+  1870 | 5212   | 52  | FAYL-BILLOT              |         1 |           0 |   416.95 |  239.60 | 0.57464
+  1940 | 5212   | 52  | FAYL-BILLOT              |         1 |           0 |   416.95 |  239.60 | 0.57464
+  1870 | 0422   | 04  | SAINT-ANDRE-DE-MEOUILLES |         1 |           0 |   283.34 |  173.68 | 0.61299
+  1940 | 0422   | 04  | SAINT-ANDRE-LES-ALPES    |         1 |           0 |   283.34 |  173.68 | 0.61299
+  1870 | 6910   | 69  | LIMONEST                 |         1 |           0 |   134.41 |   86.57 | 0.64404
+  1940 | 6910   | 69  | LIMONEST                 |         1 |           0 |   134.41 |   86.57 | 0.64404
+  1940 | 5715   | 57  | HAYANGE                  |         1 |           0 |   149.22 |   98.24 | 0.65836
+  1870 | 5209   | 52  | CLEFMONT                 |         1 |           0 |   273.85 |  180.72 | 0.65993
+  1940 | 5209   | 52  | CLEFMONT                 |         1 |           0 |   273.85 |  180.72 | 0.65993
+  1870 | 5523   | 55  | VAUBECOURT               |         1 |           0 |   274.90 |  187.60 | 0.68241
+  1940 | 5523   | 55  | VAUBECOURT               |         1 |           0 |   274.90 |  187.60 | 0.68241
+  1870 | 5928   | 59  | HAUBOURDIN               |         1 |           0 |   113.91 |   78.09 | 0.68552
+  1940 | 5928   | 59  | HAUBOURDIN               |         1 |           0 |   113.91 |   78.09 | 0.68552
+  1870 | 8702   | 87  | AMBAZAC                  |         1 |           0 |   260.72 |  179.49 | 0.68843
+  1870 | 5227   | 52  | VIGNORY                  |         1 |           0 |   251.71 |  176.87 | 0.70268
+  1940 | 5227   | 52  | VIGNORY                  |         1 |           0 |   251.71 |  176.87 | 0.70268
+  1870 | 7637   | 76  | MONTIVILLIERS            |         1 |           0 |   187.57 |  132.21 | 0.70486
+  1940 | 7637   | 76  | MONTIVILLIERS            |         1 |           0 |   187.57 |  132.21 | 0.70486
+(25 rows)
+
+
+=== 6. Départements les plus en écart (surface non partagée, km²) ===
+ annee | dep | n_pct | km2_divergents | iou_moyen 
+-------+-----+-------+----------------+-----------
+  1940 | 52  |    28 |          627.8 |    0.9186
+  1870 | 52  |    28 |          627.8 |    0.9186
+  1870 | 57  |    25 |          282.6 |    0.9502
+  1940 | 04  |    30 |          273.4 |    0.9601
+  1870 | 04  |    30 |          273.4 |    0.9601
+  1940 | 57  |    34 |          219.1 |    0.9701
+  1940 | 51  |    30 |          182.2 |    0.9833
+  1940 | 55  |    28 |          172.0 |    0.9790
+  1870 | 55  |    28 |          149.3 |    0.9820
+  1870 | 67  |    30 |          123.8 |    0.9768
+  1870 | 86  |    30 |          122.8 |    0.9851
+  1940 | 79  |    29 |          114.4 |    0.9893
+  1870 | 51  |    30 |          114.4 |    0.9892
+  1870 | 79  |    29 |          114.4 |    0.9893
+  1940 | 67  |    32 |          111.5 |    0.9811
+(15 rows)
+
+
+=== 7. Verdict ===
+ annee | pct_pseudo_cantons_conformes | pct_surface_commune 
+-------+------------------------------+---------------------
+  1870 |                        94.49 |              99.221
+  1940 |                        95.33 |              99.248
+(2 rows)
+
+
+--- verdict restreint aux cantons ruraux (aucun repliement) ---
+ annee |  n   | pct_conformes | iou_moyen 
+-------+------+---------------+-----------
+  1870 | 2660 |         94.51 |   0.99261
+  1940 | 2706 |         95.31 |   0.99304
+(2 rows)
+
+
+Détail interrogeable dans histgis.ctrl_ecart (une ligne par pseudo-canton).
+Cartographie d'un écart :
+  SELECT ST_SymDifference(n.geom, e.geom) FROM ctrl_nous n JOIN ctrl_eux e
+    USING (annee, deppct) WHERE annee = 1870 AND deppct = '0380';
+
+============================================================
+ D'OÙ VIENNENT LES ÉCARTS
+============================================================
+
+=== 1. Contours de département : concordent-ils ? ===
+    Un IoU proche de 1 ici, alors que les cantons divergent, signifie
+    que les écarts sont une redistribution INTERNE au département.
+ annee | n_dep | identiques | sous_99 | iou_moyen | km2_nous_seul | km2_gay_seul 
+-------+-------+------------+---------+-----------+---------------+--------------
+  1870 |    89 |         74 |       4 |   0.99876 |           342 |          238
+  1940 |    90 |         81 |       2 |   0.99937 |           342 |           33
+(2 rows)
+
+
+--- départements dont le contour diverge (top 15) ---
+ annee | dep | km2_nous | km2_gay | km2_nous_seul | km2_gay_seul |   iou   
+-------+-----+----------+---------+---------------+--------------+---------
+  1870 | 57  |   5236.5 |  5393.3 |           0.0 |        156.8 | 0.97092
+  1870 | 52  |   6380.2 |  6250.1 |         130.1 |          0.0 | 0.97961
+  1940 | 52  |   6380.2 |  6250.1 |         130.1 |          0.0 | 0.97961
+  1870 | 75  |    472.7 |   480.1 |           0.0 |          7.4 | 0.98450
+  1940 | 79  |   6116.8 |  6028.7 |          88.1 |          0.0 | 0.98559
+  1870 | 79  |   6116.8 |  6028.7 |          88.1 |          0.0 | 0.98559
+  1940 | 51  |   8249.6 |  8190.6 |          59.0 |          0.0 | 0.99285
+  1870 | 51  |   8249.6 |  8190.6 |          59.0 |          0.0 | 0.99285
+  1940 | 28  |   5954.3 |  5928.4 |          25.9 |          0.0 | 0.99566
+  1870 | 28  |   5954.3 |  5928.4 |          25.9 |          0.0 | 0.99566
+  1870 | 68  |   4124.0 |  4138.9 |           0.0 |         14.9 | 0.99641
+  1940 | 20  |   8732.7 |  8762.5 |           0.0 |         29.9 | 0.99659
+  1870 | 20  |   8732.7 |  8762.5 |           0.0 |         29.9 | 0.99659
+  1870 | 39  |   5057.9 |  5041.2 |          16.7 |          0.0 | 0.99669
+  1940 | 39  |   5057.9 |  5041.2 |          16.7 |          0.0 | 0.99669
+(15 rows)
+
+
+=== 2. Territoire couvert par un seul des deux ===
+    C'est ici que doivent apparaître les 5 926 km² manquants de 1870.
+ annee | dep | km2_gay_seul | km2_nous_seul |   iou   
+-------+-----+--------------+---------------+---------
+  1870 | 57  |        156.8 |           0.0 | 0.97092
+(1 row)
+
+
+--- atomes sans géométrie, par année ---
+    Une autre explication possible du déficit de surface.
+ annee | atomes_sans_geom 
+-------+------------------
+(0 rows)
+
+
+=== 3. Atomes rangés ailleurs par Gay ===
+ annee | n_atomes | hors_couverture | mal_places | pct_mal_places 
+-------+----------+-----------------+------------+----------------
+  1870 |    38292 |               0 |        151 |           0.39
+  1940 |    38302 |               0 |        152 |           0.40
+(2 rows)
+
+
+=== 4. LA question : les limites connues expliquent-elles ces atomes ? ===
+    `geofla` + non partagé = atome sans excuse. Un taux élevé de
+    désaccord dans cette ligne est une vraie erreur d'attribution.
+ annee |      source      | partagee | n_atomes | en_desaccord |  pct  
+-------+------------------+----------+----------+--------------+-------
+  1870 | hac_partage      | f        |        6 |            3 | 50.00
+  1870 | hac              | f        |       11 |            2 | 18.18
+  1870 | successeur       | t        |     1483 |          138 |  9.31
+  1870 | creation_arriere | f        |       57 |            3 |  5.26
+  1870 | geofla           | t        |     1427 |            2 |  0.14
+  1870 | geofla           | f        |    35283 |            3 |  0.01
+  1870 | union_prefixe    | t        |       15 |            0 |  0.00
+  1870 | absorbee         | t        |       10 |            0 |  0.00
+  1940 | hac_partage      | f        |        6 |            3 | 50.00
+  1940 | hac              | f        |       11 |            2 | 18.18
+  1940 | successeur       | t        |     1487 |          144 |  9.68
+  1940 | creation_arriere | f        |       58 |            3 |  5.17
+  1940 | union_prefixe    | t        |       24 |            0 |  0.00
+  1940 | geofla           | t        |     1388 |            0 |  0.00
+  1940 | absorbee         | t        |       10 |            0 |  0.00
+  1940 | geofla           | f        |    35318 |            0 |  0.00
+(16 rows)
+
+
+=== 5. Paires de cantons qui échangent des atomes (top 25) ===
+    Un échange réciproque entre deux cantons voisins évoque une erreur
+    de lecture de nomenclature ; un flux à sens unique, une commune
+    rattachée au mauvais canton.
+ annee | pct_nous | pct_gay |      nom_chez_nous       |        nom_chez_gay         | n_atomes | dont_fragiles 
+-------+----------+---------+--------------------------+-----------------------------+----------+---------------
+  1870 | 0815     | 0805    | MEZIERES                 | CHARLEVILLE                 |        3 |             3
+  1870 | 8614     | 8604    | LUSSAC-LES-CHATEAUX      | CHAUVIGNY                   |        3 |             3
+  1940 | 0815     | 0805    | MEZIERES                 | CHARLEVILLE                 |        3 |             3
+  1940 | 5523     | 5525    | VAUBECOURT               | VAVINCOURT                  |        3 |             3
+  1940 | 5705     | 5732    | CATTENOM                 | THIONVILLE                  |        3 |             3
+  1870 | 5523     | 5525    | VAUBECOURT               | VAVINCOURT                  |        3 |             3
+  1940 | 8614     | 8604    | LUSSAC-LES-CHATEAUX      | CHAUVIGNY                   |        3 |             3
+  1940 | 5110     | 5126    | ECURY-SUR-COOLE          | SOMPUIS                     |        2 |             2
+  1940 | 1424     | 1410    | MEZIDON                  | CAMBREMER                   |        2 |             2
+  1940 | 5207     | 5221    | CHAUMONT                 | NOGENT-EN-BASSIGNY          |        2 |             2
+  1940 | 0415     | 0408    | MEZEL                    | DIGNE                       |        2 |             2
+  1870 | 7319     | 7380    | LA MOTTE-SERVOLEX        | CHAMBERY                    |        2 |             2
+  1870 | 0415     | 0408    | MEZEL                    | DIGNE                       |        2 |             2
+  1940 | 2822     | 2810    | SENONCHES                | CHATEAUNEUF-EN-THYMERAIS    |        2 |             2
+  1870 | 5705     | 5732    | CATTENOM                 | THIONVILLE                  |        2 |             2
+  1870 | 6706     | 6720    | DRULINGEN                | SARRE-UNION                 |        2 |             2
+  1870 | 5517     | 5527    | SAINT-MIHIEL             | VIGNEULLES-LES-HATTONCHATEL |        2 |             2
+  1870 | 5227     | 5214    | VIGNORY                  | JUZENNECOURT                |        2 |             2
+  1870 | 5110     | 5126    | ECURY-SUR-COOLE          | SOMPUIS                     |        2 |             2
+  1870 | 1424     | 1410    | MEZIDON                  | CAMBREMER                   |        2 |             2
+  1870 | 0422     | 0407    | SAINT-ANDRE-DE-MEOUILLES | COLMARS                     |        2 |             2
+  1870 | 6735     | 6715    | WOERTH                   | NIEDERBRONN-LES-BAINS       |        2 |             2
+  1870 | 2822     | 2810    | SENONCHES                | CHATEAUNEUF-EN-THYMERAIS    |        2 |             2
+  1940 | 0422     | 0407    | SAINT-ANDRE-LES-ALPES    | COLMARS                     |        2 |             2
+  1870 | 5207     | 5221    | CHAUMONT                 | NOGENT-LE-ROI               |        2 |             2
+(25 rows)
+
+
+=== 6. Détail des cinq cantons les plus en écart ===
+ annee | pct_nous | atom_id | insee_geofla | pct_gay |   source   | partagee 
+-------+----------+---------+--------------+---------+------------+----------
+  1870 | 3539     | 34632   | 35313        | 3537    | successeur | t
+  1870 | 4204     | 34944   | 42292        | 4280    | successeur | t
+  1870 | 6735     | 12352   | 67114        | 6715    | successeur | t
+  1870 | 6735     | 21588   | 67284        | 6734    | successeur | t
+  1870 | 6735     | 24658   | 67316        | 6715    | successeur | t
+  1940 | 3539     | 34632   | 35313        | 3537    | successeur | t
+  1940 | 4208     | 34944   | 42292        | 4280    | successeur | t
+(7 rows)
+
+
+=== 7. Le département 99 ===
+    Codes Cassini d'un département disparu. Ce que nous en disons :
+ notre_dep | n_unites 
+-----------+----------
+ 99        |       22
+(1 row)
+
+
+=== 8. Le correctif de scission, noté par Gay ===
+    11_scission.sql prolonge vers l'arrière le rattachement des atomes
+    apparus en cours de série, en pariant qu'une commune nouvelle reste
+    dans le canton de sa mère. Voici le score du pari.
+ annee | atomes_prolonges | pari_perdu | pct_pari_gagne 
+-------+------------------+------------+----------------
+  1870 |              414 |          4 |          99.03
+(1 row)
+
+
+--- les communes qui n'ont pas suivi le canton de leur mère ---
+    Chacune est un rattachement à corriger à la main, ou à retirer.
+ annee | atom_id | insee_geofla | pct_nous |  ou_nous_la_mettons   | pct_gay | ou_gay_la_met | debut_reel |  km2  |   source   
+-------+---------+--------------+----------+-----------------------+---------+---------------+------------+-------+------------
+  1870 | 37390   | 08447        | 0815     | MEZIERES              | 0805    | CHARLEVILLE   | 1872-01-01 | 32.69 | successeur
+  1870 | 36437   | 77454        | 7710     | DONNEMARIE-EN-MONTOIS | 7723    | NANGIS        | 1874-01-01 | 10.60 | geofla
+  1870 | 17501   | 56086        | 5630     | QUIBERON              | 5622    | BELLE-ILE     | 1891-01-01 |  3.25 | geofla
+  1870 | 17191   | 56085        | 5630     | QUIBERON              | 5622    | BELLE-ILE     | 1891-01-01 |  2.25 | geofla
+(4 rows)
+
+
+Tables laissées en base : ctrl_dep (avec geom_ecart), ctrl_atome.
+
+============================================================
+ TERRITOIRE NON COUVERT — communes GEOFLA sans atome
+============================================================
+
+=== 1. Volumétrie ===
+    Le total doit retomber sur le km2_gay_seul de 09 : 5 926 km² en
+    1870, 744 en 1940 — mais seulement une fois écartées les communes
+    que Gay ne couvre pas non plus (pct_gay IS NULL). Ce sont Tende et
+    La Brigue, italiennes jusqu'au traité de Paris de 1947 : présentes
+    dans GEOFLA 2011, absentes de la France de 1870 comme de 1940.
+ annee | n_communes | km2_total | hors_france | km2_hors_france | km2_a_comparer | n_departements 
+-------+------------+-----------+-------------+-----------------+----------------+----------------
+  1870 |         41 |       509 |           2 |           271.1 |            238 |             10
+  1940 |          4 |       304 |           2 |           271.1 |             32 |              3
+(2 rows)
+
+
+--- ce que Gay ne couvre pas non plus ---
+ annee | insee_com | nom_comm  | dep |  km2   
+-------+-----------+-----------+-----+--------
+  1870 | 06163     | TENDE     | 06  | 177.82
+  1870 | 06162     | LA BRIGUE | 06  |  93.31
+  1940 | 06163     | TENDE     | 06  | 177.82
+  1940 | 06162     | LA BRIGUE | 06  |  93.31
+(4 rows)
+
+
+=== 2. Ces communes sont-elles postérieures à la date ? ===
+ annee |                  anteriorite                  | n_communes | km2 
+-------+-----------------------------------------------+------------+-----
+  1870 | creation INSEE documentee                     |          4 | 280
+  1870 | non documentee (creation anterieure a 1943 ?) |         37 | 229
+  1940 | creation INSEE documentee                     |          2 | 271
+  1940 | non documentee (creation anterieure a 1943 ?) |          2 |  32
+(4 rows)
+
+
+--- créations documentées : quand ? ---
+ annee | decennie | n_communes | km2 
+-------+----------+------------+-----
+  1870 |     1940 |          2 | 271
+  1870 |     1980 |          2 |   9
+  1940 |     1940 |          2 | 271
+(3 rows)
+
+
+=== 3. Les 30 plus grandes surfaces non couvertes ===
+ annee | insee_com |       nom_comm        | dep |  km2   | pct_gay |                  anteriorite                  |  date_eff  
+-------+-----------+-----------------------+-----+--------+---------+-----------------------------------------------+------------
+  1940 | 06163     | TENDE                 | 06  | 177.82 |         | creation INSEE documentee                     | 1947-09-17
+  1870 | 06163     | TENDE                 | 06  | 177.82 |         | creation INSEE documentee                     | 1947-09-17
+  1870 | 06162     | LA BRIGUE             | 06  |  93.31 |         | creation INSEE documentee                     | 1947-09-17
+  1940 | 06162     | LA BRIGUE             | 06  |  93.31 |         | creation INSEE documentee                     | 1947-09-17
+  1940 | 2B366     | CHISA                 | 2B  |  29.85 | 2041    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 2B366     | CHISA                 | 2B  |  29.85 | 2041    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57541     | PHILIPPSBOURG         | 57  |  24.61 | 5702    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57641     | SCHWEYEN              | 57  |  11.64 | 5736    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 68210     | MITTLACH              | 68  |  10.92 | 6818    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57286     | HALSTROFF             | 57  |  10.69 | 5731    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57019     | AMNEVILLE             | 57  |  10.54 | 5732    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 13075     | PLAN-DE-CUQUES        | 13  |   8.57 | 1383    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 67505     | LA VANCELLE           | 67  |   8.40 | 6724    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57704     | VECKRING              | 57  |   6.87 | 5721    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57585     | RITZING               | 57  |   6.28 | 5731    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57058     | BEHREN-LES-FORBACH    | 57  |   5.95 | 5712    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 54425     | PIENNES               | 54  |   5.10 | 5701    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 54172     | DONCOURT-LES-LONGUYON | 54  |   5.07 | 5715    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57202     | ETZLING               | 57  |   4.65 | 5712    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57457     | MENSKIRCH             | 57  |   4.63 | 5704    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 54367     | MEXY                  | 54  |   4.57 | 5716    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57372     | KUNTZIG               | 57  |   4.41 | 5721    | creation INSEE documentee                     | 1989-01-01
+  1870 | 57767     | STUCKANGE             | 57  |   4.21 | 5721    | creation INSEE documentee                     | 1989-01-01
+  1870 | 57519     | OBERVISSE             | 57  |   4.13 | 5703    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57474     | MONDELANGE            | 57  |   4.11 | 5732    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57638     | SCHOENECK             | 57  |   4.10 | 5712    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 54342     | MANCIEULLES           | 54  |   4.09 | 5707    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57194     | ENTRANGE              | 57  |   4.02 | 5705    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57358     | KEDANGE-SUR-CANNER    | 57  |   3.97 | 5721    | non documentee (creation anterieure a 1943 ?) | 
+  1870 | 57689     | VALMESTROFF           | 57  |   3.95 | 5721    | non documentee (creation anterieure a 1943 ?) | 
+(30 rows)
+
+
+=== 4. Par département, confronté à 09 ===
+    `km2_gay_seul` vient de ctrl_dep. Les deux colonnes doivent
+    coïncider ; un résidu signale une autre cause que la couverture.
+    Réserve sur le résidu : les deux colonnes ne parlent pas du même
+    code. `ctrl_non_couvert.dep` vient de GEOFLA (département actuel),
+    `ctrl_dep.dep` de Gay (département d'époque). En Lorraine, le
+    partage de 1871 suffit à créer un résidu sans anomalie.
+ annee | dep | n_communes | km2_non_couvert | km2_gay_seul | residu 
+-------+-----+------------+-----------------+--------------+--------
+  1870 | 57  |         22 |           135.0 |        156.8 |  -21.9
+  1870 | 2B  |          1 |            29.9 |              |       
+  1940 | 2B  |          1 |            29.9 |              |       
+  1870 | 54  |          6 |            23.9 |              |       
+  1870 | 68  |          2 |            14.9 |         14.9 |    0.0
+  1870 | 67  |          2 |            12.2 |         12.2 |    0.0
+  1870 | 13  |          1 |             8.6 |          8.6 |    0.0
+  1870 | 93  |          2 |             6.3 |              |       
+  1870 | 92  |          2 |             4.4 |              |       
+  1870 | 95  |          1 |             2.6 |              |       
+  1940 | 95  |          1 |             2.6 |              |       
+(11 rows)
+
+
+=== 5. Le cas témoin : Bouches-du-Rhône ===
+    557,9 km² manquants en 1870, 150,0 en 1940. Si l'hypothèse tient,
+    la différence est faite de communes créées entre les deux dates.
+ annee | insee_com |    nom_comm    | km2  | pct_gay | date_eff |                  anteriorite                  
+-------+-----------+----------------+------+---------+----------+-----------------------------------------------
+  1870 | 13075     | PLAN-DE-CUQUES | 8.57 | 1383    |          | non documentee (creation anterieure a 1943 ?)
+(1 row)
+
+
+=== 6. Combien d'atomes faudrait-il ajouter ? ===
+    Une commune non couverte à une date l'est en général aux deux.
+ communes_distinctes | occurrences_annee_commune 
+---------------------+---------------------------
+                  41 |                        45
+(1 row)
+
+
+Tables : ctrl_non_couvert (avec geom), ctrl_non_couvert_expl.

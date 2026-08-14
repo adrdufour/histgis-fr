@@ -1,0 +1,13 @@
+insee,methode,cible,nom_cible,commentaire
+69123,union_prefixe,6938,,Lyon : union des arrondissements 69381 a 69389
+13055,union_prefixe,132,,"Marseille : union des arrondissements 13201 a 13216. Prefixe 132 et non 1320 - avec 1320 le LIKE ne prenait que 13201 a 13209 et perdait les arrondissements 10 a 16, soit 133,66 km2. Sans risque : en Bouches-du-Rhone les codes 132xx sont reserves aux arrondissements marseillais, les communes s'arretent a 13119."
+59248,absorbee,59183,DUNKERQUE,Fort-Mardyck rattachee a Dunkerque en 2010
+59540,absorbee,59183,DUNKERQUE,Saint-Pol-sur-Mer rattachee a Dunkerque en 2010
+14624,absorbee,14697,L'OUDON,Saint-Martin-de-Fresnay : fusion-association de 1973 ; code transfere a Totes en 1990
+39524,absorbee,39367,MORBIER,Tancua rattachee a Morbier le 1er janvier 2007
+79037,absorbee,79013,ARGENTON-LES-VALLEES,Boesse fusionnee avec Argenton-Chateau et Sanzay le 1er septembre 2006
+79305,absorbee,79013,ARGENTON-LES-VALLEES,Sanzay fusionnee avec Argenton-Chateau et Boesse le 1er septembre 2006
+50303,absorbee,50216,GRAIGNES-MESNIL-ANGOT,Le Mesnil-Angot fusionnee avec Graignes le 28 fevrier 2007
+80370,absorbee,80369,FROHEN-SUR-AUTHIE,Frohen-le-Petit fusionnee avec Frohen-le-Grand le 1er janvier 2007
+81107,absorbee,81132,GUITALENS-L'ALBAREDE,Guitalens fusionnee avec Lalbarede le 29 juin 2007
+21551,absorbee,21084,SOURCE-SEINE,Saint-Germain-Source-Seine : fusion presumee avec Blessey en 2009 - A CONFIRMER

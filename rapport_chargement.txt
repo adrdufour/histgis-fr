@@ -1,0 +1,101 @@
+
+=== 1. Effectifs par date (attendu : 87-90 dep, 2861-3028 cantons) ===
+    date    | niveau | n_unites | n_departements | n_atomes 
+------------+--------+----------+----------------+----------
+ 1870-06-01 | canton |     2948 |             89 |    37821
+ 1870-06-01 | circo  |       89 |             89 |    37647
+ 1876-06-01 | canton |     2862 |             87 |    36239
+ 1876-06-01 | circo  |      535 |             87 |    36071
+ 1885-06-01 | canton |     2867 |             87 |    36304
+ 1885-06-01 | circo  |       87 |             87 |    36135
+ 1900-06-01 | canton |     2898 |             87 |    36390
+ 1900-06-01 | circo  |      559 |             87 |    36207
+ 1914-06-01 | canton |     2918 |             87 |    36472
+ 1914-06-01 | circo  |      580 |             87 |    36274
+ 1928-06-01 | canton |     3024 |             90 |    38219
+ 1928-06-01 | circo  |      590 |             90 |    38013
+ 1936-06-01 | canton |     3028 |             90 |    38241
+ 1936-06-01 | circo  |      595 |             90 |    38035
+ 1940-06-01 | canton |     3028 |             90 |    38244
+ 1940-06-01 | circo  |      595 |             90 |    38038
+(16 rows)
+
+
+=== 2. Régime électoral déduit, par période ===
+   regime   | depuis | jusqu_a | n_annees 
+------------+--------+---------+----------
+ liste      |   1870 |    1927 |       19
+ uninominal |   1876 |    1940 |       52
+(2 rows)
+
+
+=== 3. Anomalies structurelles ===
+                        probleme                         |  n  |                         exemples                         
+---------------------------------------------------------+-----+----------------------------------------------------------
+ unite provisoire (absente des nomenclatures)            | 132 | {U1381@1902,U1381@1928,U7580@1881,U7580@1889,U7580@1893}
+ unite sans aucun membership                             |   0 | 
+ atome sans aucun membership                             |   0 | 
+ atome sans rattachement geometrique (insee_geofla NULL) |   0 | 
+(4 rows)
+
+
+=== 4. Trous de chronologie (top 10 par durée, niveau canton) ===
+ atom_id | trou_debut |  trou_fin  | duree_annees 
+---------+------------+------------+--------------
+ 10100   | 1871-01-01 | 1919-01-01 |         48.0
+ 10373   | 1871-01-01 | 1919-01-01 |         48.0
+ 10425   | 1871-01-01 | 1919-01-01 |         48.0
+ 10577   | 1871-01-01 | 1919-01-01 |         48.0
+ 10641   | 1871-01-01 | 1919-01-01 |         48.0
+ 10651   | 1871-01-01 | 1919-01-01 |         48.0
+ 10770   | 1871-01-01 | 1919-01-01 |         48.0
+ 10851   | 1871-01-01 | 1919-01-01 |         48.0
+ 10862   | 1871-01-01 | 1919-01-01 |         48.0
+ 1000    | 1871-01-01 | 1919-01-01 |         48.0
+(10 rows)
+
+--- volumétrie des trous ---
+ niveau | count 
+--------+-------
+ canton |  1690
+ circo  |  1684
+(2 rows)
+
+
+=== 5. Couverture croisée canton / circo (communes Cassini) ===
+ date | sans_circo | sans_canton 
+------+------------+-------------
+(0 rows)
+
+
+=== 6. Cantons à cheval sur plusieurs circonscriptions (1914, top 10) ===
+    (1914 = scrutin uninominal ; sous scrutin de liste le résultat est vide par construction)
+ canton |    nom    | n_circos |               circos               
+--------+-----------+----------+------------------------------------
+ 8824   | Saint-Dié |        3 | {U8806@1881,U8807@1881,U8880@1881}
+(1 row)
+
+
+=== 7. Cohérence unit_version : la dernière version doit porter unit.nom ===
+ versions_finales_divergentes 
+------------------------------
+                            0
+(1 row)
+
+
+=== 8. Contrôle anti-chevauchement (doit renvoyer 0 partout) ===
+    objet     | chevauchements 
+--------------+----------------
+ membership   |              0
+ unit_version |              0
+(2 rows)
+
+
+=== 9. Exemple : le canton de Montluçon-Est en 1885 ===
+ unit_id |       nom       | dep | n_atomes 
+---------+-----------------+-----+----------
+ 0320    | Montluçon-Est   | 03  |        9
+ 0321    | Montluçon-Ouest | 03  |        8
+ 0120    | Montluel        | 01  |       16
+(3 rows)
+

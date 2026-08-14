@@ -1,0 +1,58 @@
+# .gitignore — HistGIS
+#
+# Principe : on versionne ce qu'on écrit, pas ce qu'on reçoit ni ce qu'on
+# régénère. Le dépôt doit rester léger (quelques Mo) pour que l'historique
+# serve à quelque chose ; les 1,3 Go de données reçues n'ont pas d'historique
+# à raconter, elles ne changent pas.
+#
+# Conséquence à connaître : un clone du dépôt NE SUFFIT PAS à rejouer la
+# chaîne. Il faut retélécharger les sources, dont les DOI sont listés dans
+# METHODE.md § 3 et dans LISEZMOI.md.
+
+# --- données reçues, jamais modifiées ---------------------------------
+sources/
+# (chemins d'avant la réorganisation, gardés pour les commits anciens)
+/trfgis/
+/cog/
+/geofla/
+/modif_canton/
+/arrondissement/
+
+# --- sorties régénérables ---------------------------------------------
+# Régénérées par cartes_cantons.py, cartes_paris.py, recupere_iris.py…
+# Voir LISEZMOI.md pour la commande qui refait chacune.
+sorties/
+*.pdf
+*.gpkg
+*.qgz
+*.7z
+*.png
+*.jpeg
+*.jpg
+
+# GeoJSON : refaits au WFS en quelques minutes, et volumineux.
+*.geojson
+
+# OCR brut du volume de 1954 : régénérable, mais des heures de calcul.
+# Conservé sur disque, hors dépôt.
+cog1954/ocr_brut/
+jorf_txt/*_raw.txt
+
+# --- sortie de la chaîne de chargement ---------------------------------
+# build/ est intégralement reconstruit par rebuild.sh. Le versionner
+# ferait entrer des dizaines de milliers de lignes qui changent à chaque
+# passage, pour aucun gain : ce qui compte est le script qui les produit.
+build/
+
+# --- Python ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- système -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*~
+*.swp
