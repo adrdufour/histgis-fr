@@ -105,12 +105,26 @@ LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla
 WHERE  a.insee_geofla IS NOT NULL
   AND  a.fraction
   AND  a.atom_id LIKE '%#%'
+  AND  g.source <> 'fraction_cog'        -- ← INDISPENSABLE, voir ci-dessous
 GROUP  BY 1, 2
 HAVING count(*) > 1;
 ```
 
 **Résultat attendu : 119 communes, 214 coupes.** Dont 81 communes à une seule
 coupe, 16 à deux, 13 à trois ; Lyon en demande 12 et Marseille 11.
+
+> **Correctif du 15 août 2026.** La quatrième condition manquait. Sans elle la
+> requête rend **environ 312 communes** et non 119 : elle ramasse les communes
+> partagées d'après 1943, dont les atomes-fraction portent eux aussi un `#` et
+> `fraction = true`. Le paragraphe « À ne pas confondre » ci-dessous décrivait
+> déjà le piège — la requête, elle, n'en tenait pas compte. Une prose juste
+> au-dessus d'une requête qui la contredit est pire qu'un silence : elle
+> autorise à ne pas vérifier.
+>
+> Cas concret : **Bourg-en-Bresse (01053) n'est PAS dans les 119.** Ses trois
+> fractions sont posées par `24_canton_moderne.sql`, elle appartient au bloc
+> moderne. `cartes/couverture_cantons_2025.csv` la classe bien
+> `moderne (1943-2012)`.
 
 ### Pourquoi ces trois conditions et pas une
 
