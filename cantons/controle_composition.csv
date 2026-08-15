@@ -1,0 +1,286 @@
+decret,date,dep,canton,communes,canton_1999,retrouvees,taux,verdict
+73-712,1973-07-23,02,Laon-Nord,7,02-18,7,100 %,accord
+73-712,1973-07-23,02,Laon-Sud,17,02-38,17,100 %,accord
+73-712,1973-07-23,02,Saint-Quentin - Nord,9,02-39,9,100 %,accord
+73-712,1973-07-23,02,Saint-Quentin - Sud,5,02-40,5,100 %,accord
+73-712,1973-07-23,02,Soissons-Nord,8,02-31,8,100 %,accord
+73-712,1973-07-23,02,Soissons-Sud,10,02-41,10,100 %,accord
+73-713,1973-07-23,03,Moulins-Ouest,6,03-24,6,100 %,accord
+73-713,1973-07-23,03,Vichy-Sud,3,03-35,3,100 %,accord
+73-651,1973-07-13,05,Briançon-Nord,3,05-06,3,100 %,accord
+73-651,1973-07-13,05,Briançon-Sud,4,05-25,4,100 %,accord
+73-811,1973-08-16,06,Nice-VII,3,06-43,3,100 %,accord
+73-761,1973-08-02,07,Annonay est divisé en deux cantons dénommés et,5,07-32,5,100 %,accord
+73-761,1973-08-02,07,Annonay-Nord (mêmes arrondissement et départe ment),5,07-01,5,100 %,accord
+73-715,1973-07-23,08,Mézières-Centre-Ouest,9,08-15,9,100 %,accord
+73-715,1973-07-23,08,Mézières-Est,6,08-37,6,100 %,accord
+73-715,1973-07-23,08,Sedan-Est,8,08-27,8,100 %,accord
+73-715,1973-07-23,08,Sedan-Nord,6,08-26,6,100 %,accord
+82-23,1982-01-15,08,Mézières-Centre-Ouest,9,08-15,9,100 %,accord
+82-23,1982-01-15,08,Villers-Semeuse,6,08-37,6,100 %,accord
+73-652,1973-07-13,10,Romilly-sur-Seine-I,10,10-20,8,80 %,accord
+73-652,1973-07-13,10,Troyes-II,7,10-23,7,100 %,accord
+73-652,1973-07-13,10,Troyes-IV,5,10-29,4,80 %,accord
+73-653,1973-07-13,11,Narbonne-Ouest,8,11-33,8,100 %,accord
+73-762,1973-08-02,12,Millau-Est,3,12-17,3,100 %,accord
+73-762,1973-08-02,12,Millau-Ouest,3,12-44,3,100 %,accord
+73-762,1973-08-02,12,Rodez-Ouest,3,12-45,3,100 %,accord
+73-716,1973-07-23,15,Aurillac-I,4,15-27,4,100 %,accord
+73-716,1973-07-23,15,Aurillac-II,3,15-03,3,100 %,accord
+73-716,1973-07-23,15,Aurillac-III,5,15-26,5,100 %,accord
+73-716,1973-07-23,15,Aurillac-IV,9,15-25,9,100 %,accord
+82-51,1982-01-20,15,Aurillac-II-Ouest,3,15-03,3,100 %,accord
+73-654,1973-07-13,16,Cognac-Nord,5,16-13,4,80 %,accord
+73-654,1973-07-13,16,Cognac-Sud,8,16-33,7,88 %,accord
+82-26,1982-01-15,17,La Rochelle-I,3,17-50,3,100 %,accord
+73-764,1973-08-02,18,Vierzon-II,9,18-30,9,100 %,accord
+73-813,1973-08-16,21,Dijon-I,8,21-09,8,100 %,accord
+73-813,1973-08-16,21,Dijon-V,7,21-39,7,100 %,accord
+73-717,1973-07-23,23,Guéret - Sud-Ouest,4,23-27,4,100 %,accord
+73-717,1973-07-23,23,Guéret-Nord,5,23-19,5,100 %,accord
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,8,24-48,8,100 %,accord
+73-656,1973-07-13,24,Périgueux gst divisé en trois cantons dénommés et,3,24-49,3,100 %,accord
+73-814,1973-08-16,25,Montbéliard-Ouest,19,25-30,19,100 %,accord
+73-718,1973-07-23,26,Montélimar-II,8,26-33,8,100 %,accord
+73-718,1973-07-23,26,Romans-sur-Isère-I,4,26-21,4,100 %,accord
+73-718,1973-07-23,26,Romans-sur-Isère-II,10,26-35,10,100 %,accord
+82-56,1982-01-20,27,Evreux-Est,10,27-37,10,100 %,accord
+82-56,1982-01-20,27,Evreux-Ouest,5,27-38,5,100 %,accord
+82-56,1982-01-20,27,Evreux-Sud,6,27-17,6,100 %,accord
+82-56,1982-01-20,27,Louviers-Nord,6,27-21,6,100 %,accord
+82-56,1982-01-20,27,Louviers-Sud,11,27-39,11,100 %,accord
+82-56,1982-01-20,27,Vernon-Nord,7,27-36,7,100 %,accord
+82-56,1982-01-20,27,Vernon-Sud,6,27-40,6,100 %,accord
+82-27,1982-01-15,28,Dreux-Est,9,28-13,9,100 %,accord
+82-27,1982-01-15,28,Dreux-Ouest,8,28-27,8,100 %,accord
+82-27,1982-01-15,28,Dreux-Sud,5,28-28,5,100 %,accord
+82-27,1982-01-15,28,Mainvilliers,4,28-30,4,100 %,accord
+73-721,1973-07-23,30,Alès - Nord-Est,3,30-02,3,100 %,accord
+73-721,1973-07-23,30,Alès - Sud-Est,6,30-41,6,100 %,accord
+73-815,1973-08-16,31,Toulouse-VIII,9,31-43,9,100 %,accord
+73-815,1973-08-16,31,Toulouse-XIII,5,31-51,4,80 %,accord
+73-815,1973-08-16,31,Toulouse-XIV,7,31-49,7,100 %,accord
+73-815,1973-08-16,31,Toulouse-XV,7,31-50,7,100 %,accord
+73-765,1973-08-02,32,Auch-Nord-Est,8,32-02,8,100 %,accord
+73-765,1973-08-02,32,Auch-Nord-Ouest,7,32-30,7,100 %,accord
+73-765,1973-08-02,32,Auch-Sud-Est,9,32-03,9,100 %,accord
+73-765,1973-08-02,32,Auch-Sud-Ouest,6,32-31,6,100 %,accord
+73-722,1973-07-23,34,Béziers-II,5,34-05,5,100 %,accord
+73-722,1973-07-23,34,Béziers-III,4,34-38,4,100 %,accord
+73-723,1973-07-23,35,Rennes-IV,4,35-52,4,100 %,accord
+73-723,1973-07-23,35,Rennes-VIII,7,35-47,6,86 %,accord
+84-1227,1984-12-24,37,Montlouis-sur-Loire,4,37-37,4,100 %,accord
+73-659,1973-07-13,39,Dole-Nord-Est,7,39-13,6,86 %,accord
+73-659,1973-07-13,39,Dole-Sud-Ouest,7,39-33,7,100 %,accord
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,8,39-15,8,100 %,accord
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,11,39-34,11,100 %,accord
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,5,40-11,5,100 %,accord
+73-661,1973-07-13,41,Blois-I,4,41-01,4,100 %,accord
+73-661,1973-07-13,41,Blois-IV,5,41-27,5,100 %,accord
+82-60,1982-01-20,41,Blois-V,5,41-27,5,100 %,accord
+82-60,1982-01-20,41,Vendôme-H,7,41-28,7,100 %,accord
+82-60,1982-01-20,41,Vendôme-I,5,41-24,5,100 %,accord
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Nord,4,41-17,4,100 %,accord
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Sud,3,41-29,3,100 %,accord
+73-662,1973-07-13,42,Roanne sont créés les deux cantons dénommés et,3,42-16,3,100 %,accord
+84-1230,1984-12-24,43,Brioude-Nord,8,43-05,8,100 %,accord
+84-1231,1984-12-24,46,Cahors-Nord-Ouest,3,46-31,3,100 %,accord
+73-663,1973-07-13,47,Agen-Nord,3,47-36,3,100 %,accord
+73-663,1973-07-13,47,Marmande-Est,9,47-19,9,100 %,accord
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Sud,5,47-39,5,100 %,accord
+82-30,1982-01-15,48,Mende-Nord,3,48-14,3,100 %,accord
+82-30,1982-01-15,48,Mende-Sud,5,48-25,5,100 %,accord
+73-727,1973-07-23,49,Angers-I,4,49-01,4,100 %,accord
+73-727,1973-07-23,49,Angers-IV,4,49-36,4,100 %,accord
+73-727,1973-07-23,49,Angers-VII,7,49-39,6,86 %,accord
+73-727,1973-07-23,49,Cholet-II,8,49-12,8,100 %,accord
+82-31,1982-01-15,50,Saint-Lô-Est,4,50-35,4,100 %,accord
+82-31,1982-01-15,50,Saint-Lô-Ouest,4,50-52,4,100 %,accord
+73-665,1973-07-13,51,Châlons-sur-Marne-II,11,51-35,10,91 %,accord
+73-665,1973-07-13,51,Châlons-sur-Marne-III,3,51-36,3,100 %,accord
+73-665,1973-07-13,51,Epernay-II,9,51-37,9,100 %,accord
+73-665,1973-07-13,51,Reims-VII,3,51-40,3,100 %,accord
+73-665,1973-07-13,51,Vitry-le-François-Est,14,51-33,14,100 %,accord
+73-665,1973-07-13,51,Vitry-le-François-Ouest,9,51-34,9,100 %,accord
+82-32,1982-01-15,51,Reims-VII,4,51-40,4,100 %,accord
+73-816,1973-08-16,52,Saint-Dizier-Ouest,8,52-31,8,100 %,accord
+73-666,1973-07-13,53,Laval - Nord-Est,3,53-17,3,100 %,accord
+73-666,1973-07-13,53,Laval - Nord-Ouest,3,53-32,3,100 %,accord
+73-666,1973-07-13,53,Laval - Sud-Ouest,3,53-32,3,100 %,accord
+84-1233,1984-12-24,53,Château-Gontier-Est,4,53-31,4,100 %,accord
+73-768,1973-08-02,54,Nancy-Est,11,54-42,11,100 %,accord
+73-728,1973-07-23,55,Bar-le-Duc - Sud,4,55-29,4,100 %,accord
+73-728,1973-07-23,55,Verdun-Est,5,55-26,5,100 %,accord
+84-1235,1984-12-24,57,Saint-Avold-I,3,57-27,3,100 %,accord
+73-817,1973-08-16,58,Nevers-Rural,6,58-32,5,83 %,accord
+73-817,1973-08-16,58,Nevers-Sud,3,58-30,3,100 %,accord
+73-668,1973-07-13,60,Compiègne-Nord,5,60-09,5,100 %,accord
+82-63,1982-01-20,60,Beauvais - Nord-Ouest,4,60-40,4,100 %,accord
+82-63,1982-01-20,60,Compiègne - Sud-Est,4,60-37,4,100 %,accord
+82-63,1982-01-20,60,Compiègne - Sud-Ouest,5,60-41,5,100 %,accord
+82-64,1982-01-20,61,Alençon-III,7,61-38,7,100 %,accord
+82-64,1982-01-20,61,Argentan-Est,5,61-03,5,100 %,accord
+82-64,1982-01-20,61,Argentan-Ouest,5,61-39,5,100 %,accord
+82-64,1982-01-20,61,L'Aigle-Est,8,61-18,8,100 %,accord
+82-35,1982-01-15,62,Arras-Sud,8,62-04,8,100 %,accord
+84-1236,1984-12-24,62,Arques,4,62-62,4,100 %,accord
+84-1236,1984-12-24,62,Calais-Nord-Ouest,8,62-15,8,100 %,accord
+73-669,1973-07-13,64,Bayonne-Nord,5,64-52,4,80 %,accord
+73-729,1973-07-23,65,Lourdes-Est,25,65-12,25,100 %,accord
+73-729,1973-07-23,65,Lourdes-Ouest,8,65-27,8,100 %,accord
+73-672,1973-07-13,70,Vesoul-Est,11,70-26,11,100 %,accord
+73-672,1973-07-13,70,Vesoul-Ouest,10,70-29,9,90 %,accord
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,4,71-01,4,100 %,accord
+73-769,1973-08-02,71,Autun-Sud (mêmes arrondissement et département),3,71-52,3,100 %,accord
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,8,71-53,7,88 %,accord
+73-769,1973-08-02,71,Mâcon-Nord,13,71-26,13,100 %,accord
+73-769,1973-08-02,71,Mâcon-Sud,8,71-27,8,100 %,accord
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,7,71-53,7,100 %,accord
+73-770,1973-08-02,73,Albertville-Nord,6,73-05,6,100 %,accord
+73-770,1973-08-02,73,Albertville-Sud,9,73-30,9,100 %,accord
+73-673,1973-07-13,79,Niort-Nord,6,79-20,6,100 %,accord
+73-675,1973-07-13,81,Albi-Nord,7,81-37,6,86 %,accord
+73-675,1973-07-13,81,Carmaux-Sud,3,81-39,3,100 %,accord
+73-675,1973-07-13,81,Mazamet-Nord-Est,3,81-19,3,100 %,accord
+73-675,1973-07-13,81,Mazamet-Sud-Ouest,3,81-42,3,100 %,accord
+73-676,1973-07-13,82,Castelsarrasin-II,4,82-25,4,100 %,accord
+73-676,1973-07-13,82,Moissac-I,4,82-11,4,100 %,accord
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,9,85-31,9,100 %,accord
+73-677,1973-07-13,86,Poitiers-V,4,86-35,4,100 %,accord
+73-821,1973-08-16,87,Limoges-Condat (Limoges-XI),3,87-36,3,100 %,accord
+73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),4,87-37,4,100 %,accord
+73-821,1973-08-16,87,Saint-Junien-Est,5,87-24,5,100 %,accord
+82-37,1982-01-15,88,Saint-Dié-Est,15,88-24,15,100 %,accord
+82-37,1982-01-15,88,Saint-Dié-Ouest,5,88-31,5,100 %,accord
+73-774,1973-08-02,89,Sens-Nord-Est,4,89-29,4,100 %,accord
+73-774,1973-08-02,89,Sens-Sud-Est,7,89-40,7,100 %,accord
+73-810,1973-08-16,01,Bourg-en-Bresse-III,8,01-39,6,75 %,accord partiel
+82-77,1982-01-25,01,Oycnnax-Sud,4,01-41,3,75 %,accord partiel
+73-714,1973-07-23,04,Manosque-Sud,4,04-32,2,50 %,accord partiel
+73-762,1973-08-02,12,Rodez-Est,4,12-28,2,50 %,accord partiel
+82-26,1982-01-15,17,La Rochelle-V,6,17-44,4,67 %,accord partiel
+73-814,1973-08-16,25,Besançon-Est,3,25-28,2,67 %,accord partiel
+73-722,1973-07-23,34,Béziers-IV,4,34-39,3,75 %,accord partiel
+73-722,1973-07-23,34,Montpellier-VIII,8,34-49,6,75 %,accord partiel
+73-658,1973-07-13,36,Châteauroux-Est,4,36-24,2,50 %,accord partiel
+73-658,1973-07-13,36,Châteauroux-Ouest,5,36-25,3,60 %,accord partiel
+73-661,1973-07-13,41,Blois-II,6,41-30,3,50 %,accord partiel
+73-663,1973-07-13,47,Agen-Est,4,47-02,2,50 %,accord partiel
+73-816,1973-08-16,52,Saint-Dizier-Est,4,52-32,2,50 %,accord partiel
+73-728,1973-07-23,55,Verdun-Ouest,3,55-31,2,67 %,accord partiel
+73-668,1973-07-13,60,Compiègne-Sud,9,60-41,5,56 %,accord partiel
+73-818,1973-08-16,62,Béthune-Nord,7,62-70,5,71 %,accord partiel
+73-818,1973-08-16,62,Béthune-Sud,7,62-53,5,71 %,accord partiel
+73-673,1973-07-13,79,Thouars-I,14,79-31,11,79 %,accord partiel
+73-674,1973-07-13,80,Amiens-II - Nord-Ouest,3,80-45,2,67 %,accord partiel
+73-675,1973-07-13,81,Albi-Sud,8,81-38,5,62 %,accord partiel
+73-677,1973-07-13,86,Châtellerault-Sud,4,86-32,2,50 %,accord partiel
+73-677,1973-07-13,86,Poitiers-II,3,86-37,2,67 %,accord partiel
+73-774,1973-08-02,89,Auxerre-Nord-Ouest,3,89-41,2,67 %,accord partiel
+73-774,1973-08-02,89,Auxerre-Sud-Ouest,3,89-38,2,67 %,accord partiel
+73-810,1973-08-16,01,Bourg-en-Bresse-I,1,,0,,trop court
+73-810,1973-08-16,01,Bourg-en-Bresse-II,1,,0,,trop court
+82-77,1982-01-25,01,Bourg-Est,2,,0,,trop court
+82-77,1982-01-25,01,Bourg-Sud,1,,0,,trop court
+73-713,1973-07-23,03,Moulins-Sud,2,,0,,trop court
+82-22,1982-01-15,03,Domérat-Montluçon-Nord-Ouest,1,,0,,trop court
+82-22,1982-01-15,03,Montluçon-Nord-Est,2,,0,,trop court
+73-714,1973-07-23,04,Manosque-Nord,1,,0,,trop court
+73-811,1973-08-16,06,Antibes - Nord,1,,0,,trop court
+73-811,1973-08-16,06,Antibes - Sud,1,,0,,trop court
+73-811,1973-08-16,06,Cannes - Ouest,1,,0,,trop court
+73-715,1973-07-23,08,Charleville-Centre,2,,0,,trop court
+73-715,1973-07-23,08,Charleville-La Houillère,2,,0,,trop court
+82-23,1982-01-15,08,Mézières-Est,1,,0,,trop court
+73-652,1973-07-13,10,Troyes-I,1,,0,,trop court
+73-652,1973-07-13,10,Troyes-VI,2,,0,,trop court
+73-652,1973-07-13,10,Troyes-VII,2,,0,,trop court
+73-653,1973-07-13,11,Carcassonne-II,1,,0,,trop court
+73-653,1973-07-13,11,Narbonne-Sud,1,,0,,trop court
+82-24,1982-01-15,12,Rodez-Est,1,,0,,trop court
+82-24,1982-01-15,12,Rodez-Nord,1,,0,,trop court
+82-24,1982-01-15,12,Rodez-Ouest,1,,0,,trop court
+73-763,1973-08-02,14,Caen-I,2,,0,,trop court
+73-763,1973-08-02,14,Caen-III,1,,0,,trop court
+73-763,1973-08-02,14,Caen-VI,2,,0,,trop court
+73-814,1973-08-16,25,Montbéliard-Est,1,,0,,trop court
+73-718,1973-07-23,26,Montélimar-I,1,,0,,trop court
+73-720,1973-07-23,29,Brest-VII,1,,0,,trop court
+73-720,1973-07-23,29,Quimper-I,2,,0,,trop court
+73-720,1973-07-23,29,Quimper-II,1,,0,,trop court
+82-53,1982-01-20,2B,Bastia-VI - Furiani-Montésoro,1,,0,,trop court
+73-721,1973-07-23,30,Nîmes-III,1,,0,,trop court
+73-721,1973-07-23,30,Nîmes-IV,1,,0,,trop court
+73-721,1973-07-23,30,Nîmes-V,1,,0,,trop court
+73-815,1973-08-16,31,Toulouse-IX,1,,0,,trop court
+73-815,1973-08-16,31,Toulouse-XI,1,,0,,trop court
+73-815,1973-08-16,31,Toulouse-XII,2,,0,,trop court
+73-722,1973-07-23,34,Montpellier-III,2,,0,,trop court
+73-722,1973-07-23,34,Montpellier-IX,1,,0,,trop court
+73-722,1973-07-23,34,Montpellier-V,1,,0,,trop court
+73-723,1973-07-23,35,Rennes-III,2,,0,,trop court
+73-723,1973-07-23,35,Rennes-VI,1,,0,,trop court
+73-723,1973-07-23,35,Rennes-VII,2,,0,,trop court
+73-723,1973-07-23,35,Rennes-X,2,,0,,trop court
+82-80,1982-01-25,35,Rennes-VII-1,1,,0,,trop court
+73-662,1973-07-13,42,Saint-Etienne - Nord-Est-II,1,,0,,trop court
+73-662,1973-07-13,42,Saint-Etienne - Nord-Ouest-I,1,,0,,trop court
+73-662,1973-07-13,42,Saint-Etienne - Nord-Ouest-II,1,,0,,trop court
+73-662,1973-07-13,42,Saint-Etienne - Sud-Est-I,1,,0,,trop court
+73-725,1973-07-23,44,Nantes-X,1,,0,,trop court
+82-59,1982-01-20,44,Saint-Herblain-Ouest-Indre,1,,0,,trop court
+82-59,1982-01-20,44,Saint-Nazaire-Ouest-Pornichet,1,,0,,trop court
+73-663,1973-07-13,47,Marmande-Ouest,2,,0,,trop court
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Nord,1,,0,,trop court
+84-1232,1984-12-24,47,Agen - Sud-Est,1,,0,,trop court
+73-727,1973-07-23,49,Angers-II,1,,0,,trop court
+73-727,1973-07-23,49,Angers-VI,1,,0,,trop court
+73-727,1973-07-23,49,Cholet-III,1,,0,,trop court
+73-665,1973-07-13,51,Reims-IV,1,,0,,trop court
+73-665,1973-07-13,51,Reims-V,1,,0,,trop court
+73-665,1973-07-13,51,Reims-VIII,1,,0,,trop court
+82-33,1982-01-15,52,Saint-Dizier-Nord-Est,1,,0,,trop court
+82-33,1982-01-15,52,Saint-Dizier-Sud-Est,1,,0,,trop court
+73-666,1973-07-13,53,Laval - Sud-Est,2,,0,,trop court
+82-34,1982-01-15,53,Laval-Est,1,,0,,trop court
+84-1233,1984-12-24,53,Laval-Est,1,,0,,trop court
+73-728,1973-07-23,55,Bar-le-Duc - Nord,1,,0,,trop court
+73-817,1973-08-16,58,Nevers-Nord,1,,0,,trop court
+73-818,1973-08-16,62,Calais-Centre,1,,0,,trop court
+73-818,1973-08-16,62,Calais-Est,1,,0,,trop court
+82-35,1982-01-15,62,Liévin-Nord,2,,0,,trop court
+82-35,1982-01-15,62,Liévin-Sud,1,,0,,trop court
+84-1236,1984-12-24,62,Boulogne-sur-Mer-Nord- Ouest,1,,0,,trop court
+84-1236,1984-12-24,62,Calais-Centre,2,,0,,trop court
+84-1236,1984-12-24,62,Calais-Est,1,,0,,trop court
+84-1236,1984-12-24,62,Rouvroy,2,,0,,trop court
+73-669,1973-07-13,64,Bayonne-Ouest,1,,0,,trop court
+73-769,1973-08-02,71,Creusot-Est,2,,0,,trop court
+73-769,1973-08-02,71,Montceau-les-Mines-Sud,1,,0,,trop court
+73-769,1973-08-02,71,Mâcon-Centre,1,,0,,trop court
+84-1237,1984-12-24,71,Chalon-sur-Saône-Ouest,1,,0,,trop court
+73-673,1973-07-13,79,Niort-Ouest,2,,0,,trop court
+73-674,1973-07-13,80,Amiens-I - Ouest,1,,0,,trop court
+73-674,1973-07-13,80,Amiens-III - Nord-Est,1,,0,,trop court
+73-674,1973-07-13,80,Amiens-IV - Est,1,,0,,trop court
+73-674,1973-07-13,80,Amiens-V - Sud-Est,1,,0,,trop court
+73-674,1973-07-13,80,Amiens-VII - Sud-Ouest,1,,0,,trop court
+73-675,1973-07-13,81,Castres-Nord,1,,0,,trop court
+73-675,1973-07-13,81,Castres-Sud,2,,0,,trop court
+84-1238,1984-12-24,81,Albi-Nord-Est,2,,0,,trop court
+73-676,1973-07-13,82,Moissac-II,2,,0,,trop court
+73-676,1973-07-13,82,Montauban -1,1,,0,,trop court
+73-771,1973-08-02,83,Saint-Mandrier,1,,0,,trop court
+73-772,1973-08-02,84,Avignon-Est,1,,0,,trop court
+73-773,1973-08-02,85,La Roche-sur-Yon-Nord,2,,0,,trop court
+73-677,1973-07-13,86,Châtellerault-Nord,1,,0,,trop court
+73-677,1973-07-13,86,Poitiers-I,2,,0,,trop court
+73-677,1973-07-13,86,Poitiers-III,1,,0,,trop court
+73-677,1973-07-13,86,Poitiers-IV,1,,0,,trop court
+73-821,1973-08-16,87,Limoges-Couzeix (Limoges-VIII),1,,0,,trop court
+73-821,1973-08-16,87,Limoges-Isle (Limoges-VI),1,,0,,trop court
+73-821,1973-08-16,87,Limôges-Le Palais (Limoges-X),1,,0,,trop court
+73-821,1973-08-16,87,Saint-Junien-Ouest,1,,0,,trop court
+82-86,1982-01-25,87,Limoges-Isle,1,,0,,trop court
+84-1242,1984-12-24,94,Arcueil,1,,0,,trop court
+84-1242,1984-12-24,94,Kremlin-Bicêtre,1,,0,,trop court

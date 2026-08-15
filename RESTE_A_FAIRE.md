@@ -33,13 +33,19 @@ d'en-tête et le redécoupage alphabétique deviennent inutiles.
 
 | tâche | valeur | difficulté |
 |---|---|---|
-| **Ajouter `insee_mvt.libelle_av` au dictionnaire de noms** | forte | faible |
+| **Ajouter `insee_mvt.libelle_av` au dictionnaire de noms** | forte, **et démontrée** | faible |
 | Remonter la couverture au-delà de 79 % | moyenne | moyenne |
 | Poser 1954 dans la base (`membership` 1940 → 1954 + 3 créations) | forte | moyenne |
 
 Le premier point est le meilleur rapport : 7 576 noms non appariés, dont une
 part importante sont des communes disparues avant 2011, donc absentes de GEOFLA
 qui sert de dictionnaire. Les ajouter ne touche pas à l'extraction.
+
+**Le correctif a été mesuré ailleurs le 15 août** : appliqué aux rejets de
+`composition_decrets.py`, `insee_mvt.libelle_av` en récupère 33 %, à condition
+de contraindre le département. Le même dictionnaire sert les deux chantiers,
+et l'implémentation est déjà écrite dans `cantons/composition_decrets.py`
+(`communes_disparues()`) — il n'y a qu'à la reprendre.
 
 **Abandonné, et à ne pas reprendre par cette voie** : les transferts de
 communes entre cantons. 311 candidats, 227 réfutés par la géométrie, les

@@ -1,0 +1,60 @@
+decret,date,dep,canton,nom_texte,insee,nom_geofla,appariement,ville_coupee,jo
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Saint-Hilaire,,,aucun,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Creney,,,aucun,Troyes,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Boutiers,,,aucun,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Saint-Sulpice,,,aucun,Cognac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Lembres,,,aucun,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Saint-Sauveur-de-Bergerac,,,aucun,Bergerac,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Campet,,,aucun,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Lucbardez,,,aucun,Mont-de-Marsan,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Ouest,Passaged'Agen,,,aucun,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Ouest,Beanpuy,,,aucun,Marmande,JORF_19730717_164
+73-665,1973-07-13,51,Reims-I,Ormes-Thillois,,,aucun,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Aulnay,,,aucun,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,L'Aitre,,,aucun,Vitry-le-François,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,La Villeneuve,,,aucun,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Epenoux,,,aucun,Vesoul,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-II - Nord-Ouest,Argœuves,,,aucun,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-IV - Est,Lqngueau,,,aucun,Amiens,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Lescure,,,aucun,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Rialet,,,aucun,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Vintrou,,,aucun,Mazamet,JORF_19730717_164
+73-676,1973-07-13,82,Castelsarrasin-II,Barthes,,,aucun,Castelsarrasin,JORF_19730717_164
+73-676,1973-07-13,82,Montauban - II,Léojac-Bellegarde,,,aucun,Montauban,JORF_19730717_164
+73-712,1973-07-23,02,Laon-Nord,Crépy-en-Laonnois,,,aucun,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Brièves,,,aucun,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Arrangy,,,aucun,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Fousomme,,,aucun,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Leury-Chavigny,,,aucun,Soissons,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Nord,Voix,,,aucun,Manosque,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Issancourt,,,aucun,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Escombres,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Le Chesnois,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Rubecourt,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Lamecourt,,,aucun,Sedan,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Saint-Michel,,,aucun,Romans-sur-Isère,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Plans,,,aucun,Alès,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-III,Lignan,,,aucun,Béziers,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-III,Parthenay,,,aucun,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VI,Thorigné,,,aucun,Rennes,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Cerqueuxde-Maulévrier,,,aucun,Cholet,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Dieue-Génicourt,,,aucun,Verdun,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Angles,,,aucun,Lourdes,JORF_19730725_171
+73-765,1973-08-02,32,Auch-Sud-Ouest,Mombert,,,aucun,Auch,JORF_19730804_180
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,Saint-Pantaléon (2),,,aucun,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Creusot-Est,Breuil,,,aucun,Le Creusot,JORF_19730804_180
+73-772,1973-08-02,84,Avignon-Nord,Pontet,,,aucun,Avignon,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Nord-Ouest,Perrigny-près-Auxerre,,,aucun,Auxerre,JORF_19730804_180
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Saint-André,,,aucun,Bourg-en-Bresse,JORF_19730817_190
+73-811,1973-08-16,06,Cannes - Ouest,Théoule,,,aucun,Cannes,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Saint-Loup,,,aucun,Toulouse,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Saincaize,,,aucun,Nevers,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Vendin,,,aucun,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Fouquière,,,aucun,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Calais-Centre,Atta ques,,,aucun,Calais,JORF_19730817_190
+82-23,1982-01-15,08,Villers-Semeuse,Gernelle la Grande-Ville,,,aucun,Charleville-Mézières,JORF_19820116_13
+82-29,1982-01-15,33,Mérignac-II,Martignas,,,aucun,Mérignac,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Nord,Baradoux,,,aucun,Mende,JORF_19820116_13
+82-56,1982-01-20,27,Evreux-Est,Viel-Evreux,,,aucun,Évreux,JORF_19820122_18
+84-1235,1984-12-24,57,Saint-Avold-I,Folschviller; Porcelette,,,aucun,Saint-Avold,JORF_19841230_305
+84-1238,1984-12-24,81,Albi-Nord-Est,Aithès,,,aucun,Albi,JORF_19841230_305

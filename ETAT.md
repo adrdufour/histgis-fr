@@ -1456,3 +1456,79 @@ reconstruire les 80 quartiers par simple union. Ailleurs c'est un support
 d'accrochage : des lignes propres, topologiquement valides, calées sur des rues
 réelles, où l'on choisit au lieu de dessiner. **Le taux de reprise réel se
 mesurera ville par ville dans QGIS**, Marseille en premier.
+
+### La composition cantonale est dans le texte des décrets — 15 août 2026
+
+`cantons/composition_decrets.py`, contrôle par `cantons/controle_composition.py`.
+
+Le trou 1941-1999 était tenu pour hors de portée de
+`communes_coupees_1973_1984.csv`, au motif que ses colonnes structurées sont
+`canton` / `commune_coupee` et jamais `canton` / `commune`. C'est exact des
+colonnes. C'est faux du fichier : **la colonne `texte` porte le texte intégral
+du JO**, et ce texte dit la composition en prose.
+
+| | |
+|---|---|
+| lignes portant un texte transcrit | 579 — 100 % |
+| dont « comprenant les communes de … » | 289 |
+| décrets concernés | **91 sur 117** |
+| cantons pourvus d'une composition | **290** |
+| rattachements de commune entière extraits | **1 295** |
+
+Appariement au dictionnaire de noms :
+
+| | | |
+|---|---|---|
+| exact | 1 166 | 90,0 % |
+| disparue avant 2011 (`insee_mvt.libelle_av`) | 31 | 2,4 % |
+| ressemblance (difflib ≥ 0,88) | 39 | 3,0 % |
+| aucun | 59 | 4,6 % |
+
+#### Le contrôle indépendant : zéro désaccord
+
+Le COG de 1999 n'a jamais vu le texte du JO. Confronté aux 179 cantons dont la
+liste compte au moins trois communes entières :
+
+| verdict | cantons |
+|---|---|
+| accord (≥ 80 % des communes dans le même canton en 1999) | **155** |
+| accord partiel (50 à 80 %) | 24 |
+| **désaccord** | **0** |
+
+**1 042 communes sur 1 102 se retrouvent en 1999 dans le canton où le décret
+les avait mises — 94,6 %.**
+
+Le taux se lit comme un plancher, pas comme une note : entre le décret et 1999,
+une commune a pu changer de canton par un décret non dépouillé. C'est même
+attendu, puisque c'est ce que le registre cantonal recense. Un désaccord aurait
+été ambigu ; leur absence complète, elle, ne l'est pas.
+
+#### Ce que les 88 rejets du premier passage ont appris
+
+Ils portaient « Campet », « Lucbardez », « Louzac », « Ferreux ». On les prend
+d'abord pour des coupures fautives de noms à rallonge — Campet-et-Lamolère,
+Louzac-Saint-André — donc pour un défaut du découpage sur « et ».
+
+Le texte du JO dit exactement « Campet » et « Louzac ». **Ce sont les vrais
+noms de 1982** ; les noms longs sont le produit de fusions postérieures. Le
+parseur n'était pas en cause, le dictionnaire l'était : GEOFLA 2011 ne connaît
+que les survivantes.
+
+C'est le même défaut qui laisse 7 576 noms non appariés dans l'extraction de
+1954, et **le même correctif y répond** — `insee_mvt.libelle_av`, 7 668
+libellés d'avant mouvement. Mesuré ici : il récupère 33 % des rejets, à
+condition de contraindre le département. Sans cette contrainte le taux monte à
+43 %, mais « Saint-Hilaire » cité par un décret de l'Aube s'apparie alors à un
+code de Charente — un gain de taux payé en erreurs muettes.
+
+#### Ce que cela ne fait pas
+
+Un décret donne la composition des cantons **qu'il crée ou modifie**, jamais
+celle des 4 000 autres. Le trou ne se comble donc pas par cette seule voie.
+Mais la base n'a pas besoin de la composition à chaque date : elle a besoin
+d'une base de départ et des deltas. 1940 est posé, 1954 est extrait, 1999 vient
+du COG — **les décrets sont les deltas**. C'est l'architecture de `membership`
+avec ses `daterange`.
+
+Rien n'est posé en base à ce stade. `composition_decrets.csv` est un fichier à
+relire.
