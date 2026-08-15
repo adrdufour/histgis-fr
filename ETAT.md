@@ -1532,3 +1532,33 @@ avec ses `daterange`.
 
 Rien n'est posé en base à ce stade. `composition_decrets.csv` est un fichier à
 relire.
+
+### Correction — la série des recensements n'a qu'une année numérisée, 15 août 2026
+
+Vérifié sur la notice `https://www.bnsp.insee.fr/ark:/12148/cb32841307b/date` :
+**« 1 année disponible »**, et `/date1968` confirme que c'est **1968**.
+
+La description bibliographique de la publication couvre bien 1954-1976 — c'est
+la périodicité de l'ouvrage, pas l'état de la numérisation. Les deux avaient
+été confondus dans la note du 14 août, qui annonçait « restent à chercher 1962,
+1975, 1982, 1990 » comme si ces millésimes attendaient dans le même fonds.
+
+**Ce qui est effectivement en ligne, à ce jour :**
+
+| millésime | ark | état |
+|---|---|---|
+| 1954 | `bc6p06z8sm1` | récupéré, extrait, contrôlé |
+| 1968 | `cb32841307b/date1968` | **à récupérer — 87 fascicules départementaux** |
+| 1999 | `cb36946269j` | non vérifié |
+
+1962, 1975, 1982 et 1990 sont donc à **chercher**, pas à cueillir : autre
+notice, autre fonds, ou pas numérisés du tout.
+
+**Conséquence sur le plan** : l'angle mort 1987-1998 ne se referme pas par un
+fascicule de 1990 comme espéré. Il faudra soit trouver ce volume ailleurs, soit
+s'en remettre aux décrets du JO — dont l'annexe VII ne donne plus la liste
+après 1986.
+
+**Leçon** : « la série va de 1954 à 1976 » décrivait la publication, pas la
+numérisation. Une phrase vraie lue comme si elle répondait à une autre
+question — la même famille d'erreur que le dénominateur des 119 villes.
