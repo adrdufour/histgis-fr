@@ -1013,3 +1013,33 @@ aucun travail ; le reste est le chantier IRIS, dont on sait depuis ce matin
 qu'il a de quoi tenir.
 
 Il ne reste qu'un téléchargement avant de charger : la trame IRIS des 28.
+
+## 16 août 2026 — le SRID tranché, et un garde-fou avant d'en avoir besoin
+
+**Le Lambert-93 ne peut pas accueillir l'outre-mer.** Mesuré plutôt que
+supposé : reprojeter les communes en 2154 gonfle les surfaces d'un facteur 1,28
+en Guadeloupe, 1,31 en Martinique, 1,63 en Guyane, 2,61 à Mayotte et **3,54 à
+La Réunion**, qui y passerait de 2 502 à 8 856 km². Ce ne sont pas des arrondis,
+et tous les contrôles du projet sont surfaciques.
+
+Décision : **l'outre-mer vit en 4326, la base métropolitaine ne bouge pas.** Les
+surfaces s'y calculent en `geography`, exactes sur l'ellipsoïde et indépendantes
+de toute projection ; `snapshot_geom()` reprojettera à la volée pour rendre une
+couche unique. Rien à recharger, et le 2154 garde sa commodité métrique là où
+il est défini.
+
+**`cartes/recupere_iris_outremer.py`** est écrit, sur le modèle du script
+métropolitain, avec trois différences assumées : sortie en 4326 ; liste des
+28 communes lue dans `cartes/iris_outremer.csv` plutôt que déduite des atomes,
+qui n'existent pas encore ; et pas de table d'arrondissements municipaux,
+puisque aucune commune d'outre-mer n'est codée ainsi — vérifié, pas supposé.
+
+**Le garde-fou vaut d'être noté parce qu'il devance le bogue.** En WFS 2.0,
+`EPSG:4326` peut être servi en lat/lon au lieu de lon/lat selon
+l'implémentation. Inverser les axes place la Guadeloupe (−61,5 ; 16,2) au large
+de la Somalie (16,2 ; −61,5) : une géométrie valide, un décompte d'entités
+juste, et une carte fausse. C'est le préfixe Marseille à l'échelle du globe.
+Le script vérifie donc chaque entité contre l'emprise de son territoire et
+refuse d'écrire si ça sort. Testé dans les deux sens sur des entités fabriquées.
+Le service n'a pas encore été interrogé pour de vrai : si les axes sont bons, le
+contrôle ne coûte rien ; s'ils ne le sont pas, il économise une journée.

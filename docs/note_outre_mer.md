@@ -328,7 +328,46 @@ du §5.
 
 ---
 
-## 7. Ce que ça change pour la base
+## 7. Le SRID : l'outre-mer vit en 4326
+
+Le Lambert-93 n'est défini que pour la métropole. Reprojeter l'outre-mer en 2154
+gonfle les surfaces — mesuré, pas supposé :
+
+| dép. | aire native | en 2154 | facteur |
+|---|---|---|---|
+| 971 Guadeloupe | 1 631 km² | 2 092 km² | 1,28× |
+| 972 Martinique | 1 104 km² | 1 451 km² | 1,31× |
+| 973 Guyane | 83 824 km² | 136 372 km² | 1,63× |
+| 976 Mayotte | 362 km² | 944 km² | 2,61× |
+| 974 La Réunion | 2 502 km² | **8 856 km²** | **3,54×** |
+
+Ce ne sont pas des arrondis, et tous les contrôles du projet sont surfaciques.
+
+**Décision : tables d'outre-mer en EPSG:4326, base métropolitaine inchangée.**
+Les surfaces s'y calculent en `geography` — exactes sur l'ellipsoïde,
+indépendantes de toute projection. `snapshot_geom()` reprojettera à la volée
+pour rendre une couche unique. Rien à recharger, et le 2154 garde sa commodité
+métrique là où il est défini.
+
+Corollaire à ne pas oublier : en 4326, `ST_Area(geom)` rend des **degrés
+carrés** — un nombre qui ressemble à une surface sans en être une. Toute mesure
+passe par `ST_Area(geom::geography)`.
+
+### Le piège des axes, désamorcé d'avance
+
+En WFS 2.0, `EPSG:4326` peut être servi en lat/lon plutôt qu'en lon/lat selon
+l'implémentation. Inverser les axes place la Guadeloupe (−61,5 ; 16,2) au large
+de la Somalie (16,2 ; −61,5) : géométrie valide, décompte juste, carte fausse.
+C'est le bogue du préfixe Marseille à l'échelle du globe.
+
+`cartes/recupere_iris_outremer.py` vérifie donc chaque entité contre l'emprise
+de son territoire et **refuse d'écrire** si elle en sort. Testé dans les deux
+sens. Le service n'a pas encore été interrogé pour de vrai : si les axes sont
+bons, le contrôle ne coûte rien.
+
+---
+
+## 8. Ce que ça change pour la base
 
 Le socle existant absorbe l'outre-mer sans modification d'architecture : les
 atomes sont des géométries, `membership` est une attribution datée, rien n'est
@@ -346,22 +385,24 @@ Trois points d'attention, tous du même genre que ceux déjà rencontrés :
 3. **Le même trou 1943-1999** qu'en métropole pour les cantons, avec en plus
    l'absence de tout millésime GEOFLA entre 1999 et 2015.
 
-## 8. Prochaines étapes, dans l'ordre
+## 9. Prochaines étapes, dans l'ordre
 
 1. ~~Télécharger~~ **fait** : neuf archives, cinq md5 concordants.
 2. ~~Recouper les effectifs, comparer 1999 et 2015~~ **fait** : §5 et §2.
 3. ~~Relancer le script pour les cinq lots `COMMUNE`~~ **fait** : recette passée,
    §6.
 4. ~~Vérifier que CONTOURS-IRIS couvre les DOM~~ **fait** : 28/28 communes,
-   61/61 coupes pourvues. Reste à **récupérer et charger** la trame, comme
-   `cartes/recupere_iris.py` l'a fait pour la métropole.
-5. Charger les atomes des cinq DOM, avec les circonscriptions 1986 et 2012 déjà
-   extraites dans `circo/circo_outremer_1986_2012.csv`.
-6. Trancher la Nouvelle-Calédonie sur la licence de BDADMIN-NC.
-7. L'Algérie, au niveau départemental, plus tard.
+   61/61 coupes pourvues.
+5. **Lancer `cartes/recupere_iris_outremer.py`** — écrit, testé à blanc, pas
+   encore exécuté contre le service.
+6. Écrire le `.sql` qui pose les 129 communes en atomes 4326, avec les
+   85 rattachements cantonaux acquis et les circonscriptions 1986 et 2012 de
+   `circo/circo_outremer_1986_2012.csv`.
+7. Trancher la Nouvelle-Calédonie sur la licence de BDADMIN-NC.
+8. L'Algérie, au niveau départemental, plus tard.
 
-Il ne reste donc **qu'un téléchargement** avant de pouvoir charger : la trame
-IRIS des 28 communes multicantonales.
+Tout ce qui se télécharge est sur le disque, sauf la trame IRIS, dont le script
+est prêt.
 
 ---
 

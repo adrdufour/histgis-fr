@@ -92,14 +92,23 @@ NB_CANTONS = re.compile(r"\(\s*(\d{1,2})\s*cantons?\s*\.?\s*\)", re.I)
 # et **entre les deux, juste avant les trois dernières, le nombre de
 # communes**. On lit donc la ligne par ses nombres et on prend le nom en
 # supplément quand il a survécu, jamais comme condition.
+# Deuxième correction, celle-ci mesurée sur la passe FRANÇAISE : exiger aussi
+# les deux populations de 1962 EN TÊTE de ligne ne rend que 17 cantons sur 37.
+# La cause est matérielle — le bord gauche est le fond de reliure, c'est-à-dire
+# la partie la plus déformée du scan. L'OCR y sème « 2 | », « ie », « rt »,
+# « : » avant le premier chiffre.
+#
+# On n'ancre donc plus que sur la FIN de ligne, qui est le bord extérieur de la
+# page et le mieux venu : le nombre de communes suivi de trois populations.
+# Tout ce qui précède est pris comme un bloc dont on tire ce qu'on peut.
 CANTON = re.compile(
-    r"^\W*([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s+"   # populations 1962
-    r"(.*?)"                                          # code et nom, souvent perdus
+    r"(.*?)"                                          # tout l'avant, souvent abîmé
     r"(\d{1,3})\s+"                                  # NOMBRE DE COMMUNES
     r"([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s*$")
 
-# Le code, quand il a survécu, ouvre le fragment illisible.
-CODE = re.compile(r"^\s*([\dOSlI]{2})\b")
+# Le code, quand il a survécu. Il est isolé entre deux espaces, après les
+# populations de 1962 et avant le nom — donc rarement en tête du fragment.
+CODE = re.compile(r"(?:^|\s)([\dOSlI]{2})(?:\s|\.|\))")
 # Le nom, quand il a survécu : au moins trois lettres d'affilée et une
 # majuscule. En dessous, c'est du bruit de points de conduite.
 NOM = re.compile(r"([A-ZÉÈÀÇŒ][A-Za-zÉÈÊËÀÂÎÏÔÛÙÇŒéèêëàâîïôûùç'’\-]{2,}"
@@ -117,7 +126,7 @@ SOSIES = str.maketrans({"O": "0", "S": "5", "l": "1", "I": "1", "$": "3"})
 def lit_tableau2(pdf, langue="fra", pages_max=16):
     """Les premières pages d'un fascicule -> les cantons du tableau II."""
     cantons, totaux, arr, nb_annonce = [], [], "", {}
-    courant = collections.Counter()
+    courant, lignes_bloc = collections.Counter(), collections.Counter()
     for p in range(1, pages_max + 1):
         txt = page_texte(pdf, p, langue=langue)
         if not EST_TABLEAU2.search(txt):
@@ -137,15 +146,22 @@ def lit_tableau2(pdf, langue="fra", pages_max=16):
             m = CANTON.search(s)
             if not m:
                 continue
-            milieu, n = m.group(3), int(m.group(4))
+            milieu, n = m.group(1), int(m.group(2))
             # La ligne TOTAL a la même charpente qu'une ligne de canton, et
             # son libellé est aussi illisible. On ne la reconnaît donc pas au
             # mot « TOTAL » — souvent rendu « PTA epee eis bites » — mais à
             # l'arithmétique : c'est celle dont le nombre égale la somme des
             # lignes du bloc en cours. La source se dénonce elle-même.
-            if MOT_TOTAL.search(milieu) or (n == courant[arr] and courant[arr] > 0):
+            # `>=` et non `==` : une ligne de canton manquée fausse la somme
+            # courante, et un TOTAL cesserait d'être reconnu. Le TOTAL reste
+            # toutefois le seul à valoir au moins la somme du bloc — à
+            # condition d'avoir déjà lu deux lignes, sans quoi le deuxième
+            # canton d'un bloc passerait pour un total.
+            if MOT_TOTAL.search(milieu) or (lignes_bloc[arr] >= 2
+                                            and n >= courant[arr] > 0):
                 totaux.append((arr, n))
                 courant[arr] = 0
+                lignes_bloc[arr] = 0
                 continue
             c = CODE.search(milieu)
             nm = NOM.search(milieu)
@@ -155,6 +171,7 @@ def lit_tableau2(pdf, langue="fra", pages_max=16):
                 nom=nettoie_nom(nm.group(1)).strip(" .") if nm else "",
                 communes=n))
             courant[arr] += n
+            lignes_bloc[arr] += 1
     return cantons, totaux, nb_annonce
 
 
