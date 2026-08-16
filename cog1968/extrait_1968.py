@@ -98,6 +98,32 @@ LIGNE = re.compile(
 SOSIES_1968 = str.maketrans({"O": "0", "S": "5", "l": "1", "I": "1", "$": "3"})
 
 
+def bornes_cantonales():
+    """{dep: plus haut code de canton connu en 1940} — une borne, pas un filtre.
+
+    Un département de 37 cantons ne peut pas en porter un numéroté 94. Les
+    codes lus au-delà de la borne sont donc presque sûrement des chiffres mal
+    reconnus — mesuré sur l'Aisne : huit codes impossibles (50, 53, 54, 55, 60,
+    82, 85, 94), vus une ou deux fois chacun, qui gonflaient le compte de 36 à
+    44 cantons.
+
+    **On signale, on ne supprime pas.** Un canton créé entre 1940 et 1968
+    porterait justement un numéro au-delà de la borne : filtrer sur 1940
+    reviendrait à faire de l'étalon un paramètre, et à rendre impossible la
+    découverte même qu'on cherche. La colonne `hors_borne` marque la ligne, le
+    tableau II tranchera.
+    """
+    hautes = collections.defaultdict(int)
+    f = RACINE / "build" / "membership_canton.csv"
+    if not f.exists():
+        return hautes
+    for l in csv.DictReader(f.open(encoding="utf-8")):
+        u = l.get("unit_id") or ""
+        if len(u) == 4 and u[2:].isdigit():
+            hautes[u[:2]] = max(hautes[u[:2]], int(u[2:]))
+    return hautes
+
+
 def index():
     """{code département: chemin du fascicule} — écrit par index_fascicules.py."""
     if not INDEX.exists():
@@ -169,10 +195,15 @@ def main():
 
     if not lignes:
         raise SystemExit("Aucune ligne reconnue.")
+    bornes = bornes_cantonales()
+    for l in lignes:
+        b = bornes.get(l["dep"], 99)
+        l["hors_borne"] = "oui" if l["canton"].isdigit() and int(l["canton"]) > b else ""
     lignes.sort(key=lambda x: (x["dep"], x["insee"]))
     with SORTIE.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["dep", "insee", "insee3", "arr",
-                                          "canton", "nom", "pop1968", "page"])
+                                          "canton", "nom", "pop1968",
+                                          "hors_borne", "page"])
         w.writeheader()
         w.writerows(lignes)
 
@@ -186,8 +217,15 @@ def main():
             if prec and l["insee3"] < prec:
                 ruptures[dep] += 1
             prec = l["insee3"]
+    hb = [l for l in lignes if l["hors_borne"]]
+    tous = {(l["dep"], l["canton"]) for l in lignes}
+    sains = {(l["dep"], l["canton"]) for l in lignes if not l["hors_borne"]}
     print(f"\n{len(lignes)} communes, {len({l['dep'] for l in lignes})} départements")
-    print(f"{len({(l['dep'], l['canton']) for l in lignes})} cantons distincts")
+    print(f"{len(tous)} cantons distincts, dont {len(tous) - len(sains)} "
+          f"au-delà de la borne de 1940")
+    if hb:
+        print(f"   {len(hb)} lignes concernées — colonne hors_borne, "
+              f"à trancher par le tableau II")
     if ruptures:
         print("\nruptures de l'ordre alphabétique (codes à revoir) :")
         for d, n in sorted(ruptures.items()):
