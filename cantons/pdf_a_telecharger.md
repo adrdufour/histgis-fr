@@ -1,6 +1,6 @@
 # Datation des 64 cantons `post_1986` — état après dépouillement des JO
 
-**55 datés · 7 faux positifs · 2 pistes restantes.**
+**57 datés · 7 faux positifs · 0 piste restante — CLOS le 15 août 2026.**
 
 Détail canton par canton dans `cantons_post1986_datation.csv`.
 
@@ -80,3 +80,68 @@ l'utiliser autrement que comme piste à vérifier.
 
 Sources : JO numérisés de `sources/modif_canton/` ; Légifrance, fonds JORF ;
 nomenclatures cantonales 1872 et 1932 de `sources/trfgis/`. Licence etalab-2.0.
+
+
+---
+
+## Les deux dernières pistes, closes le 15 août 2026
+
+Les deux PDF ont été déposés et dépouillés. **Tous deux portent une couche
+texte native** : aucun OCR n'a été nécessaire, contrairement au volume de 1954.
+
+### Châtenois-les-Forges (90) — création confirmée
+
+**Décret n° 67-672 du 9 août 1967**, JO du 10 août, page 8012. Le texte est sur
+deux colonnes ; `pdftotext -layout` les entrelace et rend l'article illisible.
+Il faut découper par colonne : `pdftotext -f 4 -l 4 -x 320 -W 320`.
+
+> « Art. 1er. — En remplacement du canton de Belfort (territoire de Belfort),
+> sont créés les sept cantons dénommés et composés comme suit : […]
+> **5. Canton de Châtenois-les-Forges** comprenant les communes de
+> Châtenois-les-Forges, Argiésans, Banvillars, Bavilliers, Bermont, Botans,
+> Buc, Dorans, Trétudans, Urcerey et Vourvenans. »
+
+Le décret crée sept cantons d'un coup : Belfort-Centre, -Est, -Ouest et -Nord
+(quatre fractions de la ville), plus Châtenois-les-Forges, Danjoutin et Valdoie.
+
+**Onze communes, onze appariements**, et deux d'entre eux méritent d'être
+notés : **Trétudans (90097) et Vourvenans (90106) ne sont pas des fautes
+d'OCR.** Ce sont deux communes réelles, fusionnées dans **Trévenans le
+1ᵉʳ juillet 1972** — cinq ans après la création du canton. Le premier réflexe
+avait été de « corriger » Vourvenans en Trévenans par ressemblance : c'eût été
+remplacer le fait par le successeur du fait. `insee_mvt.libelle_av` tranche en
+une requête.
+
+Seul « Bue » est une vraie erreur de lecture, pour **Buc** (90020) — un `c` lu
+`e`, une seule lettre.
+
+### Pau-Sud (64) — ce n'est PAS le 75-872
+
+Le décret n° 75-872 du 3 septembre 1975 ne crée rien. Son article 1er dit :
+
+> « Les quatrième et huitième alinéas de l'article 1er du **décret susvisé**
+> sont remplacés par les dispositions suivantes : "Canton de Pau-IV-Ouest
+> comprenant les communes de Narcastet, Rontignon, Uzos, Mazères-Lezons et
+> Gelos ainsi que la portion du territoire de la ville de Pau…" »
+
+Le décret visé est le **n° 73-669 du 13 juillet 1973**. C'est lui le texte
+créateur ; le 75-872 se borne à redéfinir deux de ses alinéas.
+
+**Trois enseignements, dont un désagréable.**
+
+1. Le canton s'appelle **Pau-III-Sud** en 1975 et **Pau-Sud** au COG de 1999.
+   La numérotation romaine a sauté entre les deux. C'est le cinquième
+   déguisement du même phénomène, après le changement de département, le
+   silence de la source, le renommage et la renumérotation du Havre.
+
+2. **Le décret créateur était déjà dans nos fichiers.** `73-669` figure dans
+   `communes_coupees_1973_1984.csv` — mais avec ses seules lignes **Bayonne et
+   Biarritz**, qui relèvent de son article 2. **L'article 1er, celui de Pau,
+   manque à la transcription.** Nous avons donc cherché pendant des semaines un
+   décret que nous possédions, dont une moitié n'avait pas été relevée.
+
+3. Conséquence à porter au dossier de l'exhaustivité :
+   `communes_coupees_1973_1984.csv` **n'est pas complet décret par décret**. Un
+   décret présent dans le fichier ne garantit pas que tous ses articles y
+   soient. Toute mesure de couverture fondée sur le nombre de décrets présents
+   surestime donc la couverture réelle.
