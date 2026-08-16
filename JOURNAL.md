@@ -948,3 +948,68 @@ source sans rapport. Et le lot SPM d'ADMIN EXPRESS donne
 L'attribut ne distingue pas la Guadeloupe de Mayotte, le département ne peut
 venir que du lot. Une jointure sur `CODE_DEPT` fusionnerait les cinq territoires
 sans rien signaler — encore une erreur qui produirait une géométrie valide.
+
+## 16 août 2026, fin de journée — CONTOURS-IRIS outre-mer : 61 coupes sur 61
+
+Le trou ouvert le matin — 45 % des cantons d'outre-mer sans polygone propre — se
+referme par le même chemin qu'en métropole, et un peu mieux.
+
+Le WFS de la Géoplateforme, interrogé sur `STATISTICALUNITS.IRIS:contours_iris`,
+donne **864 IRIS outre-mer**, dont **472 sur les 28 communes multicantonales**.
+La condition nécessaire `IRIS ≥ coupes + 1` tient pour **28 communes sur 28,
+61 coupes sur 61**. En métropole, trois villes restaient sans appui — ici,
+aucune. Densité 7,7 IRIS par coupe.
+
+Les deux cas les plus lourds sont les mieux servis : Saint-Denis 64 IRIS pour
+8 coupes, Fort-de-France 38 pour 9. Ces deux comptes-là ont été redemandés au
+service en `RESULTTYPE=hits` plutôt que déduits d'un dénombrement à la main :
+64 et 38, les deux fois. Détail dans `cartes/iris_outremer.csv`.
+
+**Le piège de Marseille n'a pas de jumeau ici.** En métropole, Marseille, Lyon
+et Paris rendaient zéro IRIS interrogées par leur code de commune, parce que
+l'INSEE y code par arrondissement municipal — un zéro plausible et donc muet.
+Aucune commune d'outre-mer n'est dans ce cas : les 28 rendent des IRIS sous leur
+propre code. Ce qui valait la peine d'être vérifié plutôt que supposé, puisque
+le même zéro silencieux aurait été indiscernable d'une petite commune.
+
+Ce que la trame ne prouve toujours pas : que les limites cantonales suivent des
+limites d'IRIS. Comme en métropole, c'est un support de tracé et le taux de
+reprise se mesurera dans QGIS.
+
+**Il reste deux téléchargements** avant de pouvoir charger : les cinq lots
+`COMMUNE` de GEOFLA, et la trame IRIS des 28 communes.
+
+## 16 août 2026, dernière manche — la trame communale, et un défaut qui n'existe pas
+
+Les cinq lots `COMMUNE` téléchargés, md5 concordants, recette écrite dans
+`sources/outremer/recette_outremer.py` — qui se relance et qui a servi tout de
+suite, puisqu'elle a d'abord planté sur une lecture de chemin trop maligne.
+
+**129 communes, zéro géométrie invalide, zéro recouvrement.** Le contraste avec
+la métropole est ce qu'il y a de plus notable : là-bas, la somme des cantons
+dépasse leur union de 3 945 km² en 1870, parce que des communes historiques
+fusionnées partagent un code INSEE et que les communes éclatées entre cantons
+n'ont pas de géométrie propre. Outre-mer, somme et union sont égales **au
+centième de km² près** dans les cinq départements. La limite principale du
+projet, celle qu'on traîne depuis le début et qu'on annonce en note de méthode,
+ne s'applique tout simplement pas ici.
+
+Les surfaces tombent à 0,0-1,0 % de l'attribut `SUPERFICIE` du même jeu. C'est
+un contrôle interne, mais c'est celui qui attrape une reprojection ratée, et
+avec cinq CRS distincts il valait la peine d'être fait.
+
+**L'attribution commune → canton était déjà dans le fichier.** `INSEE_COM` est
+écrit en clair — rien à reconstituer — et les codes sont identiques à ceux du
+ministère dans les quatre DOM, 112 sur 112. Mieux : la couche `COMMUNE` porte un
+`CODE_CANT`, et pour les communes d'un seul canton il concorde **85 fois sur
+85**. Deux sources indépendantes, zéro écart, pour la deuxième fois de la
+journée.
+
+Les 27 multicantonales portent le pseudo-code `90`-`99`, vérifié pour les 28
+Mayotte comprise. Ce n'est pas une lacune silencieuse mais un aveu explicite —
+et c'est la différence entre une source qui manque et une source qui ment. Le
+niveau cantonal est donc acquis pour 85 des 112 communes des quatre DOM sans
+aucun travail ; le reste est le chantier IRIS, dont on sait depuis ce matin
+qu'il a de quoi tenir.
+
+Il ne reste qu'un téléchargement avant de charger : la trame IRIS des 28.

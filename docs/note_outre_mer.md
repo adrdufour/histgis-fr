@@ -5,7 +5,8 @@
 > l'ouverture, elles sont corrigées en place et détaillées au §5 :
 > les lots « tous thèmes » ne contiennent que les cantons, et GEOFLA
 > n'individualise pas les cantons des communes multicantonales — 45 % seulement
-> des cantons d'outre-mer ont un polygone propre.
+> des cantons d'outre-mer ont un polygone propre. Le §6 rend compte de la trame
+> communale, dont la recette est passée sans réserve.
 
 L'outre-mer était jusqu'ici **hors périmètre** (`ETAT.md` §Limites, `JOURNAL.md`
 l. 615, `note_1943_2012.md` §168). Cette note rouvre le dossier : que faut-il
@@ -237,13 +238,33 @@ La Réunion est le cas extrême : **35 de ses 49 cantons n'ont aucune géométri
 propre**, parce que dix communes très peuplées y concentrent l'essentiel du
 découpage. C'est plus mauvais que tout ce qu'on a rencontré en métropole.
 
-**La suite est déjà écrite ailleurs.** C'est exactement le problème des 119
-villes multicantonales métropolitaines, résolu le 14 août par CONTOURS-IRIS
-(Licence Ouverte, 4 219 IRIS, 211 coupes pourvues sur 214). Il faut refaire la
-même chose pour 28 communes d'outre-mer. À vérifier d'abord : que CONTOURS-IRIS
-publie bien des IRIS pour les DOM — l'INSEE ne découpe en IRIS que les communes
-d'une certaine taille, et une commune de 3 000 habitants en a zéro, ce qui est
-la bonne réponse et pas une anomalie.
+**La suite était déjà écrite ailleurs, et elle marche.** C'est exactement le
+problème des 119 villes multicantonales métropolitaines, résolu le 14 août par
+CONTOURS-IRIS. Le WFS de la Géoplateforme a été interrogé le 16 août sur les 28
+communes concernées :
+
+| dép. | communes | coupes | IRIS |
+|---|---|---|---|
+| 971 Guadeloupe | 10 | 14 | 82 |
+| 972 Martinique | 6 | 15 | 80 |
+| 973 Guyane | 1 | 5 | 24 |
+| 974 La Réunion | 10 | 25 | 253 |
+| 976 Mayotte | 1 | 2 | 33 |
+| **total** | **28** | **61** | **472** |
+
+**864 IRIS outre-mer, dont 472 sur les 28 communes à découper.** La condition
+nécessaire `IRIS ≥ coupes + 1` tient pour **28 communes sur 28, soit 61 coupes
+sur 61** — mieux qu'en métropole, où trois villes restaient sans appui. Densité :
+7,7 IRIS par coupe, du même ordre que le confort métropolitain.
+
+Aucun cas limite, et les deux plus lourds sont les mieux servis : Saint-Denis
+64 IRIS pour 8 coupes, Fort-de-France 38 pour 9. Les deux comptes ont été
+recontrôlés un par un contre le service (`RESULTTYPE=hits`). Le détail est dans
+`cartes/iris_outremer.csv`.
+
+Ce que cela ne prouve pas, ici comme en métropole : que les limites cantonales
+suivent des limites d'IRIS. C'est un support de tracé, pas une réponse — le taux
+de reprise réel se mesurera commune par commune dans QGIS.
 
 ### Deux confirmations en passant
 
@@ -258,7 +279,56 @@ naïve sur `CODE_DEPT` fusionnerait les cinq territoires en silence.
 
 ---
 
-## 6. Ce que ça change pour la base
+## 6. La trame communale : recette passée, et un cadeau
+
+Les cinq lots `COMMUNE` ont été téléchargés — md5 concordants — et passés à
+`sources/outremer/recette_outremer.py`, qui rejoue tout et se relance.
+
+| dép. | communes | attendu | invalides | somme km² | union km² | recouvrement | vs `SUPERFICIE` |
+|---|---|---|---|---|---|---|---|
+| 971 | 32 | 32 | 0 | 1 631,5 | 1 631,5 | **0,00** | −0,3 % |
+| 972 | 34 | 34 | 0 | 1 103,7 | 1 103,7 | **0,00** | −0,4 % |
+| 973 | 22 | 22 | 0 | 83 824,4 | 83 824,4 | **0,00** | −0,0 % |
+| 974 | 24 | 24 | 0 | 2 501,6 | 2 501,6 | **0,00** | −0,1 % |
+| 976 | 17 | 17 | 0 | 362,5 | 362,5 | **0,00** | −1,0 % |
+
+**129 communes, zéro géométrie invalide, zéro recouvrement.** Le contraste avec
+la métropole est net : là-bas, 3 945 km² sont comptés deux fois en 1870, parce
+que des communes historiques fusionnées partagent un code INSEE. Outre-mer, ce
+défaut n'existe pas — aucune commune n'est fractionnée dans la trame, et la
+somme des surfaces égale l'union au centième de km² près. C'est la limite
+principale du projet qui, ici, ne s'applique pas.
+
+Les surfaces tombent à 0,0-1,0 % de l'attribut `SUPERFICIE` du même jeu : la
+lecture et la projection sont bonnes.
+
+### Le cadeau : l'attribution commune → canton est déjà là
+
+`INSEE_COM` est écrit en clair dans la couche — inutile de reconstituer quoi que
+ce soit — et les codes sont **identiques au fichier du ministère dans les quatre
+DOM**, 112 sur 112.
+
+Mieux : la couche `COMMUNE` porte un `CODE_CANT`, et pour les communes d'un seul
+canton il **concorde 85 fois sur 85** avec le canton du fichier de l'Intérieur.
+
+| dép. | monocantonales concordantes |
+|---|---|
+| 971 | 22 / 22 |
+| 972 | 28 / 28 |
+| 973 | 21 / 21 |
+| 974 | 14 / 14 |
+
+Les 27 communes multicantonales portent, elles, le pseudo-code `90`-`99` — la
+façon dont GEOFLA dit « je ne découpe pas ». Ce n'est pas une lacune silencieuse
+mais un aveu explicite, et il est exact : vérifié pour les 28 (Mayotte comprise).
+
+Autrement dit, **l'attribution communale du niveau cantonal est acquise pour 85
+des 112 communes des quatre DOM, sans travail**. Le reste est le chantier IRIS
+du §5.
+
+---
+
+## 7. Ce que ça change pour la base
 
 Le socle existant absorbe l'outre-mer sans modification d'architecture : les
 atomes sont des géométries, `membership` est une attribution datée, rien n'est
@@ -276,18 +346,22 @@ Trois points d'attention, tous du même genre que ceux déjà rencontrés :
 3. **Le même trou 1943-1999** qu'en métropole pour les cantons, avec en plus
    l'absence de tout millésime GEOFLA entre 1999 et 2015.
 
-## 7. Prochaines étapes, dans l'ordre
+## 8. Prochaines étapes, dans l'ordre
 
 1. ~~Télécharger~~ **fait** : neuf archives, cinq md5 concordants.
 2. ~~Recouper les effectifs, comparer 1999 et 2015~~ **fait** : §5 et §2.
-3. **Relancer le script** pour les cinq lots `COMMUNE` ajoutés depuis — la trame
-   d'atomes manque encore.
-4. **Vérifier que CONTOURS-IRIS couvre les DOM**, et mesurer la couverture des
-   28 communes multicantonales, comme le 14 août pour les 119 villes.
+3. ~~Relancer le script pour les cinq lots `COMMUNE`~~ **fait** : recette passée,
+   §6.
+4. ~~Vérifier que CONTOURS-IRIS couvre les DOM~~ **fait** : 28/28 communes,
+   61/61 coupes pourvues. Reste à **récupérer et charger** la trame, comme
+   `cartes/recupere_iris.py` l'a fait pour la métropole.
 5. Charger les atomes des cinq DOM, avec les circonscriptions 1986 et 2012 déjà
    extraites dans `circo/circo_outremer_1986_2012.csv`.
 6. Trancher la Nouvelle-Calédonie sur la licence de BDADMIN-NC.
 7. L'Algérie, au niveau départemental, plus tard.
+
+Il ne reste donc **qu'un téléchargement** avant de pouvoir charger : la trame
+IRIS des 28 communes multicantonales.
 
 ---
 
