@@ -1616,3 +1616,28 @@ département entier, avec le tableau II pour arbitre.
 Installer `tesseract-ocr-fra` et refaire **la même page** — une seule variable
 changée, sinon le gain ne sera attribuable à rien. Puis `extrait_1968.py`, puis
 le tableau II, puis l'Aisne en entier contre 1940 et 1954.
+
+
+### L'Aisne 1968 est lue — 37 cantons, les mêmes qu'en 1940
+
+`cog1968/extrait_1968.py --dep 02`, 30 pages, OCR français. Détail dans
+`cog1968/note_1968.md`.
+
+**654 communes distinctes sur 816 — 80 % de couverture. 94,2 % de conformité
+à 1940** une fois les lignes `hors_borne` écartées.
+
+Le résultat qui compte n'est pas le taux mais le cadre : **37 cantons
+distincts, codes 01 à 37 tous présents, aucun vu moins de trois fois**. Trois
+recettes indépendantes concordent, et 37 est exactement le compte de 1940. Le
+cadre cantonal de l'Aisne n'a pas bougé entre les deux dates.
+
+**La borne des codes n'a rien masqué.** Les 15 codes rejetés — 50, 51, 52, 53,
+54, 55, 57, 60, 80, 81, 82, 84, 85, 86, 94 — ne comptent aucun 38, 39 ni 40.
+Une création cantonale se serait signalée juste au-dessus de la borne ; il n'y
+a rien là. Chacun renvoie à un canton de 1940 dont il ne diffère que par le
+chiffre des dizaines. C'est un fait mesuré sur ce département, pas une
+propriété de la méthode : à revérifier là où des créations sont attendues.
+
+Restent 38 divergences — 17 à un chiffre près, 21 à deux — que ni la borne ni
+la monotonie ne peuvent départager. **Le tableau II est désormais le seul
+arbitre disponible**, et il est dans la source.

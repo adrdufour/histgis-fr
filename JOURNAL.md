@@ -851,3 +851,100 @@ chiffre annoncé comme comparable doit être comparé, pas supposé.
 **Une erreur silencieuse coûte plus qu'une erreur bruyante.** Le préfixe `1320`
 produisait une géométrie valide, simplement fausse. D'où le réflexe pris :
 afficher au chargement ce qui est capté, avec l'attendu à côté.
+
+---
+
+## 16 août 2026 — l'outre-mer : le fichier qu'on avait déjà
+
+Ouverture du dossier outre-mer, jusque-là écarté par cohérence avec une trame
+métropolitaine. Repérage complet dans `docs/note_outre_mer.md`.
+
+**Le résultat le moins attendu ne vient pas du réseau mais du disque.**
+`circo/correspondance_2012.xls` contient l'outre-mer depuis le début.
+`note_circonscriptions.md` §2.2 l'avait vu, noté, et filtré — « sans effet ici,
+l'outre-mer étant hors périmètre ». Le périmètre a changé, le fichier n'a pas
+bougé : 171 lignes, 4 départements, les circonscriptions de 1986 et de 2012.
+Extraites dans `circo/circo_outremer_1986_2012.csv`.
+
+Trois recoupements valident la lecture sans rien lui emprunter. La Guadeloupe
+donne 40 cantons pour 43 codes, et les trois manquants — `ZA23`, `ZA25`, `ZA29` —
+sont Saint-Barthélemy et Saint-Martin, partis en 2007. La Réunion passe de 5 à 7
+circonscriptions, ce qu'a fait le redécoupage de 2010. Les 32 communes de
+Guadeloupe confirment la partition. Le fichier se date lui-même.
+
+**Une règle vérifiée en métropole devient fausse outre-mer.**
+`insee = dep.zfill(2) || com.zfill(3)` donne `ZA101` là où il faut `97101` : le
+`Code commune` d'outre-mer porte déjà le chiffre du département, et la règle y
+est `'97' || com`. Vérifié sur cinq communes connues. Cette erreur-là aurait été
+silencieuse — des codes bien formés, simplement inexistants. Encore le préfixe
+Marseille, sous un quatrième déguisement.
+
+**GEOFLA couvre les DROM, mais pas au millésime 2011.** Le catalogue donne 1999,
+puis 2015 et 2016 — rien entre les deux. Le bon lot est l'édition du 4 mars
+2015, celle-là même qui sert déjà en métropole : version 2-0, cantons d'avant la
+réforme, `COMMUNE` + `CANTON` + `ARRONDISSEMENT` + `DEPARTEMENT` dans le même
+paquet. Cinq lots, cinq projections différentes, aucune n'étant le Lambert-93.
+URL et md5 relevés au flux ATOM, script dans `sources/outremer/`.
+
+Le millésime 1999 des communes offre un contrôle gratuit de stabilité de la
+trame — l'hypothèse implicite dès qu'on projette une géométrie récente sur le
+XIXᵉ siècle. À mesurer avant de charger, pas après.
+
+**Deux murs de licence, et c'est le même qu'à Paris.** La Polynésie de l'ISPF
+est en ODbL, comme ALPAGE-Vasserot. L'Algérie n'a d'autre source ouverte qu'OSM,
+ODbL également, et GADM interdit la redistribution. Le seul chemin propre reste
+celui de Marseille : géoréférencer du domaine public. À l'échelle de l'Algérie
+ce n'est pas une tâche, c'est un projet ; et la couche départementale, 15 objets,
+coûte infiniment moins que la couche communale.
+
+**Ce qui n'a pas pu être fait ici :** télécharger. `data.geopf.fr` n'est pas
+joignable depuis l'environnement de travail, seules les URL ont pu être
+vérifiées. Le script est prêt à tourner sur la machine locale.
+
+## 16 août 2026, suite — les archives ouvertes démentent le catalogue
+
+Neuf archives téléchargées. **Les cinq md5 relevés au flux ATOM concordent
+exactement** : les fichiers sont ceux annoncés, et le contrôle a servi. Puis
+l'ouverture a démenti deux choses écrites la veille d'après le seul catalogue.
+
+**Un lot sans nom de thème n'est pas un lot complet.**
+`GeoFLA_2-0__SHP_<CRS>_D97x_2015-03-04` pèse 640 Ko et ne contient que `CANTON`.
+J'avais lu « tous thèmes » dans l'absence de thème au nom, et l'avais écrit.
+Le plus gênant est que la preuve du contraire était déjà sur le disque :
+`sources/geofla/canton2014/` ne contient, lui non plus, qu'un répertoire
+`CANTON`. Les communes sont dans cinq lots séparés à la même date, ajoutés au
+script — la trame d'atomes reste donc à télécharger.
+
+**GEOFLA ne découpe pas les communes multicantonales, outre-mer non plus.**
+Une commune partagée entre plusieurs cantons y devient une entité unique, codée
+`90` à `99`, portant le nom de la commune. Résultat : 69 polygones cantonaux
+propres pour 153 cantons réels dans les quatre DOM, soit **45 %**. La Réunion
+tombe à 29 % — 35 de ses 49 cantons sont noyés dans dix agrégats. C'est plus
+mauvais que tout ce qu'on a vu en métropole.
+
+Ce qui donne confiance dans la lecture : **les 27 agrégats correspondent un pour
+un, et nom pour nom, aux 27 communes multicantonales du fichier du ministère**.
+Fort-de-France, Le Lamentin, Les Abymes, Saint-Denis, Le Tampon, Cayenne,
+Mamoudzou. Deux sources qui ne se connaissent pas, zéro exception. Le manque est
+dans la source, pas dans la lecture — et la suite est déjà écrite : c'est le
+problème des 119 villes, résolu le 14 août par CONTOURS-IRIS, à refaire pour 28
+communes d'outre-mer.
+
+**Le contrôle de stabilité communale est excellent, et il coûtait trois lignes.**
+1999 contre 2012 : 90 communes identiques sur 92, les deux écarts étant `97123`
+Saint-Barthélemy et `97127` Saint-Martin, détachés en 2007. L'hypothèse implicite
+de tout le projet — une trame récente vaut pour le passé — se vérifie ici au lieu
+de se supposer. Et le même événement était déjà lisible dans les codes cantonaux
+`ZA23`, `ZA25`, `ZA29` manquants : trois chemins indépendants, un seul fait.
+
+**Deux confirmations gratuites.** `CODE_CHF` de GEOFLA porte le code commune sur
+trois chiffres — `608` Dzaoudzi, `353` Maripasoula — et `'97' || CODE_CHF` donne
+le bon code INSEE : la règle tirée du fichier du ministère se retrouve dans une
+source sans rapport. Et le lot SPM d'ADMIN EXPRESS donne
+`code_insee_du_canton = 'NR'` pour ses deux communes : l'absence de canton y est
+écrite, pas déduite.
+
+**Un piège pour la suite :** `CODE_DEPT` vaut `97` pour les cinq départements.
+L'attribut ne distingue pas la Guadeloupe de Mayotte, le département ne peut
+venir que du lot. Une jointure sur `CODE_DEPT` fusionnerait les cinq territoires
+sans rien signaler — encore une erreur qui produirait une géométrie valide.
