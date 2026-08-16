@@ -1562,3 +1562,57 @@ après 1986.
 **Leçon** : « la série va de 1954 à 1976 » décrivait la publication, pas la
 numérisation. Une phrase vraie lue comme si elle répondait à une autre
 question — la même famille d'erreur que le dénominateur des 119 villes.
+
+### 1968 est plus facile que 1954 — mesuré le 15 août 2026
+
+83 fascicules déposés sous `sources/rp1968/`, indexés par
+`cog1968/index_fascicules.py`. Détail dans `cog1968/note_1968.md`.
+
+**83 départements sur 95.** Douze manquent : Aude, Orne, Pas-de-Calais,
+Saône-et-Loire, Sarthe, Savoie, Haute-Savoie, Paris, Seine-Maritime,
+Seine-et-Marne, Yvelines, Yonne.
+
+#### Le verrou de 1954 saute : le tableau porte le code INSEE
+
+Structure d'une ligne du tableau III :
+
+```
+[pop. 1962] [pop. 1962 sans doubles] [arr] [canton] [code INSEE] Nom.  [pop. 1968]
+```
+
+**Vérifié : 9 concordances sur 9** entre le nombre à trois chiffres et
+`noms_geofla`. En 1954 la jointure se faisait par le nom, et 7 576 noms
+restaient orphelins ; en 1968 elle se fait par le code.
+
+Trois autres garde-fous que 1954 n'avait pas : le code INSEE **croît** dans la
+page, donc un chiffre mal lu se détecte sur ses voisins ; le **tableau II**
+donne le nombre de communes par canton, recette de contrôle fournie par la
+source ; et l'en-tête de chaque page de tableau porte « AISNE (02) », soit le
+département **et son code**.
+
+Ce dernier point est une leçon en soi : l'index par page de titre a coûté trois
+essais et une correction manuelle, alors que **l'en-tête des pages de tableau
+donnait la réponse avec le code numérique en prime**. La bonne clé était sur la
+page suivante ; je ne l'ai pas cherchée avant d'avoir écrit trois algorithmes.
+
+#### Faisabilité : 79 %, et c'est un plancher
+
+Une page de l'Aisne OCRisée, confrontée à la composition cantonale de 1940
+déjà en base : **31 lignes conformes sur 39**, zéro commune inconnue.
+
+Plancher pour trois raisons cumulées : OCR en **anglais** faute du paquet
+`tesseract-ocr-fra` ; aucune des corrections écrites pour 1954 appliquée ;
+aucun prétraitement.
+
+Les huit divergences portent presque toutes sur un seul chiffre — **le 3
+initial lu 8, 2 ou 1**. Le motif rend l'explication par l'OCR très probable.
+**Il ne la prouve pas** : un transfert réel de commune entre 1940 et 1968
+laisserait la même trace, et c'est exactement ce qui a fait échouer les 311
+« transferts » de 1954, dont la géométrie a réfuté 227. À trancher sur un
+département entier, avec le tableau II pour arbitre.
+
+#### L'ordre des étapes
+
+Installer `tesseract-ocr-fra` et refaire **la même page** — une seule variable
+changée, sinon le gain ne sera attribuable à rien. Puis `extrait_1968.py`, puis
+le tableau II, puis l'Aisne en entier contre 1940 et 1954.
