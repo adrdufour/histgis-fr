@@ -1788,12 +1788,16 @@ lieu d'être déduite de voisins ; et l'hypothèse est plus faible que partout
 ailleurs dans la chaîne, puisqu'une commune associée n'a pas de rattachement
 propre : elle *est* une fraction de l'absorbante.
 
-**Résultat** : 38 cas retenus, **38 lignes posées sur 23 communes** — 23 de
-canton, 15 de circo. Zéro atome dans deux unités du même niveau à la même date.
-Ouézy est continu de 1999 à 2013. Son circo ne commence qu'au 23 février 2010,
-mais c'est l'entrée en vigueur du découpage de 2009 : **toute la couche moderne
-est sans circonscription entre 1999 et 2010**, ce n'est pas un défaut de ce
-correctif.
+**Résultat** : 38 cas retenus, **17 lignes posées sur 16 communes** — 16 de
+canton, 1 de circo. Toutes recettes vides : aucun atome dans deux unités du même
+niveau à la même date, aucune ligne posée sur une année où la commune existait,
+aucun polygone réclamé deux fois. Ouézy est continu de 1999 à 2013.
+
+**Une seule ligne de circo, et c'est cohérent.** Son circo ne commence qu'au 23
+février 2010, entrée en vigueur du découpage de 2009 : **toute la couche moderne
+est sans circonscription entre 1999 et 2010**. Or tous les rétablissements
+Marcellin sont antérieurs à 2008 — il n'y avait rien à leur donner à ce niveau.
+Le seul cas servi est Bihorel, dont la parenthèse de fusion tombe après 2010.
 
 #### Le défaut du premier jet, et ce qu'il apprend
 
@@ -1825,14 +1829,40 @@ règle fausse donne un résultat juste et une méthode fausse.* Il faut réparer
 règle, sans quoi le prochain cas qui échappe au garde-fou passe — et il passera
 silencieusement, puisque tout sera cohérent.
 
-#### Ce qui reste ouvert
+#### Le sixième garde-fou : le polygone doit être orphelin
 
-Sept communes rétablies en 2012 ou après — 52033, 52124, 52266, 52278, 52465,
-55138, 76601 — sont **absentes de `noms_geofla`**, donc de GEOFLA 2011, et
-reçoivent pourtant trois lignes chacune. Si leur atome porte le polygone de la
-mère plutôt qu'un polygone propre, il n'y avait pas de trou à combler et l'on
-superpose deux fois le même territoire. Aucune recette d'unités ne le verrait :
-il faut comparer les géométries.
+Le passage précédent posait encore trois lignes chacune à sept communes
+rétablies en 2012 ou après — 52033, 52124, 52266, 52278, 52465, 55138, 76601 —
+toutes **absentes de `noms_geofla`**, donc de GEOFLA 2011, puisque le millésime
+précède leur rétablissement.
+
+Leur atome existe quand même, par la route `successeur`, **et il porte le
+polygone de la commune absorbante**. Mesuré : leur aire est exactement celle de
+la mère — 93,1 km² contre 93,1 pour Val-de-Meuse, 23,2 contre 23,2 pour
+Terre-Natale, et ainsi des cinq autres. Il n'y avait donc rien d'orphelin à
+raccrocher. Leur poser les rattachements de la mère faisait réclamer le même
+polygone par deux atomes rattachés au même canton — **trois pour Val-de-Meuse**,
+que 52033 et 52465 portent tous deux en plus de 52332 lui-même.
+
+**La recette 5 était aveugle à cela, et c'est le point à retenir.** Elle compare
+des unités : trois atomes dans le *même* canton ne se contredisent pas, et
+pourtant le canton compte alors ce territoire trois fois. **Une recette
+d'attribution ne voit pas une erreur de surface.** C'est la même leçon que les
+planches qui avaient révélé les polygones mal placés — la cohérence interne ne
+détecte que ce qui se contredit, et deux fois le même territoire ne se
+contredit pas.
+
+Le garde-fou 6 écarte tout atome dont l'empreinte géométrique est déjà portée
+par un autre atome rattaché sur la fenêtre. Le test se fait sur
+`md5(ST_AsEWKB(geom))`, la même clé que `14_cle_partage.sql` et la seule qui ne
+suppose rien : grouper par un code aurait manqué le cas, puisque les codes
+diffèrent. La recette 7, géométrique, le vérifie après coup.
+
+Ces sept communes ne laissent aucun trou de couverture : leur territoire est
+couvert par l'atome de la mère. Elles rejoignent simplement le poids mort décrit
+à la limite n° 7 de `METHODE.md`.
+
+#### Ce qui reste ouvert
 
 Les 45 autres communes de GEOFLA 2011 absentes du COG 1999 ne sont pas des
 rétablissements et restent hors de ce fichier — créations postérieures,

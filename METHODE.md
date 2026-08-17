@@ -882,3 +882,33 @@ autres la fenêtre se réduit à la vraie parenthèse de fusion, souvent vide.
 requête ne calculait pas. Quand un fichier annonce un dénominateur, la requête
 doit le produire, et une recette doit le compter. C'est la cinquième occurrence
 du piège du dénominateur dans ce projet.
+
+### Une recette d'attribution ne voit pas une erreur de surface
+
+Même journée, même fichier, défaut suivant. Sept communes rétablies en 2012 ou
+après sont absentes de GEOFLA 2011 — le millésime précède leur rétablissement.
+Leur atome existe malgré tout, par la route `successeur`, **et il porte le
+polygone de la commune absorbante** : leur aire est exactement celle de la mère,
+93,1 km² contre 93,1 pour Val-de-Meuse, 23,2 contre 23,2 pour Terre-Natale.
+
+Il n'y avait donc aucun polygone orphelin à raccrocher. En leur posant les
+rattachements de la mère, on faisait réclamer le même polygone par deux atomes
+rattachés au même canton — trois pour Val-de-Meuse, que deux communes portent en
+plus d'elle-même.
+
+**La recette de cohérence était aveugle**, et pas par négligence : elle compte
+les atomes rattachés à deux unités du même niveau à la même date, et trois
+atomes dans le *même* canton ne se contredisent pas. Le canton comptait
+pourtant ce territoire trois fois.
+
+**La règle** : une recette d'attribution vérifie que les rattachements ne se
+contredisent pas ; elle ne dit rien de la surface. Deux fois le même territoire
+est parfaitement cohérent. Tout correctif qui ajoute des rattachements à des
+atomes doit donc être contrôlé **aussi** sur la géométrie — ici par
+`md5(ST_AsEWKB(geom))`, la clé de `14_cle_partage.sql`, la seule qui ne suppose
+rien. Grouper par un code aurait manqué le cas : les codes diffèrent, c'est le
+polygone qui est le même.
+
+C'est la même leçon que les planches qui avaient révélé les polygones mal
+placés, et que la limite 6.2 quinquies : **la cohérence interne ne détecte que
+ce qui se contredit.**
