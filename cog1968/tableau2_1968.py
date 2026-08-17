@@ -69,13 +69,24 @@ from extrait_1968 import index                              # noqa: E402
 SORTIE = RACINE / "cog1968" / "tableau2_1968.csv"
 LU = RACINE / "cog1968" / "communes_1968.csv"
 
-# La page du tableau II se reconnaît à son titre. On cherche largement :
-# l'OCR rend « Tableau II » aussi bien « Tableau JI » ou « Tableau Il ».
-EST_TABLEAU2 = re.compile(r"arrondissements?\s+et\s+cantons", re.I)
+# La page du tableau II se reconnaît à son titre — mais PAS à son titre seul,
+# et c'est la troisième fois aujourd'hui que la leçon se répète.
+#
+# Premier jet : exiger « ARRONDISSEMENTS ET CANTONS ». La page 8 du fascicule
+# de l'Aisne porte « ARRPONDISSEMENTS ET CANTONS », avec un `p` parasite. La
+# page entière était donc sautée — deux arrondissements sur cinq, Soissons et
+# Vervins, et une quinzaine de cantons avec eux. Le tableau ne tient pas sur
+# une page, et rien ne le disait.
+#
+# On tolère donc le bruit dans le titre, ET on accepte la page sur deux autres
+# marques qui ne dépendent pas de lui : l'en-tête d'arrondissement et le
+# « (6 Cantons.) » qui le suit. Trois portes d'entrée pour la même page, qui
+# échouent pour des raisons différentes.
+EST_TABLEAU2 = re.compile(r"arr\w{0,3}ondissements?\s*et\s*cantons", re.I)
 
 # « Arrondissement de CHÂTEAU-THIERRY. » puis « (5 Cantons.) »
 ARRONDISSEMENT = re.compile(
-    r"arrondissement\s+d[eu']\s*(.{2,40}?)\s*\.?\s*$", re.I)
+    r"arr\w{0,3}ondissement\s+d[eu']\s*(.{2,40}?)\s*\.?\s*$", re.I)
 NB_CANTONS = re.compile(r"\(\s*(\d{1,2})\s*cantons?\s*\.?\s*\)", re.I)
 
 # ---------------------------------------------------------------------------
@@ -101,10 +112,18 @@ NB_CANTONS = re.compile(r"\(\s*(\d{1,2})\s*cantons?\s*\.?\s*\)", re.I)
 # On n'ancre donc plus que sur la FIN de ligne, qui est le bord extérieur de la
 # page et le mieux venu : le nombre de communes suivi de trois populations.
 # Tout ce qui précède est pris comme un bloc dont on tire ce qu'on peut.
+# Troisième correction, page 8 : le scan y laisse une colonne de chiffres
+# parasites APRÈS les populations — « 9.727 | 22 », « 5.562 388 ». C'est le
+# bord de la page voisine, capté par le cadrage. L'ancrage de fin de ligne
+# cassait dessus et ne rendait qu'un canton pour Soissons comme pour Vervins.
+# On tolère donc une queue courte : au plus un nombre isolé, éventuellement
+# précédé d'une barre. Pas davantage, sans quoi une population passerait pour
+# la queue et le compte de communes glisserait d'une colonne.
 CANTON = re.compile(
     r"(.*?)"                                          # tout l'avant, souvent abîmé
     r"(\d{1,3})\s+"                                  # NOMBRE DE COMMUNES
-    r"([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s*$")
+    r"([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})"
+    r"[\s|\]\[]*(?:\d{1,4})?[\s|\]\[.]*$")           # queue parasite tolérée
 
 # Le code, quand il a survécu. Il est isolé entre deux espaces, après les
 # populations de 1962 et avant le nom — donc rarement en tête du fragment.
@@ -129,7 +148,8 @@ def lit_tableau2(pdf, langue="fra", pages_max=16):
     courant, lignes_bloc = collections.Counter(), collections.Counter()
     for p in range(1, pages_max + 1):
         txt = page_texte(pdf, p, langue=langue)
-        if not EST_TABLEAU2.search(txt):
+        if not (EST_TABLEAU2.search(txt) or NB_CANTONS.search(txt)
+                or ARRONDISSEMENT.search(txt)):
             continue
         for brut in txt.splitlines():
             s = brut.strip()
@@ -137,7 +157,8 @@ def lit_tableau2(pdf, langue="fra", pages_max=16):
                 continue
             m = ARRONDISSEMENT.search(s)
             if m and not CANTON.search(s):
-                arr = nettoie_nom(m.group(1)).upper()
+                arr = re.sub(r"[\s.,|]*\d+[\s.,|]*$", "",
+                             nettoie_nom(m.group(1))).upper().strip(" .")
                 continue
             m = NB_CANTONS.search(s)
             if m and arr:

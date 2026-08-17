@@ -1043,3 +1043,40 @@ Le script vérifie donc chaque entité contre l'emprise de son territoire et
 refuse d'écrire si ça sort. Testé dans les deux sens sur des entités fabriquées.
 Le service n'a pas encore été interrogé pour de vrai : si les axes sont bons, le
 contrôle ne coûte rien ; s'ils ne le sont pas, il économise une journée.
+
+## 16 août 2026 — la trame IRIS reçue, et le SQL écrit sans pouvoir l'essayer
+
+`recupere_iris_outremer.py` lancé pour de vrai : **472 IRIS pour 28 communes,
+exactement le nombre annoncé par le repérage**, 28 communes en trame
+confortable, **61 coupes sur 61 pourvues**. Le garde-fou d'emprise passe : les
+axes sont bien en lon/lat, le contrôle n'aura servi à rien — ce qui est le sort
+normal d'un bon garde-fou, et ne dit pas qu'il était inutile.
+
+**`sql/40_outremer.sql` est écrit, et n'a jamais tourné.** Il n'y avait pas de
+PostgreSQL dans l'environnement de rédaction, et pas les droits pour en
+installer. C'est écrit en tête du fichier plutôt que passé sous silence : les
+chiffres attendus de ses recettes viennent de mesures réelles sur les
+shapefiles, pas du script lui-même. Ce sont les recettes qui diront s'il les
+atteint.
+
+Deux choix de structure méritent d'être dits.
+
+**Tables séparées, et pour deux raisons dont la seconde suffirait.** Le SRID,
+d'abord : `atom_geom` est typé 2154, l'outre-mer vit en 4326. Mais aussi
+`unit.dep`, qui est `char(2)` quand les départements d'outre-mer tiennent sur
+trois caractères. On aurait pu leur donner les codes `ZA`-`ZD` du ministère,
+qui font bien deux caractères — c'était tentant, et c'était faire entrer dans
+une colonne un code que rien d'autre dans la base n'emploie. `om_unit.dep` est
+donc `char(3)` et porte le code INSEE, celui qu'on lit partout ailleurs.
+
+**Les deux contraintes `EXCLUDE USING gist` sont reprises telles quelles.**
+C'est ce qui empêche de rattacher Fort-de-France à ses neuf cantons à la fois,
+et donc ce qui oblige à laisser les 27 communes multicantonales sans
+attribution jusqu'au découpage sur IRIS. La contrainte qui bloque est celle qui
+protège : le même raisonnement qu'en 1870 pour Lyon.
+
+Une erreur relevée à la relecture, avant qu'elle ne coûte : le script lisait
+`om_canton_src` pour les cantons de Mayotte sans que rien n'ait jamais dit
+comment charger cette table. L'en-tête donne maintenant la commande, et un
+garde-fou refuse de démarrer sans elle plutôt que de poser 16 cantons au lieu
+de 19 sans rien signaler.
