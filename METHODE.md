@@ -843,3 +843,42 @@ points de couverture et ne fabrique aucune erreur.
 Vérification décisive : Arrien-en-Bethmale reçoit **exactement** la chaîne de
 Bethmale, sa mère, alternances comprises — sans que la filiation ait été
 cherchée nulle part.
+
+## Un garde-fou qui rattrape une règle fausse donne un résultat juste et une méthode fausse
+
+Trouvé le 17 août 2026 en jouant `41_retablissement.sql`, qui comble le trou
+laissé par les communes fusionnées sous la loi Marcellin puis rétablies après
+1999 — le miroir exact du défaut d'Arrien.
+
+**Le commentaire du fichier annonçait 21 cas, la requête en a sorti 38.** Elle
+prenait tout mouvement INSEE `mod = '21'` postérieur à 1999 sans jamais croiser
+la liste des communes absentes du COG 1999, qui était pourtant l'ensemble
+décrit trois paragraphes plus haut. Les 17 intrus sont des communes bien
+vivantes en 1999, fusionnées plus tard et rétablies ensuite : Bihorel (fusionnée
+en 2012), 14114 (2017), Sannerville, Villotran, L'Oie, les quatre du Cantal.
+Pour elles, la fenêtre `[1999, rétablissement)` couvre des années où la commune
+existait de plein droit et n'avait aucune raison d'hériter de qui que ce soit.
+
+**Le résultat était pourtant presque juste**, parce qu'un garde-fou refusait de
+poser sur une période déjà occupée : 12 intrus sur 14 tombaient d'eux-mêmes.
+Ils tombaient pour la mauvaise raison — la période était prise, pas la fenêtre
+fausse — et il restait donc exactement les cas où la commune existait **et**
+avait un trou dans son propre rattachement : cinq lignes, trois pour 14114 et
+deux pour Bihorel.
+
+**La règle à retenir** : un garde-fou protège la base d'une contradiction, il ne
+rend pas une règle vraie. Quand un contrôle rattrape la quasi-totalité des cas
+qu'une règle admet à tort, c'est la règle qu'il faut réparer — sans quoi le
+prochain cas qui échappe au contrôle passe, et il passera silencieusement
+puisque tout est cohérent.
+
+Réparation : la fenêtre ne s'ouvre plus au début de la couche moderne mais **à
+la date d'absorption**, lue dans `insee_mvt` et plafonnée par ce début ; et le
+cas est abandonné si aucune absorption n'est attestée. Pour la queue Marcellin
+— les 21 cas visés — l'absorption date de 1972-74 et rien ne change ; pour les
+autres la fenêtre se réduit à la vraie parenthèse de fusion, souvent vide.
+
+**Corollaire de rédaction** : le commentaire décrivait un ensemble que la
+requête ne calculait pas. Quand un fichier annonce un dénominateur, la requête
+doit le produire, et une recette doit le compter. C'est la cinquième occurrence
+du piège du dénominateur dans ce projet.
