@@ -50,6 +50,7 @@ import argparse
 import collections
 import csv
 import multiprocessing
+import os
 import re
 import sys
 from pathlib import Path
@@ -160,6 +161,12 @@ def main():
     ap.add_argument("--langue", default="fra")
     ap.add_argument("--jobs", type=int,
                     default=max(1, (multiprocessing.cpu_count() or 2) - 1))
+    # Une passe complète, c'est 83 fascicules et ~2 500 pages : des heures.
+    # Accumuler en mémoire et n'écrire qu'à la fin, comme le faisait la
+    # première version, fait perdre la nuit entière sur un plantage au 60e
+    # département. On écrit donc après CHAQUE fascicule, et on sait reprendre.
+    ap.add_argument("--reprendre", action="store_true",
+                    help="sauter les départements déjà présents dans le CSV")
     a = ap.parse_args()
 
     idx = index()
@@ -172,6 +179,22 @@ def main():
     else:
         raise SystemExit("Préciser --dep NN ou --tous.")
 
+    CHAMPS = ["dep", "insee", "insee3", "arr", "canton", "nom", "pop1968",
+              "hors_borne", "page"]
+    deja = set()
+    if a.reprendre and SORTIE.exists():
+        deja = {l["dep"] for l in csv.DictReader(SORTIE.open(encoding="utf-8"))}
+        cibles = [(d, p) for d, p in cibles if d not in deja]
+        print(f"reprise : {len(deja)} départements déjà faits, "
+              f"{len(cibles)} restants\n")
+    neuf = not SORTIE.exists() or (not a.reprendre)
+    sortie = SORTIE.open("w" if neuf else "a", newline="", encoding="utf-8")
+    ecrivain = csv.DictWriter(sortie, fieldnames=CHAMPS)
+    if neuf:
+        ecrivain.writeheader()
+        sortie.flush()
+
+    bornes = bornes_cantonales()
     lignes = []
     for dep, pdf in cibles:
         import subprocess
@@ -191,14 +214,20 @@ def main():
                     o["dep"] = dep
                     o["insee"] = dep + o["insee3"]
                 lignes += out
-        print(f"   {len([l for l in lignes if l['dep'] == dep])} communes lues")
+        # Écriture immédiate, fichier vidé sur le disque : ce qui est lu est
+        # acquis, même si la machine s'arrête à la page suivante.
+        du_dep = [l for l in lignes if l["dep"] == dep]
+        for l in du_dep:
+            b = bornes.get(dep, 99)
+            l["hors_borne"] = ("oui" if l["canton"].isdigit()
+                               and int(l["canton"]) > b else "")
+        ecrivain.writerows(sorted(du_dep, key=lambda x: x["insee"]))
+        sortie.flush()
+        os.fsync(sortie.fileno())
+        print(f"   {len(du_dep)} communes lues, écrites")
 
     if not lignes:
         raise SystemExit("Aucune ligne reconnue.")
-    bornes = bornes_cantonales()
-    for l in lignes:
-        b = bornes.get(l["dep"], 99)
-        l["hors_borne"] = "oui" if l["canton"].isdigit() and int(l["canton"]) > b else ""
     lignes.sort(key=lambda x: (x["dep"], x["insee"]))
     with SORTIE.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["dep", "insee", "insee3", "arr",

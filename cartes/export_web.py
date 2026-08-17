@@ -250,14 +250,23 @@ def configurations(cur, dep, niveau):
 # ---------------------------------------------------------------------------
 GEOM_ATOME = "ST_MakeValid(ST_SnapToGrid(ag.geom, %(grille)s))"
 
+# Le nom de la commune vient de `noms_geofla`, à défaut de `geofla_commune`.
+# C'est un nom de 2011, donc potentiellement anachronique sur une planche de
+# 1885 : la base ne tient pas de nom communal d'époque (`insee_mvt.libelle_av`
+# le donnerait pour les disparues, c'est un chantier ouvert dans
+# `RESTE_A_FAIRE.md`). La page l'affiche en le disant.
 SQL_COMMUNES = f"""
 SELECT a.atom_id,
        a.insee_geofla,
        a.fraction,
        ag.partagee,
-       ST_AsGeoJSON(ST_Transform({GEOM_ATOME}, 4326), %(prec)s) AS gj
+       coalesce(n.nom, g.nom_comm)                                AS nom,
+       ST_AsGeoJSON(ST_Transform({GEOM_ATOME}, 4326), %(prec)s)    AS gj,
+       ST_AsGeoJSON(ST_Transform(ST_PointOnSurface({GEOM_ATOME}), 4326), %(prec)s) AS pt
 FROM   atom_geom ag
 JOIN   atom a ON a.atom_id = ag.atom_id
+LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla
+LEFT   JOIN geofla_commune g ON g.insee_com = a.insee_geofla
 WHERE  ag.atom_id IN (
            SELECT DISTINCT m.atom_id
            FROM   membership m
@@ -265,6 +274,12 @@ WHERE  ag.atom_id IN (
            WHERE  u.dep = %(dep)s
        )
 """
+
+# `noms_geofla` peut ne pas exister sur une base reconstruite sans le
+# dictionnaire : on se rabat alors sur GEOFLA seul plutôt que d'échouer.
+SQL_COMMUNES_SANS_DICO = SQL_COMMUNES.replace(
+    "coalesce(n.nom, g.nom_comm)", "g.nom_comm").replace(
+    "LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla\n", "")
 
 SQL_UNITES = f"""
 SELECT u.unit_id,
@@ -321,15 +336,22 @@ def exporte_departement(cur, dep, grille, prec, sortie):
     poids = 0
 
     # --- communes : géométrie statique, écrite une seule fois ---------------
-    cur.execute(SQL_COMMUNES, params)
+    try:
+        cur.execute(SQL_COMMUNES, params)
+    except psycopg2.Error:
+        cur.connection.rollback()
+        cur.execute(SQL_COMMUNES_SANS_DICO, params)
     communes = {}
-    for atom_id, insee, fraction, partagee, gj in cur.fetchall():
+    for atom_id, insee, fraction, partagee, nom, gj, pt in cur.fetchall():
         if not gj:
             continue
+        p = json.loads(pt)["coordinates"] if pt else None
         communes[atom_id] = {
             "i": insee,
+            "n": nom,
             "f": 1 if fraction else 0,
             "p": 1 if partagee else 0,
+            "c": [round(p[0], 5), round(p[1], 5)] if p else None,
             "g": json.loads(gj),
         }
     poids += ecrit(base / "communes.json", {"dep": dep, "communes": communes})
