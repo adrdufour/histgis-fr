@@ -65,6 +65,8 @@
   .j-can { background: #b9c6b0; }
   .j-cir { background: #d8b9a8; }
   .j-both { background: #8fa384; }
+  .j-abs { background: repeating-linear-gradient(45deg, #cfc9bf 0 3px,
+           #e6e1d8 3px 6px); }
   #reperes { position: relative; height: 12px; color: var(--gris); font-size: 10.5px; }
   #reperes span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
   #bandeau {
@@ -90,11 +92,15 @@
               stroke-linecap: round; pointer-events: none; }
   .contour-ref { fill: var(--vide); stroke: var(--gris-clair); stroke-width: 1.5;
                  stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
-  .etiq { font-size: 9px; fill: #33302c; paint-order: stroke;
-          stroke: rgba(247,245,240,.85); stroke-width: 2.4; text-anchor: middle;
-          pointer-events: none; font-family: inherit; }
-  .etiq-circo { font-size: 10.5px; font-weight: 600; fill: var(--trait-circo);
-                stroke-width: 3; }
+  /* La taille du texte est posée en unités du viewBox par applique(), pas ici :
+     le viewBox est gradué en kilomètres, donc un `font-size: 9px` écrit dans
+     la feuille vaudrait neuf kilomètres de haut. C'est le défaut qui rendait
+     les étiquettes illisibles. Seul ce qui ne dépend pas de l'échelle reste
+     en CSS. */
+  .etiq { fill: #33302c; paint-order: stroke; stroke: rgba(247,245,240,.9);
+          text-anchor: middle; pointer-events: none; font-family: inherit; }
+  .etiq-circo { font-weight: 600; fill: var(--trait-circo); }
+  .etiq-commune { fill: #55504a; }
   .surligne { stroke: #b8860b !important; stroke-width: 3.2 !important; }
   table.rec { width: 100%; border-collapse: collapse; font-size: 12.5px; }
   table.rec td { padding: 2px 0; vertical-align: top; }
@@ -152,7 +158,13 @@
     <label><input type="checkbox" id="v-communes" checked> communes</label>
     <label><input type="checkbox" id="v-cantons" checked> cantons</label>
     <label><input type="checkbox" id="v-circos" checked> circonscriptions</label>
-    <label><input type="checkbox" id="v-noms"> noms</label>
+    <label for="v-noms">noms</label>
+    <select id="v-noms">
+      <option value="communes" selected>communes (au zoom)</option>
+      <option value="unites">cantons et circos</option>
+      <option value="tout">tout</option>
+      <option value="aucun">aucun</option>
+    </select>
     <span style="width:8px"></span>
     <label>colorier par</label>
     <select id="teinte">
@@ -303,7 +315,12 @@ async function chargeDepartement(dep) {
     ]);
     if (j !== S.jeton) return;
     S.dep = dep; S.depIndex = idx; S.communes = com.communes; S.contours = cont;
-    S.cadre = null; S.vue = null;
+    S.cadre = null; S.vue = null; S._bornes = null;
+    // Un export antérieur à l'ajout des noms se reconnaît à l'absence de `n`
+    // sur les communes. Plutôt que d'afficher une carte muette sans expliquer
+    // pourquoi, la page le dit dans le panneau.
+    const q = Object.values(S.communes)[0] || {};
+    S.exportAncien = !("n" in q);
   } finally {
     if (j === S.jeton) $("#chargement").style.display = "none";
   }
@@ -361,6 +378,39 @@ function applique() {
   if (w / h < ar) { const nw = h * ar; x -= (nw - w) / 2; w = nw; }
   else { const nh = w / ar; y -= (nh - h) / 2; h = nh; }
   svg.setAttribute("viewBox", `${x} ${y} ${w} ${h}`);
+  S.ech = w / Math.max(r.width, 1);   // unités de carte par pixel écran
+  echelleEcran();
+}
+
+// ---------------------------------------------------------------------------
+// Ce qui doit garder une taille à l'écran quel que soit le zoom. Les traits
+// s'en tirent avec `vector-effect: non-scaling-stroke` ; le texte et les motifs
+// de remplissage n'ont pas d'équivalent en SVG 1.1 et se règlent ici.
+// ---------------------------------------------------------------------------
+function echelleEcran() {
+  const e = S.ech || 1;
+  for (const [sel, px, contour] of [[".etiq", 11, 2.6],
+                                    [".etiq-circo", 13, 3.2],
+                                    [".etiq-commune", 8.5, 2]]) {
+    svg.querySelectorAll(sel).forEach(t => {
+      t.setAttribute("font-size", (px * e).toFixed(4));
+      t.setAttribute("stroke-width", (contour * e).toFixed(4));
+    });
+  }
+  // Hachures : 5 px de pas à l'écran. En unités de carte elles valaient
+  // six kilomètres, d'où un motif si étalé qu'il ne se lisait plus.
+  const p = svg.querySelector("#hachure");
+  if (p) {
+    const pas = 5 * e;
+    p.setAttribute("width", pas); p.setAttribute("height", pas);
+    p.querySelector("rect").setAttribute("width", pas);
+    p.querySelector("rect").setAttribute("height", pas);
+    const l = p.querySelector("line");
+    l.setAttribute("y2", pas);
+    l.setAttribute("stroke-width", 1.5 * e);
+  }
+  // Le point de chef-lieu et les repères ponctuels suivent la même règle.
+  svg.querySelectorAll("circle.pt").forEach(c => c.setAttribute("r", 2.2 * e));
 }
 
 function dessine() {
@@ -398,26 +448,34 @@ function dessine() {
   const vide = !S.cfgCanton && !S.cfgCirco;
 
   // --- fond : contour de référence, pour les années sans source ------------
+  // Deux silences à ne pas confondre : la base qui ne dit rien, et le
+  // territoire qui n'est pas français. Le premier est une lacune du projet, le
+  // second un fait historique. Les afficher pareil serait s'accuser à tort.
   if (vide) {
     const annees = (S.depIndex.contours || []).map(Number);
+    let plusProche = null;
     if (annees.length) {
-      const plusProche = annees.reduce((a, b) =>
+      plusProche = annees.reduce((a, b) =>
         Math.abs(b - S.annee) < Math.abs(a - S.annee) ? b : a);
       const geo = S.contours[String(plusProche)];
       if (geo) {
-        const gg = g("fond");
         const p = document.createElementNS(NS, "path");
         p.setAttribute("d", geomVersD(geo));
         p.setAttribute("class", "contour-ref");
-        gg.appendChild(p);
-        if (!S.cadre) { S.cadre = null; }
+        g("fond").appendChild(p);
       }
-      bandeau(`<b>Aucune source pour ${S.annee}.</b> La base ne tient aucune
-        composition à cette date — ni cantonale, ni électorale. Le contour grisé
-        est celui de ${plusProche}, emprunté pour situer le département : ce
-        n'est pas la carte de ${S.annee}.`);
+    }
+    const abs = absencePour(S.annee);
+    const emprunt = plusProche
+      ? ` Le contour grisé est celui de ${plusProche}, emprunté pour situer les
+          lieux : ce n'est pas la carte de ${S.annee}.` : "";
+    if (abs) {
+      bandeau(`<b>Pas de département à cette date (${abs.a}-${abs.b}).</b>
+        ${echappe(abs.motif)}. Ce n'est pas une lacune de la base : il n'y a
+        rien à cartographier.${emprunt}`);
     } else {
-      bandeau(`<b>Aucune source pour ${S.annee}</b> dans ce département.`);
+      bandeau(`<b>Aucune source pour ${S.annee}.</b> La base ne tient aucune
+        composition à cette date — ni cantonale, ni électorale.${emprunt}`);
     }
   } else {
     bandeau(null);
@@ -470,26 +528,77 @@ function dessine() {
   }
 
   // --- noms ---------------------------------------------------------------
-  if ($("#v-noms").checked) {
+  // Les noms de communes n'apparaissent qu'une fois zoomé : à l'échelle du
+  // département, trois cent quarante étiquettes se recouvrent et ne disent
+  // plus rien. Le seuil est en unités de carte par pixel, donc indépendant de
+  // la taille de la fenêtre.
+  const modeNoms = $("#v-noms").value;
+  if (modeNoms !== "aucun") {
     const gn = g("noms");
-    const pose = (unites, cls) => {
+    const pose = (x, y, nom, cls) => {
+      const t = document.createElementNS(NS, "text");
+      t.setAttribute("x", x); t.setAttribute("y", y);
+      t.setAttribute("class", cls);
+      t.textContent = nom;
+      gn.appendChild(t);
+    };
+    const poseUnites = (unites, cls) => {
       for (const u of unites || []) {
         const c = centroide(u.g);
         if (!c) continue;
         const p = proj(c[0], c[1]);
-        const t = document.createElementNS(NS, "text");
-        t.setAttribute("x", p[0]); t.setAttribute("y", p[1]);
-        t.setAttribute("class", cls);
-        t.textContent = u.nom;
-        gn.appendChild(t);
+        pose(p[0], p[1], u.nom, cls);
       }
     };
-    if (S.cfgCanton && $("#v-cantons").checked) pose(S.cfgCanton.unites, "etiq");
-    if (S.cfgCirco && $("#v-circos").checked) pose(S.cfgCirco.unites, "etiq etiq-circo");
+    if (modeNoms !== "communes") {
+      if (S.cfgCanton && $("#v-cantons").checked) poseUnites(S.cfgCanton.unites, "etiq");
+      if (S.cfgCirco && $("#v-circos").checked)
+        poseUnites(S.cfgCirco.unites, "etiq etiq-circo");
+    }
+    // Les noms de communes n'ont pas de seuil de zoom global : chaque commune
+    // porte le sien quand elle est assez grande à l'écran. Un seuil global
+    // faisait qu'à l'échelle du département *rien* n'apparaissait, y compris
+    // pour les grandes communes qui auraient tenu leur étiquette — un réglage
+    // qu'on ne peut pas distinguer d'une panne.
+    S.nomsPoses = 0;
+    if ((modeNoms === "communes" || modeNoms === "tout") && !vide) {
+      const vus = new Set();
+      const src = Object.keys(rattach).length ? rattach
+                : (Object.keys(parCanton).length ? parCanton : parCirco);
+      for (const aid of Object.keys(src)) {
+        const c = S.communes[aid];
+        if (!c || vus.has(c.i)) continue;
+        const nom = c.n || c.i || aid;
+        // La règle est celle qu'on énoncerait à la main : une étiquette plus
+        // large que sa commune ne se lit pas et masque ses voisines. Le seuil
+        // dépend donc de la longueur du nom, pas d'une constante — « Ars »
+        // tient dans une commune où « Saint-Étienne-du-Grès » déborde. La
+        // largeur est estimée à 0,52 cadratin par caractère, ce qui suffit pour
+        // trancher.
+        if (c._d === undefined) {
+          const b = bboxDe(c.g);
+          const p0 = proj(b[0], b[1]), p1 = proj(b[2], b[3]);
+          c._d = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]);
+        }
+        if (c._d / (S.ech || 1) < nom.length * 8.5 * 0.52) continue;
+        const p = c.c ? proj(c.c[0], c.c[1]) : (() => {
+          const q = centroide(c.g); return q ? proj(q[0], q[1]) : null;
+        })();
+        if (!p) continue;
+        vus.add(c.i);
+        pose(p[0], p[1], nom, "etiq etiq-commune");
+        S.nomsPoses++;
+      }
+    }
   }
 
   svg.replaceChildren(frag);
   calibre();
+  // `calibre()` rend la main sans rien faire quand le cadre est déjà posé, donc
+  // sans passer par `applique()`. Les éléments qui viennent d'être créés
+  // n'auraient alors aucune taille d'écran : texte à zéro, hachures au pas par
+  // défaut. C'est exactement le défaut qu'on corrige ici.
+  echelleEcran();
   panneau();
 }
 
@@ -513,7 +622,8 @@ function panneau() {
   const sansGeom = kc ? kc.unites.reduce((s, u) => s + (u.sans_geom || 0), 0) : 0;
   const circoSansTerr = kx ? kx.unites.filter(u => !u.g).length : 0;
 
-  let h = `<h2>${nom} — ${S.annee}</h2><table class="rec">`;
+  let h = (S.selection ? ficheCommune(S.selection) : "") +
+          `<h2>${nom} — ${S.annee}</h2><table class="rec">`;
   h += `<tr><td>communes (atomes)</td><td>${kc ? kc.unites.reduce((s,u)=>s+u.n,0)
         : (kx ? kx.unites.reduce((s,u)=>s+u.n,0) : "—")}</td></tr>`;
   h += `<tr><td>cantons</td><td>${kc ? kc.unites.length : "—"}</td></tr>`;
@@ -523,6 +633,20 @@ function panneau() {
     if (reg) h += `<tr><td>scrutin</td><td>${reg}</td></tr>`;
   }
   h += `</table>`;
+
+  // Un défaut d'export ne doit pas se présenter comme une carte pauvre : la
+  // page dit ce qui manque et comment le réparer.
+  if (S.exportAncien) {
+    h += `<p class="avert"><b>Export antérieur à l'ajout des noms.</b> Les
+      communes n'ont ni nom ni point de pose, et les périodes d'inexistence
+      d'un département ne sont pas motivées. Relancer
+      <code>python3 cartes/export_web.py</code>.</p>`;
+  } else if ($("#v-noms").value !== "aucun" && $("#v-noms").value !== "unites"
+             && S.nomsPoses === 0 && (kc || kx)) {
+    h += `<p class="note">Aucun nom de commune affiché à cette échelle : les
+      communes sont plus petites que leur étiquette. Zoomer les fait
+      apparaître une à une.</p>`;
+  }
 
   if (!kc && !kx) {
     h += `<p class="avert">Aucune source à cette date. Le trou cantonal
@@ -611,6 +735,55 @@ function nomDep(dep, annee) {
 }
 
 // ===========================================================================
+// Détail d'une commune
+//
+// Une ville partagée entre plusieurs cantons porte plusieurs atomes sur le
+// même polygone : on les regroupe par code INSEE pour rendre *tous* ses
+// rattachements, et non le premier venu. C'est là qu'est l'information que la
+// carte, elle, ne peut pas montrer.
+// ===========================================================================
+function detail(aid) {
+  const c = S.communes[aid];
+  const freres = c && c.i
+    ? Object.keys(S.communes).filter(k => S.communes[k].i === c.i) : [aid];
+  const cherche = (cfg) => {
+    if (!cfg) return [];
+    const ids = [...new Set(freres.map(k => cfg.rattachement[k]).filter(Boolean))];
+    return ids.map(id => cfg.unites.find(u => u.id === id)).filter(Boolean);
+  };
+  return { commune: c, atomes: freres,
+           cantons: cherche(S.cfgCanton), circos: cherche(S.cfgCirco) };
+}
+
+function ficheCommune(aid) {
+  const d = detail(aid);
+  const c = d.commune;
+  if (!c) return "";
+  let h = `<h2>Commune</h2><table class="rec">`;
+  h += `<tr><td>nom</td><td>${echappe(c.n || "—")}</td></tr>`;
+  h += `<tr><td>code INSEE</td><td>${echappe(c.i || "—")}</td></tr>`;
+  h += `<tr><td>atome${d.atomes.length > 1 ? "s" : ""}</td><td>${
+        d.atomes.map(echappe).join("<br>")}</td></tr>`;
+  h += `<tr><td>canton${d.cantons.length > 1 ? "s" : ""}</td><td>${
+        d.cantons.length ? d.cantons.map(u => echappe(u.nom)).join("<br>") : "—"}</td></tr>`;
+  h += `<tr><td>circonscription${d.circos.length > 1 ? "s" : ""}</td><td>${
+        d.circos.length ? d.circos.map(u => echappe(u.nom)).join("<br>") : "—"}</td></tr>`;
+  h += `</table>`;
+  if (d.cantons.length > 1) {
+    h += `<p class="avert">Cette commune relève de ${d.cantons.length} cantons.
+      La base n'en tient pas le découpage interne : chaque atome porte le
+      polygone entier, si bien que ces ${d.cantons.length} cantons se
+      recouvrent exactement ici. Le tracé reste à faire sur la trame IRIS.</p>`;
+  }
+  if (c.n) {
+    h += `<p class="note">Le nom est celui de la trame GEOFLA 2011 : il peut
+      être anachronique sur une planche ancienne. La base ne tient pas de nom
+      communal d'époque.</p>`;
+  }
+  return h;
+}
+
+// ===========================================================================
 // Infobulle
 // ===========================================================================
 svg.addEventListener("mousemove", ev => {
@@ -619,15 +792,16 @@ svg.addEventListener("mousemove", ev => {
   if (!cible) { t.style.display = "none"; return; }
   const aid = cible.dataset.atome;
   const c = S.communes[aid];
-  const kc = S.cfgCanton, kx = S.cfgCirco;
-  const canton = kc && kc.rattachement[aid]
-    ? kc.unites.find(u => u.id === kc.rattachement[aid]) : null;
-  const circo = kx && kx.rattachement[aid]
-    ? kx.unites.find(u => u.id === kx.rattachement[aid]) : null;
-  let h = `<b>${echappe(c.i || aid)}</b>`;
-  if (canton) h += `<br>canton : ${echappe(canton.nom)}`;
-  if (circo) h += `<br>circonscription : ${echappe(circo.nom)}`;
-  if (c.p) h += `<br><span class="sec">polygone partagé — les cantons se recouvrent ici</span>`;
+  const d = detail(aid);
+  let h = `<b>${echappe(c.n || c.i || aid)}</b>`;
+  if (c.n && c.i) h += ` <span class="sec">${echappe(c.i)}</span>`;
+  if (d.cantons.length === 1) h += `<br>canton : ${echappe(d.cantons[0].nom)}`;
+  else if (d.cantons.length > 1)
+    h += `<br>cantons : ${d.cantons.map(u => echappe(u.nom)).join(", ")}`;
+  if (d.circos.length === 1) h += `<br>circonscription : ${echappe(d.circos[0].nom)}`;
+  else if (d.circos.length > 1)
+    h += `<br>circonscriptions : ${d.circos.map(u => echappe(u.nom)).join(", ")}`;
+  if (c.p) h += `<br><span class="sec">commune partagée — les cantons se recouvrent ici</span>`;
   if (c.f) h += `<br><span class="sec">fraction de commune</span>`;
   t.innerHTML = h;
   const r = $("#carte-zone").getBoundingClientRect();
@@ -637,23 +811,37 @@ svg.addEventListener("mousemove", ev => {
 });
 svg.addEventListener("mouseleave", () => { $("#infobulle").style.display = "none"; });
 
+// Clic : épingle la commune dans le panneau. Un second clic la détache.
+svg.addEventListener("click", ev => {
+  if (tire && tire.bouge) return;          // fin d'un glisser, pas un clic
+  const cible = ev.target.closest("[data-atome]");
+  S.selection = (cible && cible.dataset.atome !== S.selection)
+    ? cible.dataset.atome : null;
+  panneau();
+});
+
 // ===========================================================================
 // Panoramique et zoom
 // ===========================================================================
 let tire = null;
 svg.addEventListener("mousedown", ev => {
-  tire = { x: ev.clientX, y: ev.clientY, v: { ...S.vue } };
+  tire = { x: ev.clientX, y: ev.clientY, v: { ...S.vue }, bouge: false };
   svg.classList.add("tire");
 });
 window.addEventListener("mousemove", ev => {
   if (!tire || !S.vue) return;
+  if (Math.abs(ev.clientX - tire.x) + Math.abs(ev.clientY - tire.y) > 3)
+    tire.bouge = true;
   const r = svg.getBoundingClientRect();
   const vb = svg.viewBox.baseVal;
   S.vue.x = tire.v.x - (ev.clientX - tire.x) * vb.width / r.width;
   S.vue.y = tire.v.y - (ev.clientY - tire.y) * vb.height / r.height;
   applique();
 });
-window.addEventListener("mouseup", () => { tire = null; svg.classList.remove("tire"); });
+window.addEventListener("mouseup", () => {
+  setTimeout(() => { tire = null; }, 0);   // le clic est traité avant l'oubli
+  svg.classList.remove("tire");
+});
 svg.addEventListener("wheel", ev => {
   if (!S.vue) return;
   ev.preventDefault();
@@ -667,39 +855,93 @@ svg.addEventListener("wheel", ev => {
     w: S.vue.w * f, h: S.vue.h * f,
   };
   applique();
+  // Les étiquettes de communes apparaissent une à une selon la taille de
+  // chaque commune à l'écran : le zoom change donc la liste. On redessine une
+  // fois la molette calmée plutôt qu'à chaque cran, qui coûterait plusieurs
+  // centaines de chemins pour rien.
+  if ($("#v-noms").value === "communes" || $("#v-noms").value === "tout") {
+    clearTimeout(S.minuterieZoom);
+    S.minuterieZoom = setTimeout(dessine, 140);
+  }
 }, { passive: false });
 window.addEventListener("resize", applique);
 
 // ===========================================================================
 // Curseur, jauge de disponibilité
 // ===========================================================================
+// ---------------------------------------------------------------------------
+// Le curseur ne va pas de 1815 à 2012 partout : il se borne au premier et au
+// dernier millésime que la base sert pour le département affiché. Proposer
+// 1950 pour la Meurthe, disparue en 1871, ou 1890 pour la Moselle, alors
+// allemande, ce serait offrir de naviguer dans un territoire qui n'existe pas.
+// Les bornes viennent des données ; les motifs, eux, sont déclarés.
+// ---------------------------------------------------------------------------
+function bornes() {
+  if (!S.depIndex) return [AN_MIN, AN_MAX];
+  // On préfère recalculer depuis les années servies plutôt que de faire
+  // confiance au champ `bornes` : il n'existe que dans les exports récents, et
+  // une page qui dépend d'un champ absent échoue en silence — c'est-à-dire de
+  // la pire façon. Les clés d'`annees` sont là depuis toujours.
+  if (!S._bornes) {
+    const a = Object.keys(S.depIndex.annees).map(Number);
+    S._bornes = a.length ? [Math.min(...a), Math.max(...a)] : [AN_MIN, AN_MAX];
+  }
+  return S._bornes;
+}
+
+function absencePour(annee) {
+  for (const [a, b, motif] of (S.depIndex && S.depIndex.absences) || [])
+    if (annee >= a && annee <= b) return { a, b, motif };
+  return null;
+}
+
+// Année servie la plus proche, pour ne pas laisser le curseur en terrain vide.
+function plusProcheServie(annee) {
+  const an = S.depIndex.annees;
+  if (an[String(annee)]) return annee;
+  for (let d = 1; d <= AN_MAX - AN_MIN; d++) {
+    if (an[String(annee - d)]) return annee - d;
+    if (an[String(annee + d)]) return annee + d;
+  }
+  return annee;
+}
+
 function dessineJauge() {
   const j = $("#jauge"); j.innerHTML = "";
   if (!S.depIndex) return;
-  const n = AN_MAX - AN_MIN + 1;
-  let cour = null, debut = null;
-  const pose = (a0, a1, cls) => {
+  const [a0, a1] = bornes();
+  const n = a1 - a0 + 1;
+  const pose = (d0, d1, cls) => {
     const d = document.createElement("div");
     d.className = cls;
-    d.style.left = ((a0 - AN_MIN) / n * 100) + "%";
-    d.style.width = ((a1 - a0 + 1) / n * 100) + "%";
+    d.style.left = ((d0 - a0) / n * 100) + "%";
+    d.style.width = ((d1 - d0 + 1) / n * 100) + "%";
     j.appendChild(d);
   };
-  for (let a = AN_MIN; a <= AN_MAX + 1; a++) {
+  let cour = null, debut = a0;
+  for (let a = a0; a <= a1 + 1; a++) {
     const e = S.depIndex.annees[String(a)];
-    const cls = !e ? null : (e.c && e.x ? "j-both" : (e.c ? "j-can" : "j-cir"));
+    const cls = !e ? (absencePour(a) ? "j-abs" : null)
+              : (e.c && e.x ? "j-both" : (e.c ? "j-can" : "j-cir"));
     if (cls !== cour) {
       if (cour) pose(debut, a - 1, cour);
       cour = cls; debut = a;
     }
   }
+  // Repères : les bornes du département, plus les millésimes remarquables
+  // qui tombent dedans.
   const r = $("#reperes"); r.innerHTML = "";
-  for (const a of [1815, 1870, 1900, 1940, 1970, 1999, 2012]) {
+  const marques = [...new Set([a0, a1,
+    ...[1870, 1900, 1940, 1970, 1999].filter(x => x > a0 + n * .08 &&
+                                                  x < a1 - n * .08)])];
+  for (const a of marques.sort((x, y) => x - y)) {
     const s = document.createElement("span");
     s.textContent = a;
-    s.style.left = ((a - AN_MIN + .5) / n * 100) + "%";
+    s.style.left = ((a - a0 + .5) / n * 100) + "%";
     r.appendChild(s);
   }
+  const c = $("#curseur");
+  c.min = a0; c.max = a1;
 }
 
 // ===========================================================================
@@ -716,10 +958,27 @@ async function majAnnee(annee, redessine = true) {
 
 async function majDep(dep) {
   await chargeDepartement(dep);
+  S.selection = null;
   dessineJauge();
-  await majAnnee(S.annee);
+  const [a0, a1] = bornes();
+  // On garde l'année en cours si le département la sert ; sinon on se pose sur
+  // la plus proche qu'il serve, plutôt que d'ouvrir sur une carte vide.
+  let a = Math.min(a1, Math.max(a0, S.annee));
+  if (!S.depIndex.annees[String(a)]) a = plusProcheServie(a);
+  await majAnnee(a);
   S.cadre = null; calibre();
   dessine();
+  const m = S.depIndex.motifs || [];
+  if (m[0] || m[1]) {
+    const bouts = [];
+    if (m[0]) bouts.push(`existe depuis ${a0} — ${m[0]}`);
+    if (m[1]) bouts.push(`n'existe plus après ${a1} — ${m[1]}`);
+    $("#entete-sous").textContent = bouts.join(" ; ");
+  } else {
+    $("#entete-sous").textContent =
+      `base histgis — ${a0}-${a1} pour ce département, grille ` +
+      `${S.index.grille_m} m, export du ${S.index.genere}`;
+  }
 }
 
 function lien() {
@@ -729,6 +988,9 @@ function lien() {
 $("#curseur").addEventListener("input", ev => {
   const a = +ev.target.value;
   S.annee = a; $("#annee-aff").textContent = a;
+  const abs = absencePour(a);
+  $("#annee-aff").style.color = (abs || !S.depIndex.annees[String(a)])
+    ? "var(--gris)" : "";
 });
 $("#curseur").addEventListener("change", ev => majAnnee(+ev.target.value));
 $("#dep").addEventListener("change", ev => majDep(ev.target.value));
@@ -737,8 +999,9 @@ $("#dep").addEventListener("change", ev => majDep(ev.target.value));
 $("#recadrer").addEventListener("click", () => { S.cadre = null; calibre(); });
 window.addEventListener("keydown", ev => {
   if (ev.target.tagName === "SELECT" || ev.target.tagName === "INPUT") return;
-  if (ev.key === "ArrowLeft") majAnnee(Math.max(AN_MIN, S.annee - 1));
-  if (ev.key === "ArrowRight") majAnnee(Math.min(AN_MAX, S.annee + 1));
+  const [a0, a1] = bornes();
+  if (ev.key === "ArrowLeft") majAnnee(Math.max(a0, S.annee - 1));
+  if (ev.key === "ArrowRight") majAnnee(Math.min(a1, S.annee + 1));
 });
 
 let minuterie = null;
@@ -751,8 +1014,8 @@ $("#lecture").addEventListener("click", () => {
   }
   b.classList.add("actif"); b.textContent = "■ arrêter";
   minuterie = setInterval(() => {
-    const a = S.annee >= AN_MAX ? AN_MIN : S.annee + 1;
-    majAnnee(a);
+    const [a0, a1] = bornes();
+    majAnnee(S.annee >= a1 ? a0 : S.annee + 1);
   }, 320);
 });
 
@@ -762,6 +1025,9 @@ $("#lecture").addEventListener("click", () => {
   for (const d of S.index.departements) {
     const o = document.createElement("option");
     o.value = d.code;
+    // Pas de plage d'années dans le libellé : elle allongeait chaque ligne et
+    // rendait la liste moins lisible pour une information que le curseur donne
+    // déjà. Elle est rappelée en tête de page une fois le département choisi.
     o.textContent = `${d.code} — ${d.nom}`;
     sel.appendChild(o);
   }

@@ -1137,3 +1137,106 @@ chargement alors qu'il y avait bien une information à montrer. Le coloriage
 retient maintenant le niveau le plus fin disponible. C'est le genre de chose
 qu'une recette sur les données ne peut pas attraper — il fallait regarder
 l'image.
+
+## 17 août 2026, second tour — cinq défauts remontés de l'usage
+
+Premier export réel fait, cinq reproches, tous fondés. Ce qu'ils ont en commun
+mérite d'être noté : **aucun n'était visible dans les données**. Les recettes
+de la veille passaient toutes, et la page était inutilisable sur quatre points.
+
+**Le texte et les hachures étaient exprimés en kilomètres.** Le `viewBox` est
+gradué en unités de carte ; un `font-size: 9px` écrit dans la feuille de style
+vaut donc neuf kilomètres de haut, et un motif de hachures au pas de six vaut
+six kilomètres. Les traits s'en tiraient grâce à `vector-effect:
+non-scaling-stroke`, qui n'a pas d'équivalent pour le texte ni pour les motifs
+de remplissage. La taille est maintenant posée en unités de carte à chaque
+rendu, à partir de l'échelle courante. Corollaire attrapé au passage :
+`calibre()` rend la main sans rien faire quand le cadre est déjà posé, donc
+sans repasser par `applique()` — les éléments fraîchement créés n'avaient
+aucune taille du tout. Le redimensionnement est appelé explicitement en fin de
+`dessine()`.
+
+**Le curseur proposait des années où le département n'existe pas.** Il se borne
+désormais au premier et au dernier millésime servi, déduits des données. Le 99
+n'ouvre plus qu'une année.
+
+**Et surtout, il fallait distinguer deux silences.** La base qui ne dit rien, et
+le territoire qui n'est pas français. Les afficher pareil, c'était s'accuser
+d'une lacune qu'on n'a pas : il n'y a pas de Moselle française en 1890, et ce
+n'est pas un trou de couverture. Une table `ABSENCES` déclare les périodes
+d'annexion et les motifs de bornes, en tête d'`export_web.py`, comme des
+affirmations historiques datées et non comme une commodité d'affichage. Les
+bornes, elles, restent déduites des données — la table ne fabrique aucun trou,
+elle ne fait que motiver ceux qui existent.
+
+**Le 99 méritait son nom.** C'est la Meurthe d'avant 1871, documentée au § 8 de
+`METHODE.md` ; elle sortait sans libellé et avec un curseur de deux siècles
+pour une seule année servie.
+
+**Les noms de communes manquaient.** Joints depuis `noms_geofla`, à défaut
+`geofla_commune`, avec un `ST_PointOnSurface` pour la pose. La requête est
+assemblée selon les tables présentes plutôt que d'échouer sur une base
+reconstruite sans ses annexes. Les étiquettes n'apparaissent qu'au zoom et les
+communes trop petites restent muettes — une étiquette plus large que sa commune
+masque ses voisines sans se lire elle-même.
+
+**Le clic sur une ville multicantonale rend tous ses cantons.** Ses
+atomes-fractions partagent un code INSEE ; la fiche les regroupe. C'est
+précisément l'information que la carte ne peut pas porter, puisque ces cantons
+s'y recouvrent exactement — la donner en clair là où le dessin échoue vaut
+mieux que de la taire deux fois.
+
+**Sur la méthode de recette.** La première passée de contrôle ne pouvait pas
+attraper ces défauts : ils ne sont ni dans les données, ni dans le SQL. Il a
+fallu rendre des images et les regarder. Deux limites d'outillage relevées au
+passage — cairosvg n'applique pas les sélecteurs de classe et ignore `hsl()` et
+les motifs, ce qui a d'abord fait passer un rendu correct pour un rendu cassé.
+Le contrôle final est fait à `resvg`, qui rend patterns, `paint-order` et
+`hsl()` comme un navigateur. **Un rendu de contrôle qui ment coûte plus cher
+que pas de rendu du tout** : on corrige alors ce qui n'est pas cassé.
+
+22 recettes SQL, 12 scénarios rendus, zéro erreur JavaScript.
+
+## 17 août 2026, troisième tour — la page dépendait de son propre export
+
+Trois reproches, et le premier enseignement porte sur les deux premiers : **la
+page tenait pour acquis des champs que seul le nouvel export produit.** Sur un
+export de la veille, les noms de communes n'existaient pas et le champ `bornes`
+non plus — le curseur retombait sur 1815-2012 pour tous les départements, et
+aucune étiquette ne pouvait s'afficher. Rien ne le disait. C'est la pire forme
+de panne : la page rendait une carte plausible, et le défaut passait pour un
+choix.
+
+Deux correctifs, et le second est le vrai.
+
+**Les bornes se recalculent depuis les clés d'`annees`**, qui existent depuis
+toujours, au lieu de faire confiance à un champ ajouté hier. Le résultat est le
+même quand l'export est à jour, et il est juste quand il ne l'est pas.
+
+**Un export ancien est reconnu et annoncé.** L'absence de `n` sur les communes
+suffit à le détecter ; le panneau dit alors ce qui manque et la commande à
+relancer. Une page qui se dégrade doit dire qu'elle se dégrade — sans quoi
+c'est l'utilisateur qui paie le diagnostic, deux fois.
+
+**Le seuil d'affichage des noms était global, donc inutilisable.** Il exigeait
+un zoom minimum avant de poser la moindre étiquette : à l'échelle du
+département, *rien* n'apparaissait, y compris pour les communes qui auraient
+largement tenu la leur — réglage indistinguable d'une panne, et c'est bien
+comme une panne qu'il a été rapporté. Chaque commune porte maintenant son
+propre seuil, et la règle est celle qu'on énoncerait à la main : une étiquette
+plus large que sa commune ne se lit pas et masque ses voisines. Le seuil dépend
+donc de la longueur du nom — « Ars » tient là où « Saint-Étienne-du-Grès »
+déborde. Mesuré sur un département de 340 communes : 106 noms à l'échelle
+départementale, 298 à mi-zoom, 340 au-delà. Les noms de communes sont désormais
+la couche par défaut.
+
+**La plage d'années sort du sélecteur de départements.** Elle allongeait chaque
+ligne d'une information que le curseur donne déjà ; elle est rappelée en tête
+de page une fois le département choisi.
+
+Recette élargie : le même harnais tourne maintenant sur **deux jeux de
+données**, le courant et un « export ancien » fabriqué en retirant les champs
+récents. Les bornes du 99 y restent justes (1870-1870) et le diagnostic
+s'affiche dans les trois départements testés. C'est ce second jeu qui manquait
+la veille — on ne teste jamais assez le cas où l'on ne s'est pas encore mis à
+jour soi-même.

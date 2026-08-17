@@ -25,7 +25,44 @@ Options utiles :
 | `servir.py 9000 --sans-navigateur` | autre port, sans ouvrir de fenêtre |
 
 Dans la page : flèches ← → pour avancer d'un an, molette pour zoomer, glisser
-pour déplacer, `#01/1885` dans l'URL pour pointer une planche précise.
+pour déplacer, clic sur une commune pour l'épingler dans le panneau, `#01/1885`
+dans l'URL pour pointer une planche précise.
+
+## Le curseur ne va pas de 1815 à 2012 partout
+
+Il se borne au premier et au dernier millésime que la base sert pour le
+département affiché — le libellé du sélecteur les rappelle. Le **99** (la
+Meurthe d'avant 1871, que TRF-GIS code ainsi faute de code INSEE) n'ouvre
+qu'une seule année ; la Moselle et les deux Rhin s'arrêtent en 1871 et
+reprennent en 1919.
+
+Cette dernière coupure n'est pas un trou de la base, et la page ne les affiche
+pas pareil. **Deux silences se ressemblent et ne veulent pas dire la même
+chose** : la base qui n'a rien à dire, et le territoire qui n'est pas français.
+Le bandeau distingue « aucune source pour 1965 » de « pas de département à
+cette date (1871-1918) — annexé à l'Empire allemand ». Confondre les deux
+reviendrait à s'accuser d'une lacune qu'on n'a pas. Les périodes d'annexion
+apparaissent hachurées dans la jauge, les motifs sont déclarés en tête de
+`export_web.py` : ce sont des affirmations historiques datées, à contredire si
+elles sont fausses.
+
+## Noms de communes
+
+Le nom vient de `noms_geofla`, à défaut de `geofla_commune.nom_comm`. Il paraît
+dans l'infobulle, dans la fiche au clic, et en étiquettes quand le zoom est
+assez fort — au-delà, trois cent quarante étiquettes se recouvrent et ne disent
+plus rien ; les communes trop petites pour porter la leur restent muettes.
+
+**C'est un nom de 2011, donc possiblement anachronique** sur une planche de
+1885. La page le dit dans la fiche. La base ne tient pas de nom communal
+d'époque : `insee_mvt.libelle_av` le donnerait pour les disparues, c'est un
+chantier ouvert dans `RESTE_A_FAIRE.md`.
+
+Cliquer sur une **ville multicantonale** rend tous ses rattachements et non le
+premier venu : ses atomes-fractions partagent un code INSEE, la fiche les
+regroupe et liste les cantons entre lesquels elle est partagée. C'est
+l'information que la carte, elle, ne peut pas montrer, puisque ces cantons s'y
+recouvrent exactement.
 
 ## Ce que la page montre — et ce qu'elle refuse de montrer
 

@@ -129,7 +129,51 @@ NOMS_DEP = {
     "87": "Haute-Vienne", "88": "Vosges", "89": "Yonne",
     "90": "Territoire de Belfort", "91": "Essonne", "92": "Hauts-de-Seine",
     "93": "Seine-Saint-Denis", "94": "Val-de-Marne", "95": "Val-d'Oise",
-    "54b": "Meurthe", "88b": "Vosges",
+    # `99` n'est pas un code d'usage : c'est la Meurthe d'avant 1871, que
+    # TRF-GIS code ainsi faute de code INSEE — le département a disparu au
+    # partage. Documenté dans METHODE.md, § « Curiosités documentées ».
+    "99": "Meurthe (avant le partage de 1871)",
+}
+
+
+# ---------------------------------------------------------------------------
+# Périodes où un département n'est pas français, n'existe pas encore, ou a
+# cessé d'exister. Sans cette table, un trou de couverture et une absence de
+# territoire se ressemblent : la page dirait « aucune source » pour la Moselle
+# en 1890, alors que la bonne réponse est qu'il n'y a pas de Moselle française
+# en 1890. Les bornes du curseur, elles, sont déduites des données ; cette table
+# ne sert qu'à motiver les trous, jamais à en fabriquer.
+#
+# Chaque entrée est une affirmation historique datée, à contredire si elle est
+# fausse — pas une commodité d'affichage.
+# ---------------------------------------------------------------------------
+ABSENCES = {
+    "57": [(1871, 1918, "annexée à l'Empire allemand — traité de Francfort "
+                        "(10 mai 1871) à l'armistice du 11 novembre 1918")],
+    "67": [(1871, 1918, "annexé à l'Empire allemand — traité de Francfort "
+                        "(10 mai 1871) à l'armistice du 11 novembre 1918")],
+    "68": [(1871, 1918, "annexé à l'Empire allemand — traité de Francfort "
+                        "(10 mai 1871) à l'armistice du 11 novembre 1918. "
+                        "Le Territoire de Belfort, resté français, en est "
+                        "détaché")],
+}
+
+# Motifs de début et de fin d'existence, affichés en bout de curseur.
+BORNES_MOTIF = {
+    "99": (None, "la Meurthe disparaît au partage de 1871 : l'essentiel forme "
+                 "la Meurthe-et-Moselle, le reste est annexé avec la Moselle"),
+    "20": (None, "la Corse est partagée en Corse-du-Sud et Haute-Corse "
+                 "au 1er janvier 1976"),
+    "2A": ("partition de la Corse, 1er janvier 1976", None),
+    "2B": ("partition de la Corse, 1er janvier 1976", None),
+    "91": ("créé par la réorganisation de la région parisienne — loi du "
+           "10 juillet 1964, effet au 1er janvier 1968", None),
+    "92": ("réorganisation de la région parisienne, 1er janvier 1968", None),
+    "93": ("réorganisation de la région parisienne, 1er janvier 1968", None),
+    "94": ("réorganisation de la région parisienne, 1er janvier 1968", None),
+    "95": ("réorganisation de la région parisienne, 1er janvier 1968", None),
+    "78": (None, "la Seine-et-Oise est démembrée au 1er janvier 1968 ; le code "
+                 "78 désigne ensuite les Yvelines"),
 }
 
 
@@ -255,18 +299,32 @@ GEOM_ATOME = "ST_MakeValid(ST_SnapToGrid(ag.geom, %(grille)s))"
 # 1885 : la base ne tient pas de nom communal d'époque (`insee_mvt.libelle_av`
 # le donnerait pour les disparues, c'est un chantier ouvert dans
 # `RESTE_A_FAIRE.md`). La page l'affiche en le disant.
-SQL_COMMUNES = f"""
+#
+# Ces deux tables sont des annexes, pas le cœur du modèle : une base
+# reconstruite sans elles doit exporter quand même, avec des communes sans nom
+# plutôt qu'un export qui échoue. D'où la requête assemblée selon ce qui est
+# présent, constaté une fois à la connexion.
+def sql_communes(dico, geofla):
+    champs, joints = [], []
+    if dico:
+        joints.append("LEFT JOIN noms_geofla n ON n.insee = a.insee_geofla")
+        champs.append("n.nom")
+    if geofla:
+        joints.append("LEFT JOIN geofla_commune g ON g.insee_com = a.insee_geofla")
+        champs.append("g.nom_comm")
+    nom = f"coalesce({', '.join(champs)})" if champs else "NULL::text"
+    return f"""
 SELECT a.atom_id,
        a.insee_geofla,
        a.fraction,
        ag.partagee,
-       coalesce(n.nom, g.nom_comm)                                AS nom,
-       ST_AsGeoJSON(ST_Transform({GEOM_ATOME}, 4326), %(prec)s)    AS gj,
-       ST_AsGeoJSON(ST_Transform(ST_PointOnSurface({GEOM_ATOME}), 4326), %(prec)s) AS pt
+       {nom}                                                       AS nom,
+       ST_AsGeoJSON(ST_Transform({GEOM_ATOME}, 4326), %(prec)s)     AS gj,
+       ST_AsGeoJSON(ST_Transform(ST_PointOnSurface({GEOM_ATOME}), 4326),
+                    %(prec)s)                                      AS pt
 FROM   atom_geom ag
 JOIN   atom a ON a.atom_id = ag.atom_id
-LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla
-LEFT   JOIN geofla_commune g ON g.insee_com = a.insee_geofla
+{chr(10).join(joints)}
 WHERE  ag.atom_id IN (
            SELECT DISTINCT m.atom_id
            FROM   membership m
@@ -274,12 +332,6 @@ WHERE  ag.atom_id IN (
            WHERE  u.dep = %(dep)s
        )
 """
-
-# `noms_geofla` peut ne pas exister sur une base reconstruite sans le
-# dictionnaire : on se rabat alors sur GEOFLA seul plutôt que d'échouer.
-SQL_COMMUNES_SANS_DICO = SQL_COMMUNES.replace(
-    "coalesce(n.nom, g.nom_comm)", "g.nom_comm").replace(
-    "LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla\n", "")
 
 SQL_UNITES = f"""
 SELECT u.unit_id,
@@ -322,7 +374,12 @@ def ecrit(chemin, obj):
     return chemin.stat().st_size
 
 
-def exporte_departement(cur, dep, grille, prec, sortie):
+def existe(cur, table):
+    cur.execute("SELECT to_regclass(%s) IS NOT NULL", (f"histgis.{table}",))
+    return cur.fetchone()[0]
+
+
+def exporte_departement(cur, dep, grille, prec, sortie, sql_com):
     t0 = time.time()
     base = sortie / "dep" / dep
     params = {"dep": dep, "grille": grille, "prec": prec}
@@ -336,11 +393,7 @@ def exporte_departement(cur, dep, grille, prec, sortie):
     poids = 0
 
     # --- communes : géométrie statique, écrite une seule fois ---------------
-    try:
-        cur.execute(SQL_COMMUNES, params)
-    except psycopg2.Error:
-        cur.connection.rollback()
-        cur.execute(SQL_COMMUNES_SANS_DICO, params)
+    cur.execute(sql_com, params)
     communes = {}
     for atom_id, insee, fraction, partagee, nom, gj, pt in cur.fetchall():
         if not gj:
@@ -398,14 +451,22 @@ def exporte_departement(cur, dep, grille, prec, sortie):
         c, x = cfg_canton[a], cfg_circo[a]
         if c or x:
             annees[str(a)] = {"c": c[:12] if c else "", "x": x[:12] if x else ""}
+    # Bornes du curseur : premier et dernier millésime que la base sert pour ce
+    # département. Déduites des données, jamais posées à la main — un
+    # département dont la couverture s'arrête en 1940 doit le montrer.
+    servies = sorted(int(a) for a in annees)
     poids += ecrit(base / "index.json", {
         "dep": dep,
         "annees": annees,
         "contours": sorted(int(y) for y in contours),
+        "bornes": [servies[0], servies[-1]] if servies else None,
+        "absences": [list(x) for x in ABSENCES.get(dep, [])],
+        "motifs": list(BORNES_MOTIF.get(dep, (None, None))),
     })
 
     return {
         "dep": dep,
+        "bornes": [servies[0], servies[-1]] if servies else None,
         "communes": len(communes),
         "cfg_canton": len(sig_canton),
         "cfg_circo": len(sig_circo),
@@ -437,12 +498,19 @@ def main():
         cur.execute("SELECT DISTINCT dep FROM unit ORDER BY dep")
         deps = [r[0].strip() for r in cur.fetchall()]
 
+    dico, geofla = existe(cur, "noms_geofla"), existe(cur, "geofla_commune")
+    sql_com = sql_communes(dico, geofla)
+    if not (dico or geofla):
+        print("Attention : ni `noms_geofla` ni `geofla_commune` — les communes "
+              "sortiront sans nom.")
+
     print(f"{len(deps)} département(s) à exporter, grille {args.grille} m.")
     args.sortie.mkdir(parents=True, exist_ok=True)
 
     rapport, total = [], 0
     for i, dep in enumerate(deps, 1):
-        r = exporte_departement(cur, dep, args.grille, args.precision, args.sortie)
+        r = exporte_departement(cur, dep, args.grille, args.precision,
+                                args.sortie, sql_com)
         if r is None:
             print(f"  [{i:>3}/{len(deps)}] {dep} — aucune unité, ignoré")
             continue
@@ -466,6 +534,7 @@ def main():
                      else None),
             "communes": r["communes"],
             "annees": r["annees"],
+            "bornes": r["bornes"],
         })
     index["departements"].sort(key=lambda d: d["code"])
     ecrit(args.sortie / "index.json", index)

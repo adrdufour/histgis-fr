@@ -440,3 +440,22 @@ passage.
 Le GeoPackage porte cinq couches : `ecarts`, `ecarts_dep`, `non_couvert`,
 `nous`, `eux`. Les avertissements `multi-column primary key` d'`ogr2ogr` sont
 sans effet.
+
+
+## 39_meurthe_1870.sql — la Meurthe reprend son numéro
+
+TRF-GIS range les 29 cantons de l'ancienne Meurthe sous un département « 99 »
+qui n'a jamais existé. Ce fichier leur rend le **54**, qu'ils portaient
+effectivement avant 1871.
+
+Conséquence à connaître : **le département 54 change de territoire au
+1ᵉʳ janvier 1871 sans changer de numéro.** La Meurthe (1870-1871, 29 cantons)
+perd sa partie est, annexée, et gagne l'arrondissement de Briey venu de la
+Moselle ; elle devient Meurthe-et-Moselle (1871-1941, 32 cantons). Les deux
+périodes ne se recouvrent pas, donc aucune ambiguïté à une date donnée — mais
+une carte qui empile « le 54 » sur toute la série montre deux emprises.
+
+L'`unit_id` reste en `99xx` : un identifiant est opaque, et `54xx` est déjà
+pris par les cantons de Meurthe-et-Moselle.
+
+À rejouer après chaque `rebuild.sh`, comme `38_decret_1982_ain.sql`.
