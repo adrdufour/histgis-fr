@@ -58,6 +58,7 @@ import collections
 import csv
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -125,9 +126,20 @@ CANTON = re.compile(
     r"([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})\s+([\d][\d.,]{2,8})"
     r"[\s|\]\[]*(?:\d{1,4})?[\s|\]\[.]*$")           # queue parasite tolérée
 
-# Le code, quand il a survécu. Il est isolé entre deux espaces, après les
-# populations de 1962 et avant le nom — donc rarement en tête du fragment.
-CODE = re.compile(r"(?:^|\s)([\dOSlI]{2})(?:\s|\.|\))")
+# Le code du canton se lit par sa POSITION, pas par sa forme.
+#
+# Quatrième correction. « Le premier groupe de deux chiffres du fragment »
+# rendait cinq cantons distincts sous le même code 10 — Capelle, Crozy,
+# Condé… — parce que les populations de 1962 en fournissent d'autres, plus à
+# gauche : « 10.125 » commence par 10.
+#
+# Or la ligne a un ordre fixe : deux populations, PUIS le code, PUIS le nom.
+# Le code est donc le dernier nombre à deux chiffres AVANT le début du nom.
+# On le cherche là, et nulle part ailleurs.
+DEBUT_NOM = re.compile(r"[A-Za-zÀ-ÿ]{3,}")
+# Un nombre de deux chiffres isolé : ni précédé ni suivi d'un chiffre ou d'un
+# séparateur de milliers, sans quoi « 10.125 » livrerait « 10 ».
+DEUX_CHIFFRES = re.compile(r"(?<![\d.,])([\dOSlI]{2})(?![\d.,])")
 # Le nom, quand il a survécu : au moins trois lettres d'affilée et une
 # majuscule. En dessous, c'est du bruit de points de conduite.
 NOM = re.compile(r"([A-ZÉÈÀÇŒ][A-Za-zÉÈÊËÀÂÎÏÔÛÙÇŒéèêëàâîïôûùç'’\-]{2,}"
@@ -142,10 +154,59 @@ MOT_TOTAL = re.compile(r"\bT\s*[O0]\s*T\s*A\s*[LI]\b", re.I)
 SOSIES = str.maketrans({"O": "0", "S": "5", "l": "1", "I": "1", "$": "3"})
 
 
-def lit_tableau2(pdf, langue="fra", pages_max=16):
+def codes_par_nom(dep):
+    """{clé du nom: code} — les cantons de 1940, comme dictionnaire de secours.
+
+    Sixième correction, et elle change de registre. Lire le code par sa
+    position rend des cases VIDES plutôt que fausses — un progrès, mais la
+    confrontation n'avance pas : sur cette page le code est illisible deux fois
+    sur trois, l'OCR rendant « 03 » par « pe ».
+
+    Les NOMS, eux, survivent souvent : « Crécy-sur-Serre »,
+    « Fère-en-Tardenois », « Bohain-en-Vermandois » se lisent parfaitement. On
+    s'en sert donc pour retrouver le code, via la nomenclature de 1940 déjà en
+    base — 92 % des codes partagés entre 1940 et 1999 portent le même nom.
+
+    **Ce que cela coûte, et qu'il faut assumer** : un canton créé après 1940
+    n'est pas dans ce dictionnaire, son code restera vide. Le recours ne peut
+    donc pas inventer de canton, seulement en reconnaître d'anciens — c'est
+    précisément ce qui le rend acceptable. Il identifie, il ne décide pas : le
+    nombre de communes, lui, continue de venir du seul tableau II.
+    """
+    f = RACINE / "build" / "unit_canton.csv"
+    if not f.exists():
+        return {}
+    d = {}
+    for l in csv.DictReader(f.open(encoding="utf-8")):
+        if l["dep"] == dep and l["nom"]:
+            d[_cle(l["nom"])] = l["unit_id"][2:]
+    return d
+
+
+def _cle(s):
+    s = unicodedata.normalize("NFD", s or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^a-z]", "", s.lower())
+
+
+def code_de(milieu):
+    """Le fragment illisible -> le code du canton, par sa position.
+
+    On coupe au premier mot de trois lettres — le début du libellé — et on
+    prend le DERNIER nombre à deux chiffres qui le précède.
+    """
+    m = DEBUT_NOM.search(milieu)
+    avant = milieu[:m.start()] if m else milieu
+    nums = DEUX_CHIFFRES.findall(avant)
+    return nums[-1].translate(SOSIES) if nums else ""
+
+
+def lit_tableau2(pdf, langue="fra", pages_max=16, dep=""):
     """Les premières pages d'un fascicule -> les cantons du tableau II."""
+    dico = codes_par_nom(dep)
     cantons, totaux, arr, nb_annonce = [], [], "", {}
     courant, lignes_bloc = collections.Counter(), collections.Counter()
+    total_vu = set()
     for p in range(1, pages_max + 1):
         txt = page_texte(pdf, p, langue=langue)
         if not (EST_TABLEAU2.search(txt) or NB_CANTONS.search(txt)
@@ -180,17 +241,29 @@ def lit_tableau2(pdf, langue="fra", pages_max=16):
             # canton d'un bloc passerait pour un total.
             if MOT_TOTAL.search(milieu) or (lignes_bloc[arr] >= 2
                                             and n >= courant[arr] > 0):
+                # Cinquième correction. Vervins ressortait deux fois, avec 132
+                # puis 831 — or 831 est le total du DÉPARTEMENT, imprimé après
+                # le dernier arrondissement et donc rattaché à lui. Un
+                # arrondissement n'a qu'un total : le second est le général, on
+                # le laisse tomber au lieu de le compter deux fois.
+                if arr in total_vu:
+                    continue
                 totaux.append((arr, n))
+                total_vu.add(arr)
                 courant[arr] = 0
                 lignes_bloc[arr] = 0
                 continue
-            c = CODE.search(milieu)
             nm = NOM.search(milieu)
+            nom = nettoie_nom(nm.group(1)).strip(" .") if nm else ""
+            code = code_de(milieu)
+            source_code = "position" if code else ""
+            if not code and nom:
+                code = dico.get(_cle(nom), "")
+                source_code = "nom 1940" if code else ""
             cantons.append(dict(
                 page=p, arrondissement=arr,
-                canton=c.group(1).translate(SOSIES) if c else "",
-                nom=nettoie_nom(nm.group(1)).strip(" .") if nm else "",
-                communes=n))
+                canton=code, source_code=source_code,
+                nom=nom, communes=n))
             courant[arr] += n
             lignes_bloc[arr] += 1
     return cantons, totaux, nb_annonce
@@ -207,7 +280,8 @@ def main():
     idx = index()
     if a.dep not in idx:
         raise SystemExit(f"Département {a.dep} absent de l'index.")
-    cantons, totaux, nb_annonce = lit_tableau2(idx[a.dep], a.langue)
+    cantons, totaux, nb_annonce = lit_tableau2(idx[a.dep], a.langue,
+                                               dep=a.dep)
     if not cantons:
         raise SystemExit("Aucune ligne de canton reconnue dans le tableau II.")
 
@@ -215,12 +289,16 @@ def main():
         c["dep"] = a.dep
     with SORTIE.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["dep", "arrondissement", "canton",
-                                          "nom", "communes", "page"])
+                                          "source_code", "nom", "communes",
+                                          "page"])
         w.writeheader()
         w.writerows(sorted(cantons, key=lambda x: x["canton"]))
 
     somme = sum(c["communes"] for c in cantons)
+    par_src = collections.Counter(c["source_code"] or "—" for c in cantons)
     print(f"{len(cantons)} cantons lus, {somme} communes annoncées")
+    print(f"   code retrouvé : " + ", ".join(f"{k} {v}" for k, v in
+                                             par_src.most_common()))
     print(f"{len({c['arrondissement'] for c in cantons})} arrondissements\n")
 
     # Recette n° 1, interne au tableau : la somme par arrondissement doit

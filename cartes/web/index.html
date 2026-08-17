@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>histgis — cantons, communes et circonscriptions, 1815-2012</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --fond: #f7f5f0;
+    --encre: #1d1c1a;
+    --gris: #6b6864;
+    --gris-clair: #d8d4cc;
+    --trait-commune: #9a958c;
+    --trait-canton: #2f2c28;
+    --trait-circo: #6d1414;
+    --accent: #6d1414;
+    --vide: #efece5;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font: 14px/1.45 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color: var(--encre); background: var(--fond);
+    display: flex; flex-direction: column;
+  }
+  header {
+    padding: 10px 16px; border-bottom: 1px solid var(--gris-clair);
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; letter-spacing: .01em; }
+  header .sous { color: var(--gris); font-size: 12.5px; }
+  main { flex: 1; display: flex; min-height: 0; }
+  #carte-zone { flex: 1; position: relative; min-width: 0; background: var(--fond); }
+  svg { width: 100%; height: 100%; display: block; cursor: grab; }
+  svg.tire { cursor: grabbing; }
+  aside {
+    width: 310px; border-left: 1px solid var(--gris-clair); overflow-y: auto;
+    padding: 14px 16px; font-size: 13px; background: #fbfaf7;
+  }
+  aside h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .07em;
+             color: var(--gris); margin: 18px 0 7px; font-weight: 600; }
+  aside h2:first-child { margin-top: 0; }
+  footer {
+    border-top: 1px solid var(--gris-clair); padding: 10px 16px 14px;
+    display: flex; flex-direction: column; gap: 8px; background: #fbfaf7;
+  }
+  .ligne { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  label { color: var(--gris); font-size: 12.5px; }
+  select, input[type=number], button {
+    font-family: inherit; font-size: 13px; padding: 4px 7px;
+    border: 1px solid var(--gris-clair); border-radius: 3px;
+    background: #fff; color: var(--encre);
+  }
+  button { cursor: pointer; }
+  button:hover:not(:disabled) { background: #f0ede7; }
+  button:disabled { opacity: .4; cursor: default; }
+  button.actif { background: var(--encre); color: var(--fond); border-color: var(--encre); }
+  #annee-aff { font-size: 27px; font-weight: 600; min-width: 3.1em;
+               font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+  #curseur { flex: 1; min-width: 260px; accent-color: var(--accent); }
+  .piste { position: relative; flex: 1; min-width: 260px; }
+  #jauge { position: relative; height: 9px; margin: 0 0 -3px;
+           border-radius: 2px; overflow: hidden; background: var(--vide); }
+  #jauge div { position: absolute; top: 0; height: 100%; }
+  .j-can { background: #b9c6b0; }
+  .j-cir { background: #d8b9a8; }
+  .j-both { background: #8fa384; }
+  #reperes { position: relative; height: 12px; color: var(--gris); font-size: 10.5px; }
+  #reperes span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+  #bandeau {
+    position: absolute; left: 50%; top: 18px; transform: translateX(-50%);
+    background: rgba(247,245,240,.94); border: 1px solid var(--gris-clair);
+    border-left: 3px solid var(--accent); padding: 8px 13px; max-width: 78%;
+    font-size: 12.5px; color: var(--encre); border-radius: 2px; display: none;
+    box-shadow: 0 1px 6px rgba(0,0,0,.07);
+  }
+  #infobulle {
+    position: absolute; pointer-events: none; display: none;
+    background: rgba(29,28,26,.93); color: #f7f5f0; padding: 5px 9px;
+    border-radius: 3px; font-size: 12px; max-width: 260px; line-height: 1.35;
+  }
+  #infobulle b { font-weight: 600; }
+  #infobulle .sec { color: #bab5ad; font-size: 11px; }
+  .commune { stroke: var(--trait-commune); stroke-width: .4; vector-effect: non-scaling-stroke; }
+  .commune:hover { stroke: var(--encre); stroke-width: 1.2; }
+  .canton-tr { fill: none; stroke: var(--trait-canton); stroke-width: 1.5;
+               vector-effect: non-scaling-stroke; stroke-linejoin: round; pointer-events: none; }
+  .circo-tr { fill: none; stroke: var(--trait-circo); stroke-width: 3.4;
+              vector-effect: non-scaling-stroke; stroke-linejoin: round;
+              stroke-linecap: round; pointer-events: none; }
+  .contour-ref { fill: var(--vide); stroke: var(--gris-clair); stroke-width: 1.5;
+                 stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
+  .etiq { font-size: 9px; fill: #33302c; paint-order: stroke;
+          stroke: rgba(247,245,240,.85); stroke-width: 2.4; text-anchor: middle;
+          pointer-events: none; font-family: inherit; }
+  .etiq-circo { font-size: 10.5px; font-weight: 600; fill: var(--trait-circo);
+                stroke-width: 3; }
+  .surligne { stroke: #b8860b !important; stroke-width: 3.2 !important; }
+  table.rec { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.rec td { padding: 2px 0; vertical-align: top; }
+  table.rec td:last-child { text-align: right; font-variant-numeric: tabular-nums;
+                            white-space: nowrap; padding-left: 8px; }
+  .puce { display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+          margin-right: 6px; vertical-align: -1px; border: 1px solid rgba(0,0,0,.18); }
+  .note { color: var(--gris); font-size: 11.5px; line-height: 1.45; }
+  .avert { border-left: 3px solid #b8860b; padding-left: 8px; margin: 8px 0;
+           color: #6b5a1e; font-size: 11.5px; background: #fdfbf2; padding: 6px 8px; }
+  ul.liste { list-style: none; padding: 0; margin: 4px 0 0;
+             max-height: 260px; overflow-y: auto; }
+  ul.liste li { padding: 2px 0; cursor: pointer; display: flex;
+                justify-content: space-between; gap: 8px; }
+  ul.liste li:hover { background: #f0ede7; }
+  ul.liste li span.n { color: var(--gris); font-variant-numeric: tabular-nums; }
+  .cle { display: flex; gap: 8px; align-items: center; margin: 4px 0; font-size: 12px; }
+  .cle svg { width: 26px; height: 10px; flex: none; }
+  #chargement { position: absolute; inset: 0; display: none; place-items: center;
+                background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris); }
+  @media (max-width: 900px) { aside { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cantons, communes et circonscriptions législatives</h1>
+  <span class="sous" id="entete-sous">base <code>histgis</code> — 1815-2012</span>
+</header>
+
+<main>
+  <div id="carte-zone">
+    <svg id="carte" role="img" aria-label="Carte administrative"></svg>
+    <div id="bandeau"></div>
+    <div id="infobulle"></div>
+    <div id="chargement">chargement…</div>
+  </div>
+  <aside id="panneau"></aside>
+</main>
+
+<footer>
+  <div class="ligne">
+    <span id="annee-aff">1870</span>
+    <div class="piste">
+      <div id="jauge"></div>
+      <input type="range" id="curseur" min="1815" max="2012" value="1870" step="1">
+      <div id="reperes"></div>
+    </div>
+    <button id="lecture" title="Faire défiler les années">▶ animer</button>
+  </div>
+  <div class="ligne">
+    <label for="dep">Département</label>
+    <select id="dep"></select>
+    <span style="width:8px"></span>
+    <label><input type="checkbox" id="v-communes" checked> communes</label>
+    <label><input type="checkbox" id="v-cantons" checked> cantons</label>
+    <label><input type="checkbox" id="v-circos" checked> circonscriptions</label>
+    <label><input type="checkbox" id="v-noms"> noms</label>
+    <span style="width:8px"></span>
+    <label>colorier par</label>
+    <select id="teinte">
+      <option value="canton">canton</option>
+      <option value="circo">circonscription</option>
+      <option value="aucun">rien</option>
+    </select>
+    <button id="recadrer" title="Recadrer sur le département">recadrer</button>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+// ===========================================================================
+// Données : tout vient de `cartes/export_web.py`. La page ne calcule aucune
+// géométrie et n'interpole aucune année — elle affiche ce que la base a dit,
+// et affiche explicitement qu'elle n'a rien dit quand c'est le cas.
+// ===========================================================================
+const RACINE = "donnees";
+const AN_MIN = 1815, AN_MAX = 2012;
+
+const cache = new Map();
+async function charge(url) {
+  if (cache.has(url)) return cache.get(url);
+  const p = fetch(url).then(r => {
+    if (!r.ok) throw new Error(url + " : " + r.status);
+    return r.json();
+  });
+  cache.set(url, p);
+  return p;
+}
+
+const S = {
+  index: null,        // index racine
+  dep: null,          // code du département courant
+  depIndex: null,     // dep/NN/index.json
+  communes: null,     // dep/NN/communes.json
+  contours: null,     // dep/NN/contours.json
+  annee: 1870,
+  cfgCanton: null,    // configuration cantonale chargée
+  cfgCirco: null,
+  vue: null,          // {x, y, k} panoramique et zoom
+  cadre: null,        // bbox projetée du département
+  surligne: null,
+  jeton: 0,           // pour ignorer les chargements dépassés
+};
+
+const $ = s => document.querySelector(s);
+const svg = $("#carte");
+const NS = "http://www.w3.org/2000/svg";
+
+// ---------------------------------------------------------------------------
+// Projection : conique équivalente d'Albers, calée sur le département affiché.
+// À l'échelle d'un département une projection plate suffirait, mais le calage
+// automatique coûte trois lignes et évite d'étirer le Nord par rapport au Midi
+// quand on compare deux planches.
+// ---------------------------------------------------------------------------
+function faitProjection(bbox) {
+  const [lo0, la0, lo1, la1] = bbox;
+  const lat0 = (la0 + la1) / 2 * Math.PI / 180;
+  const lon0 = (lo0 + lo1) / 2;
+  const k = Math.cos(lat0);
+  return (lon, lat) => [(lon - lon0) * k * 111.32, -(lat * 111.32)];
+}
+let proj = faitProjection([-5, 41, 10, 52]);
+
+// ---------------------------------------------------------------------------
+// GeoJSON -> chemin SVG. Les coordonnées sont déjà accrochées à une grille de
+// 25 m côté PostGIS : on ne retouche rien ici, sous peine de désaccorder les
+// limites cantonales des limites communales qu'elles suivent.
+// ---------------------------------------------------------------------------
+function anneauVersD(anneau, out) {
+  if (anneau.length < 3) return;
+  for (let i = 0; i < anneau.length; i++) {
+    const p = proj(anneau[i][0], anneau[i][1]);
+    out.push((i ? "L" : "M") + p[0].toFixed(4) + " " + p[1].toFixed(4));
+  }
+  out.push("Z");
+}
+function geomVersD(g) {
+  if (!g) return "";
+  const out = [];
+  if (g.type === "Polygon") g.coordinates.forEach(r => anneauVersD(r, out));
+  else if (g.type === "MultiPolygon")
+    g.coordinates.forEach(p => p.forEach(r => anneauVersD(r, out)));
+  else if (g.type === "GeometryCollection")
+    g.geometries.forEach(x => out.push(geomVersD(x)));
+  return out.join("");
+}
+function bboxDe(g, b) {
+  b = b || [Infinity, Infinity, -Infinity, -Infinity];
+  const vis = c => {
+    if (typeof c[0] === "number") {
+      b[0] = Math.min(b[0], c[0]); b[1] = Math.min(b[1], c[1]);
+      b[2] = Math.max(b[2], c[0]); b[3] = Math.max(b[3], c[1]);
+    } else c.forEach(vis);
+  };
+  if (g && g.coordinates) vis(g.coordinates);
+  if (g && g.geometries) g.geometries.forEach(x => bboxDe(x, b));
+  return b;
+}
+function centroide(g) {
+  // Centre de gravité surfacique du plus grand anneau extérieur : suffisant
+  // pour poser une étiquette, et robuste aux communes en archipel.
+  let best = null, bestA = -1;
+  const anneaux = [];
+  if (!g) return null;
+  if (g.type === "Polygon") anneaux.push(g.coordinates[0]);
+  else if (g.type === "MultiPolygon") g.coordinates.forEach(p => anneaux.push(p[0]));
+  else return null;
+  for (const r of anneaux) {
+    let a = 0, cx = 0, cy = 0;
+    for (let i = 0, n = r.length - 1; i < n; i++) {
+      const f = r[i][0] * r[i + 1][1] - r[i + 1][0] * r[i][1];
+      a += f; cx += (r[i][0] + r[i + 1][0]) * f; cy += (r[i][1] + r[i + 1][1]) * f;
+    }
+    a *= .5;
+    if (Math.abs(a) > bestA) { bestA = Math.abs(a); best = [cx / (6 * a), cy / (6 * a)]; }
+  }
+  return best;
+}
+
+// ---------------------------------------------------------------------------
+// Teintes : angle d'or sur la teinte, indexé sur le rang de l'unité. Deux
+// unités voisines ont donc presque toujours des teintes éloignées, sans avoir
+// à colorier un graphe d'adjacence.
+// ---------------------------------------------------------------------------
+function teinteDe(i, total) {
+  const h = (i * 137.508) % 360;
+  const s = 30 + (i % 3) * 7;
+  const l = 79 - (i % 4) * 4;
+  return `hsl(${h.toFixed(0)}, ${s}%, ${l}%)`;
+}
+
+// ===========================================================================
+// Chargement
+// ===========================================================================
+async function chargeDepartement(dep) {
+  const j = ++S.jeton;
+  $("#chargement").style.display = "grid";
+  try {
+    const [idx, com, cont] = await Promise.all([
+      charge(`${RACINE}/dep/${dep}/index.json`),
+      charge(`${RACINE}/dep/${dep}/communes.json`),
+      charge(`${RACINE}/dep/${dep}/contours.json`).catch(() => ({})),
+    ]);
+    if (j !== S.jeton) return;
+    S.dep = dep; S.depIndex = idx; S.communes = com.communes; S.contours = cont;
+    S.cadre = null; S.vue = null;
+  } finally {
+    if (j === S.jeton) $("#chargement").style.display = "none";
+  }
+}
+
+async function chargeAnnee(annee) {
+  const e = S.depIndex.annees[String(annee)] || { c: "", x: "" };
+  const j = ++S.jeton;
+  const p = [];
+  p.push(e.c ? charge(`${RACINE}/dep/${S.dep}/c_${e.c}.json`) : Promise.resolve(null));
+  p.push(e.x ? charge(`${RACINE}/dep/${S.dep}/x_${e.x}.json`) : Promise.resolve(null));
+  const [c, x] = await Promise.all(p);
+  if (j !== S.jeton) return false;
+  S.cfgCanton = c; S.cfgCirco = x;
+  return true;
+}
+
+// ===========================================================================
+// Rendu
+// ===========================================================================
+function calibre() {
+  // Emprise : celle de la configuration affichée, ou à défaut du contour de
+  // référence. On la fige au premier rendu du département pour que le curseur
+  // ne fasse pas sauter la carte d'une année à l'autre.
+  if (S.cadre) return;
+  let b = [Infinity, Infinity, -Infinity, -Infinity];
+  const src = (S.cfgCanton && S.cfgCanton.unites) || (S.cfgCirco && S.cfgCirco.unites);
+  if (src) src.forEach(u => bboxDe(u.g, b));
+  else if (S.contours) Object.values(S.contours).forEach(g => bboxDe(g, b));
+  if (!isFinite(b[0])) { Object.values(S.communes).forEach(c => bboxDe(c.g, b)); }
+  if (!isFinite(b[0])) return;
+  proj = faitProjection(b);
+  // bbox en coordonnées projetées
+  const pts = [proj(b[0], b[1]), proj(b[2], b[1]), proj(b[0], b[3]), proj(b[2], b[3])];
+  S.cadre = [
+    Math.min(...pts.map(p => p[0])), Math.min(...pts.map(p => p[1])),
+    Math.max(...pts.map(p => p[0])), Math.max(...pts.map(p => p[1])),
+  ];
+  recadre();
+}
+
+function recadre() {
+  if (!S.cadre) return;
+  const [x0, y0, x1, y1] = S.cadre;
+  const m = Math.max(x1 - x0, y1 - y0) * .04;
+  S.vue = { x: x0 - m, y: y0 - m, w: (x1 - x0) + 2 * m, h: (y1 - y0) + 2 * m };
+  applique();
+}
+
+function applique() {
+  if (!S.vue) return;
+  const r = svg.getBoundingClientRect();
+  const ar = r.width / Math.max(r.height, 1);
+  let { x, y, w, h } = S.vue;
+  if (w / h < ar) { const nw = h * ar; x -= (nw - w) / 2; w = nw; }
+  else { const nh = w / ar; y -= (nh - h) / 2; h = nh; }
+  svg.setAttribute("viewBox", `${x} ${y} ${w} ${h}`);
+}
+
+function dessine() {
+  const parCanton = (S.cfgCanton && S.cfgCanton.rattachement) || {};
+  const parCirco = (S.cfgCirco && S.cfgCirco.rattachement) || {};
+  const mode = $("#teinte").value;
+  const source = mode === "circo" ? S.cfgCirco : S.cfgCanton;
+  const rattach = mode === "circo" ? parCirco : parCanton;
+
+  const couleur = new Map();
+  if (source && mode !== "aucun") {
+    const ids = source.unites.map(u => u.id).sort();
+    ids.forEach((id, i) => couleur.set(id, teinteDe(i, ids.length)));
+  }
+
+  const frag = document.createDocumentFragment();
+  const defs = document.createElementNS(NS, "defs");
+  defs.innerHTML = `
+    <pattern id="hachure" width="6" height="6" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#e7e2d8"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8d877d" stroke-width="1.6"/>
+    </pattern>`;
+  frag.appendChild(defs);
+
+  const g = (cls) => { const e = document.createElementNS(NS, "g"); e.setAttribute("class", cls); frag.appendChild(e); return e; };
+
+  const vide = !S.cfgCanton && !S.cfgCirco;
+
+  // --- fond : contour de référence, pour les années sans source ------------
+  if (vide) {
+    const annees = (S.depIndex.contours || []).map(Number);
+    if (annees.length) {
+      const plusProche = annees.reduce((a, b) =>
+        Math.abs(b - S.annee) < Math.abs(a - S.annee) ? b : a);
+      const geo = S.contours[String(plusProche)];
+      if (geo) {
+        const gg = g("fond");
+        const p = document.createElementNS(NS, "path");
+        p.setAttribute("d", geomVersD(geo));
+        p.setAttribute("class", "contour-ref");
+        gg.appendChild(p);
+        if (!S.cadre) { S.cadre = null; }
+      }
+      bandeau(`<b>Aucune source pour ${S.annee}.</b> La base ne tient aucune
+        composition à cette date — ni cantonale, ni électorale. Le contour grisé
+        est celui de ${plusProche}, emprunté pour situer le département : ce
+        n'est pas la carte de ${S.annee}.`);
+    } else {
+      bandeau(`<b>Aucune source pour ${S.annee}</b> dans ce département.`);
+    }
+  } else {
+    bandeau(null);
+  }
+
+  // --- communes -----------------------------------------------------------
+  if ($("#v-communes").checked && !vide) {
+    const gc = g("communes");
+    const atomes = Object.keys(rattach).length ? rattach
+                 : (Object.keys(parCanton).length ? parCanton : parCirco);
+    const vus = new Set();
+    for (const aid of Object.keys(atomes)) {
+      const c = S.communes[aid];
+      if (!c || vus.has(aid)) continue;
+      vus.add(aid);
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", geomVersD(c.g));
+      p.setAttribute("class", "commune");
+      p.setAttribute("fill", c.p ? "url(#hachure)"
+                     : (couleur.get(rattach[aid]) || "#eceae4"));
+      p.dataset.atome = aid;
+      gc.appendChild(p);
+    }
+  }
+
+  // --- cantons ------------------------------------------------------------
+  if ($("#v-cantons").checked && S.cfgCanton) {
+    const gk = g("cantons");
+    for (const u of S.cfgCanton.unites) {
+      if (!u.g) continue;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", geomVersD(u.g));
+      p.setAttribute("class", "canton-tr");
+      p.dataset.unite = u.id;
+      gk.appendChild(p);
+    }
+  }
+
+  // --- circonscriptions ---------------------------------------------------
+  if ($("#v-circos").checked && S.cfgCirco) {
+    const gx = g("circos");
+    for (const u of S.cfgCirco.unites) {
+      if (!u.g) continue;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", geomVersD(u.g));
+      p.setAttribute("class", "circo-tr");
+      p.dataset.unite = u.id;
+      gx.appendChild(p);
+    }
+  }
+
+  // --- noms ---------------------------------------------------------------
+  if ($("#v-noms").checked) {
+    const gn = g("noms");
+    const pose = (unites, cls) => {
+      for (const u of unites || []) {
+        const c = centroide(u.g);
+        if (!c) continue;
+        const p = proj(c[0], c[1]);
+        const t = document.createElementNS(NS, "text");
+        t.setAttribute("x", p[0]); t.setAttribute("y", p[1]);
+        t.setAttribute("class", cls);
+        t.textContent = u.nom;
+        gn.appendChild(t);
+      }
+    };
+    if (S.cfgCanton && $("#v-cantons").checked) pose(S.cfgCanton.unites, "etiq");
+    if (S.cfgCirco && $("#v-circos").checked) pose(S.cfgCirco.unites, "etiq etiq-circo");
+  }
+
+  svg.replaceChildren(frag);
+  calibre();
+  panneau();
+}
+
+function bandeau(html) {
+  const b = $("#bandeau");
+  if (!html) { b.style.display = "none"; return; }
+  b.innerHTML = html;
+  b.style.display = "block";
+}
+
+// ===========================================================================
+// Panneau de droite : les recettes, pas la décoration.
+// ===========================================================================
+function panneau() {
+  const p = $("#panneau");
+  const dep = S.index.departements.find(d => d.code === S.dep) || {};
+  const nom = nomDep(dep, S.annee);
+  const kc = S.cfgCanton, kx = S.cfgCirco;
+
+  const partagees = kc ? kc.unites.reduce((s, u) => s + (u.partagees || 0), 0) : 0;
+  const sansGeom = kc ? kc.unites.reduce((s, u) => s + (u.sans_geom || 0), 0) : 0;
+  const circoSansTerr = kx ? kx.unites.filter(u => !u.g).length : 0;
+
+  let h = `<h2>${nom} — ${S.annee}</h2><table class="rec">`;
+  h += `<tr><td>communes (atomes)</td><td>${kc ? kc.unites.reduce((s,u)=>s+u.n,0)
+        : (kx ? kx.unites.reduce((s,u)=>s+u.n,0) : "—")}</td></tr>`;
+  h += `<tr><td>cantons</td><td>${kc ? kc.unites.length : "—"}</td></tr>`;
+  h += `<tr><td>circonscriptions</td><td>${kx ? kx.unites.length : "—"}</td></tr>`;
+  if (kx && kx.unites.length) {
+    const reg = [...new Set(kx.unites.map(u => u.regime).filter(Boolean))].join(", ");
+    if (reg) h += `<tr><td>scrutin</td><td>${reg}</td></tr>`;
+  }
+  h += `</table>`;
+
+  if (!kc && !kx) {
+    h += `<p class="avert">Aucune source à cette date. Le trou cantonal
+      1941-1998 et l'absence de série avant 1870 sont des lacunes déclarées,
+      pas des cartes vides par accident.</p>`;
+  }
+  if (partagees) {
+    h += `<p class="avert"><b>${partagees} rattachement${partagees>1?"s":""}</b>
+      concerne${partagees>1?"nt":""} une commune partagée entre plusieurs cantons.
+      Ces communes portent en base le polygone entier : leurs cantons se
+      recouvrent exactement. Elles sont hachurées, pas coloriées.</p>`;
+  }
+  if (sansGeom) {
+    h += `<p class="avert">${sansGeom} atome${sansGeom>1?"s":""} sans géométrie :
+      l'unité concernée est incomplète, pas fausse.</p>`;
+  }
+  if (circoSansTerr) {
+    h += `<p class="avert">${circoSansTerr} circonscription${circoSansTerr>1?"s":""}
+      sans territoire sur la trame — composée exclusivement de fractions de
+      communes que la trame ne peut pas porter.</p>`;
+  }
+
+  h += `<h2>Légende</h2>
+    <div class="cle"><svg viewBox="0 0 26 10"><line x1="1" y1="5" x2="25" y2="5"
+      stroke="var(--trait-commune)" stroke-width="1"/></svg> limite communale</div>
+    <div class="cle"><svg viewBox="0 0 26 10"><line x1="1" y1="5" x2="25" y2="5"
+      stroke="var(--trait-canton)" stroke-width="2"/></svg> limite cantonale</div>
+    <div class="cle"><svg viewBox="0 0 26 10"><line x1="1" y1="5" x2="25" y2="5"
+      stroke="var(--trait-circo)" stroke-width="4" stroke-linecap="round"/></svg>
+      limite de circonscription</div>
+    <div class="cle"><svg viewBox="0 0 26 10"><rect x="1" y="1" width="24" height="8"
+      fill="url(#hachure-cle)"/><defs><pattern id="hachure-cle" width="5" height="5"
+      patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="5" height="5" fill="#e7e2d8"/><line x1="0" y1="0" x2="0" y2="5"
+      stroke="#8d877d" stroke-width="1.4"/></pattern></defs></svg>
+      commune partagée entre cantons</div>`;
+
+  if (kc) {
+    h += `<h2>Cantons (${kc.unites.length})</h2><ul class="liste">`;
+    const ids = kc.unites.map(u => u.id).sort();
+    for (const u of [...kc.unites].sort((a, b) => a.nom.localeCompare(b.nom, "fr"))) {
+      const c = teinteDe(ids.indexOf(u.id), ids.length);
+      h += `<li data-unite="${u.id}"><span><span class="puce"
+            style="background:${c}"></span>${echappe(u.nom)}</span>
+            <span class="n">${u.n}</span></li>`;
+    }
+    h += `</ul>`;
+  }
+  if (kx) {
+    h += `<h2>Circonscriptions (${kx.unites.length})</h2><ul class="liste">`;
+    for (const u of [...kx.unites].sort((a, b) => a.nom.localeCompare(b.nom, "fr"))) {
+      h += `<li data-unite="${u.id}"><span>${echappe(u.nom)}${u.prov ?
+            ' <span class="note">(provisoire)</span>' : ""}</span>
+            <span class="n">${u.n}</span></li>`;
+    }
+    h += `</ul>`;
+  }
+
+  h += `<h2>Ce que la carte ne dit pas</h2><p class="note">
+    Les années servies apparaissent en couleur sous le curseur : vert pour une
+    composition cantonale, ocre pour une composition électorale. Le reste est
+    du blanc de la base, pas du blanc de la page.</p>`;
+
+  p.innerHTML = h;
+  p.querySelectorAll("li[data-unite]").forEach(li => {
+    li.onmouseenter = () => surligne(li.dataset.unite);
+    li.onmouseleave = () => surligne(null);
+  });
+}
+
+function echappe(s) {
+  return String(s).replace(/[&<>"]/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function surligne(id) {
+  svg.querySelectorAll(".surligne").forEach(e => e.classList.remove("surligne"));
+  if (!id) return;
+  svg.querySelectorAll(`[data-unite="${CSS.escape(id)}"]`)
+     .forEach(e => e.classList.add("surligne"));
+}
+
+function nomDep(dep, annee) {
+  if (dep.noms) {
+    for (const [a, b, n] of dep.noms) if (annee >= a && annee <= b) return n;
+  }
+  return dep.nom || dep.code || "—";
+}
+
+// ===========================================================================
+// Infobulle
+// ===========================================================================
+svg.addEventListener("mousemove", ev => {
+  const cible = ev.target.closest("[data-atome]");
+  const t = $("#infobulle");
+  if (!cible) { t.style.display = "none"; return; }
+  const aid = cible.dataset.atome;
+  const c = S.communes[aid];
+  const kc = S.cfgCanton, kx = S.cfgCirco;
+  const canton = kc && kc.rattachement[aid]
+    ? kc.unites.find(u => u.id === kc.rattachement[aid]) : null;
+  const circo = kx && kx.rattachement[aid]
+    ? kx.unites.find(u => u.id === kx.rattachement[aid]) : null;
+  let h = `<b>${echappe(c.i || aid)}</b>`;
+  if (canton) h += `<br>canton : ${echappe(canton.nom)}`;
+  if (circo) h += `<br>circonscription : ${echappe(circo.nom)}`;
+  if (c.p) h += `<br><span class="sec">polygone partagé — les cantons se recouvrent ici</span>`;
+  if (c.f) h += `<br><span class="sec">fraction de commune</span>`;
+  t.innerHTML = h;
+  const r = $("#carte-zone").getBoundingClientRect();
+  t.style.left = Math.min(ev.clientX - r.left + 12, r.width - 275) + "px";
+  t.style.top = (ev.clientY - r.top + 12) + "px";
+  t.style.display = "block";
+});
+svg.addEventListener("mouseleave", () => { $("#infobulle").style.display = "none"; });
+
+// ===========================================================================
+// Panoramique et zoom
+// ===========================================================================
+let tire = null;
+svg.addEventListener("mousedown", ev => {
+  tire = { x: ev.clientX, y: ev.clientY, v: { ...S.vue } };
+  svg.classList.add("tire");
+});
+window.addEventListener("mousemove", ev => {
+  if (!tire || !S.vue) return;
+  const r = svg.getBoundingClientRect();
+  const vb = svg.viewBox.baseVal;
+  S.vue.x = tire.v.x - (ev.clientX - tire.x) * vb.width / r.width;
+  S.vue.y = tire.v.y - (ev.clientY - tire.y) * vb.height / r.height;
+  applique();
+});
+window.addEventListener("mouseup", () => { tire = null; svg.classList.remove("tire"); });
+svg.addEventListener("wheel", ev => {
+  if (!S.vue) return;
+  ev.preventDefault();
+  const r = svg.getBoundingClientRect();
+  const vb = svg.viewBox.baseVal;
+  const mx = vb.x + (ev.clientX - r.left) / r.width * vb.width;
+  const my = vb.y + (ev.clientY - r.top) / r.height * vb.height;
+  const f = ev.deltaY > 0 ? 1.18 : 1 / 1.18;
+  S.vue = {
+    x: mx - (mx - S.vue.x) * f, y: my - (my - S.vue.y) * f,
+    w: S.vue.w * f, h: S.vue.h * f,
+  };
+  applique();
+}, { passive: false });
+window.addEventListener("resize", applique);
+
+// ===========================================================================
+// Curseur, jauge de disponibilité
+// ===========================================================================
+function dessineJauge() {
+  const j = $("#jauge"); j.innerHTML = "";
+  if (!S.depIndex) return;
+  const n = AN_MAX - AN_MIN + 1;
+  let cour = null, debut = null;
+  const pose = (a0, a1, cls) => {
+    const d = document.createElement("div");
+    d.className = cls;
+    d.style.left = ((a0 - AN_MIN) / n * 100) + "%";
+    d.style.width = ((a1 - a0 + 1) / n * 100) + "%";
+    j.appendChild(d);
+  };
+  for (let a = AN_MIN; a <= AN_MAX + 1; a++) {
+    const e = S.depIndex.annees[String(a)];
+    const cls = !e ? null : (e.c && e.x ? "j-both" : (e.c ? "j-can" : "j-cir"));
+    if (cls !== cour) {
+      if (cour) pose(debut, a - 1, cour);
+      cour = cls; debut = a;
+    }
+  }
+  const r = $("#reperes"); r.innerHTML = "";
+  for (const a of [1815, 1870, 1900, 1940, 1970, 1999, 2012]) {
+    const s = document.createElement("span");
+    s.textContent = a;
+    s.style.left = ((a - AN_MIN + .5) / n * 100) + "%";
+    r.appendChild(s);
+  }
+}
+
+// ===========================================================================
+// Orchestration
+// ===========================================================================
+async function majAnnee(annee, redessine = true) {
+  S.annee = annee;
+  $("#annee-aff").textContent = annee;
+  $("#curseur").value = annee;
+  const ok = await chargeAnnee(annee);
+  if (ok && redessine) dessine();
+  lien();
+}
+
+async function majDep(dep) {
+  await chargeDepartement(dep);
+  dessineJauge();
+  await majAnnee(S.annee);
+  S.cadre = null; calibre();
+  dessine();
+}
+
+function lien() {
+  history.replaceState(null, "", `#${S.dep}/${S.annee}`);
+}
+
+$("#curseur").addEventListener("input", ev => {
+  const a = +ev.target.value;
+  S.annee = a; $("#annee-aff").textContent = a;
+});
+$("#curseur").addEventListener("change", ev => majAnnee(+ev.target.value));
+$("#dep").addEventListener("change", ev => majDep(ev.target.value));
+["v-communes", "v-cantons", "v-circos", "v-noms", "teinte"]
+  .forEach(id => $("#" + id).addEventListener("change", dessine));
+$("#recadrer").addEventListener("click", () => { S.cadre = null; calibre(); });
+window.addEventListener("keydown", ev => {
+  if (ev.target.tagName === "SELECT" || ev.target.tagName === "INPUT") return;
+  if (ev.key === "ArrowLeft") majAnnee(Math.max(AN_MIN, S.annee - 1));
+  if (ev.key === "ArrowRight") majAnnee(Math.min(AN_MAX, S.annee + 1));
+});
+
+let minuterie = null;
+$("#lecture").addEventListener("click", () => {
+  const b = $("#lecture");
+  if (minuterie) {
+    clearInterval(minuterie); minuterie = null;
+    b.classList.remove("actif"); b.textContent = "▶ animer";
+    return;
+  }
+  b.classList.add("actif"); b.textContent = "■ arrêter";
+  minuterie = setInterval(() => {
+    const a = S.annee >= AN_MAX ? AN_MIN : S.annee + 1;
+    majAnnee(a);
+  }, 320);
+});
+
+(async function demarre() {
+  S.index = await charge(`${RACINE}/index.json`);
+  const sel = $("#dep");
+  for (const d of S.index.departements) {
+    const o = document.createElement("option");
+    o.value = d.code;
+    o.textContent = `${d.code} — ${d.nom}`;
+    sel.appendChild(o);
+  }
+  $("#entete-sous").textContent =
+    `base histgis — ${S.index.departements.length} départements, ` +
+    `grille ${S.index.grille_m} m, export du ${S.index.genere}`;
+
+  const m = location.hash.match(/^#([0-9AB]{2})\/(\d{4})$/);
+  const dep = (m && S.index.departements.some(d => d.code === m[1])) ? m[1]
+            : S.index.departements[0].code;
+  S.annee = m ? Math.min(AN_MAX, Math.max(AN_MIN, +m[2])) : 1870;
+  sel.value = dep;
+  await majDep(dep);
+})().catch(e => {
+  document.body.innerHTML =
+    `<div style="padding:40px;font:15px/1.6 Georgia,serif">
+       <h2>Les données ne sont pas là</h2>
+       <p><code>${echappe(e.message)}</code></p>
+       <p>Il faut d'abord exporter la base, puis servir la page :</p>
+       <pre style="background:#efece5;padding:12px;border-radius:3px">python3 cartes/export_web.py
+python3 cartes/web/servir.py</pre>
+       <p style="color:#6b6864">Ouvrir <code>index.html</code> directement depuis
+       le disque ne peut pas marcher : les navigateurs refusent <code>fetch()</code>
+       sur <code>file://</code>.</p>
+     </div>`;
+});
+</script>
+</body>
+</html>

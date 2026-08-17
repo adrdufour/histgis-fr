@@ -149,9 +149,9 @@ def nom_dep(code, annee):
 # ---------------------------------------------------------------------------
 # Connexion
 # ---------------------------------------------------------------------------
-def connecte():
+def connecte(dsn_force=None):
     dernier = None
-    for dsn in DSN_CANDIDATS:
+    for dsn in ([dsn_force] if dsn_force else DSN_CANDIDATS):
         try:
             cx = psycopg2.connect(dsn)
             cx.set_session(readonly=True, autocommit=True)
@@ -402,9 +402,11 @@ def main():
     ap.add_argument("--precision", type=int, default=5,
                     help="décimales des coordonnées en degrés (défaut 5, ~1 m)")
     ap.add_argument("--sortie", type=Path, default=SORTIE)
+    ap.add_argument("--dsn", default=None,
+                    help="chaîne de connexion explicite (défaut : essais successifs)")
     args = ap.parse_args()
 
-    cx = connecte()
+    cx = connecte(args.dsn)
     cur = cx.cursor()
 
     if args.deps:
