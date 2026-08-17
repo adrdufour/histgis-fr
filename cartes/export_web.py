@@ -66,6 +66,7 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
 import sys
 import time
 from pathlib import Path
@@ -442,6 +443,57 @@ WHERE  m.niveau = 'canton' AND u.dep = %(dep)s AND m.periode @> %(d)s::date
 """
 
 
+# ---------------------------------------------------------------------------
+# Nettoyage préalable
+#
+# Les fichiers de configuration sont nommés d'après la signature de la
+# composition (`c_<sig>.json`). Changez quoi que ce soit à ce qui entre dans la
+# signature — un nom, une borne, la façon de la calculer — et les nouveaux
+# fichiers portent d'autres noms : les anciens restent sur le disque, orphelins.
+# Ils ne sont plus référencés par l'index, mais ils traînent, ils pèsent, et
+# surtout ils font cohabiter deux générations de schéma dans le même dossier :
+# un `communes.json` d'hier à côté d'un `c_*.json` d'aujourd'hui, et la page
+# n'a aucun moyen de s'en apercevoir.
+#
+# On efface donc avant d'écrire, mais seulement ce qu'on va réécrire — un
+# export partiel ne doit pas emporter les départements qu'il ne touche pas.
+# ---------------------------------------------------------------------------
+def nettoie(sortie, deps, tous):
+    if not sortie.exists():
+        return 0
+    # Garde-fou : on ne vide un dossier que s'il ressemble à une sortie de ce
+    # script. Un `--sortie` mal tapé ne doit pas effacer autre chose.
+    connu = (sortie / "index.json").exists() or (sortie / "dep").is_dir()
+    if not connu:
+        contenu = [p for p in sortie.iterdir() if not p.name.startswith(".")]
+        if contenu:
+            print(f"Refus de nettoyer {sortie} : ce dossier ne ressemble pas à "
+                  f"une sortie d'export ({len(contenu)} élément(s) inconnus).",
+                  file=sys.stderr)
+            sys.exit(1)
+        return 0
+
+    cibles = []
+    if tous:
+        cibles.append(sortie / "dep")
+        if (sortie / "index.json").exists():
+            cibles.append(sortie / "index.json")
+    else:
+        cibles += [sortie / "dep" / d for d in deps]
+
+    n = 0
+    for c in cibles:
+        if not c.exists():
+            continue
+        if c.is_dir():
+            n += sum(1 for _ in c.rglob("*") if _.is_file())
+            shutil.rmtree(c)
+        else:
+            n += 1
+            c.unlink()
+    return n
+
+
 def ecrit(chemin, obj):
     chemin.parent.mkdir(parents=True, exist_ok=True)
     with open(chemin, "w", encoding="utf-8") as f:
@@ -577,6 +629,8 @@ def main():
     ap.add_argument("--sortie", type=Path, default=SORTIE)
     ap.add_argument("--dsn", default=None,
                     help="chaîne de connexion explicite (défaut : essais successifs)")
+    ap.add_argument("--garder", action="store_true",
+                    help="ne pas effacer l'export précédent (laisse des orphelins)")
     args = ap.parse_args()
 
     cx = connecte(args.dsn)
@@ -600,6 +654,11 @@ def main():
               "et pas de repli pour les communes disparues avant 2011.")
 
     print(f"{len(deps)} département(s) à exporter, grille {args.grille} m.")
+    if not args.garder:
+        n = nettoie(args.sortie, deps, tous=not args.deps)
+        if n:
+            print(f"  {n} fichier(s) de l'export précédent effacé(s)"
+                  f"{'' if not args.deps else ' (départements demandés seulement)'}.")
     args.sortie.mkdir(parents=True, exist_ok=True)
 
     rapport, total = [], 0
@@ -631,6 +690,21 @@ def main():
             "annees": r["annees"],
             "bornes": r["bornes"],
         })
+    # Export partiel : l'index racine doit continuer à annoncer les
+    # départements qu'on n'a pas touchés, sinon ils disparaissent du sélecteur
+    # alors que leurs fichiers sont toujours là.
+    if args.deps:
+        ancien = args.sortie / "index.json"
+        if ancien.exists():
+            try:
+                vieux = json.loads(ancien.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                vieux = {}
+            refaits = {d["code"] for d in index["departements"]}
+            for d in vieux.get("departements", []):
+                if d.get("code") not in refaits and \
+                   (args.sortie / "dep" / d.get("code", "") / "index.json").exists():
+                    index["departements"].append(d)
     index["departements"].sort(key=lambda d: d["code"])
     ecrit(args.sortie / "index.json", index)
 

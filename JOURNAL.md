@@ -1383,3 +1383,90 @@ Relecture du fichier après coup : `\if` et `\endif` s'équilibrent, plus aucun
 `SELECT` ne porte de substitution, et les six variables employées sont toutes
 définies. Quatre allers-retours pour du gréement, aucun pour les données — ce
 n'est pas la meilleure des proportions, mais c'est la bonne.
+
+**Le piège documenté le matin m'a eu le soir.** `om_canton_src` empile les cinq
+territoires et `CODE_DEPT` y vaut `97` pour tous — je l'avais écrit en toutes
+lettres dans l'en-tête du fichier, puis j'ai filtré Mayotte sans filtrer du tout.
+Le canton `01` des cinq DOM s'est présenté sous le même `unit_id` 97601, et
+`om_unit_pkey` a refusé. La contrainte a fait exactement ce pour quoi elle est
+là, et l'erreur s'est arrêtée à la première ligne fautive au lieu de produire
+seize cantons plausibles et faux.
+
+Le département se lit dans `CODE_CHF`, code de la commune chef-lieu sur trois
+chiffres dont le premier est celui du département — encore la règle
+`'97' || code`. Vérifié sur les 113 entités : **zéro discordance** entre le
+département déduit de `CODE_CHF` et le lot d'origine. Le filtre rend 16 cantons
+mahorais, d'Acoua à Tsingoni, ce qui est le compte attendu.
+
+À noter au passage, sans conséquence ici : **deux entités ont un `CODE_CHF`
+vide**, le canton 33 de Guadeloupe et le 22 de La Réunion. Ni l'un ni l'autre
+n'est un agrégat. Ces deux-là viennent du fichier du ministère, pas de GEOFLA,
+donc rien ne s'en trouve affecté — mais qui voudrait un jour déduire le
+département de `CODE_CHF` pour les 971-974 devra prévoir le cas.
+
+Un contrôle a été ajouté derrière : 16 cantons pour Mayotte, sinon on s'arrête.
+
+**Le script va au bout, et les chiffres tombent.** 129 atomes, 169 cantons,
+31 circonscriptions, 85 rattachements cantonaux et 219 rattachements de
+circonscription. Communes par département : 32/34/22/24/17, et 10/6/1/10/1
+multicantonales — les mêmes qu'à la lecture des shapefiles, retrouvées depuis
+la base. Surfaces en `geography` : 1632, 1103, 83752, 2502, 363 km². Guyane
+perd 72 km² sur la mesure planaire en UTM, soit 0,09 % : c'est l'écart normal
+entre une surface projetée et une surface ellipsoïdale, pas une anomalie.
+
+**Recouvrement : 0 km².** Vérifié cette fois dans PostGIS et non plus dans
+shapely. La limite des 3 945 km² de la métropole n'a pas d'équivalent ici.
+
+Deux choses à regarder demain. **31 circonscriptions posées pour 32 attendues**
+(4+4+2+5 en 1986, 4+4+2+7 en 2012) : il en manque une, sans doute une
+circonscription dont toutes les communes sont partagées, donc écartées par le
+`HAVING count(DISTINCT) = 1`. La recette 5 la nommera. Et **5 communes sur 224
+couples (commune, segment) relèvent de deux circonscriptions** — 342 lignes en
+entrée, 219 retenues. Elles sont listées, et c'est le pendant outre-mer du
+partage métropolitain.
+
+Dernier correctif, de la même famille que les autres : la recette lisait
+`iris_om` alors qu'un `NOTICE` en tête se contentait de prévenir qu'elle
+pouvait manquer. Prévenir n'est pas protéger — une table absente est une
+erreur, pas un compte à zéro. La requête est maintenant sous `\if` et se
+rabat sur une version sans la colonne.
+
+**`histgis.iris_om` : 472 IRIS, 2 405 km².** L'ordre de grandeur recoupe : les
+28 communes concernées sont les plus peuplées, et La Réunion en concentre à elle
+seule près de 1 400 km² (Saint-Paul, Saint-Benoît, Saint-Joseph, Le Tampon).
+La trame de découpe est en place, en 4326 comme le reste de l'outre-mer.
+
+Reste à relancer `40_outremer.sql` : la colonne IRIS apparaîtra dans la recette
+des 28 communes en attente, et les recettes 5 nommeront la circonscription
+manquante et les cinq communes partagées.
+
+## 16 août 2026, clôture — l'outre-mer est en base, et la question ouverte a sa réponse
+
+Toutes les recettes passent. 129 atomes, 169 cantons, 31 circonscriptions,
+85 rattachements cantonaux, 219 de circonscription. Zéro chevauchement, zéro
+géométrie invalide, zéro atome sans géométrie, SRID 4326 partout,
+**0 km² de recouvrement**. Les effectifs par département et les surfaces
+retrouvent, depuis la base, ce que shapely avait mesuré sur les shapefiles.
+
+**La circonscription manquante est identifiée : c'est la 1re de La Réunion.**
+La recette 5 donne 6 circonscriptions réunionnaises en 2009 au lieu de 7, et
+`om_snapshot('2012-06-01','circo')` va de `974-02` à `974-07` sans `974-01`.
+L'explication est dans le tableau d'à côté : la 1re circonscription est
+**entièrement contenue dans Saint-Denis**, commune partagée entre deux
+circonscriptions. Aucune commune ne lui appartient en entier, donc le
+`HAVING count(DISTINCT) = 1` ne lui laisse rien, donc l'unité n'est pas créée.
+
+Ce n'est pas un bogue mais la limite annoncée, et elle a un nom : tant que
+Saint-Denis n'est pas découpée, une circonscription de La Réunion n'existe pas.
+La bonne nouvelle est que Saint-Denis est la commune la mieux dotée de tout
+l'outre-mer — **64 IRIS**. La trame est là, il n'y manque que le tracé.
+
+Même mécanique, plus bénigne, pour les quatre autres partages de 2012
+(Saint-André, Saint-Louis, Saint-Paul) et le seul de 1986 (Fort-de-France) :
+là, les autres communes suffisent à faire exister la circonscription, seule
+l'attribution de la commune partagée manque.
+
+**Ce qui reste, dans l'ordre.** Découper les 28 communes sur trame IRIS dans
+QGIS — c'est ce qui débloque à la fois les 68 cantons sans polygone propre et la
+1re circonscription de La Réunion. Puis trancher la Nouvelle-Calédonie sur la
+licence de BDADMIN-NC. L'Algérie, au niveau départemental, plus tard.

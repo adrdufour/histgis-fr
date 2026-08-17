@@ -296,17 +296,40 @@ INSERT INTO om_trace (quoi, cle) SELECT 'unit_canton', unit_id FROM ins;
 
 -- Mayotte n'est pas dans le fichier du ministère : ses 19 cantons viennent de
 -- GEOFLA seul, où 16 sont individualisés et 3 sont noyés dans Mamoudzou.
-WITH ins AS (
-    INSERT INTO om_unit (unit_id, niveau, dep, code, nom)
-    SELECT DISTINCT '976' || c.code_cant, 'canton', '976',
-           'MYT' || c.code_cant, c.nom_chf
+--
+-- ATTENTION, et c'est le piège de ce fichier : `om_canton_src` empile les cinq
+-- territoires et `CODE_DEPT` y vaut `97` pour tous. Filtrer sur le département
+-- est impossible par cette colonne — une première rédaction s'y est fiée et a
+-- ramassé le canton `01` des cinq DOM sous le même `unit_id` 97601, arrêtée par
+-- `om_unit_pkey`. La contrainte a fait son travail.
+--
+-- Le département se lit dans `CODE_CHF`, code de la commune chef-lieu sur trois
+-- chiffres, dont le premier est celui du département : `608` = Dzaoudzi, donc
+-- Mayotte. C'est la règle `'97' || code` du §1 de la note, une fois de plus.
+WITH mayotte AS (
+    SELECT DISTINCT ON (c.code_cant) c.code_cant, c.nom_chf
     FROM   om_canton_src c
-    WHERE  c.code_cant !~ '^9[0-9]$'
-      AND  NOT EXISTS (SELECT 1 FROM om_unit u
-                       WHERE u.unit_id = '976' || c.code_cant)
+    WHERE  left(c.code_chf, 1) = '6'      -- 976xx : Mayotte
+      AND  c.code_cant !~ '^9[0-9]$'      -- hors agrégat Mamoudzou
+    ORDER  BY c.code_cant, c.nom_chf
+),
+ins AS (
+    INSERT INTO om_unit (unit_id, niveau, dep, code, nom)
+    SELECT '976' || m.code_cant, 'canton', '976', 'MYT' || m.code_cant, m.nom_chf
+    FROM   mayotte m
     RETURNING unit_id
 )
 INSERT INTO om_trace (quoi, cle) SELECT 'unit_canton', unit_id FROM ins;
+
+DO $$
+DECLARE n int;
+BEGIN
+    SELECT count(*) INTO n FROM om_unit WHERE dep = '976';
+    IF n <> 16 THEN
+        RAISE EXCEPTION '% cantons posés pour Mayotte, 16 attendus '
+                        '(19 réels moins les 3 noyés dans Mamoudzou).', n;
+    END IF;
+END $$;
 
 -- ---------------------------------------------------------------------------
 -- 5. Le rattachement cantonal des 85 communes d'un seul canton
@@ -458,10 +481,21 @@ SELECT (SELECT count(DISTINCT atom_id) FROM om_membership WHERE niveau='canton')
 
 \echo ''
 \echo '--- les communes en attente, et leur trame IRIS ---'
-SELECT a.atom_id, a.nom,
-       coalesce((SELECT count(*) FROM iris_om i WHERE i.code_insee = a.atom_id), 0)
-         AS iris
+-- Une table absente n'est pas un compte à zéro : c'est une erreur. Le NOTICE
+-- en tête prévenait, il ne suffisait pas — la requête cassait quand même.
+SELECT to_regclass('histgis.iris_om') IS NOT NULL AS a_iris \gset
+\if :a_iris
+SELECT a.dep, a.atom_id, a.nom,
+       coalesce((SELECT count(*) FROM iris_om i
+                 WHERE i.code_insee = a.atom_id), 0) AS iris
 FROM   om_atom a WHERE a.multi ORDER BY a.dep, a.atom_id;
+\else
+SELECT a.dep, a.atom_id, a.nom FROM om_atom a
+WHERE  a.multi ORDER BY a.dep, a.atom_id;
+\echo ''
+\echo '  (colonne IRIS omise : histgis.iris_om absente. Pour l''avoir :'
+\echo '   python3 cartes/recupere_iris_outremer.py --charger)'
+\endif
 
 \echo ''
 \echo '=== 5. Circonscriptions (attendu 1986 : 4+4+2+5 ; 2012 : 4+4+2+7) ==='
