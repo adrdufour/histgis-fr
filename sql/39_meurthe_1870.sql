@@ -101,25 +101,36 @@ SELECT dep, count(*) AS cantons
 -- découper, 270 puis 369 puis 119.
 
 -- ---------------------------------------------------------------------------
--- Recette 2 : les deux emprises du 54 ne se recouvrent pas dans le temps.
--- Une commune ne doit jamais relever de deux cantons du 54 à la même date.
+-- Recette 2 : aucun ATOME ne relève de deux cantons à la même date.
+--
+-- Premier jet, et il était faux : je groupais par `insee_geofla`. Il a sorti
+-- une ligne — Moyenvic (57490), rattachée à la fois à Château-Salins (9905) et
+-- à Vic-sur-Seille (9929) en 1870-1871 — et j'ai cru à un recouvrement créé
+-- par la fusion des deux emprises du 54.
+--
+-- Ce n'en était pas un. Moyenvic porte DEUX ATOMES, 24365 et 35117, deux
+-- identifiants Cassini distincts : ce sont deux communes de 1870, fondues
+-- depuis en une seule, qui partagent le même code INSEE de 2011. Chacune était
+-- dans son canton, et les deux rattachements sont justes.
+--
+-- C'est le piège que `METHODE.md` documente et que ce projet a déjà payé trois
+-- fois : **grouper par un code, jamais par la géométrie ni par l'atome**. Le
+-- même geste avait donné 369 villes à découper au lieu de 119. Sept autres
+-- communes du même secteur sont dans ce cas — Malzéville, Ars-Laquenexy,
+-- Azoudange, Fonteny, Maizières-lès-Vic, Richeval, Sérémange-Erzange — et
+-- aucune n'est un défaut.
+--
+-- La bonne unité est l'ATOME. C'est d'ailleurs ce que la contrainte
+-- `EXCLUDE USING gist` garantit déjà, et elle tient.
 -- ---------------------------------------------------------------------------
-SELECT count(*) AS communes_a_double_dans_le_54
-  FROM (SELECT a.insee_geofla, m.periode
+SELECT count(*) AS atomes_a_double_dans_le_54
+  FROM (SELECT m.atom_id, m.periode
           FROM membership m
-          JOIN atom a USING (atom_id)
           JOIN unit u ON u.unit_id = m.unit_id
          WHERE m.niveau = 'canton' AND u.dep = '54'
-           AND NOT a.fraction
          GROUP BY 1, 2
         HAVING count(DISTINCT m.unit_id) > 1) x;
--- Attendu : 0. Les villes coupées sont exclues par `NOT a.fraction` — Nancy,
--- Lunéville et Toul relèvent légitimement de plusieurs cantons.
---
--- MESURÉ : 1. Une commune non fractionnée relève de deux cantons du 54 à la
--- même date. Le fusionnement des deux emprises du 54 a donc révélé un
--- recouvrement, ou en a créé un. La requête de diagnostic ci-dessous le
--- nomme ; tant qu'il n'est pas expliqué, ce fichier n'est pas clos.
+-- Attendu : 0, et cette fois l'attendu porte sur la bonne unité.
 
 -- ---------------------------------------------------------------------------
 -- Recette 3 : la Meurthe au 1er juin 1870, telle qu'on pourra désormais
@@ -136,7 +147,9 @@ SELECT u.unit_id, u.nom, count(*) AS communes
 
 
 -- ---------------------------------------------------------------------------
--- Diagnostic du recouvrement signalé par la recette 2. À lancer tel quel.
+-- Diagnostic, conservé : il montre les communes MODERNES qui recouvrent
+-- plusieurs communes de 1870. Ce n'est pas une anomalie, c'est le mécanisme
+-- des absorptions — utile à connaître avant de cartographier le 54 ancien.
 -- ---------------------------------------------------------------------------
 SELECT a.insee_geofla,
        n.nom                                   AS commune,
