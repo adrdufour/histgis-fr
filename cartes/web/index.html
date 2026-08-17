@@ -156,6 +156,7 @@
     <span style="width:8px"></span>
     <label>colorier par</label>
     <select id="teinte">
+      <option value="auto">le plus fin disponible</option>
       <option value="canton">canton</option>
       <option value="circo">circonscription</option>
       <option value="aucun">rien</option>
@@ -365,15 +366,22 @@ function applique() {
 function dessine() {
   const parCanton = (S.cfgCanton && S.cfgCanton.rattachement) || {};
   const parCirco = (S.cfgCirco && S.cfgCirco.rattachement) || {};
-  const mode = $("#teinte").value;
-  const source = mode === "circo" ? S.cfgCirco : S.cfgCanton;
-  const rattach = mode === "circo" ? parCirco : parCanton;
+  // « le plus fin disponible » : le canton quand il est là, la circonscription
+  // sinon. Entre 1986 et 1998 la base tient les circonscriptions mais pas les
+  // cantons ; colorier par canton laisserait alors une carte grise qui a l'air
+  // d'un bogue alors qu'il y a bien une information à montrer.
+  let mode = $("#teinte").value;
+  if (mode === "auto") mode = S.cfgCanton ? "canton" : (S.cfgCirco ? "circo" : "aucun");
+  const source = mode === "circo" ? S.cfgCirco : (mode === "canton" ? S.cfgCanton : null);
+  const rattach = mode === "circo" ? parCirco : (mode === "canton" ? parCanton : {});
 
   const couleur = new Map();
   if (source && mode !== "aucun") {
     const ids = source.unites.map(u => u.id).sort();
     ids.forEach((id, i) => couleur.set(id, teinteDe(i, ids.length)));
   }
+  S.modeActif = mode;
+  S.couleurs = couleur;
 
   const frag = document.createDocumentFragment();
   const defs = document.createElementNS(NS, "defs");
@@ -552,26 +560,24 @@ function panneau() {
       stroke="#8d877d" stroke-width="1.4"/></pattern></defs></svg>
       commune partagée entre cantons</div>`;
 
-  if (kc) {
-    h += `<h2>Cantons (${kc.unites.length})</h2><ul class="liste">`;
-    const ids = kc.unites.map(u => u.id).sort();
-    for (const u of [...kc.unites].sort((a, b) => a.nom.localeCompare(b.nom, "fr"))) {
-      const c = teinteDe(ids.indexOf(u.id), ids.length);
-      h += `<li data-unite="${u.id}"><span><span class="puce"
-            style="background:${c}"></span>${echappe(u.nom)}</span>
-            <span class="n">${u.n}</span></li>`;
+  // La pastille ne s'affiche que pour la couche effectivement coloriée :
+  // une pastille qui ne correspond à rien sur la carte est pire que pas de
+  // pastille du tout.
+  const liste = (cfg, titre) => {
+    if (!cfg) return "";
+    let s = `<h2>${titre} (${cfg.unites.length})</h2><ul class="liste">`;
+    for (const u of [...cfg.unites].sort((a, b) => a.nom.localeCompare(b.nom, "fr"))) {
+      const c = S.couleurs && S.couleurs.get(u.id);
+      s += `<li data-unite="${u.id}"><span>` +
+           (c ? `<span class="puce" style="background:${c}"></span>` : "") +
+           `${echappe(u.nom)}${u.prov ? ' <span class="note">(provisoire)</span>' : ""}` +
+           `${u.g ? "" : ' <span class="note">(sans territoire)</span>'}</span>` +
+           `<span class="n">${u.n}</span></li>`;
     }
-    h += `</ul>`;
-  }
-  if (kx) {
-    h += `<h2>Circonscriptions (${kx.unites.length})</h2><ul class="liste">`;
-    for (const u of [...kx.unites].sort((a, b) => a.nom.localeCompare(b.nom, "fr"))) {
-      h += `<li data-unite="${u.id}"><span>${echappe(u.nom)}${u.prov ?
-            ' <span class="note">(provisoire)</span>' : ""}</span>
-            <span class="n">${u.n}</span></li>`;
-    }
-    h += `</ul>`;
-  }
+    return s + `</ul>`;
+  };
+  h += liste(kc, "Cantons");
+  h += liste(kx, "Circonscriptions");
 
   h += `<h2>Ce que la carte ne dit pas</h2><p class="note">
     Les années servies apparaissent en couleur sous le curseur : vert pour une

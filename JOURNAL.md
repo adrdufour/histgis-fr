@@ -1080,3 +1080,60 @@ Une erreur relevée à la relecture, avant qu'elle ne coûte : le script lisait
 comment charger cette table. L'en-tête donne maintenant la commande, et un
 garde-fou refuse de démarrer sans elle plutôt que de poser 16 cantons au lieu
 de 19 sans rien signaler.
+
+## 17 août 2026 — la carte interactive, et un trou qu'on a refusé de combler
+
+`cartes/export_web.py` et `cartes/web/index.html` : un curseur de 1815 à 2012,
+un sélecteur de département, trois niveaux superposés — communes en trait fin,
+cantons en trait moyen sur fond colorié, circonscriptions en trait épais.
+Mode d'emploi et limites dans `cartes/web/LISEZMOI.md`.
+
+**Le curseur va de 1815 à 2012, la base non, et la page le dit.** Elle tient
+une composition cantonale en 1870-1940 et 1999-2012, électorale en 1870-1940,
+1986-2010 et 2010-2012. Ailleurs — avant 1870, et dans le trou cantonal
+1941-1998 — la page affiche un contour départemental grisé emprunté à l'année
+datée la plus proche, **annoncé comme emprunté**, sous un bandeau qui dit qu'il
+n'y a pas de source. C'était le choix à faire et il valait d'être fait
+explicitement : reporter la composition de 1940 sur 1965 aurait donné une carte
+pleine, plausible, et fausse. Une carte a l'autorité de ce qu'elle montre ; elle
+ne dit pas qu'elle interpole. La jauge sous le curseur donne les années servies
+d'un coup d'œil, ce qui rend le trou visible sans avoir à le chercher.
+
+**Le poids a été traité par la structure, pas par la simplification.** La
+géométrie d'un atome ne bouge jamais : elle sort une fois par département.
+Ce qui bouge est le rattachement, et il ne bouge que quelques fois par période.
+Le script repère les configurations distinctes — md5 de la composition, noms
+d'époque compris — et n'écrit qu'un fichier par configuration. Réexporter la
+même carte soixante-et-onze fois aurait pesé cent fois plus pour la même
+information.
+
+**L'accrochage à la grille plutôt que la simplification, et c'est le point
+technique qui compte.** `ST_SimplifyPreserveTopology` appliqué polygone par
+polygone écarte deux communes voisines et ouvre des lisières entre elles ; les
+limites cantonales ne suivraient plus les limites communales qu'elles suivent
+en réalité. `ST_SnapToGrid` à 25 m en Lambert-93, appliqué dans le même ordre
+aux atomes et aux contours dissous, préserve les sommets partagés. La carte est
+juste parce que les deux couches ont subi exactement le même traitement.
+
+**Recette en deux passées, PostGIS n'étant pas installable ici.** Le SQL a
+tourné contre un vrai PostgreSQL 16 doté de doublures des fonctions ST_*, sur
+un jeu d'essai qui reproduit les discontinuités réelles : trou 1941-1998,
+circonscriptions sans cantons en 1986-1998, un transfert de commune en cours de
+période, un renommage de canton à mi-parcours. Dix-sept recettes, toutes
+passées — dont le dédoublonnage (4 configurations cantonales et 3 électorales
+là où il y a 97 années servies) et la restitution du nom d'époque. La page a
+ensuite tourné dans un DOM sans navigateur sur deux départements fabriqués au
+Voronoï, unions faites par shapely : sept scénarios rendus en images, zéro
+erreur JavaScript.
+
+Ce qu'aucune des deux ne prouve : que `ST_UnaryUnion` dissout correctement sur
+les vraies géométries. C'est PostGIS qui en répond, et le premier export qui le
+dira.
+
+**Un défaut trouvé par le rendu, et qui ne se serait pas vu autrement.** En
+1986-1998 la base tient les circonscriptions mais pas les cantons : colorier
+par canton rendait une carte entièrement grise, indiscernable d'un bogue de
+chargement alors qu'il y avait bien une information à montrer. Le coloriage
+retient maintenant le niveau le plus fin disponible. C'est le genre de chose
+qu'une recette sur les données ne peut pas attraper — il fallait regarder
+l'image.

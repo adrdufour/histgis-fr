@@ -437,11 +437,6 @@ def main():
              "grille_m": args.grille,
              "departements": []}
     for r in rapport:
-        cur.execute("""SELECT min(a), max(a) FROM (
-                         SELECT extract(year FROM m.valid_from)::int AS a
-                         FROM membership m JOIN unit u
-                           ON u.unit_id = m.unit_id AND u.niveau = m.niveau
-                         WHERE u.dep = %s) t""", (r["dep"],))
         index["departements"].append({
             "code": r["dep"],
             "nom": nom_dep(r["dep"], 1900),
