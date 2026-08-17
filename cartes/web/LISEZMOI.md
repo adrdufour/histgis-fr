@@ -58,11 +58,37 @@ plus rien ; les communes trop petites pour porter la leur restent muettes.
 d'époque : `insee_mvt.libelle_av` le donnerait pour les disparues, c'est un
 chantier ouvert dans `RESTE_A_FAIRE.md`.
 
-Cliquer sur une **ville multicantonale** rend tous ses rattachements et non le
-premier venu : ses atomes-fractions partagent un code INSEE, la fiche les
-regroupe et liste les cantons entre lesquels elle est partagée. C'est
-l'information que la carte, elle, ne peut pas montrer, puisque ces cantons s'y
-recouvrent exactement.
+**Le nom suit le curseur.** `insee_mvt` porte 1 388 changements de nom
+(`mod = '10'`), datés. Pour une planche de 1885, la chronologie rend le nom le
+plus ancien *connu* — celui d'avant le premier renommage enregistré — là où les
+planches PDF affichent celui de 2011. Ce n'est pas la vérité, et la fiche le
+dit : le fichier de l'Insee commence en 1943, un renommage de 1900 reste
+invisible.
+
+## Les deux recouvrements, qui ne demandent pas le même travail
+
+Un même polygone revendiqué par plusieurs cantons recouvre deux situations très
+différentes, et la carte les distingue :
+
+| aspect | situation | à faire |
+|---|---|---|
+| **ocre penché** | un seul code Cassini, plusieurs cantons — la commune d'époque est réellement coupée, la base n'en tient pas le tracé interne (Marseille, Lyon, Bourg-en-Bresse) | **tracer**, sur la trame IRIS |
+| **bleu croisé** | plusieurs codes Cassini — des communes d'époque distinctes, fondues depuis, qui partagent un polygone de 2011 (Espinouse, Saint-Jurson et Le Chaffaut sur 29,75 km²) | **rien** : artefact de la correspondance vers GEOFLA |
+| **liseré pointillé** | plusieurs communes d'époque, même canton | rien : noms superposés, pas de recouvrement |
+
+Ce sont les deux défauts que le projet mesure séparément depuis le contrôle Gay
+— 12 822 km² au niveau cantonal, 3 945 au niveau des atomes. Les compter
+ensemble reviendrait à s'attribuer une dette qu'aucun travail de dessin ne peut
+rembourser. Le panneau les compte séparément ; cliquer sur le polygone dit
+lequel des deux cas s'applique et pourquoi.
+
+**Le regroupement passe par l'empreinte du polygone, jamais par le code
+INSEE** — même règle que `cartes_cantons.py` : « un code est une reconstruction,
+l'empreinte est un fait ». Elle est nécessaire dans les deux sens : Lyon et
+Marseille portent des codes différents pour un même terrain
+(`atom_geom.source = 'union_prefixe'`), et trois communes fondues portent un
+code identique pour trois noms. Un polygone contesté est donc dessiné une fois
+et porte tous les noms qui le revendiquent, empilés.
 
 ## Ce que la page montre — et ce qu'elle refuse de montrer
 

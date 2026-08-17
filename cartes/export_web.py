@@ -304,21 +304,33 @@ GEOM_ATOME = "ST_MakeValid(ST_SnapToGrid(ag.geom, %(grille)s))"
 # reconstruite sans elles doit exporter quand même, avec des communes sans nom
 # plutôt qu'un export qui échoue. D'où la requête assemblée selon ce qui est
 # présent, constaté une fois à la connexion.
-def sql_communes(dico, geofla):
+def sql_communes(dico, geofla, mvt):
+    # Chaîne de repli identique à `cartes/cartes_cantons.py` : le nom GEOFLA
+    # 2011, puis le `libelle_av` du fichier de mouvements pour les communes
+    # disparues avant 2011, puis le code entre crochets. « Ce qui n'a de nom
+    # nulle part est signalé comme tel, pas maquillé. »
     champs, joints = [], []
-    if dico:
-        joints.append("LEFT JOIN noms_geofla n ON n.insee = a.insee_geofla")
-        champs.append("n.nom")
     if geofla:
         joints.append("LEFT JOIN geofla_commune g ON g.insee_com = a.insee_geofla")
         champs.append("g.nom_comm")
-    nom = f"coalesce({', '.join(champs)})" if champs else "NULL::text"
+    if dico:
+        joints.append("LEFT JOIN noms_geofla n ON n.insee = a.insee_geofla")
+        champs.append("n.nom")
+    if mvt:
+        champs.append("""(SELECT mv.libelle_av FROM insee_mvt mv
+                          WHERE mv.com_av = a.insee_geofla
+                          ORDER BY mv.date_eff LIMIT 1)""")
+    champs.append("'[' || a.insee_geofla || ']'")
+    nom = f"coalesce({', '.join(champs)})"
+    disparue = "(g.insee_com IS NULL)" if geofla else "NULL::boolean"
     return f"""
 SELECT a.atom_id,
        a.insee_geofla,
+       a.cassini,
        a.fraction,
        ag.partagee,
        {nom}                                                       AS nom,
+       {disparue}                                                  AS disparue,
        ST_AsGeoJSON(ST_Transform({GEOM_ATOME}, 4326), %(prec)s)     AS gj,
        ST_AsGeoJSON(ST_Transform(ST_PointOnSurface({GEOM_ATOME}), 4326),
                     %(prec)s)                                      AS pt
@@ -332,6 +344,69 @@ WHERE  ag.atom_id IN (
            WHERE  u.dep = %(dep)s
        )
 """
+
+
+# ---------------------------------------------------------------------------
+# Chronologie des noms de communes
+#
+# `insee_mvt` porte 1 388 changements de nom (`mod = '10'`), datés, de 1943 à
+# 2025 — la modalité qui renomme sans toucher au code. On en tire, pour chaque
+# code INSEE, la suite des noms portés dans le temps, et la page affiche celui
+# de l'année au curseur.
+#
+# Ce que ça apporte, et sa limite. Le fichier de l'Insee commence en 1943 :
+# aucun renommage antérieur n'y figure. Pour une planche de 1885, la
+# chronologie rend donc le nom *le plus ancien connu* — celui d'avant le
+# premier renommage enregistré — et non le nom moderne, ce qui est déjà mieux
+# que ce que font les planches PDF, qui affichent le nom de 2011. Mais un
+# renommage de 1900 reste invisible : la base ne le connaît pas.
+#
+# Autre limite, et c'est la même que partout : la chronologie porte sur le code
+# de 2011. Une commune d'époque absorbée depuis prend le code de l'absorbante,
+# donc son historique de nom. C'est le cas que `cassini` permet de *repérer*
+# (plusieurs atomes sur un polygone) sans permettre de le *nommer* : aucune
+# source du projet ne donne le nom d'un code Cassini.
+# ---------------------------------------------------------------------------
+SQL_RENOMMAGES = """
+SELECT mv.com_av, mv.date_eff, mv.libelle_av, mv.libelle_ap
+FROM   insee_mvt mv
+WHERE  mv.mod = '10'
+  AND  mv.com_av IN (
+           SELECT DISTINCT a.insee_geofla
+           FROM   atom a
+           JOIN   membership m ON m.atom_id = a.atom_id
+           JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+           WHERE  u.dep = %(dep)s
+       )
+ORDER  BY mv.com_av, mv.date_eff
+"""
+
+
+def chronologies(cur, dep):
+    """insee -> [[annee_debut, nom], …], seulement pour les codes renommés."""
+    try:
+        cur.execute(SQL_RENOMMAGES, {"dep": dep})
+    except psycopg2.Error:
+        return {}
+    par_insee = {}
+    for insee, date_eff, av, ap in cur.fetchall():
+        par_insee.setdefault(insee.strip(), []).append((date_eff, av, ap))
+    out = {}
+    for insee, mvts in par_insee.items():
+        mvts.sort(key=lambda t: t[0])
+        # avant le premier renommage : le nom d'avant ; après chacun : le nom
+        # d'après. Le dernier segment doit retomber sur le nom GEOFLA.
+        suite = [[AN_MIN, mvts[0][1]]]
+        for date_eff, _av, ap in mvts:
+            suite.append([date_eff.year, ap])
+        # on élague les doublons consécutifs, fréquents quand seul le NCC change
+        propre = [suite[0]]
+        for seg in suite[1:]:
+            if seg[1] != propre[-1][1]:
+                propre.append(seg)
+        if len(propre) > 1:
+            out[insee] = propre
+    return out
 
 SQL_UNITES = f"""
 SELECT u.unit_id,
@@ -393,20 +468,35 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com):
     poids = 0
 
     # --- communes : géométrie statique, écrite une seule fois ---------------
+    # Lire AVANT d'interroger la chronologie : `chronologies()` réutilise le
+    # même curseur, et un second `execute()` jette le résultat en attente.
+    # C'est la recette qui a trouvé celui-là, pas la relecture.
     cur.execute(sql_com, params)
+    lignes = cur.fetchall()
+    chrono = chronologies(cur, dep)
     communes = {}
-    for atom_id, insee, fraction, partagee, nom, gj, pt in cur.fetchall():
+    for (atom_id, insee, cassini, fraction, partagee, nom, disparue,
+         gj, pt) in lignes:
         if not gj:
             continue
         p = json.loads(pt)["coordinates"] if pt else None
         communes[atom_id] = {
             "i": insee,
+            "s": (cassini or "").strip() or None,
             "n": nom,
+            # Empreinte du polygone. C'est la clé de regroupement du projet :
+            # « un code est une reconstruction, l'empreinte est un fait »
+            # (`cartes_cantons.py`). Deux atomes de même empreinte occupent
+            # exactement le même terrain, quels que soient leurs codes.
+            "k": hashlib.md5(gj.encode()).hexdigest()[:10],
             "f": 1 if fraction else 0,
             "p": 1 if partagee else 0,
+            "d": 1 if disparue else 0,
             "c": [round(p[0], 5), round(p[1], 5)] if p else None,
             "g": json.loads(gj),
         }
+        if insee and insee.strip() in chrono:
+            communes[atom_id]["nm"] = chrono[insee.strip()]
     poids += ecrit(base / "communes.json", {"dep": dep, "communes": communes})
 
     # --- une configuration par état distinct de la composition -------------
@@ -498,11 +588,16 @@ def main():
         cur.execute("SELECT DISTINCT dep FROM unit ORDER BY dep")
         deps = [r[0].strip() for r in cur.fetchall()]
 
-    dico, geofla = existe(cur, "noms_geofla"), existe(cur, "geofla_commune")
-    sql_com = sql_communes(dico, geofla)
+    dico = existe(cur, "noms_geofla")
+    geofla = existe(cur, "geofla_commune")
+    mvt = existe(cur, "insee_mvt")
+    sql_com = sql_communes(dico, geofla, mvt)
     if not (dico or geofla):
         print("Attention : ni `noms_geofla` ni `geofla_commune` — les communes "
-              "sortiront sans nom.")
+              "sortiront sous leur code.")
+    if not mvt:
+        print("Attention : `insee_mvt` absente — pas de chronologie des noms, "
+              "et pas de repli pour les communes disparues avant 2011.")
 
     print(f"{len(deps)} département(s) à exporter, grille {args.grille} m.")
     args.sortie.mkdir(parents=True, exist_ok=True)

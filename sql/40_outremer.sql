@@ -45,24 +45,14 @@
 -- Guadeloupe à quelques milliers de kilomètres de chez elle sans rien casser
 -- de visible.
 --
---   cd sources/outremer
---   for f in GEOFLA_2-0_COMMUNE_*/*/GEOFLA/1_DONNEES*/*/COMMUNE/COMMUNE.SHP; do
---     ogr2ogr -f PostgreSQL PG:"dbname=histgis" "$f" \
---       -nln histgis.om_commune_src -nlt MULTIPOLYGON \
---       -lco GEOMETRY_NAME=geom -t_srs EPSG:4326 \
---       -lco PRECISION=NO $( [ -z "$PREMIER" ] && echo -overwrite || echo -append )
---     PREMIER=1
---   done
+--   bash sql/charger_outremer.sh
 --
--- Les cantons, de la même façon, dans `om_canton_src` — Mayotte n'étant pas
--- dans le fichier du ministère, ses 19 cantons ne viennent que de là :
+-- C'est une boucle sur cinq lots — le premier en `-overwrite`, les suivants en
+-- `-append` — donc un script, pas une ligne à recopier. Il charge à la fois les
+-- communes et les cantons, vérifie les effectifs et le SRID.
 --
---   for f in GeoFLA_2-0__SHP_*_D97*/*/GeoFLA/1_DONNEES*/*/CANTON/CANTON.SHP; do
---     ogr2ogr -f PostgreSQL PG:"dbname=histgis" "$f" \
---       -nln histgis.om_canton_src -nlt MULTIPOLYGON \
---       -lco GEOMETRY_NAME=geom -t_srs EPSG:4326 \
---       $( [ -z "$P2" ] && echo -overwrite || echo -append ); P2=1
---   done
+-- Le même script charge les cantons dans `om_canton_src` — 113 entités, Mayotte
+-- n'étant pas dans le fichier du ministère, ses 19 cantons ne viennent que de là.
 --
 -- Attention : `CODE_DEPT` vaut `97` pour les cinq départements, l'attribut ne
 -- les distingue pas. Le département ne peut venir que du lot, d'où le chargement
@@ -109,7 +99,13 @@ SET search_path TO histgis, public;
 \set fin_12    '2013-01-01'
 \set debut_dep '1946-03-19'
 
-\set circo_om '../circo/circo_outremer_1986_2012.csv'
+-- Le chemin du `\copy` est relatif au répertoire d'où psql est lancé, pas au
+-- fichier SQL. Par défaut on suppose la racine du dépôt, qui est d'où tournent
+-- `load.sh` et `rebuild.sh`. Sinon, le passer explicitement :
+--   psql -d histgis -v circo_om=/chemin/vers.csv -f sql/40_outremer.sql
+SELECT CASE WHEN :'circo_om' = ':circo_om'
+            THEN 'circo/circo_outremer_1986_2012.csv'
+            ELSE :'circo_om' END AS circo_om \gset
 
 DO $$
 BEGIN
@@ -267,8 +263,19 @@ CREATE TABLE om_src (
     nomdep    text, nomct   text, insee char(5), nomcom text,
     c1986     text, c2012   text
 );
+\echo 'Lecture du fichier du ministère :' :circo_om
 \set cmd '\\copy om_src FROM ' :'circo_om' ' WITH (FORMAT csv, HEADER true)'
 :cmd
+
+DO $$
+DECLARE n int;
+BEGIN
+    SELECT count(*) INTO n FROM om_src;
+    IF n <> 171 THEN
+        RAISE EXCEPTION '% lignes lues, 171 attendues dans le fichier '
+                        'du ministère.', n;
+    END IF;
+END $$;
 
 -- ---------------------------------------------------------------------------
 -- 4. Les cantons

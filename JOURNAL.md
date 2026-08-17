@@ -1240,3 +1240,129 @@ récents. Les bornes du 99 y restent justes (1870-1870) et le diagnostic
 s'affiche dans les trois départements testés. C'est ce second jeu qui manquait
 la veille — on ne teste jamais assez le cas où l'on ne s'est pas encore mis à
 jour soi-même.
+
+**Rectification, le soir même.** Le garde-fou de `40_outremer.sql` s'est
+déclenché au premier lancement : `om_commune_src` absente. Il avait raison, mais
+la faute était en amont — la commande ogr2ogr était **en commentaire dans
+l'en-tête**, et un commentaire ne s'exécute pas. Une consigne qu'il faut
+recopier à la main est une consigne qu'on saute.
+
+D'où `sql/charger_outremer.sh` : la boucle sur les cinq lots, communes et
+cantons, `-t_srs` et non `-a_srs`, avec vérification des effectifs (129 communes,
+113 entités cantonales) et du SRID avant de rendre la main. Détection des lots
+répétée à blanc : 5 et 5.
+
+## 17 août 2026, quatrième tour — deux recouvrements sous un seul drapeau
+
+Trois demandes, et la deuxième valait mieux que ce qu'elle demandait.
+
+**Le curseur est gradué par décennies.** Un tiret tous les dix ans, l'étiquette
+une décennie sur une, deux ou cinq selon la largeur *mesurée* — quinze libellés
+de quatre chiffres se chevauchent sur cinq cents pixels. Les bornes du
+département restent toujours nommées : ce sont elles qui disent jusqu'où la base
+va, et elles tombent rarement sur une décennie.
+
+**Les noms de communes suivent le curseur.** `insee_mvt` porte 1 388
+changements de nom (`mod = '10'`), datés, dont 753 dans les années 1950-60. Pour
+une planche de 1885, la chronologie rend donc le nom *le plus ancien connu* —
+celui d'avant le premier renommage enregistré — là où les planches PDF
+affichent le nom de 2011. Ce n'est pas la vérité et la fiche le dit : le fichier
+de l'Insee commence en 1943, un renommage de 1900 reste invisible.
+
+**Et le point qui compte : `partagee` cachait deux défauts différents.** La
+demande était « une couleur différente si la commune appartient à plusieurs
+cantons, ou si ça résulte de noms de communes différents ». Ce sont exactement
+les deux recouvrements que le projet mesure séparément depuis le contrôle Gay,
+et que la carte confondait :
+
+* **un seul code Cassini, plusieurs cantons** — la commune d'époque est
+  réellement coupée et la base n'en tient pas le tracé interne. Marseille, Lyon,
+  Bourg-en-Bresse. Ocre penché. **Il y a du travail à faire**, sur la trame IRIS.
+* **plusieurs codes Cassini, plusieurs cantons** — des communes d'époque
+  distinctes, fondues depuis, qui partagent un polygone de 2011. Espinouse,
+  Saint-Jurson et Le Chaffaut sur 29,75 km². Bleu croisé. **Il n'y a rien à
+  tracer** : c'est la correspondance plusieurs-vers-un vers GEOFLA, et aucun
+  dessin ne la lèvera.
+* **plusieurs Cassini, un seul canton** — pas de recouvrement, seulement des
+  noms superposés. Liseré pointillé.
+
+La distinction n'est pas cosmétique : l'une désigne un chantier, l'autre une
+limite de la trame. Les compter ensemble, c'était s'attribuer une dette qu'on ne
+peut pas rembourser.
+
+**Le regroupement passe par l'empreinte du polygone, plus par le code INSEE.**
+C'est la règle déjà posée dans `cartes_cantons.py` — « un code est une
+reconstruction, l'empreinte est un fait » — et elle était nécessaire ici :
+Lyon et Marseille ont des codes différents pour un même terrain
+(`union_prefixe`), et trois communes fondues ont un code identique pour trois
+noms. L'empreinte est un md5 du GeoJSON exporté, donc gratuite et exacte à la
+grille près. Un polygone contesté est dessiné une fois et porte tous les noms
+qui le revendiquent, empilés.
+
+**Un bogue trouvé par la recette, pas par la relecture.** `chronologies()`
+réutilisait le curseur avant que les communes eussent été lues : le second
+`execute()` jetait le résultat en attente, et l'export mourait sur « no results
+to fetch ». Écrit et relu deux fois sans le voir. La recette l'a eu au premier
+essai — c'est l'argument pour l'avoir écrite.
+
+23 recettes SQL, 12 scénarios rendus, les trois cas de partage vérifiés un à un
+(type, noms, nombre de cantons, motif de remplissage), la chronologie contrôlée
+au curseur. Zéro erreur JavaScript.
+
+**Deux pannes au premier chargement réel, toutes deux de forme.**
+
+L'encodage : les DBF de GEOFLA sont en ISO-8859-1 et ne portent pas de `.cpg`
+— vérifié, l'octet `0xE9` de « Préfecture de région » est bien à l'offset 3452
+et aucun fichier de code page n'accompagne le shapefile. Sans
+`--config SHAPE_ENCODING ISO-8859-1`, ogr2ogr les lit comme de l'UTF-8 et refuse
+d'écrire dès la première commune accentuée, Dzaoudzi. Le projet connaissait déjà
+ce piège — `37_reparer_encodage.sql` en répare les dégâts après coup. Le prendre
+en amont coûte une option.
+
+Le `psql` sans base : `psql -f fichier.sql` se connecte à une base portant le nom
+de l'utilisateur. Le script imprime maintenant la commande complète, `-d histgis`
+et `-v ON_ERROR_STOP=1` compris, plutôt que de la laisser deviner.
+
+Rien de tout cela ne touche aux données. Mais c'est la deuxième fois dans la
+journée qu'une consigne juste, laissée sous une forme qu'on ne peut pas exécuter,
+coûte un aller-retour.
+
+**Le chargement passe, et le contrôle de position tient.** Les cinq lots
+communaux et cantonaux entrent : 129 communes, 113 entités cantonales, SRID 4326
+partout, et `om_canton_src` ne connaît **qu'un seul département** — c'est le
+`CODE_DEPT = 97` annoncé, vu de la base cette fois.
+
+Le garde-fou de reprojection donne la Guadeloupe à (−61,539 ; 16,198). C'était
+l'endroit où une confusion `-a_srs` / `-t_srs` serait passée inaperçue ; elle ne
+serait pas passée.
+
+Troisième panne de forme, même famille que les deux précédentes : le chemin du
+`\copy` était écrit `../circo/…`, relatif au dossier `sql/`. Or `\copy` résout
+depuis le répertoire d'où psql est lancé, c'est-à-dire la racine. Corrigé avec
+l'idiome psql qui rend une valeur par défaut quand `-v` n'a rien passé, et
+doublé d'un contrôle : 171 lignes attendues, sinon on s'arrête. Un fichier
+tronqué ou mal séparé aurait sinon donné des cantons manquants sans un mot.
+
+## 17 août 2026, cinquième tour — une barre au lieu de deux
+
+Le curseur et la jauge de disponibilité étaient deux barres empilées qui se
+chevauchaient, et la borne du département doublait l'étiquette de décennie :
+« 18701870 ». Les deux disaient la même chose au même endroit.
+
+**La jauge est devenue la piste du curseur.** Le curseur est rendu transparent
+et posé par-dessus. Il fallait pour cela régler un détail qui n'est pas
+cosmétique : le rail d'un `input[type=range]` est en retrait de la demi-largeur
+du bouton à chaque bout, si bien qu'une graduation posée en pourcentage de la
+largeur totale ne tombe jamais sous le bouton. D'où une voie en retrait de la
+même demi-largeur, et une échelle en `(a - a0) / (a1 - a0)` et non
+`(a - a0) / n` — 1870 tombe désormais à 0 %, 2012 à 100 %, et les décennies
+exactement entre les deux.
+
+**Les bornes prennent la place avant les décennies.** Elles disent jusqu'où la
+base va, donc elles sont posées d'abord ; une décennie à moins de 30 pixels
+renonce à son libellé. C'est ce qui produisait le doublon. Et un département
+servi sur une seule année — la Meurthe, 1870 — a ses deux bornes confondues :
+un seul libellé.
+
+Contrôlé sur trois départements aux bornes différentes : une seule barre, zéro
+doublon d'étiquette, positions alignées au pourcent.
