@@ -1641,3 +1641,57 @@ propriété de la méthode : à revérifier là où des créations sont attendue
 Restent 38 divergences — 17 à un chiffre près, 21 à deux — que ni la borne ni
 la monotonie ne peuvent départager. **Le tableau II est désormais le seul
 arbitre disponible**, et il est dans la source.
+
+### La Meurthe reprend son numéro — 15 août 2026
+
+`sql/39_meurthe_1870.sql`, joué et clos.
+
+TRF-GIS rangeait les 29 cantons de l'ancienne Meurthe sous un département
+« 99 » qui n'a jamais existé. Ils portent désormais le **54**, qui était le
+leur avant 1871. Le 99 était une commodité de la source, pas un fait
+administratif.
+
+**Recettes après application :**
+
+| | |
+|---|---|
+| cantons en 99 | **0** |
+| cantons en 54 | 73 (29 Meurthe + 32 Meurthe-et-Moselle + 12 modernes) |
+| atomes rattachés à deux cantons du 54 à la même date | **0** |
+| cantons au 1ᵉʳ juin 1870 | **29**, pour 718 rattachements |
+
+718 rattachements pour 708 communes distinctes : les 10 de surplus sont les
+villes coupées — Nancy en trois cantons, Lunéville et Toul en deux — plus
+Moyenvic, qui porte deux atomes.
+
+#### Le fait à connaître avant de cartographier
+
+**Le département 54 change de territoire au 1ᵉʳ janvier 1871 sans changer de
+numéro.** Les deux périodes ne se recouvrent pas, donc une requête à date
+donnée reste sans ambiguïté ; mais une planche qui empile « le 54 » sur toute
+la série montrera deux emprises.
+
+Et les deux mouvements de 1871 ne sont pas symétriques : la Meurthe perd sa
+partie est — **242 de ses 708 communes portent aujourd'hui un INSEE 57** — et
+gagne l'arrondissement de Briey, venu de la Moselle. Meurthe-et-Moselle n'est
+donc pas la Meurthe amputée, c'est la Meurthe amputée **plus** Briey.
+
+#### Trois fausses alertes, toutes de mon fait
+
+Aucune n'était dans la donnée. La base n'a bronché sur rien.
+
+1. **61 cantons annoncés, 73 mesurés.** Mon compte venait de
+   `build/unit_canton.csv`, qui ne porte que la part TRF-GIS ; la base contient
+   en plus les cantons modernes de 1999-2012. *Un compte tiré du fichier de
+   chargement n'est pas un compte de la base.*
+2. **Un « recouvrement » à Moyenvic.** Ma recette groupait par `insee_geofla`.
+   Moyenvic porte deux atomes Cassini distincts — deux communes de 1870 fondues
+   depuis — chacune dans son canton. **Quatrième occurrence du même piège** :
+   grouper par un code plutôt que par l'atome. Le même geste avait donné 369
+   villes à découper au lieu de 119. La recette groupe désormais par `atom_id`,
+   et rend 0.
+3. Le doublon 99/57 sur neuf noms de cantons reste **signalé et non tranché** :
+   Albestroff, Château-Salins, Delme, Dieuze, Fénétrange, Lorquin, Phalsbourg,
+   Sarrebourg, Vic-sur-Seille — exactement les cantons annexés. Communes
+   distinctes de part et d'autre, aucun double rattachement. Question sur la
+   source, à porter à Victor Gay.
