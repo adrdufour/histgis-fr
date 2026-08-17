@@ -157,3 +157,58 @@ openpyxl, xlrd, pyshp, pyproj sont utilisés sans être déclarés nulle part.
 3. **Contrôler la couche circo** par les sections de l'annexe VI qui ne passent
    pas par les cantons.
 4. **Relire et envoyer** le rapport à Victor Gay.
+
+## Chisa et Butry-sur-Oise : le recodage casse le raccord de `15` — 17 août 2026
+
+Trouvé par Adrien : **Chisa est absente de la Corse 1870-1940.** Ce n'est pas un
+fait mais un trou, et la documentation du dépôt se trompe à son sujet.
+
+`insee_mvt` documente sa création : `mod 20`, **1947-04-12**, détachée de
+**Ventiseri** (20342). Elle n'est donc ni un « territoire neuf » (contrairement à
+Tende et La Brigue, italiennes jusqu'en 1947), ni « créée avant 1943, hors de
+portée du fichier INSEE ». `ETAT.md`, `METHODE.md` et `JOURNAL.md` disent les
+deux, et les deux sont faux — **à corriger en même temps que le correctif**.
+
+**La cause.** `15_creation_arriere.sql` trouve bien la fille : son test de
+« commune sans atome » est géométrique et Chisa y figure. Mais il cherche
+ensuite le mouvement par `i.com_ap = s.insee_com`, c'est-à-dire par le code
+GEOFLA **moderne**. Or la création nomme `20366`, et la Corse a été recodée en
+1976 : GEOFLA porte `2B366`. La mère aussi a bougé, `20342` → `2B342`. Le
+`JOIN LATERAL ... ON true` étant un jointure interne, la fille est **écartée en
+silence**.
+
+**L'ampleur, mesurée.** Croisement des 904 recodages `mod 41` avec les créations
+`mod 20/21` : **4 lignes, 2 communes.**
+
+| commune | créée | mère | recodage |
+|---|---|---|---|
+| Chisa `2B366` | 1947-04-12 | Ventiseri `20342` → `2B342` | Corse 1976 |
+| Butry-sur-Oise `95120` | 1948-08-01 | Auvers-sur-Oise `78039` → `95039` | Seine-et-Oise 1968 |
+
+Le défaut ne va pas au-delà. Ordre de grandeur du territoire récupéré : ~32 km²,
+sur les 238 km² encore non couverts en 1870 (les « 4 territoires neufs » valaient
+303,61 km², dont 271,1 pour Tende et La Brigue).
+
+**Le correctif retenu : amender `15`, pas écrire un `42`.** `15` est rejouable
+par conception — il supprime ses propres atomes et vide `creation_trace` avant de
+recommencer — donc il se relance seul, sans reconstruction. C'est la leçon
+écrite le même jour dans `METHODE.md` : réparer la règle là où elle vit plutôt
+que la rattraper en aval.
+
+**Ce qu'il faut écrire.** Une table de résolution des codes bâtie sur `mod 41`,
+appliquée aux deux bouts du `LATERAL` : `com_ap` résolu vers l'avant pour
+retrouver la fille, `com_av` résolu vers l'avant pour retrouver la mère dans
+GEOFLA.
+
+**Attention, la résolution doit être TRANSITIVE.** Vérifié : quatre codes sont
+recodés deux fois de suite — `78143` → `91143` et `78620` → `91620` passent par
+un état intermédiaire. Un seul saut suffirait pour Chisa et Butry, mais une
+résolution à un saut serait fausse en général, et c'est exactement le genre de
+raccourci qui reviendra. Un `WITH RECURSIVE` sur `mod 41`, avec garde contre les
+cycles.
+
+**Recette** : Chisa et Butry doivent recevoir un atome-fraction
+`source = 'creation_arriere'`, portant leur polygone GEOFLA et la chronologie de
+Ventiseri / Auvers-sur-Oise ; le total des filles passe de 58 à 60 ; le non
+couvert de 1870 baisse d'environ 32 km². Et le garde-fou 5 de `15` (territoire
+déjà couvert, test par point intérieur) doit continuer d'écarter Marseille.
