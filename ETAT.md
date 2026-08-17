@@ -1695,3 +1695,73 @@ Aucune n'était dans la donnée. La base n'a bronché sur rien.
    Sarrebourg, Vic-sur-Seille — exactement les cantons annexés. Communes
    distinctes de part et d'autre, aucun double rattachement. Question sur la
    source, à porter à Victor Gay.
+
+### La couche circo avait un trou que la couche cantonale n'avait plus — 15 août 2026
+
+`sql/40_scission_circo.sql`, joué et mesuré. Trouvé par une question d'Adrien
+sur **Arrien-en-Bethmale** (09017), commune de l'Ariège née en 1931 par
+détachement de Bethmale : elle figurait dans le canton de Castillon dès 1870 —
+`11_scission.sql` avait fait son travail — mais n'avait **aucune
+circonscription avant 1928**.
+
+#### Le défaut
+
+Le garde-fou 4 de `11` refuse de franchir une interruption de l'unité
+d'accueil. Il est **juste pour les cantons** : TRF-GIS réutilise les codes de
+canton de part et d'autre de 1871 en Alsace-Moselle, si bien qu'une
+interruption peut cacher deux cantons différents sous une même clé.
+
+**Il se trompe de cible sur les circonscriptions.** Une interruption de circo
+n'est pas une interruption de territoire : elle signale l'alternance du mode de
+scrutin. `U0903@1876` — uninominal, segment ouvert en 1876 — n'a pas de membres
+entre 1885 et 1889 parce que l'Ariège votait alors au scrutin de liste, sous
+`L0901@1870`.
+
+La signature du défaut ne laisse aucun doute : sur 462 atomes concernés, **356
+voyaient leur prolongement bloqué**, et les blocages tombent exactement sur les
+bascules de régime — 1889 (104 atomes), 1876 (86), 1919 (59), 1928 (43),
+1885 (19).
+
+#### La règle retenue
+
+On ne cherche pas la commune mère : `11` ne connaît pas la filiation. On passe
+par un pont déjà construit, **le canton**, que `11` a correctement prolongé.
+
+> À une date donnée, l'atome reçoit la circonscription de ses **voisins de
+> canton**, si et seulement si ceux-ci sont **unanimes**.
+
+Mesuré avant écriture, sur 15 dates quinquennales et 2 561 cas atome-date :
+**87,7 % d'unanimité, 12,3 % d'abstention faute de voisin rattaché, et zéro cas
+ambigu**. La règle ne tranche jamais un conflit — elle constate un accord ou se
+tait.
+
+#### Le résultat
+
+| année | trou avant | comblé | trou après | part comblée |
+|---|---|---|---|---|
+| **1870** | **598** | **307** | **291** | **51 %** |
+| 1890 | 403 | 108 | 295 | 27 % |
+| 1910 | 384 | 73 | 311 | 19 % |
+| 1930 | 326 | 1 | 325 | 0,3 % |
+
+1 003 périodes posées sur 320 atomes. La décroissance est attendue : le
+correctif ne concerne que les communes nées après 1870, donc son effet est
+maximal à cette date et s'éteint à mesure qu'on s'approche des naissances.
+
+**Ce qui reste** — un peu plus de 300 atomes à chaque date, presque constant —
+n'est pas un échec du correctif : ce sont les cantons dont **aucun membre**
+n'avait de circonscription, c'est-à-dire l'Alsace-Moselle entre 1871 et 1919,
+plus les quatre cas de canton partagé où le script s'est tu.
+
+#### Recette et réversibilité
+
+Arrien-en-Bethmale porte désormais la chaîne complète depuis 1870, alternant
+`L0901@1870` et `U0903@1876` au rythme des changements de scrutin — **identique
+à celle de Bethmale**, sa commune mère, sans qu'aucune filiation n'ait été
+cherchée. C'est la validation la plus convaincante de la règle des voisins.
+
+Zéro atome dans deux circonscriptions à la même date. Tout est tracé dans
+`scission_circo_trace`, et la recette 6 reconstitue l'avant à partir de la
+trace : `trou_avant = trou_résiduel + atomes couverts`. C'est à cela que sert
+une table de trace — pas seulement à défaire, mais à pouvoir encore répondre à
+une question qu'on ne s'était pas posée avant d'agir.

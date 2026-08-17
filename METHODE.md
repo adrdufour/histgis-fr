@@ -799,3 +799,47 @@ zéro géométrie invalide. Rapport dans `rapport_chargement.txt`.
 
 7. **Extension avant 1870**, avec Gaudillère (*Atlas historique des
    circonscriptions électorales françaises*, 1995) comme source principale.
+
+---
+
+## Un garde-fou juste peut se tromper de cible
+
+Ajouté le 15 août 2026, après le correctif `40_scission_circo.sql`.
+
+`11_scission.sql` prolonge vers l'arrière le rattachement des communes nées
+entre 1871 et 1940, pour combler les trous de couverture. Son **garde-fou 4**
+interdit de franchir une interruption de l'unité d'accueil, et il a été ajouté
+pour une raison mesurée : en Alsace-Moselle, TRF-GIS réutilise les codes de
+canton de part et d'autre de 1871, si bien qu'une interruption peut cacher deux
+cantons différents sous une même clé. Franchir l'interruption rattachait la
+commune à un canton qui n'était pas le sien.
+
+**Le même garde-fou, appliqué aux circonscriptions, produit un défaut.** Une
+interruption de circonscription ne signale pas une rupture de territoire mais
+l'alternance du mode de scrutin : le segment uninominal n'a pas de membres
+pendant les législatures élues au scrutin de liste, et réciproquement. Le
+territoire, lui, n'a jamais cessé d'appartenir à une circonscription.
+
+Coût mesuré : **356 atomes**, et un trou de couverture de la couche circo à
+1870 de **598 atomes au lieu de 291**.
+
+**La règle à retenir** : un garde-fou est écrit contre un mécanisme précis. En
+le transposant à une autre couche, vérifier que le mécanisme s'y retrouve.
+Ici il ne s'y retrouvait pas — l'interruption ne voulait pas dire la même
+chose — et le garde-fou est devenu un obstacle.
+
+### Corollaire : préférer un pont déjà vérifié à une reconstruction
+
+Le correctif avait besoin de savoir de quelle commune une commune nouvelle
+était issue. Reconstruire la filiation par la géométrie est un chantier ; la
+solution retenue passe par **le canton**, que `11` avait déjà prolongé
+correctement, et demande son avis aux **voisins de canton** — en ne posant que
+s'ils sont unanimes.
+
+Mesuré avant d'écrire : **87,7 % d'unanimité, zéro cas ambigu**. Une règle qui
+ne tranche jamais un conflit et se tait quand elle ne sait pas coûte quelques
+points de couverture et ne fabrique aucune erreur.
+
+Vérification décisive : Arrien-en-Bethmale reçoit **exactement** la chaîne de
+Bethmale, sa mère, alternances comprises — sans que la filiation ait été
+cherchée nulle part.

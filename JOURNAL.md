@@ -1366,3 +1366,20 @@ un seul libellé.
 
 Contrôlé sur trois départements aux bornes différentes : une seule barre, zéro
 doublon d'étiquette, positions alignées au pourcent.
+
+**Quatrième et dernière panne de forme, la plus instructive.** J'avais cru
+qu'une variable psql non définie s'expansait en son propre nom, et bâti là-dessus
+un `SELECT CASE WHEN :'circo_om' = ':circo_om'`. C'est faux : psql ne substitue
+pas du tout une variable inconnue, et laisse le `:` dans le texte envoyé au
+serveur, qui répond « syntax error at or near ":" ». L'idiome correct existe
+depuis psql 10 et teste l'existence explicitement :
+
+    \if :{?circo_om}
+    \else
+      \set circo_om 'circo/circo_outremer_1986_2012.csv'
+    \endif
+
+Relecture du fichier après coup : `\if` et `\endif` s'équilibrent, plus aucun
+`SELECT` ne porte de substitution, et les six variables employées sont toutes
+définies. Quatre allers-retours pour du gréement, aucun pour les données — ce
+n'est pas la meilleure des proportions, mais c'est la bonne.

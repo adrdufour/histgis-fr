@@ -103,9 +103,10 @@ SET search_path TO histgis, public;
 -- fichier SQL. Par défaut on suppose la racine du dépôt, qui est d'où tournent
 -- `load.sh` et `rebuild.sh`. Sinon, le passer explicitement :
 --   psql -d histgis -v circo_om=/chemin/vers.csv -f sql/40_outremer.sql
-SELECT CASE WHEN :'circo_om' = ':circo_om'
-            THEN 'circo/circo_outremer_1986_2012.csv'
-            ELSE :'circo_om' END AS circo_om \gset
+\if :{?circo_om}
+\else
+  \set circo_om 'circo/circo_outremer_1986_2012.csv'
+\endif
 
 DO $$
 BEGIN
