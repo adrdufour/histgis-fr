@@ -1765,3 +1765,76 @@ Zéro atome dans deux circonscriptions à la même date. Tout est tracé dans
 trace : `trou_avant = trou_résiduel + atomes couverts`. C'est à cela que sert
 une table de trace — pas seulement à défaire, mais à pouvoir encore répondre à
 une question qu'on ne s'était pas posée avant d'agir.
+
+### Le trou des communes rétablies, comblé — 17 août 2026
+
+`sql/41_retablissement.sql`, joué et mesuré. **Miroir exact du défaut
+précédent**, trouvé par une remarque d'Adrien sur la carte : Ouézy (14482),
+dans le Calvados, disparaît entre 1999 et 2006.
+
+Ce n'était pas une erreur d'attribution : la commune **n'existait pas**.
+`insee_mvt` le dit sans ambiguïté — fusionnée-associée dans Cesny-aux-Vignes au
+1ᵉʳ janvier 1972 sous la loi Marcellin, rétablie au 1ᵉʳ janvier 2006. Le COG de
+1999 ne connaît que 14149, et la base le suit fidèlement. **Mais son polygone
+existe** : GEOFLA 2011 porte 14482 séparément, puisque le rétablissement est
+antérieur au millésime. Entre 1999 et 2006, ce polygone n'a donc aucun
+rattachement — un trou de couverture de la taille de la commune, dans la couche
+moderne. Là où `11` prolonge vers l'arrière, rien ne prolongeait vers l'avant.
+
+**La règle est plus sûre que celle de `40`.** Sur la fenêtre d'absorption, la
+commune reçoit les rattachements de celle qui l'absorbait. Ici la filiation est
+**donnée par la source** — `insee_mvt` mod 21 nomme `com_av` et `date_eff` — au
+lieu d'être déduite de voisins ; et l'hypothèse est plus faible que partout
+ailleurs dans la chaîne, puisqu'une commune associée n'a pas de rattachement
+propre : elle *est* une fraction de l'absorbante.
+
+**Résultat** : 38 cas retenus, **38 lignes posées sur 23 communes** — 23 de
+canton, 15 de circo. Zéro atome dans deux unités du même niveau à la même date.
+Ouézy est continu de 1999 à 2013. Son circo ne commence qu'au 23 février 2010,
+mais c'est l'entrée en vigueur du découpage de 2009 : **toute la couche moderne
+est sans circonscription entre 1999 et 2010**, ce n'est pas un défaut de ce
+correctif.
+
+#### Le défaut du premier jet, et ce qu'il apprend
+
+Le commentaire du fichier annonçait 21 cas ; la requête en a sorti 38, **parce
+qu'elle ne croisait jamais la liste des communes absentes du COG 1999** qu'elle
+décrivait trois paragraphes plus haut. Les intrus sont des communes bien
+vivantes en 1999, fusionnées bien plus tard : Bihorel (2012), 14114 (2017),
+Sannerville, Villotran, L'Oie, les quatre du Cantal. Pour elles, la fenêtre
+`[1999, rétablissement)` couvrait des années où la commune existait de plein
+droit.
+
+Le garde-fou « ne rien poser sur une période déjà occupée » en rattrapait douze
+sur quatorze — **mais pour la mauvaise raison** : la période était prise, pas la
+fenêtre fausse. Il restait donc exactement les cas où la commune existait *et*
+avait un trou dans son propre rattachement : **cinq lignes fausses**, trois pour
+14114 et deux pour Bihorel.
+
+D'où le cinquième garde-fou : la fenêtre s'ouvre à la **date d'absorption**, lue
+dans `insee_mvt` et plafonnée par le début de la couche moderne, et le cas est
+abandonné si aucune absorption n'est attestée. Pour la queue Marcellin — les
+cas visés, absorptions de 1972 à 1974 — rien ne change. Bihorel se réduit à
+2012-2013, où il était effectivement dans Bois-Guillaume, et y gagne le canton
+qui lui manquait ; 14114 sort entièrement, sa fenêtre étant postérieure à la
+couche. La recette 6 compte les lignes posées sur une année où la commune
+existait : **zéro**.
+
+La règle générale est portée dans `METHODE.md` : *un garde-fou qui rattrape une
+règle fausse donne un résultat juste et une méthode fausse.* Il faut réparer la
+règle, sans quoi le prochain cas qui échappe au garde-fou passe — et il passera
+silencieusement, puisque tout sera cohérent.
+
+#### Ce qui reste ouvert
+
+Sept communes rétablies en 2012 ou après — 52033, 52124, 52266, 52278, 52465,
+55138, 76601 — sont **absentes de `noms_geofla`**, donc de GEOFLA 2011, et
+reçoivent pourtant trois lignes chacune. Si leur atome porte le polygone de la
+mère plutôt qu'un polygone propre, il n'y avait pas de trou à combler et l'on
+superpose deux fois le même territoire. Aucune recette d'unités ne le verrait :
+il faut comparer les géométries.
+
+Les 45 autres communes de GEOFLA 2011 absentes du COG 1999 ne sont pas des
+rétablissements et restent hors de ce fichier — créations postérieures,
+changements de code, écarts de millésime. La requête pour les lister est en
+section 5 du fichier.
