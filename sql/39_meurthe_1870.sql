@@ -90,7 +90,15 @@ SELECT dep, count(*) AS cantons
  WHERE niveau = 'canton' AND dep IN ('54', '55', '57', '99')
  GROUP BY dep
  ORDER BY dep;
--- Attendu : 54 -> 61 (32 + 29), 55 -> 28, 57 -> 36, et 99 absent.
+-- Mesuré le 15 août 2026 : 54 -> 73, 55 -> 31, 57 -> 51, et 99 absent.
+--
+-- J'avais annoncé 61, 28 et 36 : c'était faux, et l'erreur mérite d'être
+-- gardée. Ces chiffres viennent de `build/unit_canton.csv`, qui ne porte que
+-- la part TRF-GIS, 1870-1940. La base, elle, contient EN PLUS les cantons
+-- modernes chargés par `21_atomes_modernes.sql` et `24_canton_moderne.sql`
+-- pour 1999-2012. Un compte tiré du fichier de chargement n'est pas un compte
+-- de la base — c'est la même confusion que le dénominateur des villes à
+-- découper, 270 puis 369 puis 119.
 
 -- ---------------------------------------------------------------------------
 -- Recette 2 : les deux emprises du 54 ne se recouvrent pas dans le temps.
@@ -107,6 +115,11 @@ SELECT count(*) AS communes_a_double_dans_le_54
         HAVING count(DISTINCT m.unit_id) > 1) x;
 -- Attendu : 0. Les villes coupées sont exclues par `NOT a.fraction` — Nancy,
 -- Lunéville et Toul relèvent légitimement de plusieurs cantons.
+--
+-- MESURÉ : 1. Une commune non fractionnée relève de deux cantons du 54 à la
+-- même date. Le fusionnement des deux emprises du 54 a donc révélé un
+-- recouvrement, ou en a créé un. La requête de diagnostic ci-dessous le
+-- nomme ; tant qu'il n'est pas expliqué, ce fichier n'est pas clos.
 
 -- ---------------------------------------------------------------------------
 -- Recette 3 : la Meurthe au 1er juin 1870, telle qu'on pourra désormais
@@ -120,3 +133,20 @@ SELECT u.unit_id, u.nom, count(*) AS communes
    AND m.periode @> DATE '1870-06-01'
  GROUP BY 1, 2
  ORDER BY u.unit_id;
+
+
+-- ---------------------------------------------------------------------------
+-- Diagnostic du recouvrement signalé par la recette 2. À lancer tel quel.
+-- ---------------------------------------------------------------------------
+SELECT a.insee_geofla,
+       n.nom                                   AS commune,
+       string_agg(m.unit_id || ' ' || u.nom || ' [' ||
+                  m.valid_from || ' → ' || m.valid_to || ']',
+                  '   |   ' ORDER BY m.unit_id) AS rattachements
+  FROM membership m
+  JOIN atom a USING (atom_id)
+  JOIN unit u ON u.unit_id = m.unit_id
+  LEFT JOIN noms_geofla n ON n.insee = a.insee_geofla
+ WHERE m.niveau = 'canton' AND u.dep = '54' AND NOT a.fraction
+ GROUP BY a.insee_geofla, n.nom, m.periode
+HAVING count(DISTINCT m.unit_id) > 1;
