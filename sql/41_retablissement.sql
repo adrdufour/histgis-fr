@@ -96,6 +96,32 @@
 --      cette mère avant le rétablissement, **le cas est abandonné** : la
 --      filiation n'est alors pas établie dans le sens supposé, et tout le
 --      fichier repose sur le fait qu'elle le soit.
+--   6. Le polygone doit être ORPHELIN. Si l'empreinte géométrique de l'atome
+--      est déjà portée par un autre atome rattaché sur la fenêtre, il n'y a pas
+--      de trou : le remplir ferait compter le territoire deux fois.
+--
+-- Le garde-fou 6, et pourquoi la recette 5 ne suffisait pas
+-- ---------------------------------------------------------
+-- Sept communes rétablies en 2012 ou après — 52033, 52124, 52266, 52278, 52465,
+-- 55138, 76601 — sont absentes de GEOFLA 2011, puisque le millésime précède
+-- leur rétablissement. Leur atome existe quand même, par la route `successeur`,
+-- **et il porte le polygone de la commune absorbante** : mesuré, leur aire est
+-- exactement celle de la mère (93,1 km² contre 93,1 pour Val-de-Meuse, 23,2
+-- contre 23,2 pour Terre-Natale, et ainsi des cinq autres).
+--
+-- Il n'y avait donc rien d'orphelin à raccrocher. Leur poser les rattachements
+-- de la mère faisait réclamer le même polygone par deux atomes rattachés au même
+-- canton — trois pour Val-de-Meuse, que 52033 et 52465 portent tous deux.
+--
+-- **La recette 5 ne pouvait pas le voir** : elle compare des unités, et il n'y a
+-- aucun conflit d'unité — les atomes sont dans le MÊME canton. C'est un double
+-- comptage de surface, pas une contradiction d'attribution. La limite n° 7 de
+-- `METHODE.md` décrivait déjà ces atomes doublons comme du poids mort
+-- inoffensif ; ce fichier les rendait nuisibles.
+--
+-- Le test se fait sur `md5(ST_AsEWKB(geom))`, l'empreinte du polygone — la même
+-- clé que `14_cle_partage.sql`, et la seule qui ne suppose rien. Grouper par un
+-- code aurait manqué le cas, puisque les codes diffèrent.
 --
 -- Réversible : tout est tracé dans `retablissement_trace`, section 6.
 -- Rejouable : le script retire ses propres lignes avant de recommencer.
@@ -229,6 +255,50 @@ DELETE FROM ret_periode p
      WHERE m.atom_id = p.atom_id AND m.niveau = p.niveau
        AND m.periode && daterange(p.valid_from, p.valid_to, '[)'));
 
+-- ---------------------------------------------------------------------------
+-- Garde-fou 6 : le polygone doit être orphelin.
+--
+-- On calcule l'empreinte des atomes candidats, puis on cherche tout AUTRE atome
+-- de même empreinte déjà rattaché sur la fenêtre. S'il en existe un, le
+-- territoire est déjà couvert et il n'y a pas de trou.
+-- ---------------------------------------------------------------------------
+DROP TABLE IF EXISTS ret_empreinte;
+CREATE TEMP TABLE ret_empreinte AS
+SELECT DISTINCT p.atom_id, md5(ST_AsEWKB(g.geom)) AS empreinte
+  FROM ret_periode p
+  JOIN atom_geom g ON g.atom_id = p.atom_id;
+
+DROP TABLE IF EXISTS ret_jumeau;
+CREATE TEMP TABLE ret_jumeau AS
+SELECT e.atom_id, g.atom_id AS jumeau
+  FROM ret_empreinte e
+  JOIN atom_geom g ON md5(ST_AsEWKB(g.geom)) = e.empreinte
+                  AND g.atom_id <> e.atom_id;
+
+\echo ''
+\echo '=== 2 bis. Écartés par le garde-fou 6 : polygone déjà porté ==='
+SELECT DISTINCT p.insee, coalesce(n.nom, '?') AS commune,
+       p.insee_mere, j.jumeau AS atome_qui_porte_deja,
+       round((ST_Area(g.geom) / 1e6)::numeric, 1) AS km2
+  FROM ret_periode p
+  JOIN ret_jumeau j ON j.atom_id = p.atom_id
+  JOIN atom_geom g  ON g.atom_id = p.atom_id
+  LEFT JOIN noms_geofla n ON n.insee = p.insee
+ WHERE EXISTS (SELECT 1 FROM membership m
+                WHERE m.atom_id = j.jumeau AND m.niveau = p.niveau
+                  AND m.periode && daterange(p.valid_from, p.valid_to, '[)'))
+ ORDER BY 1;
+-- Mesuré le 17 août 2026 : les sept communes de la route `successeur`.
+
+DELETE FROM ret_periode p
+ WHERE EXISTS (
+    SELECT 1
+      FROM ret_jumeau j
+      JOIN membership m ON m.atom_id = j.jumeau
+                       AND m.niveau  = p.niveau
+                       AND m.periode && daterange(p.valid_from, p.valid_to, '[)')
+     WHERE j.atom_id = p.atom_id);
+
 -- Un atome rétabli peut correspondre à plusieurs atomes-mères (communes
 -- absorbées puis refondues) : on ne garde qu'une ligne par (atome, niveau,
 -- période), sans quoi la contrainte EXCLUDE ferait échouer la transaction.
@@ -313,6 +383,23 @@ SELECT t.insee, t.niveau, t.valid_from, t.absorbee_le
 -- pour 14114 (absorbée en 2017, donc vivante de 1999 à 2017) et deux pour
 -- Bihorel 76095 (absorbée en 2012). Les 36 autres étaient justes — absorptions
 -- de 1972 à 1974, la queue Marcellin, entièrement sous la fenêtre.
+
+\echo ''
+\echo '=== 7. Aucun polygone réclamé deux fois — recette GÉOMÉTRIQUE ==='
+SELECT t.insee, t.niveau, t.valid_from, t.atom_id, j.jumeau
+  FROM retablissement_trace t
+  JOIN ret_jumeau j ON j.atom_id = t.atom_id
+ WHERE EXISTS (SELECT 1 FROM membership m
+                WHERE m.atom_id = j.jumeau AND m.niveau = t.niveau
+                  AND m.periode && daterange(t.valid_from, t.valid_to, '[)'))
+ ORDER BY 1, 2, 3;
+-- Attendu : aucune ligne.
+--
+-- **Cette recette est indispensable et la recette 5 ne la remplace pas.** La 5
+-- compare des unités : deux atomes portant le même polygone dans le MÊME canton
+-- ne lui paraissent pas contradictoires, et pourtant le canton compte alors ce
+-- territoire deux fois. Une recette d'attribution ne voit pas une erreur de
+-- surface — il faut interroger la géométrie pour la voir.
 
 -- ---------------------------------------------------------------------------
 -- 5. Ce que ce fichier NE traite PAS
