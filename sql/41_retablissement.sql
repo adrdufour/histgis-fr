@@ -40,6 +40,31 @@
 -- Les 45 autres ne sont pas des rétablissements et ne sont pas traitées ici :
 -- elles relèvent d'autres mécanismes, à examiner séparément.
 --
+-- La faute du premier jet, et sa réparation
+-- -----------------------------------------
+-- Le commentaire ci-dessus annonçait 21 cas ; **la requête en a sorti 38, parce
+-- qu'elle ne croisait jamais la liste des communes absentes du COG 1999**. Elle
+-- prenait tout `mod = '21'` postérieur à 1999, y compris des communes bien
+-- vivantes en 1999, fusionnées bien plus tard et rétablies ensuite : Bihorel
+-- (fusionnée en 2012), 14114 (2017), Sannerville, Villotran, L'Oie, les quatre
+-- du Cantal. Pour celles-là la fenêtre `[1999, rétablissement)` couvre des
+-- années où la commune existait de plein droit.
+--
+-- Le garde-fou 3 en a écarté douze sur quatorze — mais **parce que la période
+-- était occupée, pas parce que la fenêtre était fausse**. Il a donc laissé
+-- passer exactement les cas où la commune existait ET avait un trou : cinq
+-- lignes, trois pour 14114 et deux pour Bihorel.
+--
+-- D'où le garde-fou 5 : la fenêtre ne commence pas au début de la couche
+-- moderne, elle commence **à la date où la commune a réellement disparu**, lue
+-- dans `insee_mvt` et plafonnée par ce début. Pour la queue Marcellin — les 21
+-- cas visés — l'absorption date de 1972-74 et rien ne change. Pour les autres
+-- la fenêtre se réduit à la vraie parenthèse de fusion, souvent vide.
+--
+-- Règle générale, portée dans `METHODE.md` : **un garde-fou qui rattrape une
+-- règle fausse donne un résultat juste et une méthode fausse.** Il faut réparer
+-- la règle, sans quoi le prochain cas qui échappe au garde-fou passe.
+--
 -- La règle, et pourquoi elle est plus sûre que celle de 40
 -- -------------------------------------------------------
 --   « Entre le début de la couche moderne et sa date de rétablissement, la
@@ -56,8 +81,8 @@
 -- une fraction de l'absorbante — donc l'hypothèse est ici plus faible que
 -- partout ailleurs dans la chaîne.
 --
--- Quatre garde-fous
--- -----------------
+-- Cinq garde-fous
+-- ---------------
 --   1. Seuls les mouvements `mod = '21'` (rétablissement) postérieurs à 1999.
 --   2. `com_av <> com_ap` : `insee_mvt` écrit aussi une ligne où la commune
 --      rétablie figure des deux côtés, et la prendre ferait hériter la commune
@@ -66,6 +91,11 @@
 --      refuserait, mais autant ne pas lui faire annuler la transaction.
 --   4. On ne pose que si l'absorbante a effectivement un rattachement sur la
 --      période. Sans quoi il n'y a rien à hériter, et on se tait.
+--   5. La fenêtre commence à la date d'ABSORPTION, pas au début de la couche
+--      moderne. Et si `insee_mvt` n'atteste aucune absorption de la commune par
+--      cette mère avant le rétablissement, **le cas est abandonné** : la
+--      filiation n'est alors pas établie dans le sens supposé, et tout le
+--      fichier repose sur le fait qu'elle le soit.
 --
 -- Réversible : tout est tracé dans `retablissement_trace`, section 6.
 -- Rejouable : le script retire ses propres lignes avant de recommencer.
@@ -94,9 +124,13 @@ CREATE TABLE IF NOT EXISTS retablissement_trace (
     valid_to      date NOT NULL,
     insee         char(5) NOT NULL,   -- la commune rétablie
     insee_mere    char(5) NOT NULL,   -- celle qui l'absorbait
+    absorbee_le   date,               -- quand elle a disparu (garde-fou 5)
     retablie_le   date NOT NULL,
     pose_le       timestamptz NOT NULL DEFAULT now()
 );
+
+-- Ajoutée après coup : les traces d'un passage antérieur ne la portent pas.
+ALTER TABLE retablissement_trace ADD COLUMN IF NOT EXISTS absorbee_le date;
 
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM retablissement_trace t
@@ -104,11 +138,16 @@ DELETE FROM membership m
 TRUNCATE retablissement_trace;
 
 -- ---------------------------------------------------------------------------
--- 1. Les rétablissements, et leur commune absorbante
+-- 1. Les rétablissements, leur commune absorbante, et la DATE D'ABSORPTION
 --
 -- Une commune peut avoir été rétablie en plusieurs temps ; on retient le
 -- PREMIER rétablissement postérieur au début de la couche moderne, celui qui
 -- ferme la fenêtre à combler.
+--
+-- La fenêtre s'ouvre à l'absorption (garde-fou 5). `insee_mvt` la donne : le
+-- dernier mouvement, antérieur au rétablissement, où la commune passe sous
+-- cette mère-là. Le `greatest` la ramène au début de la couche moderne quand
+-- l'absorption lui est antérieure — le cas Marcellin, qui est la cible.
 -- ---------------------------------------------------------------------------
 DROP TABLE IF EXISTS ret_cas;
 CREATE TEMP TABLE ret_cas AS
@@ -128,20 +167,36 @@ brut AS (
      WHERE v.mod = '21'                          -- rétablissement
        AND v.com_av <> v.com_ap                  -- garde-fou 2
        AND v.date_eff > debut.d0
+),
+absorbee AS (
+    SELECT b.insee, b.insee_mere, b.retablie_le,
+           (SELECT max(v.date_eff)
+              FROM insee_mvt v
+             WHERE v.com_av = b.insee            -- la commune y disparaît…
+               AND v.com_ap = b.insee_mere       -- …au profit de CETTE mère
+               AND v.date_eff < b.retablie_le) AS absorbee_le
+      FROM brut b
+     WHERE b.rang = 1
 )
-SELECT b.insee, b.insee_mere, b.retablie_le, d.d0 AS depuis
-  FROM brut b, debut d
- WHERE b.rang = 1;
+SELECT a.insee, a.insee_mere, a.retablie_le, a.absorbee_le,
+       greatest(d.d0, a.absorbee_le) AS depuis
+  FROM absorbee a, debut d
+ -- garde-fou 5 : pas d'absorption attestée, pas de filiation, pas de cas.
+ WHERE a.absorbee_le IS NOT NULL
+   -- et une fenêtre vide ne se comble pas : la commune existait déjà.
+   AND greatest(d.d0, a.absorbee_le) < a.retablie_le;
 
 \echo ''
 \echo '=== 1. Les cas retenus ==='
 SELECT c.insee, coalesce(n.nom, '?') AS commune,
        c.insee_mere, coalesce(nm.nom, '?') AS mere,
-       c.depuis, c.retablie_le
+       c.absorbee_le, c.depuis, c.retablie_le
   FROM ret_cas c
   LEFT JOIN noms_geofla n  ON n.insee  = c.insee
   LEFT JOIN noms_geofla nm ON nm.insee = c.insee_mere
  ORDER BY c.retablie_le, c.insee;
+-- `depuis` > `absorbee_le` signale une fusion POSTÉRIEURE à 1999 : la fenêtre
+-- ne couvre alors que la parenthèse de fusion, et non toute la couche moderne.
 
 -- ---------------------------------------------------------------------------
 -- 2. Ce que l'absorbante portait sur la fenêtre, découpé à la fenêtre
@@ -157,7 +212,7 @@ SELECT af.atom_id                                   AS atom_id,
        mm.niveau,
        lower(mm.periode * daterange(c.depuis, c.retablie_le, '[)')) AS valid_from,
        upper(mm.periode * daterange(c.depuis, c.retablie_le, '[)')) AS valid_to,
-       c.insee, c.insee_mere, c.retablie_le
+       c.insee, c.insee_mere, c.absorbee_le, c.retablie_le
   FROM ret_cas c
   -- l'atome de la commune RÉTABLIE, celui qui porte le polygone orphelin
   JOIN atom af ON af.insee_geofla = c.insee AND NOT af.fraction
@@ -200,9 +255,10 @@ WITH ins AS (
 )
 INSERT INTO retablissement_trace (membership_id, atom_id, unit_id, niveau,
                                   valid_from, valid_to, insee, insee_mere,
-                                  retablie_le)
+                                  absorbee_le, retablie_le)
 SELECT i.membership_id, i.atom_id, i.unit_id, i.niveau,
-       i.valid_from, i.valid_to, p.insee, p.insee_mere, p.retablie_le
+       i.valid_from, i.valid_to, p.insee, p.insee_mere,
+       p.absorbee_le, p.retablie_le
   FROM ins i
   JOIN ret_periode p ON p.atom_id = i.atom_id
                     AND p.niveau  = i.niveau
@@ -243,6 +299,20 @@ SELECT niveau, count(*) AS atomes_a_double
         HAVING count(DISTINCT unit_id) > 1) x
  GROUP BY niveau;
 -- Attendu : aucune ligne, ou seulement les villes coupées déjà connues.
+
+\echo ''
+\echo '=== 6. Aucune ligne posée sur une année où la commune existait ==='
+SELECT t.insee, t.niveau, t.valid_from, t.absorbee_le
+  FROM retablissement_trace t
+ WHERE t.valid_from < t.absorbee_le
+ ORDER BY 1, 2, 3;
+-- Attendu : aucune ligne. C'est la recette du garde-fou 5, et elle est la
+-- seule qui distingue une règle juste d'un garde-fou chanceux.
+--
+-- Avant le garde-fou 5, mesuré le 17 août 2026 : cinq lignes fautives, trois
+-- pour 14114 (absorbée en 2017, donc vivante de 1999 à 2017) et deux pour
+-- Bihorel 76095 (absorbée en 2012). Les 36 autres étaient justes — absorptions
+-- de 1972 à 1974, la queue Marcellin, entièrement sous la fenêtre.
 
 -- ---------------------------------------------------------------------------
 -- 5. Ce que ce fichier NE traite PAS
