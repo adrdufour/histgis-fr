@@ -715,12 +715,17 @@ JOIN   (SELECT md5(ST_AsEWKB(geom)) AS cle FROM atom_geom
 \echo '    Chisa doit relever du canton de Prunelli-di-Fiumorbo, celui de'
 \echo '    Ventiseri sa mère ; Butry de celui d''Auvers-sur-Oise. Les deux'
 \echo '    doivent porter une chronologie complète depuis 1870.'
-SELECT a.insee_geofla, n.nom, m.niveau, u.nom AS unite,
+-- `geofla_commune` et non `noms_geofla` : cette dernière est créée par
+-- `37_reparer_encodage.sql`, qui passe BIEN APRÈS ce fichier dans la chaîne.
+-- La recette interrogeait une table qui n'existe pas encore et faisait échouer
+-- `rebuild.sh` à sa dernière étape — deux fois, le 20 août 2026. Une recette
+-- ne doit dépendre que de ce qui existe à l'instant où le fichier s'exécute.
+SELECT a.insee_geofla, g.nom_comm AS nom, m.niveau, u.nom AS unite,
        m.valid_from, m.valid_to
 FROM   atom a
 JOIN   membership m ON m.atom_id = a.atom_id
 JOIN   unit u  ON u.unit_id = m.unit_id AND u.niveau = m.niveau
-LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla
+LEFT   JOIN geofla_commune g ON g.insee_com = a.insee_geofla
 WHERE  a.atom_id IN ('N2B366', 'N95120')
 ORDER  BY a.insee_geofla, m.niveau, m.valid_from;
 -- Attendu : deux atomes, une chronologie de canton continue depuis 1870, et

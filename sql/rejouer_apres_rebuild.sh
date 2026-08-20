@@ -38,14 +38,18 @@ etape() {
 
 cd "$RACINE"
 
-etape "COG 1999-2012 (22, 23, 36, 37)"
-"$ICI/load_cog.sh" "$RACINE"
-
+# 20 puis 21 AVANT le COG : `21` crée `commune_moderne`, et `load_cog.sh` finit
+# par `23_cog_diag.sql`, qui l'exige. L'ordre inverse échoue sur
+# « commune_moderne absente ». Mesuré le 20 août 2026, en le faisant.
 etape "20 — chronologie communale 1943-2012"
 $PSQL -f "$ICI/20_commune_moderne.sql"
 
-etape "21 — atomes modernes"
+etape "21 — atomes modernes (crée commune_moderne)"
 $PSQL -f "$ICI/21_atomes_modernes.sql"
+
+# 22 charge les millésimes du COG, 37 crée `noms_geofla`, 23 diagnostique.
+etape "COG 1999-2012 (22, 36, 37, 23)"
+"$ICI/load_cog.sh" "$RACINE"
 
 etape "24 — cantons 1999-2012"
 $PSQL -f "$ICI/24_canton_moderne.sql"
