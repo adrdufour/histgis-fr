@@ -45,7 +45,7 @@ reste. Les deux sont à jour au 20 août 2026.
 | 19 | `39_meurthe_1870.sql` | la Meurthe reprend le numéro 54 | `unit` | — (idempotent) | — |
 | 20 | `40_scission_circo.sql` | comble les trous de la couche circo par les voisins de canton | `membership` | `scission_circo_trace` | — |
 | 21 | `41_retablissement.sql` | communes rétablies après 1999 — trois voies | `membership` | `retablissement_trace` | — |
-| 22 | `42_rattachement_arriere.sql` | rattache le passé d'un atome qui existe déjà (Chisa, Butry) | `membership` | `rattachement_arriere_trace` | — |
+| 22 | `42_rattachement_arriere.sql` | rattache le passé d'un atome existant. **Rend 0 cas depuis que le garde-fou 6 de `15` résout les recodages** : Chisa et Butry sont traitées en amont. Reste comme filet | `membership` | `rattachement_arriere_trace` | — |
 | 23 | `44_absorption_ancienne.sql` | absorbées puis rétablies avant 1943 (Cherré) | `membership` | `absorption_trace` | — |
 | 24 | `46_creation_serie.sql` | nées pendant la série, sans rattachement — filiation HAC | `membership` | `creation_serie_trace` | `hac` (a un défaut) |
 

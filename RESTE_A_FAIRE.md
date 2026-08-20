@@ -396,3 +396,41 @@ Note : les deux autres paris perdus (Houat et Hœdic) n'apparaissent pas dans la
 section 5 de `45` — les codes cités par `METHODE.md`, 17501 et 17191, sont des
 identifiants d'atome et non des codes INSEE, et la requête filtre sur
 `insee_geofla`. À reprendre avec les bons codes.
+
+## Trous intérieurs courts apparus après `46` — à mesurer
+
+Constaté le 20 août 2026 dans la recette 4 de `44_absorption_ancienne.sql`,
+après une chaîne complète.
+
+Avant `46`, les trous intérieurs de `membership` se répartissaient en deux
+groupes nets : **2 ans** (Cherré, corrigé) et **48 ans** (l'Alsace-Moselle, qui
+doit rester ouverte). Après `46`, on voit apparaître des durées intermédiaires :
+
+| durée | trous |
+|---|---|
+| 2, 4, 5, 7, 9 ans | 1 chacun |
+| 18 ans | 2 |
+| 27, 35 ans | 1 chacun |
+| 39 ans | 2 |
+
+Une dizaine d'atomes. L'hypothèse la plus simple est que `46` pose une période
+qui **ne rejoint pas** le premier rattachement propre de la commune : sa fenêtre
+s'arrête à `min(création selon HAC, premier rattachement propre)`, et quand les
+deux dates divergent — TRF-GIS connaît Neuilly-Plaisance dès 1882, HAC la crée
+en 1892 — l'écart reste vide.
+
+**À faire** : lister ces atomes avec leur commune, la date de création selon
+HAC et selon TRF-GIS. Si l'hypothèse tient, deux voies s'offrent, et il faudra
+choisir en le disant :
+
+- combler jusqu'au premier rattachement propre, en assumant que la mère gardait
+  le territoire jusque-là ;
+- ou laisser le trou et **déclarer le désaccord de dates** entre HAC et
+  TRF-GIS, ce qui est plus honnête si les deux sources se contredisent
+  vraiment.
+
+La seconde est cohérente avec le reste du projet : on préfère un trou déclaré à
+un rattachement inventé. Mais il faut d'abord regarder les dix cas.
+
+**Ne pas refermer d'office** : c'est exactement la faute commise sur Cherré, où
+un trou de deux ans enregistrait une absorption réelle.
