@@ -83,14 +83,38 @@ SORTIE = RACINE / "cog1968" / "communes_1968.csv"
 # de la page est le plus abîmé par la reliure, et une ligne dont la population
 # de 1962 est illisible reste parfaitement utilisable — c'est le canton qu'on
 # vient chercher, pas la démographie.
+# Le nom, élargi le 20 août 2026 — trois mécanismes MESURÉS, pas supposés
+# (`lignes_rejetees.py`, Bouches-du-Rhône et Territoire de Belfort) :
+#
+#   1. **L'article est rejeté en fin de nom, entre parenthèses** : « Barben
+#      (La). », « Baux-de-Provence (Les). ». La classe n'acceptait pas `(`.
+#      6,3 % des communes de 1968, et cela explique la géographie du rappel —
+#      Moselle 88,7 %, Vendée 62,5 %, corrélation -0,50.
+#   2. **Les appels de note**, « Andelnans (1). », parfois en accolades quand
+#      l'OCR se trompe : « Bue {1}. ». À Belfort, 24 des 28 rejets.
+#   3. **Les confusions de l'OCR** : « lstres » pour Istres — un `I` initial lu
+#      `l` minuscule, quand le nom devait commencer par une majuscule — et
+#      « Châäteauneuf », où un `ä` s'insère dans une classe qui l'ignorait.
+#
+# Élargir le nom fait entrer les lignes de TOTAL, qui portent la même
+# signature — « 1°° Canton. », « TOTAL » — et ne sont pas des communes. D'où
+# `EXCLUS`, appliqué avant : on élargit d'un côté, on referme de l'autre.
 LIGNE = re.compile(
     r"(?:(\d[\d.\s]{0,9}?)\s+(\d[\d.\s]{0,9}?)\s+)?"     # populations 1962
     r"([\dOSlI])\s+"                                      # arrondissement
     r"([\dOSlI$]{2})\s+"                                  # canton
     r"(\d{3})\s+"                                         # code INSEE
-    r"([A-ZÉÈÀÇŒ][A-Za-zÉÈÊËÀÂÎÏÔÛÙÇŒéèêëàâîïôûùç'’\-\. ]{2,44}?)"
+    r"([A-Za-zÉÈÊËÀÂÄÎÏÔÖÛÜÙÇŒ]"                          # initiale, casse libre
+    r"[A-Za-z0-9ÉÈÊËÀÂÄÎÏÔÖÛÜÙÇŒéèêëàâäîïôöûüùçœ'’\-\.\s(){}]{2,54}?)"
     r"\s*[.,]\s+"                                         # le point final
     r"(\d[\d.]*)")                                        # population 1968
+
+# Les lignes de sous-total d'une grande ville : Marseille est découpée en
+# « 1er Canton », « 2e Canton »… sous le code 055, et le fascicule clôt chaque
+# groupe par un « TOTAL ». Ce ne sont pas des communes. Elles étaient rejetées
+# par accident tant que le nom devait être une suite de lettres ; elles le sont
+# désormais par décision.
+EXCLUS = re.compile(r"\b(?:canton|total|ensemble)\b", re.I)
 
 # « $ » pour « 3 » : confusion mesurée sur la première page OCRisée, où sept
 # divergences sur huit portaient sur un 3 initial lu 8, 2 ou 1. On ne corrige
@@ -141,6 +165,11 @@ def traite(args):
     pdf, page, langue = args
     out = []
     for brut in page_texte(pdf, page, langue=langue).splitlines():
+        # Les sous-totaux d'une grande ville portent la même signature qu'une
+        # commune depuis que le nom est élargi. On les écarte AVANT la grammaire
+        # plutôt que d'espérer qu'elle les refuse.
+        if EXCLUS.search(brut):
+            continue
         m = LIGNE.search(brut.strip())
         if not m:
             continue
