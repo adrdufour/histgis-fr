@@ -81,14 +81,27 @@ FROM   circo86_src;
 -- ---------------------------------------------------------------------------
 DROP TABLE IF EXISTS circo86_rat;
 CREATE TABLE circo86_rat AS
+-- Le canton ne sert qu'à DÉPARTAGER, il ne conditionne pas le raccord.
+--
+-- Défaut trouvé le 20 août 2026 par Bihorel. La jointure était INTERNE :
+-- l'atome devait avoir un canton au 1er juin 2012 pour être retenu. Or Bihorel
+-- a fusionné dans Bois-Guillaume le 1er janvier 2012 — sa ligne cantonale
+-- 1999-2012 s'arrête là, et celle qui couvre 2012 est posée par `41`, QUI
+-- S'EXÉCUTE APRÈS CE FICHIER. La commune disparaissait donc du raccord en
+-- silence, comptée parmi les « lignes source sans atome ».
+--
+-- Le canton n'a jamais servi qu'à choisir entre plusieurs atomes portant le
+-- même code INSEE. Une commune qui n'en a qu'un n'a pas besoin d'être
+-- départagée. `LEFT JOIN` + `DESC NULLS LAST` : la préférence demeure, la
+-- condition disparaît.
 SELECT DISTINCT ON (s.canton, s.insee, s.circo)
        s.canton, s.insee, s.circo, a.atom_id,
-       (m.unit_id = s.canton) AS canton_concorde
+       coalesce(m.unit_id = s.canton, false) AS canton_concorde
 FROM   circo86_src s
 JOIN   atom a       ON a.insee_geofla = s.insee
-JOIN   membership m ON m.atom_id = a.atom_id AND m.niveau = 'canton'
+LEFT   JOIN membership m ON m.atom_id = a.atom_id AND m.niveau = 'canton'
                    AND m.periode @> :'date_canton'::date
-ORDER  BY s.canton, s.insee, s.circo, (m.unit_id = s.canton) DESC, a.atom_id;
+ORDER  BY s.canton, s.insee, s.circo, (m.unit_id = s.canton) DESC NULLS LAST, a.atom_id;
 
 CREATE INDEX circo86_rat_idx ON circo86_rat (atom_id);
 
