@@ -41,6 +41,11 @@ cd "$RACINE"
 # 20 puis 21 AVANT le COG : `21` crée `commune_moderne`, et `load_cog.sh` finit
 # par `23_cog_diag.sql`, qui l'exige. L'ordre inverse échoue sur
 # « commune_moderne absente ». Mesuré le 20 août 2026, en le faisant.
+# `noms_geofla` était créée par un script de CARTES, hors de la chaîne : six
+# fichiers SQL en dépendent et une reconstruction complète échouait dessus.
+etape "19 — noms de communes (noms_geofla)"
+$PSQL -f "$ICI/19_noms_geofla.sql"
+
 etape "20 — chronologie communale 1943-2012"
 $PSQL -f "$ICI/20_commune_moderne.sql"
 

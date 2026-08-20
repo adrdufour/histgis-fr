@@ -31,10 +31,11 @@ reste. Les deux sont à jour au 20 août 2026.
 | 6 | `07_reliquat.sql` | rattrapage HAC des communes disparues | `atom_geom` | — | — |
 | 7 | `11_scission.sql` | prolonge vers 1870 les communes nées pendant la série | `membership` | `scission_trace` | — |
 | 8 | `15_creation_arriere.sql` | communes nées **après** la série : atome-fraction + chronologie de la mère | `atom` `atom_geom` `membership` | `creation_trace` | — |
+| 8bis | `19_noms_geofla.sql` | table des noms de communes, projection de `geofla_commune` | — | — | — |
 | 9 | `20_commune_moderne.sql` | chronologie communale 1943-2012 (tables `cm_*`) | — | — | — |
 | 10 | `21_atomes_modernes.sql` | atomes manquants pour 1943-2012, crée `commune_moderne` | `atom` `atom_geom` | `atome_moderne_trace` | — |
 | 11 | `22_cog_stage.sql` | charge les 14 millésimes du COG | — | — | — |
-| 12 | `37_reparer_encodage.sql` | répare les noms lus en Latin-1, **crée `noms_geofla`** | `unit` `unit_version` | `encodage_trace` | — |
+| 12 | `37_reparer_encodage.sql` | répare les noms lus en Latin-1. **Tourne à blanc par défaut** : relancer avec `-v appliquer=1` | `unit` `unit_version` | `encodage_trace` | — |
 | 13 | `24_canton_moderne.sql` | cantons 1999-2012, atomes-fractions | `atom` `atom_geom` `unit` `unit_version` `membership` | `canton_moderne_trace` | — |
 | 14 | `25_pseudo_canton.sql` | pseudo-cantons de Marseille et Lyon | `unit` `unit_version` `membership` | `pseudo_canton_trace` | — |
 | 15 | `27_circo_2012.sql` | circonscriptions du découpage de 2009 (2010-2013) | `unit` `unit_version` `membership` | `circo_moderne_trace` | **`circo`** = `circo/circo_2012.csv` |
@@ -52,8 +53,10 @@ reste. Les deux sont à jour au 20 août 2026.
 
 1. **`21` avant `22`/`23`.** `21` crée `commune_moderne`, et `23_cog_diag.sql`
    — que `load_cog.sh` joue en dernier — l'exige.
-2. **`37` avant tout ce qui interroge `noms_geofla`** : `41`, `42`, `44`. `15`
-   ne doit PAS en dépendre, il passe avant.
+2. **`19` avant tout ce qui interroge `noms_geofla`** : `39`, `41`, `42`, `43`,
+   `44`. Cette table était créée par `cartes/couverture_cantons_2025.py`, hors
+   de la chaîne — une reconstruction complète échouait donc systématiquement
+   dessus. **Une dépendance de la chaîne ne peut pas vivre hors de la chaîne.**
 3. **`24` avant `27` et `28`** : ceux-ci rattachent les circonscriptions aux
    atomes-fractions que `24` vient de créer.
 4. **Les correctifs datés en dernier**, parce qu'ils référencent les unités
