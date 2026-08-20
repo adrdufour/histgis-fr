@@ -125,18 +125,23 @@ SELECT coalesce(voie, '(aucune)') AS voie, count(*) AS creations
   FROM hac_filiation GROUP BY 1 ORDER BY 2 DESC;
 -- Mesuré le 20 août 2026 : 444 uniques, 1 homonyme, 2 introuvables sur 447.
 
+\echo '    (chemin du CSV :)' :hac
+
+-- psql N'INTERPOLE PAS ses variables à l'intérieur d'un bloc $$ ... $$ : son
+-- analyseur y voit une chaîne. Le chemin est donc affiché par le `\echo`
+-- ci-dessus, hors du bloc, et non passé à RAISE.
 DO $$
 DECLARE n bigint;
 BEGIN
     SELECT count(*) INTO n FROM hac_filiation WHERE voie = 'unique';
     IF n = 0 THEN
-        RAISE WARNING '======================================================';
-        RAISE WARNING 'HAC ABSENT : le pari par prolongement s''applique PARTOUT.';
-        RAISE WARNING 'Chemin essayé : %', :'hac';
-        RAISE WARNING 'Engendrer le CSV : python3 hac/hac_filiation.py';
-        RAISE WARNING '======================================================';
+        RAISE WARNING '===================================================';
+        RAISE WARNING 'HAC ABSENT : le pari par prolongement s''applique';
+        RAISE WARNING 'PARTOUT. Engendrer le CSV et rejouer :';
+        RAISE WARNING '    python3 hac/hac_filiation.py';
+        RAISE WARNING '===================================================';
     ELSE
-        RAISE NOTICE 'Filiation HAC : % mères nommées.', n;
+        RAISE NOTICE 'Filiation HAC : % meres nommees.', n;
     END IF;
 END $$;
 
