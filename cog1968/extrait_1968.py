@@ -196,7 +196,13 @@ def main():
     # département. On écrit donc après CHAQUE fascicule, et on sait reprendre.
     ap.add_argument("--reprendre", action="store_true",
                     help="sauter les départements déjà présents dans le CSV")
+    # Sans `--reprendre`, le fichier est ouvert en mode « w » : un essai sur un
+    # seul département ÉCRASE la passe complète. Il faut donc pouvoir écrire
+    # ailleurs pour vérifier un correctif sans risquer des heures d'OCR.
+    ap.add_argument("--sortie", type=Path, default=SORTIE,
+                    help="fichier de sortie (défaut : cog1968/communes_1968.csv)")
     a = ap.parse_args()
+    sortie_csv = a.sortie
 
     idx = index()
     if a.tous:
@@ -211,13 +217,13 @@ def main():
     CHAMPS = ["dep", "insee", "insee3", "arr", "canton", "nom", "pop1968",
               "hors_borne", "page"]
     deja = set()
-    if a.reprendre and SORTIE.exists():
-        deja = {l["dep"] for l in csv.DictReader(SORTIE.open(encoding="utf-8"))}
+    if a.reprendre and sortie_csv.exists():
+        deja = {l["dep"] for l in csv.DictReader(sortie_csv.open(encoding="utf-8"))}
         cibles = [(d, p) for d, p in cibles if d not in deja]
         print(f"reprise : {len(deja)} départements déjà faits, "
               f"{len(cibles)} restants\n")
-    neuf = not SORTIE.exists() or (not a.reprendre)
-    sortie = SORTIE.open("w" if neuf else "a", newline="", encoding="utf-8")
+    neuf = not sortie_csv.exists() or (not a.reprendre)
+    sortie = sortie_csv.open("w" if neuf else "a", newline="", encoding="utf-8")
     ecrivain = csv.DictWriter(sortie, fieldnames=CHAMPS)
     if neuf:
         ecrivain.writeheader()
@@ -258,7 +264,7 @@ def main():
     if not lignes:
         raise SystemExit("Aucune ligne reconnue.")
     lignes.sort(key=lambda x: (x["dep"], x["insee"]))
-    with SORTIE.open("w", newline="", encoding="utf-8") as f:
+    with sortie_csv.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["dep", "insee", "insee3", "arr",
                                           "canton", "nom", "pop1968",
                                           "hors_borne", "page"])
@@ -288,7 +294,7 @@ def main():
         print("\nruptures de l'ordre alphabétique (codes à revoir) :")
         for d, n in sorted(ruptures.items()):
             print(f"   {d} : {n}")
-    print(f"\n{SORTIE}")
+    print(f"\n{sortie_csv}")
 
 
 if __name__ == "__main__":
