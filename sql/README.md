@@ -32,6 +32,14 @@ Les quatre fichiers s'enchaînent seuls, mais restent lançables un par un :
 | `03_functions.sql` | `snapshot()`, `unit_nom()`, contrôles |
 | `04_checks.sql` | rapport de recette (lecture seule) |
 
+## Inventaire complet : `CHAINE.md`
+
+**`sql/CHAINE.md` dresse les 44 fichiers** — ce que chacun fait, ce qu'il écrit,
+sa table de trace, les variables qu'il attend, et l'ordre d'exécution. Il
+distingue trois familles : construction (24 fichiers), diagnostic en lecture
+seule (17), et l'espace séparé de l'outre-mer. Il nomme aussi ce qui ne sert
+plus. À lire en premier.
+
 ## Qui dépend de qui — à lire AVANT de rejouer un fichier
 
 Écrit le 20 août 2026, après que l'ignorance de ces règles eut cassé la base
