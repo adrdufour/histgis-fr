@@ -66,12 +66,37 @@ BEGIN
     END IF;
 END $$;
 
-ALTER TABLE atom_geom DROP CONSTRAINT IF EXISTS atom_geom_source_check;
-ALTER TABLE atom_geom ADD CONSTRAINT atom_geom_source_check CHECK (
-    source IN ('geofla', 'union_prefixe', 'absorbee', 'successeur',
-               'hac', 'hac_partage', 'creation_arriere', 'arrondissement',
-               'fraction_cog')
+-- Déclaration additive de la source posée ici. Voir l'explication en tête de
+-- `15_creation_arriere.sql` : une liste exhaustive écrite dans chaque fichier
+-- invalide les sources des autres au moindre rejeu.
+CREATE TABLE IF NOT EXISTS atom_geom_source (
+    source   text PRIMARY KEY,
+    pose_par text NOT NULL,
+    note     text
 );
+
+INSERT INTO atom_geom_source (source, pose_par, note)
+SELECT DISTINCT ag.source, 'préexistant',
+       'trouvée en base lors de la conversion du CHECK en table'
+FROM   atom_geom ag
+WHERE  ag.source IS NOT NULL
+ON     CONFLICT (source) DO NOTHING;
+
+INSERT INTO atom_geom_source (source, pose_par, note) VALUES
+    ('fraction_cog', '24_canton_moderne.sql',
+     'fraction de commune coupée entre plusieurs cantons du COG')
+ON CONFLICT (source) DO NOTHING;
+
+ALTER TABLE atom_geom DROP CONSTRAINT IF EXISTS atom_geom_source_check;
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                    WHERE conname = 'atom_geom_source_fk') THEN
+        ALTER TABLE atom_geom
+            ADD CONSTRAINT atom_geom_source_fk
+            FOREIGN KEY (source) REFERENCES atom_geom_source (source);
+    END IF;
+END $$;
 
 -- ---------------------------------------------------------------------------
 -- 0. Trace, et retrait d'un passage précédent

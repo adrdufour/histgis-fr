@@ -148,12 +148,70 @@ BEGIN
     END IF;
 END $$;
 
--- 'creation_arriere' rejoint les sources reconnues, comme 07 l'a fait pour hac
-ALTER TABLE atom_geom DROP CONSTRAINT IF EXISTS atom_geom_source_check;
-ALTER TABLE atom_geom ADD CONSTRAINT atom_geom_source_check CHECK (
-    source IN ('geofla', 'union_prefixe', 'absorbee', 'successeur',
-               'hac', 'hac_partage', 'creation_arriere')
+-- ---------------------------------------------------------------------------
+-- Les sources d'`atom_geom` sont déclarées dans une TABLE, pas dans un CHECK
+--
+-- Le défaut, trouvé le 17 août 2026 en rejouant ce fichier
+-- --------------------------------------------------------
+-- Quatre fichiers redéfinissaient la même contrainte `atom_geom_source_check`,
+-- chacun avec la liste des sources connues LE JOUR OÙ IL A ÉTÉ ÉCRIT :
+--
+--   07_reliquat          + hac, hac_partage
+--   15 (ici)             + creation_arriere
+--   21_atomes_modernes   + arrondissement
+--   24_canton_moderne    + fraction_cog
+--
+-- Chacun ÉCRASE la liste au lieu d'y ajouter. Joués dans l'ordre, ils
+-- s'empilent correctement. Mais rejouer un seul fichier — ce que celui-ci est
+-- précisément conçu pour permettre — réimpose une liste périmée, et la base la
+-- refuse :
+--
+--   ERROR: check constraint "atom_geom_source_check" is violated by some row
+--
+-- Ajouter les deux valeurs manquantes ici aurait réparé le symptôme et laissé
+-- la même bombe amorcée dans `07`. C'est la règle écrite le même jour : réparer
+-- la règle, pas le cas.
+--
+-- Le remplacement
+-- ---------------
+-- Une table de référence et une clé étrangère. Chaque fichier DÉCLARE la source
+-- qu'il pose, sans rien savoir des autres ; l'ordre cesse d'avoir de
+-- l'importance, et rejouer n'importe quel fichier est sans danger.
+--
+-- L'amorçage légitime tout ce qui est déjà en base, de sorte que la conversion
+-- ne casse aucun état existant, quel que soit l'ordre où elle atteint les
+-- quatre fichiers.
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS atom_geom_source (
+    source   text PRIMARY KEY,
+    pose_par text NOT NULL,
+    note     text
 );
+
+-- Amorçage : toute valeur déjà présente en base est légitimée.
+INSERT INTO atom_geom_source (source, pose_par, note)
+SELECT DISTINCT ag.source, 'préexistant',
+       'trouvée en base lors de la conversion du CHECK en table'
+FROM   atom_geom ag
+WHERE  ag.source IS NOT NULL
+ON     CONFLICT (source) DO NOTHING;
+
+-- Ce que CE fichier pose.
+INSERT INTO atom_geom_source (source, pose_par, note) VALUES
+    ('creation_arriere', '15_creation_arriere.sql',
+     'atome-fraction d''une commune née après la fin de la série')
+ON CONFLICT (source) DO NOTHING;
+
+ALTER TABLE atom_geom DROP CONSTRAINT IF EXISTS atom_geom_source_check;
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                    WHERE conname = 'atom_geom_source_fk') THEN
+        ALTER TABLE atom_geom
+            ADD CONSTRAINT atom_geom_source_fk
+            FOREIGN KEY (source) REFERENCES atom_geom_source (source);
+    END IF;
+END $$;
 
 -- ---------------------------------------------------------------------------
 -- 0. Trace, et retrait d'un éventuel passage précédent

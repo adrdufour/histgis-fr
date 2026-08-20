@@ -15,10 +15,42 @@
 \set ON_ERROR_STOP on
 SET search_path TO histgis, public;
 
+-- Les sources d'`atom_geom` sont déclarées dans une table, pas dans un CHECK :
+-- ce fichier ne connaît pas celles que 15, 21 et 24 poseront après lui, et une
+-- liste écrite ici les invaliderait au moindre rejeu. Voir l'explication
+-- complète en tête de `15_creation_arriere.sql`.
+CREATE TABLE IF NOT EXISTS atom_geom_source (
+    source   text PRIMARY KEY,
+    pose_par text NOT NULL,
+    note     text
+);
+
+INSERT INTO atom_geom_source (source, pose_par, note)
+SELECT DISTINCT ag.source, 'préexistant',
+       'trouvée en base lors de la conversion du CHECK en table'
+FROM   atom_geom ag
+WHERE  ag.source IS NOT NULL
+ON     CONFLICT (source) DO NOTHING;
+
+INSERT INTO atom_geom_source (source, pose_par, note) VALUES
+    ('geofla',        '07_reliquat.sql', 'polygone GEOFLA 2011 tel quel'),
+    ('union_prefixe', '07_reliquat.sql', 'union des arrondissements municipaux'),
+    ('absorbee',      '07_reliquat.sql', 'commune absorbée, polygone du successeur'),
+    ('successeur',    '07_reliquat.sql', 'résolue par la chaîne des mouvements'),
+    ('hac',           '07_reliquat.sql', 'fusion ancienne documentée par HAC'),
+    ('hac_partage',   '07_reliquat.sql', 'HAC, territoire réparti : premier successeur retenu')
+ON CONFLICT (source) DO NOTHING;
+
 ALTER TABLE atom_geom DROP CONSTRAINT IF EXISTS atom_geom_source_check;
-ALTER TABLE atom_geom ADD CONSTRAINT atom_geom_source_check CHECK (
-    source IN ('geofla', 'union_prefixe', 'absorbee', 'successeur',
-               'hac', 'hac_partage'));
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                    WHERE conname = 'atom_geom_source_fk') THEN
+        ALTER TABLE atom_geom
+            ADD CONSTRAINT atom_geom_source_fk
+            FOREIGN KEY (source) REFERENCES atom_geom_source (source);
+    END IF;
+END $$;
 
 -- Comparaison de noms tolérante : GEOFLA écrit en capitales sans accents,
 -- HAC avec accents et apostrophes typographiques.
