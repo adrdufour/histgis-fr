@@ -77,6 +77,70 @@ BEGIN
 END $$;
 
 -- ---------------------------------------------------------------------------
+-- 0 bis. La filiation nommée par HAC — facultative
+--
+-- Ajouté le 20 août 2026. `hac/hac_filiation.py` extrait de HAC — *Des villages
+-- de Cassini aux communes d'aujourd'hui*, EHESS — la mère de chaque commune
+-- créée entre 1870 et 1941. La clé est sûre : l'`id` de HAC EST la colonne
+-- `cassini` de TRF-GIS.
+--
+-- **Ce fichier fonctionne sans.** Si le CSV est absent, la table reste vide et
+-- le pari d'origine s'applique partout — c'est ce que faisait `11` jusqu'ici.
+-- D'où le `ON_ERROR_STOP off` autour du `\copy` : un dépôt sans le CSV doit
+-- pouvoir se reconstruire.
+--
+-- Pourquoi c'est licite. Bâtir sur HAC n'est pas s'y comparer : `15` bâtit sur
+-- `insee_mvt` et se fait contrôler par Gay. Le contrôle indépendant reste
+-- `controle_gay.sh`, qui reconstruit la même chose par une autre voie. Ce qui
+-- serait illicite, ce serait de CORRIGER la base d'après un contrôle après
+-- l'avoir utilisé comme tel — d'où le fait que `45_controle_hac.sql` ne
+-- modifie rien.
+-- ---------------------------------------------------------------------------
+\if :{?hac}
+\else
+  \set hac 'hac/hac_filiation.csv'
+\endif
+
+DROP TABLE IF EXISTS hac_filiation;
+CREATE TABLE hac_filiation (
+    cassini_fille text,
+    nom_fille     text,
+    dep           text,
+    annee         int,
+    nom_mere_hac  text,
+    cassini_mere  text,
+    voie          text
+);
+
+\set ON_ERROR_STOP off
+\set cmd '\\copy hac_filiation FROM ' :'hac' ' WITH (FORMAT csv, HEADER true)'
+:cmd
+\set ON_ERROR_STOP on
+
+CREATE INDEX hac_filiation_idx ON hac_filiation (cassini_fille) WHERE voie = 'unique';
+
+\echo ''
+\echo '=== 0 bis. Filiation HAC chargée ==='
+SELECT coalesce(voie, '(aucune)') AS voie, count(*) AS creations
+  FROM hac_filiation GROUP BY 1 ORDER BY 2 DESC;
+-- Mesuré le 20 août 2026 : 444 uniques, 1 homonyme, 2 introuvables sur 447.
+
+DO $$
+DECLARE n bigint;
+BEGIN
+    SELECT count(*) INTO n FROM hac_filiation WHERE voie = 'unique';
+    IF n = 0 THEN
+        RAISE WARNING '======================================================';
+        RAISE WARNING 'HAC ABSENT : le pari par prolongement s''applique PARTOUT.';
+        RAISE WARNING 'Chemin essayé : %', :'hac';
+        RAISE WARNING 'Engendrer le CSV : python3 hac/hac_filiation.py';
+        RAISE WARNING '======================================================';
+    ELSE
+        RAISE NOTICE 'Filiation HAC : % mères nommées.', n;
+    END IF;
+END $$;
+
+-- ---------------------------------------------------------------------------
 -- 0. Table de trace, et retrait d'un éventuel passage précédent
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS scission_trace (
@@ -89,6 +153,9 @@ CREATE TABLE IF NOT EXISTS scission_trace (
     debut_reel    date NOT NULL,   -- date d'apparition réelle de l'atome
     pose_le       timestamptz NOT NULL DEFAULT now()
 );
+
+-- Ajoutée le 20 août 2026 : par quelle voie la ligne a-t-elle été posée.
+ALTER TABLE scission_trace ADD COLUMN IF NOT EXISTS voie text;
 
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM scission_trace t WHERE t.membership_id = m.membership_id);
@@ -119,6 +186,7 @@ cible AS (
 )
 SELECT c.atom_id, c.niveau, c.debut, c.unit_id,
        a.insee_geofla,
+       a.cassini,                     -- clé de jointure avec HAC
        a.fraction,
        -- garde-fou 3 : un autre atome portait-il déjà ce code juste avant ?
        EXISTS (
@@ -177,10 +245,43 @@ annees AS (
                            extract(year FROM d1)::int - 1) AS y
     FROM   bornes
 ),
+-- L'unité retenue pour chaque (atome, niveau, année).
+--
+-- Deux voies, dans cet ordre :
+--
+--   `hac`  — l'unité de la MÈRE que HAC nomme, cette année-là. C'est un fait
+--            de source : on recopie la chronologie de la commune dont le
+--            territoire vient.
+--   `pari` — à défaut, l'unité que l'atome lui-même rejoint à son apparition,
+--            prolongée vers l'arrière. C'est le pari d'origine.
+--
+-- Le contrôle du 20 août 2026 a mesuré l'écart entre les deux : sur 399 cas où
+-- HAC parle, elles s'accordent 392 fois au canton (98,2 %) et 366 fois sur 366
+-- aux circonscriptions (100 %). Les 7 écarts ont tous la même forme — une
+-- commune détachée d'une mère relevant d'un AUTRE canton, l'acte de création
+-- changeant le canton en même temps qu'il crée la commune : Pornichet,
+-- Bagnoles-de-l'Orne, Le Pont-de-Claix, Charantonnay, Aboën, Saint-Edmond,
+-- Beauchamp. Le pari échouait exactement là où il devait échouer.
+--
+-- Si la mère relève de PLUSIEURS unités cette année-là — commune coupée — HAC
+-- ne tranche pas et on retombe sur le pari. `HAVING count(DISTINCT) = 1`.
 vivant AS (
-    SELECT c.atom_id, c.niveau, c.unit_id, c.debut, a.y
+    SELECT c.atom_id, c.niveau, c.debut, a.y,
+           coalesce(m.unit_id, c.unit_id)                        AS unit_id,
+           CASE WHEN m.unit_id IS NULL THEN 'pari' ELSE 'hac' END AS voie
     FROM   scission_candidat c
     CROSS  JOIN annees a
+    LEFT   JOIN LATERAL (
+               SELECT min(mm.unit_id) AS unit_id
+               FROM   hac_filiation f
+               JOIN   atom am       ON am.cassini = f.cassini_mere
+               JOIN   membership mm ON mm.atom_id = am.atom_id
+                                   AND mm.niveau  = c.niveau
+                                   AND mm.periode @> make_date(a.y, 6, 1)
+               WHERE  f.voie = 'unique'
+                 AND  f.cassini_fille = c.cassini
+               HAVING count(DISTINCT mm.unit_id) = 1
+           ) m ON true
     WHERE  NOT c.recodage
       -- un atome sans code INSEE n'a pas de polygone : le prolonger
       -- n'apporterait rien et alourdirait `membership` pour rien
@@ -193,37 +294,56 @@ vivant AS (
       AND  make_date(a.y + 1, 1, 1) <= c.debut
       AND  EXISTS (
                SELECT 1 FROM membership mu
-               WHERE  mu.unit_id = c.unit_id
+               WHERE  mu.unit_id = coalesce(m.unit_id, c.unit_id)
                  AND  mu.niveau  = c.niveau
                  AND  mu.periode @> make_date(a.y, 6, 1)
            )
 ),
--- gaps and islands : y - rang est constant sur une suite d'années consécutives
-iles AS (
-    SELECT atom_id, niveau, unit_id, debut, y,
-           y - row_number() OVER (PARTITION BY atom_id, niveau, unit_id ORDER BY y) AS ilot
+-- Garde-fou 4, reformulé.
+--
+-- Il ne porte plus sur des îlots d'unité mais sur des **îlots d'ANNÉES** : la
+-- couverture doit être continue en remontant depuis l'apparition, mais l'unité
+-- a désormais le droit de changer en chemin — c'est précisément ce que la
+-- chronologie d'une mère peut faire.
+--
+-- Sans ce changement, une mère ayant changé de canton découperait le
+-- prolongement en deux îlots dont un seul toucherait `debut`, et l'autre
+-- serait perdu. Sur la voie `pari`, l'unité est constante : îlots d'années et
+-- îlots d'unité coïncident, et le comportement est inchangé.
+bloc AS (
+    SELECT atom_id, niveau, debut, y, unit_id, voie,
+           y - row_number() OVER (PARTITION BY atom_id, niveau ORDER BY y) AS ilot
     FROM   vivant
 ),
-groupes AS (
-    SELECT atom_id, niveau, unit_id, debut,
-           min(y) AS y_min, max(y) AS y_max, count(*) AS n_annees
-    FROM   iles
-    GROUP  BY atom_id, niveau, unit_id, debut, ilot
+-- l'îlot d'années qui TOUCHE la date d'apparition, et lui seul
+bloc_retenu AS (
+    SELECT b.*
+    FROM   bloc b
+    JOIN   (SELECT atom_id, niveau, ilot
+            FROM   bloc
+            GROUP  BY atom_id, niveau, ilot, debut
+            HAVING max(y) = extract(year FROM debut)::int - 1) k
+           ON k.atom_id = b.atom_id AND k.niveau = b.niveau AND k.ilot = b.ilot
+),
+-- à l'intérieur, on recolle par unité : une ligne par période d'unité continue
+segments AS (
+    SELECT atom_id, niveau, debut, unit_id, voie, y,
+           y - row_number() OVER (PARTITION BY atom_id, niveau, unit_id
+                                  ORDER BY y) AS seg
+    FROM   bloc_retenu
 )
--- garde-fou 4 : seul l'îlot qui TOUCHE la date d'apparition est retenu. Les
--- îlots antérieurs sont séparés de `debut` par une interruption du canton
--- d'accueil — franchir cette interruption, c'est supposer que le canton est
--- resté le même de part et d'autre, ce que la rupture de 1871 dément.
 SELECT atom_id, niveau, unit_id, debut,
-       make_date(y_min, 1, 1)     AS valid_from,
-       make_date(y_max + 1, 1, 1) AS valid_to,
-       n_annees,
-       (y_max = extract(year FROM debut)::int - 1) AS retenu
-FROM   groupes;
+       min(voie)                       AS voie,
+       make_date(min(y), 1, 1)         AS valid_from,
+       make_date(max(y) + 1, 1, 1)     AS valid_to,
+       count(*)                        AS n_annees,
+       true                            AS retenu
+FROM   segments
+GROUP  BY atom_id, niveau, unit_id, debut, seg;
 
 DROP TABLE IF EXISTS scission_periode;
 CREATE TABLE scission_periode AS
-SELECT atom_id, niveau, unit_id, debut, valid_from, valid_to, n_annees
+SELECT atom_id, niveau, unit_id, debut, voie, valid_from, valid_to, n_annees
 FROM   scission_ilot WHERE retenu;
 
 \echo ''
@@ -268,15 +388,50 @@ WITH ins AS (
     RETURNING membership_id, atom_id, unit_id, niveau, valid_from, valid_to
 )
 INSERT INTO scission_trace (membership_id, atom_id, unit_id, niveau,
-                            valid_from, valid_to, debut_reel)
+                            valid_from, valid_to, debut_reel, voie)
 SELECT i.membership_id, i.atom_id, i.unit_id, i.niveau,
-       i.valid_from, i.valid_to, p.debut
+       i.valid_from, i.valid_to, p.debut, p.voie
 FROM   ins i
 JOIN   scission_periode p ON p.atom_id = i.atom_id
                          AND p.niveau  = i.niveau
                          AND p.valid_from = i.valid_from;
 
 ANALYZE membership;
+
+\echo ''
+\echo ''
+\echo '=== 3 bis. Par quelle voie ==='
+SELECT niveau, voie, count(*) AS lignes, count(DISTINCT atom_id) AS atomes,
+       min(valid_from) AS depuis, max(valid_to) AS jusqu_a
+  FROM scission_trace GROUP BY 1, 2 ORDER BY 1, 3 DESC;
+-- `hac`  : l'unité de la mère nommée par la source.
+-- `pari` : l'unité de l'atome lui-même, prolongée — le pari d'origine, qui
+--          reste seul là où HAC se tait.
+
+\echo ''
+\echo '=== 3 ter. Les sept communes que le contrôle HAC signalait ==='
+\echo '    Elles doivent désormais suivre leur MÈRE, et non plus leur propre'
+\echo '    canton de départ. Le Pont-de-Claix -> Vizille (et non Vif),'
+\echo '    Pornichet -> Guérande (et non Saint-Nazaire), etc.'
+SELECT a.insee_geofla, coalesce(n.nom, '?') AS commune, t.niveau,
+       t.unit_id, coalesce(u.nom, '?') AS unite, t.voie,
+       t.valid_from, t.valid_to
+  FROM scission_trace t
+  JOIN atom a ON a.atom_id = t.atom_id
+  LEFT JOIN noms_geofla n ON n.insee = a.insee_geofla
+  LEFT JOIN unit u ON u.unit_id = t.unit_id AND u.niveau = t.niveau
+ WHERE a.insee_geofla IN ('38317', '38081', '42001', '44132',
+                          '61483', '71408', '95051')
+ ORDER BY a.insee_geofla, t.niveau, t.valid_from;
+-- Les codes sont ceux de GEOFLA 2011, relevés dans `build/noms_geofla.csv` et
+-- non devinés — deux l'avaient d'abord été, et tous deux étaient faux : 38077
+-- est La Chapelle-de-Surieu et non Charantonnay, 71399 Saint-Christophe-en-
+-- Brionnais et non Saint-Edmond. Le Pont-de-Claix 38317, Charantonnay 38081,
+-- Aboën 42001, Pornichet 44132, Bagnoles-de-l'Orne 61483, Saint-Edmond 71408,
+-- Beauchamp 95051.
+--
+-- Un code qui ne rend rien signale que la commune n'est plus prolongée : à
+-- vérifier, pas à ignorer.
 
 \echo ''
 \echo '=== 3. Ce qui a été posé ==='
