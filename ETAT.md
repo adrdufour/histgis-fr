@@ -1862,6 +1862,77 @@ Ces sept communes ne laissent aucun trou de couverture : leur territoire est
 couvert par l'atome de la mère. Elles rejoignent simplement le poids mort décrit
 à la limite n° 7 de `METHODE.md`.
 
+### HAC contrôle les paris de `11` — 20 août 2026
+
+`hac/hac_filiation.py` et `sql/45_controle_hac.sql`. **Le contrôle qui manquait
+depuis le début du projet.**
+
+`11_scission.sql` prolonge vers 1870 les communes nées pendant la série, sur le
+pari « une commune nouvelle reste dans le canton de sa mère » — pari fait **sans
+jamais savoir qui est la mère**, puisqu'il ne dispose que de la géométrie et des
+cantons. HAC — *Des villages de Cassini aux communes d'aujourd'hui*, EHESS,
+déjà sur disque sous `sources/geofla/repro/source_data/HAC/` — la nomme :
+
+```
+9222.0  "réunie en 1886, (avec Saint-Antoine-de-Rochefort) à La Ferté-Bernard
+         • Créée en 1888, à partir de La Ferté-Bernard"
+```
+
+**La clé est donnée : l'`id` de HAC EST la colonne `cassini` de TRF-GIS.**
+Vérifié sur Cherré (9222), La Ferté-Bernard (18180), Saint-Antoine (30448). La
+fille ne se rapproche donc par aucun nom — c'est la clé la plus sûre du projet.
+
+**La mère, elle, n'est nommée qu'en clair**, et HAC emploie son nom
+d'**aujourd'hui** quand TRF-GIS emploie celui de l'époque : « Villefranche-sur-Mer »
+contre « Villefranche », « La Baule-Escoublac » contre « Escoublac ». Indexer les
+deux formes fait passer la résolution de 92,8 % à **99,3 %** — 444 filiations sur
+447. Les 45 homonymes redoutés (dix « Saint-Just », onze « Sainte-Marie »)
+tombent tous dès qu'on restreint au département de la fille. Restent deux
+introuvables, dont une filiation qui franchit le département.
+
+#### Le verdict
+
+| niveau | accords | désaccords | taux |
+|---|---|---|---|
+| canton | 392 | 7 | **98,2 %** |
+| circo | 366 | 0 | **100 %** |
+
+403 des 435 atomes prolongés sont couverts par le contrôle.
+
+**Les 7 désaccords ont tous la même forme** : une commune née d'un village dont
+la mère relevait d'un *autre* canton — Pornichet détachée de La Baule-Escoublac
+(canton de Guérande) mais rattachée à Saint-Nazaire ; Bagnoles-de-l'Orne
+détachée de Couterne, rattachée à Juvigny-sous-Andaine ; Le Pont-de-Claix,
+Charantonnay, Aboën, Saint-Edmond, Beauchamp. Ce sont des créations où l'acte
+**change le canton en même temps qu'il crée la commune**. Le pari de `11` échoue
+exactement là où il devait échouer, et nulle part ailleurs.
+
+#### Deux des quatre paris que Gay disait perdus sont donnés gagnés
+
+`METHODE.md` notait quatre paris perdus sur 414 selon le contrôle Gay, et que
+ces quatre « se tranchent sur pièces d'archives ». La pièce existe :
+
+| commune | `11` a posé | HAC nomme | verdict |
+|---|---|---|---|
+| Le Theux (08447) | canton 0815 Mézières | **Mézières** | accord, aux deux niveaux |
+| Sognolles-en-Montois (77454) | canton 7710 | **Lizines** | accord, aux deux niveaux |
+
+HAC contredit donc Gay sur ces deux cas et donne raison à `11`. Ce n'est pas une
+clôture — deux sources indépendantes se contredisent, c'est tout ce qu'on sait —
+mais le dossier n'est plus vide.
+
+#### Le contrôle ne modifie rien, et c'est délibéré
+
+`45_controle_hac.sql` ne contient **aucun** `INSERT`, `DELETE` ni `UPDATE`.
+Corriger la base d'après HAC lui ferait perdre son indépendance, exactement
+comme recopier Gay la ferait perdre au contrôle géométrique.
+
+**Une voie légitime existe pourtant**, et elle est notée dans
+`RESTE_A_FAIRE.md` : faire de HAC une **source de filiation** pour `11`, comme
+`insee_mvt` l'est pour `15`, et laisser Gay contrôler le résultat. Ce serait
+construire avec HAC au lieu de s'y comparer — ce qui est licite tant que le
+contrôle reste ailleurs. Cela impose un `rebuild.sh` complet.
+
 ### Les fractions retrouvent leur circonscription — 20 août 2026
 
 `sql/43_circo_fraction.sql`. Repéré par Adrien sur la carte : **des communes

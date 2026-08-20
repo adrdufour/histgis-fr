@@ -330,3 +330,55 @@ sans passer par des articles au cas par cas.
 Question ouverte, et aucune recette ne la voit : une commune omise en **fin** de
 série ne laisse pas de trou intérieur, sa période s'arrête simplement plus tôt.
 Le contrôle par trou intérieur ne la détecterait pas.
+
+## Faire de HAC une source de filiation pour `11_scission.sql`
+
+Ouvert le 20 août 2026, après le contrôle de `45_controle_hac.sql`.
+
+`11` prolonge les communes nées pendant la série en pariant qu'elles restent
+dans le canton de leur mère, **sans savoir qui est la mère**. Le contrôle par
+HAC donne 98,2 % au canton et 100 % aux circonscriptions — et les 7 désaccords
+ont tous la même forme : une commune détachée d'une mère relevant d'un **autre**
+canton, l'acte de création changeant le canton en même temps.
+
+| commune | `11` pose | mère selon HAC | canton de la mère |
+|---|---|---|---|
+| Le Pont-de-Claix (38) | Vif | Champagnier | Vizille |
+| Charantonnay (38) | Heyrieux | Beauvoir-de-Marc | Saint-Jean-de-Bournay |
+| Aboën (42) | Saint-Bonnet-le-Château | Périgneux | Saint-Rambert-sur-Loire |
+| Pornichet (44) | Saint-Nazaire | La Baule-Escoublac | Guérande |
+| Bagnoles-de-l'Orne (61) | Juvigny-sous-Andaine | Couterne | La Ferté-Macé |
+| Saint-Edmond (71) | Chauffailles | Ligny-en-Brionnais | Semur-en-Brionnais |
+| Beauchamp (78) | Montmorency | Montigny-lès-Cormeilles | Argenteuil |
+
+**Ce qu'il faudrait faire.** Utiliser `hac/hac_filiation.csv` comme source de
+filiation dans `11`, exactement comme `15_creation_arriere.sql` utilise
+`insee_mvt` : quand HAC nomme la mère, recopier SA chronologie ; sinon,
+retomber sur le pari par voisinage cantonal. 444 filiations sur 447 sont
+résolues, dont 403 recouvrent des atomes que `11` prolonge.
+
+**Et pourquoi c'est licite.** Construire avec HAC n'est pas s'y comparer : le
+contrôle indépendant resterait Gay, qui reconstruit la même chose par une autre
+voie. C'est la situation de `15`, qui bâtit sur `insee_mvt` et se fait contrôler
+par Gay. Ce qui serait illicite, c'est de **corriger** la base d'après HAC après
+l'avoir utilisée comme contrôle — d'où le fait que `45` ne modifie rien.
+
+**Coût** : `11` est dans la chaîne, donc `rebuild.sh` complet.
+
+**À mesurer d'abord** : le contrôle Gay après changement. Si le nombre d'atomes
+mal placés baisse, la voie est bonne ; s'il monte, HAC nomme une mère qui n'est
+pas celle dont le territoire vient, et il faudra comprendre pourquoi avant de
+garder le changement.
+
+### Deux paris perdus selon Gay, gagnés selon HAC
+
+Le Theux (08447, mère Mézières) et Sognolles-en-Montois (77454, mère Lizines)
+sont donnés en **accord** par HAC, aux deux niveaux, alors que le contrôle Gay
+les compte parmi ses quatre paris perdus. Deux sources indépendantes se
+contredisent ; ni l'une ni l'autre ne tranche seule. À porter à Victor Gay avec
+le reste du rapport.
+
+Note : les deux autres paris perdus (Houat et Hœdic) n'apparaissent pas dans la
+section 5 de `45` — les codes cités par `METHODE.md`, 17501 et 17191, sont des
+identifiants d'atome et non des codes INSEE, et la requête filtre sur
+`insee_geofla`. À reprendre avec les bons codes.
