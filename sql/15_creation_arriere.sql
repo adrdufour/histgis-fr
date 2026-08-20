@@ -62,6 +62,66 @@
 --      `10_couverture.sql`. L'égalité de polygone ne suffit pas : un
 --      arrondissement de Marseille n'égale pas l'union qui le porte, et serait
 --      compté deux fois.
+--   6. Les codes INSEE sont RÉSOLUS à travers les recodages avant d'être
+--      comparés. Voir ci-dessous : sans cela, deux filles sont perdues.
+--
+-- Le raccord manqué : Chisa et Butry-sur-Oise — 17 août 2026
+-- ----------------------------------------------------------
+-- Trouvé par Adrien, qui a remarqué **Chisa absente de la Corse 1870-1940**.
+--
+-- Le test de « commune sans atome » est géométrique et le voyait bien. C'est le
+-- raccord au mouvement INSEE qui échouait : il comparait `i.com_ap` au code
+-- GEOFLA **moderne**, or la source nomme le code du jour de l'acte.
+--
+--   Chisa            créée le 1947-04-12 de Ventiseri  20366, GEOFLA 2B366
+--   Butry-sur-Oise   créée le 1948-08-01 d'Auvers      78692, GEOFLA 95120
+--
+-- La Corse a été recodée en 1976 (20 -> 2A/2B), la Seine-et-Oise démembrée en
+-- 1968 (78 -> 78/91/95). Les deux bouts bougent : la mère aussi change de code,
+-- 20342 -> 2B342 et 78039 -> 95039. Le `JOIN LATERAL ... ON true` étant une
+-- jointure INTERNE, les deux filles disparaissaient **en silence**.
+--
+-- Elles étaient donc rangées parmi les « territoires neufs » avec Tende et La
+-- Brigue. C'était faux : Tende et La Brigue sont italiennes jusqu'en 1947 et
+-- n'ont légitimement aucun rattachement français ; Chisa et Butry ont toujours
+-- été françaises, leur territoire appartenait à leur mère, et leur absence
+-- était un trou de couverture.
+--
+-- L'ampleur, mesurée avant d'écrire : croisement des **904 recodages `mod 41`**
+-- avec toutes les créations `mod 20/21` — **4 lignes, 2 communes**. Le défaut
+-- ne va pas au-delà de ces deux-là.
+--
+-- La résolution est TRANSITIVE, et ce n'est pas un luxe : quatre codes sont
+-- recodés deux fois de suite (78143 -> 91143, 78620 -> 91620, via un état
+-- intermédiaire). Un seul saut suffirait pour Chisa et Butry mais serait faux
+-- en général, et c'est le genre de raccourci qui revient. `WITH RECURSIVE`,
+-- avec garde contre les cycles.
+--
+-- Règle, déjà écrite dans `METHODE.md` : **un code INSEE n'est pas une identité
+-- stable.** Comparer deux codes de millésimes différents ne compare rien. La
+-- géométrie ne souffre pas de ce défaut — c'est pourquoi le garde-fou 1 passe
+-- par elle — mais le fichier des mouvements n'a que des codes.
+--
+-- Pourquoi PAS `commune_successeur`, qui existe déjà
+-- --------------------------------------------------
+-- `06_insee_mvt.sql` construit une résolution récursive qui inclut `mod 41`, et
+-- la règle du dépôt est de préférer un pont déjà vérifié à une reconstruction.
+-- Elle ne convient pourtant pas ici, et l'écart est de nature, pas de degré.
+--
+-- `commune_successeur` mêle les recodages (41) aux FUSIONS (31, 32, 33, 34) :
+-- elle répond « par quelle commune de 2011 ce code est-il représenté ». Pour une
+-- fusion, la réponse est l'absorbante — **un autre territoire**, souvent dans un
+-- autre canton. Résoudre la mère par cette voie reviendrait à recopier
+-- l'appartenance d'une commune qui n'a jamais porté le territoire de la fille.
+--
+-- Seul `mod 41` garantit ce dont ce fichier a besoin : **le code change, le
+-- territoire non**. La résolution est donc reconstruite, restreinte à cette
+-- seule modalité. Ce n'est pas une duplication : c'est une question différente.
+--
+-- Contrôle gratuit : sur Chisa et Butry, les deux tables doivent s'accorder,
+-- puisque leur chaîne ne contient que des recodages. Si elles divergent, c'est
+-- qu'une fusion s'est glissée dans le chemin, et c'est `creation_recodage` qui
+-- fait foi ici.
 --
 -- Les deux niveaux sont traités : canton et circonscription. Combler l'un sans
 -- l'autre laisserait la couverture des circonscriptions en l'état.
@@ -118,6 +178,59 @@ DELETE FROM atom a USING creation_trace t WHERE a.atom_id = t.atom_id;
 TRUNCATE creation_trace;
 
 -- ---------------------------------------------------------------------------
+-- 0 bis. La résolution des codes INSEE à travers les recodages
+--
+-- `mod 41` est le changement de code sans changement de territoire : Corse
+-- 20 -> 2A/2B en 1976, Seine et Seine-et-Oise démembrées en 1968. Un code cité
+-- par un mouvement de 1947 n'est pas celui que porte GEOFLA 2011.
+--
+-- On construit ici la table `ancien -> moderne`, en suivant la chaîne jusqu'au
+-- bout : `DISTINCT ON` garde le saut le plus profond, donc le code final.
+-- ---------------------------------------------------------------------------
+DROP TABLE IF EXISTS creation_recodage;
+CREATE TABLE creation_recodage AS
+WITH RECURSIVE saut AS (
+    SELECT i.com_av                    AS ancien,
+           i.com_ap                    AS moderne,
+           1                           AS profondeur,
+           ARRAY[i.com_av, i.com_ap]   AS chemin
+    FROM   insee_mvt i
+    WHERE  i.mod = '41'
+      AND  i.com_av IS DISTINCT FROM i.com_ap
+      AND  i.com_av IS NOT NULL AND i.com_ap IS NOT NULL
+    UNION ALL
+    SELECT s.ancien, i.com_ap, s.profondeur + 1, s.chemin || i.com_ap
+    FROM   saut s
+    JOIN   insee_mvt i ON i.mod = '41'
+                      AND i.com_av = s.moderne
+                      AND i.com_av IS DISTINCT FROM i.com_ap
+    -- garde contre les cycles : on ne repasse pas par un code déjà visité
+    WHERE  NOT (i.com_ap = ANY (s.chemin))
+      AND  s.profondeur < 10
+)
+SELECT DISTINCT ON (ancien) ancien, moderne, profondeur
+FROM   saut
+ORDER  BY ancien, profondeur DESC;
+
+CREATE INDEX creation_recodage_idx ON creation_recodage (ancien);
+
+\echo ''
+\echo '=== 0 bis. Recodages de codes INSEE (mod 41), chaînes résolues ==='
+SELECT profondeur, count(*) AS codes
+FROM   creation_recodage GROUP BY profondeur ORDER BY profondeur;
+-- Mesuré le 17 août 2026 : 904 codes, dont 4 à profondeur 2 (Seine-et-Oise).
+
+\echo ''
+\echo '--- désaccords avec commune_successeur (une fusion dans le chemin) ---'
+\echo '    Doit être vide sur les codes qui nous intéressent. Ailleurs, un'
+\echo '    désaccord est normal : commune_successeur suit aussi les fusions.'
+SELECT r.ancien, r.moderne AS par_recodage, cs.insee_2011 AS par_successeur
+FROM   creation_recodage r
+JOIN   commune_successeur cs ON cs.insee_ancien = r.ancien
+WHERE  cs.insee_2011 IS DISTINCT FROM r.moderne
+  AND  r.ancien IN ('20366', '20342', '78692', '78039');
+
+-- ---------------------------------------------------------------------------
 -- 1. Les filles : communes de la trame que nul atome ne porte
 --
 -- Le test est géométrique et non par code : une commune est « sans atome » si
@@ -150,13 +263,23 @@ WITH sans_atome AS (
 SELECT s.insee_com AS insee_fille, s.nom_comm AS nom_fille, s.dep, s.km2, s.geom,
        m.mod       AS modalite,
        m.date_eff,
-       m.com_av    AS insee_mere,
+       m.com_av    AS insee_mere,        -- résolu au millésime de GEOFLA
+       m.com_av_source AS insee_mere_source,  -- tel que l'acte le nomme
        m.libelle_av AS nom_mere
 FROM   sans_atome s
 JOIN   LATERAL (
-           SELECT i.mod, i.date_eff, i.com_av, i.libelle_av
+           -- Garde-fou 6 : les deux bouts sont résolus à travers les recodages
+           -- avant comparaison. `rp` porte le code de la FILLE au millésime
+           -- moderne, `rv` celui de la MÈRE — que la suite cherche dans GEOFLA
+           -- et dans `atom.insee_geofla`, tous deux au millésime 2011.
+           SELECT i.mod, i.date_eff,
+                  coalesce(rv.moderne, i.com_av) AS com_av,
+                  i.com_av                       AS com_av_source,
+                  i.libelle_av
            FROM   insee_mvt i
-           WHERE  i.com_ap = s.insee_com
+           LEFT   JOIN creation_recodage rp ON rp.ancien = i.com_ap
+           LEFT   JOIN creation_recodage rv ON rv.ancien = i.com_av
+           WHERE  coalesce(rp.moderne, i.com_ap) = s.insee_com
              AND  i.mod IN ('20', '21')
              AND  i.com_av IS DISTINCT FROM i.com_ap
              AND  i.com_av IS NOT NULL
@@ -187,6 +310,18 @@ FROM   creation_fille;
 \echo '--- les 20 plus grandes ---'
 SELECT insee_fille, nom_fille, dep, km2, modalite, date_eff, nom_mere
 FROM   creation_fille ORDER BY km2 DESC LIMIT 20;
+
+\echo ''
+\echo '--- filles retrouvées GRÂCE à la résolution des codes (garde-fou 6) ---'
+\echo '    Attendu : Chisa 2B366 et Butry-sur-Oise 95120, et elles seules.'
+SELECT f.insee_fille, f.nom_fille, f.dep, f.km2, f.date_eff,
+       f.insee_mere_source AS mere_dans_l_acte,
+       f.insee_mere        AS mere_dans_geofla,
+       f.nom_mere
+FROM   creation_fille f
+WHERE  f.insee_mere IS DISTINCT FROM f.insee_mere_source
+    OR EXISTS (SELECT 1 FROM creation_recodage r WHERE r.moderne = f.insee_fille)
+ORDER  BY f.km2 DESC;
 
 \echo ''
 \echo '--- créées AVANT la fin de la série (à examiner, pas à combler) ---'
@@ -460,6 +595,26 @@ FROM   (SELECT md5(ST_AsEWKB(geom)) AS cle FROM atom_geom
         WHERE  source = 'creation_arriere') n
 JOIN   (SELECT md5(ST_AsEWKB(geom)) AS cle FROM atom_geom
         WHERE  source <> 'creation_arriere') o ON o.cle = n.cle;
+
+\echo ''
+\echo '--- Chisa et Butry-sur-Oise, les deux filles que le recodage cachait ---'
+\echo '    Chisa doit relever du canton de Prunelli-di-Fiumorbo, celui de'
+\echo '    Ventiseri sa mère ; Butry de celui d''Auvers-sur-Oise. Les deux'
+\echo '    doivent porter une chronologie complète depuis 1870.'
+SELECT a.insee_geofla, n.nom, m.niveau, u.nom AS unite,
+       m.valid_from, m.valid_to
+FROM   atom a
+JOIN   membership m ON m.atom_id = a.atom_id
+JOIN   unit u  ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+LEFT   JOIN noms_geofla n ON n.insee = a.insee_geofla
+WHERE  a.atom_id IN ('N2B366', 'N95120')
+ORDER  BY a.insee_geofla, m.niveau, m.valid_from;
+-- Attendu : deux atomes, une chronologie de canton continue depuis 1870, et
+-- l'alternance liste/uninominal pour la circonscription.
+--
+-- Si ces deux lignes manquent, c'est que `creation_recodage` n'a pas fait son
+-- office : vérifier le rapport « filles retrouvées grâce à la résolution des
+-- codes » en section 1.
 
 \echo ''
 \echo '--- effectifs après correctif ---'
