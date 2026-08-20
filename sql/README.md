@@ -105,6 +105,34 @@ psql -d histgis -f sql/41_retablissement.sql
 python3 cartes/export_web.py
 ```
 
+### Les fichiers qui attendent un chemin en ligne de commande
+
+Cinq fichiers chargent leur source par `\copy` depuis une **variable psql**.
+Sans `-v`, le chemin est vide et psql échoue sur un message opaque qui ne nomme
+ni le fichier ni la variable :
+
+```
+psql:sql/27_circo_2012.sql:76: error: :: Aucun fichier ou dossier de ce nom
+```
+
+| fichier | variable | valeur |
+|---|---|---|
+| `02_load.sql` | `f` | dossier `build/` |
+| `06_insee_mvt.sql` | `mvt`, `butoir` | `sources/v_mvt_commune_2025.csv` |
+| `08_controle_gay.sql` | `mapping` | correspondance de Gay |
+| `27_circo_2012.sql` | `circo` | `circo/circo_2012.csv` |
+| `28_circo_1986.sql` | `circo` | `circo/circo_1986.csv` |
+| `40_outremer.sql` | `circo_om` | `circo/circo_outremer_1986_2012.csv` |
+| `45`, `46` | `hac` | `hac/hac_filiation.csv` — **ont un défaut** |
+
+`\copy` résout les chemins relatifs depuis le répertoire de LANCEMENT, pas
+depuis le fichier `.sql` : passer des chemins absolus. `rejouer_apres_rebuild.sh`
+le fait ; un lancement à la main doit y penser.
+
+**Les trois derniers portent un `\if :{?var}` avec une valeur par défaut**, les
+autres non. C'est une incohérence à corriger : un fichier qui échoue faute d'un
+argument devrait le DIRE, pas produire « :: Aucun fichier ».
+
 ### La règle générale
 
 **Une table de trace protège son fichier, pas ses voisins.** Elle dit ce qu'un

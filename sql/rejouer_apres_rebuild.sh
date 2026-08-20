@@ -59,17 +59,22 @@ $PSQL -f "$ICI/25_pseudo_canton.sql"
 
 # 27 et 28 APRÈS 24 : ils rattachent les circonscriptions aux atomes-fractions
 # que 24 vient de créer. Inverser l'ordre les priverait de ces atomes.
+# `27` et `28` chargent leur table source par `\copy` depuis une variable psql.
+# Sans `-v circo=...`, le chemin est VIDE et psql échoue sur « :: Aucun fichier
+# ou dossier de ce nom » — message opaque qui ne nomme ni le fichier ni la
+# variable. C'est ce qui a arrêté la chaîne le 20 août 2026.
 etape "27 — circonscriptions de 2012"
-$PSQL -f "$ICI/27_circo_2012.sql"
+$PSQL -v circo="$RACINE/circo/circo_2012.csv" -f "$ICI/27_circo_2012.sql"
 
 etape "28 — circonscriptions de 1986"
-$PSQL -f "$ICI/28_circo_1986.sql"
+$PSQL -v circo="$RACINE/circo/circo_1986.csv" -f "$ICI/28_circo_1986.sql"
 
 etape "32 — géométrie des cantons de Marseille"
 $PSQL -f "$ICI/32_marseille_geom.sql"
 
 etape "40 — outre-mer"
-$PSQL -f "$ICI/40_outremer.sql"
+$PSQL -v circo_om="$RACINE/circo/circo_outremer_1986_2012.csv" \
+      -f "$ICI/40_outremer.sql"
 
 # --- correctifs datés, tous additifs et tracés -------------------------------
 # Ils viennent APRÈS les couches qu'ils corrigent, et plusieurs référencent des
