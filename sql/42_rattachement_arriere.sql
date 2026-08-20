@@ -169,12 +169,25 @@ SELECT p.*, a.atom_id, d.d0 AS depuis
                    AND ST_Equals(ag.geom, ST_Multi(g.geom))
   JOIN atom a ON a.atom_id = ag.atom_id AND NOT a.fraction
  WHERE p.creee_le > d.d0
-   -- aucun rattachement de canton au début de la série : c'est le trou
+   -- Le TERRITOIRE ne doit être rattaché par AUCUN atome à cette date.
+   --
+   -- Deuxième jet, et il était encore faux : le test ne portait que sur
+   -- l'atome `a` retenu ci-dessus. Or un même polygone peut être porté par
+   -- PLUSIEURS atomes — un atome historique rattaché depuis 1870 et un atome
+   -- `M` créé par `21`, qui ne l'est pas. Le second suffisait à faire entrer
+   -- la commune : 21 cas au lieu de 2, presque tous déjà couverts.
+   --
+   -- C'est la leçon de `41` prise par l'autre bout : là-bas un polygone porté
+   -- deux fois faisait compter deux fois ; ici il fait croire à un trou. Dans
+   -- les deux cas, **interroger un atome ne renseigne pas sur un territoire**.
    AND NOT EXISTS (
-       SELECT 1 FROM membership m
-        WHERE m.atom_id = a.atom_id
-          AND m.niveau  = 'canton'
-          AND m.periode @> d.d0)
+       SELECT 1
+         FROM atom_geom ag2
+         JOIN membership m ON m.atom_id = ag2.atom_id
+                          AND m.niveau  = 'canton'
+                          AND m.periode @> d.d0
+        WHERE ag2.geom && g.geom
+          AND ST_Contains(ag2.geom, ST_PointOnSurface(g.geom)))
    -- garde-fou 6 : une seule mère possible. Plusieurs atomes sous le code de
    -- la mère, ce sont plusieurs chronologies concurrentes ; on ne tranche pas,
    -- on s'abstient et on le dit en section 1 bis.
