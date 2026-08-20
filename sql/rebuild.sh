@@ -71,16 +71,7 @@ $PSQL -v mvt="$MVT" -f "$ICI/06_insee_mvt.sql"
 $PSQL -f "$ICI/07_reliquat.sql"
 
 echo "=== 5/6 scissions 1870-1940 (11) ==="
-# La filiation HAC est passée explicitement : `\copy` résout ses chemins
-# depuis le répertoire de LANCEMENT, et ce script se lance depuis `sql/`. Sans
-# ce `-v`, `11` ne trouverait pas le CSV, l'absence est tolérée, et toute la
-# reconstruction retomberait EN SILENCE sur le pari d'origine.
-HAC_CSV="$RACINE/hac/hac_filiation.csv"
-if [ ! -f "$HAC_CSV" ]; then
-    echo "  hac_filiation.csv absent — 11 emploiera le pari par prolongement." >&2
-    echo "  Pour l'engendrer : python3 hac/hac_filiation.py" >&2
-fi
-$PSQL -v hac="$HAC_CSV" -f "$ICI/11_scission.sql"
+$PSQL -f "$ICI/11_scission.sql"
 
 echo "=== 6/6 communes nées après la série (15) ==="
 $PSQL -f "$ICI/15_creation_arriere.sql"
