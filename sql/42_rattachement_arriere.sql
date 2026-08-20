@@ -151,18 +151,51 @@ premier AS (
 SELECT p.*, a.atom_id, d.d0 AS depuis
   FROM premier p
   CROSS JOIN debut d
-  -- l'atome qui porte le polygone de la fille, quelle que soit sa provenance
   JOIN geofla_commune g ON g.insee_com = p.insee
+  -- L'atome doit porter EXACTEMENT le polygone de la commune.
+  --
+  -- Premier jet, et il était grossièrement faux : le test était
+  -- `ST_Contains(ag.geom, ST_PointOnSurface(g.geom))`, celui de la couverture.
+  -- Il accroche n'importe quel atome CONTENANT le point — une fraction, un
+  -- polygone englobant, l'atome d'une commune absorbante. 144 cas au lieu de 2,
+  -- et la chronologie de Ventiseri posée sur `21387#1324`.
+  --
+  -- Le test de couverture répond « ce territoire est-il couvert » ; il ne
+  -- répond pas « quel atome EST cette commune ». C'est `ST_Equals` qu'il faut,
+  -- comme au garde-fou 1 de `15` pour les mères — et pour la même raison :
+  -- `atom_geom.geom` est construit par ST_UnaryUnion, donc l'empreinte binaire
+  -- ne convient pas davantage.
   JOIN atom_geom ag ON ag.geom && g.geom
-                   AND ST_Contains(ag.geom, ST_PointOnSurface(g.geom))
-  JOIN atom a ON a.atom_id = ag.atom_id
+                   AND ST_Equals(ag.geom, ST_Multi(g.geom))
+  JOIN atom a ON a.atom_id = ag.atom_id AND NOT a.fraction
  WHERE p.creee_le > d.d0
    -- aucun rattachement de canton au début de la série : c'est le trou
    AND NOT EXISTS (
        SELECT 1 FROM membership m
         WHERE m.atom_id = a.atom_id
           AND m.niveau  = 'canton'
-          AND m.periode @> d.d0);
+          AND m.periode @> d.d0)
+   -- garde-fou 6 : une seule mère possible. Plusieurs atomes sous le code de
+   -- la mère, ce sont plusieurs chronologies concurrentes ; on ne tranche pas,
+   -- on s'abstient et on le dit en section 1 bis.
+   AND (SELECT count(*) FROM atom am
+         WHERE am.insee_geofla = p.insee_mere AND NOT am.fraction) = 1;
+
+-- ---------------------------------------------------------------------------
+-- Alarme, et non règle : la population mesurée le 17 août 2026 est de DEUX
+-- communes — Chisa et Butry-sur-Oise. Un saut à plusieurs dizaines ne veut pas
+-- dire que l'histoire a changé, il veut dire que la sélection a dérivé. Le
+-- fichier s'arrête plutôt que de poser.
+-- ---------------------------------------------------------------------------
+DO $$
+DECLARE n int;
+BEGIN
+    SELECT count(*) INTO n FROM ra_cas;
+    IF n > 20 THEN
+        RAISE EXCEPTION 'ra_cas contient % cas, attendu de l''ordre de 2. '
+                        'La sélection a dérivé : rien n''est posé.', n;
+    END IF;
+END $$;
 
 \echo ''
 \echo '=== 1. Les cas retenus ==='
@@ -174,6 +207,54 @@ SELECT c.insee, coalesce(n.nom, '?') AS commune, c.atom_id,
  ORDER BY c.creee_le, c.insee;
 -- Attendu le 17 août 2026 : Chisa 2B366 et Butry-sur-Oise 95120.
 -- Tende et La Brigue NE doivent PAS y figurer — com_av vide, garde-fou 1.
+
+\echo ''
+\echo '=== 1 bis. Écartés, et pourquoi — rien n''est posé pour eux ==='
+WITH debut AS (SELECT min(valid_from) AS d0 FROM membership),
+mvt AS (
+    SELECT DISTINCT ON (coalesce(rp.moderne, i.com_ap))
+           coalesce(rp.moderne, i.com_ap) AS insee,
+           coalesce(rv.moderne, i.com_av) AS insee_mere,
+           i.com_av                       AS com_av_brut,
+           i.date_eff                     AS creee_le
+      FROM insee_mvt i
+      LEFT JOIN creation_recodage rp ON rp.ancien = i.com_ap
+      LEFT JOIN creation_recodage rv ON rv.ancien = i.com_av
+     WHERE i.mod IN ('20', '21') AND i.com_av IS DISTINCT FROM i.com_ap
+     ORDER BY 1, i.date_eff
+)
+SELECT g.insee_com, g.nom_comm,
+       round((ST_Area(g.geom) / 1e6)::numeric, 1) AS km2,
+       m.creee_le,
+       CASE
+         WHEN m.com_av_brut IS NULL OR btrim(m.com_av_brut) = ''
+              THEN 'création ex nihilo : pas de mère dans la source'
+         WHEN NOT EXISTS (SELECT 1 FROM atom am
+                           WHERE am.insee_geofla = m.insee_mere
+                             AND NOT am.fraction)
+              THEN 'aucun atome sous le code de la mère'
+         WHEN (SELECT count(*) FROM atom am
+                WHERE am.insee_geofla = m.insee_mere AND NOT am.fraction) > 1
+              THEN 'plusieurs mères possibles : on s''abstient'
+         WHEN NOT EXISTS (SELECT 1 FROM atom_geom ag
+                           WHERE ag.geom && g.geom
+                             AND ST_Equals(ag.geom, ST_Multi(g.geom)))
+              THEN 'aucun atome ne porte exactement ce polygone'
+         ELSE 'la mère elle-même n''est pas rattachée au début de la série'
+       END AS motif
+  FROM geofla_commune g
+  LEFT JOIN mvt m ON m.insee = g.insee_com
+  CROSS JOIN debut d
+ WHERE NOT EXISTS (
+       SELECT 1 FROM atom_geom ag
+         JOIN membership mb ON mb.atom_id = ag.atom_id
+                           AND mb.niveau  = 'canton'
+                           AND mb.periode @> d.d0
+        WHERE ag.geom && g.geom
+          AND ST_Contains(ag.geom, ST_PointOnSurface(g.geom)))
+   AND NOT EXISTS (SELECT 1 FROM ra_cas c WHERE c.insee = g.insee_com)
+ ORDER BY km2 DESC LIMIT 20;
+-- Tende et La Brigue doivent apparaître ici avec « création ex nihilo ».
 
 -- ---------------------------------------------------------------------------
 -- 2. Ce que la mère portait avant la création
@@ -203,13 +284,22 @@ DELETE FROM ra_periode p
      WHERE m.atom_id = p.atom_id AND m.niveau = p.niveau
        AND m.periode && daterange(p.valid_from, p.valid_to, '[)'));
 
--- Plusieurs atomes-mères possibles : une seule ligne par (atome, niveau,
--- période), sans quoi la contrainte EXCLUDE ferait échouer la transaction.
+-- Une seule ligne par (atome, niveau, période).
+--
+-- Premier jet : `AND a.unit_id > b.unit_id`. Il ne retire QUE les doublons de
+-- valeurs différentes et laisse passer deux lignes strictement identiques —
+-- que l'EXCLUDE refuse tout autant :
+--
+--   conflicting key value violates exclusion constraint
+--   Key (atom_id, niveau, periode)=(21387#1324, circo, [1870-01-01,1876-01-01))
+--   conflicts with existing key (… même valeur …)
+--
+-- Le `ctid` tranche sans supposer que les lignes diffèrent.
 DELETE FROM ra_periode a
  USING ra_periode b
  WHERE a.atom_id = b.atom_id AND a.niveau = b.niveau
    AND a.valid_from = b.valid_from
-   AND a.unit_id > b.unit_id;
+   AND a.ctid > b.ctid;
 
 \echo ''
 \echo '=== 2. Ce qui va être posé ==='

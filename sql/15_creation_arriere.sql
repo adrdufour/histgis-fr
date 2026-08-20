@@ -274,9 +274,21 @@ CREATE TABLE IF NOT EXISTS creation_trace (
 -- Conséquence à connaître : ce retrait défait aussi la part de `24` qui portait
 -- sur ces atomes. **Rejouer `24_canton_moderne.sql` après ce fichier** pour la
 -- rétablir.
-DELETE FROM atom a USING creation_trace t
- WHERE a.atom_id = t.atom_id
-    OR a.atom_id LIKE t.atom_id || '#%';
+--
+-- Le retrait ne peut PAS s'appuyer sur la trace, et c'est la deuxième leçon du
+-- même jour. Un premier jet engendrait le motif `t.atom_id || '#%'` depuis
+-- `creation_trace` : inopérant, puisque la trace ne contenait justement plus
+-- Chamrousse — le passage fautif l'avait déjà perdue. **Un nettoyage qui
+-- dépend de la trace ne peut pas rattraper ce que la trace a perdu.**
+--
+-- Le retrait porte donc sur l'ESPACE DE NOMS, qui est un fait de construction
+-- et non un état : le préfixe `N` n'appartient qu'à ce fichier — section 4a,
+-- `'N' || f.insee_fille` — et les fractions que `24` en tire héritent du
+-- préfixe, `N38567#3809`. Aucun autre atome ne commence par `N` : les atomes
+-- Cassini sont numériques, les autres portent `S`, `A` ou `M`.
+DELETE FROM atom a
+ WHERE a.atom_id LIKE 'N%'
+    OR EXISTS (SELECT 1 FROM creation_trace t WHERE t.atom_id = a.atom_id);
 TRUNCATE creation_trace;
 
 -- ---------------------------------------------------------------------------
