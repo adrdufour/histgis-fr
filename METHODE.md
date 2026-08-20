@@ -977,6 +977,44 @@ l'information qu'ils portent. `NOT am.fraction` était juste tant qu'il
 s'agissait d'éviter une fraction ambiguë ; il devenait aveugle dès que la
 fraction était la seule à savoir.
 
+## Une source qui NOMME un fait ne vaut pas mieux qu'un pari mesuré si elle ne nomme pas LE fait
+
+Établi le 20 août 2026 par un essai raté, mesuré et abandonné.
+
+`11_scission.sql` prolonge vers 1870 le canton qu'une commune rejoint à sa
+création — un **pari**, fait sans savoir de qui elle est issue. HAC nomme sa
+mère, pour 444 créations sur 447. Bâtir sur ce fait plutôt que sur un pari
+paraissait évidemment meilleur : une source contre une supposition.
+
+**C'était plus mauvais**, et `controle_gay.sh` l'a dit sans ambiguïté :
+
+| | paris perdus | taux | atomes mal placés (1870) |
+|---|---|---|---|
+| pari par prolongement | 4 / 414 | 99,0 % | **151** |
+| filiation nommée par HAC | 11 / 425 | 97,4 % | **155** |
+
+Les sept cas où les deux voies divergeaient sont passés dans le canton de la
+mère nommée, et Gay les compte **tous les sept** comme mal placés.
+
+La cause était écrite comme réserve dans le fichier de contrôle, et je n'y avais
+pas assez cru : **HAC ne nomme qu'une mère quand il y en a plusieurs.**
+Pornichet est créée en 1900 à partir d'Escoublac *et* de Saint-Nazaire ; HAC ne
+cite qu'Escoublac. Le canton d'attribution à la création dit où le territoire se
+trouvait administrativement ; la mère citée dit d'où vient la paroisse. Deux
+faits différents, dont un seul répond à la question posée.
+
+**La règle** : avant de remplacer une heuristique par une source, vérifier que
+la source répond à la MÊME question. Une donnée peut être exacte, sourcée,
+vérifiable — et hors sujet. Le prestige d'un fait nommé ne dispense pas de la
+mesure.
+
+**Corollaire de méthode, et c'est lui qui a sauvé la mise** : le critère
+d'acceptation avait été écrit AVANT l'essai — « si le nombre d'atomes mal placés
+baisse, la voie est bonne ; s'il monte, il faudra comprendre avant de garder le
+changement ». Sans ce seuil posé d'avance, la tentation aurait été de garder un
+résultat « fondé sur une source » en expliquant l'écart. Un critère écrit après
+coup se plie toujours au résultat.
+
 ## Avant de déclarer une source fautive, chercher l'événement qu'elle enregistre
 
 Écrite le 20 août 2026, **quelques heures après la règle ci-dessus, et en la

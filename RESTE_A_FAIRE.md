@@ -331,7 +331,7 @@ Question ouverte, et aucune recette ne la voit : une commune omise en **fin** de
 série ne laisse pas de trou intérieur, sa période s'arrête simplement plus tôt.
 Le contrôle par trou intérieur ne la détecterait pas.
 
-## Faire de HAC une source de filiation pour `11_scission.sql`
+## ~~Faire de HAC une source de filiation pour `11_scission.sql`~~ — ESSAYÉ, ABANDONNÉ le 20 août 2026
 
 Ouvert le 20 août 2026, après le contrôle de `45_controle_hac.sql`.
 
@@ -363,7 +363,21 @@ voie. C'est la situation de `15`, qui bâtit sur `insee_mvt` et se fait contrôl
 par Gay. Ce qui serait illicite, c'est de **corriger** la base d'après HAC après
 l'avoir utilisée comme contrôle — d'où le fait que `45` ne modifie rien.
 
-**Coût** : `11` est dans la chaîne, donc `rebuild.sh` complet.
+**Résultat de l'essai, mesuré par `controle_gay.sh`** : 4 paris perdus sur 414
+et 151 atomes mal placés avec le pari ; **11 sur 425 et 155 mal placés avec la
+filiation HAC**. Gay compte les sept cas divergents comme mal placés, tous les
+sept. Le changement a été **annulé** (`git` 6f8e215), et l'essai est consigné
+dans l'en-tête de `11`.
+
+Cause : **HAC ne nomme qu'une mère quand il y en a plusieurs.** Pornichet est
+créée en 1900 à partir d'Escoublac ET de Saint-Nazaire ; HAC ne cite
+qu'Escoublac. La filiation est vraie et ne répond pas à la question, qui porte
+sur le canton d'attribution.
+
+Règle tirée, dans `METHODE.md` : *une source qui nomme un fait ne vaut pas mieux
+qu'un pari mesuré si elle ne nomme pas LE fait.* Et le critère d'acceptation
+avait été écrit avant l'essai — c'est ce qui a permis de trancher au lieu
+d'expliquer l'écart.
 
 **À mesurer d'abord** : le contrôle Gay après changement. Si le nombre d'atomes
 mal placés baisse, la voie est bonne ; s'il monte, HAC nomme une mère qui n'est
