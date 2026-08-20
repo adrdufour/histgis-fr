@@ -89,6 +89,16 @@ $PSQL -f "$ICI/42_rattachement_arriere.sql"
 etape "44 — absorptions anciennes"
 $PSQL -f "$ICI/44_absorption_ancienne.sql"
 
+# 46 a besoin de hac/hac_filiation.csv, et `\copy` résout depuis le répertoire
+# de lancement : le chemin est passé explicitement, comme pour 11.
+if [ -f "$RACINE/hac/hac_filiation.csv" ]; then
+    etape "46 — communes nées pendant la série, filiation HAC"
+    $PSQL -v hac="$RACINE/hac/hac_filiation.csv" -f "$ICI/46_creation_serie.sql"
+else
+    echo "  hac_filiation.csv absent — 46 sauté." >&2
+    echo "  Pour l'engendrer : python3 hac/hac_filiation.py" >&2
+fi
+
 cat <<'FIN'
 
 ──────────────────────────────────────────────────────────────────────
