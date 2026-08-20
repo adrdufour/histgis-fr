@@ -307,3 +307,36 @@ atomes-fractions sont taillés sur les cantons.
 Même nature que les 132 pseudo-circonscriptions sans nom : il faudrait des
 atomes-fractions taillés sur les circonscriptions, ce qui suppose une trame
 géométrique du découpage législatif qu'on n'a pas.
+
+## Reconduire une commune absente d'un millésime dans `trfgis_extract.py`
+
+Trouvé le 20 août 2026 par Cherré (Sarthe, 72080), signalée absente de la carte
+entre 1886 et 1888.
+
+La nomenclature TRF-GIS donne un fichier par année. La ligne de Cherré figure
+en 1885, **manque en 1886 et 1887**, et revient en 1888 **à l'identique** —
+même canton de La Ferté-Bernard, même arrondissement, même département. C'est
+une omission de la source, pas un événement administratif : aucune commune n'a
+cessé d'exister deux ans pour renaître inchangée.
+
+L'ampleur est minuscule et parfaitement mesurée. Trous intérieurs bornés par la
+même unité, toutes couches confondues :
+
+| durée | canton | circo | cause |
+|---|---|---|---|
+| 2 ans | 1 | 1 | Cherré — l'omission |
+| 48 ans | 1 689 | 1 683 | Alsace-Moselle, 1871-1919, à laisser ouverte |
+
+**Rien entre les deux.** La distribution est bimodale, ce qui rend un seuil
+défendable : `44_lacune_nomenclature.sql` referme les trous de moins de cinq ans
+bornés par la même unité.
+
+**Le correctif est en aval.** Le vrai remède est dans `trfgis_extract.py` :
+reconduire une commune absente d'un millésime lorsqu'elle reparaît inchangée au
+suivant, en traçant la reconduction. Cela impose un `rebuild.sh` complet, d'où
+le fichier SQL en attendant.
+
+À vérifier au passage : la même omission touche-t-elle d'autres millésimes sans
+laisser de trou intérieur — par exemple une commune absente du dernier fichier
+d'une série, dont la période s'arrête simplement plus tôt ? Un trou intérieur se
+voit ; une troncature en fin de série, non.
