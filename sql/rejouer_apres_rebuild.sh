@@ -104,15 +104,21 @@ cat <<'FIN'
 ──────────────────────────────────────────────────────────────────────
 Chaîne rejouée.
 
-La mesure qui fait foi est EXTÉRIEURE, et c'est elle qui dit si le
-passage à la filiation HAC vaut mieux que le pari par prolongement :
+La mesure qui fait foi est EXTÉRIEURE :
 
     cd sql && ./controle_gay.sh
 
-Attendu si la voie est bonne : le nombre d'atomes mal placés BAISSE
-(151 avant le changement), et l'IoU ne recule pas. S'il monte, HAC
-nomme une mère dont le territoire ne vient pas — il faudra comprendre
-avant de garder le changement, pas l'inverse.
+Repères de la chaîne sans `46`, mesurés le 20 août 2026 :
+
+    paris perdus        4 / 414   (99,03 %)
+    atomes mal placés   149  (1870)   150  (1940)
+    IoU moyen           0,99302      0,99346
+    non couvert 1870    205 km²  sur 39 communes
+
+`46` doit faire BAISSER le non-couvert sans faire monter les atomes
+mal placés. S'ils montent, HAC nomme une mère dont le territoire ne
+vient pas — c'est ce qui a fait rejeter l'essai sur `11` — et il faut
+défaire plutôt qu'expliquer. La commande est en fin de `46`.
 
 Puis, pour la carte :
 
