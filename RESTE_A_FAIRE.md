@@ -308,35 +308,25 @@ Même nature que les 132 pseudo-circonscriptions sans nom : il faudrait des
 atomes-fractions taillés sur les circonscriptions, ce qui suppose une trame
 géométrique du découpage législatif qu'on n'a pas.
 
-## Reconduire une commune absente d'un millésime dans `trfgis_extract.py`
+## Chercher les autres absorptions anciennes suivies d'un rétablissement
 
-Trouvé le 20 août 2026 par Cherré (Sarthe, 72080), signalée absente de la carte
-entre 1886 et 1888.
+Le signe est un **trou intérieur** dans la chronologie d'un atome. Mesuré le
+20 août 2026 : 1 690 trous dans la couche canton, 1 684 dans la couche circo —
+dont **1 689 et 1 683 de 48 ans**, qui sont l'Alsace-Moselle de 1871 à 1919 et
+doivent rester ouverts. Le seul autre est **Cherré**, absorbée par
+La Ferté-Bernard en 1886 et rétablie en 1888, traitée par
+`sql/44_absorption_ancienne.sql`.
 
-La nomenclature TRF-GIS donne un fichier par année. La ligne de Cherré figure
-en 1885, **manque en 1886 et 1887**, et revient en 1888 **à l'identique** —
-même canton de La Ferté-Bernard, même arrondissement, même département. C'est
-une omission de la source, pas un événement administratif : aucune commune n'a
-cessé d'exister deux ans pour renaître inchangée.
+La requête de détection est en section 4 de ce fichier. **Ne jamais refermer un
+tel trou d'office** : il faut trouver l'acte, nommer l'absorbante et ajouter une
+ligne sourcée à `absorption_ancienne`. Un trou peut être borné par la même unité
+alors que l'absorbante relève d'un autre canton — le résultat serait juste ici et
+faux ailleurs.
 
-L'ampleur est minuscule et parfaitement mesurée. Trous intérieurs bornés par la
-même unité, toutes couches confondues :
+Piste pour aller plus loin : **HAC** documente les fusions antérieures à 1943 et
+est déjà une source du projet. Elle permettrait de peupler `absorption_ancienne`
+sans passer par des articles au cas par cas.
 
-| durée | canton | circo | cause |
-|---|---|---|---|
-| 2 ans | 1 | 1 | Cherré — l'omission |
-| 48 ans | 1 689 | 1 683 | Alsace-Moselle, 1871-1919, à laisser ouverte |
-
-**Rien entre les deux.** La distribution est bimodale, ce qui rend un seuil
-défendable : `44_lacune_nomenclature.sql` referme les trous de moins de cinq ans
-bornés par la même unité.
-
-**Le correctif est en aval.** Le vrai remède est dans `trfgis_extract.py` :
-reconduire une commune absente d'un millésime lorsqu'elle reparaît inchangée au
-suivant, en traçant la reconduction. Cela impose un `rebuild.sh` complet, d'où
-le fichier SQL en attendant.
-
-À vérifier au passage : la même omission touche-t-elle d'autres millésimes sans
-laisser de trou intérieur — par exemple une commune absente du dernier fichier
-d'une série, dont la période s'arrête simplement plus tôt ? Un trou intérieur se
-voit ; une troncature en fin de série, non.
+Question ouverte, et aucune recette ne la voit : une commune omise en **fin** de
+série ne laisse pas de trou intérieur, sa période s'arrête simplement plus tôt.
+Le contrôle par trou intérieur ne la détecterait pas.
