@@ -1933,6 +1933,54 @@ comme recopier Gay la ferait perdre au contrôle géométrique.
 construire avec HAC au lieu de s'y comparer — ce qui est licite tant que le
 contrôle reste ailleurs. Cela impose un `rebuild.sh` complet.
 
+### Le canton départage, il ne conditionne pas — 20 août 2026
+
+`sql/27_circo_2012.sql` et `28_circo_1986.sql`. Repéré par Adrien sur la
+carte : **Bihorel absente des couches de circonscriptions modernes.**
+
+La base était juste — `11` lui donne le canton de Darnétal depuis 1870, `40`
+sa chaîne de circonscriptions anciennes — et l'export aussi. Le défaut était
+dans le raccord de `27` et `28` :
+
+```sql
+JOIN atom a       ON a.insee_geofla = s.insee
+JOIN membership m ON m.atom_id = a.atom_id AND m.niveau = 'canton'
+                 AND m.periode @> '2012-06-01'
+```
+
+**La jointure était INTERNE** : l'atome devait avoir un canton au 1ᵉʳ juin
+2012 pour être retenu. Or Bihorel a fusionné dans Bois-Guillaume le 1ᵉʳ janvier
+2012 ; sa ligne cantonale 1999-2012 s'arrête là, et celle qui couvre 2012 est
+posée par **`41`, qui s'exécute après**.
+
+**Une dépendance croisée**, et c'est ce qui la rendait invisible : `41` a besoin
+des unités que `27` et `28` créent — d'où sa place tardive — mais `27` et `28`
+avaient besoin d'une ligne que `41` est seul à poser. Le perdant sortait sans
+un mot, compté parmi les « lignes source sans atome », un chiffre que les
+fichiers affichaient et que personne ne lisait.
+
+**Le correctif.** Le canton n'a jamais servi qu'à départager plusieurs atomes
+portant le même code INSEE ; une commune qui n'en a qu'un n'a pas à l'être.
+`LEFT JOIN` et `DESC NULLS LAST` : la préférence demeure, la condition
+disparaît.
+
+| | avant | après |
+|---|---|---|
+| `27` lignes sans atome | 71 | **0** |
+| `28` lignes sans atome | 60 | **0** |
+| rattachements circo 1986-2010 | 37 115 | **37 132** |
+| rattachements circo 2010-2013 | 37 238 | **37 257** |
+
+Chevauchements nuls, bascule du 23 février 2010 propre, Paris toujours absent
+de 1986 comme attendu. Et `41` ne pose plus qu'une ligne pour Bihorel au lieu
+de deux : sa circonscription n'a plus besoin d'être rattrapée après coup.
+
+**Effet de bord à connaître** : les atomes d'arrondissement de Marseille et
+Lyon apparaissent maintenant dans la liste des « atomes relevant de deux
+circonscriptions » — 31 au lieu de 21 en 2012, 8 au lieu de 0 en 1986. Ils y
+étaient absents parce qu'ils étaient éliminés en amont, pas parce qu'ils
+étaient résolus. La limite était masquée ; elle est maintenant déclarée.
+
 ### Les fractions retrouvent leur circonscription — 20 août 2026
 
 `sql/43_circo_fraction.sql`. Repéré par Adrien sur la carte : **des communes
