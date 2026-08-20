@@ -912,3 +912,50 @@ polygone qui est le même.
 C'est la même leçon que les planches qui avaient révélé les polygones mal
 placés, et que la limite 6.2 quinquies : **la cohérence interne ne détecte que
 ce qui se contredit.**
+
+## Interroger un atome ne renseigne pas sur un territoire
+
+Formulée le 17 août 2026, après que la même confusion eut produit deux défauts
+opposés dans deux fichiers écrits le même jour.
+
+Un polygone peut être porté par **plusieurs atomes**. C'est une conséquence
+directe de l'architecture — atomes-fractions, route `successeur`, atomes
+modernes de `21` — et non un accident. Il en découle deux fautes symétriques :
+
+- `41` posait des rattachements sur un atome dont le polygone était déjà porté
+  par un autre, **rattaché à la même unité** : le canton comptait le territoire
+  deux fois, et trois fois pour Val-de-Meuse. Aucune recette d'unités ne le
+  voyait, puisqu'il n'y avait pas de contradiction ;
+- `42` cherchait les territoires non rattachés en interrogeant **un seul** des
+  atomes portant le polygone : un atome moderne non rattaché en 1870 suffisait à
+  faire croire à un trou là où un atome historique couvrait déjà. 21 communes
+  candidates au lieu de 2.
+
+**La règle** : toute question portant sur un TERRITOIRE — est-il couvert ? est-il
+rattaché ? à quelle unité ? — doit être posée sur l'ensemble des atomes qui le
+portent, jamais sur un atome pris isolément. Le test de couverture de
+`10_couverture.sql` — un point intérieur contenu dans un polygone d'atome — est
+le bon quantificateur ; l'identité d'un atome ne l'est pas.
+
+**Corollaire, appris en le manquant** : `ST_Contains` et `ST_Equals` ne
+répondent pas à la même question. `ST_Contains(atome, point)` dit « ce
+territoire est-il couvert » ; `ST_Equals(atome, commune)` dit « quel atome EST
+cette commune ». Employer le premier pour le second accroche toute fraction et
+tout polygone englobant — 144 cas au lieu de 2 dans `42`.
+
+## L'ordre de grandeur attendu s'écrit AVANT la requête
+
+`42` a posé trois fois de suite quelque chose de faux. Aucune de ces erreurs
+n'était syntaxique, aucune n'était détectable en relisant le code : la requête
+était bien formée et la base ne pouvait pas la contredire. **Ce qui les a
+révélées est à chaque fois la taille du résultat** — 144, puis 21, quand la
+population mesurée était de 2.
+
+C'est la règle déjà tirée des 0 IRIS de Marseille, et elle n'avait pas été
+appliquée : *un résultat se confronte à l'ordre de grandeur attendu, pas à sa
+plausibilité.* La formulation manquait sa moitié utile — **l'attendu doit être
+écrit avant, sans quoi il s'ajuste au constaté.**
+
+D'où le garde-fou de `42`, qui n'est pas une règle mais une alarme : le fichier
+lève une exception au-delà de vingt cas quand deux sont attendus. Un saut d'un
+ordre de grandeur ne signifie jamais que l'histoire a changé.

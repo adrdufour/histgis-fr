@@ -212,3 +212,49 @@ cycles.
 Ventiseri / Auvers-sur-Oise ; le total des filles passe de 58 à 60 ; le non
 couvert de 1870 baisse d'environ 32 km². Et le garde-fou 5 de `15` (territoire
 déjà couvert, test par point intérieur) doit continuer d'écarter Marseille.
+
+## Trois dettes découvertes le 17 août 2026 en cassant la base
+
+Le rejeu de `15_creation_arriere.sql` a mis `24_canton_moderne.sql` en échec au
+milieu de son travail : **37 261 rattachements cantonaux supprimés et non
+reconstruits**. La base a été remise d'aplomb le jour même, mais trois défauts
+de la chaîne sont apparus et restent à corriger.
+
+### 1. `38_decret_1982_ain.sql` n'a aucune table de trace
+
+Tous les fichiers qui posent des rattachements en ont une — `scission_trace`,
+`creation_trace`, `canton_moderne_trace`, `retablissement_trace`… Lui insère
+sans pouvoir défaire. C'est sa ligne unique (`31125` dans le canton `0138`, du
+26 janvier 1982 au 1ᵉʳ janvier 1999) qui a bloqué la reconstruction de `24`, et
+il a fallu la mettre de côté à la main dans une table `reprise_24`.
+
+À faire : lui donner une trace sur le modèle des autres, et le rendre rejouable.
+
+### 2. L'ordre de la chaîne n'est écrit nulle part
+
+**`24` ne peut pas être rejoué tant qu'un autre fichier occupe ses unités** —
+la clé étrangère `membership_unit_fk` le refuse. Rien dans `sql/README.md` ne le
+dit. La séquence de rattrapage était :
+
+1. mettre de côté les rattachements portant sur les unités de `24` ;
+2. jouer `24` ;
+3. les remettre ;
+4. rejouer `41` puis `42`, qui s'appuient sur la couche reconstruite.
+
+Sans l'étape 4, `41` ne pose qu'une ligne au lieu de 17 — et rien ne signale que
+le résultat est faux, puisqu'il est cohérent. **Un résultat obtenu sur une base
+à demi reconstruite est indiscernable d'un résultat juste.**
+
+À faire : une section « qui dépend de qui » dans `sql/README.md`.
+
+### 3. Deux fichiers portent le numéro 40
+
+`40_outremer.sql` et `40_scission_circo.sql`. Sans conséquence tant qu'on les
+nomme en entier, mais la numérotation sert justement à donner l'ordre.
+
+### Résidu à expliquer
+
+La recette de `24` compte **2 rattachements dans le trou 1941-1998**, où elle en
+attend zéro. L'un est la ligne de `38` — le décret de 1982 est une donnée réelle
+dans cette période, donc une exception légitime à documenter plutôt qu'un
+défaut. L'autre n'est pas identifié.

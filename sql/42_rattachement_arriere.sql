@@ -240,8 +240,16 @@ SELECT g.insee_com, g.nom_comm,
        round((ST_Area(g.geom) / 1e6)::numeric, 1) AS km2,
        m.creee_le,
        CASE
+         -- Deux absences très différentes, que le premier jet confondait :
+         -- une commune ABSENTE du fichier des mouvements (créée avant 1943,
+         -- hors de portée — les mosellanes, Philippsbourg, Mittlach) et une
+         -- commune PRÉSENTE mais sans mère (Tende et La Brigue, venues
+         -- d'Italie). La première est une lacune de la source, la seconde un
+         -- fait qu'elle énonce.
+         WHEN m.insee IS NULL
+              THEN 'absente du fichier INSEE : créée avant 1943'
          WHEN m.com_av_brut IS NULL OR btrim(m.com_av_brut) = ''
-              THEN 'création ex nihilo : pas de mère dans la source'
+              THEN 'création ex nihilo : la source dit qu''il n''y a pas de mère'
          WHEN NOT EXISTS (SELECT 1 FROM atom am
                            WHERE am.insee_geofla = m.insee_mere
                              AND NOT am.fraction)
@@ -267,7 +275,9 @@ SELECT g.insee_com, g.nom_comm,
           AND ST_Contains(ag.geom, ST_PointOnSurface(g.geom)))
    AND NOT EXISTS (SELECT 1 FROM ra_cas c WHERE c.insee = g.insee_com)
  ORDER BY km2 DESC LIMIT 20;
--- Tende et La Brigue doivent apparaître ici avec « création ex nihilo ».
+-- Mesuré le 17 août 2026 : Tende et La Brigue en « création ex nihilo », et
+-- une vingtaine de mosellanes en « absente du fichier INSEE ». Ces dernières
+-- sont la piste HAC de `METHODE.md` § 6.2 quater, pas un défaut de ce fichier.
 
 -- ---------------------------------------------------------------------------
 -- 2. Ce que la mère portait avant la création

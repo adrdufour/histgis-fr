@@ -1862,6 +1862,68 @@ Ces sept communes ne laissent aucun trou de couverture : leur territoire est
 couvert par l'atome de la mère. Elles rejoignent simplement le poids mort décrit
 à la limite n° 7 de `METHODE.md`.
 
+### Chisa retrouve son passé — 17 août 2026
+
+`sql/42_rattachement_arriere.sql`, joué et mesuré. Trouvé par une remarque
+d'Adrien sur la carte : **Chisa est absente de la Corse 1870-1940.**
+
+Elle n'était pas absente de la base : elle y était **depuis 1986**, portée par
+l'atome `M2B366` créé par `21_atomes_modernes.sql`. Ce qui manquait n'était pas
+le polygone mais le rattachement d'avant sa naissance. Chisa a été créée le
+**12 avril 1947** par détachement de **Ventiseri** ; auparavant son territoire
+relevait du canton de Prunelli-di-Fiumorbo. Butry-sur-Oise est le cas jumeau,
+créée le 1ᵉʳ août 1948 depuis Auvers-sur-Oise.
+
+**Pourquoi `15` ne pouvait pas les traiter, et pourquoi c'est instructif.**
+`15_creation_arriere.sql` fait exactement ce travail, mais seulement pour les
+communes qu'**aucun atome ne porte** : il en crée un, puis lui recopie la
+chronologie de la mère. Chisa a un atome depuis `21`. Et elle en a un
+**précisément parce que `15` avait échoué sur elle** : son mouvement de création
+nomme `20366`, code d'avant le recodage de la Corse en 1976, que `15` comparait
+au code GEOFLA moderne `2B366`. N'ayant pas reçu d'atome `N`, elle a reçu un
+atome `M` de `21`, qui l'a crue neuve. **Les deux fichiers se sont partagé le
+territoire sans se voir, et personne n'a rattaché le passé.**
+
+Aucune recette de cohérence ne pouvait le voir : la commune existait, sa
+géométrie était valide, son canton moderne correct, la couverture bouclait. Il a
+fallu qu'Adrien regarde une carte de la Corse.
+
+**Résultat** : 2 cas, **17 lignes** — 2 de canton, 15 de circo. Chisa porte
+désormais la chaîne complète de Ventiseri, **alternances de scrutin comprises** :
+`L2001@1870` Corse, `U2004@1876` Corte, retour à la liste en 1885, uninominal en
+1889, liste en 1919, `U2003@1928`. C'est la même signature qu'Arrien recevant
+celle de Bethmale, et c'est la validation qui compte.
+
+Écartés et déclarés tels : **Tende et La Brigue**, dont le mouvement INSEE a un
+`com_av` vide — le territoire vient d'Italie, la source dit qu'il n'y a pas de
+mère. 271,1 km² qui ne sont pas un défaut mais un fait. Et une vingtaine de
+mosellanes **absentes du fichier des mouvements**, créées avant 1943 : c'est la
+piste HAC du § 6.2 quater, pas ce fichier.
+
+#### Trois erreurs de sélection, et la règle qu'elles donnent
+
+`42` a posé trois fois de suite quelque chose de faux avant d'être juste. Aucune
+de ces erreurs n'était syntaxique.
+
+1. **144 cas au lieu de 2.** Le test d'appartenance était
+   `ST_Contains(atome, point intérieur de la commune)` — celui de la
+   *couverture*. Il accroche n'importe quel atome contenant le point : une
+   fraction, un polygone englobant. La chronologie de Ventiseri s'est retrouvée
+   posée sur `21387#1324`. Il fallait `ST_Equals`.
+2. **21 cas au lieu de 2.** Le test du trou ne portait que sur l'atome retenu.
+   Or un même polygone peut être porté par plusieurs atomes — un historique
+   rattaché depuis 1870 et un `M` moderne qui ne l'est pas ; le second suffisait
+   à faire entrer une commune déjà couverte.
+3. **Violation de l'`EXCLUDE`.** Le dédoublonnage était
+   `AND a.unit_id > b.unit_id` : il ne retire que les doublons de valeurs
+   *différentes* et laisse passer deux lignes strictement identiques. Le `ctid`
+   tranche sans rien supposer.
+
+Les trois fois, la requête était bien formée et absurde, et **seul l'ordre de
+grandeur du résultat l'a révélée**. D'où le garde-fou ajouté : le fichier lève
+une exception au-delà de vingt cas, parce qu'un saut à plusieurs dizaines ne
+signifie pas que l'histoire a changé mais que la sélection a dérivé.
+
 #### Ce qui reste ouvert
 
 Les 45 autres communes de GEOFLA 2011 absentes du COG 1999 ne sont pas des
