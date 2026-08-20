@@ -2,7 +2,7 @@
 -- 45_controle_hac.sql — confronter les paris de `11` à la filiation de HAC
 --
 --   python3 hac/hac_filiation.py            # produit le CSV
---   psql -d histgis -f sql/45_controle_hac.sql
+--   psql -d histgis -f sql/45_controle_hac.sql   # depuis la RACINE du dépôt
 --
 -- **CE FICHIER NE MODIFIE RIEN.** Aucun INSERT, aucun DELETE, aucun UPDATE sur
 -- `membership`. C'est un contrôle, pas un correctif — et il doit le rester :
@@ -47,7 +47,21 @@
 \set ON_ERROR_STOP on
 SET search_path TO histgis, public;
 
-\set hac '../hac/hac_filiation.csv'
+-- Chemin du CSV produit par `hac/hac_filiation.py`.
+--
+-- `\copy` résout les chemins relatifs depuis le répertoire d'où `psql` est
+-- lancé, PAS depuis le fichier .sql — d'où le défaut relatif à la racine du
+-- dépôt, qui est là d'où ce fichier se joue :
+--
+--     psql -d histgis -f sql/45_controle_hac.sql
+--
+-- Depuis ailleurs, passer le chemin :
+--
+--     psql -d histgis -v hac=/chemin/hac_filiation.csv -f sql/45_controle_hac.sql
+\if :{?hac}
+\else
+  \set hac 'hac/hac_filiation.csv'
+\endif
 
 DO $$
 BEGIN
