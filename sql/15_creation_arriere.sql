@@ -123,6 +123,35 @@
 -- qu'une fusion s'est glissée dans le chemin, et c'est `creation_recodage` qui
 -- fait foi ici.
 --
+-- Nécessaire mais PAS suffisant : `42` finit le travail
+-- -----------------------------------------------------
+-- La résolution des codes est juste, et elle ne suffit pas. Mesuré au rejeu :
+-- Chisa et Butry **n'arrivent jamais jusqu'au raccord**, parce que la section 1
+-- les a déjà écartées.
+--
+-- Leur polygone est en effet porté depuis `21_atomes_modernes.sql` par les
+-- atomes `M2B366` et `M95120`, rattachés de 1986 à 2013. Le test « commune sans
+-- atome » les voit couvertes et passe. Et l'ironie est complète : **ces atomes
+-- modernes existent précisément parce que ce fichier avait échoué sur elles.**
+-- Les 57 autres filles avaient déjà leur atome `N` quand `21` est passé, donc
+-- `21` les a ignorées ; Chisa et Butry n'en avaient pas, `21` a comblé. Les deux
+-- fichiers se sont partagé le territoire sans se voir, et personne n'a rattaché
+-- le passé.
+--
+-- Le test de ce fichier demande *« ce territoire est-il porté par un atome ? »*
+-- quand la question est *« ce territoire est-il RATTACHÉ à la date voulue ? »*.
+-- C'est la confusion de la limite n° 7 de `METHODE.md` : un atome sans
+-- rattachement couvre géométriquement et ne couvre rien dans le temps.
+--
+-- Corriger le test ici obligerait à poser des rattachements sur des atomes que
+-- ce fichier n'a pas créés — ce ne serait plus le même fichier, et cela
+-- romprait le contrat « je crée mes atomes, je les retire ». Le cas est donc
+-- traité par `42_rattachement_arriere.sql`, additif et tracé, sur le modèle de
+-- `40` et `41`.
+--
+-- La résolution des codes reste ici : elle est juste, et sans elle `42` n'aurait
+-- pas de quoi identifier la mère.
+--
 -- Les deux niveaux sont traités : canton et circonscription. Combler l'un sans
 -- l'autre laisserait la couverture des circonscriptions en l'état.
 --
@@ -232,7 +261,22 @@ CREATE TABLE IF NOT EXISTS creation_trace (
     pose_le     timestamptz NOT NULL DEFAULT now()
 );
 
-DELETE FROM atom a USING creation_trace t WHERE a.atom_id = t.atom_id;
+-- Le retrait doit emporter les atomes-FRACTIONS taillés dans ces atomes par
+-- `24_canton_moderne.sql` — `N38567#3809`, `N38567#3844`… Sans cela le
+-- nettoyage est incomplet, et le fichier n'est rejouable qu'UNE fois :
+--
+-- Constaté sur Chamrousse le 17 août 2026. Au deuxième passage, l'atome
+-- `N38567` disparaissait, ses deux fractions survivaient, et le test « commune
+-- sans atome » de la section 1 voyait Chamrousse couverte — par les débris du
+-- passage précédent. La commune sortait donc de la liste des filles et perdait
+-- sa couverture de 1870-1940 : 58 filles au premier passage, 57 au second.
+--
+-- Conséquence à connaître : ce retrait défait aussi la part de `24` qui portait
+-- sur ces atomes. **Rejouer `24_canton_moderne.sql` après ce fichier** pour la
+-- rétablir.
+DELETE FROM atom a USING creation_trace t
+ WHERE a.atom_id = t.atom_id
+    OR a.atom_id LIKE t.atom_id || '#%';
 TRUNCATE creation_trace;
 
 -- ---------------------------------------------------------------------------
