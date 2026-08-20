@@ -123,6 +123,50 @@
 -- clé que `14_cle_partage.sql`, et la seule qui ne suppose rien. Grouper par un
 -- code aurait manqué le cas, puisque les codes diffèrent.
 --
+-- Deux voies ajoutées le 20 août 2026, après Ousse et Sendets
+-- -----------------------------------------------------------
+-- Adrien : « dans les Basses-Pyrénées, Ousse et Sendets disparaissent de 2000
+-- à 2002 ». Les deux figuraient bien dans les cas retenus, et rien n'était
+-- posé pour elles. Deux causes distinctes, mesurées avant d'écrire.
+--
+-- **A. La mère est coupée entre plusieurs cantons.** Idron, qui absorbait les
+-- deux, est rangée par le COG de 1999 à 2001 dans DEUX cantons — Morlaàs et
+-- Pau-Ouest — si bien que `24` lui a créé deux atomes-fractions. Toute son
+-- attribution vit donc sur ces fractions, et la clause `NOT am.fraction`
+-- ci-dessous ne voyait rien. **La réponse était là où le garde-fou refusait de
+-- regarder.**
+--
+-- Or cette coupure n'est pas un obstacle : c'est l'INFORMATION. Le COG coupait
+-- Idron parce qu'elle contenait deux anciennes communes de cantons différents.
+-- Et le rapprochement est dicté par la source des deux côtés :
+--
+--   « La fille hérite de la fraction de sa mère dont l'unité est celle que la
+--     fille porte elle-même une fois rétablie. »
+--
+-- Ousse porte Pau-Ouest en 2002, une fraction d'Idron porte Pau-Ouest en
+-- 1999-2001 ; Sendets porte Morlaàs, l'autre fraction porte Morlaàs. Mesuré sur
+-- les six cas concernés — Carolles, Ousse, Sendets, Mauvezin-sur-Gupie,
+-- Verquigneul, Rosoy — **la correspondance est unique six fois sur six**, y
+-- compris quand la mère est coupée en TROIS (Béthune, Sens). La règle ne
+-- tranche donc aucun conflit : elle constate un accord, comme celle des voisins
+-- de canton dans `40`. Sans correspondance unique, on s'abstient.
+--
+-- **B. L'acte ne tombe pas un 1er janvier.** La couche moderne est bâtie sur
+-- les millésimes annuels du COG, mais `insee_mvt` date le rétablissement au
+-- jour près. Entre les deux il reste un vide : Ousse est rétablie le 11 mars
+-- 2001 et son canton ne commence qu'au 1er janvier 2002.
+--
+--   « Le premier rattachement moderne d'une commune rétablie commence à la
+--     date de l'acte, non au 1er janvier du millésime qui l'enregistre. »
+--
+-- On n'invente aucune unité : on reporte en arrière celle que la commune porte
+-- elle-même, jusqu'au jour où la source dit qu'elle a reparu. Sept communes de
+-- plus — Liéoux, Draillant, Cuislès, Plottes, Ruffiac, Plévenon, et
+-- Paroy-en-Othe dont le trou dure **un jour**, rétablie le 31 décembre 2003.
+--
+-- La colonne `provenance` de la trace dit par quelle voie chaque ligne est
+-- venue : `mere`, `fraction` ou `raccord`.
+--
 -- Réversible : tout est tracé dans `retablissement_trace`, section 6.
 -- Rejouable : le script retire ses propres lignes avant de recommencer.
 -- Prérequis : la couche moderne chargée (`20`, `21`, `24`) et `insee_mvt` (06).
@@ -155,8 +199,9 @@ CREATE TABLE IF NOT EXISTS retablissement_trace (
     pose_le       timestamptz NOT NULL DEFAULT now()
 );
 
--- Ajoutée après coup : les traces d'un passage antérieur ne la portent pas.
+-- Ajoutées après coup : les traces d'un passage antérieur ne les portent pas.
 ALTER TABLE retablissement_trace ADD COLUMN IF NOT EXISTS absorbee_le date;
+ALTER TABLE retablissement_trace ADD COLUMN IF NOT EXISTS provenance  text;
 
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM retablissement_trace t
@@ -238,7 +283,8 @@ SELECT af.atom_id                                   AS atom_id,
        mm.niveau,
        lower(mm.periode * daterange(c.depuis, c.retablie_le, '[)')) AS valid_from,
        upper(mm.periode * daterange(c.depuis, c.retablie_le, '[)')) AS valid_to,
-       c.insee, c.insee_mere, c.absorbee_le, c.retablie_le
+       c.insee, c.insee_mere, c.absorbee_le, c.retablie_le,
+       'mere'::text AS provenance
   FROM ret_cas c
   -- l'atome de la commune RÉTABLIE, celui qui porte le polygone orphelin
   JOIN atom af ON af.insee_geofla = c.insee AND NOT af.fraction
@@ -247,6 +293,79 @@ SELECT af.atom_id                                   AS atom_id,
   JOIN membership mm ON mm.atom_id = am.atom_id
                     AND mm.periode && daterange(c.depuis, c.retablie_le, '[)')
  WHERE NOT isempty(mm.periode * daterange(c.depuis, c.retablie_le, '[)'));
+
+-- ---------------------------------------------------------------------------
+-- 2 bis. Voie A : la mère n'a son unité que sur des atomes-FRACTIONS
+--
+-- On ne retient qu'une fraction, celle dont l'unité est exactement celle que la
+-- fille porte elle-même une fois rétablie. Le rapprochement vient de la source
+-- des deux côtés : la coupure est celle du COG, l'unité de la fille aussi.
+--
+-- La condition `NOT EXISTS (atome plein…)` réserve cette voie aux cas que la
+-- section 2 n'a pas su traiter : là où la mère a un atome plein, il fait foi.
+-- ---------------------------------------------------------------------------
+INSERT INTO ret_periode
+SELECT af.atom_id, mm.unit_id, mm.niveau,
+       lower(mm.periode * daterange(c.depuis, c.retablie_le, '[)')),
+       upper(mm.periode * daterange(c.depuis, c.retablie_le, '[)')),
+       c.insee, c.insee_mere, c.absorbee_le, c.retablie_le,
+       'fraction'
+  FROM ret_cas c
+  JOIN atom af ON af.insee_geofla = c.insee      AND NOT af.fraction
+  JOIN atom am ON am.insee_geofla = c.insee_mere AND     am.fraction
+  JOIN membership mm ON mm.atom_id = am.atom_id
+                    AND mm.periode && daterange(c.depuis, c.retablie_le, '[)')
+ WHERE NOT isempty(mm.periode * daterange(c.depuis, c.retablie_le, '[)'))
+   -- l'unité que la fille porte elle-même après son rétablissement
+   AND mm.unit_id = (SELECT m2.unit_id FROM membership m2
+                      WHERE m2.atom_id = af.atom_id
+                        AND m2.niveau  = mm.niveau
+                        AND m2.valid_from >= c.retablie_le
+                      ORDER BY m2.valid_from LIMIT 1)
+   -- et seulement si l'atome plein de la mère ne dit rien à ce niveau
+   AND NOT EXISTS (SELECT 1
+                     FROM atom ap
+                     JOIN membership mp ON mp.atom_id = ap.atom_id
+                    WHERE ap.insee_geofla = c.insee_mere AND NOT ap.fraction
+                      AND mp.niveau = mm.niveau
+                      AND mp.periode && daterange(c.depuis, c.retablie_le, '[)'));
+
+-- ---------------------------------------------------------------------------
+-- 2 ter. Voie B : raccorder l'acte au premier millésime
+--
+-- La couche moderne commence au 1er janvier du millésime qui enregistre la
+-- commune ; l'acte, lui, est daté au jour près. On reporte en arrière l'unité
+-- que la commune porte ELLE-MÊME, jusqu'au jour de sa réapparition. Aucune
+-- unité n'est inventée.
+--
+-- `DISTINCT ON (atome, niveau)` : le premier rattachement propre à chaque
+-- niveau, et lui seul.
+-- ---------------------------------------------------------------------------
+INSERT INTO ret_periode
+SELECT DISTINCT ON (af.atom_id, m.niveau)
+       af.atom_id, m.unit_id, m.niveau,
+       c.retablie_le, m.valid_from,
+       c.insee, c.insee_mere, c.absorbee_le, c.retablie_le,
+       'raccord'
+  FROM ret_cas c
+  JOIN atom af ON af.insee_geofla = c.insee AND NOT af.fraction
+  JOIN membership m ON m.atom_id = af.atom_id
+                   AND m.valid_from > c.retablie_le
+                   -- Le raccord ne va QUE jusqu'au premier 1er janvier suivant
+                   -- l'acte : c'est le millésime qui enregistre la commune, et
+                   -- c'est tout ce que la règle prétend expliquer.
+                   --
+                   -- Sans cette borne, la voie `raccord` reporterait en arrière
+                   -- n'importe quel rattachement ultérieur. Ouézy, rétablie en
+                   -- 2006, aurait reçu la circonscription de 2009 dès 2006 —
+                   -- une unité qui n'existait pas encore, sur une période libre
+                   -- que le garde-fou 3 laisse passer.
+                   --
+                   -- Vérifié sur les sept cas : le premier millésime tombe
+                   -- exactement au 1er janvier suivant, sans exception.
+                   AND m.valid_from = date_trunc(
+                           'year', c.retablie_le + interval '1 year')::date
+ ORDER BY af.atom_id, m.niveau, m.valid_from;
 
 -- Garde-fou 3 : ne rien poser sur une période déjà occupée.
 DELETE FROM ret_periode p
@@ -310,9 +429,13 @@ DELETE FROM ret_periode a
 
 \echo ''
 \echo '=== 2. Ce qui va être posé ==='
-SELECT niveau, count(*) AS periodes, count(DISTINCT atom_id) AS atomes,
+SELECT provenance, niveau, count(*) AS periodes,
+       count(DISTINCT atom_id) AS atomes,
        min(valid_from) AS depuis, max(valid_to) AS jusqu_a
-  FROM ret_periode GROUP BY niveau ORDER BY niveau;
+  FROM ret_periode GROUP BY 1, 2 ORDER BY 1, 2;
+-- `mere`     : l'atome plein de l'absorbante, le cas ordinaire.
+-- `fraction` : la mère était coupée entre plusieurs unités — six communes.
+-- `raccord`  : entre l'acte et le premier millésime — sept communes.
 
 -- ---------------------------------------------------------------------------
 -- 3. Pose
@@ -325,10 +448,10 @@ WITH ins AS (
 )
 INSERT INTO retablissement_trace (membership_id, atom_id, unit_id, niveau,
                                   valid_from, valid_to, insee, insee_mere,
-                                  absorbee_le, retablie_le)
+                                  absorbee_le, retablie_le, provenance)
 SELECT i.membership_id, i.atom_id, i.unit_id, i.niveau,
        i.valid_from, i.valid_to, p.insee, p.insee_mere,
-       p.absorbee_le, p.retablie_le
+       p.absorbee_le, p.retablie_le, p.provenance
   FROM ins i
   JOIN ret_periode p ON p.atom_id = i.atom_id
                     AND p.niveau  = i.niveau
@@ -344,7 +467,8 @@ ANALYZE membership;
 \echo '=== 3. Posé, par commune ==='
 SELECT t.insee, coalesce(n.nom, '?') AS commune, t.insee_mere,
        t.retablie_le, count(*) AS lignes,
-       string_agg(DISTINCT t.niveau, ', ') AS niveaux
+       string_agg(DISTINCT t.niveau, ', ')     AS niveaux,
+       string_agg(DISTINCT t.provenance, ', ') AS voies
   FROM retablissement_trace t
   LEFT JOIN noms_geofla n ON n.insee = t.insee
  GROUP BY 1, 2, 3, 4 ORDER BY t.retablie_le, t.insee;
@@ -400,6 +524,53 @@ SELECT t.insee, t.niveau, t.valid_from, t.atom_id, j.jumeau
 -- ne lui paraissent pas contradictoires, et pourtant le canton compte alors ce
 -- territoire deux fois. Une recette d'attribution ne voit pas une erreur de
 -- surface — il faut interroger la géométrie pour la voir.
+
+\echo ''
+\echo '=== 8. Ousse et Sendets, le cas qui a révélé les deux voies ==='
+SELECT a.insee_geofla, coalesce(n.nom, '?') AS commune,
+       m.unit_id, u.nom AS canton, m.valid_from, m.valid_to,
+       coalesce(t.provenance, '') AS origine
+  FROM atom a
+  JOIN membership m ON m.atom_id = a.atom_id AND m.niveau = 'canton'
+                   AND m.valid_to > DATE '1998-01-01'
+  JOIN unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+  LEFT JOIN noms_geofla n ON n.insee = a.insee_geofla
+  LEFT JOIN retablissement_trace t ON t.membership_id = m.membership_id
+ WHERE a.insee_geofla IN ('64439', '64518') AND NOT a.fraction
+ ORDER BY a.insee_geofla, m.valid_from;
+-- Attendu : chaîne continue de 1999 à 2013 pour chacune. Ousse dans Pau-Ouest
+-- (6431), Sendets dans Morlaàs (6423), les deux depuis 1999 — par la voie
+-- `fraction` jusqu'au 11 mars 2001, par `raccord` jusqu'au 1er janvier 2002,
+-- puis par la couche moderne.
+
+\echo ''
+\echo '=== 9. Trous restants entre 1999 et 2013 chez les communes traitées ==='
+WITH lignes AS (
+    SELECT DISTINCT t.insee, m.valid_from, m.valid_to
+      FROM retablissement_trace t
+      JOIN atom aa ON aa.insee_geofla = t.insee AND NOT aa.fraction
+      JOIN membership m ON m.atom_id = aa.atom_id AND m.niveau = 'canton'
+                       AND m.valid_to > DATE '1999-01-01'
+),
+trous AS (
+    SELECT insee, valid_to AS de,
+           lead(valid_from) OVER (PARTITION BY insee ORDER BY valid_from) AS a
+      FROM lignes
+    UNION ALL
+    SELECT insee, DATE '1999-01-01', min(valid_from) FROM lignes GROUP BY insee
+)
+SELECT x.insee, coalesce(n.nom, '?') AS commune, x.de, x.a, x.a - x.de AS jours
+  FROM trous x LEFT JOIN noms_geofla n ON n.insee = x.insee
+ WHERE x.a IS NOT NULL AND x.a > x.de
+ ORDER BY 5 DESC;
+-- Attendu : aucune ligne.
+--
+-- Cette recette ne vaut QUE pour les communes que le fichier a traitées. Les
+-- cinq de Haute-Marne écartées par le garde-fou 6 y montreraient un trou de
+-- 1999 à 2012 qui n'en est pas un : leur atome porte le polygone de la mère,
+-- déjà rattachée. C'est la règle de `METHODE.md` — interroger un atome ne
+-- renseigne pas sur un territoire — et c'est pourquoi la jointure part de la
+-- trace et non de la liste des communes.
 
 -- ---------------------------------------------------------------------------
 -- 5. Ce que ce fichier NE traite PAS
