@@ -1862,6 +1862,60 @@ Ces sept communes ne laissent aucun trou de couverture : leur territoire est
 couvert par l'atome de la mère. Elles rejoignent simplement le poids mort décrit
 à la limite n° 7 de `METHODE.md`.
 
+### Les fractions retrouvent leur circonscription — 20 août 2026
+
+`sql/43_circo_fraction.sql`. Repéré par Adrien sur la carte : **des communes
+disparaissent entre 1987 et 1999.** De 1941 à 1998 la couche cantonale n'existe
+pas ; seule celle des circonscriptions alimente l'affichage, et une commune sans
+circonscription y est invisible.
+
+Mesuré dans les Basses-Pyrénées : **quatre polygones** non couverts —
+Biarritz, Anglet, Lacq, Nay. Pau, coupée elle aussi, s'affichait normalement.
+
+**La différence tenait à l'origine des atomes-fractions.** `24` en compte 998 :
+266 héritées de TRF-GIS, que le même code de canton fait retrouver, et 732 qu'il
+crée. Pau repose sur des héritées, Biarritz sur des créées.
+
+Or `24` a été reconstruit le 17 août lors du rattrapage. Il supprime ses atomes
+avant de les recréer, et **la cascade a emporté les circonscriptions que `27` et
+`28` avaient posées dessus**. Mesure qui tranche : 36 353 rattachements de circo
+sur 1986-2010, dont **261 seulement sur des fractions**, pour 998 fractions.
+
+**Rien n'avait échoué.** La base est restée cohérente, aucune recette n'a
+bronché, la contrainte `EXCLUDE` n'avait rien à dire — il ne restait pas une
+contradiction, seulement une absence. Il a fallu un œil sur une carte.
+
+**Correctif additif**, sans toucher à aucune unité : un rejeu de `27` et `28`
+supprimerait leurs unités, que `15`, `41` et `42` référencent désormais, et
+rejouerait le blocage de clé étrangère du matin. `43` repose uniquement les
+rattachements manquants, par la même résolution que `27` et `28`.
+
+**Résultat** : **1 557 rattachements**, 778 pour la couche de 1986 et 779 pour
+celle de 2009, sur 326 et 330 communes. Zéro atome dans deux circonscriptions,
+zéro chevauchement. Huit atomes écartés faute de circonscription unique — Lyon,
+Nice, Marseille et cinq fractions de banlieue, communes coupées entre deux
+circonscriptions sans l'être entre cantons : aucun atome ne peut porter la
+coupure, le fichier s'abstient.
+
+#### Le résidu, et il est légitime
+
+153 polygones restent sans circonscription au 1ᵉʳ juin 1990, 1 614 km². Ce ne
+sont pas des défauts :
+
+- **113 communes déclarées indéterminées à la source.** Toutes présentes dans
+  `circo/circo_1986_indetermine.csv` : le tableau officiel de 1986 écrit pour
+  certains cantons « circonscriptions 13 et 16 » en toutes lettres, sans dire
+  quelle commune va où. Concentrées sur 18 cantons du Nord, du Rhône, des
+  Bouches-du-Rhône, du Bas-Rhin, de Charente-Maritime et de la Drôme, dont
+  **7 entièrement** ;
+- Marseille et Lyon au niveau commune, dont le polygone est l'union des
+  arrondissements, et les arrondissements de Paris.
+
+**Une conséquence d'affichage reste à traiter** : ces 113 communes ne sont pas
+*marquées* indéterminées sur la carte, elles sont **absentes** — ce qui
+contredit la règle du projet, « ce qui n'a de nom nulle part est signalé comme
+tel, pas maquillé ».
+
 ### Ousse et Sendets — deux voies de plus dans `41` — 20 août 2026
 
 Repéré par Adrien sur la carte : **Ousse et Sendets disparaissent des

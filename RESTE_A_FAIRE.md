@@ -230,7 +230,7 @@ il a fallu la mettre de côté à la main dans une table `reprise_24`.
 
 À faire : lui donner une trace sur le modèle des autres, et le rendre rejouable.
 
-### 2. L'ordre de la chaîne n'est écrit nulle part
+### 2. L'ordre de la chaîne n'est écrit nulle part — FAIT le 20 août 2026
 
 **`24` ne peut pas être rejoué tant qu'un autre fichier occupe ses unités** —
 la clé étrangère `membership_unit_fk` le refuse. Rien dans `sql/README.md` ne le
@@ -245,7 +245,13 @@ Sans l'étape 4, `41` ne pose qu'une ligne au lieu de 17 — et rien ne signale 
 le résultat est faux, puisqu'il est cohérent. **Un résultat obtenu sur une base
 à demi reconstruite est indiscernable d'un résultat juste.**
 
-À faire : une section « qui dépend de qui » dans `sql/README.md`.
+**Fait** : section « Qui dépend de qui » en tête de `sql/README.md`, avec les
+deux mécanismes (blocage de clé étrangère, destruction par cascade), le tableau
+des dépendances mesurées et la séquence sûre de rejeu de `24`.
+
+La cascade a d'ailleurs frappé une seconde fois le même jour, sans rien casser
+de visible : la reconstruction de `24` a emporté les circonscriptions posées par
+`27` et `28` sur ses 732 atomes-fractions. Corrigé par `43_circo_fraction.sql`.
 
 ### 3. Deux fichiers portent le numéro 40
 
@@ -258,3 +264,46 @@ La recette de `24` compte **2 rattachements dans le trou 1941-1998**, où elle e
 attend zéro. L'un est la ligne de `38` — le décret de 1982 est une donnée réelle
 dans cette période, donc une exception légitime à documenter plutôt qu'un
 défaut. L'autre n'est pas identifié.
+
+## Marquer les circonscriptions indéterminées de 1986 sur la carte
+
+Trouvé le 20 août 2026 en refermant `43_circo_fraction.sql`.
+
+**113 communes n'ont aucune circonscription de 1986 à 2013**, et c'est un fait
+de la source, pas un défaut : le tableau officiel de 1986 écrit pour certains
+cantons « circonscriptions 13 et 16 » en toutes lettres, sans répartir les
+communes. Toutes sont recensées dans `circo/circo_1986_indetermine.csv`
+(135 lignes). Elles se concentrent sur 18 cantons — Nord (67 communes), Rhône
+(12), Bouches-du-Rhône (10), Bas-Rhin (10), Charente-Maritime (6), Drôme (6),
+Seine-Saint-Denis (2) — dont **sept entièrement absents**.
+
+**Le problème est d'affichage.** De 1987 à 1999 la couche cantonale n'existe
+pas, donc seule celle des circonscriptions dessine les communes : ces 113
+disparaissent purement et simplement. Or le projet a une règle explicite —
+« ce qui n'a de nom nulle part est signalé comme tel, pas maquillé » — et une
+absence silencieuse la contredit.
+
+**À faire** : charger `circo_1986_indetermine.csv` dans une table
+`circo_indetermine`, et faire dessiner ces communes par `export_web.py` avec un
+figuré propre (hachure, comme les communes coupées), en indiquant les
+circonscriptions candidates au survol. Pas de rattachement dans `membership` :
+la source ne tranche pas, la base ne doit pas trancher non plus.
+
+**Piste de résolution, à évaluer séparément** : pour chacune, les
+circonscriptions candidates sont connues, et le découpage de 2009 rattache la
+commune à l'une d'elles. Là où les limites n'ont pas bougé entre 1986 et 2009,
+le rapprochement serait dicté par la source — même forme d'argument que la voie
+`fraction` de `41`. À mesurer avant d'y toucher, et à ne poser que si la
+correspondance est unique.
+
+## Huit communes coupées entre circonscriptions sans l'être entre cantons
+
+Écartées par `43_circo_fraction.sql`, garde-fou d'unicité : Lyon
+(`69-13`/`69-14`), Nice (`06-07`/`06-08`), Marseille, et cinq fractions de
+banlieue parisienne et mosellane. Le découpage législatif les partage, le
+découpage cantonal non — **aucun atome ne peut porter la coupure**, puisque les
+atomes-fractions sont taillés sur les cantons.
+
+Même nature que les 132 pseudo-circonscriptions sans nom : il faudrait des
+atomes-fractions taillés sur les circonscriptions, ce qui suppose une trame
+géométrique du découpage législatif qu'on n'a pas.

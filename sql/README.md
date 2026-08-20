@@ -32,6 +32,86 @@ Les quatre fichiers s'enchaînent seuls, mais restent lançables un par un :
 | `03_functions.sql` | `snapshot()`, `unit_nom()`, contrôles |
 | `04_checks.sql` | rapport de recette (lecture seule) |
 
+## Qui dépend de qui — à lire AVANT de rejouer un fichier
+
+Écrit le 20 août 2026, après que l'ignorance de ces règles eut cassé la base
+deux fois dans la même journée.
+
+Les fichiers numérotés sont conçus pour se rejouer seuls : chacun retire son
+passage par sa table de trace avant de recommencer. **C'est vrai isolément et
+faux dans la chaîne**, pour deux raisons distinctes.
+
+### 1. Un fichier qui crée des UNITÉS ne peut pas être rejoué tant qu'un autre les référence
+
+`24_canton_moderne.sql`, `27_circo_2012.sql` et `28_circo_1986.sql` suppriment
+leurs unités avant de les recréer. La clé étrangère `membership_unit_fk` le
+refuse dès qu'un rattachement posé par un AUTRE fichier pointe dessus :
+
+```
+ERROR: update or delete on table "unit" violates foreign key constraint
+DETAIL: Key (unit_id, niveau)=(0138, canton) is still referenced from membership
+```
+
+Qui référence quoi, mesuré :
+
+| unités de | référencées par |
+|---|---|
+| `24` (cantons 1999-2012) | `38_decret_1982_ain`, `41_retablissement` |
+| `27` / `28` (circos modernes) | `15_creation_arriere`, `41`, `42` |
+
+**Marche à suivre** : mettre de côté les rattachements concernés, jouer le
+fichier, les remettre, puis rejouer ce qui en dépend. Défaire par la trace
+quand elle existe — `38_decret_1982_ain.sql` **n'en a pas**, il faut sauver ses
+lignes à la main.
+
+### 2. Une suppression en cascade détruit le travail des fichiers suivants
+
+Plus insidieux, parce que **rien n'échoue**. `24` supprime ses 732
+atomes-fractions avant de les recréer ; la cascade emporte tous les
+`membership` qui s'y rattachaient — dont les circonscriptions que `27` et `28`
+y avaient posées. `24` recrée les atomes, personne ne recrée les circos.
+
+Constaté le 20 août : 261 rattachements de circonscription sur fractions pour
+998 fractions existantes. La base restait parfaitement cohérente ; aucune
+recette ne signalait rien ; seul un coup d'œil à la carte l'a vu — quatre
+communes des Basses-Pyrénées avaient disparu entre 1987 et 1999.
+
+**Après avoir rejoué `24`, il faut donc rejouer `43_circo_fraction.sql`**, qui
+repose les circonscriptions manquantes sans toucher aux unités.
+
+### Séquence sûre après un rejeu de `24`
+
+```bash
+# 1. sauver ce qui pointe sur les unités de 24 (38 n'a pas de trace)
+psql -d histgis -c "CREATE TABLE reprise_24 AS SELECT m.atom_id, m.unit_id,
+    m.niveau, m.valid_from, m.valid_to FROM membership m
+   WHERE m.niveau='canton' AND EXISTS (SELECT 1 FROM canton_moderne_trace t
+         WHERE t.quoi='unit' AND t.cle=m.unit_id);"
+psql -d histgis -c "DELETE FROM membership m USING retablissement_trace t
+   WHERE t.membership_id=m.membership_id; TRUNCATE retablissement_trace;"
+psql -d histgis -c "DELETE FROM membership m WHERE m.niveau='canton'
+   AND EXISTS (SELECT 1 FROM canton_moderne_trace t
+       WHERE t.quoi='unit' AND t.cle=m.unit_id);"
+
+# 2. reconstruire
+psql -d histgis -f sql/24_canton_moderne.sql
+
+# 3. remettre, puis rejouer ce qui dépend de la couche
+psql -d histgis -c "INSERT INTO membership (atom_id,unit_id,niveau,valid_from,valid_to)
+   SELECT r.* FROM reprise_24 r WHERE EXISTS (SELECT 1 FROM unit u
+     WHERE u.unit_id=r.unit_id AND u.niveau=r.niveau);"
+psql -d histgis -f sql/43_circo_fraction.sql
+psql -d histgis -f sql/41_retablissement.sql
+python3 cartes/export_web.py
+```
+
+### La règle générale
+
+**Une table de trace protège son fichier, pas ses voisins.** Elle dit ce qu'un
+fichier a posé ; elle ne dit rien de ce que d'autres ont bâti par-dessus. Avant
+tout `DELETE` en cascade, se demander qui s'appuie sur ce qu'on retire — la
+base ne le dira pas, puisqu'il ne restera aucune contradiction.
+
 ## Modèle
 
 Géométrie et attribution restent découplées, comme prévu.
