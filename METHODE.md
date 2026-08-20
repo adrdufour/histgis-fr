@@ -977,6 +977,43 @@ l'information qu'ils portent. `NOT am.fraction` était juste tant qu'il
 s'agissait d'éviter une fraction ambiguë ; il devenait aveugle dès que la
 fraction était la seule à savoir.
 
+## Avant de déclarer une source fautive, chercher l'événement qu'elle enregistre
+
+Écrite le 20 août 2026, **quelques heures après la règle ci-dessus, et en la
+violant**.
+
+Cherré, dans la Sarthe, figure dans la nomenclature TRF-GIS en 1885, manque en
+1886 et 1887, revient en 1888 — ligne identique, même canton, même
+arrondissement, même département. J'y ai vu une omission de la source et j'ai
+écrit un correctif dont l'en-tête affirmait : « aucune commune n'a jamais cessé
+d'exister deux ans pour renaître à l'identique ».
+
+Affirmation sur le monde, sans fondement, et fausse. **La Ferté-Bernard absorbe
+Cherré et Saint-Antoine-de-Rochefort en 1886 ; Cherré reprend son indépendance
+en 1888.** La disparition n'était pas un trou dans la source : elle *était*
+l'événement.
+
+Et la nomenclature le disait, dans une colonne que je n'avais pas lue :
+Saint-Antoine-de-Rochefort, absorbée le même jour et jamais rétablie, y porte
+dès 1885 le **code INSEE de La Ferté-Bernard** et le drapeau `com_act = 3`. Le
+témoin était à trois lignes du cas.
+
+**Ce qui rend l'épisode instructif, c'est que le correctif fautif donnait le bon
+résultat.** La Ferté-Bernard est chef-lieu du canton de Cherré : refermer le trou
+« parce que c'est la même unité de part et d'autre » pose exactement ce que
+donne la règle juste. Aucune recette n'aurait bronché. Une commune absorbée par
+une voisine d'un autre canton produirait le même trou, et la règle fausse
+l'aurait rempli du mauvais canton, en silence.
+
+**La règle** : une absence dans une source sérielle est une donnée avant d'être
+un défaut. Avant de la traiter comme une lacune, chercher l'acte qu'elle
+enregistre — et chercher dans la source elle-même, qui porte souvent le témoin
+à côté du cas.
+
+**Corollaire** : ne jamais fonder un correctif sur une généralité historique
+qu'on n'a pas vérifiée. « Cela ne se produit pas » n'est pas un argument ; c'est
+une hypothèse, et elle se mesure ou se source.
+
 ## Une date au jour près prime sur un millésime annuel
 
 Même journée, même fichier. `insee_mvt` date le rétablissement d'Ousse au 11
