@@ -1862,6 +1862,70 @@ Ces sept communes ne laissent aucun trou de couverture : leur territoire est
 couvert par l'atome de la mère. Elles rejoignent simplement le poids mort décrit
 à la limite n° 7 de `METHODE.md`.
 
+### Ousse et Sendets — deux voies de plus dans `41` — 20 août 2026
+
+Repéré par Adrien sur la carte : **Ousse et Sendets disparaissent des
+Basses-Pyrénées entre 1999 et 2002.** Les deux figuraient bien parmi les cas
+retenus par `41`, et rien n'était posé pour elles. Deux causes distinctes, l'une
+et l'autre mesurées avant d'écrire une ligne.
+
+#### Voie A — la mère était coupée entre plusieurs cantons
+
+Idron, qui absorbait les deux communes depuis 1973, est rangée par le COG de
+1999 à 2001 dans **deux cantons** — Morlaàs et Pau-Ouest. `24` lui a donc créé
+deux atomes-fractions, et **toute son attribution vit sur ces fractions**. Or
+`41` cherchait la mère avec `NOT am.fraction`. La réponse était là où le
+garde-fou refusait de regarder.
+
+Cette coupure n'est pas un obstacle : **c'est l'information.** Le COG coupait
+Idron parce qu'elle contenait deux anciennes communes relevant de cantons
+différents. D'où la règle :
+
+> La fille hérite de la fraction de sa mère dont l'unité est celle que la fille
+> porte elle-même une fois rétablie.
+
+Ousse porte Pau-Ouest en 2002, une fraction d'Idron porte Pau-Ouest en
+1999-2001 ; Sendets porte Morlaàs, l'autre fraction porte Morlaàs. Mesuré sur
+les six cas concernés — Carolles, Ousse, Sendets, Mauvezin-sur-Gupie,
+Verquigneul, Rosoy — **la correspondance est unique six fois sur six**, y
+compris là où la mère est coupée en **trois** (Béthune, Sens). La règle ne
+tranche donc aucun conflit ; elle constate un accord, comme celle des voisins de
+canton dans `40`.
+
+#### Voie B — l'acte est daté au jour, la couche moderne au millésime
+
+`insee_mvt` date le rétablissement d'Ousse au **11 mars 2001** ; la couche
+moderne est bâtie sur les millésimes annuels du COG, qui ne la connaît qu'au
+1ᵉʳ janvier 2002. Entre les deux, dix mois vides.
+
+> Le premier rattachement moderne d'une commune rétablie commence à la date de
+> l'acte, non au 1ᵉʳ janvier du millésime qui l'enregistre.
+
+Aucune unité n'est inventée : on reporte en arrière celle que la commune porte
+elle-même. **Borné au premier 1ᵉʳ janvier suivant l'acte** — c'est tout ce que
+la règle prétend expliquer. Sans cette borne, Ouézy, rétablie en 2006, aurait
+reçu dès 2006 la circonscription issue du découpage de **2009**, sur une période
+libre que le garde-fou 3 laisse passer. Vérifié : les onze cas tombent tous sur
+le 1ᵉʳ janvier suivant, sans exception.
+
+Le cas le plus court est **Paroy-en-Othe**, rétablie le 31 décembre 2003 : son
+trou durait **un jour**.
+
+#### Résultat
+
+**34 lignes sur 22 communes** — 16 par la voie `mere`, 6 par `fraction`, 11 par
+`raccord`, plus la ligne de circo de Bihorel. Ousse et Sendets portent une
+chaîne continue de 1999 à 2013, les trois origines s'enchaînant bout à bout.
+Toutes recettes vides, y compris la nouvelle recette 9 : **aucun trou résiduel**
+chez les communes traitées.
+
+Quatre communes relèvent des deux voies à la fois — Ousse, Sendets,
+Mauvezin-sur-Gupie et Rosoy — d'où 11 raccords pour 7 communes de la seule
+famille B.
+
+La colonne `provenance` de `retablissement_trace` dit désormais par quelle voie
+chaque ligne est venue.
+
 ### Chisa retrouve son passé — 17 août 2026
 
 `sql/42_rattachement_arriere.sql`, joué et mesuré. Trouvé par une remarque

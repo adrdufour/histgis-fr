@@ -943,6 +943,60 @@ territoire est-il couvert » ; `ST_Equals(atome, commune)` dit « quel atome EST
 cette commune ». Employer le premier pour le second accroche toute fraction et
 tout polygone englobant — 144 cas au lieu de 2 dans `42`.
 
+## Une irrégularité de la source est souvent la réponse, pas l'obstacle
+
+Formulée le 20 août 2026, après Ousse et Sendets.
+
+Les deux communes n'avaient aucun canton entre 1999 et 2002. `41` cherchait
+l'attribution de leur mère, Idron, sur son atome plein — et n'y trouvait rien,
+parce que le COG range Idron dans **deux** cantons sur cette période et que
+toute son attribution vit donc sur des atomes-fractions, exclus par
+`NOT am.fraction`.
+
+Le réflexe est de voir dans cette coupure une gêne : une commune à cheval, un
+cas dégradé, quelque chose à écarter. **C'était l'inverse.** Le COG coupait
+Idron *parce qu'*elle contenait deux anciennes communes relevant de cantons
+différents. La coupure était la trace, dans la nomenclature de 1999, de la
+structure que le rétablissement de 2001 allait révéler.
+
+Il suffisait alors de rapprocher deux faits que la source donne tous les deux :
+la fille hérite de la fraction dont l'unité est celle qu'elle porte elle-même
+une fois rétablie. Correspondance unique **six fois sur six**, y compris quand
+la mère est coupée en trois.
+
+**La règle** : devant une irrégularité de la source — une commune coupée, un
+code réutilisé, une date qui ne tombe pas sur une frontière de millésime —,
+demander d'abord *pourquoi la source la produit* avant de la traiter comme du
+bruit. Une nomenclature administrative n'introduit presque jamais une
+complication gratuite ; elle enregistre quelque chose. Ce projet a déjà payé
+l'inverse : les codes de canton réutilisés en 1871 enregistraient l'annexion,
+et la coupure de Marseille en arrondissements enregistrait sa taille.
+
+**Corollaire** : un garde-fou qui écarte les cas irréguliers écarte aussi
+l'information qu'ils portent. `NOT am.fraction` était juste tant qu'il
+s'agissait d'éviter une fraction ambiguë ; il devenait aveugle dès que la
+fraction était la seule à savoir.
+
+## Une date au jour près prime sur un millésime annuel
+
+Même journée, même fichier. `insee_mvt` date le rétablissement d'Ousse au 11
+mars 2001 ; la couche moderne, bâtie sur les millésimes annuels du COG, ne la
+connaît qu'au 1ᵉʳ janvier 2002. Dix mois de vide qui ne correspondent à aucun
+fait — la commune existait.
+
+**La règle** : quand deux sources datent le même événement à des granularités
+différentes, la plus fine fait foi, et l'écart entre les deux se comble en
+reportant en arrière ce que la source grossière affirme — sans jamais inventer
+une valeur.
+
+**Et il faut borner ce report à ce que la règle explique.** Ici, au premier
+1ᵉʳ janvier suivant l'acte : c'est l'artefact de millésime, et rien d'autre.
+Sans cette borne, le premier jet reportait *n'importe quel* rattachement
+ultérieur — Ouézy, rétablie en 2006, recevait dès 2006 la circonscription issue
+du découpage de **2009**, sur une période libre qu'aucun garde-fou n'aurait
+refusée. Une règle vraie appliquée au-delà de son domaine produit une donnée
+fausse et cohérente.
+
 ## L'ordre de grandeur attendu s'écrit AVANT la requête
 
 `42` a posé trois fois de suite quelque chose de faux. Aucune de ces erreurs
