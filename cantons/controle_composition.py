@@ -45,6 +45,7 @@ C'est faible pris isolément, mais c'est indépendant du nom — et le nom est
 justement ce que l'OCR abîme.
 """
 
+import argparse
 import collections
 import csv
 from pathlib import Path
@@ -75,6 +76,14 @@ def cog_1999():
 
 
 def main():
+    # Le contrôle vaut pour toute extraction qui rend les mêmes colonnes.
+    # `composition_jo.py` en est une seconde ; on ne duplique pas le juge.
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--source", default=str(EXTRAIT))
+    ap.add_argument("--sortie", default=str(SORTIE))
+    args = ap.parse_args()
+    globals()["EXTRAIT"] = Path(args.source)
+    globals()["SORTIE"] = Path(args.sortie)
     if not EXTRAIT.exists():
         raise SystemExit("Lancer d'abord composition_decrets.py.")
     par_commune, par_canton = cog_1999()

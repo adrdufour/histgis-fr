@@ -4,10 +4,21 @@ Fichier produit : `cantons/decrets_1973_1984.csv` (136 décrets, 8 dates).
 
 ## 1. Ce qui est acquis
 
-136 décrets identifiés sur Légifrance, un par département (sauf 82-82, « divers
-départements »). Colonnes : date de signature, date de publication au JO, numéro
-de décret, code et nom du département à l'époque, objet, cantons cités dans le
-titre (1982 seulement), identifiant et URL Légifrance, identifiant du JO numérisé.
+136 décrets identifiés sur Légifrance, un par département. Colonnes : date de
+signature, date de publication au JO, numéro de décret, code et nom du
+département à l'époque, objet, cantons cités dans le titre (1982 seulement),
+identifiant et URL Légifrance, identifiant du JO numérisé.
+
+> **Deux mises à jour, portées le 2 septembre 2026.**
+>
+> * **Le corpus n'est plus de 136 mais de 343 actes.** Le moissonnage par titre
+>   du 28 août en a ajouté 207 d'un coup, couvrant 1958-1999. Le registre vit
+>   désormais dans `cantons/decrets_cantonaux.csv` et en base par
+>   `72_registre_actes.sql` ; ce fichier-ci reste l'index détaillé des trois
+>   salves de 1973, 1982 et 1984.
+> * **`82-82` n'est pas « divers départements ».** Lu au JO le 29 août : c'est
+>   la **Meurthe-et-Moselle seule**, imprimée sous le numéro du décret. Le titre
+>   Légifrance est faux, pas le décret.
 
 | Date de signature | Décrets | Plage de numéros | JO de publication |
 |---|---|---|---|

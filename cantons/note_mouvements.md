@@ -2,14 +2,34 @@
 
 Fichier : `cantons/mouvements_cantonaux.csv`
 
+> **Correction du 2 septembre 2026 — deux affirmations de cette note ont été
+> renversées par la suite du chantier.**
+>
+> 1. *« Entre les deux, rien. »* Faux depuis le 28 août : deux jalons de
+>    recensement (1954, 1968), 343 actes au registre, les salves de décrets et
+>    deux reports validés couvrent désormais l'intervalle — inégalement, et pour
+>    partie sous convention. `ETAT.md` § 2.3.
+> 2. *« Ce registre comble l'intervalle par saisie manuelle. »* Le registre a
+>    **changé de nature en cours de route**, et c'est le fait le plus utile de
+>    cette note. Il devait recueillir des mouvements dictés à la main ; la base
+>    sait les calculer par différentiel 1940→1999. **Il ne consigne plus que des
+>    dates** — et, depuis l'annexe VII, des dates de décret : l'Ain compte neuf
+>    lignes en `certitude = acte` là où il avait des intervalles de vingt-huit
+>    ans. Voir `registre_consolide.md`.
+>
+> Ce qui reste exact et n'a pas d'équivalent ailleurs : les **274 transferts
+> isolés de communes** que l'annexe VII ne recense jamais par construction, et
+> qui resteront indatables sans les décrets. C'est une limite connue, pas une
+> lacune du dépouillement.
+
 ## Pourquoi ce registre
 
-Le trou cantonal 1941-1998 est le dernier blocage structurel du projet. TRF-GIS
-s'arrête en 1940, le COG ne descend au canton qu'à partir de 1999, et la source
-n'a livré que 66 événements MOD-43, tous entre 1995 et 1998. Entre les deux,
-rien.
+Le trou cantonal 1941-1998 était, quand cette note a été écrite, le dernier
+blocage structurel du projet. TRF-GIS s'arrête en 1940, le COG ne descend au
+canton qu'à partir de 1999, et le fichier historique du COG n'a livré que
+66 événements MOD-43, tous entre 1995 et 1998.
 
-Ce registre comble l'intervalle par saisie manuelle, département par
+Ce registre devait combler l'intervalle par saisie manuelle, département par
 département.
 
 ## Ce registre n'est pas une table de faits, c'est une table de dates

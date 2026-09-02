@@ -1,0 +1,6 @@
+decret,date,dep,commune,insee,nom_ref,appariement,canton_source,canton_destination,legifrance_url
+[724660],1993-01-25,11,Laprade,11189,LAPRADE,exact,Mas-Cabardès,Saissac,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000724660
+[541708],1993-01-27,38,Vasselin,38525,VASSELIN,exact,Tour-du-Pin,Morestel,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000541708
+[736159],1995-04-10,28,Saint-Denis-des-Puits,28333,SAINT-DENIS-DES-PUITS,exact,Loupe,Courville-sur-Eure,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000736159
+[736159],1995-04-10,28,Villebon,28414,VILLEBON,exact,Loupe,Courville-sur-Eure,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000736159
+[747377],1997-02-26,38,Saint-Alban-de-Roche,38352,SAINT-ALBAN-DE-ROCHE,exact,Isle-d'Abeau,Bourgoin-Jallieu - Sud,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000747377

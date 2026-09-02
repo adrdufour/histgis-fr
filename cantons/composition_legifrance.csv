@@ -1,0 +1,253 @@
+jo,decret,date,dep,canton,nom_texte,insee,nom_ref,dep_insee,appariement,attribution,legifrance_url
+legifrance,[718411],1991-02-27,13,Berre-l'Etang,Berre-l'Etang,13014,BERRE-L'ETANG,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Berre-l'Etang,Rognac,13081,ROGNAC,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Berre-l'Etang,Saint-Chamas,13092,SAINT-CHAMAS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Châteauneuf-Côte-Bleue,Carry-le-Rouet,13021,CARRY-LE-ROUET,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Châteauneuf-Côte-Bleue,Châteauneuf-lès-Martigues,13026,CHATEAUNEUF-LES-MARTIGUES,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Châteauneuf-Côte-Bleue,Ensuès-la-Redonne,13033,ENSUES-LA-REDONNE,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Châteauneuf-Côte-Bleue,Gignac-la-Nerthe,13043,GIGNAC-LA-NERTHE,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Châteauneuf-Côte-Bleue,Le Rove,13088,LE ROVE,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Châteauneuf-Côte-Bleue,Sausset-les-Pins,13104,SAUSSET-LES-PINS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Istres-Nord,Miramas,13063,MIRAMAS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Istres-Sud,Fos-sur-Mer,13039,FOS-SUR-MER,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Istres-Sud,Saint-Mitre-les-Remparts,13098,SAINT-MITRE-LES-REMPARTS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Martigues-Ouest,Port-de-Bouc,13077,PORT-DE-BOUC,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pennes-Mirabeau,Cabriès,13019,CABRIES,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pennes-Mirabeau,Les Pennes-Mirabeau,13071,LES PENNES-MIRABEAU,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pennes-Mirabeau,Septèmes-les-Vallons,13106,SEPTEMES-LES-VALLONS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Aurons,13008,AURONS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Cornillon-Confoux,13029,CORNILLON-CONFOUX,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Coudoux,13118,COUDOUX,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,La Barben,13009,LA BARBEN,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,La Fare-les-Oliviers,13037,LA FARE-LES-OLIVIERS,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Lançon-Provence,13051,LANCON-PROVENCE,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Pélissanne,13069,PELISSANNE,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Velaux,13112,VELAUX,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Pélissanne,Ventabren,13114,VENTABREN,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718411],1991-02-27,13,Vitrolles,Vitrolles,13117,VITROLLES,13,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718411
+legifrance,[718413],1991-02-27,14,Lisieux-III,La Boissière,14082,LA BOISSIERE,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,La Houblonnière,14337,LA HOUBLONNIERE,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Le Mesnil-Eudes,14419,LE MESNIL-EUDES,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Le Mesnil-Simon,14425,LE MESNIL-SIMON,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Le Pré-d'Auge,14520,LE PRE-D'AUGE,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Les Monceaux,14435,LES MONCEAUX,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Lessard-et-Le-Chêne,14362,LESSARD-ET-LE-CHENE,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Prêtreville,14522,PRETREVILLE,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Saint-Désir,14574,SAINT-DESIR,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Saint-Germain-de-Livet,14582,SAINT-GERMAIN-DE-LIVET,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Saint-Jean-de-Livet,14595,SAINT-JEAN-DE-LIVET,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[718413],1991-02-27,14,Lisieux-III,Saint-Pierre-des-Ifs,14648,SAINT-PIERRE-DES-IFS,14,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718413
+legifrance,[172017],1991-02-27,29,Brest-Cavale-Blanche-Bohars-Guilers,Bohars,29011,BOHARS,29,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172017],1991-02-27,29,Brest-Cavale-Blanche-Bohars-Guilers,Guilers,29069,GUILERS,29,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172017],1991-02-27,29,Brest-Kerichen,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172017],1991-02-27,29,Brest-L'Hermitage-Gouesnou,Gouesnou,29061,GOUESNOU,29,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172017],1991-02-27,29,Brest-Lambezellec,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172017],1991-02-27,29,Brest-Saint-Marc,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172017],1991-02-27,29,Brest-Saint-Pierre,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172017
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Aimargues,30006,AIMARGUES,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Codognan,30083,CODOGNAN,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Gallargues-le-Montueux,30123,GALLARGUES-LE-MONTUEUX,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Le Cailar,30059,LE CAILAR,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Mus,30185,MUS,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Uchaud,30333,UCHAUD,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Vergèze,30344,VERGEZE,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172019],1991-02-27,30,Rhôny-Vidourle,Vestric-et-Candiac,30347,VESTRIC-ET-CANDIAC,30,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019
+legifrance,[172018],1991-02-27,34,Castelnau-le-Lez,Castelnau-le-Lez,34057,CASTELNAU-LE-LEZ,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Lattes,Lattes,34129,LATTES,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Lattes,Palavas-les-Flots,34192,PALAVAS-LES-FLOTS,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Lattes,Pérols,34198,PEROLS,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Cournonsec,34087,COURNONSEC,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Cournonterral,34088,COURNONTERRAL,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Fabrègues,34095,FABREGUES,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Murviel-lès-Montpellier,34179,MURVIEL-LES-MONTPELLIER,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Pignan,34202,PIGNAN,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Saint-Georges-d'Orques,34259,SAINT-GEORGES-D'ORQUES,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[172018],1991-02-27,34,Pignan,Saussan,34295,SAUSSAN,34,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018
+legifrance,[718412],1991-02-27,35,Betton,Betton,35024,BETTON,35,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412
+legifrance,[718412],1991-02-27,35,Betton,La Chapelle-des-Fougeretz,35059,LA CHAPELLE-DES-FOUGERETZ,35,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412
+legifrance,[718412],1991-02-27,35,Betton,Montgermont,35189,MONTGERMONT,35,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412
+legifrance,[718412],1991-02-27,35,Betton,Saint-Grégoire,35278,SAINT-GREGOIRE,35,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412
+legifrance,[718412],1991-02-27,35,Cesson-Sévigné,Acigné,35001,ACIGNE,35,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412
+legifrance,[718412],1991-02-27,35,Cesson-Sévigné,Cesson-Sévigné,35051,CESSON-SEVIGNE,35,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412
+legifrance,[352923],1991-02-27,41,Blois-I,Saint-Denis-sur-Loire,41206,SAINT-DENIS-SUR-LOIRE,41,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352923
+legifrance,[352923],1991-02-27,41,Blois-III,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352923
+legifrance,[352923],1991-02-27,41,Blois-IV,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352923
+legifrance,[352923],1991-02-27,41,Blois-VI,Villebarou,41276,VILLEBAROU,41,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352923
+legifrance,[352923],1991-02-27,41,Blois-VI,Villerbon,41288,VILLERBON,41,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352923
+legifrance,[172020],1991-02-27,59,Douai-Nord-Est,Auby,59028,AUBY,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Douai-Nord-Est,Flers-en-Escrebieux,59234,FLERS-EN-ESCREBIEUX,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Douai-Nord-Est,Raimbeaucourt,59489,RAIMBEAUCOURT,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Douai-Nord-Est,Roost-Warendin,59509,ROOST-WARENDIN,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Douai-Nord-Est,Râches,59486,RACHES,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Seclin-Nord,Houplin-Ancoisne,59316,HOUPLIN-ANCOISNE,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Seclin-Nord,Lesquin,59343,LESQUIN,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Seclin-Nord,Noyelles-lès-Seclin,59437,NOYELLES-LES-SECLIN,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Seclin-Nord,Templemars,59585,TEMPLEMARS,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Seclin-Nord,Vendeville,59609,VENDEVILLE,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Seclin-Nord,Wattignies,59648,WATTIGNIES,59,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[172020],1991-02-27,59,Villeneuve-d'Ascq-Nord,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020
+legifrance,[171276],1991-02-27,62,Berck,Airon-Notre-Dame,62015,AIRON-NOTRE-DAME,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Airon-Saint-Vaast,62016,AIRON-SAINT-VAAST,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Berck,62108,BERCK,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Colline-Beaumont,62231,COLLINE-BEAUMONT,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Conchil-le-Temple,62233,CONCHIL-LE-TEMPLE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Groffliers,62390,GROFFLIERS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Rang-du-Fliers,62688,RANG-DU-FLIERS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Tigny-Noyelle,62815,TIGNY-NOYELLE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Verton,62849,VERTON,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Berck,Waben,62866,WABEN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Bruay-la-Buissière,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Est,Essars,62310,ESSARS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Est,Hinges,62454,HINGES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Est,La Couture,62252,LA COUTURE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Est,Locon,62520,LOCON,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Est,Vieille-Chapelle,62851,VIEILLE-CHAPELLE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Nord,Annezin,62035,ANNEZIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Nord,Chocques,62224,CHOCQUES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Nord,Oblinghem,62632,OBLINGHEM,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Nord,Vendin-lès-Béthune,62841,VENDIN-LES-BETHUNE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Sud,Allouagne,62023,ALLOUAGNE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Sud,Fouquereuil,62349,FOUQUEREUIL,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Sud,Fouquières-lès-Béthune,62350,FOUQUIERES-LES-BETHUNE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Sud,Labeuvrière,62479,LABEUVRIERE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Sud,Lapugnoy,62489,LAPUGNOY,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Béthune-Sud,Verquin,62848,VERQUIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Acq,62007,ACQ,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Anzin-Saint-Aubin,62037,ANZIN-SAINT-AUBIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Dainville,62263,DAINVILLE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Duisans,62279,DUISANS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Ecurie,62290,ECURIE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Etrun,62320,ETRUN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Maroeuil,62557,MAROEUIL,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Mont-Saint-Eloi,62589,MONT-SAINT-ELOI,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Roclincourt,62714,ROCLINCOURT,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Dainville,Sainte-Catherine,62744,SAINTE-CATHERINE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Divion,Calonne-Ricouart,62194,CALONNE-RICOUART,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Divion,Divion,62270,DIVION,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Divion,Marles-les-Mines,62555,MARLES-LES-MINES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Douvrin,Billy-Berclau,62132,BILLY-BERCLAU,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Douvrin,Douvrin,62276,DOUVRIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Douvrin,Givenchy-lès-la-Bassée,62373,GIVENCHY-LES-LA-BASSEE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Douvrin,Haisnes,62401,HAISNES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Douvrin,Violaines,62863,VIOLAINES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Harnes,Estevelles,62311,ESTEVELLES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Harnes,Harnes,62413,HARNES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Harnes,Pont-à-Vendin,62666,PONT-A-VENDIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Beugin,62120,BEUGIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Camblain-Châtelain,62197,CAMBLAIN-CHATELAIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Caucourt,62218,CAUCOURT,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Estrée-Cauchy,62314,ESTREE-CAUCHY,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Fresnicourt-le-Dolmen,62356,FRESNICOURT-LE-DOLMEN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Gauchin-Légal,62366,GAUCHIN-LEGAL,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Hermin,62441,HERMIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Houdain,62457,HOUDAIN,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Maisnil-lès-Ruitz,62540,MAISNIL-LES-RUITZ,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Ourton,62642,OURTON,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Houdain,Rebreuve-Ranchicourt,62693,REBREUVE-RANCHICOURT,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Hénin-Beaumont,Noyelles-Godault,62624,NOYELLES-GODAULT,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Leforest,Courcelles-lès-Lens,62249,COURCELLES-LES-LENS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Leforest,Dourges,62274,DOURGES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Leforest,Evin-Malmaison,62321,EVIN-MALMAISON,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Leforest,Leforest,62497,LEFOREST,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Lens-Est,Sallaumines,62771,SALLAUMINES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Lens-Nord-Est,Annay,62033,ANNAY,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Lens-Nord-Est,Loison-sous-Lens,62523,LOISON-SOUS-LENS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Montigny-en-Gohelle,Montigny-en-Gohelle,62587,MONTIGNY-EN-GOHELLE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Noyelles-sous-Lens,Billy-Montigny,62133,BILLY-MONTIGNY,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Noyelles-sous-Lens,Fouquières-lès-Lens,62351,FOUQUIERES-LES-LENS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Noyelles-sous-Lens,Noyelles-sous-Lens,62628,NOYELLES-SOUS-LENS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Portel,Portel,11295,Portel,11,autre departement,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Sains-en-Gohelle,Aix-Noulette,62019,AIX-NOULETTE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Sains-en-Gohelle,Bouvigny-Boyeffles,62170,BOUVIGNY-BOYEFFLES,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Sains-en-Gohelle,Gouy-Servins,62380,GOUY-SERVINS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Sains-en-Gohelle,Hersin-Coupigny,62443,HERSIN-COUPIGNY,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Sains-en-Gohelle,Sains-en-Gohelle,62737,SAINS-EN-GOHELLE,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[171276],1991-02-27,62,Sains-en-Gohelle,Servins,62793,SERVINS,62,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000171276
+legifrance,[719237],1991-02-27,77,Combs-la-Ville,Combs-la-Ville,77122,COMBS-LA-VILLE,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Combs-la-Ville,Lieusaint,77251,LIEUSAINT,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Combs-la-Ville,Moissy-Cramayel,77296,MOISSY-CRAMAYEL,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Combs-la-Ville,Réau,77384,REAU,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Mée-sur-Seine,Boissettes,77038,BOISSETTES,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Mée-sur-Seine,Boissise-la-Bertrand,77039,BOISSISE-LA-BERTRAND,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Mée-sur-Seine,Cesson,77067,CESSON,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Mée-sur-Seine,Le Mée-sur-Seine,77285,LE MEE-SUR-SEINE,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[719237],1991-02-27,77,Mée-sur-Seine,Vert-Saint-Denis,77495,VERT-SAINT-DENIS,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000719237
+legifrance,[354053],1991-02-27,78,Montigny-le-Bretonneux,Guyancourt,78297,GUYANCOURT,78,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000354053
+legifrance,[352924],1991-02-27,82,Montauban-I,Lamothe-Capdeville,82090,LAMOTHE-CAPDEVILLE,82,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[352924],1991-02-27,82,Montauban-I,Villemade,82195,VILLEMADE,82,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[352924],1991-02-27,82,Montauban-II,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[352924],1991-02-27,82,Montauban-III,Léojac,82098,LEOJAC,82,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[352924],1991-02-27,82,Montauban-IV,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[352924],1991-02-27,82,Montauban-V,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[352924],1991-02-27,82,Montauban-VI,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000352924
+legifrance,[536033],1991-02-27,89,Auxerre-Nord,Appoigny,89013,APPOIGNY,89,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000536033
+legifrance,[536033],1991-02-27,89,Auxerre-Nord,Charbuy,89083,CHARBUY,89,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000536033
+legifrance,[536033],1991-02-27,89,Auxerre-Nord,Perrigny,89295,PERRIGNY,89,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000536033
+legifrance,[536033],1991-02-27,89,Auxerre-Sud,Chevannes,89102,CHEVANNES,89,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000536033
+legifrance,[536033],1991-02-27,89,Auxerre-Sud,Vallan,89427,VALLAN,89,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000536033
+legifrance,[170965],1991-02-28,971,Saint-Martin-I,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000170965
+legifrance,[170965],1991-02-28,971,Saint-Martin-II,,,,,fraction seule,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000170965
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Bailly-Romainvilliers,77018,BAILLY-ROMAINVILLIERS,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Carnetin,77062,CARNETIN,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Chalifert,77075,CHALIFERT,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Chanteloup-en-Brie,77085,CHANTELOUP-EN-BRIE,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Chessy,77111,CHESSY,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Conches,77124,Conches,77,disparue,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Coupvray,77132,COUPVRAY,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Dampmart,77155,DAMPMART,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Guermantes,77221,GUERMANTES,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Jablines,77234,JABLINES,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Jossigny,77237,JOSSIGNY,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Lesches,77248,LESCHES,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Magny-le-Hongre,77268,MAGNY-LE-HONGRE,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Montévrain,77307,MONTEVRAIN,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Serris,77449,SERRIS,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,93-260,1993-02-26,77,Thorigny-sur-Marne,Thorigny-sur-Marne,77464,THORIGNY-SUR-MARNE,77,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000347281
+legifrance,[199056],1997-02-21,06,Menton-Ouest,Gorbio,06067,GORBIO,06,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199056
+legifrance,[199056],1997-02-21,06,Menton-Ouest,Roquebrune-Cap-Martin,06104,ROQUEBRUNE-CAP-MARTIN,06,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199056
+legifrance,[199056],1997-02-21,06,Menton-Ouest,Sainte-Agnès,06113,SAINTE-AGNES,06,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199056
+legifrance,[199057],1997-02-21,54,Malzéville,Agincourt,54006,AGINCOURT,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Amance,54012,AMANCE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Bouxières-aux-Chênes,54089,BOUXIERES-AUX-CHENES,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Bouxières-aux-Dames,54090,BOUXIERES-AUX-DAMES,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Brin-sur-Seille,54100,BRIN-SUR-SEILLE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Custines,54150,CUSTINES,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Dommartin-sous-Amance,54168,DOMMARTIN-SOUS-AMANCE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Eulmont,54186,EULMONT,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Lay-Saint-Christophe,54305,LAY-SAINT-CHRISTOPHE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Laître-sous-Amance,54289,LAITRE-SOUS-AMANCE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Malzéville,Malzéville,54339,MALZEVILLE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Pompey,Champigneulles,54115,CHAMPIGNEULLES,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Pompey,Frouard,54215,FROUARD,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Pompey,Marbache,54351,MARBACHE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Pompey,Pompey,54430,POMPEY,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Pompey,Saizevais,54490,SAIZERAIS,54,ressemblance,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Champenoux,54113,CHAMPENOUX,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Laneuvelotte,54296,LANEUVELOTTE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Mazerulles,54358,MAZERULLES,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Moncel-sur-Seille,54374,MONCEL-SUR-SEILLE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Pulnoy,54439,PULNOY,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Saulxures-lès-Nancy,54495,SAULXURES-LES-NANCY,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Seichamps,54498,SEICHAMPS,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Sorneville,54510,SORNEVILLE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Seichamps,Velaine-sous-Amance,54558,VELAINE-SOUS-AMANCE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[199057],1997-02-21,54,Villers-lès-Nancy,Maxéville,54357,MAXEVILLE,54,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199057
+legifrance,[381255],1997-02-21,66,Canet-en-Roussillon,Canet-en-Roussillon,66037,CANET-EN-ROUSSILLON,66,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000381255
+legifrance,[381255],1997-02-21,66,Canet-en-Roussillon,Saint-Nazaire,66186,SAINT-NAZAIRE,66,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000381255
+legifrance,[381255],1997-02-21,66,Canet-en-Roussillon,Sainte-Marie,66182,SAINTE-MARIE,66,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000381255
+legifrance,[381255],1997-02-21,66,Canet-en-Roussillon,Villelongue-de-la-Salanque,66224,VILLELONGUE-DE-LA-SALANQUE,66,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000381255
+legifrance,[565097],1997-02-21,81,Albi-Est,Fréjairolles,81097,FREJAIROLLES,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Albi-Ouest,Marssac-sur-Tarn,81156,MARSSAC-SUR-TARN,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Albi-Sud,Carlus,81059,CARLUS,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Albi-Sud,Le Séquestre,81284,LE SEQUESTRE,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Albi-Sud,Puygouzon,81218,PUYGOUZON,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Albi-Sud,Rouffiac,81232,ROUFFIAC,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Albi-Sud,Saliès,81274,SALIES,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[565097],1997-02-21,81,Castres-Ouest,Saïx,81273,SAIX,81,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000565097
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Allinges,74005,ALLINGES,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Anthy-sur-Léman,74013,ANTHY-SUR-LEMAN,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Cervens,74053,CERVENS,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Margencel,74163,MARGENCEL,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Orcier,74206,ORCIER,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Perrignier,74210,PERRIGNIER,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
+legifrance,[199792],1997-02-26,74,Thonon-les-Bains - Ouest,Sciez,74263,SCIEZ,74,exact,titre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792
