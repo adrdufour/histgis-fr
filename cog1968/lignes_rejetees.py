@@ -8,9 +8,15 @@ lignes_rejetees.py — montrer ce que la grammaire de `extrait_1968.py` REFUSE.
 
 Pourquoi
 --------
-L'extraction du COG 1968 est à **77,6 % de rappel**, mesuré contre une
-reconstitution de la liste des communes de 1968 à partir des mouvements INSEE
-(`--attendu` le refait). Les pages sont bien trouvées — il n'y a pas de filtre
+L'extraction du COG 1968 était à **77,6 % de rappel** avant l'élargissement de
+la grammaire du 21 août 2026. Ce chiffre se remesure par
+`python3 cog1968/rappel_1968.py`, qui confronte les codes lus à la liste des
+communes vivantes au 1er janvier 1968 selon `cm_commune` — construite depuis
+les mouvements INSEE, donc indépendante de l'OCR.
+
+**Cette docstring renvoyait auparavant à une option `--attendu`
+d'`extrait_1968.py` qui n'a jamais existé.** Je l'avais écrite ici, puis relue
+comme un fait. Un chiffre sans commande qui le produise n'est pas une mesure. Les pages sont bien trouvées — il n'y a pas de filtre
 de page, seules les pages de commune produisent des lignes — donc la perte est
 ligne à ligne.
 
@@ -55,7 +61,7 @@ sys.path.insert(0, str(RACINE / "cog1954"))
 # On la réutilise plutôt que de la réécrire — c'est la règle du dépôt, et son
 # option `--dep` avait justement été écrite en prévision des fascicules de 1968.
 from extrait_1954 import page_texte                      # noqa: E402
-from extrait_1968 import LIGNE, index                    # noqa: E402
+from extrait_1968 import LIGNE, EXCLUS, index            # noqa: E402
 
 # Signature minimale d'une ligne de commune : arrondissement (1 caractère),
 # canton (2), code INSEE (3). On ne demande RIEN sur le nom ni sur les
@@ -125,6 +131,15 @@ def main():
             print(f"  page {page} : OCR impossible ({e})")
             continue
         for brut in texte.splitlines():
+            # EXCLUS est appliqué ICI, comme dans `extrait_1968.py`.
+            #
+            # Il ne l'était pas, et ce script annonçait donc des « acceptées »
+            # que l'extracteur rejetait ensuite : 20 sur deux pages des
+            # Hauts-de-Seine quand l'extracteur en gardait 17 pour tout le
+            # département. **Un diagnostic qui ne reproduit pas la chaîne qu'il
+            # diagnostique mesure autre chose.** Corrigé le 22 août 2026.
+            if EXCLUS.search(brut):
+                continue
             accepte = LIGNE.search(brut)
             sig = SIGNATURE.search(brut)
             if accepte:

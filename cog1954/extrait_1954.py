@@ -365,7 +365,41 @@ def nettoie_nom(s):
     return s
 
 
-def page_texte(chemin_pdf, p, dpi=300, langue="fra"):
+def page_texte(chemin_pdf, p, dpi=300, langue="fra", psm="6"):
+    """Une page de PDF -> son texte, par pdftoppm puis tesseract.
+
+    LE MODE DE SEGMENTATION EST DÉSORMAIS UN PARAMÈTRE, et le défaut « 6 »
+    n'est plus un choix implicite mais un choix mesuré pour 1954 — c'est-à-dire
+    un choix NON mesuré, faute d'un banc d'essai pour cette campagne.
+
+    Mesuré le 22 août 2026 sur 1968 (`cog1968/essai_ocr.py`), trois fascicules,
+    toutes leurs pages, contre un référentiel de codes INSEE réels :
+
+        département        psm 6       psm 4
+        79 Deux-Sèvres       213     235   (+22)
+        43 Haute-Loire       185     220   (+35)
+        65 Hautes-Pyrénées   353     375   (+22)
+
+    `--psm 4` suppose « une colonne de texte de tailles variables », `--psm 6`
+    « un bloc uniforme » : les tableaux du COG sont en colonnes. Les faux
+    restent plats (41→45, 3→5, 5→6), donc le gain n'est pas payé en bruit.
+
+    POURQUOI 1954 GARDE « 6 ». Le gain est établi sur les fascicules de 1968 et
+    sur eux seuls. Les volumes de 1954 sont d'une autre campagne de numérisation
+    et d'une autre mise en page ; leur appliquer le résultat serait généraliser
+    une mesure hors de son périmètre — la faute même que ce banc d'essai a servi
+    à corriger deux fois dans la journée. `essai_ocr.py` est écrit pour 1968 ;
+    l'équivalent pour 1954 reste à faire, et alors seulement ce défaut bougera.
+
+    Ce que l'on sait aussi, et qui a coûté deux fausses conclusions :
+
+      - la RÉSOLUTION est un effet de scan, pas de chaîne. 400 dpi rend +30, +5
+        et +25 selon le fascicule : irrégulier, donc non portable.
+      - `--psm 11` et `--psm 12` (texte épars) rendent ZÉRO sur des pages où le
+        témoin en lit 129, 146 et 168 : ils détruisent la structure en lignes
+        dont la grammaire dépend.
+      - le seuillage et le renforcement de netteté dégradent (-25, -90).
+    """
     with tempfile.TemporaryDirectory() as tmp:
         base = Path(tmp) / "pg"
         subprocess.run(["pdftoppm", "-r", str(dpi), "-gray", "-f", str(p),
@@ -375,7 +409,7 @@ def page_texte(chemin_pdf, p, dpi=300, langue="fra"):
         if img is None:
             return ""
         r = subprocess.run(["tesseract", str(img), "-", "-l", langue,
-                            "--psm", "6"],
+                            "--psm", psm],
                            capture_output=True, text=True)
         return r.stdout
 
