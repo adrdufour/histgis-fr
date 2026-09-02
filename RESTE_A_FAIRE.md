@@ -1,436 +1,376 @@
-# Ce qui reste à faire — état au 14 août 2026
+# Ce qui reste à faire
 
-Dressé après la journée du 14 août. Les tâches sont classées par chantier, et
-dans chacun par ordre de valeur, pas de facilité. Le blocage est indiqué quand
-il y en a un : beaucoup de choses attendent quelque chose plutôt que quelqu'un.
+**Arrêté au 2 septembre 2026.** Les tâches sont classées par valeur, pas par
+facilité. Le blocage est indiqué quand il y en a un : beaucoup de choses
+attendent quelque chose plutôt que quelqu'un.
+
+> Ce fichier a été condensé le 2 septembre 2026. Il avait dérivé en journal :
+> quinze sections datées, la même tâche reparaissant dans cinq tableaux
+> successifs avec des états différents, et des dizaines de lignes barrées.
+> **Ce qui est fait n'y figure plus** — c'est le rôle de `JOURNAL.md`, qui
+> garde tout à sa date, et d'`ETAT.md`, qui dit où en est chaque couche.
+> Seul ce qui reste ouvert est ici.
 
 ---
 
-## 1. Le trou cantonal 1955-1998 — le seul blocage structurel
+## 0. La file d'attente immédiate
 
-C'était le seul obstacle à l'objectif du projet. Il n'est plus un mur mais une
-série de jalons à extraire.
+Dans cet ordre. Les quatre premières se font sans rien chercher.
+(La numérotation portait deux « 4 » ; corrigée le 2 septembre 2026.)
 
-| tâche | état | blocage |
+| # | tâche | pourquoi maintenant |
 |---|---|---|
-| **Récupérer un fascicule de 1968** et le passer dans la chaîne | à faire | **site BNSP indisponible** |
-| Vérifier d'abord si le PDF de 1968 a une couche texte (`pdftotext -layout`) | à faire | idem |
-| Extraire les 87 fascicules de 1968 | à faire | dépend du test ci-dessus |
-| Vérifier l'existence de 1975, 1982, 1990 dans la série | à faire | idem |
-| 1962 : confirmé présent, à extraire | à faire | idem |
+| 1 | **Jouer `81_report_1968_avant.sql`** sur la vraie base, après `79` | écrit, éprouvé au banc, **confirmé non joué le 2 septembre** : 191 000 atome-années en attente, +45 % de couverture, zéro collision mesurée |
+| 2 | **Expliquer trois traces absentes : `25`, `40_outremer`, `37`** | mesuré le 2 septembre — voir ci-dessous ; `37` est le plus inquiétant des trois |
+| 3 | **Établir l'état de `38_decret_1982_ain.sql`** puis le rejouer si besoin | § 2 c de `diag_passages.sql` ; attention, il se tait au rejeu si `75`/`76`/`79` occupent déjà 1982-1999 |
+| 4 | **Donner une trace à `38` et `39`** | rien dans la base ne dit s'ils sont passés — c'est ce qui a laissé un `rebuild.sh` défaire `39` en silence pendant quinze jours |
+| 5 | **Lancer un export web complet** et mesurer le poids | seule chose que le banc ne peut pas dire ; attendu 92 Mo → deux à trois fois plus. Désormais sans conséquence pour le dépôt : `donnees/` est ignoré |
+| 6 | Écrire `requirements.txt` ou `environment.yml` | dette ouverte depuis le 14 août, triviale |
 
-**Premier fascicule conseillé : Calvados ou Aisne**, dont on a déjà la
-composition de 1940 et de 1954 — trois dates à confronter au lieu de deux.
+> **Les points « compléter `.gitignore` » et « commiter » sont faits le
+> 2 septembre 2026.** `cartes/web/donnees/` est détaché de l'index (1 546
+> fichiers, 3,3 Go, gardés sur le disque), les 4 Go de reçus sont ignorés
+> nommément, et les treize jours sont versionnés en huit commits. Le détail
+> est au § Git de `LISEZMOI.md`. Deux choses apprises, qui valent pour la
+> suite :
+>
+> * **Git n'applique pas ses motifs d'exclusion à un fichier déjà suivi.**
+>   `sorties/` était ignoré depuis toujours et ses deux rapports étaient
+>   pourtant suivis. Une règle ajoutée après coup ne rattrape rien : il faut
+>   `git rm --cached`.
+> * **Un `#` en fin de ligne ne commente pas un `.gitignore`** — il fait
+>   partie du motif. `/JORF/    # 2,6 Go` n'ignore rien, et ne le dit pas.
+>   Vérifier par `git check-ignore -v`, jamais à l'œil.
 
-L'outil est prêt : `extrait_1954.py --pdf … --dep 14`. Sur un fascicule
-départemental le département est dans le titre, donc toute la détection
-d'en-tête et le redécoupage alphabétique deviennent inutiles.
+**Avant et après chaque point, `psql -d histgis -f sql/diag_passages.sql`** —
+lecture seule. Il dit quels fichiers sont réellement passés, lesquels ont une
+trace vide, et lit par leur effet les deux qui n'en ont pas.
 
-## 2. Le volume de 1954 — acquis, perfectible
+```bash
+psql -d histgis -1 -f sql/81_report_1968_avant.sql    # APRÈS 79
+```
 
-**Acquis** : trois créations cantonales établies par trois voies indépendantes,
-98 % de stabilité 1940-1954, tableau A transcrit.
+Attendu de `81` : ~32 842 lignes, ~191 000 atome-années. Le repère mesuré le
+2 septembre, à comparer après coup :
 
-| tâche | valeur | difficulté |
+| au | avant `81` | après `81` |
 |---|---|---|
-| **Ajouter `insee_mvt.libelle_av` au dictionnaire de noms** | forte, **et démontrée** | faible |
-| Remonter la couverture au-delà de 79 % | moyenne | moyenne |
-| Poser 1954 dans la base (`membership` 1940 → 1954 + 3 créations) | forte | moyenne |
+| 1969-06-01 | **0** | des dizaines de milliers |
+| 1974-06-01 | 5 198 rattachements, 474 cantons | **inchangé** |
+| 1989-06-01 | 23 233 | inchangé |
+| 1994-06-01 | 30 783 | inchangé |
 
-Le premier point est le meilleur rapport : 7 576 noms non appariés, dont une
-part importante sont des communes disparues avant 2011, donc absentes de GEOFLA
-qui sert de dictionnaire. Les ajouter ne touche pas à l'extraction.
+Si 1974 bouge, `81` a mordu sur `79` et il faut s'arrêter. Regarder ensuite le 95
+dans `p81_qualite` (78,1 % de jamais-nommés, le plus bas ; probablement
+l'éclatement de la Seine-et-Oise et non un trou du registre).
 
-**Le correctif a été mesuré ailleurs le 15 août** : appliqué aux rejets de
-`composition_decrets.py`, `insee_mvt.libelle_av` en récupère 33 %, à condition
-de contraindre le département. Le même dictionnaire sert les deux chantiers,
-et l'implémentation est déjà écrite dans `cantons/composition_decrets.py`
-(`communes_disparues()`) — il n'y a qu'à la reprendre.
+**`39` est appliqué** — vérifié le 2 septembre, 0 canton en `99` et 73 en `54`.
+Il n'y a rien à rejouer ; il reste à lui donner une trace (point 4).
 
-**Abandonné, et à ne pas reprendre par cette voie** : les transferts de
-communes entre cantons. 311 candidats, 227 réfutés par la géométrie, les
-survivants indiscernables du bruit. Le volume dit qu'il y en a eu ; notre
-lecture ne peut pas les distinguer d'un chiffre mal reconnu.
+### Le détail du point 2 — trois traces absentes, trois questions différentes
 
-## 3. Paris — trame posée, découpage à finir
+Le § 4 de `diag_passages.sql` les lit par leur effet. Ce qu'il faut regarder
+dans l'ordre de gravité :
 
-**Acquis** : les 80 quartiers reconstruits par union d'IRIS en Licence Ouverte,
-80/80 noms confirmés par l'atlas, 386 circonscriptions posées sur 15 divisions,
-`paris_circo.pdf` généré.
+**`37_reparer_encodage.sql` — et la cause est trouvée : rien ne l'appelle.**
+
+`rejouer_apres_rebuild.sh` annonce en commentaire l'étape
+« COG 1999-2012 (22, 36, **37**, 23) » et délègue à `load_cog.sh`. Or
+`load_cog.sh` ne joue que `22_cog_stage.sql` et `23_cog_diag.sql`. **`37` n'est
+appelé par aucun script de la chaîne** — et le commentaire lui attribue en outre
+la création de `noms_geofla`, qui est le fait de `19`.
+
+Un commentaire qui décrit ce que le code ne fait pas, et personne ne l'a relu
+depuis le 20 août parce qu'il n'y avait rien à voir : la chaîne ne se plaint
+pas d'un fichier qu'elle n'appelle pas. C'est le pendant exact du défaut de
+`41`, où le commentaire annonçait 21 cas et la requête en sortait 38
+(`METHODE.md` § 15.2).
+
+La réparation qu'il porte n'est pas cosmétique — 1 975 valeurs, tous les `œ` et
+`Œ` de la nomenclature, c'est le défaut n° 4 des sept trouvés le 11 août. Sans
+elle, tout appariement par nom échoue silencieusement sur ces valeurs. Le § 4 b
+compte les octets de contrôle C1 dans `unit.nom` et `unit_version.nom` ; s'il en
+trouve :
+
+```bash
+psql -d histgis -1 -v appliquer=1 -f sql/37_reparer_encodage.sql
+```
+
+**Et il faut l'ajouter à la chaîne**, avec son `-v appliquer=1`, en corrigeant le
+commentaire qui prétend qu'il y est.
+
+**`25_pseudo_canton.sql` — à expliquer.** Sa trace est créée sans condition, et
+il est appelé sans condition juste après `24` dans la chaîne. Son absence
+signifie qu'il n'a pas tourné depuis le dernier `rebuild.sh`, alors que `24` l'a
+fait. Conséquence si c'est le cas : **les 25 arrondissements de Marseille et Lyon
+n'ont aucun canton de 1999 à 2012**, et l'effectif de 3 843/3 846 cantons est
+faux de deux unités. Le § 4 a tranche.
+
+**`40_outremer.sql` — à expliquer.** Même situation, et son CSV d'entrée
+(`circo/circo_outremer_1986_2012.csv`) est bien sur le disque, donc ce n'est pas
+la panne de `-v` du 20 août. Le § 4 d compte les tables `om_*` : neuf attendues.
+
+**Hypothèse la plus probable pour les deux**, et elle n'est pas un échec du
+script : `rejouer_apres_rebuild.sh` porte bien `set -euo pipefail` et
+`ON_ERROR_STOP=1`, donc il s'arrête au premier échec — il n'a pas pu poser `42`
+et `50` en sautant `25` et `40`, qui les précèdent. **Le script n'a donc pas été
+joué de bout en bout** ; les fichiers ont été lancés un par un, et ces deux-là
+sont passés à travers. C'est cohérent avec tout le reste de la chaîne au-delà de
+`56`, joué à la main lui aussi (voir ci-dessous).
+
+### Et pendant qu'on y est : `rejouer_apres_rebuild.sh` est périmé
+
+Il s'arrête à `56_paris_circo_1876.sql`. **Rien de ce qui a été écrit depuis le
+20 août n'y figure** — ni les jalons `58`/`59` et `66`-`69`, ni le registre `72`,
+ni les salves `74`-`77`, ni les reports `79` et `81`, ni ANR `82`. Leurs traces
+sont pourtant en base : ils ont donc été joués **à la main**, un par un.
+
+Conséquence directe : **le prochain `rebuild.sh` détruira tout ce travail et le
+script ne le remontera pas.** C'est la même mécanique qui a défait `39` en
+silence, à une échelle sans commune mesure — 1954, 1968, les salves, les deux
+reports, la trame ANR.
+
+À faire avant tout `rebuild.sh` : compléter le script jusqu'à `83`, avec l'ordre
+et les variables `-v` de chacun, en reprenant `sql/CHAINE.md`.
+
+---
+
+## 1. Cantons 1943-1999 — étendre la couverture
+
+Le trou n'en est plus un (`ETAT.md` § 2.3), mais la couverture reste molle
+entre les jalons.
+
+| tâche | valeur | blocage |
+|---|---|---|
+| **Rétroporter `pct_jamais_nommes` et son dénominateur dans `p79_qualite`** | forte | aucun — `p81_qualite` le porte déjà |
+| **Poser sur la part libre des fenêtres partiellement occupées** | 289 atomes récupérables | aucun ; la règle « tout ou rien » coûte désormais plus qu'elle ne protège |
+| Le **chaînage acte par acte** sur les 54 départements intégralement dépouillés | forte | prendre un numéro libre : `82` est pris par ANR |
+| Second tour sur la classe « modification de limites cantonales » | moyenne | 25 actes fixent encore un plancher ; le premier tour a rendu +18 %, pas +37 % |
+| Un **troisième jalon : le recensement de 1975** | forte | au milieu des 1 147 dép-années noires ; la chaîne de `59` se réutilise telle quelle |
+| Les **86 actes non dépouillés** | moyenne | file au § 7 bis de `80` : 91 (6), 54 (5), 59 (5), 38 (4), 92 (4), 76 (4) |
+| Les **62 cantons annoncés au titre d'un décret et jamais lus** | moyenne | c'est là que se joue le rappel de l'extraction : 122 sur 184 |
+| Poser le transfert de **Han-devant-Pierrepont** | faible | `77` a lu la modalité 43, celui-ci est en modalité 41 |
+| Les **24 actes dont le JO manque** (13 numéros) | faible | ils ne bloquent rien, ils enrichiraient les compositions |
+
+**Réserve permanente à ne pas oublier** : *un décret nomme les cantons qu'il crée
+ou modifie, jamais ceux qu'il vide.* Tout chaînage acte par acte hérite de ce
+biais, dont le sens est connu — il joue contre l'hypothèse, ce qui rend un
+accord élevé plus solide qu'il n'en a l'air, et un accord faible ambigu.
+
+**La part `sous_plafond` se retire en une requête** si elle est un jour jugée
+trop risquée :
+
+```sql
+DELETE FROM histgis.membership m USING histgis.p79_qualite q
+ WHERE q.membership_id = m.membership_id AND q.sous_plafond;
+```
+
+### Le mur 1986-1989
+
+37 actes, aucun texte en clair sur Légifrance, aucun dépouillé,
+`composition_jo.csv` s'arrête à 1988 avec cinq lignes. C'est aussi la fenêtre des
+**48 cantons créés entre 1986 et 1999**, nommés un par un et non datés. PDF du JO
+requis, même chaîne que `composition_jo.py`.
+
+À ne pas refaire : la veine 1990-1999 est **épuisée, pas inexploitée**. Les 83
+décrets de la décennie ont été lus — 19 portent une composition (en base par
+`76`), 4 déplacent une commune entière (posés par `77`), 40 transfèrent des
+parcelles (non-événements), 29 sont des tracés de rues, 10 sont sans texte.
+*Une année absente d'un fichier de sortie n'est pas une année non lue.*
+
+---
+
+## 2. Les villes à découper — 119, et rien n'est commencé
+
+C'est le plus gros chantier manuel restant, et le seul qui ne dépende d'aucune
+source à trouver.
+
+| tâche | valeur | blocage |
+|---|---|---|
+| **Marseille** : géoréférencer et digitaliser dans QGIS | forte | travail à la main ; protocole dans `gaudillere/protocole_georeferencement.md` |
+| Puis lancer `sql/32_marseille_geom.sql` | — | dépend du précédent |
+| Mesurer le **taux de reprise réel** ville par ville | forte | disposer d'une ligne n'est pas disposer de la bonne |
+| Les 118 autres villes | forte | même travail |
+
+**La trame d'accrochage est acquise et en base** : `histgis.iris_ville`,
+4 219 IRIS, les 119 villes servies, **211 des 214 coupes** pourvues d'au moins
+une ligne interne. Marseille reçoit 393 IRIS et Lyon 185, pour 11 et 12 coupes —
+les deux villes les plus coûteuses sont les mieux dotées.
+
+Trois villes sans appui, une coupe chacune : **Confolens** (16106), **Tartas**
+(40313), **Le Quesnoy** (59481) — un seul IRIS, donc aucune ligne interne. Deux
+en trame juste suffisante : Saint-Flour (15187) et Avesnes-sur-Helpe (59036).
+
+**Ce que la trame ne prouve pas** : les IRIS sont calés sur la voirie et les
+îlots, pas sur les limites cantonales — sauf à Paris, où l'INSEE les cale
+explicitement sur les limites de quartier. Ailleurs c'est un support
+d'accrochage : des lignes propres, topologiquement valides, calées sur des rues
+réelles, où l'on choisit au lieu de dessiner.
+
+ADMIN EXPRESS v4 (2025) reste utile comme **fond de calage, pas comme économie** :
+26 % des coupes internes seulement (123 offertes sur 472 requises ; Nantes en
+demande 17 et 2025 en offre 1).
+
+---
+
+## 3. Circonscriptions
+
+| tâche | valeur | blocage |
+|---|---|---|
+| **Marquer les 113 communes indéterminées de 1986 sur la carte** | forte | aucun — voir ci-dessous |
+| **Contrôler la couche circo** par les §§ 1, 3, 4 et 6 de l'annexe VI | forte | aucun : ce sont les seules sections qui ne passent pas par les cantons |
+| Contrôle indépendant de la couche moderne | forte | les contours publiés sur data.gouv.fr peuvent jouer le rôle que GEOFLA a joué pour les cantons |
+| Le découpage de **1958** hors Paris | moyenne | suspendu au trou cantonal ; 57 circos de 1986 sont reprises de 1981 (annexe VI § 7), et Marseille est constructible à 87 % par l'atlas |
+| **Paris en 1986** | moyenne | demanderait une autre source que le tableau de l'Intérieur |
+| Les 8 atomes coupés entre circos sans l'être entre cantons | faible | il faudrait des atomes-fractions taillés sur les circonscriptions |
+
+### Les 113 indéterminées — un défaut d'affichage, pas de données
+
+De 1987 à 1999 la couche cantonale est mince, et c'est celle des
+circonscriptions qui dessine les communes : ces 113 **disparaissent purement et
+simplement** de la carte. Le projet a une règle explicite — *ce qui n'a de nom
+nulle part est signalé comme tel, pas maquillé* — et une absence silencieuse la
+contredit.
+
+**À faire** : charger `circo/circo_1986_indetermine.csv` dans une table
+`circo_indetermine`, et les faire dessiner par `export_web.py` avec un figuré
+propre (hachure, comme les communes coupées), les circonscriptions candidates au
+survol. **Aucun rattachement dans `membership`** : la source ne tranche pas, la
+base ne doit pas trancher non plus.
+
+**Piste de résolution, à évaluer séparément** : pour chacune, les
+circonscriptions candidates sont connues, et le découpage de 2009 rattache la
+commune à l'une d'elles. Là où les limites n'ont pas bougé entre 1986 et 2009, le
+rapprochement serait dicté par la source — même forme d'argument que la voie
+`fraction` de `41`. À mesurer avant d'y toucher, et à ne poser que si la
+correspondance est unique.
+
+---
+
+## 4. Paris
+
+**Acquis** : 80 quartiers reconstruits par union d'IRIS en Licence Ouverte,
+80/80 noms confirmés par l'atlas, 386 circonscriptions sur 15 divisions,
+1958-1986 posé, `paris_circo.pdf` généré.
 
 | tâche | valeur | blocage |
 |---|---|---|
 | **Les quartiers coupés par une rue** — 3 à 9 par division, 9 pour 1958-1986 | forte | axes BD TOPO à récupérer |
-| Corriger la coquille de `paris_decoupage.xlsx` | faible | aucun |
-| Dater la période `?-?` (37 circonscriptions complètes, sans date) | moyenne | pièces à trouver |
-| La trame d'avant 1860 — 48 quartiers, 12 arrondissements | moyenne | **licence** |
-
-La coquille : en 1857-1863, `montdepietemarais` fusionne deux quartiers en une
-cellule, d'où 47 quartiers au lieu de 48. Les quatre autres périodes anciennes
-en donnent bien 48.
-
-L'avant-1860 : la couche ALPAGE-Vasserot existe et couvre exactement les 48
-quartiers, mais elle est en **ODbL**. Route propre : géoréférencer un plan du
-XIXe en domaine public, protocole de Marseille.
-
-## 4. Les villes à découper — 119, et rien n'est commencé
-
-| tâche | valeur | blocage |
-|---|---|---|
-| **Marseille** : géoréférencer et digitaliser dans QGIS | forte | à faire à la main |
-| Puis lancer `sql/32_marseille_geom.sql` | — | dépend du précédent |
-| Les 118 autres villes | forte | même travail |
-| ~~Tester CONTOURS-IRIS comme trame de découpe~~ | **fait le 14 août — la trame est bonne** | — |
-| ~~Récupérer les IRIS des 119 villes~~ | **fait le 14 août — `histgis.iris_ville`, 4 219 IRIS** | — |
-
-**Testé, et l'hypothèse tient.** CONTOURS-IRIS couvre **97 % des villes et
-88 % des coupes**, contre 26 % pour ADMIN EXPRESS. Le chantier réel est de
-**214 coupes** et non 472, dont **81 villes à trait unique**. Seules Confolens
-et Tartas, sous 5 000 habitants, sont sans trame — une coupe chacune.
-
-**La trame est récupérée et chargée** : `histgis.iris_ville`, 4 219 IRIS, les
-119 villes servies, **211 coupes sur 214** pourvues d'au moins une ligne
-interne. Marseille (393 IRIS) et Lyon (185) sont les mieux dotées, ce qui tombe
-bien puisqu'elles portent 23 des 214 coupes.
-
-Trois villes sans appui, une coupe chacune : Confolens, Tartas et **Le Quesnoy**
-— cette dernière n'était pas prévue par le seuil de population, elle est
-apparue à la récupération.
-
-Reste à mesurer le **taux de reprise réel** ville par ville dans QGIS : disposer
-d'une ligne n'est pas disposer de la bonne. Marseille en premier, ses onze
-lignes étant décrites dans `gaudillere/protocole_georeferencement.md`.
-
-## 5. Circonscriptions législatives
-
-| tâche | valeur | blocage |
-|---|---|---|
-| Contrôler la couche circo par l'annexe VI §§ 1, 3, 4, 6 | forte | aucun |
-| `circo_1986_indetermine.csv` : 135 communes, 24 cantons à valeur textuelle | moyenne | aucun |
-| Poser les circos nationales sur la trame cantonale | forte | **trou cantonal** |
-
-Les sections 1, 3, 4 et 6 de l'annexe VI ne passent pas par les cantons : elles
-sont contrôlables tout de suite, indépendamment du trou.
-
-## 6. Dettes et démarches
-
-| tâche | état |
-|---|---|
-| **Envoyer le rapport à Victor Gay** — `cantons/rapport_pour_victor_gay.md` | rédigé, à relire et envoyer |
-| Confirmer la licence Cassini EHESS auprès du CRH avant publication | à faire |
-| CRH-EHESS et INSEE : relancer ? | courriels du 10 août sans réponse |
-| **Embargo ANR-COMMUNES** : levée le 1er septembre 2026 | attendre |
-
-L'ANR-COMMUNES réglerait à la racine les recouvrements et les trous de
-couverture. C'est dans deux semaines.
-
-## 7. Limites connues, non résolues
-
-* **Recouvrements** : 12 822 km² au niveau des cantons, 3 945 km² au niveau des
-  atomes. Diagnostiqués — c'est le partage de polygone entre communes absorbées
-  — mais non corrigés. Le correctif viendra de l'ANR.
-* **`hac_partage`** : rattachement par nom, arbitraire et révocable. Le contrôle
-  Gay ne peut ni le condamner ni l'innocenter.
-* **48 cantons créés entre 1986 et 1999** : nommés, non datés. Il faut une
-  source couvrant cette période.
-* **274 transferts isolés de communes** dans le registre cantonal : l'annexe VII
-  ne recense jamais ce type de mouvement. Indatables sans les décrets.
-
-## 8. Hygiène du dépôt
-
-| tâche | valeur | difficulté |
-|---|---|---|
-| Écrire `environment.yml` ou `requirements.txt` | moyenne | triviale |
-| Regrouper les scripts de 1954 sous un nom générique (ils serviront à 1968) | faible | faible |
-
-Aucun fichier d'environnement n'existe : psycopg2, matplotlib, shapely,
-openpyxl, xlrd, pyshp, pyproj sont utilisés sans être déclarés nulle part.
+| Dater la période `?-?` — 37 circonscriptions complètes, sans date | moyenne | pièces à trouver |
+| La trame d'avant 1860 — 48 quartiers, 12 arrondissements | moyenne | **licence** : ALPAGE-Vasserot couvre exactement les 48 quartiers mais est en ODbL. Route propre : géoréférencer un plan du XIXᵉ en domaine public, protocole de Marseille |
+| Corriger la coquille de `paris_decoupage.xlsx` | faible | aucun — en 1857-1863, `montdepietemarais` fusionne deux quartiers en une cellule, d'où 47 au lieu de 48 |
 
 ---
 
-## Ce qui se ferait le mieux maintenant, site indisponible
+## 5. ANR-COMMUNES — la migration est faite à côté, pas à la place
 
-1. ~~Tester CONTOURS-IRIS~~, ~~récupérer les IRIS~~ — **faits**. 4 219 IRIS en
-   base, 211 coupes sur 214 pourvues. Suite : **attaquer Marseille dans QGIS**,
-   et mesurer le taux de reprise réel.
-2. **Ajouter `insee_mvt.libelle_av`** au dictionnaire de noms de 1954.
-3. **Contrôler la couche circo** par les sections de l'annexe VI qui ne passent
-   pas par les cantons.
-4. **Relire et envoyer** le rapport à Victor Gay.
+Chargé et contrôlé en base le 1ᵉʳ septembre : `atom_geom_anr`, 45 113 polygones
+datés, 38 074 atomes pourvus, recouvrement **101,0 km² contre 3 945**.
+`atom_geom` et `membership` n'ont pas été touchés.
 
-## Chisa et Butry-sur-Oise : le recodage casse le raccord de `15` — 17 août 2026
+| tâche | valeur | blocage |
+|---|---|---|
+| **Décider du sort de la double trame** | forte | `atom_geom` garde ses 3 945 km² ; faut-il migrer, ou garder les deux et documenter ? décision, pas travail |
+| **Signaler à l'équipe ANR** : Beauvais, Flipou/Senneville, la Corse sans édition historique, les 3 `Poly_ID` à double fenêtre, et les **532 trous de chronologie** | moyenne | aucun |
+| Décider du sort des 6 atomes doublons qu'ANR tranche (`a82_doublon`) | faible | décision |
 
-Trouvé par Adrien : **Chisa est absente de la Corse 1870-1940.** Ce n'est pas un
-fait mais un trou, et la documentation du dépôt se trompe à son sujet.
+**Ce qu'ANR ne réglera pas, et il faut le savoir** : les 333 fractions. ANR livre
+le polygone de la commune-mère entière et ne sait pas la découper entre deux
+cantons. Le chantier du § 2 reste entier.
 
-`insee_mvt` documente sa création : `mod 20`, **1947-04-12**, détachée de
-**Ventiseri** (20342). Elle n'est donc ni un « territoire neuf » (contrairement à
-Tende et La Brigue, italiennes jusqu'en 1947), ni « créée avant 1943, hors de
-portée du fichier INSEE ». `ETAT.md`, `METHODE.md` et `JOURNAL.md` disent les
-deux, et les deux sont faux — **à corriger en même temps que le correctif**.
+**Le verrou neuf, pour l'extension avant 1870** : ANR ignore la frontière
+nationale (`ETAT.md` § 5). C'est le premier obstacle à lever pour 1815.
 
-**La cause.** `15_creation_arriere.sql` trouve bien la fille : son test de
-« commune sans atome » est géométrique et Chisa y figure. Mais il cherche
-ensuite le mouvement par `i.com_ap = s.insee_com`, c'est-à-dire par le code
-GEOFLA **moderne**. Or la création nomme `20366`, et la Corse a été recodée en
-1976 : GEOFLA porte `2B366`. La mère aussi a bougé, `20342` → `2B342`. Le
-`JOIN LATERAL ... ON true` étant un jointure interne, la fille est **écartée en
-silence**.
+---
 
-**L'ampleur, mesurée.** Croisement des 904 recodages `mod 41` avec les créations
-`mod 20/21` : **4 lignes, 2 communes.**
+## 6. Extension avant 1870
 
-| commune | créée | mère | recodage |
-|---|---|---|---|
-| Chisa `2B366` | 1947-04-12 | Ventiseri `20342` → `2B342` | Corse 1976 |
-| Butry-sur-Oise `95120` | 1948-08-01 | Auvers-sur-Oise `78039` → `95039` | Seine-et-Oise 1968 |
+Ouvert, non commencé hors Paris. Gaudillère est la source principale. La
+géométrie ne coûte plus rien — `82` a chargé tout ANR, 1790-2020, donc 1815 est
+déjà dessiné (39 157 polygones, recouvrement 144,8 km²) — **ce qui manque, ce
+sont les attributions et la frontière.**
 
-Le défaut ne va pas au-delà. Ordre de grandeur du territoire récupéré : ~32 km²,
-sur les 238 km² encore non couverts en 1870 (les « 4 territoires neufs » valaient
-303,61 km², dont 271,1 pour Tende et La Brigue).
+À 1815, **10 259 polygones ne sont pas terminaux** : ANR affirme pour eux une
+forme pré-moderne précise au lieu de projeter celle d'aujourd'hui. C'est du
+contenu, et il est là où nous n'avons rien.
 
-**Le correctif retenu : amender `15`, pas écrire un `42`.** `15` est rejouable
-par conception — il supprime ses propres atomes et vide `creation_trace` avant de
-recommencer — donc il se relance seul, sans reconstruction. C'est la leçon
-écrite le même jour dans `METHODE.md` : réparer la règle là où elle vit plutôt
-que la rattraper en aval.
+---
 
-**Ce qu'il faut écrire.** Une table de résolution des codes bâtie sur `mod 41`,
-appliquée aux deux bouts du `LATERAL` : `com_ap` résolu vers l'avant pour
-retrouver la fille, `com_av` résolu vers l'avant pour retrouver la mère dans
-GEOFLA.
+## 7. Dettes et démarches
 
-**Attention, la résolution doit être TRANSITIVE.** Vérifié : quatre codes sont
-recodés deux fois de suite — `78143` → `91143` et `78620` → `91620` passent par
-un état intermédiaire. Un seul saut suffirait pour Chisa et Butry, mais une
-résolution à un saut serait fausse en général, et c'est exactement le genre de
-raccourci qui reviendra. Un `WITH RECURSIVE` sur `mod 41`, avec garde contre les
-cycles.
-
-**Recette** : Chisa et Butry doivent recevoir un atome-fraction
-`source = 'creation_arriere'`, portant leur polygone GEOFLA et la chronologie de
-Ventiseri / Auvers-sur-Oise ; le total des filles passe de 58 à 60 ; le non
-couvert de 1870 baisse d'environ 32 km². Et le garde-fou 5 de `15` (territoire
-déjà couvert, test par point intérieur) doit continuer d'écarter Marseille.
-
-## Trois dettes découvertes le 17 août 2026 en cassant la base
-
-Le rejeu de `15_creation_arriere.sql` a mis `24_canton_moderne.sql` en échec au
-milieu de son travail : **37 261 rattachements cantonaux supprimés et non
-reconstruits**. La base a été remise d'aplomb le jour même, mais trois défauts
-de la chaîne sont apparus et restent à corriger.
-
-### 1. `38_decret_1982_ain.sql` n'a aucune table de trace
-
-Tous les fichiers qui posent des rattachements en ont une — `scission_trace`,
-`creation_trace`, `canton_moderne_trace`, `retablissement_trace`… Lui insère
-sans pouvoir défaire. C'est sa ligne unique (`31125` dans le canton `0138`, du
-26 janvier 1982 au 1ᵉʳ janvier 1999) qui a bloqué la reconstruction de `24`, et
-il a fallu la mettre de côté à la main dans une table `reprise_24`.
-
-À faire : lui donner une trace sur le modèle des autres, et le rendre rejouable.
-
-### 2. L'ordre de la chaîne n'est écrit nulle part — FAIT le 20 août 2026
-
-**`24` ne peut pas être rejoué tant qu'un autre fichier occupe ses unités** —
-la clé étrangère `membership_unit_fk` le refuse. Rien dans `sql/README.md` ne le
-dit. La séquence de rattrapage était :
-
-1. mettre de côté les rattachements portant sur les unités de `24` ;
-2. jouer `24` ;
-3. les remettre ;
-4. rejouer `41` puis `42`, qui s'appuient sur la couche reconstruite.
-
-Sans l'étape 4, `41` ne pose qu'une ligne au lieu de 17 — et rien ne signale que
-le résultat est faux, puisqu'il est cohérent. **Un résultat obtenu sur une base
-à demi reconstruite est indiscernable d'un résultat juste.**
-
-**Fait** : section « Qui dépend de qui » en tête de `sql/README.md`, avec les
-deux mécanismes (blocage de clé étrangère, destruction par cascade), le tableau
-des dépendances mesurées et la séquence sûre de rejeu de `24`.
-
-La cascade a d'ailleurs frappé une seconde fois le même jour, sans rien casser
-de visible : la reconstruction de `24` a emporté les circonscriptions posées par
-`27` et `28` sur ses 732 atomes-fractions. Corrigé par `43_circo_fraction.sql`.
-
-### 3. Deux fichiers portent le numéro 40
-
-`40_outremer.sql` et `40_scission_circo.sql`. Sans conséquence tant qu'on les
-nomme en entier, mais la numérotation sert justement à donner l'ordre.
-
-### Résidu à expliquer
-
-La recette de `24` compte **2 rattachements dans le trou 1941-1998**, où elle en
-attend zéro. L'un est la ligne de `38` — le décret de 1982 est une donnée réelle
-dans cette période, donc une exception légitime à documenter plutôt qu'un
-défaut. L'autre n'est pas identifié.
-
-## Marquer les circonscriptions indéterminées de 1986 sur la carte
-
-Trouvé le 20 août 2026 en refermant `43_circo_fraction.sql`.
-
-**113 communes n'ont aucune circonscription de 1986 à 2013**, et c'est un fait
-de la source, pas un défaut : le tableau officiel de 1986 écrit pour certains
-cantons « circonscriptions 13 et 16 » en toutes lettres, sans répartir les
-communes. Toutes sont recensées dans `circo/circo_1986_indetermine.csv`
-(135 lignes). Elles se concentrent sur 18 cantons — Nord (67 communes), Rhône
-(12), Bouches-du-Rhône (10), Bas-Rhin (10), Charente-Maritime (6), Drôme (6),
-Seine-Saint-Denis (2) — dont **sept entièrement absents**.
-
-**Le problème est d'affichage.** De 1987 à 1999 la couche cantonale n'existe
-pas, donc seule celle des circonscriptions dessine les communes : ces 113
-disparaissent purement et simplement. Or le projet a une règle explicite —
-« ce qui n'a de nom nulle part est signalé comme tel, pas maquillé » — et une
-absence silencieuse la contredit.
-
-**À faire** : charger `circo_1986_indetermine.csv` dans une table
-`circo_indetermine`, et faire dessiner ces communes par `export_web.py` avec un
-figuré propre (hachure, comme les communes coupées), en indiquant les
-circonscriptions candidates au survol. Pas de rattachement dans `membership` :
-la source ne tranche pas, la base ne doit pas trancher non plus.
-
-**Piste de résolution, à évaluer séparément** : pour chacune, les
-circonscriptions candidates sont connues, et le découpage de 2009 rattache la
-commune à l'une d'elles. Là où les limites n'ont pas bougé entre 1986 et 2009,
-le rapprochement serait dicté par la source — même forme d'argument que la voie
-`fraction` de `41`. À mesurer avant d'y toucher, et à ne poser que si la
-correspondance est unique.
-
-## Huit communes coupées entre circonscriptions sans l'être entre cantons
-
-Écartées par `43_circo_fraction.sql`, garde-fou d'unicité : Lyon
-(`69-13`/`69-14`), Nice (`06-07`/`06-08`), Marseille, et cinq fractions de
-banlieue parisienne et mosellane. Le découpage législatif les partage, le
-découpage cantonal non — **aucun atome ne peut porter la coupure**, puisque les
-atomes-fractions sont taillés sur les cantons.
-
-Même nature que les 132 pseudo-circonscriptions sans nom : il faudrait des
-atomes-fractions taillés sur les circonscriptions, ce qui suppose une trame
-géométrique du découpage législatif qu'on n'a pas.
-
-## Chercher les autres absorptions anciennes suivies d'un rétablissement
-
-Le signe est un **trou intérieur** dans la chronologie d'un atome. Mesuré le
-20 août 2026 : 1 690 trous dans la couche canton, 1 684 dans la couche circo —
-dont **1 689 et 1 683 de 48 ans**, qui sont l'Alsace-Moselle de 1871 à 1919 et
-doivent rester ouverts. Le seul autre est **Cherré**, absorbée par
-La Ferté-Bernard en 1886 et rétablie en 1888, traitée par
-`sql/44_absorption_ancienne.sql`.
-
-La requête de détection est en section 4 de ce fichier. **Ne jamais refermer un
-tel trou d'office** : il faut trouver l'acte, nommer l'absorbante et ajouter une
-ligne sourcée à `absorption_ancienne`. Un trou peut être borné par la même unité
-alors que l'absorbante relève d'un autre canton — le résultat serait juste ici et
-faux ailleurs.
-
-Piste pour aller plus loin : **HAC** documente les fusions antérieures à 1943 et
-est déjà une source du projet. Elle permettrait de peupler `absorption_ancienne`
-sans passer par des articles au cas par cas.
-
-Question ouverte, et aucune recette ne la voit : une commune omise en **fin** de
-série ne laisse pas de trou intérieur, sa période s'arrête simplement plus tôt.
-Le contrôle par trou intérieur ne la détecterait pas.
-
-## ~~Faire de HAC une source de filiation pour `11_scission.sql`~~ — ESSAYÉ, ABANDONNÉ le 20 août 2026
-
-Ouvert le 20 août 2026, après le contrôle de `45_controle_hac.sql`.
-
-`11` prolonge les communes nées pendant la série en pariant qu'elles restent
-dans le canton de leur mère, **sans savoir qui est la mère**. Le contrôle par
-HAC donne 98,2 % au canton et 100 % aux circonscriptions — et les 7 désaccords
-ont tous la même forme : une commune détachée d'une mère relevant d'un **autre**
-canton, l'acte de création changeant le canton en même temps.
-
-| commune | `11` pose | mère selon HAC | canton de la mère |
-|---|---|---|---|
-| Le Pont-de-Claix (38) | Vif | Champagnier | Vizille |
-| Charantonnay (38) | Heyrieux | Beauvoir-de-Marc | Saint-Jean-de-Bournay |
-| Aboën (42) | Saint-Bonnet-le-Château | Périgneux | Saint-Rambert-sur-Loire |
-| Pornichet (44) | Saint-Nazaire | La Baule-Escoublac | Guérande |
-| Bagnoles-de-l'Orne (61) | Juvigny-sous-Andaine | Couterne | La Ferté-Macé |
-| Saint-Edmond (71) | Chauffailles | Ligny-en-Brionnais | Semur-en-Brionnais |
-| Beauchamp (78) | Montmorency | Montigny-lès-Cormeilles | Argenteuil |
-
-**Ce qu'il faudrait faire.** Utiliser `hac/hac_filiation.csv` comme source de
-filiation dans `11`, exactement comme `15_creation_arriere.sql` utilise
-`insee_mvt` : quand HAC nomme la mère, recopier SA chronologie ; sinon,
-retomber sur le pari par voisinage cantonal. 444 filiations sur 447 sont
-résolues, dont 403 recouvrent des atomes que `11` prolonge.
-
-**Et pourquoi c'est licite.** Construire avec HAC n'est pas s'y comparer : le
-contrôle indépendant resterait Gay, qui reconstruit la même chose par une autre
-voie. C'est la situation de `15`, qui bâtit sur `insee_mvt` et se fait contrôler
-par Gay. Ce qui serait illicite, c'est de **corriger** la base d'après HAC après
-l'avoir utilisée comme contrôle — d'où le fait que `45` ne modifie rien.
-
-**Résultat de l'essai, mesuré par `controle_gay.sh`** : 4 paris perdus sur 414
-et 151 atomes mal placés avec le pari ; **11 sur 425 et 155 mal placés avec la
-filiation HAC**. Gay compte les sept cas divergents comme mal placés, tous les
-sept. Le changement a été **annulé** (`git` 6f8e215), et l'essai est consigné
-dans l'en-tête de `11`.
-
-Cause : **HAC ne nomme qu'une mère quand il y en a plusieurs.** Pornichet est
-créée en 1900 à partir d'Escoublac ET de Saint-Nazaire ; HAC ne cite
-qu'Escoublac. La filiation est vraie et ne répond pas à la question, qui porte
-sur le canton d'attribution.
-
-Règle tirée, dans `METHODE.md` : *une source qui nomme un fait ne vaut pas mieux
-qu'un pari mesuré si elle ne nomme pas LE fait.* Et le critère d'acceptation
-avait été écrit avant l'essai — c'est ce qui a permis de trancher au lieu
-d'expliquer l'écart.
-
-**À mesurer d'abord** : le contrôle Gay après changement. Si le nombre d'atomes
-mal placés baisse, la voie est bonne ; s'il monte, HAC nomme une mère qui n'est
-pas celle dont le territoire vient, et il faudra comprendre pourquoi avant de
-garder le changement.
-
-### Deux paris perdus selon Gay, gagnés selon HAC
-
-Le Theux (08447, mère Mézières) et Sognolles-en-Montois (77454, mère Lizines)
-sont donnés en **accord** par HAC, aux deux niveaux, alors que le contrôle Gay
-les compte parmi ses quatre paris perdus. Deux sources indépendantes se
-contredisent ; ni l'une ni l'autre ne tranche seule. À porter à Victor Gay avec
-le reste du rapport.
-
-Note : les deux autres paris perdus (Houat et Hœdic) n'apparaissent pas dans la
-section 5 de `45` — les codes cités par `METHODE.md`, 17501 et 17191, sont des
-identifiants d'atome et non des codes INSEE, et la requête filtre sur
-`insee_geofla`. À reprendre avec les bons codes.
-
-## Trous intérieurs courts apparus après `46` — à mesurer
-
-Constaté le 20 août 2026 dans la recette 4 de `44_absorption_ancienne.sql`,
-après une chaîne complète.
-
-Avant `46`, les trous intérieurs de `membership` se répartissaient en deux
-groupes nets : **2 ans** (Cherré, corrigé) et **48 ans** (l'Alsace-Moselle, qui
-doit rester ouverte). Après `46`, on voit apparaître des durées intermédiaires :
-
-| durée | trous |
+| tâche | état |
 |---|---|
-| 2, 4, 5, 7, 9 ans | 1 chacun |
-| 18 ans | 2 |
-| 27, 35 ans | 1 chacun |
-| 39 ans | 2 |
+| **Envoyer le rapport à Victor Gay** — `cantons/rapport_pour_victor_gay.md` | rédigé, à relire et envoyer ; il a demandé le détail des comparaisons |
+| Y joindre les deux paris que HAC lui conteste | Le Theux (08447) et Sognolles-en-Montois (77454), donnés en accord par HAC aux deux niveaux |
+| Reprendre Houat et Hœdic avec les bons codes | `45` § 5 filtre sur `insee_geofla` ; 17501 et 17191 sont des identifiants d'atome, pas des codes INSEE |
+| Confirmer la licence Cassini EHESS auprès du CRH avant publication | la CC BY 3.0 FR est portée par la notice du dépôt, pas par le site |
+| CRH-EHESS et INSEE : relancer ? | courriels du 10 août sans réponse |
+| Regrouper les scripts de 1954 et 1968 sous un nom générique | faible, ils font désormais le même travail |
 
-Une dizaine d'atomes. L'hypothèse la plus simple est que `46` pose une période
-qui **ne rejoint pas** le premier rattachement propre de la commune : sa fenêtre
-s'arrête à `min(création selon HAC, premier rattachement propre)`, et quand les
-deux dates divergent — TRF-GIS connaît Neuilly-Plaisance dès 1882, HAC la crée
-en 1892 — l'écart reste vide.
+---
 
-**À faire** : lister ces atomes avec leur commune, la date de création selon
-HAC et selon TRF-GIS. Si l'hypothèse tient, deux voies s'offrent, et il faudra
-choisir en le disant :
+## 8. Chantiers ouverts, à mesurer avant d'écrire
 
-- combler jusqu'au premier rattachement propre, en assumant que la mère gardait
-  le territoire jusque-là ;
-- ou laisser le trou et **déclarer le désaccord de dates** entre HAC et
-  TRF-GIS, ce qui est plus honnête si les deux sources se contredisent
-  vraiment.
+Rien ici ne doit être corrigé d'office. Ce sont des cas où la mesure décide.
 
-La seconde est cohérente avec le reste du projet : on préfère un trou déclaré à
-un rattachement inventé. Mais il faut d'abord regarder les dix cas.
+### Les trous intérieurs courts apparus après `46`
+
+Avant `46`, les trous de `membership` se répartissaient en deux groupes nets :
+**2 ans** (Cherré, corrigé) et **48 ans** (l'Alsace-Moselle, qui doit rester
+ouverte). Après, des durées intermédiaires apparaissent — 2, 4, 5, 7, 9, 18 ×2,
+27, 35, 39 ×2 ans, soit une dizaine d'atomes.
+
+Hypothèse la plus simple : `46` pose une fenêtre qui **ne rejoint pas** le
+premier rattachement propre de la commune, sa borne étant
+`min(création selon HAC, premier rattachement propre)` — TRF-GIS connaît
+Neuilly-Plaisance dès 1882, HAC la crée en 1892, et l'écart reste vide.
+
+**À faire** : lister ces atomes avec leur commune et les deux dates de création.
+Si l'hypothèse tient, deux voies, et il faudra choisir **en le disant** : combler
+jusqu'au premier rattachement propre, ou laisser le trou et **déclarer le
+désaccord de dates** entre HAC et TRF-GIS. La seconde est cohérente avec le
+reste du projet — on préfère un trou déclaré à un rattachement inventé.
 
 **Ne pas refermer d'office** : c'est exactement la faute commise sur Cherré, où
 un trou de deux ans enregistrait une absorption réelle.
+
+### Les autres absorptions anciennes suivies d'un rétablissement
+
+Le signe est un trou intérieur dans la chronologie d'un atome ; la requête de
+détection est en § 4 de `44_absorption_ancienne.sql`. Mesuré le 20 août :
+1 690 trous côté canton, 1 684 côté circo, dont 1 689 et 1 683 de 48 ans qui sont
+l'Alsace-Moselle. Le seul autre est Cherré, traité.
+
+**Ne jamais refermer un tel trou d'office** : il faut trouver l'acte, nommer
+l'absorbante, et ajouter une ligne sourcée à `absorption_ancienne`. Un trou peut
+être borné par la même unité alors que l'absorbante relève d'un autre canton —
+le résultat serait juste ici et faux ailleurs.
+
+**Piste** : HAC documente les fusions antérieures à 1943 et est déjà une source
+du projet. Elle permettrait de peupler `absorption_ancienne` sans passer par des
+articles au cas par cas.
+
+**Angle mort connu, qu'aucune recette ne voit** : une commune omise en **fin** de
+série ne laisse pas de trou intérieur, sa période s'arrête simplement plus tôt.
+
+### Ventiler les 108 km² entre rural et urbain
+
+Point de finition sans enjeu. `13` § 3 a établi la ventilation avec l'ancienne
+clé `code_2011`, sur 3 837 km² ; les 108 km² que la clé géométrique restitue n'y
+sont pas répartis — Lyon (47,85) ira du côté urbain, les 60,18 restants sont à
+classer. Rejouer `13` § 3 sur `cle_geom` suffirait. L'ordre de grandeur ne
+bougera pas.
+
+---
+
+## 9. Voies explorées et fermées — à ne pas rouvrir sans raison neuve
+
+| voie | verdict | date |
+|---|---|---|
+| **HAC comme source de filiation pour `11`** | essayé, mesuré, **abandonné** : 11 paris perdus sur 425 contre 4 sur 414. HAC ne nomme qu'une mère quand il y en a plusieurs | 20 août |
+| **Les transferts de communes lus dans le volume de 1954** | 311 candidats, 227 réfutés par la géométrie, les survivants indiscernables du bruit | 14 août |
+| **`ID_GEOFLA.tab`, `insee_former.do`** | l'un est la table attributaire du shapefile, l'autre de l'harmonisation de noms | — |
+| **L'appariement par nom contre le COG 2005** | abandonné au profit des mouvements INSEE, traçables ligne à ligne | — |
+| **Le pseudo-découpage appliqué à Paris 2009** | mesuré puis écarté : il relierait 17 des 18 circonscriptions parisiennes en une seule composante | — |
+| **ADMIN EXPRESS comme trame de découpe** | 26 % des coupes ; CONTOURS-IRIS lui est supérieur d'un ordre de grandeur | 11 août |
+| **Cassini-Geopeuple, quartiers de la Ville de Paris, ALPAGE-Vasserot** | licences incompatibles (CC BY-NC-SA, ODbL) quelle que soit la qualité de la donnée | — |

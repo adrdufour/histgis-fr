@@ -63,6 +63,26 @@ alors que `psql` fonctionne dans le même shell.
 
 **Plusieurs atomes peuvent porter le même polygone**, volontairement.
 
+### `atom_geom_anr` — la trame **datée**, depuis le 1ᵉʳ septembre 2026
+| colonne | |
+|---|---|
+| `atom_id`, `poly_id` | |
+| `periode` | `daterange` — un polygone par atome **et par date**, garanti par contrainte |
+| `geom` | `geometry(MultiPolygon, 2154)` |
+
+45 113 polygones, 38 074 atomes pourvus, trame ANR-COMMUNES 1790-2020. Se lit par
+`snapshot_geom_anr(date, niveau)`, qui **retombe sur `atom_geom`** là où ANR ne
+dit rien et le signale (`n_anr`, `n_repli`).
+
+**Ce qu'elle change pour une carte** : le recouvrement entre communes distinctes
+passe de **3 945 km² à 101,0** à 1870. Mais `atom_geom` reste intacte avec ses
+3 945 — **ce qui lit `atom_geom` directement voit toujours l'ancienne valeur.**
+Pour une carte au zoom urbain, préférer `snapshot_geom_anr()`.
+
+Ce qu'elle ne change **pas** : les 333 fractions. ANR livre le polygone de la
+commune-mère entière et ne sait pas la découper entre deux cantons. **Le chantier
+décrit ici reste entier.**
+
 ### `membership` — l'appartenance dans le temps
 | colonne | |
 |---|---|
@@ -186,6 +206,11 @@ Alpes-de-Haute-Provence, Espinouse, Saint-Jurson et Le Chaffaut portent les
 mêmes 29,75 km². Dessinés séparément, ils s'empilent — trois libellés au même
 endroit, sans que rien ne l'indique. Regrouper sur `md5(ST_AsEWKB(geom))`.
 
+Nuance depuis ANR : sur `atom_geom_anr`, **l'empreinte de regroupement devient
+datée** — deux atomes que la trame de 2011 confondait peuvent en avoir deux
+distincts en 1870. C'est précisément le mécanisme qui fait tomber le recouvrement
+de 3 945 à 101 km². La règle ne change pas, son résultat oui.
+
 **Le nom d'unité est anachronique** si l'on ne joint pas `unit_version` avec un
 filtre de période.
 
@@ -230,7 +255,11 @@ Géométrie communale : le shapefile GEOFLA ED111 sous
 * `gaudillere/protocole_georeferencement.md` décrit comment digitaliser les
   coupes de Marseille — onze lignes internes pour 1870, 1886 et 1901. C'est le
   cas d'école du chantier.
-* `RESTE_A_FAIRE.md` donne l'état général et les blocages.
-* `METHODE.md` porte les règles du projet. La première, apprise à répétition :
-  **avant de déclarer un événement, vérifier que le référentiel n'a pas
-  bougé.**
+* `ETAT.md` donne l'état de chaque couche, `RESTE_A_FAIRE.md` § 2 le détail de
+  ce chantier et ses blocages.
+* `METHODE.md` porte les règles du projet, **indexées au § 10**. La première,
+  apprise à répétition : *avant de déclarer un événement, vérifier que le
+  référentiel n'a pas bougé.* Les plus utiles ici sont les § 14.1 (interroger un
+  atome ne renseigne pas sur un territoire), § 14.2 (grouper par la géométrie) et
+  § 14.6 (un identifiant d'atome n'est pas un code INSEE) et § 14.7 (les grandes
+  villes codées par arrondissement).
