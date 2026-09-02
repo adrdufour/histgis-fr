@@ -61,12 +61,16 @@ jorf_txt/*_raw.txt
 # reproduiraient donc pas à l'identique.
 jorf_txt/*_col.txt
 
-# Export de la carte web : 3,3 Go et 1 549 fichiers, entièrement refaits
-# par `python3 cartes/export_web.py --jobs N`. Il avait été suivi par
-# inadvertance et pesait à lui seul 96 % du bruit de `git status` — la
+# Données de la carte web : 3,3 Go et 1 546 fichiers, entièrement refaits
+# par `python3 cartes/export_web.py --jobs N`. Elles avaient été suivies par
+# inadvertance et pesaient à elles seules 96 % du bruit de `git status` — la
 # moindre régénération y produisait des milliers de suppressions et
 # d'ajouts. Ce qui compte est le script, pas sa sortie.
-cartes/web/
+#
+# ATTENTION : c'est bien `donnees/` qu'on exclut, PAS `cartes/web/`.
+# index.html, servir.py et LISEZMOI.md sont du code et de la doc, écrits à
+# la main, et restent suivis.
+cartes/web/donnees/
 
 # Sauvegardes prises avant une transformation risquée (`.avant_appariement`,
 # `.avant_correction`…). Ce sont des filets de sécurité locaux, utiles tant
