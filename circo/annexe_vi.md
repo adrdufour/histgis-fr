@@ -62,6 +62,33 @@ Loriol-sur-Drôme (Drôme), Muret (Haute-Garonne), Houdain (Pas-de-Calais,
 
 Testé par `sql/36_recette_annexe_vi.sql`.
 
+**La liste ci-dessus était incomplète — corrigé le 20 août 2026.** Elle ne
+mentionnait aucun canton du Nord, alors que l'atlas en décrit dix. La
+transcription complète du § 5 est dans **`circo/notes_1986_gaudillere.txt`**
+(à la racine du dépôt jusqu'au 2 septembre 2026), et couvre :
+
+* **Nord** — Lille-Sud-Est, Lannoy, Dunkerque-Est, Douai-Nord, Douai-Ouest,
+  Douai-Sud, Valenciennes-Nord, Valenciennes-Sud, Anzin, Condé-sur-Escaut ;
+* **Rhône** — Limonest ; **Bouches-du-Rhône** — Istres, Salon ;
+* **Bas-Rhin** — Obernai ; **Charente-Maritime** — Saintes-Est ;
+* **Drôme** — Loriol ; **Seine-Saint-Denis** — la ville de Saint-Denis.
+
+J'avais conclu de l'absence des cantons du Nord que l'atlas se contredisait, en
+prenant un résumé partiel pour la source. **Une absence dans une transcription
+n'est pas une absence dans l'original.**
+
+Cette section lève 115 des 125 communes indéterminées de 1986
+(`circo/resoudre_1986_partage.py`, puis `sql/49_circo_1986_partage.sql`), et se
+contrôle : pour chacun des 13 cantons, le ministère annonçait une PAIRE de
+circonscriptions sans dire laquelle ; l'atlas nomme les communes. **Zéro des
+118 lignes posées ne sort de la paire annoncée.**
+
+**Deux désaccords subsistent, non résolus.** L'atlas déclare divisés les cantons
+de **Douai-Ouest** et de **Condé-sur-Escaut**, que le ministère donne d'un seul
+tenant. Aucune des deux sources n'a autorité sur l'autre. À trancher sur
+l'original, ou sur les résultats électoraux par commune de 1988-1997, qui disent
+sans ambiguïté où chaque commune a voté.
+
 **Concordance déjà acquise** : `30_stabilite_cantonale.sql` avait trouvé quatre
 cantons éclatés en Bouches-du-Rhône, dont Istres et Salon-de-Provence — les
 deux que l'annexe annonce, les autres étant marseillais donc exclus.
