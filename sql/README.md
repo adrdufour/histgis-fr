@@ -34,11 +34,30 @@ Les quatre fichiers s'enchaînent seuls, mais restent lançables un par un :
 
 ## Inventaire complet : `CHAINE.md`
 
-**`sql/CHAINE.md` dresse les 44 fichiers** — ce que chacun fait, ce qu'il écrit,
+**`sql/CHAINE.md` dresse les 84 fichiers** — ce que chacun fait, ce qu'il écrit,
 sa table de trace, les variables qu'il attend, et l'ordre d'exécution. Il
-distingue trois familles : construction (24 fichiers), diagnostic en lecture
-seule (17), et l'espace séparé de l'outre-mer. Il nomme aussi ce qui ne sert
-plus. À lire en premier.
+distingue trois familles : construction, diagnostic en lecture seule, et
+l'espace séparé de l'outre-mer. Il nomme aussi ce qui ne sert plus. À lire en
+premier.
+
+> **`rejouer_apres_rebuild.sh` est périmé — lire `CHAINE.md` § 0 avant tout
+> `rebuild.sh`.** Il s'arrête à `40_scission_circo.sql` : quatorze fichiers qui
+> écrivent dans la base ne sont appelés par aucun script — tout le chantier
+> 1943-1999 et la trame ANR. Ils ont été joués à la main, et une reconstruction
+> ne les remontera pas. `CHAINE.md` § 1 c en donne la liste ordonnée, qui tient
+> lieu de procédure en attendant que le script soit complété.
+
+## Qu'est-ce qui est réellement en base ?
+
+```bash
+psql -d histgis -f sql/diag_passages.sql     # lecture seule
+```
+
+Il confronte l'inventaire des tables de trace **attendues** à ce que la base
+porte, et lit par leur effet les fichiers qui n'en ont pas (`38`, `39`) ou dont
+la trace manque. Écrit le 2 septembre 2026, parce que la question « ce fichier
+est-il passé ? » n'avait pas de réponse — et qu'un `rebuild.sh` avait défait
+`39` pendant quinze jours sans que rien ne le signale.
 
 ## Qui dépend de qui — à lire AVANT de rejouer un fichier
 
@@ -64,13 +83,62 @@ Qui référence quoi, mesuré :
 
 | unités de | référencées par |
 |---|---|
-| `24` (cantons 1999-2012) | `38_decret_1982_ain`, `41_retablissement` |
-| `27` / `28` (circos modernes) | `15_creation_arriere`, `41`, `42` |
+| `24` (cantons 1999-2012) | `38_decret_1982_ain`, `41_retablissement`, `74_yvelines_1967`, `75_composition_1973_1982`, `76_composition_salves_restantes`, `77_transferts_dates`, **`79_report_1999_arriere`**, **`81_report_1968_avant`** |
+| `27` / `28` (circos modernes) | `15_creation_arriere`, `41`, `42`, `40_scission_circo`, `43_circo_fraction`, `47_circo_mere`, `49_circo_1986_partage` |
+
+**Cette liste doit être tenue à jour par qui écrit un fichier.** Le soir du
+20 août 2026, `47` et `49` s'y sont ajoutés sans que la ligne soit corrigée, et
+la couche des circonscriptions y est passée en entier — voir ci-dessous.
 
 **Marche à suivre** : mettre de côté les rattachements concernés, jouer le
 fichier, les remettre, puis rejouer ce qui en dépend. Défaire par la trace
-quand elle existe — `38_decret_1982_ain.sql` **n'en a pas**, il faut sauver ses
-lignes à la main.
+quand elle existe — `38_decret_1982_ain.sql` **n'en a pas**, ni
+`39_meurthe_1870.sql` — il faut sauver leurs lignes à la main, et surtout se
+souvenir de les rejouer, ce que rien dans la base ne rappelle (`39` a été
+retrouvé défait le 30 août 2026). `74` à `81` en ont une (`y67_trace`,
+`p75_trace`, `p76_trace`, `p77_trace`, `p79_trace`, `p81_trace`) : on les
+défait proprement, puis on les rejoue après `24`, dans cet ordre.
+
+**`79` est un cas à part et il faut le savoir** : il ne pose QUE là où la
+fenêtre est entièrement libre. Le rejouer APRÈS `75`/`76`/`77` donne un
+résultat ; le rejouer AVANT en donne un autre, plus grand et faux — il
+occuperait des périodes que les décrets renseignent mieux que lui. **L'ordre
+`72` → `73` → `74` → `75` → `76` → `77` → `79` n'est pas une commodité, c'est
+une condition de justesse**, et rien dans la base ne signalerait l'inversion :
+le résultat serait cohérent. `78` (lecture seule) se lance quand on veut.
+
+**`81` se joue APRÈS `79`**, et son § 1 le refuse autrement (il prend
+`p79_trace` et `p79_qualite` pour témoins). L'ordre n'est pas ici une condition
+de justesse comme pour `79` — les deux reports ne peuvent pas se rencontrer,
+`79` s'arrêtant au dernier acte et `81` au premier — mais un témoin absent rend
+la recette 11 b muette au lieu de fausse, ce qui est pire. Vérifié au banc :
+`bash sql/banc_81.sh` joue la chaîne entière jusqu'à `81`, deux fois, et compte
+les chevauchements (zéro).
+
+`80_report_1968_avant_diag.sql` est en lecture seule lui aussi et se lance quand
+on veut, mais il se lit **après** `79` : son § 4 sépare l'occupation venue de
+`79` de celle venue des décrets, et son § 5 mesure la JONCTION des deux reports.
+Joué avant `79`, il n'est pas faux — il mesure une opportunité au lieu d'un
+état, et le dit. C'est l'inverse du piège de `78`, qui prenait les lignes de
+`79` pour un obstacle.
+
+Pour la couche circo, tout cela est automatisé : **`./rejouer_circo.sh`** retire
+les dépendants par leurs traces, repose `28`, `27`, l'outre-mer, puis `49`, `47`
+et `40` dans l'ordre qui convient. C'est le chemin à prendre plutôt que de
+lancer ces fichiers à la main.
+
+### 1bis. Un nettoyage qui échoue laisse la base plus vide qu'il ne l'a trouvée
+
+`27` et `28` supprimaient leurs unités sans vérifier qui les référençait. La
+clé étrangère les arrêtait alors **entre la suppression et la pose** — et comme
+psql valide chaque instruction séparément, la suppression restait acquise. Le
+20 août 2026, la couche des circonscriptions est ainsi tombée de 37 000
+rattachements à 118, sans qu'aucun message ne parle d'autre chose que d'une
+contrainte violée sur une unité.
+
+Les deux fichiers portent désormais un **contrôle préalable** qui nomme les
+tables de trace bloquantes et refuse de commencer. Le message dit quoi faire.
+Rien n'était perdu — tout est tracé — mais rien ne le disait.
 
 ### 2. Une suppression en cascade détruit le travail des fichiers suivants
 

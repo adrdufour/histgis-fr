@@ -29,6 +29,23 @@
 --   356 d'entre eux voient leur prolongement bloqué avant 1870
 --   9 500 années-communes de trou résiduel dans la couche circo
 --
+-- Ce que la première version laissait passer (20 août 2026)
+-- ---------------------------------------------------------
+-- Villeneuve-la-Garenne, vue sur la carte sans circonscription de 1893 à 1928,
+-- a montré que ce fichier ne comblait qu'une part du trou qu'il annonçait
+-- traiter. Recompté sur toute la série, atome par atome et année par année :
+--
+--   trou de tête, voisins unanimes      17 340 années-communes   270 atomes
+--   trou intérieur, voisins unanimes       265 années-communes    12 atomes
+--   aucun voisin renseigné               4 325 années-communes    77 atomes
+--   voisins partagés                        21 années-communes     3 atomes
+--
+-- Les deux premières lignes sont posables sans rien inventer ; les deux
+-- dernières restent des limites connues, et doivent le rester. La version
+-- d'origine n'en posait que 967 lignes sur 308 atomes : elle ne voyait ni les
+-- atomes dépourvus de toute circonscription, ni les trous de milieu de
+-- chronologie. Voir le § 2 pour le détail des deux angles morts.
+--
 -- Les blocages tombent exactement sur les bascules de régime — 1889 (104
 -- atomes), 1876 (86), 1919 (59), 1928 (43), 1885 (19). La signature ne laisse
 -- aucun doute sur la cause.
@@ -47,6 +64,12 @@
 --   unanime          87,7 %   -> on pose
 --   canton partagé    0,0 %   -> jamais rencontré
 --   aucun voisin     12,3 %   -> on s'abstient
+--
+-- Ce « jamais rencontré » était un artefact de l'échantillon : 15 dates
+-- quinquennales sur les seuls atomes alors candidats. Le recomptage exhaustif
+-- de 2026-08-20 trouve **21 années-communes sur 3 atomes** où le canton est
+-- partagé entre deux circonscriptions. C'est rare, mais ce n'est pas nul, et
+-- le garde-fou qui s'abstient dans ce cas n'était donc pas décoratif.
 --
 -- **Zéro cas ambigu.** La règle ne tranche jamais un conflit, elle constate un
 -- accord ou se tait. Les 12,3 % d'abstention sont les cantons dont aucun membre
@@ -97,10 +120,16 @@ CREATE TABLE IF NOT EXISTS scission_circo_trace (
     unit_id       text NOT NULL,
     valid_from    date NOT NULL,
     valid_to      date NOT NULL,
-    debut_reel    date NOT NULL,   -- première circo réelle de l'atome
+    debut_reel    date,            -- première circo réelle de l'atome, ou NULL
     voisins       int  NOT NULL,   -- combien de voisins de canton l'ont dicté
     pose_le       timestamptz NOT NULL DEFAULT now()
 );
+
+-- `debut_reel` était NOT NULL tant que le fichier ne traitait que les atomes
+-- ayant DÉJÀ une circonscription. Depuis qu'il traite aussi ceux qui n'en ont
+-- aucune, la colonne doit accepter NULL — c'est justement ce vide qu'elle
+-- documente. Sur une base existante, la contrainte se relâche ici.
+ALTER TABLE scission_circo_trace ALTER COLUMN debut_reel DROP NOT NULL;
 
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM scission_circo_trace t
@@ -110,30 +139,84 @@ TRUNCATE scission_circo_trace;
 -- ---------------------------------------------------------------------------
 -- 1. Le calendrier des années couvertes par la base
 -- ---------------------------------------------------------------------------
+-- ÉCHANTILLONNÉ AU 1er DÉCEMBRE, et non au 1er janvier. Changé le 20 août 2026.
+--
+-- Deux bornes de la couche circo tombent en cours d'année : le 24 novembre 1986
+-- et le 10 juin 2012. Au 1er janvier, ce fichier les manquait toutes les deux —
+-- il interrogeait les voisins sur l'ancien découpage puis posait l'année
+-- entière, débordant sur le nouveau.
+--
+-- C'est la même date de référence que `MOIS_JOUR` dans `cartes/export_web.py`.
+-- **Les deux doivent rester d'accord** : si la carte échantillonne l'année à
+-- une date et ce correctif à une autre, il comble un trou que la carte ne voit
+-- pas, et laisse un trou qu'elle montre.
 DROP TABLE IF EXISTS sc_annee;
 CREATE TEMP TABLE sc_annee AS
-SELECT generate_series(
+SELECT an, make_date(an, 12, 1) AS d
+  FROM generate_series(
            extract(year FROM (SELECT min(valid_from) FROM membership))::int,
            extract(year FROM (SELECT max(valid_to)   FROM membership))::int - 1
        ) AS an;
 
 -- ---------------------------------------------------------------------------
--- 2. Les candidats : premier rattachement circo postérieur au début de la base
+-- 2. Les candidats : TOUTE année où l'atome a un canton et pas de circo
+--
+-- Cette définition a remplacé le 20 août 2026 une sélection qui avait deux
+-- angles morts, mesurés :
+--
+--   « SELECT atom_id, min(valid_from) FROM membership WHERE niveau='circo'
+--     GROUP BY atom_id HAVING min(valid_from) > (début de la base) »
+--
+--   1. Un atome SANS AUCUNE circonscription n'apparaît pas dans ce GROUP BY.
+--      Il n'était donc jamais candidat — alors que c'est le cas le plus grave.
+--      **270 atomes, 17 340 années-communes**, dont les voisins de canton sont
+--      pourtant unanimes.
+--   2. La dictée ne portait que sur les années ANTÉRIEURES au premier
+--      rattachement (`WHERE an < debut`). Un trou de MILIEU de chronologie
+--      restait invisible : **12 atomes, 265 années-communes**. Villeneuve-la-
+--      Garenne, née en 1929 de Gennevilliers, en est le témoin — 1893 à 1927
+--      sans circonscription alors que sa mère a une chaîne continue.
+--
+-- Le second angle mort était le plus instructif : l'en-tête de ce fichier
+-- reproche au garde-fou 1 de `11_scission.sql` de ne prolonger que le premier
+-- rattachement, et **reproduisait exactement le même défaut**. Une critique
+-- juste ne protège pas de la faute qu'elle nomme.
+--
+-- Effet de bord réparé au passage : l'ancienne sélection dépendait de l'ORDRE
+-- de la chaîne. Si `46_creation_serie.sql` passait avant, il donnait à l'atome
+-- une circo dès 1870 ; `min(valid_from) > début` devenait faux et l'atome
+-- sortait des candidats, trou intérieur compris. La définition par le trou est
+-- insensible à l'ordre : elle décrit un état, pas une histoire.
 -- ---------------------------------------------------------------------------
-DROP TABLE IF EXISTS sc_candidat;
-CREATE TEMP TABLE sc_candidat AS
-SELECT m.atom_id, min(m.valid_from) AS debut
-  FROM membership m
- WHERE m.niveau = 'circo'
- GROUP BY 1
-HAVING min(m.valid_from) > (SELECT min(valid_from) FROM membership);
+DROP TABLE IF EXISTS sc_trou;
+CREATE TEMP TABLE sc_trou AS
+SELECT mc.atom_id,
+       a.an,
+       a.d,
+       mc.unit_id AS canton
+  FROM sc_annee a
+  JOIN membership mc ON mc.niveau = 'canton' AND mc.periode @> a.d
+ WHERE NOT EXISTS (SELECT 1 FROM membership mx
+                    WHERE mx.atom_id = mc.atom_id
+                      AND mx.niveau  = 'circo'
+                      AND mx.periode @> a.d);
 
 -- Garde-fou 3 : on écarte les atomes-fraction. Une commune coupée entre deux
 -- circonscriptions ne peut pas hériter d'une circo unique, et c'est justement
 -- le cas où l'unanimité des voisins ne prouverait rien.
-DELETE FROM sc_candidat c
+DELETE FROM sc_trou t
  USING atom a
- WHERE a.atom_id = c.atom_id AND a.fraction;
+ WHERE a.atom_id = t.atom_id AND a.fraction;
+
+CREATE INDEX sc_trou_canton_idx ON sc_trou (canton, d);
+ANALYZE sc_trou;
+
+-- Première circonscription réelle de l'atome, pour la trace seulement. NULL
+-- quand l'atome n'en a aucune — cas que l'ancienne sélection ne voyait pas.
+DROP TABLE IF EXISTS sc_debut;
+CREATE TEMP TABLE sc_debut AS
+SELECT atom_id, min(valid_from) AS debut
+  FROM membership WHERE niveau = 'circo' GROUP BY atom_id;
 
 -- ---------------------------------------------------------------------------
 -- 3. Ce que les voisins de canton disent, année par année
@@ -144,39 +227,25 @@ DELETE FROM sc_candidat c
 -- ---------------------------------------------------------------------------
 DROP TABLE IF EXISTS sc_dicte;
 CREATE TEMP TABLE sc_dicte AS
-WITH jour AS (
-    SELECT c.atom_id, c.debut, a.an, make_date(a.an, 1, 1) AS d
-      FROM sc_candidat c
-      CROSS JOIN sc_annee a
-     WHERE make_date(a.an, 1, 1) < c.debut
-),
--- le canton de l'atome cette année-là, prolongé par 11
-canton AS (
-    SELECT j.atom_id, j.debut, j.an, j.d, mc.unit_id AS canton
-      FROM jour j
-      JOIN membership mc ON mc.atom_id = j.atom_id
-                        AND mc.niveau  = 'canton'
-                        AND mc.periode @> j.d
-),
--- ce que portent les AUTRES membres de ce canton
-voisin AS (
-    SELECT k.atom_id, k.debut, k.an, k.d, k.canton,
-           mv.unit_id AS circo
-      FROM canton k
-      JOIN membership mk ON mk.niveau = 'canton'
-                        AND mk.unit_id = k.canton
-                        AND mk.atom_id <> k.atom_id
-                        AND mk.periode @> k.d
+WITH voisin AS (
+    -- ce que portent les AUTRES membres du canton, cette année-là
+    SELECT t.atom_id, t.an, t.d, mv.unit_id AS circo
+      FROM sc_trou t
+      JOIN membership mk ON mk.niveau  = 'canton'
+                        AND mk.unit_id = t.canton
+                        AND mk.atom_id <> t.atom_id
+                        AND mk.periode @> t.d
       JOIN membership mv ON mv.atom_id = mk.atom_id
                         AND mv.niveau  = 'circo'
-                        AND mv.periode @> k.d
+                        AND mv.periode @> t.d
 )
-SELECT atom_id, debut, an, d,
-       min(circo)                AS circo,
+SELECT v.atom_id, b.debut, v.an, v.d,
+       min(v.circo)              AS circo,
        count(*)                  AS voisins
-  FROM voisin
- GROUP BY 1, 2, 3, 4
-HAVING count(DISTINCT circo) = 1;
+  FROM voisin v
+  LEFT JOIN sc_debut b ON b.atom_id = v.atom_id
+ GROUP BY v.atom_id, b.debut, v.an, v.d
+HAVING count(DISTINCT v.circo) = 1;
 
 -- ---------------------------------------------------------------------------
 -- 4. Recoller les années consécutives en périodes
@@ -195,6 +264,58 @@ SELECT atom_id, circo, debut,
        round(avg(voisins))::int     AS voisins
   FROM marque
  GROUP BY atom_id, circo, debut, groupe;
+
+-- Garde-fou 5 : ne jamais emprunter une unité en dehors de sa propre vie.
+--
+-- Les périodes sont recollées par années CIVILES, mais deux découpages
+-- électoraux commencent en cours d'année. Une année dictée au 1er décembre
+-- 2012 produisait ainsi la période [2012-01-01, 2013-01-01) sur une unité
+-- `@2009` qui n'existe que depuis le 10 juin — et, symétriquement, l'ancienne
+-- version posait `55-02@1986` jusqu'en 2013 sur les villages détruits de la
+-- Meuse, alors que ce découpage s'arrête en juin 2012.
+--
+-- On borne donc chaque période à l'intervalle où l'unité a RÉELLEMENT des
+-- membres ailleurs. C'est une mesure, pas une convention : si personne d'autre
+-- ne relève de cette circonscription à cette date, elle n'existe pas.
+DROP TABLE IF EXISTS sc_vie;
+CREATE TEMP TABLE sc_vie AS
+SELECT unit_id, min(valid_from) AS debut, max(valid_to) AS fin
+  FROM membership WHERE niveau = 'circo' GROUP BY unit_id;
+
+UPDATE sc_periode p
+   SET valid_from = greatest(p.valid_from, v.debut),
+       valid_to   = least(p.valid_to,   v.fin)
+  FROM sc_vie v
+ WHERE v.unit_id = p.circo;
+
+DELETE FROM sc_periode WHERE valid_from >= valid_to;
+
+-- Et refermer la couture que le bornage vient d'ouvrir.
+--
+-- Reculer le début de l'îlot suivant laisse un trou derrière lui : les
+-- villages détruits de la Meuse sortaient avec `55-02@1986` jusqu'au
+-- 1er janvier 2012 puis `55-02@2009` à partir du 10 juin, et rien entre les
+-- deux — alors qu'ils relevaient bien de l'ancienne circonscription jusqu'au
+-- 9 juin.
+--
+-- On referme donc chaque période sur la suivante, **à la stricte condition que
+-- le trou tienne dans une seule année civile**. C'est ce qui distingue une
+-- couture d'un vrai vide : le trou d'Alsace-Moselle, de 1871 à 1919, traverse
+-- quarante-huit ans et ne doit jamais être refermé. La condition sur l'année
+-- est le garde-fou, et elle est vérifiable d'un coup d'œil.
+UPDATE sc_periode p
+   SET valid_to = least(s.suivant, v.fin)
+  FROM (SELECT atom_id, circo, valid_from,
+               lead(valid_from) OVER (PARTITION BY atom_id ORDER BY valid_from)
+                   AS suivant
+          FROM sc_periode) s,
+       sc_vie v
+ WHERE s.atom_id = p.atom_id AND s.circo = p.circo
+   AND s.valid_from = p.valid_from
+   AND v.unit_id = p.circo
+   AND s.suivant IS NOT NULL
+   AND s.suivant > p.valid_to
+   AND date_trunc('year', s.suivant) = date_trunc('year', p.valid_to);
 
 -- Garde-fou 4 : ne jamais chevaucher un rattachement déjà présent. La
 -- contrainte EXCLUDE le refuserait de toute façon, mais autant ne pas lui
@@ -236,9 +357,27 @@ ANALYZE membership;
 -- ---------------------------------------------------------------------------
 \echo ''
 \echo '=== 2. Posé, par décennie d''apparition réelle ==='
-SELECT (extract(year FROM debut_reel)::int / 10) * 10 AS decennie,
+SELECT coalesce(((extract(year FROM debut_reel)::int / 10) * 10)::text,
+                'aucune circo native') AS decennie,
        count(DISTINCT atom_id) AS atomes, count(*) AS periodes
   FROM scission_circo_trace GROUP BY 1 ORDER BY 1;
+-- La ligne « aucune circo native » est le premier angle mort réparé : ces
+-- atomes n'avaient AUCUNE circonscription, à aucune date, et l'ancienne
+-- sélection ne pouvait pas les voir. Attendu de l'ordre de 270 atomes.
+
+\echo ''
+\echo '=== 2bis. Villeneuve-la-Garenne, témoin du trou INTÉRIEUR ==='
+SELECT m.unit_id, m.valid_from, m.valid_to,
+       CASE WHEN t.membership_id IS NULL THEN '' ELSE 'posé par 40' END AS origine
+  FROM membership m
+  JOIN atom a USING (atom_id)
+  LEFT JOIN scission_circo_trace t ON t.membership_id = m.membership_id
+ WHERE a.insee_geofla = '92078' AND m.niveau = 'circo'
+ ORDER BY m.valid_from;
+-- Née en 1929 par détachement de Gennevilliers (Wikipédia, fiche Cassini
+-- 40353). Attendu : plus aucune interruption entre 1870 et 1941. Le bloc
+-- 1893-1928 doit porter « posé par 40 » ; sa mère, elle, a toujours eu la
+-- chaîne complète — ce n'était donc pas un manque de source.
 
 \echo ''
 \echo '=== 3. Arrien-en-Bethmale, le cas qui a révélé le défaut ==='

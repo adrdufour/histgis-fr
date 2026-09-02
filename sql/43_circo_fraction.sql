@@ -70,8 +70,10 @@
 SET search_path TO histgis, public;
 
 \set d86_debut '1986-11-24'
-\set d86_fin   '2010-02-23'
-\set d09_debut '2010-02-23'
+-- Bascule alignée sur `27`, `28` et `40_outremer` : 10 juin 2012. Voir
+-- l'en-tête de `28_circo_1986.sql`. Corrigé le 20 août 2026.
+\set d86_fin   '2012-06-10'
+\set d09_debut '2012-06-10'
 \set d09_fin   '2013-01-01'
 -- Même date de référence que `27` et `28` pour lire la structure cantonale :
 -- c'est elle qui a servi à découper les atomes-fractions.

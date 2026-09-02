@@ -15,11 +15,22 @@
 -- 539 circonscriptions métropolitaines — le compte officiel, retrouvé sans
 -- correction par la somme des maxima départementaux.
 --
--- La période retenue court du **23 février 2010**, promulgation de la loi de
--- ratification, à la fin de la série. Le choix mérite d'être dit : aucune
--- élection législative n'a eu lieu entre 2007 et 2012, la borne aurait donc pu
--- être placée n'importe où dans cet intervalle. La promulgation est la date à
--- laquelle la carte devient le droit.
+-- La période retenue court du **10 juin 2012**, premier tour du renouvellement
+-- général, à la fin de la série. Corrigé le 20 août 2026 : elle commençait au
+-- 23 février 2010, promulgation de la loi de ratification.
+--
+-- Le raisonnement d'origine était que « la promulgation est la date à laquelle
+-- la carte devient le droit », et qu'aucune législative n'ayant eu lieu entre
+-- 2007 et 2012, la borne pouvait se placer n'importe où dans l'intervalle.
+-- **C'est faux sur les deux points.** L'ordonnance n° 2009-935 fixe elle-même
+-- son entrée en vigueur au prochain renouvellement général : entre 2010 et
+-- 2012, le droit applicable restait le découpage de 1986. Et l'intervalle n'est
+-- pas vide de scrutins — les législatives PARTIELLES s'y tiennent, sur les
+-- circonscriptions alors en vigueur.
+--
+-- La convention du projet reste celle de l'ACTE. Ce qui change, c'est que la
+-- date d'acte pertinente n'est pas celle de la ratification mais celle que
+-- l'acte se donne à lui-même.
 --
 -- Le raccord
 -- ----------
@@ -41,7 +52,11 @@
 
 \set ON_ERROR_STOP on
 SET search_path TO histgis, public;
-\set debut '2010-02-23'
+-- DÉBUT AU 10 JUIN 2012, et non au 23 février 2010. Corrigé le 20 août 2026.
+-- L'ordonnance n° 2009-935 ne s'applique qu'à compter du prochain
+-- renouvellement général — juin 2012. Voir l'en-tête de `28_circo_1986.sql`,
+-- où le raisonnement est écrit en entier.
+\set debut '2012-06-10'
 \set fin   '2013-01-01'
 \set date_canton '2012-06-01'
 
@@ -53,6 +68,34 @@ CREATE TABLE IF NOT EXISTS circo_moderne_trace (
     pose_le timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (quoi, cle)
 );
+
+-- CONTRÔLE PRÉALABLE — même raison qu'en `28`, dont l'en-tête détaille le cas.
+-- Un nettoyage qui échoue en cours de route laisse la base plus vide qu'il ne
+-- l'a trouvée, parce que psql valide chaque instruction séparément.
+DO $$
+DECLARE t text; n bigint; bloque text := '';
+BEGIN
+    FOREACH t IN ARRAY ARRAY['circo_partage_trace', 'circo_mere_trace',
+                             'scission_circo_trace', 'circo_fraction_trace']
+    LOOP
+        IF to_regclass('histgis.' || t) IS NULL THEN CONTINUE; END IF;
+        EXECUTE format($q$
+            SELECT count(*) FROM %I x
+             JOIN membership m ON m.membership_id = x.membership_id
+             JOIN circo_moderne_trace c ON c.quoi = 'unit' AND c.cle = m.unit_id
+        $q$, t) INTO n;
+        IF n > 0 THEN
+            bloque := bloque || format('  %s : %s rattachement(s)%s', t, n, chr(10));
+        END IF;
+    END LOOP;
+    IF bloque <> '' THEN
+        RAISE EXCEPTION E'Des rattachements posés par d''autres fichiers '
+            'référencent les unités de 2009 :\n%\n'
+            'Les retirer par leur trace avant de rejouer ce fichier, puis les '
+            'reposer. Le plus simple : sql/rejouer_circo.sh, qui fait les deux '
+            'dans l''ordre.', bloque;
+    END IF;
+END $$;
 
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM circo_moderne_trace t
@@ -171,7 +214,7 @@ BEGIN
 
     SELECT count(*) INTO n
       FROM membership WHERE niveau = 'circo'
-       AND periode && daterange('2010-02-23', '2013-01-01', '[)');
+       AND periode && daterange('2012-06-10', '2013-01-01', '[)');
     IF n > 0 THEN
         RAISE EXCEPTION 'PRÉALABLE 3 : % rattachements circo existent déjà sur la période.', n;
     END IF;
@@ -254,11 +297,14 @@ FROM   membership a JOIN membership b
 
 \echo ''
 \echo '--- effectifs ==='
-\echo '    1870-1940 inchangé. 1970 et 2000 doivent être VIDES au niveau circo'
-\echo '    — le trou, et l''absence du découpage de 1986. 2012 doit donner 539.'
+\echo '    1870-1940 inchangé. 1970 VIDE : le trou de la couche circo.'
+\echo '    2000 et 2012-06-01 donnent le découpage de 1986 (533 unités),'
+\echo '    qui court jusqu''au 10 juin 2012. C''est seulement APRÈS cette date'
+\echo '    que celui de 2009 s''applique : 2012-12-01 doit donner 539.'
 SELECT d::date AS date, c.*
 FROM   (VALUES ('1870-06-01'), ('1914-06-01'), ('1940-06-01'),
-               ('1970-06-01'), ('2000-06-01'), ('2012-06-01')) AS t(d),
+               ('1970-06-01'), ('2000-06-01'), ('2012-06-01'),
+               ('2012-12-01')) AS t(d),
        LATERAL count_units(d::date) c
 WHERE  c.niveau = 'circo' ORDER BY 1;
 

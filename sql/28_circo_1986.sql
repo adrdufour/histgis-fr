@@ -6,11 +6,14 @@
 -- Loi du 24 novembre 1986. Attention au calendrier : l'élection de mars 1986
 -- s'est tenue à la PROPORTIONNELLE DÉPARTEMENTALE, sans circonscriptions. La
 -- carte dite « de 1986 » sert donc aux scrutins de 1988, 1993, 1997, 2002 et
--- 2007, et cède la place au découpage de 2009 le 23 février 2010.
+-- 2007, et cède la place au découpage de 2009 le 10 juin 2012.
 --
 -- Période retenue : du **24 novembre 1986**, promulgation de la loi, au
--- **22 février 2010** inclus. Même convention qu'en `27` — la carte devient le
--- droit à sa promulgation, indépendamment de la date du premier scrutin.
+-- **9 juin 2012** inclus. Même convention qu'en `27` — la carte devient le
+-- droit à sa promulgation, indépendamment de la date du premier scrutin, et
+-- le reste tant qu'un autre acte n'a pas pris effet. Corrigé le 20 août 2026 :
+-- la borne de fin était le 22 février 2010, ce qui privait ce découpage des
+-- deux dernières années où il était pourtant seul applicable.
 --
 -- Deux amputations, et elles sont déclarées
 -- -----------------------------------------
@@ -40,8 +43,26 @@
 
 \set ON_ERROR_STOP on
 SET search_path TO histgis, public;
+-- BASCULE AU 10 JUIN 2012, et non au 23 février 2010. Corrigé le 20 août 2026.
+--
+-- `2010-02-23` était la date de la loi n° 2010-165 ratifiant l'ordonnance
+-- n° 2009-935. Mais cette ordonnance prévoit elle-même de ne s'appliquer
+-- **qu'à compter du prochain renouvellement général de l'Assemblée
+-- nationale** — celui de juin 2012. Le découpage de 1986 a donc servi à CINQ
+-- élections : 1988, 1993, 1997, 2002 et 2007 (Sénat, dossier pjl09-048).
+--
+-- Avec l'ancienne borne, 2010 et 2011 affichaient un découpage qui n'avait
+-- servi à aucun scrutin, et le découpage réellement en vigueur disparaissait
+-- deux ans trop tôt.
+--
+-- La convention du projet reste celle de l'ACTE, pas du scrutin — c'est
+-- pourquoi le début est le 24 novembre 1986, date de la loi, et non juin 1988.
+-- Ce qui change ici n'est pas la convention : c'est que la date d'acte retenue
+-- était la mauvaise, l'ordonnance fixant elle-même sa propre entrée en vigueur.
+-- Le point compte pour les législatives PARTIELLES, qui se tiennent entre deux
+-- renouvellements sur le découpage alors en vigueur.
 \set debut '1986-11-24'
-\set fin   '2010-02-23'
+\set fin   '2012-06-10'
 \set date_canton '2012-06-01'
 
 CREATE TABLE IF NOT EXISTS circo1986_trace (
@@ -49,6 +70,41 @@ CREATE TABLE IF NOT EXISTS circo1986_trace (
     pose_le timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (quoi, cle)
 );
+
+-- CONTRÔLE PRÉALABLE : refuser de commencer plutôt que de s'arrêter au milieu.
+--
+-- Ce fichier supprime ses unités avant de les recréer. Si un AUTRE fichier a
+-- posé des rattachements dessus, la clé étrangère arrête la suppression — mais
+-- APRÈS que les `membership` de ce fichier ont été supprimés, et psql valide
+-- chaque instruction séparément. La base reste alors sans couche de 1986.
+--
+-- C'est arrivé le 20 août 2026 : 37 000 rattachements tombés à 118, et le seul
+-- message parlait d'une contrainte sur l'unité `59-13@1986`. Le remède est de
+-- vérifier AVANT, et de nommer le fichier bloquant.
+DO $$
+DECLARE t text; n bigint; bloque text := '';
+BEGIN
+    FOREACH t IN ARRAY ARRAY['circo_partage_trace', 'circo_mere_trace',
+                             'scission_circo_trace', 'circo_fraction_trace']
+    LOOP
+        IF to_regclass('histgis.' || t) IS NULL THEN CONTINUE; END IF;
+        EXECUTE format($q$
+            SELECT count(*) FROM %I x
+             JOIN membership m ON m.membership_id = x.membership_id
+             JOIN circo1986_trace c ON c.quoi = 'unit' AND c.cle = m.unit_id
+        $q$, t) INTO n;
+        IF n > 0 THEN
+            bloque := bloque || format('  %s : %s rattachement(s)%s', t, n, chr(10));
+        END IF;
+    END LOOP;
+    IF bloque <> '' THEN
+        RAISE EXCEPTION E'Des rattachements posés par d''autres fichiers '
+            'référencent les unités de 1986 :\n%\n'
+            'Les retirer par leur trace avant de rejouer ce fichier, puis les '
+            'reposer. Le plus simple : sql/rejouer_circo.sh, qui fait les deux '
+            'dans l''ordre.', bloque;
+    END IF;
+END $$;
 
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM circo1986_trace t
@@ -135,7 +191,7 @@ BEGIN
     RAISE NOTICE 'Lignes source sans atome : % (tolérées).', n;
 
     SELECT count(*) INTO n FROM membership
-     WHERE niveau = 'circo' AND periode && daterange('1986-11-24', '2010-02-23', '[)');
+     WHERE niveau = 'circo' AND periode && daterange('1986-11-24', '2012-06-10', '[)');
     IF n > 0 THEN
         RAISE EXCEPTION 'PRÉALABLE 2 : % rattachements circo existent déjà sur la période.', n;
     END IF;
@@ -224,7 +280,7 @@ SELECT count(*) AS unites_paris_1986
 FROM   unit WHERE niveau = 'circo' AND segment_depuis = 1986 AND dep = '75';
 
 \echo ''
-\echo '--- la bascule du 23 février 2010 ---'
+\echo '--- la bascule du 10 juin 2012 ---'
 \echo '    Un atome ne doit jamais relever des deux découpages à la fois.'
 SELECT count(*) AS atomes_aux_deux_decoupages
 FROM   membership a JOIN membership b ON b.atom_id = a.atom_id

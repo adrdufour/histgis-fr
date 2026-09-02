@@ -92,6 +92,20 @@ SELECT dep, count(*) AS cantons
  ORDER BY dep;
 -- Mesuré le 15 août 2026 : 54 -> 73, 55 -> 31, 57 -> 51, et 99 absent.
 --
+-- REJOUÉ LE 30 AOÛT 2026 : 54 -> 73, 55 -> 31, **57 -> 52**, 99 absent.
+-- Le 57 a gagné un canton, et ce n'est pas ce fichier : `60_canton_forbach2.sql`
+-- a créé `5740` Forbach-II le 22 août, un canton que ni TRF-GIS ni le COG 1999
+-- ne connaissent et que seul le recensement de 1968 révèle. **Vérifié en base
+-- le 30 août 2026** (`5740` = Forbach-II), et non pas seulement déduit. L'attendu écrit
+-- ici datait d'avant. *Un attendu inscrit en dur vieillit dès qu'un autre
+-- fichier touche la même table* — il faut le dater, ce qui est fait ci-dessus.
+--
+-- ET IL A FALLU LE REJOUER : `99` était de retour en base. `39` figure pourtant
+-- dans `rejouer_apres_rebuild.sh`, mais il n'a **aucune table de trace**, donc
+-- rien ne disait s'il était passé — c'est la recette 1 ci-dessus, lue par
+-- hasard depuis `80`, qui l'a montré. Même défaut que `38_decret_1982_ain.sql`.
+-- **À doter d'une trace**, pour que la recette de filiation de `24` le voie.
+--
 -- J'avais annoncé 61, 28 et 36 : c'était faux, et l'erreur mérite d'être
 -- gardée. Ces chiffres viennent de `build/unit_canton.csv`, qui ne porte que
 -- la part TRF-GIS, 1870-1940. La base, elle, contient EN PLUS les cantons

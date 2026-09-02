@@ -357,15 +357,84 @@ FROM   membership a JOIN membership b
        ON a.atom_id = b.atom_id AND a.niveau = b.niveau
       AND a.membership_id < b.membership_id AND a.periode && b.periode;
 
+-- ---------------------------------------------------------------------------
+-- LE TROU 1941-1998 N'EST PLUS UN TROU — recette réécrite le 29 août 2026
+--
+-- Cette recette comptait les rattachements de la période et EN ATTENDAIT ZÉRO.
+-- C'était juste tant que la lacune était totale ; `59`, `74` à `77` puis `79`
+-- l'ont comblée pour partie, et la recette rendait des dizaines de milliers là
+-- où elle voulait zéro. **Elle mesurait une absence qui n'a plus lieu d'être.**
+--
+-- Ce qu'il faut vérifier maintenant n'est plus « la période est-elle vide »
+-- mais « tout ce qui s'y trouve est-il RECONNU » : chaque rattachement doit
+-- venir d'un fichier qui l'assume par sa table de trace. Un rattachement de la
+-- période sans trace est un orphelin, et LUI doit valoir zéro.
+--
+-- *Une recette qui contrôle une absence expire le jour où l'absence est
+-- comblée ; une recette qui contrôle une filiation ne périme pas.*
+-- ---------------------------------------------------------------------------
+-- `24` tourne AVANT les fichiers qui posent dans la période : sur une base
+-- reconstruite, leurs traces n'existent pas encore. On les crée vides plutôt
+-- que de faire échouer la recette — chacun de ces fichiers les crée lui-même
+-- avec `IF NOT EXISTS`, donc la forme est la leur et rien n'est écrasé.
+CREATE TABLE IF NOT EXISTS c68_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS c54_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS y67_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS p75_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS p76_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS p77_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS p79_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+
 \echo ''
-\echo '--- le trou 1941-1998 est-il bien vide ? (doit valoir 0) ---'
-\echo '    Aucun rattachement cantonal ne doit exister entre la fin de la'
-\echo '    série TRF-GIS et le premier millésime du COG. C''est la lacune'
-\echo '    assumée, et elle doit se voir.'
-SELECT count(*) AS rattachements_dans_le_trou
-FROM   membership
-WHERE  niveau = 'canton'
-  AND  periode && daterange('1941-01-01', '1999-01-01', '[)');
+\echo '--- ce qui occupe 1941-1998, et par quel fichier ---'
+\echo '    La période n''est plus vide. Chaque ligne doit venir d''un fichier'
+\echo '    qui l''assume par sa trace ; c''est `sans_trace` qui doit valoir 0.'
+WITH dans_le_trou AS (
+    SELECT m.membership_id
+    FROM   membership m
+    WHERE  m.niveau = 'canton'
+      AND  m.periode && daterange('1941-01-01', '1999-01-01', '[)')
+),
+trace AS (
+    SELECT cle::bigint AS membership_id, '59 (COG 1968)'   AS pose_par FROM c68_trace       WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '68 (COG 1954)'          FROM c54_trace       WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '74 (Yvelines 1967)'     FROM y67_trace       WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '75 (salves 1973/1982)'  FROM p75_trace       WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '76 (autres salves)'     FROM p76_trace       WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '77 (transferts datés)'  FROM p77_trace       WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '79 (report depuis 1999)' FROM p79_trace      WHERE quoi = 'membership'
+)
+SELECT coalesce(t.pose_par, '### SANS TRACE — à expliquer') AS pose_par,
+       count(*)                                             AS rattachements
+FROM   dans_le_trou d
+LEFT   JOIN trace t ON t.membership_id = d.membership_id
+GROUP  BY 1 ORDER BY rattachements DESC;
+
+\echo ''
+\echo '    le chiffre qui doit valoir 0 :'
+WITH dans_le_trou AS (
+    SELECT m.membership_id FROM membership m
+    WHERE  m.niveau = 'canton'
+      AND  m.periode && daterange('1941-01-01', '1999-01-01', '[)')
+),
+trace AS (
+    SELECT cle::bigint AS membership_id FROM c68_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM c54_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM y67_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM p75_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM p76_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM p77_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM p79_trace WHERE quoi = 'membership'
+)
+SELECT count(*) AS sans_trace
+FROM   dans_le_trou d
+WHERE  NOT EXISTS (SELECT 1 FROM trace t WHERE t.membership_id = d.membership_id);
+
+\echo ''
+\echo '    NOTE : `38_decret_1982_ain.sql` n''a toujours aucune table de trace'
+\echo '    (dette du 17 août 2026). Sa ligne unique apparaîtra donc SANS TRACE'
+\echo '    tant qu''elle n''en aura pas une. C''est un cas connu, pas un défaut'
+\echo '    du report — mais c''est exactement pourquoi il faut la lui donner.'
 
 \echo ''
 \echo '--- effectifs cantonaux à quelques dates ---'

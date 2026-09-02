@@ -93,9 +93,14 @@ SET search_path TO histgis, public;
 -- Les DOM deviennent départements par la loi du 19 mars 1946. Mayotte le
 -- 31 mars 2011. Les bornes des circonscriptions reprennent celles de `27` et
 -- `28`, pour que les deux séries se comparent sans conversion.
+-- Bascule au 10 juin 2012 et non au 23 février 2010 : l'ordonnance n° 2009-935
+-- ne s'applique qu'à compter du prochain renouvellement général. Le
+-- raisonnement complet est dans l'en-tête de `28_circo_1986.sql`. Corrigé le
+-- 20 août 2026, en même temps que la métropole — les deux espaces doivent
+-- basculer à la même date, sans quoi l'outre-mer contredirait la métropole.
 \set debut_86  '1986-11-24'
-\set fin_86    '2010-02-23'
-\set debut_12  '2010-02-23'
+\set fin_86    '2012-06-10'
+\set debut_12  '2012-06-10'
 \set fin_12    '2013-01-01'
 \set debut_dep '1946-03-19'
 
