@@ -67,8 +67,26 @@ saint-denis`, `rochechouar`, `saint aveye`, `saint-marguerite`. Noter que la
 coquille est souvent **plus fréquente** que la forme correcte : la fréquence ne
 décide de rien, seul le référentiel officiel tranchera, par jointure.
 
-**Deux virgules manquantes**, qui collaient deux quartiers en un seul jeton :
-`grandes-carrières-clignancourt` et `jardin-des-plantes val-de-grace`.
+**Trois virgules manquantes**, qui collaient deux quartiers en un seul jeton :
+`grandes-carrières-clignancourt`, `jardin-des-plantes val-de-grace` et
+`mont de piétémarais`.
+
+> **Attention — divergence entre le tableur et le CSV, 21 août 2026.**
+>
+> La troisième, `mont de piétémarais` (ligne 225, période 1857-1863,
+> 6ᵉ circonscription), a été corrigée **directement dans
+> `paris_decoupage.csv`**, dédoublée en `mont-de-piété` et `marais`.
+> Sauvegarde de l'état antérieur : `paris_decoupage.csv.avant_virgule`.
+>
+> Critère retenu, celui du projet : les deux formes existent ailleurs dans le
+> fichier, cinq fois chacune. Ce n'est pas une reconstitution, c'est un
+> dédoublement attesté.
+>
+> **`paris_decoupage.xlsx` n'a pas été touché.** Le prochain
+> `extrait_paris.py` effacera donc la correction. Deux issues : reporter la
+> virgule dans le tableur, ou faire porter la correction par
+> `extrait_paris.py` lui-même, à côté des douze coquilles qu'il traite déjà.
+> La seconde est plus sûre — elle survit à une réédition du tableur.
 
 ## Ce qui reste ouvert
 
@@ -231,10 +249,14 @@ circonscription coupe un quartier, en donnera l'occasion.
 
 * trame géométrique des 80 quartiers — **posée** ;
 * composition des 19 divisions par quartier — **transcrite et contrôlée** ;
-* rattachement des circonscriptions à la trame — à faire, plus rien ne le
-  bloque ;
+* ~~rattachement des circonscriptions à la trame — à faire~~ — **fait le 11 août
+  2026**, et la section suivante le raconte : 386 circonscriptions sur 15
+  divisions de 1863 à 1986, chacune rendant les 105,43 km² de Paris entier ;
 * quartiers coupés par une rue — à traiter, axes BD TOPO ;
-* trame d'avant 1860 — hors périmètre pour l'instant.
+* trame d'avant 1860 — bloquée par la **licence** : ALPAGE-Vasserot couvre
+  exactement les 48 quartiers mais est en ODbL, incompatible avec la contrainte
+  CC BY-SA du projet. Route propre : géoréférencer un plan du XIXᵉ en domaine
+  public.
 
 ---
 
@@ -272,9 +294,18 @@ comptent que trois circonscriptions pour 80 quartiers : c'est le scrutin de
 liste par secteur. Aucune consigne ne l'imposait au tableur ; la donnée le dit
 seule.
 
-**1958-1986 est posé.** Nationalement, ce découpage est bloqué par le trou
-cantonal 1941-1998 puisqu'il se définit par cantons. À Paris il se définit par
-quartiers : c'est le premier morceau de 1958 qui existe en géométrie.
+**1958-1986 est posé.** Nationalement, ce découpage était alors bloqué par le
+trou cantonal 1941-1998 puisqu'il se définit par cantons. À Paris il se définit
+par quartiers : c'est le premier morceau de 1958 qui existe en géométrie.
+
+> **Nuance du 2 septembre 2026.** Le trou cantonal n'est plus vide : jalons de
+> 1954 et 1968, registre des actes, deux reports validés. Le découpage de 1958
+> hors Paris redevient donc envisageable — **mais pas gratuit** : la couverture
+> cantonale est inégale, et entre 1985 et 1998 la plupart des dates sont des
+> conventions et non des faits (`p76_qualite`). Deux autres morceaux sont
+> acquis par ailleurs : les **57 circonscriptions de 1986 reprises de 1981**
+> (annexe VI § 7), et **Marseille à 87 %** par l'atlas Gaudillère, qui établit
+> qu'en 1958-1986 deux arrondissements seulement y sont divisés.
 
 ## Le piège des homonymes
 

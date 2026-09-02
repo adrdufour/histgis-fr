@@ -1,6 +1,32 @@
 # Les trois circonscriptions de Bourg-en-Bresse en 1986
 
-## La réponse
+> **CETTE NOTE EST FAUSSE. Constaté le 21 août 2026.**
+>
+> Bourg-en-Bresse n'était **pas** coupée entre trois circonscriptions en 1986.
+> Ses trois cantons — Bourg-en-Bresse-Est, Bourg-en-Bresse-Nord-Centre,
+> Bourg-en-Bresse-Sud — appartenaient tous à la **seule 1re circonscription**.
+>
+> Source : loi n° 86-1197 du 24 novembre 1986 (JO du 25 novembre 1986,
+> p. 14171) et **Gaudillère, *Atlas historique des circonscriptions
+> électorales françaises*, p. 89**. Les quatre listes totalisent 43 cantons,
+> chacun une fois exactement.
+>
+> **D'où venait l'erreur.** La note s'appuyait sur `circo/circo_1986_ain.csv`,
+> lui-même dérivé de la colonne « Circ. législative 1986 » de
+> `correspondance_2012.xls`. Cette colonne est **brouillée pour l'Ain** :
+> trente cantons sur quarante-trois y portent la mauvaise circonscription. Le
+> défaut s'est vu sur la carte — quatre circonscriptions en vingt-trois
+> morceaux disjoints, là où la loi impose un territoire continu.
+>
+> Ce qui reste juste dans ce qui suit : **le décret n° 82-77 du 25 janvier
+> 1982** et le découpage cantonal de Bourg-en-Bresse qu'il institue. C'est
+> l'affectation de ces cantons aux circonscriptions qui était fausse, pas les
+> cantons eux-mêmes.
+>
+> Correctif : `circo/circo_1986_correctifs.csv` et
+> `sql/51_circo_1986_correctif.sql`.
+
+## La réponse (obsolète — voir l'avertissement ci-dessus)
 
 Bourg-en-Bresse (01053) est coupée entre **trois** des quatre circonscriptions
 de l'Ain du découpage de 1986. La coupure n'est pas propre au découpage
