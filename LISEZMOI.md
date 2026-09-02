@@ -194,7 +194,12 @@ inscrites ici et au § 0 de `RESTE_A_FAIRE.md`) :
    disque. `index.html`, `servir.py` et `cartes/web/LISEZMOI.md` restent
    suivis : c'est du code écrit à la main.
 2. **Les 4 Go de reçus sont ignorés nommément**, et les treize jours de
-   travail sont versionnés — huit commits, un par chantier.
+   travail sont versionnés — neuf commits, un par chantier.
+
+Le dépôt passe de **1 744 fichiers / 932 Mo** à **384 / 91 Mo**, et
+`git status` de 4 499 lignes à zéro. Les 91 Mo restent loin des *« quelques
+Mo »* que ce fichier vise, pour une seule raison : `jorf_txt/` en pèse 52,
+soit 57 % à lui seul. Dette ouverte, pas encore tranchée.
 
 Sont sortis de l'index au passage, parce que la règle existait déjà sans
 s'appliquer à ce qu'ils suivaient : les deux rapports de `sorties/` et

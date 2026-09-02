@@ -5919,7 +5919,26 @@ trois bancs), `cantons/` (la moisson et la lecture en colonnes), `circo/`
 (l'annexe VI et Paris jusqu'à 1815), les deux recensements, `jorf_txt/` et le
 banc de l'export.
 
-Le dépôt suivait 932 Mo. Il en suit maintenant une vingtaine.
+Le dépôt suivait 1 744 fichiers pour 932 Mo. Il en suit 384 pour 91 Mo.
+
+**Correctif, écrit après vérification** : j'avais d'abord annoncé « une
+vingtaine de Mo » sans mesurer, par simple soustraction des 3,3 Go détachés.
+C'est 91 Mo, et l'écart n'est pas un détail — il dit où va réellement le poids :
+
+| | |
+|---|---|
+| `jorf_txt/` | 52 Mo, les 86 JO océrisés — **57 % du dépôt à eux seuls** |
+| `circo/` | 11 Mo |
+| `sql/` | 8,1 Mo, dont 6,5 pour les jeux d'essai de `banc/` |
+| `cog1954/`, `cog1968/` | 14 Mo à eux deux |
+| tout le reste | 6 Mo |
+
+Le principe affiché en tête du `.gitignore` — *« le dépôt doit rester léger,
+quelques Mo »* — reste donc contredit d'un ordre de grandeur, et par une seule
+cause. La question à trancher un jour n'est pas de savoir si 91 Mo est
+acceptable, mais si l'OCR nu des JO doit vivre dans le dépôt ou à côté : c'est
+une donnée intermédiaire, coûteuse à refaire mais non reproductible à
+l'identique, et le dépôt n'a pas de catégorie pour ça.
 
 Une décision de tri, au passage : les `jorf_txt/*_col.txt` sortent du dépôt
 (35 Mo) parce que `jorf_colonnes.py` les refait en quelques minutes depuis les
