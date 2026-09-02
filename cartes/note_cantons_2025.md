@@ -153,6 +153,20 @@ villes sont au-dessus ?
 **Seules Confolens (2 800 hab.) et Tartas (3 000 hab.) sont hors de portée**,
 pour une coupe chacune.
 
+> **Correction du 14 août 2026, à la récupération réelle des IRIS : elles sont
+> TROIS.** **Le Quesnoy** (59481) n'a lui aussi qu'un seul IRIS, et il n'était
+> pas prévu — le seuil de population publié par l'INSEE annonçait les deux
+> premières, pas la troisième.
+>
+> *Le critère qui décide n'est pas la population mais le nombre d'IRIS
+> effectivement publiés* : il fallait le mesurer, pas le déduire. L'estimation
+> se trompait d'ailleurs des deux côtés à la fois — elle donnait 88 % des coupes
+> couvertes, le réel est de **98,6 %** (211 sur 214), le seuil des 5 000
+> habitants étant appliqué plus souplement que la règle ne l'annonce.
+>
+> Deux villes de plus sont en trame « juste suffisante », 2 IRIS pour 1 coupe :
+> **Saint-Flour** (15187) et **Avesnes-sur-Helpe** (59036).
+
 ### La densité
 
 | ville | coupes à tracer | IRIS disponibles |
