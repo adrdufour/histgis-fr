@@ -1,0 +1,77 @@
+# Environnement du projet HistGIS.
+#
+#     conda env create -f environment.yml     # ou : mamba env create -f …
+#     conda activate histgis
+#
+# Ce fichier déclare de quoi FAIRE TOURNER les scripts, pas de quoi héberger la
+# base. PostgreSQL + PostGIS restent volontairement hors de l'environnement :
+# voir la note « serveur » en bas, qui n'est pas un oubli mais une décision.
+#
+# Ce qui est déclaré ici a été relevé sur les imports réels des .py et sur les
+# binaires appelés en subprocess dans les .py et les .sh — pas sur la liste de
+# LISEZMOI.md, qui annonçait `pyproj` alors qu'aucun script ne l'importe.
+
+name: histgis
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python >=3.11
+
+  # --- Accès à la base ---------------------------------------------------
+  # Seul lien Python vers PostgreSQL ; utilisé par une trentaine de scripts.
+  - psycopg2 >=2.9
+
+  # --- Géométrie ---------------------------------------------------------
+  # shapely 2.x : les scripts utilisent `shapely.STRtree` (chemin 2.x) autant
+  # que `shapely.strtree.STRtree`, ainsi que wkb, ops.unary_union,
+  # ops.polygonize, geometry.shape et validation.explain_validity.
+  - shapely >=2.0
+  # pyshp — importé sous le nom `shapefile` (lecture des trames livrées en .shp)
+  - pyshp >=2.3
+
+  # --- Cartes et rapports ------------------------------------------------
+  # matplotlib-base suffit : aucun script n'ouvre de fenêtre (backend Agg /
+  # backend_pdf.PdfPages), et cela évite de tirer Qt dans l'environnement.
+  - matplotlib-base >=3.7
+
+  # --- Tableurs des sources ----------------------------------------------
+  - openpyxl >=3.1   # .xlsx (mouvements INSEE, annexes)
+  - xlrd >=2.0       # .xls anciens ; xlrd 2 ne lit QUE le .xls, d'où les deux
+  - pandas >=2.0     # un seul script (sorties/anr), mais il en dépend
+
+  # --- Outils système appelés en subprocess ------------------------------
+  # Déclarés ici pour que l'environnement soit autosuffisant ; s'ils sont déjà
+  # installés côté système, ces lignes sont redondantes, pas nuisibles.
+  - gdal >=3.6            # ogr2ogr : ~19 appels dans les .sh, 7 dans les .py
+  - poppler               # pdftoppm, pdftotext, pdfinfo : chaîne OCR des COG
+  - tesseract >=5.0       # OCR des COG 1954 et 1968
+  - tesseract-data-fra    # `-l fra` : sans ce paquet, l'OCR est inutilisable
+  - imagemagick           # `magick`/`convert`, seulement pour cog1968/essai_ocr.py
+  - unzip                 # décompression des livraisons IGN/INSEE
+
+  - pip
+  - pip:
+      # Serveur PostgreSQL éphémère embarqué, utilisé UNIQUEMENT par les bancs
+      # d'essai sql/banc_*.sh (75, 81, 82, 84). Absent de conda-forge.
+      - pgserver
+
+# --- Le serveur de base, et le piège de la socket -------------------------
+#
+# `postgresql` et `postgis` ne sont PAS dans la liste ci-dessus, à dessein.
+# La libpq livrée par conda cherche la socket Unix dans /tmp, alors que Debian
+# et Ubuntu la posent dans /var/run/postgresql. Installer le client PostgreSQL
+# dans cet environnement fabrique donc des « No such file or directory » sur
+# des bases qui répondent parfaitement au `psql` du système, dans le même
+# terminal. Le serveur reste au système :
+#
+#     sudo apt install postgresql postgresql-<version>-postgis-3
+#     CREATE EXTENSION postgis; CREATE EXTENSION btree_gist;
+#
+# Versions attendues : PostgreSQL >= 13, PostGIS >= 3.0 (btree_gist est requis
+# par les contraintes EXCLUDE sur les intervalles d'appartenance).
+#
+# Les scripts essaient les trois emplacements de socket ; `HISTGIS_DSN` force
+# le choix quand l'heuristique se trompe.

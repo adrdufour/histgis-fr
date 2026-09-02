@@ -217,12 +217,30 @@ tesseract et ne se reproduirait pas à l'identique.
 
 ## Environnement
 
-Aucun fichier d'environnement n'existe encore — dette connue, inscrite dans
-`RESTE_A_FAIRE.md` § 0. Sont utilisés sans être déclarés : `psycopg2`,
-`matplotlib`, `shapely`, `openpyxl`, `xlrd`, `pyshp`, `pyproj`, et `pgserver`
-pour les bancs d'essai. Côté système : PostgreSQL ≥ 13 avec `postgis` et
-`btree_gist`, GDAL (`ogr2ogr`), `poppler-utils` (`pdftoppm`, `pdftotext`,
-`pdfinfo`), `tesseract-ocr` avec le paquet français.
+`environment.yml` est à la racine depuis le 2 septembre 2026 :
+
+```
+conda env create -f environment.yml   # ou mamba
+conda activate histgis
+```
+
+Il déclare `psycopg2`, `shapely` ≥ 2, `pyshp` (importé sous le nom
+`shapefile`), `matplotlib-base`, `openpyxl`, `xlrd`, `pandas`, et — en
+`pip:`, faute d'exister sur conda-forge — `pgserver`, dont dépendent les
+bancs `sql/banc_*.sh`. Côté outils appelés en sous-processus : GDAL
+(`ogr2ogr`), `poppler` (`pdftoppm`, `pdftotext`, `pdfinfo`), `tesseract`
+avec `tesseract-data-fra`, ImageMagick (`magick`/`convert`, pour le seul
+`cog1968/essai_ocr.py`) et `unzip`.
+
+**Cette liste a été relevée sur les imports réels, et elle corrige celle qui
+figurait ici.** `pyproj` y était annoncé alors qu'aucun script ne l'importe —
+`cartes/couverture_cantons_2025.py` dit même l'inverse en toutes lettres ;
+`pandas` et ImageMagick, eux, étaient utilisés sans être déclarés. Une liste
+de dépendances recopiée de mémoire se trompe dans les deux sens à la fois.
+
+Le serveur reste **hors** de l'environnement, à dessein — c'est le piège
+ci-dessous : PostgreSQL ≥ 13 avec `postgis` et `btree_gist` s'installent par
+le système, pas par conda.
 
 **Piège de connexion** : la libpq de conda cherche la socket dans `/tmp` alors
 que Debian et Ubuntu la posent dans `/var/run/postgresql`. D'où des « No such

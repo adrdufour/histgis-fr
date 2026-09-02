@@ -6191,3 +6191,32 @@ comblée — un atome de 20 km² dont deux hectares ont été comblés y pèse 2
 colonne était juste, la légende fausse, et une colonne juste sous une légende
 fausse est une colonne fausse. Le § 7 pose maintenant la vraie question :
 la surface de chaque atome après la partition, moins celle qu'il avait avant.
+
+---
+
+## 2 septembre 2026, la dette d'environnement — une liste recopiée se trompe dans les deux sens
+
+`environment.yml` est écrit, à la racine. C'était le point 6 de
+`RESTE_A_FAIRE.md`, ouvert depuis le 14 août et annoncé « trivial ». Il l'était,
+à une condition : ne pas recopier la liste que `LISEZMOI.md` § Environnement
+donnait déjà, et relire les imports.
+
+**Les deux listes ne coïncident pas.** `LISEZMOI.md` déclarait `pyproj` :
+aucun script ne l'importe, et `cartes/couverture_cantons_2025.py` écrit noir sur
+blanc « pas de pyproj, pas de pyshp ». À l'inverse, `pandas` (dans
+`sorties/anr/anr_variantes_verdict.py`) et ImageMagick (`magick`/`convert`, dans
+`cog1968/essai_ocr.py`) étaient utilisés sans figurer nulle part. *Une liste de
+dépendances tenue de mémoire dérive dans les deux sens à la fois : elle déclare
+ce qui a été abandonné et tait ce qui a été ajouté.* Seuls les imports et les
+`subprocess.run` font foi ; c'est une mesure, pas un souvenir.
+
+**Ce que le fichier ne contient pas est aussi une décision.** PostgreSQL et
+PostGIS restent hors de l'environnement, avec la raison écrite dans le fichier
+lui-même : la libpq de conda cherche la socket dans `/tmp` quand Debian la pose
+dans `/var/run/postgresql`. Les déclarer aurait installé le piège de connexion
+en même temps que le client. Le serveur s'installe par le système.
+
+`pgserver` passe en section `pip:` — absent de conda-forge, et requis par les
+bancs `sql/banc_*.sh`, qui sont le seul endroit où un serveur éphémère sert.
+`matplotlib-base` plutôt que `matplotlib` : aucun script n'ouvre de fenêtre,
+tout passe par `backend_pdf`, et Qt n'a rien à faire dans l'environnement.
