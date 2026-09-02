@@ -1,7 +1,7 @@
 -- ============================================================================
 -- 39_meurthe_1870.sql — la Meurthe reprend son numéro : 99 -> 54
 --
---   psql -d histgis -f sql/39_meurthe_1870.sql
+--   psql -d histgis -1 -f sql/39_meurthe_1870.sql
 --
 -- Ce que fait ce fichier
 -- ---------------------
@@ -14,7 +14,27 @@
 -- ne se superpose à aucun département actuel — mais c'est une commodité de
 -- traitement, pas un fait administratif. La base doit porter le fait.
 --
--- Idempotent : ne touche que ce qui est encore en 99.
+-- TRACE — ajoutée le 2 septembre 2026
+-- -----------------------------------
+-- Ce fichier a été joué le 15 août, déclaré clos, puis **défait par un
+-- `rebuild.sh` sans que rien ne le signale**. Personne ne l'a su avant le
+-- 30 août, et encore par hasard, en lisant la recette d'un autre fichier.
+-- C'est la dette la plus coûteuse du dépôt, et elle se solde ici.
+--
+-- **L'idempotence protège du rejeu, pas de l'oubli.** Un fichier idempotent
+-- qu'un `DROP SCHEMA` a emporté se tait exactement comme un fichier qui vient
+-- de réussir : dans les deux cas, zéro ligne modifiée et code de retour nul.
+-- Seule une table dans la base peut faire la différence, parce qu'elle
+-- disparaît avec le schéma qu'elle atteste.
+--
+-- LA CIBLE EST L'IDENTIFIANT, PAS LE DÉPARTEMENT — et ce n'est pas un détail.
+-- Les 29 cantons gardent leur `unit_id` en `99xx` (§ « Ce que ce fichier NE
+-- fait PAS »). Cet identifiant, lui, ne bouge jamais : il désigne les mêmes
+-- unités que le fichier soit déjà passé ou non. Viser `dep = '99'` aurait
+-- donné une trace VIDE sur une base déjà conforme — donc le verdict « joué
+-- puis défait ? » de `diag_passages.sql`, c'est-à-dire précisément la fausse
+-- alarme qu'on cherche à supprimer. `avant` garde le département d'origine,
+-- et dit lequel des deux cas on était.
 --
 -- Ce que cela implique, et qu'il faut savoir
 -- ------------------------------------------
@@ -67,24 +87,85 @@
 -- sur la base : à porter à Victor Gay.
 -- ============================================================================
 
+\set ON_ERROR_STOP on
 SET search_path TO histgis, public;
 
 BEGIN;
 
--- État avant, pour que la recette ait un point de comparaison.
-SELECT count(*) AS cantons_en_99_avant
-  FROM unit WHERE niveau = 'canton' AND dep = '99';
+-- ---------------------------------------------------------------------------
+-- 1. DÉFAIRE LE PASSAGE PRÉCÉDENT
+--
+-- Une MISE À JOUR ne se défait pas par un DELETE : `avant` garde le
+-- département d'origine, et c'est lui qu'on restaure. Sur une base où ce
+-- fichier était déjà passé avant que la trace existe, `avant` vaudra `54` et
+-- la restauration sera un geste nul — c'est le comportement voulu, pas un
+-- raté : on ne rend `99` qu'à ce qui le portait.
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS p39_trace (
+    quoi  text NOT NULL,          -- 'unit_dep'
+    cle   text NOT NULL,          -- unit_id, stable : jamais renuméroté
+    avant text,                   -- le département d'avant le passage
+    pose  timestamptz NOT NULL DEFAULT now()
+);
 
-UPDATE unit
-   SET dep = '54'
- WHERE niveau = 'canton'
-   AND dep = '99';
+UPDATE unit u
+   SET dep = t.avant::char(2)
+  FROM p39_trace t
+ WHERE t.quoi = 'unit_dep' AND t.cle = u.unit_id;
+
+TRUNCATE p39_trace;
+
+-- État avant, pour que la recette ait un point de comparaison.
+\echo ''
+\echo '-- 1 bis. état avant écriture'
+SELECT count(*) FILTER (WHERE dep = '99')      AS cantons_en_99_avant,
+       count(*) FILTER (WHERE dep = '54')      AS cantons_en_54_avant
+  FROM unit WHERE niveau = 'canton';
+
+-- ---------------------------------------------------------------------------
+-- 2. LE DÉPARTEMENT RENDU, ET SA TRACE DANS LA MÊME INSTRUCTION
+--
+-- La cible est l'identifiant `99xx`, pas le département `99` : voir l'en-tête.
+--
+-- `avant` n'est PAS lu par `RETURNING` : celui-ci rend la ligne d'APRÈS la
+-- mise à jour, donc `54` dans tous les cas. La valeur est posée en dur à `99`,
+-- et la note qui suit dit pourquoi c'est la bonne.
+-- ---------------------------------------------------------------------------
+WITH maj AS (
+    UPDATE unit u
+       SET dep = '54'
+     WHERE u.niveau = 'canton'
+       AND (u.dep = '99' OR u.unit_id LIKE '99%')
+    RETURNING u.unit_id
+)
+INSERT INTO p39_trace (quoi, cle, avant)
+SELECT 'unit_dep', unit_id, '99' FROM maj;
 
 COMMIT;
 
 -- ---------------------------------------------------------------------------
--- Recette 1 : plus aucun canton en 99, et 54 en compte 29 de plus.
+-- Note sur `avant` : il vaut `99` par construction, et non le département lu
+-- avant la mise à jour. C'est volontaire et il faut le dire, sinon la colonne
+-- ment. Deux cas seulement se présentent :
+--   * base fraîche — les 29 unités portent `99`, `avant` est exact ;
+--   * base où `39` était déjà passé sans trace — elles portent `54`, et
+--     `avant` dit `99`, c'est-à-dire ce que la source TRF-GIS avait posé et ce
+--     à quoi un retrait doit revenir. Défaire `39` sur une telle base rend le
+--     `99` de la source, pas l'état de la veille.
+-- Dans les deux cas la trace est peuplée, et c'est ce qu'on lui demande : dire
+-- que ce fichier est passé, et sur quelles unités.
 -- ---------------------------------------------------------------------------
+
+-- ===========================================================================
+-- RECETTE
+-- ===========================================================================
+\echo ''
+\echo '-- 3 a. la trace : 29 unités attendues'
+SELECT count(*) AS unites_tracees, min(pose) AS pose
+  FROM p39_trace WHERE quoi = 'unit_dep';
+
+\echo ''
+\echo '-- 3 b. plus aucun canton en 99, et 54 les a repris'
 SELECT dep, count(*) AS cantons
   FROM unit
  WHERE niveau = 'canton' AND dep IN ('54', '55', '57', '99')
@@ -101,10 +182,10 @@ SELECT dep, count(*) AS cantons
 -- fichier touche la même table* — il faut le dater, ce qui est fait ci-dessus.
 --
 -- ET IL A FALLU LE REJOUER : `99` était de retour en base. `39` figure pourtant
--- dans `rejouer_apres_rebuild.sh`, mais il n'a **aucune table de trace**, donc
--- rien ne disait s'il était passé — c'est la recette 1 ci-dessus, lue par
--- hasard depuis `80`, qui l'a montré. Même défaut que `38_decret_1982_ain.sql`.
--- **À doter d'une trace**, pour que la recette de filiation de `24` le voie.
+-- dans `rejouer_apres_rebuild.sh`, mais il n'avait **aucune table de trace**, donc
+-- rien ne disait s'il était passé — c'est cette recette-ci, lue par hasard
+-- depuis `80`, qui l'a montré. **Dette soldée le 2 septembre 2026** :
+-- `p39_trace` existe (§ 3 a), et `diag_passages.sql` la déclare.
 --
 -- J'avais annoncé 61, 28 et 36 : c'était faux, et l'erreur mérite d'être
 -- gardée. Ces chiffres viennent de `build/unit_canton.csv`, qui ne porte que
@@ -115,7 +196,7 @@ SELECT dep, count(*) AS cantons
 -- découper, 270 puis 369 puis 119.
 
 -- ---------------------------------------------------------------------------
--- Recette 2 : aucun ATOME ne relève de deux cantons à la même date.
+-- 3 c. Aucun ATOME ne relève de deux cantons à la même date.
 --
 -- Premier jet, et il était faux : je groupais par `insee_geofla`. Il a sorti
 -- une ligne — Moyenvic (57490), rattachée à la fois à Château-Salins (9905) et
@@ -137,6 +218,8 @@ SELECT dep, count(*) AS cantons
 -- La bonne unité est l'ATOME. C'est d'ailleurs ce que la contrainte
 -- `EXCLUDE USING gist` garantit déjà, et elle tient.
 -- ---------------------------------------------------------------------------
+\echo ''
+\echo '-- 3 c. atomes rattachés à deux cantons du 54 à la même date (attendu : 0)'
 SELECT count(*) AS atomes_a_double_dans_le_54
   FROM (SELECT m.atom_id, m.periode
           FROM membership m
@@ -144,12 +227,13 @@ SELECT count(*) AS atomes_a_double_dans_le_54
          WHERE m.niveau = 'canton' AND u.dep = '54'
          GROUP BY 1, 2
         HAVING count(DISTINCT m.unit_id) > 1) x;
--- Attendu : 0, et cette fois l'attendu porte sur la bonne unité.
 
 -- ---------------------------------------------------------------------------
--- Recette 3 : la Meurthe au 1er juin 1870, telle qu'on pourra désormais
--- l'interroger. 29 cantons attendus.
+-- 3 d. La Meurthe au 1er juin 1870, telle qu'on pourra désormais
+--      l'interroger. 29 cantons attendus.
 -- ---------------------------------------------------------------------------
+\echo ''
+\echo '-- 3 d. la Meurthe au 1er juin 1870 (29 cantons attendus)'
 SELECT u.unit_id, u.nom, count(*) AS communes
   FROM membership m
   JOIN unit u ON u.unit_id = m.unit_id
