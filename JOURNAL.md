@@ -5945,3 +5945,249 @@ Une décision de tri, au passage : les `jorf_txt/*_col.txt` sortent du dépôt
 PDF — même statut que les `_raw.txt`, déjà exclus. Les `.txt` nus **restent** :
 leur OCR dépend de la version de tesseract et ne se reproduirait pas à
 l'identique. Ce n'est pas le poids qui tranche, c'est la reproductibilité.
+
+---
+
+## 2 septembre 2026 (soir) — la couture de la trame hybride
+
+Adrien signale un défaut de la carte « depuis l'ajout d'ANR », dans l'Ain, entre
+Villieu-Loyes-Mollon et Meximieux : un double trait noir là où il n'en faut
+qu'un.
+
+### Ce que c'était
+
+L'atome `40689` est Villieu. **ANR le fait naître en 1897**, par détachement de
+Loyes, et il a raison. Notre base le fait vivre dès 1870 — report arrière de
+`11`. ANR refusant le polygone, R5 retombe sur `atom_geom`, c'est-à-dire le
+polygone **GEOFLA 2011 de Villieu-Loyes-Mollon, la fusionnée de 1973** : 15,84
+km² posés sur Loyes (9,63 des 10,11) et Mollon (5,38 des 5,66), plus 0,198 km²
+qui débordent sur Meximieux. À 1900 ANR pourvoit Villieu et le recouvrement
+avec Meximieux tombe à zéro exactement.
+
+Le retournement vaut d'être noté : **l'artefact apparaît là où ANR a réussi.**
+Avant `82`, Loyes et Mollon étaient `sans_geom` — disparues avant 2011, pas de
+repli — et le polygone de la fusionnée tenait leur place sans que rien ne
+dépasse. ANR leur a rendu leur territoire ; le repli, lui, n'a pas lâché le
+polygone moderne.
+
+### L'ampleur, et la recette qui ne pouvait pas la voir
+
+Mesuré sur `cartes/web/donnees/`, à 1870, entre communes ordinaires :
+ANR × ANR 1,0 km² sur 2 353 paires ; **ANR × repli 4 542,8 km² sur 1 618
+paires** ; repli × repli 0,0. 72 départements, 393 superpositions franches
+(4 267 km²) et 1 225 lisières (275 km²). À 1940, 1,3 km² : la couture s'éteint
+à mesure qu'ANR fait naître les filles.
+
+`check_geom_anr` joint `atom_geom_anr` à elle-même. Ses 101,0 km² sont exacts —
+et ne décrivent pas la carte, qui dessine `coalesce(ANR, atom_geom)`.
+**Une recette qui mesure la source ne mesure pas le composite qu'on en tire.**
+`ETAT.md` § 2.1 porte désormais les deux lignes.
+
+### Trois règles écrites, deux jetées
+
+Adrien tranche : la fille garde son sol, on découpe la mère ; les fractions
+restent hachurées comme aujourd'hui ; le nettoyage vit en base.
+
+**Premier jet — le repli comme territoire de la fille.** Lui laisser son
+polygone GEOFLA puis le retrancher de la mère donnait, dans l'Ain : Loyes
+10,08 → 0,48 km², Crépieux-la-Pape 14,95 → 11,56, Rillieux-la-Pape 11,34 →
+0,08. `atom_geom` porte le polygone de la commune **terminale** de la lignée
+Cassini ; pour `40689` c'est la fusionnée de 1973, qui contient sa propre mère.
+*Un polygone de repli dit où une commune est aujourd'hui, pas quel sol elle
+tenait alors.*
+
+**Deuxième jet — combler les trous de chronologie d'ANR** en reportant le
+dernier polygone antérieur. Sur l'Aveyron, les dix plus grosses faces disputées
+portaient toutes ce motif : Saint-Beaulize contre Fondamente, La Serre contre
+Saint-Sernin-sur-Rance, Les Albres contre Aspriéres. Ces communes ont été
+**réunies à leur voisine puis rétablies** — le chantier `41` — et le trou d'ANR
+est un fait. Reporter le polygone d'avant la réunion par-dessus la voisine qui
+l'avait absorbée recréait le double comptage qu'on venait d'ôter.
+*Un trou dans une source datée peut être ce qu'elle a de plus exact.*
+
+**Ce qui reste, une règle unique.** `territoire(fille, D) = voisin(D) −
+voisin(Y′)`, Y′ étant la prochaine apparition de la fille chez ANR et le voisin
+celui dont la chronologie s'y coupe. Naissance et rétablissement sont le même
+événement vu d'ANR. Le critère de désignation de la mère — une coupure ANR le
+même millésime — retient 86,5 % des superpositions franches et 4,8 % des
+lisières : il sépare les deux familles **sans qu'on lui ait donné de seuil**.
+
+### Deux pièges du banc
+
+**Le cadre.** Le premier treillis, calculé département par département, offrait
+les **478 km² du département de la Seine** aux communes de Seine-et-Oise, et
+l'enclave des papes à la Drôme : un territoire enclavé ressemble à un trou quand
+le cadre s'arrête au département. D'où l'anneau de contexte de 20 km. *Un trou
+n'est un trou que dans un cadre assez large pour contenir ce qui le remplit.*
+
+**La déduplication.** Côté export, la première version dédoublonnait les
+versions successives sur l'empreinte du GeoJSON. Éprouvé sur l'Ain : 916
+instantanés donnaient **918** versions, soit aucune déduplication. La cause
+n'est pas la sérialisation, elle est géométrique — le treillis est renoué à
+chaque année, et une commune dont un *voisin* change gagne des sommets
+colinéaires sur leur bord commun. `ST_Equals` comparé au précédent par `lag()`
+ramène 2 748 instantanés à 920 versions sur six années d'échantillon.
+*Deux dessins identiques peuvent avoir deux empreintes ; c'est l'égalité
+géométrique qu'il faut demander, pas l'égalité des octets.*
+
+### Ce qui est posé, et ce qui ne l'est pas
+
+`sql/84_carte_partition.sql` (fonctions `partition_reprise`,
+`carte_partition_atome`, `carte_partition`, `check_partition`, procédure
+`partition_journalise`, table `p84_trace`), `sql/banc_84.py`, et le drapeau
+`--partition` de `cartes/export_web.py`. Résultat du banc à 1870 sur 23
+départements : recouvrement 6 923,6 → **0,000 km²**, trou non comblé 0,000,
+aucun atome sans face.
+
+**Le SQL n'a jamais été exécuté** — écrit sans accès à une base. Six erreurs ont
+été trouvées à la relecture (SRID perdu par `ST_Extent`, fonction de fenêtre au
+lieu d'un agrégat pour la fratrie, `ST_Node` sur une `GeometryCollection`,
+`min(geom)`, `DISTINCT ON` sur une géométrie, `STABLE` mensonger) ; il en reste
+sans doute. `check_partition` est ce qui les dira.
+
+Ce fichier ne valide pas le report arrière de `11` : il rend dessinable ce que
+la base affirme. La question de savoir si Villieu vivait en 1870 reste celle de
+`83_anr_ecart_couverture.sql`, toujours à jouer.
+
+### Le premier appel, et ce qu'un chargement réussi ne prouve pas
+
+`psql -f sql/84_carte_partition.sql` passe sans une erreur : `CREATE FUNCTION`
+cinq fois, `CREATE PROCEDURE`, et l'écho de fin. Puis le premier
+`check_partition` tombe sur `column reference "geom" is ambiguous`, dans un
+`DELETE FROM t84_src WHERE geom IS NULL` que le fichier portait depuis le début.
+
+**Un corps PL/pgSQL n'est analysé qu'au premier appel.** Le chargement ne
+vérifie que la syntaxe de l'enveloppe ; tout ce qui est entre `BEGIN` et `END`
+attend qu'on s'en serve. Un fichier SQL qui se charge proprement ne dit donc
+rien de ses fonctions procédurales — pour `82`, écrit en SQL pur, le chargement
+valait contrôle ; ici il ne valait rien. *La forme d'un fichier décide de ce que
+son chargement prouve.*
+
+La cause : `RETURNS TABLE (atom_id, geom, source, motif, dedans)` déclare cinq
+VARIABLES du même nom que les colonnes des tables temporaires du corps.
+`#variable_conflict use_column` en tête règle toute la famille d'un coup.
+
+**Quatre autres fautes trouvées dans la même relecture**, aucune ne s'étant
+encore déclarée : `min(geometry)` — que PostGIS ne fournit pas — dans le calcul
+de la différence, alors que le même piège avait été évité trois CTE plus haut ;
+`ST_Polygonize` appelé comme une fonction scalaire alors que c'est un agrégat,
+et dans la même liste de sélection que le `ST_Dump` qui le consomme ;
+`row_number() OVER ()` mêlé au même `ST_Dump` ; et `ST_Multi` appliqué à des
+différences qui peuvent rendre une `GeometryCollection` avec des lisières
+linéaires — celle-là ne serait tombée que sur le premier département où le cas
+se présente, c'est-à-dire tard.
+
+### Le contrôle
+
+Ain, 1870 : **recouvrement hors fraction 0,000 km²**, zéro géométrie invalide,
+458 atomes dessinés, **7 repris par différence, 0 repli résiduel**.
+
+Les trois comptes sont **exactement ceux du banc**, obtenus par un chemin qui ne
+partage pas une ligne de code : shapely sur l'export WGS84 accroché à 25 m d'un
+côté, PostGIS sur la géométrie Lambert-93 réelle de l'autre. Emprise 5 812 km²
+projetés contre 5 810 attendus pour l'Ain au facteur 1,0084 — +0,03 %.
+
+Le banc avait servi à écrire l'algorithme ; il sert maintenant de second chemin
+pour le contrôler. C'était son intérêt, et il n'était pas prévu.
+
+### La passe nationale, et un piège relu le matin puis réécrit le soir
+
+Deux blocages avant qu'elle passe, et le second est le plus instructif.
+
+**Le premier.** `carte_partition_atome` acceptait `NULL` et bâtissait UN treillis
+national : `ST_Union` sur les frontières des 38 000 communes de France, puis
+`ST_Polygonize` dessus. Elle n'a jamais rendu la main. Ce n'est pas de la
+lenteur, c'est un changement de régime — et rien dans le résultat ne le
+justifiait, puisqu'un atome ne dispute jamais une face à un autre situé à cent
+kilomètres. Le banc, lui, avait toujours travaillé département par département
+avec anneau de contexte : j'avais transcrit l'algorithme sans transcrire son
+découpage. *Une opération globale qui n'a que des effets locaux doit être
+découpée ; le seul travail est de choisir un cadre plus large que la portée des
+effets.* Et une fonction muette qui dure des minutes est indiscernable d'une
+fonction bloquée, d'où le `RAISE NOTICE` par département.
+
+**Le second.** La boucle finissait ses 90 départements — les NOTICE le
+disaient — puis la recette bloquait à son tour. `check_partition` lisait
+`WITH c AS MATERIALIZED (…)` et joignait `c` à `c` par `ST_Intersects` : une
+CTE matérialisée n'a pas d'index, `ST_Intersects` a beau porter son `&&` en
+lui, il n'a plus rien à consulter, et PostgreSQL part sur 38 000 × 38 000
+paires en boucle imbriquée.
+
+**C'est mot pour mot le § 7 de `82_anr_geom.sql`**, « deux pièges de coût, payés
+en direct », que j'avais relu le matin même pour comprendre `check_geom_anr`.
+*Un piège consigné dans le dépôt n'est pas un piège évité : encore faut-il que
+la relecture se fasse à l'endroit où il reparaît.* Table temporaire indexée en
+GiST, `ST_Intersection` calculé une fois par paire — l'autre moitié du même
+paragraphe.
+
+**Deux garde-fous ajoutés au passage.** Un `DISTINCT ON (atom_id)`, parce qu'un
+atome rattaché à des unités de deux départements (`35_atomes_hors_departement`)
+serait rendu par les deux passes de la boucle et se recouvrirait lui-même de
+toute sa surface. Et une ligne de recette séparée pour la couture entre
+départements, parce que ce chiffre-là était une inconnue qu'il valait mieux
+lire seul que noyé dans le total.
+
+### Le résultat
+
+Au 1ᵉʳ décembre 1870, France entière : 38 129 atomes dessinés, **433 repris par
+différence**, **84 replis résiduels**, **recouvrement hors fraction 0,000 km²**,
+**couture entre départements 0,000 km²**, zéro géométrie invalide, emprise
+548 576 km².
+
+Le second zéro n'était pas acquis. Deux communes séparées par une limite
+départementale sont arbitrées dans deux cadres où les tiers diffèrent ; rien ne
+garantissait qu'une lisière disputée tombe du même côté. Elle y tombe partout.
+
+Les 84 replis contre 111 au banc confirment ce qui était annoncé : le banc
+cherchait la mère dans le seul département, `84` la cherche dans l'anneau et en
+trouve 27 de plus. Reste à les nommer un par un.
+
+Deux chiffres ne sont pas expliqués et sont consignés comme tels dans
+`ETAT.md` : l'emprise dépasse de 181 km² (+0,033 %) l'emprise nette d'ANR, ce
+que le comblement des lisières internes explique plausiblement sans que ce soit
+vérifié ; et les 38 129 atomes ne se comparent pas terme à terme aux 38 331 du
+banc, qui ne comptait pas la même chose.
+
+### Les 84 nommés, et deux choses qu'on ne cherchait pas
+
+`sql/diag_partition.sql` — un fichier écrit parce que chaque question posée
+séparément relançait les 90 départements. *Ce qui coûte des minutes ne se
+demande pas une question à la fois.*
+
+**Les 84 replis résiduels se décomposent sans une surprise** : 54 fractions
+(par construction), 27 jamais pourvus par ANR — dont **les 20 arrondissements
+de Paris**, que la trame des quartiers couvre par ailleurs —, 2 pourvus sur une
+fenêtre antérieure à 1870, et **1 seul** où la règle de reprise échoue.
+
+La confrontation avec le § 8 de `82` tombe juste sans qu'on l'ait cherchée :
+quatre des six doublons y sont (Sebrazac, L'Aubépin, Saint-Hubert, La
+Salvetat-Belmontet), et les deux « pourvus sur une fenêtre antérieure à 1870 »
+sont exactement Sébazac-Concourès et Roches-Prémarie-Andillé, les deux que `82`
+nommait. Un fichier écrit pour la géométrie retrouve la liste d'un fichier écrit
+pour la chronologie.
+
+**Un seul angle mort sur toute la France** : La Guérinière, 0,4 km². Elle
+réapparaît chez ANR mais aucun voisin ne se coupe au même millésime — elle a été
+formée en 1919 de deux communes-mères, ce qui est l'explication à vérifier. Une
+règle sans seuil qui laisse un résidu à quatre décimales du pays se déclare ;
+elle ne se rafistole pas.
+
+**L'emprise se referme** : 548 576 km² contre l'étalon GEOFLA de 548 489,
++0,016 %. La partition récupère les 101 km² de recouvrement d'ANR et ajoute de
+l'ordre de 80 km² de lisières internes comblées.
+
+**Et un chiffre que personne n'avait posé : 318 atomes vivants à 1870 ne sont
+dessinés nulle part.** Ni ANR, ni reprise, ni GEOFLA 2011. Ce n'est pas `84` qui
+les efface — `snapshot_geom_anr` les comptait déjà sous `n_sans_geom`, mais le
+nombre n'avait jamais été lu. C'est le vrai trou de la carte à cette date, et il
+passe en tête de `RESTE_A_FAIRE.md`. *Une colonne qui existe depuis un mois n'est
+pas un fait connu tant que personne n'en a lu la somme.*
+
+**Une faute de légende, dans le diagnostic lui-même.** Son § 4 donnait la
+surface totale des atomes portant chaque motif d'arbitrage, et annonçait que la
+ligne `comblement` était « le premier suspect pour les +181 km² ». Elle vaut
+2 559,8 km² : c'est la surface des 135 atomes concernés, pas celle qui a été
+comblée — un atome de 20 km² dont deux hectares ont été comblés y pèse 20. La
+colonne était juste, la légende fausse, et une colonne juste sous une légende
+fausse est une colonne fausse. Le § 7 pose maintenant la vraie question :
+la surface de chaque atome après la partition, moins celle qu'il avait avant.

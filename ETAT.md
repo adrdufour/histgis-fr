@@ -78,7 +78,8 @@ un polygone par atome et par date. Toutes validées sur les vraies données.
 |---|---|---|
 | origine | GEOFLA 2011, un polygone par atome | ANR-COMMUNES, 1790-2020, polygones datés |
 | lignes | 38 442 | **45 113**, 38 074 atomes pourvus |
-| recouvrement à 1870 | 3 945 km² | **101,0 km²** |
+| recouvrement à 1870, **dans la table** | 3 945 km² | **101,0 km²** |
+| recouvrement à 1870, **tel que la carte le dessine** | 3 945 km² | **4 542,8 km²** |
 | lue par | `snapshot_geom()` | `snapshot_geom_anr()`, avec repli sur `atom_geom` |
 
 Le recouvrement de 101,0 km² a été mesuré **deux fois par deux chemins qui ne
@@ -86,6 +87,30 @@ partagent pas une ligne de code** — shapely + STRtree hors base le matin,
 PostGIS + GiST en base le soir — et les deux tombent au dixième près. Résidu
 nommé : Notre-Dame-de-Briançon 93,6 km², Tours 6,9. `atom_geom` et `membership`
 n'ont pas été touchés.
+
+**Mais 101,0 km² n'est pas ce que la carte montre, et la ligne de dessous est
+la vraie.** `check_geom_anr` joint `atom_geom_anr` à elle-même : elle mesure le
+recouvrement **de la source**. La carte, elle, dessine le **composite**
+`coalesce(ANR à la date, atom_geom)`, et personne ne l'avait mesuré. Fait le
+2 septembre 2026, sur l'export web, à 1870, entre communes ordinaires :
+
+| | paires | km² |
+|---|---|---|
+| ANR × ANR | 2 353 | **1,0** |
+| **ANR × repli** | **1 618** | **4 542,8** |
+| repli × repli | 2 | 0,0 |
+
+72 départements. La couture est ce qui se passe là où un atome retombe sur
+GEOFLA 2011 pendant que ses voisins viennent d'ANR : 393 superpositions
+franches (4 267 km², les filles reportées en arrière par `11` posées entières
+sur leur mère intacte) et 1 225 lisières (275 km², le double trait visible
+entre Villieu-Loyes-Mollon et Meximieux). À 1940 la couture est presque éteinte,
+1,3 km². Détail par paire : `sorties/anr/carte_couture_repli_1870.csv`.
+
+*Une recette qui mesure la source ne mesure pas le composite qu'on en tire.*
+
+**`sql/84_carte_partition.sql` la lève** — voir § 2.1 bis. `82` n'est pas en
+cause et n'a pas bougé.
 
 **Ce qui lit `atom_geom` directement voit toujours l'ancienne valeur.** C'est
 une transition, pas une migration : les deux tables coexistent, et seul ce qui
@@ -95,6 +120,159 @@ Le pont est une jointure d'entiers : `id_com` d'ANR **est** l'identifiant
 Cassini de `atom.cassini`. 99,91 % des atomes non-fraction retrouvés, 99,66 %
 d'accord sur les noms. Cinq règles de sélection, aucune n'arbitrant une
 frontière, dans `sorties/anr/anr_regles.py` et `sql/82_anr_geom.sql`.
+
+### 2.1 bis Trame nettoyée — écrite, mesurée hors base, PAS ENCORE JOUÉE
+
+`sql/84_carte_partition.sql` rend une trame **sans trou et sans superposition**
+hors fractions. Couche dérivée, lue à la demande : `atom_geom`, `atom_geom_anr`
+et `membership` sont intacts, et `snapshot_geom_anr()` répond comme avant.
+
+**Une seule règle, la reprise.** Un atome que la base fait vivre à la date et
+qu'ANR ne pourvoit pas alors reçoit `voisin(D) − voisin(Y′)`, où Y′ est sa
+prochaine apparition chez ANR et le voisin celui dont la chronologie s'y coupe.
+Villieu à 1870 = Loyes(1870) − Loyes(1897) = 5,68 km², et Loyes garde les 4,40
+restants. Deux polygones datés, une soustraction, aucun seuil, et une frontière
+d'époque au lieu d'une frontière de 2011. Les frontières sont ensuite nouées et
+polygonisées : une face, un propriétaire, donc **recouvrement impossible par
+construction** plutôt que corrigé après coup.
+
+Mesuré par `sql/banc_84.py` sur la vraie géométrie de l'export :
+
+| à 1870 | avant | après |
+|---|---|---|
+| recouvrement, 23 départements | 6 923,6 km² | **0,000** |
+| trou non comblé | — | **0,000** |
+| atome sans aucune face | — | **0** |
+
+Passe nationale à 1870 : 38 331 atomes dessinés, 37 497 par ANR, **432 repris**,
+111 replis résiduels (souvent une mère hors département, limite du banc), 291
+fractions et partagées inchangées.
+
+**JOUÉ ET CONTRÔLÉ le 2 septembre 2026, sur l'Ain à 1870.** `check_partition`
+rend **recouvrement hors fraction 0,000 km²**, zéro géométrie invalide, et
+**les trois comptes tombent exactement sur ceux du banc** : 458 atomes
+dessinés, 7 repris par différence, 0 repli résiduel. Deux chemins qui ne
+partagent pas une ligne de code — shapely sur l'export WGS84 accroché à 25 m,
+PostGIS sur la géométrie Lambert-93 réelle — et les comptes sont les mêmes.
+
+L'Aveyron suit : 0,000 km² lui aussi, zéro géométrie invalide, 306 atomes,
+19 reprises, 3 replis résiduels. C'est le département qui éprouve le vrai
+mécanisme — Saint-Beaulize, La Serre, Les Albres y ont été réunies puis
+rétablies, et c'est là que la règle « combler le trou par report » s'était
+brisée.
+
+Emprises : 5 812 km² projetés pour l'Ain, 8 770 pour l'Aveyron, contre 5 762 et
+8 735 km² pour ces départements aujourd'hui. **Ce contrôle-là ne vaut qu'à un
+demi-point près** : le facteur d'aire du Lambert-93 varie avec la latitude, et
+le 1,0084 d'`ETAT.md` est une moyenne nationale. Il dit que le nettoyage ne se
+paie ni en trous ni en débordements ; il ne dit pas mieux, et l'annoncer à
+0,03 % sur l'Ain était une précision empruntée à une moyenne.
+
+**Un défaut de la recette, trouvé par l'Aveyron.** `check_partition` portait
+`1870-01-01` par défaut, tandis que `export_web.py` et le banc observent l'année
+au **1ᵉʳ décembre**. La colonne « attendu » comparait donc deux cartes distantes
+de onze mois — d'où 19 reprises contre 18 au banc, et 3 replis résiduels contre
+1. Le défaut par défaut est passé au 1ᵉʳ décembre. *Une colonne « attendu » qui
+ne partage pas la convention de ce qu'elle compare est pire qu'une colonne
+vide : elle a l'air de valider.*
+
+Cinq erreurs de SQL avaient été trouvées avant le premier appel et une sixième
+par lui : les colonnes de `RETURNS TABLE` deviennent des variables PL/pgSQL, et
+**un corps PL/pgSQL n'est analysé qu'au premier appel** — le fichier se charge
+sans rien dire de ce qu'il contient. Détail dans `JOURNAL.md`.
+
+**PASSE NATIONALE PASSÉE le 2 septembre 2026**, au 1ᵉʳ décembre 1870 :
+
+| contrôle | valeur |
+|---|---|
+| atomes dessinés | 38 129 |
+| repris par différence | **433** (432 au banc) |
+| repli GEOFLA résiduel | **84** (111 au banc) |
+| **recouvrement hors fraction** | **0,000 km²** |
+| dont couture entre départements | **0,000 km²** |
+| somme des aires hors fraction | 548 576 km² |
+| géométries invalides | 0 |
+
+**Les deux zéros ne disent pas la même chose.** Le premier était le but du
+fichier. Le second était une inconnue : le treillis se bâtit département par
+département, donc deux communes séparées par une limite départementale sont
+arbitrées deux fois, dans deux cadres où les tiers présents diffèrent. Rien ne
+garantissait qu'une lisière disputée tombe du même côté. Elle tombe du même
+côté partout. *Un découpage qui ne laisse pas de trace de lui-même est une
+propriété du résultat, pas de la méthode qui l'a obtenu — et elle se vérifie.*
+
+**Les 84 replis résiduels sont nommés** (`sql/diag_partition.sql`), et il n'y a
+pas une surprise dans le lot :
+
+| | n | km² | ce que c'est |
+|---|---|---|---|
+| fractions | 54 | 83,7 | par construction — elles gardent le polygone de la mère |
+| jamais pourvus par ANR | 27 | 196,8 | dont **les 20 arrondissements de Paris**, couverts par la trame des quartiers (§ 2.7) |
+| pourvus avant 1870 seulement | 2 | 46,9 | Sébazac-Concourès et Roches-Prémarie-Andillé |
+| réapparaissent, mais sans mère trouvée | **1** | 0,4 | La Guérinière — le seul angle mort de la règle |
+
+Hors Paris et hors fractions, **il reste dix communes** : Sébazac-Concourès,
+Sebrazac, Tauriac-de-Naucelle, Puilboreau, un atome corse sans nom (2A325),
+L'Aubépin, Saint-Hubert, La Salvetat-Belmontet, La Guérinière,
+Roches-Prémarie-Andillé. **Quatre des six doublons nommés au § 8 de `82`** y
+figurent, et **les deux « pourvus sur une fenêtre antérieure à 1870 »** du même
+paragraphe sont exactement la troisième ligne du tableau. La confrontation
+retrouve la liste de `82` sans l'avoir cherchée.
+
+**Un seul cas où la règle de reprise échoue sur toute la France**, 0,4 km². Une
+règle sans seuil qui laisse un résidu à quatre décimales du pays se déclare,
+elle ne se rafistole pas.
+
+**L'emprise se referme.** 548 576 km² contre l'étalon GEOFLA 2014 de
+548 489 : **+0,016 %**. La partition récupère les 101 km² de recouvrement
+d'ANR et ajoute de l'ordre de 80 km² de lisières internes comblées.
+
+**Ce que le nettoyage a déplacé, mesuré atome par atome** (§ 7 du diagnostic —
+surface après la partition moins surface sous `coalesce(ANR, atom_geom)`) :
+
+| | atomes | km² net |
+|---|---|---|
+| inchangés à 0,1 ha près | 37 156 | 0,0 |
+| ont perdu du sol | 653 | **−5 901,1** |
+| ont gagné du sol | 266 | **+248,9** |
+
+Les 5 901 km² perdus sont le double comptage qui disparaît : une fille reportée
+en arrière revendiquait le polygone de sa commune terminale, sa mère revendiquait
+le sien entier, et le même sol était compté deux fois. Les 653 perdants sont ces
+filles et ces mères.
+
+**Les 248,9 km² gagnés sont la seule terre que l'arbitrage ajoute** — 0,045 % du
+pays, pour l'essentiel des lisières internes comblées au plus long bord. C'est
+le majorant de ce que `84` invente, et il fallait le mesurer plutôt que le
+déduire d'une somme de motifs.
+
+**318 atomes vivants à 1870 ne sont dessinés nulle part** — ni ANR, ni reprise,
+ni GEOFLA 2011. Ce n'est pas `84` qui les efface : ils manquaient déjà, et
+`snapshot_geom_anr` les comptait sous `n_sans_geom` sans que le nombre ait
+jamais été posé. C'est le vrai trou de la carte à cette date.
+
+Et ils ne sont pas de la même espèce. Les vingt premiers sont surtout des
+**atomes-fraction de villes multicantonales** — Montluçon, Moulins, Sedan,
+Troyes, Carcassonne, Castelnaudary, Aix-en-Provence — qui n'ont AUCUNE
+géométrie, pas même celle de leur mère. Ces cantons-là sont donc dessinés
+courts, et ce défaut est antérieur à `82` comme à `84`. S'y mêlent quelques
+communes disparues sans polygone GEOFLA, dont **Goutrens** : c'est le
+troisième des trois que `82` § 8 nommait comme « pourvus sur une fenêtre
+antérieure à 1870 », les deux autres étant dans la liste des replis ci-dessus.
+**Le trio de `82` est refermé, par deux chemins différents.**
+
+> **Piège de lecture, corrigé le soir même.** Le § 4 de `diag_partition.sql`
+> donnait la surface totale des atomes portant chaque motif d'arbitrage, et sa
+> légende invitait à y lire la surface arbitrée — un atome de 20 km² dont deux
+> hectares ont été comblés pesait 20 dans la ligne `comblement`. Les 2 559,8 km²
+> de cette ligne ne sont donc PAS ce que le comblement a ajouté. La question se
+> pose au § 7, qui compare la surface de chaque atome avant et après.
+> *Une colonne juste sous une légende fausse est une colonne fausse.*
+
+`cartes/export_web.py --partition` sait la lire, en option et sans rien changer
+par défaut, pour que les deux trames soient comparables avant qu'on remplace
+l'une par l'autre. Coût mesuré : 24,5 années géométriques par département contre
+une centaine d'années candidates, soit environ quatre fois le temps ordinaire.
 
 ### 2.2 Cantons 1870-1940 — close, contrôlée
 

@@ -20,11 +20,16 @@ Dans cet ordre. Les quatre premières se font sans rien chercher.
 
 | # | tâche | pourquoi maintenant |
 |---|---|---|
+| 0 | **Les atomes-fraction de villes multicantonales sans aucune géométrie** | 318 atomes vivants à 1870 ne sont dessinés nulle part, et les vingt premiers sont surtout des fractions de Montluçon, Moulins, Sedan, Troyes, Carcassonne, Aix-en-Provence — sans même le polygone de leur mère. Ces cantons sont dessinés courts. Défaut antérieur à `82` et à `84`, rendu visible par `diag_partition.sql` § 8. **Premier geste** : compter fractions et non-fractions séparément (requête ci-dessous), parce que ce sont deux problèmes |
+| 0 bis | **La Guérinière**, le seul atome de France où la reprise échoue | 0,4 km². Il réapparaît chez ANR mais aucun voisin ne se coupe au même millésime. La commune a été formée en 1919 de DEUX communes-mères ; si c'est la cause, la règle gagne un cas, sinon elle se déclare telle quelle. À trancher, pas à rafistoler |
 | 1 | **Jouer `81_report_1968_avant.sql`** sur la vraie base, après `79` | écrit, éprouvé au banc, **confirmé non joué le 2 septembre** : 191 000 atome-années en attente, +45 % de couverture, zéro collision mesurée |
 | 2 | **Expliquer trois traces absentes : `25`, `40_outremer`, `37`** | mesuré le 2 septembre — voir ci-dessous ; `37` est le plus inquiétant des trois |
 | 3 | **Établir l'état de `38_decret_1982_ain.sql`** puis le rejouer si besoin | § 2 c de `diag_passages.sql` ; attention, il se tait au rejeu si `75`/`76`/`79` occupent déjà 1982-1999 |
 | 4 | **Donner une trace à `38` et `39`** | rien dans la base ne dit s'ils sont passés — c'est ce qui a laissé un `rebuild.sh` défaire `39` en silence pendant quinze jours |
 | 5 | **Lancer un export web complet** et mesurer le poids | seule chose que le banc ne peut pas dire ; attendu 92 Mo → deux à trois fois plus. Désormais sans conséquence pour le dépôt : `donnees/` est ignoré |
+| 5 bis | **Exporter un département avec `--partition` dans un dossier à part**, et comparer à l'ordinaire | `python3 cartes/export_web.py 01 --partition --sortie /tmp/part`. C'est la seule façon de voir la couture disparaître avant de décider de remplacer la trame. Vérifier au passage le taux de déduplication des versions : s'il est proche de 1, `ST_Equals` ne fait pas son travail et `communes.json` va enfler |
+| 5 ter | **Afficher `repris` dans `cartes/web/index.html`** | l'export pose désormais `repris` par unité à côté de `anr` et `repli` ; la page l'ignore. Une unité qui doit sa forme à une reprise doit pouvoir le dire, sans quoi la légende laisse croire à une trame entièrement attestée |
+| 5 quater | **Créer un rôle `histgis_carte` en SELECT seul + TEMPORARY** | `--partition` doit ouvrir la connexion en lecture-écriture : une transaction `READ ONLY` de PostgreSQL interdit TOUT DDL, y compris `CREATE TEMP TABLE`, et `84` en a besoin. La garantie que l'export n'écrit rien vient donc du code et non plus du moteur. Un rôle sans droit d'écriture la rend au moteur — la commande est dans la docstring de `connecte()` |
 | 6 | Écrire `requirements.txt` ou `environment.yml` | dette ouverte depuis le 14 août, triviale |
 
 > **Les points « compléter `.gitignore` » et « commiter » sont faits le
@@ -374,3 +379,34 @@ bougera pas.
 | **Le pseudo-découpage appliqué à Paris 2009** | mesuré puis écarté : il relierait 17 des 18 circonscriptions parisiennes en une seule composante | — |
 | **ADMIN EXPRESS comme trame de découpe** | 26 % des coupes ; CONTOURS-IRIS lui est supérieur d'un ordre de grandeur | 11 août |
 | **Cassini-Geopeuple, quartiers de la Ville de Paris, ALPAGE-Vasserot** | licences incompatibles (CC BY-NC-SA, ODbL) quelle que soit la qualité de la donnée | — |
+
+### Le détail du point 0 — deux problèmes sous un seul nombre
+
+Les 318 atomes sans géométrie à 1870 ne sont pas une population homogène. La
+requête suivante ne demande pas la partition et répond en quelques secondes :
+
+```sql
+SELECT a.fraction, count(*)
+FROM  (SELECT DISTINCT m.atom_id FROM histgis.membership m
+        WHERE m.periode @> '1870-12-01'::date) v
+JOIN   histgis.atom a ON a.atom_id = v.atom_id
+WHERE  NOT EXISTS (SELECT 1 FROM histgis.atom_geom ag
+                    WHERE ag.atom_id = a.atom_id)
+  AND  NOT EXISTS (SELECT 1 FROM histgis.atom_geom_anr g
+                    WHERE g.atom_id = a.atom_id
+                      AND g.periode @> '1870-12-01'::date)
+GROUP  BY 1;
+```
+
+**Les fractions** posent une question de chaîne : `05_geom.sql` donne à chaque
+atome-fraction le polygone de sa commune-mère, et ceux-là ne l'ont pas reçu.
+Pourquoi une partie seulement — 54 fractions ont bien leur polygone et
+apparaissent dans les replis de `84` — est la première chose à établir.
+
+**Les non-fractions** posent une question de source : commune disparue avant
+2011, donc pas de GEOFLA, et ANR qui ne la pourvoit pas à cette date.
+**Goutrens** en est le cas type, et referme le trio du § 8 de `82` dont les deux
+autres — Sébazac-Concourès et Roches-Prémarie-Andillé — sont dans les replis.
+
+*Un même symptôme — « rien à dessiner » — recouvre ici un défaut de chaîne et
+une limite de source. Les compter ensemble empêche de traiter l'un ou l'autre.*

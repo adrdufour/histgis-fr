@@ -86,6 +86,41 @@ Une carte hybride qui ne dit pas où elle est hybride est une carte qui ment par
 omission. Chaque version porte donc `r: 1` quand elle vient du repli, chaque
 unité porte `n_anr` et `n_repli`, et la page les affiche.
 
+`--partition` : LA TRAME NETTOYÉE (`sql/84_carte_partition.sql`)
+----------------------------------------------------------------
+Le repli a un coût que le paragraphe précédent nommait sans le chiffrer : là où
+un atome retombe sur GEOFLA pendant que ses voisins viennent d'ANR, les bords ne
+coïncident plus. Mesuré à 1870 sur cet export même, entre communes ordinaires :
+**4 542,8 km² de recouvrement sur la couture ANR × repli**, contre 1,0 km² entre
+deux polygones ANR. C'est le double trait qu'on voit entre Villieu-Loyes-Mollon
+et Meximieux, et la superposition franche des 393 filles reportées en arrière
+par `11` sur leur mère intacte.
+
+`84` rend une trame sans trou et sans superposition : chaque atome que la base
+fait vivre et qu'ANR ne pourvoit pas reçoit `voisin(D) − voisin(Y′)` — la
+différence des deux polygones du voisin qui s'en sépare l'année de sa prochaine
+apparition chez ANR — puis toutes les frontières sont nouées et polygonisées,
+et chaque face n'a qu'un propriétaire.
+
+CE DRAPEAU EST OPTIONNEL, ET LE RESTERA JUSQU'À CE QUE `84` AIT TOURNÉ. Sans
+lui, rien ne change : l'export tire `coalesce(ANR, atom_geom)` comme avant. Les
+deux trames peuvent donc être exportées dans deux dossiers et comparées à l'œil
+avant qu'on décide laquelle sert la page. *Une trame corrigée qu'on ne peut pas
+comparer à celle qu'elle remplace n'est pas une correction, c'est un pari.*
+
+CE QUE `--partition` COÛTE. La partition est une opération DATÉE : elle ne se
+lit pas sur un intervalle comme `atom_geom_anr`. Le script la calcule donc une
+fois par « année géométrique » — les années où le jeu de polygones dessinés peut
+changer, c'est-à-dire les bornes de `atom_geom_anr` et celles de la VIE des
+atomes (pas de leurs rattachements : un atome qui change de canton ne change pas
+de forme). Mesuré sur les vingt premiers départements : **24,5 années
+géométriques en moyenne**, contre une centaine d'années candidates. C'est ce
+rapport de un à quatre qui rend le drapeau utilisable.
+
+Les fractions et les villes partagées ne changent pas de statut : `84` les
+traite comme un propriétaire unique et les rend dupliquées par canton, drapeau
+`partagee` compris. La page continue de les hachurer.
+
 Les années sans source
 ----------------------
 Le script n'invente rien. Une année sans `membership` sort avec la signature
@@ -304,12 +339,40 @@ def nom_dep(code, annee):
 # ---------------------------------------------------------------------------
 # Connexion
 # ---------------------------------------------------------------------------
-def connecte(dsn_force=None):
+def connecte(dsn_force=None, readonly=True):
+    """Ouvre la connexion. LECTURE SEULE par défaut, et ce défaut a un sens.
+
+    `--partition` doit l'abandonner, et il faut savoir pourquoi. Une
+    transaction `READ ONLY` de PostgreSQL interdit **toutes** les commandes
+    CREATE, ALTER et DROP — y compris sur une table TEMPORAIRE. Les écritures
+    dans une table temporaire déjà créée, elles, sont permises : c'est le DDL
+    qui bloque, pas le contenu. Or `carte_partition_atome` crée et détruit
+    quatre tables temporaires par département ; elle ne peut pas s'exécuter
+    sous ce régime, et aucune réécriture de `84` n'y changerait rien tant que le
+    comblement a besoin d'une table de travail.
+
+    Ce que l'export perd est donc réel : la garantie ne vient plus du moteur
+    mais de la lecture du code. `84` ne touche ni `atom_geom`, ni
+    `atom_geom_anr`, ni `membership` — c'est vrai, c'est vérifiable, et ce
+    n'est plus imposé.
+
+    LA VRAIE RÉPONSE EST UN RÔLE, PAS UN MODE. Un rôle qui n'a que `SELECT` sur
+    le schéma et `TEMPORARY` sur la base rend la garantie au moteur sans
+    interdire les tables de travail :
+
+        CREATE ROLE histgis_carte LOGIN;
+        GRANT CONNECT, TEMPORARY ON DATABASE histgis TO histgis_carte;
+        GRANT USAGE ON SCHEMA histgis TO histgis_carte;
+        GRANT SELECT ON ALL TABLES IN SCHEMA histgis TO histgis_carte;
+
+    puis `--dsn "dbname=histgis user=histgis_carte"`. Tant que ce rôle n'existe
+    pas, `--partition` s'exécute en lecture-écriture et le dit.
+    """
     dernier = None
     for dsn in ([dsn_force] if dsn_force else DSN_CANDIDATS):
         try:
             cx = psycopg2.connect(dsn)
-            cx.set_session(readonly=True, autocommit=True)
+            cx.set_session(readonly=readonly, autocommit=True)
             with cx.cursor() as c:
                 c.execute("SET search_path TO histgis, public")
             return cx
@@ -380,6 +443,24 @@ SELECT DISTINCT d FROM (
 ) t
 """
 
+# Bornes de VIE des atomes, pour `--partition`. À ne pas confondre avec
+# `SQL_BORNES`, qui rend toutes les bornes de rattachement : un atome qui passe
+# d'un canton à l'autre y produit deux bornes et ne change pas d'un pouce de
+# forme. La partition, elle, ne dépend que de QUI est vivant et de QUELLE forme
+# ANR lui donne. Distinguer les deux fait passer le nombre de calculs d'une
+# centaine par département à vingt-cinq.
+#
+# Les intervalles sont rendus bruts : c'est Python qui les fusionne par atome,
+# parce que fusionner des intervalles en SQL demande un « gaps and islands »
+# qu'on relirait trois fois avant de le croire.
+SQL_VIE_ATOME = """
+SELECT m.atom_id, m.valid_from, m.valid_to
+FROM   membership m
+JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+WHERE  u.dep = %(dep)s
+ORDER  BY m.atom_id, m.valid_from
+"""
+
 # La signature couvre la composition ET la forme.
 #
 # `coalesce(ga.poly_id, '=')` : `=` marque un atome en repli sur `atom_geom`,
@@ -435,6 +516,105 @@ def annees_candidates(cur, dep, niveau, anr):
     return sorted(cand)
 
 
+def annees_geometriques(cur, dep):
+    """Années où le jeu de polygones dessinés peut changer, pour `--partition`.
+
+    Deux sources et deux seulement : les bornes de `atom_geom_anr`, et celles
+    de la VIE des atomes. Un atome qui change de canton n'entre pas ici — sa
+    forme n'a pas bougé, et lui faire recalculer une partition serait payer
+    quatre fois le prix pour le même dessin.
+
+    LIMITE CONNUE. La reprise d'un atome dépend de la forme de sa MÈRE, et la
+    mère peut vivre dans un département voisin — `84` la cherche dans son anneau
+    de 20 km, cette fonction-ci ne regarde que le département. Une mère
+    étrangère qui change de forme entre deux années géométriques du département
+    déplacerait donc la reprise sans qu'on recalcule. Le cas est rare (il faut
+    une fille frontalière ET une mère qui bouge dans l'intervalle) et il se
+    corrige en ajoutant les bornes des voisins ; on le déclare plutôt que de
+    payer d'avance un élargissement dont personne n'a mesuré le besoin.
+    """
+    cand = {AN_MIN}
+    cur.execute(SQL_BORNES_GEOM, {"dep": dep})
+    for (d,) in cur.fetchall():
+        if d is not None:
+            cand.add(annee_de_borne(d))
+
+    # Fusionner les intervalles de rattachement par atome : seules les bornes
+    # qui restent après fusion sont des changements de VIE. Les autres sont des
+    # passages d'un canton à l'autre, et la forme les ignore.
+    cur.execute(SQL_VIE_ATOME, {"dep": dep})
+    par_atome = {}
+    for atom_id, d1, d2 in cur.fetchall():
+        par_atome.setdefault(atom_id, []).append((d1, d2))
+    for segs in par_atome.values():
+        segs.sort(key=lambda s: (s[0] is None, s[0]))
+        fin = None
+        for d1, d2 in segs:
+            if fin is None or (d1 is not None and fin is not None and d1 > fin):
+                if d1 is not None:
+                    cand.add(annee_de_borne(d1))
+                if fin is not None:
+                    cand.add(annee_de_borne(fin))
+                fin = d2
+            elif d2 is None or fin is None or d2 > fin:
+                fin = d2
+        if fin is not None:
+            cand.add(annee_de_borne(fin))
+
+    return sorted(a for a in cand if AN_MIN <= a <= AN_MAX)
+
+
+# La table de partition d'un département : une ligne par (année géométrique,
+# atome). Elle sert les trois requêtes datées, qui la joignent sur `an`.
+#
+# TEMPORAIRE et par département : `carte_partition_atome` crée elle-même des
+# tables temporaires, et deux workers qui se partageraient un département se
+# marcheraient dessus. Le parallélisme du script est déjà par département,
+# et c'est ce qui rend la chose sûre sans un mot de synchronisation.
+SQL_PART_CREE = """
+DROP TABLE IF EXISTS part_dep;
+CREATE TEMP TABLE part_dep (
+    an       int  NOT NULL,
+    atom_id  text NOT NULL,
+    source   text NOT NULL,
+    motif    text,
+    geom     geometry(MultiPolygon, 2154) NOT NULL
+)
+"""
+
+SQL_PART_REMPLIT = """
+INSERT INTO part_dep (an, atom_id, source, motif, geom)
+SELECT %(an)s, c.atom_id, c.source, c.motif, c.geom
+FROM   carte_partition_atome(%(d)s::date, %(dep)s) c
+WHERE  c.geom IS NOT NULL
+"""
+
+
+def prepare_partition(cur, dep, annees_geom):
+    """Calcule la partition une fois par année géométrique. Rend an -> an_geom.
+
+    Le dictionnaire rendu traduit N'IMPORTE QUELLE année en l'année géométrique
+    qui la gouverne : une configuration dont l'année de référence tombe sur un
+    changement de composition sans changement de forme lit la partition de la
+    dernière année géométrique qui la précède. Sans cette traduction, une
+    jointure sur `an = %(d)s` ne trouverait rien et la carte serait vide — un
+    échec silencieux, le pire de tous.
+    """
+    cur.execute(SQL_PART_CREE)
+    for an in annees_geom:
+        cur.execute(SQL_PART_REMPLIT,
+                    {"an": an, "d": date_ref(an), "dep": dep})
+    cur.execute("CREATE INDEX ON part_dep (an, atom_id)")
+    cur.execute("ANALYZE part_dep")
+
+    gouverne, courante = {}, None
+    for an in range(AN_MIN, AN_MAX + 1):
+        if an in annees_geom:
+            courante = an
+        gouverne[an] = courante if courante is not None else AN_MIN
+    return gouverne
+
+
 def configurations(cur, dep, niveau, anr):
     """année -> signature ('' si aucune source), et signature -> année de référence."""
     par_annee = {}
@@ -476,9 +656,20 @@ def geom_snap(src):
 GEOM_ATOME = geom_snap("ag.geom")                      # trame GEOFLA 2011 seule
 GEOM_DATEE = geom_snap("coalesce(ga.geom, ag.geom)")   # ANR quand il parle (R5)
 
+# `--partition` : la trame nettoyée de `84` d'abord, et le coalesce derrière —
+# non pas qu'il doive servir, mais parce qu'un atome que `carte_partition_atome`
+# ne rendrait pas doit rester dessiné plutôt que disparaître sans un mot.
+# Si ce repli-là se met à servir, c'est `84` qu'il faut regarder, pas la carte.
+GEOM_PARTITION = geom_snap("coalesce(cp.geom, ga.geom, ag.geom)")
+
 # La jointure datée qui accompagne `GEOM_DATEE` dans les requêtes par date.
 JOINT_DATE = ("LEFT   JOIN atom_geom_anr ga "
               "ON ga.atom_id = m.atom_id AND ga.periode @> %(d)s::date")
+
+# `%(ag)s` et pas `%(d)s` : la partition est indexée par ANNÉE GÉOMÉTRIQUE, pas
+# par la date affichée. C'est `prepare_partition()` qui traduit l'une en l'autre.
+JOINT_PARTITION = (JOINT_DATE + "\nLEFT   JOIN part_dep cp "
+                   "ON cp.atom_id = m.atom_id AND cp.an = %(ag)s")
 
 # Le nom de la commune vient de `noms_geofla`, à défaut de `geofla_commune`.
 # C'est un nom de 2011, donc potentiellement anachronique sur une planche de
@@ -566,6 +757,43 @@ SELECT ag.atom_id,
                     %(prec)s)                                       AS pt
 FROM   atom_geom ag
 WHERE  ag.atom_id = ANY(%(atomes)s)
+"""
+
+# `--partition` : les versions se lisent dans `part_dep`, pas dans
+# `atom_geom_anr`. Une ligne par (année géométrique, atome) ; c'est
+# `construit_versions_partition()` qui en refait des intervalles.
+#
+# L'accrochage à la grille est appliqué ICI comme ailleurs, et c'est ce qui
+# garde la promesse du fichier : le polygone communal et le contour cantonal
+# subissent les mêmes opérations dans le même ordre sur la MÊME source.
+#
+# `idem` EST LA COLONNE QUI DÉCIDE DU POIDS DU FICHIER, et elle a coûté un
+# aller-retour. Le premier jet dédoublonnait sur l'empreinte du GeoJSON émis.
+# Éprouvé sur l'Ain avec le banc : 916 instantanés donnaient 918 versions —
+# AUCUNE déduplication. La raison n'est pas la sérialisation, elle est
+# géométrique : le treillis est renoué à chaque année, et une commune dont un
+# VOISIN change gagne ou perd des sommets colinéaires sur leur bord commun. Sa
+# forme est la même, son empreinte ne l'est pas. À ce régime un département aux
+# vingt-cinq années géométriques portait vingt-cinq versions par commune.
+#
+# `ST_Equals` tranche sur l'ensemble de points et se moque des sommets en trop.
+# Comparé au précédent par `lag()`, il suffit — on ne dédoublonne que des
+# versions CONSÉCUTIVES, jamais deux formes séparées par une troisième.
+#
+# *Deux dessins identiques peuvent avoir deux empreintes ; c'est l'égalité
+# géométrique qu'il faut demander, pas l'égalité des octets.*
+SQL_VERSIONS_PARTITION = f"""
+SELECT p.atom_id,
+       p.an,
+       p.source,
+       ST_AsGeoJSON(ST_Transform({geom_snap('p.geom')}, 4326), %(prec)s)  AS gj,
+       ST_AsGeoJSON(ST_Transform(ST_PointOnSurface({geom_snap('p.geom')}), 4326),
+                    %(prec)s)                                            AS pt,
+       coalesce(ST_Equals(p.geom,
+                          lag(p.geom) OVER (PARTITION BY p.atom_id
+                                            ORDER BY p.an)), false)      AS idem
+FROM   part_dep p
+ORDER  BY p.atom_id, p.an
 """
 
 
@@ -718,6 +946,7 @@ SELECT u.unit_id,
        count(*) FILTER (WHERE ag.partagee)               AS n_partagees,
        count(*) FILTER (WHERE {est_anr})                 AS n_anr,
        count(*) FILTER (WHERE {est_repli})               AS n_repli,
+       count(*) FILTER (WHERE {est_repris})              AS n_repris,
        array_agg(m.atom_id ORDER BY m.atom_id)           AS atomes,
        ST_AsGeoJSON(
            ST_Transform(
@@ -745,17 +974,33 @@ WHERE  m.niveau = 'canton' AND u.dep = %(dep)s AND m.periode @> %(d)s::date
 """
 
 
-def sql_par_date(anr):
-    """Les deux requêtes datées, gréées selon que `atom_geom_anr` est là ou non."""
-    if anr:
+def sql_par_date(anr, partition=False):
+    """Les deux requêtes datées, gréées selon la trame demandée.
+
+    Avec `--partition`, les compteurs ne se lisent plus sur la présence d'un
+    polygone mais sur la SOURCE que `84` déclare pour chacun : `anr`, `reprise`
+    ou `repli`. C'est plus qu'un détail de comptage — c'est ce qui permet à une
+    unité de dire « ma forme doit trois communes à une reprise », alors que la
+    trame hybride ne savait dire que « trois communes sont en repli ».
+    """
+    if partition:
+        gabarit = {"geom": GEOM_PARTITION, "joint_date": JOINT_PARTITION,
+                   "sans_geom": "cp.atom_id IS NULL AND ga.atom_id IS NULL "
+                                "AND ag.atom_id IS NULL",
+                   "est_anr": "cp.source = 'anr'",
+                   "est_repli": "cp.source = 'repli'",
+                   "est_repris": "cp.source = 'reprise'"}
+    elif anr:
         gabarit = {"geom": GEOM_DATEE, "joint_date": JOINT_DATE,
                    "sans_geom": "ga.atom_id IS NULL AND ag.atom_id IS NULL",
                    "est_anr": "ga.atom_id IS NOT NULL",
-                   "est_repli": "ga.atom_id IS NULL AND ag.atom_id IS NOT NULL"}
+                   "est_repli": "ga.atom_id IS NULL AND ag.atom_id IS NOT NULL",
+                   "est_repris": "false"}
     else:
         gabarit = {"geom": GEOM_ATOME, "joint_date": "",
                    "sans_geom": "ag.atom_id IS NULL",
-                   "est_anr": "false", "est_repli": "ag.atom_id IS NOT NULL"}
+                   "est_anr": "false", "est_repli": "ag.atom_id IS NOT NULL",
+                   "est_repris": "false"}
     return SQL_UNITES.format(**gabarit), SQL_CONTOUR.format(**gabarit)
 
 
@@ -881,17 +1126,97 @@ def versions_par_atome(cur, params, atomes_connus, anr):
             for aid in atomes_connus}
 
 
-def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr):
+def construit_versions_partition(par_annee, annees_geom):
+    """[(an, source, gj, pt, idem)] trié -> [{a, k, c, g, r}, …].
+
+    Le pendant de `construit_versions()` pour la trame nettoyée, et il travaille
+    à l'envers : là où ANR livre des INTERVALLES qu'il faut paver, `84` livre
+    des INSTANTANÉS qu'il faut recoller. Deux instantanés consécutifs
+    géométriquement égaux ne font qu'une version — c'est `idem`, calculé en SQL
+    par `ST_Equals`, qui le dit ; voir l'en-tête de `SQL_VERSIONS_PARTITION`
+    pour ce qui arrive quand on le demande à une empreinte.
+
+    `r` vaut 1 pour le repli GEOFLA résiduel — les atomes qu'ANR ne pourvoit à
+    aucune date et qu'aucune reprise ne peut atteindre. La reprise, elle, n'est
+    PAS un repli : elle vient de deux polygones datés. Les confondre ferait
+    disparaître de la légende la seule vraie faiblesse qui reste.
+    """
+    versions = []
+    for an, source, gj, pt, idem in par_annee:
+        repli = 1 if source == 'repli' else 0
+        if versions and idem and versions[-1]["r"] == repli:
+            continue
+        versions.append({
+            "a": an,
+            "k": hashlib.md5(gj.encode()).hexdigest()[:10] if gj else None,
+            "c": json.loads(pt)["coordinates"] if pt else None,
+            "g": json.loads(gj) if gj else None,
+            "r": repli,
+        })
+    # Une commune qui n'apparaît qu'à partir de sa deuxième année géométrique
+    # doit commencer par un blanc, pas par sa forme reportée en arrière : le
+    # curseur ne doit jamais la montrer avant que la base ne la fasse vivre.
+    if versions and versions[0]["a"] > AN_MIN and annees_geom:
+        versions.insert(0, {"a": AN_MIN, "k": None, "c": None,
+                            "g": None, "r": 0})
+    return versions
+
+
+def versions_par_atome_partition(cur, params, atomes_connus, annees_geom):
+    """Les versions lues dans `part_dep`, déjà remplie par `prepare_partition`."""
+    cur.execute(SQL_VERSIONS_PARTITION, params)
+    par_atome = {}
+    for atom_id, an, source, gj, pt, idem in cur.fetchall():
+        par_atome.setdefault(atom_id, []).append((an, source, gj, pt, idem))
+    return {aid: construit_versions_partition(par_atome.get(aid, []), annees_geom)
+            for aid in atomes_connus}
+
+
+def affine_signatures(cfg, gouverne):
+    """Ajoute l'année géométrique à la signature d'entrée.
+
+    Sans cela, deux années de même composition mais de partition différente
+    partageraient un calcul ET un fichier : la page montrerait la forme d'une
+    autre année sans le dire. C'est exactement le défaut que ce fichier nomme
+    partout ailleurs, et il revient par la porte de derrière dès qu'une trame
+    gagne une dimension que la signature ignore.
+    """
+    cfg2 = {a: (s + "@" + str(gouverne[a]) if s else "") for a, s in cfg.items()}
+    sig2 = {}
+    for a in sorted(cfg2):
+        if cfg2[a] and cfg2[a] not in sig2:
+            sig2[cfg2[a]] = a
+    return cfg2, sig2
+
+
+def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr,
+                        partition=False):
     t0 = time.time()
     base = sortie / "dep" / dep
     params = {"dep": dep, "grille": grille, "prec": prec}
-    sql_unites, sql_contour = sql_par_date(anr)
+    sql_unites, sql_contour = sql_par_date(anr, partition)
 
     cfg_canton, sig_canton = configurations(cur, dep, "canton", anr)
     cfg_circo, sig_circo = configurations(cur, dep, "circo", anr)
 
     if not sig_canton and not sig_circo:
         return None
+
+    # La partition se calcule AVANT tout le reste : les trois requêtes datées
+    # la joignent, et `versions_par_atome_partition()` la relit telle quelle.
+    annees_geom, gouverne = [], None
+    if partition:
+        annees_geom = annees_geometriques(cur, dep)
+        gouverne = prepare_partition(cur, dep, annees_geom)
+        cfg_canton, sig_canton = affine_signatures(cfg_canton, gouverne)
+        cfg_circo, sig_circo = affine_signatures(cfg_circo, gouverne)
+
+    def par_date(annee):
+        """Les paramètres d'une requête datée : la date, et l'année qui la gouverne."""
+        p = dict(params, d=date_ref(annee))
+        if partition:
+            p["ag"] = gouverne[annee]
+        return p
 
     poids = 0
 
@@ -902,7 +1227,11 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr):
     cur.execute(sql_com, params)
     lignes = cur.fetchall()
     chrono = chronologies(cur, dep)
-    versions = versions_par_atome(cur, params, [l[0] for l in lignes], anr)
+    if partition:
+        versions = versions_par_atome_partition(
+            cur, params, [l[0] for l in lignes], annees_geom)
+    else:
+        versions = versions_par_atome(cur, params, [l[0] for l in lignes], anr)
 
     communes, n_versions, n_repli_atomes = {}, 0, 0
     for atom_id, insee, cassini, fraction, partagee, nom, disparue in lignes:
@@ -956,15 +1285,15 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr):
         par_contenu = {}      # empreinte de contenu -> nom court
         renom = {}            # signature d'entrée   -> nom court
         for sig, annee in sorted(sig_annee.items(), key=lambda kv: kv[1]):
-            cur.execute(sql_unites, dict(params, niveau=niveau, d=date_ref(annee)))
+            cur.execute(sql_unites, dict(par_date(annee), niveau=niveau))
             unites, rattach = [], {}
             for (uid, nom, code, regime, provisoire, n_at, n_sg,
-                 n_part, n_anr, n_repli, atomes, gj) in cur.fetchall():
+                 n_part, n_anr, n_repli, n_repris, atomes, gj) in cur.fetchall():
                 unites.append({
                     "id": uid, "nom": nom, "code": code, "regime": regime,
                     "prov": 1 if provisoire else 0,
                     "n": n_at, "sans_geom": n_sg, "partagees": n_part,
-                    "anr": n_anr, "repli": n_repli,
+                    "anr": n_anr, "repli": n_repli, "repris": n_repris,
                     "g": json.loads(gj) if gj else None,
                 })
                 for a in atomes:
@@ -989,7 +1318,7 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr):
     # une année datée, que la page affiche en grisé et annonce comme empruntée.
     contours = {}
     for annee in sorted(set(sig_canton.values())):
-        cur.execute(sql_contour, dict(params, d=date_ref(annee)))
+        cur.execute(sql_contour, par_date(annee))
         r = cur.fetchone()
         if r and r[0]:
             contours[str(annee)] = json.loads(r[0])
@@ -1027,7 +1356,11 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr):
         "absences": [list(x) for x in ABSENCES.get(dep, [])],
         "motifs": list(BORNES_MOTIF.get(dep, (None, None))),
         # Ce que la page doit savoir pour ne pas mentir sur sa propre trame.
-        "trame": "anr" if anr else "geofla2011",
+        "trame": "partition" if partition else ("anr" if anr else "geofla2011"),
+        # Les années où la partition a été recalculée. Utile pour relire un
+        # export : si ce tableau est court là où la carte bouge beaucoup, c'est
+        # `annees_geometriques()` qu'il faut regarder, pas `84`.
+        "annees_geom": annees_geom or None,
     })
 
     return {
@@ -1063,17 +1396,18 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr):
 _W = {}
 
 
-def _init_worker(dsn, grille, prec, sortie, sql_com, anr):
-    _W["cx"] = connecte(dsn)
+def _init_worker(dsn, grille, prec, sortie, sql_com, anr, partition):
+    # `--partition` a besoin de créer des tables temporaires : voir `connecte`.
+    _W["cx"] = connecte(dsn, readonly=not partition)
     _W["cur"] = _W["cx"].cursor()
-    _W["params"] = (grille, prec, sortie, sql_com, anr)
+    _W["params"] = (grille, prec, sortie, sql_com, anr, partition)
 
 
 def _fait_un(dep):
     try:
-        grille, prec, sortie, sql_com, anr = _W["params"]
+        grille, prec, sortie, sql_com, anr, partition = _W["params"]
         r = exporte_departement(_W["cur"], dep, grille, prec,
-                                sortie, sql_com, anr)
+                                sortie, sql_com, anr, partition)
         # Le résultat revient hors ordre : il doit porter son département,
         # sinon un « ignoré » anonyme n'apprend rien à personne.
         return r if r is not None else {"dep": dep, "vide": True}
@@ -1103,6 +1437,11 @@ def main():
     ap.add_argument("--sans-anr", action="store_true",
                     help="ignorer atom_geom_anr et exporter la trame GEOFLA "
                          "2011 seule, sans épaisseur temporelle")
+    ap.add_argument("--partition", action="store_true",
+                    help="trame nettoyée de sql/84_carte_partition.sql : sans "
+                         "trou ni superposition hors fractions. Quatre fois "
+                         "plus lent ; à comparer à l'export ordinaire avant "
+                         "de le remplacer (voir --sortie)")
     args = ap.parse_args()
 
     cx = connecte(args.dsn)
@@ -1118,6 +1457,20 @@ def main():
     geofla = existe(cur, "geofla_commune")
     mvt = existe(cur, "insee_mvt")
     anr = existe(cur, "atom_geom_anr") and not args.sans_anr
+    # `--partition` sans `84` en base serait une erreur au premier département,
+    # après le nettoyage et à moitié du travail. Mieux vaut refuser tout de
+    # suite, et dire quoi jouer.
+    partition = args.partition
+    if partition:
+        cur.execute("SELECT to_regprocedure("
+                    "'histgis.carte_partition_atome(date, text)') IS NOT NULL")
+        if not cur.fetchone()[0]:
+            sys.exit("--partition demandé, mais `carte_partition_atome` est "
+                     "absente : jouer d'abord `psql -d histgis -f "
+                     "sql/84_carte_partition.sql`.")
+        if not anr:
+            sys.exit("--partition suppose la trame ANR : incompatible avec "
+                     "--sans-anr, et inutile sans `82`.")
     sql_com = sql_communes(dico, geofla, mvt)
     if not (dico or geofla):
         print("Attention : ni `noms_geofla` ni `geofla_commune` — les communes "
@@ -1130,6 +1483,16 @@ def main():
         n_poly, n_at = cur.fetchone()
         print(f"Trame ANR-COMMUNES : {n_poly} polygones datés sur {n_at} atomes "
               f"(repli sur atom_geom ailleurs).")
+    if partition:
+        print("Trame NETTOYÉE (--partition) : `84` recalcule la partition à "
+              "chaque année géométrique — sans trou ni superposition hors "
+              "fractions. Comptez environ quatre fois le temps ordinaire.")
+        print("  Connexion en LECTURE-ÉCRITURE : `84` crée des tables "
+              "temporaires, et une transaction READ ONLY interdit tout DDL, "
+              "même temporaire. Rien n'est écrit dans le modèle — la garantie "
+              "vient maintenant du code et non du moteur. Pour la rendre au "
+              "moteur, voir la docstring de `connecte()` (rôle en SELECT seul "
+              "+ TEMPORARY).")
     elif args.sans_anr:
         print("Trame GEOFLA 2011 seule (--sans-anr) : pas d'épaisseur temporelle.")
     else:
@@ -1154,7 +1517,8 @@ def main():
     args.sortie.mkdir(parents=True, exist_ok=True)
 
     t_debut = time.time()
-    init = (args.dsn, args.grille, args.precision, args.sortie, sql_com, anr)
+    init = (args.dsn, args.grille, args.precision, args.sortie, sql_com, anr,
+            partition)
     if jobs == 1:
         _init_worker(*init)
         resultats = map(_fait_un, deps)

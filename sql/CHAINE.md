@@ -198,6 +198,7 @@ de la reconstruction.
 | `78_report_1999_arriere_diag.sql` | mesure le report arrière avant de l'écrire. **Se lit après `79`** | — |
 | `80_report_1968_avant_diag.sql` | idem pour le report avant, et **porte la validation du registre** (§ 6 quinquies) | — |
 | `83_anr_ecart_couverture.sql` | pourquoi 486 atomes et non 40 — devenu le **troisième contrôle indépendant** | `date` |
+| `84_carte_partition.sql` | la trame nettoyée : sans trou ni superposition hors fractions. **Ne modifie rien** — que des fonctions, une trace et une procédure. Écrit le 2 septembre 2026, **jamais joué** | `date`, `dep` |
 | `diag_titre_composition.sql` | le titre d'un décret juge le découpage du JO | — |
 | `diag_passages.sql` | **quels fichiers sont réellement passés sur cette base** — l'inventaire des traces attendues contre ce que la base porte | — |
 
@@ -1225,3 +1226,37 @@ réponse, et c'est la question qu'il faut lire, pas le nombre.*
 géométrie y devient l'empreinte MD5 du WKB réel, ce qui permet d'exercer R2 et
 les aires pour de vrai. Il a trouvé deux défauts que la relecture n'avait pas
 vus — voir `JOURNAL.md` au 1ᵉʳ septembre.
+
+---
+
+## `84` — la carte nettoyée, dérivée et non substituée
+
+| entrées | crée | trace | variables |
+|---|---|---|---|
+| `atom_geom_anr`, `atom_geom`, `membership`, `atom` | `partition_reprise()`, `carte_partition_atome()`, `carte_partition()`, `check_partition()`, `partition_journalise()` | `p84_trace`, à remplir par `CALL partition_journalise(…)` | `date`, `dep` |
+
+**Il ne modifie aucune table du modèle.** `atom_geom`, `atom_geom_anr` et
+`membership` sont intacts, `snapshot_geom_anr()` répond comme avant : `84` est
+une lecture, pas une migration. Le défaire, c'est `DROP` sur cinq routines et
+une table.
+
+**Ce qu'il corrige** : la couture de la trame hybride. `82` a laissé un repli
+(R5) sur `atom_geom`, et là où un atome y retombe pendant que ses voisins
+viennent d'ANR, les bords ne coïncident plus — 4 542,8 km² de recouvrement à
+1870 sur l'export web, contre 1,0 km² entre deux polygones ANR. Ce chiffre-là
+n'est pas dans `check_geom_anr`, qui joint `atom_geom_anr` à elle-même :
+*une recette qui mesure la source ne mesure pas le composite qu'on en tire.*
+
+**Ordre** : après `82`, et sans rapport avec les autres. Il ne crée aucune unité
+et n'en référence aucune ; comme `82`, il n'entre pas dans la liste « Qui dépend
+de qui » de `README.md`.
+
+**`banc_84.py` l'éprouve hors base**, sur `cartes/web/donnees/` — un algorithme
+topologique ne s'éprouve pas sur des empreintes MD5 comme `banc_82.sh`, il lui
+faut de la vraie géométrie. Il a trouvé les deux règles fausses que le fichier
+raconte, et le piège du cadre départemental (478 km² de Seine offerts à la
+Seine-et-Oise). Les comptes qu'il rend sont exacts, ses km² approchés à ±0,3 %.
+
+**Non joué au 2 septembre 2026.** Le SQL a été écrit sans accès à une base.
+`check_partition('1870-01-01', '01')` est ce qui dira ce qu'il en reste : la
+ligne « recouvrement hors fraction » doit valoir 0,000.
