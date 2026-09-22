@@ -198,6 +198,192 @@ verifie("communes et contours partagent l'expression de snap",
         E.geom_snap("coalesce(ga.geom, ag.geom)") in c_anr, True)
 
 # ---------------------------------------------------------------------------
+print("\n§ 8. OUTRE-MER — l'export de bout en bout, sur un faux curseur")
+# ---------------------------------------------------------------------------
+# Ce paragraphe ne ressemble pas aux sept précédents, et il faut dire pourquoi.
+# Les autres éprouvent des fonctions PURES ; celui-ci fait tourner
+# `exporte_departement_om()`, qui interroge une base et écrit sur le disque.
+#
+# Il le peut parce que la fonction ne parle à PostgreSQL qu'à travers un
+# curseur, et qu'un curseur est une toute petite interface : `execute` et
+# `fetchall`/`fetchone`. Un mannequin qui répond selon la requête reçue suffit à
+# faire jouer tout le chemin — les signatures, le dédoublonnage par contenu,
+# l'écriture des cinq fichiers, et la forme exacte du JSON que la page lit.
+#
+# CE QU'IL NE DIT PAS, et c'est la même limite que partout ici : il ne juge
+# aucune géométrie. `ST_SnapToGrid` et `ST_UnaryUnion` ne sont pas appelés — le
+# mannequin rend du GeoJSON tout fait. Il juge la TUYAUTERIE, c'est-à-dire
+# l'endroit où ce chemin-là peut se tromper en silence : un atome perdu, une
+# signature qui pointe dans le vide, un département escamoté.
+#
+# *Une fonction qu'on ne peut éprouver qu'avec la base est une fonction qu'on
+# n'éprouve pas ; c'est le curseur, et non la base, qui est sa dépendance.*
+import json as _json                                           # noqa: E402
+import tempfile                                                # noqa: E402
+
+CARRE = ('{"type":"MultiPolygon","coordinates":'
+         '[[[[-61.5,16.2],[-61.4,16.2],[-61.4,16.3],[-61.5,16.3],[-61.5,16.2]]]]}')
+POINT = '{"type":"Point","coordinates":[-61.45,16.25]}'
+
+
+class FauxCurseur:
+    """Répond aux six requêtes d'outre-mer, et à rien d'autre.
+
+    `rattache` vaut False pour rejouer Mayotte : des communes, des cantons, et
+    pas une ligne de `om_membership`.
+    """
+
+    def __init__(self, communes, rattache=True):
+        self.communes = communes
+        self.rattache = rattache
+        self.reponse = []
+
+    def execute(self, sql, params=None):
+        p = params or {}
+        if "FROM   om_atom a\nWHERE  a.dep" in sql:            # SQL_OM_ATOMES
+            self.reponse = [(c, c, None, False, c.endswith("9"), f"Commune {c}",
+                             False) for c in self.communes]
+        elif "om_atom_geom g" in sql and "ST_PointOnSurface" in sql:
+            self.reponse = [(c, CARRE, POINT) for c in self.communes]
+        elif "SELECT DISTINCT d FROM" in sql:                  # SQL_OM_BORNES
+            import datetime
+            self.reponse = ([] if not self.rattache else
+                            [(datetime.date(1946, 3, 19),),
+                             (datetime.date(1986, 11, 24),),
+                             (datetime.date(2013, 1, 1),)])
+        elif sql.lstrip().startswith("SELECT md5"):            # SQL_OM_SIGNATURE
+            # LA BORNE DE 1946 EST DANS LE MANNEQUIN, ET C'EST LE PREMIER JET
+            # QUI L'AVAIT OUBLIÉE. Sans elle, ce faux curseur rendait une
+            # composition pour 1815 — une date où `om_membership` est
+            # évidemment vide, puisque `40` ne pose rien avant le 19 mars 1946.
+            # Le banc a signalé un département servi depuis 1815, et il avait
+            # raison de le signaler : ce que le mannequin décrivait n'était pas
+            # la base. *Un mannequin plus généreux que la source ne valide rien ;
+            # il fait passer pour un défaut du code ce qui est un défaut du
+            # banc, et — c'est plus grave — l'inverse aussi.*
+            if not self.rattache or p["d"] < "1946-12-01":
+                self.reponse = [(None, 0)]
+            else:
+                # Deux compositions distinctes : une avant 1986, une après.
+                jeton = "avant" if p["d"] < "1986-12-01" else "apres"
+                self.reponse = [(f"sig-{p['niveau']}-{jeton}",
+                                 len(self.communes))]
+        elif "array_agg(m.atom_id" in sql:                     # SQL_OM_UNITES
+            self.reponse = [(f"{p['dep']}01", "Canton d'essai", "01", None,
+                             False, len(self.communes), 0, 1, 0,
+                             len(self.communes), 0, list(self.communes), CARRE)]
+        else:                                                  # SQL_OM_CONTOUR
+            self.reponse = [(CARRE,)]
+
+    def fetchall(self):
+        return self.reponse
+
+    def fetchone(self):
+        return self.reponse[0] if self.reponse else None
+
+
+def joue_om(dep, communes, rattache=True):
+    d = Path(tempfile.mkdtemp())
+    r = E.exporte_departement_om(FauxCurseur(communes, rattache), dep,
+                                 25.0, 5, d)
+    lu = {f.name: _json.loads(f.read_text(encoding="utf-8"))
+          for f in (d / "dep" / dep).glob("*.json")}
+    return r, lu
+
+
+# --- le cas ordinaire : la Guadeloupe -------------------------------------
+r, f = joue_om("971", ["97101", "97102", "97109"])
+verifie("les trois communes sont écrites", r["communes"], 3)
+verifie("communes.json porte les trois atomes",
+        sorted(f["communes.json"]["communes"]), ["97101", "97102", "97109"])
+verifie("une version par commune, et elle part de la départementalisation",
+        [(v["a"], len(f["communes.json"]["communes"][c]["v"]))
+         for c in ["97101"] for v in f["communes.json"]["communes"][c]["v"]],
+        [(E.AN_DEBUT_DOM["971"], 1)])
+# Et surtout PAS de `AN_MIN`. La version qui commencerait en 1815 ferait
+# dessiner la Guadeloupe de 2015 sur une planche de la Restauration, sans
+# qu'aucun message ne l'annonce : la forme serait là, plausible, et fausse de
+# cent trente ans.
+verifie("aucune version ne commence avant le département",
+        min(v["a"] for c in f["communes.json"]["communes"].values()
+            for v in c["v"]) >= 1946, True)
+
+# `r: 1` sur TOUTES les communes. Ce n'est pas un défaut à corriger un jour :
+# la trame d'outre-mer est un instantané GEOFLA 2015, et une carte qui ne dit
+# pas qu'elle est plate laisse croire à une datation qu'elle n'a pas.
+verifie("toutes les formes sont déclarées non datées (r = 1)",
+        all(v["r"] == 1 for c in f["communes.json"]["communes"].values()
+            for v in c["v"]), True)
+
+# `multi` devient `p` : la commune est hachurée, et la page annonce déjà un
+# tracé à faire sur la trame IRIS. C'est la SEULE information que l'export
+# transporte sur les 27 multicantonales, et elle ne doit pas se perdre.
+verifie("la multicantonale ressort drapeau `p` levé",
+        f["communes.json"]["communes"]["97109"]["p"], 1)
+verifie("les autres ne le sont pas",
+        f["communes.json"]["communes"]["97101"]["p"], 0)
+verifie("aucune commune ne porte de code Cassini",
+        {c["s"] for c in f["communes.json"]["communes"].values()}, {None})
+
+# L'index doit pointer sur des fichiers qui EXISTENT. C'est la faute que
+# `nom_fichier()` guette côté métropole, et le chemin d'outre-mer la guette
+# aussi — un index qui pointe dans le vide afficherait « aucune source » pour
+# une année qui en a une, sans que rien ne le dise.
+idx = f["index.json"]
+noms = {p[:-5] for p in f if p.startswith(("c_", "x_"))}
+pointes = {v[k] for v in idx["annees"].values() for k in ("c", "x") if v[k]}
+verifie("tout ce que l'index désigne est écrit sur le disque",
+        pointes - {n.split("_", 1)[1] for n in noms}, set())
+verifie("l'index se déclare de l'espace outre-mer", idx["espace"], "outremer")
+verifie("et de la trame GEOFLA 2015", idx["trame"], "geofla2015")
+verifie("les bornes commencent à la départementalisation",
+        idx["bornes"][0], 1946)
+verifie("un contour de référence est écrit", len(f["contours.json"]), 1)
+
+# --- le cas Mayotte : des communes, aucun rattachement --------------------
+# C'est le paragraphe qui justifie que `exporte_departement_om` ne rende jamais
+# `None`. La fonction métropolitaine rendrait ici « aucune unité, ignoré », et
+# Mayotte disparaîtrait du sélecteur — le lecteur en conclurait que le projet
+# l'ignore, alors que la base porte ses communes et ses cantons.
+r, f = joue_om("976", ["97601", "97602"], rattache=False)
+verifie("Mayotte est tout de même exportée", r["communes"], 2)
+verifie("ses communes sont dessinées",
+        sorted(f["communes.json"]["communes"]), ["97601", "97602"])
+verifie("mais elle ne sert aucune année", f["index.json"]["annees"], {})
+verifie("et ses bornes sont nulles, pas inventées",
+        f["index.json"]["bornes"], None)
+verifie("son contour de référence est rangé sous 2011, sa départementalisation",
+        list(f["contours.json"]), ["2011"])
+verifie("aucun fichier de configuration n'est écrit",
+        [p for p in f if p.startswith(("c_", "x_"))], [])
+# LA GARDE QUI EMPÊCHE L'ANACHRONISME. `bornes` est nul : sans `existence`, la
+# page retomberait sur son curseur global, 1815-2012, et montrerait Mayotte au
+# temps de la Restauration. Ce champ-là est la seule chose qui l'en empêche.
+verifie("l'existence du département est déclarée, faute de bornes servies",
+        f["index.json"]["existence"], [2011, E.AN_MAX])
+verifie("et ses formes ne commencent pas avant",
+        {v["a"] for c in f["communes.json"]["communes"].values()
+         for v in c["v"]}, {2011})
+
+# --- la grille, et ce qu'elle garantit ------------------------------------
+# Même contrôle qu'au § 7, transposé : c'est la MÊME expression d'accrochage
+# qui doit servir aux communes et au contour, sinon la limite cantonale
+# dissoute ne longe plus la limite communale. Cela se lit dans le texte.
+verifie("communes et contour d'outre-mer partagent l'expression de snap",
+        E.sql_om_geom("g.geom") in E.SQL_OM_CONTOUR
+        and E.sql_om_geom("g.geom") in E.SQL_OM_VERSION, True)
+verifie("les unités dissoutes aussi",
+        E.sql_om_geom("g.geom") in E.SQL_OM_UNITES, True)
+verifie("l'accrochage est en degrés, pas en mètres",
+        "%(pas)s" in E.SQL_OM_VERSION and "%(grille)s" not in E.SQL_OM_VERSION,
+        True)
+# Aucun `ST_Transform` : la géométrie est déjà en 4326, et l'écrire donnerait à
+# croire qu'une conversion a lieu.
+verifie("aucune reprojection sur le chemin d'outre-mer",
+        any("ST_Transform" in q for q in
+            (E.SQL_OM_VERSION, E.SQL_OM_UNITES, E.SQL_OM_CONTOUR)), False)
+
+# ---------------------------------------------------------------------------
 print()
 if ECHECS:
     print(f"{len(ECHECS)} ÉCHEC(S) : " + ", ".join(ECHECS))

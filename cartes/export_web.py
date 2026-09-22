@@ -9,6 +9,20 @@ export_web.py — exporte la base `histgis` vers les fichiers que consomme
     python3 cartes/export_web.py --grille 50      # quantification plus grossière
     python3 cartes/export_web.py --jobs 8         # huit départements de front
     python3 cartes/export_web.py --sans-anr       # trame GEOFLA 2011, comme avant
+    python3 cartes/export_web.py --outremer       # les cinq DOM, tables om_*
+
+L'OUTRE-MER S'AJOUTE, IL NE REMPLACE PAS. `--outremer` écrit `dep/971` à
+`dep/976` dans le même dossier et laisse la métropole intacte — c'est un export
+partiel par nature, y compris quand on ne lui donne aucun département. Il se
+joue donc APRÈS l'export métropolitain, dans cet ordre :
+
+    python3 cartes/export_web.py --partition --jobs 6
+    python3 cartes/export_web.py --outremer
+
+Le dossier porte alors deux trames, ce qui est un fait et non un accident :
+`84` ne traite que la métropole et ANR ne couvre pas l'outre-mer. L'index
+racine l'annonce (`trame: mixte`, détail dans `trames`), et chaque index de
+département porte la sienne, que la page lit en priorité.
 
 Sortie : `cartes/web/donnees/`, puis
     python3 cartes/web/servir.py
@@ -254,7 +268,32 @@ NOMS_DEP = {
     # `99` n'est pas un code d'usage : c'est la Meurthe d'avant 1871, que
     # TRF-GIS code ainsi faute de code INSEE — le département a disparu au
     # partage. Documenté dans METHODE.md, § « Curiosités documentées ».
+    #
+    # CETTE ENTRÉE SURVIT À `86_meurthe_circo.sql`, QUI LA REND SANS OBJET, ET
+    # C'EST VOULU. `39` puis `86` rendent le numéro 54 aux 29 cantons et à la
+    # circonscription de la Meurthe : après eux, `SELECT DISTINCT dep FROM unit`
+    # ne rend plus `99`, et cette ligne ne sert jamais. Mais une base
+    # reconstruite par `rebuild.sh` sans que la chaîne soit allée jusqu'au bout
+    # le fait réapparaître — c'est exactement ce qui s'est produit entre le
+    # 15 et le 30 août 2026. La retirer ferait alors sortir un département sous
+    # le libellé « 99 » sans que rien ne dise ce qu'il est. *Un libellé de
+    # secours ne coûte rien tant qu'il est juste ; c'est le supprimer parce
+    # qu'on croit le cas impossible qui coûte.*
     "99": "Meurthe (avant le partage de 1871)",
+
+    # --- outre-mer (`--outremer`, tables `om_*`) ---------------------------
+    # Codes INSEE à trois caractères : c'est la raison pour laquelle
+    # `om_unit.dep` est `char(3)` et ne peut pas entrer dans `unit.dep`.
+    # Les noms ne varient pas sur la période servie (1946-2012), d'où des
+    # chaînes et non des plages. Ce qui varie, c'est la DATE à partir de
+    # laquelle chacun est un département : c'est `BORNES_MOTIF` qui la porte,
+    # parce que c'est un fait de calendrier et non un fait de nom.
+    #
+    # Pas de `975` : Saint-Pierre-et-Miquelon n'est pas dans les cinq lots que
+    # `40_outremer.sql` charge. Le Pacifique et l'Algérie sont bloqués par la
+    # licence de leurs sources (`ETAT.md`, § 2.7).
+    "971": "Guadeloupe", "972": "Martinique", "973": "Guyane",
+    "974": "La Réunion", "976": "Mayotte",
 }
 
 
@@ -320,7 +359,44 @@ BORNES_MOTIF = {
     "95": ("réorganisation de la région parisienne, 1er janvier 1968", None),
     "78": (None, "la Seine-et-Oise est démembrée au 1er janvier 1968 ; le code "
                  "78 désigne ensuite les Yvelines"),
+    # Outre-mer. Comme partout dans cette table, chaque entrée est une
+    # affirmation historique datée, à contredire si elle est fausse.
+    "971": ("département par la loi de départementalisation du 19 mars 1946 — "
+            "colonie auparavant, avec des députés mais pas de cantons au sens "
+            "métropolitain", None),
+    "972": ("département par la loi du 19 mars 1946", None),
+    "973": ("département par la loi du 19 mars 1946", None),
+    "974": ("département par la loi du 19 mars 1946", None),
+    "976": ("département depuis le 31 mars 2011 seulement — collectivité "
+            "territoriale auparavant", None),
 }
+
+# Première année où chaque territoire d'outre-mer est un DÉPARTEMENT.
+#
+# Ce n'est pas une commodité d'affichage, et c'est pour cela que la table est
+# ici plutôt que dans la page : elle décide de trois choses à la fois — l'année
+# à partir de laquelle la forme d'une commune est écrite, l'année sous laquelle
+# est rangé le contour de référence, et la borne basse du curseur pour un
+# département dont la base ne sert aucune composition.
+#
+# **Sans elle, Mayotte serait dessinée en 1815.** Ses communes n'ont aucun
+# rattachement (voir `exporte_departement_om`), donc aucune borne, donc rien
+# ne bornerait le curseur : la page retomberait sur `AN_MIN`, et l'on verrait
+# les dix-sept communes de Mayotte sur une planche de 1815 — un anachronisme de
+# deux siècles, produit par le silence d'une table et non par une affirmation.
+# *Une donnée qu'aucune borne ne contraint prend la borne de son conteneur, et
+# celle-là n'a aucune raison d'être juste.*
+AN_DEBUT_DOM = {
+    # Loi de départementalisation du 19 mars 1946. Avant, ce sont des colonies
+    # avec des députés mais pas de cantons au sens métropolitain — `40` s'en
+    # explique et refuse de poser 1870-1946.
+    "971": 1946, "972": 1946, "973": 1946, "974": 1946,
+    # Mayotte devient département le 31 mars 2011 : collectivité territoriale
+    # auparavant, et c'est aussi pourquoi elle est absente du fichier du
+    # ministère de 1986 et de 2012 qui pose les rattachements.
+    "976": 2011,
+}
+AN_DOM = 1946        # repli, pour un code d'outre-mer que la table ignore
 
 
 def nom_dep(code, annee):
@@ -339,7 +415,7 @@ def nom_dep(code, annee):
 # ---------------------------------------------------------------------------
 # Connexion
 # ---------------------------------------------------------------------------
-def connecte(dsn_force=None, readonly=True):
+def connecte(dsn_force=None, readonly=True, role=None):
     """Ouvre la connexion. LECTURE SEULE par défaut, et ce défaut a un sens.
 
     `--partition` doit l'abandonner, et il faut savoir pourquoi. Une
@@ -365,8 +441,21 @@ def connecte(dsn_force=None, readonly=True):
         GRANT USAGE ON SCHEMA histgis TO histgis_carte;
         GRANT SELECT ON ALL TABLES IN SCHEMA histgis TO histgis_carte;
 
-    puis `--dsn "dbname=histgis user=histgis_carte"`. Tant que ce rôle n'existe
-    pas, `--partition` s'exécute en lecture-écriture et le dit.
+    ON PREND LE RÔLE, ON NE S'Y CONNECTE PAS. Se connecter directement en
+    `histgis_carte` bute sur l'authentification `peer` de la socket Unix, qui
+    exige que le nom du compte système soit celui du rôle — et y échapper
+    demanderait un mot de passe en clair ou une retouche de `pg_hba.conf`.
+    `SET ROLE` évite les deux : on se connecte normalement, puis on descend
+    dans le rôle restreint. Il suffit d'en être membre :
+
+        GRANT histgis_carte TO adrien;
+
+    puis `--role histgis_carte`. Les droits appliqués sont alors ceux du rôle
+    pris, pas ceux du propriétaire — une écriture est refusée par le moteur.
+
+    C'est un garde-fou, pas une prison : `RESET ROLE` défait la chose en un mot,
+    et rien n'empêcherait un code malveillant de l'écrire. Contre l'accident,
+    qui est le risque réel ici, il suffit.
     """
     dernier = None
     for dsn in ([dsn_force] if dsn_force else DSN_CANDIDATS):
@@ -374,6 +463,12 @@ def connecte(dsn_force=None, readonly=True):
             cx = psycopg2.connect(dsn)
             cx.set_session(readonly=readonly, autocommit=True)
             with cx.cursor() as c:
+                if role:
+                    # AVANT le search_path : si le rôle n'existe pas ou qu'on
+                    # n'en est pas membre, mieux vaut échouer ici, sur une
+                    # erreur qui nomme le rôle, que trois requêtes plus loin.
+                    c.execute("SET ROLE %s" % psycopg2.extensions.quote_ident(
+                        role, cx))
                 c.execute("SET search_path TO histgis, public")
             return cx
         except psycopg2.Error as e:
@@ -1004,6 +1099,207 @@ def sql_par_date(anr, partition=False):
     return SQL_UNITES.format(**gabarit), SQL_CONTOUR.format(**gabarit)
 
 
+# ===========================================================================
+# OUTRE-MER — un second espace, et pourquoi il ne se branche pas sur le premier
+#
+# `sql/40_outremer.sql` range la Guadeloupe, la Martinique, la Guyane, La
+# Réunion et Mayotte dans des tables `om_*` séparées. Ce n'est pas une commodité
+# de rangement, et il faut l'avoir en tête avant de lire ce qui suit — trois
+# différences de MODÈLE interdisent de réutiliser les requêtes ci-dessus :
+#
+#   1. `unit.dep` est `char(2)` ; `om_unit.dep` est `char(3)`, parce que les
+#      codes d'outre-mer tiennent sur trois caractères et que Mayotte n'a pas
+#      de code ministériel à deux ;
+#   2. la métropole vit en Lambert-93 (EPSG:2154), l'outre-mer en WGS84
+#      (EPSG:4326) — reprojeter La Réunion en Lambert-93 multiplierait ses
+#      surfaces par 3,54, et tous les contrôles du projet sont surfaciques ;
+#   3. **il n'y a ni ANR ni partition outre-mer.** `atom_geom_anr` ne couvre
+#      que la métropole, `84` aussi. La géométrie d'un atome d'outre-mer est un
+#      instantané GEOFLA 2015 sans épaisseur temporelle, exactement ce que la
+#      métropole était avant `82`.
+#
+# D'où un bloc de requêtes à part, court parce que le modèle est plus simple, et
+# une fonction d'export à lui. *Deux modèles qui diffèrent sur la clé, sur la
+# projection et sur la dimension temporelle ne se factorisent pas en changeant
+# des noms de tables : on croirait relire le même code, et il ne ferait pas la
+# même chose.*
+#
+# CE QUE CE CHEMIN NE FAIT PAS, ET QUI SE VOIT SUR LA CARTE
+# ---------------------------------------------------------
+# `40` déclare deux trous, et l'export les laisse tels quels plutôt que de les
+# combler au jugé :
+#
+#   * les **27 communes multicantonales** (plus Mamoudzou) n'ont AUCUN
+#     rattachement cantonal — GEOFLA ne les découpe pas, et
+#     `om_membership_non_chevauchant` refuserait de les mettre dans quatre
+#     cantons à la fois. Elles sortent avec `p: 1`, donc hachurées par la page,
+#     qui dit déjà « le tracé reste à faire, sur la trame IRIS » ;
+#   * **Mayotte n'a aucun rattachement du tout** : ses 16 cantons viennent de
+#     GEOFLA, mais le fichier du ministère qui pose les rattachements ne la
+#     contient pas. Le département sortira avec ses communes dessinées et zéro
+#     année servie.
+#
+# C'EST POURQUOI LES ATOMES SONT LUS PAR `om_atom.dep` ET NON PAR LE
+# MEMBERSHIP. La requête métropolitaine part du `membership` — un atome sans
+# rattachement n'existe pas pour elle. Appliquée telle quelle à l'outre-mer,
+# elle ferait **disparaître de la carte** les vingt-huit communes sans canton et
+# les dix-sept communes de Mayotte, c'est-à-dire précisément ce que `40` a pris
+# soin de ne pas décider. Une commune dessinée sans couleur montre le trou ;
+# une commune absente le cache. *La règle du projet — « ce qui n'a de nom nulle
+# part est signalé comme tel, pas maquillé » — se joue ici dans le choix de la
+# table de départ.*
+# ===========================================================================
+
+# L'accrochage à la grille, en DEGRÉS et non en mètres, et ça se dit.
+#
+# `ST_SnapToGrid` travaille dans l'unité de la géométrie : des mètres en 2154,
+# des degrés en 4326. On convertit donc le pas demandé au taux de 111 320 m par
+# degré, qui est celui de l'équateur. Les cinq départements sont entre 4° S
+# (Guyane) et 21° S (La Réunion) : le pas réel en longitude y vaut de 111 320 à
+# 103 900 m par degré, donc un « 25 m » demandé accroche en fait entre 25,0 et
+# 26,8 m selon le lieu.
+#
+# **Ce n'est pas une approximation à corriger, et il faut dire pourquoi.** Ce
+# que la grille garantit n'est pas une distance, c'est une COÏNCIDENCE : deux
+# communes voisines qui partageaient un sommet le partagent encore après
+# accrochage, donc le contour cantonal dissous longe exactement la limite
+# communale. Cette propriété ne dépend que du fait que la même grille est
+# appliquée aux deux, jamais de sa valeur métrique. Un pas qui varie de 7 % avec
+# la latitude ne l'entame pas d'un pouce.
+DEG_PAR_M = 1.0 / 111320.0
+
+# Les atomes d'un département d'outre-mer. Sept colonnes dans le même ordre que
+# `sql_communes()`, pour que la boucle d'écriture soit la même des deux côtés.
+#
+# `cassini` est NULL : la série TRF-GIS ne couvre pas l'outre-mer, et inventer
+# un identifiant intermédiaire n'apporterait rien (`40`, § 1). `fraction` et
+# `disparue` sont faux : il n'y a pas d'atome-fraction outre-mer, et la trame
+# est celle de 2015, donc contemporaine de la période servie.
+#
+# `partagee` porte `om_atom.multi`, et le sens est le bon : GEOFLA ne découpe
+# pas ces communes-là. La page les hachure et annonce un tracé à faire sur la
+# trame IRIS — `iris_om` est en base, c'est le chantier ouvert, pas un défaut.
+SQL_OM_ATOMES = """
+SELECT a.atom_id,
+       a.atom_id            AS insee_geofla,
+       NULL::text           AS cassini,
+       false                AS fraction,
+       a.multi              AS partagee,
+       a.nom                AS nom,
+       false                AS disparue
+FROM   om_atom a
+WHERE  a.dep = %(dep)s
+ORDER  BY a.atom_id
+"""
+
+
+def sql_om_geom(expr):
+    """Accrochage puis reprojection — sauf qu'il n'y a rien à reprojeter.
+
+    La géométrie est déjà en 4326 : `ST_Transform` serait un geste nul, et
+    l'écrire donnerait à croire qu'une conversion a lieu. On accroche, on
+    revalide, on sérialise.
+    """
+    return f"ST_MakeValid(ST_SnapToGrid({expr}, %(pas)s))"
+
+
+SQL_OM_VERSION = f"""
+SELECT g.atom_id,
+       ST_AsGeoJSON({sql_om_geom('g.geom')}, %(prec)s)                    AS gj,
+       ST_AsGeoJSON(ST_PointOnSurface({sql_om_geom('g.geom')}), %(prec)s) AS pt
+FROM   om_atom_geom g
+JOIN   om_atom a ON a.atom_id = g.atom_id
+WHERE  a.dep = %(dep)s
+"""
+
+# Bornes de composition. Pas de troisième famille : la forme d'un atome
+# d'outre-mer ne change jamais, donc aucune borne géométrique n'existe. C'est la
+# situation de la métropole d'avant `82`, et elle est ici un fait de la source,
+# pas un retard de traitement.
+SQL_OM_BORNES = """
+SELECT DISTINCT d FROM (
+    SELECT m.valid_from AS d
+    FROM   om_membership m JOIN om_unit u
+           ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+    WHERE  m.niveau = %(niveau)s AND u.dep = %(dep)s
+    UNION ALL
+    SELECT m.valid_to
+    FROM   om_membership m JOIN om_unit u
+           ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+    WHERE  m.niveau = %(niveau)s AND u.dep = %(dep)s
+    UNION ALL
+    SELECT uv.valid_from
+    FROM   om_unit_version uv JOIN om_unit u ON u.unit_id = uv.unit_id
+    WHERE  u.niveau = %(niveau)s AND u.dep = %(dep)s
+    UNION ALL
+    SELECT uv.valid_to
+    FROM   om_unit_version uv JOIN om_unit u ON u.unit_id = uv.unit_id
+    WHERE  u.niveau = %(niveau)s AND u.dep = %(dep)s
+) t
+"""
+
+# La signature ne couvre QUE la composition, et c'est correct ici alors que ce
+# serait un défaut en métropole : sans géométrie datée, deux années de même
+# composition dessinent forcément la même carte. Le jeton de forme n'est pas
+# omis par simplification, il n'a pas d'objet.
+SQL_OM_SIGNATURE = """
+SELECT md5(string_agg(m.atom_id || '>' || m.unit_id || '>'
+                      || coalesce(uv.nom, u.nom, ''), ',' ORDER BY m.atom_id)) AS sig,
+       count(*) AS n
+FROM   om_membership m
+JOIN   om_unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+LEFT   JOIN om_unit_version uv
+       ON uv.unit_id = u.unit_id AND uv.periode @> %(d)s::date
+WHERE  m.niveau = %(niveau)s AND u.dep = %(dep)s AND m.periode @> %(d)s::date
+"""
+
+# `n_anr` est nul et `n_repli` vaut le compte entier : toute commune d'outre-mer
+# est dessinée par un instantané non daté. La page dira donc « 100 % en repli »,
+# et ce sera vrai — l'index du département porte `trame: geofla2015` pour
+# qu'elle nomme la bonne trame.
+SQL_OM_UNITES = f"""
+SELECT u.unit_id,
+       coalesce(uv.nom, u.nom, u.unit_id)                AS nom,
+       u.code,
+       u.regime,
+       false                                             AS provisoire,
+       count(*)                                          AS n_atomes,
+       count(*) FILTER (WHERE g.atom_id IS NULL)         AS n_sans_geom,
+       count(*) FILTER (WHERE a.multi)                   AS n_partagees,
+       0                                                 AS n_anr,
+       count(*) FILTER (WHERE g.atom_id IS NOT NULL)     AS n_repli,
+       0                                                 AS n_repris,
+       array_agg(m.atom_id ORDER BY m.atom_id)           AS atomes,
+       ST_AsGeoJSON(
+           ST_MakeValid(ST_UnaryUnion(ST_Collect({sql_om_geom('g.geom')}))),
+           %(prec)s)                                     AS gj
+FROM   om_membership m
+JOIN   om_unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+JOIN   om_atom a ON a.atom_id = m.atom_id
+LEFT   JOIN om_atom_geom g ON g.atom_id = m.atom_id
+LEFT   JOIN om_unit_version uv
+       ON uv.unit_id = u.unit_id AND uv.periode @> %(d)s::date
+WHERE  m.niveau = %(niveau)s AND u.dep = %(dep)s AND m.periode @> %(d)s::date
+GROUP  BY u.unit_id, coalesce(uv.nom, u.nom, u.unit_id), u.code, u.regime
+"""
+
+# Le contour de référence, et il ne dépend PAS de la date.
+#
+# En métropole il est emprunté à une année datée, parce que l'emprise d'un
+# département change avec les formes qu'ANR édite. Ici la trame est un
+# instantané : l'emprise est la même à toutes les dates, et une seule entrée
+# suffit. Elle est écrite sous la première année servie — ou sous 1946, l'année
+# où les DOM deviennent départements, quand la base ne sert aucune année.
+SQL_OM_CONTOUR = f"""
+SELECT ST_AsGeoJSON(
+           ST_MakeValid(ST_UnaryUnion(ST_Collect({sql_om_geom('g.geom')}))),
+           %(prec)s)
+FROM   om_atom_geom g
+JOIN   om_atom a ON a.atom_id = g.atom_id
+WHERE  a.dep = %(dep)s
+"""
+
+
 # ---------------------------------------------------------------------------
 # Nettoyage préalable
 #
@@ -1378,6 +1674,209 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr,
     }
 
 
+def exporte_departement_om(cur, dep, grille, prec, sortie):
+    """L'export d'un département d'outre-mer. Même sortie, autre modèle.
+
+    Les fichiers écrits ont EXACTEMENT la forme de ceux de la métropole —
+    `communes.json`, `c_<sig>.json`, `x_<sig>.json`, `contours.json`,
+    `index.json` — parce que c'est la page qui les lit, et qu'elle n'a pas à
+    savoir de quel espace de la base ils sortent. Ce qui change est en amont :
+    les tables, la projection, et l'absence de dimension temporelle sur la
+    forme.
+
+    UNE DIFFÉRENCE DE COMPORTEMENT, ET ELLE EST DÉLIBÉRÉE. La fonction
+    métropolitaine rend `None` — « aucune unité, ignoré » — quand aucune
+    signature n'est calculée. Ici, un département sans le moindre rattachement
+    est tout de même écrit, avec ses communes et son contour, et zéro année
+    servie. C'est le cas de Mayotte. Le renvoyer à `None` la ferait disparaître
+    du sélecteur, et le lecteur conclurait que le projet ne connaît pas
+    Mayotte — alors que la base porte ses dix-sept communes et ses seize
+    cantons, et que ce qui manque est le fichier qui les relie. *Un département
+    vide et un département absent ne disent pas la même chose, et c'est le
+    premier qui est vrai.*
+    """
+    t0 = time.time()
+    base = sortie / "dep" / dep
+    params = {"dep": dep, "pas": grille * DEG_PAR_M, "prec": prec}
+    an_debut = AN_DEBUT_DOM.get(dep, AN_DOM)
+
+    def par_annee_signature(niveau):
+        """année -> signature, et signature -> année de référence.
+
+        PAS DE GRAINE À `AN_MIN`, contrairement à `annees_candidates()`. La
+        version métropolitaine échantillonne 1815 d'office, parce que Paris y
+        commence et qu'une année candidate de moins serait une planche perdue.
+        Outre-mer, rien ne commence avant le 19 mars 1946 : interroger 1815
+        coûte une requête qui rend toujours zéro ligne, et c'est le SEUL chemin
+        par lequel un département pourrait se déclarer servi depuis 1815. Une
+        graine qui ne peut rien produire de vrai ne peut produire que du faux.
+        """
+        cand = set()
+        cur.execute(SQL_OM_BORNES, {"dep": dep, "niveau": niveau})
+        for (d,) in cur.fetchall():
+            if d is not None:
+                y = annee_de_borne(d)
+                if AN_MIN <= y <= AN_MAX:
+                    cand.add(y)
+        par_annee, sig_annee, courante = {}, {}, None
+        for annee in range(AN_MIN, AN_MAX + 1):
+            if annee in cand:
+                cur.execute(SQL_OM_SIGNATURE,
+                            {"dep": dep, "niveau": niveau, "d": date_ref(annee)})
+                sig, n = cur.fetchone()
+                courante = sig if (sig and n) else ""
+                if courante and courante not in sig_annee:
+                    sig_annee[courante] = annee
+            par_annee[annee] = courante or ""
+        return par_annee, sig_annee
+
+    cfg_canton, sig_canton = par_annee_signature("canton")
+    cfg_circo, sig_circo = par_annee_signature("circo")
+
+    poids = 0
+
+    # --- communes -----------------------------------------------------------
+    # Lire les attributs AVANT la géométrie : même curseur, et un second
+    # `execute()` jette le résultat en attente. C'est la recette de la
+    # métropole qui a trouvé ce piège-là ; il ne coûte rien de ne pas le
+    # reproduire.
+    cur.execute(SQL_OM_ATOMES, params)
+    lignes = cur.fetchall()
+    cur.execute(SQL_OM_VERSION, params)
+    formes = {atom_id: (gj, pt) for atom_id, gj, pt in cur.fetchall() if gj}
+
+    communes = {}
+    for atom_id, insee, cassini, fraction, partagee, nom, disparue in lignes:
+        paire = formes.get(atom_id)
+        if not paire:
+            # Sans polygone, l'atome n'est pas exporté — comme en métropole.
+            # `n_sans_geom` le compte par unité, et il vaut zéro tant que
+            # `om_atom_geom` reste peuplée depuis la même source que `om_atom`.
+            continue
+        gj, pt = paire
+        p = json.loads(pt)["coordinates"] if pt else None
+        communes[atom_id] = {
+            "i": insee,
+            "s": None,                      # pas de code Cassini outre-mer
+            "n": nom,
+            "f": 0,                         # pas d'atome-fraction
+            "p": 1 if partagee else 0,      # multicantonale, tracé à faire
+            "d": 0,                         # trame contemporaine de la période
+            # UNE SEULE VERSION, ET `r: 1`. La forme ne change jamais : elle
+            # vaut donc de la départementalisation à la fin. `r: 1` dit qu'elle
+            # ne vient pas d'une source datée — la même déclaration que le repli
+            # de la métropole, pour la même raison, et la page l'affiche déjà.
+            # C'est aussi ce que fait `--sans-anr` en métropole, où TOUTES les
+            # communes portent `r: 1` : le chemin d'outre-mer ne s'invente pas
+            # une convention, il applique celle qui existe.
+            #
+            # `an_debut` ET NON `AN_MIN` : la version ne commence pas avant le
+            # département. Un curseur poussé à 1900 sur Mayotte ne doit rien
+            # dessiner du tout, pas dessiner la trame de 2015 — et cela se règle
+            # ici, où la donnée est écrite, plutôt que par une garde dans la
+            # page, qu'un futur lecteur pourrait retirer sans savoir ce qu'elle
+            # retenait.
+            "v": [{"a": an_debut, "k": hashlib.md5(gj.encode()).hexdigest()[:10],
+                   "c": [round(p[0], 5), round(p[1], 5)] if p else None,
+                   "g": json.loads(gj), "r": 1}],
+        }
+    poids += ecrit(base / "communes.json", {"dep": dep, "communes": communes})
+
+    # --- configurations -----------------------------------------------------
+    # Même dédoublonnage par contenu qu'en métropole : la signature d'entrée dit
+    # ce qu'il faut recalculer, l'empreinte de sortie ce qu'il faut réécrire.
+    def exporte_configs(sig_annee, niveau, prefixe):
+        total, par_contenu, renom = 0, {}, {}
+        for sig, annee in sorted(sig_annee.items(), key=lambda kv: kv[1]):
+            cur.execute(SQL_OM_UNITES,
+                        dict(params, d=date_ref(annee), niveau=niveau))
+            unites, rattach = [], {}
+            for (uid, nom, code, regime, provisoire, n_at, n_sg,
+                 n_part, n_anr, n_repli, n_repris, atomes, gj) in cur.fetchall():
+                unites.append({
+                    "id": uid, "nom": nom, "code": code, "regime": regime,
+                    "prov": 1 if provisoire else 0,
+                    "n": n_at, "sans_geom": n_sg, "partagees": n_part,
+                    "anr": n_anr, "repli": n_repli, "repris": n_repris,
+                    "g": json.loads(gj) if gj else None,
+                })
+                for a in atomes:
+                    rattach[a] = uid
+            corps = {"dep": dep, "niveau": niveau,
+                     "unites": unites, "rattachement": rattach}
+            empreinte = hashlib.md5(serialise(corps).encode()).hexdigest()[:12]
+            renom[sig] = empreinte
+            if empreinte in par_contenu:
+                continue
+            par_contenu[empreinte] = annee
+            total += ecrit(base / f"{prefixe}_{empreinte}.json",
+                           dict(corps, annee_ref=annee))
+        return total, renom, len(par_contenu)
+
+    p_c, renom_c, n_fic_c = exporte_configs(sig_canton, "canton", "c")
+    p_x, renom_x, n_fic_x = exporte_configs(sig_circo, "circo", "x")
+    poids += p_c + p_x
+
+    # --- contour de référence, une seule entrée ----------------------------
+    annees = {}
+    for a in range(AN_MIN, AN_MAX + 1):
+        c, x = cfg_canton[a], cfg_circo[a]
+        if c or x:
+            if c and c not in renom_c:
+                raise RuntimeError(f"{dep}/canton : signature calculée mais "
+                                   f"jamais écrite — l'index pointerait dans le vide.")
+            if x and x not in renom_x:
+                raise RuntimeError(f"{dep}/circo : signature calculée mais "
+                                   f"jamais écrite — l'index pointerait dans le vide.")
+            annees[str(a)] = {"c": renom_c[c] if c else "",
+                              "x": renom_x[x] if x else ""}
+    servies = sorted(int(a) for a in annees)
+
+    contours = {}
+    cur.execute(SQL_OM_CONTOUR, params)
+    r = cur.fetchone()
+    if r and r[0]:
+        contours[str(servies[0] if servies else an_debut)] = json.loads(r[0])
+    poids += ecrit(base / "contours.json", contours)
+
+    poids += ecrit(base / "index.json", {
+        "dep": dep,
+        "annees": annees,
+        "contours": sorted(int(y) for y in contours),
+        "bornes": [servies[0], servies[-1]] if servies else None,
+        "absences": [list(x) for x in ABSENCES.get(dep, [])],
+        "motifs": list(BORNES_MOTIF.get(dep, (None, None))),
+        # La page lit d'abord la trame du DÉPARTEMENT, l'index racine ensuite :
+        # c'est ce qui lui permet de dire « GEOFLA 2015 » ici et « partition »
+        # sur l'Ain sans se contredire.
+        "trame": "geofla2015",
+        "annees_geom": None,
+        # Déclaré dans le fichier plutôt que déduit par la page : l'outre-mer
+        # est un autre espace de la base, et une carte qui ne dit pas d'où elle
+        # vient laisse croire qu'elle vient d'ailleurs.
+        "espace": "outremer",
+        # LA PÉRIODE OÙ LE DÉPARTEMENT EXISTE, qui n'est pas celle où la base
+        # sert quelque chose. `bornes` dit ce que la base tient ; `existence`
+        # dit ce que l'histoire tient. Les confondre donnerait à Mayotte, dont
+        # `bornes` est nul, le curseur par défaut de la page — 1815-2012.
+        "existence": [an_debut, AN_MAX],
+    })
+
+    return {
+        "dep": dep,
+        "bornes": [servies[0], servies[-1]] if servies else None,
+        "communes": len(communes),
+        "versions": len(communes),
+        "repli": len(communes),
+        "cfg_canton": n_fic_c,
+        "cfg_circo": n_fic_x,
+        "calculs": len(sig_canton) + len(sig_circo),
+        "annees": len(annees),
+        "octets": poids,
+        "secondes": round(time.time() - t0, 1),
+    }
+
+
 # ---------------------------------------------------------------------------
 # Un processus par département
 #
@@ -1396,26 +1895,90 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr,
 _W = {}
 
 
-def _init_worker(dsn, grille, prec, sortie, sql_com, anr, partition):
+def _init_worker(dsn, grille, prec, sortie, sql_com, anr, partition, role,
+                 om=False):
     # `--partition` a besoin de créer des tables temporaires : voir `connecte`.
-    _W["cx"] = connecte(dsn, readonly=not partition)
+    _W["conn"] = (dsn, not partition, role)     # de quoi rouvrir, voir _reconnecte
+    _W["cx"] = connecte(dsn, readonly=not partition, role=role)
     _W["cur"] = _W["cx"].cursor()
-    _W["params"] = (grille, prec, sortie, sql_com, anr, partition)
+    _W["params"] = (grille, prec, sortie, sql_com, anr, partition, om)
+
+
+def _reconnecte():
+    """Rouvre la connexion du worker. Rend True si elle est de nouveau utilisable.
+
+    Sert le cas où le SERVEUR est tombé, pas où le département est mauvais :
+    un backend qui meurt fait redémarrer le postmaster, qui coupe TOUTES les
+    sessions. Sans reconnexion, les quatre-vingt-dix départements suivants
+    échouent chacun sur « cursor already closed » — quatre-vingt-dix lignes
+    d'écho pour une seule panne, et la vraie cause en tête de journal là où
+    personne ne la cherche.
+    """
+    for c in ("cur", "cx"):
+        try:
+            if _W.get(c):
+                _W[c].close()
+        except Exception:                       # noqa: BLE001
+            pass
+    dsn, readonly, role = _W["conn"]
+    try:
+        _W["cx"] = connecte(dsn, readonly=readonly, role=role)
+        _W["cur"] = _W["cx"].cursor()
+        return True
+    except SystemExit:
+        # `connecte()` sort du processus quand plus rien ne répond : dans un
+        # worker, ce serait une mort silencieuse. On la convertit en échec.
+        return False
+    except Exception:                           # noqa: BLE001
+        return False
 
 
 def _fait_un(dep):
-    try:
-        grille, prec, sortie, sql_com, anr, partition = _W["params"]
-        r = exporte_departement(_W["cur"], dep, grille, prec,
-                                sortie, sql_com, anr, partition)
-        # Le résultat revient hors ordre : il doit porter son département,
-        # sinon un « ignoré » anonyme n'apprend rien à personne.
-        return r if r is not None else {"dep": dep, "vide": True}
-    except Exception as e:                      # noqa: BLE001
-        # Un département qui échoue ne doit pas emporter l'export entier ni,
-        # pire, passer inaperçu : on rend l'erreur comme une donnée et le
-        # parent la compte.
-        return {"dep": dep, "erreur": f"{type(e).__name__}: {e}"}
+    grille, prec, sortie, sql_com, anr, partition, om = _W["params"]
+    for essai in (1, 2):
+        try:
+            if om:
+                r = exporte_departement_om(_W["cur"], dep, grille, prec, sortie)
+            else:
+                r = exporte_departement(_W["cur"], dep, grille, prec,
+                                        sortie, sql_com, anr, partition)
+            # UNE CONNEXION NEUVE PAR DÉPARTEMENT, en `--partition`, et c'est
+            # une correction de fuite plus qu'une hygiène.
+            #
+            # Un worker garde sa connexion pour la vingtaine de départements
+            # qu'il traite. Le backend PostgreSQL en face accumule alors le
+            # PLUS HAUT niveau de mémoire atteint depuis son ouverture :
+            # `84` alloue des gigaoctets dans GEOS, PostgreSQL les libère à la
+            # fin de chaque requête, mais l'allocateur de la glibc ne les rend
+            # pas au système. Mesuré le 3 septembre 2026 : un backend à
+            # **12,7 Go** après une vingtaine de départements, et l'OOM killer
+            # du noyau qui abat le cluster entier.
+            #
+            # Fermer la connexion détruit le backend et rend la mémoire. Le
+            # coût est de quelques millisecondes par département, contre
+            # plusieurs minutes de travail : il ne se mesure pas.
+            #
+            # *Une fuite qui n'est pas dans votre code peut quand même être
+            # dans votre architecture : c'est la durée de vie du processus qui
+            # décide de ce qu'une non-restitution finit par coûter.*
+            if partition:
+                _reconnecte()
+            # Le résultat revient hors ordre : il doit porter son département,
+            # sinon un « ignoré » anonyme n'apprend rien à personne.
+            return r if r is not None else {"dep": dep, "vide": True}
+        except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
+            # La connexion est morte. Une fois, on rouvre et on recommence ce
+            # département ; deux fois, c'est le serveur qui ne revient pas et
+            # il faut le dire plutôt que d'insister.
+            if essai == 1 and _reconnecte():
+                continue
+            return {"dep": dep, "erreur": f"{type(e).__name__}: {e}",
+                    "connexion": True}
+        except Exception as e:                  # noqa: BLE001
+            # Un département qui échoue ne doit pas emporter l'export entier
+            # ni, pire, passer inaperçu : on rend l'erreur comme une donnée et
+            # le parent la compte.
+            return {"dep": dep, "erreur": f"{type(e).__name__}: {e}"}
 
 
 def main():
@@ -1437,18 +2000,63 @@ def main():
     ap.add_argument("--sans-anr", action="store_true",
                     help="ignorer atom_geom_anr et exporter la trame GEOFLA "
                          "2011 seule, sans épaisseur temporelle")
+    ap.add_argument("--forcer-trame", action="store_true",
+                    help="autoriser un export à écraser une sortie produite "
+                         "avec une autre trame (voir le garde-fou de main())")
+    ap.add_argument("--role", default=None,
+                    help="prendre ce rôle après connexion (SET ROLE). Rend au "
+                         "moteur la garantie que --partition retire au mode "
+                         "lecture seule : voir la docstring de connecte()")
     ap.add_argument("--partition", action="store_true",
                     help="trame nettoyée de sql/84_carte_partition.sql : sans "
                          "trou ni superposition hors fractions. Quatre fois "
                          "plus lent ; à comparer à l'export ordinaire avant "
                          "de le remplacer (voir --sortie)")
+    ap.add_argument("--outremer", action="store_true",
+                    help="exporter l'outre-mer (tables om_*, EPSG:4326) au "
+                         "lieu de la métropole. S'AJOUTE à un export "
+                         "métropolitain existant sans l'effacer : les deux "
+                         "espaces cohabitent dans le même dossier")
     args = ap.parse_args()
 
-    cx = connecte(args.dsn)
+    cx = connecte(args.dsn, role=args.role)
     cur = cx.cursor()
+
+    # --- outre-mer : un espace, des tables, et un refus franc s'il manque ---
+    #
+    # `40_outremer.sql` n'a longtemps été appelé par rien (son prérequis
+    # `om_commune_src` venait de `charger_outremer.sh`, que la chaîne
+    # n'invoquait pas — voir `RESTE_A_FAIRE.md`). Une base parfaitement à jour
+    # côté métropole peut donc ne pas avoir une seule table `om_*`. On le dit
+    # tout de suite, avec la commande à jouer, plutôt que d'échouer au premier
+    # département sur une table absente.
+    if args.outremer:
+        manquantes = [t for t in ("om_atom", "om_atom_geom", "om_unit",
+                                  "om_unit_version", "om_membership")
+                      if not existe(cur, t)]
+        if manquantes:
+            sys.exit(
+                "--outremer demandé, mais la base ne porte pas "
+                f"{', '.join(manquantes)}.\n"
+                "  L'outre-mer vit dans un espace séparé, à charger en deux "
+                "temps :\n"
+                "    bash sql/charger_outremer.sh\n"
+                "    psql -d histgis -f sql/40_outremer.sql\n"
+                "  (le second lit `circo/circo_outremer_1986_2012.csv` depuis "
+                "la racine du dépôt).")
+        if args.partition:
+            sys.exit("--outremer et --partition sont incompatibles : `84` ne "
+                     "traite que la métropole, et l'outre-mer n'a pas de "
+                     "trame ANR à nettoyer.")
 
     if args.deps:
         deps = [d.upper() for d in args.deps]
+    elif args.outremer:
+        # Depuis `om_atom` et non `om_unit` : Mayotte a des cantons sans
+        # rattachement, mais ce sont ses COMMUNES qui décident qu'il y a
+        # quelque chose à dessiner.
+        cur.execute("SELECT DISTINCT dep FROM om_atom ORDER BY dep")
+        deps = [r[0].strip() for r in cur.fetchall()]
     else:
         cur.execute("SELECT DISTINCT dep FROM unit ORDER BY dep")
         deps = [r[0].strip() for r in cur.fetchall()]
@@ -1478,29 +2086,97 @@ def main():
     if not mvt:
         print("Attention : `insee_mvt` absente — pas de chronologie des noms, "
               "et pas de repli pour les communes disparues avant 2011.")
-    if anr:
+    if anr and not args.outremer:
         cur.execute("SELECT count(*), count(DISTINCT atom_id) FROM atom_geom_anr")
         n_poly, n_at = cur.fetchone()
         print(f"Trame ANR-COMMUNES : {n_poly} polygones datés sur {n_at} atomes "
               f"(repli sur atom_geom ailleurs).")
+    if args.outremer:
+        cur.execute("SELECT count(*) FROM om_atom")
+        n_com = cur.fetchone()[0]
+        cur.execute("SELECT count(*) FROM om_membership")
+        n_rat = cur.fetchone()[0]
+        cur.execute("SELECT count(*) FROM om_atom a WHERE a.multi")
+        n_multi = cur.fetchone()[0]
+        cur.execute("SELECT count(*) FROM om_atom a WHERE NOT EXISTS "
+                    "(SELECT 1 FROM om_membership m WHERE m.atom_id = a.atom_id)")
+        n_orph = cur.fetchone()[0]
+        print(f"ESPACE OUTRE-MER : {n_com} communes, {n_rat} rattachements, "
+              f"trame GEOFLA 2015 en EPSG:4326, sans épaisseur temporelle.")
+        print(f"  {n_multi} communes multicantonales que GEOFLA ne découpe pas "
+              f"(hachurées, tracé à faire sur la trame IRIS `iris_om`).")
+        if n_orph:
+            # Annoncé AVANT l'export et non déduit après : un lecteur qui voit
+            # un département vide doit savoir d'avance que c'est un fait de la
+            # source et non une panne de ce script.
+            print(f"  {n_orph} communes n'ont AUCUN rattachement — Mayotte est "
+                  f"absente du fichier du ministère qui les pose. Elles seront "
+                  f"dessinées sans couleur, et leur département servira zéro "
+                  f"année : c'est le trou, pas son maquillage.")
     if partition:
         print("Trame NETTOYÉE (--partition) : `84` recalcule la partition à "
               "chaque année géométrique — sans trou ni superposition hors "
               "fractions. Comptez environ quatre fois le temps ordinaire.")
-        print("  Connexion en LECTURE-ÉCRITURE : `84` crée des tables "
-              "temporaires, et une transaction READ ONLY interdit tout DDL, "
-              "même temporaire. Rien n'est écrit dans le modèle — la garantie "
-              "vient maintenant du code et non du moteur. Pour la rendre au "
-              "moteur, voir la docstring de `connecte()` (rôle en SELECT seul "
-              "+ TEMPORARY).")
+        if args.role:
+            print(f"  Connexion en lecture-écriture, mais sous le rôle "
+                  f"`{args.role}` : c'est le moteur qui refuse les écritures, "
+                  f"pas seulement le code.")
+        else:
+            print("  Connexion en LECTURE-ÉCRITURE : `84` crée des tables "
+                  "temporaires, et une transaction READ ONLY interdit tout "
+                  "DDL, même temporaire. Rien n'est écrit dans le modèle — "
+                  "mais la garantie vient du code, pas du moteur. Pour la lui "
+                  "rendre : --role histgis_carte (voir `connecte()`).")
     elif args.sans_anr:
         print("Trame GEOFLA 2011 seule (--sans-anr) : pas d'épaisseur temporelle.")
-    else:
+    elif not anr and not args.outremer:
+        # `elif not anr` et non `else` : la branche disait « atom_geom_anr
+        # absente » chaque fois que l'export tournait avec la trame ANR sans
+        # `--partition`, c'est-à-dire dans le cas le plus courant. Corrigé le
+        # 6 septembre 2026. *Un avertissement qui se déclenche quand tout va
+        # bien apprend à ne plus lire les avertissements.*
         print("Attention : `atom_geom_anr` absente — trame GEOFLA 2011 seule, "
               "sans épaisseur temporelle. Jouer `sql/82_anr_geom.sql` pour "
               "l'obtenir.")
     cur.close()
     cx.close()
+
+    # NE PAS RECOUVRIR EN SILENCE UNE TRAME NETTOYÉE PAR UNE TRAME À COUTURE.
+    # Une fois `sorties/part` promu en `cartes/web/donnees`, un
+    # `python3 cartes/export_web.py` sans drapeau — le réflexe de tous les mois
+    # précédents — réécrirait la carte avec `coalesce(ANR, atom_geom)` et lui
+    # rendrait ses 4 542,8 km² de couture. Rien dans la sortie ne le dirait :
+    # le nombre de fichiers, leur nom, leur poids seraient plausibles.
+    #
+    # *Le jour où un drapeau change le sens du résultat, son oubli devient un
+    # défaut silencieux ; c'est à ce moment-là qu'il faut un garde-fou, pas
+    # quand on l'ajoute.*
+    #
+    # `--outremer` EST EXEMPTÉ, ET CE N'EST PAS UNE DÉROGATION DE CONFORT.
+    # Le garde-fou protège contre le fait de RECOUVRIR une trame nettoyée par
+    # une trame à couture. Un export d'outre-mer ne recouvre rien : il n'écrit
+    # que `dep/97x/`, il ne touche à aucun département métropolitain, et il ne
+    # PEUT pas porter la trame `partition` — `84` ne traite que la métropole,
+    # et l'outre-mer n'a pas d'ANR à nettoyer. Le dossier portera donc
+    # légitimement deux trames, ce que le bloc `mixte` plus bas déclare
+    # département par département. *Un garde-fou qui interdit ce qu'il n'a pas
+    # été écrit pour interdire finit par se faire désarmer d'un --forcer, et
+    # c'est ce jour-là qu'il cesse de protéger.*
+    ancien_index = args.sortie / "index.json"
+    if not partition and not args.outremer and ancien_index.exists():
+        try:
+            vieille = json.loads(
+                ancien_index.read_text(encoding="utf-8")).get("trame")
+        except (json.JSONDecodeError, OSError):
+            vieille = None
+        if vieille in ("partition", "mixte") and not args.forcer_trame:
+            sys.exit(
+                f"ARRÊT : {args.sortie} porte la trame « {vieille} », et cet "
+                f"appel produirait la trame hybride.\n"
+                f"  Réécrire par-dessus rendrait à la carte la couture que "
+                f"`84` en a ôtée, sans que rien ne le signale.\n"
+                f"  Si c'est voulu : --forcer-trame. Sinon, ajouter "
+                f"--partition (et --role si la base l'exige).")
 
     jobs = args.jobs or min(8, max(1, (os.cpu_count() or 2) // 2))
     jobs = max(1, min(jobs, len(deps)))
@@ -1509,16 +2185,24 @@ def main():
 
     # Séquentiel dans le parent : le nettoyage efface des dossiers que les
     # workers vont écrire, et le faire pendant qu'ils écrivent serait une course.
+    #
+    # `tous` EST FAUX EN OUTRE-MER MÊME SANS LISTE DE DÉPARTEMENTS, et c'est la
+    # ligne la plus dangereuse de ce bloc. `tous=True` efface `dep/` en entier.
+    # Un `--outremer` sans argument aurait donc emporté les 95 départements
+    # métropolitains pour en réécrire 5 — un export complet détruit par une
+    # commande qui a l'air d'en ajouter. L'outre-mer est toujours un export
+    # PARTIEL du dossier, quelle que soit la façon dont on l'appelle.
     if not args.garder:
-        n = nettoie(args.sortie, deps, tous=not args.deps)
+        partiel = bool(args.deps) or args.outremer
+        n = nettoie(args.sortie, deps, tous=not partiel)
         if n:
             print(f"  {n} fichier(s) de l'export précédent effacé(s)"
-                  f"{'' if not args.deps else ' (départements demandés seulement)'}.")
+                  f"{'' if not partiel else ' (départements demandés seulement)'}.")
     args.sortie.mkdir(parents=True, exist_ok=True)
 
     t_debut = time.time()
     init = (args.dsn, args.grille, args.precision, args.sortie, sql_com, anr,
-            partition)
+            partition, args.role, args.outremer)
     if jobs == 1:
         _init_worker(*init)
         resultats = map(_fait_un, deps)
@@ -1560,7 +2244,9 @@ def main():
              "absences_circo": [list(x) for x in ABSENCES_CIRCO],
              # La trame vaut pour tout l'export : la page l'annonce en légende
              # plutôt que de laisser croire à une trame d'époque partout.
-             "trame": "anr" if anr else "geofla2011",
+             "trame": ("geofla2015" if args.outremer
+                       else "partition" if partition
+                       else "anr" if anr else "geofla2011"),
              "departements": []}
     for r in rapport:
         index["departements"].append({
@@ -1575,7 +2261,12 @@ def main():
     # Export partiel : l'index racine doit continuer à annoncer les
     # départements qu'on n'a pas touchés, sinon ils disparaissent du sélecteur
     # alors que leurs fichiers sont toujours là.
-    if args.deps:
+    # `or args.outremer` : sans lui, un export d'outre-mer rendrait un index
+    # racine de cinq départements, et les 95 métropolitains disparaîtraient du
+    # sélecteur alors que leurs fichiers sont intacts sur le disque. C'est le
+    # même raisonnement que pour `nettoie()` ci-dessus, et la même cause : un
+    # export d'outre-mer est PARTIEL par nature, jamais complet.
+    if args.deps or args.outremer:
         ancien = args.sortie / "index.json"
         if ancien.exists():
             try:
@@ -1588,6 +2279,37 @@ def main():
                    (args.sortie / "dep" / d.get("code", "") / "index.json").exists():
                     index["departements"].append(d)
     index["departements"].sort(key=lambda d: d["code"])
+
+    # UN DOSSIER NE DOIT PAS MÊLER DEUX TRAMES SANS LE DIRE. Un export partiel
+    # avec `--partition` par-dessus un export ordinaire laisse côte à côte des
+    # départements nettoyés et des départements à couture, sous un index racine
+    # qui n'annonce qu'une trame — la dernière écrite. La page dirait alors de
+    # l'Ain ce qui n'est vrai que de lui, et de la Drôme ce qui est faux d'elle.
+    #
+    # On lit donc la trame réelle de chaque département sur son propre index et
+    # on refuse de résumer ce qui ne se résume pas.
+    trames = {}
+    for d in index["departements"]:
+        f = args.sortie / "dep" / d["code"] / "index.json"
+        try:
+            trames[d["code"]] = json.loads(
+                f.read_text(encoding="utf-8")).get("trame", "?")
+        except (json.JSONDecodeError, OSError):
+            trames[d["code"]] = "?"
+    distinctes = sorted(set(trames.values()))
+    if len(distinctes) > 1:
+        index["trame"] = "mixte"
+        index["trames"] = {k: v for k, v in sorted(trames.items())}
+        print(f"\nATTENTION : ce dossier mêle {len(distinctes)} trames "
+              f"({', '.join(distinctes)}).", file=sys.stderr)
+        for t in distinctes:
+            n = sum(1 for v in trames.values() if v == t)
+            print(f"  {t:12s} {n:3d} département(s)", file=sys.stderr)
+        print("  L'index racine porte `trame: mixte` et le détail par "
+              "département dans `trames`. Une carte qui mêle deux trames n'est "
+              "pas fausse, mais elle ne peut pas se résumer en légende.",
+              file=sys.stderr)
+
     ecrit(args.sortie / "index.json", index)
 
     ecoule = time.time() - t_debut
@@ -1597,7 +2319,17 @@ def main():
     print(f"\n{len(rapport)} départements écrits, {total/1e6:.1f} Mo au total.")
     print(f"{ecoule:.0f} s de mur pour {cumul:.0f} s de travail cumulé "
           f"(×{cumul/ecoule:.1f} sur {jobs} processus).")
-    if anr and n_com:
+    if args.outremer and n_com:
+        vides = [r["dep"] for r in rapport if not r["bornes"]]
+        print(f"Trame GEOFLA 2015 : les {n_com} communes d'outre-mer sont "
+              f"dessinées par un instantané sans épaisseur temporelle — toutes "
+              f"portent `r: 1`, et c'est exact.")
+        if vides:
+            print(f"Département(s) sans une seule année servie : "
+                  f"{' '.join(vides)}. Leurs communes sont dessinées, aucune "
+                  f"n'est rattachée : le fichier du ministère qui pose les "
+                  f"rattachements ne les contient pas.")
+    elif anr and n_com:
         print(f"Trame hybride : {n_repli} atomes sur {n_com} ({100*n_repli/n_com:.1f} %) "
               f"retombent sur atom_geom au moins une année — fractions, report "
               f"arrière de `11`, et trous de chronologie d'ANR.")
@@ -1606,8 +2338,35 @@ def main():
     if echecs:
         print(f"\n{len(echecs)} département(s) EN ÉCHEC — l'export est "
               f"incomplet :", file=sys.stderr)
+        # Groupé par message : quand le serveur tombe, quatre-vingt-dix
+        # départements portent la MÊME erreur, et les lister un par un enterre
+        # la seule ligne qui apprend quelque chose.
+        par_msg = {}
         for e in echecs:
-            print(f"  {e['dep']} : {e['erreur']}", file=sys.stderr)
+            par_msg.setdefault(e["erreur"].strip(), []).append(e["dep"])
+        for msg, deps_ in sorted(par_msg.items(), key=lambda kv: -len(kv[1])):
+            court = msg.splitlines()[0]
+            print(f"  {len(deps_):3d} département(s) : {court}", file=sys.stderr)
+            print(f"      {' '.join(sorted(deps_))}", file=sys.stderr)
+        if any(e.get("connexion") for e in echecs):
+            print("\n  Au moins un échec vient de la CONNEXION, pas du "
+                  "département : le serveur a coupé et n'est pas revenu.\n"
+                  "  Lire le journal de PostgreSQL AVANT de conclure, et "
+                  "distinguer deux causes qui ne se corrigent pas pareil :\n"
+                  "    « received fast shutdown request » — on a DEMANDÉ "
+                  "l'arrêt du service. Mise à jour de paquet, veille, ou "
+                  "`systemd-oomd`, qui arrête proprement une unité sous "
+                  "pression mémoire et ne ressemble donc pas à un OOM.\n"
+                  "    « terminated by signal 9 » venant du NOYAU — l'OOM "
+                  "killer, et là seul --jobs compte.\n"
+                  "  Pour une passe longue, préférer `cartes/export_partition.sh` : "
+                  "il travaille par lots et reprend où il s'est arrêté.",
+                  file=sys.stderr)
+        print("\n  Relancer les manquants sans refaire le reste :\n"
+              f"    python3 cartes/export_web.py {' '.join(sorted(e['dep'] for e in echecs))} \\\n"
+              f"        --partition --sortie {args.sortie}"
+              + (f" --role {args.role}" if args.role else ""),
+              file=sys.stderr)
     print(f"Sortie : {args.sortie}")
     print("Servir la page :  python3 cartes/web/servir.py")
     if echecs:

@@ -445,6 +445,10 @@ async function chargeDepartement(dep) {
     // C'est exactement le genre de silence que ce projet refuse.
     S.exportSansVersions = !("v" in q);
     S.trame = (idx && idx.trame) || (S.index && S.index.trame) || null;
+    // L'espace d'où sort ce département. Déclaré par l'export, jamais déduit
+    // du code : un code à trois chiffres est un indice, pas une preuve, et la
+    // page n'a pas à rejouer une règle que le producteur des fichiers connaît.
+    S.espace = (idx && idx.espace) || "metropole";
   } finally {
     if (j === S.jeton) $("#chargement").style.display = "none";
   }
@@ -625,11 +629,24 @@ function dessine() {
       // eu d'élection. Dire « aucune source » des deux ferait passer un fait
       // historique pour un défaut de la base.
       const ac = absenceCirco(S.annee);
+      if (S.espace === "outremer") {
+        // Le trou n'est pas au même endroit qu'en métropole, et le dire
+        // change ce qu'il faut faire pour le combler. Ici les communes sont
+        // dessinées : ce qui manque est le fichier qui les range dans leurs
+        // cantons, pas la trame.
+        bandeau(`<b>Communes dessinées, aucun rattachement.</b> La trame
+          GEOFLA 2015 couvre ce département, mais la base ne tient ni canton ni
+          circonscription pour lui : le fichier du ministère qui pose les
+          rattachements — <code>circo/circo_outremer_1986_2012.csv</code> — ne
+          contient pas Mayotte. Ses cantons existent pourtant en base, tirés de
+          GEOFLA seul. C'est un trou d'attribution, pas un trou de carte.`);
+      } else {
       bandeau(`<b>Aucune source pour ${S.annee}.</b> La base ne tient aucune
         composition cantonale à cette date.` +
         (ac ? ` Quant aux circonscriptions, il n'y en a pas : ${echappe(ac.motif)}.
                Ce n'est pas une lacune de la base.`
             : ` Ni électorale.`) + emprunt);
+      }
     }
   } else {
     bandeau(null);
@@ -640,7 +657,14 @@ function dessine() {
   // revendiquent : c'est le regroupement par empreinte qui évite l'empilement
   // silencieux de trois libellés et de trois cantons au même endroit.
   S.comptes = { fraction: 0, communes: 0, homonymes: 0, repli: 0, sansGeom: 0 };
-  if ($("#v-communes").checked && !vide) {
+  // `|| S.espace === "outremer"` : `vide` signifie « aucune configuration à
+  // cette date », et en métropole cela veut dire qu'on ne sait rien — ni où
+  // sont les communes, ni à quoi elles appartiennent. Outre-mer, la trame est
+  // indépendante des rattachements : on sait parfaitement dessiner Mayotte, on
+  // ne sait pas la découper. Refuser de la dessiner ferait passer un trou
+  // d'ATTRIBUTION pour un trou de GÉOMÉTRIE, et le lecteur conclurait que le
+  // projet n'a pas Mayotte alors qu'il ne lui manque qu'un fichier.
+  if ($("#v-communes").checked && (!vide || S.espace === "outremer")) {
     const gc = g("communes");
     for (const grp of groupes().values()) {
       const aid = grp.atomes[0];
@@ -900,6 +924,17 @@ function panneau() {
       l'année : le curseur déplace les rattachements, pas les formes.
       Réexporter avec <code>python3 cartes/export_web.py</code> sur une base où
       <code>sql/82_anr_geom.sql</code> a été joué.</p>`;
+  } else if (cp.repli && S.trame === "geofla2015") {
+    // Outre-mer : le repli n'est pas un manque d'ANR, c'est l'absence d'ANR.
+    // Servir ici les « trois causes » de la métropole nommerait une source qui
+    // ne couvre pas ce territoire, et laisserait croire à un défaut réparable
+    // par un réexport. *Un message juste ailleurs est un message faux ici.*
+    h += `<p class="note"><b>Trame sans épaisseur temporelle.</b> Les
+      ${cp.repli} communes affichées sont dessinées par GEOFLA 2015, le même
+      instantané à toutes les dates : ANR-COMMUNES ne couvre pas l'outre-mer, et
+      <code>sql/84_carte_partition.sql</code> non plus. Les rattachements, eux,
+      suivent le curseur. La forme est juste, sa <i>date</i> n'est pas
+      attestée.</p>`;
   } else if (cp.repli) {
     const n = cp.repli;
     h += `<p class="note"><b>${n} commune${n>1?"s":""}</b> dessinée${n>1?"s":""}
@@ -1092,8 +1127,33 @@ function groupes() {
   const src = Object.assign({},
                             (kx && kx.rattachement) || {},
                             (kc && kc.rattachement) || {});
+  // OUTRE-MER : ON PART DES COMMUNES, PAS DES RATTACHEMENTS.
+  //
+  // Le paragraphe ci-dessus reconnaît qu'un atome absent des deux couches reste
+  // caché, et le range parmi les défauts à traiter. Outre-mer, ce défaut cesse
+  // d'être marginal et devient structurel : les 27 communes multicantonales
+  // n'ont aucun canton, et les 17 communes de Mayotte n'ont RIEN — le fichier
+  // du ministère qui pose les rattachements ne contient pas Mayotte. Partir des
+  // rattachements ferait donc disparaître un département entier de la carte,
+  // alors que la base porte ses communes et ses seize cantons.
+  //
+  // On n'étend PAS ce traitement à la métropole, et il faut dire pourquoi
+  // plutôt que de laisser croire à une timidité. En métropole, le rattachement
+  // est ce qui borne la VIE d'un atome : une commune créée en 1900 n'a pas de
+  // rattachement en 1870, et c'est ce filtre-là — pas la géométrie — qui
+  // l'empêche d'être dessinée sur une planche où elle n'existe pas. Partir de
+  // `S.communes` y dessinerait des communes avant leur naissance et après leur
+  // mort, en silence. Outre-mer la question ne se pose pas : la trame est un
+  // instantané de 2015, et chaque version porte l'année de départementalisation
+  // comme borne basse (`AN_DEBUT_DOM` dans `export_web.py`).
+  //
+  // *Le même geste est juste d'un côté et faux de l'autre parce que la donnée
+  // n'y a pas la même forme — c'est la raison de la condition, et elle vaut
+  // d'être écrite ici plutôt que déduite plus tard.*
+  const aids = S.espace === "outremer" ? Object.keys(S.communes)
+                                       : Object.keys(src);
   const par = new Map();
-  for (const aid of Object.keys(src)) {
+  for (const aid of aids) {
     const c = S.communes[aid];
     if (!c) continue;
     // L'empreinte est DATÉE, et c'est un gain, pas une complication. Deux
@@ -1190,7 +1250,12 @@ function ficheCommune(aid) {
   h += `</table>`;
   if (c.v) {
     const vg = versionA(c, S.annee);
-    if (vg && vg.r) {
+    if (vg && vg.r && S.trame === "geofla2015") {
+      h += `<p class="note">Forme prise à GEOFLA 2015, la seule trame dont
+        l'outre-mer dispose : elle vaut à toutes les dates. La commune est bien
+        où la base la met ; sa <i>forme</i> n'est pas datée, et aucune source du
+        projet ne la date aujourd'hui.</p>`;
+    } else if (vg && vg.r) {
       h += `<p class="note">Forme empruntée à la trame de 2011 : ANR-COMMUNES ne
         donne pas de polygone pour cette commune en ${S.annee}. Ce n'est pas une
         erreur de rattachement — la commune est bien où la base la met — mais sa
@@ -1348,7 +1413,15 @@ function bornes() {
   // la pire façon. Les clés d'`annees` sont là depuis toujours.
   if (!S._bornes) {
     const a = Object.keys(S.depIndex.annees).map(Number);
-    S._bornes = a.length ? [Math.min(...a), Math.max(...a)] : [AN_MIN, AN_MAX];
+    // `existence` avant le repli global, et c'est ce qui empêche un
+    // anachronisme de deux siècles. Un département dont la base ne sert AUCUNE
+    // année — Mayotte, dont les communes existent mais dont aucun fichier ne
+    // pose les rattachements — retombait sinon sur 1815-2012, le curseur de la
+    // page entière. Le champ dit la période où le DÉPARTEMENT existe, ce qui
+    // n'est pas la période où la base sait quelque chose de lui.
+    const ex = S.depIndex.existence;
+    S._bornes = a.length ? [Math.min(...a), Math.max(...a)]
+              : (ex ? [ex[0], ex[1]] : [AN_MIN, AN_MAX]);
   }
   return S._bornes;
 }
@@ -1538,20 +1611,50 @@ $("#lecture").addEventListener("click", () => {
 (async function demarre() {
   S.index = await charge(`${RACINE}/index.json`);
   const sel = $("#dep");
+  // Deux groupes, parce que ce sont deux ESPACES de la base et non deux
+  // régions d'un même. La métropole vient de `unit`/`membership` en
+  // Lambert-93 ; l'outre-mer de `om_*` en WGS84, avec sa propre trame et sa
+  // propre couverture. Les mêler dans une liste plate ferait attendre du 971
+  // ce que le 01 sait faire — une profondeur de 1870 à 2012 — alors que
+  // l'outre-mer ne commence qu'en 1946 et n'a pas de géométrie datée.
+  //
+  // Le code à trois caractères est le repère, et c'est un fait de la source :
+  // `om_unit.dep` est `char(3)` là où `unit.dep` est `char(2)`, précisément
+  // parce que les deux ne tiennent pas dans la même colonne.
+  const groupes = new Map();
+  const groupeDe = code => code.length > 2 ? "Outre-mer" : "Métropole";
   for (const d of S.index.departements) {
+    const titre = groupeDe(d.code);
+    if (!groupes.has(titre)) {
+      const g = document.createElement("optgroup");
+      g.label = titre;
+      groupes.set(titre, g);
+    }
     const o = document.createElement("option");
     o.value = d.code;
     // Pas de plage d'années dans le libellé : elle allongeait chaque ligne et
     // rendait la liste moins lisible pour une information que le curseur donne
     // déjà. Elle est rappelée en tête de page une fois le département choisi.
     o.textContent = `${d.code} — ${d.nom}`;
-    sel.appendChild(o);
+    groupes.get(titre).appendChild(o);
   }
+  // Métropole d'abord, quel que soit l'ordre des codes : `971` se range avant
+  // `99` dans un tri de chaînes, et l'outre-mer se serait glissé au milieu de
+  // la métropole sans que le libellé de groupe ait de sens.
+  for (const titre of ["Métropole", "Outre-mer"])
+    if (groupes.has(titre)) sel.appendChild(groupes.get(titre));
   $("#entete-sous").textContent =
     `base histgis — ${S.index.departements.length} départements, ` +
     `grille ${S.index.grille_m} m, export du ${S.index.genere}`;
 
-  const m = location.hash.match(/^#([0-9AB]{2})\/(\d{4})$/);
+  // `{2,3}` et non `{2}` : les départements d'outre-mer ont un code INSEE à
+  // trois caractères (971 à 976). Avec `{2}`, un lien partagé vers
+  // `#974/1990` ne correspondait à rien, la page retombait silencieusement sur
+  // le premier département de la liste, et l'utilisateur croyait au lien mort
+  // alors que la Réunion était bien exportée. La vérification d'appartenance à
+  // la ligne suivante reste la vraie garde ; ce motif ne fait que ne plus
+  // exclure d'avance.
+  const m = location.hash.match(/^#([0-9AB]{2,3})\/(\d{4})$/);
   const dep = (m && S.index.departements.some(d => d.code === m[1])) ? m[1]
             : S.index.departements[0].code;
   S.annee = m ? Math.min(AN_MAX, Math.max(AN_MIN, +m[2])) : 1870;
