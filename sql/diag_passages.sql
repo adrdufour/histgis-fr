@@ -28,11 +28,22 @@
 -- Une trace absente est une preuve qu'il n'est PAS passé — ou qu'un
 -- `DROP SCHEMA` l'a emportée, ce qui revient au même.
 --
--- Le § 2 ne prouve rien de tel. Il lit un ÉTAT observable là où il n'y a pas de
--- trace, et un état peut avoir été atteint autrement. Il répond à « la base
--- est-elle dans le bon état ? », jamais à « ce fichier est-il passé ? ». C'est
--- toute la différence, et c'est pour ne pas avoir à s'en contenter qu'il faut
--- donner une trace à `38` et `39`.
+-- Le § 2 ne prouve rien de tel. Il lit un ÉTAT observable, et un état peut
+-- avoir été atteint autrement. Il répond à « la base est-elle dans le bon
+-- état ? », jamais à « ce fichier est-il passé ? ». C'est toute la différence.
+--
+-- DEPUIS LE 2 SEPTEMBRE 2026, `38` ET `39` ONT UNE TRACE — `p38_trace` et
+-- `p39_trace`, déclarées au § 1, éprouvées par `sql/banc_38_39.sh`. La dette
+-- qui a fait naître ce fichier est soldée. Le § 2 reste, et pour deux raisons
+-- qui ne sont pas de la nostalgie :
+--
+--   * sur une base où les deux fichiers sont passés AVANT que la trace existe,
+--     le § 1 les dira absents et il aura raison — il n'y a pas de trace. Seul
+--     le § 2 dit alors que l'état, lui, est bon. Rejouer les deux fichiers
+--     suffit à réconcilier les deux lectures ;
+--   * une trace peuplée sur un effet absent serait une anomalie — la trace
+--     survivant à ce qu'elle trace. Deux lectures indépendantes valent mieux
+--     qu'une, c'est la règle du dépôt et elle vaut aussi pour ce diagnostic.
 --
 -- Ni l'horodatage du fichier `.sql` sur le disque, ni l'historique du shell, ne
 -- sont des preuves : ils disent qu'une commande a été TAPÉE, pas qu'elle a
@@ -64,6 +75,8 @@ INSERT INTO attendu (rang, fichier, temoin, role) VALUES
   ( 28, '28_circo_1986.sql',            'circo1986_trace',          'circonscriptions 1986'),
   ( 32, '32_marseille_geom.sql',        'marseille_trace',          'coupes internes de Marseille'),
   ( 37, '37_reparer_encodage.sql',      'encodage_trace',           'CP1252 lu en Latin-1'),
+  ( 38, '38_decret_1982_ain.sql',       'p38_trace',                'décret 82-77, cantons de Bourg'),
+  ( 39, '39_meurthe_1870.sql',          'p39_trace',                'la Meurthe reprend le numéro 54'),
   ( 40, '40_outremer.sql',              'om_trace',                 'outre-mer, espace séparé'),
   ( 40, '40_scission_circo.sql',        'scission_circo_trace',     'comblement de la couche circo'),
   ( 41, '41_retablissement.sql',        'retablissement_trace',     'communes rétablies après Marcellin'),
@@ -98,9 +111,32 @@ INSERT INTO attendu (rang, fichier, temoin, role) VALUES
   ( 79, '79_report_1999_arriere.sql',   'p79_qualite',              'profondeur et plafond'),
   ( 81, '81_report_1968_avant.sql',     'p81_trace',                'REPORT AVANT depuis 1968'),
   ( 81, '81_report_1968_avant.sql',     'p81_qualite',              'pct_jamais_nommes + dénominateur'),
-  ( 82, '82_anr_geom.sql',              'a82_trace',                'trame ANR datée');
+  ( 82, '82_anr_geom.sql',              'a82_trace',                'trame ANR datée'),
+  -- `92` complète `39` à l'étage circo : sans lui, une unité reste en `99` et
+  -- la Meurthe de 1870 est coupée en deux, cantons dans le 54 et
+  -- circonscription dans un 99 sans cantons. Déclaré ici le 6 septembre 2026,
+  -- le jour où le fichier a été écrit — une trace qu'on ajoute à l'inventaire
+  -- « plus tard » est une trace dont l'absence ne sera jamais remarquée.
+  ( 92, '92_meurthe_circo.sql',         'p92_trace',                'la circo de la Meurthe rejoint le 54'),
+  -- Les sept témoins que le § 1 ter dénonçait comme orphelins le 6 septembre
+  -- 2026. Ils existaient en base et pas dans cet inventaire : le § 1 ne
+  -- pouvait donc pas dire qu'ils MANQUAIENT, seulement le § 1 ter qu'ils
+  -- étaient là. *Un inventaire qui ignore un fichier ne remarquera jamais son
+  -- absence — c'est le § 1 ter qui rattrape le § 1, et il faut le lire.*
+  ( 84, '84_carte_partition.sql',       'p84_trace',                'trame sans trou ni superposition'),
+  ( 85, '85_conflit_38_79.sql',         'p85_trace',                'rend à 38 la fenêtre que 79 occupe'),
+  ( 87, '87_seine_canton_1954.sql',     'seine_canton_trace',       'quatre communes rendues au jalon 1954'),
+  ( 88, '88_seine_circo_1945_1967.sql', 'seine_circo_trace',        'la banlieue de la Seine 1945-1967'),
+  ( 89, '89_seine_annexees_1860.sql',   'seine_annexees_trace',     'les onze annexées de 1860'),
+  ( 90, '90_seine_1848_banlieue.sql',   'seine_1848_trace',         'la banlieue en 1848'),
+  ( 91, '91_seine_1815_1870.sql',       'seine_1870_trace',         'la Seine de 1815 à 1870'),
+  -- `93` est déclaré le jour où il est écrit, avant d'avoir jamais tourné :
+  -- c'est la seule façon que son absence soit un jour remarquée.
+  ( 93, '93_report_1940_1954.sql',      'p93_trace',                '1941-1953, entre deux bouts attestés'),
+  ( 93, '93_report_1940_1954.sql',      'p93_qualite',              'fondement, appariement, chrono_trouee');
 
 UPDATE attendu SET hors_chaine = true WHERE temoin IN (
+    'p85_trace',              -- 85 : n'existe que parce que 79 a été joué hors ordre
     'circo_fraction_trace',   -- 43 : exclu de la chaîne EXPRÈS (voir son en-tête)
     'marseille_trace',        -- 32 : attend le géoréférencement, chantier ouvert
     'encodage_trace',         -- 37 : n'écrit sa trace que sous -v appliquer=1
@@ -173,8 +209,10 @@ ORDER  BY 1;
 
 \echo ''
 \echo '==========================================================='
-\echo '-- 2. Les deux fichiers SANS trace, lus par leur effet'
-\echo '--    Ceci n''est pas une preuve de passage. Voir l''en-tête.'
+\echo '-- 2. 38 et 39 lus par leur EFFET — seconde lecture, indépendante'
+\echo '--    de leur trace. Ceci n''est pas une preuve de passage : voir'
+\echo '--    l''en-tête. Un état conforme sans trace = joués avant le'
+\echo '--    2 septembre 2026 ; les rejouer réconcilie les deux lectures.'
 \echo '==========================================================='
 
 \echo ''

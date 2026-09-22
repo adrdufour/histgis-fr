@@ -503,7 +503,28 @@ WHERE  a.multi ORDER BY a.dep, a.atom_id;
 \endif
 
 \echo ''
-\echo '=== 5. Circonscriptions (attendu 1986 : 4+4+2+5 ; 2012 : 4+4+2+7) ==='
+-- ATTENDU CORRIGÉ LE 6 SEPTEMBRE 2026, PREMIER PASSAGE RÉEL DU FICHIER :
+-- `4+4+2+6` en 2012, et non `4+4+2+7`. La Réunion a bien sept circonscriptions
+-- depuis 2012 ; la **1re n'est composée que de Saint-Denis** (97411), commune
+-- elle-même partagée entre deux circonscriptions et donc écartée par le
+-- `HAVING count(DISTINCT circo) = 1` du § 6. Sans un seul membre, l'unité n'est
+-- pas créée : elle ne devient pas vide, elle n'existe pas.
+--
+-- Ce n'est pas un défaut de filtrage à corriger. Une circonscription
+-- ENTIÈREMENT CONTENUE DANS UNE COMMUNE est inexprimable dans un modèle dont la
+-- maille de rattachement est la commune — le même mur qu'à Paris, où le
+-- découpage de 2009 coupe à l'intérieur des arrondissements (`ETAT.md` § 6.5).
+-- Elle demande la trame IRIS, comme les 28 multicantonales du § 5.
+--
+-- *Une unité plus fine que la maille de rattachement ne se perd pas par erreur ;
+-- elle est inexprimable, et cela se déclare au lieu de se rattraper.*
+--
+-- L'attendu de 7 venait du nombre réel de circonscriptions. Le laisser aurait
+-- fait crier cette ligne à chaque passage pour une raison connue et sans
+-- correctif — et une recette qui crie toujours cesse d'être lue.
+\echo '=== 5. Circonscriptions (attendu 1986 : 4+4+2+5 ; 2012 : 4+4+2+6) ==='
+\echo '    (974 : 6 et non 7 — la 1re circo est incluse dans Saint-Denis, voir'
+\echo '     la note ci-dessus et RESTE_A_FAIRE.md § 0 bis)'
 SELECT segment_depuis, dep, count(*) AS circos
 FROM   om_unit WHERE niveau = 'circo'
 GROUP  BY segment_depuis, dep ORDER BY segment_depuis, dep;

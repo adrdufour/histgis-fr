@@ -101,6 +101,12 @@ BEGIN
                     WHERE niveau = 'canton' AND periode @> '1999-06-01'::date) THEN
         RAISE EXCEPTION 'PRÉREQUIS : la couche 1999 est absente — jouer sql/24_canton_moderne.sql.';
     END IF;
+    -- Ajouté le 22 septembre 2026 : le § 5 écarte les pseudo-cantons de `25`
+    -- par sa trace. Sans elle, l'exclusion serait muette et la convention
+    -- repasserait en report.
+    IF to_regclass('histgis.pseudo_canton_trace') IS NULL THEN
+        RAISE EXCEPTION 'PRÉREQUIS : jouer sql/25_pseudo_canton.sql (pseudo_canton_trace).';
+    END IF;
 END $$;
 
 -- ---------------------------------------------------------------------------
@@ -226,7 +232,23 @@ FROM   membership m
 JOIN   unit u          ON u.unit_id = m.unit_id AND u.niveau = 'canton'
 JOIN   p79_plancher p  ON p.dep = u.dep::text
 WHERE  m.niveau = 'canton'
-  AND  m.periode @> :'date_1999'::date;
+  AND  m.periode @> :'date_1999'::date
+  -- PAS les pseudo-cantons de `25` — décidé le 22 septembre 2026.
+  --
+  -- « La ville est un canton » n'est pas une composition attestée : c'est
+  -- une convention, prise parce que la trame communale ne sait pas couper
+  -- Marseille et Lyon. `25` la pose sur 1999-2012 et affirme en recette que
+  -- « le trou 1941-1998 reste vide ». Ce fichier, qui ne connaissait pas les
+  -- pseudo-cantons, la reportait en arrière comme n'importe quelle
+  -- composition : Lyon depuis le 1985-03-10, Marseille depuis le 1992-03-22,
+  -- 25 lignes, marquées dans `p79_qualite` comme un report ordinaire.
+  -- Invisible sur `histgis`, où `25` n'avait jamais tourné ; vu à la
+  -- première chaîne complète, par +9 rattachements dans le Rhône en 1990.
+  --
+  -- *Un report transporte ce qu'il trouve, et ne sait pas distinguer une
+  -- composition lue d'une convention posée. C'est à la sélection de le dire.*
+  AND  NOT EXISTS (SELECT 1 FROM pseudo_canton_trace t
+                    WHERE t.quoi = 'unit' AND t.cle = m.unit_id);
 
 CREATE INDEX p79_cible_idx ON p79_cible (atom_id);
 
@@ -447,6 +469,15 @@ FROM   p79_qualite q
 JOIN   membership m ON m.membership_id = q.membership_id
 JOIN   p79_plancher p ON p.dep = q.dep
 WHERE  m.valid_from < p.plancher OR m.valid_to > '1999-01-01'::date;
+
+\echo ''
+\echo '-- 10 g. aucune ligne sur un pseudo-canton de 25 (doit valoir 0)'
+\echo '   (Lyon et Marseille restent sans canton avant 1999 : la ville-canton'
+\echo '    est une convention de 25, pas une composition à reporter)'
+SELECT count(*) AS sur_pseudo_canton
+FROM   p79_qualite q
+JOIN   membership m ON m.membership_id = q.membership_id
+JOIN   pseudo_canton_trace t ON t.quoi = 'unit' AND t.cle = m.unit_id;
 
 ANALYZE membership; ANALYZE p79_qualite;
 

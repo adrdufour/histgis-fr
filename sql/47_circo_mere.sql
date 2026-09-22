@@ -123,7 +123,14 @@ DROP TABLE IF EXISTS cm_annee;
 CREATE TEMP TABLE cm_annee AS
 SELECT y, make_date(y, 12, 1) AS d
   FROM generate_series(
-           extract(year FROM (SELECT min(valid_from) FROM membership))::int,
+           -- Niveau CANTON, et non tous niveaux : depuis `54`, `min(valid_from)`
+           -- sur tout `membership` vaut 1815 (Paris), et la serie balayait
+           -- cinquante-cinq annees ou aucun atome n'a de canton — donc aucune
+           -- candidate possible. Provablement vide, mais coûteux et trompeur.
+           -- Aligné le 6 septembre 2026 sur `42` et `46`, où le même
+           -- glissement changeait, lui, le RÉSULTAT.
+           extract(year FROM (SELECT min(valid_from) FROM membership
+                               WHERE niveau = 'canton'))::int,
            extract(year FROM (SELECT max(valid_to)   FROM membership))::int - 1
        ) y
  WHERE EXISTS (SELECT 1 FROM membership mx
@@ -304,6 +311,19 @@ SELECT coalesce(n.nom, '?') AS commune, coalesce(n.dep, '?') AS dep,
 
 \echo ''
 \echo '=== 3. Port-Saint-Louis-du-Rhone : la jonction avec la chaine native ==='
+-- `scission_circo_trace` est la table de `40`, et `40` passe APRES ce fichier
+-- dans `rejouer_apres_rebuild.sh` -- a dessein, voir le commentaire qui les
+-- ordonne. Sur une base reconstruite elle n'existe donc pas encore ici, et la
+-- jointure arretait la chaine (cinquieme passage, 22 septembre 2026) -- APRES
+-- la pose, sur un paragraphe de lecture. Sur `histgis`, `40` avait ete joue
+-- en aout hors de toute chaine : la table etait la, le defaut invisible.
+-- Meme famille qu'`anr_commune` ou `hac_filiation` : un fichier joue a la
+-- main sur une base deja peuplee ne dit rien de ce qu'il lit.
+--
+-- Sans `40`, aucune ligne ne peut venir de lui ; le controle de jonction
+-- ci-dessous reste entier.
+SELECT to_regclass('scission_circo_trace') IS NOT NULL AS a_40 \gset
+\if :a_40
 SELECT m.unit_id, m.valid_from, m.valid_to,
        CASE WHEN t.membership_id IS NOT NULL THEN 'pose par 47 (mere Arles)'
             WHEN s.membership_id IS NOT NULL THEN 'pose par 40 (voisins)'
@@ -314,6 +334,17 @@ SELECT m.unit_id, m.valid_from, m.valid_to,
   LEFT JOIN scission_circo_trace s ON s.membership_id = m.membership_id
  WHERE a.insee_geofla = '13078' AND m.niveau = 'circo'
  ORDER BY m.valid_from;
+\else
+\echo '    (40 pas encore joue : aucune ligne ne peut venir de lui)'
+SELECT m.unit_id, m.valid_from, m.valid_to,
+       CASE WHEN t.membership_id IS NOT NULL THEN 'pose par 47 (mere Arles)'
+            ELSE '' END AS origine
+  FROM membership m
+  JOIN atom a USING (atom_id)
+  LEFT JOIN circo_mere_trace   t ON t.membership_id = m.membership_id
+ WHERE a.insee_geofla = '13078' AND m.niveau = 'circo'
+ ORDER BY m.valid_from;
+\endif
 -- CONTROLE : la derniere ligne posee par 47 doit etre U1303@1889, se fermant
 -- exactement ou s'ouvre la ligne NATIVE U1303@1902. Meme circonscription, pas
 -- de trou, pas de chevauchement. La donnee confirme la filiation d'elle-meme.

@@ -120,10 +120,58 @@ TRUNCATE rattachement_arriere_trace;
 -- atome. C'est la correction de fond : un atome sans rattachement couvre
 -- géométriquement et ne couvre rien dans le temps.
 -- ---------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------
+-- `d0` — le début de la SÉRIE CANTONALE, et non le début de la base
+-- ---------------------------------------------------------------------------
+-- Ce fichier disait `SELECT min(valid_from) FROM membership`, tous niveaux
+-- confondus. C'était juste le 17 août 2026, où la base commençait en 1870.
+--
+-- **Ça ne l'est plus depuis `54`**, qui a fait démarrer Paris en 1815, et
+-- encore moins depuis `91` et la Seine. `d0` a glissé à 1815-01-01, et le
+-- garde-fou « le territoire ne doit être rattaché par AUCUN atome à cette
+-- date » a cessé de garder quoi que ce soit : à 1815, seuls les 48 quartiers
+-- de Vasserot ont un rattachement, donc **toute commune de France y répond
+-- oui**. La sélection est passée de 2 cas à 274 — c'est ce qu'a rendu le
+-- premier passage de la chaîne complète, le 6 septembre 2026.
+--
+-- L'alarme du § suivant a fait son travail : elle a refusé d'écrire. Sans
+-- elle, 272 communes auraient reçu la chronologie de leur mère sur un trou
+-- qui n'existe pas.
+--
+-- La date qui a un sens ici est celle où commence la série que `11`, `15` et
+-- ce fichier raisonnent — la série cantonale de TRF-GIS. Elle se demande au
+-- niveau `canton`, que Paris avant 1870 ne peuple pas : les fichiers `54`,
+-- `55`, `56`, `57`, `90` et `91` ne posent que du `circo`.
+--
+-- Et elle est ASSERTÉE, parce qu'une valeur dérivée qui glisse est
+-- précisément ce qui vient de se produire : si un jour un fichier pose du
+-- canton avant 1870, ce fichier doit s'arrêter et être relu, pas se dégrader
+-- en silence.
+--
+-- *Un garde-fou calculé sur l'état de la base se relâche quand la base change,
+-- et il ne le dit pas. Celui-ci ne protégeait plus rien depuis `54`, et rien
+-- ne l'aurait montré tant que la chaîne s'arrêtait avant.*
+-- ---------------------------------------------------------------------------
+DO $$
+DECLARE d date;
+BEGIN
+    SELECT min(valid_from) INTO d FROM membership WHERE niveau = 'canton';
+    IF d IS NULL THEN
+        RAISE EXCEPTION 'Aucun rattachement cantonal : la base n''est pas chargée.';
+    END IF;
+    IF d <> DATE '1870-01-01' THEN
+        RAISE EXCEPTION E'La serie cantonale commence en %, et non 1870-01-01.\n'
+            '  Ce fichier compare la date de creation d''une commune au debut de\n'
+            '  la serie, et teste qu''aucun atome ne portait son territoire a\n'
+            '  cette date. Si le canton remonte plus haut, le test change de\n'
+            '  sens : relire le paragraphe d0 avant de continuer.', d;
+    END IF;
+END $$;
+
 DROP TABLE IF EXISTS ra_cas;
 CREATE TEMP TABLE ra_cas AS
 WITH debut AS (
-    SELECT min(valid_from) AS d0 FROM membership
+    SELECT min(valid_from) AS d0 FROM membership WHERE niveau = 'canton'
 ),
 -- garde-fou 2 : les deux bouts résolus à travers les recodages
 mvt AS (
@@ -223,7 +271,8 @@ SELECT c.insee, coalesce(n.nom, '?') AS commune, c.atom_id,
 
 \echo ''
 \echo '=== 1 bis. Écartés, et pourquoi — rien n''est posé pour eux ==='
-WITH debut AS (SELECT min(valid_from) AS d0 FROM membership),
+WITH debut AS (SELECT min(valid_from) AS d0 FROM membership
+                WHERE niveau = 'canton'),   -- voir le paragraphe d0
 mvt AS (
     SELECT DISTINCT ON (coalesce(rp.moderne, i.com_ap))
            coalesce(rp.moderne, i.com_ap) AS insee,
@@ -412,7 +461,8 @@ SELECT g.code_dept AS dep, g.insee_com, g.nom_comm,
        SELECT 1 FROM atom_geom ag
          JOIN membership m ON m.atom_id = ag.atom_id
                           AND m.niveau  = 'canton'
-                          AND m.periode @> (SELECT min(valid_from) FROM membership)
+                          AND m.periode @> (SELECT min(valid_from) FROM membership
+                                             WHERE niveau = 'canton')
         WHERE ag.geom && g.geom
           AND ST_Contains(ag.geom, ST_PointOnSurface(g.geom)))
  ORDER BY km2 DESC LIMIT 15;

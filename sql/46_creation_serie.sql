@@ -115,9 +115,45 @@ TRUNCATE creation_serie_trace;
 -- ---------------------------------------------------------------------------
 -- 1. Les cas : un atome, aucun rattachement au début de la série, une mère
 -- ---------------------------------------------------------------------------
+-- `d0` au niveau CANTON, et non tous niveaux confondus — corrigé le
+-- 6 septembre 2026, en même temps que `42`, qui portait le même défaut et
+-- l'a fait voir en s'arrêtant.
+--
+-- Ce fichier sélectionne « un atome sans aucun rattachement au début de la
+-- série », et compare l'année de création HAC à ce début. Depuis `54`, qui
+-- fait commencer Paris en 1815, `min(valid_from)` sur tout `membership` vaut
+-- **1815-01-01** : `f.annee > 1815` est vrai pour presque tout, et le
+-- garde-fou 5 — « le territoire n'est rattaché par aucun atome à cette
+-- date » — devient vide de sens, seuls les 48 quartiers de Vasserot ayant un
+-- rattachement à cette date.
+--
+-- La série que ce fichier raisonne est la série CANTONALE, que rien ne
+-- peuple avant 1870 : `54`, `55`, `56`, `57`, `90` et `91` ne posent que du
+-- `circo`. L'assertion ci-dessous arrête le fichier si cela cesse d'être
+-- vrai, plutôt que de le laisser se dégrader sans le dire.
+--
+-- *Contrairement à `42`, ce fichier n'a pas d'alarme sur l'effectif : il
+-- aurait POSÉ. C'est l'arrêt de `42`, trois marches plus haut, qui a fait
+-- regarder ici.*
+DO $$
+DECLARE d date;
+BEGIN
+    SELECT min(valid_from) INTO d FROM membership WHERE niveau = 'canton';
+    IF d IS NULL THEN
+        RAISE EXCEPTION 'Aucun rattachement cantonal : la base n''est pas chargée.';
+    END IF;
+    IF d <> DATE '1870-01-01' THEN
+        RAISE EXCEPTION E'La serie cantonale commence en %, et non 1870-01-01.\n'
+            '  Ce fichier compare l''annee de creation HAC au debut de la serie\n'
+            '  et teste qu''aucun atome ne portait le territoire a cette date.\n'
+            '  Si le canton remonte plus haut, les deux tests changent de sens.', d;
+    END IF;
+END $$;
+
 DROP TABLE IF EXISTS cs_cas;
 CREATE TEMP TABLE cs_cas AS
-WITH debut AS (SELECT min(valid_from) AS d0 FROM membership)
+WITH debut AS (SELECT min(valid_from) AS d0 FROM membership
+                WHERE niveau = 'canton')
 SELECT a.atom_id, a.cassini, a.insee_geofla, d.d0 AS depuis,
        f.cassini_mere, f.nom_mere_hac, f.annee AS creee_en,
        -- la fenêtre s'arrête à la création, ou au premier rattachement propre

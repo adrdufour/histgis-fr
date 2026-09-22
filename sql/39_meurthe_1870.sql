@@ -1,7 +1,10 @@
 -- ============================================================================
 -- 39_meurthe_1870.sql — la Meurthe reprend son numéro : 99 -> 54
 --
---   psql -d histgis -1 -f sql/39_meurthe_1870.sql
+--   psql -d histgis -f sql/39_meurthe_1870.sql
+--
+-- SANS `-1` : ce fichier ouvre et ferme sa propre transaction (voir la même
+-- note en tête de `38`).
 --
 -- Ce que fait ce fichier
 -- ---------------------

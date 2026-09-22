@@ -154,7 +154,14 @@ DROP TABLE IF EXISTS sc_annee;
 CREATE TEMP TABLE sc_annee AS
 SELECT an, make_date(an, 12, 1) AS d
   FROM generate_series(
-           extract(year FROM (SELECT min(valid_from) FROM membership))::int,
+           -- Niveau CANTON, et non tous niveaux : depuis `54`, `min(valid_from)`
+           -- sur tout `membership` vaut 1815 (Paris), et la serie balayait
+           -- cinquante-cinq annees ou aucun atome n'a de canton — donc aucune
+           -- candidate possible. Provablement vide, mais coûteux et trompeur.
+           -- Aligné le 6 septembre 2026 sur `42` et `46`, où le même
+           -- glissement changeait, lui, le RÉSULTAT.
+           extract(year FROM (SELECT min(valid_from) FROM membership
+                               WHERE niveau = 'canton'))::int,
            extract(year FROM (SELECT max(valid_to)   FROM membership))::int - 1
        ) AS an;
 

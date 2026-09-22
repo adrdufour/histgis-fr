@@ -1,7 +1,14 @@
 -- ============================================================================
 -- 38_decret_1982_ain.sql — decret n° 82-77 du 25 janvier 1982, cantons de Bourg
 --
---   psql -d histgis -1 -f sql/38_decret_1982_ain.sql
+--   psql -d histgis -f sql/38_decret_1982_ain.sql
+--
+-- SANS `-1` : ce fichier ouvre et ferme sa PROPRE transaction. Ajouter `-1`
+-- n'apporte rien et rend deux avertissements — « there is already a
+-- transaction in progress » au BEGIN, « there is no transaction in progress »
+-- à la fin. Mesuré le 2 septembre 2026 sur la vraie base.
+-- Sa recette (§ 7) est en LECTURE SEULE et tourne après le COMMIT : c'est
+-- voulu, elle doit pouvoir se relire sans rien rejouer.
 --
 -- Ce que fait ce fichier
 -- ---------------------

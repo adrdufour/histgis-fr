@@ -54,10 +54,12 @@ psql -d histgis -f sql/diag_passages.sql     # lecture seule
 ```
 
 Il confronte l'inventaire des tables de trace **attendues** à ce que la base
-porte, et lit par leur effet les fichiers qui n'en ont pas (`38`, `39`) ou dont
-la trace manque. Écrit le 2 septembre 2026, parce que la question « ce fichier
-est-il passé ? » n'avait pas de réponse — et qu'un `rebuild.sh` avait défait
-`39` pendant quinze jours sans que rien ne le signale.
+porte, et relit par leur effet ceux dont la trace manque ou est vide. Écrit le
+2 septembre 2026, parce que la question « ce fichier est-il passé ? » n'avait
+pas de réponse — et qu'un `rebuild.sh` avait défait `39` pendant quinze jours
+sans que rien ne le signale. `38` et `39`, seuls fichiers écrivant sans trace,
+en ont reçu une le même jour ; son § 2 les relit malgré tout par leur effet,
+parce que deux lectures indépendantes valent mieux qu'une.
 
 ## Qui dépend de qui — à lire AVANT de rejouer un fichier
 
@@ -84,6 +86,7 @@ Qui référence quoi, mesuré :
 | unités de | référencées par |
 |---|---|
 | `24` (cantons 1999-2012) | `38_decret_1982_ain`, `41_retablissement`, `74_yvelines_1967`, `75_composition_1973_1982`, `76_composition_salves_restantes`, `77_transferts_dates`, **`79_report_1999_arriere`**, **`81_report_1968_avant`** |
+| `67` (les trois créations 1949-1951) + `68` (jalon 1954) | **`93_report_1940_1954`** |
 | `27` / `28` (circos modernes) | `15_creation_arriere`, `41`, `42`, `40_scission_circo`, `43_circo_fraction`, `47_circo_mere`, `49_circo_1986_partage` |
 
 **Cette liste doit être tenue à jour par qui écrit un fichier.** Le soir du
@@ -91,13 +94,22 @@ Qui référence quoi, mesuré :
 la couche des circonscriptions y est passée en entier — voir ci-dessous.
 
 **Marche à suivre** : mettre de côté les rattachements concernés, jouer le
-fichier, les remettre, puis rejouer ce qui en dépend. Défaire par la trace
-quand elle existe — `38_decret_1982_ain.sql` **n'en a pas**, ni
-`39_meurthe_1870.sql` — il faut sauver leurs lignes à la main, et surtout se
-souvenir de les rejouer, ce que rien dans la base ne rappelle (`39` a été
-retrouvé défait le 30 août 2026). `74` à `81` en ont une (`y67_trace`,
-`p75_trace`, `p76_trace`, `p77_trace`, `p79_trace`, `p81_trace`) : on les
-défait proprement, puis on les rejoue après `24`, dans cet ordre.
+fichier, les remettre, puis rejouer ce qui en dépend. **Défaire par la trace :
+tous en ont une depuis le 2 septembre 2026.** `38_decret_1982_ain.sql` et
+`39_meurthe_1870.sql` étaient les deux exceptions — il fallait sauver leurs
+lignes à la main, et surtout se souvenir de les rejouer, ce que rien dans la
+base ne rappelait (`39` a été retrouvé défait le 30 août 2026). Ils portent
+maintenant `p38_trace` et `p39_trace`, et se défont comme les autres. `74` à
+`81` ont les leurs (`y67_trace`, `p75_trace`, `p76_trace`, `p77_trace`,
+`p79_trace`, `p81_trace`) : on les défait proprement, puis on les rejoue après
+`24`, dans cet ordre.
+
+**Une nuance qui compte pour `38` et `39`** : leurs deux traces ne se défont
+pas par un `DELETE`. Ces fichiers ne posent pas seulement des lignes, ils en
+**modifient** — la date de départ des trois fractions de Bourg, le département
+des 29 cantons de la Meurthe. La colonne `avant` garde la valeur d'origine, et
+le retrait la restaure. Vider la trace à la main ne défait donc rien : il faut
+rejouer le fichier, dont le § de retrait s'en charge.
 
 **`79` est un cas à part et il faut le savoir** : il ne pose QUE là où la
 fenêtre est entièrement libre. Le rejouer APRÈS `75`/`76`/`77` donne un
@@ -642,4 +654,40 @@ une carte qui empile « le 54 » sur toute la série montre deux emprises.
 L'`unit_id` reste en `99xx` : un identifiant est opaque, et `54xx` est déjà
 pris par les cantons de Meurthe-et-Moselle.
 
-À rejouer après chaque `rebuild.sh`, comme `38_decret_1982_ain.sql`.
+À rejouer après chaque `rebuild.sh`, comme `38_decret_1982_ain.sql`. Depuis le
+2 septembre 2026, `p39_trace` dit s'il l'a été — et elle vise l'`unit_id`
+`99xx`, non le département `99`, parce qu'un identifiant ne bouge pas alors que
+le département est justement ce que le fichier change. Une trace calée sur ce
+qu'on modifie est vide dès que le travail est fait.
+
+Les deux fichiers sont éprouvés par `sql/banc_38_39.sh` : six scénarios sur un
+PostgreSQL jetable, dont la base déjà conforme, les deux façons dont la fenêtre
+1982-1999 peut être prise, et l'ordre réel de la chaîne où `24` crée la trace
+avant que `38` ne l'utilise.
+
+**Il ne fait que la moitié du travail, et cela s'est vu le 6 septembre 2026** :
+sa clause porte `u.niveau = 'canton'`. Voir `92_meurthe_circo.sql`, à jouer
+juste derrière.
+
+## 92_meurthe_circo.sql — l'autre étage de la Meurthe
+
+`39` rend le 54 aux 29 **cantons** de la Meurthe. Il reste alors une unité en
+`99` : `L9901@1870`, la circonscription au scrutin de liste, 714 rattachements
+sur `[1870-01-01, 1871-01-01)`.
+
+Une seule ligne, et deux effets. Le visible : un 99ᵉ département dans tout ce
+qui énumère `SELECT DISTINCT dep FROM unit` — l'export web lui fabriquait un
+dossier `dep/99/`. Le second, plus gênant et invisible tant qu'on regarde une
+planche à la fois : **la Meurthe de 1870 était coupée en deux**, ses cantons
+dans le 54 et sa circonscription dans un 99 sans cantons. Aucune des deux
+planches n'était fausse ; c'est leur séparation qui l'était.
+
+Mêmes règles qu'en `39`, et pour les mêmes raisons : la trace vise
+l'**identifiant** (`^[LU]99[0-9]{2}@`) et non le département, sans quoi elle
+serait vide sur une base déjà conforme ; `unit_id` et `code` ne bougent pas,
+`5401` étant déjà pris par la Meurthe-et-Moselle. Il ne fusionne rien : les deux
+unités restent deux, sur deux périodes disjointes, ce qui est le fait
+historique.
+
+À rejouer après chaque `rebuild.sh`, **immédiatement après `39`** — les séparer
+dans la chaîne, c'est se préparer à rejouer l'un sans l'autre.

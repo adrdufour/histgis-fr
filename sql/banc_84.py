@@ -108,6 +108,31 @@ GPKG = os.path.join(RACINE, 'ANR_COMMUNES_22042026', 'COMMUNES_22042026.gpkg')
 
 MOTIFS = ('unique', 'source_datee', 'departage', 'comblement')
 
+# --- la règle de partage d'une fratrie, et les deux façons de la poser -------
+#
+# `--mosaique` (5 septembre 2026) change UNE chose, et c'est celle que la base a
+# désignée comme fausse :
+#
+#   RÈGLE HISTORIQUE — le morceau connexe entier va à la fille dont le repli le
+#   recouvre le plus. `ST_Dump` / `.geoms` ne sépare que les composantes
+#   DÉCONNECTÉES, donc six filles voisines ne font qu'un morceau et une seule
+#   sert. Mesuré en base le 5 septembre : des six filles de Tournon-d'Agenais,
+#   Bourlens garde 73,518 km² pour un repli de 15,578 et les cinq autres ne
+#   sont PAS DESSINÉES.
+#
+#   RÈGLE MOSAÏQUE — chaque fille reçoit `reste ∩ son repli`. Ce qu'aucun repli
+#   ne réclame n'est donné à personne ici : le treillis le voit comme un trou et
+#   le comble au voisin partageant le plus long bord, ce qui est le
+#   comportement déjà déclaré. Aucun seuil, aucune proportion, aucune ligne
+#   inventée — le repli reste un indice de POSITION, et la frontière posée est
+#   celle du treillis.
+#
+# Ce qui autorise ce changement, et qui a été mesuré avant de l'écrire : la
+# somme des replis des sœurs reproduit le morceau à moins d'un pour cent
+# (73,793 contre 73,518 ; 18,942 contre 19,080). La mosaïque des replis PAVE le
+# territoire à partager, elle ne le devine pas.
+MOSAIQUE = False
+
 
 # --- ce qu'ANR sait des naissances ----------------------------------------
 
@@ -325,10 +350,32 @@ def charge_dep(dep, an, debuts, bornes):
                 geoms[kids[0]] = diff
                 brut[kids[0]] = (None, 'fille_anr', brut[kids[0]][2])
                 n_filles += 1
+            elif MOSAIQUE:
+                # RÈGLE MOSAÏQUE — chaque fille prend ce que SON repli couvre
+                # dans le reste. Deux filles contiguës cessent de se disputer un
+                # morceau indivisible, puisqu'on ne partage plus des morceaux
+                # mais du sol. Ce qu'aucun repli ne réclame reste sans
+                # propriétaire : le treillis le comblera au plus long bord.
+                pris = []
+                for c in kids:
+                    p = diff.intersection(geoms[c]).buffer(0)
+                    if p.is_empty or p.area <= 0:
+                        sans_mere.append(c)
+                        continue
+                    geoms[c] = p
+                    brut[c] = (None, 'fille_anr', brut[c][2])
+                    n_filles += 1
+                    pris.append(c)
+                if len(pris) > 1:
+                    n_partages += 1
+                elif not pris:
+                    pass
             else:
-                # plusieurs filles la même année : chaque morceau va à celle
-                # dont le repli le recouvre le plus. Le repli sert d'indice de
-                # position, jamais de mesure.
+                # RÈGLE HISTORIQUE — plusieurs filles la même année : chaque
+                # morceau va à celle dont le repli le recouvre le plus. Le repli
+                # sert d'indice de position, jamais de mesure. C'est la règle
+                # que la mesure du 5 septembre 2026 a prise en défaut sur les
+                # fratries CONTIGUËS, où il n'y a qu'un morceau pour six filles.
                 morceaux = list(diff.geoms) if hasattr(diff, 'geoms') else [diff]
                 part = {c: [] for c in kids}
                 for m in morceaux:
@@ -506,8 +553,12 @@ def fait_dep(dep, an, debuts, bornes, detail=False, charge=None, bbox=None):
 
 
 def main():
-    an = int(sys.argv[1]) if len(sys.argv) > 1 else 1870
-    deps = sys.argv[2:] or sorted(os.listdir(BASE))
+    global MOSAIQUE
+    argv = [a for a in sys.argv[1:] if a != '--mosaique']
+    MOSAIQUE = len(argv) != len(sys.argv) - 1
+    an = int(argv[0]) if argv else 1870
+    deps = argv[1:] or sorted(os.listdir(BASE))
+    print(f'  règle de fratrie : {"MOSAÏQUE (reste ∩ repli)" if MOSAIQUE else "historique (morceau entier)"}')
     debuts, bornes = charge_filiation()
     tot, aires, n = collections.Counter(), collections.Counter(), 0
     for dep in deps:

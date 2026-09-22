@@ -20,32 +20,86 @@ du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 
 ---
 
-## 0. AVERTISSEMENT — les scripts de rejeu sont périmés
+## 0. AVERTISSEMENT — le trou est comblé, il n'est pas éprouvé
 
-> **`rejouer_apres_rebuild.sh` s'arrête à `40_scission_circo.sql`.** Mesuré le
-> 2 septembre 2026 en lisant ses invocations réelles, pas ses commentaires.
+> **`rejouer_apres_rebuild.sh` va désormais jusqu'à `84`.** Complété le
+> 6 septembre 2026 : les vingt-deux étapes qui manquaient y sont, dans l'ordre
+> du § 1 c ci-dessous, avec leurs `-v`, leur `-1` là où le fichier le demande,
+> et les trois prérequis binaires. **Le § 1 c n'est plus une procédure ; c'est
+> une table de dépendances.**
 >
-> **Quatorze fichiers qui écrivent dans la base ne sont appelés par aucun
-> script** : `37`, `57`, `58`, `59`, `60`, `67`, `68`, `74`, `75`, `76`, `77`,
-> `79`, `81`, `82` — c'est-à-dire **tout le chantier 1943-1999** (les deux
-> jalons de recensement, le registre des actes, les salves de décrets, les deux
-> reports) **et la trame ANR**. Leurs traces sont pourtant en base : ils ont été
-> joués **à la main**, un par un.
+> **Ce qui n'est toujours pas vrai : que cela fonctionne.** Le script n'a pas
+> tourné. Il est vérifié hors base — `bash -n`, existence de chaque fichier
+> cité, et le contrôle croisé qui compte : *tout fichier `sql/[0-9]*.sql` qui
+> écrit dans la base est appelé par `rebuild.sh`, `load.sh`, `load_cog.sh` ou
+> ce script*. Les vingt-neuf qui restent hors chaîne sont tous en lecture seule
+> (§ 2). Mais **une chaîne ne se relit pas, elle se joue** : c'est la même
+> phrase qu'au 2 septembre, et elle vaut toujours.
 >
-> **Conséquence : le prochain `rebuild.sh` détruira tout cela, et le script ne
-> le remontera pas.** C'est la mécanique qui a défait `39_meurthe_1870.sql`
-> pendant quinze jours entre le 15 et le 30 août, appliquée cette fois à 1954, à
-> 1968, aux salves, au report arrière et à la trame ANR.
+> **Deux recettes propres à cette complétion**, à lire au premier passage :
 >
-> `37_reparer_encodage.sql` est un cas à part et plus ancien : le script annonce
-> en commentaire l'étape « COG 1999-2012 (22, 36, **37**, 23) » et délègue à
-> `load_cog.sh`, **qui ne joue que `22` et `23`**. Le fichier n'a donc jamais
-> été appelé par la chaîne, et le commentaire lui attribue en prime la création
-> de `noms_geofla`, qui est le fait de `19`. *Un commentaire qui décrit ce que
-> le code ne fait pas ne se dément jamais tout seul : la chaîne ne se plaint pas
-> d'un fichier qu'elle n'appelle pas.*
+> * `diag_passages.sql` doit trouver une trace pour **toutes** les étapes, `25`,
+>   `37` et `40` compris ;
+> * `85_conflit_38_79.sql`, joué sans `-v`, doit trouver **zéro** fraction à
+>   libérer. Il n'existe que parce que `79` a été joué après `38` hors de toute
+>   chaîne ; dans l'ordre du script, `38` passe avant et le § 5 de `79` écarte
+>   ces six atomes de lui-même. *S'il trouve quelque chose, c'est l'ordre du
+>   script qui est faux, pas `85`.*
+>
+> Ce que la complétion ajoute au constat du 2 septembre, sans le retirer :
+> **un quatrième prérequis ne vivait qu'en commentaire** — `anr_commune`, la
+> couche du GeoPackage ANR chargée par un `ogr2ogr` écrit dans l'en-tête de
+> `82` et dans `JOUER_82.md`, et par aucun script. Il en dépend plus que `82` :
+> `89`, `90`, `91` et `84` lèvent tous une `EXCEPTION` sans lui.
+>
+> ---
+>
+> **L'état d'avant, conservé — c'est lui qui dit pourquoi le comblement valait
+> une journée.** Le script s'arrêtait à `40_scission_circo.sql`, mesuré le
+> 2 septembre 2026 en lisant ses invocations réelles et non ses commentaires.
+> **Treize fichiers qui écrivent dans la base n'étaient appelés par aucun
+> script** : `57`, `58`, `59`, `60`, `67`, `68`, `74`, `75`, `76`, `77`, `79`,
+> `81`, `82` — tout le chantier 1943-1999 et la trame ANR — rejoints depuis par
+> `87` à `91`. Leurs traces étaient pourtant en base : ils avaient été joués
+> **à la main**, un par un.
+>
+> **Le prochain `rebuild.sh` aurait tout détruit sans que rien n'échoue.** La
+> base se serait reconstruite, plus petite, en silence. C'est la mécanique qui
+> a défait `39_meurthe_1870.sql` pendant quinze jours entre le 15 et le 30 août,
+> appliquée cette fois à 1954, 1968, aux salves, aux deux reports, à la trame
+> ANR et à la Seine entière.
+>
+> Ce que le 2 septembre change, et ce qu'il ne change pas : `38` et `39` ont
+> maintenant une trace, donc un `rebuild.sh` qui les emporte se **voit**
+> désormais dans `diag_passages.sql`. Il ne les remonte toujours pas pour
+> autant. Une trace signale une perte, elle ne la répare pas.
+>
+> **Trois manques ont été comblés dans le script le 2 septembre 2026**, et ils
+> avaient une seule et même cause : *un prérequis qui n'est écrit qu'en
+> commentaire est un prérequis absent.*
+>
+> * `37_reparer_encodage.sql` n'était appelé par rien. L'étape annonçait
+>   « COG 1999-2012 (22, 36, **37**, 23) » et déléguait à `load_cog.sh`, **qui
+>   ne joue que `22` et `23`** ; le commentaire lui attribuait en prime la
+>   création de `noms_geofla`, qui est le fait de `19`. Il est maintenant appelé
+>   à côté de `50`, avec `-v appliquer=1`.
+> * `25_pseudo_canton.sql` exige `geofla_canton`, que **rien ne chargeait** : la
+>   commande `ogr2ogr` ne vivait qu'en commentaire dans son en-tête. Elle est
+>   entrée dans la chaîne.
+> * `40_outremer.sql` exige `om_commune_src`, que produit `charger_outremer.sh`,
+>   **que rien n'appelait**. Le script est appelé avant lui, sous condition.
+>
+> *Un commentaire qui décrit ce que le code ne fait pas ne se dément jamais tout
+> seul : la chaîne ne se plaint pas d'un fichier qu'elle n'appelle pas.*
+>
+> **Et une conséquence qui vaut pour la lecture de tout ce document** : `25`
+> levait une `EXCEPTION`, et `set -euo pipefail` la propage. **La chaîne ne
+> pouvait donc pas dépasser `25`.** Tout ce qui porte une trace au-delà a été
+> joué à la main — c'est établi par l'état de la base, pas seulement soupçonné.
 >
 > Ce qui est en base se vérifie par `psql -d histgis -f sql/diag_passages.sql`.
+> **Ces trois correctifs, eux, ne sont vérifiés par rien tant que le script n'a
+> pas tourné** : une chaîne ne se relit pas, elle se joue.
 
 ---
 
@@ -80,8 +134,9 @@ sortie trop longue pour être relue.**
 | 9 | `19_noms_geofla.sql` | noms de communes, projection de `geofla_commune` | — | — |
 | 10 | `20_commune_moderne.sql` | chronologie communale 1943-2012 (`cm_*`) | — | — |
 | 11 | `21_atomes_modernes.sql` | atomes 1943-2012, crée `commune_moderne` | `atome_moderne_trace` | — |
-| 12 | `load_cog.sh` → `22`, `23` | 14 millésimes du COG, puis diagnostic | — | — |
+| 12 | `load_cog.sh` → `22`, `23` | 14 millésimes du COG (en `WIN1252`), puis diagnostic. **Ni `36` ni `37`**, contrairement à ce que l'étape annonçait jusqu'au 2 septembre | — | — |
 | 13 | `24_canton_moderne.sql` | cantons 1999-2012, atomes-fractions | `canton_moderne_trace` | — |
+| 13 bis | *(`ogr2ogr`)* | couche **CANTON de GEOFLA 2014** → `geofla_canton`, `-a_srs EPSG:2154`. Prérequis de `25` et de `26`. **N'était chargée par aucun script avant le 2 septembre** : elle ne vivait qu'en commentaire, et `25` s'arrêtait sur son garde-fou | — | — |
 | 14 | `25_pseudo_canton.sql` | pseudo-cantons de Marseille et Lyon | `pseudo_canton_trace` | — |
 | 15 | `27_circo_2012.sql` | circonscriptions de 2009 (2010-2013) | `circo_moderne_trace` | **`circo`** |
 | 16 | `28_circo_1986.sql` | circonscriptions de 1986 (1986-2010) | `circo1986_trace` | **`circo`** |
@@ -94,10 +149,13 @@ sortie trop longue pour être relue.**
 | 23 | `56_paris_circo_1876.sql` | Paris au quartier 1876-1941, remplace TRF-GIS | `paris_1876_trace` | `appliquer` |
 | 24 | `55_paris_circo_serie.sql` | Paris : 1863-1870 et 1941-1986 | `paris_serie_trace` | `appliquer` |
 | 25 | `32_marseille_geom.sql` | géométrie des cantons de Marseille | `marseille_trace` | — |
-| 26 | `40_outremer.sql` | espace séparé `om_*` (§ 3) | `om_trace` | `circo_om` |
-| 27 | `38_decret_1982_ain.sql` | décret de 1982, cantons de Bourg-en-Bresse | **AUCUNE** | — |
+| 25 bis ⟨si⟩ | `charger_outremer.sh` | les cinq lots GEOFLA d'outre-mer → `om_commune_src`, `om_canton_src`. Prérequis de `40`. **N'était appelé par rien avant le 2 septembre** | — | — |
+| 26 ⟨si⟩ | `40_outremer.sql` | espace séparé `om_*` (§ 3). Sauté proprement si les lots manquent : les tables `om_*` ne partagent rien avec la métropole | `om_trace` | `circo_om` |
+| 27 | `38_decret_1982_ain.sql` | décret de 1982, cantons de Bourg-en-Bresse | `p38_trace` | — |
 | 28 | `50_noms_perdus_trfgis.sql` | 4 noms détruits **dans la source** (U+FFFD) | `noms_perdus_trace` | `appliquer` |
-| 29 | `39_meurthe_1870.sql` | la Meurthe reprend le numéro 54 | **AUCUNE** | — |
+| 28 bis | `37_reparer_encodage.sql` | C1 de Windows-1252 lus en Latin-1 dans `unit.nom` et `unit_version.nom`. **Ici et non à l'étape COG** : il répare des tables qui n'existent pas encore à ce moment-là. Peut légitimement ne rien avoir à faire depuis que `load_cog.sh` lit en `WIN1252` | `encodage_trace` | **`appliquer`** |
+| 29 | `39_meurthe_1870.sql` | la Meurthe reprend le numéro 54 — **cantons seulement** | `p39_trace` | — |
+| 29 bis | `92_meurthe_circo.sql` | le même geste à l'étage **circo** : `L9901@1870` passe en 54. Sans lui, une unité reste en `99`, et la Meurthe de 1870 est coupée en deux — cantons dans le 54, circonscription dans un 99 sans cantons | `p92_trace` | — |
 | 30 | `41_retablissement.sql` | communes rétablies après 1999 — trois voies | `retablissement_trace` | — |
 | 31 | `42_rattachement_arriere.sql` | rattache le passé d'un atome existant. **Rend 0 cas** depuis que le garde-fou 6 de `15` résout les recodages : sa trace vide est l'état sain, pas une anomalie | `rattachement_arriere_trace` | — |
 | 32 | `44_absorption_ancienne.sql` | absorbées puis rétablies avant 1943 (Cherré) | `absorption_trace` | — |
@@ -105,16 +163,34 @@ sortie trop longue pour être relue.**
 | 34 | `47_circo_mere.sql` | circo de la mère HAC quand les voisins sont muets | `circo_mere_trace` | — |
 | 35 | `40_scission_circo.sql` | comble les trous circo par les voisins de canton. **En DERNIER**, après `46` : contrainte 5 | `scission_circo_trace` | — |
 
-### 1 c. APPELÉS PAR AUCUN SCRIPT — à jouer à la main, dans cet ordre
+### 1 c. LES ÉTAPES TARDIVES — entrées dans le script le 6 septembre 2026
 
-**C'est le trou du § 0.** Ces fichiers écrivent dans la base et aucune
-reconstruction ne les remonte. Tant que `rejouer_apres_rebuild.sh` n'est pas
-complété, **cette liste est la procédure**.
+**C'était le trou du § 0, et cette liste en était la procédure.** Elle ne l'est
+plus : `rejouer_apres_rebuild.sh` appelle désormais tout ce qui suit, dans cet
+ordre, à la suite de `40_scission_circo`. Le tableau reste, comme **table de
+dépendances** — c'est lui qui dit pourquoi l'ordre est celui-là, et ce que
+chaque fichier exige avant de partir.
+
+Cinq lignes s'y sont ajoutées depuis, écrites après le tableau d'origine et
+rangées dans le script à la place que leurs propres garde-fous imposent :
+
+| # | fichier | exige, et le dit par une `EXCEPTION` |
+|---|---|---|
+| s | `87_seine_canton_1954.sql` | le jalon `68` en base |
+| t | `88_seine_circo_1945_1967.sql` | `68` **et** `87` — son § 1 nomme le second |
+| u | `89_seine_annexees_1860.sql` | `anr_commune` **et** `atom_geom_anr`, donc `82` |
+| v | `90_seine_1848_banlieue.sql` | l'unité `L7501@1848` de `57`, et les onze de `89` |
+| w | `91_seine_1815_1870.sql` | les circos parisiennes de 1863 (`55`), `89`, et `68` |
+| x | `84_carte_partition.sql` | `82` — « PRÉREQUIS : jouer sql/82_anr_geom.sql » |
+
+`84` ne modifie aucune donnée : il pose des fonctions, une trace et une
+procédure, que `DROP SCHEMA` emporte comme le reste et que
+`cartes/export_web.py --partition` appelle. C'est à ce titre qu'il est dans la
+chaîne, et à aucun autre.
 
 | # | fichier | rôle | trace | `-v` |
 |---|---|---|---|---|
-| a | `37_reparer_encodage.sql` | CP1252 lu en Latin-1 : 1 975 valeurs, tous les `œ`. **À jouer juste après `22`** | `encodage_trace` | **`appliquer`** |
-| b | `57_paris_circo_1848.sql` | 1848-1852 : le département EST la circonscription | `paris_1848_trace` | **`appliquer`** |
+| a | `57_paris_circo_1848.sql` | 1848-1852 : le département EST la circonscription | `paris_1848_trace` | **`appliquer`** |
 | c | `58_cog1968_stage.sql` | dépôt et résolution du recensement de 1968. N'écrit pas dans `membership` | `c68_trace` | lancer depuis la RACINE |
 | d | `59_cog1968_membership.sql` | **JALON 1968** — 32 659 rattachements, 2 899 cantons | `c68_trace`, `c68_qualite` | `-1` |
 | e | `60_canton_forbach2.sql` | Forbach-II, canton que `59` délègue explicitement | `c60_trace` | — |
@@ -129,7 +205,19 @@ complété, **cette liste est la procédure**.
 | n | `77_transferts_dates.sql` | 66 transferts de commune, dates INSEE — des FAITS | `p77_trace`, `p77_qualite` | `-1` |
 | o | `79_report_1999_arriere.sql` | **REPORT ARRIÈRE** depuis 1999. Après `77`, jamais avant | `p79_trace`, `p79_qualite` | `-1` |
 | p | `81_report_1968_avant.sql` | **REPORT AVANT** depuis 1968. Après `79`, qu'il prend pour témoin | `p81_trace`, `p81_qualite` | `-1` |
+| p bis | `93_report_1940_1954.sql` | **1941-1953**, le dernier vide franc. Ne pose que là où 1940 et 1954 disent le même canton — deux bouts attestés, pas une absence de registre. Prérequis `67` et `68` ; indifférent à `79` et `81`, qui ne descendent pas sous 1968 | `p93_trace`, `p93_qualite` | `-1` |
 | q | `82_anr_geom.sql` | trame ANR datée, **à côté** de `atom_geom`. Hors chaîne par conception | `a82_trace` | `variantes` |
+| r | `85_conflit_38_79.sql` | **rend à `38` la fenêtre 1982-1999 que `79` occupe.** Instruit sans `-v`, corrige avec `appliquer=1`, se défait avec `defaire=1` | `p85_trace` | `appliquer`, `defaire` |
+
+**`85` n'existe que parce que `79` a été joué hors ordre**, et il n'est PAS dans
+le script. Le conflit qu'il répare est celui d'un report arrière posé APRÈS le
+décret qu'il recouvre : joué dans l'ordre — `38` en `1 b`, puis `79` en `o` —
+`79` écarte ces six atomes de lui-même, son § 5 n'écrivant que sur une fenêtre
+entièrement libre. **C'est devenu la recette de la complétion** : au premier
+passage complet, `85` joué sans `-v` doit trouver zéro fraction à libérer. S'il
+en trouve, c'est l'ordre du script qui est faux. Écrit le 5 septembre 2026,
+joué le même jour sur la base d'alors — où le conflit, lui, existait bel et
+bien.
 
 `64_composition_1815_stage.sql`, `70_report_1940_1954.sql` et
 `71_desaccords_report_geometrie.sql` sont en lecture seule et se lancent à la
@@ -198,9 +286,12 @@ de la reconstruction.
 | `78_report_1999_arriere_diag.sql` | mesure le report arrière avant de l'écrire. **Se lit après `79`** | — |
 | `80_report_1968_avant_diag.sql` | idem pour le report avant, et **porte la validation du registre** (§ 6 quinquies) | — |
 | `83_anr_ecart_couverture.sql` | pourquoi 486 atomes et non 40 — devenu le **troisième contrôle indépendant** | `date` |
-| `84_carte_partition.sql` | la trame nettoyée : sans trou ni superposition hors fractions. **Ne modifie rien** — que des fonctions, une trace et une procédure. Écrit le 2 septembre 2026, **jamais joué** | `date`, `dep` |
+| `84_carte_partition.sql` | la trame nettoyée : sans trou ni superposition hors fractions. **Ne modifie aucune donnée** — que des fonctions, une trace et une procédure ; il est à ce titre dans les deux listes, ici parce qu'on l'interroge, en `1 c` parce qu'un `DROP SCHEMA` emporte ses fonctions. Joué et contrôlé les 3, 5 et 6 septembre 2026 : anneau de voisinage réel, trappe du vide, règle mosaïque de fratrie, recouvrement 0,000 km² | `date`, `dep` |
+| `86_reprise_mosaique.sql` | compare les deux règles de partage d'une fratrie, l'en-vigueur et l'historique, toutes deux vivantes dans `84`. A servi à décider, sert à contrôler que la décision tient | `date` |
+| `diag_partition.sql` | interroge la trame nettoyée sans la recalculer — replis nommés, motifs d'arbitrage, atomes que rien ne dessine (§ 8) | `date` |
 | `diag_titre_composition.sql` | le titre d'un décret juge le découpage du JO | — |
 | `diag_passages.sql` | **quels fichiers sont réellement passés sur cette base** — l'inventaire des traces attendues contre ce que la base porte | — |
+| `diag_sans_geometrie.sql` | **les atomes que rien ne dessine, et l'unique échec de la reprise.** Sépare le défaut de chaîne de la limite de source par une colonne, et instruit La Guérinière. Ne recalcule PAS la partition — quelques secondes contre plusieurs minutes. Écrit le 5 septembre 2026, **jamais joué** | `date` |
 
 **`45` ne modifie rien, et c'est délibéré.** Corriger la base d'après HAC lui
 ferait perdre son indépendance — comme recopier Gay la ferait perdre au
@@ -229,8 +320,8 @@ même préfixe alors qu'ils n'ont rien à voir. À renuméroter.
 | `diag_marseille.sql` | **mort** — diagnostic ponctuel, remplacé par `31_marseille_inventaire.sql`. Aucun script ne l'appelle. |
 | `23_cog_diag.sql` | **mal placé** — c'est un diagnostic, mais `load_cog.sh` le joue en dernier et son `RAISE EXCEPTION` fait échouer tout le chargement. Un diagnostic ne devrait pas bloquer une construction. |
 | `43_circo_fraction.sql` | **conditionnel** — inutile dans une chaîne complète, indispensable après un rejeu isolé de `24`. |
-| `38_decret_1982_ain.sql` | **sans trace** — seul fichier qui pose des rattachements sans pouvoir les défaire. C'est lui qui a bloqué la reconstruction de `24`. |
-| `39_meurthe_1870.sql` | **sans trace, et ce n'est PAS sans risque** — cette ligne disait le contraire jusqu'au 2 septembre 2026. Il est idempotent, oui ; mais un `rebuild.sh` l'a défait le 15 août et **personne ne l'a su avant le 30**, parce que rien dans la base ne dit s'il est passé. L'idempotence protège du rejeu, pas de l'oubli. |
+| `38_decret_1982_ain.sql` | **doté d'une trace le 2 septembre 2026** (`p38_trace`, trois catégories distinctes). Il était jusque-là le seul fichier qui posait des rattachements sans pouvoir les défaire, et c'est lui qui a bloqué la reconstruction de `24`. Il **nomme désormais l'occupant** quand la fenêtre 1982-1999 est prise, au lieu de se taire. Éprouvé avec `39` par `sql/banc_38_39.sh` — six scénarios, dont les deux façons dont la fenêtre peut être prise. |
+| `39_meurthe_1870.sql` | **doté d'une trace le 2 septembre 2026** (`p39_trace`). Cette ligne disait « sans trace, et ce n'est PAS sans risque » : il est idempotent, oui ; mais un `rebuild.sh` l'a défait le 15 août et **personne ne l'a su avant le 30**, parce que rien dans la base ne disait s'il était passé. L'idempotence protège du rejeu, pas de l'oubli. Sa trace vise l'`unit_id` `99xx`, jamais le département `99` — sans quoi elle serait vide sur une base déjà conforme, et le diagnostic crierait au faux. |
 
 ### Trous à combler dans la chaîne elle-même
 
@@ -1129,7 +1220,17 @@ une recette qui contrôle une filiation ne périme pas.*
 `24` tournant avant ces fichiers, il crée leurs traces vides avec
 `IF NOT EXISTS` — chacun les crée de la même façon, rien n'est écrasé. Éprouvé
 au banc : le poseur est nommé, et la ligne sans trace (celle de `38`, dette du
-17 août) ressort bien comme telle.
+17 août) ressortait bien comme telle.
+
+**Depuis le 2 septembre 2026, `p38_trace` est de la partie**, et la recette
+compte ses lignes posées *comme ses lignes remontées* : `38` fait démarrer en
+1982 trois rattachements qui existaient déjà, ce qui les fait entrer dans le
+trou sans qu'aucune ligne soit créée. *Une trace qui ne dirait que les
+insertions laisserait orphelin ce que le fichier s'est contenté de déplacer.*
+Attention à la définition : `p38_trace` porte une colonne `avant` que les autres
+n'ont pas, et `CREATE TABLE IF NOT EXISTS` n'ajoute pas de colonne à une table
+qui existe déjà — les deux déclarations, celle de `24` et celle de `38`, doivent
+rester identiques.
 
 ### Piège d'écriture : `csv.writer` termine ses lignes en CRLF
 

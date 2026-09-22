@@ -128,6 +128,16 @@ ORDER  BY 2 DESC;
 \echo '    lui, comptait les rattachements exportés, ce qui est encore autre'
 \echo '    chose et ne se compare pas terme à terme.'
 \echo ''
+\echo '    LIBELLÉ DE LA DERNIÈRE LIGNE CORRIGÉ LE 5 SEPTEMBRE 2026. Il disait'
+\echo '    « vivants SANS aucune géométrie — les vrais absents », ce qui est'
+\echo '    faux : la requête compte les atomes ABSENTS DE `d84`, c''est-à-dire'
+\echo '    du RÉSULTAT de la partition. `diag_sans_geometrie.sql` cherche les'
+\echo '    vivants sans aucune géométrie — ni atom_geom, ni ANR à la date — et'
+\echo '    en trouve ZÉRO. Les 318 ont tous de quoi être dessinés ; ce qui leur'
+\echo '    manque est une FACE. C''est le § 8 qui les nomme, et c''est la même'
+\echo '    confusion que son titre portait jusqu''à ce jour, une section plus'
+\echo '    loin dans le même fichier.'
+\echo ''
 
 SELECT 'atomes vivants à la date' AS quoi, count(DISTINCT m.atom_id) AS n
 FROM   membership m WHERE m.periode @> :'date'::date
@@ -137,7 +147,7 @@ FROM   d84
 UNION ALL
 SELECT 'dont non-fraction', count(*) FROM d84 WHERE NOT fraction
 UNION ALL
-SELECT 'vivants SANS aucune géométrie — les vrais absents',
+SELECT 'vivants ABSENTS DU RÉSULTAT de la partition (≠ sans géométrie)',
        count(DISTINCT m.atom_id)
 FROM   membership m
 WHERE  m.periode @> :'date'::date
@@ -189,9 +199,27 @@ GROUP  BY 1
 ORDER  BY 2 DESC;
 
 \echo ''
-\echo '=== 8. Les atomes vivants que RIEN ne dessine =========================='
-\echo '    Ni ANR, ni reprise, ni GEOFLA 2011. Ce ne sont pas des trous ouverts'
-\echo '    par 84 — ils manquaient déjà — mais personne ne les avait comptés.'
+\echo '=== 8. Les atomes vivants que la PARTITION ne rend pas =================='
+\echo '    ATTENTION AU TITRE, CORRIGÉ LE 5 SEPTEMBRE 2026. Il disait « que'
+\echo '    RIEN ne dessine », et ajoutait « ce ne sont pas des trous ouverts'
+\echo '    par 84 — ils manquaient déjà ». **C''était faux, et mesuré tel** :'
+\echo '    `diag_sans_geometrie.sql` cherche les atomes vivants sans aucune'
+\echo '    géométrie — ni atom_geom, ni ANR à la date — et en trouve ZÉRO.'
+\echo ''
+\echo '    Ces atomes ont donc tous de quoi être dessinés. Ce qui leur manque,'
+\echo '    c''est une FACE : ils sont absents du résultat de la fonction, pas'
+\echo '    des tables qu''elle lit. L''arbitrage du § (d) donne chaque face à un'
+\echo '    seul propriétaire, et un polygone entièrement recouvert par un autre'
+\echo '    mieux classé — un repli sous un polygone ANR, typiquement une fille'
+\echo '    reportée en arrière par `11` posée sur sa mère intacte — perd tout.'
+\echo ''
+\echo '    *Une population définie par « absente du résultat d''une fonction »'
+\echo '    n''est pas celle définie par « absente des tables qu''elle lit ». Les'
+\echo '    deux se disent avec la même phrase française.*'
+\echo ''
+\echo '    La question utile est donc « à qui leur sol a-t-il été donné ? », et'
+\echo '    la requête est au § 6 de `diag_sans_geometrie.sql` : elle se colle'
+\echo '    ICI, dans cette session, où `d84` est encore vivante.'
 \echo '    Les vingt premiers, pour savoir de quoi il s''agit.'
 \echo ''
 
@@ -207,6 +235,48 @@ WHERE  m.periode @> :'date'::date
 GROUP  BY m.atom_id, a.insee_geofla, a.fraction, 4
 ORDER  BY 5, 4
 LIMIT  20;
+
+\echo ''
+\echo '=== 9. La couture entre départements, nommée paire par paire ============'
+\echo '    AJOUTÉ LE 5 SEPTEMBRE 2026, parce que la ligne a cessé de valoir'
+\echo '    zéro. Passe nationale du 2 septembre : 0,000 km². Passe nationale du'
+\echo '    5 septembre, mêmes atomes, mêmes reprises, même emprise au km² près :'
+\echo '    **0,019 km²**. Une seule chose a changé entre les deux, l''anneau de'
+\echo '    contexte du 3 septembre — et sa non-régression n''avait été vérifiée'
+\echo '    que département par département, c''est-à-dire là où cette ligne est'
+\echo '    SANS OBJET par construction.'
+\echo ''
+\echo '    *Une recette qu''on ne peut pas lire dans le cadre où l''on éprouve'
+\echo '    un correctif ne le contrôle pas — elle attend la passe nationale.*'
+\echo ''
+\echo '    Ce qui se lit ici : deux atomes de départements différents qui se'
+\echo '    recouvrent ont été arbitrés dans deux cadres, et la lisière n''est'
+\echo '    pas tombée du même côté. 1,9 ha au total, donc des lisières et non'
+\echo '    du territoire — mais c''est aussi ici que se verrait le corollaire'
+\echo '    de la reprise non découpable : une FRATRIE À CHEVAL sur deux'
+\echo '    départements recevant deux fois le même morceau. La colonne'
+\echo '    `deux_reprises` sépare les deux lectures. Un couple qui la porte à'
+\echo '    `t` et pèse plusieurs km² n''est pas une lisière : c''est le même sol'
+\echo '    donné deux fois.'
+\echo ''
+
+SELECT a.dep                                              AS dep_a,
+       coalesce(na.nom, '[' || a.insee_geofla || ']')     AS nom_a,
+       b.dep                                              AS dep_b,
+       coalesce(nb.nom, '[' || b.insee_geofla || ']')     AS nom_b,
+       round((ST_Area(ST_Intersection(a.geom, b.geom)) / 1e6)::numeric, 4)
+                                                          AS km2,
+       a.source || ' / ' || b.source                      AS sources,
+       (a.source = 'reprise' AND b.source = 'reprise')     AS deux_reprises
+FROM   d84 a
+JOIN   d84 b ON a.atom_id < b.atom_id
+            AND a.geom && b.geom
+            AND ST_Intersects(a.geom, b.geom)
+LEFT   JOIN noms_geofla na ON na.insee = a.insee_geofla
+LEFT   JOIN noms_geofla nb ON nb.insee = b.insee_geofla
+WHERE  NOT a.fraction AND NOT b.fraction
+  AND  a.dep IS DISTINCT FROM b.dep
+ORDER  BY 5 DESC;
 
 \echo ''
 \echo '--- Fin. La table temporaire `d84` reste disponible dans CETTE session :'

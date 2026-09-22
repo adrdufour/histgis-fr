@@ -47,9 +47,17 @@
 --    pourvoit pas alors reçoit la DIFFÉRENCE des deux polygones du voisin qui
 --    s'en sépare l'année de sa prochaine apparition chez ANR :
 --
---        territoire(fille, D) = voisin(D) − voisin(Y′)
+--        territoire(fille, D) = (voisin(D) − voisin(Y′)) ∩ repli(fille)
 --        Y′ = première année > D où ANR pourvoit la fille
 --        voisin = celui dont la chronologie ANR porte une coupure en Y′
+--        et le sol qu'aucun repli ne réclame va, ENTRE SŒURS, à celle qui
+--        partage avec lui le plus long bord.
+--
+--    L'intersection par le repli date du 5 septembre 2026 et corrige le seul
+--    défaut GRAVE que ce fichier ait porté : sans elle, six filles voisines se
+--    disputaient un morceau connexe indivisible, une seule était dessinée, et
+--    les cinq autres disparaissaient de la carte à somme conservée. Le § 4 bis
+--    porte la mesure et le § 8-7 l'histoire.
 --
 --    C'est la lecture symétrique de R1 : ANR écrit la fin du polygone de la
 --    mère et le début de celui de la fille sur le même millésime. Deux
@@ -100,9 +108,14 @@
 -- ressemble à un trou du dessin si on ne regarde qu'un département, et le
 -- comblement le donne au premier voisin venu. Le premier jet du banc offrait
 -- ainsi les 478 km² du département de la Seine à ses voisines. D'où l'anneau
--- de contexte du § 5 : les atomes des 20 km alentour entrent dans le treillis
--- et n'en sortent jamais. *Un trou n'est un trou que dans un cadre assez large
+-- de contexte du § 3 bis : les atomes LIMITROPHES entrent dans le treillis et
+-- n'en sortent jamais. *Un trou n'est un trou que dans un cadre assez large
 -- pour contenir ce qui le remplit.*
+--
+-- Cet anneau a d'abord été une boîte englobante élargie de 20 km, et cela a
+-- coûté deux passes nationales et un backend à 12,7 Go : une boîte n'épouse
+-- rien, et sur le Val-de-Marne elle prenait toute l'Île-de-France. Le § 3 bis
+-- raconte la correction.
 --
 -- CHIFFRES ATTENDUS, mesurés hors base par `sql/banc_84.py` sur l'export web
 -- (WGS84, grille 25 m — les COMPTES sont exacts, les km² approchés à ±0,3 %).
@@ -136,6 +149,23 @@
 -- analysé qu'au premier appel*, si bien qu'un chargement propre ne prouve rien
 -- d'une fonction procédurale — pour `82`, écrit en SQL pur, il valait contrôle.
 -- Reste à jouer : les autres départements et la passe nationale.
+--
+-- CORRIGÉ LE 5 SEPTEMBRE 2026 — LA TRAPPE DU VIDE. `partition_reprise` pouvait
+-- rendre un `MULTIPOLYGON EMPTY`, que `DELETE FROM t84_src WHERE geom IS NULL`
+-- ne voyait pas : deux atomes (L'Étang-Bertrand, Courbiac) entraient dans le
+-- treillis comme `source = 'reprise'`, ne dessinaient rien, et n'étaient
+-- comptés ni parmi les replis résiduels ni parmi les filles muettes. Un
+-- `HAVING NOT ST_IsEmpty(…)` et un `OR ST_IsEmpty(geom)` les font retomber sur
+-- R5, le comportement déclaré. **Ce correctif n'arbitre rien** — c'est ce qui
+-- le rendait applicable seul. À rejouer avant toute nouvelle passe : le fichier
+-- ne pose que des fonctions, les rejouer suffit.
+--
+-- CE QUE LE 5 SEPTEMBRE A AUSSI ÉTABLI, ET QUI RESTE OUVERT : la reprise n'est
+-- pas découpable par département, et une fratrie contiguë n'est pas dépliée.
+-- Les deux sont aux points 6 et 7 du § 8, avec leur mesure. Ne pas les lire
+-- comme des détails : le second dessine treize communes trop petites et autant
+-- de sœurs trop grandes, à somme conservée, donc invisible à toute recette de
+-- surface.
 -- ============================================================================
 
 \set ON_ERROR_STOP on
@@ -165,6 +195,8 @@ DROP FUNCTION IF EXISTS carte_partition(date, text, text);
 DROP FUNCTION IF EXISTS carte_partition_atome(date, text);
 DROP FUNCTION IF EXISTS partition_un_dep(date, text);
 DROP FUNCTION IF EXISTS partition_reprise(date, text);
+DROP FUNCTION IF EXISTS partition_reprise_morceau(date, text);
+DROP FUNCTION IF EXISTS partition_voisinage(date, text);
 DROP FUNCTION IF EXISTS check_partition(date, text);
 DROP PROCEDURE IF EXISTS partition_journalise(date, text);
 DROP TABLE IF EXISTS p84_trace;
@@ -186,37 +218,91 @@ COMMENT ON TABLE p84_trace IS
 -- § 3. L'anneau de contexte : les atomes à charger pour traiter `p_dep`.
 --      NULL = la France entière, et alors l'anneau n'a pas lieu d'être.
 --
---      20 km en Lambert-93. Ce n'est pas un seuil d'arbitrage — aucun résultat
---      n'en dépend — c'est une fenêtre de chargement : au-delà, un polygone ne
---      peut plus toucher le département. La plus grande commune de France
---      métropolitaine (Arles, 759 km²) tient dans un disque de 20 km de rayon.
+--      Le voisinage est calculé par `partition_voisinage` (§ 3 bis) : les
+--      atomes limitrophes, trouvés à l'index, et non une boîte englobante.
 -- ---------------------------------------------------------------------------
-CREATE FUNCTION partition_reprise(p_date date, p_dep text DEFAULT NULL)
+-- ---------------------------------------------------------------------------
+-- § 3 bis. LE VOISINAGE, ET POURQUOI CE N'EST PAS UNE BOÎTE.
+--
+--      La première version prenait `ST_Expand(ST_Extent(département), 20 km)`.
+--      Une boîte englobante n'épouse rien : sur l'Aisne elle ratissait une
+--      bonne part de la Picardie et de l'Île-de-France, et sur le Val-de-Marne
+--      — soixante-et-onze communes serrées — elle prenait toute la région.
+--
+--      Le prix, mesuré le 3 septembre 2026 : un backend PostgreSQL à
+--      **12,7 Go**, l'OOM killer du noyau qui abat le cluster, et deux passes
+--      nationales perdues. Les dix départements restés en rade au bout de la
+--      troisième passe — 67, 68, 69, 70, 91 à 95 — sont exactement les plus
+--      denses, c'est-à-dire ceux où la boîte se trompait le plus.
+--
+--      Le voisinage réel se demande à l'index : les atomes dont le polygone
+--      GEOFLA touche celui d'un atome du département, à cent mètres près.
+--      GEOFLA sert ici de RÉFÉRENTIEL DE POSITION, jamais de géométrie
+--      dessinée — c'est un pavage complet de la France, donc l'outil juste
+--      pour dire qui est voisin de qui, même quand le polygone finalement
+--      dessiné viendra d'ANR ou d'une reprise.
+--
+--      Les cent mètres ne sont pas un seuil d'arbitrage : deux communes
+--      limitrophes partagent leur frontière et seraient trouvées à zéro. C'est
+--      une marge contre les lisières de numérisation, et aucun résultat n'en
+--      dépend.
+--
+--      *Une boîte englobante est une approximation du voisinage qui empire
+--      avec la densité — c'est-à-dire là où l'on peut le moins se le permettre.*
+-- ---------------------------------------------------------------------------
+CREATE FUNCTION partition_voisinage(p_date date, p_dep text DEFAULT NULL)
+RETURNS TABLE (atom_id text)
+LANGUAGE sql STABLE AS $$
+    WITH dedans AS (
+        SELECT DISTINCT m.atom_id
+        FROM   membership m
+        JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+        WHERE  u.dep = p_dep AND m.periode @> p_date
+    ),
+    socle AS (
+        SELECT ag.geom
+        FROM   dedans d
+        JOIN   atom_geom ag ON ag.atom_id = d.atom_id
+    )
+    -- Le département lui-même, y compris les atomes sans polygone GEOFLA que
+    -- le test de voisinage ne pourrait pas trouver.
+    SELECT d.atom_id FROM dedans d
+    UNION
+    -- Puis l'anneau. La jointure part de `socle`, qui est petit, et sonde
+    -- l'index gist de `atom_geom` : quelques centaines de recherches indexées
+    -- au lieu d'un balayage des 38 000 polygones du pays.
+    SELECT DISTINCT v.atom_id
+    FROM   socle s
+    JOIN   atom_geom v ON ST_DWithin(v.geom, s.geom, 100);
+$$;
+
+COMMENT ON FUNCTION partition_voisinage(date, text) IS
+    'Le département et son anneau de contexte réel — les atomes limitrophes, pas une boîte englobante. Rend tout quand p_dep est NULL n''a pas de sens : appeler avec un département.';
+
+
+-- LA RÈGLE HISTORIQUE, CONSERVÉE COMME CODE VIVANT ET NON COMME COMMENTAIRE.
+-- Elle n'est appelée par rien : `partition_un_dep` appelle `partition_reprise`,
+-- définie plus bas, qui porte la règle en vigueur depuis le 5 septembre 2026.
+-- On la garde pour que la comparaison des deux reste jouable à toute date —
+-- c'est ce que fait `sql/86_reprise_mosaique.sql`. *Une règle remplacée dont on
+-- ne garde que la prose ne se compare plus à rien.*
+--
+-- SON DÉFAUT, EN UNE PHRASE : `ST_Dump` ne sépare que les composantes
+-- DÉCONNECTÉES, donc six filles voisines ne font qu'un morceau, `DISTINCT ON`
+-- le donne à une seule, et les cinq autres ne sont pas dessinées.
+CREATE FUNCTION partition_reprise_morceau(p_date date, p_dep text DEFAULT NULL)
 RETURNS TABLE (atom_id text, geom geometry, mere_id text, an_reprise int,
                fratrie int)
 LANGUAGE sql STABLE AS $$
-    WITH cadre AS (
-        -- ST_SetSRID est obligatoire : `ST_Extent` rend un box2d, et un box2d
-        -- casté en geometry perd son SRID. Sans lui, `ST_Intersects` refuse la
-        -- comparaison — panne muette au premier appel avec un département.
-        SELECT CASE WHEN p_dep IS NULL THEN NULL
-               ELSE ST_Expand(ST_SetSRID(ST_Extent(ag.geom)::geometry, 2154),
-                              20000) END AS boite
-        FROM   membership m
-        JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
-        LEFT   JOIN atom_geom ag ON ag.atom_id = m.atom_id
-        WHERE  m.periode @> p_date
-          AND  (p_dep IS NULL OR u.dep = p_dep)
-    ),
+    WITH proches AS (SELECT atom_id FROM partition_voisinage(p_date, p_dep)),
     -- Les atomes vivants à la date, dans le cadre.
     vivant AS (
         SELECT DISTINCT m.atom_id, a.fraction
         FROM   membership m
         JOIN   atom a ON a.atom_id = m.atom_id
-        LEFT   JOIN atom_geom ag ON ag.atom_id = m.atom_id
-        CROSS  JOIN cadre c
         WHERE  m.periode @> p_date
-          AND  (c.boite IS NULL OR ag.geom IS NULL OR ST_Intersects(ag.geom, c.boite))
+          AND  (p_dep IS NULL
+                OR m.atom_id IN (SELECT atom_id FROM proches))
     ),
     -- Ceux qu'ANR ne pourvoit pas à cette date, et qui ont un repli pour dire
     -- où ils sont. Les fractions sont hors sujet : ANR ne les pourvoit jamais.
@@ -304,17 +390,213 @@ LANGUAGE sql STABLE AS $$
                   ST_Area(ST_Intersection(r.g_repli, mo.g)) DESC,
                   me.atom_id
     )
+    -- LE `HAVING` FERME UNE TRAPPE, ET N'ARBITRE RIEN. Quand tous les morceaux
+    -- attribués à un atome sont vides — cas mesuré le 5 septembre 2026 sur
+    -- L'Étang-Bertrand (13202) et Courbiac (10603) —, l'union rend un
+    -- `MULTIPOLYGON EMPTY`, qui n'est PAS `NULL`. L'atome sortait donc d'ici
+    -- comme servi, comptait `source = 'reprise'` au § (a), n'apparaissait ni
+    -- dans les replis résiduels ni dans les muets, et ne dessinait rien : il
+    -- était invisible aux deux comptes à la fois.
+    --
+    -- L'écarter ici le fait retomber sur le `coalesce` du § (a), donc sur son
+    -- polygone GEOFLA — R5, le comportement DÉCLARÉ. Rien n'est inventé, une
+    -- fille muette redevient comptable.
+    --
+    -- *Un test `IS NULL` sur une géométrie ne teste pas l'absence de géométrie :
+    -- PostGIS distingue « pas de valeur » de « valeur vide », et seul le premier
+    -- se voit.* Le `NOT ST_IsEmpty(NULL)` valant NULL, un `NULL` égaré serait
+    -- écarté par la même ligne — c'est voulu.
     SELECT a.atom_id,
            ST_Multi(ST_CollectionExtract(ST_UnaryUnion(ST_Collect(a.g)), 3)),
            max(a.mere_id),
            extract(year FROM max(a.d_reprise))::int,
            max(a.fratrie)::int
     FROM   attribue a
-    GROUP  BY a.atom_id;
+    GROUP  BY a.atom_id
+    HAVING NOT ST_IsEmpty(ST_CollectionExtract(
+               ST_UnaryUnion(ST_Collect(a.g)), 3));
+$$;
+
+COMMENT ON FUNCTION partition_reprise_morceau(date, text) IS
+    'RÈGLE HISTORIQUE, plus appelée : le morceau connexe entier va à la fille dont le repli le recouvre le plus. Conservée pour comparaison (sql/86_reprise_mosaique.sql).';
+
+
+-- ---------------------------------------------------------------------------
+-- § 4 bis. LA RÈGLE EN VIGUEUR DEPUIS LE 5 SEPTEMBRE 2026 — la mosaïque.
+--
+--      Tout est identique à la précédente jusqu'à `diff` compris. Seule
+--      l'attribution change, et elle se raccourcit : plus de dépliage, plus de
+--      numérotation de morceaux, plus de `DISTINCT ON` sur un morceau.
+--
+--          AVANT   le morceau connexe entier à la fille dont le repli le
+--                  recouvre le plus ;
+--          APRÈS   chaque fille reçoit `reste ∩ son repli`, puis ce qu'aucun
+--                  repli ne réclame va, ENTRE SŒURS, à celle qui partage le
+--                  plus long bord avec lui.
+--
+--      CE QUI L'A AUTORISÉE, mesuré avant d'être écrit : la somme des replis
+--      des sœurs reproduit le morceau à moins d'un pour cent (73,793 contre
+--      73,518 pour Tournon-d'Agenais ; 18,942 contre 19,080 pour Bricquebec).
+--      La mosaïque des replis PAVE le territoire à partager, elle ne le devine
+--      pas. Le repli reste un indice de POSITION et jamais une mesure de
+--      surface — ce que la règle précédente affirmait déjà de lui. Ni seuil, ni
+--      proportion, ni ligne tracée à la main.
+--
+--      ET LE SECOND TEMPS N'EST PAS UNE RÈGLE DE PLUS. La mosaïque nue laisse
+--      **559,28 km², 10,22 %** du sol sans propriétaire ; le treillis les
+--      comblerait au § (e), mais au profit de voisins ÉTRANGERS à la fratrie,
+--      et le comblement national vaut 33 km² sur 23 départements — le
+--      quintupler pour réparer autre chose serait déplacer le problème. Le
+--      comblement est donc joué d'abord entre sœurs, avec la règle du § (e)
+--      mot pour mot. *Une règle existante rendue à la portée où elle a un sens
+--      n'est pas une règle nouvelle.*
+--
+--      MESURÉ EN BASE LE 5 SEPTEMBRE 2026 (`sql/86_reprise_mosaique.sql`) :
+--
+--        servies ................. 435  →  447   (+12, les muettes connues)
+--        sol repris, en union .... 5 469,9  →  5 469,9 km²   INCHANGÉ
+--        reliquat sans maître .... 559,280  →  0,000 km²
+--        Tournon-d'Agenais ....... 1 fille dessinée  →  6, somme 73,518 exacte
+--        Bricquebec .............. 1  →  2, somme 19,080 exacte
+--
+--      ET SUR LA CARTE, passe nationale de `check_partition` le même jour —
+--      c'est la seule mesure qui fasse foi, la reprise n'étant que l'entrée du
+--      treillis :
+--
+--        atomes dessinés ............. 38 129  →  38 142   (+13)
+--        dont repris ..................   433  →     447
+--        dont repli résiduel ..........    84  →      83
+--        recouvrement hors fraction .. 0,000  →  0,000 km²   LE CONTRÔLE TIENT
+--        couture entre départements .. 0,019  →  0,019 km²
+--        emprise hors fraction ....... 548 576 → 548 576 km²
+--        géométries invalides .........     0  →       0
+--
+--      **Les treize filles muettes sont sur la carte**, et les 5,3 km² de
+--      prétentions concurrentes ont bien été absorbés par le `departage` : le
+--      recouvrement reste nul, l'emprise ne bouge pas d'un km². Aucun sol n'a
+--      été créé — treize communes ont cessé d'être dessinées sous le nom d'une
+--      sœur.
+--
+--      LE SEUL PRIX, ET IL EST DÉCLARÉ : la somme des aires ligne à ligne vaut
+--      5 475,2 contre 5 469,9 en union, soit **5,3 km² (0,097 %) où deux sœurs
+--      réclament le même sol**. C'est le défaut connu des replis qui se
+--      recouvrent, et il n'est pas tranché ici : le treillis du § (d) donne
+--      chaque face à un seul propriétaire, par `departage`, qui est
+--      déterministe et déjà déclaré. *Une règle qui produit des prétentions n'a
+--      pas à les départager quand l'étape suivante est faite pour ça.*
+-- ---------------------------------------------------------------------------
+CREATE FUNCTION partition_reprise(p_date date, p_dep text DEFAULT NULL)
+RETURNS TABLE (atom_id text, geom geometry, mere_id text, an_reprise int,
+               fratrie int)
+LANGUAGE sql STABLE AS $$
+    WITH proches AS (SELECT atom_id FROM partition_voisinage(p_date, p_dep)),
+    vivant AS (
+        SELECT DISTINCT m.atom_id, a.fraction
+        FROM   membership m
+        JOIN   atom a ON a.atom_id = m.atom_id
+        WHERE  m.periode @> p_date
+          AND  (p_dep IS NULL OR m.atom_id IN (SELECT atom_id FROM proches))
+    ),
+    manquant AS (
+        SELECT v.atom_id, ag.geom AS g_repli
+        FROM   vivant v
+        JOIN   atom_geom ag ON ag.atom_id = v.atom_id
+        WHERE  NOT v.fraction
+          AND  NOT EXISTS (SELECT 1 FROM atom_geom_anr g
+                           WHERE g.atom_id = v.atom_id AND g.periode @> p_date)
+    ),
+    reprise AS (
+        SELECT mq.atom_id, mq.g_repli, min(lower(g.periode)) AS d_reprise
+        FROM   manquant mq
+        JOIN   atom_geom_anr g ON g.atom_id = mq.atom_id
+                              AND lower(g.periode) > p_date
+        GROUP  BY mq.atom_id, mq.g_repli
+    ),
+    mere AS (
+        SELECT DISTINCT ON (r.atom_id)
+               r.atom_id, r.d_reprise, gb.atom_id AS mere_id,
+               gb.geom AS g_avant, gm.geom AS g_apres
+        FROM   reprise r
+        JOIN   atom_geom_anr gb ON gb.periode @> p_date
+                               AND gb.atom_id <> r.atom_id
+                               AND ST_Intersects(gb.geom, r.g_repli)
+        JOIN   atom_geom_anr gm ON gm.atom_id = gb.atom_id
+                               AND lower(gm.periode) = r.d_reprise
+        ORDER  BY r.atom_id,
+                  ST_Area(ST_Intersection(gb.geom, r.g_repli)) DESC,
+                  gb.atom_id
+    ),
+    diff AS (
+        SELECT m.mere_id, m.d_reprise, count(*)::int AS fratrie,
+               ST_CollectionExtract(
+                   ST_Difference((array_agg(m.g_avant))[1],
+                                 (array_agg(m.g_apres))[1]), 3) AS reste
+        FROM   mere m
+        GROUP  BY m.mere_id, m.d_reprise
+    ),
+    -- Premier temps : chaque fille prend ce que SON repli couvre dans le reste.
+    -- Une fratrie contiguë cesse d'être un cas particulier — on ne partage plus
+    -- des morceaux, on partage du sol.
+    part AS (
+        SELECT me.atom_id, d.mere_id, d.d_reprise, d.fratrie, d.reste,
+               ST_CollectionExtract(
+                   ST_Intersection(d.reste, r.g_repli), 3) AS g
+        FROM   diff d
+        JOIN   mere me ON me.mere_id = d.mere_id AND me.d_reprise = d.d_reprise
+        JOIN   reprise r ON r.atom_id = me.atom_id
+    ),
+    -- Second temps : le sol qu'aucun repli ne réclame, à la sœur qui partage
+    -- avec lui le plus long bord. `ST_Distance` départage quand une composante
+    -- ne touche aucune sœur ; `atom_id` en dernier pour que le résultat ne
+    -- dépende pas de l'ordre du planificateur. Le `row_number` est là parce
+    -- qu'un `DISTINCT ON` sur une géométrie s'appuierait sur l'opérateur `=` de
+    -- PostGIS, dont la sémantique a changé entre versions — même précaution
+    -- qu'au `mid` de la règle précédente.
+    reliquat AS (
+        SELECT p.mere_id, p.d_reprise,
+               (ST_Dump(ST_CollectionExtract(
+                   ST_Difference((array_agg(p.reste))[1],
+                                 ST_UnaryUnion(ST_Collect(p.g))), 3))).geom AS g
+        FROM   part p
+        GROUP  BY p.mere_id, p.d_reprise
+    ),
+    rid AS (SELECT row_number() OVER () AS rid, r.* FROM reliquat r),
+    comble AS (
+        SELECT DISTINCT ON (x.rid) x.rid, x.g, p.atom_id
+        FROM   rid x
+        JOIN   part p ON p.mere_id = x.mere_id AND p.d_reprise = x.d_reprise
+        WHERE  NOT ST_IsEmpty(p.g)
+        ORDER  BY x.rid,
+                  ST_Length(ST_Intersection(ST_Boundary(x.g),
+                                            ST_Boundary(p.g))) DESC,
+                  ST_Distance(x.g, p.g) ASC,
+                  p.atom_id
+    ),
+    tout AS (
+        SELECT p.atom_id, p.mere_id, p.d_reprise, p.fratrie, p.g
+        FROM   part p WHERE NOT ST_IsEmpty(p.g)
+        UNION ALL
+        SELECT c.atom_id, p.mere_id, p.d_reprise, p.fratrie, c.g
+        FROM   comble c JOIN part p ON p.atom_id = c.atom_id
+    )
+    -- Le `HAVING` reste, et il garde son rôle : une fille dont le repli ne
+    -- touche pas le reste — le piège de Villieu-Loyes-Mollon — ne reçoit rien
+    -- et retombe sur R5, le comportement déclaré, au lieu d'entrer dans le
+    -- treillis avec un polygone qui ne borde rien.
+    SELECT t.atom_id,
+           ST_Multi(ST_CollectionExtract(
+               ST_UnaryUnion(ST_Collect(t.g)), 3)),
+           max(t.mere_id),
+           extract(year FROM max(t.d_reprise))::int,
+           max(t.fratrie)::int
+    FROM   tout t
+    GROUP  BY t.atom_id
+    HAVING NOT ST_IsEmpty(ST_CollectionExtract(
+               ST_UnaryUnion(ST_Collect(t.g)), 3));
 $$;
 
 COMMENT ON FUNCTION partition_reprise(date, text) IS
-    'La reprise : territoire(fille, D) = voisin(D) − voisin(Y′). Ne rend que les atomes repris ; les autres gardent ce que 82 leur donne.';
+    'La reprise : territoire(fille, D) = (voisin(D) − voisin(Y′)) ∩ repli(fille), le reliquat allant à la sœur au plus long bord. Règle en vigueur depuis le 5 septembre 2026.';
 
 -- ---------------------------------------------------------------------------
 -- § 4-5. Le treillis, l'arbitrage, le comblement.
@@ -338,11 +620,29 @@ COMMENT ON FUNCTION partition_reprise(date, text) IS
 -- planaire coûte en n log n dans le meilleur cas et bien davantage quand les
 -- arêtes se croisent, et rien dans le résultat ne le justifie — un atome ne
 -- dispute jamais une face à un autre situé à cent kilomètres. Le découpage par
--- département avec anneau de contexte rend EXACTEMENT le même dessin, puisque
+-- département avec anneau de contexte rend EXACTEMENT le même TREILLIS, puisque
 -- l'anneau contient tout ce qui peut toucher le département.
 --
 -- *Une opération globale qui n'a que des effets locaux doit être découpée ;
 -- le seul travail est de choisir un cadre plus large que la portée des effets.*
+--
+-- ET CE PARAGRAPHE A DIT « LE MÊME DESSIN » JUSQU'AU 5 SEPTEMBRE 2026, CE QUI
+-- EST FAUX. Le treillis est découpable ; LA REPRISE NE L'EST PAS. Dans
+-- `partition_reprise`, le bloc `vivant` est filtré par le département et le
+-- bloc `mere` interroge `atom_geom_anr` sans restriction : à l'échelle d'un
+-- département, moins de filles concourent pour le même morceau, et une fille
+-- qui perd au national gagne en local. Mesuré le 5 septembre : 13 filles
+-- muettes au national, 1 seule vue par la carte, qui boucle par département.
+--
+-- *Une opération n'est découpable que si ses effets sont locaux. Le treillis
+-- l'est, un arbitrage entre prétendants ne l'est pas, et les deux vivaient dans
+-- ce fichier sous la même justification.*
+--
+-- Corollaire non résolu, et plus gênant que l'écart de comptage : une fratrie à
+-- cheval sur deux départements peut se voir attribuer le même morceau deux
+-- fois, une fois dans chaque passe. La ligne « couture entre départements » du
+-- § 7 est exactement l'endroit où cela se lirait — elle a été écrite pour
+-- surveiller le treillis, elle surveille aussi ceci.
 CREATE FUNCTION partition_un_dep(p_date date, p_dep text)
 RETURNS TABLE (atom_id text, geom geometry(MultiPolygon, 2154),
                source text, motif text, dedans boolean)
@@ -350,7 +650,7 @@ LANGUAGE plpgsql VOLATILE AS $$
 -- `RETURNS TABLE` déclare `atom_id`, `geom`, `source`, `motif` et `dedans`
 -- comme des VARIABLES PL/pgSQL, et les tables temporaires ci-dessous portent
 -- des colonnes des mêmes noms. Sans cette directive, la moindre référence non
--- qualifiée — `DELETE FROM t84_src WHERE geom IS NULL` — échoue à l'exécution
+-- qualifiée — `DELETE FROM t84_src WHERE geom IS NULL OR …` — échoue à l'exécution
 -- sur « column reference is ambiguous », et pas au chargement du fichier : le
 -- corps d'une fonction PL/pgSQL n'est analysé qu'au premier appel.
 --
@@ -383,15 +683,7 @@ BEGIN
     -- (a) La source : ANR, la reprise, le repli — un polygone par atome.
     DROP TABLE IF EXISTS t84_src;
     CREATE TEMP TABLE t84_src ON COMMIT DROP AS
-    WITH cadre AS (
-        SELECT CASE WHEN p_dep IS NULL THEN NULL
-               ELSE ST_Expand(ST_SetSRID(ST_Extent(ag.geom)::geometry, 2154),
-                              20000) END AS boite
-        FROM   membership m
-        JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
-        LEFT   JOIN atom_geom ag ON ag.atom_id = m.atom_id
-        WHERE  m.periode @> p_date AND (p_dep IS NULL OR u.dep = p_dep)
-    ),
+    WITH proches AS (SELECT atom_id FROM partition_voisinage(p_date, p_dep)),
     -- `dedans` sépare le département demandé de son anneau de contexte : le
     -- contexte tient la topologie et ne sort jamais du résultat.
     vivant AS (
@@ -400,11 +692,9 @@ BEGIN
         FROM   membership m
         JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
         JOIN   atom a ON a.atom_id = m.atom_id
-        LEFT   JOIN atom_geom ag ON ag.atom_id = m.atom_id
-        CROSS  JOIN cadre c
         WHERE  m.periode @> p_date
-          AND  (c.boite IS NULL OR ag.geom IS NULL
-                OR ST_Intersects(ag.geom, c.boite))
+          AND  (p_dep IS NULL
+                OR m.atom_id IN (SELECT atom_id FROM proches))
         GROUP  BY m.atom_id, a.fraction
     ),
     rep AS (SELECT * FROM t84_rep)
@@ -422,7 +712,19 @@ BEGIN
            ON ga.atom_id = v.atom_id AND ga.periode @> p_date
     LEFT   JOIN atom_geom ag ON ag.atom_id = v.atom_id;
 
-    DELETE FROM t84_src WHERE geom IS NULL;
+    -- Le second verrou de la même trappe, et il ne fait pas double emploi : le
+    -- `HAVING` de `partition_reprise` écarte les vides QU'ELLE produit, celui-ci
+    -- écarte tous les autres, d'où qu'ils viennent. Un polygone vide entre dans
+    -- le treillis, ne borde rien, ne gagne aucune face et disparaît sans un mot
+    -- — il n'est même pas compté comme atome sans face.
+    --
+    -- CE QU'IL FAUT SAVOIR AVANT DE S'EN FÉLICITER : cette ligne SUPPRIME, elle
+    -- ne fait pas retomber sur le repli. Le `coalesce` ci-dessus a déjà choisi
+    -- sa source, et un `atom_geom_anr` vide serait pris par lui avant que le
+    -- repli ait sa chance. Écarté ici, un tel atome deviendrait absent plutôt
+    -- que fantôme — mieux, mais pas encore juste. Aucun cas n'est connu à ce
+    -- jour ; s'il en paraît un, le remède est dans le `coalesce`, pas ici.
+    DELETE FROM t84_src WHERE geom IS NULL OR ST_IsEmpty(geom);
 
     -- La mère se réduit à ce qu'elle garde. Sans cela, le treillis verrait la
     -- fille ET sa mère revendiquer le même sol, et `source_datee` donnerait le
@@ -684,10 +986,18 @@ COMMENT ON FUNCTION carte_partition(date, text, text) IS
 --
 -- D'où la table temporaire indexée ci-dessous, et le `ST_Intersection` calculé
 -- une seule fois par paire — l'autre moitié du même § 7 de `82`.
+-- `SET search_path` porté par la fonction elle-même, ajouté le 22 septembre
+-- 2026 : appelée par `psql -c "SELECT * FROM histgis.check_...()"`, elle
+-- s'exécutait avec le search_path de la SESSION, et ses appels non qualifiés
+-- ne résolvaient que sur `histgis`, où le chemin avait été posé à la main
+-- une fois, hors de tout script. Sur `histgis_essai` : « function ... does
+-- not exist ». Une recette ne doit pas dépendre du réglage de qui la lance.
 CREATE FUNCTION check_partition(p_date date DEFAULT '1870-12-01',
                                 p_dep text DEFAULT NULL)
 RETURNS TABLE (controle text, valeur numeric, attendu text)
-LANGUAGE plpgsql VOLATILE AS $$
+LANGUAGE plpgsql VOLATILE
+SET search_path = histgis, public
+AS $$
 #variable_conflict use_column
 BEGIN
     -- `DISTINCT ON` : un atome rattaché à des unités de deux départements
@@ -711,16 +1021,19 @@ BEGIN
     ANALYZE t84_chk;
 
     RETURN QUERY
+    -- ATTENDUS REMESURÉS LE 5 SEPTEMBRE 2026, passe nationale, règle mosaïque.
+    -- Les valeurs par département datent d'avant et sont signalées comme
+    -- telles : elles n'ont pas été rejouées une à une.
     SELECT 'atomes dessinés', count(*)::numeric,
-           '38 331 à 1870, France entière ; 01 : 458 · 12 : 306 · 78 : 692'
+           'France 38 142 au 5 sept. 2026 (38 129 avant la mosaïque) ; av. mosaïque 01 : 458 · 12 : 306 · 78 : 692'
     FROM   t84_chk
     UNION ALL
     SELECT 'dont repris par différence', count(*)::numeric,
-           '01 : 7 · 12 : 19 · 78 : 7 · France 432 au banc'
+           'France 447 au 5 sept. 2026, contre 433 avant la mosaïque ; av. mosaïque 01 : 7 · 12 : 19 · 78 : 7'
     FROM   t84_chk WHERE source = 'reprise'
     UNION ALL
     SELECT 'dont repli GEOFLA résiduel', count(*)::numeric,
-           '01 : 0 · 12 : 3 · 78 : 0 · France 111 au banc. Les nommer : § 8'
+           'France 83 au 5 sept. 2026, contre 84 avant la mosaïque. Les nommer : § 8'
     FROM   t84_chk WHERE source = 'repli'
     UNION ALL
     SELECT 'recouvrement hors fraction, km²',
@@ -747,7 +1060,7 @@ BEGIN
     SELECT 'dont couture entre départements, km²',
            round((coalesce(sum(s.aire) FILTER (WHERE NOT s.meme_dep), 0)
                   / 1e6)::numeric, 3),
-           'nul ou négligeable ; sans objet sur un seul département'
+           '0,019 les 3 et 5 sept. 2026 ; 0,000 le 2, avant l''anneau réel. Sans objet sur un seul département'
     FROM  (SELECT ST_Area(ST_Intersection(a.geom, b.geom)) AS aire,
                   (a.dep IS NOT DISTINCT FROM b.dep) AS meme_dep
              FROM t84_chk a
@@ -774,7 +1087,9 @@ COMMENT ON FUNCTION check_partition(date, text) IS
 -- plusieurs fois : la table garde l'historique, elle ne le remplace pas.
 CREATE PROCEDURE partition_journalise(p_date date DEFAULT '1870-01-01',
                                       p_dep text DEFAULT NULL)
-LANGUAGE sql AS $$
+LANGUAGE sql
+SET search_path = histgis, public      -- même motif que check_partition
+AS $$
     INSERT INTO p84_trace (p_date, dep, quoi, n, km2, note)
     SELECT p_date, p_dep, c.controle,
            CASE WHEN c.controle LIKE '%km²' THEN NULL ELSE c.valeur::bigint END,
@@ -827,6 +1142,56 @@ COMMENT ON PROCEDURE partition_journalise(date, text) IS
 --      `coalesce(ga.geom, ag.geom)`, la carte web garde ses coutures. Le
 --      branchement est une étape à part, pour que la trame nettoyée puisse
 --      être comparée à l'ancienne avant de la remplacer.
+--
+--   6. LA REPRISE N'EST PAS DÉCOUPABLE PAR DÉPARTEMENT, et le fichier l'a
+--      affirmé pendant trois jours — voir l'en-tête de `partition_un_dep`.
+--      Le treillis l'est, l'arbitrage entre prétendants ne l'est pas. Tant que
+--      le bloc `mere` de `partition_reprise` ignore `p_dep`, la carte voit
+--      moins de filles muettes que la France entière (1 contre 13 à 1870), et
+--      une fratrie à cheval sur deux départements peut recevoir deux fois le
+--      même morceau. À mesurer sur la ligne « couture entre départements »
+--      AVANT de toucher à quoi que ce soit : c'est peut-être nul.
+--
+--   7. UNE FRATRIE CONTIGUË N'ÉTAIT PAS DÉPLIÉE — **CORRIGÉ LE 5 SEPTEMBRE
+--      2026**, la règle en vigueur étant désormais celle du § 4 bis. Ce qui
+--      suit décrit le défaut tel qu'il a été trouvé, et reste la seule raison
+--      pour laquelle `partition_reprise_morceau` existe encore.
+--      L'angle mort de la règle d'alors : `ST_Dump` ne sépare que les composantes DÉCONNECTÉES : deux
+--      filles voisines nées du même millésime — La Guérinière et L'Épine sur
+--      Noirmoutier, les six de Tournon-d'Agenais — se disputent un seul
+--      morceau, `DISTINCT ON (mid)` le donne à une seule, et **la sœur servie
+--      est dessinée trop grande** (L'Épine reçoit 16,4 km² pour un repli de
+--      8,7 ; Bourlens 73,5 pour 15,6). Mesuré le 5 septembre : 13 muettes,
+--      ~158 km². Aucune recette ne l'attrapait, LA SOMME ÉTANT CONSERVÉE.
+--      Partager un morceau connexe au prorata serait un SEUIL dans un
+--      algorithme qui revendique de n'en avoir aucun : à décider en le disant,
+--      jamais en silence. Le § 7 g de `sql/diag_sans_geometrie.sql` porte la
+--      mesure et la liste nominative.
+--
+--      MESURÉ DE BOUT EN BOUT LE MÊME JOUR, SUR LA CARTE ET NON SUR LA RÈGLE
+--      (`sql/diag_fratrie_carte2.sql`) : des six filles de Tournon-d'Agenais,
+--      **une seule est dessinée**. Bourlens garde 73,518 km² pour un repli de
+--      15,578 ; Anthé, Cazideroque, Thézac, Masquières et Courbiac ne gagnent
+--      aucune face et SORTENT DU RÉSULTAT — elles rejoignent les 318 du § 8 de
+--      `diag_partition.sql`. Idem pour L'Étang-Bertrand face à Rocheville.
+--      66,74 km², six communes, et 94,956 − 73,518 = 21,438 chez la mère : la
+--      somme est conservée au km² près. *Un défaut qui conserve la somme ne se
+--      trouve pas en pesant ; il faut compter les objets, pas mesurer le tas.*
+--
+--      ET LE CORRECTIF EST DÉCIDABLE, ce qui n'était pas acquis. La somme des
+--      replis des sœurs reproduit le morceau à moins d'un pour cent — 73,793
+--      contre 73,518, 18,942 contre 19,080. **La mosaïque des replis pave le
+--      territoire à partager.** Donner chaque face à la sœur dont le repli la
+--      recouvre n'invente donc aucune ligne : c'est la règle déjà écrite plus
+--      haut — « le repli redevient ce qu'il sait faire, un indice de position,
+--      jamais une mesure de surface » — appliquée à la FACE au lieu du MORCEAU.
+--      Ce n'en est pas moins un changement de règle : il se décide en le
+--      disant, et s'éprouve à `sql/banc_84.py` avant la base.
+--
+--      Les mesures : `diag_reprise_nulle.sql` donne la distribution — 4
+--      reprises sous 1 m², 540 au-dessus de 1 km², RIEN entre les deux, six
+--      ordres de grandeur vides ; `diag_fratrie_carte.sql` et son second
+--      volet donnent la sortie, fratrie par fratrie.
 -- ---------------------------------------------------------------------------
 
 \echo ''

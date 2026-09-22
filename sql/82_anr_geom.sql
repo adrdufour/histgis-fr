@@ -400,9 +400,17 @@ COMMENT ON FUNCTION snapshot_geom_anr(date, text) IS
 CREATE INDEX atom_geom_anr_periode_idx ON atom_geom_anr USING gist (periode);
 ANALYZE atom_geom_anr;
 
+-- `SET search_path` porté par la fonction elle-même, ajouté le 22 septembre
+-- 2026 : appelée par `psql -c "SELECT * FROM histgis.check_...()"`, elle
+-- s'exécutait avec le search_path de la SESSION, et ses appels non qualifiés
+-- ne résolvaient que sur `histgis`, où le chemin avait été posé à la main
+-- une fois, hors de tout script. Sur `histgis_essai` : « function ... does
+-- not exist ». Une recette ne doit pas dépendre du réglage de qui la lance.
 CREATE FUNCTION check_geom_anr(p_date date DEFAULT '1870-01-01')
 RETURNS TABLE (controle text, valeur numeric, attendu text)
-LANGUAGE sql STABLE AS $$
+LANGUAGE sql STABLE
+SET search_path = histgis, public
+AS $$
     SELECT 'atomes pourvus par ANR', count(*)::numeric, '37 618 à 1870, 38 006 à 1940'
     FROM   atom_geom_anr WHERE periode @> p_date
     UNION ALL

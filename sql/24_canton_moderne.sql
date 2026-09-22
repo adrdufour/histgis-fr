@@ -384,6 +384,12 @@ CREATE TABLE IF NOT EXISTS p75_trace (quoi text NOT NULL, cle text NOT NULL, pos
 CREATE TABLE IF NOT EXISTS p76_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
 CREATE TABLE IF NOT EXISTS p77_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
 CREATE TABLE IF NOT EXISTS p79_trace (quoi text NOT NULL, cle text NOT NULL, pose timestamptz NOT NULL DEFAULT now());
+-- `p38_trace` porte une colonne de plus, `avant` : `38` MODIFIE des lignes
+-- autant qu'il en pose, et une mise à jour ne se défait pas sans sa valeur
+-- d'origine. La créer ici sans cette colonne ferait échouer `38` au chargement,
+-- car `CREATE TABLE IF NOT EXISTS` n'ajoute pas de colonne à une table qui
+-- existe déjà. Les deux définitions doivent rester identiques.
+CREATE TABLE IF NOT EXISTS p38_trace (quoi text NOT NULL, cle text NOT NULL, avant text, pose timestamptz NOT NULL DEFAULT now());
 
 \echo ''
 \echo '--- ce qui occupe 1941-1998, et par quel fichier ---'
@@ -403,6 +409,7 @@ trace AS (
     UNION ALL SELECT cle::bigint, '76 (autres salves)'     FROM p76_trace       WHERE quoi = 'membership'
     UNION ALL SELECT cle::bigint, '77 (transferts datés)'  FROM p77_trace       WHERE quoi = 'membership'
     UNION ALL SELECT cle::bigint, '79 (report depuis 1999)' FROM p79_trace      WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint, '38 (décret 82-77, Bourg)' FROM p38_trace      WHERE quoi IN ('membership', 'membership_remontee')
 )
 SELECT coalesce(t.pose_par, '### SANS TRACE — à expliquer') AS pose_par,
        count(*)                                             AS rattachements
@@ -425,16 +432,21 @@ trace AS (
     UNION ALL SELECT cle::bigint FROM p76_trace WHERE quoi = 'membership'
     UNION ALL SELECT cle::bigint FROM p77_trace WHERE quoi = 'membership'
     UNION ALL SELECT cle::bigint FROM p79_trace WHERE quoi = 'membership'
+    UNION ALL SELECT cle::bigint FROM p38_trace WHERE quoi IN ('membership', 'membership_remontee')
 )
 SELECT count(*) AS sans_trace
 FROM   dans_le_trou d
 WHERE  NOT EXISTS (SELECT 1 FROM trace t WHERE t.membership_id = d.membership_id);
 
 \echo ''
-\echo '    NOTE : `38_decret_1982_ain.sql` n''a toujours aucune table de trace'
-\echo '    (dette du 17 août 2026). Sa ligne unique apparaîtra donc SANS TRACE'
-\echo '    tant qu''elle n''en aura pas une. C''est un cas connu, pas un défaut'
-\echo '    du report — mais c''est exactement pourquoi il faut la lui donner.'
+\echo '    NOTE : `38_decret_1982_ain.sql` a reçu `p38_trace` le 2 septembre'
+\echo '    2026 — dette du 17 août, soldée. Ses lignes sont désormais comptées'
+\echo '    ci-dessus, les posées comme les REMONTÉES : `38` fait démarrer trois'
+\echo '    rattachements existants en 1982, ce qui les fait entrer dans le trou'
+\echo '    sans qu''aucune ligne soit créée. Une trace qui ne dirait que les'
+\echo '    insertions les laisserait orphelines ici.'
+\echo '    Tant que `38` n''a pas été REJOUÉ, sa trace est vide et ses lignes'
+\echo '    ressortent SANS TRACE : c''est exact, et c''est ce qu''il faut lire.'
 
 \echo ''
 \echo '--- effectifs cantonaux à quelques dates ---'
