@@ -26,11 +26,9 @@ une source à trouver : ce sont des commandes à lancer et des sorties à lire.
 
 | # | tâche | pourquoi maintenant |
 |---|---|---|
-| 1 | **Jouer `92_meurthe_circo.sql`**, puis rejouer l'export du 54 | écrit et parsé hors base le 6 septembre, jamais joué. Une seule unité circo reste en `99`, et elle suffit à faire un 99ᵉ département et à couper la Meurthe de 1870 en deux. Attendus et procédure au § 0 bis a |
+| 1 | **Rejouer l'export web** — métropole, partition, outre-mer | **`histgis` sort de la chaîne depuis le 22 septembre** (identique à l'essai ligne pour ligne, `92` et `25` compris) : la base est juste, la carte ne l'est pas encore. trois corrections écrites le 6 septembre attendent d'être visibles : le 99 retiré, l'outre-mer affiché, la trame mosaïque de `84`. Procédure au § 0 bis c, **et le `rm -rf` n'est pas facultatif** |
 | 2 | **Combler l'intervalle noir entre `81` et `79`** | mesuré par `81` § 11 g au premier passage : **72 départements sur 87, 1 072 département-années**, et elles tombent entre 1975 et 1986 — exactement la fenêtre que la carte montre le plus mince. Voir § 1 ter |
 | 2 bis | **Achever le dépouillement du recensement de 1954** | `94` l'a chiffré le 6 septembre : le jalon ne couvre que **79,0 %** des communes vivantes en 1940, et les **7 870 manquantes vivaient** — ce n'est pas de la mortalité, c'est de la lecture. Vaut 102 310 atome-années sur la seule fenêtre 1941-1953, plus le jalon lui-même, plus le report vers 1962 à venir. **Premier levier de toute la période.** Voir § 1 bis |
-| 3 | **Reconstruire `histgis` par la chaîne**, maintenant qu'elle est prouvée | la chaîne complète est passée de bout en bout sur `histgis_essai` le 22 septembre 2026, recettes d'après-chaîne comprises (`JOURNAL.md`). `histgis` reste la base jouée à la main : **sans `25`** (Marseille et Lyon absents de 1999-2012), et avec un `search_path` posé hors script. Rejouer d'abord `79` seul sur l'essai (`psql -d histgis_essai -1 -f sql/79_report_1999_arriere.sql`) : § 10 g à **0**, **25 lignes de moins** que les 36 315 du 22 septembre. Puis `rebuild.sh` + `rejouer_apres_rebuild.sh` sur `histgis`, `diag_passages` avant et après |
-| 4 | **Rejouer l'export web** — métropole, partition, outre-mer | trois corrections écrites le 6 septembre attendent d'être visibles : le 99 retiré, l'outre-mer affiché, la trame mosaïque de `84`. Procédure au § 0 bis c, **et le `rm -rf` n'est pas facultatif** |
 | 5 | **Afficher `repris` dans `cartes/web/index.html`** | l'export pose `repris` par unité à côté de `anr` et `repli` ; la page l'ignore. Une unité qui doit sa forme à une reprise doit pouvoir le dire, sans quoi la légende laisse croire à une trame entièrement attestée. **Seul point de cette file qui ne demande pas la base** |
 | 6 | **Où est passé le sol des 318 ?** | ils ne sont PAS sans géométrie — `diag_sans_geometrie.sql` en a trouvé zéro le 5 septembre. Ils sont absents du **résultat** de `carte_partition_atome`, pas des tables qu'elle lit : un polygone entièrement recouvert par un mieux classé perd toutes ses faces. La question utile est « à qui leur sol a-t-il été donné ? », § 6 du même fichier, à coller dans une session où `diag_partition.sql` vient de matérialiser `d84`. Si le sol est repris à ~100 %, **la carte n'a pas de trou : elle a un défaut de légende** |
 | 7 | **La couture entre départements vaut 0,019 km² et non 0** | 1,9 ha ne tranche pas entre « des lisières » et « un vrai doublon parmi des lisières ». Jouer le § 9 de `sql/diag_partition.sql`, qui nomme les paires et porte une colonne `deux_reprises`. Mesuré au passage : le triple don d'Anthé et Thézac existait dans la règle, pas sur la carte — `partition_un_dep` ne rend que les atomes `dedans`, et elles habitent le 47 |
@@ -41,11 +39,11 @@ lecture seule. Il dit quels fichiers sont réellement passés, lesquels ont une
 trace vide, et relit `38` et `39` par leur effet — seconde lecture, indépendante
 de leurs traces.
 
-```bash
-psql -d histgis -f sql/diag_passages.sql              # avant, lecture seule
-psql -d histgis -f sql/92_meurthe_circo.sql           # sans -1 : transaction propre
-psql -d histgis -1 -f sql/81_report_1968_avant.sql    # APRÈS 79
-```
+**Depuis le 22 septembre 2026, `histgis` se reconstruit par la chaîne et
+seulement par elle** : `cd sql && ./rebuild.sh && ./rejouer_apres_rebuild.sh`,
+sauvegarde `pg_dump -Fc` d'abord (celle du 22 est dans `build/`). Un fichier
+joué à la main doit entrer dans le script le jour même, sans quoi le prochain
+rebuild l'efface sans rien dire.
 
 ### `81` est joué — 6 septembre 2026, et l'attendu écrit ici était faux
 

@@ -9253,3 +9253,33 @@ laissé derrière lui `HEAD.lock`, `objects/maintenance.lock` et une
 cinquantaine d'objets temporaires. **Règle : git en écriture se lance depuis
 le shell d'Adrien, jamais depuis la session.** Les quatre commits suivants
 sont dans `build/commits_22sept.sh`, qui nettoie d'abord.
+
+### `histgis` reconstruit par la chaîne — identique à l'essai
+
+Sauvegarde d'abord (`build/histgis_avant_chaine_2026-09-22.dump`, 591 Mo),
+puis `rebuild.sh` + `rejouer_apres_rebuild.sh` sur `histgis`, sans un arrêt.
+
+**Le journal de la chaîne a été comparé ligne à ligne à celui de l'essai.**
+73 lignes diffèrent, et toutes s'expliquent :
+
+* `79` et ce qui le lit : **36 290** au lieu de 36 315, 1990 à 23 236,
+  § 10 g à 0, le témoin `total_canton` de `93` à 213 930 (−25). C'est
+  l'exclusion des pseudo-cantons, et rien d'autre ;
+* les numéros de ligne des NOTICE de `79` et `82`, décalés par les
+  commentaires ajoutés ;
+* trois tirages non déterministes : l'échantillon de trois identifiants
+  d'un `array_agg`, l'ordre de deux communes à 5,1 km², la largeur d'une
+  colonne d'horodatage.
+
+Les recettes d'après-chaîne sont celles de l'essai au chiffre près : 50
+traces présentes, `85` rien à libérer, Seine à 0,000 km², `check_partition`
+01 et 78 à 0,000, `check_geom_anr` à 101,0.
+
+`build/reglages_histgis.txt` confirme la cause trouvée sur l'essai :
+`ALTER DATABASE histgis SET search_path = histgis, public`, posé à la main,
+survit au `DROP SCHEMA` et ne passe par aucun script. Les recettes ne
+dépendent plus de lui.
+
+**`histgis` n'est plus une base jouée à la main.** Elle a désormais `25`
+(Marseille et Lyon en 1999-2012) et sort entière d'un script versionné. Le
+point 3 de `RESTE_A_FAIRE.md` est fait ; la file s'ouvre sur l'export web.
