@@ -1,0 +1,87 @@
+division,circo,libelle,type,jeton,insee,source
+1945-1958,4,Seine-Sud,canton,Nogent-sur-Marne,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,4,Seine-Sud,canton,Saint-Maur-des-Fossés,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,4,Seine-Sud,canton,Charenton-le-Pont,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,4,Seine-Sud,canton,Ivry-sur-Seine,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,4,Seine-Sud,canton,Villejuif,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,4,Seine-Sud,canton,Sceaux,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,4,Seine-Sud,canton,Vanves,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Boulogne-Billancourt,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Puteaux,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Colombes,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Courbevoie,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Neuilly-sur-Seine,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Levallois-Perret,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Asnières,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Clichy,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,5,Seine-Nord-Ouest,canton,Saint-Ouen,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,6,Seine-Nord-Est,canton,Saint-Denis,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,6,Seine-Nord-Est,canton,Aubervilliers,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,6,Seine-Nord-Est,canton,Pantin,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,6,Seine-Nord-Est,canton,Noisy-le-Sec,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,6,Seine-Nord-Est,canton,Montreuil-sous-Bois,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1945-1958,6,Seine-Nord-Est,canton,Vincennes,,loi 46-2151 du 5 oct. 1946 (JORF 8 oct. 1946)
+1958-1968,32,,canton,Boulogne-Billancourt,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,33,,commune,Nanterre,92050,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,33,,commune,Suresnes,92073,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,34,,commune,Neuilly-sur-Seine,92051,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,34,,commune,Puteaux,92062,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,35,,commune,Courbevoie,92026,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,35,,commune,La Garenne-Colombes,92035,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,36,,commune,Colombes,92025,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,36,,commune,Gennevilliers,92036,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,37,,commune,Bois-Colombes,92009,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,37,,commune,Asnières-sur-Seine,92004,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,38,,commune,Clichy,92024,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,38,,commune,Levallois-Perret,92044,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,39,,canton,Saint-Ouen,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,39,,commune,Villeneuve-la-Garenne,92078,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,39,,commune,Pierrefitte-sur-Seine,93059,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,39,,commune,Villetaneuse,93079,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,40,,commune,Saint-Denis,93066,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,41,,commune,Aubervilliers,93001,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,41,,commune,La Courneuve,93027,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,41,,commune,Stains,93072,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,42,,commune,Bobigny,93008,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,42,,commune,Le Bourget,93013,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,42,,commune,Drancy,93029,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,42,,commune,Dugny,93030,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,43,,commune,Bondy,93010,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,43,,commune,Noisy-le-Sec,93053,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,43,,commune,Pavillons-sous-Bois,93057,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,43,,commune,Romainville,93063,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,43,,commune,Villemomble,93077,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,44,,canton,Pantin,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,45,,commune,Montreuil,93048,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,45,,commune,Rosny-sous-Bois,93064,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,46,,canton,Vincennes,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,47,,canton,Nogent-sur-Marne,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,48,,canton,Saint-Maur-des-Fossés,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,49,,canton,Charenton-le-Pont,,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,50,,commune,Ivry-sur-Seine,94041,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,50,,commune,Vitry-sur-Seine,94081,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,Chevilly-Larue,94021,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,Choisy-le-Roi,94022,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,Fresnes,94034,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,L'Haÿ-les-Roses,94038,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,Orly,94054,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,Rungis,94065,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,51,,commune,Thiais,94073,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,52,,commune,Arcueil,94003,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,52,,commune,Cachan,94016,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,52,,commune,Gentilly,94037,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,52,,commune,Le Kremlin-Bicêtre,94043,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,52,,commune,Villejuif,94076,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,53,,commune,Antony,92002,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,53,,commune,Bagneux,92007,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,53,,commune,Bourg-la-Reine,92014,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,53,,commune,Montrouge,92049,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,54,,commune,Châtenay-Malabry,92019,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,54,,commune,Châtillon-sous-Bagneux,92020,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,54,,commune,Clamart,92023,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,54,,commune,Fontenay-aux-Roses,92032,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,54,,commune,Le Plessis-Robinson,92060,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,54,,commune,Sceaux,92071,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,55,,commune,Issy-les-Moulineaux,92040,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,55,,commune,Malakoff,92046,"ord. 58-945 du 13 oct. 1958, tableau n° 1"
+1958-1968,55,,commune,Vanves,92075,"ord. 58-945 du 13 oct. 1958, tableau n° 1"

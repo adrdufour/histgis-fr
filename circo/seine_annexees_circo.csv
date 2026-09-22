@@ -1,0 +1,25 @@
+division,commune,atom_id,unit_id,note
+1852-1857,Passy,26284,75-01@1852,planche : circo 1 avec Boulogne
+1852-1857,Auteuil,1960,75-01@1852,planche : circo 1 avec Boulogne
+1852-1857,Boulogne-Billancourt,5199,75-01@1852,planche : circo 1 — commune de banlieue captee par Paris
+1852-1857,La Chapelle,8165,75-02@1852,planche : circo 2
+1852-1857,Batignolles-Monceau,2924,75-02@1852,planche : circo 2
+1852-1857,Montmartre,23671,75-02@1852,planche : circo 2
+1852-1857,Charonne,8509,S1852@8,planche : banlieue nord
+1852-1857,La Villette,40600,S1852@8,planche : banlieue nord
+1852-1857,Bercy,3719,S1852@9,planche : banlieue sud
+1852-1857,Grenelle,16141,S1852@9,planche : banlieue sud
+1852-1857,Vaugirard,39042,S1852@9,planche : banlieue sud
+1852-1857,Belleville,3564,S1852@8,planche : banlieue nord
+1857-1863,Passy,26284,75-01@1857,planche : circo 1 avec Boulogne
+1857-1863,Auteuil,1960,75-01@1857,planche : circo 1 avec Boulogne
+1857-1863,Boulogne-Billancourt,5199,75-01@1857,planche : circo 1 — commune de banlieue captee par Paris
+1857-1863,La Chapelle,8165,75-02@1857,planche : circo 2
+1857-1863,Batignolles-Monceau,2924,75-02@1857,planche : circo 2
+1857-1863,Montmartre,23671,75-02@1857,planche : circo 2
+1857-1863,Charonne,8509,S1857@9,planche : banlieue nord
+1857-1863,La Villette,40600,S1857@9,planche : banlieue nord
+1857-1863,Bercy,3719,S1857@10,planche : banlieue sud
+1857-1863,Grenelle,16141,S1857@10,planche : banlieue sud
+1857-1863,Vaugirard,39042,S1857@10,planche : banlieue sud
+1857-1863,Belleville,3564,(coupee),partagee entre la 5e (deux bureaux de vote) et la 9e ; ligne declaree arbitraire par l atlas

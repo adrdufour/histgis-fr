@@ -1,0 +1,14 @@
+division,du,au,cote,unit_id,nom,regime,provenance,planche
+1815-1820,1815-01-01,1820-01-01,nord,S1815@nord,Seine — collège de Saint-Denis,uninominal,neuve,1815
+1815-1820,1815-01-01,1820-01-01,sud,S1815@sud,Seine — collège de Sceaux,uninominal,neuve,1815
+1820-1831,1820-01-01,1831-01-01,tout,S1820@8,Seine 8e circonscription (banlieue),uninominal,neuve,1820-1831
+1831-1848,1831-01-01,1848-01-01,nord,S1831@14,Seine 14e circonscription — Saint-Denis,uninominal,neuve,1831-1848
+1831-1848,1831-01-01,1848-01-01,sud,S1831@13,Seine 13e circonscription — Sceaux,uninominal,neuve,1831-1848
+1852-1857,1852-01-01,1857-01-01,nord,S1852@8,Seine 8e circonscription (banlieue nord),uninominal,neuve,1852-1857
+1852-1857,1852-01-01,1857-01-01,sud,S1852@9,Seine 9e circonscription (banlieue sud),uninominal,neuve,1852-1857
+1857-1863,1857-01-01,1863-01-01,nord,S1857@9,Seine 9e circonscription (banlieue nord),uninominal,neuve,1857-1863
+1857-1863,1857-01-01,1863-01-01,sud,S1857@10,Seine 10e circonscription (banlieue sud),uninominal,neuve,1857-1863
+1863-1869,1863-01-01,1869-01-01,nord,V1863_1869#8,Seine 8e circonscription,uninominal,existante,1863-1869
+1863-1869,1863-01-01,1869-01-01,sud,V1863_1869#9,Seine 9e circonscription,uninominal,existante,1863-1869
+1869-1870,1869-01-01,1870-01-01,nord,V1869_1870#8,Seine 8e circonscription,uninominal,existante,1869-1870
+1869-1870,1869-01-01,1870-01-01,sud,V1869_1870#9,Seine 9e circonscription,uninominal,existante,1869-1870

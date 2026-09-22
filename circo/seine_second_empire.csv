@@ -1,0 +1,34 @@
+division,circo,quartiers_paris,hors_paris,orientation_probable
+1852-1857,1,"Le roule; place vendome; champs-elysees; tuileries; palais-royal",oui,ouest
+1852-1857,2,"chaussé d'antin; faubourg-montmartre",oui,nord
+1852-1857,3,"faubourg-poissonière; montmartre; le mail; saint fustache; feydeau; banque de France; saint-honoré; marchés; louvre; bonne nouvelle; montorgueil",non,
+1852-1857,4,"faubourg-saint-denis; porte saint-martin; porte saint-denis; saint-martin-des-champs; lombards; saint-avoye; mont-de-piété",non,
+1852-1857,5,"temple; popincourt; marais; marché saint-jean; faubourg saint-antoine; quinze-vingts",non,
+1852-1857,6,"monnaie; faubourg saint germain; invalides; saint thomas d'acquin; palais de justice; ecole de medecine; Luxembourg; cité",non,
+1852-1857,7,"saint-jacques; observatoire; jardin-des-plantes; saint-marcel; sorbonne; arcis; hotel de ville; ile saint louis; arsenal",non,
+1857-1863,1,"Le roule; place vendome; champs-elysees; tuileries",oui,ouest
+1857-1863,2,"chaussée d'antin; feydeau",oui,nord
+1857-1863,3,"faubourg-poissonière; faubourg-montmartre; faubourg saint denis; bonne nouvelle; montmartre; le mail; saint fustache; palais-royal",non,
+1857-1863,4,"porte saint-denis; montorgueil; marché; lombards; saint-avoye; arcis; hotel de ville; cité; palais de justice; louvre; saint-honoré; banque de France",non,
+1857-1863,5,"porte saint martin; saint martin des champs; temple",oui,nord-est
+1857-1863,6,"popincourt; mont de piété; marais; marché saint-jean; faubourg saint-antoine; quinze-vingts",non,
+1857-1863,7,"saint-jacques; observatoire; jardin-des-plantes; saint-marcel; sorbonne; ile saint louis; arsenal",non,
+1857-1863,8,"monnaie; faubourg saint germain; invalides; saint thomas d'acquin; ecole de medecine; Luxembourg",non,
+1863-1869,1,"auteuil; la muette; porte-dauphine; chaillot; ternes; plaine-monceau; batignolles; epinettes; grandes-carrieres; clignancourt; goutte d'or; la chapelle; la villette; pont-de-flandre",non,
+1863-1869,2,"roule; champs-elysées; europe; madeleine; saint-georges; chaussé d'antin; gaillon; place vendome; palais royal",non,
+1863-1869,3,"rochechouart; faubourg montmartre; vivienne; mail; bonne nouvelle; halles; saint-germain-l'auxerrois; saint-merri; notre dame",non,
+1863-1869,4,"saint vincent de paul; hopital saint louis; porte saint martin; porte saint denis; art et metiers; enfant rouges; saint avoye",non,
+1863-1869,5,"la folie-mericourt; saint ambroise; la roquette; saint-marguerite; archives; saint gervais; arsenal",non,
+1863-1869,6,"gros-caillou; invalides; ecole-militaire; saint thomas d'acquin; saint germain des pres; monnaie; sorbonne; odéon; notre dame des champs",non,
+1863-1869,7,"saint-victor; val de grace; jardin des plantes; salpetriere; la gare; croule-barbe; maison-blanche; montparnasse; santé; petit-montrouge; plaisance; necker; saint-lambert; grenelle; javel",non,
+1863-1869,8,"amérique; combat; belleville; saint-fargeau; père lachaise; charonne",oui,nord-est et est
+1863-1869,9,"quinze-vingts; picpus; bercy; bel-air",oui,sud-est
+1869-1870,1,"epinettes; grandes-carrieres; clignancourt; goutte d'or; la chapelle; la villette; pont-de-flandre; amérique; combat; belleville; saint-fargeau; père lachaise",non,
+1869-1870,2,"auteuil; la muette; porte-dauphine; chaillot; ternes; plaine-monceau; batignolles; roule; champs-elysées; europe; madeleine; gaillon; place vendome; palais royal; saint germain l'auxerrois",non,
+1869-1870,3,"vivienne; mail; bonnenouvelle; art et metiers; enfants rouges; saint avoye; halles; saint merri; notre dame",non,
+1869-1870,4,"saint georges; chaussé d'antin; rochechouart; faubourg montmartre; saint-vincent de paul; porte de saint-denis; hopital saint louis; porte saint martin",non,
+1869-1870,5,"la folie-mericourt; saint ambroise; la roquette; saint-marguerite; archives; saint gervais; arsenal",non,
+1869-1870,6,"gros-caillou; invalides; ecole-militaire; saint thomas d'acquin; saint germain des pres; monnaie; odéon; notre dame des champs",non,
+1869-1870,7,"saint-victor; val de grace; jardin des plantes; salpetriere; croule-barbe; montparnasse; santé; petit-montrouge; plaisance; necker; grenelle; sorbonne",non,
+1869-1870,8,"quinze-vingts; picpus; bercy; bel-air; charonne",oui,sud-est
+1869-1870,9,"javel; saint-lambert; maison-blanche; la gare",oui,sud et sud-ouest
