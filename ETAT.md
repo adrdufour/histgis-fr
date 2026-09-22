@@ -52,6 +52,8 @@ rattachements depuis le chargement initial. Ce qui suit est **ce que chaque
 | salves restantes | 873 rattachements, 128 cantons | `76` | 28 août |
 | transferts datés INSEE | 32 rattachements, 13 cantons | `77` | 28 août |
 | report arrière depuis 1999 | 36 296 rattachements, 422 838 atome-années | `79` | 29 août |
+| report avant depuis 1968 | 32 842 rattachements, 191 866 atome-années, jusqu'au 1985-03-10 | `81` | 6 sept. |
+| report 1940 → 1954 | 29 686 rattachements, 385 885 atome-années | `93` | 6 sept. |
 | trame géométrique datée | 45 113 polygones, 38 074 atomes pourvus | `82` | 1ᵉʳ sept. |
 
 Instantanés utiles : `snapshot(1968-06-01)` = 32 842 rattachements et 2 911
@@ -183,15 +185,21 @@ sans rien dire de ce qu'il contient. Détail dans `JOURNAL.md`.
 
 **PASSE NATIONALE PASSÉE le 2 septembre 2026**, au 1ᵉʳ décembre 1870 :
 
-| contrôle | valeur |
-|---|---|
-| atomes dessinés | 38 129 |
-| repris par différence | **433** (432 au banc) |
-| repli GEOFLA résiduel | **84** (111 au banc) |
-| **recouvrement hors fraction** | **0,000 km²** |
-| dont couture entre départements | **0,000 km²** |
-| somme des aires hors fraction | 548 576 km² |
-| géométries invalides | 0 |
+| contrôle | 2 sept. | **5 sept., règle mosaïque** |
+|---|---|---|
+| atomes dessinés | 38 129 | **38 142** (+13) |
+| repris par différence | 433 | **447** |
+| repli GEOFLA résiduel | 84 | **83** |
+| **recouvrement hors fraction** | **0,000 km²** | **0,000 km²** |
+| dont couture entre départements | 0,000 km² | 0,019 km² |
+| somme des aires hors fraction | 548 576 km² | 548 576 km² |
+| géométries invalides | 0 | 0 |
+
+> **Ces deux lignes bougeront au prochain passage**, et dans un sens connu : la
+> trappe du vide fermée le 5 septembre retire de la reprise les atomes servis
+> avec un `MULTIPOLYGON EMPTY` et les rend au repli. Au national, ils sont deux ;
+> **par département — et c'est ainsi que la carte travaille — leur nombre est à
+> lire, pas à déduire**, le cadre changeant le résultat de la reprise.
 
 **Les deux zéros ne disent pas la même chose.** Le premier était le but du
 fichier. Le second était une inconnue : le treillis se bâtit département par
@@ -219,9 +227,164 @@ figurent, et **les deux « pourvus sur une fenêtre antérieure à 1870 »** du 
 paragraphe sont exactement la troisième ligne du tableau. La confrontation
 retrouve la liste de `82` sans l'avoir cherchée.
 
-**Un seul cas où la règle de reprise échoue sur toute la France**, 0,4 km². Une
-règle sans seuil qui laisse un résidu à quatre décimales du pays se déclare,
-elle ne se rafistole pas.
+~~**Un seul cas où la règle de reprise échoue sur toute la France**, 0,4 km².~~
+**La cause est trouvée le 5 septembre 2026, et elle n'est pas celle qu'on
+croyait ; l'ampleur, elle, reste à trancher.**
+
+Ce n'est **ni** une lacune de la source **ni** l'histoire des deux
+communes-mères. Noirmoutier rétrécit bien en 1919, de **16,426 km²** (36,393 →
+19,967), et une mère existe qui se coupe exactement en Y′. Mais elle a **deux
+filles ce millésime-là** — La Guérinière et **L'Épine** (85083) —, voisines sur
+la même île, et `partition_reprise` déplie le reste par `ST_Dump`, **qui ne
+sépare que les composantes déconnectées** :
+
+| fille | son repli | recouvre le morceau | rang | ce qu'elle obtient |
+|---|---|---|---|---|
+| L'Épine | 8,704 km² | 8,349 | 1 | **tout le morceau : 16,426 km²** |
+| La Guérinière | 7,918 km² | 7,485 | 2 | rien — retombe sur son repli |
+
+Les deux replis font ensemble 16,622 km² pour un morceau de 16,426 : **elles
+font à elles deux exactement ce que la mère a perdu.** Le compteur `fratrie`
+valait 2 sur ce couple et n'en tirait aucune conséquence — *une valeur calculée
+que rien ne lit n'est pas une garde, c'est une décoration.*
+
+**Le corollaire n'avait pas été vu, et il est plus grave que le trou : la sœur
+servie est dessinée trop grande.** L'Épine reçoit près du double de son
+territoire. Un atome muet se voit ; un atome enflé se confond avec un atome
+juste.
+
+**Et c'est pourquoi aucune recette ne pouvait l'attraper.** Une sœur enflée
+occupe le sol de sa sœur muette : le treillis lui donne les faces, et la
+surface totale est conservée. L'emprise nationale tombait juste — 548 576 km²
+contre 548 489 d'étalon, +0,016 % — parce qu'un échange ne change pas une
+somme. *Une recette qui mesure un total ne voit pas une permutation.*
+
+**L'AMPLEUR EST MESURÉE, en appelant la règle elle-même.**
+`partition_reprise` est `LANGUAGE sql STABLE`, sans table temporaire, et son
+`p_dep` accepte `NULL` : appelée sans département, elle fait la France entière
+— c'est `partition_un_dep` qui exige un département, pas elle. Au 1ᵉʳ décembre
+1870 (`sql/diag_sans_geometrie.sql` § 7 g) :
+
+| | n | lecture |
+|---|---|---|
+| candidats à la reprise | 486 | vivants, non-fractions, avec repli, sans ANR à la date |
+| servis par la reprise | 435 | |
+| **muets malgré un Y′** | **13** | ANR reparle d'eux, la règle ne leur rend rien |
+| sans Y′ | 38 | limite de source, rien à réparer |
+
+Les treize, ~**158 km²** et non 0,4 : Beauvais (33,5), Saint-Sulpice 63 (18,3),
+Anthé (14,4), La Guillermie (12,6), Cazideroque (12,3), Thézac (11,3),
+Masquières (11,2), Amnéville (10,5), Velanne (8,1), La Guérinière (7,9),
+Saint-Sulpice-des-Rivoires (7,2), Colomars (6,0), Chardeny (5,1). Quatre sont
+du Lot-et-Garonne au même millésime — **la fratrie de six de Tournon-d'Agenais,
+où Bourlens reçoit 73,5 km² pour un repli de 15,6.**
+
+*(Deux estimations intermédiaires — 17 filles perdantes, §§ 7 e et 7 f — sont
+fausses et conservées comme telles : elles partaient de la mère quand la règle
+part de la fille, et comptaient chaque fille sous chacune de ses mères. Leur
+propre sortie les réfute : Sury et This y figurent deux fois avec les rôles
+inversés.)*
+
+**DEUX ATOMES SONT SERVIS AVEC UN POLYGONE VIDE**, et c'est pire que d'être
+muet : L'Étang-Bertrand (repli 8,5 km², reçue 0,000) et Courbiac (9,0 → 0,000).
+Comptés `source = 'reprise'`, ils n'apparaissent **ni dans les 84 replis ni
+dans les 13 muets**, et ne dessinent rien. `partition_reprise` rend un
+`MULTIPOLYGON EMPTY`, qui n'est pas `NULL`, et le `DELETE FROM t84_src WHERE
+geom IS NULL` de `84` § (a) le laisse passer. *Un test `IS NULL` sur une
+géométrie ne teste pas l'absence de géométrie.* **C'est le seul des trois
+défauts qui se corrige sans décider de rien** — un `HAVING NOT ST_IsEmpty(…)`
+et un `OR ST_IsEmpty(geom)` les feraient retomber sur R5, le comportement
+déclaré.
+
+> **APPLIQUÉ ET JOUÉ LE 5 SEPTEMBRE 2026 — ET LA MESURE A DÉPLACÉ LE DÉFAUT.**
+> Le correctif est en base (`prosrc LIKE '%ST_IsEmpty%'` rend `t`) et **rien
+> n'a bougé** : 433 reprises, 84 replis, exactement comme avant. La raison est
+> que le paragraphe ci-dessus décrit l'appel NATIONAL et non la carte. Dans leur
+> propre département, L'Étang-Bertrand et Courbiac ne reçoivent pas un
+> `MULTIPOLYGON EMPTY` mais un multipolygone de **6 et 33 morceaux d'aire
+> totale nulle** — des lisières effondrées. `ST_IsEmpty` les déclare pleins.
+>
+> *Un filtre sur le vide ne voit pas un polygone d'aire nulle. « Avoir des
+> points » et « avoir une surface » sont deux propriétés distinctes.*
+>
+> **La trappe fermée est donc réelle et sans victime sur la carte** : elle
+> protège l'appel national, qui est un outil de diagnostic. Le vrai défaut est
+> le point 7 du § 8 de `84`, mesuré de bout en bout le même jour — voir
+> ci-dessous.
+
+**SIX COMMUNES ENTRENT, UNE SEULE EST DESSINÉE** — mesuré de bout en bout le
+5 septembre 2026 par `sql/diag_fratrie_carte2.sql`, sur la carte elle-même et
+non sur l'appel national :
+
+| mère | fille | repli | sur la carte |
+|---|---|---|---|
+| Tournon-d'Agenais (1876) | **Bourlens** | 15,578 | **oui, 73,518 km²** |
+| | Anthé | 14,380 | non |
+| | Cazideroque | 12,277 | non |
+| | Thézac | 11,330 | non |
+| | Masquières | 11,215 | non |
+| | Courbiac | 9,013 | non |
+| Bricquebec (1895) | **Rocheville** | 10,417 | **oui, 19,080 km²** |
+| | L'Étang-Bertrand | 8,525 | non |
+
+**66,74 km² et six communes** qui existent, qui sont dessinables, et qui sont
+dessinées sous le nom d'une sœur. Le mécanisme : `ST_Dump` ne sépare que les
+composantes déconnectées, six filles voisines ne font qu'un morceau,
+`DISTINCT ON (mid)` le donne à celle dont le repli le recouvre le plus. Les
+autres ne reçoivent rien, ne gagnent aucune face, et **sortent du résultat** —
+elles tombent dans les 318. La mère est réduite de la totalité :
+94,956 − 73,518 = 21,438, au km² près.
+
+*Un défaut qui conserve la somme ne se trouve pas en pesant. Il faut compter les
+objets, pas mesurer le tas.*
+
+**ET CE QUI REND LE CORRECTIF DÉCIDABLE.** La somme des replis des sœurs
+reproduit le morceau à partager à moins d'un pour cent — Tournon 73,793 contre
+73,518 (−0,37 %), Bricquebec 18,942 contre 19,080 (+0,73 %). **La mosaïque des
+replis pave le territoire.** Découper le morceau connexe en donnant chaque face
+à la sœur dont le repli la recouvre n'invente donc aucune ligne : c'est la règle
+déjà écrite — « le repli redevient ce qu'il sait faire, un indice de position »
+— appliquée à la face au lieu du morceau. C'est un changement de règle, il se
+décide en le disant, et il s'éprouve au banc avant la base.
+
+**ET LE CADRE DÉPARTEMENTAL CHANGE LE RÉSULTAT DE LA REPRISE.** 13 muets au
+national, 1 sur la carte : les deux ne calculent pas la même chose. Le bloc
+`vivant` de `partition_reprise` est filtré par le département, le bloc `mere`
+ne l'est pas — donc **moins de filles concourent pour le même morceau en
+local**, et une fille qui perd au national gagne dans son département. Cela
+contredisait l'affirmation écrite en tête de `partition_un_dep` — *« le
+découpage par département rend EXACTEMENT le même dessin »* —, **corrigée dans
+le fichier le 5 septembre 2026** : le mot juste est « le même TREILLIS », et
+l'en-tête porte désormais l'exception en toutes lettres. C'est vrai du treillis, dont
+les effets sont locaux ; **ce n'est pas vrai d'un arbitrage entre
+prétendants**. Corollaire à vérifier : une fratrie à cheval sur deux
+départements se ferait attribuer le même morceau deux fois, et cela se lirait
+sur la ligne « couture entre départements » de `check_partition`.
+
+> **CETTE LIGNE VALAIT 0,000 km² LE 2 SEPTEMBRE, ELLE VAUT 0,019 LE 5.** J'ai
+> écrit le matin même qu'elle valait zéro et que le corollaire était donc nul,
+> sous réserve que la mesure précédait la correction de l'anneau du 3 septembre.
+> **La réserve a payé le jour même** : la passe nationale rejouée rend
+> `couture entre départements = 0,019 km²`, tout le reste identique au chiffre
+> près — 38 129 atomes, 433 reprises, 84 replis, recouvrement 0,000, emprise
+> 548 576. Le corollaire n'est donc **pas** nul.
+>
+> 1,9 ha, c'est l'ordre de grandeur d'une lisière et non d'un territoire : la
+> lecture la plus simple est qu'une frontière disputée entre deux départements
+> ne tombe plus du même côté dans les deux cadres depuis que l'anneau épouse le
+> voisinage réel. Mais **une fratrie à cheval recevant deux fois le même morceau
+> se lirait au même endroit**, et 1,9 ha ne suffit pas à trancher entre les
+> deux : il faut nommer les paires. C'est le § 9 de `sql/diag_partition.sql`,
+> écrit pour ça, avec une colonne `deux_reprises` qui sépare les deux lectures.
+>
+> *La non-régression de l'anneau avait été vérifiée département par
+> département — c'est-à-dire exactement là où cette ligne est sans objet par
+> construction. Une recette qu'on ne peut pas lire dans le cadre où l'on éprouve
+> un correctif ne le contrôle pas.*
+
+*Une opération n'est découpable que si ses effets sont locaux — et deux
+opérations aux propriétés opposées vivaient dans le même fichier sous la même
+justification.*
 
 **L'emprise se referme.** 548 576 km² contre l'étalon GEOFLA 2014 de
 548 489 : **+0,016 %**. La partition récupère les 101 km² de recouvrement
@@ -272,7 +435,30 @@ antérieure à 1870 », les deux autres étant dans la liste des replis ci-dessu
 `cartes/export_web.py --partition` sait la lire, en option et sans rien changer
 par défaut, pour que les deux trames soient comparables avant qu'on remplace
 l'une par l'autre. Coût mesuré : 24,5 années géométriques par département contre
-une centaine d'années candidates, soit environ quatre fois le temps ordinaire.
+une centaine d'années candidates, soit environ quatre fois le temps ordinaire —
+351 s pour l'Ain, **~8,7 h en séquentiel pour la France**, deux heures à
+`--jobs 6`.
+
+**Export de l'Ain, mesuré le 2 septembre** : 62 atomes en repli au moins une
+année → **5**. Le dossier ne grossit que de 6,5 % (27,20 → 28,98 Mo) pour
+585 → 1 274 versions, la déduplication par `ST_Equals` ramenant une quarantaine
+d'instantanés par commune à 2,75 versions.
+
+**LE PLAFOND DE `84`, ET IL FAUT LE CONNAÎTRE AVANT DE JUGER.** Les fractions
+restent en repli par construction. Sur l'ancien export, France entière :
+
+| | atomes |
+|---|---|
+| en repli au moins une année | 4 291 (10,3 %) |
+| dont **fractions**, hors portée de `84` | **1 256 (29 %)** |
+| **corrigeables au mieux** | **3 035** |
+
+La correction n'est donc pas uniforme, et l'écart entre départements est
+énorme : l'Ain n'a que 5 fractions sur 62 replis et tombe à 1,1 % ; **Paris en a
+128 sur 159**, plus 20 arrondissements qu'ANR ne pourvoit jamais, et son
+plancher est vers 148. Les départements où `84` se juge vraiment sont ceux dont
+le repli n'est presque pas fractionnaire — Haute-Marne (163 replis, 6 fractions)
+et Basses-Alpes (58, 5).
 
 ### 2.2 Cantons 1870-1940 — close, contrôlée
 
@@ -299,8 +485,34 @@ suppose que `39_meurthe_1870.sql` soit appliqué.)
 carte complète — de l'ordre de 1 200 cantons sur 4 000 à certaines dates — mais
 le blocage structurel du projet a cessé d'en être un.
 
+> **Et cette phrase ne disait rien de ce qui est SOUS 1954.** Deux fenêtres y
+> renvoyaient le vide franc. **1941-1953 est comblé depuis le 6 septembre
+> 2026** — `93`, 29 686 rattachements sur 38 304 atomes vivants en 1940. Reste
+> **1955-1967**, qui attend un troisième jalon : le recensement de 1962, en
+> ligne (§ 1 bis de `RESTE_A_FAIRE.md`). *Une borne d'affirmation se lit aussi
+> par ce qu'elle laisse dehors.*
+
+**Ce que 1941-1953 porte, et à quel titre.** `93` ne pose que là où les deux
+relevés — TRF-GIS et le recensement, sans source commune — donnent le même
+canton ; ailleurs il laisse un trou déclaré plutôt qu'un arbitrage.
+
+| | atomes | atome-années | |
+|---|---|---|---|
+| posé, contrôlé aux deux bouts par un appariement indépendant | 26 221 | 340 873 | `controle_independant` |
+| posé, accord vrai par construction (`ferme_canton`, `hors_c54`) | 3 454 | 44 902 | vaut un report à la `79` |
+| posé sous décret, jusqu'à la signature | 11 | 110 | Sousceyrac, Brive-Sud |
+| **refusé** — absent du relevé de 1954 | 7 970 | 103 610 | voir `94` |
+| **refusé** — fraction, aucun contrôle possible | 325 | 4 225 | |
+| **refusé** — désaccord entre les deux bouts | 323 | 4 199 | arbitrage de `71` |
+
+Le taux d'accord se lit sur les seuls **comparables** : **98,78 % sur 26 544**
+dans la classe indépendante — les deux nombres exacts de `70`, retrouvés par un
+autre fichier. La classe `ferme_canton` rend 100,00 %, et c'est ce qu'elle doit
+rendre : elle a été appariée parce que son canton concordait.
+
 | ce qui répond | fondement de la date | fichier |
 |---|---|---|
+| 1941-1953 | accord de deux relevés indépendants — **posé le 6 sept. 2026** | `93` |
 | 1954 | un recensement — un fait | `66`-`69` |
 | 1968 | un recensement — un fait | `58`, `59` |
 | Yvelines 1968 | la naissance d'un département — un fait | `74` |
@@ -308,7 +520,7 @@ le blocage structurel du projet a cessé d'en être un.
 | les autres salves | convention, **93,7 % incertaines** | `76` |
 | 66 transferts de commune | 30 datés au jour près par l'INSEE | `77` |
 | 1987-1999 par report arrière depuis 1999 | inférence validée (§ 3.4) | `79` |
-| 1969-1973 par report avant depuis 1968 | inférence validée, **pas encore posée** | `81` |
+| 1969 → premier acte du département | inférence validée, **posée le 6 sept. 2026** | `81` |
 
 **Asymétrie à connaître avant toute lecture.** L'incertitude de date ne pèse que
 sur les cantons *modifiés*. La part des actes de création pure s'effondre avec
@@ -328,8 +540,24 @@ cartes, pas deux lectures contradictoires.
 
 Qualité de lecture : 1954, `ferme` 88,5 %, `nom_flou_confirme` 11,4 %,
 `atome_ambigu` 0,1 % (`c54_qualite`) ; 1968, `ferme` 79,9 %,
-`canton_conteste` 3,1 % (`c68_qualite`), dépouillement de 30 128 lignes sur
-31 400, soit 95,9 %.
+`canton_conteste` 3,1 % (`c68_qualite`).
+
+> **Le « 95,9 % » de 1954 ne mesure pas ce qu'on lui faisait dire — corrigé le
+> 6 septembre 2026.** C'est 30 128 lignes sur 31 400 : la part des lignes
+> **transcrites** qui ont reçu un code, donc la qualité de l'appariement. Les
+> pages muettes ne sont pas au dénominateur, n'ayant produit aucune ligne.
+>
+> **La couverture du jalon sur les communes qui existaient est de 79,0 %**
+> — 30 009 atomes comparables sur 37 979 vivants en 1940 (`94` § 5). Les
+> **7 870 manquantes vivaient en 1954** : `94` le mesure par la chronologie de
+> l'INSEE, qui ne trouve que 55 mortes dans la fenêtre. Et la perte **n'est pas
+> concentrée** sur les quatre départements que `note_1954.md` donne pour
+> absents — ils portent 6,2 % du total, et le 52 ne perd que 30 % de ses
+> communes. C'est un défaut général du dépouillement, réparti entre 19 et 42 %
+> par département.
+>
+> ***Un taux sans son dénominateur est une opinion présentée comme une
+> mesure*** — celui-ci était rassurant depuis le 14 août 2026.
 
 **Le registre des actes** (`72`) porte 343 décrets moissonnés par titre et
 1 212 cantons dépouillés des JO ; `acte_departement` et `acte_sans_effet` en
@@ -422,6 +650,41 @@ Rouvert le 16 août 2026, dans un espace séparé (`om_*`, `40_outremer.sql`), s
 mélange avec la métropole. Circonscriptions DOM déjà sur disque, GEOFLA
 2015-03-04 pour les trames, CONTOURS-IRIS couvrant 61 coupes sur 61. Pacifique
 et Algérie restent bloqués par la licence.
+
+**`40_outremer.sql` n'est toujours pas joué** — son prérequis `om_commune_src`
+vient de `charger_outremer.sh`, que rien n'appelait jusqu'au 2 septembre (§ 6).
+Tout ce qui suit décrit donc ce que la chaîne fera, pas ce que la base porte.
+
+**La carte web sait lire cet espace depuis le 6 septembre 2026**, par
+`cartes/export_web.py --outremer`. Trois différences de modèle interdisaient de
+réutiliser le chemin métropolitain, et elles valent d'être connues avant de lire
+une planche d'outre-mer :
+
+| | métropole | outre-mer |
+|---|---|---|
+| clé de département | `unit.dep`, `char(2)` | `om_unit.dep`, `char(3)` |
+| projection | Lambert-93 (2154) | WGS84 (4326), surfaces en `geography` |
+| épaisseur temporelle de la forme | ANR datée, `84` nettoyée | **aucune** — instantané GEOFLA 2015 |
+| accrochage | 25 m | 25 m convertis en degrés (25,0 à 26,8 m selon la latitude) |
+
+Toutes les communes d'outre-mer portent donc `r: 1` : leur forme est juste, sa
+*date* n'est pas attestée. C'est la convention que `--sans-anr` emploie déjà en
+métropole, pas une convention neuve.
+
+**Deux trous connus, et l'export les montre au lieu de les combler.** Les 27
+communes multicantonales n'ont aucun rattachement cantonal — GEOFLA ne les
+découpe pas — et sortent hachurées, tracé à faire sur `iris_om`. **Mayotte n'a
+aucun rattachement du tout** : le fichier du ministère qui les pose ne la
+contient pas, ses 16 cantons ne venant que de GEOFLA. Son département s'affiche
+donc avec ses communes dessinées, sans couleur, et zéro année servie.
+
+Cela a demandé de corriger la page, qui ne dessinait que les communes présentes
+dans un `rattachement` — le défaut que le § 2.5 nomme depuis août à propos des
+113 communes de 1986. **Il n'est levé que pour l'outre-mer**, et la raison n'est
+pas la prudence : en métropole, le rattachement est ce qui borne la *vie* d'un
+atome, et s'en passer dessinerait des communes avant leur naissance. Outre-mer,
+la trame étant un instantané, chaque version porte l'année de
+départementalisation comme borne basse (1946, et 2011 pour Mayotte).
 
 ---
 
@@ -649,17 +912,23 @@ crus résolus.
 psql -d histgis -f sql/diag_passages.sql     # lecture seule
 ```
 
-Elle confronte l'inventaire des 44 tables de trace **attendues** à ce que la base
-porte (§ 1), lit par leur effet les fichiers qui n'ont pas de trace (§ 2), et
-lit par leur effet ceux dont la trace manque ou est vide (§ 4). Écrite le
-2 septembre 2026, précisément parce que la question « ce fichier est-il passé ? »
-n'avait pas de réponse.
+Elle confronte l'inventaire des tables de trace **attendues** à ce que la base
+porte (§ 1), relit `38` et `39` par leur effet (§ 2), et lit par leur effet ceux
+dont la trace manque ou est vide (§ 4). Écrite le 2 septembre 2026, précisément
+parce que la question « ce fichier est-il passé ? » n'avait pas de réponse.
 
 ### Ce que le premier passage a rendu, le 2 septembre 2026
 
-**35 traces peuplées sur 44, aucune trace orpheline** — l'inventaire couvre
+**35 traces peuplées sur 44, aucune trace orpheline** — l'inventaire couvrait
 exactement ce que la base porte. Restent neuf lignes, qui ne disent pas toutes
 la même chose :
+
+> **L'inventaire est passé à 46 le soir même**, `p38_trace` et `p39_trace`
+> ayant été écrites (§ ci-dessous). Elles compteront pour absentes tant que les
+> deux fichiers n'auront pas été rejoués, et ce sera exact : *un dénominateur
+> qui change est ce qui arrive à toute mesure qu'on continue d'améliorer ; le
+> chiffre de 35/44 vaut pour le 2 septembre au matin, il n'a pas à être
+> réécrit.*
 
 | fichier | trace | lecture |
 |---|---|---|
@@ -667,42 +936,166 @@ la même chose :
 | `43_circo_fraction` | absente | **normal** — exclu de `rejouer_apres_rebuild.sh` exprès : il ne répare qu'après un rejeu *isolé* de `24` |
 | `50_noms_perdus_trfgis` | vide | a tourné **avec** `appliquer=1` (sa trace n'existe que dans ce cas) et n'a rien eu à réparer |
 | `42_rattachement_arriere` | vide | a tourné, zéro cas — état sain **si** Chisa et Butry ont bien leur passé (§ 4 e) |
-| `37_reparer_encodage` | absente | **n'a jamais tourné avec `appliquer=1`** : sa trace est créée dans le `\if`. La réparation CP1252 → Latin-1 (1 975 valeurs, tous les `œ`) n'a peut-être jamais été appliquée |
-| `25_pseudo_canton` | absente | **à expliquer** — il est pourtant appelé sans condition juste après `24` dans la chaîne |
-| `40_outremer` | absente | **à expliquer** — appelé lui aussi, et son CSV d'entrée est bien sur le disque |
+| `37_reparer_encodage` | absente | **expliquée le 2 septembre : aucun script ne l'appelait.** `load_cog.sh` ne joue que `22` et `23`, alors que l'étape s'intitulait « 22, 36, 37, 23 ». Corrigé dans `rejouer_apres_rebuild.sh` |
+| `25_pseudo_canton` | absente | **expliquée le 2 septembre : son prérequis n'existait qu'en commentaire.** `geofla_canton` n'était chargée par aucun script ; `25` s'arrêtait sur son garde-fou. Le chargement `ogr2ogr` est entré dans la chaîne |
+| `40_outremer` | absente | **expliquée le 2 septembre : idem.** `om_commune_src` vient de `charger_outremer.sh`, que rien n'appelait. Le script est désormais appelé avant `40`, sous condition de présence des lots |
 | `81_report_1968_avant` (×2) | absentes | attendu : le fichier n'a jamais été joué |
 
-Les trois lignes en gras sont les seules qui appellent une action. Le § 4 du
-diagnostic les lit par leur **effet**, seul juge : `25` par ses 25 rattachements
+Les trois lignes en gras étaient les seules qui appelaient une action ; leur
+cause est trouvée et les correctifs sont écrits (`JOURNAL.md`, 2 septembre).
+**Elle est commune aux trois** : un prérequis qui n'est écrit qu'en commentaire
+est un prérequis absent. Et comme `25` lève une `EXCEPTION` sous
+`set -euo pipefail`, la chaîne ne pouvait pas aller au-delà de lui — ce qui
+prouve, par l'autre bout, que tout ce qui a une trace au-delà a été joué à la
+main.
+
+Rien n'est vérifié tant que le script corrigé n'a pas tourné. Le § 4 du
+diagnostic reste le juge, par l'**effet** : `25` par ses 25 rattachements
 d'arrondissement au 1ᵉʳ juin 2012, `40` par la présence des tables `om_*`, `37`
-par les octets de contrôle C1 dans `unit.nom` et `unit_version.nom`.
+par les octets de contrôle C1 dans `unit.nom` et `unit_version.nom` — étant
+entendu que `37` peut légitimement n'avoir rien à réparer, `load_cog.sh` lisant
+désormais le COG en `WIN1252`.
 
 *Une trace absente n'est pas un défaut par elle-même ; c'est une question. Neuf
 alarmes indistinctes valent moins que trois alarmes triées, et un diagnostic qui
 crie à chaque passage cesse d'être lu.*
 
-* ~~**`39_meurthe_1870.sql` est-il appliqué ?**~~ — **OUI, mesuré le 2 septembre
-  2026** : 0 canton en `99`, 73 en `54`, et zéro atome rattaché à deux cantons du
-  54 à la même date. L'état est conforme. **Mais `39` n'a toujours aucune table
-  de trace** : ce qui est établi, c'est que la base est dans le bon état, pas que
-  le fichier soit passé — un état peut être atteint autrement. C'est le même
-  fichier qu'un `rebuild.sh` avait défait en silence entre le 15 et le 30 août.
-  La dette reste ouverte (`RESTE_A_FAIRE.md` § 0).
+* **`39` ne couvrait qu'un étage sur deux — trouvé le 6 septembre 2026.** Sa
+  clause porte `u.niveau = 'canton'`, et il restait **une unité en `99`** au
+  niveau circo : `L9901@1870`, la Meurthe au scrutin de liste, 714
+  rattachements. Elle suffisait à faire vivre un 99ᵉ département dans tout ce
+  qui énumère `SELECT DISTINCT dep FROM unit`, l'export web en tête — et,
+  surtout, **elle coupait la Meurthe de 1870 en deux** : ses cantons dans le 54,
+  sa circonscription dans un 99 sans cantons. `sql/92_meurthe_circo.sql` le
+  corrige, avec sa trace ; **écrit et parsé, pas encore joué**
+  (`RESTE_A_FAIRE.md` § 0 bis). *Un correctif qui vise un niveau laisse l'autre
+  derrière lui, et la recette qui l'accompagne ne peut pas le dire : elle compte
+  ce qu'on lui a demandé de compter.*
+* ~~**`39_meurthe_1870.sql` est-il appliqué ?**~~ — **CLOS le 2 septembre 2026,
+  trace comprise.** Rejoué ce soir-là avec `p39_trace` : **29 unités tracées**,
+  0 canton en `99`, 73 en `54`, 52 en `57`, 31 en `55`, et zéro atome rattaché à
+  deux cantons du 54 à la même date. La Meurthe rend bien ses 29 cantons au
+  1ᵉʳ juin 1870. La question n'est plus « l'état est-il bon ? » mais « le fichier
+  est-il passé ? », et la base répond désormais elle-même.
+  *Le cas B du banc était le bon* : la trace visant l'`unit_id` `99xx` et non le
+  département, elle s'est peuplée sur une base où le travail était déjà fait —
+  `cantons_en_99_avant = 0`, et 29 lignes tout de même.
 * **`81_report_1968_avant.sql` n'est PAS joué** — établi le 2 septembre par deux
   chemins : `p81_trace` et `p81_qualite` sont absentes de la base, et
   `snapshot(1969-06-01)` rend **0 rattachement**. Attendu au passage :
   ~32 842 lignes, ~191 000 atome-années, `1969-06-01` passant de 0 à des dizaines
   de milliers, et **1974 et au-delà ne devant pas bouger** — le repère est
   5 198 rattachements sur 474 cantons au 1ᵉʳ juin 1974.
-* **`38_decret_1982_ain.sql` — état indéterminé.** Le décret n° 82-77 pose trois
-  choses distinctes : la remontée des trois fractions de Bourg-en-Bresse au
-  26 janvier 1982, trois communes entières (01254 Montagnat, 01369 Saint-Just →
-  `0105` ; 01344 Saint-Denis-les-Bourg → `0138`), et trois `unit_version`. Le
-  § 2 c de `diag_passages.sql` les lit séparément, parce qu'un rejeu partiel en
-  laisse passer une et pas les autres. **Piège au rejeu** : `38` n'insère que si
-  la période est libre, et depuis que `75`, `76` et `79` écrivent sur 1982-1999,
-  il peut ne rien poser **sans rien dire**. Lire le § 2 c après le rejeu, pas le
-  code de retour.
+* ~~**`38_decret_1982_ain.sql` est bloqué**~~ — **CLOS le 5 septembre 2026 :
+  `38` EST APPLIQUÉ.** `sql/85_conflit_38_79.sql` a libéré les trois fractions
+  et `38` est passé derrière, rendant **3 remontées, 3 `unit_version`, 0
+  rattachement de commune entière** avec le WARNING de son § 7 — l'attendu
+  exact. Son § 7 c rend enfin les trois cantons au 1ᵉʳ juin 1986 sous leurs
+  noms de 1982, `valid_from = 1982-01-26` : Bourg-Est, Bourg-Nord-Centre,
+  Bourg-Sud. **La ville n'est plus coupée par des cantons qui n'existaient
+  pas**, ce qui était l'objet du fichier depuis le 17 août.
+
+  Les trois issues posées ci-dessous ne sont plus la question, mais leur
+  analyse reste utile et **deux d'entre elles étaient mal posées** :
+
+  — *L'issue 3, renoncer, était à écarter.* Sur les trois fractions, `38` et
+    `79` disent le MÊME canton ; le texte primaire couvre seize ans là où le
+    report en couvre dix. Laisser l'inférence primer sur l'acte qui la fonde
+    n'était pas défendable.
+  — *Les issues 1 et 2 étaient équivalentes, et démontrablement.* `79` n'écrit
+    que sur une fenêtre entièrement libre (§ 5, `p79_libre`) ; rejoué après
+    `38`, il se serait abstenu de lui-même. Le rejeu complet coûtait
+    36 296 lignes pour le même état.
+  — *Et le vrai correctif n'était aucune des trois : c'est l'ORDRE.* Le conflit
+    n'existait que parce que `79` a été joué à la main, hors chaîne, après
+    `38`. Quand `rejouer_apres_rebuild.sh` sera complété jusqu'à `83`, `38`
+    devant `79` (il y est déjà, ligne 233), `85` deviendra inutile.
+
+  **CE QUI RESTE OUVERT, ET QUI EST NEUF.** Le décret rattache aussi trois
+  communes entières — Montagnat, Saint-Just, Saint-Denis-lès-Bourg — et elles
+  sont occupées sur `[1985-03-10, 1992-03-22)` par `0139` Péronnas et `0143`
+  Viriat, les deux successeurs de **Bourg-Couronne**. La transcription du JO
+  donne pourtant raison à `38` sur 1982. Comme les bornes de l'occupant sont
+  deux scrutins cantonaux, l'acte qu'il porte est **postérieur** au décret :
+  il n'y a alors pas de désaccord mais **une fenêtre de `38` § 6 trop large**,
+  qui court jusqu'en 1999 quand le décret ne vaut que jusqu'à l'acte suivant.
+  La fenêtre réellement libre est `[1982-01-26, 1985-03-10)`.
+
+  **L'OCCUPANT EST NOMMÉ : c'est `76`, et l'hypothèse est confirmée.** Le § 3
+  bis élargi rend `canton_decret = Péronnas` pour Montagnat et Saint-Just,
+  `Viriat` pour Saint-Denis, `n_actes = 1`, `provenance = 'jo'` (dépouillé de
+  l'OCR du Journal officiel), convention `scrutin_suivant`. La borne basse au
+  scrutin du 10 mars 1985 situe l'acte **entre mars 1982 et mars 1985**, donc
+  après le décret 82-77.
+
+  **Il n'y a donc aucun désaccord entre les deux sources** : un acte postérieur
+  a déplacé ces trois communes vers Bourg-Couronne — devenu Péronnas et Viriat
+  — et `38` § 6 prétend simplement courir jusqu'en 1999 quand le décret ne vaut
+  que jusqu'à cet acte. Le correctif est d'une ligne, et il n'est pas fait :
+  borner le § 6 de `38` à la date d'effet de l'acte suivant plutôt qu'à
+  `1999-01-01`.
+
+  *J'avais d'abord attribué l'occupant à `75` sur la seule forme de ses bornes,
+  deux scrutins cantonaux. Mais `76` emploie la même convention, et `77` pose
+  aussi des communes entières : une convention de dates partagée par trois
+  fichiers ne désigne aucun des trois, elle ne fait que les rendre
+  indiscernables. Seule la table de qualité tranche.*
+
+  Pour mémoire, l'obstacle initial, mesuré le 2 septembre 2026 :
+
+  ```
+  REMONTEE IMPOSSIBLE — la fenetre 1982-1999 est deja prise :
+    5260#0105 occupe par 0105 sur [1998-03-15,1999-01-01) ;
+    5260#0137 occupe par 0137 sur [1998-03-15,1999-01-01) ;
+    5260#0138 occupe par 0138 sur [1998-03-15,1999-01-01)
+  ```
+
+  **Ce n'est pas un désaccord de fond, c'est un conflit de bornes.** L'occupant
+  attribue chaque fraction au MÊME canton que le décret de 1982 — `0105` occupe
+  `5260#0105`. Les deux sources disent la même chose ; elles ne la font pas
+  commencer à la même date. `38` la fait partir du texte (26 janvier 1982,
+  publication au JO), l'occupant d'un plancher.
+
+  **Présomption à vérifier, non encore prouvée** : `1998-03-15` a la forme d'un
+  plancher de `79_report_1999_arriere.sql`, qui pose `[plancher, 1999-01-01)` par
+  département, le plancher étant la date du dernier acte connu du registre. Une
+  requête le dit :
+
+  ```sql
+  SELECT m.membership_id, m.atom_id, m.unit_id, m.periode,
+         (SELECT count(*) FROM p79_trace t
+           WHERE t.quoi='membership' AND t.cle = m.membership_id::text) AS pose_par_79
+    FROM membership m
+   WHERE m.niveau='canton' AND m.atom_id LIKE '5260#%'
+   ORDER BY m.atom_id, m.valid_from;
+  SELECT * FROM p79_plancher WHERE dep='01';
+  ```
+
+  **Trois issues, à trancher — aucune n'est un rafistolage :**
+
+  1. *La voie du dépôt.* Défaire `79` par sa trace, jouer `38`, rejouer `79`.
+     `79` ne pose que là où la fenêtre est entièrement libre : il cédera de
+     lui-même les trois fractions à `38`, sans qu'aucune règle soit contournée.
+     Coûteux (36 296 lignes) mais c'est la procédure écrite dans `sql/README.md`,
+     et `81` n'est pas encore joué, donc l'ordre reste propre.
+  2. *La voie chirurgicale.* Supprimer les trois lignes de l'occupant **et leurs
+     lignes de trace**, puis jouer `38`. Équivalent au résultat de la voie 1 sur
+     ces trois atomes seulement. À ne faire qu'en supprimant aussi la trace :
+     une trace qui survit à ce qu'elle trace est l'anomalie que
+     `diag_passages.sql` § 3 bis cherche.
+  3. *Ne rien faire, et le dire.* L'occupant couvre 1998-1999 ; `38` ajouterait
+     seize ans de couverture attestée par un texte primaire. Renoncer est
+     défendable si l'on tient que `38` doit céder devant une couche systématique,
+     mais alors il faut le décider, pas le subir.
+
+  **Ce que le refus a prouvé au passage** : le § 3 fait son travail. Sans lui,
+  la transaction serait tombée sur une violation d'`EXCLUDE` illisible — et
+  avant le 2 septembre, sur rien du tout.
+
+  Les deux autres parts du décret (les trois `unit_version` de 1982, les trois
+  communes entières) n'ont pas été atteintes : le refus est intervenu avant.
+  Leur état reste inconnu.
+
 * **Chisa et Butry-sur-Oise — à trancher.** `ETAT.md` les rangeait parmi les
   « territoires neufs » aux côtés de Tende et La Brigue, et `METHODE.md` parmi
   les créations d'avant 1943 hors de portée du fichier INSEE. **Les deux étaient
@@ -729,6 +1122,13 @@ crie à chaque passage cesse d'être lu.*
   (`40_outremer.sql`, `40_scission_circo.sql`), et le « `82`, le chaînage acte
   par acte » évoqué dans les notes d'août entre en collision avec
   `82_anr_geom.sql`. Le chaînage devra prendre un numéro libre.
+  **Le piège a resservi le 6 septembre 2026** : `92_meurthe_circo.sql` avait
+  d'abord été écrit en `86`, où `86_reprise_mosaique.sql` l'attendait. Attrapé
+  avant le premier appel, en comptant les préfixes plutôt qu'en regardant la fin
+  de `ls`, qui trie `diag_*` après les chiffres et ne montre donc jamais le
+  dernier numéro. *Un doublon de numéro ne se voit pas au moment où on le crée ;
+  il se voit quand on compte, et il faut compter exprès.* Le plus haut numéro
+  occupé est aujourd'hui `91`.
 
 ---
 

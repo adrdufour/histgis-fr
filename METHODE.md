@@ -1653,10 +1653,26 @@ importe est le comportement, pas le mécanisme. Ce que le banc ne prouve pas doi
 rien du **coût** des requêtes (§ 11.6).
 
 **Tout fichier qui écrit a une table de trace**, et il retire son passage avant
-de recommencer. `38_decret_1982_ain.sql` et `39_meurthe_1870.sql` n'en ont pas :
-rien dans la base ne dit s'ils sont passés, et `39` a été défait par un
-`rebuild.sh` sans que rien ne le signale pendant quinze jours. C'est la dette la
-plus coûteuse du dépôt.
+de recommencer. `38_decret_1982_ain.sql` et `39_meurthe_1870.sql` ont été les
+deux dernières exceptions, et elles ont coûté cher : rien dans la base ne disait
+s'ils étaient passés, et `39` a été défait par un `rebuild.sh` sans que rien ne
+le signale pendant quinze jours. **Dette soldée le 2 septembre 2026** —
+`p38_trace`, `p39_trace`, éprouvées par `sql/banc_38_39.sh`. Trois choses
+apprises en les écrivant :
+
+* **Une trace se cale sur ce qui NE bouge PAS.** `39` change le département des
+  29 cantons de la Meurthe ; viser `dep = '99'` aurait donné une trace vide sur
+  une base déjà conforme, donc le verdict « joué puis défait ? » sur une base
+  saine. La trace vise l'`unit_id` `99xx`, qui ne bouge jamais. *Une trace calée
+  sur ce que le fichier modifie est vide dès que le travail est fait.*
+* **Une MISE À JOUR ne se défait pas par un DELETE.** Les deux fichiers
+  modifient des lignes autant qu'ils en posent. La colonne `avant` garde la
+  valeur d'origine ; sans elle, la trace sait dire qu'on est passé mais pas
+  revenir en arrière — une demi-trace.
+* **L'idempotence protège du rejeu, pas de l'oubli.** C'est l'argument qui avait
+  dispensé `39` de trace, et il était faux : un fichier idempotent qu'un
+  `DROP SCHEMA` a emporté se tait exactement comme un fichier qui vient de
+  réussir. Zéro ligne modifiée, code de retour nul, dans les deux cas.
 
 **Poser l'objet et sa trace dans la MÊME instruction**, via `RETURNING`, et
 lancer tout script qui écrit avec `psql -1`. Un `NULL` non casté a laissé 25

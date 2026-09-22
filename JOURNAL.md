@@ -6220,3 +6220,3036 @@ en même temps que le client. Le serveur s'installe par le système.
 bancs `sql/banc_*.sh`, qui sont le seul endroit où un serveur éphémère sert.
 `matplotlib-base` plutôt que `matplotlib` : aucun script n'ouvre de fenêtre,
 tout passe par `backend_pdf`, et Qt n'a rien à faire dans l'environnement.
+
+---
+
+## 2 septembre 2026, la dernière dette de trace — `38` et `39` deviennent défaisables
+
+### Ce qui était en jeu
+
+Deux fichiers de la chaîne écrivaient dans la base sans rien y laisser qui dise
+qu'ils étaient passés : `38_decret_1982_ain.sql` et `39_meurthe_1870.sql`. La
+convention du dépôt veut que **tout fichier qui écrit porte une table de trace**
+et retire son passage avant de recommencer ; ces deux-là étaient les dernières
+exceptions, et elles avaient déjà coûté deux incidents distincts.
+
+`39` avait été joué le 15 août, déclaré clos, puis **défait par un `rebuild.sh`**
+— et personne ne l'a su avant le 30, par hasard, en lisant la recette de `80`.
+`38`, lui, posait des rattachements que rien ne savait défaire : c'est ce qui a
+bloqué la reconstruction de `24`.
+
+### Ce qui a été écrit
+
+`p38_trace` et `p39_trace`, sur le modèle de `p79_trace`, avec une colonne de
+plus. Le § de retrait de chaque fichier défait le passage précédent avant de
+refaire, et l'objet est posé avec sa trace dans la **même** instruction, par
+`RETURNING` — la règle de `METHODE.md`, née d'un incident où 25 atomes avaient
+été committés sans trace.
+
+`38` distingue trois catégories, parce qu'un rejeu partiel en laisse passer une
+et pas les autres : `membership_remontee` (la date de départ des trois fractions
+de Bourg-en-Bresse), `unit_version` (les trois noms de 1982), `membership` (les
+trois communes entières que le décret rattache).
+
+### Trois choses apprises en l'écrivant
+
+**Une trace se cale sur ce qui NE bouge PAS.** Premier réflexe pour `39` : tracer
+les unités dont `dep = '99'`. Il est faux, et d'une façon qui ne se serait vue
+qu'à l'usage — sur la vraie base, où `39` est déjà passé, `dep` vaut `54` et la
+trace serait sortie **vide**. Or `diag_passages.sql` lit une trace vide comme
+« joué puis défait ? ». On aurait donc fabriqué, en voulant supprimer une fausse
+alarme, exactement la fausse alarme qu'on voulait supprimer. La cible est
+l'`unit_id` `99xx`, que le fichier ne renumérote jamais. *Une trace calée sur ce
+que le fichier modifie est vide dès que le travail est fait.*
+
+**Une mise à jour ne se défait pas par un `DELETE`.** Les deux fichiers modifient
+autant qu'ils insèrent. D'où la colonne `avant`, qui garde la valeur d'origine :
+sans elle, la trace saurait dire qu'on est passé, mais pas revenir en arrière.
+Une demi-trace.
+
+**L'idempotence protège du rejeu, pas de l'oubli.** C'est l'argument qui avait
+dispensé `39` de trace pendant trois semaines, et il était faux : un fichier
+idempotent qu'un `DROP SCHEMA` a emporté se tait **exactement** comme un fichier
+qui vient de réussir — zéro ligne modifiée, code de retour nul, dans les deux
+cas. Seule une table qui disparaît avec le schéma peut faire la différence.
+
+### Le silence de `38`, rompu
+
+`38` n'insère que si la période est libre. Depuis que `75`, `76` et `79`
+écrivent sur 1982-1999, il pouvait ne **rien** poser sans rien dire : le code de
+retour vaut zéro dans les deux cas. Son § 7 compare désormais ce qui est tracé à
+ce qui était attendu, **nomme l'occupant** de la fenêtre, et lève un `WARNING`.
+
+Un `WARNING` et non une `EXCEPTION`, et le choix mérite d'être écrit : une
+période tenue par un décret mieux daté que celui de 1982 n'est pas une erreur,
+c'est une meilleure source. Ce qui serait une erreur, c'est de ne pas le savoir.
+En revanche, quand c'est la **remontée d'une fraction** qui est bloquée, le
+fichier refuse franchement et nomme l'occupant, plutôt que de laisser tomber une
+violation d'`EXCLUDE` illisible.
+
+### Le banc
+
+`sql/banc_38_39.sh`, six scénarios sur un PostgreSQL jetable, même dispositif
+que `banc_75` et `banc_81` — vrai schéma, `EXCLUDE` remplacées par des
+déclencheurs équivalents, une base neuve par scénario. **Vert du premier coup
+sur les quatre premiers, deux contrôles du banc lui-même à corriger.**
+
+| | ce qu'il exerce |
+|---|---|
+| A | `39` sur base fraîche : 29 tracées, `dep` passé à 54, rejeu idempotent, retrait rendant bien le `99` de la source |
+| B | `39` sur base **déjà conforme, trace perdue** — 29 tracées quand même. C'est le scénario qui justifie tout le choix de cible, et c'est l'état de la vraie base aujourd'hui |
+| C | `38` sur base fraîche : 3 + 3 + 3, rejeu sans doublon, retrait complet rendant l'état de départ |
+| D | `38` avec la fenêtre prise pour une commune : pose 2 sur 3, nomme l'occupant, `WARNING` levé |
+| E | `38` avec la fenêtre prise pour une fraction : refus explicite, **et pas une ligne écrite** |
+| F | `38` quand `24` a déjà créé `p38_trace` vide, comme le fait la vraie chaîne |
+
+Le scénario E a appris quelque chose que je n'avais pas prévu : la transaction
+entière étant annulée, le `CREATE TABLE IF NOT EXISTS p38_trace` l'est aussi. Un
+fichier qui refuse ne laisse donc **même pas sa trace** — et c'est ce qu'on veut,
+puisqu'une trace vide se lirait comme « joué puis défait ».
+
+Deux contrôles du banc étaient faux, et de la même façon : ils comparaient à un
+nombre pris ailleurs. « État identique au départ : 6 rattachements » ignorait que
+la base du banc porte aussi les 29 de la Meurthe — 35 au total. *Le défaut n'est
+pas dans ce qu'on mesure, il est dans le nombre qu'on lui oppose ; c'est la même
+faute que le dénominateur des villes à découper et que le 37 266 de `79`.*
+
+### Ce qui reste
+
+**Les traces n'existent que dans les fichiers, pas encore dans la base.** Tant
+que `38` et `39` ne sont pas rejoués, `diag_passages.sql` § 1 les dira absents,
+et il aura raison. Son § 2 dira dans le même temps que l'état est conforme, et il
+aura raison aussi — c'est précisément à cela qu'il sert, et l'en-tête du fichier
+le dit maintenant. Un rejeu réconcilie les deux lectures et tranche du même coup
+la question laissée ouverte sur `38`, dont on ne savait pas s'il était passé.
+
+---
+
+## 2 septembre 2026, les trois traces absentes — un prérequis en commentaire est un prérequis absent
+
+### La question
+
+`diag_passages.sql` avait rendu neuf lignes sans trace, dont trois appelaient une
+action : `25_pseudo_canton.sql`, `40_outremer.sql`, `37_reparer_encodage.sql`.
+Trois questions supposées différentes. L'hypothèse écrite dans
+`RESTE_A_FAIRE.md` était que `rejouer_apres_rebuild.sh` n'avait jamais été joué
+de bout en bout et que ces deux-là étaient passés à travers.
+
+**Elle était juste sur le fait et fausse sur la cause**, et la vraie cause est
+commune aux trois.
+
+### Ce qui a été trouvé, sur pièces et sans base
+
+**`37` n'est appelé par rien.** L'étape de la chaîne s'intitule
+« COG 1999-2012 (22, 36, **37**, 23) » et délègue à `load_cog.sh`, qui ne joue
+que `22` et `23`. Le commentaire attribuait en outre à `37` la création de
+`noms_geofla`, qui est le fait de `19`. Ni `36` ni `37` n'étaient appelés.
+
+**`25` s'arrête sur son garde-fou.** Il exige `geofla_canton` — la couche CANTON
+de GEOFLA 2014 — et cette table n'est chargée par **aucun script du dépôt** : la
+commande `ogr2ogr` ne vit qu'en commentaire, dans l'en-tête de `25` et en
+prérequis de `26`. `rebuild.sh` ne charge qu'un seul shapefile, `geofla_commune`.
+
+**`40_outremer` s'arrête sur le sien.** Il était pourtant bien appelé, avec son
+`-v circo_om`, et son CSV est sur le disque — ce n'était donc ni la panne de `-v`
+du 20 août, ni un fichier manquant. Il exige `om_commune_src`, que produit
+`charger_outremer.sh`, **que rien n'appelait**. `rejouer_circo.sh` connaissait la
+question et testait la présence de la table avant de jouer `40` ;
+`rejouer_apres_rebuild.sh` le lançait à sec.
+
+Le seul autre échec possible a été vérifié et écarté : le `find` de
+`charger_outremer.sh` rend bien **5 lots COMMUNE et 5 lots CANTON**, malgré les
+deux familles de dossiers `GEOFLA_2-0_COMMUNE_SHP_*` et `GeoFLA_2-0__SHP_*`
+datées du même `2015-03-04` — le filtre `-ipath "*/COMMUNE/*"` les sépare.
+
+### Ce que cela dit de la chaîne, et qui ne se lisait pas dans la liste
+
+`25` est appelé tôt, juste après `24`, et son garde-fou lève une `EXCEPTION`.
+Sous `set -euo pipefail`, l'échec se propage. **La chaîne, en l'état, ne pouvait
+pas aller au-delà de `25`.**
+
+D'où une preuve indépendante de ce qu'on soupçonnait par ailleurs : que `38`,
+`41`, `44`, `46`, `47` et `40_scission` aient tous une trace en base établit
+qu'ils ont été joués **à la main**. Le même diagnostic que « le script est
+périmé », obtenu par l'autre bout — non par la liste de ce qui manque au script,
+mais par ce que la base contient malgré lui.
+
+### Les trois correctifs
+
+Dans `rejouer_apres_rebuild.sh` :
+
+1. **La couche CANTON 2014 est chargée avant `25`**, par `ogr2ogr`, avec
+   `-a_srs EPSG:2154` (le lot métropolitain est déjà en Lambert-93 : il n'y a
+   rien à reprojeter, même choix que pour COMMUNE dans `rebuild.sh`). Échec franc
+   si le shapefile manque : sans lui, les 25 arrondissements de Marseille et Lyon
+   restent sans canton de 1999 à 2012.
+2. **`charger_outremer.sh` est appelé avant `40_outremer`**, sous condition de
+   présence des lots, et `40` est sauté proprement sinon — les tables `om_*` ne
+   partagent rien avec la métropole, leur absence ne doit pas arrêter la chaîne.
+   C'est la prudence de `rejouer_circo.sh`, avec le chargement en plus.
+3. **`37` est appelé avec `-v appliquer=1`**, à côté de `50` et non dans l'étape
+   COG : il répare `unit.nom` et `unit_version.nom`, qui n'existent pas encore
+   quand `load_cog.sh` tourne. Le commentaire menteur est corrigé.
+
+Le contrôle `command -v ogr2ogr` est monté en tête du script : rien ne sert de
+rejouer une heure de SQL pour buter sur un binaire absent.
+
+### Ce qu'il faut attendre de `37`, et qui n'est pas ce qu'on croit
+
+Sa trace pourra très bien sortir **vide**, et ce sera un bon signe.
+`load_cog.sh` lit désormais le COG en `WIN1252` — le correctif « tarit la
+source », dit son propre commentaire. Depuis, un `rebuild.sh` ne réintroduit
+plus le défaut, et `37` ne vaut plus que pour d'éventuelles valeurs entrées
+avant. Une trace vide dira « a tourné, rien à réparer », comme celle de `50`.
+
+**C'est exactement la distinction que la trace absente interdisait de faire** :
+entre un fichier qui n'a rien eu à faire et un fichier qui n'a pas tourné.
+
+### La règle
+
+**Un prérequis qui n'est écrit qu'en commentaire est un prérequis absent.**
+Troisième occurrence dans ce seul fichier, après `noms_geofla` — créée par un
+script de `cartes/`, hors chaîne — et les quatre tables parisiennes engendrées
+par des scripts Python. `charger_outremer.sh` l'avait même formulée dans son
+en-tête, le 17 août : *« la même consigne en commentaire n'était pas
+exécutable »*. Elle était écrite, et le défaut a survécu deux semaines à côté.
+
+Corollaire de méthode : **une chaîne ne se relit pas, elle se joue.** Aucune de
+ces trois absences ne se voyait à la lecture du script — les trois appels
+étaient là, ou paraissaient l'être. Elles se voient à la première exécution, et
+c'est la seule vérification qui reste à faire.
+
+### Le même soir, sur la vraie base — `39` passe, `38` est refusé
+
+**`39` : conforme, et tracé.** 29 unités dans `p39_trace`, `cantons_en_99_avant`
+à **0** — c'est-à-dire le scénario B du banc, celui de la base déjà conforme dont
+la trace était perdue. Il s'est peuplé quand même, et c'est toute la raison pour
+laquelle la cible est l'`unit_id` et non le département. Effectifs inchangés :
+54 → 73, 55 → 31, 57 → 52, `99` absent ; zéro atome à double dans le 54 ; les
+29 cantons de la Meurthe répondent au 1ᵉʳ juin 1870, d'Albestroff (26 communes)
+à Vic-sur-Seille (24). Moyenvic ressort au diagnostic final, comme prévu — deux
+atomes Cassini sous un seul code INSEE, ce n'est pas un défaut.
+
+**`38` : refusé net, et c'est une réponse.** Le contrôle préalable du § 3 a
+arrêté la transaction :
+
+```
+REMONTEE IMPOSSIBLE — la fenetre 1982-1999 est deja prise :
+  5260#0105 occupe par 0105 sur [1998-03-15,1999-01-01) ; …
+```
+
+La question ouverte depuis le 17 août — « `38` est-il passé ? » — est donc
+tranchée : **non**. Et il ne peut plus passer en l'état.
+
+**L'obstacle n'est pas un désaccord, c'est un conflit de bornes.** L'occupant
+attribue chaque fraction au *même* canton que le décret de 1982 : `0105` occupe
+`5260#0105`, `0137` occupe `5260#0137`. Les deux sources disent la même chose et
+ne la font pas commencer à la même date — `38` part du texte publié au JO le
+26 janvier 1982, l'occupant d'un plancher. La forme de `1998-03-15` désigne
+`79_report_1999_arriere.sql`, qui pose `[plancher, 1999-01-01)` par département,
+mais **ce n'est encore qu'une présomption** : la requête qui le prouve est dans
+`ETAT.md` § 6, et elle n'a pas été lancée.
+
+*Un fichier qui refuse en nommant son obstacle rend plus qu'un fichier qui
+réussit en silence.* Avant ce matin, `38` se serait tu ou serait tombé sur une
+violation d'`EXCLUDE` illisible ; il a désigné trois lignes, leur unité et leur
+intervalle. Le § 3 a été écrit pour un cas d'école du banc, et il a trouvé un
+cas réel le jour même.
+
+**Ce qui reste inconnu** : les deux autres parts du décret — les trois
+`unit_version` de 1982 et les trois communes entières — n'ont pas été atteintes,
+le refus étant intervenu avant. Trois issues sont posées dans `ETAT.md` § 6 ;
+aucune n'est prise, parce qu'aucune ne se déduit des données.
+
+**Un défaut d'ergonomie, corrigé au passage.** Les deux fichiers ouvrent leur
+propre transaction ; les lancer avec `psql -1` produit « there is already a
+transaction in progress » puis « there is no transaction in progress ». Sans
+conséquence, mais deux avertissements qui n'apprennent rien font douter des
+avertissements qui en apprennent. Les en-têtes et `RESTE_A_FAIRE.md` disent
+maintenant d'appeler ces deux-là sans `-1`.
+
+### Le plafond de `84`, et une vitrine mal choisie
+
+L'Ain exporté avec `--partition` : **62 atomes en repli → 5**, 92 % du repli
+GEOFLA effacé, poids +6,5 % seulement (27,20 → 28,98 Mo) pour 585 → 1 274
+versions. La déduplication par `ST_Equals` tient : une quarantaine
+d'instantanés par commune se réduisent à 2,75 versions en moyenne.
+
+J'ai ensuite proposé quatre départements « qui peuvent surprendre » — 75, 13,
+20, 78 — choisis pour éprouver l'ALGORITHME (couche parisienne concurrente,
+pseudo-cantons marseillais, instantané corse, enclave de la Seine). Adrien les
+a lus comme une mesure de la CORRECTION, ce qui était l'usage naturel de ce que
+je lui avais donné, et a constaté qu'elle corrigeait moins. C'est exact, et
+c'était prévisible :
+
+| dep | communes | en repli | dont fractions |
+|---|---|---|---|
+| 75 | 228 | 159 (69,7 %) | **128** |
+| 13 | 155 | 50 (32,3 %) | **25** |
+| 20 | 369 | 10 (2,7 %) | 3 |
+| 78 | 706 | 35 (5,0 %) | 14 |
+| 01 | 463 | 62 (13,4 %) | 5 |
+
+**Les fractions restent en repli par construction.** À Paris, 128 des 159 en
+sont, plus les 20 arrondissements qu'ANR ne pourvoit à aucune date : le plancher
+est vers 148 et `84` ne peut en corriger qu'une dizaine. L'Ain n'avait que 5
+fractions sur 62 : d'où ses 92 %.
+
+**Le plafond national se mesure**, et il fallait le poser avant de promettre
+quoi que ce soit : 4 291 atomes en repli, dont **1 256 fractions**, donc
+**3 035 corrigeables au mieux — 71 % du repli, pas 100 %.**
+
+*Un jeu d'essai choisi pour éprouver un algorithme ne mesure pas ce qu'il
+apporte, et présenter l'un pour l'autre transforme un succès en déception.*
+Les deux départements qui jugent vraiment sont la Haute-Marne (163 replis, 6
+fractions) et les Basses-Alpes (58 replis, 5 fractions).
+
+## 3 septembre 2026 — la passe nationale, et une boîte qui n'épousait rien
+
+Trois tentatives d'export national, trois clusters PostgreSQL abattus. La cause
+a mis du temps à se lire, et je m'y suis trompé deux fois avant de la voir.
+
+**Ce que disait le journal de PostgreSQL** : `received fast shutdown request`.
+J'en ai conclu un arrêt demandé — mise à jour de paquet, puis `systemd-oomd`.
+Les deux fois à tort. Ce message est un EFFET : systemd arrête proprement
+l'unité *après* que le noyau a tué un de ses processus. La cause n'est que dans
+`journalctl -k`, et elle y était en toutes lettres :
+
+    Out of memory: Killed process 16717 (postgres) anon-rss:12681868kB
+
+**12,7 Go pour un seul backend.** *Le message d'un service qui meurt décrit ce
+qu'il subit, pas ce qui l'a tué ; il faut remonter d'un cran dans la pile.*
+
+**Deux causes, l'une d'architecture, l'autre d'algorithme.**
+
+*L'architecture.* Un worker gardait sa connexion pour la vingtaine de
+départements qu'il traitait. PostgreSQL libère la mémoire à la fin de chaque
+requête, mais l'allocateur de la glibc ne la rend pas au système : le backend
+conservait le plus haut niveau atteint depuis son ouverture, cumulé sur tous
+les départements. `export_web.py` rouvre désormais sa connexion après chaque
+département — quelques millisecondes contre plusieurs minutes de travail.
+*Une fuite qui n'est pas dans votre code peut être dans votre architecture :
+c'est la durée de vie du processus qui décide de ce qu'une non-restitution
+finit par coûter.*
+
+*L'algorithme.* L'anneau de contexte de `84` était une BOÎTE ENGLOBANTE élargie
+de 20 km. Une boîte n'épouse rien : sur l'Aisne elle ratissait une bonne part de
+la Picardie, sur le Val-de-Marne — soixante-et-onze communes serrées — toute
+l'Île-de-France. La preuve est venue de la panne elle-même : après trois passes,
+les dix départements restés en rade étaient **67, 68, 69, 70, 91 à 95 et 99**,
+c'est-à-dire exactement les plus denses. `partition_voisinage` demande
+maintenant le voisinage réel à l'index gist — les atomes dont le polygone
+GEOFLA touche celui du département à cent mètres près. *Une boîte englobante
+est une approximation du voisinage qui empire avec la densité, c'est-à-dire là
+où l'on peut le moins se le permettre.*
+
+**Non-régression vérifiée contre l'export produit par l'ancien anneau** : Ain
+458 atomes, 451 ANR, 7 reprises, 0 repli, 0,000 km² ; Haute-Marne 550, 550, 0,
+0 — identiques au chiffre près. L'oracle existait parce que 88 départements
+étaient déjà sortis : *une refonte se vérifie contre ce qu'elle remplace, à
+condition d'avoir gardé ce qu'elle remplace.*
+
+**Deux défauts du script de lots, trouvés par l'usage.** Il a lancé 23 lots en
+deux secondes, tous morts sur `ModuleNotFoundError: psycopg2` — un shell sans
+l'environnement conda — sans jamais nommer la cause, qui n'était que dans le
+fichier de journal. Il vérifie maintenant l'interpréteur AVANT la boucle et
+s'arrête après deux lots consécutifs sans rien écrire. *Ce qui ne peut pas
+marcher se vérifie une fois, avant ; ce qui peut échouer par intermittence se
+réessaie dedans. Et une boucle qui réessaie doit savoir remarquer qu'elle
+n'avance pas.*
+
+---
+
+## 5 septembre 2026 — la tête de liste était périmée, et deux hypothèses écrites étaient fausses
+
+La passe nationale de `--partition` a fini ce matin à 09 h 49 : **98
+départements sur 98**, 3,75 Go. Le fait se vérifie sans la base — chaque
+`cartes/web/donnees/dep/NN/index.json` porte `"trame": "partition"`, et les 98
+le portent. Les points 0, 5 et 5 bis de `RESTE_A_FAIRE.md` tombent ensemble ;
+le fichier avait deux jours de retard sur le disque.
+
+Le poids attendu était « 92 Mo, deux à trois fois plus ». C'est quarante fois
+plus, et l'écart n'est pas une surprise de l'export : `--partition` écrit une
+version par année géométrique, quand l'estimation portait sur la trame
+ordinaire. *Une prévision faite sur un objet ne vaut pas pour un autre objet
+qui porte le même nom de commande.*
+
+### Deux hypothèses réfutées sans toucher la base
+
+Le reste de la journée est allé aux points qui exigent `psql` — et il s'est
+trouvé que les deux plus anciens reposaient sur des explications que le dépôt
+suffit à démentir.
+
+**Les fractions sans géométrie.** `RESTE_A_FAIRE.md` posait que
+« `05_geom.sql` donne à chaque atome-fraction le polygone de sa commune-mère,
+et ceux-là ne l'ont pas reçu ». Les deux moitiés sont fausses. `05` ne cherche
+aucune mère : il joint `atom.insee_geofla` à `geofla_commune.insee_com` pour
+tous les atomes indistinctement, et le mot « mère » n'apparaît pas dans le
+fichier — une fraction est servie parce qu'elle porte le même code INSEE que sa
+commune. Quant au code, il ne manque à personne : sur `build/atom.csv`, **333
+lignes portent un `#` et les 333 portent un code INSEE** au format attendu,
+aucune vide, aucune valant 1, 2 ou 3 — les valeurs de `com_act`, qui partagent
+la colonne et auraient laissé `insee_geofla` à NULL.
+
+L'hypothèse qui reste est une propriété de la chaîne, pas de la source :
+`atom_geom` est bâtie à l'étape 5 et jamais reconstruite, alors que six
+fichiers créent des atomes après elle. Cinq l'alimentent dans la foulée ;
+**`59_cog1968_membership.sql` et `68_cog1954_membership.sql` ne le font pas.**
+Un atome né après l'étape 5 ne peut pas avoir de repli, quel que soit son code.
+Et cela se mesure en une colonne : *son code INSEE a-t-il un polygone dans
+`geofla_commune` ?* Oui sans ligne dans `atom_geom` = défaut de chaîne,
+réparable ; non = limite de source. `sql/diag_sans_geometrie.sql` la rend, et
+la redonne par un second chemin — la mère est-elle dessinée, elle ?
+
+**La Guérinière.** L'explication avancée — « formée en 1919 de DEUX
+communes-mères » — prédit un symptôme que nous n'observons pas. La règle de
+reprise cherche un voisin dont la chronologie ANR se coupe en Y′, puis
+départage par `DISTINCT ON` au recouvrement décroissant : **deux mères
+donneraient deux candidats, donc un départage, pas zéro.** Une règle qui
+départage ne tombe pas en panne parce qu'il y a deux réponses ; elle tombe en
+panne quand il n'y en a aucune.
+
+*Une explication qui prédit autre chose que ce qu'on voit n'est pas une
+explication faible, c'est une explication réfutée.* Trois causes restent — Y′
+n'est pas l'année crue, les mères se coupent à un autre millésime, ou le repli
+ne touche personne — et le § 6 du même fichier les sépare.
+
+### `38` : le conflit portait sur six atomes, pas trois
+
+`ETAT.md` § 6 décrit le refus de `38` sur les trois fractions de Bourg. Mais le
+§ 3 de `38` **ne contrôle que les fractions** — il joint sa table `d82` — alors
+que son § 6 rattache aussi trois communes entières : Montagnat, Saint-Just et
+Saint-Denis-les-Bourg. Elles sont dans l'Ain, vivantes en 1999, donc dans la
+cible de `79` exactement comme les fractions, et `38` ne les insère que
+`WHERE NOT EXISTS` un chevauchement. **Il ne les aurait pas refusées : il se
+serait tu**, et seul le WARNING de son § 7 l'aurait dit.
+
+*Un contrôle préalable qui ne couvre qu'une partie de ce que le fichier écrit
+donne un diagnostic exact sur un périmètre faux.*
+
+**Les trois issues d'`ETAT.md` § 6 ne sont pas trois.** L'issue 3 — renoncer —
+laisserait une inférence primer sur le texte primaire qui la fonde, et sur le
+seul segment où le texte est plus riche : seize ans contre dix mois, en disant
+la même chose sur la partie commune. Elle est écartée. Et les issues 1 et 2 —
+rejouer `79` en entier ou retirer chirurgicalement — **donnent le même état, et
+on peut le démontrer** : `79` n'écrit que là où la fenêtre est entièrement
+libre, or `38` pose `[1982-01-26, 1999-01-01)`, qui contient
+`[1998-03-15, 1999-01-01)`. Un `79` rejoué après `38` s'abstiendrait de
+lui-même. L'issue 1 coûte 36 296 lignes pour arriver au même endroit.
+
+**Le vrai correctif n'est ni l'un ni l'autre : c'est l'ordre.** Le conflit
+n'existe que parce que `79` a été joué à la main, hors chaîne, après `38`. Dans
+`rejouer_apres_rebuild.sh`, `38` est déjà à sa place, ligne 233 ; tant que le
+script n'est pas complété jusqu'à `83`, le prochain `rebuild.sh` refabriquera
+ce conflit. *Un correctif qui ne change pas l'ordre qui a produit le défaut
+n'est pas un correctif, c'est un entretien.*
+
+### Un défaut trouvé dans mon propre fichier, avant de le livrer
+
+`85_conflit_38_79.sql` demande, en fin de course, d'être relu pour lire sa
+recette après le passage de `38`. Or à ce moment-là l'occupant de la fenêtre
+est `38` lui-même. La première version triait les occupants sur « viennent-ils
+de `79` ? » : relue après `38`, elle aurait refusé — et pire, son § 4 aurait
+**supprimé le travail de `38`** en croyant libérer `79`.
+
+Le tri se fait maintenant en trois classes (`79`, `38`, autre) et le retrait ne
+porte que sur la première. `38` s'y reconnaît à sa DATE, `1982-01-26`, et non à
+`p38_trace` : PostgreSQL résout les noms de table au moment du plan, si bien
+qu'interroger cette table ferait échouer la requête quand elle n'existe pas —
+c'est-à-dire dans le cas normal, avant que `38` n'ait jamais tourné. *Un
+critère qui tient dans la donnée vaut mieux qu'un critère qui suppose une
+table.*
+
+Deux autres défauts corrigés au passage, tous deux du même genre — du SQL qui
+se lit bien et ne fait pas ce qu'il dit :
+
+* `to_jsonb(q.*)` sur une jointure externe **sans correspondance ne rend pas
+  NULL** : il rend un objet dont tous les champs valent `null`. La recette qui
+  comptait les lignes sans qualité n'aurait jamais rien vu.
+* `(jsonb_set(…)).*` n'étale pas un `jsonb` en colonnes. Il faut
+  `jsonb_populate_record(NULL::p79_qualite, …)`.
+
+### Ce qui n'est pas fait, et il faut le dire
+
+**Aucun des deux fichiers n'a tourné.** Ils ont été écrits sans accès à une
+base — comme `84` le 2 septembre, et son en-tête le dit de la même façon. Ce
+qui a été vérifié est leur ANALYSE SYNTAXIQUE, par `pglast` (le parseur de
+PostgreSQL lui-même), commandes psql retirées : 13 instructions pour
+`diag_sans_geometrie.sql`, 32 pour `85_conflit_38_79.sql`, et les deux branches
+de chaque `\if` analysées ensemble. Les colonnes ont été relues une à une
+contre `01_schema.sql`, `19`, `72`, `79` et `82`.
+
+*Un fichier qui s'analyse n'est pas un fichier qui marche.* La règle du dépôt
+vaut ici comme ailleurs : une chaîne ne se relit pas, elle se joue.
+
+## 5 septembre 2026, sur la base — trois hypothèses jouées, trois hypothèses fausses
+
+Les deux fichiers écrits ce matin ont tourné. Aucun n'a rendu ce qu'il
+attendait, et les trois écarts valent mieux que les réponses espérées.
+
+### Les 318 atomes n'ont jamais manqué de géométrie
+
+`diag_sans_geometrie.sql` cherche les atomes vivants à 1870-12-01 privés des
+trois sources de `84` — ni `atom_geom`, ni ANR à la date, la reprise exigeant
+elle-même un repli. **Il rend zéro ligne.** Aucun atome vivant n'est privé de
+géométrie.
+
+Les 318 du § 8 de `diag_partition.sql` sont donc **absents du résultat de
+`carte_partition_atome`**, pas des tables qu'elle lit. Le § 8 affirmait
+pourtant le contraire, en toutes lettres : *« Ce ne sont pas des trous ouverts
+par 84 — ils manquaient déjà »*. Son titre et sa légende sont corrigés.
+
+Où ils se perdent se lit dans le fichier : `partition_un_dep` finit par
+`t84_src JOIN t84_prop JOIN net`, et un atome ne ressort que si son
+propriétaire a gagné au moins une face. L'arbitrage du § (d) attribue chaque
+face à un seul propriétaire, dans l'ordre `est_repli`, `aire`, `pid` — un
+polygone entièrement recouvert par un mieux classé perd tout. C'est exactement
+le cas d'une fille reportée en arrière par `11` dont le repli GEOFLA se
+superpose au polygone ANR de sa mère intacte : les 393 superpositions franches
+que `84` documente lui-même en tête.
+
+*Une population définie par « absente du résultat d'une fonction » n'est pas
+celle définie par « absente des tables qu'elle lit ». Les deux se disent avec
+la même phrase française, et c'est tout le piège.* Trois jours de tête de liste
+reposaient sur cette confusion.
+
+La question devient « à qui leur sol a-t-il été donné ? ». Si la réponse est
+« presque intégralement à un voisin », **la carte n'a pas de trou : elle a un
+défaut de légende** — un canton perd des communes à l'affichage sans perdre un
+mètre carré. La requête est écrite, au § 6, pour être collée dans une session
+où `diag_partition.sql` a déjà matérialisé `d84` ; la relancer pour elle seule
+coûterait plusieurs minutes de treillis.
+
+### La Guérinière : la mère existe, et se coupe au bon millésime
+
+Y′ vaut 1919-01-01. Deux voisins pourvus à 1870 que son repli touche :
+**Noirmoutier-en-l'Île**, dont la chronologie ANR se coupe exactement en
+1919-01-01 et qui recouvre 7,485 des 7,803 km², et Barbâtre, qui ne se coupe
+pas en Y′ et ne recouvre rien (contact de frontière).
+
+**Une mère existe donc, et elle satisfait la condition de la règle.**
+L'hypothèse des deux communes-mères est réfutée deux fois : il n'y a qu'une
+candidate, et deux en auraient donné un départage — la règle finit par un
+`DISTINCT ON` au recouvrement décroissant — jamais un échec.
+
+Reste un suspect, δ : **ANR ne fait pas rétrécir Noirmoutier en 1919.** La
+coupure de 1919 dans sa chronologie existerait pour une autre raison, et
+`mere(1870) − mere(1919)` ne rend rien de surfacique. Si c'est cela, la règle
+n'a pas d'angle mort : elle refuse d'inventer un territoire qu'aucun couple de
+polygones datés ne porte, et c'est ce qu'on lui demande. Le § 7 b le mesure en
+une ligne — `reste_km2` et `reste_sur_le_repli_km2`.
+
+### `38` : le refus était juste, et mon fichier refusait pour la mauvaise raison
+
+`85_conflit_38_79.sql` a refusé au premier essai. Il avait raison de refuser,
+et tort de refuser en bloc.
+
+**Trois occupants de plus que prévu**, sur `[1985-03-10, 1992-03-22)` :
+Montagnat et Saint-Just sous `0139`, Saint-Denis-lès-Bourg sous `0143`. Ces
+bornes sont deux scrutins cantonaux : c'est la convention de date d'effet de
+`75_composition_1973_1982.sql`. Et sur `[1998-03-15, 1999-01-01)`, `79` dit la
+même chose — `0139` et `0143`, et non les `0105` et `0138` du décret.
+
+`0139` Péronnas et `0143` Viriat sont **les deux successeurs de
+Bourg-Couronne**, le quatrième canton du décret de 1982, celui qui n'a aucun
+`unit_id` dans la base. Or la transcription du JO est sans ambiguïté :
+Bourg-Couronne comprend Péronnas, Buellas, Lent, Montcet, Montracol, Polliat,
+Saint-André-sur-Vieux-Jonc, Saint-Rémy, Servas, Vandeins et Viriat — les trois
+communes litigieuses n'y sont pas, et `38` a raison **sur 1982**.
+
+**Mais l'occupant de `75` ne parle pas de 1982.** Sa fenêtre commence au
+scrutin de mars 1985, donc l'acte qu'il a lu est postérieur au décret 82-77,
+dont l'effet conventionnel serait mars 1982. Si le registre porte bien un acte
+de 1982-1985 déplaçant ces trois communes vers Bourg-Couronne, **il n'y a aucun
+désaccord** : il y a une **fenêtre de `38` § 6 trop large**, qui prétend courir
+jusqu'en 1999 alors que le décret ne vaut que jusqu'à l'acte suivant.
+
+Le fichier est donc refait autour d'un **périmètre** :
+
+* **les trois fractions** — un seul occupant, `79`, dix mois, même canton :
+  conflit de bornes pur, libérable, et c'est tout ce que `85` retire ;
+* **les trois communes entières** — instruites au § 3 bis, qui nomme l'acte
+  que `75` invoque et calcule la fenêtre réellement libre, et **jamais
+  touchées**. `38` se taira de lui-même dessus, son § 6 n'insérant que
+  `WHERE NOT EXISTS`, et son § 7 lèvera le WARNING prévu pour ce cas.
+
+L'attendu de `38` n'est donc pas 3/3/3 mais **3 / 3 / 0 avec un WARNING**, et
+c'est le bon résultat : *un fichier qui ne pose pas ce qu'une meilleure source
+occupe déjà n'échoue pas, il cède.*
+
+*Un contrôle dont le périmètre est plus large que l'action qu'il protège
+transforme une information en blocage.* Ma première version refusait de libérer
+trois fractions à cause de trois communes dont elle n'avait de toute façon rien
+à faire — la faute exacte que je reprochais au § 3 de `38` deux paragraphes
+plus haut, commise en le corrigeant.
+
+## 5 septembre 2026, au soir — `38` est appliqué, et la règle de reprise a un vrai angle mort
+
+### `38` passe, après trois semaines de blocage
+
+`85_conflit_38_79.sql` a libéré les trois fractions de Bourg : **3 lignes
+retirées** à `79`, avec leur trace et leur ligne de qualité, `sans_ligne_de_qualite`
+à 0. Le contrôle collatéral tombe juste au chiffre près — l'Ain passe de 422 à
+419 lignes de `79`, et de 5 à 2 fractions. Trois lignes, trois fractions, rien
+d'autre.
+
+`38` derrière : **3 remontées, 3 `unit_version`, 0 rattachement de commune
+entière**, avec le WARNING de son § 7. C'était l'attendu annoncé, et c'est le
+bon résultat — *un fichier qui ne pose pas ce qu'une meilleure source occupe
+déjà n'échoue pas, il cède.* Son § 7 c rend enfin ce que le fichier cherchait
+depuis le 17 août :
+
+    0105  Bourg-Est           5260#0105  01053  1982-01-26
+    0137  Bourg-Nord-Centre   5260#0137  01053  1982-01-26
+    0138  Bourg-Sud           5260#0138  01053  1982-01-26
+
+La ville n'est plus coupée en trois par des cantons qui, à la même date,
+n'existaient pas.
+
+**Ce que le § 3 bis n'a pas su dire.** Il interrogeait `p75_qualite`, et n'a
+rendu que des colonnes vides : les lignes de `[1985-03-10, 1992-03-22)` ne
+viennent pas de `75`. J'avais conclu à `75` sur la seule forme des bornes —
+deux scrutins cantonaux. Or `76` emploie la même convention, et `77` pose aussi
+des communes entières. *Une convention de dates partagée par trois fichiers ne
+désigne aucun des trois : elle ne fait que les rendre indiscernables.* Le § 3
+bis interroge maintenant les trois, et renvoie à `diag_passages.sql` s'ils se
+taisent tous.
+
+### La Guérinière : ce n'est pas la source, c'est `ST_Dump`
+
+Le § 7 b devait départager quatre causes. Il les a toutes réfutées, et en a
+révélé une cinquième que personne n'avait envisagée.
+
+    Noirmoutier-en-l'Île, chronologie ANR
+      1790 → 1858 ..... 49,573 km²
+      1858 → 1919 ..... 36,393 km²
+      1919 → 2020 ..... 19,967 km²
+    différence ........ 16,426 km², dont 7,485 sur le repli de La Guérinière
+
+**La mère rétrécit bel et bien en 1919.** La règle avait tout ce qu'il lui
+fallait : une mère, une coupure au bon millésime, une différence non vide.
+
+Et 16,426 n'est pas 7,803. Noirmoutier perd **deux fois** le territoire de La
+Guérinière, parce qu'elle a deux filles ce millésime-là : La Guérinière et
+**L'Épine**, voisines sur la même île.
+
+Or `partition_reprise` calcule un seul `reste` par couple (mère, Y′), le déplie
+par `ST_Dump`, et donne chaque morceau à une seule fille — `DISTINCT ON (mid)`,
+au recouvrement décroissant.
+
+> `ST_Dump` sépare les composantes DÉCONNECTÉES. Il ne partage pas un polygone
+> connexe entre deux prétendants.
+
+Deux filles contiguës, un seul morceau : L'Épine l'emporte et prend les
+16,4 km², La Guérinière repart les mains vides et retombe sur son repli GEOFLA,
+que le treillis du § 5 lui reprend ensuite face par face — `est_repli` classe
+un repli après un polygone de reprise.
+
+**Le corollaire n'avait pas été vu, et il est plus grave que le trou : la sœur
+servie est dessinée trop grande.** L'Épine reçoit ici près du double de son
+territoire. Un atome muet se voit ; un atome enflé se confond avec un atome
+juste.
+
+*Le compteur `fratrie` existait déjà, et valait 2 sur ce couple. La règle SAVAIT
+qu'elles étaient deux ; elle n'en tirait aucune conséquence.* Une valeur
+calculée que rien ne lit n'est pas une garde, c'est une décoration.
+
+**Ce qu'il ne faut pas faire** : partager le morceau au prorata des replis. Ce
+serait un arbitrage, dans un algorithme dont l'en-tête revendique de n'avoir
+aucun seuil, et il dessinerait une frontière qu'aucune source ne porte —
+exactement ce que `84` refuse aux 333 fractions. Le § 7 e mesure d'abord
+l'ampleur nationale : combien de couples où `filles > morceaux`. Si c'est un,
+l'angle mort se déclare ; si c'est vingt, ce sont les 432 reprises qu'il faut
+relire, et la recette avant la règle.
+
+### Ce que trois passages sur la base ont appris en un jour
+
+Trois hypothèses écrites dans `RESTE_A_FAIRE.md` depuis des semaines, trois
+réfutations. Et à chaque fois la réfutation valait mieux que la confirmation
+espérée : la première a fait disparaître un chantier (les 318 ne manquent de
+rien), la deuxième a débloqué un fichier arrêté depuis trois semaines, la
+troisième a trouvé un défaut d'algorithme là où l'on soupçonnait une lacune de
+source.
+
+*Une hypothèse écrite dans un fichier de tâches se lit comme un fait acquis au
+bout de quelques semaines. Les trois se démentaient en une requête chacune.*
+
+### Le même soir, deux fins de fil
+
+**L'occupant est `76`, et il n'y a aucun désaccord.** Le § 3 bis élargi aux
+trois tables de qualité répond du premier coup : `canton_decret = Péronnas`
+pour Montagnat et Saint-Just, `Viriat` pour Saint-Denis, un acte, `provenance`
+`jo` — dépouillé de l'OCR du Journal officiel —, convention `scrutin_suivant`.
+La borne basse au scrutin du 10 mars 1985 situe l'acte entre mars 1982 et mars
+1985, donc **après** le décret 82-77.
+
+L'hypothèse tient donc : un acte postérieur a déplacé ces trois communes vers
+Bourg-Couronne, devenu Péronnas et Viriat, et `38` § 6 prétend seulement courir
+trop loin. Le correctif est d'une ligne — borner à la date d'effet de l'acte
+suivant plutôt qu'à `1999-01-01` — et il n'est pas fait, pour ne pas mêler deux
+gestes dans le commit qui débloque `38`.
+
+J'avais d'abord attribué cet occupant à `75`, sur la seule forme de ses bornes.
+C'était une inférence de forme, et elle était fausse : `76` emploie la même
+convention et `77` pose aussi des communes entières. *Une convention de dates
+partagée par trois fichiers ne désigne aucun des trois ; elle ne fait que les
+rendre indiscernables.* Seule la table de qualité tranche, et c'est exactement
+ce pour quoi elle existe.
+
+**Et une erreur de typage que le parseur ne pouvait pas voir.** Le § 7 d est
+tombé sur `function round(double precision, integer) does not exist` : j'avais
+écrit `round(x / 1e6::numeric, 3)` au lieu de `round((x / 1e6)::numeric, 3)`.
+`ST_Area` rend un double, `double / numeric` reste un double, et `round(double,
+int)` n'existe pas — la parenthèse doit englober la division avant le cast.
+
+Les deux fichiers passaient pourtant l'analyse de `pglast`, le parseur de
+PostgreSQL lui-même. **C'est la limite exacte de ce contrôle** : il valide la
+grammaire, pas la résolution des fonctions, qui demande le catalogue. *Un
+parseur ne remplace pas un passage en base ; il réduit seulement le nombre de
+passages nécessaires.* Trois passages auront suffi là où l'écriture à l'aveugle
+en aurait demandé six.
+
+Le reste des `round` du dépôt a été relu au `grep` dans la foulée : aucun autre
+ne divise hors du cast.
+
+## 5 septembre 2026, dernier volet — le mécanisme est prouvé, l'ampleur ne l'est pas
+
+Le § 7 d a rendu le couple de Noirmoutier tout nu :
+
+| fille | son repli | recouvre le morceau | rang | obtient |
+|---|---|---|---|---|
+| L'Épine | 8,704 km² | 8,349 | 1 | **tout : 16,426 km²** |
+| La Guérinière | 7,918 km² | 7,485 | 2 | rien |
+
+Deux filles, **un seul morceau**, et les deux replis font ensemble 16,622 km²
+pour un reste de 16,426 : elles font à elles deux exactement ce que la mère a
+perdu. `ST_Dump` ne sépare que les composantes déconnectées ; `DISTINCT ON
+(mid)` donne le morceau entier à la première. **L'Épine est dessinée près de
+deux fois trop grande, et La Guérinière disparaît.**
+
+### Pourquoi aucune recette ne pouvait l'attraper
+
+La sœur enflée occupe le sol de sa sœur muette. Le treillis lui donne les
+faces, et **la surface totale est conservée** : l'emprise nationale tombait
+juste, 548 576 km² contre 548 489 d'étalon, +0,016 %. *Une recette qui mesure
+un total ne voit pas une permutation.* Il fallait descendre à l'atome, et rien
+ne le faisait.
+
+### L'ampleur : 17, et je ne le crois pas
+
+Le § 7 e balaie la France : 14 couples en fratrie contiguë, 31 filles en jeu,
+**17 perdantes**. Contre 1 annoncé le 2 septembre.
+
+**Et c'est probablement moi qui ai tort.** `ETAT.md` § 2.1 bis dénombre 84
+replis résiduels à cette date, dont seulement 30 hors fractions, toutes
+nommées. Une fille muette retombe sur son repli par définition : dix-sept n'y
+tiennent pas.
+
+La cause la plus vraisemblable est dans ma requête, pas dans la base : **elle
+part de la MÈRE quand la règle part de la FILLE.** Je prends pour Y′ le premier
+millésime de la mère postérieur à la date ; la règle prend celui de la fille,
+puis choisit parmi les mères candidates celle qui recouvre le plus. Une
+« fille » comptée ici peut relever d'une autre mère dans la règle réelle, et
+être servie par elle. Sur Noirmoutier — une seule mère possible, une seule
+coupure — les deux lectures coïncident ; ailleurs, rien ne le garantit.
+
+D'où le § 7 f, qui les **nomme une à une** : toute ligne de rang > 1 doit
+figurer dans les replis de `diag_partition.sql` § 1, et si elle n'y est pas,
+c'est mon paragraphe qui se trompe. Le tableau d'`ETAT.md` sert d'étalon, et
+c'est la bonne façon de s'en servir — *ne jamais ajuster sur l'étalon, mais
+toujours se faire juger par lui.*
+
+*Un mécanisme se prouve sur un cas ; son ampleur ne se prouve que sur la
+population, et les deux ne s'établissent pas de la même façon.* Le couple de
+Noirmoutier suffit à établir que le défaut existe ; il ne dit rien de combien
+de fois il se produit.
+
+### Ce qu'il ne faut pas faire, et l'ordre des suites
+
+Partager un morceau connexe au prorata des replis serait un **seuil**, dans un
+algorithme dont l'en-tête revendique de n'en avoir aucun, et tracerait une
+frontière qu'aucune source ne porte — exactement ce que `84` refuse aux
+333 fractions. Trois suites, dans cet ordre :
+
+1. **confronter** la liste du § 7 f aux 84 replis nommés ;
+2. si elle tient, corriger **la légende et la recette** de `84` avant sa règle —
+   une somme conservée cachait un échange, et c'est la recette qui a failli ;
+3. **seulement alors**, décider si un morceau connexe se partage. Déclarer
+   l'angle mort reste défendable ; le laisser en silence ne l'est plus.
+
+*Déclarer un angle mort qu'on n'a pas mesuré, c'est déclarer qu'on ne sait pas —
+ce qui est honnête. Le déclarer « à 0,4 km² près » quand on n'a mesuré qu'un cas
+sur quatorze, c'est autre chose.*
+
+### Le § 7 f se réfute lui-même, et j'avais réécrit une fonction que je pouvais appeler
+
+Les 31 lignes nommées portent leur démenti, lisible sans la base :
+
+* **Sury et This apparaissent deux fois, rôles inversés.** Sous
+  Neuville-lès-This (1871), This est servie et Sury muette ; sous Belval, Sury
+  est servie et This muette. Même chose pour Ville-sur-Retourne et
+  Mont-Saint-Rémy, pour Amnéville et `57435`, pour Mars-sous-Bourcq.
+* **Six écarts sont négatifs** : le morceau est plus petit que le repli de la
+  « fille » — Gandrange donnerait 5,796 km² à une commune de 10,538. Une fille
+  n'est pas plus grande que ce que sa mère a perdu.
+* **`08068` réclame 28,103 km² sur un morceau de 4,748.**
+
+La cause est celle que le § 7 f annonçait contre lui-même : il part de la MÈRE
+et lui attribue toutes les filles du millésime ; la règle part de la FILLE et
+lui donne UNE mère, au plus fort recouvrement. Sury choisit Belval, This
+choisit Neuville, **les deux sont servies**, et mon paragraphe inventait deux
+muettes en les comptant sous chaque mère. Les 17 sont un majorant sans valeur.
+
+*Une approximation qui produit des rôles contradictoires pour un même objet ne
+demande pas d'être arbitrée : elle demande d'être abandonnée.*
+
+**Et je n'avais rien à réécrire.** `partition_reprise` est déclarée
+`LANGUAGE sql STABLE`, sans table temporaire, et son `p_dep` accepte `NULL` :
+son bloc `vivant` porte `(p_dep IS NULL OR m.atom_id IN proches)`. **Appelée
+sans département, elle fait la France entière.** C'est `partition_un_dep` qui
+exige un département — pas elle. Le § 7 g l'appelle et compare son résultat à
+la population candidate, copiée du bloc `manquant` : `candidats`,
+`servis_par_la_reprise`, `muets_malgré_un_Y′`, `sans_Y′`. C'est la règle qui
+répond, pas une lecture de la règle.
+
+*J'ai passé deux paragraphes à reconstituer un algorithme dont l'appel tenait
+en une ligne. La restriction que je croyais générale — « un département à la
+fois, et c'est structurel » — était écrite en tête de la fonction VOISINE.*
+
+Le § 7 h mesure enfin ce qui compte vraiment : pour les atomes servis dont
+`fratrie > 1`, l'écart entre le polygone reçu et leur propre repli. C'est la
+sœur enflée, et cette mesure-là ne dépend d'aucune de mes reconstitutions.
+
+## 5 septembre 2026, la mesure juste — 13 muets, deux fantômes, et une opération qui n'était pas découpable
+
+`partition_reprise(1870-12-01, NULL)` a répondu. 486 candidats, 435 servis,
+**13 muets malgré un Y′**, 38 sans Y′ — ceux-là étant une limite de source et
+non un défaut.
+
+Treize, et non un. Environ **158 km²**, et non 0,4 : Beauvais (33,5 km²,
+Y′ 1943), Saint-Sulpice du Puy-de-Dôme (18,3), Anthé (14,4), La Guillermie
+(12,6), Cazideroque (12,3), Thézac (11,3), Masquières (11,2), Amnéville (10,5),
+Velanne (8,1), La Guérinière (7,9), Saint-Sulpice-des-Rivoires (7,2), Colomars
+(6,0), Chardeny (5,1).
+
+Quatre viennent du Lot-et-Garonne au même millésime 1876 : c'est **la fratrie
+de six de Tournon-d'Agenais**, où Bourlens reçoit 73,5 km² pour un repli de
+15,6. Le pire cas de France, et il ne se voyait nulle part.
+
+### Deux atomes reçoivent un polygone vide — pire que muets
+
+    13202  L'Étang-Bertrand   mère Bricquebec 1895        repli 8,525 → reçue 0,000
+    10603  Courbiac           mère Tournon-d'Agenais 1876 repli 9,013 → reçue 0,000
+
+Ils sont DANS le résultat de la reprise, donc comptés `source = 'reprise'` :
+**ils n'apparaissent ni dans les 84 replis résiduels, ni dans les 13 muets**,
+et ne dessinent rien. Invisibles aux deux comptes à la fois.
+
+Le chemin est net. `partition_reprise` finit par `ST_Multi(ST_CollectionExtract(
+ST_UnaryUnion(ST_Collect(a.g)), 3))`, ce qui rend un `MULTIPOLYGON EMPTY` quand
+tous les morceaux sont vides — et `84` § (a) écrit `DELETE FROM t84_src WHERE
+geom IS NULL`. **Le vide passe le filtre.** Il entre dans le treillis, ne borde
+rien, ne gagne aucune face, et disparaît sans un mot.
+
+*Un test `IS NULL` sur une géométrie ne teste pas l'absence de géométrie.
+PostGIS distingue « pas de valeur » de « valeur vide », et seul le premier se
+voit.*
+
+**C'est le seul des trois défauts qui se corrige sans décider de rien** :
+écarter les vides les fait retomber sur leur repli GEOFLA, c'est-à-dire sur R5,
+le comportement déclaré. Un `HAVING NOT ST_IsEmpty(…)` et un `OR
+ST_IsEmpty(geom)`. Non appliqué — un `diag_*` ne modifie rien — mais écrit.
+
+### Et le cadre départemental change le résultat de la reprise
+
+13 muets au national, 1 sur la carte. L'écart n'est pas une erreur de mesure :
+**les deux ne calculent pas la même chose.**
+
+Dans `partition_reprise`, le bloc `vivant` est filtré par le département, le
+bloc `mere` ne l'est pas. À l'échelle d'un département, **moins de filles
+concourent pour le même morceau**, et une fille qui perd au national gagne en
+local. La carte bouclant par département, elle voit moins de muettes.
+
+**Cela contredit une affirmation de `84`**, écrite en tête de
+`partition_un_dep` : *« Le découpage par département avec anneau de contexte
+rend EXACTEMENT le même dessin, puisque l'anneau contient tout ce qui peut
+toucher le département. »* C'est vrai du TREILLIS, dont les effets sont
+strictement locaux — un atome ne dispute pas une face à un voisin situé à cent
+kilomètres. **Ce n'est pas vrai de la REPRISE**, dont le résultat dépend de
+l'ensemble des prétendants, donc du cadre.
+
+*Une opération n'est découpable que si ses effets sont locaux. Le treillis
+l'est, un arbitrage entre prétendants ne l'est pas, et les deux vivaient dans
+le même fichier sous la même justification.*
+
+Le corollaire est plus gênant que l'écart de comptage : **une fratrie à cheval
+sur deux départements verrait le même morceau attribué deux fois**, une fois
+dans chaque passe. La ligne « couture entre départements » de `check_partition`
+est exactement l'endroit où cela se lirait — elle a été écrite pour surveiller
+le treillis, elle surveillera aussi ceci.
+
+### Ce que la journée aura appris
+
+Quatre affirmations du dépôt sont tombées : les 318 atomes ne manquaient pas de
+géométrie, La Guérinière n'était pas une lacune de source, l'angle mort n'était
+pas unique, et la reprise n'était pas découpable par département. Aucune n'était
+un mensonge : chacune était une lecture plausible qu'aucune mesure n'avait
+encore contredite.
+
+*Ce qui les a fait tomber n'est ni une relecture ni une intuition : c'est
+d'avoir posé à la base des questions dont je ne connaissais pas la réponse, et
+d'avoir écrit la réponse attendue AVANT de la lire. Trois de mes propres
+paragraphes y sont passés aussi.*
+
+---
+
+## 5 septembre 2026, la suite immédiate — fermer la trappe du vide, et rien d'autre
+
+La file d'attente de `RESTE_A_FAIRE.md` porte quatre défauts en tête, tous
+trouvés le matin même. Trois demandent une décision ; **un seul n'en demande
+aucune**, et c'est celui-là qui est joué — la règle du projet étant qu'un
+correctif qui tranche se discute d'abord, tandis qu'un correctif qui rend un
+comportement DÉCLARÉ s'applique.
+
+### Ce qui a été écrit
+
+Deux lignes, aux deux endroits que le § 7 i de `sql/diag_sans_geometrie.sql`
+avait nommés le matin :
+
+* dans `partition_reprise`, au `SELECT` final —
+  `HAVING NOT ST_IsEmpty(ST_CollectionExtract(ST_UnaryUnion(ST_Collect(a.g)), 3))` ;
+* dans `partition_un_dep` § (a) —
+  `DELETE FROM t84_src WHERE geom IS NULL OR ST_IsEmpty(geom)`.
+
+L'Étang-Bertrand (13202) et Courbiac (10603) sortaient de la reprise avec un
+`MULTIPOLYGON EMPTY`, entraient dans le treillis comme `source = 'reprise'`, ne
+bordaient rien, ne gagnaient aucune face — et n'étaient comptés **ni parmi les
+84 replis résiduels, ni parmi les 13 filles muettes**. Écartés de la reprise,
+ils retombent sur le `coalesce` du § (a), donc sur leur polygone GEOFLA : R5, le
+comportement que le fichier annonce depuis le début.
+
+**Les deux lignes ne font pas double emploi**, et le fichier le dit maintenant :
+le `HAVING` écarte les vides que la reprise PRODUIT, le `DELETE` écarte tous les
+autres, d'où qu'ils viennent. Mais le second **supprime** au lieu de faire
+retomber — le `coalesce` a déjà choisi sa source, et un `atom_geom_anr` vide
+serait pris par lui avant que le repli ait sa chance. Aucun cas connu ; c'est
+écrit dans le fichier pour que le jour où il s'en présente un, on sache que le
+remède est dans le `coalesce` et pas dans le `DELETE`.
+
+### Une affirmation fausse retirée de l'en-tête
+
+`partition_un_dep` promettait que le découpage par département rend
+« EXACTEMENT le même dessin ». La mesure du matin l'a réfutée : 13 muettes au
+national, 1 vue par la carte. Le mot juste est **le même TREILLIS**, et
+l'en-tête porte désormais l'exception, sa cause (le bloc `mere` ignore `p_dep`)
+et son corollaire non résolu — une fratrie à cheval sur deux départements peut
+recevoir deux fois le même morceau, et c'est la ligne « couture entre
+départements » du § 7 qui le dirait.
+
+Le § 8 du fichier gagne deux points, 6 et 7 : la reprise non découpable, et la
+fratrie contiguë que `ST_Dump` ne sépare pas. Le second est le plus coûteux —
+treize communes trop petites et autant de sœurs trop grandes, **à somme
+conservée**, donc invisible à toute recette de surface.
+
+### Un attendu qui bascule, et qu'il fallait écrire avant de le voir tomber
+
+Le § 7 j de `diag_sans_geometrie.sql` annonçait « Attendu : 2 ». Contre un `84`
+corrigé, il doit rendre **0**, et zéro ligne y vaudra preuve et non panne. Les
+deux fichiers le disent maintenant chacun de son côté, avec la date du bascule.
+
+*Une recette dont l'attendu change au passage d'un correctif doit annoncer les
+deux valeurs et ce qui les sépare, sinon le jour venu elle a l'air d'être en
+panne — et on corrige la recette au lieu de constater le succès.*
+
+### Ce qui n'est PAS prouvé
+
+Rien n'a été joué : le poste de travail de cette session n'a pas la base. Le
+correctif est **écrit et relu, pas mesuré**. Ce qui vaudra preuve, dans l'ordre :
+rejouer `sql/84_carte_partition.sql` — il ne pose que des fonctions, les rejouer
+suffit —, puis `psql -d histgis -f sql/diag_sans_geometrie.sql` et lire le § 7 j
+(0 ligne), puis `check_partition('1870-12-01')` où les deux atomes doivent avoir
+migré de `reprise` vers `repli`. Tant que ces trois lectures n'ont pas eu lieu,
+la carte dessine encore deux fantômes.
+
+### Le même jour, la passe nationale — deux enseignements, dont un que je n'attendais pas
+
+`check_partition()` a été relancée sur la France entière juste après. Sa sortie
+dit deux choses, et la première commande la lecture de la seconde.
+
+**1. Le correctif n'est pas dans la base — et c'est la colonne `attendu` qui le
+prouve.** Les libellés rendus sont ceux d'avant : « France 432 au banc », sans
+le « moins les vides écartés depuis le 5 sept. » que le fichier porte désormais.
+Or ces libellés sont des LITTÉRAUX écrits dans le corps de `check_partition` :
+ils ne peuvent venir que de la version chargée. Deux causes possibles, et il
+faut les distinguer avant de conclure — `84` n'a pas été rejoué, ou il a été
+rejoué depuis une autre copie du dépôt, le piège de propagation entre dossiers
+que le projet connaît déjà. La question se tranche sans rejouer quoi que ce
+soit :
+
+```sql
+SELECT prosrc LIKE '%ST_IsEmpty%' AS trappe_fermee
+FROM   pg_proc WHERE proname = 'partition_reprise';
+```
+
+*Une recette qui porte ses attendus en clair dans son propre corps se date
+elle-même. Ce n'était pas l'intention en les écrivant, et c'est pourtant le
+service le plus utile qu'ils aient rendu aujourd'hui.*
+
+**2. La couture entre départements n'est plus nulle : 0,019 km².** Le 2
+septembre elle valait 0,000. Tout le reste est identique au chiffre près —
+38 129 atomes dessinés, 433 reprises, 84 replis résiduels, recouvrement hors
+fraction 0,000, emprise 548 576 km², zéro géométrie invalide. **Une seule chose
+a changé entre les deux passes : l'anneau de contexte du 3 septembre**, qui
+demande désormais le voisinage réel à l'index gist au lieu d'une boîte
+englobante.
+
+Et sa non-régression avait été vérifiée sur l'Ain et la Haute-Marne, au chiffre
+près — mais **département par département, c'est-à-dire précisément là où cette
+ligne est sans objet par construction**. Elle ne pouvait rien contrôler de ce
+qui se joue entre deux cadres.
+
+*Une recette qu'on ne peut pas lire dans le cadre où l'on éprouve un correctif
+ne le contrôle pas : elle attend la passe nationale, et il faut le savoir en
+déclarant la non-régression.*
+
+**Ce que 1,9 ha veut dire, et ce qu'il ne dit pas.** C'est l'ordre de grandeur
+d'une lisière, pas d'un territoire : la lecture la plus simple est qu'une
+frontière disputée ne tombe plus du même côté dans les deux passes. Mais le
+corollaire écrit le matin — une fratrie à cheval sur deux départements recevant
+deux fois le même morceau — **se lirait au même endroit**, et une somme de
+1,9 ha ne permet pas de trancher entre « vingt lisières » et « un vrai doublon
+plus dix-neuf lisières ». D'où le § 9 neuf de `sql/diag_partition.sql`, qui
+nomme les paires, donne leur surface et porte une colonne `deux_reprises` :
+un couple qui la porte à `t` et pèse plusieurs km² n'est pas une lisière.
+
+Et la note écrite le matin dans `ETAT.md` — « cette ligne vaut 0,000, donc le
+corollaire est nul » — est corrigée sur place. Elle portait sa réserve (« la
+mesure précède la correction de l'anneau »), et la réserve a payé le jour même.
+*Une conclusion assortie de la réserve qui la tuera n'est pas une erreur : c'est
+le format le moins coûteux à corriger.*
+
+### Et la mesure a déplacé le défaut — ce n'était pas le vide, c'était le cadre
+
+`diag_deux_vides.sql` puis `diag_reprise_nulle.sql`, joués dans la foulée, ont
+répondu trois choses que je n'attendais dans aucun de ces trois ordres.
+
+**1. Les deux fantômes ne sont pas vides sur la carte.** Dans leur propre
+département, L'Étang-Bertrand et Courbiac sont SERVIS, et servis avec un
+multipolygone de **6 et 33 morceaux dont l'aire totale est nulle** — des
+lisières effondrées, ce que `ST_Difference` laisse quand deux bords coïncident.
+`ST_IsEmpty` les déclare pleins. **Le correctif du matin est donc juste au
+national et inopérant sur la carte**, ce qui explique les 84 replis inchangés :
+il ferme une trappe réelle qui n'avait pas de victime là où la carte travaille.
+
+*Un filtre sur le vide ne voit pas un polygone d'aire nulle. « Avoir des
+points » et « avoir une surface » sont deux propriétés distinctes, et il a fallu
+mesurer pour cesser de les confondre — après avoir écrit un correctif fondé sur
+leur confusion.*
+
+**2. La distribution est franchement bimodale, et cela vaut décision.** Sur les
+544 reprises calculées comme la carte les calcule (une passe par département) :
+
+    moins de 1 m² .....   4    0,000 km²    26,3 morceaux en moyenne
+    1 km² ou plus .....  540  7 233,211 km²  24,2
+
+**Rien entre 1 m² et 1 km².** Six ordres de grandeur vides. Un filtre posé
+n'importe où dans cet intervalle sépare exactement les mêmes deux populations :
+ce n'est donc pas un seuil au sens où le projet refuse les seuils — c'est la
+lecture d'une discontinuité qui est dans les données. *Un seuil arbitraire est
+un seuil dont le résultat dépend ; celui-ci n'en dépend pas, et c'est
+vérifiable.* La classe « aire exactement nulle » est vide, en revanche : les
+miettes valent quelques dixièmes de m², pas zéro, si bien qu'un filtre
+`ST_Area > 0` ne les prendrait pas.
+
+**3. Le corollaire du point 6 n'est pas une crainte, c'est un fait mesuré.** Les
+quatre lignes à moins d'un m² sont **deux atomes seulement** : Courbiac y
+apparaît trois fois, comptée dans les passes de 46, 47 et 82 parce que l'anneau
+de contexte l'y fait entrer. Et surtout :
+
+    dep 82  ANTHE      73,518 km² reçus pour un repli de 14,380
+    dep 46  THEZAC     73,518                        11,330
+    dep 47  BOURLENS   73,518                        15,578
+
+**Le même morceau, au mètre carré près, est donné à trois filles différentes**,
+une par passe départementale. Et la fratrie change de taille avec le cadre :
+`fratrie = 3` vue de 46 et de 82, `= 6` vue de 47, pour le même atome, la même
+mère et le même millésime. L'affirmation retirée de l'en-tête ce matin — « le
+découpage rend exactement le même dessin » — n'était donc pas seulement fausse
+en théorie.
+
+**Ce qui reste à mesurer avant d'écrire une ligne de correctif** : la reprise
+est l'ENTRÉE du treillis, pas la carte. L'arbitrage peut rogner ces trois
+polygones jusqu'à ce qu'ils ne se recouvrent plus, et la ligne « couture entre
+départements » qui vaut 0,019 km² et non 150 le suggère fortement.
+`sql/diag_fratrie_carte.sql` pose la question à la SORTIE : ce que chaque fille
+reçoit vraiment, si elles se recouvrent sur le dessin, et ce que la mère garde.
+
+*Une entrée fausse ne fait pas une sortie fausse quand une étape ultérieure
+arbitre. J'ai failli conclure sur l'entrée deux fois de suite aujourd'hui.*
+
+### Le fond de l'affaire — six communes entrent, une seule est dessinée
+
+`diag_fratrie_carte2.sql` a répondu, et la chaîne est complète du premier
+polygone au dernier pixel.
+
+    mère 37892 TOURNON-D'AGENAIS, Y′ 1876, six filles, toutes en 47
+      BOURLENS      repli 15,578   sur la carte : OUI, 73,518 km²  (source_datee)
+      ANTHE         repli 14,380   sur la carte : NON
+      CAZIDEROQUE   repli 12,277   sur la carte : NON
+      THEZAC        repli 11,330   sur la carte : NON
+      MASQUIERES    repli 11,215   sur la carte : NON
+      COURBIAC      repli  9,013   sur la carte : NON
+    mère 5988 BRICQUEBEC, Y′ 1895, deux filles, en 50
+      ROCHEVILLE    repli 10,417   sur la carte : OUI, 19,080 km²  (unique)
+      L'ÉTANG-B.    repli  8,525   sur la carte : NON
+
+**Cinq communes du Lot-et-Garonne et une de la Manche ne sont pas sur la carte
+à 1870** — 66,74 km² de sol qui existe, qui est dessinable, et qui est dessiné
+sous le nom d'une sœur.
+
+### Le mécanisme, de bout en bout
+
+1. `mere` désigne une mère par fille : correct.
+2. `diff` calcule UN `reste` par couple (mère, Y′) — le territoire des six
+   réunies, 73,518 km².
+3. `ST_Dump` le déplie, **et ne sépare que les composantes déconnectées**. Six
+   filles voisines sur un même canton, c'est un seul morceau.
+4. `DISTINCT ON (mid)` donne ce morceau à la fille dont le repli le recouvre le
+   plus : Bourlens, qui a le plus grand repli des six.
+5. Les cinq autres ne reçoivent rien, ou des lisières effondrées d'aire nulle.
+   Sans surface, elles ne gagnent aucune face du treillis et **sortent du
+   résultat** : elles tombent dans les 318.
+6. La mère est réduite de la totalité du `reste` : 94,956 − 73,518 = 21,438.
+   **La somme est conservée au km² près**, donc l'emprise nationale, le
+   recouvrement et toutes les recettes de surface restent muets.
+
+*Un défaut qui conserve la somme ne se trouve pas en pesant. Il faut compter les
+objets, pas mesurer le tas.*
+
+### Et la couture ne mentait pas
+
+Anthé et Thézac reçoivent le même morceau de 73,518 km² dans les passes de 82 et
+de 46 — mais elles habitent le 47, et `partition_un_dep` ne rend que les atomes
+`dedans`. Leur victoire dans un cadre étranger ne se dessine nulle part. Les
+0,019 km² de couture disaient donc vrai : **le triple don existe dans la règle,
+pas sur la carte.** Le point 6 du § 8 de `84` est réel mais sans effet visible,
+et le point 7 est l'inverse — invisible aux recettes et grave sur le dessin.
+
+### Ce qui rend le correctif décidable, et c'est neuf
+
+La somme des replis des sœurs reproduit le `reste` à moins d'un pour cent :
+
+    Tournon-d'Agenais   Σ replis 73,793   reste 73,518   écart −0,37 %
+    Bricquebec          Σ replis 18,942   reste 19,080   écart +0,73 %
+
+Autrement dit, **la mosaïque des replis pave exactement le territoire à
+partager**. Découper le morceau connexe en attribuant chaque face à la sœur dont
+le repli la recouvre — au lieu de donner le morceau entier à une seule — n'est
+pas un seuil et n'invente aucune ligne : c'est la règle DÉJÀ ÉCRITE (« le repli
+redevient ce qu'il sait faire, un indice de position »), appliquée à la face au
+lieu du morceau. Le repli reste un indice de position, jamais une mesure de
+surface, et la frontière posée est celle du treillis, pas une ligne tracée à la
+main.
+
+Ce n'en est pas moins un changement de règle, et il se décide en le disant. Il
+s'éprouve d'abord au banc — `sql/banc_84.py` — comme les deux règles fausses qui
+l'ont précédé.
+
+### Bilan de la journée sur ce point
+
+La trappe du vide fermée ce matin était réelle et **sans victime sur la carte** :
+elle protège l'appel national, qui est un outil de diagnostic. Ce qui blesse la
+carte est le point 7, et il a fallu quatre mesures pour cesser de le confondre
+avec autre chose. À chaque étape j'ai conclu sur l'entrée d'une règle en croyant
+parler de sa sortie.
+
+### La règle mosaïque, décidée, écrite, éprouvée, adoptée — treize communes reviennent
+
+La décision prise, restait à ne pas la prendre sur parole.
+
+**Le banc était mort, et il ne le disait pas.** `banc_84.py` a reçu la règle
+sous le drapeau `--mosaique`, et lancé sur le Lot-et-Garonne il annonce
+329 atomes ANR, **0 reprise et 0 repli**. La cause est dans
+`cartes/web/donnees/dep/47/index.json` : `trame: "partition"`. Depuis l'export
+du 5 septembre au matin, l'entrée du banc est la SORTIE de ce qu'il éprouve.
+
+*Un banc dont l'entrée est la sortie de ce qu'il éprouve ne prouve rien — et il
+ne proteste pas : il rend des zéros, qui ressemblent à des succès.*
+
+D'où `sql/86_reprise_mosaique.sql`, qui pose la règle candidate à côté de celle
+en vigueur, sans toucher à `84`, et les compare en base.
+
+### Le premier jet était bon et cher : 10,22 %
+
+La mosaïque nue — chaque fille reçoit `reste ∩ son repli` — sert les six sœurs
+et rend leurs vraies tailles. Mais elle laisse **559,280 km², soit 10,22 %** du
+sol à partager sans propriétaire. Le treillis les comblerait, c'est son § (e) —
+mais au voisin partageant le plus long bord, qui peut être étranger à la
+fratrie, et le comblement national vaut 33 km² sur 23 départements. Le
+quintupler pour réparer autre chose, c'est déplacer le problème.
+
+Le second temps n'est donc pas une règle de plus : **le comblement est joué
+d'abord entre sœurs**, avec la règle du § (e) mot pour mot — plus long bord
+partagé, `ST_Distance` en second critère, `atom_id` en dernier. *Une règle
+existante rendue à la portée où elle a un sens n'est pas une règle nouvelle.*
+
+### Ce que la comparaison a rendu
+
+    Tournon-d'Agenais   1 fille dessinée -> 6, somme 73,518 EXACTE
+    Bricquebec          1 -> 2, somme 19,080 exacte
+    servies             435 -> 447
+    sol repris en union 5 469,9 -> 5 469,9 km²      inchangé
+    reliquat            559,280 -> 0,000 km²
+
+Le seul prix est déclaré : la somme ligne à ligne vaut 5 475,2 contre 5 469,9 en
+union, soit **5,3 km² (0,097 %) où deux sœurs réclament le même sol** — le
+défaut connu des replis qui se recouvrent. Il n'est pas tranché dans la règle :
+le `departage` du treillis est fait pour ça, et il est déterministe.
+
+### Et sur la carte, qui est la seule mesure qui fasse foi
+
+    atomes dessinés ......... 38 129 -> 38 142   (+13)
+    dont repris .............    433 ->    447
+    dont repli résiduel .....     84 ->     83
+    recouvrement hors fract.  0,000 -> 0,000 km²
+    couture entre dép. ......  0,019 -> 0,019 km²
+    emprise hors fraction ... 548 576 -> 548 576 km²
+    géométries invalides ....      0 ->      0
+
+**Les treize filles muettes sont sur la carte.** Les 5,3 km² de prétentions
+concurrentes ont été absorbés par le départage — le recouvrement reste nul.
+L'emprise ne bouge pas d'un km² : aucun sol n'a été créé, treize communes ont
+cessé d'être dessinées sous le nom d'une sœur.
+
+### Ce qui est écrit où
+
+`partition_reprise` porte la règle mosaïque dans `84`. L'ancienne survit comme
+**code vivant** sous le nom `partition_reprise_morceau`, appelée par rien —
+*une règle remplacée dont on ne garde que la prose ne se compare plus à rien*.
+`86` ne pose plus de fonction : il compare les deux, à toute date, et c'est la
+seule raison pour laquelle la seconde existe. Les attendus de `check_partition`
+sont remesurés et datés.
+
+### Ce que la journée aura appris, en une ligne
+
+Quatre fois de suite j'ai conclu sur l'entrée d'une règle en croyant parler de
+sa sortie : le vide qui n'était vide qu'au national, la miette qui n'était pas
+un vide, le triple don qui ne se dessinait pas, le reliquat qui ne se voyait pas
+au § 4. Le correctif du matin fermait une trappe sans victime ; celui du soir en
+rend treize à la carte. **Les deux venaient de la même mesure — l'un l'avait lue
+trop vite.**
+
+---
+
+## 6 septembre 2026 — la Seine perd sa banlieue en 1945, et le coupable n'est pas la géométrie
+
+Le signalement était visuel : *il manque les villes du département de la Seine
+de 1945 à 1953, de 1954 à 1967, et de 1815 à 1869*. Trois fenêtres, un seul
+département.
+
+La base n'étant pas joignable ce jour-là, le diagnostic est passé par l'export
+web du 5 septembre, qui est une image fidèle de ce qu'elle contient.
+
+    1870-1875     1 unité (« Seine »)   100 rattachements   dont 80 de banlieue
+    1936-1944    56 unités              156                 dont 80
+    1945-1957     3 unités               80                 dont  0
+    1958-1985    28 unités               72                 dont  0
+
+**Les quatre-vingts communes ne manquent pas — elles ne sont rattachées à
+rien.** Elles sont en base, dessinées, vivantes ; leur `communes.json` porte
+leurs polygones sans une lacune de 1870 à 2012. Ce qui s'arrête en 1941 est la
+seule source qui porte le 75 hors TRF-GIS : `paris_decoupage.xlsx`, intra-muros
+et par quartier.
+
+*Un trou sur la carte se lit comme une géométrie absente. Il faut compter les
+rattachements pour voir que ce n'en est pas une.*
+
+### Les deux textes, et le mur qui n'en était plus un
+
+Les deux découpages se définissent **par canton** — précisément ce qui bloquait
+le découpage de 1958 dans toute la France. Mais depuis `66`-`69` le jalon de
+1954 donne la composition cantonale, et la Seine y est.
+
+    1945-1958   loi 46-2151 du 5 octobre 1946     3 circos de banlieue, 22 cantons
+    1958-1968   ord. 58-945 du 13 octobre 1958   24 circos, 17 en communes, 7 en cantons
+
+### Le contrôle est tombé tout seul, et il est indépendant
+
+La page 758 du fascicule de 1954 porte en tête la nomenclature des 42 cantons
+de la Seine. Les 22 de banlieue sont, **nom pour nom**, les 22 que la loi de
+1946 énumère. Ni un de plus, ni un de moins ; et les 7 cantons cités par
+l'ordonnance de 1958 en font partie.
+
+Deux sources qui n'ont jamais été mises en contact — un texte électoral, un
+dénombrement, douze ans d'écart — nomment la même liste.
+
+### Ce que le banc a trouvé en chemin
+
+Première mesure : **76 communes sur 80** pour 1945-1958. Absentes :
+Choisy-le-Roi, Noisy-le-Sec, Sceaux, Villejuif.
+
+Elles ne manquent pas au fascicule. Elles y sont, codées :
+
+    Choisy-ic-Roi   3 08      Nolsy-ie-Sec   2 13
+    SCEAUX          3 39      Vitejuit       3 41
+
+L'extraction les a laissées tomber sur des noms qu'elle n'a pas su apparier —
+et `SCEAUX` est la seule ligne du département imprimée en capitales. Trois des
+quatre sont les chefs-lieux des cantons qui portent leur nom, et la page les
+code **deux fois**, dans la nomenclature de tête et dans le tableau de
+population. Rien n'est déduit ; tout est relu.
+
+D'où `87_seine_canton_1954.sql`, et le banc qui tourne deux fois pour que le
+prix du correctif se mesure : **76/80 → 80/80**.
+
+### Un alias écrit trop vite, rendu par le banc
+
+La table d'équivalences de graphie contenait `asnieres → asnieres sur seine`.
+Elle servait aux communes comme aux cantons, et la loi de 1946 nomme le canton
+« Asnières » quand l'ordonnance de 1958 nomme la commune
+« Asnières-sur-Seine » — les deux existent en base sous ces deux noms exacts.
+L'alias les a confondus, et la couverture de 1945-1958 est tombée à 73/80.
+
+*Un alias qui rapproche deux objets réels n'est pas une commodité, c'est une
+confusion.* Il n'en reste que deux, `Charenton-le-Pont → Charenton` et
+`Montreuil-sous-Bois → Montreuil`, écrits un par un dans le SQL.
+
+### L'état, et ce qu'il n'est pas
+
+Écrits, éprouvés au banc, **non joués** : `sql/87_seine_canton_1954.sql` et
+`sql/88_seine_circo_1945_1967.sql`, avec `circo/seine_circo.csv` (86 lignes),
+`cog1954/correctif_seine_1954.csv` (4 lignes), `circo/banc_seine.py` et
+`circo/note_seine.md`. Les deux fichiers passent l'analyseur de PostgreSQL.
+
+Ce qu'ils supposent, et c'est écrit dans leur en-tête : la composition
+communale des cantons n'est connue qu'à 1954, et elle est projetée sur les deux
+périodes. Sur les 80 communes, 57 sont posées par leur nom propre en 1958 et
+23 par un canton ; la division de 1945-1958, elle, en dépend entièrement.
+`provisoire = true` porte cette réserve.
+
+Ce qui reste dû au chantier : **la confrontation au JO lui-même**. Légifrance ne
+reproduit pas les tableaux annexes, et la transcription vient d'une synthèse
+tierce. Les contrôles rendent une erreur improbable, ils ne la rendent pas
+impossible.
+
+Et 1815-1869 n'est pas entamé : à cette date **180 atomes du 75 sortent de
+l'export sans polygone**, toute la banlieue plus les communes annexées en 1860.
+Ce n'est pas le même trou, et il demande géométrie et attribution.
+
+### Le premier jeu, le soir même — un code INSEE n'est pas un atome
+
+`87` est passé, `88` s'est arrêté sur son propre garde-fou. Le message était
+juste et l'explication ailleurs :
+
+    87, recette 1     6 lignes pour 4 communes
+                      Villejuif -> 40231, 40231#9427, 40231#9448
+    88, recette 1     1945-1958   82 communes
+                      1958-1968  128 communes, dont 105 par jeton commune
+                      pour 57 jetons
+
+Les deux fichiers joignaient sur le seul `insee_geofla`. **Villejuif possède
+trois atomes** — le sien et deux fractions héritées d'un partage cantonal de
+1870-1940 — et cinquante-sept jetons « commune » en atteignaient cent cinq.
+
+Les deux divisions ne couvraient donc pas le même territoire, et personne ne
+pouvait le voir : la recette de couverture déduisait elle aussi son lot de
+`insee_geofla`. Elle annonçait 82/82 puis 82/82 — deux fois le même chiffre
+sur deux ensembles différents.
+
+*Une recette qui construit son attendu par le même chemin que son mesuré ne
+mesure rien.* C'est la même faute que le banc du 5 septembre, sous un autre
+déguisement : là l'entrée était la sortie, ici l'attendu était le mesuré.
+
+### Le correctif, et pourquoi il ne tranche rien
+
+La convention n'était pas à inventer : `68` pose **un atome par commune**, et
+ne fabrique une fraction `atome#canton` que si la commune est multicantonale à
+1954. Aucune ne l'est dans la Seine. Et l'export du 75 ne contient **aucun
+atome à `#`**, pas même en 1870 — les fractions de Villejuif ne sont dessinées
+à aucune date.
+
+D'où un référentiel unique, `se_lot` : les atomes que la Seine rattache à l'un
+de ses cantons au 1er juin 1954. Il sert aux jetons « canton », aux jetons
+« commune » et à la recette. Il vient de `68` et de `87`, jamais de la
+transcription qu'il éprouve, et les deux divisions couvrent le même sol par
+construction plutôt que par vérification.
+
+Trois garde-fous neufs, chacun sur ce qui a manqué :
+
+    87   un code INSEE resout vers plusieurs atomes      (valait 2)
+    88   la planche tient plus d'atomes que de communes  (valait 82 pour 80)
+    88   colonne `hors_lot` : atomes atteints par la transcription
+         que la planche de 1954 ignore                   (aurait valu 48)
+
+`87` doit être rejoué — il retire sa propre trace, donc le rejeu est propre et
+ramène ses six rattachements à quatre.
+
+### Joué, et la Seine est entière de 1870 à 1967
+
+    87   4 rattachements cantonaux      80 communes, 22 cantons a 1954
+    88   27 unites, 160 rattachements
+
+    recette 6                banlieue  paris  circos
+      1875-06-01                   80     20       1     unite « Seine »
+      1900-06-01                   80     77      44
+      1935-06-01                   80     76      55
+      1950-06-01                   80     80       6     3 Paris + 3 Seine
+      1956-06-01                   80     80       6
+      1960-06-01                   80     72      52    28 Paris + 24 Seine
+      1967-06-01                   80     72      52
+      1970-06-01                    0     72      28     la Seine n'existe plus
+
+1943 ne rend aucune ligne, comme annoncé. Aucun atome dans deux
+circonscriptions à la même date, France entière.
+
+### Deux finitions, dont une qui a crié au loup
+
+La recette 3 de `87`, relancée à blanc après le premier passage, a annoncé
+**quatre conflits** — ses propres rattachements. Le retrait de trace n'existait
+que dans la branche qui pose ; le diagnostic, lui, comptait l'ouvrage du
+fichier parmi les obstacles du fichier. Corrigé des deux côtés, `87` et `88`.
+
+*Un diagnostic qui compte son propre ouvrage parmi les obstacles ne prévient de
+rien, il crie au loup.* C'est la troisième fois que la même forme revient : le
+banc du 5 septembre dont l'entrée était la sortie, la recette du matin dont
+l'attendu était le mesuré, ce diagnostic-ci. La faute n'est pas dans le calcul,
+elle est dans le circuit.
+
+Et la passe « sans le correctif » de `banc_seine.py` est morte de la même
+cause : `87` joué, l'export porte les quatre communes et les deux passes
+rendent 80/80. Le chiffre de 76/80 est daté du matin et vit désormais ici.
+
+---
+
+## 6 septembre 2026, second volet — 1815-1869, et un correctif qu'il ne faut pas faire
+
+Même signalement, autre bout : la banlieue manque aussi avant 1870. Et c'est
+**le même trou que le précédent**, pas un trou de géométrie.
+
+`carte_partition_atome` définit *vivant* comme « a un `membership` à la date ».
+Un atome sans rattachement n'entre pas dans la partition, quelle que soit la
+géométrie disponible. Or `82` a chargé ANR **sans filtre de date** :
+`atom_geom_anr` porte les fenêtres 1790-2020, et les polygones de 1815 sont en
+base depuis le 1er septembre. Ils n'étaient simplement atteignables par rien.
+
+### Le recensement du territoire, fait hors base et complet
+
+Emprise de la Seine reconstruite par union des polygones ANR modernes des
+80 communes plus Paris : **479,64 km²**, pour une Seine officielle de 479,9.
+Puis les centroïdes ANR testés contre cette emprise, année par année :
+
+    1815   79 communes    69 de la banlieue actuelle + 9 annexées + Paris
+    1830   81             Batignolles-Monceau et Grenelle naissent
+    1848   81
+    1859   70             l'annexion a eu lieu
+    1866   71             Levallois-Perret naît
+
+**Aucune commune inconnue de la base n'apparaît**, hors les onze annexées à
+Paris en 1860. Le recensement est donc clos : la Seine de 1848 est faite de ces
+81 objets et d'aucun autre. Les 80 non parisiennes pèsent 441,56 km², avec un
+recouvrement mutuel de **0,001 km²**.
+
+Et ANR est cohérent avec lui-même sans qu'on le lui demande : Vaugirard a deux
+fenêtres, [1790,1830) puis [1830,1859), parce que Grenelle en est détachée en
+1830 — exactement l'année où Batignolles-Monceau se détache de Clichy. C'est ce
+qui fait 79 communes en 1815 et 81 en 1830.
+
+### Deux fichiers, et ce qu'ils ne prétendent pas
+
+`89_seine_annexees_1860.sql` crée onze atomes — Auteuil, Batignolles-Monceau,
+Belleville, Bercy, Charonne, Grenelle, La Chapelle, La Villette, Montmartre,
+Passy, Vaugirard — avec leur géométrie ANR et **aucun rattachement**. Il dit
+qu'elles existaient et où, pas à quoi elles appartenaient.
+
+`90_seine_1848_banlieue.sql` lève la limite que `57` avait écrite noir sur
+blanc : « nous ne posons que sa part parisienne, faute d'atomes pour le reste
+avant 1870 ». Les 80 communes rejoignent l'unité `L7501@1848`, qui passe de 48 à
+**128 atomes** et perd la parenthèse de son nom.
+
+Le critère de pose est unique et il est de fond : **l'atome a un polygone ANR
+couvrant la date**. Onze communes de la banlieue actuelle sont donc écartées —
+Alfortville, Bois-Colombes, Cachan, La Garenne-Colombes, Le Kremlin-Bicêtre,
+Levallois-Perret, Les Lilas, Malakoff, Les Pavillons-sous-Bois, Le Perreux,
+Villeneuve-la-Garenne. Sans ce critère, `carte_partition_atome` les dessinerait
+quand même, par le repli sur `atom_geom` — avec leur forme de 2011. *Une commune
+de 1929 dessinée en 1848 n'est pas une approximation, c'est une invention.*
+
+### L'écart d'un an, déclaré
+
+ANR ferme les onze annexées en **1859**. La loi est du 16 juin 1859 et prend
+effet le **1er janvier 1860**. Toute division posée plus tard sur 1852-1859
+devra se fermer en 1859, faute de quoi elle aurait une année sans polygone.
+
+### Le correctif du report arrière : mesuré, et refusé
+
+La décision prise le matin était de fermer, dans la foulée, la vie des communes
+dessinées avant leur naissance. La mesure a renversé la question.
+
+    367 atomes, 70 départements, 4 572,2 km²
+
+C'est l'ordre de grandeur de la couture de la trame hybride, et surtout **c'est
+exactement le trou que `11_scission` existe pour fermer**. Le report arrière
+n'est pas un relâchement : c'est un pari écrit — *le territoire d'une commune
+née après la série appartenait au canton de sa mère* — et ANR l'a contrôlé,
+357 dates sur 359 (`ETAT.md` § 3.5).
+
+Le pari porte sur l'**attribution**, et il est bon. Ce qu'il coûte est
+l'**identité** : le sol est dessiné sous le nom de la fille, pas de la mère. Le
+vrai correctif n'est donc pas « fermer la vie de la fille » mais « rendre le sol
+à la mère jusqu'à la naissance de la fille » — ce qui change les attributions de
+1870-1940 et demande sa propre recette.
+
+*Un défaut d'identité et un défaut de couverture se ressemblent sur une carte.
+Le premier se corrige en renommant, le second en comblant, et les confondre
+fait perdre le second en croyant gagner le premier.*
+
+Rien n'est corrigé. `sql/diag_report_arriere.sql` rend la mesure rejouable en
+base, et la question reste ouverte, correctement posée cette fois.
+
+### Un défaut de mes propres garde-fous, trouvé au relecteur
+
+Les recettes de `87`, `88` et `90` excluaient leur propre trace par
+`to_regclass('…') IS NULL OR NOT EXISTS (SELECT … FROM la_trace)`. **PostgreSQL
+résout les noms de relations à l'analyse** : la garde n'aurait pas
+court-circuité, elle aurait échoué à la planification dès le premier passage à
+blanc sur une base neuve. Les trois tables de trace se créent désormais AVANT
+les recettes — une trace vide n'est pas une donnée.
+
+### Joué — la Seine de 1848 est pavée, et le déficit a un nom
+
+    89   11 atomes, 12 geometries   80 communes, 441,56 km2, recouvrement 0,001
+    90   1 nom d unite, 80 rattachements
+         128 atomes dessines, union 475,83 km2, recouvrement 0,000
+
+Les trois chiffres de `89` sont ceux mesurés hors base sur le GeoPackage, au
+centième près. La recette 7 tient : 1849 et 1850 rendent 48 quartiers **et**
+80 communes, une circonscription, régime liste ; les autres dates gardent
+48 quartiers et zéro commune — la banlieue n'est pas attribuée hors 1848-1852 et
+le fichier ne le prétend pas.
+
+### Les 3,81 km² manquants, localisés
+
+L'emprise de la Seine vaut 479,64 km² et la partition en rend 475,83. Le déficit
+a été cherché hors base, en soustrayant à l'emprise l'union des 80 communes et
+celle des 48 quartiers de Vasserot. Il se concentre en **deux morceaux**, et ce
+ne sont pas des lisières :
+
+**1,86 km² à l'ouest** — le **bois de Boulogne**. ANR le donne à Paris dès 1790 ;
+Vasserot s'arrête au mur des Fermiers généraux. Ce n'est pas un défaut, c'est
+que les deux sources ne nomment pas le même Paris. La base dessine Paris par
+Vasserot, donc le bois n'appartient à personne avant 1860.
+
+**3,96 km² à l'est** — et celui-là est un **trou d'ANR**, pas de la base :
+
+    Nogent-sur-Marne  1860_0_…  [1790,1860)  4,19 km2
+                      1887_0_…  [1860,1887)  6,76 km2
+    Le Perreux        COMMUNE_… [1887,2020)  3,96 km2
+
+Nogent GAGNE 2,57 km² en 1860, et le point testé n'appartient à personne avant
+cette date — interrogé à 1848, ANR rend `PERSONNE`. Le territoire dont Le
+Perreux naîtra en 1887 est donc sans propriétaire dans ANR pendant soixante-dix
+ans. À joindre à la liste des signalements à l'équipe ANR (`RESTE_A_FAIRE` § 5),
+avec Beauvais et Flipou/Senneville.
+
+*Un déficit de surface est muet tant qu'on le pèse ; il parle dès qu'on le
+regarde. Ces 3,81 km² n'étaient pas une couture entre deux levés — c'étaient un
+bois et un trou de source, et les deux ont un nom.*
+
+### L'atlas cartographie la banlieue, et la colonne `remarque` n'en était que l'ombre
+
+Photographies des planches « SEINE » reçues le soir même. Elles ne signalent pas
+que des circonscriptions débordent : **elles dessinent la banlieue commune par
+commune et numérotent ses circonscriptions.**
+
+    1815        deux collèges : Saint-Denis (nord), Sceaux (sud)
+    1820-1831   UNE circonscription pour toute la banlieue — la 8e
+    1831-1848   même découpage qu'en 1815 : 13e = Sceaux, 14e = Saint-Denis
+    1852-1857   8 au nord, 9 au sud, hors Paris
+    1857-1863   9 au nord, 10 au sud, hors Paris
+    1863-1869   circos 8 et 9 de PARIS, étendues à la banlieue nord et sud
+    1869-1870   idem
+
+La bascule de 1863 s'explique par l'annexion. Avant 1860, la petite banlieue —
+les onze communes que Paris absorbe — est rattachée aux circonscriptions
+parisiennes limitrophes, et c'est cela que disait `rattaché hors-paris` :
+circos 1 et 2 en 1852, 1, 2 et 5 en 1857. La grande banlieue a les siennes.
+Après 1860 il n'y a plus de petite banlieue.
+
+### La ligne nord/sud se vérifie contre 1954, et son anomalie la confirme
+
+La planche de 1815 porte la seule définition écrite : « les deux
+arrondissements de Sceaux et de Saint-Denis étaient séparés, sur le territoire
+actuel de Paris, par la Seine à l'Ouest et la rue de Lagny à l'Est. »
+
+Le jalon cantonal de 1954 porte encore cette frontière — la nomenclature de la
+page 758 donne l'arrondissement de chaque canton. Déployée sur les communes :
+
+    Saint-Denis   37 communes   174,22 km2   2 composantes connexes
+    Sceaux        43 communes   199,99 km2   1 composante
+
+La seconde composante de Saint-Denis est **Boulogne-Billancourt seule**,
+6,16 km², coupée de son arrondissement par Paris. Ce n'est pas un défaut :
+Boulogne est sur la rive DROITE, dans la boucle, et la planche dit que la
+séparation suit la Seine à l'ouest.
+
+*Deux sources séparées de cent trente-neuf ans décrivent la même ligne, et
+l'anomalie de l'une confirme la règle de l'autre.*
+
+### Ce que l'atlas ne donne pas, et il le dit lui-même
+
+La répartition des onze communes annexées entre les circos parisiennes 1, 2
+et 5 en 1852-1863 n'est que **dessinée**. Une lecture de carte n'est pas une
+transcription, et elle n'entrera pas en base à ce titre.
+
+Et pour Belleville en 1857-1863, l'atlas se dénonce : « deux bureaux de vote
+étaient inclus dans la 5ᵉ circonscription, et le reste de la commune dans la
+9ᵉ. **Faute de précisions supplémentaires, la ligne de séparation cartographiée
+ci-dessus est purement arbitraire.** » Belleville sera donc nommée et non
+attribuée, comme les quartiers parisiens coupés par une rue.
+
+Lecture complète dans `circo/note_seine_1815_1870.md`.
+
+### `91` écrit — 1815-1870 posable à deux exceptions près, toutes deux déclarées
+
+Neuf unités neuves et quatre renommages, sur sept divisions :
+
+    1815-1820   collège de Saint-Denis / collège de Sceaux     nord 31  sud 38
+    1820-1831   8e circonscription, toute la banlieue          tout 80
+    1831-1848   14e = Saint-Denis / 13e = Sceaux               nord 31  sud 38
+    1852-1857   8e nord / 9e sud                               nord 31  sud 38
+    1857-1863   9e nord / 10e sud                              nord 31  sud 38
+    1863-1869   V1863_1869#8 et #9, renommées « Seine »        nord 33  sud 38
+    1869-1870   V1869_1870#8 et #9, renommées « Seine »        nord 33  sud 38
+
+31 et 38 et non 37 et 43 : onze communes de la banlieue actuelle naissent après
+1815, six au nord et cinq au sud. Elles entrent à leur date et non à celle de
+la division — Levallois-Perret au 1er janvier 1866, Les Lilas en 1867, et
+Batignolles-Monceau et Grenelle en 1830 dans la 8e de 1820-1831. Quatre
+`entrees_en_cours` en tout, chiffrées avant d'écrire une ligne de SQL.
+
+*C'est le contraire exact du report arrière de `11`, et c'est délibéré : là il
+fallait combler un trou de couverture au prix de l'identité du dessin ; ici il
+n'y a rien à combler, la mère est dessinée à la place de la fille par la trame
+ANR.*
+
+### Les deux exceptions, et elles viennent de l'atlas lui-même
+
+**Les onze annexées de 1852 à 1863.** L'atlas les répartit entre les circos
+parisiennes 1, 2 et 5 en les DESSINANT, sans les nommer. Une lecture de carte
+n'est pas une transcription : elles restent sans rattachement, et la recette 3
+les compte une par une. Le prix se mesurera sur la carte — environ 40 km² non
+dessinés à 1855, la recette 8 le dira.
+
+**Belleville en 1857-1863**, que l'atlas dénonce lui-même : « deux bureaux de
+vote étaient inclus dans la 5ᵉ circonscription, et le reste de la commune dans
+la 9ᵉ. Faute de précisions supplémentaires, la ligne de séparation
+cartographiée ci-dessus est purement arbitraire. » Elle tombe dans le cas
+précédent, et c'est heureux — le cas le plus délicat est traité par la règle la
+plus générale.
+
+**1820-1831 échappe aux deux** : la banlieue entière n'y fait qu'une
+circonscription, donc les onze annexées y entrent sans le moindre arbitrage.
+C'est la seule date d'avant 1848 où la Seine est complète.
+
+Écrits, non joués : `sql/91_seine_1815_1870.sql`,
+`circo/seine_1815_1870.csv` (13 divisions × côté),
+`circo/seine_arrondissements.csv` (la nomenclature de la page 758),
+`circo/seine_second_empire.csv` et `circo/note_seine_1815_1870.md`.
+
+### `91` joué — la Seine est continue de 1815 à 2012, et le prix est chiffré
+
+    9 unites neuves, 4 renommages « Paris » -> « Seine », 498 rattachements
+    aucun atome dans deux circos, France entiere
+
+    recette 6        quartiers  communes  circos
+      1817-06-01        48 (PV)      69      6     4 Paris + 2 colleges
+      1825-06-01        48           78      8     7 Paris + la 8e
+      1840-06-01        48           69     14    12 Paris + 13e et 14e
+      1849-06-01        48           80      1     `90`
+      1855-06-01        48           69      9     7 Paris + 8e et 9e
+      1858-06-01        48           69     10     8 Paris + 9e et 10e
+      1861-06-01        48           69     10
+      1866-06-01        80 (PQ)      70      9
+      1869-06-01        80           71      9
+      1875-06-01         —          100      1     TRF-GIS reprend
+
+**78 et non 80 à 1825**, et mon commentaire disait 80 : les 80 sont l'effectif
+de la DIVISION 1820-1831, pas de l'instantané. Batignolles-Monceau et Grenelle
+naissent en 1830 ; à 1825 la Seine compte 69 + 9. La donnée était juste, le
+commentaire parlait d'autre chose. *Un effectif de période et un effectif de
+date portent le même nom et ne comptent pas la même chose.*
+
+### Ce que la carte rend, et les trois chiffres se lisent ensemble
+
+    1825-06-01   126 atomes   475,83 km2   recouvrement 0,000
+    1855-06-01   117 atomes   455,25 km2   recouvrement 0,000
+    1866-06-01   150 atomes   479,64 km2   recouvrement 0,000
+
+**1866 rend la Seine ENTIÈRE, au centième** — 479,64 pour une Seine officielle
+de 479,9. Le déficit du bois de Boulogne a disparu : à cette date Paris est sur
+la trame des 80 quartiers, qui couvre le Paris de 1860 bois compris, là où
+Vasserot s'arrête au mur des Fermiers généraux.
+
+**1825 rend 475,83**, soit les 3,81 km² déjà connus de `90` — le bois et le
+trou ANR de Nogent, et rien de plus. Tout est rattaché à cette date.
+
+**1855 rend 455,25**, soit **24,39 km² de moins**. C'est le prix des onze
+annexées non rattachées, et il est plus faible que les ~40 que j'annonçais :
+la règle mosaïque de `84` reprend une partie de leur sol au profit des voisins.
+Le prix d'un refus se mesure aussi, et il n'est pas celui qu'on croit.
+
+### Un trou hérité, trouvé en lisant la recette 6 : 1860-1863
+
+À 1861 la carte rend 48 quartiers de Vasserot et 69 communes. Les onze annexées
+sont mortes en 1859 selon ANR, et **Paris est encore dessiné sur sa trame
+d'avant l'annexion**, parce que la division électorale parisienne de 1857-1863
+porte sur les 48 quartiers et court jusqu'en 1863.
+
+Il y a donc, de 1860 à 1863, **un anneau vide** entre le Paris de Vasserot et
+la grande banlieue. Ce n'est pas un défaut de `91` : c'est la source qui date
+la division électorale de 1857 et l'annexion de 1860, et les deux ne coïncident
+pas. Le combler demanderait de faire basculer Paris sur la trame des 80
+quartiers au 1er janvier 1860 tout en gardant la division de 1857-1863 — un
+changement dans `55`, pas ici.
+
+### Les planches relues nomment les annexées — et elles dénoncent un rattachement faux
+
+Le refus du matin — « l'atlas les dessine sans les nommer » — était fondé sur
+la seule colonne `remarque` du tableur. Les planches, elles, les nomment :
+
+    circo 1 de Paris    Passy, Auteuil, BOULOGNE-BILLANCOURT
+    circo 2 de Paris    La Chapelle, Batignolles-Monceau, Montmartre
+    banlieue nord       Charonne, La Villette, Belleville (1852-1857)
+    banlieue sud        Bercy, Grenelle, Vaugirard
+    circo 5 de Paris    Paris seul, puis une partie de Belleville en 1857
+
+Ce que j'avais inféré était juste au détail près, et il ne fallait pas le
+poser sur cette base. Ce qui suit, en revanche, ne se déduisait de rien.
+
+### Boulogne-Billancourt était rattachée au mauvais endroit, et l'indice était dans ma propre mesure
+
+**Boulogne n'est pas une annexée** : c'est une commune de la banlieue actuelle,
+que la ligne nord/sud de 1954 place dans l'arrondissement de Saint-Denis, donc
+dans la circonscription de banlieue nord. Les planches la donnent à la
+**1re circonscription parisienne**, avec Passy et Auteuil. Le premier jeu de
+`91` l'a donc rattachée au mauvais endroit de 1852 à 1863.
+
+L'indice avait été mesuré le matin même. Boulogne formait la **seconde
+composante connexe** de l'arrondissement de Saint-Denis — seule, 6,16 km²,
+coupée du reste par Paris. J'y ai vu une confirmation de la ligne (« la Seine
+sépare à l'ouest ») et je me suis arrêté là.
+
+*Une commune que Paris sépare de son arrondissement est précisément celle que
+Paris capte électoralement. Une anomalie qui confirme une règle peut en
+annoncer une autre, et on cesse de lire dès qu'elle donne raison.*
+
+### Ce que la relecture change dans `91`
+
+`circo/seine_annexees_circo.csv`, 24 lignes, **prime sur la règle nord/sud** :
+le texte l'emporte sur la déduction, et quatre garde-fous neufs le vérifient —
+une exception qui ne se pose pas, une exception posée ailleurs que ce que la
+planche dit, une commune déclarée coupée posée quand même, une unité citée qui
+n'existe pas.
+
+    1852-1857   75-01@1852  3   75-02@1852  3   S1852@8  33   S1852@9  41   = 80
+    1857-1863   75-01@1857  3   75-02@1857  3   S1857@9  32   S1857@10 41   = 79
+
+**1852-1857 partitionne les 80.** 1857-1863 en couvre 79 : Belleville y est
+nommée et non attribuée, l'atlas déclarant sa propre ligne « purement
+arbitraire ». Total 519 rattachements contre 498.
+
+### Un second défaut du premier jeu, trouvé en lisant l'export
+
+Les quatre unités de 1863-1870 devaient passer de « Paris » à « Seine ». Le
+renommage a bien eu lieu — dans `unit.nom` — et la carte affiche toujours
+« Paris 8e circonscription ». **L'export lit le nom dans `unit_version`**, que
+`55` avait rempli et que `91` n'avait pas touché.
+
+*Un nom dénormalisé qu'on corrige sans corriger sa source ne corrige rien.*
+`91` met désormais les deux à jour, et sa trace les rend tous les deux.
+
+### Le garde-fou exigeait que l'ouvrage fût déjà fait
+
+Premier rejeu : `ERROR: 11 unite(s) citee(s) par les planches n'existent pas en
+base`. La transaction a été annulée — `psql -1` — donc rien n'avait bougé, et
+l'export enchaîné a fidèlement reproduit l'état d'avant. *Un `-1` qui échoue ne
+laisse pas la base à moitié corrigée, il la laisse intacte, et c'est la seule
+raison pour laquelle cette soirée n'a pas coûté un rebuild.*
+
+Les onze lignes citaient `S1852@8`, `S1852@9`, `S1857@9` et `S1857@10` —
+quatre unités que le fichier venait de supprimer par son retrait de trace et
+qu'il recréait vingt lignes plus bas. Le garde-fou tournait entre les deux.
+
+**C'est la faute du matin retournée.** Là, un diagnostic comptait l'ouvrage du
+fichier parmi ses obstacles ; ici, un garde-fou exigeait que l'ouvrage fût déjà
+fait. *Dans les deux cas il interrogeait la base à un instant où elle ne pouvait
+pas encore lui répondre.* Une unité citée doit exister en base **ou** figurer
+dans `seine_1815_1870.csv`.
+
+### Joué — et le prix du refus s'efface
+
+    9 unites, 4 noms d'unite, 4 noms de version, 519 rattachements
+
+    recette 8    atomes   union km2   recouvrement
+      1825-06-01    126     475,83        0,000
+      1855-06-01    128     475,68        0,000
+      1866-06-01    150     479,64        0,000
+
+**1855 valait 455,25 ce matin, il vaut 475,68 ce soir** — il rejoint 1825 à
+0,15 km² près. Les 24,39 km² que coûtait le refus de lire une carte à la place
+d'un texte n'étaient pas un prix à payer : c'était une question à poser.
+
+*Le prix d'un refus se mesure, et parfois la bonne réponse est de ne plus
+refuser. Encore faut-il l'avoir chiffré pour savoir que la question valait
+d'être posée.*
+
+Recette 6 conforme : 1855 rend 48 quartiers + 80 communes, 1858 en rend 79
+(Belleville coupée), 1861 retombe à 69 — l'anneau vide de 1860-1863, que la
+recette 3 montre sous un troisième angle : les rattachements des annexées
+s'arrêtent au 1er janvier 1859, pas à 1863, parce que `least(au, mort_le)` fait
+son travail. Boulogne, elle, va jusqu'en 1863 : elle survit à l'annexion.
+
+Zéro atome dans deux circonscriptions à la même date, France entière.
+
+### Un trou signalé à l'œil, localisé à la requête : 1815-1820 et 1831-1848
+
+« Toujours des trous sur Boulogne, Passy, Auteuil. » Mesuré sur l'export, atome
+par atome et date par date :
+
+    année  Passy      Auteuil    Boulogne     Montmartre  Belleville  Vaugirard
+    1817   —          —          Saint-Denis  —           —           —
+    1825   Seine 8e   Seine 8e   Seine 8e     Seine 8e    Seine 8e    Seine 8e
+    1840   —          —          Seine 14e    —           —           —
+    1849   Seine      Seine      Seine        Seine       Seine       Seine
+    1855   Paris 1e   Paris 1e   Paris 1e     Paris 2e    Seine 8e    Seine 9e
+    1858   Paris 1e   Paris 1e   Paris 1e     Paris 2e    —           Seine 10e
+    1861   —          —          Paris 1e     —           —           —
+    1866   —          —          Seine 8e     —           —           —
+
+**Boulogne n'est blanche à aucune date** : ce qu'on voit autour d'elle, ce sont
+Passy et Auteuil. Le trou est réel, et il est en **1815-1820 et 1831-1848**.
+
+La cause est dans `91`, déclarée sans être comblée. Les onze annexées y portent
+le côté `annexee`, qui ne rejoint que la division dont le côté vaut `tout` —
+1820-1831. Les deux autres divisions partagent la banlieue entre les collèges
+de Saint-Denis et de Sceaux, et aucun côté ne leur a été donné : elles n'ont
+jamais eu de canton en 1954. La note écrivait « leur côté doit venir
+d'ailleurs », et il n'est jamais venu.
+
+*Une réserve écrite n'est pas une réserve levée. Elle protège du reproche, pas
+du trou.*
+
+Consigné dans `RESTE_A_FAIRE.md` : onze lignes à ajouter, après lecture des
+planches 1815 et 1831-1848. La règle écrite mettrait Grenelle et Vaugirard à
+Sceaux et les autres à Saint-Denis, **Bercy restant douteuse** — rive droite
+mais au sud de la rue de Lagny. Elle ne sera pas tranchée par déduction
+géométrique.
+
+---
+
+## 6 septembre 2026 — l'export web : le 99 fantôme, et l'outre-mer invisible
+
+Deux défauts de l'export, signalés en regardant la carte plutôt qu'en lisant du
+code : « j'ai encore le département 99 Meurthe », et « je voudrais pouvoir
+afficher les outre-mers ». Le premier avait une cause qu'aucune recette ne
+pouvait attraper ; le second a fait remonter un défaut de la page qui n'était
+pas là où on le cherchait.
+
+### Le 99 n'était pas un reliquat de `39` : c'était son angle mort
+
+`39_meurthe_1870.sql` est passé, tracé, clos depuis le 2 septembre. Sa recette
+dit « 0 canton en 99, 73 en 54 », et elle dit vrai. Mais sa clause porte
+`u.niveau = 'canton'`, et il reste **une unité** au niveau circo :
+`L9901@1870`, la Meurthe au scrutin de liste, 714 rattachements sur
+`[1870-01-01, 1871-01-01)`. Une seule ligne suffisait à faire vivre un 99ᵉ
+département dans tout ce qui énumère `SELECT DISTINCT dep FROM unit`.
+
+**Et le vrai dommage n'était pas le département de trop.** Il se lit dans les
+deux index de l'export du matin, mis côte à côte :
+
+    dep/99/index.json : {"annees": {"1870": {"c": "",         "x": "eaf16c2a…"}}}
+    dep/54/index.json : {"annees": {"1870": {"c": "ed54effb…", "x": ""}}}
+
+**La Meurthe de 1870 était coupée en deux** : ses cantons dans le 54, sa
+circonscription dans un 99 sans cantons. Aucune des deux planches n'est fausse.
+C'est leur séparation qui l'est, et elle ne se voit qu'en les regardant
+ensemble — ce qu'aucune recette ne fait, chacune s'occupant d'un département.
+
+*Un correctif qui vise un niveau laisse l'autre derrière lui, et la recette qui
+l'accompagne ne peut pas le dire : elle compte ce qu'on lui a demandé de
+compter.*
+
+`sql/92_meurthe_circo.sql` applique à l'étage circo ce que `39` a fait aux
+cantons, avec sa trace `p92_trace` et la même règle — **viser l'identifiant, pas
+le département**, pour que la trace se peuple même sur une base déjà conforme.
+`unit_id` et `code` ne bougent pas : renuméroter `9901` en `5401` entrerait en
+collision avec `L5401@1871`, la Meurthe-et-Moselle. Le département est un
+attribut, pas un préfixe.
+
+Écrit et parsé hors base (`pglast`), pas encore joué.
+
+### L'outre-mer : trois différences de modèle, et un défaut de page
+
+`40_outremer.sql` range les cinq DOM dans des tables `om_*` séparées, et
+l'export ne les voyait pas. Trois différences interdisent de réutiliser les
+requêtes métropolitaines : `char(3)` contre `char(2)`, EPSG:4326 contre 2154, et
+**pas d'ANR ni de partition** — la géométrie d'outre-mer est un instantané
+GEOFLA 2015 sans épaisseur temporelle. D'où un bloc de requêtes à part et une
+fonction d'export à lui, `--outremer`.
+
+**Le premier piège était dans le nettoyage, et il détruisait.** `nettoie()`
+efface `dep/` en entier quand aucun département n'est demandé. Un `--outremer`
+sans argument aurait donc emporté les 95 départements métropolitains pour en
+réécrire 5 — un export complet détruit par une commande qui a l'air d'en
+ajouter. L'outre-mer est **toujours** un export partiel du dossier, quelle que
+soit la façon dont on l'appelle ; même correction pour l'index racine, qui sans
+cela aurait annoncé cinq départements pendant que quatre-vingt-quinze dossiers
+intacts dormaient sur le disque.
+
+**Le second piège est plus intéressant, parce qu'il n'était pas dans le code
+qu'on écrivait.** La page ne dessine que les communes présentes dans un
+`rattachement` — c'est le défaut que `ETAT.md` § 2.5 nomme depuis août à propos
+des 113 communes de 1986 : *« elles ne sont pas marquées indéterminées, elles
+en sont absentes »*. Marginal en métropole, il devient structurel outre-mer :
+les 27 communes multicantonales n'ont aucun canton, et **Mayotte n'a rien du
+tout** — le fichier du ministère qui pose les rattachements ne la contient pas.
+Exporter Mayotte proprement ne servait à rien : la page ne l'aurait pas
+dessinée.
+
+Corrigé pour l'outre-mer seul, et la condition mérite d'être expliquée plutôt
+que subie. En métropole, le rattachement est ce qui borne la **vie** d'un
+atome : partir de `S.communes` y dessinerait des communes avant leur naissance
+et après leur mort, en silence. Outre-mer la question ne se pose pas — la trame
+est un instantané, et chaque version porte l'année de départementalisation comme
+borne basse. *Le même geste est juste d'un côté et faux de l'autre parce que la
+donnée n'y a pas la même forme.*
+
+### Ce que le banc a trouvé, et ce qu'il s'était trouvé à lui-même
+
+Un § 8 a été ajouté à `cartes/banc_export_web.py` : un faux curseur qui fait
+jouer `exporte_departement_om()` de bout en bout, sans base et sans PostGIS.
+Il ne juge aucune géométrie ; il juge la tuyauterie, c'est-à-dire l'endroit où
+ce chemin peut se tromper en silence — un atome perdu, une signature qui pointe
+dans le vide, un département escamoté.
+
+Il a signalé un département servi depuis 1815. **C'était le mannequin qui
+mentait** : il rendait une composition pour une date où `om_membership` est
+évidemment vide, `40` ne posant rien avant le 19 mars 1946. *Un mannequin plus
+généreux que la source ne valide rien ; il fait passer pour un défaut du code ce
+qui est un défaut du banc, et — c'est plus grave — l'inverse aussi.*
+
+Mais l'alarme a valu quelque chose : elle a fait voir que `par_annee_signature`
+amorçait ses candidates à `AN_MIN`, par recopie de la version métropolitaine où
+Paris commence en 1815. Outre-mer, cette graine était le seul chemin par lequel
+un département pouvait se déclarer servi depuis 1815. Retirée. *Une graine qui
+ne peut rien produire de vrai ne peut produire que du faux.*
+
+De là est venue `AN_DEBUT_DOM`, qui n'était pas prévue et qui décide de trois
+choses : l'année où commence la forme d'une commune, l'année sous laquelle est
+rangé le contour de référence, et la borne basse du curseur pour un département
+dont la base ne sert **aucune** composition. Sans elle, Mayotte — `bornes` nul,
+donc aucune contrainte — aurait pris le curseur global de la page et se serait
+affichée en 1815. *Une donnée qu'aucune borne ne contraint prend la borne de son
+conteneur, et celle-là n'a aucune raison d'être juste.*
+
+### Un avertissement qui criait quand tout allait bien
+
+Trouvé en passant, corrigé : la branche finale du diagnostic de trame affichait
+« `atom_geom_anr` absente » chaque fois que l'export tournait **avec** la trame
+ANR sans `--partition`, c'est-à-dire dans le cas le plus courant. *Un
+avertissement qui se déclenche quand tout va bien apprend à ne plus lire les
+avertissements.*
+
+### Rien de tout cela n'est joué
+
+`92` n'est pas passé, `charger_outremer.sh` et `40` non plus, et aucun export
+n'a tourné. Ce qui est éprouvé l'est hors base : le SQL par un analyseur
+PostgreSQL, le Python par le banc. La procédure et les attendus chiffrés sont
+dans `RESTE_A_FAIRE.md`.
+
+---
+
+## 6 septembre 2026, troisième volet — la chaîne va enfin jusqu'au bout
+
+Deux gestes : le ménage dans `RESTE_A_FAIRE.md`, puis le seul point de la file
+qui ne demandait pas la base — et c'était le plus urgent des deux.
+
+### Le ménage : 653 lignes à 562, et onze tâches faites qui restaient dedans
+
+Le fichier avait redérivé en journal en quatre jours. La file d'attente portait
+onze lignes barrées — l'anneau de `84`, la fratrie contiguë, la trappe du vide,
+le déblocage de `38`, deux exports, `environment.yml`, `.gitignore` — et deux
+sections entières devenues fausses : « trois traces absentes », dont la cause
+est trouvée et le correctif écrit, et « `rejouer_apres_rebuild.sh` est périmé »,
+qui annonçait un arrêt à `56` quand le script allait à `40_scission`.
+
+Le § 0 bis annonçait « deux corrections non jouées » alors que `40_outremer`
+avait été joué et instruit dans la journée, avec quatre-vingts lignes de récit
+que `JOURNAL.md` gardait déjà. La file est refaite en huit points, tous ouverts,
+tous à faire — et sept sur huit demandent la base.
+
+*Un fichier de tâches se relit à la même vitesse qu'il se remplit, et ce n'est
+pas la même chose : la ligne barrée coûte plus cher à lire qu'à écrire.*
+
+### Le vrai trou n'était pas dans la file, il était sous elle
+
+La file recommandait de jouer `92`, puis `81`, puis l'export. Aucun de ces
+points ne dit ce qui les menace tous : **`rejouer_apres_rebuild.sh` s'arrêtait
+au 20 août.** Vingt-deux étapes qui écrivent dans la base n'y figuraient pas —
+Paris 1848 (`57`), les deux jalons de recensement (`58`-`60`, `65`-`69`), le
+registre des actes (`72`), les salves (`74`-`77`), les deux reports (`79`,
+`81`), la trame ANR (`82`), la Seine de 1815 à 1967 (`87`-`91`) et la partition
+(`84`). Elles avaient toutes été jouées à la main.
+
+`sql/CHAINE.md` le disait depuis le 2 septembre, et le disait bien : son § 1 c
+s'intitulait « APPELÉS PAR AUCUN SCRIPT — à jouer à la main, dans cet ordre » et
+ajoutait « tant que `rejouer_apres_rebuild.sh` n'est pas complété, cette liste
+est la procédure ». Une procédure tenue dans un document de référence est une
+procédure que rien n'exécute.
+
+**Ce qu'un `rebuild.sh` aurait fait : reconstruire la base, plus petite, sans
+qu'une seule commande échoue.** C'est la mécanique qui a défait `39` pendant
+quinze jours en août, cette fois appliquée à deux jalons, deux reports, un
+registre, une trame et un département entier.
+
+### L'ordre ne se déduit pas des numéros — cinq fichiers l'ont montré
+
+Le § 1 c donnait dix-sept lignes ordonnées. Les cinq fichiers écrits après lui
+n'y étaient pas, et leur numéro ne dit pas où les mettre. Leurs garde-fous, si :
+
+    88  exige 68 ET 87        son § 1 nomme le second dans son message
+    89  exige anr_commune ET atom_geom_anr, donc 82
+    90  exige l'unité L7501@1848 de 57, et les onze annexées de 89
+    91  exige les circos parisiennes de 1863 (55), 89, et 68
+    84  exige 82 — « PRÉREQUIS : jouer sql/82_anr_geom.sql avant celui-ci »
+
+D'où `87` et `88` collés à `68`, et non rangés avec la Seine ; et `89`, `90`,
+`91` sous la trame ANR, avec `84`, dans un bloc que l'absence du GeoPackage
+saute d'un seul tenant.
+
+*Un fichier bien écrit dit lui-même où il va. Le numéro dit quand il a été
+écrit, ce qui n'est pas la même question.*
+
+### Un quatrième prérequis qui ne vivait qu'en commentaire
+
+`anr_commune` — la couche `geometries_only_processed` du GeoPackage ANR, 550 Mo
+et 34 millions de sommets — est chargée par un `ogr2ogr` écrit dans l'en-tête de
+`82` et dans `JOUER_82.md`, et par aucun script. `rebuild.sh` fait `DROP SCHEMA`
+et l'emporte avec le reste.
+
+C'est le quatrième cas après `noms_geofla`, les tables parisiennes,
+`geofla_canton` et les lots d'outre-mer. Et il coûte plus cher que les autres :
+`82`, `89`, `90`, `91` et `84` lèvent tous une `EXCEPTION` sans lui — la moitié
+de ce qui a été écrit en septembre.
+
+### Ce qui est vérifié, et ce qui ne l'est pas
+
+Hors base : `bash -n`, existence de chaque fichier cité, et le contrôle qui
+compte — *tout fichier `sql/[0-9]*.sql` qui écrit dans la base est appelé par
+`rebuild.sh`, `load.sh`, `load_cog.sh` ou `rejouer_apres_rebuild.sh`*. Les
+vingt-neuf qui restent dehors sont tous en lecture seule, vérifiés un par un
+contre leur en-tête et contre le § 2 de `CHAINE.md`.
+
+En base : **rien**. La chaîne n'a jamais tourné au-delà de `25`, et ce n'est pas
+ce script qui le prouvera — c'est son passage.
+
+### `85` devient une recette
+
+`85_conflit_38_79.sql` rend à `38` la fenêtre 1982-1999 que `79` occupe. Ce
+conflit n'existe que parce que `79` a été joué après `38`, hors de toute chaîne.
+Dans l'ordre du script, `38` passe bien avant `79`, et le § 5 de `79` n'écrit
+que sur une fenêtre entièrement libre : il écarte ces six atomes de lui-même.
+
+Donc `85` n'est PAS dans le script, et au premier passage complet il doit
+trouver zéro fraction à libérer. **S'il en trouve, c'est l'ordre du script qui
+est faux, pas `85`.**
+
+*Un correctif écrit pour réparer un désordre devient, une fois l'ordre rétabli,
+la seule mesure de cet ordre. Il ne se supprime pas : il change d'emploi.*
+
+### Deux choses trouvées en passant
+
+**`circo/seine_second_empire.csv` n'est lu par rien** — aucun `.sql`, aucun
+`.py` du dépôt ne le charge. Consigné au § 4 bis.
+
+**Le dernier export intégral est antérieur à la règle mosaïque.** Il date du
+5 septembre à 09 h 49 ; la règle a été jouée le même jour. Les 98 départements
+portent donc encore l'ancienne trame, celle où une seule des six filles de
+Tournon-d'Agenais est dessinée. *La correction est en base et sur aucune carte —
+deux endroits où l'on croit regarder la même chose.*
+
+### Complément du soir : la chaîne complétée ne pouvait pas être essayée
+
+En cherchant quoi faire ensuite, la réponse évidente était « jouer le script,
+mais sur une copie » — une chaîne qui n'a jamais tourné au-delà de `25` ne
+s'essaie pas sur la base de travail. Vérification faite, **c'était impossible**,
+et pour une raison qui ne se voit pas en lisant le script :
+
+    rebuild.sh              export PGDATABASE="${PGDATABASE:-histgis}"
+    load.sh                 export PGDATABASE="${PGDATABASE:-histgis}"
+    load_cog.sh             export PGDATABASE="${PGDATABASE:-histgis}"
+    charger_outremer.sh     PG="PG:${HISTGIS_DSN:-dbname=histgis}"
+    rejouer_apres_rebuild   psql … -d histgis        ← en dur, trois fois
+
+Quatre scripts sur cinq honoraient une variable d'environnement ; le cinquième
+écrivait le nom en dur, dans `PSQL` et dans les deux `ogr2ogr`.
+
+**Ce n'est pas une inélégance, c'est un piège.**
+`PGDATABASE=histgis_essai ./rebuild.sh` aurait reconstruit la copie, puis
+`./rejouer_apres_rebuild.sh` aurait écrit dans la vraie base — et **rien
+n'aurait échoué** : les deux bases existent, portent le même schéma, acceptent
+les mêmes ordres. On croit essayer, on écrase. Le seul indice serait venu
+plusieurs heures plus tard, en constatant que la copie est restée au stade `15`.
+
+Corrigé : `PGDATABASE` honoré comme ailleurs, `PG_DSN` dérivé pour les deux
+`ogr2ogr` et passé à `charger_outremer.sh` par `HISTGIS_DSN`, et le script
+annonce sa base cible en première ligne — un essai qui ne dit pas où il écrit
+n'est pas un essai.
+
+*Un jeu de scripts n'est cohérent qu'au niveau du moins cohérent d'entre eux.
+Et le défaut était ancien : il n'a coûté rien tant que le script s'arrêtait à
+`40_scission`, parce que personne n'avait de raison de l'essayer ailleurs. Le
+compléter est ce qui l'a rendu dangereux.*
+
+---
+
+## 6 septembre 2026 — le dernier vide franc, et une notice mal interrogée
+
+### Où était vraiment le trou
+
+La question posée était « comment combler 1940-1980 ». La lecture d'`ETAT.md`
+§ 2.3 la coupe en quatre, et deux des quatre morceaux ne sont pas du même
+ordre :
+
+| fenêtre | état |
+|---|---|
+| **1941-1953** | **vide franc** — `snapshot` ne rend rien du tout |
+| 1954 | jalon |
+| **1955-1967** | **vide franc** |
+| 1968 | jalon |
+| 1969-1973 | `81`, écrit et validé, **jamais joué** |
+| 1974-1980 | salves de `75`/`76`, minces |
+
+La phrase d'`ETAT.md` — « plus aucune date entre 1954 et 1999 ne renvoie le
+vide » — est vraie et ne dit rien de ce qui est SOUS 1954. *Une borne
+d'affirmation se lit aussi par ce qu'elle laisse dehors.*
+
+### `93` — pourquoi ce n'est pas un troisième `79`
+
+`79` et `81` infèrent depuis une ABSENCE : le registre ne connaît aucun acte
+dans l'intervalle, donc rien n'a bougé. L'affirmation est réfutable, elle a été
+éprouvée (94,9 % contre 33,5 %, 49 départements sur 49), et elle reste suspendue
+à la complétude d'un registre.
+
+**Sur 1941-1953, les deux bouts sont attestés** — TRF-GIS d'un côté, un
+recensement de l'autre, sans source commune. `93` ne pose donc pas « rien n'a
+bougé parce que je n'ai pas d'acte » mais **« les deux relevés disent le même
+canton »**. Un atome dont les bouts divergent n'est pas arbitré : il est laissé
+vide. Le registre n'y sert plus qu'à EXPLIQUER les désaccords qu'il prédit —
+l'inverse exact du rôle qu'il tient dans `79` et `81`.
+
+C'est aussi l'intervalle le mieux mesuré du dépôt : `70` y avait relevé 98,78 %
+d'accord brut, 99,50 % purgé des lectures absurdes, contre 89,80 % au témoin
+1954 → 1968.
+
+**Le piège de circularité de `70` § 2 ne mord pas ici, et il fallait le dire
+plutôt que de le contourner.** La classe `ferme_canton` de `c54_qualite` a été
+appariée PARCE QUE son canton de 1954 concordait avec celui de 1940 : l'inclure
+dans une mesure ferait mesurer au banc sa propre entrée. Mais `93` ne tire
+aucune valeur de 1954 — **la valeur posée vient de 1940 seul, 1954 ne fait que
+filtrer**. Une ligne de cette classe n'est donc pas fausse, elle est *non
+filtrée* : elle vaut ce que vaudrait un report à la `79`, sans le contrôle par
+l'autre bout. La distinction voyage dans `p93_qualite.controle_independant`
+plutôt que dans une note.
+
+**Les trois décrets n'ont que leur moitié basse.** Sousceyrac (5.9.1949), Tende
+(10.9.1951) et Brive-Sud (13.9.1951) doivent être en désaccord, et le sont.
+`93` leur rend `[1941-01-01, signature)` au canton de 1940 : ce n'est pas une
+convention, c'est ce que le décret dit de lui-même — le canton n'existait pas
+avant d'être créé. La moitié HAUTE demanderait une date d'effet, donc le premier
+tour du renouvellement qui suit, règle de `75` — mais **`scrutin_cantonal` ne
+commence qu'en 1961**. Elle n'est pas posée. *Une convention ne s'applique pas
+là où un fait est disponible, et pas non plus là où la table qui la porte ne va
+pas.*
+
+### Ce que le banc a trouvé, et ce qu'il a trouvé de mieux
+
+`sql/banc_93.sh` + `banc_93_donnees.sql` : vingt-quatre atomes bâtis pour
+qu'aucune des cinq classes du tamis ne soit vide — un désaccord, un absent de
+1954, une fraction, une série écourtée, une fenêtre déjà occupée, les onze
+communes des décrets à leurs vrais codes INSEE, et une commune sans ligne de
+qualité pour rejouer le cas de `87`.
+
+**Les deux seules erreurs qu'il a levées étaient dans mes attendus, pas dans le
+fichier** — un `6` compté `7`, un `15` compté `16`. C'est le bon sens du
+rapport : le banc a corrigé celui qui l'écrivait.
+
+**Mais le contrôle qui a servi est le dernier, et il n'existait pas au premier
+jet.** Tous les zéros d'un banc ne valent que si la contrainte est vivante ;
+j'ai donc ajouté une insertion délibérément chevauchante, qui DOIT être
+refusée. Elle l'a été — **pour la mauvaise raison** : « relation "membership"
+does not exist ». Le déclencheur qui remplace l'`EXCLUDE` au banc lisait la
+table sans la qualifier, et dépendait donc du `search_path` de la session qui
+écrit. Depuis une session extérieure, il échouait avant d'avoir rien vérifié.
+
+***Un garde-fou qui échoue pour la mauvaise raison se lit comme un succès.***
+Corrigé en qualifiant `histgis.membership` dans le corps du déclencheur.
+`banc_75.sh` et `banc_81.sh` portent le même défaut ; il ne les mord pas, parce
+qu'aucun des deux n'écrit depuis une session extérieure — c'est-à-dire qu'aucun
+des deux ne s'est jamais demandé s'il avait des dents.
+
+**Écrit et éprouvé au banc, PAS ENCORE JOUÉ sur la vraie base.** Ajouté à
+`rejouer_apres_rebuild.sh` et à `CHAINE.md` en `p bis`.
+
+### 1962 existe, et la notice consultée n'était pas la bonne
+
+`cog1954/note_1954.md` conclut, à la vérification du 15 août 2026, que la série
+`cb32841307b` n'a **qu'une année numérisée**, 1968, et que 1962, 1975, 1982 et
+1990 sont « à chercher — autre notice, autre fonds, ou pas numérisés du tout ».
+La première moitié est exacte et le reste a été pris pour une réponse.
+
+**1962 est en ligne.** Titre distinct, notice distincte, type distinct :
+
+> *Recensement de 1962. Population du département... Arrondissements, cantons
+> et communes*, INSEE — **domaine public**, ensemble documentaire **BnSP002**,
+> le même que les fascicules de 1968.
+> <https://www.bnsp.insee.fr/ark:/12148/bd6t53571595>
+> <https://gallica.bnf.fr/ark:/12148/bd6t53488410>
+
+Deux arks distincts, donc une série et non une pièce isolée. La forme est celle
+de 1968 — **un fascicule par département**, « Population **du** département » au
+singulier —, quand 1954 était un volume national. Toute la chaîne se réutilise,
+`extrait_1954.py --pdf … --dep …` compris, et le département n'est pas à
+deviner.
+
+***La notice interrogée décrivait un périodique ; les fascicules sont
+catalogués comme des livres. Une réponse négative ne vaut que pour la question
+posée, et « 1 année disponible » répondait à une autre.***
+
+Ce qui reste à faire est l'énumération des arks, comme pour 1968 : le
+dénombrement bute sur la vérification anti-robot de Gallica, qui ne se
+contourne pas — c'est `fetch_inspect.py` et son en-tête de navigateur, à la
+main, comme le 21 août.
+
+**Ce que cela change.** 1955-1967 était la fenêtre la plus dure des quatre :
+deux bouts, mais un accord de 89,80 % seulement, le plus mauvais des trois
+intervalles mesurés — un report simple y poserait des lignes fausses
+qu'aucune recette interne ne distinguerait des vraies. Un jalon de 1962 la coupe
+en deux fenêtres de six ans, et rend à chacune la méthode que `93` vient
+d'éprouver sur treize.
+
+### Premier passage réel de la chaîne complétée — `histgis_essai`, arrêt à `52`
+
+Il est allé plus loin que la chaîne n'était jamais allée. Avant le 2 septembre
+elle butait sur `25` ; ici `rebuild.sh` passe entier, puis `19`, `20`, `21`, le
+COG, `24`, la couche CANTON de GEOFLA, `25`, `27`, `28`, `49`, `51` — tous à
+leurs attendus, recettes comprises : zéro chevauchement partout, 0 atome sans
+géométrie, effectifs 1870-1940 rigoureusement inchangés d'un fichier à l'autre,
+`sans_atome` nul dans `23`, la bascule du 10 juin 2012 propre.
+
+Puis `52` s'arrête sur :
+
+    ERROR: paris_quartier ou paris_circo absente.
+
+**Le message est exact et désigne le mauvais coupable.** Les tables ne manquent
+pas : elles ont été construites vingt lignes plus haut, et les scripts l'ont
+annoncé — 80 quartiers, 80/80 noms retrouvés, 386 circonscriptions sur 15
+divisions, 992 IRIS, 48 quartiers de Vasserot. Elles sont **dans l'autre base**.
+
+Les quatre scripts Python de `circo/` partagent la fonction `connexion()` de
+`paris_quartiers.py`, qui honore `HISTGIS_DSN` et retombe sinon sur une liste de
+DSN candidats — tous en `dbname=histgis`. **Ils ne connaissent pas
+`PGDATABASE`.** Le shell venait d'être réparé le matin même ; les scripts qu'il
+appelle ne l'étaient pas.
+
+*Le défaut corrigé au réveil s'était reproduit un étage plus bas, et il ne
+pouvait pas se voir autrement qu'en essayant : rendre un script paramétrable ne
+suffit pas, il faut lui passer le paramètre.*
+
+**Ce que la production a pris.** Les quatre scripts ne touchent que leurs
+propres tables — `paris_quartier`, `paris_circo`, `paris_quartier_1815`,
+`iris_paris` — par `DROP` puis `CREATE`. Ni `atom`, ni `unit`, ni `membership`.
+Ce sont des tables dérivées, reconstruites de fichiers qui n'ont pas bougé, et
+les compteurs imprimés sont ceux qu'`ETAT.md` enregistre. La base de travail a
+donc été écrite, et son contenu est identique. **Il s'en est fallu de peu** : si
+la faute avait été un étage plus haut, dans un fichier qui pose des
+rattachements, elle aurait été silencieuse et destructrice.
+
+Correctif : `export HISTGIS_DSN="$PG_DSN"` avant l'étape Paris, avec le motif
+écrit sur place. La passe est à reprendre du début — la chaîne n'a pas de point
+de reprise, et c'est très bien ainsi : ce qu'on veut prouver est qu'elle passe
+d'un bout à l'autre.
+
+*Une chaîne qui échoue à la première tentative sur une base d'essai fait
+exactement ce pour quoi la base d'essai existe. La nouvelle du jour n'est pas
+l'arrêt, c'est qu'il ait fallu descendre jusqu'à `52` pour le trouver.*
+
+### `81` est joué — et l'alarme qui a sonné était la mauvaise
+
+**32 842 rattachements, 191 866 atome-années, du 1969-01-01 au 1985-03-10.**
+1969 passe de **zéro** à 32 842. Toutes les recettes de refus à zéro : § 6
+aucune fenêtre même partiellement occupée, 11 a aucun atome à deux cantons,
+11 b les trois écarts nuls — `79` intact —, 11 c et 11 d à zéro.
+
+**Et pourtant l'attendu a été violé.** `RESTE_A_FAIRE.md` et le § 11 f du
+fichier disaient : *« 1974 ne doit PAS bouger ; si 1974 bouge, `81` a mordu sur
+`79` et il faut s'arrêter. »* 1974 est passé de **5 198 à 9 771**.
+
+**Rien n'a été mordu.** La supposition sous-jacente était que la borne de la
+plupart des départements serait la salve du 23 septembre 1973. Le § 3, mesuré
+sur la vraie base, rend une profondeur **moyenne de 6,3 ans** depuis 1969 —
+donc 1975 — et une borne la plus haute au **1985-03-10**. Les 4 573
+rattachements de plus sont de la couverture neuve : ce sont les départements
+dont le premier acte postérieur à 1968 est postérieur à 1974.
+
+Ce qui protège n'était pas cette ligne. Ce sont le § 6 (zéro écarté : aucune
+fenêtre n'était même partiellement occupée) et le 11 b (`ecart_79` = 0). La
+ligne de 1974, elle, ne servait qu'à LIRE la couverture, et elle annonçait un
+nombre qui n'avait jamais été mesuré.
+
+***Une recette qui annonce un nombre supposé apprend à ignorer ses propres
+alarmes.*** C'est le pendant de la faute inverse, déjà payée trois fois par
+`79` : là on comparait à un nombre venu d'ailleurs, ici on prédit un nombre
+qu'on n'a pas mesuré. Même racine — *une recette ne doit affirmer que ce
+qu'elle a compté*.
+
+**Un détail de lecture qui a failli passer** : le relevé d'avant et celui
+d'après ne partagent qu'**une seule date**, 1974. « 1989 → 23 236 » puis
+« 1990 → 23 236 » ne sont pas deux mesures du même point, et lire l'une comme
+la confirmation de l'autre serait une coïncidence prise pour une preuve. Les
+deux jeux de dates de `diag_passages` § 3 et de `81` § 11 f devraient
+coïncider ; ils ne coïncident pas.
+
+Trois départements sous 85 % de jamais-nommés : **20, 91, 95** — la Corse et
+l'éclatement de la Seine-et-Oise. Ce sont exactement ceux qu'on attendait, et
+c'est la seule prédiction de la journée qui se soit vérifiée.
+
+### Ce que `81` révèle en se posant : 1 072 département-années noires
+
+Le § 11 g n'avait jamais tourné sur la vraie base. Il rend : **15 départements
+sur 87 couverts de bout en bout de 1969 à 1999, 72 qui ne le sont pas**, pour
+**1 072 département-années** entre le plafond de `81` et le plancher de `79` —
+c'est-à-dire entre 1975 et 1986.
+
+C'est désormais le plus gros poste de toute la période, et il ne demande
+aucune source neuve : les 86 actes non dépouillés, les 62 cantons annoncés au
+titre d'un décret et jamais lus, le chaînage acte par acte. *Un report qui se
+pose ne comble pas seulement un trou : il mesure celui qui reste.*
+
+### Deux autres choses que le diagnostic a dites, et qu'il faut instruire
+
+**`25_pseudo_canton.sql` n'a jamais tourné, et cette fois c'est lu par
+l'EFFET** : zéro pseudo-canton, zéro rattachement. `37` et `40`, les deux
+autres « traces jamais vues », ressortent « sain » et « présent » — `25` est
+seul dans son cas. Marseille et Lyon seraient donc absents de la couche
+1999-2012, alors qu'`ETAT.md` § 2.4 les y donne et que le tableau des effectifs
+crédite `25` de sa part. **À trancher par une troisième lecture**, pas en
+croyant la plus récente des deux.
+
+**Les sept témoins orphelins du § 1 ter** — `p84`, `p85` et les cinq traces de
+la Seine — étaient en base et hors de l'inventaire du § 1. Le § 1 ne pouvait
+donc pas remarquer leur absence, seulement le § 1 ter leur présence. Ils sont
+déclarés, `93` avec eux, *avant d'avoir jamais tourné*, ce qui est la seule
+façon que son absence soit un jour remarquée.
+
+### `93` est joué — 1941-1953 cesse d'être vide
+
+**29 686 rattachements, 385 885 atome-années**, sur 38 304 atomes vivants en
+1940. `snapshot` : 1941 → 29 686, 1945 → 29 686, 1950 → 29 682, 1953 → 29 675.
+Les trois marches sont les décrets qui sortent, et elles tombent au jour près.
+
+Toutes les recettes à zéro : § 6 aucune fenêtre occupée, 11 a aucun atome à
+deux cantons, 11 b les quatre couches intactes (1940, 1954, 1968, circo),
+11 c, 11 d, 11 e, 11 h. Le § 11 f rend `jointes_a_1954` = 29 675, exactement le
+nombre de lignes `accord_deux_bouts` — la recette avait annoncé ce nombre avant
+de le compter, et c'est le seul endroit où elle avait le droit.
+
+**LE CONTRÔLE QUI COMPTE : `70` EST RETROUVÉ AU CHIFFRE PRÈS.** Le § 4 bis rend
+**26 544 comparables et 98,78 % d'accord** dans la classe `ferme` — les deux
+nombres exacts de `70`, calculés par un autre fichier, sur un autre chemin, à
+huit jours d'intervalle. Ce n'est pas une confirmation du taux, qui est le même
+calcul : c'est la preuve que **`93` sélectionne exactement la population que
+`70` a mesurée**, sans l'élargir ni la rétrécir. Un report qui poserait sur une
+population plus large que celle qu'on a jugée hériterait d'un taux qui ne la
+décrit pas.
+
+Et `ferme_canton` rend **100,00 % sur 3 450** — ce qu'elle doit rendre, ayant
+été appariée parce que son canton concordait. La prédiction de l'en-tête tient :
+l'accord y est vrai par construction, il ne mesure rien, il ne fausse rien.
+
+### Les quatre départements les plus bas étaient tous prédits
+
+| dep | accord | qui l'avait annoncé |
+|---|---|---|
+| 36 Indre | 94,4 % | `71` — l'échange croisé Issoudun-Nord/Sud |
+| 19 Corrèze | 94,9 % | `70` § 3 — le dédoublement de Brive |
+| 14 Calvados | 96,0 % | `71` — l'échange croisé Falaise-Nord/Sud |
+| 46 Lot | 97,2 % | `70` § 3 — la création de Sousceyrac |
+
+Quatre têtes de classement, quatre explications écrites avant le passage, deux
+fichiers différents. *Un classement dont les extrêmes étaient prédits ne
+surprend pas : il confirme.* Le 06, cinquième à 97,0 %, n'a pas d'explication —
+Tende n'a aucun atome avant 1947 et ne peut rien y faire. C'est le seul du haut
+de liste à instruire.
+
+### Un défaut, et il est dans mon commentaire
+
+Le § 4 annonçait « `desaccord` doit valoir de l'ordre de 1,2 % » **sans dire de
+quoi**. La colonne `pct` du § 4 rapporte chaque classe à TOUS les atomes de
+1940, les 7 970 absents compris : le désaccord y vaut 0,87 %. Rapporté aux
+comparables, il vaut 1,11 %. Sur la seule classe indépendante, l'accord vaut
+98,78 %. Trois nombres justes, trois dénominateurs, et le commentaire en citait
+un quatrième.
+
+***Un taux sans son dénominateur est une opinion présentée comme une mesure*** —
+cinquième fois dans ce dépôt, et **la première où c'est le commentaire et non la
+requête qui l'a commise**. Le § 4 dit maintenant ce que chaque colonne rapporte
+à quoi, et renvoie au § 4 bis pour le seul taux qui se compare à `70`.
+
+### Le refus le plus gros n'est pas instruit — `94`
+
+7 970 atomes, **103 610 atome-années**, classés « absent du relevé de 1954 ».
+C'est le quart de la fenêtre, et la classe porte deux causes qui n'ont rien à
+voir :
+
+* la commune **était morte** — absorbée entre 1941 et 1953. Elle n'a pas de
+  ligne en 1954 parce qu'elle n'existait plus, et son canton de 1940 vaut
+  jusqu'à sa mort. **C'est de la couverture à prendre**, et `93` ne lui donne
+  rien du tout ;
+* la commune **vivait** et le fascicule ne l'a pas rendue — 161 pages muettes,
+  quatre départements absents. Là il n'y a rien à poser sans changer de
+  fondement.
+
+`sql/94_absents_1954_diag.sql`, lecture seule, les sépare par la chronologie
+communale de l'INSEE, et mesure la part posable en atome-années plutôt qu'en
+atomes — un mort de 1942 rend deux ans, un mort de 1953 en rend douze.
+Il ne peut rien dire des mortes de 1941-1942, l'univers du COG commençant en
+1943 ; la classe existe et est comptée à part, non tranchée.
+
+***Une classe de refus qui porte deux causes se traite comme la plus mauvaise
+des deux tant qu'on ne l'a pas ouverte.***
+
+Le banc a été étendu pour lui : sans une commune morte dans la fenêtre, la
+classe `MORTE_DANS_LA_FENETRE` restait vide et `94` ne mesurait rien. C'est la
+même leçon que la Corse de `75` et la couche 1999 de `76`, pour la troisième
+fois — *un banc qui ne fournit pas de cible ne mesure pas un tir*.
+
+### Deux réserves petites et nommées
+
+**Les 15 atomes `hors_c54` s'accordent à 26,67 %**, contre 98,78 % ailleurs.
+Hypothèse : la Seine, dont l'accord 1940/1954 est structurellement de 10,0 %
+(`66` § 6 ter), et dont `87` a rendu quatre communes au jalon sans ligne de
+qualité. À vérifier par une requête, pas à supposer : si ce n'est pas la Seine,
+des lignes de 1954 entrent en base hors de `c54_qualite` et il faut savoir par
+où.
+
+**Deux lignes portent `chrono_trouee`**, toutes deux dans l'Eure et au canton
+de Saint-André-de-l'Eure — l'INSEE leur donne une disparition puis un
+rétablissement dans la fenêtre. Rien n'a été retiré. *Ne jamais refermer un tel
+trou d'office : c'est la faute commise sur Cherré.*
+
+### Le correctif du matin était faux, et son échec dit pourquoi
+
+Deuxième passage : même arrêt, à la même étape, pour la raison inverse.
+
+    psycopg2.OperationalError: connection to server on socket
+    "/tmp/.s.PGSQL.5432" failed: No such file or directory
+
+`psql` et `ogr2ogr` sont les binaires du système, dont libpq cherche la socket
+dans `/var/run/postgresql`. `psycopg2` vient de l'environnement conda, où elle
+est cherchée dans `/tmp`. **Le même `dbname=histgis_essai` ne désigne donc pas
+le même serveur selon qui l'interprète** : le shell venait de s'y connecter sans
+peine, ligne au-dessus.
+
+C'est exactement ce que la liste de DSN candidats de `connexion()` existe pour
+absorber — son commentaire le dit depuis toujours : « la mienne se contentait de
+`dbname=histgis` et échouait sur la socket ; celle du projet essaie une liste ».
+Lui imposer un DSN unique depuis le shell la court-circuitait. *J'ai réparé le
+nom de la base en cassant la découverte de la socket.*
+
+Correctif juste, et il est dans `paris_quartiers.py` : les trois candidats sont
+bâtis sur `PGDATABASE`, le chemin de la socket reste **cherché**, et
+`HISTGIS_DSN` demeure l'échappatoire explicite, sans repli — une connexion
+nommée à la main qui échoue doit le dire plutôt que se rabattre en silence sur
+une autre base. Le message d'échec nomme désormais la base et les trois DSN
+essayés.
+
+*Paramétrer, c'est choisir ce qui varie. Le nom de la base varie ; le chemin de
+la socket dépend du client, et le figer casse ce qui marchait. Les deux se
+ressemblent dans un DSN — c'est une seule chaîne de caractères — et ne se
+ressemblent pas du tout.*
+
+Rien n'a été écrit nulle part cette fois : l'échec est à la connexion.
+
+### `94` réfute l'hypothèse qui l'avait fait écrire — et trouve autre chose
+
+**Le levier annoncé n'existe pas.** Les 7 970 « absents du relevé de 1954 »
+devaient mêler des communes mortes dans la fenêtre — de la couverture que `93`
+refusait à tort — et des communes non lues. Mesuré :
+
+| classe | atomes | |
+|---|---|---|
+| vivante en 1954, non lue | **7 870** | 98,7 % |
+| morte dans la fenêtre | 55 | **414 atome-années, 0,4 %** |
+| jamais dans le COG | 45 | mortes de 1941-1942, ou sans code moderne |
+
+414 atome-années contre les 103 610 de la classe, et contre les 385 885 que
+`93` a posées : **un millième**. Il n'y a pas de § supplémentaire à écrire dans
+`93`, et le dire est le résultat du fichier. *Une hypothèse qu'on chiffre avant
+de l'implémenter coûte une heure ; implémentée d'abord, elle coûte un fichier
+et sa maintenance.*
+
+Les 55 sont réelles et la classification les trouve bien : Brest-2, Brest-3,
+Douarnenez, Concarneau meurent en 1945, Niederbronn en septembre 1945 — les
+fusions d'après-guerre. Elles sont peu nombreuses parce que la vraie vague de
+fusions est celle de 1971-1972. **Un nombre historiquement plausible est un
+contrôle**, et c'est ce qui permet de conclure que la classe est bien vide
+plutôt que mal calculée.
+
+### Le § 3 devait confirmer une explication ; il l'a démentie
+
+La perte de lecture ne se concentre **pas** sur les six départements que
+`note_1954.md` nomme. Ils portent **491 des 7 870, soit 6,2 %**. Le reste est
+réparti sur presque tous les départements, entre 19 et 42 % de leurs communes :
+Ariège 42,4 %, Haute-Saône 37,2 %, Jura 34,5 %, Ardennes 32,5 %.
+
+**Et le 52, donné « ABSENT » par la note, ne perd que 30,2 % de ses communes :
+la liste des quatre départements absents est périmée**, ils ont été repris
+depuis sans que la note le dise.
+
+Ce n'est donc pas un lot de fascicules manquants, c'est un **défaut général du
+dépouillement**. Le § 3 avait été écrit pour confirmer ; il annonçait d'avance
+ce qu'un résultat uniforme signifierait, et c'est ce qui le rend lisible.
+*Une recette qui ne peut que confirmer ne sert à rien.*
+
+### Le vrai chiffre de 1954 : 79,0 %, et non 95,9 %
+
+C'est la conséquence, et elle vaut plus que tout le reste de la journée.
+
+`ETAT.md` et `note_1954.md` portent **95,9 %** pour la lecture de 1954 depuis
+le 14 août. Le nombre est juste : 30 128 lignes sur 31 400. Mais c'est la part
+des lignes **transcrites** qui ont reçu un code — la qualité de l'appariement.
+**Les pages muettes ne sont pas au dénominateur : elles n'ont produit aucune
+ligne, donc elles ne peuvent pas manquer à un compte de lignes.**
+
+Rapportée aux communes qui existaient, la couverture du jalon est de
+**79,0 %** — 30 009 comparables sur 37 979 atomes non-fractions vivants en
+1940 (`94` § 5).
+
+***Un taux sans son dénominateur est une opinion présentée comme une mesure.***
+Sixième fois dans ce dépôt, et la plus coûteuse : celle-ci rassurait depuis
+trois semaines, et elle a fait classer « finition » un chantier qui est le
+premier levier de toute la période.
+
+**Ce que l'achèvement du dépouillement de 1954 rendrait** : 102 310
+atome-années sur la seule fenêtre 1941-1953, plus un cinquième du jalon de 1954
+lui-même, plus tout ce qui s'appuiera dessus — le report vers 1962 quand ce
+jalon existera. À comparer aux 1 072 département-années noires de `81` § 11 g,
+qui était jusqu'ici le plus gros poste identifié.
+
+*Deux fichiers écrits pour prendre de la couverture, `93` et `94`. Le premier
+en a pris 385 885 atome-années. Le second n'en a pris aucune, et il a désigné
+le chantier qui vaut le plus. Un diagnostic qui ne pose rien peut être le plus
+utile des deux.*
+
+### Troisième passage — Paris passe, et `32` révèle une casse antérieure
+
+Le correctif tient : les quatre scripts Paris écrivent dans `histgis_essai`, et
+`52`, `53`, `54`, `56`, `55` suivent, tous à leurs attendus. Paris est continu
+de 1815 à 2012 — 48 quartiers et 4 circos en 1816, 80 et 9 en 1865, 73 et 21 en
+1990 — avec ses trous déclarés aux bons endroits (1850, 1943, 1970) et zéro
+atome dans deux circonscriptions à la même date, à chaque fichier.
+
+Puis `32_marseille_geom.sql` :
+
+    ERROR: Couches absentes. Importer le GeoPackage avec ogr2ogr (voir en-tête).
+
+**Et celui-là n'est pas de mon fait.** `32` était appelé sans condition depuis
+toujours, et son entrée est `gaudillere/marseille_cantons.gpkg` — la
+digitalisation à la main que `RESTE_A_FAIRE.md` § 2 décrit comme « le plus gros
+chantier manuel restant, et rien n'est commencé ». **Le fichier n'a jamais
+existé.** Les deux `ogr2ogr` qui l'importeraient ne vivaient, une fois de plus,
+que dans l'en-tête du SQL.
+
+La chaîne était donc déjà cassée ici **avant** la complétion — à une étape que
+personne n'avait jamais atteinte, `25` bloquant quinze marches plus haut. Ce
+n'est pas un cinquième prérequis en commentaire au sens des quatre autres : là,
+la donnée était sur le disque et la commande manquait ; ici la donnée reste à
+produire. `32` est donc sauté sous condition, comme `49`, `51`, `46` et
+l'outre-mer, en disant ce que son absence coûte — les douze fractions de
+Marseille gardent le polygone de la ville, 1 176 km² comptés en trop en 1870 et
+2 587 en 1940.
+
+*Un fichier appelé sans condition dans une chaîne qui ne va jamais jusqu'à lui
+n'est pas un appel : c'est une intention. Rien ne l'en distingue tant que la
+chaîne s'arrête avant.*
+
+### L'audit qui remplace les relances
+
+Trois arrêts en trois passages, à trois marches différentes, chacun coûtant une
+reconstruction complète. Le reste de la chaîne a donc été audité d'un coup,
+hors base, plutôt que découvert une relance à la fois :
+
+* **tous les `\copy FROM` littéraux** des trente-neuf fichiers : les fichiers
+  existent, sans exception ;
+* **toutes les tables exigées par un `to_regclass … RAISE EXCEPTION`** : toutes
+  sont produites par une étape antérieure de la chaîne, dans l'ordre où elle
+  les joue ;
+* **toutes les entrées binaires** : GEOFLA CANTON, GeoPackage ANR,
+  `anr_variantes.csv`, ALPAGE-Vasserot, les cinq lots d'outre-mer, les CSV
+  circo — présents. Seul manque le GeoPackage de Marseille, désormais déclaré.
+
+L'audit a trouvé une chose que l'exécution n'aurait pas montrée : **`47` lit
+`hac_filiation`, que `46` crée, et `47` n'était pas conditionnel** alors que
+`46` l'est. Le CSV étant présent, la branche n'a jamais été prise — et le jour
+où elle l'aurait été, `47` aurait arrêté la chaîne. Corrigé.
+
+*Une étape conditionnelle rend conditionnel tout ce qui lit sa sortie, et cela
+ne se voit pas tant que la condition est vraie.*
+
+### Pourquoi la perte de 1954 est uniforme : ce ne sont pas les pages, ce sont les lignes
+
+La question laissée ouverte par `94` § 3 — *pourquoi 19 à 42 % dans presque
+tous les départements ?* — se tranche sans toucher à la base, sur les fichiers
+du dépôt.
+
+**Les pages ne manquent pas.** `communes_1954_redecoupe.csv` porte 805 pages
+distinctes, de 14 à 936. Les 118 absentes forment trois grandes plages —
+15-37, 39-82 et 892-935 — c'est-à-dire l'introduction, la nomenclature de tête
+et les annexes de queue (le tableau A est en 895, transcrit à part). **Dans le
+corps du volume, 83 à 888, il ne manque qu'une quinzaine de pages isolées.**
+
+**Ce sont les lignes qui manquent, sur des pages lues.** Médiane de 43 lignes
+par page, mais 180 pages du corps sous 30 lignes quand le maximum observé est
+55. Le brut OCR de `ocr_brut/` est là pour trancher :
+
+| sur le corps 83-888 | lignes |
+|---|---|
+| lignes brutes portant au moins trois chiffres | **41 996** |
+| retenues par l'extraction | 31 369 |
+| **taux de conservation** | **74,7 %** |
+
+*Les pages ont été scannées, océrisées et lues. Un quart de leurs lignes est
+tombé à l'analyse.* Voilà pourquoi la perte est uniforme : chaque page en perd
+une part comparable, donc chaque département aussi.
+
+**Et la cause se nomme.** Les 10 627 lignes perdues se classent :
+
+| classe | lignes | |
+|---|---|---|
+| nomenclature de cantons en tête de département | 1 099 | **normal**, ce ne sont pas des communes |
+| **nom lisible, couple arrondissement/canton ABÎMÉ** | **4 016** | récupérable |
+| non classées (en-têtes, noms détruits par l'OCR) | 5 278 | à ouvrir |
+| **nom lisible ET couple arr/canton PROPRE** | **323** | défaut pur du parseur |
+
+Le couple `arrondissement canton` est ce qui casse. L'analyseur attend
+`chiffre espace deux-chiffres` ; le scan rend :
+
+    1 28  ->  128       Arandas, Argis
+    2 02  ->  2:02      Asnières-sur-Saône
+    4 22  ->  4 2:      Arbent
+    1 31  ->  1: 31     Anglefort
+    1 01  ->  1 Ot      Bettant
+
+S'y ajoute le point final du nom, rendu en virgule ou absent — « Armix 59 »,
+« Armans - », « Asnières-sur-Saône, ».
+
+**Ce n'est donc pas un chantier d'acquisition mais de lecture**, et pour la
+seconde fois de la campagne : le 29 août, les huit actes anonymes étaient déjà
+OCRisés dans `jorf_txt/` et il n'y avait rien à télécharger. *Vérifier ce qu'on
+a avant de chercher ce qui manque.*
+
+**Et l'assouplissement ne coûterait rien à la rigueur**, parce que deux arbitres
+indépendants existent déjà : la nomenclature cantonale du département
+(`nomenclature_brute_1954.csv`) dit quels codes de canton existent, et le
+dictionnaire de noms dit quelles communes existent. Une ligne lue « 128 » se
+tente en « 1 28 » et se fait valider — ou refuser — par la nomenclature. C'est
+la méthode du dépôt : *relâcher la lecture et laisser une source extérieure
+arbitrer*, comme `71` a arbitré par la géométrie ce qu'aucun contrôle de
+cohérence ne pouvait trancher.
+
+**La recette qui jugera le correctif est double, et le second terme est le plus
+important** : la couverture doit monter depuis 79,0 %, ET le taux d'accord du
+§ 4 bis de `93` — 98,78 % sur la classe indépendante — **ne doit pas baisser**.
+*Un parseur plus permissif qui gagne de la couverture en perdant de l'accord
+achète du volume avec des erreurs, et rien d'autre ne le dirait.*
+
+**Ce que la note disait, et qui est faux.** `note_1954.md` explique la lacune
+par « 161 pages muettes, dont une cinquantaine réellement perdues ; quatre
+départements absents ; d'autres absorbés par leur voisin ». Les pages muettes
+existent mais ne rendent pas compte du quart manquant, et les quatre
+départements sont repris depuis (le 52 ne perd que 30 % de ses communes).
+*Une explication plausible, écrite tôt, survit à sa réfutation tant que
+personne ne la chiffre.*
+
+### Les 5 278 non classées, ouvertes — le plafond n'est pas où je l'avais mis
+
+Premier classement : 4 016 lignes « nom lisible, arr/canton abîmé », 5 278
+« non classées ». **Le second passage montre que mon classement était trop
+strict, et exactement de la même façon que le parseur qu'il diagnostique** : il
+exigeait un séparateur propre avant le nom et un chiffre juste après. « Champdor. »
+suivi d'une apostrophe parasite lui échappait, alors que le nom est parfait.
+
+*J'ai reproduit le défaut que j'étais en train de mesurer.* Il n'a coûté qu'un
+second passage parce que la classe « non classées » avait été gardée et
+comptée ; nommer un fourre-tout et le compter est ce qui permet d'y revenir.
+
+**Mesure refaite, avec une lecture relâchée du couple arr/canton et un arbitre**
+— le code de canton doit être attesté au moins deux fois dans le département
+parmi les lignes déjà retenues (2 900 codes sur 90 départements) :
+
+| sur les 10 716 lignes perdues du corps | lignes | |
+|---|---|---|
+| **RÉCUPÉRABLES — canton attesté dans le département** | **5 056** | 47,2 % |
+| aucune lecture relâchée possible | 3 125 | 29,2 % |
+| nomenclature de cantons | 1 099 | 10,3 % — normal |
+| en-têtes de page et de colonne | 1 072 | 10,0 % — normal |
+| refusées par l'arbitre | 357 | 3,3 % |
+
+**5 056 lignes contre 7 870 communes manquantes**, et le résidu en contient
+d'autres : « 4 2: » pour le canton 22, « 1 Ot » pour 1 01, « 3iyes. » dont le
+nom commence par un chiffre. Trois substitutions connues — `O→0`, `t/l→1`,
+`:→ chiffre` — et un nom autorisé à commencer par du bruit iraient chercher
+plusieurs centaines de plus. **Le plafond n'est pas 4 300 : il approche les
+7 870.**
+
+Les 357 refus ne sont pas un taux d'erreur du procédé mais **de ma lecture** :
+« 4 241 | Billy-sur-Ourcq » y est refusée parce que mon expression régulière a
+mordu sur les deux mauvais chiffres. Un analyseur qui connaît la position des
+colonnes — ce que `extrait_1954.py` sait et qu'une regex de diagnostic ignore —
+n'aurait pas ce problème. *Un chiffre de refus produit par un outil grossier
+mesure l'outil, pas la matière.*
+
+**Une trouvaille de côté, qui n'a rien à voir avec la couverture.** Parmi les
+lignes sans lecture possible, il y a les NOTES DE BAS DE PAGE du volume, et
+elles sont substantielles :
+
+> « Par décret du 4 janvier 1919, la commune de SAINT-SULPICE, rattachée au
+> canton de… »
+> « Par décret du 19 juillet 1952, la commune de NEUVILLE-SAINT-AMAND, qui
+> était rattachée au canton de… »
+
+**Ce sont des rattachements cantonaux datés au décret**, dans un volume de
+1954 — c'est-à-dire pile la matière que le registre de `72` ne trouve pas pour
+les années 1940 et 1950, et le type de mouvement que l'annexe VII de Gaudillère
+ne consigne jamais (les transferts isolés de communes). Elles ne comblent pas
+la couverture ; elles pourraient dater ce qu'on ne sait pas dater. À dépouiller
+séparément.
+
+### Quatrième passage — `42` s'arrête, et il a raison : un garde-fou qui ne gardait plus
+
+La chaîne descend jusqu'à `42`. Tout ce qui précède est à l'attendu : Marseille
+sauté proprement, l'outre-mer chargé et posé (129 communes, 85 rattachements,
+0 km² de recouvrement, La Réunion à 6 circos comme la note l'annonce), `38`
+conforme 3/3/3, `50` réparant ses quatre noms, `37` **trace vide** — le bon
+signe attendu depuis le 2 septembre, `load_cog.sh` lisant en WIN1252 —, `39` et
+`92` rendant les 29 cantons et l'unique circo au 54, `41` posant ses 22
+communes rétablies sans un seul atome à double.
+
+Puis :
+
+    ERROR: ra_cas contient 274 cas, attendu de l'ordre de 2.
+           La selection a derive : rien n'est pose.
+
+**Le fichier a refusé d'écrire, et c'est exactement ce qu'il fallait.** Son
+alarme, écrite le 17 août, dit « un saut à plusieurs dizaines ne veut pas dire
+que l'histoire a changé, il veut dire que la sélection a dérivé ». Elle avait
+raison, et la dérive n'est pas dans `42`.
+
+`42` définissait `d0` comme `min(valid_from)` sur TOUT `membership`, puis
+testait « le territoire n'est rattaché par aucun atome à cette date ». C'était
+juste tant que la base commençait en 1870. **Depuis `54`, elle commence en
+1815** — et à 1815 seuls les 48 quartiers de Vasserot ont un rattachement, donc
+*toute commune de France* passe le test. Le garde-fou avait cessé de garder
+quoi que ce soit sans qu'une ligne de code change.
+
+*Un garde-fou calculé sur l'état de la base se relâche quand la base change, et
+il ne le dit pas. Celui-ci ne protégeait plus rien depuis `54` — et rien ne
+pouvait le montrer tant que la chaîne s'arrêtait avant `42`.*
+
+Corrigé : `d0` se demande au niveau `canton`, que rien ne peuple avant 1870,
+`54` à `91` ne posant que du `circo`. Et la valeur est désormais **assertée** —
+si un fichier pose un jour du canton avant 1870, `42` s'arrête et se fait
+relire, au lieu de se dégrader.
+
+### Le même défaut trois fichiers plus loin, et celui-là aurait POSÉ
+
+L'arrêt de `42` a fait chercher le motif ailleurs. Trois autres sites :
+
+* **`46_creation_serie.sql`** — même `d0` global, servant aux deux tests :
+  `f.annee > année(d0)` et le garde-fou 5. Avec 1815, les deux se vident.
+  **Et `46` n'a pas d'alarme sur l'effectif : il aurait écrit.** Il tourne
+  trois marches après `42` ; sans l'arrêt de celui-ci, la chaîne serait allée
+  au bout en posant des milliers de rattachements sur des trous inexistants,
+  et rien n'aurait crié.
+* **`40_scission_circo`** et **`47_circo_mere`** — le même `min` global, mais
+  pour borner une `generate_series` d'années. L'effet y est seulement
+  coûteux : ils balayaient 1815-1869, où aucun atome n'a de canton, donc
+  aucune candidate possible. Alignés quand même, pour que les quatre fichiers
+  disent la même chose du même mot.
+
+`11` et `15` portent la même formule et restent justes **par l'ordre seul** :
+ils tournent dans `rebuild.sh`, avant que Paris 1815 n'existe. C'est une
+protection réelle et fragile ; elle est notée ici plutôt que corrigée, parce
+que la déplacer changerait leur périmètre.
+
+*Une alarme qui s'arrête sur un chiffre inattendu ne protège pas seulement son
+fichier : elle est le seul endroit d'où l'on peut voir un défaut partagé. `46`
+avait le même et serait passé.*
+
+### L'essai est fait — +11,6 %, et mon plafond d'hier était trop haut
+
+`cog1954/essai_ligne_souple.py`, lecture seule. **Un seul changement** : dans
+`LIGNE`, le séparateur entre l'arrondissement et le canton, `\s+`, devient
+`[\s:;.,]*`, et le premier groupe passe en non gourmand pour que « 128 » se lise
+« 1 » + « 28 » et non « 12 » + « 8 ». Tout le reste de la règle est repris par
+substitution textuelle dans `LIGNE.pattern` — la règle n'est pas recopiée, elle
+est prise là où elle vit.
+
+**Le § 0 est ce qui rend la mesure lisible** : avant de mesurer un gain, le
+fichier rejoue la règle ACTUELLE sur `ocr_brut/` et vérifie qu'elle retrouve le
+CSV. **31 272 retrouvées, 0 en trop**, 97 manquantes qui sont les correctifs
+postérieurs. *Un banc qui ne reproduit pas l'existant ne mesure pas sa
+modification* — sans ce paragraphe, tout gain serait un artefact de ma lecture
+plutôt qu'un effet du changement.
+
+**Deux arbitres, aucun n'étant la règle elle-même** : le code de canton doit
+être attesté dans le département (2 900 codes sur 90 départements, tirés des
+lignes déjà lues), et le nom doit tomber à sa place alphabétique entre la
+commune lue juste avant et celle lue juste après sur la même page. Le second ne
+connaît ni cantons ni noms de communes : il ne juge que la POSITION, et c'est ce
+qui le rend indépendant du premier.
+
+| sur tout le volume | lignes |
+|---|---|
+| gagnées par la règle relâchée | **4 638** |
+| dont **les deux arbitres d'accord** | **3 562** |
+| canton attesté, ordre alphabétique non | 939 |
+| ordre bon, canton inconnu du département | 83 |
+| les deux refusent | 79 |
+
+**+11,6 % sur les 30 714 lignes déjà lues.** La couverture du jalon passerait
+de **79,0 % à environ 88 %**.
+
+**Et les départements qui gagnent le plus sont exactement ceux que `94` § 3
+donnait pour les plus abîmés** : Ariège +39,1 %, Jura +32,8 %, Haute-Marne
++28,8 %, Alpes-de-Haute-Provence +28,3 %, Haute-Saône +26,4 %, Doubs +26,2 %.
+Le correctif répare là où la mesure disait que ça cassait. *Deux fichiers
+écrits pour des raisons différentes qui désignent les mêmes départements, c'est
+une explication, pas une coïncidence.*
+
+**MON PLAFOND D'HIER ÉTAIT FAUX, ET DANS LE SENS FLATTEUR.** J'avais écrit que
+le gain « approche les 7 870 » communes manquantes, sur la foi d'une regex de
+diagnostic qui trouvait 5 056 lignes candidates. La vraie règle, avec le seul
+séparateur relâché, en récupère 4 638 brutes et 3 562 arbitrées : **la moitié
+du manque, pas la totalité.** L'écart vient de ce que ma regex ignorait le reste
+de `LIGNE` — l'exigence de trois nombres après le nom, le refus de la
+nomenclature — qui écarte à bon droit une partie de ses candidates.
+
+***Un outil grossier qui estime un gain l'estime toujours vers le haut : il ne
+porte aucune des contraintes qui font refuser.*** Je l'avais écrit la veille à
+propos des 357 refus, sans voir que la remarque valait aussi pour le total.
+
+Ce qui reste hors d'atteinte demande davantage que le séparateur : le « : » tenu
+pour un chiffre (« 4 2: » = canton 22), le « t » pour un « 1 » (« 1 Ot » =
+1 01), et les noms dont l'OCR a mangé la première lettre (« 3iyes. »). Chacun
+est une substitution de plus, et chacune élargit la surface d'erreur — à
+mesurer séparément, pas à empiler.
+
+**La recette qui décidera n'est pas dans ce fichier**, et c'est dit dans son
+en-tête : le taux d'accord de `93` § 4 bis, 98,78 % sur 26 544 comparables, ne
+doit PAS baisser pendant que la couverture monte. Il exige la base. À surveiller
+en particulier l'Indre, qui gagne 25,5 % de lignes et qui est déjà le
+département au plus bas accord 1940/1954 (94,4 %) : si les deux bougent
+ensemble, c'est le premier endroit où on le verra.
+
+## 22 septembre 2026 — cinquième passage, arrêt à `47`, et l'audit des lectures en avant
+
+### `42` et `46` passent ; `47` pose, puis s'arrête sur une lecture
+
+Les corrections de `d0` tiennent : la chaîne franchit `42`, `44` et `46`. `47`
+pose ce qu'on attendait de lui, Port-Saint-Louis-du-Rhône, mère Arles,
+4 périodes du 1870-01-01 au 1902-01-01, puis s'arrête au § 3 :
+
+    ERROR: relation "scission_circo_trace" does not exist
+
+**La table est celle de `40`, et `40` passe après `47`**, à dessein (la
+filiation avant la procuration des voisins, déplacement du 20 août). Sur
+`histgis`, `40` avait été joué en août : la table existait, et la jointure du
+§ 3 lisait une table qu'aucune étape antérieure de la chaîne ne crée. Le
+paragraphe est une lecture, et `47` ne tourne pas en `-1` : la pose a eu lieu,
+et la base d'essai est simplement à reconstruire.
+
+Corrigé : le § 3 teste `to_regclass('scission_circo_trace')` et, sans `40`,
+rend la même jonction sans la colonne qui ne peut pas avoir de valeur. Le
+contrôle U1303@1889 → U1303@1902 reste entier.
+
+### L'audit que l'arrêt appelait : toute lecture d'une table créée plus loin
+
+L'audit du 6 septembre vérifiait les tables exigées par un `RAISE EXCEPTION`,
+pas les simples `FROM` et `JOIN`. Refait sur les 70 étapes de la chaîne, dans
+l'ordre de `rebuild.sh` puis de `rejouer_apres_rebuild.sh` : pour chaque
+fichier, tout nom lu dont la première création est à une étape postérieure.
+**Trois sites, pas davantage :**
+
+* `47` § 3 : `scission_circo_trace` (`40`), corrigé ci-dessus ;
+* `90` § 6 et `91` § 8 : `carte_partition_atome`, la fonction de `84`.
+  **Ceux-là sont joués en `-1`** : l'appel aurait annulé la pose entière de la
+  Seine de 1848 et de 1815-1870, puis arrêté la chaîne. Même garde, par
+  `pg_proc`, et sans `84` la commande de relecture est affichée.
+
+*Une étape jouée à la main sur une base peuplée ne dit rien de ce qu'elle lit :
+elle trouve tout ce que les étapes suivantes ont laissé. Seule la chaîne
+rejouée à vide le montre, et l'audit se fait une fois au lieu d'attendre les
+arrêts un à un.*
+
+### Ce que l'audit a montré en passant : la moitié de la chaîne n'est pas suivie
+
+`sql/85` à `sql/94`, dont sept fichiers joués par la chaîne (`87` à `93`), et les CSV de
+la Seine qu'ils lisent (`circo/seine_*.csv`, `cog1954/correctif_seine_1954.csv`)
+sont **absents de git**. Rien n'est commité depuis le 2 septembre. La chaîne
+dépend de fichiers qui n'existent qu'en un seul exemplaire.
+
+### Sixième passage — la chaîne va au bout, pour la première fois
+
+`rebuild.sh` puis `rejouer_apres_rebuild.sh` sur `histgis_essai`, de `19` à
+`84`, sans un arrêt (`build/passe5_essai.log`). Seuls sautés : `32`, faute du
+GeoPackage de Marseille, comme déclaré. Relu étape par étape contre les
+attendus écrits :
+
+| étape | rendu | attendu |
+|---|---|---|
+| `25` | 25 rattachements, 2 unités, 25/25 arrondissements couverts | **premier passage de sa vie** |
+| `42` | 0 cas ; Chisa a son canton depuis 1870 par une étape antérieure | « zéro cas, sain si Chisa et Butry ont leur passé » (`ETAT.md`) |
+| `46` | 37 cas, 37 + 56 périodes, 0 chevauchement | — |
+| `47` | Port-Saint-Louis, 4 périodes ; U1303@1889 → U1303@1902 jointif | la jonction |
+| `40` | 1 038 périodes, 348 atomes, 0 atome à double | — |
+| `81` | 32 842 rattachements, 186 060 + 5 806 = **191 866** atome-années | idem au chiffre |
+| `93` | `ferme` **98,78 % sur 26 544** ; 29 686 posés ; 11 a à 11 h nuls | idem au chiffre |
+| `89` | couronne 441,56 km², recouvrement 0,001 | 441,56 |
+| `90`, `91` | recettes cartographiques différées, le garde du matin a joué | — |
+
+**`25` règle le point 4 bis de `RESTE_A_FAIRE.md`** : sur `histgis`, la
+couche 1999-2012 n'a réellement ni Marseille ni Lyon (`diag_passages` § 4 a
+rendait zéro, et c'était vrai) ; la chaîne les pose. C'était un trou, pas une
+recette mal écrite.
+
+**Un écart à instruire** : `81` § 11 f rend **+9** rattachements en 1985 et
+en 1990 par rapport à `histgis` (21 543 contre 21 534, 23 245 contre 23 236).
+Le report lui-même est identique au chiffre : les neuf viennent d'une couche
+que la chaîne pose et que `histgis` n'a pas, ou l'inverse. `25` est hors de
+cause, il commence en 1999.
+
+**Et un défaut du garde du matin, trouvé en relisant sa sortie.** La commande
+de relecture affichée par `90` et `91` disait « sans `-v appliquer` ». Or la
+recette est DANS la branche `appliquer` : sans lui, le fichier tourne à blanc
+et ne l'atteint jamais. Corrigé : rejeu avec `-1 -v appliquer=1`, sans
+risque puisque les deux fichiers retirent leur trace avant de reposer.
+*Une commande qu'on affiche sans l'avoir jouée est une supposition de plus.*
+
+### Les recettes d'après-chaîne — tout est à l'attendu, sauf ce que la session fournissait
+
+`build/apres_passe_essai.log`, sur `histgis_essai` :
+
+* **`diag_passages`** : 50 traces présentes, 0 absente anormale, 0 orpheline.
+  Deux vides, toutes deux saines : `42` (§ 4 e : Chisa et Butry rattachées
+  dès 1870) et `84`, dont la trace n'est remplie que par
+  `partition_journalise`, jamais par le fichier lui-même. `37` et `50`
+  sains. `25` posé (§ 4 a : 2 unités, 25 rattachements).
+* **`85`** : rien à libérer. **L'ordre du script est juste.**
+* **`90` § 6** : 128 atomes, 475,83 km², recouvrement **0,000**.
+* **`91` § 8** : 1825 → 475,83 ; 1855 → 475,68, qui rejoint 1825 comme
+  annoncé ; 1866 → 479,64. Recouvrement **0,000** aux trois dates.
+
+**`check_partition` et `check_geom_anr` échouent : « function
+carte_partition_atome(date, text) does not exist ».** La fonction existe ;
+c'est l'appel non qualifié DANS la fonction qui ne résout pas, lancé par
+`psql -c` sans `search_path`. Aucun script du dépôt ne pose de
+`ALTER DATABASE … SET search_path` : sur `histgis`, le chemin a été posé à la
+main, une fois, et la base d'essai ne l'a jamais reçu. **Sixième prérequis
+hors script**, après `noms_geofla`, les tables parisiennes, `geofla_canton`,
+les lots d'outre-mer et `anr_commune`, et le premier qui ne soit pas une
+donnée mais un réglage.
+
+Corrigé à la source : `check_partition`, `check_geom_anr` et
+`partition_journalise` portent `SET search_path = histgis, public`. Les autres
+fonctions de `82` et `84` restent sans : leurs appelants (`export_web.py`, les
+fichiers SQL) posent le chemin eux-mêmes, et une fonction SQL qui porte un
+`SET` n'est plus inlinée, ce qui compte sur le chemin de l'export et non sur
+une recette.
+
+Deux points restent ouverts, et demandent les deux bases côte à côte :
+**7 fractions sans circonscription en 1990** (`diag_passages` § 4 f) et les
+**+9 rattachements cantonaux** de 1985 et 1990.
+
+### Les recettes de `84` et `82`, et les deux écarts résolus par comparaison
+
+**Le correctif du `search_path` tient** : `84` rejoué, `check_partition`
+répond sans que la session ne pose rien. 01 : 458 atomes, 7 repris, 0 repli ;
+78 : 692, 7, 0. Recouvrement hors fraction **0,000**, 0 invalide. Ce sont les
+valeurs « avant mosaïque » : la mosaïque de fratrie (+13 atomes en France)
+ne touche ni l'Ain ni les Yvelines. La passe nationale reste à jouer.
+
+`check_geom_anr('1870-01-01')` : tout au chiffre (37 618 ; 548 496 ; 486
+vivants ; 101,0 ; 0 invalide), **sauf les non-fraction sans polygone ANR :
+544 contre 533**. +11, et ce sont les onze communes que `89` a créées
+(Auteuil… Vaugirard) : mortes en 1859, sans polygone ANR en 1870, comptées
+parce que la ligne ne filtre pas sur la vie. **La ligne des VIVANTS ne bouge
+pas (486)**, et c'est elle qui compte. L'attendu est antérieur à `89`.
+
+**Les 7 fractions sans circo en 1990 sont les mêmes sur les deux bases** :
+ce n'est pas la chaîne, c'est un état ancien. Quatre ont un canton en 1990
+et pas de circo (Adelans-et-le-Val-de-Bithaine, Idron ×2, Alleyras) : muettes
+pour de vrai. Trois n'ont ni l'un ni l'autre (Forbach, Drancy, Roubaix) :
+à vérifier qu'elles sont bien mortes à cette date, auquel cas `diag_passages`
+§ 4 f les compte à tort.
+
+**Les +9 sont dans le Rhône : 295 rattachements en 1990 sur `histgis`,
+304 sur `histgis_essai`. Neuf, comme les neuf arrondissements de Lyon.**
+Hypothèse : sur la base d'essai, `25` pose le pseudo-canton de Lyon en 1999,
+et `79`, qui passe après et ne connaît pas les pseudo-cantons, **reporte
+cette composition en arrière** jusqu'au plancher du Rhône. Sur `histgis`,
+`25` n'ayant jamais tourné, `79` n'avait rien à reporter. À confirmer par une
+requête, puis à TRANCHER : `25` écrit comme propriété que « le trou
+1941-1998 reste vide », et `79` le remplit avec une convention (la ville est
+un canton) comme si c'était une composition attestée.
+
+**Confirmé par la requête, et plus large que l'hypothèse** : sur
+`histgis_essai`, `79` reporte les deux pseudo-cantons. Lyon (`6999`, 9
+arrondissements) du **1985-03-10** au 1999-01-01, Marseille (`1399`, 16
+arrondissements) du **1992-03-22** au 1999-01-01 — hors du `diff` de 1990
+parce que postérieur. 25 lignes, zéro sur `histgis`. `79` ne mentionne les
+pseudo-cantons nulle part : il reporte toute composition présente au
+1999-01-01, qu'elle soit attestée ou conventionnelle.
+
+**Tranché : les pseudo-cantons sont exclus de `79`.** Une convention n'est pas
+une composition, et le report la ferait passer pour telle. `79` § 5 écarte
+désormais toute unité tracée par `25` (`pseudo_canton_trace`, `quoi = 'unit'`),
+`pseudo_canton_trace` devient un prérequis déclaré au § 1, et le § 10 g
+compte les lignes posées sur un pseudo-canton (attendu **0**). Lyon et
+Marseille restent donc sans canton de 1941 à 1998, comme `25` l'affirmait.
+
+Attendu au prochain passage : **25 lignes de moins** que les 36 315 de ce
+jour. Rien d'autre ne cite l'effectif de `79`. `81` n'est pas touché : son
+§ 6 a établi que ses fenêtres ne recoupent pas celles de `79`.
+
+`RESTE_A_FAIRE.md` : le point 3 (la preuve par la chaîne) est fait et devient
+« reconstruire `histgis` par la chaîne » ; le point 4 bis (`25`) est résolu.
+
+**`79` rejoué seul sur `histgis_essai`, exclusion comprise** : **36 290**
+lignes posées, soit 25 de moins, au chiffre. § 10 g à **0** ; 10 a, 10 b/c,
+10 e et 10 f à zéro ; le jalon de 1968 et la couche 1999 intacts. Et le
+snapshot de 1990 rend **23 236, la valeur de `histgis`** (23 245 avant) :
+les +9 étaient entièrement Lyon, il n'en reste rien.
+
+### Pourquoi rien n'était commité depuis le 2 septembre
+
+`.git/index.lock`, vide, daté du 2 septembre à 22 h 55 : neuf secondes après
+le dernier commit. Tout git en écriture s'y arrêtait. La cause s'est montrée
+en commitant : **la session Claude peut créer des fichiers dans ce dossier,
+pas en effacer**, et git ne fait que ça — poser un verrou, écrire, le
+retirer. Le premier commit du jour (`170cad7`, la Seine) est passé, et a
+laissé derrière lui `HEAD.lock`, `objects/maintenance.lock` et une
+cinquantaine d'objets temporaires. **Règle : git en écriture se lance depuis
+le shell d'Adrien, jamais depuis la session.** Les quatre commits suivants
+sont dans `build/commits_22sept.sh`, qui nettoie d'abord.
