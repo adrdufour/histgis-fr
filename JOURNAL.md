@@ -9283,3 +9283,49 @@ dépendent plus de lui.
 **`histgis` n'est plus une base jouée à la main.** Elle a désormais `25`
 (Marseille et Lyon en 1999-2012) et sort entière d'un script versionné. Le
 point 3 de `RESTE_A_FAIRE.md` est fait ; la file s'ouvre sur l'export web.
+
+### Avant l'export : les droits de `histgis_carte` sont partis avec le schéma
+
+`export_partition.sh` descend dans le rôle `histgis_carte` (SELECT seul,
+pour que le moteur garantisse qu'un export n'écrit rien). Ses droits sur le
+schéma — `USAGE`, `SELECT ON ALL TABLES` — **disparaissent au `DROP SCHEMA
+histgis CASCADE` de `rebuild.sh`**, sans un mot ; les droits sur la base et
+l'appartenance au rôle, eux, survivent. Le premier export sur la base
+reconstruite se serait arrêté sur « permission denied » à chaque lot, et le
+script aurait abandonné au deuxième.
+
+Septième prérequis hors script, et il vivait dans la docstring de
+`connecte()`. Trouvé à la lecture, avant de lancer. `rejouer_apres_rebuild.sh`
+rend désormais ces droits en dernière étape, si le rôle existe ; il ne le
+crée pas, parce qu'un rôle appartient au cluster et non à la base.
+
+## 23 septembre 2026 — la carte rejoint la base
+
+### L'export, et ce qu'il change
+
+`export_partition.sh --sortie sorties/part_2026-09-22`, puis `--outremer` dans
+le même dossier : 97 départements métropolitains en 2 h 44 (23 h 46 → 02 h 30),
+aucun lot perdu, 102 dossiers avec l'outre-mer, `trame: mixte`, pas de 99.
+
+Comparé département par département à la carte du 6 septembre :
+
+* **+1 638 département-années de cantons** (9 707 → 11 345), la couche circo
+  inchangée (8 933). Ce sont les couches que l'export du 6 septembre ne
+  portait pas encore : 1941-1953 (`93`) et les années ouvertes par `81`,
+  soit l'essentiel des « ∅ → · ».
+* **Marseille et Lyon apparaissent de 1999 à 2012** : pseudo-canton de 16
+  arrondissements dans le 13, de 9 dans le 69 ; rien avant 1999, comme décidé.
+* **Les signatures qui changent entre deux années déjà servies ne sont pas
+  des changements** : sur l'Aisne en 1880, mêmes unités, mêmes métadonnées,
+  mêmes 6 064 sommets, dans un autre ordre. Le point de départ des anneaux
+  n'est pas déterministe, et la signature hache la géométrie. À savoir avant
+  de lire un jour un diff d'export comme un diff de contenu.
+
+Promotion par renommage, rien d'effacé : `cartes/web/donnees` →
+`sorties/web_2026-09-06` (ignoré par git, contrairement à un
+`cartes/web/donnees_*` qui aurait fait entrer 3,5 Go dans `git status`),
+puis `sorties/part_2026-09-22` → `cartes/web/donnees`.
+
+Restent à voir sur la carte, et seulement là (`RESTE_A_FAIRE.md` § 0 bis d) :
+la coïncidence des contours outre-mer, le cadrage des cinq départements,
+Mayotte dessinée sans couleur.
