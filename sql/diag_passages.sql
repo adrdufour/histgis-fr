@@ -133,6 +133,7 @@ INSERT INTO attendu (rang, fichier, temoin, role) VALUES
   -- `93` est déclaré le jour où il est écrit, avant d'avoir jamais tourné :
   -- c'est la seule façon que son absence soit un jour remarquée.
   ( 93, '93_report_1940_1954.sql',      'p93_trace',                '1941-1953, entre deux bouts attestés'),
+  ( 95, '95_report_deux_bouts_1969_1999.sql', 'p95_trace',       '1969-1998, entre deux bouts attestés'),
   ( 93, '93_report_1940_1954.sql',      'p93_qualite',              'fondement, appariement, chrono_trouee');
 
 UPDATE attendu SET hors_chaine = true WHERE temoin IN (

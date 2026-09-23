@@ -536,6 +536,13 @@ $PSQL -1 -f "$ICI/81_report_1968_avant.sql"
 etape "93 — 1941-1953, entre deux bouts attestés"
 $PSQL -1 -f "$ICI/93_report_1940_1954.sql"
 
+# `95` APRÈS `79` ET `81`, et c'est un ordre imposé, pas une commodité : il
+# comble les trous ENTRE leurs deux reports, par l'accord du canton qui ferme
+# le trou à gauche et de celui qui l'ouvre à droite. Joué avant eux, il ne
+# trouverait aucun bout. Écrit le 23 septembre 2026.
+etape "95 — 1969-1998, entre deux bouts attestés"
+$PSQL -1 -f "$ICI/95_report_deux_bouts_1969_1999.sql"
+
 # --- la trame communale historique ANR --------------------------------------
 # Quatrième prérequis qui ne vivait qu'en commentaire, après `noms_geofla`, les
 # tables parisiennes, `geofla_canton` et les lots d'outre-mer : `anr_commune`
