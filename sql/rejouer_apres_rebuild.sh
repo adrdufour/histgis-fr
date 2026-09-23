@@ -592,6 +592,38 @@ else
     echo "  variantes s'engendre par sorties/anr/anr_variantes_verdict.py." >&2
 fi
 
+# ============================================================================
+# LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026
+# ============================================================================
+# `export_web.py --role histgis_carte` et `cartes/export_partition.sh`
+# descendent dans ce rôle, qui n'a que SELECT : c'est ce qui rend au moteur la
+# garantie qu'un export n'écrit rien (voir `connecte()` dans export_web.py).
+#
+# Ces droits portent sur le SCHÉMA, et `rebuild.sh` fait `DROP SCHEMA histgis
+# CASCADE` : ils partent avec lui, en silence. Les droits sur la BASE
+# (CONNECT, TEMPORARY) et l'appartenance au rôle survivent, eux. Sans ce
+# bloc, le premier export après une reconstruction s'arrêtait sur
+# « permission denied for schema histgis » à chaque lot. Septième prérequis
+# qui ne vivait qu'en commentaire, dans la docstring d'un script Python.
+#
+# Le rôle est créé une fois, à la main, parce qu'il appartient au cluster et
+# non à la base (voir la docstring) ; ce script ne le crée pas, il le sert.
+etape "droits du rôle histgis_carte (le DROP SCHEMA les a emportés)"
+$PSQL <<'SQL'
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'histgis_carte') THEN
+        RAISE NOTICE 'Rôle histgis_carte absent : rien à rendre. Le créer une fois '
+                     '(docstring de connecte() dans cartes/export_web.py) avant '
+                     'd''exporter avec --role.';
+        RETURN;
+    END IF;
+    GRANT USAGE ON SCHEMA histgis TO histgis_carte;
+    GRANT SELECT ON ALL TABLES IN SCHEMA histgis TO histgis_carte;
+    RAISE NOTICE 'histgis_carte : USAGE et SELECT rendus sur le schéma histgis.';
+END $$;
+SQL
+
 cat <<'FIN'
 
 ──────────────────────────────────────────────────────────────────────
