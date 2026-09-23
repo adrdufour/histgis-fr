@@ -68,9 +68,9 @@
 -- ====================
 --   * les FRACTIONS (215 trous) : une fraction porte son canton dans son
 --     identifiant, son accord ne mesure rien. Même réserve que `93` ;
---   * la CORSE : ses cantons changent d'identifiant au 1er janvier 1976
---     (20NN → 2ANN / 2BNN). Aucun de ses trous n'est en accord ; les
---     renumérotations pures relèvent d'une règle à part, pas de celle-ci ;
+--   * la CORSE de l'« autre numéro » (109 trous) — voir § 4 : fusions de
+--     1973, créations de 1982 et lectures fausses de 1968 mêlées, dont la
+--     date de changement est indécidable ;
 --   * les désaccords EN BLOC (Sarreguemines → Sarreguemines-Campagne) : un
 --     canton scindé dont on connaît la fille, mais pas la date d'effet pour
 --     chaque commune. C'est le chaînage, sur ces seuls cantons.
@@ -226,13 +226,40 @@ UPDATE p95_trou SET verdict = CASE
                   WHERE p.quoi = 'unit'
                     AND p.cle IN (unit_g, unit_d))
                                     THEN 'pseudo_canton'
+    -- LA CORSE, ajoutée le 23 septembre 2026 (`diag_corse_1976.sql`). Ses
+    -- cantons changent de code au 1er janvier 1976, 20NN → 2ANN / 2BNN : les
+    -- deux bouts ne portent jamais le même identifiant, et `95` n'en posait
+    -- aucun. Même NUMÉRO aux deux bouts = même canton, recodé : c'est l'accord
+    -- des deux bouts à une table de correspondance déclarée près.
+    --
+    -- Ce que la règle couvre : 78 trous où le nom aussi est le même (canton
+    -- que 1973 n'a pas touché) et 85 où il diffère (canton renommé et agrandi
+    -- par le décret n° 73-825, qui garde son numéro : La Porta devenu
+    -- Fiumalto-d'Ampugnani). RÉSERVE pour ces derniers : de 1973 à 1976, la
+    -- ligne porte l'unité 20NN, dont le nom connu est l'ANCIEN. L'identité est
+    -- juste, le libellé retarde de trois ans.
+    --
+    -- Ce qu'elle ne couvre pas : l'« autre numéro » (109 trous), où se mêlent
+    -- les fusions de 1973, les créations de 1982 (Ajaccio 7e) et des lectures
+    -- de 1968 qui traversent la frontière 2A / 2B (San-Nicolao → Santa-Maria-
+    -- Siché). La date du changement y est indécidable ; ils restent vides.
+    --
+    -- Le décret n° 73-825 n'a été lu qu'à 15 lignes, et le test « nommé » est
+    -- sain en Corse (`diag_corse_1976.sql` § 2 et § 5) : les communes qu'il
+    -- nomme ont une ligne de `75` et ne sont dans aucun trou.
+    WHEN unit_g ~ '^20[0-9]{2}$' AND unit_d ~ '^2[AB][0-9]{2}$'
+     AND substr(unit_g, 3) = substr(unit_d, 3)
+     AND NOT nomme
+     AND valid_from < DATE '1976-01-01' AND valid_to > DATE '1976-01-01'
+                                    THEN 'accord_corse_1976'
     WHEN unit_g <> unit_d           THEN 'desaccord'
     WHEN nomme                      THEN 'accord_nomme'
     ELSE                                 'accord' END;
 
 \echo ''
 \echo '-- 4. le tamis, classe par classe'
-\echo '   `accord` est le seul poste posé. `accord_nomme` : les deux bouts'
+\echo '   `accord` et `accord_corse_1976` sont les seuls postes posés — le'
+\echo '   second en deux lignes, coupées au 1er janvier 1976. `accord_nomme` : les deux bouts'
 \echo '   disent le même canton, mais un acte lu a nommé la commune entre les'
 \echo '   deux — un aller-retour possible, à lire, pas à supposer.'
 SELECT verdict,
@@ -251,6 +278,9 @@ SELECT nomme, count(*) AS trous,
 FROM   p95_trou
 WHERE  verdict NOT IN ('fraction', 'pseudo_canton')
 GROUP  BY 1 ORDER BY 1;
+-- La Corse y reste, à 0 % d'accord par identifiant, comme dans le diag : la
+-- relecture doit porter sur la MÊME population, sans quoi elle ne prouve rien.
+-- Ses trous posés par la règle du recodage ne changent pas ce calcul.
 
 -- ---------------------------------------------------------------------------
 -- 5. CE QUI SERA POSÉ
@@ -261,16 +291,25 @@ GROUP  BY 1 ORDER BY 1;
 DROP TABLE IF EXISTS p95_pose;
 CREATE TABLE p95_pose AS
 SELECT atom_id, unit_g AS unit_id, dep, valid_from, valid_to,
-       source_g, source_d, actes
+       source_g, source_d, actes, verdict AS regle
 FROM   p95_trou
-WHERE  verdict = 'accord';
+WHERE  verdict = 'accord'
+UNION ALL
+-- la Corse : l'ancien code jusqu'au recodage, le nouveau ensuite
+SELECT atom_id, unit_g, dep, valid_from, DATE '1976-01-01',
+       source_g, source_d, actes, verdict
+FROM   p95_trou WHERE verdict = 'accord_corse_1976'
+UNION ALL
+SELECT atom_id, unit_d, dep, DATE '1976-01-01', valid_to,
+       source_g, source_d, actes, verdict
+FROM   p95_trou WHERE verdict = 'accord_corse_1976';
 
 \echo ''
 \echo '-- 5. ce qui va être posé, avant écriture'
-SELECT count(*) AS lignes, count(DISTINCT atom_id) AS atomes,
+SELECT regle, count(*) AS lignes, count(DISTINCT atom_id) AS atomes,
        min(valid_from) AS du, max(valid_to) AS au,
        round(sum((valid_to - valid_from) / 365.25)) AS atome_annees
-FROM   p95_pose;
+FROM   p95_pose GROUP BY regle ORDER BY regle;
 
 -- ---------------------------------------------------------------------------
 -- 6. GARDE-FOUS — avant d'écrire, pas après
@@ -353,7 +392,7 @@ SELECT count(*) AS rattachements FROM p95_trace WHERE quoi = 'membership';
 CREATE TABLE p95_qualite AS
 SELECT m.membership_id,
        p.atom_id, p.unit_id, p.dep,
-       p.source_g, p.source_d, p.actes,
+       p.source_g, p.source_d, p.actes, p.regle,
        (p.source_g NOT IN ('81', '79', '?') AND p.source_d NOT IN ('81', '79', '?'))
                                                         AS bouts_releves,
        round((p.valid_to - p.valid_from) / 365.25, 2)  AS annees_reportees
@@ -379,7 +418,7 @@ FROM   p95_qualite GROUP BY 1 ORDER BY 2 DESC;
 \echo '-- 9. ce qui reste vide, par classe'
 SELECT verdict, count(*) AS trous,
        round(sum((valid_to - valid_from) / 365.25)) AS atome_annees
-FROM   p95_trou WHERE verdict <> 'accord'
+FROM   p95_trou WHERE verdict NOT IN ('accord', 'accord_corse_1976')
 GROUP  BY 1 ORDER BY 3 DESC;
 
 -- ---------------------------------------------------------------------------
@@ -423,10 +462,25 @@ FROM   p95_qualite q
 JOIN   membership m ON m.membership_id = q.membership_id
 WHERE  NOT EXISTS (SELECT 1 FROM membership g WHERE g.atom_id = m.atom_id
                      AND g.niveau = 'canton' AND g.valid_to = m.valid_from
-                     AND g.unit_id = m.unit_id)
+                     AND (g.unit_id = m.unit_id
+                          OR (q.regle = 'accord_corse_1976'
+                              AND m.valid_from = DATE '1976-01-01')))
    OR  NOT EXISTS (SELECT 1 FROM membership d WHERE d.atom_id = m.atom_id
                      AND d.niveau = 'canton' AND d.valid_from = m.valid_to
-                     AND d.unit_id = m.unit_id);
+                     AND (d.unit_id = m.unit_id
+                          OR (q.regle = 'accord_corse_1976'
+                              AND m.valid_to = DATE '1976-01-01')));
+\echo '   (en Corse, la jonction du 1er janvier 1976 relie deux identifiants'
+\echo '    du même numéro : c''est le recodage, et c''est la seule exception)'
+
+\echo ''
+\echo '-- 10 e bis. la Corse : deux lignes par trou, même numéro (doit valoir 0)'
+SELECT count(*) AS corse_mal_coupee
+FROM   (SELECT atom_id, count(*) AS n,
+               count(DISTINCT substr(unit_id, 3)) AS numeros
+        FROM   p95_qualite WHERE regle = 'accord_corse_1976'
+        GROUP  BY atom_id) x
+WHERE  n <> 2 OR numeros <> 1;
 
 \echo ''
 \echo '-- 10 f. ce que snapshot répond désormais'
