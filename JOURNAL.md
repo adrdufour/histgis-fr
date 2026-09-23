@@ -9329,3 +9329,105 @@ puis `sorties/part_2026-09-22` → `cartes/web/donnees`.
 Restent à voir sur la carte, et seulement là (`RESTE_A_FAIRE.md` § 0 bis d) :
 la coïncidence des contours outre-mer, le cadrage des cinq départements,
 Mayotte dessinée sans couleur.
+
+### L'intervalle noir, mesuré dans la base — et il n'est pas où on le cherchait
+
+`sql/diag_intervalle_noir.sql` (lecture seule) compte le trou dans
+`membership`, atome par atome, au lieu de l'estimer par les bornes comme
+`81` § 11 g. **357 788 atome-années noires, 25 080 atomes, 36,3 % de
+1969-1998**, sur 74 départements.
+
+**Le trou s'ouvre en 1974, pas en 1986.** 62 atomes de 1970 à 1973 (Belfort),
+puis 21 891 d'un coup après le scrutin du 23 septembre 1973, 22 523 de 1976
+à 1981, et une décrue par paliers aux scrutins suivants : 19 209 (1982),
+12 941 (1985), 11 313 (1989), 6 357 (1992), 5 588 (1994), 224 (1998). Le
+« mur 1986-1989 » de `RESTE_A_FAIRE.md` § 1 n'est pas le cœur : **le cœur est
+la salve de 1973, et elle est dépouillée.** 178 actes des fenêtres sur 264
+ont leur composition lue, 33 ont un texte sur Légifrance non lu (tous de 1992
+à 1998), 53 n'ont ni l'un ni l'autre.
+
+La cause est la règle de `81`, pas les sources : son report s'arrête pour
+TOUT le département au premier acte, alors qu'un décret de « création de
+cantons » ne déplace que les communes des cantons qu'il crée ou modifie.
+*Un report qui ignore qui l'acte déplace doit supposer qu'il déplace tout le
+monde.*
+
+Voies, au sens du fichier : 32 départements « chaînage » (125 611
+atome-années, tous leurs actes lus), 7 « lecture » (50 004), 33 « source »
+(179 937). Mais le chaînage acte par acte suppose que chaque acte lu l'a été
+en entier — et 62 cantons annoncés n'ont jamais été lus. D'où la mesure
+suivante, `sql/diag_deux_bouts_1969_1999.sql` : lire le trou comme `93` a lu
+1941-1953, par l'accord du canton qui le ferme à gauche et de celui qui
+l'ouvre à droite, le registre servant à expliquer les désaccords et non à
+autoriser le report. Avec le test de pente qui décide.
+
+Deux trous hors des fenêtres de 11 g, à instruire : la Corse (2 184
+atome-années, 1974-1981, `20` sans borne propre) et 52 atomes de l'Aisne en
+1998.
+
+### Les deux bouts : la pente est là, `95` est écrit
+
+`sql/diag_deux_bouts_1969_1999.sql` (lecture seule) :
+
+| mesure | trous | accord |
+|---|---|---|
+| tous, hors fractions | 25 566 | **91,68 %** |
+| commune NON nommée par un acte dans le trou | 24 997 | **93,14 %** |
+| commune NOMMÉE | 569 | **27,59 %** |
+| aucun acte dans le trou | 261 | 100,00 % |
+| témoin 1954 → 1968 (`66`) | | 89,80 % |
+
+**La pente est forte, et elle est au bon endroit** : l'accord s'effondre
+exactement quand un décret nomme la commune. C'est ce qui en fait une mesure
+des décrets. Elle n'est PAS monotone en nombre d'actes (91,1 % à un acte,
+93,7 à deux, 95,8 à trois) ni en longueur de trou : les désaccords des
+communes non nommées ne s'accumulent pas avec le temps, ce ne sont donc pas
+surtout des mouvements cachés, mais des lectures (`59` : 88,3 % d'accord
+1968/1999) et des identités qui glissent. Ni les unes ni les autres ne sont
+posées.
+
+Désaccords : 1 373 isolés non nommés (19 037 atome-années, à instruire),
+401 nommés (mouvements expliqués par le registre), 352 **en bloc** — la Corse
+presque entière (20NN → 2ANN/2BNN au 1er janvier 1976 : 0 % d'accord, 2 304
+atome-années, une renumérotation et non un déménagement), Sarreguemines →
+Sarreguemines-Campagne, Gaillon → Gaillon-Campagne, Luxeuil → Saint-Sauveur.
+
+**Posable : 23 283 trous, 23 116 atomes, 334 256 atome-années** — 93 % du
+trou. `sql/95_report_deux_bouts_1969_1999.sql` est écrit sur le modèle de
+`93` : trace, témoins, garde-fous avant écriture (dont une alarme sur
+l'effectif, celle de `42`), qualité ligne à ligne (`bouts_releves` vrai
+quand aucun des deux bouts n'est un report), recettes. Inscrit le jour même
+dans `rejouer_apres_rebuild.sh` après `93` et dans l'inventaire de
+`diag_passages`. Pas encore joué.
+
+Écartés et déclarés : 215 fractions, 157 « accord mais nommé »
+(aller-retour possible, à lire), la Corse, les blocs.
+
+### `95` est joué — 1974 passe de 9 771 à 29 479
+
+Sur `histgis`, en une transaction, tout à l'attendu :
+
+* § 4 bis retrouve la pente du diag **au centième** : 93,14 % non nommés sur
+  24 997, 27,59 % nommés sur 569. Le fichier sélectionne la population que la
+  mesure a jugée ;
+* **23 283 rattachements, 23 116 atomes, 334 290 atome-années** ;
+* recettes 10 a à 10 e à zéro : aucun atome à deux cantons, 1968 et 1999
+  intacts, chaque ligne jointive de ses deux voisines ;
+* snapshot : 1974 → **29 479** (9 771 avant), 1980 → **29 338** (9 135),
+  1986 → 33 478, 1990 → 33 714, 1995 → 36 041.
+
+Le bout gauche est `81` pour 94 % des lignes (21 790 sur 23 283) : la
+salve de 1973 n'avait pas besoin d'être relue, seulement d'être franchie par
+les communes qu'elle ne nomme pas.
+
+Un défaut de libellé, corrigé après coup : 262 trous finissant au 1999-01-01
+avaient pour bout droit la couche de `24`, absente de l'inventaire des
+traces. Ils sortaient en « ? » et donc hors de `bouts_releves`, alors que le
+COG 1999 est un relevé. Corrigé dans `95` et dans le diag ; sans effet sur
+ce qui est posé, seulement sur la colonne de qualité, que le prochain
+passage de la chaîne recalculera.
+
+Ce qui reste du trou : 2 126 désaccords (28 812 atome-années), 215 fractions
+(3 244), 157 « accord mais nommé » (2 393). Dans les désaccords, la Corse
+(renumérotation du 1er janvier 1976) et les blocs sont les deux postes qui
+se traitent par une règle et non par une lecture.

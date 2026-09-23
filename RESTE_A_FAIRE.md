@@ -26,7 +26,7 @@ une source à trouver : ce sont des commandes à lancer et des sorties à lire.
 
 | # | tâche | pourquoi maintenant |
 |---|---|---|
-| 2 | **Combler l'intervalle noir entre `81` et `79`** | mesuré par `81` § 11 g au premier passage : **72 départements sur 87, 1 072 département-années**, et elles tombent entre 1975 et 1986 — exactement la fenêtre que la carte montre le plus mince. Voir § 1 ter |
+| 2 | **Ce qui reste de l'intervalle noir** — 34 449 atome-années sur 368 702 | `95` (23 septembre 2026) a posé **334 290 atome-années** par l'accord des deux bouts : 93 % du trou. Restent, par ordre de rendement : **la Corse** (2 304, renumérotation 20NN → 2ANN/2BNN au 1er janvier 1976 — une règle, pas une lecture), **les blocs** (352 trous : Sarreguemines → Sarreguemines-Campagne et semblables — chaînage sur ces seuls cantons), **les 1 373 désaccords isolés non nommés** (19 037, à croiser avec `c68_qualite`), les 215 fractions, les 157 « accord mais nommé ». Mesure : `sql/diag_deux_bouts_1969_1999.sql` |
 | 2 bis | **Achever le dépouillement du recensement de 1954** | `94` l'a chiffré le 6 septembre : le jalon ne couvre que **79,0 %** des communes vivantes en 1940, et les **7 870 manquantes vivaient** — ce n'est pas de la mortalité, c'est de la lecture. Vaut 102 310 atome-années sur la seule fenêtre 1941-1953, plus le jalon lui-même, plus le report vers 1962 à venir. **Premier levier de toute la période.** Voir § 1 bis |
 | 5 | **Afficher `repris` dans `cartes/web/index.html`** | l'export pose `repris` par unité à côté de `anr` et `repli` ; la page l'ignore. Une unité qui doit sa forme à une reprise doit pouvoir le dire, sans quoi la légende laisse croire à une trame entièrement attestée. **Seul point de cette file qui ne demande pas la base** |
 | 6 | **Où est passé le sol des 318 ?** | ils ne sont PAS sans géométrie — `diag_sans_geometrie.sql` en a trouvé zéro le 5 septembre. Ils sont absents du **résultat** de `carte_partition_atome`, pas des tables qu'elle lit : un polygone entièrement recouvert par un mieux classé perd toutes ses faces. La question utile est « à qui leur sol a-t-il été donné ? », § 6 du même fichier, à coller dans une session où `diag_partition.sql` vient de matérialiser `d84`. Si le sol est repris à ~100 %, **la carte n'a pas de trou : elle a un défaut de légende** |
@@ -243,6 +243,12 @@ géométrie**. Restent à voir sur la carte, et seulement là :
 ---
 
 ## 1 ter. L'intervalle noir entre les deux reports — 1 072 dép-années
+
+> **Mis à jour le 23 septembre 2026.** Mesuré dans la base par
+> `diag_intervalle_noir.sql`, le trou valait 357 788 atome-années et s'ouvrait
+> en **1974**, au scrutin qui suit la salve de 1973 — pas en 1986. `95` en a
+> comblé 93 % par l'accord des deux bouts (voir `JOURNAL.md`). Ce qui suit est
+> l'analyse d'avant, gardée pour la trace ; ce qui reste est au point 2 du § 0.
 
 Mesuré par `81` § 11 g, au premier passage réel : **15 départements sur 87 sont
 couverts de bout en bout de 1969 à 1999 ; 72 ne le sont pas**, et le total des
