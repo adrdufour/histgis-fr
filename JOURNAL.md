@@ -9431,3 +9431,36 @@ Ce qui reste du trou : 2 126 désaccords (28 812 atome-années), 215 fractions
 (3 244), 157 « accord mais nommé » (2 393). Dans les désaccords, la Corse
 (renumérotation du 1er janvier 1976) et les blocs sont les deux postes qui
 se traitent par une règle et non par une lecture.
+
+### La Corse : le recodage de 1976 posé, les fusions de 1973 laissées vides
+
+`sql/diag_corse_1976.sql` (lecture seule) avant d'écrire la règle. 272
+trous corses, 1973-09-23 → 1982-03-14. Deux craintes, une levée :
+
+* **le test « nommé » est sain** : 0 trou nommé, y compris avec le code
+  ramené à `20xxx`, et 0 ligne de `95` nommée sous un ancien code INSEE
+  ailleurs en France (§ 5). Les communes que nomme le décret n° 73-825 ont une
+  ligne de `75` et ne sont dans aucun trou ;
+* **mais ce décret n'est lu qu'à 15 lignes**, alors qu'il refait presque toute
+  la carte de l'île. D'où trois familles :
+
+| famille | trous | règle |
+|---|---|---|
+| a. même numéro, même nom | 78 | posé : 20NN jusqu'au 1976-01-01, 2ANN/2BNN ensuite |
+| b. même numéro, autre nom | 85 | posé de même ; le libellé 1973-1976 retarde (La Porta pour Fiumalto-d'Ampugnani) |
+| c. autre numéro | 109 | **vide** : fusions de 1973, créations de 1982 (Ajaccio 7e) et lectures de 1968 qui franchissent la frontière 2A/2B |
+
+La règle entre dans `95` (verdict `accord_corse_1976`, deux lignes par trou
+coupées au recodage), avec une recette 10 e bis. La relecture de la pente
+(§ 4 bis) garde la Corse, pour lire la même population que le diag.
+
+**Joué** : 23 283 lignes `accord` et 326 `accord_corse_1976` (163 trous,
+1 381 atome-années), pente relue au centième, recettes 10 a à 10 e bis à
+zéro. Snapshot 1974 → 29 642, 1980 → 29 501. Le libellé « ? » a disparu au
+profit de `24` (261 lignes), sauf une. Le § 9 rangeait la Corse posée parmi
+ce qui reste vide : corrigé.
+
+Ce qui reste de l'intervalle noir : 1 963 désaccords (27 431 atome-années,
+dont 109 trous corses d'« autre numéro »), 215 fractions (3 244), 157
+« accord mais nommé » (2 393). **92 % du trou est comblé ; le reste demande
+de la lecture, pas une règle.**
