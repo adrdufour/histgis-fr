@@ -1,6 +1,6 @@
 # Ce qui reste à faire
 
-**Arrêté au 6 septembre 2026, file d'attente mise à jour le 22 septembre.** Les tâches sont classées par valeur, pas par
+**Arrêté au 6 septembre 2026, file d'attente mise à jour le 24 septembre.** Les tâches sont classées par valeur, pas par
 facilité. Le blocage est indiqué quand il y en a un : beaucoup de choses
 attendent quelque chose plutôt que quelqu'un.
 
@@ -26,12 +26,12 @@ une source à trouver : ce sont des commandes à lancer et des sorties à lire.
 
 | # | tâche | pourquoi maintenant |
 |---|---|---|
-| 2 | **Ce qui reste de l'intervalle noir** — 33 068 atome-années sur 368 702 | `95` (23 septembre 2026) a posé **335 671 atome-années** par l'accord des deux bouts, Corse recodée comprise (`accord_corse_1976`). Reste de la LECTURE, plus de règle : **1 963 désaccords** (27 431 — dont 109 trous corses d'« autre numéro », le décret n° 73-825 n'étant lu qu'à 15 lignes), **215 fractions** (3 244), **157 « accord mais nommé »** (2 393, aller-retour possible). Les désaccords isolés sont à croiser avec `c68_qualite` : une lecture fausse de 1968 ne se corrige pas par un report. Mesures : `sql/diag_deux_bouts_1969_1999.sql`, `sql/diag_corse_1976.sql` |
-| 2 bis | **Achever le dépouillement du recensement de 1954** | `94` l'a chiffré le 6 septembre : le jalon ne couvre que **79,0 %** des communes vivantes en 1940, et les **7 870 manquantes vivaient** — ce n'est pas de la mortalité, c'est de la lecture. Vaut 102 310 atome-années sur la seule fenêtre 1941-1953, plus le jalon lui-même, plus le report vers 1962 à venir. **Premier levier de toute la période.** Voir § 1 bis |
-| 5 | **Afficher `repris` dans `cartes/web/index.html`** | l'export pose `repris` par unité à côté de `anr` et `repli` ; la page l'ignore. Une unité qui doit sa forme à une reprise doit pouvoir le dire, sans quoi la légende laisse croire à une trame entièrement attestée. **Seul point de cette file qui ne demande pas la base** |
-| 6 | **Où est passé le sol des 318 ?** | ils ne sont PAS sans géométrie — `diag_sans_geometrie.sql` en a trouvé zéro le 5 septembre. Ils sont absents du **résultat** de `carte_partition_atome`, pas des tables qu'elle lit : un polygone entièrement recouvert par un mieux classé perd toutes ses faces. La question utile est « à qui leur sol a-t-il été donné ? », § 6 du même fichier, à coller dans une session où `diag_partition.sql` vient de matérialiser `d84`. Si le sol est repris à ~100 %, **la carte n'a pas de trou : elle a un défaut de légende** |
-| 7 | **La couture entre départements vaut 0,019 km² et non 0** | 1,9 ha ne tranche pas entre « des lisières » et « un vrai doublon parmi des lisières ». Jouer le § 9 de `sql/diag_partition.sql`, qui nomme les paires et porte une colonne `deux_reprises`. Mesuré au passage : le triple don d'Anthé et Thézac existait dans la règle, pas sur la carte — `partition_un_dep` ne rend que les atomes `dedans`, et elles habitent le 47 |
-| 8 | **Rendre au banc de `84` une entrée qui ne soit pas sa propre sortie** | son entrée est devenue sa sortie ; il ne peut plus rien réfuter. Les règles se mesurent en SQL contre la base |
+| 1 | **Ce qui reste des trous cantonaux 1941-1998 — de la lecture, plus de règle** | Trois reports par les deux bouts, sur des jalons jugés par la géométrie (`96`) : `93` 29 841 lignes (1941-1953), `97` 30 453 (1941-1967), `95` 24 041 (1969-1998). Restent au 23 septembre au soir : **`95` 1 426 désaccords**, dont 109 trous corses d'« autre numéro » (le décret n° 73-825 n'est lu qu'à 15 lignes) ; **`93` 150 désaccords** ; les désaccords de `97` que l'annexe VII annonce (Metz-Campagne → Rombas, Belfort-Centre → Danjoutin…) ; les **échanges croisés** que `96` ne voit pas (Falaise-Nord/Sud, Issoudun-Nord/Sud : un bloc mal lu ensemble se touche lui-même) ; les fractions ; les « accord mais nommé ». Mesures : `diag_deux_bouts_1969_1999.sql`, `diag_deux_bouts_1955_1967.sql`, `diag_corse_1976.sql` |
+| 2 | **Achever le dépouillement du recensement de 1954** | `94` l'a chiffré le 6 septembre : le jalon ne couvre que **79,0 %** des communes vivantes en 1940, et les **7 870 manquantes vivaient** — ce n'est pas de la mortalité, c'est de la lecture. Vaut 102 310 atome-années sur la seule fenêtre 1941-1953, plus le jalon lui-même, plus le report vers 1962 à venir. **Premier levier de toute la période.** Voir § 1 bis |
+| 3 | **Afficher `repris` dans `cartes/web/index.html`** | l'export pose `repris` par unité à côté de `anr` et `repli` ; la page l'ignore. Une unité qui doit sa forme à une reprise doit pouvoir le dire, sans quoi la légende laisse croire à une trame entièrement attestée. **Seul point de cette file qui ne demande pas la base** |
+| 4 | **Où est passé le sol des 318 ?** | ils ne sont PAS sans géométrie — `diag_sans_geometrie.sql` en a trouvé zéro le 5 septembre. Ils sont absents du **résultat** de `carte_partition_atome`, pas des tables qu'elle lit : un polygone entièrement recouvert par un mieux classé perd toutes ses faces. La question utile est « à qui leur sol a-t-il été donné ? », § 6 du même fichier, à coller dans une session où `diag_partition.sql` vient de matérialiser `d84`. Si le sol est repris à ~100 %, **la carte n'a pas de trou : elle a un défaut de légende** |
+| 5 | **La couture entre départements vaut 0,019 km² et non 0** | 1,9 ha ne tranche pas entre « des lisières » et « un vrai doublon parmi des lisières ». Jouer le § 9 de `sql/diag_partition.sql`, qui nomme les paires et porte une colonne `deux_reprises`. Mesuré au passage : le triple don d'Anthé et Thézac existait dans la règle, pas sur la carte — `partition_un_dep` ne rend que les atomes `dedans`, et elles habitent le 47 |
+| 6 | **Rendre au banc de `84` une entrée qui ne soit pas sa propre sortie** | son entrée est devenue sa sortie ; il ne peut plus rien réfuter. Les règles se mesurent en SQL contre la base |
 
 **Avant et après chaque point, `psql -d histgis -f sql/diag_passages.sql`** —
 lecture seule. Il dit quels fichiers sont réellement passés, lesquels ont une
@@ -248,7 +248,7 @@ géométrie**. Restent à voir sur la carte, et seulement là :
 > `diag_intervalle_noir.sql`, le trou valait 357 788 atome-années et s'ouvrait
 > en **1974**, au scrutin qui suit la salve de 1973 — pas en 1986. `95` en a
 > comblé 93 % par l'accord des deux bouts (voir `JOURNAL.md`). Ce qui suit est
-> l'analyse d'avant, gardée pour la trace ; ce qui reste est au point 2 du § 0.
+> l'analyse d'avant, gardée pour la trace ; ce qui reste est au point 1 du § 0.
 
 Mesuré par `81` § 11 g, au premier passage réel : **15 départements sur 87 sont
 couverts de bout en bout de 1969 à 1999 ; 72 ne le sont pas**, et le total des
@@ -486,7 +486,18 @@ parcelles (non-événements), 29 sont des tracés de rues, 10 sont sans texte.
 
 ---
 
-## 2. Les villes à découper — 119, et rien n'est commencé
+## 2. Les villes à découper — 119, l'outillage est posé, une ville en banc d'essai
+
+> **Mis à jour le 24 septembre 2026.** `98_coupe_ville.sql` (joué le 23 au soir,
+> dans la chaîne) charge les coupes depuis deux CSV versionnés —
+> `cartes/coupes_ville.csv` et `cartes/coupes_ville_ancres.csv` — et découpe
+> au tirage, par des **lignes** et non des polygones : voir son en-tête pour le
+> pourquoi. `cartes/pont_qgis.py` monte le plan de travail d'une ville dans le
+> QGIS ouvert. **Une seule ville est saisie, Vienne (38544), et c'est un banc
+> d'essai à refaire** : la ligne suit des grands quartiers INSEE qu'aucun texte
+> n'établit comme limite cantonale. `iris_ville`, que le paragraphe plus bas
+> dit « acquise et en base », avait été emportée par un `rebuild.sh` ; elle est
+> désormais rechargée par la chaîne. Le reste de la section date d'avant.
 
 C'est le plus gros chantier manuel restant, et le seul qui ne dépende d'aucune
 source à trouver.
@@ -711,11 +722,11 @@ bougera pas.
 | **ADMIN EXPRESS comme trame de découpe** | 26 % des coupes ; CONTOURS-IRIS lui est supérieur d'un ordre de grandeur | 11 août |
 | **Cassini-Geopeuple, quartiers de la Ville de Paris, ALPAGE-Vasserot** | licences incompatibles (CC BY-NC-SA, ODbL) quelle que soit la qualité de la donnée | — |
 
-### Le détail du point 6 — deux problèmes sous un seul nombre
+### Le détail du point 4 — deux problèmes sous un seul nombre
 
 *Rangé ici et non dans la file : ce qui suit est une voie fermée — la question
 « pourquoi n'ont-ils pas de géométrie ? » a reçu sa réponse, qui est qu'elle ne
-se posait pas. La question ouverte, elle, est au point 6 de la file.*
+se posait pas. La question ouverte, elle, est au point 4 de la file.*
 
 Les 318 atomes sans géométrie à 1870 ne sont pas une population homogène. La
 requête suivante ne demande pas la partition et répond en quelques secondes :

@@ -572,6 +572,22 @@ function dessine() {
   S.modeActif = mode;
   S.couleurs = couleur;
 
+  // DEUX TRAMES SUR LE MÊME SOL. À Paris, les arrondissements (couche canton)
+  // et les quartiers (couche circo) couvrent le même territoire, et le dessin
+  // part de l'UNION des deux couches : les deux cartes se superposaient, noms
+  // compris — de 1876 à 1884 et de 1889 à 2012 (3 octobre 2026). Règle : un
+  // groupe qui n'est pas rattaché dans la couche ACTIVE est masqué si chacun
+  // de ses atomes porte un code INSEE que la couche active dessine déjà. Une
+  // commune connue d'une seule couche (une commune sans canton entre 1941 et
+  // 1999, par exemple) a un code que la couche active n'a pas : elle reste.
+  const inseeActifs = new Set();
+  for (const a of Object.keys(rattach)) {
+    const c = S.communes[a];
+    if (c && c.i) inseeActifs.add(c.i);
+  }
+  const masque = grp => !grp.atomes.some(x => rattach[x]) &&
+    grp.atomes.every(x => { const c = S.communes[x]; return c && c.i && inseeActifs.has(c.i); });
+
   const frag = document.createDocumentFragment();
   // Trois traitements pour trois situations qui ne demandent pas le même
   // travail : l'ocre penché à droite est une coupe à tracer, le bleu-gris
@@ -666,8 +682,20 @@ function dessine() {
   // projet n'a pas Mayotte alors qu'il ne lui manque qu'un fichier.
   if ($("#v-communes").checked && (!vide || S.espace === "outremer")) {
     const gc = g("communes");
-    for (const grp of groupes().values()) {
-      const aid = grp.atomes[0];
+    // L'ORDRE DE DESSIN : les groupes rattachés dans la couche ACTIVE en
+    // dernier, donc au-dessus. Deux trames peuvent couvrir le même sol à la
+    // même date — à Paris de 1876 à 1884 et de 1889 à 1940, les quartiers
+    // (couche circo) et les arrondissements (couche canton). L'ordre suivait
+    // celui des clés, et JavaScript range les clés numériques (« 76208 »)
+    // AVANT les autres (« PQ01 ») : les quartiers, sans canton, recouvraient
+    // en gris les arrondissements coloriés, et Paris semblait n'avoir aucun
+    // canton (3 octobre 2026).
+    const ordonnes = [...groupes().values()].sort((a, b) =>
+      (a.atomes.some(x => rattach[x]) ? 1 : 0) - (b.atomes.some(x => rattach[x]) ? 1 : 0));
+    for (const grp of ordonnes) {
+      if (masque(grp)) continue;
+      // L'atome qui porte la teinte : le premier rattaché dans la couche active.
+      const aid = grp.atomes.find(x => rattach[x]) || grp.atomes[0];
       const c = S.communes[aid];
       if (!c) continue;
       const vg = versionA(c, S.annee);
@@ -753,6 +781,7 @@ function dessine() {
     S.nomsPoses = 0;
     if ((modeNoms === "communes" || modeNoms === "tout") && !vide) {
       for (const grp of groupes().values()) {
+        if (masque(grp)) continue;
         const aid = grp.atomes[0];
         const c = S.communes[aid];
         if (!c) continue;

@@ -9464,3 +9464,153 @@ Ce qui reste de l'intervalle noir : 1 963 désaccords (27 431 atome-années,
 dont 109 trous corses d'« autre numéro »), 215 fractions (3 244), 157
 « accord mais nommé » (2 393). **92 % du trou est comblé ; le reste demande
 de la lecture, pas une règle.**
+
+### Les comblements jugés sur la carte — ce ne sont pas eux qui ont tort
+
+Adrien, dubitatif devant 1940-1980 : des erreurs, et des communes qui
+disparaissent. Mesuré sur l'export servi (`sorties/diag_comblements_2026-09-23/`,
+scripts compris), avant de toucher à quoi que ce soit.
+
+**Les disparitions sont des refus, pas des pertes.** La page ne dessine une
+commune que si elle a un canton ou une circo à l'année. 1941-1953 : 8 618
+atomes non dessinés — exactement les refus de `93` (7 970 absents de 1954,
+325 fractions, 323 désaccords), et il n'y a pas de circo avant 1945. 1955-1967 :
+160 communes dessinées en tout, la carte est vide treize ans.
+
+**Les erreurs sont dans les JALONS, et `81` les prolonge.** Communes à plus de
+15 km de tout autre membre de leur canton : 9 en 1940, 9 en 1950 (`93` est
+propre), 158 en 1954, **446 de 1968 à 1972**, 3 en 1999. 804 lectures de 1968
+contredisent 1954 (ou 1940) et 1999 qui s'accordent ; 84 % à un chiffre près,
+3/5, 6/8, 0/9. `95` ne les recopie pas — il exige 1999 —, `81` si.
+
+**Lamastre, l'exemple d'Adrien** : lue « 3 19 » au lieu de « 3 10 » dans le
+fascicule de 1954 (p. 132), donc à Saint-Péray, donc en désaccord avec 1940,
+donc vide de 1941 à 1953. `71` l'avait classée SÉPARÉE ; rien ne l'avait retirée
+du jalon.
+
+### `96` — la géométrie juge les deux jalons
+
+`sql/96_jalons_lecture_absurde.sql`, inscrit après `88` dans
+`rejouer_apres_rebuild.sh` et dans l'inventaire de `diag_passages`. Une ligne
+est absurde si la commune ne TOUCHE pas l'emprise de son canton lu (union des
+membres aux quatre dates, 1 km) et qu'aucun bout attesté ne la confirme. Elle
+est corrigée si un canton, et un seul, existant à la date, satisfait trois
+arbitres : il touche la commune, son numéro ne diffère que d'un chiffre (ou il
+porte le nom du chef-lieu), un bout le donne. Sinon retirée.
+
+**Premier passage à blanc, seuil à 5 km (celui de `71`) : Lamastre n'est pas
+sortie** — Saint-Péray est à moins de 5 km de son bord. Un transfert se fait
+vers un canton contigu ; c'est la contiguïté qu'il fallait exiger. Le témoin
+dit ce qu'elle coûte : 41 lignes de 1940 et 62 de 1999 ne touchent pas leur
+canton (îles, enclaves), toutes confirmées par un autre relevé.
+
+Joué : **1954 — 156 corrigées, 29 retirées ; 1968 — 580 corrigées, 146
+retirées.** Recettes 7 a à 7 c à zéro. Lamastre 0719 → 0710, Holnon
+0235 → 0233, Laon 0227 → 0218, La Salle-les-Alpes 0515 → 0513 ; Montluçon
+retirée (ville partagée : plusieurs cantons satisfont les trois arbitres).
+Les couples les plus fréquents, 25→23, 06→08, 08→03, 15→13, 05→03, sont ceux
+de l'OCR.
+
+**Et les reports rejoués derrière le disent mieux que `96` lui-même :**
+
+| | avant | après `96` |
+|---|---|---|
+| `93` § 4 bis, `ferme` | 98,78 % sur 26 544 | **99,48 %** sur 26 515 |
+| `93` désaccords | 323 | **150** |
+| `93` posés | 29 686 | 29 841 |
+| `95` § 4 bis, non nommés | 93,14 % | **95,21 %** |
+| `95` désaccords | 1 963 | **1 426** |
+| `95` posés | 23 609 | 24 041 |
+| snapshot 1974 | 29 642 | 30 012 |
+
+La recette en deux termes du § 1 bis de `RESTE_A_FAIRE.md` vaut ici aussi :
+la couverture monte ET l'accord monte. *Une correction qui ne ferait que
+déplacer des lignes laisserait l'accord où il était.*
+
+**Limite déclarée** : `96` ne voit que les lectures ISOLÉES. Un bloc de
+communes voisines mal lues ensemble se touche lui-même et passe. À mesurer
+sur le prochain export.
+
+**Un écart de comptabilité à instruire**, sans effet sur les recettes (toutes
+à zéro) : les DELETE de rejeu ne rendent pas ce que les passages précédents
+annonçaient avoir posé — `81` 32 704 pour 32 842, `93` 29 826 pour 29 686,
+`95` 23 895 pour 23 609. Des lignes ont changé de trace ou des passages n'ont
+pas été journalisés. `diag_passages.sql` avant le prochain export.
+
+### 1955-1967 par ses deux bouts : la pente est là, `97` est écrit
+
+`sql/diag_deux_bouts_1955_1967.sql` (lecture seule). Deux fenêtres : A,
+[1955, 1968) entre les jalons de 1954 et 1968 (25 082 trous, 326 066
+atome-années) ; B, [1941, 1968) pour les absents de 1954, de la couche 1940
+au jalon de 1968 (6 760 trous, 182 520). Le registre ne commençant qu'en 1958,
+un second témoin : le canton nommé par l'annexe VII.
+
+| | trous | accord |
+|---|---|---|
+| A, comparables | 24 514 | **98,49 %** |
+| B, comparables | 6 473 | **97,73 %** |
+| A, canton nommé par l'annexe VII | 389 | **57,84 %** |
+| A, département sans événement | 17 407 | 99,20 % |
+| A, commune nommée par un acte | 45 | **8,89 %** |
+| A, bout corrigé par `96` | 566 | **99,65 %** |
+| B, bout corrigé par `96` | 130 | 100,00 % |
+
+La pente est plus franche qu'en 1969-1999. **Et les bouts que `96` a corrigés
+s'accordent mieux que les autres** : la correction a levé l'erreur au lieu de
+la déplacer — le contrôle que `96` ne pouvait pas se faire à lui-même.
+
+Les plus gros désaccords sont ceux que l'annexe annonce : Metz-Campagne →
+Rombas, Woippy ; Belfort-Centre → Danjoutin, Châtenois, Valdoie ; Houdain →
+Bruay ; Forbach → Forbach-II. Falaise-Nord/Sud et Issoudun-Nord/Sud
+reparaissent : les échanges croisés de `71`, que `96` ne voit pas.
+
+`sql/97_report_deux_bouts_1941_1967.sql`, sur le modèle de `95`, inscrit
+après `95` dans `rejouer_apres_rebuild.sh` et dans l'inventaire de
+`diag_passages`. Pose `accord` et `accord_canton_annexe` (commune non nommée
+dans un canton divisé — la règle de `95`), marqués ligne à ligne avec la
+fenêtre ; laisse vides les désaccords, les communes nommées, la Seine et la
+Seine-et-Oise (numérotations incomparables), les fractions. Attendu : ~30 460
+lignes, ~484 500 atome-années. Pas encore joué.
+
+**`97` joué.** 30 453 rattachements : A 23 910 `accord` + 221
+`accord_canton_annexe` (313 687 atome-années), B 6 264 + 58 (170 681). Recettes
+10 a, 10 c, 10 d à zéro ; Lamastre 0710 du 1955-01-01 au 1968-01-01, bout
+corrigé par `96`. Snapshot : 1945 → 36 163 (29 841), 1950 → 36 159,
+1955-1967 → **30 453 (zéro avant)**, 1940 et 1968 intacts.
+
+La recette 10 b rendait **6 322 d'écart en 1954** : ce n'était pas une faute
+de pose mais une faute de recette. La fenêtre B traverse 1954, et ses 6 322
+lignes y donnent un canton aux atomes que le relevé n'a pas lus. Le témoin
+« 1954 ne doit pas bouger » était celui de `93`, recopié. Corrigé : l'écart
+attendu est l'effectif de B. *Une recette recopiée d'un fichier voisin teste
+la règle du voisin.*
+
+Ce que la carte doit montrer au prochain export : 1941-1953 de ~29 700 à
+~36 200 communes dessinées, 1955-1967 de 160 à ~30 600, 1968-1972 sans les
+726 lectures absurdes.
+
+
+## 24 septembre 2026 — un export propre, et le ménage pendant qu'il tourne
+
+Deux exports partiels ont été lancés le 23 au soir, et aucun n'est
+réutilisable : `sorties/part_2026-09-23` (38 départements) est parti à
+22 h 15, **avant** que `97` soit joué ; `sorties/part_2026-09-24` (77) a été
+lancé par `export_web.py` seul — sans `export_partition.sh`, donc sans le rôle
+en lecture seule ni la reprise par lots — puis interrompu. Reprendre l'un ou
+l'autre aurait fait sauter à `export_partition.sh` les départements déjà
+écrits : une carte à deux états de la base. **Export relancé dans un dossier
+neuf, `sorties/part_2026-09-24_propre`**, après un `GRANT SELECT ON ALL
+TABLES` : un GRANT ne vaut que pour les tables qui existent quand on le
+donne, et `95`, `96`, `97` en ont créé depuis.
+
+`diag_passages.sql` avant l'export (`build/passages_avant_export.log`) :
+56 passés, 2 vides attendues (`42`, `84`), 0 absente anormale, 0 orpheline ;
+`98` passé le 23 à 23 h 56. L'« écart de comptabilité » de la veille est
+l'effet de `96` : il a retiré 146 lectures de 1968, `81` reporte donc moins
+(32 696). Trace et qualité ont partout le même effectif.
+
+Ménage : `RESTE_A_FAIRE.md` — le point 1 de la file (1955-1967) est fait par
+`97` et sort ; le point des trous restants reprend les chiffres d'après `96` ;
+la file est renumérotée de 1 à 6, avec ses deux renvois internes ; le § 2
+(« rien n'est commencé ») dit ce que `98` a posé. Les cinq scripts de commit
+déjà joués passent dans `build/scripts_joues/`.

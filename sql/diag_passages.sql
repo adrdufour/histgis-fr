@@ -134,6 +134,20 @@ INSERT INTO attendu (rang, fichier, temoin, role) VALUES
   -- c'est la seule façon que son absence soit un jour remarquée.
   ( 93, '93_report_1940_1954.sql',      'p93_trace',                '1941-1953, entre deux bouts attestés'),
   ( 95, '95_report_deux_bouts_1969_1999.sql', 'p95_trace',       '1969-1998, entre deux bouts attestés'),
+  ( 96, '96_jalons_lecture_absurde.sql', 'p96_trace',        'jalons 1954 et 1968 : lectures absurdes corrigées ou retirées'),
+  ( 97, '97_report_deux_bouts_1941_1967.sql', 'p97_trace',  '1941-1967, entre deux bouts attestés'),
+  ( 98, '98_coupe_ville.sql',           'p98_trace',    'villes multicantonales : lignes de coupe et ancres'),
+  ( 99, '99_partition_coupes.sql',      'p99_trace',    'villes découpées dans la partition de 84 (à rejouer après 84)'),
+  (101, '101_paris_fractions_quartier.sql', 'p101_trace', 'Paris : fractions de quartier coupé entre deux circonscriptions (avant 98)'),
+  -- Déclarée après coup : elle existait en base sans figurer ici, et le § 1 ter
+  -- la signalait comme orpheline à chaque passage.
+  ( 95, '95_report_deux_bouts_1969_1999.sql', 'p95_qualite', 'fondement et profondeur de 95'),
+  -- `p97_qualite` porte le `membership_id` de chaque ligne posée par `97`.
+  -- C'est elle qui a permis de reconstruire `p97_trace` le 23 septembre 2026,
+  -- après qu'un fichier écrit sous le même numéro l'eut vidée. Une table de
+  -- qualité qui porte la clé de pose vaut sauvegarde de la trace : la déclarer
+  -- ici, c'est s'assurer qu'on remarquera sa disparition à elle aussi.
+  ( 97, '97_report_deux_bouts_1941_1967.sql', 'p97_qualite', 'fondement de 97, et filet de sa trace'),
   ( 93, '93_report_1940_1954.sql',      'p93_qualite',              'fondement, appariement, chrono_trouee');
 
 UPDATE attendu SET hors_chaine = true WHERE temoin IN (

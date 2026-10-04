@@ -556,6 +556,43 @@ WHERE  u.dep = %(dep)s
 ORDER  BY m.atom_id, m.valid_from
 """
 
+# Bornes des VILLES DÉCOUPÉES, pour `--partition` — 3 octobre 2026, avec
+# `sql/99_partition_coupes.sql`. Une fraction découpée change de forme quand
+# une ligne ou une ancre commence ou finit, ou quand une fraction de la ville
+# gagne ou perd son canton (les ancres ne jouent que pour les fractions qui en
+# ont un). Aucune de ces bornes n'est une borne de VIE ou d'ANR : sans elles,
+# une ligne qui commence en 1982 ne serait tirée qu'à la borne de forme
+# suivante. Ne s'exécute que si `coupe_ville` existe (98 joué).
+SQL_BORNES_COUPE = """
+-- La clé d'une coupe est la commune, ou le quartier pour Paris (`coupe_cle`
+-- et `coupe_niveau` de 98, depuis `101`).
+WITH v AS (
+    SELECT DISTINCT coupe_cle(a.cassini, a.insee_geofla::text) AS insee
+    FROM   atom a
+    JOIN   membership m ON m.atom_id = a.atom_id
+    JOIN   unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau
+    WHERE  u.dep = %(dep)s
+      AND  a.atom_id LIKE '%%#%%'
+      AND  coupe_cle(a.cassini, a.insee_geofla::text) IN (SELECT insee::text FROM coupe_ville)
+)
+SELECT c.valid_from FROM coupe_ville c JOIN v ON v.insee = c.insee::text
+UNION SELECT c.valid_to FROM coupe_ville c JOIN v ON v.insee = c.insee::text
+UNION SELECT an.valid_from FROM coupe_ville_ancre an
+      JOIN atom a ON a.atom_id = an.atom_id
+      JOIN v ON v.insee = coupe_cle(a.cassini, a.insee_geofla::text)
+UNION SELECT an.valid_to FROM coupe_ville_ancre an
+      JOIN atom a ON a.atom_id = an.atom_id
+      JOIN v ON v.insee = coupe_cle(a.cassini, a.insee_geofla::text)
+UNION SELECT m.valid_from FROM membership m
+      JOIN atom a ON a.atom_id = m.atom_id
+      JOIN v ON v.insee = coupe_cle(a.cassini, a.insee_geofla::text)
+      WHERE m.niveau = coupe_niveau(v.insee) AND a.atom_id LIKE '%%#%%'
+UNION SELECT m.valid_to FROM membership m
+      JOIN atom a ON a.atom_id = m.atom_id
+      JOIN v ON v.insee = coupe_cle(a.cassini, a.insee_geofla::text)
+      WHERE m.niveau = coupe_niveau(v.insee) AND a.atom_id LIKE '%%#%%'
+"""
+
 # La signature couvre la composition ET la forme.
 #
 # `coalesce(ga.poly_id, '=')` : `=` marque un atome en repli sur `atom_geom`,
@@ -655,6 +692,15 @@ def annees_geometriques(cur, dep):
                 fin = d2
         if fin is not None:
             cand.add(annee_de_borne(fin))
+
+    # Les villes découpées (99) : bornes des lignes, des ancres et des cantons
+    # de leurs fractions. Voir `SQL_BORNES_COUPE`.
+    cur.execute("SELECT to_regclass('histgis.coupe_ville') IS NOT NULL")
+    if cur.fetchone()[0]:
+        cur.execute(SQL_BORNES_COUPE, {"dep": dep})
+        for (d,) in cur.fetchall():
+            if d is not None:
+                cand.add(annee_de_borne(d))
 
     return sorted(a for a in cand if AN_MIN <= a <= AN_MAX)
 
@@ -776,7 +822,7 @@ JOINT_PARTITION = (JOINT_DATE + "\nLEFT   JOIN part_dep cp "
 # reconstruite sans elles doit exporter quand même, avec des communes sans nom
 # plutôt qu'un export qui échoue. D'où la requête assemblée selon ce qui est
 # présent, constaté une fois à la connexion.
-def sql_communes(dico, geofla, mvt):
+def sql_communes(dico, geofla, mvt, anr_nom=False):
     """Attributs d'un atome — tout sauf la géométrie, qui est maintenant datée.
 
     Cette requête rend UNE ligne par atome. Les polygones viennent des deux
@@ -798,6 +844,25 @@ def sql_communes(dico, geofla, mvt):
         champs.append("""(SELECT mv.libelle_av FROM insee_mvt mv
                           WHERE mv.com_av = a.insee_geofla
                           ORDER BY mv.date_eff LIMIT 1)""")
+    # Dernier repli avant le code : le nom que porte ANR, joint par Cassini.
+    # Il sert aux atomes SANS code INSEE — les onze communes annexées à Paris
+    # en 1860 (`89`), que rien d'autre ne nomme : sans lui la fiche affichait
+    # « nom en 1850 : 23671 » pour Montmartre (3 octobre 2026). `coalesce`
+    # n'évalue la sous-requête que si tout ce qui précède est NULL, donc elle
+    # ne coûte rien aux communes déjà nommées. Le suffixe « [Département] »
+    # qu'ANR ajoute à certaines fenêtres est retiré, et le nom est mis à la
+    # graphie GEOFLA — capitales sans accents (« LA VILLETTE ») — pour ne pas
+    # dépareiller les étiquettes. `translate` avant `upper` : sous une
+    # collation C, `upper('é')` rend `é`.
+    if anr_nom:
+        champs.append("""(SELECT upper(translate(
+                                 regexp_replace(x.namecom, '\\s*\\[[^]]*\\]$', ''),
+                                 'àâäçéèêëîïôöùûüÿœÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒ',
+                                 'aaaceeeeiioouuuyoAAACEEEEIIOOUUUYO'))
+                          FROM anr_commune x
+                          WHERE x.id_com::text = a.cassini
+                          ORDER BY (nullif(x.enddt::text, ''))::numeric DESC NULLS LAST
+                          LIMIT 1)""")
     champs.append("'[' || a.insee_geofla || ']'")
     nom = f"coalesce({', '.join(champs)})"
     disparue = "(g.insee_com IS NULL)" if geofla else "NULL::boolean"
@@ -2079,7 +2144,11 @@ def main():
         if not anr:
             sys.exit("--partition suppose la trame ANR : incompatible avec "
                      "--sans-anr, et inutile sans `82`.")
-    sql_com = sql_communes(dico, geofla, mvt)
+    anr_nom = existe(cur, "anr_commune")
+    sql_com = sql_communes(dico, geofla, mvt, anr_nom)
+    if not anr_nom:
+        print("Attention : `anr_commune` absente — les communes sans code INSEE "
+              "(les onze annexées de 1860) sortiront sans nom.")
     if not (dico or geofla):
         print("Attention : ni `noms_geofla` ni `geofla_commune` — les communes "
               "sortiront sous leur code.")

@@ -219,6 +219,14 @@ SELECT u.nom AS canton_sans_cote
  WHERE u.niveau = 'canton' AND u.dep = '75'
    AND EXISTS (SELECT 1 FROM membership m WHERE m.unit_id = u.unit_id
                 AND m.niveau = 'canton' AND m.periode @> DATE '1954-06-01')
+   -- Les cantons de PARIS n'ont pas de côté et n'en demandent pas : depuis
+   -- `103` (3 octobre 2026), Paris-01 à Paris-20 sont vivants en 1954, portés
+   -- par les quartiers (`PQ…`). Le garde-fou ne vise que les cantons de
+   -- banlieue, c'est-à-dire ceux qui portent au moins une COMMUNE. Il a
+   -- arrêté le rejeu du 4 octobre sur ces vingt-là.
+   AND EXISTS (SELECT 1 FROM membership m2 WHERE m2.unit_id = u.unit_id
+                AND m2.niveau = 'canton' AND m2.periode @> DATE '1954-06-01'
+                AND m2.atom_id NOT LIKE 'P%')
    AND NOT EXISTS (SELECT 1 FROM s70_arr a WHERE a.canton = u.nom)
  ORDER BY 1;
 -- Attendu : aucune ligne. Une sortie voudrait dire que la nomenclature de la
@@ -354,6 +362,10 @@ BEGIN
      WHERE u.niveau = 'canton' AND u.dep = '75'
        AND EXISTS (SELECT 1 FROM membership m WHERE m.unit_id = u.unit_id
                     AND m.niveau = 'canton' AND m.periode @> DATE '1954-06-01')
+       -- les cantons de Paris (portés par les quartiers) : voir la recette 1 bis
+       AND EXISTS (SELECT 1 FROM membership m2 WHERE m2.unit_id = u.unit_id
+                    AND m2.niveau = 'canton' AND m2.periode @> DATE '1954-06-01'
+                    AND m2.atom_id NOT LIKE 'P%')
        AND NOT EXISTS (SELECT 1 FROM s70_arr a WHERE a.canton = u.nom);
     IF n > 0 THEN
         RAISE EXCEPTION '% canton(s) de 1954 sans cote. La nomenclature de la '
@@ -562,13 +574,34 @@ SELECT count(*) AS atomes_a_double
 SELECT EXISTS (SELECT 1 FROM pg_proc WHERE proname = 'carte_partition_atome')
        AS a_84 \gset
 \if :a_84
-SELECT d::date AS a_la_date, count(*) AS atomes_dessines,
+-- UNE DATE PAR REQUETE, et la recette ne peut plus annuler la pose. Depuis
+-- `99` (3 octobre 2026), `carte_partition_atome` est en plpgsql et cree puis
+-- detruit des tables temporaires (`t84_*`, `t99_*`) a chaque appel : appelee
+-- pour plusieurs dates dans UNE requete (`LATERAL` sur un `VALUES`), le
+-- deuxieme appel detruit ce que le premier lit encore — « could not open
+-- relation with OID ». Trouve le 4 octobre 2026 sur `105`, ou la recette a
+-- emporte la pose entiere, le fichier etant joue en `-1`. `ON_ERROR_ROLLBACK`
+-- fait de chaque requete un point de reprise : un echec s'affiche, et la
+-- transaction va jusqu'au COMMIT.
+\set ON_ERROR_STOP off
+\set ON_ERROR_ROLLBACK on
+SELECT DATE '1825-06-01' AS a_la_date, count(*) AS atomes_dessines,
        round((ST_Area(ST_Union(geom)) / 1e6)::numeric, 2) AS union_km2,
        round(((sum(ST_Area(geom)) - ST_Area(ST_Union(geom))) / 1e6)::numeric, 3)
                                                           AS recouvrement_km2
-  FROM (VALUES ('1825-06-01'::date),('1855-06-01'),('1866-06-01')) v(d),
-       LATERAL carte_partition_atome(d, '75')
- GROUP BY d ORDER BY d;
+  FROM carte_partition_atome(DATE '1825-06-01', '75');
+SELECT DATE '1855-06-01' AS a_la_date, count(*) AS atomes_dessines,
+       round((ST_Area(ST_Union(geom)) / 1e6)::numeric, 2) AS union_km2,
+       round(((sum(ST_Area(geom)) - ST_Area(ST_Union(geom))) / 1e6)::numeric, 3)
+                                                          AS recouvrement_km2
+  FROM carte_partition_atome(DATE '1855-06-01', '75');
+SELECT DATE '1866-06-01' AS a_la_date, count(*) AS atomes_dessines,
+       round((ST_Area(ST_Union(geom)) / 1e6)::numeric, 2) AS union_km2,
+       round(((sum(ST_Area(geom)) - ST_Area(ST_Union(geom))) / 1e6)::numeric, 3)
+                                                          AS recouvrement_km2
+  FROM carte_partition_atome(DATE '1866-06-01', '75');
+\set ON_ERROR_ROLLBACK off
+\set ON_ERROR_STOP on
 \else
 \echo '    84 pas encore joue : recette a relire apres lui, par'
 \echo '    psql -d $PGDATABASE -1 -v appliquer=1 -f sql/91_seine_1815_1870.sql'

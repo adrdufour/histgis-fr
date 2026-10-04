@@ -1107,6 +1107,10 @@ COMMENT ON PROCEDURE partition_journalise(date, text) IS
 --   1. LES FRACTIONS. 333 atomes-fraction et les villes partagées gardent le
 --      polygone de la commune entière. Le § 6 les compte dans `n_partagees` ;
 --      la page les hachure. Rien ici ne prétend les découper.
+--      DEPUIS LE 3 OCTOBRE 2026, `99_partition_coupes.sql` les découpe par
+--      les lignes de `98`, en REMPLAÇANT `carte_partition_atome` et
+--      `carte_partition` de ce fichier. Rejouer `84` seul défait ce
+--      branchement sans erreur : rejouer `99` juste après.
 --
 --   2. LE REPLI RÉSIDUEL. Les atomes qu'ANR ne pourvoit à AUCUNE date — les
 --      six doublons nommés au § 8 de `82` en tête — n'ont pas de reprise

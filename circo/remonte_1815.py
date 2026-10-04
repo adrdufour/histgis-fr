@@ -48,6 +48,7 @@ découpage faux, il n'en renverra aucun.
 import argparse
 import collections
 import csv
+import re
 import sys
 import unicodedata
 from pathlib import Path
@@ -502,17 +503,39 @@ REGLES = {
 }
 
 
-def composition_1876(dep):
-    """{canton (nom) -> circonscription (nom)} au segment 1876."""
+# Départements 21 à 63, lus sur les cartes photographiées (octobre 2026).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from regles_1815_21_63 import REGLES_21_63  # noqa: E402
+REGLES.update(REGLES_21_63)
+
+
+def composition_1876(dep, date=None):
+    """{canton (nom) -> circonscription (nom)} au segment 1876.
+
+    `date` : date de lecture des cantons vivants, REF_DATE par défaut. La
+    Meurthe (code 99) n'existe plus en 1878 : on la lit en 1870, où elle n'a
+    pas de circonscription (scrutin de liste) — le découpage de base est
+    alors VIDE, et ses règles n'emploient que des listes de cantons.
+    """
+    date = date or REF_DATE
     circos = {r["unit_id"]: r for r in csv.DictReader(
         (B / "unit_circo.csv").open(encoding="utf-8")) if r["dep"] == dep}
-    cantons = {r["unit_id"]: r["nom"] for r in csv.DictReader(
+    # RÉPARATION : unit_canton.csv porte quatre noms abîmés, une lettre
+    # accentuée remplacée par deux « \ufffd » en amont : Saint-Étienne-Nord-
+    # et -Sud-Ouest (4221, 4222), Orléans-Est et -Ouest (4521, 4522). On la
+    # rétablit ici — « É » en tête de mot, « é » ailleurs ; la source reste
+    # à corriger.
+    def _repare(nom):
+        return re.sub(r"(^|(?<=[-\s]))\ufffd\ufffd", "É",
+                      nom).replace("\ufffd\ufffd", "é")
+    cantons = {r["unit_id"]: _repare(r["nom"])
+               for r in csv.DictReader(
         (B / "unit_canton.csv").open(encoding="utf-8")) if r["dep"] == dep}
 
     def actifs(fichier, garde):
         d = {}
         for r in csv.DictReader((B / fichier).open(encoding="utf-8")):
-            if r["valid_from"] <= REF_DATE < r["valid_to"] and garde(r["unit_id"]):
+            if r["valid_from"] <= date < r["valid_to"] and garde(r["unit_id"]):
                 d[r["atom_id"]] = r["unit_id"]
         return d
 
@@ -546,6 +569,20 @@ def composition_1876(dep):
 
 
 def applique(dep, periode, connus, univers=None):
+    """Enveloppe : retire les cantons `absents` de la période.
+
+    `absents` : cantons qui, à cette date, n'appartiennent pas au
+    département — Montbéliard et Audincourt, encore haut-saônois en 1815 et
+    rattachés au Doubs en 1816. Ils ne reçoivent rien, et la partition est
+    contrôlée sans eux.
+    """
+    absents = set(periode.get("absents", ()))
+    univ = set(univers or ()) - absents
+    res = _applique(dep, periode, connus, univ)
+    return {ct: c for ct, c in res.items() if ct not in absents}
+
+
+def _applique(dep, periode, connus, univers=None):
     """Calcule {canton -> circo} d'une période à partir de son découpage de base.
 
     `univers` : les cantons VIVANTS à la date, qui peuvent être plus nombreux
@@ -633,7 +670,7 @@ def main():
     total_ok = True
     for dep in deps:
         R = REGLES[dep]
-        base76, partages, tous_cantons = composition_1876(dep)
+        base76, partages, tous_cantons = composition_1876(dep, R.get("date"))
         # Saales et Schirmeck existent avant 1871 et sont cités par les règles,
         # mais n'ont plus d'atome français en 1878 : l'annexion les a retirés.
         # Ils appartiennent donc au référentiel des périodes anciennes.
@@ -687,7 +724,7 @@ def main():
         for p in sorted(ordonnees, key=lambda x: -x["depuis"]):
             res = connus[str(p["depuis"])]
             n_circo = len(set(res.values()))
-            oublies = tous_cantons - set(res)
+            oublies = tous_cantons - set(p.get("absents", ())) - set(res)
             doubles = [ct for ct in res if ct not in tous_cantons]
             ok = not oublies and not doubles
             total_ok &= ok

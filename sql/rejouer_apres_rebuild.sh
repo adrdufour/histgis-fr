@@ -436,6 +436,7 @@ $PSQL -f "$ICI/40_scission_circo.sql"
 #   89 exige anr_commune ET atom_geom_anr, donc 82
 #   90 exige 57 (l'unité L7501@1848) et les onze annexées de 89
 #   91 exige les circos parisiennes de 1863 (55), les annexées (89) et 1954 (68)
+#   105 exige c15_composition (64) et atom_geom_anr (82) ; 64 n'exige rien
 #   84 exige 82 — « PRÉREQUIS : jouer sql/82_anr_geom.sql avant celui-ci »
 #
 # `-1` là où le fichier le demande, et nulle part ailleurs : `38`, `39`, `92`
@@ -501,6 +502,14 @@ $PSQL -1 -v appliquer=1 -f "$ICI/87_seine_canton_1954.sql"
 etape "88 — la banlieue de la Seine entre dans la couche circo, 1945-1967"
 $PSQL -1 -v appliquer=1 -f "$ICI/88_seine_circo_1945_1967.sql"
 
+# `96` APRÈS les deux jalons et la Seine, AVANT le registre et les reports :
+# `79`, `81`, `93` et `95` lisent les jalons dans `membership`, et c'est la
+# lecture corrigée qu'ils doivent reporter. Écrit le 23 septembre 2026, sur
+# Lamastre (lue « 3 19 » en 1954) et les 804 lectures de 1968 que 1954 et
+# 1999 contredisent ensemble.
+etape "96 — les jalons de 1954 et 1968 jugés par la géométrie"
+$PSQL -1 -v appliquer=1 -f "$ICI/96_jalons_lecture_absurde.sql"
+
 # --- le registre des actes, puis les salves ---------------------------------
 # `72` charge huit CSV par \copy relatifs à la RACINE — le `cd` du haut de ce
 # script y pourvoit. `74` à `77` lisent le registre qu'il pose.
@@ -543,6 +552,12 @@ $PSQL -1 -f "$ICI/93_report_1940_1954.sql"
 etape "95 — 1969-1998, entre deux bouts attestés"
 $PSQL -1 -f "$ICI/95_report_deux_bouts_1969_1999.sql"
 
+# `97` APRÈS `93` — c'est `93` qui borne par la gauche le trou 1955-1967 ;
+# sans lui, les deux fenêtres se confondent. Il lit `cantons/annexe_vii.csv`
+# par un \copy relatif à la RACINE. Écrit le 23 septembre 2026.
+etape "97 — 1941-1967, entre deux bouts attestés"
+$PSQL -1 -f "$ICI/97_report_deux_bouts_1941_1967.sql"
+
 # --- la trame communale historique ANR --------------------------------------
 # Quatrième prérequis qui ne vivait qu'en commentaire, après `noms_geofla`, les
 # tables parisiennes, `geofla_canton` et les lots d'outre-mer : `anr_commune`
@@ -576,11 +591,77 @@ if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
     etape "89 — les onze communes que Paris a mangées en 1860"
     $PSQL -1 -v appliquer=1 -f "$ICI/89_seine_annexees_1860.sql"
 
+    # Ajoutés le 3 octobre 2026. `100` comble le sol du Perreux, sans
+    # propriétaire dans ANR avant 1860, en le rendant à Nogent ; `101` prolonge
+    # le sol des annexées jusqu'à la fin de la division 1857-1863. Tous deux
+    # écrivent dans `atom_geom_anr`, donc après `82`/`89` ; `101` AVANT `91`,
+    # qui borne les rattachements par la vie ANR de l'atome.
+    etape "100 — le sol du Perreux rendu à Nogent avant 1860"
+    $PSQL -1 -v appliquer=1 -f "$ICI/100_nogent_perreux_avant_1860.sql"
+
+    etape "101 — les annexées jusqu'à la fin de la division 1857-1863"
+    $PSQL -1 -v appliquer=1 -f "$ICI/101_seine_annexees_1859_1862.sql"
+
+    etape "102 — les lambeaux pris par Paris en 1860 (bois de Boulogne, Ternes)"
+    $PSQL -1 -v appliquer=1 -f "$ICI/102_seine_lambeaux_1860_1862.sql"
+
+    etape "103 — les cantons de Paris 1941-1998, par les deux bouts"
+    $PSQL -1 -v appliquer=1 -f "$ICI/103_paris_cantons_1941_1998.sql"
+
+    etape "104 — les cantons de banlieue de la Seine prolongés de 1955 à 1967 (hypothèse)"
+    $PSQL -1 -v appliquer=1 -f "$ICI/104_seine_cantons_1955_1967.sql"
+
     etape "90 — la Seine de 1848 : la limite déclarée par 57 est levée"
     $PSQL -1 -v appliquer=1 -f "$ICI/90_seine_1848_banlieue.sql"
 
     etape "91 — la banlieue de la Seine, 1815-1870 (planches Gaudillère)"
     $PSQL -1 -v appliquer=1 -f "$ICI/91_seine_1815_1870.sql"
+
+    # --- l'Yonne avant 1870 -------------------------------------------------
+    # Ajoutés le 4 octobre 2026. `64` dépose la composition cantonale des
+    # découpages 1815-1870 lue dans Gaudillère (`c15_composition`) et n'écrit
+    # rien d'autre ; il n'était appelé par aucun script, et un rebuild l'avait
+    # emporté sans que rien ne le signale. `105` pose
+    # l'Yonne de 1815 à 1870 sur cette table, bornée par la vie ANR de chaque
+    # atome — d'où sa place après `82`. Son § 8 lit `84`, qui passe plus bas :
+    # sur une base reconstruite il s'abstient, et le dit.
+    etape "64 — les découpages 1815-1870 de Gaudillère (c15_composition)"
+    $PSQL -f "$ICI/64_composition_1815_stage.sql"
+
+    etape "105 — l'Yonne, 1815-1870 : cantons et circonscriptions"
+    $PSQL -1 -v appliquer=1 -f "$ICI/105_yonne_1815_1870.sql"
+
+    # --- les villes multicantonales -----------------------------------------
+    # Cinquième prérequis hors chaîne, découvert le 23 septembre 2026 :
+    # `iris_ville` — 4 219 IRIS, la trame d'accrochage des 119 villes à
+    # découper — était chargée par `cartes/recupere_iris.py` et par rien
+    # d'autre. `rebuild.sh` l'avait emportée, `RESTE_A_FAIRE.md` § 2 la
+    # déclarait toujours « acquise et en base », et elle n'a pas de table de
+    # trace : RIEN ne pouvait signaler son absence. Rechargée depuis le
+    # GeoJSON du 14 août, sans retoucher au WFS de l'IGN.
+    IRIS_JSON="$RACINE/cartes/sorties/iris_villes.geojson"
+    if [ -f "$IRIS_JSON" ]; then
+        etape "iris_ville — trame d'accrochage des 119 villes (prérequis de 98)"
+        python3 - "$IRIS_JSON" <<'PY'
+import importlib.util, json, sys
+s = importlib.util.spec_from_file_location("ri", "cartes/recupere_iris.py")
+ri = importlib.util.module_from_spec(s); s.loader.exec_module(ri)
+ri.charger(json.loads(open(sys.argv[1]).read())["features"])
+PY
+
+        # `101` AVANT `98` : il pose les fractions de quartier de Paris, que
+        # les ancres de `98` référencent (3 octobre 2026).
+        if [ -f "$ICI/101_paris_fractions_quartier.sql" ]; then
+            etape "101 — Paris : les fractions de quartier (prérequis de 98)"
+            $PSQL -1 -v appliquer=1 -f "$ICI/101_paris_fractions_quartier.sql"
+        fi
+
+        etape "98 — les villes multicantonales, découpées par leurs lignes"
+        $PSQL -1 -v appliquer=1 -f "$ICI/98_coupe_ville.sql"
+    else
+        echo "  iris_ville NON rechargée : $IRIS_JSON absent."
+        echo "  python3 cartes/recupere_iris.py --charger  (retélécharge)"
+    fi
 
     # --- la carte -----------------------------------------------------------
     # `84` NE MODIFIE RIEN : que des fonctions, une trace et une procédure.
@@ -588,6 +669,14 @@ if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
     # qu'un DROP SCHEMA les emporte comme le reste.
     etape "84 — la trame de partition (fonctions ; ne modifie aucune donnée)"
     $PSQL -f "$ICI/84_carte_partition.sql"
+
+    # `99` REMPLACE `carte_partition_atome` et `carte_partition` de `84` par des
+    # versions qui découpent les villes à lignes (98). Il doit suivre `84` :
+    # `84` rejoué seul remet ses fonctions et la carte redevient hachurée.
+    if [ -f "$ICI/99_partition_coupes.sql" ]; then
+        etape "99 — les villes découpées entrent dans la partition (fonctions)"
+        $PSQL -1 -f "$ICI/99_partition_coupes.sql"
+    fi
 else
     echo "  GeoPackage ANR ou build/anr_variantes.csv absent — 82 sauté," >&2
     echo "  et avec lui 89, 90, 91 et 84, qui exigent tous atom_geom_anr." >&2
