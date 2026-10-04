@@ -1,0 +1,1099 @@
+dep,dep_nom,date_texte,date_iso,type,texte,page
+01,Ain,A. 9 Vendémiaire An X,1801-10-01,origine,Découpage d'origine,787
+01,Ain,L. 20.3.1806,1806-03-20,transfert_arr,Transfert Poncin (Arr. Belley -> Arr. Nantua),787
+01,Ain,O. 8.11.1814,1814-11-08,creation_arr,"Cr. Arr. Gex, avec les cantons de Gex, Collonges et Ferney, précédemment inclus dans le département du Léman (Arr. Genève)",787
+01,Ain,O. 19.7.1826,1826-07-19,TCL,TCL Mornay -> Izernore,787
+01,Ain,L. 18.7.1868,1868-07-18,creation,Cr. Villars (Chalamont + Saint-Trivier + Chatillon + Meximieux),787
+01,Ain,D. 7.8.1913,1913-08-07,TCL,TCL Chatillon-de-Michailles -> Bellegarde,787
+01,Ain,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Gex et Trévoux,787
+01,Ain,L. 27.12.1933,1933-12-27,creation_arr,Rétab. Arr. Gex,787
+01,Ain,L. 29.12.1967,1967-12-29,cession_departement,"Cession au Rhône de 4 communes du canton de Trévoux (Genay, Montanay, Sathonay-Camp et Sathonay-Village) et 2 communes du canton de Montluel (Crépieux et Rillieux)",787
+01,Ain,D. 16.8.1973,1973-08-16,creation,"Cr. Bourg-1, Bourg-2 et Bourg-3 (division de Bourg, qui disparaît)",787
+01,Ain,D. 25.1.1982,1982-01-25,creation,"Cr. Bourg-E., Bourg-N.-Centre, Bourg-S. et Bourg-Couronne (division Bourg-1 à 3, qui disparaissent)",787
+01,Ain,D. 24.12.1984,1984-12-24,creation,Cr. Miribel (division Montluel),787
+01,Ain,D. 24.12.1984,1984-12-24,creation,Cr. Oyonnax-N. et Oyonnax-S. (dédoublement Oyonnax),787
+01,Ain,D. 24.12.1984,1984-12-24,creation,Cr. Reyrieux (division Trévoux),787
+01,Ain,D. 24.12.1984,1984-12-24,creation,Cr. Viriat (Bourg-Couronne + Bourg-S.),787
+01,Ain,D. 24.12.1984,1984-12-24,creation,Cr. Péronnas (Bourg-Couronne + Bourg-E.),788
+01,Ain,D. 24.12.1984,1984-12-24,suppression,Supp. Bourg-Couronne,788
+02,Aisne,A. 3 Vendémiaire An X,1801-09-25,origine,Découpage d'origine,788
+02,Aisne,A. 29 Thermidor An XI,1803-08-17,TCL,TCL Chézy-sur-Marne -> Charly,788
+02,Aisne,A. 24 Ventôse An XII,1804-03-15,TCL,TCL Montcornet -> Rozoy,788
+02,Aisne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Château-Thierry,788
+02,Aisne,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Château-Thierry,788
+02,Aisne,D. 23.7.1973 et 18.8.1973,1973-07-23,creation,Cr. Laon-N. et Laon-S. (dédoublement Laon),788
+02,Aisne,D. 23.7.1973 et 18.8.1973,1973-07-23,creation,"Cr. St-Quentin-N., St-Quentin-S. et St-Quentin-Centre (division St-Quentin, qui disparaît)",788
+02,Aisne,D. 23.7.1973 et 18.8.1973,1973-07-23,creation,Cr. Soissons-N. et Soissons-S. (dédoublement Soissons),788
+02,Aisne,D. 23.7.1973 et 18.8.1973,1973-07-23,creation,Cr. Tergnier (division La Fère),788
+03,Allier,A. 3 Brumaire An X,1801-10-25,origine,Découpage d'origine,788
+03,Allier,A. 3 Ventôse An X,1802-02-22,TCL,TCL Bellenaves -> Ébreuil,788
+03,Allier,D. 17.3.1858,1858-03-17,creation,Cr. Montluçon-E. et Montluçon-O. (dédoublement Montluçon),788
+03,Allier,L. 16.6.1859,1859-06-16,creation,Cr. Commentry (division Montmarault),788
+03,Allier,L. 10.5.1892,1892-05-10,creation,Cr. Vichy (division Cusset),788
+03,Allier,D.-L. 10.3.1926,1926-03-10,suppression_arr,Supp. Arr. Gannat,788
+03,Allier,D. 28.8.1941,1941-08-28,transfert_sp,SP. transférée de Lapalisse à Vichy,788
+03,Allier,D. 18.8.1973,1973-08-18,creation,Cr. Montluçon-N. et Montluçon-S. (division Montluçon-E. et Montluçon-O.),788
+03,Allier,D. 18.8.1973,1973-08-18,creation,"Cr. Moulins-S. et Yzeure (division Moulins-E., qui disparaît, et Moulins-O., qui demeure)",788
+03,Allier,D. 15.1.1982,1982-01-15,creation,Cr. Vichy-N. et Vichy-S. (dédoublement Vichy),788
+03,Allier,D. 15.1.1982,1982-01-15,creation,Cr. Montluçon-N.E et Domérat - Montluçon-N.O. (dédoublement Montluçon-N.),788
+03,Allier,D. 23.1.1985,1985-01-23,creation,"Cr. Cusset-N. et Cusset-S. (division Cusset, qui disparaît, Vichy-N. et Vichy-S., qui demeurent)",788
+04,Alpes-de-Haute-Provence,A. 27 Vendémiaire An X,1801-10-19,origine,Découpage d'origine des Basses-Alpes,788
+04,Alpes-de-Haute-Provence,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Reillanne -> Manosque,788
+04,Alpes-de-Haute-Provence,A. 5 Frimaire An XI,1802-11-26,TCL,TCL Meyronnes -> Saint-Paul,788
+04,Alpes-de-Haute-Provence,A. 5 Frimaire An XI,1802-11-26,creation,Cr. Mézel (Digne + Riez),788
+04,Alpes-de-Haute-Provence,A. 5 Frimaire An XI,1802-11-26,creation,Cr. Peyruis (St-Étienne-les-Orgues + Forcalquier),788
+04,Alpes-de-Haute-Provence,A. 5 Frimaire An XI,1802-11-26,creation,Cr. Reillanne (division Manosque),788
+04,Alpes-de-Haute-Provence,D. 13.1.1810,1810-01-13,transfert_departement,Transfert du canton de Barcillonnette-de-Vitrolles aux Hautes-Alpes,788
+04,Alpes-de-Haute-Provence,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Castellane et Sisteron,788
+04,Alpes-de-Haute-Provence,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Castellane,788
+04,Alpes-de-Haute-Provence,D. 13.4.1970,1970-04-13,renommage_departement,Le département prend le nom d'Alpes-de-Haute-Provence,788
+04,Alpes-de-Haute-Provence,D. 23.7.1973,1973-07-23,creation,Cr. Digne-E. et Digne-O. (dédoublement Digne),788
+04,Alpes-de-Haute-Provence,D. 23.7.1973,1973-07-23,creation,Cr. Manosque-N. et Manosque-S. (dédoublement Manosque),788
+04,Alpes-de-Haute-Provence,D. 29.1.1985,1985-01-29,fusion,Fusion : Allos et Colmars deviennent Allos-Colmars,788
+04,Alpes-de-Haute-Provence,D. 20.2.1986,1986-02-20,fix_limites,Fix. limites : Digne-E. et Digne-O.,789
+04,Alpes-de-Haute-Provence,D. 20.2.1986,1986-02-20,creation,"Cr. Manosque-S.O. et Manosque-S.E. (division Manosque-N. qui demeure, et Manosque-S., qui disparaît)",789
+04,Alpes-de-Haute-Provence,D. 20.2.1986,1986-02-20,transfert_arr,Transfert Allos-Colmars (Arr. Barcelonnette -> Arr. Castellane),789
+04,Alpes-de-Haute-Provence,D. 20.2.1986,1986-02-20,suppression,Supp. St-Paul (-> Barcelonnette),789
+04,Alpes-de-Haute-Provence,D. 20.2.1986,1986-02-20,suppression,"Supp. Senez (-> Barrême, Mézel)",789
+05,Hautes-Alpes,A. 19 Vendémiaire An X,1801-10-11,origine,Découpage d'origine,789
+05,Hautes-Alpes,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Mont-Léon -> Guillestre,789
+05,Hautes-Alpes,D. 13.1.1810,1810-01-13,transfert_departement,Rattachement du canton de Barcillonnette-de-Vitrolles (en provenance des Basses-Alpes) à l’arrondissement de Gap,789
+05,Hautes-Alpes,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Embrun,789
+05,Hautes-Alpes,D. 13.7.1973,1973-07-13,creation,Cr. Briançon-N. et Briançon-S. (dédoublement Briançon),789
+05,Hautes-Alpes,D. 13.7.1973,1973-07-13,creation,"Cr. Gap-Centre, Gap-E., Gap-O. et Gap-Campagne (division Gap, qui disparaît)",789
+05,Hautes-Alpes,D. 25.1.1982,1982-01-25,creation,Cr. Gap-N.E. et Gap-S.E. (dédoublement Gap-E.),789
+05,Hautes-Alpes,D. 25.1.1982,1982-01-25,creation,Cr. Gap-N.O. et Gap-S.O. (dédoublement Gap-O.),789
+06,Alpes-Maritimes,L. 23.6.1860,1860-06-23,creation_departement,"L'Arr. de Grasse (Var) est réuni au Comté de Nice, acquis par la France le 14.6.1860",789
+06,Alpes-Maritimes,D. 24.10.1860,1860-10-24,origine,"Découpage d'origine des arrondissements de Nice et Puget-Théniers (pour l'arrondissement de Grasse, voir le découpage du Var de 1801 à 1860)",789
+06,Alpes-Maritimes,L. 30.7.1881,1881-07-30,creation,Cr. Cagnes (division Vence),789
+06,Alpes-Maritimes,L. 23.1.1904,1904-01-23,creation,Cr. Roquebillière (division St-Martin-Vésubie),789
+06,Alpes-Maritimes,L. 7.2.1919,1919-02-07,creation,"Cr. Nice-1, Nice-2, Nice-3 et Nice-4 (division Nice-E. et Nice-O., qui disparaissent)",789
+06,Alpes-Maritimes,L. 27.12.1922,1922-12-27,creation,Cr. Beausoleil (division Villefranche-sur-Mer),789
+06,Alpes-Maritimes,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Puget-Théniers,789
+06,Alpes-Maritimes,D. 10.9.1951,1951-09-10,creation,Cr. Tende (division Breil),789
+06,Alpes-Maritimes,D. 31.10.1953,1953-10-31,TCL,TCL Utelle -> Lantosque,789
+06,Alpes-Maritimes,D. 19.1.1955,1955-01-19,creation,"Cr. Nice-5 et Nice-6 (division Nice-2, 3 et 4)",789
+06,Alpes-Maritimes,D. 21.10.1957,1957-10-21,creation,Cr. Le Cannet (division Cannes),789
+06,Alpes-Maritimes,D. 16.8.1973,1973-08-16,creation,Cr. Antibes-N. et Antibes-S. (dédoublement Antibes),789
+06,Alpes-Maritimes,D. 16.8.1973,1973-08-16,creation,Cr. Cannes-E. et Cannes-O. (dédoublement Cannes),789
+06,Alpes-Maritimes,D. 16.8.1973,1973-08-16,creation,"Cr. Nice-7, Nice-8, Nice-9, Nice-10, Nice-11 (division Nice-4, Nice-5 et Nice-6)",789
+06,Alpes-Maritimes,D. 25.1.1982,1982-01-25,creation,Cr. Cagnes-E. et Cagnes-O. (dédoublement Cagnes),789
+06,Alpes-Maritimes,D. 25.1.1982,1982-01-25,creation,Cr. Mougins (division Le Cannet),789
+06,Alpes-Maritimes,D. 25.1.1982,1982-01-25,creation,"Cr. Nice-12 à 14 (division Nice-1 à 3, Nice-7, Nice-9 et Nice-10)",789
+06,Alpes-Maritimes,D. 31.1.1985,1985-01-31,fix_limites,"Fix. limites : Nice-1, Nice-2, Nice-3, Nice-10 et Nice-14",789
+06,Alpes-Maritimes,D. 31.1.1985,1985-01-31,creation,"Cr. Antibes-Biot et Vallauris-Antibes-E. (division Antibes-N., qui disparaît, et Antibes-Centre, qui demeure)",789
+06,Alpes-Maritimes,D. 31.1.1985,1985-01-31,creation,"Cr. Cagnes-Centre et St-Laurent-du-Var - Cagnes-E. (division Cagnes-E., qui disparaît, et Cagnes-O., qui demeure)",790
+06,Alpes-Maritimes,D. 31.1.1985,1985-01-31,creation,"Cr. Cannes-Centre et Mandelieu - Cannes-O. (division Cannes-O., qui disparaît, et Cannes-E., qui demeure)",790
+06,Alpes-Maritimes,D. 31.1.1985,1985-01-31,creation,Cr. Grasse-N. et Grasse-S. (dédoublement Grasse),790
+06,Alpes-Maritimes,D. 31.1.1985,1985-01-31,creation,Cr. Carros (division Vence),790
+07,Ardèche,A. 15 Brumaire An X,1801-11-06,origine,Découpage d'origine,790
+07,Ardèche,D. 2.8.1973,1973-08-02,creation,Cr. Annonay-N. et Annonay-S. (dédoublement Annonay),790
+07,Ardèche,D. 2.8.1973,1973-08-02,creation,Cr. Vals-les-Bains (division Aubenas),790
+08,Ardennes,A. 23 Vendémiaire An X,1801-10-15,origine,Découpage d'origine,790
+08,Ardennes,O. 18.8.1814,1814-08-18,rattachement,"Rattache aux Ardennes (Arr. Rocroy) 1 canton du département de Jemmapes (Chimay) et 4 cantons du département de Sambre-et-Meuse (Walcourt, Florennes, Beauraing et Gédinne)",790
+08,Ardennes,Traité de Paris 20.11.1815,1815-11-20,perte,"Perte de 7 cantons de l'Arr. de Rocroy (Couvin, Philippeville, Chimay, Valcour, Florennes, Beauraing et Gédinne) et d'1 canton de l'Arr. de Sedan (Bouillon)",790
+08,Ardennes,D.-L. 10.9.1926,1926-09-10,suppression_arr,Suppression Arr. Rocroi et Sedan,790
+08,Ardennes,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Sedan,790
+08,Ardennes,D. 23.7.1973,1973-07-23,creation,"Cr. Charleville Centre, Charleville-La-Houillère et Nouzonville (division Charleville, qui disparaît)",790
+08,Ardennes,D. 23.7.1973,1973-07-23,creation,Cr. Mézières-Centre-O. et Mézières-E. (dédoublement Mézières),790
+08,Ardennes,D. 23.7.1973,1973-07-23,creation,"Cr. Sedan-E. et Sedan-O. (division Sedan-N., qui demeure, et Sedan-S., qui disparaît)",790
+08,Ardennes,D. 23.7.1973,1973-07-23,creation,Cr. Revin (division Fumay),790
+08,Ardennes,D. 15.1.1982,1982-01-15,creation,Cr. Villers-Semeuse (division Mézières-Centre-O. et Mézières-E.),790
+09,Ariège,A. 23 Vendémiaire An X,1801-10-15,origine,Découpage d'origine,790
+09,Ariège,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Pamiers,790
+09,Ariège,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Pamiers,790
+09,Ariège,D. 24.12.1982,1982-12-24,creation,Cr. Pamiers-E. et Pamiers-O. (dédoublement Pamiers),790
+09,Ariège,D. 24.12.1982,1982-12-24,creation,Cr. Foix-Ville et Foix-Rural (= Montgailhard) (dédoublement Foix),790
+10,Aube,A. 27 Fructidor An IX,1801-09-14,origine,Découpage d'origine,790
+10,Aube,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Arcis-sur-Aube et Bar-sur-Seine,790
+10,Aube,D. 13.7.1973,1973-07-13,creation,Cr. Romilly-1 et Romilly-2 (dédoublement Romilly),790
+10,Aube,D. 13.7.1973,1973-07-13,creation,Cr. Troyes-2 (dédoublement Troyes-1),790
+10,Aube,D. 22.1.1985,1985-01-22,creation,"Cr. Troyes-3, Troyes-4 et Sainte-Savine (division de l'ancien Troyes-2, qui disparaît)",791
+10,Aube,D. 22.1.1985,1985-01-22,creation,"Cr. Troyes-5, Troyes-6 et Troyes-7 (division de l'ancien Troyes-3, qui disparaît)",791
+10,Aube,D. 22.1.1985,1985-01-22,creation,Cr. La Chapelle-St-Luc (Troyes-4 + Ste-Savine),791
+11,Aude,A. 13 Brumaire An X,1801-11-04,origine,Découpage d'origine,791
+11,Aude,A. 11 Messidor An X,1802-06-30,creation,Cr. Carcassonne-E. et Carcassonne-O. (dédoublement Carcassonne),791
+11,Aude,A. 17 Nivôse An XIII,1805-01-07,TCL,TCL Arques -> Couiza,791
+11,Aude,O. 26.1.1842,1842-01-26,TCL,TCL Roquefort -> Axat,791
+11,Aude,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Castelnaudary,791
+11,Aude,D. 9.8.1950,1950-08-09,transfert_arr,Transfert Tuchan (Arr. Carcassonne -> Arr. Narbonne),791
+11,Aude,D. 13.7.1973,1973-07-13,renommage,Changement dénomination : Carcassonne-E. devient Carcassonne-1,791
+11,Aude,D. 13.7.1973,1973-07-13,creation,Cr. Carcassonne-2 et Carcassonne-3 (dédoublement Carcassonne-O.),791
+11,Aude,D. 13.7.1973,1973-07-13,creation,"Cr. Narbonne-E., Narbonne-O. et Narbonne-S. (division Narbonne, qui disparaît)",791
+11,Aude,D. 22.1.1985,1985-01-22,fix_limites,Fix-limites : Narbonne-O. et Narbonne-S. ; Carcassonne-2 et Carcassonne-3,791
+12,Aveyron,A. 7 Frimaire An X,1801-11-28,origine,Découpage d'origine,791
+12,Aveyron,A. 26 Ventôse An XI,1803-03-17,TCL,TCL La Selve -> Réquista,791
+12,Aveyron,S.-C. 4.11.1808,1808-11-04,transfert_departement,Transfert au Tarn-et-Garonne du canton de St-Antonin (Arr. Villefranche),791
+12,Aveyron,L. 12.4.1881,1881-04-12,creation,Cr. Decazeville (division Aubin),791
+12,Aveyron,D. 6.3.1922,1922-03-06,TCL,TCL Asprières -> Capdenac-Gare,791
+12,Aveyron,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Espalion et Saint-Affrique,791
+12,Aveyron,D. 2.8.1973,1973-08-02,creation,Cr. Millau-E. et Millau-O. (dédoublement Millau),791
+12,Aveyron,D. 2.8.1973,1973-08-02,creation,Cr. Rodez-E. et Rodez-O. (dédoublement Rodez),791
+12,Aveyron,D. 2.8.1973,1973-08-02,TCL,TCL Sauveterre -> Baraqueville,791
+12,Aveyron,D. 15.1.1982,1982-01-15,creation,Cr. Rodez-N. (division Rodez-E. et Rodez-O.),791
+13,Bouches-du-Rhône,A. 17 Frimaire An X,1801-12-08,origine,Découpage d'origine,791
+13,Bouches-du-Rhône,A. 3 Brumaire An XI,1802-10-25,creation,Cr. Aubagne (division Roquevaire),791
+13,Bouches-du-Rhône,O. 22.2.1816,1816-02-22,transfert_sp,SP. transférée de Tarascon en Arles,791
+13,Bouches-du-Rhône,L. 13.7.1886,1886-07-13,creation,Cr. Marseille-7 et 8,791
+13,Bouches-du-Rhône,L. 19.6.1901,1901-06-19,creation,"Cr. Marseille-9, 10, 11 et 12",791
+13,Bouches-du-Rhône,L. 15.11.1932,1932-11-15,creation,Cr. Port-Saint-Louis (division Arles-O.),791
+13,Bouches-du-Rhône,D. 16.8.1973,1973-08-16,creation,Cr. Marseille-13 à Marseille-20 et Allauch (division des 12 anciens cantons),791
+13,Bouches-du-Rhône,D. 16.8.1973,1973-08-16,creation,Cr. Marignane (division Martigues),791
+13,Bouches-du-Rhône,D. 23.10.1981,1981-10-23,creation_arr,"Cr. Arr. Istres, avec 4 cantons de l'Arr. d'Aix-en-Provence (Berre-l'Étang, Istres, Marignane et Martigues) et 1 de l'Arr. d'Arles (Port-Saint-Louis)",791
+13,Bouches-du-Rhône,D. 2.2.1982,1982-02-02,creation,"Cr. Aix-N.E., Aix-S.O. et Aix-Centre (division Aix-N. et Aix-S., qui disparaissent)",791
+13,Bouches-du-Rhône,D. 2.2.1982,1982-02-02,creation,"Cr. Marseille 14 A, 14 B, 20 A et 20 B (division Marseille 11, 12, 13, 17, 18 et 19, qui demeurent, et Marseille 14 et 20, qui disparaissent)",792
+13,Bouches-du-Rhône,D. 14.4.1982,1982-04-14,transfert_arr,Transfert Port-Saint-Louis (Arr. Istres -> Arr. Arles),792
+14,Calvados,A. 6 Brumaire An X,1801-10-28,origine,Découpage d'origine,792
+14,Calvados,O. 30.12.1815,1815-12-30,fix_limites,Fix. limites et nouvelle dénomination des 2 cantons de Caen : Caen-E. et Caen-O.,792
+14,Calvados,O. 3.12.1831,1831-12-03,TCL,TCL Dives -> Dozulé,792
+14,Calvados,D. 27.11.1859,1859-11-27,renommage,Falaise 1re et 2e sections prennent le nom de Falaise-N. et Falaise-S.,792
+14,Calvados,L. 1.8.1872,1872-08-01,creation,Cr. Trouville (division Pont-L'Évêque),792
+14,Calvados,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Falaise et Pont-L'Évêque,792
+14,Calvados,D. 8.8.1967,1967-08-08,creation,Cr. Caen-N. et Caen-S. (division Caen-E. et Caen-O.),792
+14,Calvados,D. 2.8.1973,1973-08-02,creation,"Cr. Caen-1 à Caen-6 (division Caen-E., Caen-O., Caen-S. et Caen-N., qui disparaissent)",792
+14,Calvados,D. 26.1.1982,1982-01-26,creation,Cr. Cabourg (division Troarn),792
+14,Calvados,D. 26.1.1982,1982-01-26,creation,Cr. Ouistreham (division Douvres),792
+14,Calvados,D. 5.2.1982,1982-02-05,creation,Cr. Caen-7 à Caen-10 (division Caen-1 à 6),792
+15,Cantal,A. 27 Vendémiaire An X,1801-10-19,origine,Découpage d'origine,792
+15,Cantal,D. 4.7.1906,1906-07-04,TCL,TCL Marcenat -> Condat,792
+15,Cantal,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Murat,792
+15,Cantal,D. 23.7.1973,1973-07-23,creation,"Cr. Aurillac-1 à Aurillac-4 (division Aurillac-N. et Aurillac-S., qui disparaissent)",792
+15,Cantal,D. 20.1.1982,1982-01-20,creation,"Cr. Arpajon-sur-Cère (division Aurillac-1, Aurillac-2 et Aurillac-3)",792
+15,Cantal,D. 22.1.1985,1985-01-22,creation,"Cr. Jussac (division Aurillac-1, Aurillac-2 et Aurillac-3)",792
+16,Charente,A. 5 Brumaire An X,1801-10-27,origine,Découpage d'origine,792
+16,Charente,A. 9 Pluviôse An X,1802-01-29,creation,Cr. Confolens-N. et Confolens-S. (dédoublement Confolens),792
+16,Charente,L. 16.5.1863,1863-05-16,fix_limites,Fix. limites Angoulême-1 et 2,792
+16,Charente,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Barbézieux et Ruffec,792
+16,Charente,D. 13.7.1973,1973-07-13,creation,"Cr. La Couronne, Ruelle et Soyaux (division Angoulême-1 et Angoulême-2)",792
+16,Charente,D. 13.7.1973,1973-07-13,creation,Cr. Cognac-N. et Cognac-S. (dédoublement Cognac),792
+16,Charente,D. 15.1.1982,1982-01-15,creation,"Cr. Angoulême-N., Angoulême-E. et Angoulême-O. (division Angoulême-1 et 2, qui disparaissent)",792
+16,Charente,D. 15.1.1982,1982-01-15,creation,Cr. Le Gond-Pontouvre (division Ruelle),792
+17,Charente-Maritime,A. 27 Brumaire An X,1801-11-18,origine,Découpage d'origine de la Charente-Inférieure,792
+17,Charente-Maritime,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Mortagne/Gironde -> Cozes,792
+17,Charente-Maritime,A. 5 Frimaire An XI,1802-11-26,TCL,TCL Arvert -> La Tremblade,792
+17,Charente-Maritime,A. 5 Frimaire An XI,1802-11-26,creation,Cr. Royan (division Arvert),792
+17,Charente-Maritime,A. 29 Thermidor An XI,1803-08-17,creation,Cr. Ars (division St-Martin-de-Ré),793
+17,Charente-Maritime,D. 19.5.1810,1810-05-19,transfert_sp,Préfecture transférée de Saintes à La Rochelle,793
+17,Charente-Maritime,L. 29.6.1852,1852-06-29,creation,Cr. Rochefort-N. et Rochefort-S. (dédoublement Rochefort),793
+17,Charente-Maritime,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Marennes et St-Jean-d'Angély,793
+17,Charente-Maritime,L. 4.10.1941,1941-10-04,renommage_departement,Le département prend le nom de Charente-Maritime,793
+17,Charente-Maritime,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. St-Jean-d'Angély,793
+17,Charente-Maritime,D. 13.7.1973,1973-07-13,creation,"Cr. La Rochelle-1 à La Rochelle-4 (division La Rochelle-E. et La Rochelle-O., qui disparaissent)",793
+17,Charente-Maritime,D. 13.7.1973,1973-07-13,creation,Cr. Royan-E. et Royan-O. (dédoublement Royan),793
+17,Charente-Maritime,D. 15.1.1982,1982-01-15,creation,"Cr. La Rochelle-5 et La Rochelle-6 (division La Rochelle-1 à 4, qui demeurent)",793
+17,Charente-Maritime,D. 29.1.1985,1985-01-29,creation,"Cr. La Rochelle-7, La Rochelle-8, La Rochelle-9 et Aytré (division La Rochelle-1 à 6)",793
+17,Charente-Maritime,D. 29.1.1985,1985-01-29,creation,Cr. Rochefort-Centre (division Rochefort-N. et Rochefort-S.),793
+17,Charente-Maritime,D. 29.1.1985,1985-01-29,creation,"Cr. Saintes-E. et Saintes-O. (division Saintes-N., qui demeure, et Saintes-S., qui disparaît)",793
+18,Cher,A. 9 Fructidor An IX,1801-08-27,origine,Découpage d'origine,793
+18,Cher,O. 15.1.1817,1817-01-15,TCL,TCL Menetou-Salon -> St-Martin-d'Auxigny,793
+18,Cher,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Sancerre,793
+18,Cher,D. 2.8.1973,1973-08-02,creation,"Cr. Bourges-1 à Bourges-4 (division Bourges, qui disparaît)",793
+18,Cher,D. 2.8.1973,1973-08-02,creation,Cr. Vierzon-1 et Vierzon-2 (dédoublement Vierzon),793
+18,Cher,D. 20.1.1982,1982-01-20,creation,Cr. Bourges-5 (division Bourges-1),793
+18,Cher,D. 20.1.1982,1982-01-20,creation,Cr. Saint-Doulchard (division Mehun-sur-Yèvre),793
+18,Cher,D. 5.4.1984,1984-04-05,creation_arr,"Cr. Arr. Vierzon (division Arr. Bourges) : Vierzon-1 et 2, Argent-sur-Sauldre, Aubigny-sur-Nère, La Chapelle d'Angillon, Graçay, Lury-sur-Arnon, Mehun-sur-Yèvre",793
+19,Corrèze,A. 17 Brumaire An X,1801-11-08,origine,Découpage d'origine,793
+19,Corrèze,D. 2.3.1864,1864-03-02,TCL,TCL Servières -> St-Privat,793
+19,Corrèze,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Ussel,793
+19,Corrèze,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Ussel,793
+19,Corrèze,D. 13.9.1951,1951-09-13,creation,Cr. Brive-N. et Brive-S. (dédoublement Brive),793
+19,Corrèze,D. 2.2.1982,1982-02-02,creation,"Cr. Brive-Centre, Brive-N.E., Brive-N.O., Brive-S.E., Brive-S.O. et Malemort-sur-Corrèze (division Brive-N. et Brive-S., qui disparaissent)",793
+19,Corrèze,D. 2.2.1982,1982-02-02,creation,"Cr. Tulle-Urbain-N., Tulle-Urbain-S., Tulle-Campagne-N. (Naves) et Tulle-Campagne-S. (Laguenne) (division Tulle-N. et Tulle-S., qui disparaissent)",793
+19,Corrèze,D. 29.1.1985,1985-01-29,fix_limites,Fix. limites : Brive-N.O. et Brive-S.O.,793
+19,Corrèze,D. 29.1.1985,1985-01-29,creation,Cr. Ussel-O. et Ussel-E. (dédoublement Ussel),793
+20,Corse,S.-C. 19.4.1811,1811-04-19,fusion_departement,"Fusion des deux départements du Golo et du Liamone dans le département de la Corse. Le nombre des cantons (62) est inchangé. Mais l'arrondissement de Vico disparaît : 5 de ses cantons (Cruzini, Sevidentro, Sevinfuori, Sorroinsu et Vico) passent à l'arrondissement d'Ajaccio, et 1 (Niolo) à celui de Corte",794
+20,Corse,1814,1814-01-01,perte,Annexion par le royaume de Sardaigne du canton de l'île de Capraja,794
+20,Corse,O. 31.3.1824,1824-03-31,TCL,TCL Fiumorbo -> Ventiseri,794
+20,Corse,O. 13.4.1828,1828-04-13,renommage,Révision des chefs-lieux et dénominations des cantons (n’entraîne pas de modification du nombre : 61 cantons),794
+20,Corse,D. 2.4.1850,1850-04-02,TCL,TCL Algajola -> Muro,794
+20,Corse,L. 20.4.1861,1861-04-20,creation,Cr. Ghisoni (division Vezzani),794
+20,Corse,D. 21.12.1874,1874-12-21,renommage,Changement dénomination : Serraggio devient Venaco,794
+20,Corse,D.-L. 10.3.1926,1926-03-10,suppression_arr,Supp. Arr. Calvi,794
+20,Corse,O. 6.12.1943,1943-12-06,creation_arr,Rétab. Arr. Calvi,794
+20,Corse,D. 18.8.1973,1973-08-18,creation,"Cr. Ajaccio-1 à Ajaccio-5 (division Ajaccio, qui disparaît)",794
+20,Corse,D. 18.8.1973,1973-08-18,creation,"Cr. Bastia-3, Bastia-4 et Bastia-5 (division Bastia-1 et Bastia-2)",794
+20,Corse,D. 18.8.1973,1973-08-18,renommage,Changement dénomination et fix. limites : Ste-Lucie de Tallano et Serra-di-Scopamène deviennent Figari et Tallano-Scopamène,794
+20,Corse,D. 18.8.1973,1973-08-18,fusion,Fusion de 37 cantons donnant naissance à 17 cantons,794
+20,Corse,L. 15.5.1975,1975-05-15,scission_departement,"Séparation en 2 départements : Haute-Corse (Arr. Bastia, Calvi et Corte, 23 cantons) ; Corse du Sud (Arr. Ajaccio et Sartène, 20 cantons). Le nombre et les limites des cantons ne changent pas",794
+21,Côte-d'Or,A. 17 Vendémiaire An X,1801-10-09,origine,Découpage d'origine,794
+21,Côte-d'Or,L. 9.7.1907,1907-07-09,creation,Cr. Dijon-S. (division Dijon-O.),794
+21,Côte-d'Or,D. 27.3.1910,1910-03-27,TCL,TCL Flavigny -> Venarey,794
+21,Côte-d'Or,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Châtillon-sur-Seine,794
+21,Côte-d'Or,D.-L. 10.9.1926,1926-09-10,transfert_sp,SP. transférée de Semur à Montbard,794
+21,Côte-d'Or,D. 16.8.1973,1973-08-16,creation,"Cr. Dijon-1 à Dijon-8, Chenôve et Fontaine-les-Dijon (division Dijon-E., Dijon-O., Dijon-S. et Dijon-N., qui disparaissent)",794
+22,Côtes-du-Nord,A. 5 Brumaire An X,1801-10-27,origine,Découpage d'origine,795
+22,Côtes-du-Nord,O. 22.8.1821,1821-08-22,creation,Cr. Étables (Lanvollon + Plouha + Châteaulaudren),795
+22,Côtes-du-Nord,D. 8.12.1881,1881-12-08,TCL,TCL St-Jouan-de-L'Isle -> Caulnes,795
+22,Côtes-du-Nord,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Loudéac,795
+22,Côtes-du-Nord,D. 20.1.1982,1982-01-20,creation,"Cr. St-Brieuc-O., Langueux, Plévin et Ploufragan (division St-Brieuc-N. et S., qui demeurent)",795
+23,Creuse,A. 23 Vendémiaire An X,1801-10-21,origine,Découpage d'origine,795
+23,Creuse,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Bourganeuf et Boussac,795
+23,Creuse,D. 23.7.1973,1973-07-23,creation,"Cr. Guéret-N., Guéret-S.E. et Guéret-S.O. (division Guéret, qui disparaît)",795
+24,Dordogne,A. 17 Vendémiaire An X,1801-10-09,origine,Découpage d'origine,795
+24,Dordogne,A. 3 Brumaire An XI,1802-10-25,TCL,TCL Montagnac -> Villamblard,795
+24,Dordogne,O. 26.2.1817,1817-02-26,TCL,TCL Cunèges -> Sigoulès,795
+24,Dordogne,O. 10.6.1829,1829-06-10,TCL,TCL Grignols -> St-Astier,795
+24,Dordogne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Ribérac,795
+24,Dordogne,D. 13.7.1973,1973-07-13,creation,Cr. Bergerac-1 et Bergerac-2 (dédoublement Bergerac),795
+24,Dordogne,D. 13.7.1973,1973-07-13,creation,"Cr. Périgueux-Centre, Périgueux-N.E. et Périgueux-O. (division Périgueux, qui disparaît)",795
+25,Doubs,A. 27 Vendémiaire An X,1801-10-19,origine,Découpage d'origine,795
+25,Doubs,L. 9.1.1816,1816-01-09,rattachement,"Rattachement au Doubs de 2 cantons du Haut-Rhin (Montbéliard et Audincourt), qui forment avec les 5 cantons de l'Arr. St-Hippolyte (Blamont, Maîche, Pont-de-Roide, Le Russey et St-Hippolyte) le nouvel Arr. Montbéliard",795
+25,Doubs,D. 12.5.1898,1898-05-12,TCL,TCL Blamont -> Hérimoncourt,795
+25,Doubs,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Baume-les-Dames,795
+25,Doubs,D. 16.8.1973,1973-08-16,creation,Cr. Besançon-E. et Besançon-O. (division Besançon-N.),795
+25,Doubs,D. 16.8.1973,1973-08-16,creation,Cr. Montbéliard-E. et Montbéliard-O. (dédoublement Montbéliard),795
+25,Doubs,D. 16.8.1973,1973-08-16,creation,Cr. Sochaux-Grand-Charmont (division Audincourt),795
+25,Doubs,D. 20.1.1982,1982-01-20,creation,Cr. Besançon-N.E. et Besançon-N.O. (dédoublement Besançon-N.),795
+25,Doubs,D. 20.1.1982,1982-01-20,creation,Cr. Besançon-Planoise (division Besançon-O.),795
+25,Doubs,D. 20.1.1982,1982-01-20,creation,Cr. Étupes (division Sochaux-Grand-Charmont),795
+25,Doubs,D. 20.1.1982,1982-01-20,creation,Cr. Valentigney (division Audincourt),795
+26,Drôme,A. 9 Frimaire An X,1801-11-30,origine,Découpage d'origine,795
+26,Drôme,O. 12.3.1839,1839-03-12,TCL,TCL Pierrelatte -> St-Paul-Trois-Châteaux,795
+26,Drôme,L. 13.6.1856,1856-06-13,creation,Cr. Pierrelatte (division St-Paul-Trois-Châteaux),795
+26,Drôme,D.-L. 10.3.1926,1926-03-10,suppression_arr,Supp. Arr. Montélimar,796
+26,Drôme,D. 28.1.1964,1964-01-28,creation,Cr. Valence-N. et Valence-S. (dédoublement Valence),796
+26,Drôme,D. 23.7.1973,1973-07-23,creation,Cr. Montélimar-1 et Montélimar-2 (dédoublement Montélimar),796
+26,Drôme,D. 23.7.1973,1973-07-23,creation,Cr. Romans-1 et Romans-2 (dédoublement Romans),796
+26,Drôme,D. 23.7.1973,1973-07-23,creation,"Cr. Valence-1, Valence-2, Valence-3, Bourg-lès-Valence et Portes-lès-Valence (division Valence-N. et Valence-S., qui disparaissent)",796
+26,Drôme,D. 24.12.1984,1984-12-24,creation,Cr. Valence-4 (division Valence-1 à 3),796
+27,Eure,A. 27 Fructidor An IX,1801-09-14,origine,Découpage d'origine,796
+27,Eure,A. 15 Floréal An X,1802-05-05,creation,Cr. Etrepagny (Lyons + Gisors),796
+27,Eure,1814,1814-07-08,renommage,Changement dénomination : Chambrois devient Broglie (application de l'O. 8.7.1814),796
+27,Eure,O. 20.11.1821,1821-11-20,TCL,TCL Tourville -> Amfreville,796
+27,Eure,O. 2.4.1823,1823-04-02,TCL,TCL Grainville -> Écouis,796
+27,Eure,O. 23.8.1834,1834-08-23,TCL,TCL Écouis -> Fleury-sur-Andelle,796
+27,Eure,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Louviers et Pont-Audemer,796
+27,Eure,D. 20.1.1982,1982-01-20,creation,Cr. Évreux-E. et Évreux-O. (division Évreux-S.),796
+27,Eure,D. 20.1.1982,1982-01-20,creation,Cr. Louviers-N. et Louviers-S. (dédoublement Louviers),796
+27,Eure,D. 31.1.1985,1985-01-31,creation,Cr. Val-de-Reuil (division Pont-de-l'Arche),796
+27,Eure,D. 31.1.1985,1985-01-31,creation,Cr. Bernay-E. et Bernay-O. (dédoublement Bernay),796
+27,Eure,D. 31.1.1985,1985-01-31,creation,Cr. Gaillon-Campagne (division Gaillon),796
+28,Eure-et-Loir,A. 29 Fructidor An IX,1801-09-16,origine,Découpage d'origine,796
+28,Eure-et-Loir,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Nogent-le-Rotrou,796
+28,Eure-et-Loir,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Nogent-le-Rotrou,796
+28,Eure-et-Loir,D. 23.7.1973,1973-07-23,creation,"Cr. Chartres-N.E., Chartres-N.O., Chartres-S.E. et Chartres-S.O. (division de Chartres-N. et Chartres-S., qui disparaissent)",796
+28,Eure-et-Loir,D. 23.7.1973,1973-07-23,creation,Cr. Dreux-N.E. et Dreux-S.O. (dédoublement Dreux),796
+28,Eure-et-Loir,D. 15.1.1982,1982-01-15,creation,Cr. Lucé et Mainvilliers (dédoublement Chartres-N.O.),796
+28,Eure-et-Loir,D. 15.1.1982,1982-01-15,creation,"Cr. Dreux-E., Dreux-O. et Dreux-S. (division Dreux-N.E. et Dreux-S.O., qui disparaissent)",796
+29,Finistère,A. 7 Brumaire An X,1801-10-29,origine,Découpage d'origine,796
+29,Finistère,A. 3 Brumaire An XI,1802-10-25,TCL,TCL Plouguerneau -> Lannilis,796
+29,Finistère,O. 29.4.1829,1829-04-29,TCL,TCL Le Ponthou -> Plouigneau,796
+29,Finistère,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Quimperlé,796
+29,Finistère,D. 23.7.1973,1973-07-23,creation,"Cr. Brest-4, Brest-5, Brest-6 et Brest-7 (division Brest-1 à 3)",796
+29,Finistère,D. 23.7.1973,1973-07-23,creation,Cr. Quimper-1 et Quimper-2 (dédoublement Quimper),796
+29,Finistère,D. 15.1.1982,1982-01-15,creation,Cr. Guilvinec (division Pont-L'Abbé),796
+29,Finistère,D. 22.1.1985,1985-01-22,creation,Cr. Brest-8 et Guipavas (division Brest-1 et Brest-5 à 7),796
+29,Finistère,D. 22.1.1985,1985-01-22,creation,Cr. Quimper-3 (division Quimper-1 et Quimper-2),796
+2A,Corse-du-Sud,D. 2.2.1982,1982-02-02,creation,"Cr. Ajaccio-6 et Ajaccio-7 (division Ajaccio-4 et 5, qui demeurent)",794
+2B,Haute-Corse,D. 2.2.1982,1982-02-02,creation,Cr. Bastia-6 (division Bastia-5),794
+30,Gard,A. 23 Vendémiaire An X,1801-10-21,origine,Découpage d'origine,797
+30,Gard,A. 25 Ventôse An X,1802-03-16,transfert_arr,Transfert Alzan et St-André-de-Valborgne (Arr. Nîmes -> Arr. du Vigan),797
+30,Gard,A. 25 Ventôse An X,1802-03-16,transfert_arr,Transfert Aigues-Mortes (Arr. Uzès -> Arr. Nîmes),797
+30,Gard,A. 25 Ventôse An X,1802-03-16,suppression,"Supp. St-Martin-de-Valgalgues (-> La Grand-Combe, Alès)",797
+30,Gard,L. 18.5.1858,1858-05-18,creation,Cr. La Grand-Combe (St-Martin de Valgalgues + Génolhac),797
+30,Gard,L. 18.5.1858,1858-05-18,creation,Cr. Alès-E. et Alès-O. (dédoublement Alès),797
+30,Gard,L. 4.7.1868,1868-07-04,creation,Cr. Bessèges (Génolhac + St-Ambroix),797
+30,Gard,L. 13.3.1880,1880-03-13,fix_limites,Fix. limites Nîmes-1 et Nîmes-3,797
+30,Gard,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Uzès,797
+30,Gard,D. 23.7.1973,1973-07-23,creation,Cr. Alès-N.E. et Alès-S.E. (dédoublement Alès-E.),797
+30,Gard,D. 23.7.1973,1973-07-23,creation,Cr. Nîmes-4 et Nîmes-5 (division Nîmes-1 et Nîmes-3),797
+30,Gard,D. 20.1.1982,1982-01-20,creation,Cr. Nîmes-6 et La Vistrenque (= Bouillargues) (division Nîmes-3 à 5),797
+31,Haute-Garonne,A. 7 Frimaire An X,1801-11-28,origine,Découpage d'origine,797
+31,Haute-Garonne,A. 23 Germinal An X,1802-04-13,creation,Cr. Villemur (division Fronton),797
+31,Haute-Garonne,A. 3 Brumaire An XI,1802-10-25,TCL,TCL St-Félix -> Revel,797
+31,Haute-Garonne,A. 3 Brumaire An XI,1802-10-25,creation,Cr. Rieux (Montesquieu + Cazères + Fousseret),797
+31,Haute-Garonne,S.-C. 4.11.1808,1808-11-04,transfert_departement,Transfert au Tarn-et-Garonne de l'Arr. de Castelsarrasin (7 cantons),797
+31,Haute-Garonne,D. 11.4.1888,1888-04-11,TCL,TCL St-Bertrand -> Barbazan,797
+31,Haute-Garonne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Muret et Villefranche-de-Lauragais,797
+31,Haute-Garonne,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Muret,797
+31,Haute-Garonne,D. 16.8.1973,1973-08-16,creation,"Cr. Toulouse-1 à Toulouse-15 (division Toulouse-Centre, Toulouse-N., Toulouse-O. et Toulouse-S., qui disparaissent)",797
+32,Gers,A. 9 Brumaire An X,1801-10-31,origine,Découpage d'origine,797
+32,Gers,A. 23 Germinal An X,1802-04-13,TCL,TCL Barcelonne -> Riscle,797
+32,Gers,S.-C. 4.11.1808,1808-11-04,transfert_departement,Transfert au Tarn-et-Garonne du canton de Lavit (Arr. Lectoure),797
+32,Gers,D. 19.11.1817,1817-11-19,fix_limites,Fix. limites Auch-N. et Auch-S.,797
+32,Gers,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Lectoure et Lombez,797
+32,Gers,D. 2.8.1973,1973-08-02,creation,"Cr. Auch-N.E., Auch-S.E., Auch-N.O. et Auch-S.O. (division Auch-N. et Auch-S., qui disparaissent)",797
+32,Gers,D. 16.1.1985,1985-01-16,renommage,Changement dénomination : Auch-S.E. devient Auch-S.E.-Seissan,797
+33,Gironde,A. 5 Brumaire An X,1801-10-27,origine,Découpage d'origine,797
+33,Gironde,A. 17 Nivôse An XIII,1805-01-07,TCL,TCL Préchac -> Villandraut,797
+33,Gironde,L. 18.5.1864,1864-05-18,rattachement,"Annexions diverses à la Ville de Bordeaux (et inclusion de ces terrains annexés dans le 5e canton, par L. 3.6.1865)",797
+33,Gironde,L. 12.8.1888,1888-08-12,creation,Cr. Bordeaux-7 (division Bordeaux-5),798
+33,Gironde,L. 17.4.1906,1906-04-17,creation,Cr. Arcachon (division La Teste),798
+33,Gironde,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Bazas et Lesparre,798
+33,Gironde,D.-L. 10.9.1926,1926-09-10,transfert_sp,SP transférée de La Réole à Langon,798
+33,Gironde,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Lesparre,798
+33,Gironde,D. 24.9.1957,1957-09-24,creation,Cr. Mérignac (division Pessac),798
+33,Gironde,D. 13.7.1973,1973-07-13,creation,"Cr. Bordeaux-8, Bègles, Le Bouscat et Talence (division Bordeaux-1 à 7)",798
+33,Gironde,D. 13.7.1973,1973-07-13,creation,Cr. Cenon (division Carbon Blanc),798
+33,Gironde,D. 13.7.1973,1973-07-13,creation,Cr. Villeneuve-d'Ornon (division Pessac),798
+33,Gironde,D. 15.1.1982,1982-01-15,creation,Cr. Floirac (division Cenon),798
+33,Gironde,D. 15.1.1982,1982-01-15,creation,Cr. Gradignan (division Villeneuve d'Ornon),798
+33,Gironde,D. 15.1.1982,1982-01-15,creation,Cr. Lormont (division Carbon Blanc),798
+33,Gironde,D. 15.1.1982,1982-01-15,creation,Cr. Mérignac-1 et Mérignac-2 (dédoublement Mérignac),798
+33,Gironde,D. 15.1.1982,1982-01-15,creation,Cr. Pessac-1 et Pessac-2 (dédoublement Pessac),798
+33,Gironde,D. 15.1.1982,1982-01-15,creation,Cr. Saint-Médard en Jalles (division Blanquefort),798
+34,Hérault,A. 3 Brumaire An X,1801-10-25,origine,Découpage d'origine,798
+34,Hérault,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Lodève et St-Pons,798
+34,Hérault,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Lodève,798
+34,Hérault,D. 23.7.1973,1973-07-23,creation,Cr. Béziers-3 et Béziers-4 (division Béziers-1 et Béziers-2),798
+34,Hérault,D. 23.7.1973,1973-07-23,creation,Cr. Montpellier-4 à 9 (division Montpellier-2 et Montpellier-3),798
+34,Hérault,D. 23.7.1973,1973-07-23,creation,Cr. Sète-1 et Sète-2 (dédoublement Sète),798
+34,Hérault,D. 31.1.1985,1985-01-31,fix_limites,"Fix. limites : Béziers-1, Béziers-3 et Béziers-4 ; Sète-1 et Sète-2",798
+34,Hérault,D. 31.1.1985,1985-01-31,creation,"Cr. Montpellier-10 (division Montpellier-1 à 4, Montpellier-6 et 7 et Montpellier-9)",798
+35,Ille-et-Vilaine,A. 27 Brumaire An X,1801-11-18,origine,Découpage d'origine,798
+35,Ille-et-Vilaine,L. 19.7.1845,1845-07-19,renommage,Changement de dénomination et fix. limites : Vitré-N. et Vitré-S. deviennent Vitré-O. et Vitré-E.,798
+35,Ille-et-Vilaine,D. 31.7.1879,1879-07-31,TCL,TCL Pleurtuit -> Dinard,798
+35,Ille-et-Vilaine,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Montfort et Vitré,798
+35,Ille-et-Vilaine,A. 26.10.1967,1967-10-26,renommage,Changement de dénomination : Saint-Servan devient Saint-Malô-Sud et Saint-Malô devient Saint-Malô-Nord,798
+35,Ille-et-Vilaine,D. 23.7.1973,1973-07-23,creation,"Cr. Rennes-I à Rennes-X (division Rennes-N.E., Rennes-N.O., Rennes-S.E. et Rennes-S.O., qui disparaissent)",798
+35,Ille-et-Vilaine,D. 25.1.1982,1982-01-25,creation,Cr. Rennes VII-1 et Rennes VII-2 (dédoublement Rennes-VII),798
+35,Ille-et-Vilaine,D. 25.1.1982,1982-01-25,creation,Cr. Rennes VIII-1 et Rennes VIII-2 (dédoublement Rennes-VIII),798
+35,Ille-et-Vilaine,D. 16.1.1985,1985-01-16,renommage,"Changement dénomination : Rennes I-X deviennent Rennes-Centre, Rennes-Centre-O., Rennes-N.O., Rennes-N., Rennes-N.E., Rennes-E., Rennes-S.E., Rennes-Le Blosne, Bruz, Rennes-Breguigny, Rennes-Centre-S., Rennes-S.O.",799
+36,Indre,A. 9 Fructidor An IX,1801-08-27,origine,Découpage d'origine,799
+36,Indre,A. 26 Floréal An X,1802-05-16,fix_limites,Fix. limites Issoudun-S.O. et Issoudun-N.E.,799
+36,Indre,1830,1830-01-01,renommage,"Changement de dénomination : Issoudun-S.O. et Issoudun-N.E. deviennent Issoudun-Sud et Issoudun-Nord (changement coutumier, sans texte ; source : A.D.)",799
+36,Indre,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Issoudun,799
+36,Indre,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Issoudun,799
+36,Indre,D. 13.7.1973,1973-07-13,creation,"Cr. Chateauroux-Centre, Chateauroux-E., Chateauroux-O. et Chateauroux-S. (division Chateauroux, qui disparaît)",799
+36,Indre,D. 29.1.1985,1985-01-29,fix_limites,"Fix. limites : Chateauroux-O., Chateauroux-Centre, Chateauroux-S., Ardentes et Levroux ; Issoudun-N. et Issoudun-S.",799
+37,Indre-et-Loire,A. 5 Vendémiaire An X,1801-09-27,origine,Découpage d'origine,799
+37,Indre-et-Loire,A. 29 Thermidor An XI,1803-08-17,TCL,TCL St-Christophe -> Neuvy,799
+37,Indre-et-Loire,L. 21.7.1824,1824-07-21,transfert_arr,Transfert Chateau-La-Vallière (Arr. Chinon -> Arr. Tours),799
+37,Indre-et-Loire,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Loches,799
+37,Indre-et-Loire,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Loches,799
+37,Indre-et-Loire,D. 4.8.1956,1956-08-04,creation,Cr. Tours-E. et Tours-O. (division Tours-S.),799
+37,Indre-et-Loire,D. 23.7.1973 et 17.6.1974,1973-07-23,renommage,Changement dénomination : Tours-Centre devient Tours-Centre-1,799
+37,Indre-et-Loire,D. 23.7.1973 et 17.6.1974,1973-07-23,creation,"Cr. Tours-E.-2, Tours-N.-3, Tours-O.-4, Tours-S.-5, Tours-Val du Cher-6, Joué-les-Tours, St-Cyr-sur-Loire et St-Pierre-des-Corps (division Tours-E., Tours-N., Tours-O. et Tours-S.O. qui disparaissent)",799
+37,Indre-et-Loire,D. 20.1. et 5.2.1982,1982-01-20,creation,Cr. Ballan Miré (Montbazon + Joué-les-Tours) ; Cr. St-Avertin (division St-Pierre-des-Corps) ; Cr. Tours-N.E. et Tours-N.O. (dédoublement Tours-N.) ; Cr. Joué-les-Tours-N. et Joué-les-Tours-S. (dédoublement Joué-les-Tours),799
+37,Indre-et-Loire,D. 24.12.1984,1984-12-24,creation,Cr. Chambray-les-Tours (division Montbazon) ; Cr. Luynes (division St-Cyr-sur-Loire) ; Cr. Montlouis-sur-Loire (division St-Avertin) ; Fix. limites : Tours-Centre-1 et Tours-S.-5,799
+38,Isère,A. 9 Brumaire An X,1801-10-31,origine,Découpage d'origine,800
+38,Isère,A. 3 Brumaire An XI,1802-10-25,suppression,Supp. St-Quentin (-> Tullins),800
+38,Isère,A. 3 Brumaire An XI,1802-10-25,creation,Cr. Vinay (Tullins + Pont-en-Royans),800
+38,Isère,A. 26 Ventôse An XI,1803-03-17,creation,Cr. Virieu (St-Geoir + Grand-Lemps + La Tour du Pin),800
+38,Isère,D. 12.8.1835,1835-08-12,TCL,TCL Entraigues -> Valbonnais,800
+38,Isère,D. 24.3.1852,1852-03-24,cession_departement,"3 communes du canton de Meyzieu (Villeurbanne, Vaulx et Bron) et 1 commune du canton de St-Symphorien (Vénissieux) sont transférées au Rhône",800
+38,Isère,L. 14.4.1891,1891-04-14,fix_limites,"Fix. limites Grenoble-N., Grenoble-S. et Grenoble-E.",800
+38,Isère,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. St-Marcellin,800
+38,Isère,L. 23.12.1967,1967-12-23,cession_departement,"Rattachement au département du Rhône du canton de St-Symphorien d'Ozon, de 7 communes du canton de Meyzieux, de 4 communes du canton d'Heyrieux et d'une commune du canton de La Verpillière. Avec les 6 communes du canton de Meyzieux restant en Isère, est créé le canton de Pont de Chéruy (D. 1.8.1968)",800
+38,Isère,D. 20.10.1972,1972-10-20,transfert_arr,Transfert La Verpillière (Arr. Vienne -> Arr. La Tour du Pin),800
+38,Isère,D. 20.10.1972,1972-10-20,creation,"Cr. Grenoble-1 à 5, Échirolles, Meylan, St-Egrève et St-Martin d'Hères (division Grenoble-E., Grenoble-N. et Grenoble-S., qui disparaissent)",800
+38,Isère,D. 24.1.1985,1985-01-24,creation,"Cr. Fontaine-Sassenage et Fontaine-Seyssinet (division Villard-de-Lans, qui demeure, et Sassenage qui disparaît)",800
+38,Isère,D. 24.1.1985,1985-01-24,creation,"Cr. Échirolles-O., Échirolles-E., Eybens, St-Martin d'Hères-N. et St-Martin d'Hères-S. (division St-Martin d'Hères et Échirolles, qui disparaissent)",800
+38,Isère,D. 24.1.1985,1985-01-24,creation,Cr. Grenoble-6 (division Grenoble-3 et Grenoble-5),800
+38,Isère,D. 24.1.1985,1985-01-24,creation,Cr. Bourgoin-N. et Bourgoin-S. (dédoublement Bourgoin),800
+38,Isère,D. 24.1.1985,1985-01-24,creation,Cr. L'Isle d'Abeau (division La Verpillière),800
+39,Jura,A. 7 Brumaire An X,1801-10-29,origine,Découpage d'origine,800
+39,Jura,A. 9 Pluviôse An X,1802-01-29,TCL,TCL St-Laurent -> Petites Chiettes,800
+39,Jura,O. 31.1.1817,1817-01-31,TCL,TCL Petites Chiettes -> St-Laurent,800
+39,Jura,D. 11.8.1819,1819-08-11,TCL,TCL Cousance -> Beaufort,800
+39,Jura,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Poligny,800
+39,Jura,D. 13.7.1973,1973-07-13,creation,Cr. Dole-N.E. et Dole-S.O. (dédoublement Dole),800
+39,Jura,D. 13.7.1973,1973-07-13,creation,Cr. Lons-le-Saunier-N. et Lons-le-Saunier-S. (dédoublement Lons-le-Saunier),800
+40,Landes,A. 27 Vendémiaire An X,1801-10-19,origine,Découpage d'origine,800
+40,Landes,D. 31.3.1858,1858-03-31,TCL,TCL St-Esprit -> St-Martin de Seignanx,800
+40,Landes,D. 31.3.1888,1888-03-31,TCL,TCL Arjuzanx -> Morcenx,800
+40,Landes,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. St-Sever,800
+40,Landes,D. 13.7.1973,1973-07-13,creation,Cr. Dax-N. et Dax-S. (dédoublement Dax),800
+40,Landes,D. 13.7.1973,1973-07-13,creation,Cr. Mont-de-Marsan-N. et Mont-de-Marsan-S. (dédoublement Mont-de-Marsan),800
+41,Loir-et-Cher,A. 5 Vendémiaire An X,1801-09-27,origine,Découpage d'origine,801
+41,Loir-et-Cher,A. 3 Brumaire An XI,1802-10-25,TCL,TCL Chaumont-sur-Tharonne -> Lamotte-Beuvron,801
+41,Loir-et-Cher,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Romorantin,801
+41,Loir-et-Cher,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Romorantin,801
+41,Loir-et-Cher,D. 13.7.1973,1973-07-13,creation,"Cr. Blois-1 à Blois-4 (division Blois-E. et Blois-O., qui disparaissent)",801
+41,Loir-et-Cher,D. 20.1.1982,1982-01-20,creation,Cr. Blois-5 (division Blois-4),801
+41,Loir-et-Cher,D. 20.1.1982,1982-01-20,creation,Cr. Vendôme-1 et Vendôme-2 (dédoublement Vendôme),801
+41,Loir-et-Cher,D. 24.12.1984,1984-12-24,creation,Cr. Vineuil (division Blois-2),801
+41,Loir-et-Cher,D. 24.12.1984,1984-12-24,creation,Cr. Romorantin-N. et Romorantin-S. (dédoublement Romorantin),801
+42,Loire,A. 27 Brumaire An X,1801-11-18,origine,Découpage d'origine,801
+42,Loire,D. 4.5.1825,1825-05-04,TCL,TCL Chazelles-sur-Lyon -> St-Galmier,801
+42,Loire,D. 19.8.1831,1831-08-19,fix_limites,Fix. limites St-Étienne-E. et St-Étienne-O.,801
+42,Loire,D. 25.7.1855,1855-07-25,transfert_sp,Préfecture transférée de Montbrison à St-Étienne,801
+42,Loire,L. 9.5.1860,1860-05-09,creation,"Cr. St-Étienne-N.E., St-Étienne-N.O., St-Étienne-S.E. et St-Étienne-S.O. (division des 2 anciens cantons, qui disparaissent)",801
+42,Loire,L. 29.11.1901,1901-11-29,creation,Cr. Firminy (division Le Chambon-Feugerolles),801
+42,Loire,L. 2.7.1925,1925-07-02,creation,Cr. Chazelles-sur-Lyon (division St-Galmier),801
+42,Loire,D. 13.7.1973,1973-07-13,creation,Cr. Roanne-N. et Roanne-S. (dédoublement Roanne),801
+42,Loire,D. 13.7.1973,1973-07-13,creation,"Cr. St-Étienne-N.E.-1, St-Étienne-N.E.-2, St-Étienne-S.E.-1, St-Étienne-S.E.-2, St-Étienne-S.E.-3, St-Étienne-S.O.-1, St-Étienne-S.O.-2, St-Étienne-N.O.-1 et St-Étienne-N.O.-2 (division de St-Étienne-N.E., N.O., S.E. et S.O., qui disparaissent)",801
+42,Loire,D. 13.7.1973,1973-07-13,creation,Cr. Le Grand Croix (Rive de Gier + St-Chamond),801
+42,Loire,D. 24.12.1984,1984-12-24,creation,Cr. St-Chamond-N. et St-Chamond-S. (dédoublement St-Chamond),801
+43,Haute-Loire,A. 5 Brumaire An X,1801-09-27,origine,Découpage d'origine,801
+43,Haute-Loire,A. 9 Pluviôse An X,1802-01-29,TCL,TCL St-Ilpize -> La Voutte,801
+43,Haute-Loire,A. 25 Ventôse An X,1802-03-16,fix_limites,Fix. limites Le Puy-N.O. et Le Puy-S.E.,801
+43,Haute-Loire,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Yssingeaux,801
+43,Haute-Loire,L. 21.4.1932,1932-04-21,creation,Cr. Retournac (Yssingeaux + Bas),801
+43,Haute-Loire,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Yssingeaux,801
+43,Haute-Loire,D. 2.8.1973,1973-08-02,creation,"Cr. Le Puy-N., Le Puy-E., Le Puy-O. et Le Puy-S.O. (division Le Puy-N.O. qui disparaît, et Le Puy-S.E. qui demeure)",801
+43,Haute-Loire,D. 24.12.1984,1984-12-24,creation,Cr. Aurec-sur-Loire (division St-Didier-en-Velay),801
+43,Haute-Loire,D. 24.12.1984,1984-12-24,creation,Cr. Ste Sigolène (division Monistrol-sur-Loire et St-Didier-en-Velay),801
+43,Haute-Loire,D. 24.12.1984,1984-12-24,creation,Cr. Brioude-N. et Brioude-S. (dédoublement Brioude),801
+44,Loire-Atlantique,A. 15 Brumaire An X,1801-11-06,origine,Découpage d'origine de la Loire-Inférieure,802
+44,Loire-Atlantique,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Vieillevigne -> Aigrefeuille,802
+44,Loire-Atlantique,D. 22.1.1868,1868-01-22,transfert_sp,SP transférée de Savenay à St-Nazaire,802
+44,Loire-Atlantique,L. 3.4.1908,1908-04-03,creation,Cr. Nantes-7 (division Nantes-6),802
+44,Loire-Atlantique,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Ancenis et Paimboeuf,802
+44,Loire-Atlantique,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Ancenis,802
+44,Loire-Atlantique,D. 9.3.1957,1957-03-09,renommage_departement,Le département prend le nom de Loire-Atlantique,802
+44,Loire-Atlantique,D. 23.7.1973,1973-07-23,creation,"Cr. Nantes-8 à Nantes-10, et St-Herblain (division Nantes-1 à Nantes-7)",802
+44,Loire-Atlantique,D. 23.7.1973,1973-07-23,creation,"Cr. St-Nazaire-E., St-Nazaire-O. et Montoir-de-Bretagne (division St-Nazaire qui disparaît)",802
+44,Loire-Atlantique,D. 23.7.1973,1973-07-23,creation,Cr. Rézé (division Bouaye),802
+44,Loire-Atlantique,D. 20.8.1976,1976-08-20,transfert_arr,Transfert Le Pellerin et St-Étienne de Mont Luc (Arr. St-Nazaire -> Arr. Nantes),802
+44,Loire-Atlantique,D. 20.1.1982,1982-01-20,creation,Cr. Orvault (division La Chapelle-sur-Erdre),802
+44,Loire-Atlantique,D. 20.1.1982,1982-01-20,creation,Cr. St-Herblain-E. et St-Herblain-O.-Indre (dédoublement St-Herblain),802
+44,Loire-Atlantique,D. 20.1.1982,1982-01-20,creation,Cr. St-Nazaire-O.-Pornichet et St-Nazaire-Centre (dédoublement St-Nazaire-O.),802
+44,Loire-Atlantique,D. 29.1.1985,1985-01-29,creation,Cr. Vertou-Vignoble (= Basse-Goulaine) (division Vertou),802
+44,Loire-Atlantique,D. 29.1.1985,1985-01-29,creation,Cr. La Baule Escoublac (division St-Nazaire et Guérande),802
+44,Loire-Atlantique,D. 29.1.1985,1985-01-29,fix_limites,Fix. limites : St-Nazaire-Centre - St-Nazaire-O. ; Nantes-6 et Nantes-7,802
+44,Loire-Atlantique,D. 29.1.1985,1985-01-29,creation,Cr. Nantes-11 (division Nantes-5),802
+45,Loiret,A. 9 Vendémiaire An X,1801-10-01,origine,Découpage d'origine,802
+45,Loiret,A. 25 Ventôse An X,1802-03-16,fix_limites,"Fix. limites Orléans-1, Orléans-2 et Orléans-3",802
+45,Loiret,D. 21.8.1806,1806-08-21,TCL,TCL Bazoches -> Outarville,802
+45,Loiret,D. 21.8.1806,1806-08-21,creation,"Cr. Orléans-E., Orléans-O., Orléans-S., Orléans-N.O. et Orléans-N.E. (Orléans-1 à 3 disparaissant)",802
+45,Loiret,D. 21.8.1806,1806-08-21,creation,Cr. Artenay (Ingré + Neuville + Patay),802
+45,Loiret,D. 21.8.1806,1806-08-21,suppression,Supp. Ingré (-> Orléans-N.O. + Patay + Artenay),802
+45,Loiret,D. 21.8.1806,1806-08-21,suppression,Supp. Checy (-> Orléans-N.E. + Chateauneuf + Neuville),802
+45,Loiret,D. 21.8.1806,1806-08-21,suppression,Supp. Olivet (-> Orléans-S.),802
+45,Loiret,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Gien et Pithiviers,802
+45,Loiret,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Pithiviers,802
+45,Loiret,D. 23.7.1973,1973-07-23,creation,"Cr. Amilly et Chalette-sur-Loing (division Montargis, qui demeure)",802
+45,Loiret,D. 23.7.1973,1973-07-23,renommage,Changement dénomination : Orléans-E. devient Orléans-1 et Orléans-O. devient Orléans-2,802
+45,Loiret,D. 23.7.1973,1973-07-23,creation,"Cr. Orléans-3, Fleury-les-Aubrais et Saint-Jean-de-la-Ruelle (division Orléans-N.O., qui disparaît)",802
+45,Loiret,D. 23.7.1973,1973-07-23,creation,Cr. Orléans-4 et St-Jean-de-Braye (dédoublement Orléans-N.E.),802
+45,Loiret,D. 23.7.1973,1973-07-23,creation,Cr. Orléans-5 et Olivet (dédoublement Orléans-S.),802
+45,Loiret,D. 25.1.1982,1982-01-25,creation,"Cr. Orléans-Bourgogne, Orléans-Carmes, Orléans-Bannier et Orléans St-Marc Argonne (suppression Orléans-1 à 4)",803
+45,Loiret,D. 25.1.1982,1982-01-25,creation,Cr. Orléans-St-Marceau et Orléans-La Source (dédoublement Orléans-5),803
+45,Loiret,D. 25.1.1982,1982-01-25,creation,Cr. Chécy (division St-Jean-de-Braye),803
+45,Loiret,D. 25.1.1982,1982-01-25,creation,Cr. Ingré (St-Jean-de-la-Ruelle + Fleury-les-Aubrais),803
+45,Loiret,D. 25.1.1982,1982-01-25,creation,Cr. St-Jean-le-Blanc (division Olivet),803
+46,Lot,A. 13 Brumaire An X,1801-11-04,origine,Découpage d'origine,803
+46,Lot,S.-C. 4.11.1808,1808-11-04,transfert_departement,Transfert au Tarn-et-Garonne de l'Arr. Montauban (12 cantons),803
+46,Lot,D. 8.7.1818,1818-07-08,TCL,TCL Gorses -> Latronquière,803
+46,Lot,D. 5.9.1949,1949-09-05,creation,Cr. Sousceyrac (Latronquière + Bretenoux + St-Céré),803
+46,Lot,D. 24.12.1984,1984-12-24,creation,Cr. Cahors-N.O. et Cahors-N.E. (dédoublement Cahors-N.),803
+47,Lot-et-Garonne,A. 7 Brumaire An X,1801-10-29,origine,Découpage d'origine,803
+47,Lot-et-Garonne,L. 15.9.1807,1807-09-15,transfert_arr,Transfert Casteljaloux et Damazan (Arr. Marmande -> Arr. Nérac),803
+47,Lot-et-Garonne,S.-C. 4.11.1808,1808-11-04,transfert_departement,"Transfert au Tarn-et-Garonne des cantons de Montaigu, Auvillard et Valence (Arr. d'Agen)",803
+47,Lot-et-Garonne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Nérac,803
+47,Lot-et-Garonne,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Nérac,803
+47,Lot-et-Garonne,D. 13.7.1973,1973-07-13,creation,"Cr. Agen-Centre, Agen-E., Agen-N. et Agen-O. (division Agen-1 et Agen-2, qui disparaissent)",803
+47,Lot-et-Garonne,D. 13.7.1973,1973-07-13,creation,Cr. Marmande-E. et Marmande-O. (dédoublement Marmande),803
+47,Lot-et-Garonne,D. 13.7.1973,1973-07-13,creation,Cr. Villeneuve-sur-Lot-N. et Villeneuve-sur-Lot-S. (dédoublement Villeneuve-sur-Lot),803
+47,Lot-et-Garonne,D. 24.12.1984,1984-12-24,creation,Cr. Agen-S.E. et Agen-N.E. (dédoublement Agen-E.),803
+48,Lozère,A. 5 Brumaire An X,1801-10-27,origine,Découpage d'origine,803
+48,Lozère,A. 29 Thermidor An XI,1803-08-17,TCL,TCL St-Alban -> Serverette,803
+48,Lozère,O. 1.9.1827,1827-09-01,TCL,TCL Chirac -> St-Germain du Teil,803
+48,Lozère,O. 11.8.1839,1839-08-11,TCL,TCL St-Georges de Levejac -> Le Massegros,803
+48,Lozère,D. 9.3.1897,1897-03-09,TCL,TCL Serverette -> St-Alban,803
+48,Lozère,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Marvejols,803
+48,Lozère,D. 15.1.1982,1982-01-15,creation,Cr. Mende-N. et Mende-S. (dédoublement Mende),803
+49,Maine-et-Loire,A. 27 Brumaire An X,1801-11-18,origine,Découpage d'origine,803
+49,Maine-et-Loire,L. 20.3.1806,1806-03-20,transfert_arr,Transfert Durtal (Arr. Segré -> Arr. Baugé),803
+49,Maine-et-Loire,L. 14.7.1819,1819-07-14,transfert_arr,Transfert Briollay (Arr. Segré -> Arr. Angers),803
+49,Maine-et-Loire,L. 21.7.1824,1824-07-21,transfert_arr,Transfert Thouarcé (Arr. Saumur -> Arr. Angers),803
+49,Maine-et-Loire,D. 16.11.1857,1857-11-16,transfert_sp,SP transférée de Beaupréau à Cholet,803
+49,Maine-et-Loire,L. 3.2.1875,1875-02-03,TCL,TCL Briollay -> Tiercé,803
+49,Maine-et-Loire,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Baugé,804
+49,Maine-et-Loire,D. 10.8.1961,1961-08-10,creation,Cr. Cholet-O. et Cholet-E. (dédoublement Cholet),804
+49,Maine-et-Loire,D. 30.5.1963,1963-05-30,TCL,TCL Saumur-N.E. -> Allonnes (et fix. limites),804
+49,Maine-et-Loire,D. 28.1.1964,1964-01-28,creation,Cr. Angers-N. et Angers-E. (dédoublement Angers-N.E.),804
+49,Maine-et-Loire,D. 28.1.1964,1964-01-28,renommage,"Changement dénomination : Angers-N.O. devient Angers-O., et Angers-S.E. devient Angers-S.",804
+49,Maine-et-Loire,D. 23.7.1973,1973-07-23,renommage,Changement dénomination : Angers-E. devient Angers-3,804
+49,Maine-et-Loire,D. 23.7.1973,1973-07-23,creation,"Cr. Angers-1, Angers-2, Angers-4 à 7 (division Angers-N., Angers-O. et Angers-S., qui disparaissent)",804
+49,Maine-et-Loire,D. 23.7.1973,1973-07-23,creation,Cr. Cholet-1 à Cholet-3 (division Cholet-O. et Cholet-E. qui disparaissent),804
+49,Maine-et-Loire,D. 16.10.1975,1975-10-16,fix_limites,Fixation limites : Angers-1 et 2 ; Angers-4 à 7 ; Cholet-1 et Cholet-2,804
+49,Maine-et-Loire,D. 20.1.1982,1982-01-20,creation,Cr. Angers-8 (division Angers-7),804
+49,Maine-et-Loire,D. 23.1.1985,1985-01-23,fix_limites,"Fixation limites : Angers-3, Angers-4 et Angers-5",804
+49,Maine-et-Loire,D. 23.1.1985,1985-01-23,renommage,"Changement dénomination : Angers-1 à 8 deviennent Angers-N.E., Angers-E., Angers-S., Angers-Centre, Angers-Trélazé, Angers-O., Angers-N., Angers-N.O.",804
+50,Manche,A. 23 Vendémiaire An X,1801-10-15,origine,Découpage d'origine,804
+50,Manche,A. 23 Germinal An X,1802-04-13,transfert_arr,"Transfert Isigny, St-Hilaire de Harcouët et Barenton (Arr. St-Lô -> Arr. Mortain)",804
+50,Manche,D. 19.7.1811,1811-07-19,creation_arr,"Cr. Arr. Cherbourg (division Arr. Valognes) : cantons de Beaumont, Cherbourg, Les Pieux, Octeville, St-Pierre-L’Église",804
+50,Manche,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Mortain et Valognes,804
+50,Manche,D. 11.2.1952,1952-02-11,transfert_arr,Transfert La Haye-Pesnel (Arr. Coutances -> Arr. Avranches),804
+50,Manche,D. 20.6.1963,1963-06-20,transfert_arr,Transfert Barneville-sur-Mer et St-Sauveur-le-Vicomte (Arr. Coutances -> Arr. Cherbourg),804
+50,Manche,D. 20.6.1963,1963-06-20,transfert_arr,Transfert Cerisy-la-Salle (Arr. St-Lô -> Arr. Coutances),804
+50,Manche,D. 13.7.1973,1973-07-13,creation,Cr. Cherbourg-N.O. et Cherbourg-S.E. (dédoublement Cherbourg),804
+50,Manche,D. 13.7.1973,1973-07-13,creation,Cr. Equeurdreville-Hainneville et Tourlaville (division Octeville),804
+50,Manche,D. 15.1.1982,1982-01-15,creation,Cr. St-Lô-E. et St-Lô-O. (dédoublement St-Lô),804
+51,Marne,A. 29 Fructidor An IX,1801-09-16,origine,Découpage d'origine,804
+51,Marne,L. 21.7.1824,1824-07-21,transfert_arr,Transfert Vertus (Arr. Épernay -> Arr. Châlons),804
+51,Marne,L. 20.2.1889,1889-02-20,creation,"Cr. Reims-4 (division Reims-1, Reims-2 et Reims-3)",804
+51,Marne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Ste-Menehould,804
+51,Marne,D. 13.9.1940,1940-09-13,creation_arr,Rétab. Arr. Ste-Menehould,804
+51,Marne,D. 4.6.1957,1957-06-04,TCL,TCL Dommartin-sur-Yèvre -> Givry-en-Argonne,804
+51,Marne,D. 13.7.1973,1973-07-13,creation,"Cr. Châlons-1 à 3 (division Châlons, qui disparaît)",805
+51,Marne,D. 13.7.1973,1973-07-13,creation,Cr. Épernay-1 et Épernay-2 (dédoublement Épernay),805
+51,Marne,D. 13.7.1973,1973-07-13,creation,Cr. Reims-5 à Reims-8 (division Reims-1 à 4),805
+51,Marne,D. 13.7.1973,1973-07-13,creation,Cr. Vitry-le-François-E. et Vitry-le-François-O. (dédoublement Vitry-le-François),805
+51,Marne,D. 13.7.1973,1973-07-13,creation,Cr. Reims-9 (division Reims-7),805
+51,Marne,D. 15.1.1982,1982-01-15,creation,Cr. Châlons-4 (division Châlons-1 et Châlons-2),805
+51,Marne,D. 31.1.1985,1985-01-31,creation,Cr. Reims-10 (division Reims-4 et Reims-8),805
+52,Haute-Marne,A. 17 Brumaire An X,1801-10-08,origine,Découpage d'origine,805
+52,Haute-Marne,1814,1814-07-08,renommage,Changement dénomination : Ville-sur-Aujon devient Châteauvillain (application de l'O. 8.7.1814),805
+52,Haute-Marne,O. 6.9.1825,1825-09-06,TCL,TCL Sailly -> Poissons,805
+52,Haute-Marne,O. 17.2.1834,1834-02-17,TCL,TCL Donjeux -> Doulaincourt,805
+52,Haute-Marne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Wassy,805
+52,Haute-Marne,D. 14.11.1940,1940-11-14,creation_arr,Rétab. Arr. Wassy,805
+52,Haute-Marne,D. 22.1.1943,1943-01-22,transfert_sp,SP transférée de Wassy à St-Dizier,805
+52,Haute-Marne,A. 1.6.1972,1972-06-01,renommage,Changement dénomination : Montigny-le-Roi devient Val-de-Meuse,805
+52,Haute-Marne,A. 19.6.1972,1972-06-19,renommage,Changement dénomination : Doulevant devient Blaiserives,805
+52,Haute-Marne,A. 20.6.1972,1972-06-20,renommage,Changement dénomination : Fays-Billot devient Fayl-la-Forêt,805
+52,Haute-Marne,A. 4.7.1972,1972-07-04,renommage,Changement dénomination : Varennes-sur-Amance devient Terre-Natale,805
+52,Haute-Marne,D. 16.8.1973,1973-08-16,creation,Cr. Chaumont-N. et Chaumont-S. (dédoublement Chaumont),805
+52,Haute-Marne,D. 16.8.1973,1973-08-16,creation,"Cr. St-Dizier-Centre, St-Dizier-E. et St-Dizier-O. (division St-Dizier, qui disparaît)",805
+52,Haute-Marne,D. 15.1.1982,1982-01-15,creation,Cr. St-Dizier-N.E. et St-Dizier-S.E. (dédoublement St-Dizier-E.),805
+53,Mayenne,A. 13 Brumaire An X,1801-10-04,origine,Découpage d'origine,805
+53,Mayenne,A. 25 Ventôse An X,1802-03-16,renommage,Fix. limites et changement dénomination : Mayenne-N.E. et Mayenne-S.O. deviennent Mayenne-E. et Mayenne-O.,805
+53,Mayenne,L. 31.5.1872,1872-05-31,fix_limites,Fix. limites Laval-E. et Laval-O.,805
+53,Mayenne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Château-Gontier,805
+53,Mayenne,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Château-Gontier,805
+53,Mayenne,D. 13.7.1973,1973-07-13,creation,"Cr. Laval-N.E., Laval-N.O., Laval-S.E. et Laval-S.O. (division Laval-E. et Laval-O., qui disparaissent)",805
+53,Mayenne,D. 15.1.1982,1982-01-15,creation,Cr. Laval-E. et Laval-St-Nicolas (dédoublement Laval-S.E.),805
+53,Mayenne,D. 24.12.1984,1984-12-24,creation,"Cr. St-Berthevin (division Laval-N.O., Laval-S.O. et Laval-E.)",805
+53,Mayenne,D. 24.12.1984,1984-12-24,creation,Cr. Château-Gontier-E. et Château-Gontier-O. (dédoublement Château-Gontier),805
+54,Meurthe-et-Moselle,A. 17 Frimaire An X,1801-12-08,origine,Découpage d'origine de la Meurthe,806
+54,Meurthe-et-Moselle,L. 11.4.1821,1821-04-11,transfert_arr,Transfert Vézelise et Haroué (Arr. Lunéville -> Arr. Nancy),806
+54,Meurthe-et-Moselle,O. 28.12.1825,1825-12-28,fix_limites,Fix. limites Lunéville-N. et Lunéville-S.,806
+54,Meurthe-et-Moselle,Traité de Francfort 10.5.1871,1871-05-10,perte,"La Meurthe perd : dans l'Arr. de Château-Salins les cantons d'Albestroff, Delme, Dieuze et Château-Salins (moins Mazerulles, Moncel et Sorneville) et 15 communes de Vic-sur-Seille (dont 9 restent françaises) ; dans l'Arr. de Sarrebourg les cantons de Fénétrange, Phalsbourg et Sarrebourg, 18 communes de Lorquin (dont 8 restent françaises) et le canton de Réchicourt (moins Igney et une partie d'Avricourt, rendues par la Convention du 12.10.1871)",806
+54,Meurthe-et-Moselle,L. 7.9.1871,1871-09-07,rattachement,"Rattache à la Meurthe les territoires restés français de la Moselle, constitués en Arr. de Briey, comportant les cantons d'Audun-le-Roman (moins 7 communes), Briey, Conflans, Longuyon, Longwy et 12 communes du canton de Gorze",806
+54,Meurthe-et-Moselle,L. 7.9.1871,1871-09-07,renommage_departement,Le département prend le nom de Meurthe-et-Moselle,806
+54,Meurthe-et-Moselle,D. 16.9.1871,1871-09-16,creation,"Érige en cantons les 12 communes de l'ancien canton de Gorze, les 8 communes de l'ancien canton de Lorquin et les 9 communes de l'ancien canton de Vic-sur-Seille",806
+54,Meurthe-et-Moselle,L. 21.3.1873,1873-03-21,renommage,"Donne aux cantons créés le 16.9.1871 les noms de Chambley (Arr. Briey), Cirey et Arracourt (Arr. Lunéville)",806
+54,Meurthe-et-Moselle,L. 21.6.1873,1873-06-21,rattachement,Rattachement à la commune d'Igney (canton Blamont) de la partie restée française de la commune d'Avricourt,806
+54,Meurthe-et-Moselle,L. 8.4.1879,1879-04-08,creation,Cr. Nancy-S. (division Nancy-E.),806
+54,Meurthe-et-Moselle,L. 8.4.1879,1879-04-08,creation,Cr. Badonviller (dédoublement Baccarat),806
+54,Meurthe-et-Moselle,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Toul,806
+54,Meurthe-et-Moselle,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Toul,806
+54,Meurthe-et-Moselle,D. 2.8.1973,1973-08-02,creation,"Cr. Herserange, Mont-St-Martin et Villerupt (division Longwy)",806
+54,Meurthe-et-Moselle,D. 2.8.1973,1973-08-02,creation,Cr. Homécourt (division Briey),806
+54,Meurthe-et-Moselle,D. 2.8.1973,1973-08-02,creation,"Cr. Neuves-Maisons, Pompey, St-Max et Vandoeuvre-les-Nancy (division Nancy-N., Nancy-O., Nancy-E. et Nancy-S., qui demeurent)",806
+54,Meurthe-et-Moselle,D. 25.1.1982,1982-01-25,creation,Cr. Jarville-la-Malgrange (division Neuves-Maisons),806
+54,Meurthe-et-Moselle,D. 25.1.1982,1982-01-25,creation,Cr. Laxou (Pompey + Vandoeuvre-les-Nancy),806
+54,Meurthe-et-Moselle,D. 25.1.1982,1982-01-25,creation,Cr. Tomblaine (St-Nicolas + St-Max),806
+54,Meurthe-et-Moselle,D. 24.12.1984,1984-12-24,creation,Cr. Dieulouard (division Pont-à-Mousson),806
+55,Meuse,A. 27 Vendémiaire An X,1801-10-19,origine,Découpage d'origine,806
+55,Meuse,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Montmédy,806
+55,Meuse,A. 20.12.1972,1972-12-20,renommage,Changement dénomination : Triaucourt devient Seuil d'Argonne,806
+55,Meuse,D. 23.7.1973,1973-07-23,creation,Cr. Bar-le-Duc-N. et Bar-le-Duc-S. (dédoublement Bar-le-Duc),807
+55,Meuse,D. 23.7.1973,1973-07-23,creation,Cr. Verdun-E. et Verdun-O. (dédoublement Verdun),807
+55,Meuse,D. 26.1.1982,1982-01-26,creation,Cr. Verdun-Centre (division Verdun-E. et Verdun-O.),807
+56,Morbihan,A. 3 Brumaire An X,1801-10-25,origine,Découpage d'origine,807
+56,Morbihan,O. 20.1.1837,1837-01-20,TCL,TCL Carentoir -> La Gacilly,807
+56,Morbihan,L. 4.1.1923,1923-01-04,creation,Cr. Groix (division Port-Louis),807
+56,Morbihan,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Ploërmel,807
+56,Morbihan,D. 20.1. et 5.2.1982,1982-01-20,creation,Cr. Lanester (division Pont-Scorff),807
+56,Morbihan,D. 20.1. et 5.2.1982,1982-01-20,creation,"Cr. Lorient-Centre, Lorient-N., Lorient-S. et Ploemeur (division Lorient-1 et Lorient-2, qui disparaissent)",807
+56,Morbihan,D. 20.1. et 5.2.1982,1982-01-20,creation,Cr. Vannes-Centre (division Vannes-E. et Vannes-O.),807
+57,Moselle,A. 29 Vendémiaire An X,1801-10-21,origine,Découpage d'origine,807
+57,Moselle,A. 15 Floréal An X,1802-05-05,TCL,TCL Puttelange -> Sarralbe,807
+57,Moselle,D. 18.7.1806,1806-07-18,TCL,TCL Lannstroff -> Sierck,807
+57,Moselle,1er Traité de Paris 30.5.1814,1814-05-30,perte,"Perte du canton de Tholey et d'une grande partie du canton de Sierck, annexés par la Prusse",807
+57,Moselle,O. 18.8.1814,1814-08-18,rattachement,"Rattache à la Moselle (Arr. Sarreguemines) les cantons de Sarrebruck et St-Jean, provenant du département de Sarre",807
+57,Moselle,2e Traité de Paris 20.11.1815,1815-11-20,perte,"Perte de 4 cantons : Rellingen, Sarre-Libre (= Sarrelouis), Sarrebruck et St-Jean",807
+57,Moselle,Traité de Francfort 10.5.1871,1871-05-10,perte,"La Moselle est rattachée en quasi-totalité à l'Allemagne : entièrement pour les Arr. de Sarreguemines et Thionville ; presque entièrement pour l'Arr. de Metz ; pour l'Arr. de Briey : 7 communes du canton d'Audun-le-Roman (qui formeront en Moselle le canton de Fontoy), 2 communes du canton de Longwy et 7 communes du canton de Briey",807
+57,Moselle,L. 17.10.1919,1919-10-17,rattachement,"La France, recouvrant ce département, conserve l'intégralité des Arr. et cantons existants. La période allemande a créé 4 cantons : Fontoy et Metz-Campagne (Ord. Impériale 6.3.1873) ; Hayange et Moyeuvre-Grande (Ord. Statthalter 9.4.1901)",807
+57,Moselle,D. 16.3.1950,1950-03-16,TCL,TCL Gorze -> Ars/Moselle,808
+57,Moselle,D. 8.8.1967,1967-08-08,creation,Cr. Forbach-1 et Forbach-2 (dédoublement Forbach),808
+57,Moselle,D. 8.8.1967,1967-08-08,creation,Cr. Florange (division Hayange),808
+57,Moselle,D. 8.8.1967,1967-08-08,creation,"Cr. Montigny-les-Metz, Rombas et Woippy (division de Metz-Campagne qui disparaît)",808
+57,Moselle,D. 8.8.1967,1967-08-08,creation,Cr. Freyming (division St-Avold),808
+57,Moselle,D. 8.8.1967,1967-08-08,creation,Cr. Basse-Yutz (division Thionville),808
+57,Moselle,D. 13.7.1973,1973-07-13,creation,Cr. Maizières-les-Metz (division Woippy),808
+57,Moselle,D. 25.1.1982,1982-01-25,creation,Cr. Algrange (division Hayange),808
+57,Moselle,D. 25.1.1982,1982-01-25,creation,Cr. Fameck (division Florange),808
+57,Moselle,D. 25.1.1982,1982-01-25,creation,Cr. Metz-4 (division Metz-2),808
+57,Moselle,D. 24.12.1984,1984-12-24,creation,Cr. Sarreguemines-Campagne (division Sarreguemines),808
+57,Moselle,D. 24.12.1984,1984-12-24,creation,"Cr. Forbach, Stiring-Wendel et Behren-les-Forbach (division Forbach-1 et 2 qui disparaissent)",808
+57,Moselle,D. 24.12.1984,1984-12-24,creation,"Cr. St-Avold-1 et St-Avold-2 (division Freyming-Merlebach qui demeure, et St-Avold qui disparaît)",808
+57,Moselle,D. 24.12.1984,1984-12-24,creation,Cr. Thionville-E. et Thionville-O. (dédoublement Thionville),808
+57,Moselle,D. 24.12.1984,1984-12-24,creation,Cr. Marange-Silvange (division Rombas),808
+58,Nièvre,A. 9 Fructidor An IX,1801-08-27,origine,Découpage d'origine,808
+58,Nièvre,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Cosne,808
+58,Nièvre,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Cosne,808
+58,Nièvre,D. 16.8.1973,1973-08-16,creation,"Cr. Nevers-Centre, Nevers-N., Nevers-Rural et Nevers-S. (division Nevers, qui disparaît)",808
+58,Nièvre,D. 16.8.1973,1973-08-16,creation,Cr. Guérigny (division Pougues-les-Eaux),808
+58,Nièvre,D. 16.8.1973,1973-08-16,creation,Cr. La Machine (division Decize),808
+58,Nièvre,D. 23.1.1985,1985-01-23,creation,Cr. Imphy (division Nevers-Rural),808
+58,Nièvre,D. 23.1.1985,1985-01-23,renommage,Changement dénomination : Nevers-Rural devient Nevers-E.,808
+58,Nièvre,D. 23.1.1985,1985-01-23,creation,Cr. Cosne-Cours-sur-Loire-N. et Cosne-Cours-sur-Loire-S. (dédoublement Cosne-Cours-sur-Loire),808
+59,Nord,A. 15 Vendémiaire An X,1801-10-07,origine,"Découpage d'origine (comportait une erreur rectifiée ensuite, plaçant Armentières dans l'Arr. d'Hazebrouck et non de Lille)",808
+59,Nord,A. 3 Thermidor An XI,1803-07-22,transfert_sp,Préfecture transférée de Douai à Lille,808
+59,Nord,A. 3 Thermidor An XI,1803-07-22,transfert_sp,SP transférée de Bergues à Dunkerque,808
+59,Nord,D. 1.12.1813,1813-12-01,transfert_sp,SP transférée d'Hazebrouck à Cassel,808
+59,Nord,O. 8.7.1814,1814-07-08,transfert_sp,SP transférée de Cassel à Hazebrouck,809
+59,Nord,O. 18.8.1814,1814-08-18,rattachement,Rattache au Nord 3 cantons du département de Jemmapes : Dour à Arr. de Douai ; Merles-le-Château et Beaumont à Arr. d’Avesnes,809
+59,Nord,D. 21.4.1815,1815-04-21,transfert_sp,"SP transférée d'Hazebrouck à Cassel (à la fin des Cent-Jours, on revint à l'Ordonnance de Juillet 1814)",809
+59,Nord,2e Traité de Paris 20.11.1815,1815-11-20,perte,"Perte des 3 cantons rattachés en 1814, annexés par les Pays-Bas",809
+59,Nord,O. 8.7.1818,1818-07-08,TCL,TCL Templeuve -> Cysoing,809
+59,Nord,L. 21.7.1824,1824-07-21,creation_arr,"Cr. Arr. Valenciennes (division Arr. Douai) : cantons St-Amand (Rive G. et Rive D.), Condé, Valenciennes N., E. et S., Bouchain",809
+59,Nord,L. 20.4.1854,1854-04-20,fix_limites,Fix. limites Dunkerque-O.,809
+59,Nord,D. 13.10.1858,1858-10-13,rattachement,Annexion de diverses communes à Lille S.-O.,809
+59,Nord,L. 24.7.1867,1867-07-24,creation,Cr. Roubaix-E. et Roubaix-O. (dédoublement Roubaix),809
+59,Nord,L. 3.2.1875,1875-02-03,fix_limites,Fix. limites Dunkerque-O. et Dunkerque-E.,809
+59,Nord,L. 29.12.1886,1886-12-29,creation,Cr. Denain (division Bouchain),809
+59,Nord,L. 5.6.1889,1889-06-05,creation,Cr. 3 cantons à Lille (division des 5 anciens),809
+59,Nord,L. 20.7.1892,1892-07-20,creation,Cr. Roubaix-N. (division Roubaix-E. et Roubaix-O.),809
+59,Nord,L. 20.7.1895,1895-07-20,creation,Cr. Tourcoing-N.E. (division Tourcoing-N. et Tourcoing-S.),809
+59,Nord,L. 7.7.1910,1910-07-07,creation,Cr. Maubeuge-N. et Maubeuge-S. (dédoublement Maubeuge),809
+59,Nord,L. 27.12.1922,1922-12-27,fix_limites,Fix. limites Douai-E. et Douai-S.,809
+59,Nord,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Hazebrouck,809
+59,Nord,D. 26.3.1958,1958-03-26,creation,Cr. Hautmont (Maubeuge-N. + Bavay),809
+59,Nord,D. 28.1.1964,1964-01-28,creation,Cr. Marcq-en-Baroeul (division Tourcoing-S.),809
+59,Nord,D. 4.2.1982,1982-02-04,creation,Cr. Coudekerque-Branche et Grande-Synthe (division Dunkerque-E. et Dunkerque-O.),809
+59,Nord,D. 4.2.1982,1982-02-04,creation,Cr. Anzin (division Valenciennes-N.),809
+59,Nord,D. 4.2.1982,1982-02-04,creation,Cr. Lomme (division Haubourdin),809
+59,Nord,D. 4.2.1982,1982-02-04,creation,Cr. Roubaix-Centre (division Roubaix-E.),809
+59,Nord,D. 4.2.1982,1982-02-04,creation,Cr. Villeneuve d'Ascq (division Lannoy),809
+60,Oise,A. 23 Vendémiaire An X,1801-10-15,origine,Découpage d'origine,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,creation,Cr. Beauvais-N.E. et Beauvais-S.O. (dédoublement Beauvais),809
+60,Oise,A. 3 Ventôse An X,1802-02-22,TCL,TCL Senantes -> Songeon,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,TCL,TCL Tillé -> Nivillers,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,TCL,TCL Mouy -> Liancourt,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,TCL,TCL Fretoy -> Guiscard,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,TCL,TCL Grandfresnoy -> Estrées St-Denis,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,TCL,TCL Acy -> Betz,809
+60,Oise,A. 3 Ventôse An X,1802-02-22,suppression,Supp. Chantilly (-> Creil),809
+60,Oise,A. 3 Ventôse An X,1802-02-22,suppression,Supp. Bailleul-le-Soc (St-Just + Liancourt + Clermont),809
+60,Oise,A. 26 Ventôse An XI,1803-03-17,creation,Cr. Mouy (Bailleul-le-Soc + Liancourt + Clermont),809
+60,Oise,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Clermont,809
+60,Oise,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Clermont,809
+60,Oise,D. 7.8.1950,1950-08-07,transfert_arr,Transfert Crèvecœur (Arr. Clermont -> Arr. Beauvais),809
+60,Oise,D. 13.7.1973,1973-07-13,creation,"Cr. Creil-Nogent, Creil-S., Chantilly et Montataire (division Creil, qui disparaît)",809-810
+60,Oise,D. 13.7.1973,1973-07-13,creation,Cr. Compiègne-N. et Compiègne-S. (dédoublement Compiègne),809
+60,Oise,D. 20.1.1982,1982-01-20,creation,Cr. Beauvais-N.O. (division Beauvais-N.E.),810
+60,Oise,D. 20.1.1982,1982-01-20,creation,Cr. Compiègne-S.E. et Compiègne-S.O. (dédoublement Compiègne-S.),810
+61,Orne,A. 5 Brumaire An X,1801-10-27,origine,Découpage d'origine,810
+61,Orne,O. 28.6.1826,1826-06-28,creation,Cr. Flers (Saint-Germain de Messei + Tinchebray + Athis),810
+61,Orne,Octobre 1828,1828-10-01,renommage,Changement dénomination : St-Germain de Messei devient Messei,810
+61,Orne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Domfront et Mortagne,810
+61,Orne,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Mortagne,810
+61,Orne,D. 20.1.1982,1982-01-20,creation,Cr. L'Aigle-E. et l'Aigle-O. (dédoublement l'Aigle),810
+61,Orne,D. 20.1.1982,1982-01-20,renommage,Changement dénomination : Alençon-O. devient Alençon-1,810
+61,Orne,D. 20.1.1982,1982-01-20,creation,Cr. Alençon-2 et Alençon-3 (dédoublement Alençon-E.),810
+61,Orne,D. 20.1.1982,1982-01-20,creation,Cr. Argentan-E. et Argentan-O. (dédoublement Argentan),810
+61,Orne,D. 20.1.1982,1982-01-20,creation,Cr. Flers-N. et Flers-S. (dédoublement Flers),810
+62,Pas-de-Calais,A. 9 Brumaire An X,1801-10-31,origine,Découpage d'origine,810
+62,Pas-de-Calais,A. 29 Thermidor An XI,1803-08-17,TCL,TCL Tournehem -> Ardres,810
+62,Pas-de-Calais,A. 29 Thermidor An XI,1803-08-17,TCL,TCL Foncquevillers -> Pas,810
+62,Pas-de-Calais,O. 8.2.1816,1816-02-08,TCL,TCL Wail -> Parcq,810
+62,Pas-de-Calais,L. 15.4.1869,1869-04-15,creation,Cr. Boulogne-N. et Boulogne-S. (dédoublement Boulogne),810
+62,Pas-de-Calais,L. 13.3.1887,1887-03-13,creation,Cr. Calais-S.E. et Calais-N.O. (dédoublement Calais),810
+62,Pas-de-Calais,L. 18.2.1904,1904-02-18,creation,Cr. Lens-E. et Lens-O. (dédoublement Lens),810
+62,Pas-de-Calais,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. St-Pol,810
+62,Pas-de-Calais,D. 28.6.1949,1949-06-28,TCL,TCL Lens-O. -> Liévin et fix. limites Lens-Liévin,810
+62,Pas-de-Calais,D. 10.1.1962,1962-01-10,creation_arr,"Cr. Arr. Calais (division Arr. Boulogne) : cantons Calais-N.O., Calais-S.E. et Guines",810
+62,Pas-de-Calais,D. 10.1.1962,1962-01-10,creation_arr,"Cr. Arr. Lens (division Arr. Béthune) : cantons Lens-E., Lens-N.O., Lens-N.E., Liévin-N., Liévin-N.O. ; Carvin et Hénin-Liétard",810
+62,Pas-de-Calais,D. 10.1.1962,1962-01-10,suppression,Supp. Liévin,810
+62,Pas-de-Calais,D. 10.1.1962,1962-01-10,creation,"Cr. Bruay-en-Artois, Hénin-Liétard, Lens-N.E., Lens-N.O., Liévin-N., Liévin-N.O. (division de Carvin, Houdain, Lens-E. et Liévin)",810
+62,Pas-de-Calais,D. 16.8.1973,1973-08-16,creation,Cr. Béthune-N. et Béthune-S. (dédoublement Béthune),810
+62,Pas-de-Calais,D. 16.8.1973,1973-08-16,creation,Cr. Calais-Centre et Calais-E. (dédoublement Calais-S.),810
+62,Pas-de-Calais,D. 16.8.1973,1973-08-16,creation,Cr. Avion (division Vimy),810
+62,Pas-de-Calais,D. 16.8.1973,1973-08-16,creation,Cr. Harnes (division Lens-N.E.),810
+62,Pas-de-Calais,D. 16.8.1973,1973-08-16,creation,Cr. Leforest (division Hénin-Beaumont),810
+62,Pas-de-Calais,D. 16.8.1973,1973-08-16,creation,Cr. Noeux-les-Mines (Cambrin + Liévin-N.),810
+62,Pas-de-Calais,D. 29.9.1975,1975-09-29,renommage,Changements de dénomination : Liévin-N. devient Liévin ; Liévin-N.O. devient Bully-les-Mines,810
+62,Pas-de-Calais,D. 15.1.1982,1982-01-15,creation,Cr. Arras-O. (division Arras-S.),811
+62,Pas-de-Calais,D. 15.1.1982,1982-01-15,creation,Cr. Courrières (division Carvin),811
+62,Pas-de-Calais,D. 15.1.1982,1982-01-15,creation,Cr. Outreau (division Samer),811
+62,Pas-de-Calais,D. 15.1.1982,1982-01-15,creation,Cr. Liévin-N. et Liévin-S. (dédoublement Liévin),811
+62,Pas-de-Calais,D. 24.12.1984,1984-12-24,creation,Cr. Rouvroy (division Avion),811
+62,Pas-de-Calais,D. 24.12.1984,1984-12-24,creation,Cr. Auchel (division Norrent-Fontes),811
+62,Pas-de-Calais,D. 24.12.1984,1984-12-24,creation,Cr. Boulogne-N.O. et Boulogne-N.E. (dédoublement Boulogne-N.),811
+62,Pas-de-Calais,D. 24.12.1984,1984-12-24,creation,Cr. Wingles (division Lens-N.O.),811
+62,Pas-de-Calais,D. 24.12.1984,1984-12-24,creation,Cr. Arques (division St-Omer-S.),811
+62,Pas-de-Calais,D. 24.12.1984,1984-12-24,creation,"Cr. Calais-S.E. (division Calais-Centre, Calais-E. et Calais-N.O.)",811
+63,Puy-de-Dôme,A. 15 Brumaire An X,1801-11-06,origine,Découpage d'origine,811
+63,Puy-de-Dôme,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Ambert,811
+63,Puy-de-Dôme,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Ambert,811
+63,Puy-de-Dôme,D. 2.2.1982,1982-02-02,creation,Cr. Beaumont (division Clermont-Ferrand-S.O.),811
+63,Puy-de-Dôme,D. 2.2.1982,1982-02-02,creation,"Cr. Gerzat, Montferrand, Chamalières, Clermont-Ferrand-N.O., Clermont-Ferrand-O. et Royat (division Clermont-Ferrand-N. et Clermont-Ferrand-E., qui demeurent)",811
+63,Puy-de-Dôme,D. 2.2.1982,1982-02-02,creation,"Cr. Aubière, Clermont-Ferrand-Centre et Clermont-Ferrand-S.E. (division Clermont-Ferrand-S.)",811
+63,Puy-de-Dôme,D. 2.2.1982,1982-02-02,creation,Cr. Cournon d'Auvergne (division Pont-du-Château),811
+64,Pyrénées-Atlantiques,A. 9 Pluviôse An X,1802-01-29,origine,Découpage d'origine des Basses-Pyrénées,811
+64,Pyrénées-Atlantiques,L. 18.5.1858,1858-05-18,renommage,Changement de dénomination : Oloron et Ste-Marie deviennent Oloron-Ste-Marie-E. et Oloron-Ste-Marie-O.,811
+64,Pyrénées-Atlantiques,D. 11.2.1863,1863-02-11,renommage,Changement de dénomination : Nay devient Nay-O. ; Clarac devient Nay-E.,811
+64,Pyrénées-Atlantiques,L. 23.2.1874,1874-02-23,fix_limites,Fix. limites Pau-E. et Pau-O.,811
+64,Pyrénées-Atlantiques,L. 25.4.1895,1895-04-25,creation,Cr. Biarritz (division Bayonne-N.O.),811
+64,Pyrénées-Atlantiques,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Mauléon et Orthez,811
+64,Pyrénées-Atlantiques,D. 10.10.1969,1969-10-10,renommage_departement,Le département prend le nom de Pyrénées-Atlantiques,811
+64,Pyrénées-Atlantiques,D. 13.7.1973,1973-07-13,creation,"Cr. Bayonne-E., Bayonne-O. et Anglet (division Bayonne-N.E. et Bayonne-N.O. qui disparaissent)",811
+64,Pyrénées-Atlantiques,D. 13.7.1973,1973-07-13,creation,Cr. Biarritz-E. et Biarritz-O. (dédoublement Biarritz),811
+64,Pyrénées-Atlantiques,D. 13.7.1973,1973-07-13,creation,"Cr. Pau-1 Centre, Pau-2 E., Pau-3 S., Pau-4 O. et Jurançon (division Pau-E. et Pau-O., qui disparaissent)",811
+64,Pyrénées-Atlantiques,D. 13.7.1973,1973-07-13,creation,Cr. Hendaye (division St-Jean-de-Luz),811
+64,Pyrénées-Atlantiques,D. 29.7.1981,1981-07-29,fix_limites,Fix. limites Biarritz-E. et Biarritz-O.,811
+64,Pyrénées-Atlantiques,D. 27.1.1982,1982-01-27,creation,Cr. Anglet-N. et Anglet-S. (dédoublement Anglet),811
+64,Pyrénées-Atlantiques,D. 27.1.1982,1982-01-27,creation,Cr. Billère (division Lescar),811
+64,Pyrénées-Atlantiques,D. 27.1.1982,1982-01-27,creation,Cr. Pau-N. (division Pau-Centre et Pau-E.),811
+64,Pyrénées-Atlantiques,D. 27.1.1982,1982-01-27,creation,Cr. St-Pierre d'Irube (Bayonne-N. + Ustaritz),811
+65,Hautes-Pyrénées,A. 7 Frimaire An X,1801-11-28,origine,Découpage d'origine,812
+65,Hautes-Pyrénées,A. 3 Brumaire An XI,1802-10-25,suppression,Supp. Juncalas (-> Lourdes),812
+65,Hautes-Pyrénées,A. 3 Brumaire An XI,1802-10-25,creation,Cr. St-Pé (division Lourdes),812
+65,Hautes-Pyrénées,A. 26 Ventôse An XI,1803-03-17,TCL,TCL Aubarède -> Pouy Astruc,812
+65,Hautes-Pyrénées,L. 7.6.1853,1853-06-07,fix_limites,Fix. limites Tarbes-N. et Tarbes-S.,812
+65,Hautes-Pyrénées,D. 2.4.1870,1870-04-02,TCL,TCL Nestier -> St-Laurent,812
+65,Hautes-Pyrénées,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Argelès,812
+65,Hautes-Pyrénées,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Argelès,812
+65,Hautes-Pyrénées,D. 23.7.1973 et 2.9.1974,1973-07-23,creation,Cr. Lourdes-E. et Lourdes-O. (dédoublement Lourdes),812
+65,Hautes-Pyrénées,D. 23.7.1973 et 2.9.1974,1973-07-23,creation,"Cr. Tarbes-1 à 5, Aureilhan et Séméac (division Tarbes-N. et Tarbes-S., qui disparaissent)",812
+65,Hautes-Pyrénées,D. 20.1.1982,1982-01-20,creation,Cr. Bordères-sur-L'Echez (division Aureilhan),812
+65,Hautes-Pyrénées,D. 20.1.1982,1982-01-20,creation,Cr. Laloubère (division Séméac),812
+66,Pyrénées-Orientales,A. 19 Nivôse An X,1802-01-09,origine,Découpage d'origine,812
+66,Pyrénées-Orientales,L. 7.3.1935,1935-03-07,creation,Cr. St-Laurent de la Salanque (dédoublement Rivesaltes),812
+66,Pyrénées-Orientales,D. 16.8.1973,1973-08-16,creation,"Cr. Perpignan-1 à 7 (division Perpignan-E. et Perpignan-O., qui disparaissent)",812
+66,Pyrénées-Orientales,D. 16.8.1973,1973-08-16,creation,Cr. La Côte Vermeille (= Port-Vendres) (division Argelès),812
+66,Pyrénées-Orientales,D. 25.1.1982,1982-01-25,creation,Cr. La Côte Radieuse (= Canet en Roussillon) (division Perpignan-3),812
+66,Pyrénées-Orientales,D. 25.1.1982,1982-01-25,creation,Cr. Elne (division Perpignan-4),812
+66,Pyrénées-Orientales,D. 25.1.1982,1982-01-25,creation,Cr. Perpignan-9 (division Perpignan-1),812
+66,Pyrénées-Orientales,D. 25.1.1982,1982-01-25,creation,Cr. Perpignan-8 (division Perpignan-5),812
+66,Pyrénées-Orientales,D. 25.1.1982,1982-01-25,creation,Cr. Toulouges (Perpignan-5 + Thuir),812
+66,Pyrénées-Orientales,D. 25.1.1982,1982-01-25,creation,"Cr. St-Estève (division Rivesaltes et Perpignan-2, 3 et 7)",812
+66,Pyrénées-Orientales,D. 31.1.1985,1985-01-31,fix_limites,"Fix. limites : La Côte Radieuse, Rivesaltes, St-Laurent-de-la-Salanque, Perpignan-2, 3 et 7",812
+67,Bas-Rhin,A. 27 Brumaire An X,1801-11-18,origine,Découpage d'origine,812
+67,Bas-Rhin,D. 10.2.1806,1806-02-10,transfert_sp,SP transférée de Barr à Sélestat,812
+67,Bas-Rhin,1er Traité de Paris 30.5.1814,1814-05-30,perte,"Perte du canton de Dahn, annexé par la Prusse",812
+67,Bas-Rhin,2e Traité de Paris 20.11.1815,1815-11-20,perte,"Perte de Bergzabern, Candel et Landau (Arr. Wissembourg), annexés par la Prusse et la Bavière",812
+67,Bas-Rhin,O. 12.8.1835,1835-08-12,TCL,TCL Oberhausbergen -> Schiltigheim,812
+67,Bas-Rhin,Traité de Francfort 10.5.1871,1871-05-10,perte,Le Bas-Rhin est entièrement annexé à l'Allemagne ; les 2 cantons annexés des Vosges lui sont rattachés (Saales et Schirmeck),812
+67,Bas-Rhin,L. 17.10.1919,1919-10-17,rattachement,"La France, recouvrant ce département, conserve l'intégralité des Arr. et cantons existants. Aucun canton nouveau créé pendant la période allemande ; la répartition entre Arr. a changé (Cr. Arr. Molsheim par A. 7.12.1870, Arr. Erstein et Haguenau par A. 11.1.1871, et Strasbourg-Campagne)",812
+67,Bas-Rhin,D. 22.1.1962,1962-01-22,creation,"Cr. Strasbourg-5, Strasbourg-6, Strasbourg-7 et Strasbourg-8 (division des 4 anciens cantons)",813
+67,Bas-Rhin,D. 13.7.1973,1973-07-13,creation,Cr. Illkirch-Graffenstaden (division Geispolsheim),813
+67,Bas-Rhin,D. 13.7.1973,1973-07-13,creation,Cr. Mundolsheim (division Schiltigheim),813
+67,Bas-Rhin,D. 13.7.1973,1973-07-13,creation,Cr. Strasbourg-9 et Strasbourg-10 (division Strasbourg-6 à 8),813
+67,Bas-Rhin,D. 24.5.1974,1974-05-24,suppression_arr,"Supp. Arr. Erstein : Transfert Benfeld, Erstein et Obernai -> Arr. Sélestat-Erstein ; Transfert Geispolsheim et Illkirch -> Arr. Strasbourg-Campagne",813
+67,Bas-Rhin,D. 15.1.1982,1982-01-15,creation,Cr. Bischheim (division Schiltigheim),813
+68,Haut-Rhin,A. 9 Pluviôse An X,1802-01-29,origine,Découpage d'origine,813
+68,Haut-Rhin,1er Traité de Paris 30.5.1814,1814-05-30,perte,"Perte de l'Arr. Delémont (5 cantons) et de 3 cantons de l'Arr. Porrentruy, annexés par la Suisse",813
+68,Haut-Rhin,L. 9.1.1816,1816-01-09,cession_departement,Transfert au Doubs des cantons de Montbéliard et Audincourt (les 2 cantons restants de l'Arr. Porrentruy),813
+68,Haut-Rhin,D. 10.11.1857,1857-11-10,transfert_sp,SP transférée d'Altkirch à Mulhouse,813
+68,Haut-Rhin,L. 3.7.1861,1861-07-03,creation,Cr. Mulhouse-N. et Mulhouse-S. (dédoublement Mulhouse),813
+68,Haut-Rhin,Traité de Francfort 10.5.1871,1871-05-10,perte,"Sont rattachés à l'Allemagne : les Arr. de Colmar et Mulhouse ; pour l'Arr. de Belfort : les cantons de St-Amarin, Cernay et Thann, ainsi que celui de Masevaux (moins 4 communes), celui de Dannemarie (moins 3 communes) et 6 communes du canton de Fontaine (rattachées ensuite au canton de Dannemarie)",813
+68,Haut-Rhin,L. 17.10.1919,1919-10-17,rattachement,"La France, recouvrant ce département, conserve l'intégralité des Arr. et cantons existants. Aucun canton nouveau créé pendant la période allemande ; la répartition entre Arr. a changé (Cr. Arr. Altkirch, Guebwiller, Ribeauvillé et Thann)",813
+68,Haut-Rhin,D. 26.10.1948,1948-10-26,TCL,TCL Landser -> Sierentz,814
+68,Haut-Rhin,D. 26.2.1958,1958-02-26,creation,Cr. Colmar-N. et Colmar-S. (dédoublement Colmar),814
+68,Haut-Rhin,D. 26.2.1958,1958-02-26,creation,"Cr. Mulhouse-O., Mulhouse-E. et Wittenheim (division Mulhouse-N. et Mulhouse-S.)",814
+68,Haut-Rhin,D. 27.1.1982,1982-01-27,creation,Cr. Illzach (division Habsheim),814
+69,Rhône,17 Ventôse An V,1797-03-07,origine,Découpage de la Ville de Lyon en 3 municipalités (= arrondissements),814
+69,Rhône,A. 15 Brumaire An X,1801-11-06,origine,Découpage d'origine du département,814
+69,Rhône,O. 4.5.1833,1833-05-04,TCL,TCL Ste-Colombe -> Condrieu,814
+69,Rhône,O. 5.5.1836,1836-05-05,TCL,TCL St-Nizier-d'Azergues -> Lamure,814
+69,Rhône,L. 24.7.1843,1843-07-24,creation,Cr. La Guillotière (division Lyon-1),814
+69,Rhône,D. 24.3.1852,1852-03-24,rattachement,"4 communes de l'Isère (Villeurbanne, Vaux, Bron et Vénissieux) sont rattachées au Rhône (canton de La Guillotière)",814
+69,Rhône,D. 24.3.1852,1852-03-24,rattachement,"Les communes de La Guillotière, Vaise, La Croix-Rousse sont rattachées à Lyon. Les limites des cantons restent inchangées. Lyon passe de 3 à 5 arrondissements",814
+69,Rhône,L. 22.6.1854,1854-06-22,creation,Cr. Villeurbanne et Lyon-7 (dédoublement La Guillotière),814
+69,Rhône,L. 6.7.1862,1862-07-06,creation,Cr. Lyon-8 (division Lyon-7),814
+69,Rhône,L. 17.7.1867,1867-07-17,creation,Cr. VIe Arrondissement de Lyon,814
+69,Rhône,D. 17.7.1867,1867-07-17,fix_limites,Fix. limites cantons de Lyon (leur nombre reste inchangé),814
+69,Rhône,L. 8.5.1869,1869-05-08,creation,Cr. Amplepuis (Tarare + Thizy + Lamure),814
+69,Rhône,L. 8.3.1912,1912-03-08,creation,Cr. VIIe Arrondissement de Lyon,814
+69,Rhône,L. 10.4.1914,1914-04-10,creation,"Cr. Lyon-9, Lyon-10, Lyon-11 et Lyon-12 (division de Lyon-7, Lyon-8 et Villeurbanne)",814
+69,Rhône,D. 19.2.1959,1959-02-19,creation,Cr. VIIIe Arrondissement de Lyon,814
+69,Rhône,D. 10.1.1964,1964-01-10,creation,"Cr. Villeurbanne-N., Villeurbanne-S. et Bron (division Villeurbanne, qui disparaît)",814
+69,Rhône,D. 28.1.1964,1964-01-28,creation,Cr. Lyon-13 (division Lyon-12),814
+69,Rhône,D. 12.8.1964,1964-08-12,creation,Cr. IXe Arrondissement de Lyon,814
+69,Rhône,D. 12.8.1964,1964-08-12,fix_limites,Fix. limites Lyon-5 - Lyon-6,814
+69,Rhône,L. 23.12.1967,1967-12-23,rattachement,Rattachement au Rhône des cantons de Meyzieux et St-Symphorien d'Ozon (en provenance de l'Isère) et de 6 communes de l'Ain,814
+69,Rhône,D. 13.7.1973,1973-07-13,creation,Cr. Vénissieux (division Bron),814
+69,Rhône,D. 13.7.1973,1973-07-13,creation,Cr. Oullins (division St-Genis),814
+69,Rhône,D. 13.7.1973,1973-07-13,transfert_commune,Transfert commune de St-Fons (Bron -> St-Symphorien d'Ozon),814
+69,Rhône,D. 20.1.1982,1982-01-20,creation,Cr. Caluire-et-Cuire (division Neuville),814
+69,Rhône,D. 20.1.1982,1982-01-20,creation,Cr. Décines-Charpieu (division Meyzieu),814
+69,Rhône,D. 20.1.1982,1982-01-20,creation,Cr. St-Priest (division St-Symphorien d'Ozon),814
+69,Rhône,D. 20.1.1982,1982-01-20,creation,Cr. Vaulx-en-Velin (division Bron),814
+69,Rhône,D. 20.1.1982,1982-01-20,creation,Cr. Vénissieux-N. et Vénissieux-S. (dédoublement Vénissieux),814
+69,Rhône,D. 22.1.1985,1985-01-22,creation,Cr. Villeurbanne-Centre (division Villeurbanne-N. et Villeurbanne-S.),815
+69,Rhône,D. 22.1.1985,1985-01-22,creation,Cr. Ste-Foy-les-Lyon (division Oullins),815
+69,Rhône,D. 22.1.1985,1985-01-22,creation,Cr. Irigny (division St-Genis-Laval),815
+69,Rhône,D. 22.1.1985,1985-01-22,creation,Cr. St-Fons (division St-Symphorien d'Ozon),815
+69,Rhône,D. 22.1.1985,1985-01-22,creation,Cr. Tassin-la-Demi-Lune (division Vaugneray),815
+70,Haute-Saône,A. 17 Frimaire An X,1801-12-08,origine,Découpage d'origine,815
+70,Haute-Saône,O. 26.7.1826,1826-07-26,creation,Cr. Marnay (Pesmes + Gy),815
+70,Haute-Saône,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Gray,815
+70,Haute-Saône,D. 13.7.1973,1973-07-13,creation,Cr. Vesoul-E. et Vesoul-O. (dédoublement Vesoul),815
+70,Haute-Saône,D. 31.1.1985,1985-01-31,creation,Cr. St-Sauveur (division Luxeuil),815
+70,Haute-Saône,D. 31.1.1985,1985-01-31,creation,Cr. Héricourt-E. et Héricourt-O. (dédoublement Héricourt),815
+70,Haute-Saône,D. 31.1.1985,1985-01-31,creation,Cr. Lure-N. et Lure-S. (dédoublement Lure),815
+71,Saône-et-Loire,A. 17 Frimaire An X,1801-12-08,origine,Découpage d'origine,815
+71,Saône-et-Loire,A. 15 Floréal An X,1802-05-05,TCL,TCL Saisy -> Épinac,815
+71,Saône-et-Loire,L. 25.3.1868,1868-03-25,creation,Cr. Le Creusot (division Montcenis),815
+71,Saône-et-Loire,L. 27.3.1874,1874-03-27,creation,Cr. Montceau-les-Mines (division Mont-St-Vincent),815
+71,Saône-et-Loire,L. 10.4.1926,1926-04-10,creation,Cr. Montchanin (Mont-Saint-Vincent + Buxy),815
+71,Saône-et-Loire,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Louhans,815
+71,Saône-et-Loire,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Louhans,815
+71,Saône-et-Loire,D. 2.8.1973,1973-08-02,creation,Cr. Autun-N. et Autun-S. (dédoublement Autun),815
+71,Saône-et-Loire,D. 2.8.1973,1973-08-02,creation,Cr. Châlon-Périphérie et Châlon-Ville (dédoublement Châlon-N.),815
+71,Saône-et-Loire,D. 2.8.1973,1973-08-02,creation,Cr. Le Creusot-E. et Le Creusot-O. (dédoublement Le Creusot),815
+71,Saône-et-Loire,D. 2.8.1973,1973-08-02,creation,Cr. Mâcon-Centre (division Mâcon-N. et Mâcon-S.),815
+71,Saône-et-Loire,D. 2.8.1973,1973-08-02,creation,Cr. Montceau-les-Mines-N. et Montceau-les-Mines-S. (dédoublement Montceau-les-Mines),815
+71,Saône-et-Loire,D. 24.12.1984,1984-12-24,creation,"Cr. Châlon-Centre, Châlon-O. et Châlon-N. (division Châlon-Ville et Châlon-Périphérie, qui disparaissent)",815
+72,Sarthe,A. 13 Brumaire An X,1801-11-04,origine,Découpage d'origine,815
+72,Sarthe,L. 13.7.1892,1892-07-13,fix_limites,Fix. limites entre 3 cantons du Mans,815
+72,Sarthe,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. St-Calais,815
+72,Sarthe,D. 8.8.1967,1967-08-08,creation,"Cr. Le Mans-Centre, Le Mans-E., Le Mans-N., Le Mans-N.-O., Le Mans-S. et Le Mans-S.-O. (division des 3 anciens cantons du Mans)",815
+72,Sarthe,D. 2.2.1982,1982-02-02,creation,Cr. Le Mans-N.-Ville et Le Mans-N.-Campagne (division de Le Mans-Centre et Le Mans-N.),815
+72,Sarthe,D. 2.2.1982,1982-02-02,creation,Cr. Le Mans-E.-Ville et Le Mans-E.-Campagne (dédoublement Le Mans-E.),815
+72,Sarthe,D. 2.2.1982,1982-02-02,creation,"Cr. Le Mans-S.E., Le Mans-O. et Allonnes (division Le Mans-S. qui disparaît, et Le Mans-S.O. qui demeure)",815
+73,Savoie,D. 25.6.1860,1860-06-25,origine,Découpage d'origine,816
+73,Savoie,D. 24.11.1860,1860-11-24,creation,Cr. Chambéry-N. et Chambéry-S. (dédoublement Chambéry),816
+73,Savoie,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Moutiers,816
+73,Savoie,D. 2.8.1973,1973-08-02,creation,Cr. Albertville-N. et Albertville-S. (dédoublement Albertville),816
+73,Savoie,D. 2.8.1973,1973-08-02,creation,"Cr. Chambéry-S.O., La Ravoire et St-Alban-Leysse (division Chambéry-N. et Chambéry-S.)",816
+73,Savoie,D. 2.8.1973,1973-08-02,creation,Cr. Grésy-sur-Aix (division Aix-les-Bains),816
+73,Savoie,D. 23.1.1985,1985-01-23,creation,Cr. Chambéry-E. (division Chambéry-N. et St-Alban-Leysse),816
+73,Savoie,D. 23.1.1985,1985-01-23,creation,Cr. Cognin (La Motte Servolex + La Ravoire),816
+73,Savoie,D. 23.1.1985,1985-01-23,creation,"Cr. Aix-N. Grésy, Aix-Centre et Aix-S. (division Aix et Grésy qui disparaissent)",816
+74,Haute-Savoie,D. 25.6.1860,1860-06-25,origine,Découpage d'origine,816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,suppression,"Supp. Duingt (-> Alby, Annecy-S.)",816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,creation,"Cr. Alby (Duingt + Albens, en Savoie)",816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,creation,Cr. Annecy-S. (Duingt + division Annecy),816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,renommage,Changement dénomination : Annecy devient Annecy-N.,816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,creation,Cr. Cruseilles (St-Julien + Annecy + Thorens + Reignier),816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,creation,Cr. Frangy (Seyssel + St-Julien),816
+74,Haute-Savoie,D. 20.12.1860,1860-12-20,creation,Cr. Boëge (St-Jeoire + Thonon),816
+74,Haute-Savoie,L. 17.2.1864,1864-02-17,creation,Cr. Chamonix (division St-Gervais),816
+74,Haute-Savoie,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. St-Julien,816
+74,Haute-Savoie,L. 27.12.1933,1933-12-27,creation_arr,Rétab. Arr. St-Julien,816
+74,Haute-Savoie,D. 16.8.1973,1973-08-16,creation,"Cr. Annecy-Centre, Annecy-N.E., Annecy-N.O., Annecy-le-Vieux et Seynod (division Annecy-N. et Annecy-S., qui disparaissent)",816
+74,Haute-Savoie,D. 16.8.1973,1973-08-16,creation,Cr. Annemasse-N. et Annemasse-S. (dédoublement Annemasse),816
+74,Haute-Savoie,D. 16.8.1973,1973-08-16,creation,Cr. Scionzier (division Cluses),816
+75,Seine,A. 25 Fructidor An IX,1801-09-12,origine,"Découpage d'origine. La Seine ne compte que 8 cantons : Arr. St-Denis (St-Denis, Nanterre, Neuilly, Pantin) ; Arr. Sceaux (Sceaux, Charenton, Villejuif, Vincennes)",816
+75,Seine,D. 1.3.1829,1829-03-01,TCL,TCL Nanterre -> Courbevoie,816
+75,Seine,L. 16.6.1859,1859-06-16,rattachement,Annexion à Paris d'une partie de la banlieue ; la nomenclature cantonale ne change pas,816
+75,Seine,L. 12.4.1893,1893-04-12,creation,"Cr. Asnières, Aubervilliers, Boulogne, Clichy, Levallois-Perret, Noisy-le-Sec, Puteaux, St-Ouen, Ivry, Montreuil, Nogent-sur-Marne, St-Maur, Vanves",816
+75,Seine,L. 14.4.1908,1908-04-14,creation,Cr. Colombes (division Courbevoie),817
+76,Seine-Maritime,A. 3 Vendémiaire An X,1801-09-25,origine,Découpage d'origine de la Seine-Inférieure,817
+76,Seine-Maritime,A. 11 Thermidor An X,1802-06-30,TCL,TCL Foucarmont -> Blangy,817
+76,Seine-Maritime,L. 9.7.1852,1852-07-09,rattachement,Annexion au Havre des communes de Grainville et Ingerville (partie),817
+76,Seine-Maritime,L. 9.7.1852,1852-07-09,renommage,Changement dénomination : Ingerville devient Le Havre-N. et Le Havre devient Le Havre-S.,817
+76,Seine-Maritime,L. 21.5.1864,1864-05-21,creation,Cr. Le Havre-E. (division Le Havre-N. et Le Havre-S.),817
+76,Seine-Maritime,L. 27.11.1887,1887-11-27,fix_limites,Fix. limites Rouen-3 et Rouen-4,817
+76,Seine-Maritime,L. 7.7.1888,1888-07-07,creation,"Cr. Le Havre-1 à 6 (division des 3 anciens cantons, qui disparaissent)",817
+76,Seine-Maritime,L. 10.5.1892,1892-05-10,creation,Cr. Sotteville (division Grand-Couronne),817
+76,Seine-Maritime,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Neufchâtel et Yvetôt,817
+76,Seine-Maritime,D. 18.1.1955,1955-01-18,renommage_departement,Le département prend le nom de Seine-Maritime,817
+76,Seine-Maritime,D. 28.1.1964,1964-01-28,creation,Cr. Le Havre-7 (division Le Havre-3 à 6),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Dieppe-E. et Dieppe-O. (dédoublement Dieppe),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,"Cr. Sotteville-E., Sotteville-O. et St-Étienne du Rouvray (division Sotteville, qui disparaît)",817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Rouen-7 (division Rouen-1 à Rouen-6),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Bois-Guillaume (division Darnétal),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Caudebec (division Elbeuf),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Gonfreville (Montivilliers + Le Havre-3),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Le Havre-8 (division Le Havre-7),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Le Havre-9 et Le Havre-10 (division Le Havre-4 et Montivilliers),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Le Grand Quevilly et Le Petit Quevilly (division Grand-Couronne),817
+76,Seine-Maritime,D. 27.1.1982,1982-01-27,creation,Cr. Mont-St-Aignan et Notre Dame de Bondeville (division Maromme),817
+77,Seine-et-Marne,A. 25 Fructidor An IX,1801-09-12,origine,Découpage d'origine,817
+77,Seine-et-Marne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Coulommiers et Fontainebleau,817
+77,Seine-et-Marne,D. 29.7.1964,1964-07-29,creation,Cr. Chelles (division Lagny),817
+77,Seine-et-Marne,D. 28.10.1975,1975-10-28,creation,Cr. Perthes et Savigny-le-Temple (division Melun-N. et Melun-S.),818
+77,Seine-et-Marne,D. 28.10.1975,1975-10-28,creation,Cr. Meaux-N. et Meaux-S. (dédoublement Meaux),818
+77,Seine-et-Marne,D. 28.10.1975,1975-10-28,creation,Cr. Roissy (division Tournan-en-Brie),818
+77,Seine-et-Marne,D. 28.10.1975,1975-10-28,creation,Cr. Torcy (division Lagny),818
+77,Seine-et-Marne,D. 28.10.1975,1975-10-28,creation,Cr. Vaires (division Chelles),818
+77,Seine-et-Marne,D. 27.1.1982,1982-01-27,creation,Cr. Mitry-Mory (division Claye-Souilly),818
+77,Seine-et-Marne,D. 22.1.1985,1985-01-22,creation,Cr. Pontault-Combault (division Roissy-en-Brie),818
+77,Seine-et-Marne,D. 22.1.1985,1985-01-22,creation,Cr. Champs-sur-Marne et Noisiel (division Torcy),818
+78,Yvelines,D. 2.6.1966,1966-06-02,creation,Cr. St-Arnoult-en-Yvelines,819
+78,Yvelines,D. 2.6.1966,1966-06-02,creation_arr,"Modification des circonscriptions des 4 Arr. (Versailles, Mantes-la-Jolie, Rambouillet et St-Germain-en-Laye)",819
+78,Yvelines,D. 20.7.1967,1967-07-20,origine,Découpage des Yvelines en 31 cantons,819
+78,Yvelines,D. 15.1.1976,1976-01-15,creation,Cr. Le Chesnay (division Versailles-N.O.),819
+78,Yvelines,D. 15.1.1976,1976-01-15,creation,Cr. Mantes-la-Ville (division Mantes-la-Jolie),819
+78,Yvelines,D. 15.1.1976,1976-01-15,creation,Cr. Maurepas (division Chevreuse),819
+78,Yvelines,D. 15.1.1976,1976-01-15,creation,Cr. St-Cyr-L'École (Trappes + Versailles-O.),819
+78,Yvelines,D. 15.1.1976,1976-01-15,creation,Cr. Le Pecq (division St-Germain-N. et St-Germain-S.),819
+78,Yvelines,D. 15.1.1976,1976-01-15,creation,Cr. Vélizy-Villacoublay (division Viroflay),819
+78,Yvelines,D. 15.1.1982,1982-01-15,creation,Cr. Plaisir (division Trappes),819
+78,Yvelines,D. 31.1.1985,1985-01-31,creation,Cr. Andresy (division Conflans),819
+78O,Seine-et-Oise,A. 3 Brumaire An X,1801-10-25,origine,Découpage d'origine,818
+78O,Seine-et-Oise,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Villeneuve-en-Chevrie -> Bonnières,818
+78O,Seine-et-Oise,D. 19.7.1811,1811-07-19,creation_arr,"Création Arr. Rambouillet avec 4 cantons de l'Arr. Versailles (Rambouillet, Chevreuse, Limours, Montfort-l'Amaury) et 2 cantons de l'Arr. Étampes (Dourdan-N. et Dourdan-S.)",818
+78O,Seine-et-Oise,L. 7.4.1882,1882-04-07,creation,Cr. Le Raincy (division Gonesse),818
+78O,Seine-et-Oise,L. 22.10.1919,1919-10-22,creation,Cr. Villeneuve-St-Georges (division Boissy-Saint-Léger),818
+78O,Seine-et-Oise,L. 22.10.1919,1919-10-22,creation,Cr. Aulnay-sous-Bois (division Gonesse),818
+78O,Seine-et-Oise,L. 12.4.1924,1924-04-12,creation,Cr. Maisons-Laffitte (St-Germain-en-Laye + Argenteuil),818
+78O,Seine-et-Oise,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Étampes et Mantes,818
+78O,Seine-et-Oise,L. 21.7.1931,1931-07-21,creation,Cr. Taverny (division Montmorency),818
+78O,Seine-et-Oise,L. 26.11.1943,1943-11-26,creation_arr,Rétab. Arr. Mantes,818
+78O,Seine-et-Oise,D. 7.11.1962,1962-11-07,creation_arr,"Cr. Arr. Montmorency, St-Germain-en-Laye, du Raincy et Palaiseau (divisions des Arr. Pontoise, Versailles, Corbeil et Rambouillet)",818
+78O,Seine-et-Oise,D. 28.1.1964,1964-01-28,creation,"Cr. Chennevières-sur-Marne, Enghien-les-Bains, St-Leu, Conflans, Chatou, Sarcelles-Centre, Corbeil-N. et Corbeil-S., Montgeron et Brunoy, Blanc-Mesnil et Sevran, Livry-Gargan et Neuilly-Plaisance, Rueil-Malmaison et La Celle-St-Cloud, Meudon et St-Cloud, Argenteuil-N., Argenteuil-S., Cormeilles-en-Parisis et Houilles, Drancy, Villeneuve-le-Roi, Athis-Mons, Savigny-sur-Orge, Juvisy-sur-Orge, Versailles-N.O.",818
+78O,Seine-et-Oise,L. 10.7.1964,1964-07-10,suppression_departement,Disparition du département de Seine-et-Oise. Celui des Yvelines hérite de 262 communes de l'ancienne Seine-et-Oise,819
+79,Deux-Sèvres,A. 5 Brumaire An X,1801-10-27,origine,Découpage d'origine,819
+79,Deux-Sèvres,D. 3 Nivôse An XIII,1804-12-24,transfert_sp,SP transférée de Thouars à Bressuire,819
+79,Deux-Sèvres,D. 7.11.1831,1831-11-07,TCL,TCL Chenay -> Lezay,819
+79,Deux-Sèvres,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Melle et Bressuire,819
+79,Deux-Sèvres,L. 1.6.1942,1942-06-01,creation_arr,Rétab. Arr. Bressuire,819
+79,Deux-Sèvres,A. 6.1.1965,1965-01-06,renommage,Changement dénomination : Chatillon-sur-Sèvre devient Mauléon,819
+79,Deux-Sèvres,D. 13.7.1973,1973-07-13,creation,"Cr. Niort-N., Niort-O. et Niort-E. (division Niort-1 et Niort-2, qui disparaissent)",819
+79,Deux-Sèvres,D. 13.7.1973,1973-07-13,creation,Cr. Thouars-1 et Thouars-2 (dédoublement Thouars),819
+80,Somme,A. 17 Brumaire An X,1801-11-08,origine,Découpage d'origine,819
+80,Somme,A. 9 Pluviôse An X,1802-01-23,TCL,TCL Liomer -> Hornoy,819
+80,Somme,D. 12.5.1880,1880-05-12,TCL,TCL Sains -> Boves,819
+80,Somme,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Doullens,819
+80,Somme,D. 21.10.1963,1963-10-21,fix_limites,Fix. limites Abbeville-N. et Abbeville-S.,819
+80,Somme,D. 13.7.1973,1973-07-13,creation,"Cr. Amiens-1-O., Amiens-2-N.O., Amiens-3-N.E., Amiens-4-E., Amiens-5-S.E., Amiens-6-S. et Amiens-7-S.O. (division Amiens-N.E., Amiens-N.O., Amiens-S.E. et Amiens-S.O., qui disparaissent)",819
+80,Somme,D. 22.1.1985,1985-01-22,fix_limites,Fix. limites : Amiens-1-O. et Amiens-7-S.O. ; Amiens-5-S.E. et Amiens-6-S.,819
+80,Somme,D. 22.1.1985,1985-01-22,creation,Cr. Amiens-8-N. (division Amiens-2-N.O. et Amiens-3-N.E.),819
+80,Somme,D. 22.1.1985,1985-01-22,creation,Cr. Friville-Escarbotin (division Ault),819
+81,Tarn,A. 7 Frimaire An X,1801-11-28,origine,Découpage d'origine,820
+81,Tarn,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Puycelci -> Vaour,820
+81,Tarn,A. 9 Pluviôse An X,1802-01-29,TCL,TCL Montirat -> Pampelonne,820
+81,Tarn,A. 9 Pluviôse An X,1802-01-29,TCL,TCL St-Juéry -> Villefranche d'Albigeois,820
+81,Tarn,L. 5.7.1889,1889-07-05,creation,Cr. Carmaux (division Monestiès),820
+81,Tarn,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Gaillac et Lavaur,820
+81,Tarn,D. 13.7.1973,1973-07-13,creation,"Cr. Albi-Centre, Albi-N. et Albi-S. (division Albi, qui disparaît)",820
+81,Tarn,D. 13.7.1973,1973-07-13,creation,Cr. Carmaux-N. et Carmaux-S. (dédoublement Carmaux),820
+81,Tarn,D. 13.7.1973,1973-07-13,creation,"Cr. Castres-E., Castres-N. et Castres-S. (division Castres qui disparaît)",820
+81,Tarn,D. 13.7.1973,1973-07-13,creation,Cr. Mazamet-N.E. et Mazamet-S.O. (dédoublement Mazamet),820
+81,Tarn,D. 24.12.1984,1984-12-24,creation,Cr. Albi-N.E. et Albi-N.O. (dédoublement Albi-N.),820
+82,Tarn-et-Garonne,S.-C. 4.11.1808,1808-11-04,origine,"Création du département (composition : Aveyron, Haute-Garonne, Gers, Lot et Lot-et-Garonne) et découpage d’origine",820
+82,Tarn-et-Garonne,D. 8.10.1810,1810-10-08,transfert_arr,Transfert Villebrumier (Arr. Castelsarrasin -> Arr. Montauban),820
+82,Tarn-et-Garonne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Moissac,820
+82,Tarn-et-Garonne,D. 13.7.1973,1973-07-13,creation,Cr. Castelsarrasin-1 et Castelsarrasin-2 (dédoublement Castelsarrasin),820
+82,Tarn-et-Garonne,D. 13.7.1973,1973-07-13,creation,Cr. Moissac-1 et Moissac-2 (dédoublement Moissac),820
+82,Tarn-et-Garonne,D. 13.7.1973,1973-07-13,creation,"Cr. Montauban-1 à 4 (division Montauban-E. et Montauban-O., qui disparaissent)",820
+83,Var,A. 15 Brumaire An X,1801-11-06,origine,Découpage d'origine,820
+83,Var,D. 27.12.1820,1820-12-27,creation,Cr. Cannes (division Antibes),820
+83,Var,D. 3.9.1823,1823-09-03,creation,Cr. Solliès-Pont (division Cuers),820
+83,Var,D. 28.4.1824,1824-04-28,creation,Cr. Le Luc (division Lorgues),820
+83,Var,D. 30.3.1831,1831-03-30,TCL,TCL Ginasservis -> Rians,820
+83,Var,L. 23.6.1860,1860-06-23,transfert_departement,Transfert de l'Arr. de Grasse aux Alpes-Maritimes,820
+83,Var,L. 8.5.1869,1869-05-08,creation,Cr. La Seyne (division Ollioules),820
+83,Var,L. 8.7.1901,1901-07-08,creation,Cr. Toulon-3 et Toulon-4 (division des 2 anciens cantons),820
+83,Var,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Brignoles,820
+83,Var,D. 28.1.1964,1964-01-28,creation,Cr. Toulon-5 (division Toulon-1 et Toulon-3),820
+83,Var,D. 2.8.1973,1973-08-02,creation,Cr. Toulon-6 à 9 et La Valette (division Toulon-1 et Toulon-3 à 5),820
+83,Var,D. 2.8.1973,1973-08-02,renommage,Changement dénomination : Toulon-2 devient Toulon-5,820
+83,Var,D. 2.8.1973,1973-08-02,creation,Cr. La Crau (division Hyères),820
+83,Var,D. 2.8.1973,1973-08-02,creation,Cr. Le Muy et St-Raphaël (division Fréjus),820
+83,Var,D. 2.8.1973,1973-08-02,creation,Cr. St-Mandrier et Six-Fours (division La Seyne),820
+83,Var,D. 4.12.1974,1974-12-04,creation_arr,"Cr. Arr. Brignoles avec 6 cantons de l'Arr. Draguignan (Aups, Barjols, Besse-sur-Issole, Cotignac, Rians et Tavernes) et 3 cantons de l'Arr. Toulon (Brignoles, La Roquebrussane et St-Maximin)",820
+83,Var,D. 4.12.1974,1974-12-04,transfert_sp,Préfecture transférée de Draguignan à Toulon,821
+84,Vaucluse,A. 7 Frimaire An X,1801-11-28,origine,Découpage d'origine,821
+84,Vaucluse,A. 7 Frimaire An X,1801-11-28,transfert_sp,SP transférée d'Apt à Cavaillon,821
+84,Vaucluse,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Orange,821
+84,Vaucluse,D.-L. 10.9.1926,1926-09-10,transfert_sp,SP transférée de Cavaillon à Apt,821
+84,Vaucluse,D. 27.4.1933,1933-04-27,creation,Cr. Avignon-E. et Avignon-O. (division Avignon-N. et Avignon-S.),821
+84,Vaucluse,D. 31.1.1985,1985-01-31,fix_limites,"Fix. limites : Avignon-E., Avignon-N., Avignon-O. et Avignon-S.",821
+85,Vendée,A. 9 Brumaire An X,1801-10-31,origine,Découpage d'origine,821
+85,Vendée,D. 4 Germinal An XIII,1805-03-25,creation,Cr. St-Jean-de-Monts (Challans + Beauvoir + St-Gilles-sur-Vie),821
+85,Vendée,D. 14.6.1810,1810-06-14,transfert_sp,Préfecture transférée de Fontenay à Napoléon (= La Roche-sur-Yon),821
+85,Vendée,D. 14.6.1810,1810-06-14,suppression_arr,Supp. SP Montaigu : ses cantons constituent l'Arr. de La Roche-sur-Yon,821
+85,Vendée,L. 21.7.1824,1824-07-21,transfert_arr,Transfert Mareuil et Chantonnay (Arr. Fontenay -> Arr. La Roche-sur-Yon),821
+85,Vendée,D. 2.8.1973,1973-08-02,creation,Cr. La Roche-sur-Yon-N. et La Roche-sur-Yon-S. (dédoublement La Roche-sur-Yon),821
+86,Vienne,A. 27 Brumaire An X,1801-11-18,origine,"Découpage d'origine (comportait une erreur rectifiée ensuite, plaçant St-Georges-lès-Baillargeaux dans l'Arr. de Civray et non de Poitiers)",821
+86,Vienne,L. 16.4.1862,1862-04-16,fix_limites,Fix. limites Poitiers-N. et Poitiers-S.,821
+86,Vienne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Civray et Loudun,821
+86,Vienne,D. 11.1.1973,1973-01-11,TCL,TCL Leigné-sur-Usseau -> St-Gervais-les-Trois-Clochers,821
+86,Vienne,D. 13.7. et 18.8.1973,1973-07-13,creation,Cr. Châtellerault-N. et Châtellerault-S. (dédoublement Châtellerault),821
+86,Vienne,D. 13.7. et 18.8.1973,1973-07-13,creation,"Cr. Poitiers-1 à Poitiers-5 (division Poitiers-N. et Poitiers-S., qui disparaissent)",821
+86,Vienne,D. 26.1.1982,1982-01-26,creation,Cr. Châtellerault-O. (division Châtellerault-N. et Châtellerault-S.),821
+86,Vienne,D. 26.1.1982,1982-01-26,creation,Cr. Poitiers-6 et Poitiers-7 (division Poitiers-1 à 5),821
+87,Haute-Vienne,A. 9 Frimaire An X,1801-11-30,origine,Découpage d'origine,821
+87,Haute-Vienne,A. 11 Thermidor An XII,1804-07-30,creation,Cr. Oradour-sur-Vayres (St-Laurent + St-Mathieu),821
+87,Haute-Vienne,L. 21.7.1824,1824-07-21,transfert_arr,Transfert Laurière (Arr. Bellac -> Arr. Limoges),821
+87,Haute-Vienne,L. 3.7.1901,1901-07-03,creation,Cr. Limoges-E. et Limoges-O. (division Limoges-N. et Limoges-S.),821
+87,Haute-Vienne,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. St-Yrieix,821
+87,Haute-Vienne,D. 16.8.1973,1973-08-16,creation,"Cr. Limoges-1 à Limoges-12 (division Limoges-E., Limoges-N., Limoges-O. et Limoges-S., qui disparaissent)",822
+87,Haute-Vienne,D. 16.8.1973,1973-08-16,creation,Cr. St-Junien-E. et St-Junien-O. (dédoublement St-Junien),822
+87,Haute-Vienne,D. 25.1.1982,1982-01-25,creation,Cr. Limoges-Isle et Limoges-Puy-les-Rodes (dédoublement Limoges-6),822
+87,Haute-Vienne,D. 25.1.1982,1982-01-25,creation,Cr. Limoges-Corgnac (division Limoges-7),822
+87,Haute-Vienne,D. 24.12.1984,1984-12-24,creation,Cr. Limoges-Vigenal (division Limoges-8),822
+87,Haute-Vienne,D. 24.12.1984,1984-12-24,creation,Cr. Limoges Grand-Treuil (division Limoges-4),822
+88,Vosges,A. 19 Vendémiaire An X,1801-10-11,origine,Découpage d'origine,822
+88,Vosges,A. 26 Ventôse An XI,1803-03-17,TCL,TCL Cornimont -> Saulxures,822
+88,Vosges,L. 11.4.1821,1821-04-11,transfert_arr,Transfert Bains (Arr. Mirecourt -> Arr. Épinal),822
+88,Vosges,D. 30.6.1860,1860-06-30,TCL,TCL Ramonchamp -> Le Thillot,822
+88,Vosges,Traité de Francfort 10.5.1871,1871-05-10,perte,"Sont annexés à l'Allemagne : le canton de Schirmeck (moins Raon-sur-Plaine, rétrocédé par l'Allemagne le 12.10.1871) ; 7 communes du canton de Saales",822
+88,Vosges,L. 5.4.1873,1873-04-05,creation,Cr. Provenchères (avec les 6 communes restées françaises du canton de Saales + 1 commune du canton de St-Dié),822
+88,Vosges,D.-L. 10.9.1926,1926-09-10,suppression_arr,Supp. Arr. Mirecourt et Remiremont,822
+88,Vosges,D. 13.7.1973,1973-07-13,creation,Cr. Épinal-E. et Épinal-O. (dédoublement Épinal),822
+88,Vosges,D. 15.1.1982,1982-01-15,creation,Cr. St-Dié-E. et St-Dié-O. (dédoublement St-Dié),822
+89,Yonne,A. 15 Vendémiaire An X,1801-10-07,origine,Découpage d'origine,822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,suppression,"Supp. St-Julien-du-Sault (-> Villeneuve-sur-Yonne, Joigny, Charny)",822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,creation,Cr. Cerisiers (Villeneuve-sur-Yonne + Brion),822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,creation,Cr. Sens-N. et Sens-S. (dédoublement Sens),822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,creation,"Cr. Auxerre-E. et Auxerre-O. (dédoublement Auxerre + partie des cantons de Seignelay, Toucy, Chablis et Ligny)",822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,TCL,TCL St-Valérien -> Charny,822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,TCL,TCL St-Vinnemer -> Cruzy,822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,creation,Cr. Guillon (division L'Isle-sur-Serein),822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,suppression,Supp. Ligny le Châtel (-> Auxerre-E. + Chablis + Seignelay),822
+89,Yonne,A. 9 Pluviôse An X,1802-01-29,suppression,Supp. Lucy-le-Bois (-> L'Isle-sur-Serein + Avallon + Vézelay),822
+89,Yonne,A. 29 Thermidor An XI,1803-08-17,fix_limites,Fix. limites Auxerre-O. et Auxerre-E.,822
+89,Yonne,A. 11 Thermidor An XII,1804-07-30,creation,Cr. St-Julien-du-Sault (Villeneuve-sur-Yonne + Joigny + Chéroy),822
+89,Yonne,A. 17 Nivôse An XIII,1805-01-07,creation,Cr. Ligny-le-Chatel (Auxerre-E. + Chablis + Seignelay),823
+89,Yonne,D. 31.7.1806,1806-07-31,suppression_arr,Supp. Arr. Joigny et Tonnerre,823
+89,Yonne,D. 2.8.1973,1973-08-02,creation,Cr. Auxerre-N.O. et Auxerre-S.O. (dédoublement Auxerre-O.),823
+89,Yonne,D. 2.8.1973,1973-08-02,creation,Cr. Sens-N.E. et Sens-S.E. (dédoublement Sens-N.),823
+89,Yonne,D. 2.8.1973,1973-08-02,renommage,Changement dénomination : Sens-S. devient Sens-O.,823
+89,Yonne,D. 2.8.1973,1973-08-02,creation,Cr. Migennes (division Joigny),823
+90,Territoire de Belfort,D. 16.9.1871,1871-09-16,origine,"Découpage d'origine : Belfort, Delle (auquel on rattache les 3 communes de l'ancien canton de Dannemarie), Fontaine, Giromagny et Rougemont-le-Château (constitué des 4 communes de l'ancien canton de Masevaux)",823
+90,Territoire de Belfort,D. 9.8.1967,1967-08-09,creation,"Cr. Belfort-Centre, Belfort-E., Belfort-N., Belfort-O., Chatenais-les-Forges, Danjoutin et Valdoie (division Belfort qui disparaît)",823
+90,Territoire de Belfort,D. 19.1.1970,1970-01-19,creation,Cr. Beaucourt et Grandvillars (division Delle),823
+90,Territoire de Belfort,D. 25.1 et 5.2.1982,1982-01-25,creation,Cr. Belfort-S. (division Belfort-Centre et Belfort-O.),823
+90,Territoire de Belfort,D. 24.12.1984,1984-12-24,creation,Cr. Offemont (Valdoie + Giromagny),823
+90,Territoire de Belfort,D. 24.12.1984,1984-12-24,fix_limites,"Fix. limites : Fontaine, Giromagny, Rougemont-le-Château",823
+91,Essonne,D. 2.6.1966,1966-06-02,transfert_sp,SP transférée de Corbeil à Évry,823
+91,Essonne,D. 2.6.1966,1966-06-02,creation_arr,Modification des circonscriptions des Arr. Évry et Palaiseau ; Cr. Arr. Étampes,823
+91,Essonne,D. 20.7.1967,1967-07-20,origine,Découpage en 27 cantons,823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Chilly-Mazarin (Longjumeau + Savigny-sur-Orge + Massy),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Draveil (division Juvisy-sur-Orge),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Gif-sur-Yvette (division Orsay),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Morsang-sur-Orge (division Viry-Chatillon),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. St-Germain-les-Corbeil (Évry + Corbeil-Essonnes),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. St-Michel-sur-Orge (division Bretigny-sur-Orge),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Vigneux-sur-Seine (division Montgeron),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Villebon-sur-Yvette (Longjumeau + Palaiseau),823
+91,Essonne,D. 25.11.1975,1975-11-25,creation,Cr. Yerres (Montgeron + Brunoy),823
+91,Essonne,D. 25.11.1975,1975-11-25,suppression,Supp. Juvisy-sur-Orge (-> Viry-Chatillon et Draveil),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Épinay-sous-Sénart (division Brunoy),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Corbeil-E. et Corbeil-O. (dédoublement Corbeil),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Évry-N. et Évry-S. (dédoublement Évry),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Massy-E. et Massy-O. (dédoublement Massy),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Grigny (division Morsang-sur-Orge),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Les Ulis (division Orsay),823
+91,Essonne,D. 23.1.1985,1985-01-23,creation,Cr. Juvisy-sur-Orge (division Savigny et Viry-Chatillon),823
+91,Essonne,D. 23.1.1985,1985-01-23,transfert_arr,Transfert Juvisy-sur-Orge (Arr. Évry -> Arr. Palaiseau),823
+92,Hauts-de-Seine,D. 20.7.1967,1967-07-20,origine,Découpage en 40 cantons,824
+92,Hauts-de-Seine,D. 27.12.1972,1972-12-27,creation_arr,"Cr. Arr. Boulogne-Billancourt (division Arr. Nanterre) : cantons Boulogne-Billancourt (3), Chaville, Issy-les-Moulineaux (2), Meudon, St-Cloud et Sèvres",824
+92,Hauts-de-Seine,D. 24.12.1984,1984-12-24,creation,Cr. Genevilliers-S. et Genevilliers-N. (dédoublement Genevilliers),824
+92,Hauts-de-Seine,D. 24.12.1984,1984-12-24,creation,Cr. Nanterre-S.O. et Nanterre-S.E. (dédoublement Nanterre-S.),824
+92,Hauts-de-Seine,D. 24.12.1984,1984-12-24,creation,Cr. Chatenay-Malabry (division Sceaux),824
+92,Hauts-de-Seine,D. 24.12.1984,1984-12-24,creation,Cr. Fontenay-aux-Roses (division Chatillon),824
+92,Hauts-de-Seine,D. 24.12.1984,1984-12-24,creation,Cr. Colombes-N.E. et Colombes-N.O. (dédoublement Colombes-N.),824
+93,Seine-Saint-Denis,D. 20.7.1967,1967-07-20,origine,Découpage en 34 cantons,824
+93,Seine-Saint-Denis,D. 20.1.1976,1976-01-20,creation,"Cr. Bondy-S.E. et Bondy-N.O. (division Bondy, qui disparaît, et Pavillon-sous-Bois, qui demeure)",824
+93,Seine-Saint-Denis,D. 20.1.1976,1976-01-20,creation,"Cr. Montreuil-N. (division Montreuil-E., Montreuil-O. et Romainville)",824
+93,Seine-Saint-Denis,D. 20.1.1976,1976-01-20,creation,Cr. Neuilly-sur-Marne (division Neuilly-Plaisance),824
+93,Seine-Saint-Denis,D. 20.1.1976,1976-01-20,creation,"Cr. Les Lilas, Pantin-E. et Pantin-O. (division Pantin et le Pré-Saint-Gervais, qui disparaissent)",824
+93,Seine-Saint-Denis,D. 20.1.1976,1976-01-20,creation,Cr. Pierrefitte (Stains + St-Denis-N.O.),824
+93,Seine-Saint-Denis,D. 20.1.1976,1976-01-20,creation,Cr. Villepinte (division Tremblay-les-Gonesse),824
+94,Val-de-Marne,D. 20.7.1967,1967-07-20,origine,Découpage en 33 cantons,824
+94,Val-de-Marne,D. 27.12.1972,1972-12-27,creation_arr,"Cr. Arr. L'Hay-les-Roses (division Arr. Créteil) : cantons Cachan, L'Hay-les-Roses, le Kremlin-Bicêtre, Thiais et Villejuif",824
+94,Val-de-Marne,D. 20.1.1976,1976-01-20,creation,Cr. Arcueil (Cachan + Kremlin-Bicêtre),824
+94,Val-de-Marne,D. 20.1.1976,1976-01-20,creation,"Cr. Champigny-O., Champigny-E. et Villiers-sur-Marne (division Champigny, qui disparaît, et Bry-sur-Marne, Chennevières et Joinville-le-Pont, qui demeurent)",824
+94,Val-de-Marne,D. 20.1.1976,1976-01-20,creation,Cr. Créteil-N. et Créteil-S. (dédoublement Créteil),824
+94,Val-de-Marne,D. 20.1.1976,1976-01-20,creation,"Cr. Fontenay-E., Vincennes-Fontenay-N. et Vincennes-Fontenay-S. (division Fontenay et Vincennes-E., qui disparaissent)",824
+94,Val-de-Marne,D. 20.1.1976,1976-01-20,creation,Cr. Fresnes (division l'Hay-les-Roses),824
+94,Val-de-Marne,D. 20.1.1976,1976-01-20,fix_limites,"Fix. limites : l'Hay-les-Roses, le Kremlin-Bicêtre et Villejuif ; Vitry-E. et Vitry-O.",824
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,"Cr. Villejuif-E. et Villejuif-O. (division Arcueil, l'Hay-les-Roses et le Kremlin-Bicêtre, qui demeurent, et Villejuif, qui disparaît)",824
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. Chevilly-Larue (division Thiais),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. Vitry-N. (division Vitry-E. et Vitry-O.),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. Alfortville-S. et Alfortville-N. (dédoublement Alfortville),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. Créteil-O. (division Créteil-N. et Créteil-S.),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. Valenton (division Villeneuve-St-Georges),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. Sucy-en-Brie (division Boissy-St-Léger et Villeneuve),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,Cr. St-Maur-la-Varenne (division Bonneuil-sur-Marne),825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,"Cr. Champigny-Centre et Ormesson (division Champigny-E., Champigny-O. et Chennevières)",825
+94,Val-de-Marne,D. 24.12.1984,1984-12-24,creation,"Cr. Fontenay-O. et Vincennes-E. (division Vincennes-Fontenay-N. et Vincennes-Fontenay-S., qui disparaissent)",825
+95,Val-d'Oise,D. 2.6.1966,1966-06-02,creation_arr,Cr. Arr. Pontoise,825
+95,Val-d'Oise,D. 20.7.1967,1967-07-20,origine,Découpage en 27 cantons,825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,"Cr. Argenteuil-E. et Argenteuil-Bezons (division Argenteuil-Centre, qui demeure, Argenteuil-N. et Bezons qui disparaissent)",825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. Beauchamp (Taverny + St-Ouen l'Aumône),825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. Cergy et Osny (division Pontoise),825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. Goussainville (division Gonesse),825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. Herblay (division Cormeilles),825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. Sarcelles-St-Brice (Sarcelles + Domont),825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,renommage,Changement dénomination : Sarcelles devient Sarcelles-E.,825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. La Vallée du Sausseron (= Auvers) (St-Ouen l'Aumône + L'Isle-Adam + Pontoise),825
+95,Val-d'Oise,D. 22.1.1976,1976-01-22,creation,Cr. Villiers-le-Bel (division Garges-les-Gonesse),825
+95,Val-d'Oise,D. 31.1.1985,1985-01-31,creation,"Cr. Argenteuil-N., Argenteuil-O. et Bezons (division Argenteuil-Bezons et Argenteuil-Centre qui disparaissent)",825
+95,Val-d'Oise,D. 31.1.1985,1985-01-31,creation,Cr. Garges-E. et Garges-O. (dédoublement Garges),825
+95,Val-d'Oise,D. 31.1.1985,1985-01-31,creation,"Cr. Sarcelles-N.E. et Sarcelles-S.O. (division Domont, Écouen qui demeurent, et Sarcelles-E., Sarcelles St-Brice qui disparaissent)",825
+95,Val-d'Oise,D. 31.1.1985,1985-01-31,creation,"Cr. Cergy-N., Cergy-S. et L'Hautil (division Cergy et Osny qui disparaissent, St-Ouen-l'Aumône et Taverny, qui demeurent)",825
+95,Val-d'Oise,D. 31.1.1985,1985-01-31,creation,Cr. Saint-Gratien (division Sannois),825

@@ -1,0 +1,172 @@
+dep_code,dep_nom,commune,nb_cantons,cantons,limites_decrites,dates,decrets
+13,BOUCHES-DU-RHONE,Marseille,20,Marseille-I ; Marseille-II ; Marseille-III ; Marseille-IV ; Marseille-IX ; Marseille-V ; Marseille-VI ; Marseille-VII ; Marseille-VIII ; Marseille-X ; Marseille-XI ; Marseille-XII ; Marseille-XIII ; Marseille-XIV ; Marseille-XIX ; Marseille-XV ; Marseille-XVI ; Marseille-XVIII ; Marseille-XVIl ; Marseille-XX,20/20,1973-08-16,73-812
+87,HAUTE-VIENNE,Limoges,18,Limoges - Puy-Las-Rodas ; Limoges-Beaupuy (Limoges-I) ; Limoges-Carnot (Limoges-II) ; Limoges-Centre (Limoges-III) ; Limoges-Cité (Limoges-IX) ; Limoges-Condat (Limoges-XI) ; Limoges-Corgnac ; Limoges-Couzeix (Limoges-VIII) ; Limoges-Emailleurs (Limoges-V) ; Limoges-Grand-Treuil ; Limoges-Isle ; Limoges-Isle (Limoges-VI) ; Limoges-La Bastide (Limoges-IV) ; Limoges-Landouge ; Limoges-Landouge (Limoges-VII) ; Limoges-Panazol (Limoges-XII) ; Limoges-Vigenal ; Limôges-Le Palais (Limoges-X),18/18,1973-08-16 ; 1982-01-25 ; 1984-12-24,73-821 ; 82-86 ; 84-1239
+31,HAUTE-GARONNE,Toulouse,15,Toulouse-I ; Toulouse-II ; Toulouse-III ; Toulouse-IV ; Toulouse-IX ; Toulouse-V ; Toulouse-VI ; Toulouse-VII ; Toulouse-VIII ; Toulouse-X ; Toulouse-XI ; Toulouse-XII ; Toulouse-XIII ; Toulouse-XIV ; Toulouse-XV,15/15,1973-08-16,73-815
+06,ALPES-MARITIMES,Nice,13,Nice-I ; Nice-II ; Nice-III ; Nice-IV ; Nice-IX ; Nice-V ; Nice-VI ; Nice-VII ; Nice-VIII ; Nice-X ; Nice-XI ; Nice-XII ; Nice-XIV,16/16,1973-08-16 ; 1982-01-25,73-811 ; 82-79
+35,ILLE-ET-VILAINE,Rennes,12,Rennes-I ; Rennes-II ; Rennes-III ; Rennes-IV ; Rennes-IX ; Rennes-V ; Rennes-VI ; Rennes-VII ; Rennes-VII-1 ; Rennes-VIII ; Rennes-VIII-2 ; Rennes-X,12/12,1973-07-23 ; 1982-01-25,73-723 ; 82-80
+44,LOIRE-ATLANTIQUE,Nantes,10,Nantes-I ; Nantes-II ; Nantes-III ; Nantes-IV ; Nantes-IX ; Nantes-V ; Nantes-VI ; Nantes-VII ; Nantes-VIII ; Nantes-X,10/10,1973-07-23,73-725
+42,LOIRE,Saint-Étienne,9,Saint-Etienne - Nord-Est -1 ; Saint-Etienne - Nord-Est-II ; Saint-Etienne - Nord-Ouest-I ; Saint-Etienne - Nord-Ouest-II ; Saint-Etienne - Sud-Est-I ; Saint-Etienne - Sud-Est-II ; Saint-Etienne - Sud-Est-III ; Saint-Etienne - Sud-Ouest-I ; Saint-Etienne - Sud-Ouest-II,9/9,1973-07-13,73-662
+45,LOIRET,Orléans,9,Orléans - Saint-Marc (ou Orléans-IV) ; Orléans - Saint-Marc - Argonne ; Orléans-Bannier ; Orléans-Bannier (ou Orléans-III) ; Orléans-Bourgogne ; Orléans-Carmes ; Orléans-La Source ; Orléans-Saint-Marceau ; Orléans-Saint-Marceau - La Source (ou Orléans-V),7/9,1973-07-23 ; 1982-01-25,73-726 ; 82-81
+51,MARNE,Reims,9,Reims-I ; Reims-II ; Reims-III ; Reims-IV ; Reims-IX ; Reims-V ; Reims-VI ; Reims-VII ; Reims-VIII,10/10,1973-07-13 ; 1982-01-15,73-665 ; 82-32
+66,PYRENEES-ORIENTALES,Perpignan,9,Perpignan-I ; Perpignan-I (ou du Vernet) ; Perpignan-II ; Perpignan-III ; Perpignan-IV ; Perpignan-IX ; Perpignan-V ; Perpignan-VI ; Perpignan-VIII,9/9,1973-08-16 ; 1982-01-25,73-819 ; 82-84
+33,GIRONDE,Bordeaux,8,Bordeaux-I ; Bordeaux-II ; Bordeaux-III ; Bordeaux-IV ; Bordeaux-V ; Bordeaux-VI ; Bordeaux-VII ; Bordeaux-VIII,7/8,1973-07-13,73-657
+37,INDRE-ET-LOIRE,Tours,8,Montlouis-sur-Loire ; Tours-Est-II ; Tours-Nord-Est ; Tours-Nord-III ; Tours-Nord-Ouest ; Tours-Ouest-IV ; Tours-Sud-V ; Tours-Val-du-Cher-VI,7/8,1973-07-23 ; 1982-01-20 ; 1984-12-24,73-724 ; 82-58 ; 84-1227
+53,MAYENNE,Laval,8,Laval - Nord-Est ; Laval - Nord-Ouest ; Laval - Sud-Est ; Laval - Sud-Ouest ; Laval-Est ; Laval-Nord-Ouest ; Laval-Saint-Nicolas ; Laval-Sud-Ouest,9/9,1973-07-13 ; 1982-01-15 ; 1984-12-24,73-666 ; 82-34 ; 84-1233
+83,VAR,Toulon,8,Toulon-I ; Toulon-II ; Toulon-III ; Toulon-IV ; Toulon-IX ; Toulon-VI ; Toulon-VII ; Toulon-VIII,8/8,1973-08-02,73-771
+10,AUBE,Troyes,7,Troyes-I ; Troyes-II ; Troyes-III ; Troyes-IV ; Troyes-V ; Troyes-VI ; Troyes-VII,4/7,1973-07-13,73-652
+15,CANTAL,Aurillac,7,Aurillac-I ; Aurillac-I-Nord ; Aurillac-II ; Aurillac-II-Ouest ; Aurillac-III ; Aurillac-III-Sud ; Aurillac-IV,7/7,1973-07-23 ; 1982-01-20,73-716 ; 82-51
+21,COTE-D'OR,Dijon,7,Dijon-I ; Dijon-III ; Dijon-IV ; Dijon-V ; Dijon-VI ; Dijon-VII ; Dijon-VIII,7/7,1973-08-16,73-813
+34,HERAULT,Montpellier,7,Montpellier-III ; Montpellier-IV ; Montpellier-IX ; Montpellier-V ; Montpellier-VI ; Montpellier-VII ; Montpellier-VIII,7/7,1973-07-23,73-722
+80,SOMME,Amiens,7,Amiens-I - Ouest ; Amiens-II - Nord-Ouest ; Amiens-III - Nord-Est ; Amiens-IV - Est ; Amiens-V - Sud-Est ; Amiens-VI - Sud ; Amiens-VII - Sud-Ouest,7/7,1973-07-13,73-674
+01,AIN,Bourg-en-Bresse,6,Bourg-Est ; Bourg-Nord-Centre ; Bourg-Sud ; Bourg-en-Bresse-I ; Bourg-en-Bresse-II ; Bourg-en-Bresse-III,6/6,1973-08-16 ; 1982-01-25,73-810 ; 82-77
+29,FINISTERE,Brest,6,Brest-II ; Brest-III ; Brest-IV ; Brest-V ; Brest-VI ; Brest-VII,6/6,1973-07-23,73-720
+49,MAINE-ET-LOIRE,Angers,6,Angers-I ; Angers-II ; Angers-IV ; Angers-V ; Angers-VI ; Angers-VII,6/6,1973-07-23,73-727
+08,ARDENNES,Charleville-Mézières,5,Charleville-Centre ; Charleville-La Houillère ; Mézières-Centre-Ouest ; Mézières-Est ; Villers-Semeuse,7/7,1973-07-23 ; 1982-01-15,73-715 ; 82-23
+16,CHARENTE,Angoulême,5,Angoulême - Ville-II ; Angoulême-Est ; Angoulême-Nord ; Angoulême-Ouest ; Augoulême - Ville-I,3/5,1973-07-13 ; 1982-01-15,73-654 ; 82-25
+17,CHARENTE-MARITIME,La Rochelle,5,La Rochelle-I ; La Rochelle-II ; La Rochelle-III ; La Rochelle-IV ; La Rochelle-V,7/7,1973-07-13 ; 1982-01-15,73-655 ; 82-26
+18,CHER,Bourges,5,Bourges-I ; Bourges-II ; Bourges-III ; Bourges-IV ; Bourges-V,6/6,1973-08-02 ; 1982-01-20,73-764 ; 82-52
+25,DOUBS,Besançon,5,Besançon - Nord-Est ; Besançon - Nord-Ouest ; Besançon-Est ; Besançon-Ouest ; Besançon-Planoise,6/6,1973-08-16 ; 1982-01-20,73-814 ; 82-55
+30,GARD,Nîmes,5,Nîmes-I ; Nîmes-III ; Nîmes-IV ; Nîmes-V ; Nîmes-VI,8/8,1973-07-23 ; 1982-01-20,73-721 ; 82-57
+38,ISERE,Grenoble,5,Grenoble-I ; Grenoble-II ; Grenoble-III ; Grenoble-IV ; Grenoble-V,5/5,1973-08-02,73-766
+41,LOIR-ET-CHER,Blois,5,Blois-I ; Blois-II ; Blois-III ; Blois-IV ; Blois-V,6/6,1973-07-13 ; 1982-01-20,73-661 ; 82-60
+47,LOT-ET-GARONNE,Agen,5,Agen - Sud-Est ; Agen-Est ; Agen-Nord ; Agen-Ouest ; Agen-centre,5/5,1973-07-13 ; 1984-12-24,73-663 ; 84-1232
+52,HAUTE-MARNE,Saint-Dizier,5,Saint-Dizier-Centre ; Saint-Dizier-Est ; Saint-Dizier-Nord-Est ; Saint-Dizier-Ouest ; Saint-Dizier-Sud-Est,4/5,1973-08-16 ; 1982-01-15,73-816 ; 82-33
+65,HAUTES-PYRENEES,Tarbes,5,Tarbes-I ; Tarbes-II ; Tarbes-III ; Tarbes-IV ; Tarbes-V,5/5,1973-07-23,73-729
+71,SAONE-ET-LOIRE,Chalon-sur-Saône,5,Chalon-sur-Saône-Centre ; Chalon-sur-Saône-Nord ; Chalon-sur-Saône-Ouest ; Chalon-sur-Saône-Ville ; Chalon-sur-Saône-périphérie,4/5,1973-08-02 ; 1984-12-24,73-769 ; 84-1237
+86,VIENNE,Poitiers,5,Poitiers-I ; Poitiers-II ; Poitiers-III ; Poitiers-IV ; Poitiers-V,5/5,1973-07-13,73-677
+14,CALVADOS,Caen,4,Caen-I ; Caen-III ; Caen-V ; Caen-VI,4/4,1973-08-02,73-763
+26,DROME,Valence,4,Valence-I ; Valence-II ; Valence-III ; Valence-IV,7/7,1973-07-23 ; 1984-12-24,73-718 ; 84-1224
+32,GERS,Auch,4,Auch-Nord-Est ; Auch-Nord-Ouest ; Auch-Sud-Est ; Auch-Sud-Ouest,4/4,1973-08-02,73-765
+34,HERAULT,Béziers,4,Béziers-I ; Béziers-II ; Béziers-III ; Béziers-IV,4/4,1973-07-23,73-722
+36,INDRE,Châteauroux,4,Châteauroux-Est ; Châteauroux-Ouest ; Châteauroux-Sud ; Châteauroux-centre,4/4,1973-07-13,73-658
+54,MEURTHE-ET-MOSELLE,Nancy,4,Nancy-Est ; Nancy-Nord ; Nancy-Ouest ; Nancy-Sud,4/4,1973-08-02,73-768
+58,NIEVRE,Nevers,4,Nevers-Centre ; Nevers-Nord ; Nevers-Rural ; Nevers-Sud,4/4,1973-08-16,73-817
+60,OISE,Compiègne,4,Compiègne - Sud-Est ; Compiègne - Sud-Ouest ; Compiègne-Nord ; Compiègne-Sud,3/4,1973-07-13 ; 1982-01-20,73-668 ; 82-63
+62,PAS-DE-CALAIS,Calais,4,Calais-Centre ; Calais-Est ; Calais-Nord-Ouest ; Calais-Sud-Est,4/6,1973-08-16 ; 1984-12-24,73-818 ; 84-1236
+81,TARN,Albi,4,Albi-Centre ; Albi-Nord ; Albi-Nord-Est ; Albi-Sud,4/4,1973-07-13 ; 1984-12-24,73-675 ; 84-1238
+82,TARN-ET-GARONNE,Montauban,4,Montauban - II ; Montauban - III ; Montauban - IV ; Montauban -1,4/4,1973-07-13,73-676
+84,VAUCLUSE,Avignon,4,Avignon-Est ; Avignon-Nord ; Avignon-Ouest ; Avignon-Sud,4/4,1973-08-02,73-772
+02,AISNE,Saint-Quentin,3,Saint-Quentin - Centre ; Saint-Quentin - Nord ; Saint-Quentin - Sud,3/3,1973-07-23,73-712
+11,AUDE,Narbonne,3,Narbonne-Est ; Narbonne-Ouest ; Narbonne-Sud,2/3,1973-07-13,73-653
+12,AVEYRON,Rodez,3,Rodez-Est ; Rodez-Nord ; Rodez-Ouest,4/5,1973-08-02 ; 1982-01-15,73-762 ; 82-24
+22,COTES-DU-NORD,Saint-Brieuc,3,Saint-Brieuc-Nord ; Saint-Brieuc-Ouest ; Saint-Brieuc-Sud,3/3,1982-01-20,82-54
+27,EURE,Évreux,3,Evreux-Est ; Evreux-Ouest ; Evreux-Sud,3/3,1982-01-20,82-56
+28,EURE-ET-LOIR,Dreux,3,Dreux-Est ; Dreux-Ouest ; Dreux-Sud,2/3,1982-01-15,82-27
+44,LOIRE-ATLANTIQUE,Saint-Nazaire,3,Saint-Nazaire - Est ; Saint-Nazaire-Centre ; Saint-Nazaire-Ouest-Pornichet,3/3,1973-07-23 ; 1982-01-20,73-725 ; 82-59
+49,MAINE-ET-LOIRE,Cholet,3,Cholet-I ; Cholet-II ; Cholet-III,2/3,1973-07-23,73-727
+51,MARNE,Châlons-sur-Marne,3,Châlons-sur-Marne-I ; Châlons-sur-Marne-II ; Châlons-sur-Marne-III,2/3,1973-07-13,73-665
+56,MORBIHAN,Lorient,3,Lorient-Centre ; Lorient-Nord ; Lorient-Sud,3/3,1982-01-20,82-62
+56,MORBIHAN,Vannes,3,Vannes-Centre ; Vannes-Est ; Vannes-Ouest,2/3,1982-01-20,82-62
+64,PYRENEES-ATLANTIQUES,Bayonne,3,Bayonne-Est ; Bayonne-Nord ; Bayonne-Ouest,3/3,1973-07-13,73-669
+69,RHONE,Villeurbanne,3,Villeurbanne-Centre ; Villeurbanne-Nord ; Villeurbanne-Sud,2/3,1982-01-20,82-66
+71,SAONE-ET-LOIRE,Mâcon,3,Mâcon-Centre ; Mâcon-Nord ; Mâcon-Sud,3/3,1973-08-02,73-769
+73,SAVOIE,Chambéry,3,Chambéry-Nord ; Chambéry-Sud ; Chambéry-Sud-Ouest,3/3,1973-08-02,73-770
+79,DEUX-SEVRES,Niort,3,Niort-Est ; Niort-Nord ; Niort-Ouest,3/3,1973-07-13,73-673
+81,TARN,Castres,3,Castres-Est ; Castres-Nord ; Castres-Sud,3/3,1973-07-13,73-675
+90,TERRITOIRE DE BELFORT,Belfort,3,Belfort-Centre ; Belfort-Ouest-I ; Belfort-Ouest-II,3/3,1982-01-25,82-85
+94,VAL-DE-MARNE,Champigny-sur-Marne,3,Champigny-sur-Marne-Centre ; Champigny-sur-Marne-Est ; Champigny-sur-Marne-Ouest,3/3,1984-12-24,84-1242
+94,VAL-DE-MARNE,Créteil,3,Créteil-Nord ; Créteil-Ouest ; Créteil-Sud,2/3,1984-12-24,84-1242
+94,VAL-DE-MARNE,Vitry-sur-Seine,3,Vitry-sur-Seinc-Est ; Vitry-sur-Seine-Nord ; Vitry-sur-Seine-Ouest,2/3,1984-12-24,84-1242
+02,AISNE,Laon,2,Laon-Nord ; Laon-Sud,1/2,1973-07-23,73-712
+02,AISNE,Soissons,2,Soissons-Nord ; Soissons-Sud,1/2,1973-07-23,73-712
+03,ALLIER,Montluçon,2,Domérat-Montluçon-Nord-Ouest ; Montluçon-Nord-Est,2/2,1982-01-15,82-22
+03,ALLIER,Moulins,2,Moulins-Ouest ; Moulins-Sud,1/2,1973-07-23,73-713
+03,ALLIER,Vichy,2,Vichy-Nord ; Vichy-Sud,1/2,1973-07-23,73-713
+04,ALPES-DE-HAUTE-PROVENCE,Manosque,2,Manosque-Nord ; Manosque-Sud,1/2,1973-07-23,73-714
+05,HAUTES-ALPES,Briançon,2,Briançon-Nord ; Briançon-Sud,1/2,1973-07-13,73-651
+06,ALPES-MARITIMES,Antibes,2,Antibes - Nord ; Antibes - Sud,1/2,1973-08-16,73-811
+06,ALPES-MARITIMES,Cannes,2,Cannes - Est ; Cannes - Ouest,1/2,1973-08-16,73-811
+07,ARDECHE,Annonay,2,Annonay est divisé en deux cantons dénommés et ; Annonay-Nord (mêmes arrondissement et départe ment),1/2,1973-08-02,73-761
+08,ARDENNES,Sedan,2,Sedan-Est ; Sedan-Nord,2/2,1973-07-23,73-715
+10,AUBE,Romilly-sur-Seine,2,Romilly-sur-Seine-I ; Romilly-sur-Seine-II,1/2,1973-07-13,73-652
+11,AUDE,Carcassonne,2,Carcassonne-II ; Carcassonne-III,2/2,1973-07-13,73-653
+12,AVEYRON,Millau,2,Millau-Est ; Millau-Ouest,1/2,1973-08-02,73-762
+16,CHARENTE,Cognac,2,Cognac-Nord ; Cognac-Sud,1/2,1973-07-13,73-654
+18,CHER,Vierzon,2,Vierzon-I ; Vierzon-II,1/2,1973-08-02,73-764
+23,CREUSE,Guéret,2,Guéret - Sud-Ouest ; Guéret-Nord,2/2,1973-07-23,73-717
+25,DOUBS,Montbéliard,2,Montbéliard-Est ; Montbéliard-Ouest,1/2,1973-08-16,73-814
+26,DROME,Montélimar,2,Montélimar-I ; Montélimar-II,2/2,1973-07-23,73-718
+26,DROME,Romans-sur-Isère,2,Romans-sur-Isère-I ; Romans-sur-Isère-II,1/2,1973-07-23,73-718
+27,EURE,Louviers,2,Louviers-Nord ; Louviers-Sud,1/2,1982-01-20,82-56
+27,EURE,Vernon,2,Vernon-Nord ; Vernon-Sud,1/2,1982-01-20,82-56
+29,FINISTERE,Quimper,2,Quimper-I ; Quimper-II,2/2,1973-07-23,73-720
+2B,HAUTE-CORSE,Bastia,2,Bastia-V - Lupino ; Bastia-VI - Furiani-Montésoro,2/2,1982-01-20,82-53
+30,GARD,Alès,2,Alès - Nord-Est ; Alès - Sud-Est,1/2,1973-07-23,73-721
+33,GIRONDE,Mérignac,2,Mérignac-I ; Mérignac-II,1/2,1982-01-15,82-29
+33,GIRONDE,Pessac,2,Pessac-I ; Pessac-II,1/2,1982-01-15,82-29
+34,HERAULT,Sète,2,Sète-I ; Sète-II,2/2,1973-07-23,73-722
+39,JURA,Dole,2,Dole-Nord-Est ; Dole-Sud-Ouest,1/2,1973-07-13,73-659
+39,JURA,Lons-le-Saunier,2,Lons-le-Saunier-Nord ; Lons-le-Saunier-Sud,1/2,1973-07-13,73-659
+41,LOIR-ET-CHER,Romorantin-Lanthenay,2,Romorantin-Lanthenay-Nord ; Romorantin-Lanthenay-Sud,1/2,1984-12-24,84-1228
+41,LOIR-ET-CHER,Vendôme,2,Vendôme-H ; Vendôme-I,2/2,1982-01-20,82-60
+44,LOIRE-ATLANTIQUE,Saint-Herblain,2,Saint-Herblain-Est ; Saint-Herblain-Ouest-Indre,1/2,1982-01-20,82-59
+47,LOT-ET-GARONNE,Marmande,2,Marmande-Est ; Marmande-Ouest,2/2,1973-07-13,73-663
+47,LOT-ET-GARONNE,Villeneuve-sur-Lot,2,Villeneuve-sur-Lot-Nord ; Villeneuve-sur-Lot-Sud,2/2,1973-07-13,73-663
+48,LOZERE,Mende,2,Mende-Nord ; Mende-Sud,1/2,1982-01-15,82-30
+50,MANCHE,Cherbourg,2,Cherbourg - Nord-Ouest ; Cherbourg - Sud-Est,2/2,1973-07-13,73-664
+50,MANCHE,Saint-Lô,2,Saint-Lô-Est ; Saint-Lô-Ouest,1/2,1982-01-15,82-31
+51,MARNE,Vitry-le-François,2,Vitry-le-François-Est ; Vitry-le-François-Ouest,1/2,1973-07-13,73-665
+51,MARNE,Épernay,2,Epernay-I ; Epernay-II,1/2,1973-07-13,73-665
+55,MEUSE,Bar-le-Duc,2,Bar-le-Duc - Nord ; Bar-le-Duc - Sud,0/2,1973-07-23,73-728
+55,MEUSE,Verdun,2,Verdun-Est ; Verdun-Ouest,0/2,1973-07-23,73-728
+57,MOSELLE,Metz,2,Metz-II ; Metz-IV,2/2,1982-01-25,82-83
+57,MOSELLE,Saint-Avold,2,Saint-Avold-I ; Saint-Avold-II,1/2,1984-12-24,84-1235
+60,OISE,Beauvais,2,Beauvais - Nord-Est ; Beauvais - Nord-Ouest,2/2,1982-01-20,82-63
+61,ORNE,Alençon,2,Alençon-III ; AlençonJI,2/2,1982-01-20,82-64
+61,ORNE,Argentan,2,Argentan-Est ; Argentan-Ouest,1/2,1982-01-20,82-64
+62,PAS-DE-CALAIS,Arras,2,Arras-Ouest ; Arras-Sud,2/2,1982-01-15,82-35
+62,PAS-DE-CALAIS,Béthune,2,Béthune-Nord ; Béthune-Sud,1/2,1973-08-16,73-818
+62,PAS-DE-CALAIS,Liévin,2,Liévin-Nord ; Liévin-Sud,1/2,1982-01-15,82-35
+64,PYRENEES-ATLANTIQUES,Biarritz,2,Biarritz-Est ; Biarritz-Ouest,1/2,1973-07-13,73-669
+65,HAUTES-PYRENEES,Lourdes,2,Lourdes-Est ; Lourdes-Ouest,2/2,1973-07-23,73-729
+69,RHONE,Vénissieux,2,Vénissieux-Nord ; Vénissieux-Sud,1/2,1982-01-20,82-66
+70,HAUTE-SAONE,Vesoul,2,Vesoul-Est ; Vesoul-Ouest,1/2,1973-07-13,73-672
+71,SAONE-ET-LOIRE,Autun,2,Autun est divisé en deux cantons dénommés et ; Autun-Sud (mêmes arrondissement et département),1/2,1973-08-02,73-769
+71,SAONE-ET-LOIRE,Le Creusot,2,Creusot-Est ; Creusot-Ouest,1/2,1973-08-02,73-769
+71,SAONE-ET-LOIRE,Montceau-les-Mines,2,Montceau-les-Mines-Nord ; Montceau-les-Mines-Sud,1/2,1973-08-02,73-769
+73,SAVOIE,Albertville,2,Albertville-Nord ; Albertville-Sud,1/2,1973-08-02,73-770
+74,HAUTE-SAVOIE,Annecy,2,Annecy Nord-Est ; Annecy-centre,1/2,1973-08-16,73-820
+81,TARN,Mazamet,2,Mazamet-Nord-Est ; Mazamet-Sud-Ouest,2/2,1973-07-13,73-675
+82,TARN-ET-GARONNE,Castelsarrasin,2,Castelsarrasin-I ; Castelsarrasin-II,1/2,1973-07-13,73-676
+82,TARN-ET-GARONNE,Moissac,2,Moissac-I ; Moissac-II,1/2,1973-07-13,73-676
+83,VAR,La Seyne-sur-Mer,2,La Seyne-sur-Mer ; Saint-Mandrier,1/2,1973-08-02,73-771
+85,VENDEE,La Roche-sur-Yon,2,La Roche-sur-Yon-Nord ; La Roche-sur-Yon-Sud,1/2,1973-08-02,73-773
+86,VIENNE,Châtellerault,2,Châtellerault-Nord ; Châtellerault-Sud,1/2,1973-07-13,73-677
+87,HAUTE-VIENNE,Saint-Junien,2,Saint-Junien-Est ; Saint-Junien-Ouest,1/2,1973-08-16,73-821
+88,VOSGES,Saint-Dié,2,Saint-Dié-Est ; Saint-Dié-Ouest,1/2,1982-01-15,82-37
+89,YONNE,Auxerre,2,Auxerre-Nord-Ouest ; Auxerre-Sud-Ouest,1/2,1973-08-02,73-774
+89,YONNE,Sens,2,Sens-Nord-Est ; Sens-Sud-Est,1/2,1973-08-02,73-774
+94,VAL-DE-MARNE,Gentilly,2,Arcueil ; Kremlin-Bicêtre,1/2,1984-12-24,84-1242
+94,VAL-DE-MARNE,Villejuif,2,Villejuif-Est ; Villejuif-Ouest,1/2,1984-12-24,84-1242
+01,AIN,Oyonnax,1,Oycnnax-Sud,1/1,1982-01-25,82-77
+06,ALPES-MARITIMES,Le Cannet,1,Cannet,1/1,1982-01-25,82-79
+21,COTE-D'OR,Chenôve,1,Dijon-IV,1/1,1973-08-16,73-813
+24,DORDOGNE,Bergerac,1,Bergerac est divisé en deux cantons dénommés et,1/1,1973-07-13,73-656
+24,DORDOGNE,Périgueux,1,Périgueux gst divisé en trois cantons dénommés et,1/1,1973-07-13,73-656
+28,EURE-ET-LOIR,Chartres,1,Mainvilliers,1/1,1982-01-15,82-27
+37,INDRE-ET-LOIRE,Joué-lès-Tours,1,Joué-lcs-Tours-Nord,1/1,1984-12-24,84-1227
+40,LANDES,Mont-de-Marsan,1,Mont-de-Marsan est divisé en deux cantons dénommés et,1/1,1973-07-13,73-660
+42,LOIRE,Roanne,1,Roanne sont créés les deux cantons dénommés et,1/1,1973-07-13,73-662
+42,LOIRE,Saint-Chamond,1,Saint-Chamond-Nord,1/1,1984-12-24,84-1229
+43,HAUTE-LOIRE,Brioude,1,Brioude-Nord,1/1,1984-12-24,84-1230
+44,LOIRE-ATLANTIQUE,Rezé,1,Nantes-X,1/1,1973-07-23,73-725
+46,LOT,Cahors,1,Cahors-Nord-Ouest,1/1,1984-12-24,84-1231
+53,MAYENNE,Château-Gontier,1,Château-Gontier-Est,0/1,1984-12-24,84-1233
+57,MOSELLE,Forbach,1,Stiring-Wendel,0/1,1984-12-24,84-1235
+57,MOSELLE,Thionville,1,Thionville-Est,1/1,1984-12-24,84-1235
+60,OISE,Creil,1,Creil-Sud,1/1,1973-07-13,73-668
+61,ORNE,L' Aigle,1,L'Aigle-Est,1/1,1982-01-20,82-64
+62,PAS-DE-CALAIS,Boulogne-sur-Mer,1,Boulogne-sur-Mer-Nord- Ouest,1/1,1984-12-24,84-1236
+62,PAS-DE-CALAIS,Méricourt,1,Rouvroy,1/1,1984-12-24,84-1236
+62,PAS-DE-CALAIS,Saint-Omer,1,Arques,1/1,1984-12-24,84-1236
+79,DEUX-SEVRES,Thouars,1,Thouars-I,1/1,1973-07-13,73-673
+81,TARN,Carmaux,1,Carmaux-Sud,0/1,1973-07-13,73-675
+83,VAR,Hyères,1,Hyères,0/1,1973-08-02,73-771
+92,HAUTS-DE-SEINE,Châtenay-Malabry,1,Châtenay-Malabry,1/1,1984-12-24,84-1241
+92,HAUTS-DE-SEINE,Colombes,1,Colombes-Nord-Est,1/1,1984-12-24,84-1241
+92,HAUTS-DE-SEINE,Gennevilliers,1,Gennevilliers-Sud,1/1,1984-12-24,84-1241
+92,HAUTS-DE-SEINE,Nanterre,1,Nanterre-Sud-Ouest,1/1,1984-12-24,84-1241
+94,VAL-DE-MARNE,Alfortville,1,Alfortville-Sud,1/1,1984-12-24,84-1242
+94,VAL-DE-MARNE,Fontenay-sous-Bois,1,Fontenay-sous-Bois-Ouest,0/1,1984-12-24,84-1242
+94,VAL-DE-MARNE,Saint-Maur-des-Fossés,1,Saint-Maur-La Varenne,0/1,1984-12-24,84-1242
+94,VAL-DE-MARNE,Vincennes,1,Vincennes-Est,0/1,1984-12-24,84-1242

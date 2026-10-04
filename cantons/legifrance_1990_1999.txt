@@ -1,0 +1,79 @@
+# Composition et transferts tires du texte integral de Legifrance, 1990-1999.
+# C|id|canton|commune1;commune2;...   (liste vide = canton fait de fractions seules)
+# T|id|commune|canton_source|canton_destination
+C|718411|Istres-Nord|Miramas
+C|718411|Istres-Sud|Fos-sur-Mer;Saint-Mitre-les-Remparts
+C|718411|Berre-l'Etang|Berre-l'Etang;Rognac;Saint-Chamas
+C|718411|Vitrolles|Vitrolles
+C|718411|Pélissanne|Aurons;La Barben;Cornillon-Confoux;Coudoux;La Fare-les-Oliviers;Lançon-Provence;Pélissanne;Velaux;Ventabren
+C|718411|Pennes-Mirabeau|Cabriès;Les Pennes-Mirabeau;Septèmes-les-Vallons
+C|718411|Châteauneuf-Côte-Bleue|Carry-le-Rouet;Châteauneuf-lès-Martigues;Ensuès-la-Redonne;Gignac-la-Nerthe;Le Rove;Sausset-les-Pins
+C|718411|Martigues-Ouest|Port-de-Bouc
+C|718413|Lisieux-III|La Boissière;La Houblonnière;Lessard-et-Le-Chêne;Le Mesnil-Eudes;Le Mesnil-Simon;Les Monceaux;Le Pré-d'Auge;Prêtreville;Saint-Désir;Saint-Germain-de-Livet;Saint-Jean-de-Livet;Saint-Pierre-des-Ifs
+C|172017|Brest-Saint-Pierre|
+C|172017|Brest-Cavale-Blanche-Bohars-Guilers|Bohars;Guilers
+C|172017|Brest-L'Hermitage-Gouesnou|Gouesnou
+C|172017|Brest-Lambezellec|
+C|172017|Brest-Kerichen|
+C|172017|Brest-Saint-Marc|
+C|172019|Rhôny-Vidourle|Aimargues;Le Cailar;Codognan;Gallargues-le-Montueux;Mus;Uchaud;Vergèze;Vestric-et-Candiac
+C|172018|Castelnau-le-Lez|Castelnau-le-Lez
+C|172018|Lattes|Lattes;Palavas-les-Flots;Pérols
+C|172018|Pignan|Cournonsec;Cournonterral;Fabrègues;Murviel-lès-Montpellier;Pignan;Saint-Georges-d'Orques;Saussan
+C|718412|Cesson-Sévigné|Acigné;Cesson-Sévigné
+C|718412|Betton|Betton;La Chapelle-des-Fougeretz;Montgermont;Saint-Grégoire
+C|352923|Blois-I|Saint-Denis-sur-Loire
+C|352923|Blois-III|
+C|352923|Blois-IV|
+C|352923|Blois-VI|Villebarou;Villerbon
+C|172020|Villeneuve-d'Ascq-Nord|
+C|172020|Seclin-Nord|Houplin-Ancoisne;Lesquin;Noyelles-lès-Seclin;Templemars;Vendeville;Wattignies
+C|172020|Douai-Nord-Est|Auby;Flers-en-Escrebieux;Râches;Raimbeaucourt;Roost-Warendin
+C|171276|Douvrin|Billy-Berclau;Douvrin;Givenchy-lès-la-Bassée;Haisnes;Violaines
+C|171276|Hénin-Beaumont|Noyelles-Godault
+C|171276|Leforest|Courcelles-lès-Lens;Dourges;Evin-Malmaison;Leforest
+C|171276|Montigny-en-Gohelle|Montigny-en-Gohelle
+C|171276|Dainville|Acq;Anzin-Saint-Aubin;Dainville;Duisans;Ecurie;Etrun;Maroeuil;Mont-Saint-Eloi;Roclincourt;Sainte-Catherine
+C|171276|Divion|Calonne-Ricouart;Divion;Marles-les-Mines
+C|171276|Bruay-la-Buissière|
+C|171276|Houdain|Beugin;Camblain-Châtelain;Caucourt;Estrée-Cauchy;Fresnicourt-le-Dolmen;Gauchin-Légal;Hermin;Houdain;Maisnil-lès-Ruitz;Ourton;Rebreuve-Ranchicourt
+C|171276|Berck|Airon-Notre-Dame;Airon-Saint-Vaast;Berck;Colline-Beaumont;Conchil-le-Temple;Groffliers;Rang-du-Fliers;Tigny-Noyelle;Verton;Waben
+C|171276|Harnes|Estevelles;Harnes;Pont-à-Vendin
+C|171276|Noyelles-sous-Lens|Billy-Montigny;Fouquières-lès-Lens;Noyelles-sous-Lens
+C|171276|Lens-Nord-Est|Annay;Loison-sous-Lens
+C|171276|Lens-Est|Sallaumines
+C|171276|Sains-en-Gohelle|Aix-Noulette;Bouvigny-Boyeffles;Gouy-Servins;Hersin-Coupigny;Sains-en-Gohelle;Servins
+C|171276|Béthune-Est|La Couture;Essars;Hinges;Locon;Vieille-Chapelle
+C|171276|Béthune-Nord|Annezin;Chocques;Oblinghem;Vendin-lès-Béthune
+C|171276|Béthune-Sud|Allouagne;Fouquereuil;Fouquières-lès-Béthune;Labeuvrière;Lapugnoy;Verquin
+C|171276|Portel|Portel
+C|719237|Combs-la-Ville|Combs-la-Ville;Lieusaint;Moissy-Cramayel;Réau
+C|719237|Mée-sur-Seine|Boissettes;Boissise-la-Bertrand;Cesson;Le Mée-sur-Seine;Vert-Saint-Denis
+C|354053|Montigny-le-Bretonneux|Guyancourt
+C|352924|Montauban-I|Lamothe-Capdeville;Villemade
+C|352924|Montauban-II|
+C|352924|Montauban-III|Léojac
+C|352924|Montauban-IV|
+C|352924|Montauban-V|
+C|352924|Montauban-VI|
+C|536033|Auxerre-Nord|Appoigny;Charbuy;Perrigny
+C|536033|Auxerre-Sud|Chevannes;Vallan
+C|170965|Saint-Martin-I|
+C|170965|Saint-Martin-II|
+C|347281|Thorigny-sur-Marne|Bailly-Romainvilliers;Carnetin;Chalifert;Chanteloup-en-Brie;Chessy;Conches;Coupvray;Dampmart;Guermantes;Jablines;Jossigny;Lesches;Magny-le-Hongre;Montévrain;Serris;Thorigny-sur-Marne
+C|199056|Menton-Ouest|Gorbio;Roquebrune-Cap-Martin;Sainte-Agnès
+C|199057|Seichamps|Champenoux;Laneuvelotte;Mazerulles;Moncel-sur-Seille;Pulnoy;Saulxures-lès-Nancy;Seichamps;Sorneville;Velaine-sous-Amance
+C|199057|Malzéville|Agincourt;Amance;Bouxières-aux-Chênes;Bouxières-aux-Dames;Brin-sur-Seille;Custines;Dommartin-sous-Amance;Eulmont;Laître-sous-Amance;Lay-Saint-Christophe;Malzéville
+C|199057|Villers-lès-Nancy|Maxéville
+C|199057|Pompey|Champigneulles;Frouard;Marbache;Pompey;Saizevais
+C|381255|Canet-en-Roussillon|Canet-en-Roussillon;Saint-Nazaire;Sainte-Marie;Villelongue-de-la-Salanque
+C|565097|Albi-Ouest|Marssac-sur-Tarn
+C|565097|Albi-Sud|Carlus;Puygouzon;Rouffiac;Saliès;Le Séquestre
+C|565097|Albi-Est|Fréjairolles
+C|565097|Castres-Ouest|Saïx
+C|199792|Thonon-les-Bains - Ouest|Allinges;Anthy-sur-Léman;Cervens;Margencel;Orcier;Perrignier;Sciez
+T|724660|Laprade|Mas-Cabardès|Saissac
+T|541708|Vasselin|Tour-du-Pin|Morestel
+T|736159|Saint-Denis-des-Puits|Loupe|Courville-sur-Eure
+T|736159|Villebon|Loupe|Courville-sur-Eure
+T|747377|Saint-Alban-de-Roche|Isle-d'Abeau|Bourgoin-Jallieu - Sud

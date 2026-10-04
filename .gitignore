@@ -1,0 +1,101 @@
+# .gitignore — HistGIS
+#
+# Principe : on versionne ce qu'on écrit, pas ce qu'on reçoit ni ce qu'on
+# régénère. Le dépôt doit rester léger (quelques Mo) pour que l'historique
+# serve à quelque chose ; les 1,3 Go de données reçues n'ont pas d'historique
+# à raconter, elles ne changent pas.
+#
+# Conséquence à connaître : un clone du dépôt NE SUFFIT PAS à rejouer la
+# chaîne. Il faut retélécharger les sources, dont les DOI sont listés dans
+# METHODE.md § 3 et dans LISEZMOI.md.
+
+# --- données reçues, jamais modifiées ---------------------------------
+sources/
+# (chemins d'avant la réorganisation, gardés pour les commits anciens)
+/trfgis/
+/cog/
+/geofla/
+/modif_canton/
+/arrondissement/
+
+# Reçus mais hors de sources/, pour des raisons historiques. Même
+# principe, même poids : 4 Go de données qui ne changent pas et n'ont
+# aucun historique à raconter. Sans ces lignes, un seul `git add -A`
+# suffisait à les faire entrer dans le dépôt.
+#   2,6 Go — PDF des Journaux officiels
+/JORF/
+#   1,2 Go — trame communale 1790-2020, Zenodo 10.5281/zenodo.3727274
+/ANR_COMMUNES_22042026/
+#    93 Mo — BD ADMIN Polynésie française
+/polynesie/
+#    36 Mo — BD ADMIN Nouvelle-Calédonie (DITTT), avec ses CGU et son lisez-moi
+/nouvelle_caledonie/
+#   ODbL, inutilisable — gardé pour référence
+/42-Vasserot_quartiers_v1L93/
+
+# --- sorties régénérables ---------------------------------------------
+# Régénérées par cartes_cantons.py, cartes_paris.py, recupere_iris.py…
+# Voir LISEZMOI.md pour la commande qui refait chacune.
+sorties/
+*.pdf
+*.gpkg
+*.qgz
+*.7z
+*.png
+*.jpeg
+*.jpg
+
+# GeoJSON : refaits au WFS en quelques minutes, et volumineux.
+*.geojson
+
+# OCR brut du volume de 1954 : régénérable, mais des heures de calcul.
+# Conservé sur disque, hors dépôt.
+cog1954/ocr_brut/
+jorf_txt/*_raw.txt
+
+# Même raison pour les `_col.txt` : c'est `cantons/jorf_colonnes.py` qui les
+# refait à partir des PDF de JORF/, en quelques minutes. 35 Mo pour une sortie
+# de script, alors que le script, lui, est versionné.
+# Les `.txt` nus RESTENT dans le dépôt : ils viennent d'une extraction
+# antérieure dont le résultat dépend de la version de tesseract, et ne se
+# reproduiraient donc pas à l'identique.
+jorf_txt/*_col.txt
+
+# Données de la carte web : 3,3 Go et 1 546 fichiers, entièrement refaits
+# par `python3 cartes/export_web.py --jobs N`. Elles avaient été suivies par
+# inadvertance et pesaient à elles seules 96 % du bruit de `git status` — la
+# moindre régénération y produisait des milliers de suppressions et
+# d'ajouts. Ce qui compte est le script, pas sa sortie.
+#
+# ATTENTION : c'est bien `donnees/` qu'on exclut, PAS `cartes/web/`.
+# index.html, servir.py et LISEZMOI.md sont du code et de la doc, écrits à
+# la main, et restent suivis.
+cartes/web/donnees/
+
+# Sauvegardes prises avant une transformation risquée (`.avant_appariement`,
+# `.avant_correction`…). Ce sont des filets de sécurité locaux, utiles tant
+# que le script n'est pas stabilisé : gardés sur disque, hors dépôt, puisque
+# c'est le fichier d'arrivée qui est versionné.
+*.avant_*
+
+# Journaux d'exécution : trace d'une passe, pas un résultat.
+*.log
+
+# --- sortie de la chaîne de chargement ---------------------------------
+# build/ est intégralement reconstruit par rebuild.sh. Le versionner
+# ferait entrer des dizaines de milliers de lignes qui changent à chaque
+# passage, pour aucun gain : ce qui compte est le script qui les produit.
+build/
+
+# --- Python ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- système -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*~
+*.swp

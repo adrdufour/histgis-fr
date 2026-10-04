@@ -1,0 +1,13 @@
+dep,dep_nom,date_texte,date_iso,type,texte,communes,page,source
+06,Alpes-Maritimes,Décret du 10 septembre 1951,1951-09-10,creation,Cr. Tende (arrondissement de Nice),La Brigue ; Tende,895,tableau A
+19,Corrèze,Décret du 13 septembre 1951,1951-09-13,creation,Cr. Brive-la-Gaillarde-Nord (par scission de l'ancien canton de Brive-la-Gaillarde),Brive-la-Gaillarde-Nord ; Dampniat ; Venarsal,895,tableau A
+19,Corrèze,Décret du 13 septembre 1951,1951-09-13,creation,Cr. Brive-la-Gaillarde-Sud (par scission de l'ancien canton de Brive-la-Gaillarde),Brive-la-Gaillarde-Sud ; Chapelle-aux-Brocs (La) ; Cosnac ; Estivals ; Jugeals-Nazareth ; Malemort-sur-Corrèze ; Nespouls ; Noailles,895,tableau A
+19,Corrèze,Décret du 13 septembre 1951,1951-09-13,suppression,Suppr. Brive-la-Gaillarde (séparé en deux cantons Nord et Sud),,895,tableau A
+46,Lot,Décret du 5 septembre 1949,1949-09-05,creation,Cr. Sousceyrac,Comiac ; Lacam-d'Ourcet ; Lamativie ; Sousceyrac,895,tableau A
+11,Aude,Décret du 9 août 1950,1950-08-09,transfert_arr,Tuchan passe de l'arrondissement de Carcassonne à celui de Narbonne,,895,tableau A
+50,Manche,Décret du 11 février 1952,1952-02-11,transfert_arr,La Haye-Pesnel passe de l'arrondissement de Coutances à celui d'Avranches,,895,tableau A
+60,Oise,Décret du 7 août 1950,1950-08-07,transfert_arr,Crèvecœur-le-Grand passe de l'arrondissement de Clermont à celui de Beauvais,,895,tableau A
+06,Alpes-Maritimes,Décret du 31 octobre 1953,1953-10-31,TCL,TCL Utelle -> Lantosque (arrondissement de Nice),,895,tableau A
+57,Moselle,Décret du 16 mars 1950,1950-03-16,TCL,TCL Gorze -> Ars-sur-Moselle (arrondissement de Metz-Campagne),,895,tableau A
+62,Pas-de-Calais,Décret du 28 juin 1949,1949-06-28,TCL,TCL Lens-Ouest -> Liévin (arrondissement de Béthune),,895,tableau A
+68,Haut-Rhin,Décret du 26 octobre 1948,1948-10-26,TCL,TCL Landser -> Sierentz (arrondissement de Mulhouse),,895,tableau A

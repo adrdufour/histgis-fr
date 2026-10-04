@@ -1,0 +1,735 @@
+RAPPORT D'EN-TÊTES TRF-GIS
+============================================================
+
+## Inventaire
+    .txt                   6  <- lu
+    .tab                   5  <- lu
+
+    11 fichiers à inspecter.
+
+### communes/Nomenclatures/COG_COMMUNES_1870_CODEBOOK.txt  [codebook, 155 lignes]
+    CODEBOOK FOR COG_COMMUNES_1870.txt
+    
+    DATASET        Commune-level nomenclature 1870
+    SOURCE         Victor Gay (2021) Mapping the Third Republic
+    ISO CATEOGRY   Boundaries
+    KEYWORDS       Administrative boundaries; France; Communes
+    LICENSE        CC BY 4.0
+    AUTHOR         Victor Gay
+    ORGANIZATION   TSE and IAST
+    CONTACT        victor.gay@tse-fr.eu
+    SOFTWARE       Stata SE version 16
+    DATE           30apr2021
+    
+    VARIABLES
+    cassini            Cassini id                    
+    insee              Département-commune id        
+    com_act            Actual commune code           
+    com_name           Commune name (capitalized)    
+    com_name_prop      Commune name (proper)         
+    dep                Département id                
+    dep_name           Département name (capitalized)
+    dep_name_prop      Département name (proper)     
+    cl_dep             Département chef-lieu         
+    depar              Département-arrondissement id 
+    ar                 Arrondissement id             
+    ar_name            Arrondissement name (capitalized)
+    ar_name_prop       Arrondissement name (proper)  
+    cl_ar              Arrondissement chef-lieu      
+    deppct             Département-pseudo-canton id  
+    pct                Pseudo-canton id              
+    pct_name           Pseudo canton name (capitalized)
+    pct_name_prop      Pseudo canton name (proper)   
+    cl_ct              Canton chef-lieu              
+    pct_type           Pseudo-canton type            
+    mcor               Military corps id             
+    mcor_name          Military corps name (capitalized)
+    mcor_name_prop     Military corps name (proper)  
+    cl_mcor            Military corps chef-lieu      
+    mdiv               Military subdivision id       
+    mdiv_name          Military division name (capitalized)
+    mdiv_name_prop     Military division name (proper)
+    cl_mdiv            Military division chef-lieu   
+    mdiv_type          Military division type        
+    cour               Court of appeal id            
+    cour_name          Court of appeal name (capitalized)
+    cour_name_prop     Court of appeal name (proper) 
+    cl_cour            Court of appeal chef-lieu     
+    courinst           Court of appeal-first instance id
+    inst               Court of first instance id    
+    inst_name          Court of first instance name (capitalized)
+    inst_name_prop     Court of first instance (proper)
+    cl_inst            Court of first instance chef-lieu
+    trib_com           Tribunal de commerce          
+    trib_prud          Tribunal de prud'hommes       
+    pris               Penitentiary constituency id  
+    pris_name          Penitentiary constituency name (capitalized)
+    pris_name_prop     Penitentiary constituency name (proper)
+    cl_pris            Penitentiary institution chef-lieu
+    deppcirco          Département-pseudo_circonscription id
+    pcirco             Pseudo-circonscription id     
+    pcirco_name        Pseudo-circonscription name (capitalized)
+    pcirco_name_prop   Pseudo-circonscription name (proper)
+    pcirco_type        Pseudo-circonscription type   
+    acad               Academy id                    
+    acad_name          Academy name (capitalized)    
+    acad_name_prop     Academy name (proper)         
+    cl_acad            Academy chef-lieu             
+    arch               Archbishopric id              
+    arch_name          Archbishopric name (capitalized)
+    arch_name_prop     Archbishopric name (proper)   
+    arch_type          Archbishopric type            
+    archdioc           Archbishopric-diocese id      
+    dioc               Diocese id                    
+    dioc_name          Diocese name (capitalized)    
+    dioc_name_prop     Diocese name (proper)         
+    dioc_type          Diocese type                  
+    cl_dioc            Diocese chef-lieu             
+    pop                Population (census)           
+    ipop               Population (interpolated)     
+    pop_flag           Population flag               
+    
+    VALUE LABELS
+    com_act:
+               1 Current
+               2 Former (post-1943)
+               3 Former (pre-1943)
+    cl_dep:
+               0 Not prefecture
+               1 Prefecture
+    cl_ar:
+               0 Not subprefecture
+               1 Subrefecture
+    cl_ct:
+               0 Not bureau centralisateur
+               1 Bureau centralisateur
+    pct_type:
+               1 Only entire commune(s)
+               2 Fraction of one commune and entire commune(s)
+               3 Fractions of several communes and entire commune(s)
+               4 Fraction of one commune
+               5 Fractions of several communes
+               6 Pseudo canton
+               7 Paris arrondissement
+    cl_mcor:
+               0 Not military corps chef-lieu
+               1 Military corps chef-lieu
+    cl_mdiv:
+               0 Not military division chef-lieu
+               1 Military division chef-lieu
+    mdiv_type:
+               1 Only entire départements
+    cl_cour:
+               0 Not court of appeal chef-lieu
+               1 Court of appeal chef-lieu
+    cl_inst:
+               0 Not court of first instance chef-lieu
+               1 Court of first instance chef-lieu
+    trib_com:
+               0 No tribunal de commerce
+               1 Tribunal de commerce
+    trib_prud:
+               0 No tribunal de prud'hommes
+               1 Tribunal de prud'hommes
+    cl_pris:
+               0 Not penitentiary constituency chef-lieu
+               1 Penitentiary constituency chef-lieu
+    pcirco_type:
+               0 Unique
+               1 Multiple
+    cl_acad:
+               0 Not academy chef-lieu
+               1 Academy chef-lieu
+    arch_type:
+               1 Metropolitan See
+               2 Exempt
+    dioc_type:
+               1 Archbishopric
+               2 Bishopric
+    cl_dioc:
+               0 Not diocese chef-lieu
+               1 Diocese chef-lieu
+    pop:
+              .a Not census year
+              .b Commune nonexistent
+              .c Archive lost
+              .d Archive unreadable
+              .e Commune not surveyed
+    pop_flag:
+               1 Census data
+               2 Interpolated: not census year
+               3 Interpolated: archive lost
+               4 Interpolated: archive unreadable
+               5 Interpolated: commune not surveyed
+               6 Imputed: previous census
+               7 Imputed: next census
+
+### communes/Nomenclatures/COG_COMMUNES_1900_CODEBOOK.txt  [codebook, 167 lignes]
+    CODEBOOK FOR COG_COMMUNES_1900.txt
+    
+    DATASET        Commune-level nomenclature 1900
+    SOURCE         Victor Gay (2021) Mapping the Third Republic
+    ISO CATEOGRY   Boundaries
+    KEYWORDS       Administrative boundaries; France; Communes
+    LICENSE        CC BY 4.0
+    AUTHOR         Victor Gay
+    ORGANIZATION   TSE and IAST
+    CONTACT        victor.gay@tse-fr.eu
+    SOFTWARE       Stata SE version 16
+    DATE           30apr2021
+    
+    VARIABLES
+    cassini            Cassini id                    
+    insee              Département-commune id        
+    com_act            Actual commune code           
+    com_name           Commune name (capitalized)    
+    com_name_prop      Commune name (proper)         
+    dep                Département id                
+    dep_name           Département name (capitalized)
+    dep_name_prop      Département name (proper)     
+    cl_dep             Département chef-lieu         
+    depar              Département-arrondissement id 
+    ar                 Arrondissement id             
+    ar_name            Arrondissement name (capitalized)
+    ar_name_prop       Arrondissement name (proper)  
+    cl_ar              Arrondissement chef-lieu      
+    deppct             Département-pseudo-canton id  
+    pct                Pseudo-canton id              
+    pct_name           Pseudo canton name (capitalized)
+    pct_name_prop      Pseudo canton name (proper)   
+    cl_ct              Canton chef-lieu              
+    pct_type           Pseudo-canton type            
+    pmreg              Military region id            
+    pmreg_name         Military region name (capitalized)
+    pmreg_name_prop    Military region name (proper) 
+    cl_pmreg           Military region chef-lieu     
+    pmreg_type         Military region type          
+    pmsub              Military subdivision id       
+    pmsub_name         Military subdivision name (capitalized)
+    pmsub_name_prop    Military subdivision name (proper)
+    cl_pmsub           Military subdivision chef-lieu
+    pmsub_type         Military subdivision type     
+    cour               Court of appeal id            
+    cour_name          Court of appeal name (capitalized)
+    cour_name_prop     Court of appeal name (proper) 
+    cl_cour            Court of appeal chef-lieu     
+    courinst           Court of appeal-first instance id
+    inst               Court of first instance id    
+    inst_name          Court of first instance name (capitalized)
+    inst_name_prop     Court of first instance (proper)
+    cl_inst            Court of first instance chef-lieu
+    trib_com           Tribunal de commerce          
+    trib_prud          Tribunal de prud'hommes       
+    pris               Penitentiary constituency id  
+    pris_name          Penitentiary constituency name (capitalized)
+    pris_name_prop     Penitentiary constituency name (proper)
+    cl_pris            Penitentiary institution chef-lieu
+    deppcirco          Département-pseudo_circonscription id
+    pcirco             Pseudo-circonscription id     
+    pcirco_name        Pseudo-circonscription name (capitalized)
+    pcirco_name_prop   Pseudo-circonscription name (proper)
+    pcirco_type        Pseudo-circonscription type   
+    acad               Academy id                    
+    acad_name          Academy name (capitalized)    
+    acad_name_prop     Academy name (proper)         
+    cl_acad            Academy chef-lieu             
+    insp               Labor inspection id           
+    cl_insp            Labor inspection chef-lieu    
+    arch               Archbishopric id              
+    arch_name          Archbishopric name (capitalized)
+    arch_name_prop     Archbishopric name (proper)   
+    arch_type          Archbishopric type            
+    archdioc           Archbishopric-diocese id      
+    dioc               Diocese id                    
+    dioc_name          Diocese name (capitalized)    
+    dioc_name_prop     Diocese name (proper)         
+    dioc_type          Diocese type                  
+    cl_dioc            Diocese chef-lieu             
+    pop                Population (census)           
+    ipop               Population (interpolated)     
+    pop_flag           Population flag               
+    
+    VALUE LABELS
+    com_act:
+               1 Current
+               2 Former (post-1943)
+               3 Former (pre-1943)
+    cl_dep:
+               0 Not prefecture
+               1 Prefecture
+    cl_ar:
+               0 Not subprefecture
+               1 Subrefecture
+    cl_ct:
+               0 Not bureau centralisateur
+               1 Bureau centralisateur
+    pct_type:
+               1 Only entire commune(s)
+               2 Fraction of one commune and entire commune(s)
+               3 Fractions of several communes and entire commune(s)
+               4 Fraction of one commune
+               5 Fractions of several communes
+               6 Pseudo canton
+               7 Paris arrondissement
+    cl_pmreg:
+               0 Not military region chef-lieu
+               1 Military region chef-lieu
+    pmreg_type:
+               0 Undivided
+               1 Divided across canton(s)
+               2 Divided across pseudo-canton(s)
+    cl_pmsub:
+               0 Not military subdivision chef-lieu
+               1 Military subdivision chef-lieu
+    pmsub_type:
+               0 Undivided
+               1 Divided across canton(s)
+               2 Divided across pseudo-canton(s)
+    cl_cour:
+               0 Not court of appeal chef-lieu
+               1 Court of appeal chef-lieu
+    cl_inst:
+               0 Not court of first instance chef-lieu
+               1 Court of first instance chef-lieu
+    trib_com:
+               0 No tribunal de commerce
+               1 Tribunal de commerce
+    trib_prud:
+               0 No tribunal de prud'hommes
+               1 Tribunal de prud'hommes
+    cl_pris:
+               0 Not penitentiary constituency chef-lieu
+               1 Penitentiary constituency chef-lieu
+    pcirco_type:
+               0 Unique
+               1 Multiple
+    cl_acad:
+               0 Not academy chef-lieu
+               1 Academy chef-lieu
+    cl_insp:
+               0 Not labor inspection chef-lieu
+               1 Labor inspection chef-lieu
+    arch_type:
+               1 Metropolitan See
+               2 Exempt
+    dioc_type:
+               1 Archbishopric
+               2 Bishopric
+    cl_dioc:
+               0 Not diocese chef-lieu
+               1 Diocese chef-lieu
+    pop:
+              .a Not census year
+              .b Commune nonexistent
+              .c Archive lost
+              .d Archive unreadable
+              .e Commune not surveyed
+    pop_flag:
+               1 Census data
+               2 Interpolated: not census year
+               3 Interpolated: archive lost
+               4 Interpolated: archive unreadable
+               5 Interpolated: commune not surveyed
+               6 Imputed: previous census
+               7 Imputed: next census
+
+### communes/Nomenclatures/COG_COMMUNES_1940_CODEBOOK.txt  [codebook, 167 lignes]
+    CODEBOOK FOR COG_COMMUNES_1940.txt
+    
+    DATASET        Commune-level nomenclature 1940
+    SOURCE         Victor Gay (2021) Mapping the Third Republic
+    ISO CATEOGRY   Boundaries
+    KEYWORDS       Administrative boundaries; France; Communes
+    LICENSE        CC BY 4.0
+    AUTHOR         Victor Gay
+    ORGANIZATION   TSE and IAST
+    CONTACT        victor.gay@tse-fr.eu
+    SOFTWARE       Stata SE version 16
+    DATE           30apr2021
+    
+    VARIABLES
+    cassini            Cassini id                    
+    insee              Département-commune id        
+    com_act            Actual commune code           
+    com_name           Commune name (capitalized)    
+    com_name_prop      Commune name (proper)         
+    dep                Département id                
+    dep_name           Département name (capitalized)
+    dep_name_prop      Département name (proper)     
+    cl_dep             Département chef-lieu         
+    depar              Département-arrondissement id 
+    ar                 Arrondissement id             
+    ar_name            Arrondissement name (capitalized)
+    ar_name_prop       Arrondissement name (proper)  
+    cl_ar              Arrondissement chef-lieu      
+    deppct             Département-pseudo-canton id  
+    pct                Pseudo-canton id              
+    pct_name           Pseudo canton name (capitalized)
+    pct_name_prop      Pseudo canton name (proper)   
+    cl_ct              Canton chef-lieu              
+    pct_type           Pseudo-canton type            
+    pmreg              Military region id            
+    pmreg_name         Military region name (capitalized)
+    pmreg_name_prop    Military region name (proper) 
+    cl_pmreg           Military region chef-lieu     
+    pmreg_type         Military region type          
+    pmsub              Military subdivision id       
+    pmsub_name         Military subdivision name (capitalized)
+    pmsub_name_prop    Military subdivision name (proper)
+    cl_pmsub           Military subdivision chef-lieu
+    pmsub_type         Military subdivision type     
+    cour               Court of appeal id            
+    cour_name          Court of appeal name (capitalized)
+    cour_name_prop     Court of appeal name (proper) 
+    cl_cour            Court of appeal chef-lieu     
+    courinst           Court of appeal-first instance id
+    inst               Court of first instance id    
+    inst_name          Court of first instance name (capitalized)
+    inst_name_prop     Court of first instance (proper)
+    cl_inst            Court of first instance chef-lieu
+    trib_com           Tribunal de commerce          
+    trib_prud          Tribunal de prud'hommes       
+    pris               Penitentiary constituency id  
+    pris_name          Penitentiary constituency name (capitalized)
+    pris_name_prop     Penitentiary constituency name (proper)
+    cl_pris            Penitentiary institution chef-lieu
+    deppcirco          Département-pseudo_circonscription id
+    pcirco             Pseudo-circonscription id     
+    pcirco_name        Pseudo-circonscription name (capitalized)
+    pcirco_name_prop   Pseudo-circonscription name (proper)
+    pcirco_type        Pseudo-circonscription type   
+    acad               Academy id                    
+    acad_name          Academy name (capitalized)    
+    acad_name_prop     Academy name (proper)         
+    cl_acad            Academy chef-lieu             
+    insp               Labor inspection id           
+    cl_insp            Labor inspection chef-lieu    
+    arch               Archbishopric id              
+    arch_name          Archbishopric name (capitalized)
+    arch_name_prop     Archbishopric name (proper)   
+    arch_type          Archbishopric type            
+    archdioc           Archbishopric-diocese id      
+    dioc               Diocese id                    
+    dioc_name          Diocese name (capitalized)    
+    dioc_name_prop     Diocese name (proper)         
+    dioc_type          Diocese type                  
+    cl_dioc            Diocese chef-lieu             
+    pop                Population (census)           
+    ipop               Population (interpolated)     
+    pop_flag           Population flag               
+    
+    VALUE LABELS
+    com_act:
+               1 Current
+               2 Former (post-1943)
+               3 Former (pre-1943)
+    cl_dep:
+               0 Not prefecture
+               1 Prefecture
+    cl_ar:
+               0 Not subprefecture
+               1 Subrefecture
+    cl_ct:
+               0 Not bureau centralisateur
+               1 Bureau centralisateur
+    pct_type:
+               1 Only entire commune(s)
+               2 Fraction of one commune and entire commune(s)
+               3 Fractions of several communes and entire commune(s)
+               4 Fraction of one commune
+               5 Fractions of several communes
+               6 Pseudo canton
+               7 Paris arrondissement
+    cl_pmreg:
+               0 Not military region chef-lieu
+               1 Military region chef-lieu
+    pmreg_type:
+               0 Undivided
+               1 Divided across canton(s)
+               2 Divided across pseudo-canton(s)
+    cl_pmsub:
+               0 Not military subdivision chef-lieu
+               1 Military subdivision chef-lieu
+    pmsub_type:
+               0 Undivided
+               1 Divided across canton(s)
+               2 Divided across pseudo-canton(s)
+    cl_cour:
+               0 Not court of appeal chef-lieu
+               1 Court of appeal chef-lieu
+    cl_inst:
+               0 Not court of first instance chef-lieu
+               1 Court of first instance chef-lieu
+    trib_com:
+               0 No tribunal de commerce
+               1 Tribunal de commerce
+    trib_prud:
+               0 No tribunal de prud'hommes
+               1 Tribunal de prud'hommes
+    cl_pris:
+               0 Not penitentiary constituency chef-lieu
+               1 Penitentiary constituency chef-lieu
+    pcirco_type:
+               0 Unique
+               1 Multiple
+    cl_acad:
+               0 Not academy chef-lieu
+               1 Academy chef-lieu
+    cl_insp:
+               0 Not labor inspection chef-lieu
+               1 Labor inspection chef-lieu
+    arch_type:
+               1 Metropolitan See
+               2 Exempt
+    dioc_type:
+               1 Archbishopric
+               2 Bishopric
+    cl_dioc:
+               0 Not diocese chef-lieu
+               1 Diocese chef-lieu
+    pop:
+              .a Not census year
+              .b Commune nonexistent
+              .c Archive lost
+              .d Archive unreadable
+              .e Commune not surveyed
+    pop_flag:
+               1 Census data
+               2 Interpolated: not census year
+               3 Interpolated: archive lost
+               4 Interpolated: archive unreadable
+               5 Interpolated: commune not surveyed
+               6 Imputed: previous census
+               7 Imputed: next census
+
+### cantons/Nomenclatures/COG_CANTONS_1870_MAPPING.tab
+    ERREUR : new-line character seen in unquoted field - do you need to open the file with newline=''?
+
+### cantons/Nomenclatures/COG_CANTONS_1940_MAPPING.tab
+    ERREUR : new-line character seen in unquoted field - do you need to open the file with newline=''?
+
+### communes/Nomenclatures/COG_COMMUNES_1870.tab
+    ~1916 lignes, séparateur TAB, 4 colonnes
+    <stata_dta><header><release>118</release><byteorder>LSF</byteorder><K>B </K><N>�      </N><label>  </label><timestamp>30 Apr 2021 08:41</timestamp></header><map>        �             �      #      �#      u2      �S      æ      ��      �b    &�b    ��b    ��b    </map><variable_types>�� ��1 2    ��    ��  - - ����   ��   ����   ��    ������   ��    ��   ��   ex:  �L pop1914  om_act                   h��1           � @
+     ��    ����������</variable_types><varnames>cassini _prop   ^>X� = ��^       81   �v    P>^�/> � :       1298        R>\� ? �         230  C�    T>R� @ � �     insee t  prop                                                                                                                    com_act  prop                                                                                                                    com_name prop                         2   -0      ,   A                         4��  ��>�A     Z                       com_name_prop                         2   -0      ,   A                         4��  ��>�A     Z                       dep name prop                                                                                                                    dep_name prop                                                                                                                    dep_name_prop                                                                                                                    cl_dep  prop                                                                                                                     depar e prop                                                                                                                     ar name prop                                                                                                                     ar_name prop                                                                                                                     ar_name_prop                                                                                                                     cl_ar  e prop                                                                                                                    deppct e prop                                                                                                                    pct name prop                                                                                                                    pct_name prop                                                                                                                    pct_name_prop                                                                                                                    cl_ct pe  prop                                                                                                                   pct_type  prop                                                                                                                   mcor name prop                                                                                                                   mcor_name prop                                                                                                                   mcor_name_prop                                                                                                                   cl_mcor e prop                                                                                                                   mdiv name prop                                                                                                                   mdiv_name prop                                                                                                                   mdiv_name_prop                                                                                                                   cl_mdiv e prop                                                                                                                   mdiv_type prop p                                                                                                                 cour name prop p                                                                                                                 cour_name prop p                                                                                                                 cour_name_prop p                                                                                                                 cl_cour   prop p                                                                                                                 courinst  prop p                                                                                                                 inst name prop p                                                                                                                 inst_name prop p                                                                                                                 inst_name_prop p                                                                                                                 cl_inst   prop p                                                                                                                 trib_com  prop p                                                                                                                 trib_prud prop p                                                                                                                 pris name prop p                                                                                                                 pris_name prop p                                                                                                                 pris_name_prop p                                                                                                                 cl_pris o e prop                                                                                                                 deppcirco e prop                                                                                                                 pcirco name prop                                                                                                                 pcirco_name prop                                                                                                                 pcirco_name_prop                                                                                                                 pcirco_type op                                                                                                                   acad name prop                                                                                                                   acad_name prop                                                                                                                   acad_name_prop                                                                                                                   cl_acad e prop                                                                                                                   arch name prop                                                                                                                   arch_name prop                                                                                                                   arch_name_prop                                                                                                                   arch_type prop                                                                                                                   archdioc  prop                                                                                                                   dioc name prop                                                                                                                   dioc_name prop                                                                                                                   dioc_name_prop                                                                                                                   dioc_type                                                                                                                        cl_dioc                                                                                                                          pop  lag                                                                                                                         ipop lag                                                                                                                         pop_flag                                                                                                                         </varnames><sortlist>                          �   �7  �2� ��Rejv��  ������������������  ��������  ����    ����������������                              </sortlist><formats>%10.0g                                op1876          %9s 0g                                                   %18.0g                                                   %49s                                  ex:                                
+               %50s g                                ex:                                
+               %9s  g                                                   %19s g                                                   %21s g                                                   %14.0g                                                   %9s  g                                                   %9s  g                                                   %23s g                                                   %23s g                                                   %17.0g                                                   %9s  g                                                   %9s  g                                                   %45s g                                                   %45s g                                                   %25.0g                                                   %51.0g                                                   %9s 0g                                                   %9s 0g                                                   %9s 0g                                                   %28.0g                                                   %9s  g                                                   %17s g                                                   %18s g                                                   %31.0g                                                   %25.0g                                                   %9s  g                                                   %11s g                                                   %11s g                                                   %29.0g                                                   %9s  g                                                   %9s  g                                                   %23s g                                                   %23s g                                                   %37.0g                                                   %23.0g                                                   %26.0g                                                   %9s  g                                                   %17s g                                                   %18s g                                                   %39.0g                                                   %9s                                                      %9s                                                      %19s                                                     %21s                                                     %9.0g                                                    %9s  g                                                   %16s g                                                   %16s g                                                   %21.0g                                                   %9s 0g                                                   %9s 0g                                                   %9s 0g                                                   %16.0g                                                   %9s  g                                                   %9s  g                                                   %12s g                                                   %12s g                                                   %13.0g                                                   %21.0g                                                   %20.0g                                                   %10.0g                                                   %34.0g                                                   </formats><value_label_names> om_act �       �    d e pop1912                       �       �    d e pop1913                       �       �    ex:                                
+
+### communes/Nomenclatures/COG_COMMUNES_1870.txt
+    ~37649 lignes, séparateur ,, 66 colonnes
+    cassini              ex: 575                            592
+    insee                ex: 01003                          01004
+    com_act              ex: 2                              1
+    com_name             ex: AMAREINS                       AMBERIEU
+    com_name_prop        ex: Amareins                       Amb�rieu
+    dep                  ex: 01                             01
+    dep_name             ex: AIN                            AIN
+    dep_name_prop        ex: Ain                            Ain
+    cl_dep               ex: 0                              0
+    depar                ex: 015                            011
+    ar                   ex: 5                              1
+    ar_name              ex: TREVOUX                        BELLEY
+    ar_name_prop         ex: Tr�voux                        Belley
+    cl_ar                ex: 0                              0
+    deppct               ex: 0130                           0101
+    pct                  ex: 30                             01
+    pct_name             ex: SAINT-TRIVIER-SUR-MOIGNANS     AMBERIEU
+    pct_name_prop        ex: Saint-Trivier-sur-Moignans     Amb�rieu
+    cl_ct                ex: 0                              1
+    pct_type             ex: 1                              1
+    mcor                 ex: 4                              4
+    mcor_name            ex: LYON                           LYON
+    mcor_name_prop       ex: Lyon                           Lyon
+    cl_mcor              ex: 0                              0
+    mdiv                 ex: 08                             08
+    mdiv_name            ex: LYON                           LYON
+    mdiv_name_prop       ex: Lyon                           Lyon
+    cl_mdiv              ex: 0                              0
+    mdiv_type            ex: 1                              1
+    cour                 ex: 16                             16
+    cour_name            ex: LYON                           LYON
+    cour_name_prop       ex: Lyon                           Lyon
+    cl_cour              ex: 0                              0
+    courinst             ex: 1609                           1601
+    inst                 ex: 09                             01
+    inst_name            ex: TREVOUX                        BELLEY
+    inst_name_prop       ex: Tr�voux                        Belley
+    cl_inst              ex: 0                              0
+    trib_com             ex: 0                              0
+    trib_prud            ex: 0                              0
+    pris                 ex: 01                             01
+    pris_name            ex: BOURG                          BOURG
+    pris_name_prop       ex: Bourg                          Bourg
+    cl_pris              ex: 0                              0
+    deppcirco            ex: 0101                           0101
+    pcirco               ex: 01                             01
+    pcirco_name          ex: AIN                            AIN
+    pcirco_name_prop     ex: Ain                            Ain
+    pcirco_type          ex: 0                              0
+    acad                 ex: 09                             09
+    acad_name            ex: LYON                           LYON
+    acad_name_prop       ex: Lyon                           Lyon
+    cl_acad              ex: 0                              0
+    arch                 ex: 18                             18
+    arch_name            ex: BESANCON                       BESANCON
+    arch_name_prop       ex: Besan�on                       Besan�on
+    arch_type            ex: 1                              1
+    archdioc             ex: 1817                           1817
+    dioc                 ex: 17                             17
+    dioc_name            ex: BELLEY                         BELLEY
+    dioc_name_prop       ex: Belley                         Belley
+    dioc_type            ex: 2                              2
+    cl_dioc              ex: 0                              0
+    pop                  ex: .a                             .a
+    ipop                 ex: 214                            2985
+    pop_flag             ex: 2                              2
+
+### communes/Nomenclatures/COG_COMMUNES_1900.tab
+    ERREUR : new-line character seen in unquoted field - do you need to open the file with newline=''?
+
+### communes/Nomenclatures/COG_COMMUNES_1900.txt
+    ~36209 lignes, séparateur ,, 69 colonnes
+    cassini              ex: 575                            592
+    insee                ex: 01003                          01004
+    com_act              ex: 2                              1
+    com_name             ex: AMAREINS                       AMBERIEU
+    com_name_prop        ex: Amareins                       Amb�rieu
+    dep                  ex: 01                             01
+    dep_name             ex: AIN                            AIN
+    dep_name_prop        ex: Ain                            Ain
+    cl_dep               ex: 0                              0
+    depar                ex: 015                            011
+    ar                   ex: 5                              1
+    ar_name              ex: TREVOUX                        BELLEY
+    ar_name_prop         ex: Tr�voux                        Belley
+    cl_ar                ex: 0                              0
+    deppct               ex: 0130                           0101
+    pct                  ex: 30                             01
+    pct_name             ex: SAINT-TRIVIER-SUR-MOIGNANS     AMBERIEU
+    pct_name_prop        ex: Saint-Trivier-sur-Moignans     Amb�rieu
+    cl_ct                ex: 0                              1
+    pct_type             ex: 1                              1
+    pmreg                ex: 07                             07
+    pmreg_name           ex: BESANCON                       BESANCON
+    pmreg_name_prop      ex: Besan�on                       Besan�on
+    cl_pmreg             ex: 0                              0
+    pmreg_type           ex: 0                              0
+    pmsub                ex: 7                              8
+    pmsub_name           ex: BOURG                          BELLEY
+    pmsub_name_prop      ex: Bourg                          Belley
+    cl_pmsub             ex: 0                              0
+    pmsub_type           ex: 0                              0
+    cour                 ex: 16                             16
+    cour_name            ex: LYON                           LYON
+    cour_name_prop       ex: Lyon                           Lyon
+    cl_cour              ex: 0                              0
+    courinst             ex: 1609                           1601
+    inst                 ex: 09                             01
+    inst_name            ex: TREVOUX                        BELLEY
+    inst_name_prop       ex: Tr�voux                        Belley
+    cl_inst              ex: 0                              0
+    trib_com             ex: 0                              0
+    trib_prud            ex: 0                              0
+    pris                 ex: 28                             28
+    pris_name            ex: LYON                           LYON
+    pris_name_prop       ex: Lyon                           Lyon
+    cl_pris              ex: 0                              0
+    deppcirco            ex: 0106                           0101
+    pcirco               ex: 06                             01
+    pcirco_name          ex: TREVOUX                        BELLEY
+    pcirco_name_prop     ex: Tr�voux                        Belley
+    pcirco_type          ex: 0                              0
+    acad                 ex: 09                             09
+    acad_name            ex: LYON                           LYON
+    acad_name_prop       ex: Lyon                           Lyon
+    cl_acad              ex: 0                              0
+    insp                 ex: 11                             11
+    cl_insp              ex: 0                              0
+    arch                 ex: 18                             18
+    arch_name            ex: BESANCON                       BESANCON
+    arch_name_prop       ex: Besan�on                       Besan�on
+    arch_type            ex: 1                              1
+    archdioc             ex: 1817                           1817
+    dioc                 ex: 17                             17
+    dioc_name            ex: BELLEY                         BELLEY
+    dioc_name_prop       ex: Belley                         Belley
+    dioc_type            ex: 2                              2
+    cl_dioc              ex: 0                              0
+    pop                  ex: .a                             .a
+    ipop                 ex: 192                            3928
+    pop_flag             ex: 2                              2
+
+### communes/Nomenclatures/COG_COMMUNES_1940.tab
+    ERREUR : new-line character seen in unquoted field - do you need to open the file with newline=''?
+
+### communes/Nomenclatures/COG_COMMUNES_1940.txt
+    ~38040 lignes, séparateur ,, 69 colonnes
+    cassini              ex: 575                            592
+    insee                ex: 01003                          01004
+    com_act              ex: 2                              1
+    com_name             ex: AMAREINS                       AMBERIEU
+    com_name_prop        ex: Amareins                       Amb�rieu
+    dep                  ex: 01                             01
+    dep_name             ex: AIN                            AIN
+    dep_name_prop        ex: Ain                            Ain
+    cl_dep               ex: 0                              0
+    depar                ex: 012                            011
+    ar                   ex: 2                              1
+    ar_name              ex: BOURG                          BELLEY
+    ar_name_prop         ex: Bourg                          Belley
+    cl_ar                ex: 0                              0
+    deppct               ex: 0130                           0101
+    pct                  ex: 30                             01
+    pct_name             ex: SAINT-TRIVIER-SUR-MOIGNANS     AMBERIEU
+    pct_name_prop        ex: Saint-Trivier-sur-Moignans     Amb�rieu
+    cl_ct                ex: 0                              1
+    pct_type             ex: 1                              1
+    pmreg                ex: 14                             14
+    pmreg_name           ex: LYON                           LYON
+    pmreg_name_prop      ex: Lyon                           Lyon
+    cl_pmreg             ex: 0                              0
+    pmreg_type           ex: 0                              0
+    pmsub                ex: 2                              2
+    pmsub_name           ex: BOURG                          BOURG
+    pmsub_name_prop      ex: Bourg                          Bourg
+    cl_pmsub             ex: 0                              0
+    pmsub_type           ex: 0                              0
+    cour                 ex: 16                             16
+    cour_name            ex: LYON                           LYON
+    cour_name_prop       ex: Lyon                           Lyon
+    cl_cour              ex: 0                              0
+    courinst             ex: 1609                           1601
+    inst                 ex: 09                             01
+    inst_name            ex: TREVOUX                        BELLEY
+    inst_name_prop       ex: Tr�voux                        Belley
+    cl_inst              ex: 0                              0
+    trib_com             ex: 0                              0
+    trib_prud            ex: 0                              0
+    pris                 ex: 28                             28
+    pris_name            ex: LYON                           LYON
+    pris_name_prop       ex: Lyon                           Lyon
+    cl_pris              ex: 0                              0
+    deppcirco            ex: 0105                           0101
+    pcirco               ex: 05                             01
+    pcirco_name          ex: TREVOUX                        BELLEY
+    pcirco_name_prop     ex: Tr�voux                        Belley
+    pcirco_type          ex: 0                              0
+    acad                 ex: 09                             09
+    acad_name            ex: LYON                           LYON
+    acad_name_prop       ex: Lyon                           Lyon
+    cl_acad              ex: 0                              0
+    insp                 ex: 11                             11
+    cl_insp              ex: 0                              0
+    arch                 ex: 18                             18
+    arch_name            ex: BESANCON                       BESANCON
+    arch_name_prop       ex: Besan�on                       Besan�on
+    arch_type            ex: 1                              1
+    archdioc             ex: 1817                           1817
+    dioc                 ex: 17                             17
+    dioc_name            ex: BELLEY                         BELLEY
+    dioc_name_prop       ex: Belley                         Belley
+    dioc_type            ex: 2                              2
+    cl_dioc              ex: 0                              0
+    pop                  ex: .a                             .a
+    ipop                 ex: 112                            6964
+    pop_flag             ex: 2                              2

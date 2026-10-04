@@ -1,0 +1,24 @@
+nord :
+canton lille sud est : lezennes et ronchin 2eme circonscription le reste du canton 1re circonscription
+canton lannoy : anstaing, baisieux, chéreng, forest, gruson, sailly, tressin, willems 6eme circonscription hem, lannoy, leps, leers, toufflers 7eme circonscription
+canton dunkerque est : bray dunes et zuydcoote 14 eme circonscription, le reste du canton 13 eme circonscription
+canton de douai nord : sin, waziers et la partie de douai appartenant a ce canton 17eme circonscription, le reste du canton 16 eme circonscription
+canton douai ouest : courchelettes, cuincy, esquerlin, flers, lambers, lauwin et la partie de douai appartenant a ce canton 17eme circonscription le reste du canton 16eme circonscription
+canton de douai sud : ferin, roncourt et la partie de douai appartenant a cette circonscription 17eme circonscription le reste du canton 16eme circonscription
+canton de valencienne sud : la partie de la ville appartenant a ce canton 21eme circonscription le reste du canton dans la 19 circonscription
+canton d'anzin : saint saulve 21eme circonscription le reste du canton 20eme circonscription
+canton de condé sur escault : escaupont, fresnes, hergnies, odomez et vicq 20eme circonscription le reste du canton 21eme circonscription
+cantron de valenciennes nord : la partie de la ville de valenciennes appartenant a ce canton 21eme circonscription le reste du canton 20eme circonscription
+rhone :
+canton de limonest : dardilly dans la 10 circonscription champagne, collonges, ecully, saint-cyr et saint didier dans la 5eme circonscription le reste du canton dans la 8eme circonscription
+bouche du rhone : 
+canton d'istres : miramas dans la 16eme circonscription, saint-chamas dans la 12eme circonscription et le reste du canton dans la 13eme circonscription 
+canton de salon : aurons, la barben et pélissanne sont incluses dans la 15eme circonscription et le reste du canton dans la 11eme circonscription
+bas-rhin :
+canton d'obernai : innenheim, qui en fait partie mais ce trouve en fait enclavée dans le canton de geispolsheim et rosheim, se trouve incluse avec le 1er dans la 4eme circonscription
+charente maritime :
+canton de saintes-est : colombier et la jard qui en font partie mais qui sont en fait enclavées entre les cantons de pons et gémozac sont placés comme ces derniers dans la 4eme circonscription et le reste du canton dans la 3eme circonscription
+drome :
+canton de loriol : ambonil qui en fait partie mais qui se trouve enclavé dans le canton de crest nord se trouve placé comme ce dernier dans la 3eme criconscription
+seine saint denis :
+la ville de saint denis est divisé entre la premiere et la seconde circonscription

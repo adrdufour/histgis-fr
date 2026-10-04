@@ -1,0 +1,337 @@
+atom_id,note,wkt,valid_from,valid_to
+39839#3838,canton 3838 Vienne-Nord,POINT(847132.4400000001 6494498.25),,
+39839#3839,canton 3839 Vienne-Sud,POINT(846257.53 6491379),,
+23649#0320,canton 0320 Montlucon-Est (rive droite du Cher),POINT(670495.79 6581808.58),,
+23649#0321,canton 0321 Montlucon-Ouest (rive gauche du Cher),POINT(667923.31 6582612.7),,
+24214#0323,canton 0323 Moulins-Est (Moulins-Sud en 1999) : sud-est,POINT(725058.63 6606585.7),,
+24214#0324,canton 0324 Moulins-Ouest : nord-ouest,POINT(724478.27 6607800.05),,
+8443#0832,canton Charleville-La Houillère (nord),POINT(823343.52 6968026.58),,
+8443#0833,canton Mézières-Est (sud),POINT(823907.88 6962084.3),,
+8443#0815,canton Mézières (ouest),POINT(822318.67 6964246.15),,
+8443#0837,canton Villers-Semeuse (est),POINT(824937.93 6963961.350000001),,
+8443#0805,canton Charleville (point explicite),POINT(824450 6965350),,
+38334#1022,canton Troyes-1 (nord-est),POINT(780693.65 6800566.03),,
+38334#1023,canton Troyes-2 (ouest),POINT(778897.29 6800989.350000001),,
+38334#1024,canton Troyes-3 (sud),POINT(780110.6 6798429.390000001),,
+320#1301,canton Aix-en-Provence-Nord (nord-est),POINT(897954.96 6277143.600000001),,
+320#1302,canton Aix-en-Provence-Sud (sud-ouest),POINT(892611.15 6272105.45),,
+320#1347,canton Aix-en-Provence-Centre (point explicite),POINT(898000 6272850),,
+19690#1421,canton Lisieux-1 (point explicite),POINT(497550 6899900),,
+19690#1421,canton Lisieux-1 (point explicite),POINT(497705 6897640),,
+19690#1422,canton Lisieux-2 (point explicite),POINT(497300 6896000),,
+19690#1449,canton Lisieux  3e  Canton (point explicite),POINT(498300 6898700),,
+25988#0123,canton Oyonnax-Nord (point explicite),POINT(906000 6575000),,
+25988#0141,canton Oyonnax-Sud (point explicite),POINT(902400 6579000),,
+5260#0137,canton Bourg-Nord-Centre (point explicite),POINT(871632 6570763),,
+5260#0138,canton Bourg-Sud (point explicite),POINT(871300 6568700),,
+5260#0105,canton Bourg-Est (point explicite),POINT(874000 6570000),,
+36448#0231,canton Soissons (point explicite),POINT(723000 6921200),,
+36448#0241,canton Soissons-Sud (point explicite),POINT(723000 6919000),,
+18722#0218,canton Laon (nord),POINT(745135.64 6943373.850000001),,
+18722#0238,canton Laon-Sud (sud),POINT(745221.68 6939690.71),,
+34360#0239,canton Saint-Quentin-Nord (point explicite),POINT(721500 6974000),,
+34360#0228,canton Saint-Quentin (point explicite),POINT(718000 6972500),,
+34360#0240,canton Saint-Quentin-Sud (point explicite),POINT(719865 6970843),,
+39750#0329,canton Vichy (nord),POINT(732441.18 6559828.140000001),,
+39750#0330,canton Vichy-Sud (sud),POINT(733006.62 6558036.57),,
+15035#0509,canton Gap (point explicite),POINT(943000 6396000),,
+15035#0526,canton Gap-Centre (point explicite),POINT(943500 6389500),,
+15035#0527,canton Gap-Nord-Est (point explicite),POINT(945500 6391000),,
+15035#0529,canton Gap-Sud-Est (point explicite),POINT(945500 6388500),,
+15035#0528,canton Gap-Nord-Ouest (point explicite),POINT(943700 6388800),,
+15035#0530,canton Gap-Sud-Ouest (point explicite),POINT(941500 6386500),,
+5879#0506,canton Briançon (point explicite),POINT(987500 6431000),,
+5879#0525,canton Briançon-Sud (point explicite),POINT(988400 6427500),,
+20929#0413,canton Manosque (point explicite),POINT(922500 6311000),,
+20929#0432,canton Manosque-Sud-Est (point explicite),POINT(926500 6305000),,
+20929#0433,canton Manosque-Sud-Ouest (point explicite),POINT(922100 6307050),,
+11835#0408,canton Digne (point explicite),POINT(962000 6338000),,
+11835#0431,canton Digne-les-Bains-Ouest (point explicite),POINT(956300 6339400),,
+11413#0306,canton Cusset (point explicite),POINT(737000 6562000),,
+11413#0335,canton Cusset-Sud (point explicite),POINT(737450 6557800),,
+951#0601,canton Antibes (point explicite),POINT(1032476 6286407),,
+951#0647,canton Antibes-Centre (point explicite),POINT(1030000 6287000),,
+951#0635,canton Vallauris-Antibes-Ouest (point explicite),POINT(1029927 6284943),,
+6536#0605,canton Cagnes-sur-Mer (point explicite),POINT(1036500 6295500),,
+6536#0648,canton Cagnes-sur-Mer-Centre (point explicite),POINT(1035000 6292800),,
+6536#0645,canton Cagnes-sur-Mer-Ouest (point explicite),POINT(1033000 6293500),,
+6806#0606,canton Cannes (point explicite),POINT(1026500 6282000),,
+6806#0649,canton Cannes-Centre (point explicite),POINT(1023000 6281500),,
+6806#0649,canton Cannes-Centre (point explicite),POINT(1027416 6277313),,
+6806#0649,canton Cannes-Centre (point explicite),POINT(1027148 6275956),,
+6806#0636,canton Mandelieu-Cannes-Ouest (point explicite),POINT(1020000 6281500),,
+34360#0239,canton Saint-Quentin-Nord (point explicite ; pointe Est de l'ANR au nord de 02691-1),POINT(723299 6972394),,
+19581#5938,canton Lille-Ouest (point explicite),POINT(703453 7060576),1858-10-13,1889-01-01
+19581#5934,canton Lille-Centre (point explicite),POINT(704445 7060936),1858-10-13,1889-01-01
+19581#5937,canton Lille-Nord-Est (point explicite),POINT(706241 7059904),1858-10-13,1889-01-01
+19581#5940,canton Lille-Sud-Est (point explicite),POINT(704812 7059388),1858-10-13,1889-01-01
+19581#5937,canton Lille-Nord-Est (point explicite ; morceau sud hors les murs : correction d'Adrien du 27 septembre 2026),POINT(705659 7057918),1858-10-13,1889-01-01
+19581#5941,canton Lille-Sud-Ouest (point explicite),POINT(703420 7058243),1858-10-13,1889-01-01
+19581#5941,canton Lille-Sud-Ouest (point explicite),POINT(702568 7058232),1889-01-01,1941-01-01
+19581#5939,canton Lille-Sud (point explicite),POINT(704425 7057803),1889-01-01,1941-01-01
+19581#5937,canton Lille-Nord-Est (point explicite),POINT(706113 7060466),1889-01-01,1941-01-01
+19581#5935,canton Lille-Est (point explicite),POINT(706058 7058897),1889-01-01,1941-01-01
+19581#5934,canton Lille-Centre (point explicite),POINT(703769 7059452),1889-01-01,1941-01-01
+19581#5938,canton Lille-Ouest (point explicite),POINT(703453 7060576),1889-01-01,1941-01-01
+19581#5936,canton Lille-Nord (point explicite),POINT(704445 7060936),1889-01-01,1941-01-01
+19581#5935,canton Lille-Est (point explicite ; morceau sud hors les murs : correction d'Adrien du 27 septembre 2026),POINT(705659 7057918),1889-01-01,1941-01-01
+19581#5940,canton Lille-Sud-Est (point explicite),POINT(704828 7059377),1889-01-01,1941-01-01
+29736#5954,canton Roubaix-Ouest (point explicite),POINT(711467 7066075),1892-01-01,1982-03-14
+29736#5953,canton Roubaix-Nord (point explicite),POINT(712666 7067070),1892-01-01,1982-03-14
+29736#5952,canton Roubaix-Est (point explicite),POINT(713294 7065039),1892-01-01,1982-03-14
+38378#5961,canton Tourcoing-Nord (point explicite),POINT(709635 7070216),1895-01-01,2013-01-01
+38378#5962,canton Tourcoing-Nord-Est (point explicite),POINT(711626 7070814),1895-01-01,2013-01-01
+38378#5963,canton Tourcoing-Sud (point explicite),POINT(711748 7068874),1895-01-01,2013-01-01
+7729#7106,canton Chalon-sur-Saône-Nord (point explicite),POINT(840512 6633485),1876-01-01,1985-03-10
+7729#7107,canton Chalon-sur-Saône-Sud (point explicite),POINT(841676 6631834),1876-01-01,1985-03-10
+38657#5967,canton Valenciennes-Sud (point explicite),POINT(735810 7028436),1801-01-01,2013-01-01
+38657#5966,canton Valenciennes-Nord (point explicite),POINT(737717 7030535),1801-01-01,2013-01-01
+38657#5965,canton Valenciennes-Est (point explicite),POINT(737930 7028863),1801-01-01,2013-01-01
+41221#5952,canton Roubaix-Est (point explicite),POINT(716568 7066935),1892-01-01,2013-01-01
+41221#5953,canton Roubaix-Nord (point explicite),POINT(714090 7068398),1892-01-01,2013-01-01
+10978#6011,canton Creil-Nogent-sur-Oise (point explicite),POINT(661260 6907272),1973-09-23,2013-01-01
+10978#6038,canton Creil-Sud (point explicite),POINT(662280 6905980),1973-09-23,2013-01-01
+3332#6003,canton Beauvais-Nord-Est (point explicite ; pose pour 1958-1982 : aucune appartenance en base a ces dates),POINT(633651 6927696),1958-01-01,1982-03-14
+3332#6004,canton Beauvais-Sud-Ouest (point explicite ; pose pour 1958-1982 : aucune appartenance en base a ces dates),POINT(633828 6924694),1958-01-01,1982-03-14
+3332#6040,canton Beauvais-Nord-Ouest (point explicite),POINT(631500 6927800),1982-03-14,2013-01-01
+3332#6003,canton Beauvais-Nord-Est (point explicite),POINT(635000 6927500),1982-03-14,2013-01-01
+3332#6004,canton Beauvais-Sud-Ouest (point explicite),POINT(633828 6924694),1982-03-14,2013-01-01
+19196#6231,canton Lens-Est (point explicite),POINT(688232 7038028),1904-01-01,1949-06-28
+19196#6232,canton Lens-Ouest (point explicite),POINT(686235 7037616),1904-01-01,1949-06-28
+5200#6213,canton Boulogne-sur-Mer-Nord (point explicite),POINT(601714 7071914),1958-01-01,1985-03-10
+5200#6214,canton Boulogne-sur-Mer-Sud (point explicite),POINT(601871 7069714),1958-01-01,1985-03-10
+5200#6213,canton Boulogne-sur-Mer-Nord-Est (point explicite),POINT(602300 7072000),1985-03-10,2013-01-01
+5200#6265,canton Boulogne-sur-Mer-Nord-Ouest (point explicite),POINT(601000 7071600),1985-03-10,2013-01-01
+5200#6214,canton Boulogne-sur-Mer-Sud (point explicite),POINT(602300 7069700),1985-03-10,2013-01-01
+5200#6276,canton Portel (point explicite),POINT(600700 7070300),1992-03-22,2013-01-01
+22076#6267,canton Rouvroy (point explicite),POINT(691514 7033800),1985-03-10,2013-01-01
+22076#6252,canton Avion (point explicite),POINT(689743 7032572),1985-03-10,2013-01-01
+21801#7717,canton Meaux-Nord (point explicite),POINT(692505 6873539),1976-03-07,2013-01-01
+21801#7731,canton Meaux-Sud (point explicite),POINT(692070 6871985),1976-03-07,2013-01-01
+21914#7718,canton Melun-Nord (point explicite),POINT(674295 6827673),1976-03-07,2013-01-01
+21914#7719,canton Melun-Sud (point explicite),POINT(674773 6826418),1976-03-07,2013-01-01
+25044#7920,canton Niort-1 (point explicite),POINT(434165 6587186),1870-01-01,1964-06-21
+25044#7921,canton Niort-2 (point explicite),POINT(434523 6585794),1870-01-01,1964-06-21
+25044#7920,canton Niort-Nord (point explicite),POINT(434250 6589700),1973-09-23,2013-01-01
+25044#7933,canton Niort-Est (point explicite),POINT(436934 6585100),1973-09-23,2013-01-01
+25044#7921,canton Niort-Ouest (point explicite),POINT(430800 6585866),1973-09-23,2013-01-01
+21721#5320,canton Mayenne-Est (point explicite),POINT(432867 6806791),1802-03-16,2013-01-01
+21721#5321,canton Mayenne-Ouest (point explicite),POINT(430882 6807081),1802-03-16,2013-01-01
+38367#1925,canton Tulle-Nord (point explicite),POINT(602475 6464022),1808-01-01,1982-03-14
+38367#1926,canton Tulle-Sud (point explicite),POINT(604856 6464278),1808-01-01,1982-03-14
+38367#1925,canton Tulle-Urbain-Nord (point explicite),POINT(604030 6464927),1982-03-14,2013-01-01
+38367#1926,canton Tulle-Urbain-Sud (point explicite),POINT(603646 6463617),1982-03-14,2013-01-01
+37084#6521,canton Tarbes-Nord (point explicite),POINT(460841 6241478),1801-01-01,1853-06-07
+37084#6522,canton Tarbes-Sud (point explicite),POINT(462566 6242211),1801-01-01,1853-06-07
+37084#6521,canton Tarbes-Nord (point explicite),POINT(460793 6241400),1853-06-07,1973-09-23
+37084#6522,canton Tarbes-Sud (point explicite),POINT(462900 6242200),1853-06-07,1973-09-23
+37084#6528,canton Tarbes  1er Canton (point explicite),POINT(463000 6242300),1973-09-23,2013-01-01
+37084#6529,canton Tarbes  2e  Canton (point explicite),POINT(463000 6240300),1973-09-23,2013-01-01
+37084#6530,canton Tarbes  3e  Canton (point explicite),POINT(460800 6242500),1973-09-23,2013-01-01
+37084#6531,canton Tarbes  4e  Canton (point explicite),POINT(461300 6241800),1973-09-23,2013-01-01
+37084#6532,canton Tarbes  5e  Canton (point explicite),POINT(460800 6240300),1973-09-23,2013-01-01
+26522#6609,canton Perpignan-Ouest (point explicite),POINT(691100 6177500),1870-01-01,1973-09-23
+26522#6608,canton Perpignan-Est (point explicite),POINT(692500 6178500),1870-01-01,1973-09-23
+26522#6608,canton Perpignan-I (1er canton en base) (point explicite),POINT(691000 6180500),1973-09-23,1982-03-14
+26522#6608,canton Perpignan-I (1er canton en base) (point explicite),POINT(696000 6179650),1973-09-23,1982-03-14
+26522#6609,canton Perpignan-II (2e canton en base) (point explicite),POINT(693500 6178500),1973-09-23,1982-03-14
+26522#6620,canton Perpignan-III (3e canton en base) (point explicite),POINT(695183 6176931),1973-09-23,1982-03-14
+26522#6621,canton Perpignan-IV (4e canton en base) (point explicite),POINT(691800 6174500),1973-09-23,1982-03-14
+26522#6622,canton Perpignan-V (5e canton en base) (point explicite),POINT(688500 6175500),1973-09-23,1982-03-14
+26522#6623,canton Perpignan-VI (6e canton en base ; ancienne enclave de l Ouest) (point explicite),POINT(691100 6177500),1973-09-23,1982-03-14
+7760#7309,canton Chambéry-Nord (point explicite),POINT(927563 6502484),1860-11-24,1973-09-23
+7760#7310,canton Chambéry-Sud (point explicite),POINT(927019 6500546),1860-11-24,1973-09-23
+35529#4928,canton Saumur-Nord-Ouest (point explicite),POINT(468085 6689352),1963-05-30,1973-02-01
+35529#4929,canton Saumur-Sud (point explicite),POINT(467529 6688181),1963-05-30,1973-02-01
+35529#4928,canton Saumur-Nord (point explicite),POINT(467897 6691679),1973-02-01,2013-01-01
+35529#4929,canton Saumur-Sud (point explicite ; ile de l est : correction d'Adrien du 1er octobre 2026),POINT(471561 6686847),1973-02-01,2013-01-01
+35529#4929,canton Saumur-Sud (point explicite),POINT(467000 6686500),1973-02-01,2013-01-01
+9705#6310,canton Clermont-Ferrand-Est (point explicite),POINT(710500 6521000),1801-01-01,1982-03-14
+9705#6311,canton Clermont-Ferrand-Nord (point explicite),POINT(705200 6521200),1801-01-01,1982-03-14
+9705#6312,canton Clermont-Ferrand-Sud (point explicite),POINT(707500 6518500),1801-01-01,1982-03-14
+9705#6313,canton Clermont-Ferrand-Sud-Ouest (point explicite),POINT(705800 6518500),1801-01-01,1982-03-14
+20932#7219,canton Le Mans-1 (point explicite),POINT(490620 6769818),1801-01-01,1892-07-13
+20932#7220,canton Le Mans-2 (point explicite),POINT(490308 6772038),1801-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite ; rive gauche au sud de la ville : correction d'Adrien du 1er octobre 2026),POINT(488046 6768087),1801-01-01,1892-07-13
+20932#7220,canton Le Mans-2 (point explicite),POINT(490892 6771343),1801-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite ; rive gauche au sud de la ville : correction d'Adrien du 1er octobre 2026),POINT(489096 6768709),1801-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite ; rive gauche au sud de la ville : correction d'Adrien du 1er octobre 2026),POINT(487831 6768364),1801-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite ; rive gauche au sud de la ville : correction d'Adrien du 1er octobre 2026),POINT(488842 6767121),1801-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite),POINT(493500 6768500),1855-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite),POINT(488252 6772226),1855-01-01,1892-07-13
+20932#7221,canton Le Mans-3 (point explicite),POINT(489111 6769488),1855-01-01,1892-07-13
+20932#7219,canton Le Mans-1 (point explicite),POINT(492000 6772500),1892-07-13,1967-08-08
+20932#7220,canton Le Mans-2 (point explicite),POINT(489000 6771500),1892-07-13,1967-08-08
+20932#7220,canton Le Mans-2 (point explicite),POINT(490892 6771343),1892-07-13,1967-08-08
+20932#7221,canton Le Mans-3 (point explicite),POINT(491500 6767000),1892-07-13,1967-08-08
+16833#7627,1er canton du Havre (base : Le Havre-Nord) (point explicite ; plan de 1888 dans Gaudillere),POINT(490044 6936005),1888-07-07,1964-01-28
+16833#7628,2e canton du Havre (base : Le Havre-Sud) (point explicite ; plan de 1888 dans Gaudillere),POINT(491071 6935954),1888-07-07,1964-01-28
+16833#7629,3e canton du Havre (base : Le Havre-Est) (point explicite ; plan de 1888 dans Gaudillere),POINT(492365 6935425),1888-07-07,1964-01-28
+16833#7629,3e canton du Havre (base : Le Havre-Est) (point explicite ; plan de 1888 dans Gaudillere ; le port a l est),POINT(491893 6933600),1888-07-07,1964-01-28
+16833#7630,Le Havre-4 (point explicite ; plan de 1888 dans Gaudillere),POINT(492311 6937152),1888-07-07,1964-01-28
+16833#7631,Le Havre-5 (point explicite ; plan de 1888 dans Gaudillere),POINT(490826 6936976),1888-07-07,1964-01-28
+16833#7630,"canton Le Havre-4 (point explicite ; Graville annexee au 4e canton, loi du 18 octobre 1919)",POINT(494940 6937180),1919-01-01,1964-01-28
+16833#7632,"Le Havre-6 (point explicite ; Sanvic, annexee en 1955, deja commune du 6e : deduction)",POINT(490787 6938533),1955-01-01,1964-01-28
+16833#7632,Le Havre-6 (point explicite ; plan de 1888 dans Gaudillere),POINT(489832 6937197),1888-07-07,1964-01-28
+16833#7632,"Le Havre-6 (point explicite ; Bleville, annexee en 1953, deja commune du 6e : deduction)",POINT(490061 6940102),1953-01-01,1964-01-28
+29752#7642,canton Rouen-1 (point explicite),POINT(561336 6928547),1801-01-01,1982-01-27
+29752#7643,canton Rouen-2 (point explicite),POINT(561899 6928961),1801-01-01,1982-01-27
+29752#7644,canton Rouen-3 (point explicite),POINT(561876 6928247),1801-01-01,1982-01-27
+29752#7645,canton Rouen-4 (point explicite),POINT(562745 6928534),1801-01-01,1982-01-27
+29752#7646,canton Rouen-5 (point explicite),POINT(559628 6928944),1801-01-01,1982-01-27
+29752#7647,canton Rouen-6 (point explicite),POINT(561117 6927377),1801-01-01,1982-01-27
+39569#7838,canton Versailles-Nord (point explicite),POINT(637129 6857360),1801-01-01,1964-01-28
+39569#7839,canton Versailles-Ouest (point explicite),POINT(634200 6857560),1801-01-01,1964-01-28
+39569#7840,canton Versailles-Sud (point explicite),POINT(634286 6854979),1801-01-01,1964-01-28
+37812#8327,canton Toulon-Est (point explicite),POINT(937243 6231574),1901-07-08,1964-01-28
+37812#8328,canton Toulon-Ouest (point explicite),POINT(938438 6229401),1901-07-08,1964-01-28
+37812#8329,canton Toulon-3 (point explicite),POINT(940712 6229675),1901-07-08,1964-01-28
+37812#8330,canton Toulon-4 (point explicite),POINT(942134 6230001),1901-07-08,1964-01-28
+2184#8402,canton Avignon-Nord (point explicite),POINT(848802 6317628),1801-01-01,1933-04-27
+2184#8403,canton Avignon-Sud (point explicite),POINT(843994 6316288),1801-01-01,1933-04-27
+29394#8523,canton La Roche-sur-Yon (point explicite),POINT(362861 6630568),,
+29394#8531,canton Roche-sur-Yon-Sud (point explicite),POINT(364528 6626236),,
+27358#8621,canton Poitiers-Nord (point explicite),POINT(498583 6613519),1862-04-16,1973-07-13
+27358#8622,canton Poitiers-Sud (point explicite),POINT(496118 6610647),1862-04-16,1973-07-13
+22356#9222,canton Issy-les-Moulineaux-Ouest (point explicite),POINT(644628 6857454),,
+22356#9226,canton Meudon (point explicite),POINT(643099 6856151),,
+15323#9434,canton Arcueil (point explicite),POINT(651412 6857312),,
+15323#9416,canton Kremlin-Bicêtre (point explicite),POINT(652073 6857087),,
+35344#9523,canton Sarcelles-Nord-Est (point explicite),POINT(655305 6877180),,
+35344#9533,canton Sarcelles-Sud-Ouest (point explicite),POINT(654117 6876064),,
+12105#5922,canton Douai-Nord (point explicite),POINT(707028 7032222),1922-12-27,1982-03-14
+12105#5923,canton Douai-Ouest (point explicite),POINT(705239 7031413),1922-12-27,1982-03-14
+12105#5924,canton Douai-Sud (point explicite),POINT(705799 7029125),1922-12-27,1982-03-14
+22347#5717,canton Metz-1 (point explicite),POINT(932560 6895777),1801-01-01,1941-01-01
+22347#5718,canton Metz-2 (point explicite),POINT(931883 6896833),1801-01-01,1941-01-01
+22347#5719,canton Metz-3 (point explicite),POINT(931681 6895183),1801-01-01,1941-01-01
+24537#5420,canton Nancy-Nord (point explicite),POINT(933300 6849300),1871-01-01,1973-09-23
+24537#5421,canton Nancy-Ouest (point explicite),POINT(933000 6848000),1871-01-01,1973-09-23
+24537#5419,canton Nancy-Est (point explicite),POINT(935000 6848000),1871-01-01,1973-09-23
+24537#5422,canton Nancy-Sud (point explicite),POINT(934320 6848200),1879-01-01,1973-09-23
+24537#5422,canton Nancy-Sud (point explicite),POINT(934800 6846800),1879-01-01,1973-09-23
+24537#9917,canton Nancy-Nord du departement de la Meurthe (point explicite),POINT(933300 6849300),1801-01-01,1871-01-01
+24537#9918,canton Nancy-Ouest du departement de la Meurthe (point explicite),POINT(933000 6848000),1801-01-01,1871-01-01
+24537#9916,canton Nancy-Est du departement de la Meurthe (point explicite),POINT(935000 6848000),1801-01-01,1871-01-01
+28831#5119,canton Reims-1 (point explicite),POINT(773781 6905187),1889-01-01,1973-09-23
+28831#5120,canton Reims-2 (point explicite),POINT(777072 6907315),1889-01-01,1973-09-23
+28831#5121,canton Reims-3 (point explicite),POINT(776810 6904065),1889-01-01,1973-09-23
+28831#5122,canton Reims-4 (point explicite),POINT(774032 6908299),1889-01-01,1973-09-23
+804#4901,canton Angers-Nord-Est (point explicite),POINT(433863 6715370),1801-01-01,1964-01-01
+804#4902,canton Angers-Nord-Ouest (point explicite),POINT(430535 6714860),1801-01-01,1964-01-01
+804#4903,canton Angers-Sud-Est (point explicite),POINT(431824 6712006),1801-01-01,1964-01-01
+24557#4420,canton Nantes-1 (plan Gaudillere 1908-1973),POINT(354773 6692851),1801-01-01,1973-09-23
+24557#4421,canton Nantes-2 (plan Gaudillere 1908-1973),POINT(357775 6693502),1801-01-01,1973-09-23
+24557#4422,canton Nantes-3 (plan Gaudillere 1908-1973),POINT(355468 6689454),1801-01-01,1973-09-23
+24557#4423,canton Nantes-4 (plan Gaudillere 1908-1973),POINT(356353 6687779),1801-01-01,1973-09-23
+24557#4424,canton Nantes-5 (plan Gaudillere 1908-1973),POINT(354035 6690084),1801-01-01,1973-09-23
+24557#4425,canton Nantes-6 (plan Gaudillere 1908-1973),POINT(354200 6689000),1801-01-01,1973-09-23
+24557#4426,canton Nantes-7 (plan Gaudillere 1908-1973),POINT(352249 6688637),1908-01-01,1973-09-23
+14156#3832,canton Fontaine-Sassenage (point explicite),POINT(911200 6459000),,
+14156#3856,canton Fontaine-Seyssinet (point explicite),POINT(911200 6457800),,
+5316#3853,canton Bourgoin-Jallieu-Nord (point explicite),POINT(877806 6503945),,
+5316#3804,canton Bourgoin (point explicite),POINT(876138 6501408),,
+31635#4219,canton Saint-Étienne-Nord-Est (point explicite),POINT(809636 6485192),1860-05-09,1973-09-23
+31635#4220,canton Saint-Étienne-Sud-Est (point explicite),POINT(810280 6481003),1860-05-09,1973-09-23
+31635#4221,canton Saint-Étienne-Nord-Ouest (point explicite),POINT(807138 6484480),1860-05-09,1973-09-23
+31635#4222,canton Saint-Étienne-Sud-Ouest (point explicite),POINT(807918 6480943),1860-05-09,1973-09-23
+28294#4319,canton Le Puy-Nord-Ouest (point explicite),POINT(769890 6438900),1802-03-16,1973-09-23
+28294#4320,canton Le Puy-Sud-Est (point explicite),POINT(769545 6438450),1802-03-16,1973-09-23
+37911#3722,canton Tours-Nord (point explicite),POINT(525600 6702750),1801-01-01,1956-08-04
+37911#3721,canton Tours-Centre (point explicite),POINT(525800 6701900),1801-01-01,1956-08-04
+37911#3723,canton Tours-Sud (point explicite),POINT(525500 6700000),1801-01-01,1956-08-04
+28930#3529,canton Rennes-Nord-Est (point explicite),POINT(353500 6790500),1801-01-01,1973-09-23
+28930#3530,canton Rennes-Nord-Ouest (point explicite),POINT(350000 6791000),1801-01-01,1973-09-23
+28930#3531,canton Rennes-Sud-Est (point explicite),POINT(353500 6787500),1801-01-01,1973-09-23
+28930#3532,canton Rennes-Sud-Ouest (point explicite),POINT(350000 6788000),1801-01-01,1973-09-23
+4149#3404,canton Béziers-1 (point explicite),POINT(718275 6250736),1801-01-01,1973-09-23
+4149#3405,canton Béziers-2 (point explicite),POINT(718497 6247627),1801-01-01,1973-09-23
+23741#3422,canton Montpellier-1 (point explicite),POINT(770750 6279500),1801-01-01,1973-09-23
+23741#3423,canton Montpellier-2 (point explicite),POINT(773000 6280000),1801-01-01,1973-09-23
+23741#3424,canton Montpellier-3 (point explicite),POINT(768000 6278500),1801-01-01,1973-09-23
+PQ42#V-SO,"quartier PQ42, cote SO (30.1 ha) : Q1889_1893#1/11 et suivantes",POINT(653911 6862417),,
+PQ42#V-NE,"quartier PQ42, cote NE (53.3 ha) : Q1889_1893#2/11 et suivantes",POINT(654437 6862764),,
+PQ43#V-SO,"quartier PQ43, cote SO (61.0 ha) : Q1889_1893#1/11 et suivantes",POINT(654220 6861919),,
+PQ43#V-NE,"quartier PQ43, cote NE (55.7 ha) : Q1889_1893#2/11 et suivantes",POINT(654763 6862313),,
+PQ44#V-SO,"quartier PQ44, cote SO (47.1 ha) : Q1889_1893#1/11 et suivantes",POINT(654695 6861468),,
+PQ44#V-NE,"quartier PQ44, cote NE (45.5 ha) : Q1889_1893#2/11 et suivantes",POINT(655494 6861535),,
+PQ27#B-O,"quartier PQ27, cote O (47.1 ha) : Q1902_1910#1/7 et suivantes",POINT(649158 6861406),,
+PQ27#B-E,"quartier PQ27, cote E (33.6 ha) : Q1902_1910#2/7 et suivantes",POINT(649811 6861326),,
+PQ46#58N,"quartier PQ46, cote N (127.4 ha) : V1958_1986#11",POINT(655463 6860622),,
+PQ46#58S,"quartier PQ46, cote S (593.6 ha) : V1958_1986#12",POINT(658983 6858827),,
+PQ59#58NE,"quartier PQ59, cote NE (49.2 ha) : V1958_1986#18",POINT(648203 6861683),,
+PQ59#58SO,"quartier PQ59, cote SO (97.9 ha) : V1958_1986#19",POINT(647877 6861258),,
+PQ62#58N,"quartier PQ62, cote NO (460.8 ha) : V1958_1986#21",POINT(644892 6863157),,
+PQ62#58S,"quartier PQ62, cote SE (86.8 ha) : V1958_1986#20",POINT(647008 6861887),,
+PQ66#58O,"quartier PQ66, cote SO (40.5 ha) : V1958_1986#22",POINT(648463 6865138),,
+PQ66#58E,"quartier PQ66, cote NE (100.3 ha) : V1958_1986#23",POINT(648842 6865384),,
+PQ67#58O,"quartier PQ67, cote O (130.1 ha) : V1958_1986#23",POINT(649522 6865670),,
+PQ67#58E,"quartier PQ67, cote E (13.9 ha) : V1958_1986#24",POINT(650423 6865398),,
+PQ70#58O,"quartier PQ70, cote SO (105.3 ha) : V1958_1986#26",POINT(651968 6865765),,
+PQ70#58E,"quartier PQ70, cote NE (60.0 ha) : V1958_1986#27",POINT(652374 6866119),,
+PQ73#58SO,"quartier PQ73, cote SO (101.3 ha) : V1958_1986#28",POINT(654101 6865321),,
+PQ73#58NE,"quartier PQ73, cote NE (27.3 ha) : V1958_1986#29",POINT(654580 6865699),,
+PQ22#86S,"quartier PQ22, cote S (41.5 ha) : 75-02@1986",POINT(651259 6860801),,
+PQ22#86N,"quartier PQ22, cote N (30.0 ha) : 75-03@1986",POINT(651364 6861344),,
+PQ79#86NO,"quartier PQ79, cote NO (52.4 ha) : 75-06@1986",POINT(655210 6863144),,
+PQ79#86SE,"quartier PQ79, cote SE (108.3 ha) : 75-21@1986",POINT(655697 6862704),,
+PQ51#86O,"quartier PQ51, cote O (178.4 ha) : 75-10@1986",POINT(652257 6858413),,
+PQ51#86E,"quartier PQ51, cote E (45.1 ha) : 75-09@1986",POINT(653016 6858350),,
+PQ62#86N,"quartier PQ62, cote NO (484.3 ha) : 75-15@1986",POINT(645002 6863037),,
+PQ62#86S,"quartier PQ62, cote SE (63.3 ha) : 75-14@1986",POINT(647040 6861819),,
+PQ67#86O,"quartier PQ67, cote SO (34.2 ha) : 75-16@1986",POINT(649643 6865302),,
+PQ67#86E,"quartier PQ67, cote NE (109.9 ha) : 75-17@1986",POINT(649618 6865706),,
+37818#3135,canton Toulouse-Ouest (point explicite),POINT(571000 6278000),1801-01-01,1973-09-23
+37818#3134,canton Toulouse-Nord (point explicite),POINT(572500 6283000),1801-01-01,1973-09-23
+37818#3133,canton Toulouse-Centre (point explicite),POINT(576500 6282000),1801-01-01,1973-09-23
+37818#3136,canton Toulouse-Sud (point explicite),POINT(575000 6275000),1801-01-01,1973-09-23
+21387#1313,canton Marseille-1 (point explicite),POINT(892200 6248200),1801-01-01,1886-01-01
+21387#1314,canton Marseille-2 (point explicite),POINT(893000 6246500),1801-01-01,1886-01-01
+21387#1315,canton Marseille-3 (point explicite),POINT(892900 6247150),1801-01-01,1886-01-01
+21387#1316,canton Marseille-4 (point explicite),POINT(893500 6250000),1801-01-01,1886-01-01
+21387#1317,canton Marseille-5 (point explicite),POINT(894000 6240000),1801-01-01,1886-01-01
+21387#1318,canton Marseille-6 (point explicite),POINT(900000 6249000),1801-01-01,1886-01-01
+21387#1313,canton Marseille-1 (point explicite),POINT(892900 6247150),1886-01-01,1901-01-01
+21387#1314,canton Marseille-2 (point explicite),POINT(893000 6246500),1886-01-01,1901-01-01
+21387#1315,canton Marseille-3 (point explicite),POINT(892200 6248200),1886-01-01,1901-01-01
+21387#1316,canton Marseille-4 (point explicite),POINT(892000 6250500),1886-01-01,1901-01-01
+21387#1317,canton Marseille-5 (point explicite),POINT(895000 6251000),1886-01-01,1901-01-01
+21387#1318,canton Marseille-6 (point explicite),POINT(895500 6246500),1886-01-01,1901-01-01
+21387#1319,canton Marseille-7 (point explicite),POINT(894000 6240000),1886-01-01,1901-01-01
+21387#1320,canton Marseille-8 (point explicite),POINT(900000 6249000),1886-01-01,1901-01-01
+21387#1313,canton Marseille-1 (point explicite),POINT(892676 6247129),1901-01-01,1973-09-23
+21387#1314,canton Marseille-2 (point explicite),POINT(892836 6246560),1901-01-01,1973-09-23
+21387#1315,canton Marseille-3 (point explicite),POINT(892134 6247374),1901-01-01,1973-09-23
+21387#1316,canton Marseille-4 (point explicite),POINT(892263 6248305),1901-01-01,1973-09-23
+21387#1317,canton Marseille-5 (point explicite),POINT(892867 6250021),1901-01-01,1973-09-23
+21387#1318,canton Marseille-6 (point explicite),POINT(896173 6248274),1901-01-01,1973-09-23
+21387#1319,canton Marseille-7 (point explicite),POINT(892728 6252770),1901-01-01,1973-09-23
+21387#1320,canton Marseille-8 (point explicite),POINT(894362 6247208),1901-01-01,1973-09-23
+21387#1321,canton Marseille-9 (point explicite),POINT(895640 6245705),1901-01-01,1973-09-23
+21387#1322,canton Marseille-10 (point explicite),POINT(898734 6241320),1901-01-01,1973-09-23
+21387#1323,canton Marseille-11 (point explicite),POINT(892026 6245253),1901-01-01,1973-09-23
+21387#1324,canton Marseille-12 (point explicite),POINT(899026 6250455),1901-01-01,1973-09-23
+8537#2807,canton Chartres-Nord (point explicite),POINT(590688 6818227),1870-01-01,1973-09-23
+8537#2808,canton Chartres-Sud (point explicite),POINT(589846 6816676),1870-01-01,1973-09-23
+13353#2716,canton Évreux-Nord (point explicite),POINT(563431 6883277),,
+13353#2717,canton Évreux-Sud (point explicite),POINT(565375 6880291),,
+13353#2737,canton Évreux-Est (point explicite),POINT(566113 6882399),,
+13353#2738,canton Évreux-Ouest (point explicite),POINT(563499 6880383),,
+347#3003,canton Alès-Ouest (point explicite),POINT(785000 6336500),1858-05-18,1973-09-23
+347#3002,canton Alès-Est (point explicite),POINT(787000 6339000),1858-05-18,1973-09-23
+30795#2244,canton Saint-Brieuc-1 (nord),POINT(272803.6 6840390.25),1870-01-01,1982-03-14
+30795#2245,canton Saint-Brieuc-2 (sud),POINT(274930.98 6838762.05),1870-01-01,1982-03-14
+29927#1725,canton Royan (est),POINT(387672.65 6511858.8),,
+29927#1743,canton Royan-Ouest (ouest),POINT(385044.60000000003 6511440.600000001),,
+11845#2110,canton Dijon-Nord (point explicite),POINT(854149 6695197),1907-01-01,1973-09-23
+11845#2109,canton Dijon-Est (point explicite),POINT(855765 6696384),1907-01-01,1973-09-23
+11845#2112,canton Dijon-Sud (point explicite),POINT(856648 6691409),1907-01-01,1973-09-23
+11845#2111,canton Dijon-Ouest (point explicite),POINT(852515 6691718),1907-01-01,1973-09-23
+4923#3308,canton Bordeaux-1 (point explicite),POINT(419257 6426693),1801-01-01,1973-09-23
+4923#3309,canton Bordeaux-2 (point explicite),POINT(417186 6422867),1801-01-01,1973-09-23
+4923#3310,canton Bordeaux-3 (point explicite),POINT(417252 6422046),1801-01-01,1973-09-23
+4923#3311,canton Bordeaux-4 (point explicite),POINT(415854 6420799),1801-01-01,1973-09-23
+4923#3312,canton Bordeaux-5 (point explicite),POINT(417357 6420418),1801-01-01,1973-09-23
+4923#3313,canton Bordeaux-6 (point explicite),POINT(419019 6420149),1801-01-01,1973-09-23
+4923#3312,canton Bordeaux-5 rive droite La Bastide 1865-1888 (point explicite),POINT(419333 6422541),1865-01-01,1888-01-01
+4923#3314,canton Bordeaux-7 (point explicite),POINT(419333 6422541),1888-01-01,1973-09-23

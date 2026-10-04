@@ -1,0 +1,7 @@
+legifrance_id,dep,fondement
+JORFTEXT000000561502,54,"décret n° 96-709 du 7 août 1996, art. 1er : Han-devant-Pierrepont est rattachée au département de Meurthe-et-Moselle, canton de Longuyon ; effet au 1er janvier 1997, dit par le décret. Confirmé par sources/v_mvt_commune_2025.csv, mod 41, DATE_EFF 1997-01-01, 55227 -> 54602."
+JORFTEXT000000561502,55,"décret n° 96-709 du 7 août 1996, art. 1er : la commune quitte le département de la Meuse, canton de Spincourt. Même acte, département de départ."
+JORFTEXT000000334636,54,"décret n° 82-82 du 25 janvier 1982. Le titre Légifrance dit « dans divers départements » et c'est FAUX : le JO du 26 janvier 1982 (JORF_19820126_21, l. 920) imprime « (Département de Meurthe-et-Moselle) » sous le numéro du décret, et ses neuf articles ne nomment que des communes de ce département. L'ancien fichier lui donnait 54 par défaut — la valeur était juste, le fondement ne l'était pas ; il l'est maintenant."
+JORFTEXT000000508862,10,"décret du 24 février 1987, département de l'Aube (JORF_19870228_50). Sans effet sur l'appartenance — voir acte_sans_effet.csv."
+JORFTEXT000000699137,41,"décret du 28 août 1985, département de Loir-et-Cher (JORF_19850903_204). Sans effet sur l'appartenance — voir acte_sans_effet.csv."
+JORFTEXT000000852865,69,"décret n° 64-847 du 12 août 1964, département du Rhône, 5e et 6e cantons de Lyon (JORF_19640819_192). Sans effet sur l'appartenance — voir acte_sans_effet.csv."

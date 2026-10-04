@@ -1,0 +1,1296 @@
+decret,date,dep,canton,nom_texte,insee,nom_geofla,appariement,ville_coupee,jo
+73-651,1973-07-13,05,Briançon-Nord,Nevache,05093,NEVACHE,exact,Briançon,JORF_19730717_164
+73-651,1973-07-13,05,Briançon-Nord,Val-des-Prés,05174,VAL-DES-PRES,exact,Briançon,JORF_19730717_164
+73-651,1973-07-13,05,Briançon-Nord,Montgenèvre,05085,MONTGENEVRE,exact,Briançon,JORF_19730717_164
+73-651,1973-07-13,05,Briançon-Sud,Puy-Saint-André,05107,PUY-SAINT-ANDRE,exact,Briançon,JORF_19730717_164
+73-651,1973-07-13,05,Briançon-Sud,Puy-Saint-Pierre,05109,PUY-SAINT-PIERRE,exact,Briançon,JORF_19730717_164
+73-651,1973-07-13,05,Briançon-Sud,Villar-Saint-Pancrace,05183,VILLAR-SAINT-PANCRACE,exact,Briançon,JORF_19730717_164
+73-651,1973-07-13,05,Briançon-Sud,Cervières,05027,CERVIERES,exact,Briançon,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Maizières-la-Grande-Paroisse,10220,MAIZIERES-LA-GRANDE-PAROISSE,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Origny-le-Sec,10271,ORIGNY-LE-SEC,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Orvilliers-Saint-Julien,10274,ORVILLIERS-SAINT-JULIEN,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Fontaine-les-Grès,10151,FONTAINE-LES-GRES,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Ossey-les-Trois-Maisons,10275,OSSEY-LES-TROIS-MAISONS,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Saint-Martin-de-Bossenay,10351,SAINT-MARTIN-DE-BOSSENAY,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Saint-Loup-de-Buffigny,10347,SAINT-LOUP-DE-BUFFIGNY,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Ferreux,10148,Ferreux,disparue,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Gelannes,10164,GELANNES,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Pars-lès-Romilly,10280,PARS-LES-ROMILLY,exact,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Romilly-sur-Seine-I,Saint-Hilaire,,,aucun,Romilly-sur-Seine,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-I,Saint-Parrèsaux-Tertres,10357,SAINT-PARRES-AUX-TERTRES,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Creney,,,aucun,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Lavau,10191,LAVAU,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Mergey,10230,MERGEY,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Pont-Sainte-Marie,10297,PONT-SAINTE-MARIE,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Saint-Benoît-sur-Seine,10336,SAINT-BENOIT-SUR-SEINE,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Sainte-Maure,10352,SAINTE-MAURE,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Vailly,10391,VAILLY,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-II,Villacerf,10409,VILLACERF,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-IV,Barberey,10030,Barberey,disparue,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-IV,La Chapelle-Saint-Luc,10081,LA CHAPELLE-SAINT-LUC,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-IV,Saint-Lye,10349,SAINT-LYE,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-IV,Payns,10282,PAYNS,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-IV,Pavillon-Sainte-Julis,10281,LE PAVILLON-SAINTE-JULIE,ressemblance,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-VI,Laines-aux-Bois,10186,LAINES-AUX-BOIS,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-VI,Saint-André-les-Vergers,10333,SAINT-ANDRE-LES-VERGERS,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-VII,Bréviandes,10060,BREVIANDES,exact,Troyes,JORF_19730717_164
+73-652,1973-07-13,10,Troyes-VII,Saint-Julien-les-Villas,10343,SAINT-JULIEN-LES-VILLAS,exact,Troyes,JORF_19730717_164
+73-653,1973-07-13,11,Carcassonne-II,Pennautier,11279,PENNAUTIER,exact,Carcassonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Bizanet,11040,BIZANET,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Canet,11067,CANET,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Marcorignan,11217,MARCORIGNAN,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Montredon,11255,Montredon,disparue,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Moussan,11258,MOUSSAN,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Névian,11264,NEVIAN,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Raissac-d'Aude,11307,RAISSAC-D'AUDE,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Ouest,Villedaigne,11421,VILLEDAIGNE,exact,Narbonne,JORF_19730717_164
+73-653,1973-07-13,11,Narbonne-Sud,Bages,11024,BAGES,exact,Narbonne,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Chervesde-Cognac,16097,Cherves-de-Cognac,disparue,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Boutiers,,,aucun,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Saint-Sulpice,,,aucun,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Saint-Brice,16304,SAINT-BRICE,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Bréville,16060,BREVILLE,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Mesnac,16218,MESNAC,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Nord,Richemont,16278,Richemont,disparue,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Châteaubernard,16089,CHATEAUBERNARD,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Merpins,16217,MERPINS,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Javrezac,16169,JAVREZAC,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Saint-Laurent,16330,Saint-Laurent,disparue,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Ars,16018,ARS,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Louzac,16193,Louzac,disparue,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Gimeux,16152,GIMEUX,exact,Cognac,JORF_19730717_164
+73-654,1973-07-13,16,Cognac-Sud,Saint-André,16299,Saint-André,disparue,Cognac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Cours-de-Pile,24140,COURS-DE-PILE,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Saint-Germain-et-Mons,24419,SAINT-GERMAIN-ET-MONS,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Saint-Laurent-des-Vignes,24437,SAINT-LAURENT-DES-VIGNES,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Saint-Nexans,24472,SAINT-NEXANS,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Creysse,24145,CREYSSE,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Lamonzie-Montastruc,24224,LAMONZIE-MONTASTRUC,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Lembres,,,aucun,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Mouleydier,24296,MOULEYDIER,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Queyssac,24345,QUEYSSAC,exact,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Bergerac est divisé en deux cantons dénommés et,Saint-Sauveur-de-Bergerac,,,aucun,Bergerac,JORF_19730717_164
+73-656,1973-07-13,24,Périgueux gst divisé en trois cantons dénommés et,Trélissac,24557,TRELISSAC,exact,Périgueux,JORF_19730717_164
+73-656,1973-07-13,24,Périgueux gst divisé en trois cantons dénommés et,Château-l'Evêque,24115,CHATEAU-L'EVEQUE,exact,Périgueux,JORF_19730717_164
+73-656,1973-07-13,24,Périgueux gst divisé en trois cantons dénommés et,Champcevinel,24098,CHAMPCEVINEL,exact,Périgueux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Est,Coings,36057,COINGS,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Est,Déols,36063,DEOLS,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Est,Diors,36064,DIORS,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Est,Montierchaume,36128,MONTIERCHAUME,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Ouest,Saint-Maur,36202,SAINT-MAUR,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Ouest,Villers-les-Ormes,36245,VILLERS-LES-ORMES,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Ouest,Niherne,36142,NIHERNE,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Ouest,Luant,36101,LUANT,exact,Châteauroux,JORF_19730717_164
+73-658,1973-07-13,36,Châteauroux-Ouest,La Perouille,36157,LA PEROUILLE,exact,Châteauroux,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Biarne,39051,BIARNE,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Champvans,39101,CHAMPVANS,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Foucherans,39233,FOUCHERANS,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Goux,39256,Goux,disparue,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Monnières,39345,MONNIERES,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Sampans,39501,SAMPANS,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Nord-Est,Villettelès-Dole,39573,VILLETTE-LES-DOLE,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Abergement-la-Ronce,39001,ABERGEMENT-LA-RONCE,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Choisey,39150,CHOISEY,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Crissey,39182,CRISSEY,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Damparis,39189,DAMPARIS,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Gevry,39252,GEVRY,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Nevy-lès-Dole,39387,NEVY-LES-DOLE,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Dole-Sud-Ouest,Parcey,39405,PARCEY,exact,Dole,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Chille,39145,CHILLE,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Condamine,39162,CONDAMINE,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Courlans,39170,COURLANS,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Courlaoux,39171,COURLAOUX,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,L'Etoile,39217,L'ETOILE,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Montmorot,39362,MONTMOROT,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Saint-Didier,39480,SAINT-DIDIER,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Nord,Villeneuve-sous-Pymont,39567,VILLENEUVE-SOUS-PYMONT,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Bornay,39066,BORNAY,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Chilly-le-Vignoble,39146,CHILLY-LE-VIGNOBLE,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Courbouzon,39169,COURBOUZON,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Frebuans,39241,FREBUANS,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Géruge,39250,GERUGE,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Gevingey,39251,GEVINGEY,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Macornay,39306,MACORNAY,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Messia-sur-Sorne,39327,MESSIA-SUR-SORNE,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Moiron,39334,MOIRON,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Trénal,39537,TRENAL,exact,Lons-le-Saunier,JORF_19730717_164
+73-659,1973-07-13,39,Lons-le-Saunier-Sud,Vernantois,39552,VERNANTOIS,exact,Lons-le-Saunier,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Bostens,40050,BOSTENS,exact,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Campet,,,aucun,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Gaillères,40103,GAILLERES,exact,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Geloux,40111,GELOUX,exact,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Lucbardez,,,aucun,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Saint-Avit,40250,SAINT-AVIT,exact,Mont-de-Marsan,JORF_19730717_164
+73-660,1973-07-13,40,Mont-de-Marsan est divisé en deux cantons dénommés et,Saint-Martin-d'Oney,40274,SAINT-MARTIN-D'ONEY,exact,Mont-de-Marsan,JORF_19730717_164
+73-661,1973-07-13,41,Blois-I,Villerbon,41288,VILLERBON,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-I,Villebarou,41276,VILLEBAROU,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-I,Saint-Denis-sur-Loire,41206,SAINT-DENIS-SUR-LOIRE,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-I,La Chaussée-Saint-Victor,41047,LA CHAUSSEE-SAINT-VICTOR,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-II,Montlivault,41148,MONTLIVAULT,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-II,Saint-Claude-de-Diray,41204,SAINT-CLAUDE-DE-DIRAY,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-II,Vineuil,41295,VINEUIL,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-II,Saint-Gervais-la-Forêt,41212,SAINT-GERVAIS-LA-FORET,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-II,Chailles,41032,CHAILLES,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-II,Cellettes,41031,CELLETTES,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-IV,Marolles,41128,MAROLLES,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-IV,Fossé,41091,FOSSE,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-IV,Saint-Bohaire,41203,SAINT-BOHAIRE,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-IV,Saint-Lubin-en-Vergonnois,41223,SAINT-LUBIN-EN-VERGONNOIS,exact,Blois,JORF_19730717_164
+73-661,1973-07-13,41,Blois-IV,Saint-Sulpice,41230,Saint-Sulpice,disparue,Blois,JORF_19730717_164
+73-662,1973-07-13,42,Roanne sont créés les deux cantons dénommés et,Briennon,42026,BRIENNON,exact,Roanne,JORF_19730717_164
+73-662,1973-07-13,42,Roanne sont créés les deux cantons dénommés et,Mably,42127,MABLY,exact,Roanne,JORF_19730717_164
+73-662,1973-07-13,42,Roanne sont créés les deux cantons dénommés et,La Bénisson-Dieu,42016,LA BENISSON-DIEU,exact,Roanne,JORF_19730717_164
+73-662,1973-07-13,42,Saint-Etienne - Nord-Est-II,Saint-Jean-Bonnefonds,42237,SAINT-JEAN-BONNEFONDS,exact,Saint-Étienne,JORF_19730717_164
+73-662,1973-07-13,42,Saint-Etienne - Nord-Ouest-I,Villars,42330,VILLARS,exact,Saint-Étienne,JORF_19730717_164
+73-662,1973-07-13,42,Saint-Etienne - Nord-Ouest-II,Saint-Genest-Lerpt,42223,SAINT-GENEST-LERPT,exact,Saint-Étienne,JORF_19730717_164
+73-662,1973-07-13,42,Saint-Etienne - Sud-Est-I,Rochetaillée,42190,Rochetaillée,disparue,Saint-Étienne,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Est,Bajamont,47019,BAJAMONT,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Est,Boé,47031,BOE,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Est,Bon-Encontre,47032,BON-ENCONTRE,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Est,Pont-du-Casse,47209,PONT-DU-CASSE,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Nord,Colayrac-Saint-Cirq,47069,COLAYRAC-SAINT-CIRQ,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Nord,Foulayronnes,47100,FOULAYRONNES,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Nord,Saint-Hilaire-de-Lusignan,47246,SAINT-HILAIRE-DE-LUSIGNAN,exact,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Agen-Ouest,Passaged'Agen,,,aucun,Agen,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Agme,47002,AGME,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Birac-sur-Trec,47028,BIRAC-SUR-TREC,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Fauguerolles,47094,FAUGUEROLLES,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Gontaud-de-Nogaret,47110,GONTAUD-DE-NOGARET,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Hautesvignes,47118,HAUTESVIGNES,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Longueville,47150,LONGUEVILLE,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Saint-Pardoux-du-Breuil,47263,SAINT-PARDOUX-DU-BREUIL,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Taillebourg,47304,TAILLEBOURG,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Est,Virazeil,47326,VIRAZEIL,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Ouest,Beanpuy,,,aucun,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Ouest,Sainte-Bazeille,47233,SAINTE-BAZEILLE,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Marmande-Ouest,Saint-Martin-Petit,47257,SAINT-MARTIN-PETIT,exact,Marmande,JORF_19730717_164
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Nord,Ledat,47146,LEDAT,exact,Villeneuve-sur-Lot,JORF_19730717_164
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Sud,Bias,47027,BIAS,exact,Villeneuve-sur-Lot,JORF_19730717_164
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Sud,Pujols,47215,PUJOLS,exact,Villeneuve-sur-Lot,JORF_19730717_164
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Sud,Saint-Antoine-de-Ficalba,47228,SAINT-ANTOINE-DE-FICALBA,exact,Villeneuve-sur-Lot,JORF_19730717_164
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Sud,Sainte-Colombe-de-Villeneuve,47237,SAINTE-COLOMBE-DE-VILLENEUVE,exact,Villeneuve-sur-Lot,JORF_19730717_164
+73-663,1973-07-13,47,Villeneuve-sur-Lot-Sud,Sembas,47297,SEMBAS,exact,Villeneuve-sur-Lot,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Aigny,51003,AIGNY,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Condé-sur-Marne,51161,CONDE-SUR-MARNE,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Les Grandes-Loges,51278,LES GRANDES-LOGES,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Isse,51301,ISSE,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Juvigny,51312,JUVIGNY,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Récy,51453,RECY,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Saint-Etienne-au-Temple,51476,SAINT-ETIENNE-AU-TEMPLE,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Saint-Martin-sur-le-Pré,51504,SAINT-MARTIN-SUR-LE-PRE,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Saint-Memmie,51506,SAINT-MEMMIE,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,La Veuve,51617,LA VEUVE,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-II,Vraux,51656,VRAUX,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-III,Compertrix,51160,COMPERTRIX,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-III,Coolus,51168,COOLUS,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Châlons-sur-Marne-III,Fagnieres,51242,FAGNIERES,exact,Châlons-sur-Marne,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Chouilly,51153,CHOUILLY,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Damery,51204,DAMERY,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Fleury-la-Rivière,51252,FLEURY-LA-RIVIERE,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Mardeuil,51344,MARDEUIL,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Moussy,51390,MOUSSY,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Pierry,51431,PIERRY,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Saint-Martind'Ablois,51002,SAINT-MARTIN-D'ABLOIS,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Vauciennes,51597,VAUCIENNES,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Epernay-II,Venteuil,51605,VENTEUIL,exact,Épernay,JORF_19730717_164
+73-665,1973-07-13,51,Reims-I,Ormes-Thillois,,,aucun,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Reims-IV,Bétheny,51055,BETHENY,exact,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Reims-V,Bézannes,51058,BEZANNES,exact,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Reims-VII,Cormontreuil,51172,CORMONTREUIL,exact,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Reims-VII,Saint-Léonard,51493,SAINT-LEONARD,exact,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Reims-VII,Taissy,51562,TAISSY,exact,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Reims-VIII,Champigny,51118,CHAMPIGNY,exact,Reims,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Ablancourt,51001,ABLANCOURT,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Aulnay,,,aucun,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,L'Aitre,,,aucun,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Bignicourt-sur-Marne,51059,BIGNICOURT-SUR-MARNE,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Couvrot,51195,COUVROT,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Frignicourt,51262,FRIGNICOURT,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,La Chaussée-sur-Marne,51141,LA CHAUSSEE-SUR-MARNE,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Lisse,51325,Lisse,disparue,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Luxemont-et-Villotte,51334,LUXEMONT-ET-VILLOTTE,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Marolles,51352,MAROLLES,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Merlaut,51363,MERLAUT,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Saint-Amand-sur-Fion,51472,SAINT-AMAND-SUR-FION,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Saint-Lumier-en-Champagne,51496,SAINT-LUMIER-EN-CHAMPAGNE,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Saint-Quentin-les-Marais,51510,SAINT-QUENTIN-LES-MARAIS,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Soulanges,51557,SOULANGES,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Est,Vitry-en-Perthois,51647,VITRY-EN-PERTHOIS,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Blacy,51065,BLACY,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Courdemanges,51184,COURDEMANGES,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Drouilly,51220,DROUILLY,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Glannes,51275,GLANNES,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Huiron,51295,HUIRON,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Soisy-sur-Marne,51328,LOISY-SUR-MARNE,ressemblance,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Maisons-en-Champagne,51340,MAISONS-EN-CHAMPAGNE,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Pringy,51446,PRINGY,exact,Vitry-le-François,JORF_19730717_164
+73-665,1973-07-13,51,Vitry-le-François-Ouest,Songy,51552,SONGY,exact,Vitry-le-François,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Nord-Est,Changé,53054,CHANGE,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Nord-Est,Saint-Germain-le-Fouilloux,53224,SAINT-GERMAIN-LE-FOUILLOUX,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Nord-Est,Saint-Jean-sur-Mayenne,53229,SAINT-JEAN-SUR-MAYENNE,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Nord-Ouest,Ahuille,53001,AHUILLE,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Nord-Ouest,Courbeveille,53082,COURBEVEILLE,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Nord-Ouest,Saint-Berthevin,53201,SAINT-BERTHEVIN,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Sud-Est,Entrammes,53094,ENTRAMMES,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Sud-Est,L'Huisserie,53119,L'HUISSERIE,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Sud-Ouest,Astille,53011,ASTILLE,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Sud-Ouest,Montigné-le-Brillant,53157,MONTIGNE-LE-BRILLANT,exact,Laval,JORF_19730717_164
+73-666,1973-07-13,53,Laval - Sud-Ouest,Nuillé-sur-Vicoin,53168,NUILLE-SUR-VICOIN,exact,Laval,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Nord,Bienville,60070,BIENVILLE,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Nord,Choisy-au-Bac,60151,CHOISY-AU-BAC,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Nord,Clairoix,60156,CLAIROIX,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Nord,Janville,60323,JANVILLE,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Nord,Margny-lès-Compiègne,60382,MARGNY-LES-COMPIEGNE,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Jaux,60325,JAUX,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,La Croix-Saint-Ouen,60338,LACROIX-SAINT-OUEN,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Saint-Jean-aux-Bois,60579,SAINT-JEAN-AUX-BOIS,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Saint-Sauveur,60597,SAINT-SAUVEUR,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Venette,60665,VENETTE,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Vieux-Moulin,60674,VIEUX-MOULIN,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Armancourt,60023,ARMANCOURT,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Jonquières,60326,JONQUIERES,exact,Compiègne,JORF_19730717_164
+73-668,1973-07-13,60,Compiègne-Sud,Le Meux,60402,LE MEUX,exact,Compiègne,JORF_19730717_164
+73-669,1973-07-13,64,Bayonne-Nord,Bou cau,64140,BOUCAU,exact,Bayonne,JORF_19730717_164
+73-669,1973-07-13,64,Bayonne-Nord,Lahonce,64304,LAHONCE,exact,Bayonne,JORF_19730717_164
+73-669,1973-07-13,64,Bayonne-Nord,Mouguerre,64407,MOUGUERRE,exact,Bayonne,JORF_19730717_164
+73-669,1973-07-13,64,Bayonne-Nord,Saint-Pierre-d'Irube,64496,SAINT-PIERRE-D'IRUBE,exact,Bayonne,JORF_19730717_164
+73-669,1973-07-13,64,Bayonne-Nord,Urcuit,64540,URCUIT,exact,Bayonne,JORF_19730717_164
+73-669,1973-07-13,64,Bayonne-Ouest,Bassussarry,64100,BASSUSSARRY,exact,Bayonne,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Colombier,70163,COLOMBIER,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Comberjon,70166,COMBERJON,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Coulevon,70179,COULEVON,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Frotey-lès-Vesoul,70261,FROTEY-LES-VESOUL,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Montcey,70358,MONTCEY,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Navenne,70378,NAVENNE,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Quincey,70433,QUINCEY,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Varogne,70522,VAROGNE,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Vellefrie,70534,VELLEFRIE,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,La Villeneuve,,,aucun,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Villeparois,70559,VILLEPAROIS,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Est,Vilory,70569,VILORY,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Andelarre,70019,ANDELARRE,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Andelarrot,70020,ANDELARROT,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Chariez,70134,CHARIEZ,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Charmoille,70136,CHARMOILLE,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Echenoz-la-Méline,70207,ECHENOZ-LA-MELINE,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Montigny-lès-Vesoul,70363,MONTIGNY-LES-VESOUL,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Mont-le-Vernois,70367,MONT-LE-VERNOIS,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Noidans-lès-Vesoul,70388,NOIDANS-LES-VESOUL,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Pusey,70428,PUSEY,exact,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Pusy,70428,PUSEY,ressemblance,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,Epenoux,,,aucun,Vesoul,JORF_19730717_164
+73-672,1973-07-13,70,Vesoul-Ouest,La Vaivre,70512,LA VAIVRE,exact,Vesoul,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Nord,Chaudray,79081,CHAURAY,ressemblance,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Nord,Echiré,79109,ECHIRE,exact,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Nord,Saint-Gelais,79249,SAINT-GELAIS,exact,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Nord,Sainte-Maxire,79281,SAINT-MAXIRE,ressemblance,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Nord,Saint-Rémy,79293,SAINT-REMY,exact,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Nord,Sciecq,79308,SCIECQ,exact,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Ouest,Magné,79162,MAGNE,exact,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Niort-Ouest,Coulon,79100,COULON,exact,Niort,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Bilazais,79036,Bilazais,disparue,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Brié,79054,BRIE,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Maulais,79169,Maulais,disparue,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Missé,79178,MISSE,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Noizé,79194,Noizé,disparue,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Oiron,79196,OIRON,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Pas-de-Jeu,79203,PAS-DE-JEU,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Saint-Cyr-la-Lande,79244,SAINT-CYR-LA-LANDE,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Saint-Jacques-de-Thouars,79258,SAINT-JACQUES-DE-THOUARS,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Saint-Jean-de-Thouars,79259,SAINT-JEAN-DE-THOUARS,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Saint-Léger-de-Montbrun,79265,SAINT-LEGER-DE-MONTBRUN,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Saint-Martin-de-Mâcon,79274,SAINT-MARTIN-DE-MACON,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Taizé,79321,TAIZE,exact,Thouars,JORF_19730717_164
+73-673,1973-07-13,79,Thouars-I,Tourtenay,79331,TOURTENAY,exact,Thouars,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-I - Ouest,Dreuil-lès-Amiens,80256,DREUIL-LES-AMIENS,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-II - Nord-Ouest,Allonville,80020,ALLONVILLE,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-II - Nord-Ouest,Argœuves,,,aucun,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-II - Nord-Ouest,Poulainville,80639,POULAINVILLE,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-II - Nord-Ouest,Saint-Sauveur,80718,SAINT-SAUVEUR,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-III - Nord-Est,Rivery,80674,RIVERY,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-IV - Est,Camon,80164,CAMON,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-IV - Est,Lqngueau,,,aucun,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-V - Sud-Est,Cagny,80160,CAGNY,exact,Amiens,JORF_19730717_164
+73-674,1973-07-13,80,Amiens-VII - Sud-Ouest,Pont-de-Metz,80632,PONT-DE-METZ,exact,Amiens,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Arthès,81018,ARTHES,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Lescure,,,aucun,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Cagnac-les-Mines,81048,CAGNAC-LES-MINES,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Castelnau-de-Lévis,81063,CASTELNAU-DE-LEVIS,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Sainte-Croix,81326,SAINTE-CROIX,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Mailhoc,81152,MAILHOC,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Villeneuve-sur-Vère,81319,VILLENEUVE-SUR-VERE,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Nord,Milhavet,81166,MILHAVET,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Fréjairolles,81097,FREJAIROLLES,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Puygouzon,81218,PUYGOUZON,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Saliès,81274,SALIES,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Carlus,81059,CARLUS,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Le Séquestre,81284,LE SEQUESTRE,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Rouffiac,81232,ROUFFIAC,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Terssac,81297,TERSSAC,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Albi-Sud,Marssac-sur-Tarn,81156,MARSSAC-SUR-TARN,exact,Albi,JORF_19730717_164
+73-675,1973-07-13,81,Carmaux-Sud,Taïx,81291,TAIX,exact,Carmaux,JORF_19730717_164
+73-675,1973-07-13,81,Carmaux-Sud,Labastide-Gabausse,81114,LABASTIDE-GABAUSSE,exact,Carmaux,JORF_19730717_164
+73-675,1973-07-13,81,Carmaux-Sud,Blaye-les-Mines,81033,BLAYE-LES-MINES,exact,Carmaux,JORF_19730717_164
+73-675,1973-07-13,81,Castres-Nord,Laboulbène,81118,LABOULBENE,exact,Castres,JORF_19730717_164
+73-675,1973-07-13,81,Castres-Sud,Saïx,81273,SAIX,exact,Castres,JORF_19730717_164
+73-675,1973-07-13,81,Castres-Sud,Navès,81195,NAVES,exact,Castres,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Rialet,,,aucun,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Vintrou,,,aucun,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Saint-Salvy-de-la-Balme,81269,SAINT-SALVY-DE-LA-BALME,exact,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Boissezon,81034,BOISSEZON,exact,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Nord-Est,Pont-de-l'Arn,81209,PONT-DE-LARN,exact,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Sud-Ouest,Caucalières,81066,CAUCALIERES,exact,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Sud-Ouest,Aiguefonde,81002,AIGUEFONDE,exact,Mazamet,JORF_19730717_164
+73-675,1973-07-13,81,Mazamet-Sud-Ouest,Aussillon,81021,AUSSILLON,exact,Mazamet,JORF_19730717_164
+73-676,1973-07-13,82,Castelsarrasin-II,Barthes,,,aucun,Castelsarrasin,JORF_19730717_164
+73-676,1973-07-13,82,Castelsarrasin-II,Labastide-du-Temple,82080,LABASTIDE-DU-TEMPLE,exact,Castelsarrasin,JORF_19730717_164
+73-676,1973-07-13,82,Castelsarrasin-II,Meauzac,82108,MEAUZAC,exact,Castelsarrasin,JORF_19730717_164
+73-676,1973-07-13,82,Castelsarrasin-II,Barry-d'Islemade,82011,BARRY-D'ISLEMADE,exact,Castelsarrasin,JORF_19730717_164
+73-676,1973-07-13,82,Castelsarrasin-II,Albefeuille-Lagarde,82001,ALBEFEUILLE-LAGARDE,exact,Castelsarrasin,JORF_19730717_164
+73-676,1973-07-13,82,Moissac-I,Saint-Pauld'Espis,82170,SAINT-PAUL-D'ESPIS,exact,Moissac,JORF_19730717_164
+73-676,1973-07-13,82,Moissac-I,Saint-Vincent-Lespinasse,82175,SAINT-VINCENT-LESPINASSE,exact,Moissac,JORF_19730717_164
+73-676,1973-07-13,82,Moissac-I,Malause,82101,MALAUSE,exact,Moissac,JORF_19730717_164
+73-676,1973-07-13,82,Moissac-I,Boudou,82019,BOUDOU,exact,Moissac,JORF_19730717_164
+73-676,1973-07-13,82,Moissac-II,Montesquieu,82127,MONTESQUIEU,exact,Moissac,JORF_19730717_164
+73-676,1973-07-13,82,Moissac-II,Lizac,82099,LIZAC,exact,Moissac,JORF_19730717_164
+73-676,1973-07-13,82,Montauban - II,Léojac-Bellegarde,,,aucun,Montauban,JORF_19730717_164
+73-676,1973-07-13,82,Montauban -1,Lamothe-Capdeville,82090,LAMOTHE-CAPDEVILLE,exact,Montauban,JORF_19730717_164
+73-677,1973-07-13,86,Châtellerault-Nord,Thure,86272,THURE,exact,Châtellerault,JORF_19730717_164
+73-677,1973-07-13,86,Châtellerault-Sud,Targe,86267,Targé,disparue,Châtellerault,JORF_19730717_164
+73-677,1973-07-13,86,Châtellerault-Sud,Naintre,86174,NAINTRE,exact,Châtellerault,JORF_19730717_164
+73-677,1973-07-13,86,Châtellerault-Sud,Saint-Sauveur,86245,SAINT-SAUVEUR,exact,Châtellerault,JORF_19730717_164
+73-677,1973-07-13,86,Châtellerault-Sud,Senille,86259,SENILLE,exact,Châtellerault,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-I,Migne-Auxances,86158,MIGNE-AUXANCES,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-I,Biard,86027,BIARD,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-II,Chasseneuil-du-Poitou,86062,CHASSENEUIL-DU-POITOU,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-II,Buxerolles,86041,BUXEROLLES,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-II,Montamise,86163,MONTAMISE,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-III,Mignaloux-Beauvoir,86157,MIGNALOUX-BEAUVOIR,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-IV,Saint-Benoît,86214,SAINT-BENOIT,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-V,Ligugé,86133,LIGUGE,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-V,Croutelle,86088,CROUTELLE,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-V,Fontaine-le-Comte,86100,FONTAINE-LE-COMTE,exact,Poitiers,JORF_19730717_164
+73-677,1973-07-13,86,Poitiers-V,Vouneuil-sous-Biard,86297,VOUNEUIL-SOUS-BIARD,exact,Poitiers,JORF_19730717_164
+73-712,1973-07-23,02,Laon-Nord,Crépy-en-Laonnois,,,aucun,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Vivaise,02821,VIVAISE,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Aulnois-sous-Laon,02037,AULNOIS-SOUS-LAON,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Besny-Loizy,02080,BESNY-ET-LOIZY,ressemblance,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Bucy-lès-Cerny,02132,BUCY-LES-CERNY,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Molinchart,02489,MOLINCHART,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Chambry,02157,CHAMBRY,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Nord,Cerny-lès-Bucy,02151,CERNY-LES-BUCY,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Clacy-et-Thienret,02196,CLACY-ET-THIERRET,ressemblance,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Chivy-lès-Etouvelles,02191,CHIVY-LES-ETOUVELLES,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Etouvelles,02294,ETOUVELLES,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Nouvion-le-Vineux,02561,NOUVION-LE-VINEUX,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Presles-et-Thierny,02621,PRESLES-ET-THIERNY,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Vorges,02824,VORGES,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Bruyères-et-Montbérault,02128,BRUYERES-ET-MONTBERAULT,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Parfondru,02587,PARFONDRU,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Chérêt,02177,CHERET,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Montchâlons,02501,MONTCHALONS,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Orgeval,02573,ORGEVAL,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Brièves,,,aucun,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Ployart-et-Vaurseine,02609,PLOYART-ET-VAURSEINE,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Arrangy,,,aucun,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Festieux,02309,FESTIEUX,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Veslud,02791,VESLUD,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Eppes,02282,EPPES,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Athies-sous-Laon,02028,ATHIES-SOUS-LAON,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Laon-Sud,Samoussy,02697,SAMOUSSY,exact,Laon,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Marcy,02459,MARCY,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Lesdins,02420,LESDINS,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Remaucourt,02637,REMAUCOURT,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Essigny-le-Petit,02288,ESSIGNY-LE-PETIT,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Fousomme,,,aucun,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Fleulaine,02310,FIEULAINE,ressemblance,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Omissy,02571,OMISSY,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Morcourt,02525,MORCOURT,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Rouvroy,02659,ROUVROY,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Nord,Fontaine-Notre-Dame,02322,FONTAINE-NOTRE-DAME,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Sud,Harly,02371,HARLY,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Sud,Homblières,02383,HOMBLIERES,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Sud,Gauchy,02340,GAUCHY,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Sud,Neuville-Saint-Amand,02549,NEUVILLE-SAINT-AMAND,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Saint-Quentin - Sud,Mesnil-Saint-Laurent,02481,MESNIL-SAINT-LAURENT,exact,Saint-Quentin,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Juvigny,02398,JUVIGNY,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Vauxrezis,02767,VAUXREZIS,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Leury-Chavigny,,,aucun,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Pommiers,02610,POMMIERS,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Pasly,02593,PASLY,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Cuffies,02245,CUFFIES,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Crouy,02243,CROUY,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Villeneuve-Saint-Germain,02805,VILLENEUVE-SAINT-GERMAIN,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Nord,Venizel,02780,VENIZEL,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Mercinet-Vaux,02477,MERCIN-ET-VAUX,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Vauxbuin,02770,VAUXBUIN,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Belleu,02064,BELLEU,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Billy-sur-Aisne,02089,BILLY-SUR-AISNE,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Courmelles,02226,COURMELLES,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Missyaux-Rois,02485,MISSY-AUX-BOIS,ressemblance,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Ploisy,02607,PLOISY,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Noyant-et-Aconin,02564,NOYANT-ET-ACONIN,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Septmonts,02706,SEPTMONTS,exact,Soissons,JORF_19730725_171
+73-712,1973-07-23,02,Soissons-Sud,Berzy-le-Sec,02077,BERZY-LE-SEC,exact,Soissons,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Ouest,Aubigny,03009,AUBIGNY,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Ouest,Avermes,03013,AVERMES,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Ouest,Bagneux,03015,BAGNEUX,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Ouest,Coulandon,03085,COULANDON,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Ouest,Montilly,03184,MONTILLY,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Ouest,Neuvy,03200,NEUVY,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Sud,Bressoles,03040,BRESSOLLES,ressemblance,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Moulins-Sud,Toulon-sur-Allier,03286,TOULON-SUR-ALLIER,exact,Moulins,JORF_19730725_171
+73-713,1973-07-23,03,Vichy-Sud,Abrest,03001,ABREST,exact,Vichy,JORF_19730725_171
+73-713,1973-07-23,03,Vichy-Sud,Saint-Yorre,03264,SAINT-YORRE,exact,Vichy,JORF_19730725_171
+73-713,1973-07-23,03,Vichy-Sud,Le Vernet,03306,LE VERNET,exact,Vichy,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Nord,Saint-Martin-les-Eaux,04190,SAINT-MARTIN-LES-EAUX,exact,Manosque,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Nord,Voix,,,aucun,Manosque,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Sud,Corbières,04063,CORBIERES,exact,Manosque,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Sud,Montfuron,04128,MONTFURON,exact,Manosque,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Sud,Pierrevert,04152,PIERREVERT,exact,Manosque,JORF_19730725_171
+73-714,1973-07-23,04,Manosque-Sud,Sainte-Tulle,04197,SAINTE-TULLE,exact,Manosque,JORF_19730725_171
+73-715,1973-07-23,08,Charleville-Centre,Aiglemont,08003,AIGLEMONT,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Charleville-Centre,Montcy-Notre-Dame,08298,MONTCY-NOTRE-DAME,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Charleville-La Houillère,Damouzy,08137,DAMOUZY,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Charleville-La Houillère,Houldizy,08230,HOULDIZY,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Warcq,08497,WARCQ,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Neuville-lès-This,08322,NEUVILLE-LES-THIS,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Prix-lès-Mézières,08346,PRIX-LES-MEZIERES,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,This,08450,THIS,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Warnecourt,08498,WARNECOURT,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Sury,08432,SURY,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Evigny,08160,EVIGNY,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Belval,08058,BELVAL,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Centre-Ouest,Fagnon,08162,FAGNON,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Gernelle,08187,GERNELLE,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Issancourt,,,aucun,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Lûmes,08263,LUMES,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Saint-Laurent,08385,SAINT-LAURENT,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Ville-sur-Lumes,08483,VILLE-SUR-LUMES,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Villers-Semeuse,08480,VILLERS-SEMEUSE,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Mézières-Est,Vivier-au-Court,08488,VIVIER-AU-COURT,exact,Charleville-Mézières,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Balan,08043,BALAN,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Bazeilles,08053,BAZEILLES,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Daigny,08136,DAIGNY,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Escombres,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Le Chesnois,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Francheval,08179,FRANCHEVAL,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,La Moncelle,08294,LA MONCELLE,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Pouru-aux-Bois,08342,POURU-AUX-BOIS,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Pouru-Saint-Rémy,08343,POURU-SAINT-REMY,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Rubecourt,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Lamecourt,,,aucun,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Est,Villers-Cernay,08475,VILLERS-CERNAY,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Nord,La Cha pelle,08101,LA CHAPELLE,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Nord,Fleigneux,08170,FLEIGNEUX,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Nord,Floing,08174,FLOING,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Nord,Givonne,08191,GIVONNE,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Nord,Glaire,08194,GLAIRE,exact,Sedan,JORF_19730725_171
+73-715,1973-07-23,08,Sedan-Nord,Illy,08232,ILLY,exact,Sedan,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-I,Grandelles,15056,CRANDELLES,ressemblance,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-I,Jussac,15083,JUSSAC,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-I,Naucelles-Reilhac,15140,Naucelles-Reilhac,disparue,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-I,Teissières-de-Cornet,15233,TEISSIERES-DE-CORNET,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-II,Saint-Pauldes-Landes,15204,SAINT-PAUL-DES-LANDES,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-II,Sansac-de-Marmiesse,15221,SANSAC-DE-MARMIESSE,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-II,Ytrac,15267,YTRAC,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-III,Arpajon-sur-Cère,15012,ARPAJON-SUR-CERE,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-III,Labrousse,15085,LABROUSSE,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-III,Prunet,15156,PRUNET,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-III,Vezac,15255,VEZAC,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-III,Vezels-Roussy,15257,VEZELS-ROUSSY,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Giou-de-Mamou,15074,GIOU-DE-MAMOU,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Laroquevieille,15095,LAROQUEVIEILLE,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Lascelles,15096,LASCELLE,ressemblance,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Mandailles-Saint-Julien,15113,MANDAILLES-SAINT-JULIEN,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Marmanhac,15118,MARMANHAC,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Saint-Cirgues-de-Jordanne,15178,SAINT-CIRGUES-DE-JORDANNE,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Saint-Simon,15215,SAINT-SIMON,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Velzic,15252,VELZIC,exact,Aurillac,JORF_19730725_171
+73-716,1973-07-23,15,Aurillac-IV,Yolet,15266,YOLET,exact,Aurillac,JORF_19730725_171
+73-717,1973-07-23,23,Guéret - Sud-Ouest,Saint-Victor,23248,Saint-Victor,disparue,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret - Sud-Ouest,La Chapelle-Taillefert,23052,LA CHAPELLE-TAILLEFERT,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret - Sud-Ouest,Saint-Christophe,23186,SAINT-CHRISTOPHE,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret - Sud-Ouest,Savennes,23170,SAVENNES,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret-Nord,Saint-Fiel,23195,SAINT-FIEL,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret-Nord,Glénic,23092,GLENIC,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret-Nord,Ajain,23002,AJAIN,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret-Nord,Jouillat,23101,JOUILLAT,exact,Guéret,JORF_19730725_171
+73-717,1973-07-23,23,Guéret-Nord,Ladapeyre,23102,LADAPEYRE,exact,Guéret,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-I,Ancone,26008,ANCONE,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Allan,26005,ALLAN,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Châteauneuf-du-Rhône,26085,CHATEAUNEUF-DU-RHONE,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Espeluche,26121,ESPELUCHE,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Malataverne,26169,MALATAVERNE,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Montbouchersur-Jabron,26191,MONTBOUCHER-SUR-JABRON,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Portes-en-Valdaine,26251,PORTES-EN-VALDAINE,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Puygiron,26257,PUYGIRON,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Montélimar-II,Rochefort-en-Valdaine,26272,ROCHEFORT-EN-VALDAINE,exact,Montélimar,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-I,Clérieux,26096,CLERIEUX,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-I,Saint-Bardoux,26294,SAINT-BARDOUX,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-I,Peyrins,26231,PEYRINS,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-I,Mours-Saint-Eusèbe,26218,MOURS-SAINT-EUSEBE,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Saint-Paul-lès-Romans,26323,SAINT-PAUL-LES-ROMANS,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Génissieux,26139,GENISSIEUX,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Triors,26355,TRIORS,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Chatiolon-Saint-Jean,26087,CHATILLON-SAINT-JEAN,ressemblance,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Saint-Bonnet-de-Valclérieux,26297,SAINT-BONNET-DE-VALCLERIEUX,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Le Chalon,26068,LE CHALON,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Saint-Laurent-d'Onay,26310,SAINT-LAURENT-D'ONAY,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Saint-Michel,,,aucun,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Parnans,26225,PARNANS,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Crepol,26107,CREPOL,exact,Romans-sur-Isère,JORF_19730725_171
+73-718,1973-07-23,26,Romans-sur-Isère-II,Miribel,26184,MIRIBEL,exact,Romans-sur-Isère,JORF_19730725_171
+73-720,1973-07-23,29,Brest-VII,Bohars,29011,BOHARS,exact,Brest,JORF_19730725_171
+73-720,1973-07-23,29,Quimper-I,Plomelin,29170,PLOMELIN,exact,Quimper,JORF_19730725_171
+73-720,1973-07-23,29,Quimper-I,Pluguffan,29216,PLUGUFFAN,exact,Quimper,JORF_19730725_171
+73-720,1973-07-23,29,Quimper-II,Ergué-Gabéric,29051,ERGUE-GABERIC,exact,Quimper,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Nord-Est,Rousson,30223,ROUSSON,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Nord-Est,Saint-Julien-les-Rosiers,30274,SAINT-JULIEN-LES-ROSIERS,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Nord-Est,Saint-Martin-de-Valgalgues,30284,SAINT-MARTIN-DE-VALGALGUES,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Plans,,,aucun,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Mejannes-lès-Alès,30165,MEJANNES-LES-ALES,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Mons,30173,MONS,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Saint-Hilaire-de-Brethmas,30259,SAINT-HILAIRE-DE-BRETHMAS,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Saint-Privatdes-Vieux,30294,SAINT-PRIVAT-DES-VIEUX,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Salindres,30305,SALINDRES,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Alès - Sud-Est,Servas,30318,SERVAS,exact,Alès,JORF_19730725_171
+73-721,1973-07-23,30,Nîmes-III,Bouillargues,30047,BOUILLARGUES,exact,Nîmes,JORF_19730725_171
+73-721,1973-07-23,30,Nîmes-IV,Caissargues,30060,CAISSARGUES,exact,Nîmes,JORF_19730725_171
+73-721,1973-07-23,30,Nîmes-V,Milhaud,30169,MILHAUD,exact,Nîmes,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-II,Lieuranlès-Béziers,34139,LIEURAN-LES-BEZIERS,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-II,Bassan,34025,BASSAN,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-II,Boujan-sur-Libron,34037,BOUJAN-SUR-LIBRON,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-II,Cers,34073,CERS,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-II,Villeneuve-lès-Béziers,34336,VILLENEUVE-LES-BEZIERS,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-III,Corneilhan,34084,CORNEILHAN,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-III,Lignan,,,aucun,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-III,Maraussan,34148,MARAUSSAN,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-III,Cazouls-lès-Béziers,34069,CAZOULS-LES-BEZIERS,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-III,Colombiers,34081,COLOMBIERS,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-IV,Lespignan,34135,LESPIGNAN,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-IV,Vendres,34329,VENDRES,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-IV,Sauvian,34298,SAUVIAN,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Béziers-IV,Sérignan,34299,SERIGNAN,exact,Béziers,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-III,Castelnau-le-Lez,34057,CASTELNAU-LE-LEZ,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-III,Le Crès,34090,LE CRES,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-IX,Juvignac,34123,JUVIGNAC,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-V,Lattes,34129,LATTES,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Cournonsec,34087,COURNONSEC,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Cournonterral,34088,COURNONTERRAL,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Fabrègues,34095,FABREGUES,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Lavérune,34134,LAVERUNE,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Murviel-lès-Montpellier,34179,MURVIEL-LES-MONTPELLIER,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Pignan,34202,PIGNAN,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Saint-Georges-d'Orques,34259,SAINT-GEORGES-D'ORQUES,exact,Montpellier,JORF_19730725_171
+73-722,1973-07-23,34,Montpellier-VIII,Saint-Jean-de-Vedas,34270,SAINT-JEAN-DE-VEDAS,exact,Montpellier,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-III,Pacé,35210,PACE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-III,Gévezé,35120,GEVEZE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-III,Parthenay,,,aucun,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-IV,Mont germont,35189,MONTGERMONT,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-IV,La Chapelle-des-Fougerets,35059,LA CHAPELLE-DES-FOUGERETZ,ressemblance,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-IV,Saint-Grégoire,35278,SAINT-GREGOIRE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-IV,Betton,35024,BETTON,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VI,Thorigné,,,aucun,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VI,Cesson-Sévigné,35051,CESSON-SEVIGNE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VII,Chantepie,35055,CHANTEPIE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VII,Vern-sur-Seiche,35352,VERN-SUR-SEICHE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Châtillonsur-Seiche,35073,Châtillon-sur-Seiche,disparue,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Noyal-sur-Seiche,35206,Noyal-sur-Seiche,disparue,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Chartres-de-Bretagne,35066,CHARTRES-DE-BRETAGNE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Bruz,35047,BRUZ,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Saint-Erblon,35266,SAINT-ERBLON,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Orgères,35208,ORGERES,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-VIII,Bourgbarré,35032,BOURGBARRE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-X,Saint-Jacques-de-la-Lande,35281,SAINT-JACQUES-DE-LA-LANDE,exact,Rennes,JORF_19730725_171
+73-723,1973-07-23,35,Rennes-X,Vezin-le-Coquet,35353,VEZIN-LE-COQUET,exact,Rennes,JORF_19730725_171
+73-725,1973-07-23,44,Nantes-X,Saint-Sébastien-sur-Loire,44190,SAINT-SEBASTIEN-SUR-LOIRE,exact,Nantes ; Rezé,JORF_19730725_171
+73-727,1973-07-23,49,Angers-I,Ecouflant,49129,ECOUFLANT,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-I,Pellouailles-les-Vignes,49238,PELLOUAILLES-LES-VIGNES,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-I,Saint-Sylvain-d'Anjou,49323,SAINT-SYLVAIN-D'ANJOU,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-I,Villevêque,49377,VILLEVEQUE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-II,Plessis-Grammoire,49241,LE PLESSIS-GRAMMOIRE,ressemblance,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-IV,Andard,49004,ANDARD,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-IV,Brain-sur-l'Authion,49042,BRAIN-SUR-L'AUTHION,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-IV,Sarrigné,49326,SARRIGNE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-IV,Trélazé,49353,TRELAZE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VI,Beaucouzé,49020,BEAUCOUZE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,Avrillé,49015,AVRILLE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,Cantenay-Epinard,49055,CANTENAY-EPINARD,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,Montreuil-Juigné,49214,MONTREUIL-JUIGNE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,La Meignanne,49196,LA MEIGNANNE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,La Membrollesur-Longuenée,49200,LA MEMBROLLE-SUR-LONGUENEE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,Le Plessis-Macé,49242,LE PLESSIS-MACE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Angers-VII,Saint-Lambert-la-Potherie,49294,SAINT-LAMBERT-LA-POTHERIE,exact,Angers,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Cerqueuxde-Maulévrier,,,aucun,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Chanteloup-les-Bois,49070,CHANTELOUP-LES-BOIS,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Maulévrier,49192,MAULEVRIER,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Mazières-en-Mauges,49195,MAZIERES-EN-MAUGES,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Nuaillé,49231,NUAILLE,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Toutlemonde,49352,TOUTLEMONDE,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Trémentines,49355,TREMENTINES,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Vezins,49371,VEZINS,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-II,Yzernay,49381,YZERNAY,exact,Cholet,JORF_19730725_171
+73-727,1973-07-23,49,Cholet-III,Saint-Christophe-du-Bois,49269,SAINT-CHRISTOPHE-DU-BOIS,exact,Cholet,JORF_19730725_171
+73-728,1973-07-23,55,Bar-le-Duc - Nord,Longeville-en-Barrois,55302,LONGEVILLE-EN-BARROIS,exact,Bar-le-Duc,JORF_19730725_171
+73-728,1973-07-23,55,Bar-le-Duc - Sud,Savonnières-devant-Bar,55476,SAVONNIERES-DEVANT-BAR,exact,Bar-le-Duc,JORF_19730725_171
+73-728,1973-07-23,55,Bar-le-Duc - Sud,Combles-en-Barrois,55120,COMBLES-EN-BARROIS,exact,Bar-le-Duc,JORF_19730725_171
+73-728,1973-07-23,55,Bar-le-Duc - Sud,Trémont-sur-Saulx,55514,TREMONT-SUR-SAULX,exact,Bar-le-Duc,JORF_19730725_171
+73-728,1973-07-23,55,Bar-le-Duc - Sud,Robert-Espagne,55435,ROBERT-ESPAGNE,exact,Bar-le-Duc,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Belrupten-Verdunois,55045,BELRUPT-EN-VERDUNOIS,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Haudainville,55236,HAUDAINVILLE,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Sommedieue,55492,SOMMEDIEUE,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Dieue-Génicourt,,,aucun,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Amblysur-Meuse,55007,AMBLY-SUR-MEUSE,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Est,Rupt-en-Woevre,55449,RUPT-EN-WOEVRE,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Ouest,Belleray,55042,BELLERAY,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Ouest,Dugny-sur-Meuse,55166,DUGNY-SUR-MEUSE,exact,Verdun,JORF_19730725_171
+73-728,1973-07-23,55,Verdun-Ouest,Sivry-la-Perche,55489,SIVRY-LA-PERCHE,exact,Verdun,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Angles,,,aucun,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Arcizac-ez-Angles,65020,ARCIZAC-EZ-ANGLES,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Arrayou-Lahitte,65247,ARRAYOU-LAHITTE,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Arrodets-ez-Angles,65033,ARRODETS-EZ-ANGLES,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Artigues,65038,ARTIGUES,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Berberust-Lias,65082,BERBERUST-LIAS,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Bourréac,65107,BOURREAC,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Cheust,65144,CHEUST,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Escoubès-Pouts,65164,ESCOUBES-POUTS,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Gazost,65191,GAZOST,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Ger,65197,GER,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Germs-sur-l'Oussouet,65200,GERMS-SUR-L'OUSSOUET,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Geu,65201,GEU,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Gez-ez-Angles,65203,GEZ-EZ-ANGLES,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Jarret,65233,JARRET,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Julos,65236,JULOS,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Juncalas,65237,JUNCALAS,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Lézignan,65271,LEZIGNAN,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Lugagnan,65291,LUGAGNAN,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Ossun-ez-Angles,65345,OSSUN-EZ-ANGLES,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Ourdis-Cotdoussan,65348,OURDIS-COTDOUSSAN,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Ourdon,65349,OURDON,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Ouste,65351,OUSTE,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Paréac,65355,PAREAC,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Saint-Créac,65386,SAINT-CREAC,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Est,Sère-Lanso,65421,SERE-LANSO,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Ade,65002,ADE,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Aspin-en-Lavedan,65040,ASPIN-EN-LAVEDAN,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Bartrès,65070,BARTRES,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Omex,65334,OMEX,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Ossen,65343,OSSEN,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Poueyferre,65366,POUEYFERRE,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Ségus,65415,SEGUS,exact,Lourdes,JORF_19730725_171
+73-729,1973-07-23,65,Lourdes-Ouest,Viger,65470,VIGER,exact,Lourdes,JORF_19730725_171
+73-761,1973-08-02,07,Annonay est divisé en deux cantons dénommés et,Monestier,07160,MONESTIER,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay est divisé en deux cantons dénommés et,Roiffieux,07197,ROIFFIEUX,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay est divisé en deux cantons dénommés et,Saint-Julien-Vocance,07258,SAINT-JULIEN-VOCANCE,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay est divisé en deux cantons dénommés et,Talencieux,07317,TALENCIEUX,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay est divisé en deux cantons dénommés et,Vanosc,07333,VANOSC,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay-Nord (mêmes arrondissement et départe ment),Boulieu-lès-Annonay,07041,BOULIEU-LES-ANNONAY,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay-Nord (mêmes arrondissement et départe ment),Davezieux,07078,DAVEZIEUX,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay-Nord (mêmes arrondissement et départe ment),Saint-Clair,07225,SAINT-CLAIR,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay-Nord (mêmes arrondissement et départe ment),Saint-Cyr,07227,SAINT-CYR,exact,Annonay,JORF_19730804_180
+73-761,1973-08-02,07,Annonay-Nord (mêmes arrondissement et départe ment),Saint-Marcel-lès-Arinonay,07265,SAINT-MARCEL-LES-ANNONAY,ressemblance,Annonay,JORF_19730804_180
+73-762,1973-08-02,12,Millau-Est,Aguessac,12002,AGUESSAC,exact,Millau,JORF_19730804_180
+73-762,1973-08-02,12,Millau-Est,Paulhe,12178,PAULHE,exact,Millau,JORF_19730804_180
+73-762,1973-08-02,12,Millau-Est,Compeyre,12070,COMPEYRE,exact,Millau,JORF_19730804_180
+73-762,1973-08-02,12,Millau-Ouest,Compregnac,12072,COMPREGNAC,exact,Millau,JORF_19730804_180
+73-762,1973-08-02,12,Millau-Ouest,Creissels,12084,CREISSELS,exact,Millau,JORF_19730804_180
+73-762,1973-08-02,12,Millau-Ouest,Saint-Georges-de-Luzençon,12225,SAINT-GEORGES-DE-LUZENCON,exact,Millau,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Est,Sebazac-Concourès,12264,SEBAZAC-CONCOURES,exact,Rodez,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Est,Sainte-Radegonde,12241,SAINTE-RADEGONDE,exact,Rodez,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Est,Onet-le-Château,12176,ONET-LE-CHATEAU,exact,Rodez,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Est,Le Monastère,12146,LE MONASTERE,exact,Rodez,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Ouest,Druelle,12090,DRUELLE,exact,Rodez,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Ouest,Luc,12133,Luc,disparue,Rodez,JORF_19730804_180
+73-762,1973-08-02,12,Rodez-Ouest,Olemps,12174,OLEMPS,exact,Rodez,JORF_19730804_180
+73-763,1973-08-02,14,Caen-I,Carpiquet,14137,CARPIQUET,exact,Caen,JORF_19730804_180
+73-763,1973-08-02,14,Caen-I,Bretteville-sur-Odon,14101,BRETTEVILLE-SUR-ODON,exact,Caen,JORF_19730804_180
+73-763,1973-08-02,14,Caen-III,Saint-Contest,14566,SAINT-CONTEST,exact,Caen,JORF_19730804_180
+73-763,1973-08-02,14,Caen-VI,Fleury-sur-Orne,14271,FLEURY-SUR-ORNE,exact,Caen,JORF_19730804_180
+73-763,1973-08-02,14,Caen-VI,Ifs,14341,IFS,exact,Caen,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Nançay,18159,NANCAY,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Neuvy-sur-Barangeon,18165,NEUVY-SUR-BARANGEON,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Vouzeron,18290,VOUZERON,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Saint-Laurent,18219,SAINT-LAURENT,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Vignoux-sur-Barangeon,18281,VIGNOUX-SUR-BARANGEON,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Massay,18140,MASSAY,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Saint-Hilaire-de-Court,18214,SAINT-HILAIRE-DE-COURT,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Méry-sur-Cher,18150,MERY-SUR-CHER,exact,Vierzon,JORF_19730804_180
+73-764,1973-08-02,18,Vierzon-II,Thénioux,18263,THENIOUX,exact,Vierzon,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Augnax,32014,AUGNAX,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Crastes,32112,CRASTES,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Lahitte,32183,LAHITTE,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Leboulin,32207,LEBOULIN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Montégut,32282,MONTEGUT,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Mougaroulet,32298,NOUGAROULET,ressemblance,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Puycasquier,32335,PUYCASQUIER,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Est,Tourrenquets,32453,TOURRENQUETS,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Castin,32091,CASTIN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Duran,32117,DURAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Mirepoix,32258,MIREPOIX,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Montaut-les-Créneaux,32279,MONTAUT-LES-CRENEAUX,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Preignan,32331,PREIGNAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Roque laure,32348,ROQUELAURE,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Nord-Ouest,Sainte-Christie,32368,SAINTE-CHRISTIE,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Auterrive,32019,AUTERIVE,ressemblance,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Boucagnères,32060,BOUCAGNERES,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Haulies,32153,HAULIES,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Labarthe,32169,LABARTHE,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Orbessan,32300,ORBESSAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Ornézan,32302,ORNEZAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Pessan,32312,PESSAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Sansan,32411,SANSAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Est,Seissan,32426,SEISSAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Barran,32029,BARRAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Durban,32118,DURBAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Lasséran,32200,LASSERAN,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Lasseube-Propre,32201,LASSEUBE-PROPRE,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Mombert,,,aucun,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Pavie,32307,PAVIE,exact,Auch,JORF_19730804_180
+73-765,1973-08-02,32,Auch-Sud-Ouest,Saint-Jean-le-Comtal,32381,SAINT-JEAN-LE-COMTAL,exact,Auch,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Agincourt,54006,AGINCOURT,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Amance,54012,AMANCE,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Bouxières-aux-Chênes,54089,BOUXIERES-AUX-CHENES,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Bouxières-aux-Dames,54090,BOUXIERES-AUX-DAMES,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Brin-sur-Seille,54100,BRIN-SUR-SEILLE,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Custines,54150,CUSTINES,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Dommartin-sous-Amance,54168,DOMMARTIN-SOUS-AMANCE,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Eulmont,54186,EULMONT,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Laitre-sous-Amance,54289,LAITRE-SOUS-AMANCE,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Lay-Saint-Christophe,54305,LAY-SAINT-CHRISTOPHE,exact,Nancy,JORF_19730804_180
+73-768,1973-08-02,54,Nancy-Est,Malzéville,54339,MALZEVILLE,exact,Nancy,JORF_19730804_180
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,Monthelon,71313,MONTHELON,exact,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,Tavernay,71535,TAVERNAY,exact,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,Saint-Forgeot (2),71414,SAINT-FORGEOT,ressemblance,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,Dracy-Saint-Loup,71184,DRACY-SAINT-LOUP,exact,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun est divisé en deux cantons dénommés et,Saint-Pantaléon (2),,,aucun,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun-Sud (mêmes arrondissement et département),Auxy,71015,AUXY,exact,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun-Sud (mêmes arrondissement et département),Antully,71010,ANTULLY,exact,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Autun-Sud (mêmes arrondissement et département),Curgy,71162,CURGY,exact,Autun,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Champforgueil,71081,CHAMPFORGEUIL,ressemblance,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Crissey,71154,CRISSEY,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Châtenoy-le-Royal,71118,CHATENOY-LE-ROYAL,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Fargeslès-Chalon,71194,FARGES-LES-CHALON,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Fragnes,71204,FRAGNES,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,La Loyère,71265,LA LOYERE,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Sassenay,71502,SASSENAY,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Virey-le-Grand,71585,VIREY-LE-GRAND,exact,Chalon-sur-Saône,JORF_19730804_180
+73-769,1973-08-02,71,Creusot-Est,Breuil,,,aucun,Le Creusot,JORF_19730804_180
+73-769,1973-08-02,71,Creusot-Est,Saint-Firmin,71413,SAINT-FIRMIN,exact,Le Creusot,JORF_19730804_180
+73-769,1973-08-02,71,Creusot-Est,Saint-Sernin-du-Bois,71479,SAINT-SERNIN-DU-BOIS,exact,Le Creusot,JORF_19730804_180
+73-769,1973-08-02,71,Montceau-les-Mines-Sud,Saint-Vallier,71486,SAINT-VALLIER,exact,Montceau-les-Mines,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Centre,Charnaylès-Mâcon,71105,CHARNAY-LES-MACON,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Berzéla-Ville,71032,BERZE-LA-VILLE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Charbonnières,71099,CHARBONNIERES,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Chevagny-lès-Chevrières,71126,CHEVAGNY-LES-CHEVRIERES,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Hurigny,71235,HURIGNY,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Igé,71236,IGE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Laizé,71250,LAIZE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Milly-Lamartine,71299,MILLY-LAMARTINE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,La Roche-Vineuse,71371,LA ROCHE-VINEUSE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Saint-Martin-Belle-Roche,71448,SAINT-MARTIN-BELLE-ROCHE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Sancé,71497,SANCE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Senozan,71513,SENOZAN,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Sologny,71525,SOLOGNY,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Nord,Verzé,71574,VERZE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Bussières,71069,BUSSIERES,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Davaye,71169,DAVAYE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Fuissé,71210,FUISSE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Prissé,71360,PRISSE,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Solutre-Pouilly,71526,SOLUTRE-POUILLY,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Varennes-lès-Mâcon,71556,VARENNES-LES-MACON,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Vergisson,71567,VERGISSON,exact,Mâcon,JORF_19730804_180
+73-769,1973-08-02,71,Mâcon-Sud,Vinzelles,71583,VINZELLES,exact,Mâcon,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Nord,Allondaz,73014,ALLONDAZ,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Nord,Césarches,73061,CESARCHES,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Nord,Mercury,73154,MERCURY,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Nord,Pallud,73196,PALLUD,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Nord,Thénesol,73292,THENESOL,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Nord,Venthon,73308,VENTHON,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Cevins,73063,CEVINS,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Esserts-Blay,73110,ESSERTS-BLAY,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Gilly-sur-Isère,73124,GILLY-SUR-ISERE,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Grignon,73130,GRIGNON,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,La Bâthie,73032,LA BATHIE,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Monthion,73170,MONTHION,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Rognaix,73216,ROGNAIX,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Saint-Paul-sur-Isère,73268,SAINT-PAUL-SUR-ISERE,exact,Albertville,JORF_19730804_180
+73-770,1973-08-02,73,Albertville-Sud,Tours-en-Savoie,73298,TOURS-EN-SAVOIE,exact,Albertville,JORF_19730804_180
+73-771,1973-08-02,83,Saint-Mandrier,Saint-Mandrier,83153,Saint-Mandrier,disparue,La Seyne-sur-Mer,JORF_19730804_180
+73-772,1973-08-02,84,Avignon-Est,Morières-lès-Avignon,84081,MORIERES-LES-AVIGNON,exact,Avignon,JORF_19730804_180
+73-772,1973-08-02,84,Avignon-Nord,Pontet,,,aucun,Avignon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Nord,Venansault,85300,VENANSAULT,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Nord,Mouilleron-le-Captif,85155,MOUILLERON-LE-CAPTIF,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Aubigny,85008,AUBIGNY,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,La Chaize-le-Vicomte,85046,LA CHAIZE-LE-VICOMTE,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Chaille-sous-les-Ormeaux,85043,CHAILLE-SOUS-LES-ORMEAUX,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Les Clouzeaux,85069,LES CLOUZEAUX,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Fougère,85093,FOUGERE,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Saint-Florent-des-Bois,85213,SAINT-FLORENT-DES-BOIS,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Le Tablier,85285,LE TABLIER,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Thorigny,85291,THORIGNY,exact,La Roche-sur-Yon,JORF_19730804_180
+73-773,1973-08-02,85,La Roche-sur-Yon-Sud,Nesmy,85160,NESMY,exact,La Roche-sur-Yon,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Nord-Ouest,Appoigny,89013,APPOIGNY,exact,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Nord-Ouest,Charbuy,89083,CHARBUY,exact,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Nord-Ouest,Moneteau,89263,MONETEAU,exact,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Nord-Ouest,Perrigny-près-Auxerre,,,aucun,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Sud-Ouest,Saint-Georges-sur-Baulche,89346,SAINT-GEORGES-SUR-BAULCHE,exact,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Sud-Ouest,Villefargeau,89453,VILLEFARGEAU,exact,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Auxerre-Sud-Ouest,Chevannes-,89102,CHEVANNES,exact,Auxerre,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Nord-Est,Saint-Clément,89338,SAINT-CLEMENT,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Nord-Est,Saligny,89373,SALIGNY,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Nord-Est,Fontaine-la-Gaillarde,89172,FONTAINE-LA-GAILLARDE,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Nord-Est,Soucy,89399,SOUCY,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Mail lot,89236,MAILLOT,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Malay-le-Grand,89239,MALAY-LE-GRAND,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Malay-le-Petit,89240,MALAY-LE-PETIT,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Noé,89278,NOE,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Passy,89291,PASSY,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Vaumort,89434,VAUMORT,exact,Sens,JORF_19730804_180
+73-774,1973-08-02,89,Sens-Sud-Est,Véron,89443,VERON,exact,Sens,JORF_19730804_180
+73-810,1973-08-16,01,Bourg-en-Bresse-I,Polliat,01301,POLLIAT,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-II,Viriat,01451,VIRIAT,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Buellas,01065,BUELLAS,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Lent,01211,LENT,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Montagnat,01254,MONTAGNAT,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Montcet,01259,MONTCET,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Montracol,01264,MONTRACOL,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Péronnas,01289,PERONNAS,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Servas,01405,SERVAS,exact,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Saint-André,,,aucun,Bourg-en-Bresse,JORF_19730817_190
+73-810,1973-08-16,01,Bourg-en-Bresse-III,Saint-Rémy,01385,SAINT-REMY,exact,Bourg-en-Bresse,JORF_19730817_190
+73-811,1973-08-16,06,Antibes - Nord,Biot,06018,BIOT,exact,Antibes,JORF_19730817_190
+73-811,1973-08-16,06,Antibes - Sud,Vallauris,06155,VALLAURIS,exact,Antibes,JORF_19730817_190
+73-811,1973-08-16,06,Cannes - Ouest,Mandelieu-la-Napoule,06079,MANDELIEU-LA-NAPOULE,exact,Cannes,JORF_19730817_190
+73-811,1973-08-16,06,Cannes - Ouest,Théoule,,,aucun,Cannes,JORF_19730817_190
+73-811,1973-08-16,06,Nice-VII,Falicon,06060,FALICON,exact,Nice,JORF_19730817_190
+73-811,1973-08-16,06,Nice-VII,Saint-André,06114,Saint-André,disparue,Nice,JORF_19730817_190
+73-811,1973-08-16,06,Nice-VII,La Trinité,06149,LA TRINITE,exact,Nice,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Bretigny,21107,BRETIGNY,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Brognon,21111,BROGNON,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Clénay,21179,CLENAY,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Orgeux,21469,ORGEUX,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Ruffey-lès-Echirey,21535,RUFFEY-LES-ECHIREY,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Saint-Apollinaire,21540,SAINT-APOLLINAIRE,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Saint-Julien,21555,SAINT-JULIEN,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-I,Varois-et-Chaignot,21657,VAROIS-ET-CHAIGNOT,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Corcellesles-Monts,21192,CORCELLES-LES-MONTS,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Flavignerot,21270,FLAVIGNEROT,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Fleurey-sur-Ouche,21273,FLEUREY-SUR-OUCHE,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Lantenay,21339,LANTENAY,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Pasques,21478,PASQUES,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Prenois,21508,PRENOIS,exact,Dijon,JORF_19730817_190
+73-813,1973-08-16,21,Dijon-V,Velars-sur-Ouche,21661,VELARS-SUR-OUCHE,exact,Dijon,JORF_19730817_190
+73-814,1973-08-16,25,Besançon-Est,Chalezeule,25112,CHALEZEULE,exact,Besançon,JORF_19730817_190
+73-814,1973-08-16,25,Besançon-Est,Chaleze,25111,CHALEZE,exact,Besançon,JORF_19730817_190
+73-814,1973-08-16,25,Besançon-Est,Arcier,25023,Arcier,disparue,Besançon,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Est,Bethoncourt,25057,BETHONCOURT,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Aibre,25008,AIBRE,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Allondans,25013,ALLONDANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Bart,25043,BART,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Bavans,25048,BAVANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Beutal,25059,BEUTAL,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Bretigney,25093,BRETIGNEY,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Désandans,25198,DESANDANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Dung,25207,DUNG,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Echenans,25210,ECHENANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Issans,25316,ISSANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Laire,25322,LAIRE,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Lougres,25350,LOUGRES,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Présentevillers,25469,PRESENTEVILLERS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Raynans,25481,RAYNANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Saint-Julien-lès-Montbéliard,25521,SAINT-JULIEN-LES-MONTBELIARD,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Sainte-Marie,25523,SAINTE-MARIE,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Sainte-Suzanne,25526,SAINTE-SUZANNE,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Semondans,25540,SEMONDANS,exact,Montbéliard,JORF_19730817_190
+73-814,1973-08-16,25,Montbéliard-Ouest,Le Vernoy,25608,LE VERNOY,exact,Montbéliard,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-IX,Ramonville-Saint-Agne,31446,RAMONVILLE-SAINT-AGNE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Balma,31044,BALMA,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Beaupuy,31053,BEAUPUY,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Dremil-Lafage,31163,DREMIL-LAFAGE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Flourens,31184,FLOURENS,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Mondouzil,31352,MONDOUZIL,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Mons,31355,MONS,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Montrabe,31389,MONTRABE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Pin-Balma,31418,PIN-BALMA,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-VIII,Quint,31445,Quint,disparue,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XI,Portet-sur-Garonne,31433,PORTET-SUR-GARONNE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XII,Cugnaux,31157,CUGNAUX,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XII,Tournefeuille,31557,TOURNEFEUILLE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIII,Beauzelle,31056,BEAUZELLE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIII,Blagnac,31069,BLAGNAC,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIII,Colomiers,31149,COLOMIERS,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIII,Cornebarrieu,31150,CORNEBARRIEU,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIII,Mondonville,31351,MONDONVILLE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Aucamville,31022,AUCAMVILLE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Castelginest,31116,CASTELGINEST,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Fenouillet,31182,FENOUILLET,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Fonbeauzard,31186,FONBEAUZARD,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Gagnac-sur-Garonne,31205,GAGNAC-SUR-GARONNE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Launaguet,31282,LAUNAGUET,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XIV,Saint-Alban,31467,SAINT-ALBAN,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Castelmaurou,31117,CASTELMAUROU,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Montberon,31364,MONTBERON,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Pechbonnieu,31410,PECHBONNIEU,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Rouffiac-Tolosan,31462,ROUFFIAC-TOLOSAN,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Saint-Geniès-Bellevue,31484,SAINT-GENIES-BELLEVUE,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Saint-Jean,31488,SAINT-JEAN,exact,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,Saint-Loup,,,aucun,Toulouse,JORF_19730817_190
+73-815,1973-08-16,31,Toulouse-XV,L'Union,31561,L'UNION,exact,Toulouse,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Est,Bettancourt-la-Ferrée,52045,BETTANCOURT-LA-FERREE,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Est,Chamouilley,52099,CHAMOUILLEY,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Est,Chancenay,52104,CHANCENAY,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Est,Roches-sur-Marne et,52429,ROCHES-SUR-MARNE,ressemblance,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Eclaron,52182,Éclaron,disparue,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Hallignicourt,52235,HALLIGNICOURT,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Humbécourt,52244,HUMBECOURT,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Laneville-au-Pont,52267,LANEUVILLE-AU-PONT,ressemblance,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Moeslains,52327,MOESLAINS,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Perthes,52386,PERTHES,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Valcourt,52500,VALCOURT,exact,Saint-Dizier,JORF_19730817_190
+73-816,1973-08-16,52,Saint-Dizier-Ouest,Villiers-en-Lieu,52534,VILLIERS-EN-LIEU,exact,Saint-Dizier,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Nord,Coulangeslès-Nevers,58088,COULANGES-LES-NEVERS,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Saint-Eloi,58238,SAINT-ELOI,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Sauvigny-lès-Bois,58273,SAUVIGNY-LES-BOIS,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Imphy,58134,IMPHY,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Chevenon,58072,CHEVENON,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Magny-Cours,58152,MAGNY-COURS,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Saincaize,,,aucun,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Rural,Gimouille,58126,GIMOUILLE,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Sud,Marzy,58160,MARZY,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Sud,Challuy,58051,CHALLUY,exact,Nevers,JORF_19730817_190
+73-817,1973-08-16,58,Nevers-Sud,Sermoise,58278,Sermoise,disparue,Nevers,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Annezin,62035,ANNEZIN,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Essars,62310,ESSARS,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Hinges,62454,HINGES,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Lacouture,62252,LA COUTURE,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Locon,62520,LOCON,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Oblinghem,62632,OBLINGHEM,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Vendin,,,aucun,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Nord,Vielle-Chapelle,62851,VIEILLE-CHAPELLE,ressemblance,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Allouagne,62023,ALLOUAGNE,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Chocques,62224,CHOCQUES,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Fouquereuil,62349,FOUQUEREUIL,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Fouquière,,,aucun,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Labeuvrière,62479,LABEUVRIERE,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Lapugnoy,62489,LAPUGNOY,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Verquigneul,62847,VERQUIGNEUL,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Béthune-Sud,Verquin,62848,VERQUIN,exact,Béthune,JORF_19730817_190
+73-818,1973-08-16,62,Calais-Centre,Atta ques,,,aucun,Calais,JORF_19730817_190
+73-818,1973-08-16,62,Calais-Centre,Coulogne,62244,COULOGNE,exact,Calais,JORF_19730817_190
+73-818,1973-08-16,62,Calais-Est,Marck,62548,MARCK,exact,Calais,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Condat (Limoges-XI),Condat-sur-Vienne,87048,CONDAT-SUR-VIENNE,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Condat (Limoges-XI),Solignac,87192,SOLIGNAC,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Condat (Limoges-XI),Le Vigen,87205,LE VIGEN,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Couzeix (Limoges-VIII),Couzeix,87050,COUZEIX,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Isle (Limoges-VI),Isle,87075,ISLE,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Panazol,87114,PANAZOL,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Feytiat,87065,FEYTIAT,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Saint-Just-le-Martel,87156,SAINT-JUST-LE-MARTEL,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Aureil,87005,AUREIL,exact,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Limôges-Le Palais (Limoges-X),Palais-sur-Vienne,87113,LE PALAIS-SUR-VIENNE,ressemblance,Limoges,JORF_19730817_190
+73-821,1973-08-16,87,Saint-Junien-Est,Javerdat,87078,JAVERDAT,exact,Saint-Junien,JORF_19730817_190
+73-821,1973-08-16,87,Saint-Junien-Est,Oradour-sur-Glane,87110,ORADOUR-SUR-GLANE,exact,Saint-Junien,JORF_19730817_190
+73-821,1973-08-16,87,Saint-Junien-Est,Saint-Martin-de-Jussac,87164,SAINT-MARTIN-DE-JUSSAC,exact,Saint-Junien,JORF_19730817_190
+73-821,1973-08-16,87,Saint-Junien-Est,Saint-Bricesur-Vienne,87140,SAINT-BRICE-SUR-VIENNE,exact,Saint-Junien,JORF_19730817_190
+73-821,1973-08-16,87,Saint-Junien-Est,Saint-Victurnien,87185,SAINT-VICTURNIEN,exact,Saint-Junien,JORF_19730817_190
+73-821,1973-08-16,87,Saint-Junien-Ouest,Chaillac-sur-Vienne,87030,CHAILLAC-SUR-VIENNE,exact,Saint-Junien,JORF_19730817_190
+82-22,1982-01-15,03,Domérat-Montluçon-Nord-Ouest,Domérat,03101,DOMERAT,exact,Montluçon,JORF_19820116_13
+82-22,1982-01-15,03,Montluçon-Nord-Est,Saint-Victor,03262,SAINT-VICTOR,exact,Montluçon,JORF_19820116_13
+82-22,1982-01-15,03,Montluçon-Nord-Est,Vaux,03301,VAUX,exact,Montluçon,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Belval,08058,BELVAL,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Evigny,08160,EVIGNY,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Fagnon,08162,FAGNON,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Neuville-les-This,08322,NEUVILLE-LES-THIS,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Prix-les-Mézières,08346,PRIX-LES-MEZIERES,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Sury,08432,SURY,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,This,08450,THIS,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Warcq,08497,WARCQ,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Centre-Ouest,Warnécourt,08498,WARNECOURT,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Mézières-Est,La Francheville,08180,LA FRANCHEVILLE,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Gernelle la Grande-Ville,,,aucun,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Issancourt-Rumel,08235,ISSANCOURT-ET-RUMEL,ressemblance,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Lûmes,08263,LUMES,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Saint-Lau rent,08385,SAINT-LAURENT,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Ville-sur-Lumes,08483,VILLE-SUR-LUMES,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Vivier-au-Court,08488,VIVIER-AU-COURT,exact,Charleville-Mézières,JORF_19820116_13
+82-23,1982-01-15,08,Villers-Semeuse,Villers-Semeuse,08480,VILLERS-SEMEUSE,exact,Charleville-Mézières,JORF_19820116_13
+82-24,1982-01-15,12,Rodez-Est,Monas tère,12146,LE MONASTERE,ressemblance,Rodez,JORF_19820116_13
+82-24,1982-01-15,12,Rodez-Nord,Onet-le-Château,12176,ONET-LE-CHATEAU,exact,Rodez,JORF_19820116_13
+82-24,1982-01-15,12,Rodez-Ouest,Olemps,12174,OLEMPS,exact,Rodez,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-I,L'Houmeau,17190,L'HOUMEAU,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-I,Lagord,17200,LAGORD,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-I,Nieul-sur-Mer,17264,NIEUL-SUR-MER,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-V,Esnandes,17153,ESNANDES,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-V,Marsilly,17222,MARSILLY,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-V,Saint-Xandre,17414,SAINT-XANDRE,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-V,Puilboreau,17291,PUILBOREAU,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-V,Dompierre-sur-Mer,17142,DOMPIERRE-SUR-MER,exact,La Rochelle,JORF_19820116_13
+82-26,1982-01-15,17,La Rochelle-V,Périgny,17274,PERIGNY,exact,La Rochelle,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Charpont,28082,CHARPONT,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Chapelle-Forainvilliers,28076,LA CHAPELLE-FORAINVILLIERS,ressemblance,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Cherisy,28098,CHERISY,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Ecluzelles,28136,ECLUZELLES,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Germainville,28178,GERMAINVILLE,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Mézièresen-Drouais,28251,MEZIERES-EN-DROUAIS,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Luray,28223,LURAY,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Ouerre,28292,OUERRE,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Est,Sainte-Gemme-Moronval,28332,SAINTE-GEMME-MORONVAL,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Allainville,28003,ALLAINVILLE,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Crécy-Couvé,28117,CRECY-COUVE,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Boissy-en-Drouais,28045,BOISSY-EN-DROUAIS,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Garancières-en-Drouais,28170,GARANCIERES-EN-DROUAIS,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Louvilliers-en-Drouais,28216,LOUVILLIERS-EN-DROUAIS,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Saulnières,28369,SAULNIERES,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Vert-en-Drouais,28405,VERT-EN-DROUAIS,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Ouest,Montreuil,28267,MONTREUIL,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Sud,Aunay-sous-Crécy,28014,AUNAY-SOUS-CRECY,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Sud,Garnay,28171,GARNAY,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Sud,Marville-Moutiers-Brûlé,28239,MARVILLE-MOUTIERS-BRULE,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Sud,Tréon,28394,TREON,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Dreux-Sud,Vernouillet,28404,VERNOUILLET,exact,Dreux,JORF_19820116_13
+82-27,1982-01-15,28,Mainvilliers,Mainvilliers,28229,MAINVILLIERS,exact,Chartres,JORF_19820116_13
+82-27,1982-01-15,28,Mainvilliers,Bailleau-l'Evêque,28022,BAILLEAU-L'EVEQUE,exact,Chartres,JORF_19820116_13
+82-27,1982-01-15,28,Mainvilliers,Lèves,28209,LEVES,exact,Chartres,JORF_19820116_13
+82-27,1982-01-15,28,Mainvilliers,Saint-Aubin-des-Bois,28325,SAINT-AUBIN-DES-BOIS,exact,Chartres,JORF_19820116_13
+82-29,1982-01-15,33,Mérignac-II,Martignas,,,aucun,Mérignac,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Nord,Baradoux,,,aucun,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Nord,Le Born,48029,LE BORN,exact,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Nord,Le Chastel-Nouvel,48042,CHASTEL-NOUVEL,ressemblance,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Nord,Pelouse,48111,PELOUSE,exact,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Sud,Balsièges,48016,BALSIEGES,exact,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Sud,Brenoux,48030,BRENOUX,exact,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Sud,Lanuéjols,48081,LANUEJOLS,exact,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Sud,Saint-Bauzile,48137,SAINT-BAUZILE,exact,Mende,JORF_19820116_13
+82-30,1982-01-15,48,Mende-Sud,Saint-Etienne-du-Valdonnez,48147,SAINT-ETIENNE-DU-VALDONNEZ,exact,Mende,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Est,Sainte-Suzanne-sur-Vire,50556,SAINTE-SUZANNE-SUR-VIRE,exact,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Est,La Luzerne,50283,LA LUZERNE,exact,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Est,Baudre,50034,BAUDRE,exact,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Est,La Barre-de-Semilly,50032,LA BARRE-DE-SEMILLY,exact,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Ouest,Agneaux,50002,AGNEAUX,exact,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Ouest,Rampan,50423,RAMPAN,exact,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Ouest,Saint-Georges-de-Montcocq,50475,SAINT-GEORGES-MONTCOCQ,ressemblance,Saint-Lô,JORF_19820116_13
+82-31,1982-01-15,50,Saint-Lô-Ouest,Le Mesnil-Rouxelin,50321,LE MESNIL-ROUXELIN,exact,Saint-Lô,JORF_19820116_13
+82-32,1982-01-15,51,Reims-VII,Cormontreuil,51172,CORMONTREUIL,exact,Reims,JORF_19820116_13
+82-32,1982-01-15,51,Reims-VII,Saint-Léonard,51493,SAINT-LEONARD,exact,Reims,JORF_19820116_13
+82-32,1982-01-15,51,Reims-VII,Taissy,51562,TAISSY,exact,Reims,JORF_19820116_13
+82-32,1982-01-15,51,Reims-VII,Trois-Puits,51584,TROIS-PUITS,exact,Reims,JORF_19820116_13
+82-33,1982-01-15,52,Saint-Dizier-Nord-Est,Bettancourt-la-Ferrée,52045,BETTANCOURT-LA-FERREE,exact,Saint-Dizier,JORF_19820116_13
+82-33,1982-01-15,52,Saint-Dizier-Sud-Est,Chamouilley,52099,CHAMOUILLEY,exact,Saint-Dizier,JORF_19820116_13
+82-34,1982-01-15,53,Laval-Est,Entrammes,53094,ENTRAMMES,exact,Laval,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Achicourt,62004,ACHICOURT,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Agny,62013,AGNY,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Beaurains,62099,BEAURAINS,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Fampoux,62323,FAMPOUX,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Feuchy,62331,FEUCHY,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Neuville-Vitasse,62611,NEUVILLE-VITASSE,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Tilloy-lès-Mofflaines,62817,TILLOY-LES-MOFFLAINES,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Arras-Sud,Wailly,62869,WAILLY,exact,Arras,JORF_19820116_13
+82-35,1982-01-15,62,Liévin-Nord,Grenay,62386,GRENAY,exact,Liévin,JORF_19820116_13
+82-35,1982-01-15,62,Liévin-Nord,Mazingarbe,62563,MAZINGARBE,exact,Liévin,JORF_19820116_13
+82-35,1982-01-15,62,Liévin-Sud,Angres,62032,ANGRES,exact,Liévin,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Ban-de-Laveline,88032,BAN-DE-LAVELINE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Bertrirnoutier,88054,BERTRIMOUTIER,ressemblance,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Coinches,88111,COINCHES,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Combrimont,88113,COMBRIMONT,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Frapelle,88182,FRAPELLE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Gemaingoutte,88193,GEMAINGOUTTE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Lesseux,88268,LESSEUX,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Nayemont-lcs-Fosses,88320,NAYEMONT-LES-FOSSES,ressemblance,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Neüvillers-sur-Fave,88326,NEUVILLERS-SUR-FAVE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Pairet-Grandrupt,88341,PAIR-ET-GRANDRUPT,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Raves,88375,RAVES,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Remomeix,88386,REMOMEIX,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Sainte-Marguerite,88424,SAINTE-MARGUERITE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Saulcv-sur-Meurthe,88445,SAULCY-SUR-MEURTHE,ressemblance,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Est,Wisembach,88526,WISEMBACH,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Ouest,La Bourgonce,88068,LA BOURGONCE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Ouest,Saint-Michel-sur-Meurthe,88428,SAINT-MICHEL-SUR-MEURTHE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Ouest,La Salle,88438,LA SALLE,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Ouest,Taintrux,88463,TAINTRUX,exact,Saint-Dié,JORF_19820116_13
+82-37,1982-01-15,88,Saint-Dié-Ouest,La Voivre,88519,LA VOIVRE,exact,Saint-Dié,JORF_19820116_13
+82-51,1982-01-20,15,Aurillac-II-Ouest,Saint-Paul-des-Landes,15204,SAINT-PAUL-DES-LANDES,exact,Aurillac,JORF_19820122_18
+82-51,1982-01-20,15,Aurillac-II-Ouest,Sansac-de-Marmiesse,15221,SANSAC-DE-MARMIESSE,exact,Aurillac,JORF_19820122_18
+82-51,1982-01-20,15,Aurillac-II-Ouest,Ytrac,15267,YTRAC,exact,Aurillac,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Fauville,27234,FAUVILLE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Fontaine-sous-Jouy,27254,FONTAINE-SOUS-JOUY,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Gauciel,27280,GAUCIEL,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Huest,27347,HUEST,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Jouy-sur-Eure,27358,JOUY-SUR-EURE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Miserey,27410,MISEREY,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Saint-Vigor,27611,SAINT-VIGOR,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Sassey,27615,SASSEY,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,La Trinité,27659,LA TRINITE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Val-David,27668,LE VAL-DAVID,ressemblance,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Est,Viel-Evreux,,,aucun,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Ouest,Arnièressur-Iton,27020,ARNIERES-SUR-ITON,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Ouest,Aulnay-sur-Iton,27023,AULNAY-SUR-ITON,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Ouest,Caugé,27132,CAUGE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Ouest,Claville,27161,CLAVILLE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Ouest,Saint-Sébastien-de-Morsent,27602,SAINT-SEBASTIEN-DE-MORSENT,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Sud,Angervillela-Campagne,27017,ANGERVILLE-LA-CAMPAGNE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Sud,Les Baux-Sainte-Croix,27044,LES BAUX-SAINTE-CROIX,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Sud,Guichainville,27306,GUICHAINVILLE,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Sud,Le Plessis-Grohan,27464,LE PLESSIS-GROHAN,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Sud,Saint-Luc,27560,SAINT-LUC,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Evreux-Sud,Les Ventes,27678,LES VENTES,exact,Évreux,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Nord,Ande,27015,ANDE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Nord,Heudebouville,27332,HEUDEBOUVILLE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Nord,Incarville,27351,INCARVILLE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Nord,Saint-Etienne-du-Vauvray,27537,SAINT-ETIENNE-DU-VAUVRAY,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Nord,Saint-Pierre-du-Vauvray,27598,SAINT-PIERRE-DU-VAUVRAY,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Nord,Vironvay,27697,VIRONVAY,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Acquigny,27003,ACQUIGNY,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Crosville,27184,CRASVILLE,ressemblance,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,La Haye-Le-Conte,27321,LA HAYE-LE-COMTE,ressemblance,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,La Haye-Malherbe,27322,LA HAYE-MALHERBE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Hondouville,27339,HONDOUVILLE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Le Mesnil-Jourdain,27403,LE MESNIL-JOURDAIN,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Pinterville,27456,PINTERVILLE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Quatremare,27483,QUATREMARE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Surtauville,27623,SURTAUVILLE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,Surville,27624,SURVILLE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Louviers-Sud,La Vacherie,27666,LA VACHERIE,exact,Louviers,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,La Chapelle-Reanville,27150,LA CHAPELLE-REANVILLE,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,Chambray,27140,CHAMBRAY,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,Saint-Just,27554,SAINT-JUST,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,Saint-Marcel,27562,SAINT-MARCEL,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,Saint-Pierred'Autils,27588,SAINT-PIERRE-D'AUTILS,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,Sainte-Colombe-près-Vernon,27525,SAINTE-COLOMBE-PRES-VERNON,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Nord,Villez sous-Bailleul,27694,VILLEZ-SOUS-BAILLEUL,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Sud,Douains,27203,DOUAINS,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Sud,La Heunière,27336,LA HEUNIERE,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Sud,Houlbec-Cocherel,27343,HOULBEC-COCHEREL,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Sud,Mercey,27399,MERCEY,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Sud,Rouvray,27501,ROUVRAY,exact,Vernon,JORF_19820122_18
+82-56,1982-01-20,27,Vernon-Sud,Saint-Vincentdes-Bois,27612,SAINT-VINCENT-DES-BOIS,exact,Vernon,JORF_19820122_18
+82-53,1982-01-20,2B,Bastia-VI - Furiani-Montésoro,Furiani,2B120,FURIANI,exact,Bastia,JORF_19820122_18
+82-60,1982-01-20,41,Blois-V,Saint-Sulpice,41230,Saint-Sulpice,disparue,Blois,JORF_19820122_18
+82-60,1982-01-20,41,Blois-V,Fossé,41091,FOSSE,exact,Blois,JORF_19820122_18
+82-60,1982-01-20,41,Blois-V,Marolles,41128,MAROLLES,exact,Blois,JORF_19820122_18
+82-60,1982-01-20,41,Blois-V,Saint-Bohaire,41203,SAINT-BOHAIRE,exact,Blois,JORF_19820122_18
+82-60,1982-01-20,41,Blois-V,Saint-Lubin-en-Vergonnois _,41223,SAINT-LUBIN-EN-VERGONNOIS,exact,Blois,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Areines,41003,AREINES,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Marcilly-en-Beauce,41124,MARCILLY-EN-BEAUCE,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Meslay,41138,MESLAY,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Sainte-Anne,41200,SAINTE-ANNE,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Saint-Ouen,41226,SAINT-OUEN,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Villerable,41287,VILLERABLE,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-H,Villiersfaux,41293,VILLIERSFAUX,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-I,Mazangé,41131,MAZANGE,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-I,Naveil,41158,NAVEIL,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-I,Thoré-la-Rochette,41259,THORE-LA-ROCHETTE,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-I,Villiers-sur-Loir,41294,VILLIERS-SUR-LOIR,exact,Vendôme,JORF_19820122_18
+82-60,1982-01-20,41,Vendôme-I,Azé,41010,AZE,exact,Vendôme,JORF_19820122_18
+82-59,1982-01-20,44,Saint-Herblain-Ouest-Indre,Indre,44074,INDRE,exact,Saint-Herblain,JORF_19820122_18
+82-59,1982-01-20,44,Saint-Nazaire-Ouest-Pornichet,Pornichet,44132,PORNICHET,exact,Saint-Nazaire,JORF_19820122_18
+82-63,1982-01-20,60,Beauvais - Nord-Ouest,Fouquenies,60250,FOUQUENIES,exact,Beauvais,JORF_19820122_18
+82-63,1982-01-20,60,Beauvais - Nord-Ouest,Herchies,60310,HERCHIES,exact,Beauvais,JORF_19820122_18
+82-63,1982-01-20,60,Beauvais - Nord-Ouest,Pierrefitte-en-Beauvaisis,60490,PIERREFITTE-EN-BEAUVAISIS,exact,Beauvais,JORF_19820122_18
+82-63,1982-01-20,60,Beauvais - Nord-Ouest,Savignies,60609,SAVIGNIES,exact,Beauvais,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Est,La Croix-Saint-Ouen,60338,LACROIX-SAINT-OUEN,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Est,Saint-Sauveur,60597,SAINT-SAUVEUR,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Est,Saint-Jean-aux-Bois,60579,SAINT-JEAN-AUX-BOIS,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Est,Vieux-Moulin,60674,VIEUX-MOULIN,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Ouest,Venette,60665,VENETTE,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Ouest,Jaux,60325,JAUX,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Ouest,Jonquières,60326,JONQUIERES,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Ouest,Armancourt,60023,ARMANCOURT,exact,Compiègne,JORF_19820122_18
+82-63,1982-01-20,60,Compiègne - Sud-Ouest,Le Meux,60402,LE MEUX,exact,Compiègne,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Radon,61341,RADON,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Vingt-Hanaps,61509,VINGT-HANAPS,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Forges,61175,FORGES,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Larré,61224,LARRE,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Valframbert,61497,VALFRAMBERT,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Semallé,61467,SEMALLE,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Alençon-III,Cerise,61077,CERISE,exact,Alençon,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Est,Sévigny,61472,SEVIGNY,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Est,Urou-et-Crennes,61496,UROU-ET-CRENNES,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Est,Sai,61358,SAI,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Est,Aunou-le-Faucon,61014,AUNOU-LE-FAUCON,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Est,Juvigny-sur-Orne,61212,JUVIGNY-SUR-ORNE,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Ouest,Commeaux,61114,COMMEAUX,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Ouest,Moulins-sur-Orne,61298,MOULINS-SUR-ORNE,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Ouest,Fontenai-sur-Orne,61173,FONTENAI-SUR-ORNE,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Ouest,Sarceaux,61462,SARCEAUX,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,Argentan-Ouest,Occagnes,61314,OCCAGNES,exact,Argentan,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Chandai,61092,CHANDAI,exact,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Irai,61208,IRAI,exact,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Saint-Martin-d'Ecublei,61423,SAINT-MARTIN-D'ECUBLEI,exact,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Crulai,61140,CRULAI,exact,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Saint-Michel-Tubœuf,61432,SAINT-MICHEL-TUBOEUF,ressemblance,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Saint-Ouen-sur-Iton,61440,SAINT-OUEN-SUR-ITON,exact,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Saint-Sulpice-sur-Risle,61456,SAINT-SULPICE-SUR-RISLE,exact,L' Aigle,JORF_19820122_18
+82-64,1982-01-20,61,L'Aigle-Est,Vitrai-sous-L'Aigle,61510,VITRAI-SOUS-LAIGLE,exact,L' Aigle,JORF_19820122_18
+82-77,1982-01-25,01,Bourg-Est,Montagnat,01254,MONTAGNAT,exact,Bourg-en-Bresse,JORF_19820126_21
+82-77,1982-01-25,01,Bourg-Est,Saint-Just,01369,SAINT-JUST,exact,Bourg-en-Bresse,JORF_19820126_21
+82-77,1982-01-25,01,Bourg-Sud,Saint-Denislès-Bourg,01344,SAINT-DENIS-LES-BOURG,exact,Bourg-en-Bresse,JORF_19820126_21
+82-77,1982-01-25,01,Oycnnax-Sud,Martignat,01237,MARTIGNAT,exact,Oyonnax,JORF_19820126_21
+82-77,1982-01-25,01,Oycnnax-Sud,Groissiat,01181,GROISSIAT,exact,Oyonnax,JORF_19820126_21
+82-77,1982-01-25,01,Oycnnax-Sud,Bellignat,01031,BELLIGNAT,exact,Oyonnax,JORF_19820126_21
+82-77,1982-01-25,01,Oycnnax-Sud,Géovreissiat,01170,Géovreissiat,disparue,Oyonnax,JORF_19820126_21
+82-80,1982-01-25,35,Rennes-VII-1,Chantepie,35055,CHANTEPIE,exact,Rennes,JORF_19820126_21
+82-86,1982-01-25,87,Limoges-Isle,Isle,87075,ISLE,exact,Limoges,JORF_19820126_21
+84-1227,1984-12-24,37,Montlouis-sur-Loire,Larçay,37124,LARCAY,exact,Tours,JORF_19841230_305
+84-1227,1984-12-24,37,Montlouis-sur-Loire,Véretz,37267,VERETZ,exact,Tours,JORF_19841230_305
+84-1227,1984-12-24,37,Montlouis-sur-Loire,La Ville-aux-Dames,37273,LA VILLE-AUX-DAMES,exact,Tours,JORF_19841230_305
+84-1227,1984-12-24,37,Montlouis-sur-Loire,Montlouis-sur-Loire,37156,MONTLOUIS-SUR-LOIRE,exact,Tours,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Nord,Courmemin,41068,COURMEMIN,exact,Romorantin-Lanthenay,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Nord,Millançay,41140,MILLANCAY,exact,Romorantin-Lanthenay,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Nord,Veilleins,41268,VEILLEINS,exact,Romorantin-Lanthenay,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Nord,Vernou-en-Sologne,41271,VERNOU-EN-SOLOGNE,exact,Romorantin-Lanthenay,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Sud,Loreux,41118,LOREUX,exact,Romorantin-Lanthenay,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Sud,Pruniers,41185,Pruniers,disparue,Romorantin-Lanthenay,JORF_19841230_305
+84-1228,1984-12-24,41,Romorantin-Lanthenay-Sud,Villeherviers,41282,VILLEHERVIERS,exact,Romorantin-Lanthenay,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Saint-Géron,43191,SAINT-GERON,exact,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Bournoncle-Saint-Piene,43038,BOURNONCLE-SAINT-PIERRE,ressemblance,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Cohade,43074,COHADE,exact,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Beaumont,43022,BEAUMONT,exact,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Paulhac,43147,PAULHAC,exact,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Lamothe,43110,LAMOTHE,exact,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Saint-Beauzire,43170,SAINT-BEAUZIRE,exact,Brioude,JORF_19841230_305
+84-1230,1984-12-24,43,Brioude-Nord,Saint-Laurent-Chabreuges,43207,SAINT-LAURENT-CHABREUGES,exact,Brioude,JORF_19841230_305
+84-1231,1984-12-24,46,Cahors-Nord-Ouest,Espère,46095,ESPERE,exact,Cahors,JORF_19841230_305
+84-1231,1984-12-24,46,Cahors-Nord-Ouest,Mercuès,46191,MERCUES,exact,Cahors,JORF_19841230_305
+84-1231,1984-12-24,46,Cahors-Nord-Ouest,Pradines,46224,PRADINES,exact,Cahors,JORF_19841230_305
+84-1232,1984-12-24,47,Agen - Sud-Est,Boé,47031,BOE,exact,Agen,JORF_19841230_305
+84-1233,1984-12-24,53,Château-Gontier-Est,Azé,53014,AZE,exact,Château-Gontier,JORF_19841230_305
+84-1233,1984-12-24,53,Château-Gontier-Est,Fromontières,53101,FROMENTIERES,ressemblance,Château-Gontier,JORF_19841230_305
+84-1233,1984-12-24,53,Château-Gontier-Est,Ménil,53150,MENIL,exact,Château-Gontier,JORF_19841230_305
+84-1233,1984-12-24,53,Château-Gontier-Est,Saint-Fort,53215,SAINT-FORT,exact,Château-Gontier,JORF_19841230_305
+84-1233,1984-12-24,53,Laval-Est,Entrammes,53094,ENTRAMMES,exact,Laval,JORF_19841230_305
+84-1235,1984-12-24,57,Saint-Avold-I,Altviller,57015,ALTVILLER,exact,Saint-Avold,JORF_19841230_305
+84-1235,1984-12-24,57,Saint-Avold-I,Diesen,57765,DIESEN,exact,Saint-Avold,JORF_19841230_305
+84-1235,1984-12-24,57,Saint-Avold-I,Folschviller; Porcelette,,,aucun,Saint-Avold,JORF_19841230_305
+84-1235,1984-12-24,57,Saint-Avold-I,Valmont,57690,VALMONT,exact,Saint-Avold,JORF_19841230_305
+84-1236,1984-12-24,62,Arques,Arques,62040,ARQUES,exact,Saint-Omer,JORF_19841230_305
+84-1236,1984-12-24,62,Arques,Blendecques,62139,BLENDECQUES,exact,Saint-Omer,JORF_19841230_305
+84-1236,1984-12-24,62,Arques,Campagne-lès-Wardrecques,62205,CAMPAGNE-LES-WARDRECQUES,exact,Saint-Omer,JORF_19841230_305
+84-1236,1984-12-24,62,Arques,Helfaut,62423,HELFAUT,exact,Saint-Omer,JORF_19841230_305
+84-1236,1984-12-24,62,Boulogne-sur-Mer-Nord- Ouest,Wimereux,62893,WIMEREUX,exact,Boulogne-sur-Mer,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Centre,Cou logne,62244,COULOGNE,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Centre,Les Attaques,62043,LES ATTAQUES,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Est,Marck,62548,MARCK,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Bonningues-lès-Calais,62156,BONNINGUES-LES-CALAIS,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Coquelles,62239,COQUELLES,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Escalles,62307,ESCALLES,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Fréthun,62360,FRETHUN,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Nielles-lès-Calais,62615,NIELLES-LES-CALAIS,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Peuplingues,62654,PEUPLINGUES,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Saint-Tricat,62769,SAINT-TRICAT,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Calais-Nord-Ouest,Sangatte,62774,SANGATTE,exact,Calais,JORF_19841230_305
+84-1236,1984-12-24,62,Rouvroy,Drocourt,62277,DROCOURT,exact,Méricourt,JORF_19841230_305
+84-1236,1984-12-24,62,Rouvroy,Rouvroy,62724,ROUVROY,exact,Méricourt,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,Champforgeuil,71081,CHAMPFORGEUIL,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,Farges-lès-Chalon,71194,FARGES-LES-CHALON,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,La Loyère,71265,LA LOYERE,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,Fragnes,71204,FRAGNES,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,Virey,71585,Virey,disparue,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,Sassenay,71502,SASSENAY,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Nord,Crissey,71154,CRISSEY,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1237,1984-12-24,71,Chalon-sur-Saône-Ouest,Châtenoy-le-Royal,71118,CHATENOY-LE-ROYAL,exact,Chalon-sur-Saône,JORF_19841230_305
+84-1238,1984-12-24,81,Albi-Nord-Est,Aithès,,,aucun,Albi,JORF_19841230_305
+84-1238,1984-12-24,81,Albi-Nord-Est,Le Garric,81101,LE GARRIC,exact,Albi,JORF_19841230_305
+84-1238,1984-12-24,81,Albi-Nord-Est,Lescure-d'Albigeois,81144,LESCURE-D'ALBIGEOIS,exact,Albi,JORF_19841230_305
+84-1242,1984-12-24,94,Arcueil,Arcueil,94003,ARCUEIL,exact,Gentilly,JORF_19841230_305
+84-1242,1984-12-24,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,ressemblance,Gentilly,JORF_19841230_305

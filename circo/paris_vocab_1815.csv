@@ -1,0 +1,49 @@
+cle,quartier,nom_vasserot,arrondissement,voie,occurrences
+arcis,28,Arcis,7,direct,5
+arsenal,36,Arsenal,9,direct,5
+banquedefrance,16,Banque de France,4,direct,5
+bonnenouvelle,19,Bonne Nouvelle,5,direct,5
+champselysees,2,Champs-Elysees,1,direct,5
+chausseedantin,5,Chaussee d'Antin,2,direct,5
+cite,35,Cite,9,direct,5
+ecoledemedecine,42,Ecole de Medecine,11,direct,5
+faubourgmontmartre,8,Faubourg Montmartre,2,direct,5
+faubourgpoissoniere,9,Faubourg Poissonniere,3,orthographe : un « n » manquant,5
+faubourgsaintantoine,31,Faubourg Saint-Antoine,8,direct,5
+faubourgsaintdenis,17,Faubourg Saint-Denis,5,direct,5
+faubourgsaintgermain,40,Faubourg Saint-Germain,10,direct,5
+feydeau,7,Feydeau,2,direct,5
+hoteldeville,34,Hotel de Ville,9,direct,5
+ilesaintlouis,33,Ile Saint-Louis,9,direct,5
+invalides,39,Invalides,10,direct,5
+jardindesplantes,47,Jardin du Roi,12,renommage : le Jardin du Roi devient Jardin des Plantes,5
+lemail,12,Mail,3,article,5
+leroule,1,Roule,1,article,5
+lombards,23,Lombards,6,direct,5
+louvre,14,Louvre,4,direct,5
+luxembourg,41,Luxembourg,11,direct,5
+marais,29,Marais,8,direct,4
+marches,15,Marches,4,direct,6
+marchesaintjean,27,Marche Saint-Jean,7,direct,5
+monnaie,37,Monnaie,10,direct,5
+montdepiete,26,Mont de Piete,7,direct,4
+montmartre,10,Montmartre,3,direct,5
+montorgueil,20,Montorgueil,5,direct,5
+observatoire,48,Observatoire,12,direct,5
+palaisdejustice,44,Palais de Justice,11,direct,5
+palaisroyal,6,Palais-Royal,2,direct,5
+placevendome,3,Place Vendome,1,direct,5
+popincourt,30,Popincourt,8,direct,5
+portedesaintdenis,21,Porte Saint-Denis,6,direct,5
+portesaintmartin,18,Porte Saint-Martin,5,direct,5
+quinzevingts,32,Quinze-Vingts,8,direct,5
+saintavoye,25,Sainte-Avoie,7,orthographe,5
+saintfustache,11,Saint-Eustache,3,coquille : f pour E,5
+sainthonore,13,Saint-Honore,4,direct,5
+saintjacques,45,Saint-Jacques,12,direct,5
+saintmarcel,46,Saint-Marcel,12,direct,5
+saintmartindeschamps,22,Saint-Martin-des-Champs,6,direct,5
+saintthomasdacquin,38,Saint-Thomas d'Aquin,10,orthographe : dAcquin pour dAquin,5
+sorbonne,43,Sorbonne,11,direct,5
+temple,24,Temple,6,direct,5
+tuileries,4,Tuileries,1,direct,5
