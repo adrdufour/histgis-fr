@@ -1,0 +1,168 @@
+dep,code,communes,verdict,exemples
+01,0154,1,bruit d'OCR probable,Genay
+01,0175,1,bruit d'OCR probable,Seine
+03,0393,1,bruit d'OCR probable,Fieuriel
+04,0456,1,bruit d'OCR probable,Escale (L')
+06,0631,2,bruit d'OCR probable,Brigue (La) ; Tende
+07,0767,1,bruit d'OCR probable,St-Lager-Bressac
+07,0774,1,bruit d'OCR probable,Cheminas
+08,0834,1,bruit d'OCR probable,Guincourt
+08,0845,1,bruit d'OCR probable,tion
+08,0894,1,bruit d'OCR probable,Tremblois-lès-Carignan
+09,0900,1,bruit d'OCR probable,JAscou
+12,1293,1,bruit d'OCR probable,Sébazac-Concourès
+12,1296,1,bruit d'OCR probable,Albres (Les)
+13,1398,1,cadre : Marseille repliée en pseudo-cantons,rorAL
+14,1450,1,bruit d'OCR probable,Pont-Farcy
+14,1453,1,bruit d'OCR probable,Étreham
+14,1457,1,bruit d'OCR probable,Maisoncelles-Pelvey
+14,1493,1,bruit d'OCR probable,Svbles
+16,1666,1,bruit d'OCR probable,Vignolles
+16,1699,1,bruit d'OCR probable,St-Quentin-sur-Charente
+17,1764,1,bruit d'OCR probable,Contré
+17,1797,1,bruit d'OCR probable,Grève-sur-le-Mignon (La)
+18,1800,1,bruit d'OCR probable,t À Aubinges
+19,1930,7,CANDIDAT création après 1940,Chapelle-aux-Brocs (La) ; Cosnac ; Estivals ; Jugeals-Nazareth ; Malemort-sur-Corrèze ; Ne
+21,2198,1,bruit d'OCR probable,Noiron-sur-Seine
+23,2352,1,bruit d'OCR probable,Malleret
+24,2461,1,bruit d'OCR probable,Bourniquel
+27,2751,1,bruit d'OCR probable,Frétils (Les)
+29,2954,1,bruit d'OCR probable,St-Jean-Trolimon
+29,2968,1,bruit d'OCR probable,Quéménéven
+30,3097,1,bruit d'OCR probable,Bagnols-sur-Cèze
+31,3167,1,bruit d'OCR probable,Cabanac-Séguenville
+31,3197,1,bruit d'OCR probable,Lagraulet-St-Nicolas
+32,3245,1,bruit d'OCR probable,Panassac
+32,3294,1,bruit d'OCR probable,Larée
+32,3296,1,bruit d'OCR probable,CONDOM
+33,3356,1,bruit d'OCR probable,Portets
+34,3455,1,bruit d'OCR probable,Servian
+34,3469,1,bruit d'OCR probable,Lauret
+34,3499,1,bruit d'OCR probable,Fontanès
+35,3556,1,bruit d'OCR probable,Montours
+35,3591,1,bruit d'OCR probable,Marcillé-Raoul
+38,3850,1,bruit d'OCR probable,St-Vérand
+38,3851,1,bruit d'OCR probable,Mions
+38,3898,1,bruit d'OCR probable,TOTAÏ
+39,3992,1,bruit d'OCR probable,Marigna-sur-Valouse
+39,3994,1,bruit d'OCR probable,Chapelle-Voland
+42,4252,1,bruit d'OCR probable,Pradines
+42,4267,1,bruit d'OCR probable,Épercieux-St-Paul
+42,4297,1,bruit d'OCR probable,St-Barthélemy-Lestra
+43,4396,1,bruit d'OCR probable,Séneujols
+45,4550,1,bruit d'OCR probable,Augerville-la-Rivière
+46,4630,4,CANDIDAT création après 1940,Comiac ; Lacam-d'Ourcet ; Lamativie ; Sousceyrac
+46,4666,1,bruit d'OCR probable,St-Denis-Catus
+46,4697,1,bruit d'OCR probable,Montcléra
+48,4873,1,bruit d'OCR probable,Salces (Les)
+49,4959,1,bruit d'OCR probable,St-Sauveur-de-Flée
+49,4999,1,bruit d'OCR probable,Bouzillé
+50,5053,1,bruit d'OCR probable,Carnet
+51,5152,1,bruit d'OCR probable,Sommepy-Tahure
+51,5169,1,bruit d'OCR probable,JBcursauit
+54,5452,1,bruit d'OCR probable,Mandres-aux-Quatre-Tours
+54,5494,1,bruit d'OCR probable,Neufmaisons
+55,5562,1,bruit d'OCR probable,Harville
+55,5568,1,bruit d'OCR probable,Foameix
+57,5746,1,bruit d'OCR probable,das ls LONGEVILLE-LES-METZ
+57,5751,1,bruit d'OCR probable,Manderen
+57,5763,1,bruit d'OCR probable,Gomelange
+57,5799,1,bruit d'OCR probable,TOYAL
+60,6055,1,bruit d'OCR probable,Hécourt
+60,6092,1,bruit d'OCR probable,Houssoye (La)
+60,6095,1,bruit d'OCR probable,Boursonne
+61,6151,1,bruit d'OCR probable,St-Hiaire-la-Gérard
+62,6249,1,bruit d'OCR probable,Sarton
+62,6291,1,bruit d'OCR probable,Inghem
+62,6292,1,bruit d'OCR probable,Nielles-lès-Ardres
+62,6297,1,bruit d'OCR probable,Willencourt
+64,6449,1,bruit d'OCR probable,Argelos
+64,6453,1,bruit d'OCR probable,St-Martin-d'Arrossa
+64,6465,2,bruit d'OCR probable,Malaussanne ; Uzan
+64,6494,1,bruit d'OCR probable,Louvie-Juzon
+64,6496,1,bruit d'OCR probable,Canton N
+65,6595,1,bruit d'OCR probable,Escala
+67,6753,1,bruit d'OCR probable,Kirchheim
+68,6861,1,bruit d'OCR probable,Illfurth
+68,6869,1,bruit d'OCR probable,Zimmersheim
+68,6891,1,bruit d'OCR probable,Tagolïsheim
+69,6996,1,cadre : Lyon replié en pseudo-cantons,Bagnols
+69,6999,1,cadre : Lyon replié en pseudo-cantons,LYON
+70,7072,1,bruit d'OCR probable,Hautevelle
+72,7235,1,bruit d'OCR probable,Dollon
+72,7292,1,bruit d'OCR probable,Vivoin
+72,7295,1,bruit d'OCR probable,Maigné
+73,7395,2,bruit d'OCR probable,ALBERTVILLE ; St-Sigismond
+75,7599,1,cadre : Seine démembrée en 1964,PARIS
+76,7664,1,bruit d'OCR probable,Rosay
+77,7793,1,bruit d'OCR probable,JUry
+78O,78O01,12,cadre : Seine-et-Oise démembrée en 1964,Argentcuil ; Bczons ; c ; Carrières-sur-Seine ; Cormeilles-en-Parisis ; Étiolles ; Frette-
+78O,78O02,15,cadre : Seine-et-Oise démembrée en 1964,Arpajon ; Avraiaville ; Brétigny-sur-Orge ; Bruyères-le-Châtel ; Cheptainville ; Guibeviil
+78O,78O03,5,cadre : Seine-et-Oise démembrée en 1964,Aulnay-sous-Bois ; PBlanc-Mesnit (Le) ; Sevran ; Tremblay-lès-Gonesse ; Villepinte
+78O,78O04,14,cadre : Seine-et-Oise démembrée en 1964,Boissy-St-Léger ; Chennevières-sur-Marne ; Épiray-sous-Sénart ; Limeil-Brévannes ; Mandres
+78O,78O05,23,cadre : Seine-et-Oise démembrée en 1964,Bennecourt ; Blaru ; Boissy-Mauvoisin ; Bonnières-sur-Seine ; Bréval ; Chauffour-lès-Bonni
+78O,78O06,14,cadre : Seine-et-Oise démembrée en 1964,Cernay-la-Ville ; Chevreuse ; Choisel ; Coignières ; Dumpierre ; Jouars-Pontchartrain ; Ma
+78O,78O07,18,cadre : Seine-et-Oise démembrée en 1964,Auvernaux ; Ballancourt ; Bondouñe ; Champcueil ; Chevannes ; CORELL-ESSONNES ; Coudray-Mo
+78O,78O08,15,cadre : Seine-et-Oise démembrée en 1964,Angervilliers ; Boissy-sous-St-Yon ; Bonnelles ; Breuillet ; Breux ; Bullion ; Celle-les-B
+78O,78O09,19,cadre : Seine-et-Oise démembrée en 1964,Ablis ; Allainville ; Authon-la-Plaine ; Bvinville-le-Gaillard ; Chatignonville ; Corbreus
+78O,78O10,18,cadre : Seine-et-Oise démembrée en 1964,Attainville ; Baillet-en-France ; Bouffémont ; Bouqueval ; Châtenay-en-France ; Domont ; É
+78O,78O11,12,cadre : Seine-et-Oise démembrée en 1964,Boissy-le-Sec ; Boutervilliers ; Bouville ; Brières-les-Scellés ; Chalo-St-Mars ; Chauffou
+78O,78O12,16,cadre : Seine-et-Oise démembrée en 1964,Auvers-St-Georges ; Baulne ; Boissy-le-Cutté ; Bouray-sur-Juine ; Boutigny-sur-Essonnes ; 
+78O,78O13,6,cadre : Seine-et-Oise démembrée en 1964,Arnouville-lès-Goneste ; Bonneuil-en-France ; Garges-lès-Gonesse ; Gonesse ; Goussainville
+78O,78O14,28,cadre : Seine-et-Oise démembrée en 1964,Montfoïrt-l'Amaury ; Adainville ; Bazainville ; Boissets ; Bourdonné ; Civry-la-Forêt ; Co
+78O,78O15,17,cadre : Seine-et-Oise démembrée en 1964,Beaumont-sur-Oise ; Bruyères-sur-Oise ; Champagne-sur-Oise ; Hédouville ; Hérouville ; sle
+78O,78O16,18,cadre : Seine-et-Oise démembrée en 1964,Brueil-en-Vexin ; Drocourt ; Follainville-Dennemont ; Fontenay-St-Père ; Gargenville ; Gue
+78O,78O17,14,cadre : Seine-et-Oise démembrée en 1964,Boullay-les-Troux ; Briis-sous-Forges ; Courson-Morntelous ; Fontenay-lès-Briis ; Forges-l
+78O,78O18,19,cadre : Seine-et-Oise démembrée en 1964,Ablon-sur-Seine ; fAthis-Mons ; Ballainvilliers ; Champlan ; Chilly-Mazarin ; Grigny ; Juv
+78O,78O19,17,cadre : Seine-et-Oise démembrée en 1964,Asnières-sur-Oise ; Belicfontaine ; Belloy-cen-France ; Chaumontel ; Chennevières-lès-Louv
+78O,78O20,25,cadre : Seine-et-Oise démembrée en 1964,Ambleviile ; Amerucourt ; Arthies ; Arthieul ; Blamécourt ; Bray-et-L ü ; Buhy ; Chapellc-
+78O,78O21,4,cadre : Seine-et-Oise démembrée en 1964,Achères ; Maisons-Laffitte ; Mesnil-le-Roi (Le) ; Sartrouville
+78O,78O22,20,cadre : Seine-et-Oise démembrée en 1964,Andelu ; Arnouville-lès-Mantes ; Auffreville-Brasseuil ; Bellay-en-Vexin (Le) ; fBoinville
+78O,78O23,22,cadre : Seine-et-Oise démembrée en 1964,Ableiges ; Arronville ; Avernes ; Berville ; Bréançon ; Brignancourt ; Chers ; Cléry-en-Ve
+78O,78O24,12,cadre : Seine-et-Oise démembrée en 1964,Bailly ; Bougival ; Celle-St-Clcud (La) ; Chavenay ; Étang-la-Ville (L’) ; ÎLouveciennes ;
+78O,78O25,16,cadre : Seine-et-Oise démembrée en 1964,Abbéville-la-Rivière ; Angervilie ; Arrancourt ; Blandy ; Bois-Herpin ; Boissy-la-Rivière 
+78O,78O26,15,cadre : Seine-et-Oise démembrée en 1964,Aincourt ; Aubergenville ; Aulnay-sur-Mauldre ; Bazemont ; Bouafie ; Chapet ; JÉvecquemont
+78O,78O27,9,cadre : Seine-et-Oise démembrée en 1964,Brouy ; Buno-Bonnevaux ; Champmoiteux ; Courances ; Courdimanche-sur-Essonnes ; Dunnemon ;
+78O,78O28,23,cadre : Seine-et-Oise démembrée en 1964,Auteuil-le-Roi ; Bazoches-sur-Guyonne ; Béhoust ; Beynes ; Boissy-sans-Avoir ; Flexanville
+78O,78O29,7,cadre : Seine-et-Oise démembrée en 1964,Andilly ; Deuil-la-Burre ; Enghign-les-Pains ; Groslay ; Montmorency ; ÎSt-Gratien ; Soisy
+78O,78O30,15,cadre : Seine-et-Oise démembrée en 1964,Bièvres ; Bures-sur-Yvette ; Châteaufort ; IGif-sur-Yvette ; Igny ; Orsay ; Saclay ; St-Au
+78O,78O31,13,cadre : Seine-et-Oise démembrée en 1964,Afluets-le-Roi (Les) ; fAndrésy ; Carrières-sous-Poissy ; Chanteloup-les-Vignes ; Crespièr
+78O,78O32,15,cadre : Seine-et-Oise démembrée en 1964,Auvers-sur-Oise ; Boisemont ; Boissy-l'Aillerie ; Butry-sur-Oise ; Cergy ; Courdimanche ; 
+78O,78O33,11,cadre : Seine-et-Oise démembrée en 1964,Clichy-sous-Bois ; Coubrou ; Gagny ; Gournay-sur-Marne ; Livry-Gargan ; Montfermeil ; Neui
+78O,78O34,17,cadre : Seine-et-Oise démembrée en 1964,Auffargis ; Boissière-École (La) ; Bréviaires (Les) ; Émancé ; Essarts-le-Roi (Les) ; Gamb
+78O,78O35,7,cadre : Seine-et-Oise démembrée en 1964,Aigremont ; Chambourcy ; Chatou ; Croissy-sur-Scine ; Pecq (Le) ; St-Germain-en-Laye ; Vés
+78O,78O36,7,cadre : Seine-et-Oise démembrée en 1964,Chaville ; Garches ; Marnes-la-Coquette ; Meudon ; St.Cloud ; Vaucresson ; Ville-d'Avray
+78O,78O37,11,cadre : Seine-et-Oise démembrée en 1964,Bessancourt ; Béthemnont-la-Forêt ; Chauvry ; Enubonne ; Ermant ; Franconvilie ; Montligno
+78O,78O38,1,cadre : Seine-et-Oise démembrée en 1964,Virofay
+78O,78O39,10,cadre : Seine-et-Oise démembrée en 1964,Bois-d'Arcy ; Chesnay (Le) ; Clayes-sous-Bois (Les) ; Guyancourt ; Montigay-le-Breicnneux 
+78O,78O40,4,cadre : Seine-et-Oise démembrée en 1964,Buc ; Jouy-en-Josas ; Loges-en-Josas (Les) ; Vélizy-Villacoublay
+78O,78O41,9,cadre : Seine-et-Oise démembrée en 1964,Boussy-St-Antoine ; Brunoy ; Crosnes ; Draveil ; Montgeron ; Quincy-sous-Sénart ; Vigneux-
+78O,78O50,1,cadre : Seine-et-Oise démembrée en 1964,Palaiseau
+78O,78O52,1,cadre : Seine-et-Oise démembrée en 1964,Mondeville
+78O,78O92,1,cadre : Seine-et-Oise démembrée en 1964,Montihéry
+79,7951,1,bruit d'OCR probable,Brion-près-Thouct
+79,7968,2,bruit d'OCR probable,Pamplic ; Ste-Ouenne
+79,7992,1,bruit d'OCR probable,St-Pierre-à-Champ
+81,8162,1,bruit d'OCR probable,Cagnac-les-Mines
+81,8199,1,bruit d'OCR probable,Loubers
+82,8262,1,bruit d'OCR probable,Auterive
+84,8432,1,bruit d'OCR probable,Gouit
+85,8550,1,bruit d'OCR probable,Longeville
+85,8594,1,bruit d'OCR probable,St-Hilaire-le-Vouhis
+87,8757,1,bruit d'OCR probable,Roussac
+88,8866,1,bruit d'OCR probable,Hadigny-les-Verrières
+88,8867,1,bruit d'OCR probable,Arofte
+88,8895,1,bruit d'OCR probable,Vincey
+89,8951,1,bruit d'OCR probable,Vinneuf
+89,8958,1,bruit d'OCR probable,Joux-la-Ville
+89,8961,1,bruit d'OCR probable,Chassy
+90,9007,1,bruit d'OCR probable,LOIRE CHaute) ue
+90,9015,1,bruit d'OCR probable,ERE
+90,9019,1,bruit d'OCR probable,CORREZE
+90,9031,1,bruit d'OCR probable,IGARONNE (Haute)
+90,9032,1,bruit d'OCR probable,GERS
+90,9049,1,bruit d'OCR probable,MAINE-ET-LOIRE cc
+90,9050,2,bruit d'OCR probable,MME ; MANCHE
+90,9064,1,bruit d'OCR probable,PYRENEES (Basses)
+90,9082,1,bruit d'OCR probable,TARN-ET-CARONNE
+90,9090,2,bruit d'OCR probable,BELFORT (Territoire de) ; BELFORT (Territoire de)

@@ -1,0 +1,58 @@
+RAPPORT D'EN-TÊTES TRF-GIS
+============================================================
+
+## Inventaire
+    .tab                   3  <- lu
+
+    3 fichiers à inspecter.
+
+### Nomenclatures/COG_CANTONS_1870_MAPPING.tab
+    ~289 lignes, séparateur TAB, 14 colonnes
+    dep                  ex: 03                             03
+    dep_name             ex: ALLIER                         ALLIER
+    dep_name_prop        ex: Allier                         Allier
+    depar                ex: 031                            031
+    ar_name              ex: MONTLUCON                      MONTLUCON
+    ar_name_prop         ex: Montlu��on                     Montlu��on
+    depct                ex: 0320                           0321
+    ct                   ex: 20                             21
+    ct_name              ex: MONTLUCON-EST                  MONTLUCON-OUEST
+    ct_name_prop         ex: Montlu��on-Est                 Montlu��on-Ouest
+    deppct               ex: 0380                           0380
+    pct                  ex: 80                             80
+    pct_name             ex: MONTLUCON                      MONTLUCON
+    pct_name_prop        ex: Montlu��on                     Montlu��on
+
+### Nomenclatures/COG_CANTONS_1900_MAPPING.tab
+    ~295 lignes, séparateur TAB, 14 colonnes
+    dep                  ex: 03                             03
+    dep_name             ex: ALLIER                         ALLIER
+    dep_name_prop        ex: Allier                         Allier
+    depar                ex: 031                            031
+    ar_name              ex: MONTLUCON                      MONTLUCON
+    ar_name_prop         ex: Montlu��on                     Montlu��on
+    depct                ex: 0320                           0321
+    ct                   ex: 20                             21
+    ct_name              ex: MONTLUCON-EST                  MONTLUCON-OUEST
+    ct_name_prop         ex: Montlu��on-Est                 Montlu��on-Ouest
+    deppct               ex: 0380                           0380
+    pct                  ex: 80                             80
+    pct_name             ex: MONTLUCON                      MONTLUCON
+    pct_name_prop        ex: Montlu��on                     Montlu��on
+
+### Nomenclatures/COG_CANTONS_1940_MAPPING.tab
+    ~323 lignes, séparateur TAB, 14 colonnes
+    dep                  ex: 03                             03
+    dep_name             ex: ALLIER                         ALLIER
+    dep_name_prop        ex: Allier                         Allier
+    depar                ex: 031                            031
+    ar_name              ex: MONTLUCON                      MONTLUCON
+    ar_name_prop         ex: Montlu��on                     Montlu��on
+    depct                ex: 0320                           0321
+    ct                   ex: 20                             21
+    ct_name              ex: MONTLUCON-EST                  MONTLUCON-OUEST
+    ct_name_prop         ex: Montlu��on-Est                 Montlu��on-Ouest
+    deppct               ex: 0380                           0380
+    pct                  ex: 80                             80
+    pct_name             ex: MONTLUCON                      MONTLUCON
+    pct_name_prop        ex: Montlu��on                     Montlu��on

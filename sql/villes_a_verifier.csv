@@ -1,0 +1,1749 @@
+insee,nom,dep,km2,cantons_1870_1940,cantons_1999_2012,circos_1986,circos_2012,atomes_ecartes_1986,atomes_ecartes_2012,circos_en_conflit,motif
+75116,PARIS-16E-ARRONDISSEMENT,75,16.75,1,1,0,0,0,1,75-04 / 75-14,"0 - Paris, irreductible"
+75112,PARIS-12E-ARRONDISSEMENT,75,16.18,1,1,0,0,0,1,75-07 / 75-08,"0 - Paris, irreductible"
+75115,PARIS-15E-ARRONDISSEMENT,75,8.39,1,1,0,0,0,1,75-12 / 75-13,"0 - Paris, irreductible"
+75113,PARIS-13E-ARRONDISSEMENT,75,7.05,1,1,0,0,0,1,75-09 / 75-10,"0 - Paris, irreductible"
+75119,PARIS-19E-ARRONDISSEMENT,75,6.54,1,1,0,0,0,1,75-16 / 75-17,"0 - Paris, irreductible"
+75120,PARIS-20E-ARRONDISSEMENT,75,6.29,1,1,0,0,0,1,75-06 / 75-08 / 75-15,"0 - Paris, irreductible"
+75118,PARIS-18E-ARRONDISSEMENT,75,5.81,1,1,0,0,0,1,75-03 / 75-17 / 75-18,"0 - Paris, irreductible"
+75114,PARIS-14E-ARRONDISSEMENT,75,5.80,1,1,0,0,0,1,75-10 / 75-11,"0 - Paris, irreductible"
+75117,PARIS-17E-ARRONDISSEMENT,75,5.76,1,1,0,0,0,1,75-03 / 75-04,"0 - Paris, irreductible"
+75107,PARIS-7E-ARRONDISSEMENT,75,3.86,1,1,0,0,0,1,75-02 / 75-12,"0 - Paris, irreductible"
+75108,PARIS-8E-ARRONDISSEMENT,75,3.85,1,1,0,1,0,0,,"0 - Paris, irreductible"
+75111,PARIS-11E-ARRONDISSEMENT,75,3.30,1,1,0,0,0,1,75-06 / 75-07,"0 - Paris, irreductible"
+75110,PARIS-10E-ARRONDISSEMENT,75,2.99,1,1,0,1,0,0,,"0 - Paris, irreductible"
+75109,PARIS-9E-ARRONDISSEMENT,75,2.42,1,1,0,0,0,1,75-01 / 75-18,"0 - Paris, irreductible"
+75105,PARIS-5E-ARRONDISSEMENT,75,2.28,1,1,0,1,0,0,,"0 - Paris, irreductible"
+75106,PARIS-6E-ARRONDISSEMENT,75,2.13,1,1,0,0,0,1,75-02 / 75-11,"0 - Paris, irreductible"
+75101,PARIS-1ER-ARRONDISSEMENT,75,1.94,1,1,0,1,0,0,,"0 - Paris, irreductible"
+75104,PARIS-4E-ARRONDISSEMENT,75,1.70,1,1,0,1,0,0,,"0 - Paris, irreductible"
+75103,PARIS-3E-ARRONDISSEMENT,75,1.08,1,1,0,1,0,0,,"0 - Paris, irreductible"
+75102,PARIS-2E-ARRONDISSEMENT,75,0.77,1,1,0,1,0,0,,"0 - Paris, irreductible"
+13209,MARSEILLE--9E--ARRONDISSEMENT,13,64.55,0,1,1,1,0,0,,1 - pseudo-canton
+13211,MARSEILLE-11E--ARRONDISSEMENT,13,33.36,0,1,0,1,1,0,13-06 / 13-08,1 - pseudo-canton
+13213,MARSEILLE-13E--ARRONDISSEMENT,13,27.97,0,1,0,1,1,0,13-07 / 13-08,1 - pseudo-canton
+13208,MARSEILLE--8E--ARRONDISSEMENT,13,18.74,0,1,1,1,0,0,,1 - pseudo-canton
+13215,MARSEILLE-15E--ARRONDISSEMENT,13,17.09,0,1,0,1,1,0,13-04 / 13-07,1 - pseudo-canton
+13214,MARSEILLE-14E--ARRONDISSEMENT,13,16.16,0,1,1,0,0,1,13-03 / 13-07,1 - pseudo-canton
+13216,MARSEILLE-16E--ARRONDISSEMENT,13,14.32,0,1,1,1,0,0,,1 - pseudo-canton
+13212,MARSEILLE-12E--ARRONDISSEMENT,13,13.88,0,1,0,0,1,1,13-01 / 13-03,1 - pseudo-canton
+13210,MARSEILLE-10E--ARRONDISSEMENT,13,10.88,0,1,0,0,1,1,13-01 / 13-06,1 - pseudo-canton
+69387,LYON--7E--ARRONDISSEMENT,69,9.61,0,1,1,0,0,1,69-01 / 69-03,1 - pseudo-canton
+69389,LYON--9E--ARRONDISSEMENT,69,8.02,0,1,0,0,0,1,69-01 / 69-02,1 - pseudo-canton
+69388,LYON--8E--ARRONDISSEMENT,69,6.80,0,1,0,0,0,1,69-01 / 69-03 / 69-04,1 - pseudo-canton
+69383,LYON--3E--ARRONDISSEMENT,69,6.20,0,1,0,0,1,1,69-03 / 69-04,1 - pseudo-canton
+69385,LYON--5E--ARRONDISSEMENT,69,5.89,0,1,1,1,0,0,,1 - pseudo-canton
+13207,MARSEILLE--7E--ARRONDISSEMENT,13,3.94,0,1,1,1,0,0,,1 - pseudo-canton
+69386,LYON--6E--ARRONDISSEMENT,69,3.67,0,1,1,1,0,0,,1 - pseudo-canton
+69382,LYON--2E--ARRONDISSEMENT,69,3.46,0,1,0,0,0,1,69-01 / 69-02,1 - pseudo-canton
+13202,MARSEILLE--2E--ARRONDISSEMENT,13,3.27,0,1,1,1,0,0,,1 - pseudo-canton
+13204,MARSEILLE--4E--ARRONDISSEMENT,13,2.98,0,1,1,1,0,0,,1 - pseudo-canton
+69384,LYON--4E--ARRONDISSEMENT,69,2.79,0,1,1,1,0,0,,1 - pseudo-canton
+13203,MARSEILLE--3E--ARRONDISSEMENT,13,2.40,0,1,1,1,0,0,,1 - pseudo-canton
+13205,MARSEILLE--5E--ARRONDISSEMENT,13,2.21,0,1,1,0,0,1,13-04 / 13-05,1 - pseudo-canton
+13206,MARSEILLE--6E--ARRONDISSEMENT,13,1.79,0,1,0,0,1,1,13-04 / 13-05,1 - pseudo-canton
+13201,MARSEILLE--1ER-ARRONDISSEMENT,13,1.69,0,1,0,1,1,0,13-01 / 13-03,1 - pseudo-canton
+69381,LYON--1ER-ARRONDISSEMENT,69,1.41,0,1,1,1,0,0,,1 - pseudo-canton
+13001, Aix-en-Provence,13,188.15,2,3,2,2,0,1,13-11 / 13-14,2 - circo ecartee
+31555, Toulouse,31,119.21,4,15,6,5,0,1,31-03 / 31-09,2 - circo ecartee
+67482, Strasbourg,67,78.60,4,10,3,3,0,1,67-01 / 67-03,2 - circo ecartee
+57463, Metz,57,42.30,3,4,3,2,0,1,57-01 / 57-03,2 - circo ecartee
+69290, Saint-Priest,69,29.45,1,1,1,0,0,1,69-13 / 69-14,2 - circo ecartee
+06155, Vallauris,06,13.32,1,1,1,0,0,1,06-07 / 06-08,2 - circo ecartee
+92012, Boulogne-Billancourt,92,5.94,2,3,1,1,0,1,92-09 / 92-10,2 - circo ecartee
+92026, Courbevoie,92,4.33,1,2,1,1,0,1,92-03 / 92-06,2 - circo ecartee
+13004, Arles,13,758.59,2,2,1,1,0,0,,3 - multicantonale
+11262, Narbonne,11,175.56,1,3,1,1,0,0,,3 - multicantonale
+12145, Millau,12,169.67,1,2,1,1,0,0,,3 - multicantonale
+30189, Nîmes,30,162.30,3,7,2,2,0,0,,3 - multicantonale
+82121, Montauban,82,136.13,2,6,1,1,0,0,,3 - multicantonale
+83069, Hyères,83,134.48,1,3,1,1,0,0,,3 - multicantonale
+13047, Istres,13,114.48,1,2,1,2,0,0,,3 - multicantonale
+04070, Digne-les-Bains,04,109.50,1,2,1,1,0,0,,3 - multicantonale
+05061, Gap,05,108.81,1,6,1,1,0,0,,3 - multicantonale
+81065, Castres,81,99.52,1,4,1,2,0,0,,3 - multicantonale
+34032, Béziers,34,96.37,2,4,1,1,0,0,,3 - multicantonale
+49099, Cholet,49,88.12,1,3,1,1,0,0,,3 - multicantonale
+85191,La Roche-sur-Yon,85,88.10,1,2,2,2,0,0,,3 - multicantonale
+82112, Moissac,82,85.33,1,2,1,1,0,0,,3 - multicantonale
+29232, Quimper,29,83.83,1,3,1,1,0,0,,3 - multicantonale
+2A004, Ajaccio,2A,83.77,1,7,2,2,0,0,,3 - multicantonale
+47323, Villeneuve-sur-Lot,47,81.77,1,2,1,1,0,0,,3 - multicantonale
+87085, Limoges,87,81.23,4,16,3,3,0,0,,3 - multicantonale
+42218, Saint-Étienne,42,79.84,4,9,3,2,0,0,,3 - multicantonale
+82033, Castelsarrasin,82,78.12,1,2,1,1,0,0,,3 - multicantonale
+84087, Orange,84,75.49,2,2,1,1,0,0,,3 - multicantonale
+13056, Martigues,13,75.19,1,2,1,1,0,0,,3 - multicantonale
+18279, Vierzon,18,74.81,1,2,1,1,0,0,,3 - multicantonale
+06088, Nice,06,74.38,4,14,4,3,0,0,,3 - multicantonale
+32013, Auch,32,73.68,2,4,1,1,0,0,,3 - multicantonale
+81163, Mazamet,81,72.90,1,2,1,1,0,0,,3 - multicantonale
+64422, Oloron-Sainte-Marie,64,69.87,2,2,1,1,0,0,,3 - multicantonale
+66136, Perpignan,66,69.18,2,9,3,3,0,0,,3 - multicantonale
+18033, Bourges,18,69.17,1,5,3,3,0,0,,3 - multicantonale
+79191, Niort,79,69.11,2,3,1,1,0,0,,3 - multicantonale
+68066, Colmar,68,67.33,1,2,1,1,0,0,,3 - multicantonale
+49328, Saumur,49,66.96,3,2,2,2,0,0,,3 - multicantonale
+11069, Carcassonne,11,66.75,2,4,1,2,0,0,,3 - multicantonale
+44109, Nantes,44,66.48,8,11,5,5,0,0,,3 - multicantonale
+25056, Besançon,25,65.90,2,6,2,2,0,0,,3 - multicantonale
+46042, Cahors,46,65.37,2,3,1,1,0,0,,3 - multicantonale
+84007, Avignon,84,64.83,2,4,1,1,0,0,,3 - multicantonale
+71014, Autun,71,62.39,1,2,1,1,0,0,,3 - multicantonale
+88160, Épinal,88,60.01,1,2,1,1,0,0,,3 - multicantonale
+87154, Saint-Junien,87,58.63,1,2,1,1,0,0,,3 - multicantonale
+34172, Montpellier,34,57.35,3,10,4,5,0,0,,3 - multicantonale
+04112, Manosque,04,56.80,1,3,1,1,0,0,,3 - multicantonale
+24037, Bergerac,24,56.58,1,2,1,1,0,0,,3 - multicantonale
+42207, Saint-Chamond,42,55.83,1,2,1,1,0,0,,3 - multicantonale
+76351,Le Havre,76,55.36,6,9,3,2,0,0,,3 - multicantonale
+52121, Chaumont,52,55.20,1,2,1,1,0,0,,3 - multicantonale
+13005, Aubagne,13,55.12,1,2,1,1,0,0,,3 - multicantonale
+58086, Cosne-Cours-sur-Loire,58,53.36,1,2,1,1,0,0,,3 - multicantonale
+72181,Le Mans,72,52.95,3,9,4,4,0,0,,3 - multicantonale
+60159, Compiègne,60,52.76,1,3,2,2,0,0,,3 - multicantonale
+86066, Châtellerault,86,52.05,1,3,1,1,0,0,,3 - multicantonale
+19275, Ussel,19,51.62,1,2,1,1,0,0,,3 - multicantonale
+35238, Rennes,35,51.49,4,11,4,4,0,0,,3 - multicantonale
+57672, Thionville,57,50.98,1,2,1,1,0,0,,3 - multicantonale
+89024, Auxerre,89,50.10,2,5,1,1,0,0,,3 - multicantonale
+80021, Amiens,80,50.00,4,8,2,2,0,0,,3 - multicantonale
+33063, Bordeaux,33,49.49,7,8,3,3,0,0,,3 - multicantonale
+78551, Saint-Germain-en-Laye,78,49.07,1,2,1,1,0,0,,3 - multicantonale
+52448, Saint-Dizier,52,49.05,1,4,1,1,0,0,,3 - multicantonale
+19031, Brive-la-Gaillarde,19,48.86,1,5,1,1,0,0,,3 - multicantonale
+44184, Saint-Nazaire,44,48.70,1,3,1,1,0,0,,3 - multicantonale
+29019, Brest,29,48.43,3,10,2,2,0,0,,3 - multicantonale
+33281, Mérignac,33,48.32,1,2,1,1,0,0,,3 - multicantonale
+11076, Castelnaudary,11,47.66,2,2,1,1,0,0,,3 - multicantonale
+09225, Pamiers,09,47.20,1,2,1,1,0,0,,3 - multicantonale
+51454, Reims,51,47.03,4,10,3,4,0,0,,3 - multicantonale
+26198, Montélimar,26,46.95,1,2,1,1,0,0,,3 - multicantonale
+88413, Saint-Dié-des-Vosges,88,46.41,1,2,1,1,0,0,,3 - multicantonale
+81004, Albi,81,45.98,1,6,2,2,0,0,,3 - multicantonale
+17415, Saintes,17,45.97,2,3,1,1,0,0,,3 - multicantonale
+47157, Marmande,47,45.55,1,2,1,1,0,0,,3 - multicantonale
+41194, Romorantin-Lanthenay,41,45.24,1,2,1,1,0,0,,3 - multicantonale
+49007, Angers,49,44.82,3,8,4,4,0,0,,3 - multicantonale
+02408, Laon,02,44.74,1,2,1,1,0,0,,3 - multicantonale
+06069, Grasse,06,44.56,1,2,1,2,0,0,,3 - multicantonale
+83137, Toulon,83,44.30,4,9,2,2,0,0,,3 - multicantonale
+59043, Bailleul,59,43.98,2,2,1,1,0,0,,3 - multicantonale
+86194, Poitiers,86,43.53,2,7,2,2,0,0,,3 - multicantonale
+59183, Dunkerque,59,43.41,2,4,2,2,0,0,,3 - multicantonale
+63113, Clermont-Ferrand,63,43.04,4,9,3,3,0,0,,3 - multicantonale
+34301, Sète,34,43.02,1,2,1,1,0,0,,3 - multicantonale
+21231, Dijon,21,41.93,4,8,3,3,0,0,,3 - multicantonale
+13030, Cuges-les-Pins,13,40.22,1,2,1,1,0,0,,3 - multicantonale
+39198, Dole,39,38.65,1,2,1,1,0,0,,3 - multicantonale
+35360, Vitré,35,38.64,2,2,1,1,0,0,,3 - multicantonale
+33318, Pessac,33,38.42,1,2,1,1,0,0,,3 - multicantonale
+36088, Issoudun,36,37.88,2,2,1,1,0,0,,3 - multicantonale
+84031, Carpentras,84,37.84,2,2,1,2,0,0,,3 - multicantonale
+48095, Mende,48,37.73,1,2,1,1,0,0,,3 - multicantonale
+65286, Lourdes,65,37.69,1,2,1,1,0,0,,3 - multicantonale
+41018, Blois,41,37.58,2,5,1,1,0,0,,3 - multicantonale
+26362, Valence,26,36.84,1,4,1,1,0,0,,3 - multicantonale
+40192, Mont-de-Marsan,40,36.64,1,2,1,1,0,0,,3 - multicantonale
+35288, Saint-Malo,35,36.59,1,2,1,1,0,0,,3 - multicantonale
+01283, Oyonnax,01,35.96,1,2,2,1,0,0,,3 - multicantonale
+57606, Saint-Avold,57,35.96,1,2,1,1,0,0,,3 - multicantonale
+59350, Lille,59,35.82,8,9,5,5,0,0,,3 - multicantonale
+46102, Figeac,46,35.28,2,2,1,1,0,0,,3 - multicantonale
+53130, Laval,53,34.83,2,5,2,2,0,0,,3 - multicantonale
+27681, Vernon,27,34.61,1,2,1,1,0,0,,3 - multicantonale
+59526, Saint-Amand-les-Eaux,59,34.23,2,2,1,1,0,0,,3 - multicantonale
+56260, Vannes,56,33.66,2,3,1,1,0,0,,3 - multicantonale
+37261, Tours,37,33.50,3,7,3,2,0,0,,3 - multicantonale
+60057, Beauvais,60,33.47,2,3,2,2,0,0,,3 - multicantonale
+26281, Romans-sur-Isère,26,33.45,1,2,1,1,0,0,,3 - multicantonale
+63300, Riom,63,33.29,2,2,1,1,0,0,,3 - multicantonale
+37122, Joué-lès-Tours,37,33.05,1,2,1,1,0,0,,3 - multicantonale
+62193, Calais,62,32.97,2,4,2,1,0,0,,3 - multicantonale
+13042, Gémenos,13,32.89,1,2,1,1,0,0,,3 - multicantonale
+08105, Charleville-Mézières,08,32.69,1,5,2,2,0,0,,3 - multicantonale
+03095, Cusset,03,32.13,1,2,1,1,0,0,,3 - multicantonale
+55545, Verdun,55,31.94,1,3,1,1,0,0,,3 - multicantonale
+21054, Beaune,21,31.52,2,2,1,1,0,0,,3 - multicantonale
+17300,La Rochelle,17,31.42,2,9,1,1,0,0,,3 - multicantonale
+64445, Pau,64,31.38,2,6,3,3,0,0,,3 - multicantonale
+54528, Toul,54,31.32,4,2,1,1,0,0,,3 - multicantonale
+40313, Tartas,40,30.97,2,2,1,1,0,0,,3 - multicantonale
+13085, Roquefort-la-Bédoule,13,30.36,1,2,1,1,0,0,,3 - multicantonale
+44162, Saint-Herblain,44,29.52,2,2,1,1,0,0,,3 - multicantonale
+15014, Aurillac,15,28.75,2,4,1,1,0,0,,3 - multicantonale
+45234, Orléans,45,28.15,5,6,3,3,0,0,,3 - multicantonale
+59295, Hazebrouck,59,28.11,2,2,1,1,0,0,,3 - multicantonale
+53062, Château-Gontier,53,27.93,1,2,1,1,0,0,,3 - multicantonale
+64024, Anglet,64,27.75,1,2,1,1,0,0,,3 - multicantonale
+59009, Villeneuve-d'Ascq,59,27.73,1,2,1,1,0,0,,3 - multicantonale
+05023, Briançon,05,27.61,1,2,1,1,0,0,,3 - multicantonale
+71270, Mâcon,71,27.26,2,3,1,1,0,0,,3 - multicantonale
+06004, Antibes,06,27.10,1,3,1,1,0,0,,3 - multicantonale
+15187, Saint-Flour,15,27.09,2,2,1,1,0,0,,3 - multicantonale
+27375, Louviers,27,27.07,1,2,1,1,0,0,,3 - multicantonale
+80001, Abbeville,80,26.82,2,2,1,1,0,0,,3 - multicantonale
+27229, Évreux,27,26.59,2,4,2,2,0,0,,3 - multicantonale
+51108, Châlons-en-Champagne,51,26.50,1,4,1,1,0,0,,3 - multicantonale
+13022, Cassis,13,26.43,1,2,1,1,0,0,,3 - multicantonale
+79014, Argenton-l'Église,79,26.28,1,2,1,1,0,0,,3 - multicantonale
+64102, Bayonne,64,26.01,2,3,1,1,0,0,,3 - multicantonale
+23096, Guéret,23,25.99,1,3,1,1,0,0,,3 - multicantonale
+78646, Versailles,78,25.65,3,3,2,2,0,0,,3 - multicantonale
+14118, Caen,14,25.49,2,9,2,2,0,0,,3 - multicantonale
+10323, Romilly-sur-Seine,10,25.44,1,2,1,1,0,0,,3 - multicantonale
+38053, Bourgoin-Jallieu,38,24.99,1,2,2,2,0,0,,3 - multicantonale
+43005, Alleyras,43,24.96,1,2,1,1,0,0,,3 - multicantonale
+41269, Vendôme,41,24.75,1,2,1,1,0,0,,3 - multicantonale
+36044, Châteauroux,36,24.66,1,4,1,1,0,0,,3 - multicantonale
+19272, Tulle,19,24.43,2,2,1,1,0,0,,3 - multicantonale
+27056, Bernay,27,24.32,1,2,1,1,0,0,,3 - multicantonale
+70310, Lure,70,24.10,1,2,1,1,0,0,,3 - multicantonale
+55029, Bar-le-Duc,55,24.03,1,2,1,1,0,0,,3 - multicantonale
+01053, Bourg-en-Bresse,01,23.83,1,3,3,2,0,0,,3 - multicantonale
+28134, Dreux,28,23.78,1,3,1,1,0,0,,3 - multicantonale
+50502, Saint-Lô,50,23.73,1,2,1,1,0,0,,3 - multicantonale
+30007, Alès,30,23.67,2,3,2,2,0,0,,3 - multicantonale
+38544, Vienne,38,23.63,2,2,1,1,0,0,,3 - multicantonale
+26108, Crest,26,23.23,2,2,1,1,0,0,,3 - multicantonale
+02691, Saint-Quentin,02,23.10,1,3,1,1,0,0,,3 - multicantonale
+83126,La Seyne-sur-Mer,83,23.08,1,2,1,1,0,0,,3 - multicantonale
+50629, Vesly,50,22.81,1,2,2,1,0,0,,3 - multicantonale
+51230, Épernay,51,22.65,1,2,1,1,0,0,,3 - multicantonale
+68224, Mulhouse,68,22.39,2,4,2,2,0,0,,3 - multicantonale
+17299, Rochefort,17,22.20,2,3,1,1,0,0,,3 - multicantonale
+89387, Sens,89,22.17,2,3,1,1,0,0,,3 - multicantonale
+73065, Chambéry,73,22.15,2,4,2,1,0,0,,3 - multicantonale
+76540, Rouen,76,21.84,6,7,1,2,0,0,,3 - multicantonale
+50066, Jullouville,50,21.64,1,2,2,1,0,0,,3 - multicantonale
+16015, Angoulême,16,21.58,2,3,2,1,0,0,,3 - multicantonale
+61169, Flers,61,21.50,1,2,1,1,0,0,,3 - multicantonale
+03185, Montluçon,03,21.07,2,5,1,1,0,0,,3 - multicantonale
+07010, Annonay,07,21.03,1,2,1,1,0,0,,3 - multicantonale
+62427, Hénin-Beaumont,62,20.81,1,2,1,1,0,0,,3 - multicantonale
+06029, Cannes,06,20.81,1,3,1,1,0,0,,3 - multicantonale
+53147, Mayenne,53,20.20,2,2,1,1,0,0,,3 - multicantonale
+40088, Dax,40,19.79,1,2,1,1,0,0,,3 - multicantonale
+2B033, Bastia,2B,19.78,2,6,1,1,0,0,,3 - multicantonale
+17306, Royan,17,19.60,1,2,2,2,0,0,,3 - multicantonale
+59122, Cambrai,59,19.33,2,2,1,1,0,0,,3 - multicantonale
+59392, Maubeuge,59,19.13,2,2,1,1,0,0,,3 - multicantonale
+22278, Saint-Brieuc,22,19.07,2,3,1,1,0,0,,3 - multicantonale
+16106, Confolens,16,18.97,2,2,1,1,0,0,,3 - multicantonale
+61214,L' Aigle,61,18.83,1,2,1,1,0,0,,3 - multicantonale
+76575, Saint-Étienne-du-Rouvray,76,18.76,2,2,1,1,0,0,,3 - multicantonale
+89263, Monéteau,89,18.35,1,2,2,1,0,0,,3 - multicantonale
+70285, Héricourt,70,18.15,1,2,1,1,0,0,,3 - multicantonale
+38185, Grenoble,38,18.09,3,6,2,2,0,0,,3 - multicantonale
+06027, Cagnes-sur-Mer,06,18.02,2,3,1,1,0,0,,3 - multicantonale
+90010, Belfort,90,17.78,2,5,2,2,0,0,,3 - multicantonale
+61006, Argentan,61,17.77,1,2,1,1,0,0,,3 - multicantonale
+69257, Vaux-en-Beaujolais,69,17.70,1,2,1,1,0,0,,3 - multicantonale
+59560, Seclin,59,17.69,1,2,1,1,0,0,,3 - multicantonale
+73011, Albertville,73,17.67,1,2,1,1,0,0,,3 - multicantonale
+58194, Nevers,58,17.60,1,4,1,1,0,0,,3 - multicantonale
+69013, Arnas,69,17.58,1,2,1,1,0,0,,3 - multicantonale
+71153,Le Creusot,71,17.50,1,2,1,1,0,0,,3 - multicantonale
+43157,Le Puy-en-Velay,43,17.46,2,5,2,2,0,0,,3 - multicantonale
+28085, Chartres,28,17.39,2,4,2,2,0,0,,3 - multicantonale
+95018, Argenteuil,95,17.23,1,3,1,1,0,0,,3 - multicantonale
+64300, Lacq,64,17.09,1,2,1,1,0,0,,3 - multicantonale
+57227, Forbach,57,17.07,1,2,1,1,0,0,,3 - multicantonale
+59178, Douai,59,16.82,3,4,1,1,0,0,,3 - multicantonale
+62765, Saint-Omer,62,16.67,2,3,1,1,0,0,,3 - multicantonale
+74281, Thonon-les-Bains,74,16.59,1,2,1,1,0,0,,3 - multicantonale
+54329, Lunéville,54,16.59,4,2,1,1,0,0,,3 - multicantonale
+70004, Adelans-et-le-Val-de-Bithaine,70,16.54,1,2,1,1,0,0,,3 - multicantonale
+93005, Aulnay-sous-Bois,93,16.49,2,2,1,1,0,0,,3 - multicantonale
+62178, Bruay-la-Buissière,62,16.43,1,2,1,1,0,0,,3 - multicantonale
+71306, Montceau-les-Mines,71,16.38,2,2,1,1,0,0,,3 - multicantonale
+08409, Sedan,08,16.31,2,3,1,1,0,0,,3 - multicantonale
+77108, Chelles,77,16.17,1,2,1,1,0,0,,3 - multicantonale
+69167, Rivolet,69,16.06,1,2,1,1,0,0,,3 - multicantonale
+42187, Roanne,42,16.01,1,2,1,1,0,0,,3 - multicantonale
+59599, Tourcoing,59,15.79,3,3,2,2,0,0,,3 - multicantonale
+69259, Vénissieux,69,15.76,1,2,1,1,0,0,,3 - multicantonale
+50129, Cherbourg-Octeville,50,15.76,1,3,1,1,0,0,,3 - multicantonale
+65440, Tarbes,65,15.74,2,5,2,2,0,0,,3 - multicantonale
+74010, Annecy,74,15.66,2,3,2,2,0,0,,3 - multicantonale
+73008, Aix-les-Bains,73,15.65,1,3,1,1,0,0,,3 - multicantonale
+71076, Chalon-sur-Saône,71,15.51,2,4,2,2,0,0,,3 - multicantonale
+54395, Nancy,54,15.44,7,4,2,2,0,0,,3 - multicantonale
+44143, Rezé,44,15.37,1,2,1,1,0,0,,3 - multicantonale
+25388, Montbéliard,25,15.10,1,2,1,1,0,0,,3 - multicantonale
+16102, Cognac,16,14.95,1,2,1,1,0,0,,3 - multicantonale
+77284, Meaux,77,14.71,1,2,2,1,0,0,,3 - multicantonale
+92063, Rueil-Malmaison,92,14.50,1,2,1,1,0,0,,3 - multicantonale
+56121, Lorient,56,14.50,2,3,1,1,0,0,,3 - multicantonale
+69266, Villeurbanne,69,14.46,1,3,1,1,0,0,,3 - multicantonale
+69151,Le Perréon,69,14.42,1,2,1,1,0,0,,3 - multicantonale
+59481,Le Quesnoy,59,14.38,2,2,1,1,0,0,,3 - multicantonale
+95127, Cergy,95,14.25,1,2,1,2,0,0,,3 - multicantonale
+06083, Menton,06,14.19,1,2,1,1,0,0,,3 - multicantonale
+81060, Carmaux,81,14.14,2,2,1,1,0,0,,3 - multicantonale
+69072, Dardilly,69,14.06,1,2,0,1,0,0,,3 - multicantonale
+59606, Valenciennes,59,13.94,3,3,1,1,0,0,,3 - multicantonale
+43040, Brioude,43,13.50,1,2,1,1,0,0,,3 - multicantonale
+59512, Roubaix,59,13.50,3,4,2,2,0,0,,3 - multicantonale
+10387, Troyes,10,13.44,3,7,3,3,0,0,,3 - multicantonale
+14366, Lisieux,14,13.41,2,3,1,1,0,0,,3 - multicantonale
+62510, Liévin,62,13.26,2,2,1,1,0,0,,3 - multicantonale
+59650, Wattrelos,59,13.18,3,2,2,1,0,0,,3 - multicantonale
+78498, Poissy,78,12.98,1,2,1,1,0,0,,3 - multicantonale
+50531, Saint-Ovin,50,12.70,1,2,1,1,0,0,,3 - multicantonale
+93066, Saint-Denis,93,12.69,1,3,2,2,0,0,,3 - multicantonale
+64122, Biarritz,64,12.50,2,2,1,1,0,0,,3 - multicantonale
+92050, Nanterre,92,12.44,2,3,1,1,0,0,,3 - multicantonale
+02722, Soissons,02,12.43,1,2,1,1,0,0,,3 - multicantonale
+38567, Chamrousse,38,12.30,1,2,2,1,0,0,,3 - multicantonale
+76217, Dieppe,76,12.21,1,2,1,1,0,0,,3 - multicantonale
+47001, Agen,47,12.18,2,5,1,1,0,0,,3 - multicantonale
+14258, Falaise,14,12.16,2,2,1,1,0,0,,3 - multicantonale
+62041, Arras,62,12.07,2,3,2,1,0,0,,3 - multicantonale
+94081, Vitry-sur-Seine,94,11.96,2,3,2,2,0,0,,3 - multicantonale
+79329, Thouars,79,11.89,1,2,1,1,0,0,,3 - multicantonale
+62498, Lens,62,11.74,2,3,1,1,0,0,,3 - multicantonale
+92036, Gennevilliers,92,11.46,2,2,1,1,0,0,,3 - multicantonale
+94017, Champigny-sur-Marne,94,11.34,2,4,2,2,0,0,,3 - multicantonale
+94028, Créteil,94,11.27,2,3,2,2,0,0,,3 - multicantonale
+69023, Blacé,69,11.25,1,2,1,1,0,0,,3 - multicantonale
+94068, Saint-Maur-des-Fossés,94,11.20,2,3,2,1,0,0,,3 - multicantonale
+76322,Le Grand-Quevilly,76,11.16,1,2,1,1,0,0,,3 - multicantonale
+12202, Rodez,12,11.08,1,3,1,1,0,0,,3 - multicantonale
+60175, Creil,60,10.90,1,2,2,2,0,0,,3 - multicantonale
+91174, Corbeil-Essonnes,91,10.87,1,2,1,1,0,0,,3 - multicantonale
+61001, Alençon,61,10.77,2,3,1,1,0,0,,3 - multicantonale
+10081,La Chapelle-Saint-Luc,10,10.72,1,2,1,1,0,0,,3 - multicantonale
+24322, Périgueux,24,10.35,1,3,1,1,0,0,,3 - multicantonale
+14327, Hérouville-Saint-Clair,14,10.32,1,2,1,1,0,0,,3 - multicantonale
+35115, Fougères,35,10.30,2,2,1,1,0,0,,3 - multicantonale
+69092, Gleizé,69,10.27,1,2,1,1,0,0,,3 - multicantonale
+92048, Meudon,92,10.12,1,2,2,2,0,0,,3 - multicantonale
+92002, Antony,92,9.81,1,2,1,1,0,0,,3 - multicantonale
+91377, Massy,91,9.54,1,2,1,1,0,0,,3 - multicantonale
+38421, Saint-Martin-d'Hères,38,9.52,1,2,1,1,0,0,,3 - multicantonale
+62119, Béthune,62,9.32,1,3,1,1,0,0,,3 - multicantonale
+70550, Vesoul,70,9.24,1,2,1,1,0,0,,3 - multicantonale
+69074, Denicé,69,9.17,1,2,1,1,0,0,,3 - multicantonale
+92023, Clamart,92,9.12,2,2,1,1,0,0,,3 - multicantonale
+93048, Montreuil,93,9.02,2,3,1,1,0,0,,3 - multicantonale
+91228, Évry,91,8.86,1,2,1,1,0,0,,3 - multicantonale
+54547, Vanduvre-lès-Nancy,54,8.85,2,2,1,1,0,0,,3 - multicantonale
+95585, Sarcelles,95,8.72,1,2,2,2,0,0,,3 - multicantonale
+03190, Moulins,03,8.52,2,2,1,1,0,0,,3 - multicantonale
+69081, Écully,69,8.27,1,2,0,1,0,0,,3 - multicantonale
+38151, Échirolles,38,8.12,1,2,1,1,0,0,,3 - multicantonale
+94078, Villeneuve-Saint-Georges,94,8.05,2,2,1,1,0,0,,3 - multicantonale
+77288, Melun,77,8.04,2,2,2,1,0,0,,3 - multicantonale
+92025, Colombes,92,8.00,2,3,2,2,0,0,,3 - multicantonale
+64269, Idron,64,7.97,1,2,1,1,0,0,,3 - multicantonale
+39300, Lons-le-Saunier,39,7.79,1,2,1,1,0,0,,3 - multicantonale
+62570, Méricourt,62,7.74,1,2,2,2,0,0,,3 - multicantonale
+62160, Boulogne-sur-Mer,62,7.61,2,4,2,1,0,0,,3 - multicantonale
+93029, Drancy,93,7.55,2,2,1,1,0,0,,3 - multicantonale
+06030,Le Cannet,06,7.46,1,2,1,1,0,0,,3 - multicantonale
+21166, Chenôve,21,7.22,2,2,1,1,0,0,,3 - multicantonale
+76681, Sotteville-lès-Rouen,76,7.14,2,2,1,1,0,0,,3 - multicantonale
+91589, Savigny-sur-Orge,91,7.05,1,2,1,1,0,0,,3 - multicantonale
+69215, Saint-Julien,69,6.88,1,2,1,1,0,0,,3 - multicantonale
+92019, Châtenay-Malabry,92,6.57,1,2,1,1,0,0,,3 - multicantonale
+51649, Vitry-le-François,51,6.49,1,2,1,1,0,0,,3 - multicantonale
+69192, Saint-Cyr-le-Chatoux,69,6.41,1,2,1,1,0,0,,3 - multicantonale
+69061, Cogny,69,6.32,1,2,1,1,0,0,,3 - multicantonale
+38169, Fontaine,38,6.22,1,2,2,2,0,0,,3 - multicantonale
+94041, Ivry-sur-Seine,94,6.03,2,2,1,1,0,0,,3 - multicantonale
+03310, Vichy,03,5.94,2,2,1,1,0,0,,3 - multicantonale
+93001, Aubervilliers,93,5.80,2,2,1,1,0,0,,3 - multicantonale
+94033, Fontenay-sous-Bois,94,5.74,1,2,1,1,0,0,,3 - multicantonale
+69115, Limas,69,5.59,1,2,1,1,0,0,,3 - multicantonale
+93010, Bondy,93,5.50,2,2,1,2,0,0,,3 - multicantonale
+94076, Villejuif,94,5.46,1,2,1,1,0,0,,3 - multicantonale
+95268, Garges-lès-Gonesse,95,5.35,1,2,1,1,0,0,,3 - multicantonale
+94046, Maisons-Alfort,94,5.33,1,2,1,1,0,0,,3 - multicantonale
+64417, Nay,64,5.29,1,2,1,1,0,0,,3 - multicantonale
+79270, Saint-Maixent-l'École,79,5.24,2,2,1,1,0,0,,3 - multicantonale
+92004, Asnières-sur-Seine,92,5.20,2,2,1,1,0,0,,3 - multicantonale
+74012, Annemasse,74,5.04,1,2,1,1,0,0,,3 - multicantonale
+93055, Pantin,93,4.79,1,2,1,1,0,0,,3 - multicantonale
+93070, Saint-Ouen,93,4.53,2,2,1,1,0,0,,3 - multicantonale
+92040, Issy-les-Moulineaux,92,4.37,2,2,1,1,0,0,,3 - multicantonale
+69172, Salles-Arbuissonnas-en-Beaujolais,69,4.09,1,2,1,1,0,0,,3 - multicantonale
+69137, Montmelas-Saint-Sorlin,69,4.02,1,2,1,1,0,0,,3 - multicantonale
+22050, Dinan,22,3.91,2,2,1,1,0,0,,3 - multicantonale
+94002, Alfortville,94,3.83,1,2,1,1,0,0,,3 - multicantonale
+13119, Carnoux-en-Provence,13,3.74,1,2,1,1,0,0,,3 - multicantonale
+92051, Neuilly-sur-Seine,92,3.69,1,2,1,1,0,0,,3 - multicantonale
+62847, Verquigneul,62,3.64,1,2,1,1,0,0,,3 - multicantonale
+69105, Lacenas,69,3.19,1,2,1,1,0,0,,3 - multicantonale
+92024, Clichy,92,2.76,2,2,1,1,0,0,,3 - multicantonale
+69040, Champagne-au-Mont-d'Or,69,2.72,1,2,0,1,0,0,,3 - multicantonale
+92044, Levallois-Perret,92,2.43,2,2,1,1,0,0,,3 - multicantonale
+59036, Avesnes-sur-Helpe,59,2.12,2,2,1,2,0,0,,3 - multicantonale
+94080, Vincennes,94,1.87,1,2,1,1,0,0,,3 - multicantonale
+94037, Gentilly,94,1.18,1,2,2,2,0,0,,3 - multicantonale
+13078, Port-Saint-Louis-du-Rhône,13,83.13,2,1,1,1,0,0,,4 - fraction ancienne
+06013, Belvédère,06,76.45,2,1,1,1,0,0,,4 - fraction ancienne
+73194, Orelle,73,74.26,2,1,1,1,0,0,,4 - fraction ancienne
+57623, Saint-Quirin,57,53.47,2,1,1,1,0,0,,4 - fraction ancienne
+51553, Souain-Perthes-lès-Hurlus,51,52.46,2,1,1,1,0,0,,4 - fraction ancienne
+13002, Allauch,13,50.46,2,1,1,1,0,0,,4 - fraction ancienne
+57163, Dabo,57,49.10,2,1,1,1,0,0,,4 - fraction ancienne
+43162, Retournac,43,45.30,2,1,1,1,0,0,,4 - fraction ancienne
+10293, Poivres,10,42.14,2,1,1,1,0,0,,4 - fraction ancienne
+26361, Valdrôme,26,41.14,2,1,1,1,0,0,,4 - fraction ancienne
+57003, Abreschviller,57,40.59,2,1,1,1,0,0,,4 - fraction ancienne
+29048, Edern,29,39.91,2,1,1,1,0,0,,4 - fraction ancienne
+67165, Grandfontaine,67,39.28,2,1,1,1,0,0,,4 - fraction ancienne
+57742, Walscheid,57,38.46,2,1,1,1,0,0,,4 - fraction ancienne
+13065, Mouriès,13,37.92,2,1,1,1,0,0,,4 - fraction ancienne
+21641, Touillon,21,36.47,2,1,1,1,0,0,,4 - fraction ancienne
+2B059, Canavaggia,2B,35.30,2,1,1,1,0,0,,4 - fraction ancienne
+06020,La Bollène-Vésubie,06,35.29,2,1,1,1,0,0,,4 - fraction ancienne
+45331, Vannes-sur-Cosson,45,35.03,2,1,1,1,0,0,,4 - fraction ancienne
+89359, Saint-Maurice-aux-Riches-Hommes,89,33.49,2,1,1,1,0,0,,4 - fraction ancienne
+62548, Marck,62,32.59,2,1,1,1,0,0,,4 - fraction ancienne
+11436, Villesèque-des-Corbières,11,31.98,2,1,1,1,0,0,,4 - fraction ancienne
+87183, Saint-Sylvestre,87,31.55,2,1,1,1,0,0,,4 - fraction ancienne
+91200, Dourdan,91,31.29,2,1,1,1,0,0,,4 - fraction ancienne
+52220, Giey-sur-Aujon,52,31.29,2,1,1,1,0,0,,4 - fraction ancienne
+57682, Turquestein-Blancrupt,57,30.73,2,1,1,1,0,0,,4 - fraction ancienne
+21385, Marey-sur-Tille,21,30.65,2,1,1,1,0,0,,4 - fraction ancienne
+54189, Favières,54,30.40,2,1,1,1,0,0,,4 - fraction ancienne
+57253, Gondrexange,57,30.23,2,1,1,1,0,0,,4 - fraction ancienne
+87050, Couzeix,87,30.16,2,1,1,1,0,0,,4 - fraction ancienne
+54322, Longuyon,54,30.02,2,1,1,1,0,0,,4 - fraction ancienne
+23054, Charron,23,29.78,2,1,1,1,0,0,,4 - fraction ancienne
+90065, Lepuix,90,28.72,2,1,1,1,0,0,,4 - fraction ancienne
+18019, Azy,18,27.54,2,1,1,1,0,0,,4 - fraction ancienne
+12292, Versols-et-Lapeyre,12,27.52,2,1,1,1,0,0,,4 - fraction ancienne
+54462, Rosières-aux-Salines,54,27.47,2,1,1,1,0,0,,4 - fraction ancienne
+54099, Briey,54,26.93,2,1,1,1,0,0,,4 - fraction ancienne
+57086, Belles-Forêts,57,26.88,2,1,1,1,0,0,,4 - fraction ancienne
+26376, Villeperdrix,26,25.98,2,1,1,1,0,0,,4 - fraction ancienne
+54318, Liverdun,54,25.94,2,1,1,1,0,0,,4 - fraction ancienne
+57434, Maizières-lès-Vic,57,25.70,2,1,1,1,0,0,,4 - fraction ancienne
+57564, Réchicourt-le-Château,57,25.51,2,1,1,1,0,0,,4 - fraction ancienne
+06103, Roquebillière,06,25.37,2,1,1,1,0,0,,4 - fraction ancienne
+54232, Gondreville,54,25.16,2,1,1,1,0,0,,4 - fraction ancienne
+54205, Foug,54,25.16,2,1,1,1,0,0,,4 - fraction ancienne
+66176, Saint-Hippolyte,66,24.99,2,1,1,1,0,0,,4 - fraction ancienne
+71486, Saint-Vallier,71,24.82,2,1,1,1,0,0,,4 - fraction ancienne
+54222, Gerbéviller,54,24.75,2,1,1,1,0,0,,4 - fraction ancienne
+83103,Le Revest-les-Eaux,83,24.47,2,1,1,1,0,0,,4 - fraction ancienne
+54115, Champigneulles,54,23.91,2,1,1,1,0,0,,4 - fraction ancienne
+54393, Moyen,54,23.91,2,1,1,1,0,0,,4 - fraction ancienne
+12004, Almont-les-Junies,12,23.52,2,1,1,1,0,0,,4 - fraction ancienne
+72024,La Bazoge,72,23.44,2,1,1,1,0,0,,4 - fraction ancienne
+18174, Osmoy,18,23.37,2,1,1,1,0,0,,4 - fraction ancienne
+54586, Viterne,54,23.29,2,1,1,1,0,0,,4 - fraction ancienne
+12246, Saint-Santin,12,23.23,2,1,1,1,0,0,,4 - fraction ancienne
+67377, Plaine,67,23.03,2,1,1,1,0,0,,4 - fraction ancienne
+57418, Loudrefing,57,22.86,2,1,1,1,0,0,,4 - fraction ancienne
+57375, Lagarde,57,22.83,2,1,1,1,0,0,,4 - fraction ancienne
+54086, Boucq,54,22.70,2,1,1,1,0,0,,4 - fraction ancienne
+55358, Chanteraine,55,22.68,2,1,1,1,0,0,,4 - fraction ancienne
+93073, Tremblay-en-France,93,22.45,2,1,1,1,0,0,,4 - fraction ancienne
+67066,La Broque,67,22.37,2,1,1,1,0,0,,4 - fraction ancienne
+54373, Moncel-lès-Lunéville,54,22.32,2,1,1,1,0,0,,4 - fraction ancienne
+54040, Badonviller,54,22.23,3,1,1,1,0,0,,4 - fraction ancienne
+54466, Royaumeix,54,22.21,2,1,1,1,0,0,,4 - fraction ancienne
+76484, Oissel,76,22.13,2,1,1,1,0,0,,4 - fraction ancienne
+54396, Neufmaisons,54,22.01,3,1,1,1,0,0,,4 - fraction ancienne
+42059, Chazelles-sur-Lyon,42,21.94,2,1,1,1,0,0,,4 - fraction ancienne
+54236, Grand-Failly,54,21.79,2,1,1,1,0,0,,4 - fraction ancienne
+54143, Crépey,54,21.56,2,1,1,1,0,0,,4 - fraction ancienne
+74174, Mégevette,74,21.51,2,1,1,1,0,0,,4 - fraction ancienne
+54431, Pont-à-Mousson,54,21.50,2,1,1,1,0,0,,4 - fraction ancienne
+54059, Belleau,54,21.32,2,1,1,1,0,0,,4 - fraction ancienne
+21120,La Bussière-sur-Ouche,21,21.23,2,1,1,1,0,0,,4 - fraction ancienne
+81196, Noailhac,81,21.15,2,1,1,1,0,0,,4 - fraction ancienne
+71412, Saint-Eusèbe,71,21.06,2,1,1,1,0,0,,4 - fraction ancienne
+62043,Les Attaques,62,20.88,2,1,1,1,0,0,,4 - fraction ancienne
+06161, Villeneuve-Loubet,06,20.66,2,1,1,1,0,0,,4 - fraction ancienne
+54036, Avril,54,20.58,2,1,1,1,0,0,,4 - fraction ancienne
+51055, Bétheny,51,20.52,2,1,1,1,0,0,,4 - fraction ancienne
+31383, Montjoire,31,20.20,2,1,1,1,0,0,,4 - fraction ancienne
+66050, Claira,66,19.95,2,1,1,1,0,0,,4 - fraction ancienne
+2B150, Lumio,2B,19.73,2,1,1,1,0,0,,4 - fraction ancienne
+54065, Bertrichamps,54,19.73,2,1,1,1,0,0,,4 - fraction ancienne
+87075, Isle,87,19.70,2,1,1,1,0,0,,4 - fraction ancienne
+37225, Saint-Martin-le-Beau,37,19.67,2,1,1,1,0,0,,4 - fraction ancienne
+54089, Bouxières-aux-Chênes,54,19.66,2,1,1,1,0,0,,4 - fraction ancienne
+88276, Lusse,88,19.60,2,1,1,1,0,0,,4 - fraction ancienne
+54488, Saint-Sauveur,54,19.49,3,1,1,1,0,0,,4 - fraction ancienne
+54112, Chambley-Bussières,54,19.41,3,1,1,1,0,0,,4 - fraction ancienne
+57011, Albestroff,57,19.28,2,1,1,1,0,0,,4 - fraction ancienne
+54297, Laneuveville-aux-Bois,54,19.20,2,1,1,1,0,0,,4 - fraction ancienne
+57712, Vic-sur-Seille,57,19.15,2,1,1,1,0,0,,4 - fraction ancienne
+54316, Limey-Remenauville,54,19.03,2,1,1,1,0,0,,4 - fraction ancienne
+59151, Colleret,59,18.98,2,1,1,1,0,0,,4 - fraction ancienne
+54518, Thiaucourt-Regniéville,54,18.96,2,1,1,1,0,0,,4 - fraction ancienne
+54064, Bertrambois,54,18.83,3,1,1,1,0,0,,4 - fraction ancienne
+67543, Wisches,67,18.75,2,1,1,1,0,0,,4 - fraction ancienne
+54229, Glonville,54,18.74,2,1,1,1,0,0,,4 - fraction ancienne
+54352, Maron,54,18.73,2,1,1,1,0,0,,4 - fraction ancienne
+57383, Languimberg,57,18.69,2,1,1,1,0,0,,4 - fraction ancienne
+57272, Guermange,57,18.58,2,1,1,1,0,0,,4 - fraction ancienne
+54540, Val-et-Châtillon,54,18.51,3,1,1,1,0,0,,4 - fraction ancienne
+90046, Florimont,90,18.49,2,1,1,1,0,0,,4 - fraction ancienne
+54557, Velaine-en-Haye,54,18.47,2,1,1,1,0,0,,4 - fraction ancienne
+57469, Mittersheim,57,18.43,2,1,1,1,0,0,,4 - fraction ancienne
+54062, Benney,54,18.42,2,1,1,1,0,0,,4 - fraction ancienne
+54575, Villers-la-Montagne,54,18.34,2,1,1,1,0,0,,4 - fraction ancienne
+54279, Jezainville,54,18.24,2,1,1,1,0,0,,4 - fraction ancienne
+54496, Saulxures-lès-Vannes,54,18.17,2,1,1,1,0,0,,4 - fraction ancienne
+12240, Saint-Parthem,12,18.17,2,1,1,1,0,0,,4 - fraction ancienne
+54400, Nomeny,54,18.05,2,1,1,1,0,0,,4 - fraction ancienne
+66180, Saint-Laurent-de-la-Salanque,66,18.05,2,1,1,1,0,0,,4 - fraction ancienne
+54157, Dieulouard,54,17.97,2,1,1,1,0,0,,4 - fraction ancienne
+54080, Blénod-lès-Toul,54,17.96,2,1,1,1,0,0,,4 - fraction ancienne
+54405, Ochey,54,17.92,2,1,1,1,0,0,,4 - fraction ancienne
+54188, Faulx,54,17.88,2,1,1,1,0,0,,4 - fraction ancienne
+78490, Plaisir,78,17.80,2,1,1,1,0,0,,4 - fraction ancienne
+54023, Arracourt,54,17.76,3,1,1,1,0,0,,4 - fraction ancienne
+54196, Flavigny-sur-Moselle,54,17.74,2,1,1,1,0,0,,4 - fraction ancienne
+57241, Fribourg,57,17.66,2,1,1,1,0,0,,4 - fraction ancienne
+57099, Bourdonnay,57,17.54,2,1,1,1,0,0,,4 - fraction ancienne
+54418, Parroy,54,17.54,2,1,1,1,0,0,,4 - fraction ancienne
+54135, Colombey-les-Belles,54,17.53,2,1,1,1,0,0,,4 - fraction ancienne
+54017, Angomont,54,17.44,3,1,1,1,0,0,,4 - fraction ancienne
+54176, Einville-au-Jard,54,17.41,2,1,1,1,0,0,,4 - fraction ancienne
+54071, Bezange-la-Grande,54,17.35,3,1,1,1,0,0,,4 - fraction ancienne
+54584, Villey-Saint-Étienne,54,17.34,2,1,1,1,0,0,,4 - fraction ancienne
+54073, Bicqueley,54,17.34,2,1,1,1,0,0,,4 - fraction ancienne
+54548, Vannes-le-Châtel,54,17.32,2,1,1,1,0,0,,4 - fraction ancienne
+54421, Petitmont,54,17.29,3,1,1,1,0,0,,4 - fraction ancienne
+54350, Marainviller,54,17.29,2,1,1,1,0,0,,4 - fraction ancienne
+66212, Torreilles,66,17.19,2,1,1,1,0,0,,4 - fraction ancienne
+67351, Seebach,67,17.18,2,1,1,1,0,0,,4 - fraction ancienne
+43166, Saint-André-de-Chalencon,43,17.18,2,1,1,1,0,0,,4 - fraction ancienne
+90089, Rougemont-le-Château,90,17.18,2,1,1,1,0,0,,4 - fraction ancienne
+54375, Montauville,54,17.04,2,1,1,1,0,0,,4 - fraction ancienne
+57226, Fontoy,57,16.93,2,1,1,1,0,0,,4 - fraction ancienne
+54008, Allain,54,16.80,2,1,1,1,0,0,,4 - fraction ancienne
+54472, Saint-Clément,54,16.67,2,1,1,1,0,0,,4 - fraction ancienne
+57630, Sarrebourg,57,16.66,2,1,1,1,0,0,,4 - fraction ancienne
+21092, Bouilland,21,16.59,2,1,1,1,0,0,,4 - fraction ancienne
+57035, Assenoncourt,57,16.54,2,1,1,1,0,0,,4 - fraction ancienne
+54129, Cirey-sur-Vezouze,54,16.51,3,1,1,1,0,0,,4 - fraction ancienne
+57498, Neufchef,57,16.49,2,1,1,1,0,0,,4 - fraction ancienne
+83062,La Garde,83,16.34,2,1,1,1,0,0,,4 - fraction ancienne
+54304, Laxou,54,16.19,2,1,1,1,0,0,,4 - fraction ancienne
+54148, Croismare,54,16.15,2,1,1,1,0,0,,4 - fraction ancienne
+66111, Montalba-le-Château,66,16.13,2,1,1,1,0,0,,4 - fraction ancienne
+54138, Cosnes-et-Romain,54,16.13,2,1,1,1,0,0,,4 - fraction ancienne
+71357, Pourlans,71,16.02,2,1,1,1,0,0,,4 - fraction ancienne
+67384, Ranrupt,67,16.02,2,1,1,1,0,0,,4 - fraction ancienne
+57225, Fonteny,57,16.00,2,1,1,1,0,0,,4 - fraction ancienne
+57044, Azoudange,57,15.98,2,1,1,1,0,0,,4 - fraction ancienne
+54027, Atton,54,15.95,2,1,1,1,0,0,,4 - fraction ancienne
+54308, Leintrey,54,15.95,2,1,1,1,0,0,,4 - fraction ancienne
+62589, Mont-Saint-Éloi,62,15.91,2,1,1,1,0,0,,4 - fraction ancienne
+57038, Audun-le-Tiche,57,15.89,2,1,1,1,0,0,,4 - fraction ancienne
+54273, Jarny,54,15.79,2,1,1,1,0,0,,4 - fraction ancienne
+54336, Maizières,54,15.76,2,1,1,1,0,0,,4 - fraction ancienne
+54590, Viviers-sur-Chiers,54,15.75,2,1,1,1,0,0,,4 - fraction ancienne
+54200, Flirey,54,15.68,2,1,1,1,0,0,,4 - fraction ancienne
+91201, Draveil,91,15.66,2,1,1,1,0,0,,4 - fraction ancienne
+57443, Marange-Silvange,57,15.58,2,1,1,1,0,0,,4 - fraction ancienne
+54504, Serrouville,54,15.54,2,1,1,1,0,0,,4 - fraction ancienne
+90053, Grandvillars,90,15.46,2,1,1,1,0,0,,4 - fraction ancienne
+66017,Le Barcarès,66,15.42,2,1,1,1,0,0,,4 - fraction ancienne
+57579, Rhodes,57,15.35,2,1,1,1,0,0,,4 - fraction ancienne
+54161, Domèvre-sur-Vezouze,54,15.30,2,1,1,1,0,0,,4 - fraction ancienne
+54270, Hussigny-Godbrange,54,15.30,2,1,1,1,0,0,,4 - fraction ancienne
+57529, Ottange,57,15.25,2,1,1,1,0,0,,4 - fraction ancienne
+54258, Hénaménil,54,15.23,2,1,1,1,0,0,,4 - fraction ancienne
+83144,La Valette-du-Var,83,15.23,2,1,1,1,0,0,,4 - fraction ancienne
+54502, Serres,54,15.16,2,1,1,1,0,0,,4 - fraction ancienne
+54206, Fraimbois,54,15.15,2,1,1,1,0,0,,4 - fraction ancienne
+54435, Prény,54,15.08,2,1,1,1,0,0,,4 - fraction ancienne
+54198, Fléville-Lixières,54,14.97,2,1,1,1,0,0,,4 - fraction ancienne
+88275, Lubine,88,14.96,2,1,1,1,0,0,,4 - fraction ancienne
+54177, Emberménil,54,14.95,2,1,1,1,0,0,,4 - fraction ancienne
+56069, Groix,56,14.95,2,1,1,1,0,0,,4 - fraction ancienne
+54118, Charency-Vezin,54,14.88,2,1,1,1,0,0,,4 - fraction ancienne
+10227, Marolles-sous-Lignières,10,14.85,2,1,1,1,0,0,,4 - fraction ancienne
+62826,Le Touquet-Paris-Plage,62,14.75,2,1,1,1,0,0,,4 - fraction ancienne
+54194, Fillières,54,14.67,2,1,1,1,0,0,,4 - fraction ancienne
+57039, Augny,57,14.64,2,1,1,1,0,0,,4 - fraction ancienne
+57210, Fénétrange,57,14.62,2,1,1,1,0,0,,4 - fraction ancienne
+67059, Bourg-Bruche,67,14.61,2,1,1,1,0,0,,4 - fraction ancienne
+18038, Bruère-Allichamps,18,14.52,2,1,1,1,0,0,,4 - fraction ancienne
+54505, Sexey-aux-Forges,54,14.52,2,1,1,1,0,0,,4 - fraction ancienne
+57751, Woippy,57,14.48,2,1,1,1,0,0,,4 - fraction ancienne
+12089, Decazeville,12,14.47,2,1,1,1,0,0,,4 - fraction ancienne
+72328, Sargé-lès-le-Mans,72,14.47,2,1,1,1,0,0,,4 - fraction ancienne
+42062, Chevrières,42,14.46,2,1,1,1,0,0,,4 - fraction ancienne
+57126, Chambrey,57,14.38,2,1,1,1,0,0,,4 - fraction ancienne
+71236, Igé,71,14.36,2,1,1,1,0,0,,4 - fraction ancienne
+30336, Vallabrègues,30,14.34,2,1,1,1,0,0,,4 - fraction ancienne
+54039, Baccarat,54,14.34,2,1,1,1,0,0,,4 - fraction ancienne
+69176, Soucieu-en-Jarrest,69,14.31,2,1,1,1,0,0,,4 - fraction ancienne
+54490, Saizerais,54,14.30,2,1,1,1,0,0,,4 - fraction ancienne
+54288, Lagney,54,14.26,2,1,1,1,0,0,,4 - fraction ancienne
+54211, Frémonville,54,14.25,2,1,1,1,0,0,,4 - fraction ancienne
+57490, Moyenvic,57,14.21,3,1,1,1,0,0,,4 - fraction ancienne
+82084, Lacour,82,14.19,2,1,1,1,0,0,,4 - fraction ancienne
+54038, Azerailles,54,14.19,2,1,1,1,0,0,,4 - fraction ancienne
+57753, Wuisse,57,14.18,2,1,1,1,0,0,,4 - fraction ancienne
+82016, Belvèze,82,14.04,2,1,1,1,0,0,,4 - fraction ancienne
+21310, Grosbois-en-Montagne,21,13.96,2,1,1,1,0,0,,4 - fraction ancienne
+54048,Les Baroches,54,13.95,2,1,1,1,0,0,,4 - fraction ancienne
+67481, Stotzheim,67,13.87,2,1,1,1,0,0,,4 - fraction ancienne
+90017, Bourogne,90,13.80,2,1,1,1,0,0,,4 - fraction ancienne
+57246, Gelucourt,57,13.78,2,1,1,1,0,0,,4 - fraction ancienne
+54567, Villacourt,54,13.76,2,1,1,1,0,0,,4 - fraction ancienne
+54012, Amance,54,13.70,2,1,1,1,0,0,,4 - fraction ancienne
+54402, Norroy-le-Sec,54,13.63,2,1,1,1,0,0,,4 - fraction ancienne
+54162, Domgermain,54,13.58,2,1,1,1,0,0,,4 - fraction ancienne
+54566, Vilcey-sur-Trey,54,13.55,2,1,1,1,0,0,,4 - fraction ancienne
+54111, Chaligny,54,13.52,2,1,1,1,0,0,,4 - fraction ancienne
+54456, Réméréville,54,13.52,2,1,1,1,0,0,,4 - fraction ancienne
+57540, Phalsbourg,57,13.52,2,1,1,1,0,0,,4 - fraction ancienne
+54182, Essey-et-Maizerais,54,13.48,2,1,1,1,0,0,,4 - fraction ancienne
+21390, Marsannay-la-Côte,21,13.42,2,1,1,1,0,0,,4 - fraction ancienne
+54011, Allondrelle-la-Malmaison,54,13.32,2,1,1,1,0,0,,4 - fraction ancienne
+54026, Athienville,54,13.32,3,1,1,1,0,0,,4 - fraction ancienne
+54363, Mercy-le-Haut,54,13.32,2,1,1,1,0,0,,4 - fraction ancienne
+71187, Écuisses,71,13.30,2,1,1,1,0,0,,4 - fraction ancienne
+57096, Boulange,57,13.28,2,1,1,1,0,0,,4 - fraction ancienne
+54491, Sancy,54,13.26,2,1,1,1,0,0,,4 - fraction ancienne
+57302, Hattigny,57,13.23,2,1,1,1,0,0,,4 - fraction ancienne
+57506, Niederstinzel,57,13.23,2,1,1,1,0,0,,4 - fraction ancienne
+57321, Hesse,57,13.17,2,1,1,1,0,0,,4 - fraction ancienne
+57706, Vergaville,57,13.17,2,1,1,1,0,0,,4 - fraction ancienne
+54423, Pexonne,54,13.13,3,1,1,1,0,0,,4 - fraction ancienne
+54546, Vandières,54,13.13,2,1,1,1,0,0,,4 - fraction ancienne
+54260, Hériménil,54,13.00,3,1,1,1,0,0,,4 - fraction ancienne
+57711, Vibersviller,57,13.00,2,1,1,1,0,0,,4 - fraction ancienne
+93051, Noisy-le-Grand,93,12.99,2,1,1,1,0,0,,4 - fraction ancienne
+54334, Mairy-Mainville,54,12.94,2,1,1,1,0,0,,4 - fraction ancienne
+68368, Wihr-au-Val,68,12.91,2,1,1,1,0,0,,4 - fraction ancienne
+54527, Tonnoy,54,12.88,2,1,1,1,0,0,,4 - fraction ancienne
+54215, Frouard,54,12.87,2,1,1,1,0,0,,4 - fraction ancienne
+67436, Saulxures,67,12.87,2,1,1,1,0,0,,4 - fraction ancienne
+57625, Salonnes,57,12.86,2,1,1,1,0,0,,4 - fraction ancienne
+57221, Florange,57,12.85,2,1,1,1,0,0,,4 - fraction ancienne
+64257, Haut-de-Bosdarros,64,12.82,2,1,1,1,0,0,,4 - fraction ancienne
+54014, Ancerviller,54,12.78,2,1,1,1,0,0,,4 - fraction ancienne
+54538, Uruffe,54,12.77,2,1,1,1,0,0,,4 - fraction ancienne
+57238, Fresnes-en-Saulnois,57,12.77,2,1,1,1,0,0,,4 - fraction ancienne
+57680, Troisfontaines,57,12.76,2,1,1,1,0,0,,4 - fraction ancienne
+57232, Francaltroff,57,12.76,2,1,1,1,0,0,,4 - fraction ancienne
+15257, Vezels-Roussy,15,12.74,2,1,1,1,0,0,,4 - fraction ancienne
+54007, Aingeray,54,12.71,2,1,1,1,0,0,,4 - fraction ancienne
+12101, Flagnac,12,12.71,2,1,1,1,0,0,,4 - fraction ancienne
+54365, Merviller,54,12.70,2,1,1,1,0,0,,4 - fraction ancienne
+90041, Étueffont,90,12.69,2,1,1,1,0,0,,4 - fraction ancienne
+54353, Mars-la-Tour,54,12.69,3,1,1,1,0,0,,4 - fraction ancienne
+54426, Pierre-la-Treiche,54,12.67,2,1,1,1,0,0,,4 - fraction ancienne
+81114, Labastide-Gabausse,81,12.67,2,1,1,1,0,0,,4 - fraction ancienne
+90081, Réchésy,90,12.63,2,1,1,1,0,0,,4 - fraction ancienne
+57635, Schalbach,57,12.61,2,1,1,1,0,0,,4 - fraction ancienne
+72001, Aigné,72,12.57,2,1,1,1,0,0,,4 - fraction ancienne
+54370, Minorville,54,12.57,2,1,1,1,0,0,,4 - fraction ancienne
+57304, Haut-Clocher,57,12.52,2,1,1,1,0,0,,4 - fraction ancienne
+57382, Langatte,57,12.48,2,1,1,1,0,0,,4 - fraction ancienne
+62528, Loos-en-Gohelle,62,12.48,2,1,1,1,0,0,,4 - fraction ancienne
+57183, Donnelay,57,12.45,2,1,1,1,0,0,,4 - fraction ancienne
+54374, Moncel-sur-Seille,54,12.42,3,1,1,1,0,0,,4 - fraction ancienne
+54411, Ormes-et-Ville,54,12.41,2,1,1,1,0,0,,4 - fraction ancienne
+54550, Vathiménil,54,12.38,2,1,1,1,0,0,,4 - fraction ancienne
+54534, Trondes,54,12.38,2,1,1,1,0,0,,4 - fraction ancienne
+57306, Hayange,57,12.35,2,1,1,1,0,0,,4 - fraction ancienne
+21473, Ouges,21,12.35,2,1,1,1,0,0,,4 - fraction ancienne
+48071, Grandvals,48,12.35,2,1,1,1,0,0,,4 - fraction ancienne
+57629, Sarraltroff,57,12.34,2,1,1,1,0,0,,4 - fraction ancienne
+54598, Xivry-Circourt,54,12.30,2,1,1,1,0,0,,4 - fraction ancienne
+54549, Varangéville,54,12.30,2,1,1,1,0,0,,4 - fraction ancienne
+54235, Goviller,54,12.24,2,1,1,1,0,0,,4 - fraction ancienne
+57206, Fameck,57,12.24,2,1,1,1,0,0,,4 - fraction ancienne
+42336, Virigneux,42,12.24,2,1,1,1,0,0,,4 - fraction ancienne
+57229, Foulcrey,57,12.21,2,1,1,1,0,0,,4 - fraction ancienne
+54100, Brin-sur-Seille,54,12.18,3,1,1,1,0,0,,4 - fraction ancienne
+54067, Beuveille,54,12.18,2,1,1,1,0,0,,4 - fraction ancienne
+54075, Bionville,54,12.16,3,1,1,1,0,0,,4 - fraction ancienne
+54300, Laneuveville-devant-Nancy,54,12.12,2,1,1,1,0,0,,4 - fraction ancienne
+54128, Choloy-Ménillot,54,12.12,2,1,1,1,0,0,,4 - fraction ancienne
+57591, Rombas,57,12.09,2,1,1,1,0,0,,4 - fraction ancienne
+88112, Colroy-la-Grande,88,12.09,2,1,1,1,0,0,,4 - fraction ancienne
+54568, Ville-au-Montois,54,12.04,2,1,1,1,0,0,,4 - fraction ancienne
+54597, Xirocourt,54,12.00,2,1,1,1,0,0,,4 - fraction ancienne
+54542, Valleroy,54,11.97,2,1,1,1,0,0,,4 - fraction ancienne
+54588, Vitrimont,54,11.96,2,1,1,1,0,0,,4 - fraction ancienne
+59172, Denain,59,11.92,2,1,1,1,0,0,,4 - fraction ancienne
+54076, Blainville-sur-l'Eau,54,11.91,2,1,1,1,0,0,,4 - fraction ancienne
+54231, Gondrecourt-Aix,54,11.91,2,1,1,1,0,0,,4 - fraction ancienne
+90095, Suarce,90,11.81,2,1,1,1,0,0,,4 - fraction ancienne
+54150, Custines,54,11.81,2,1,1,1,0,0,,4 - fraction ancienne
+57566, Réding,57,11.75,2,1,1,1,0,0,,4 - fraction ancienne
+21308, Grignon,21,11.75,2,1,1,1,0,0,,4 - fraction ancienne
+08193, Givry,08,11.73,2,1,1,1,0,0,,4 - fraction ancienne
+54478, Saint-Marcel,54,11.72,2,1,1,1,0,0,,4 - fraction ancienne
+54025, Art-sur-Meurthe,54,11.71,2,1,1,1,0,0,,4 - fraction ancienne
+67448, Schirmeck,67,11.70,2,1,1,1,0,0,,4 - fraction ancienne
+54587, Vitrey,54,11.69,2,1,1,1,0,0,,4 - fraction ancienne
+54223, Germiny,54,11.65,2,1,1,1,0,0,,4 - fraction ancienne
+54311, Lenoncourt,54,11.62,2,1,1,1,0,0,,4 - fraction ancienne
+82010, Bardigues,82,11.59,2,1,1,1,0,0,,4 - fraction ancienne
+54500, Selaincourt,54,11.59,2,1,1,1,0,0,,4 - fraction ancienne
+57270, Val-de-Bride,57,11.58,2,1,1,1,0,0,,4 - fraction ancienne
+67420, Russ,67,11.56,2,1,1,1,0,0,,4 - fraction ancienne
+54187, Euvezin,54,11.51,2,1,1,1,0,0,,4 - fraction ancienne
+82067, Gensac,82,11.51,2,1,1,1,0,0,,4 - fraction ancienne
+54256, Haussonville,54,11.49,2,1,1,1,0,0,,4 - fraction ancienne
+57290, Hampont,57,11.47,2,1,1,1,0,0,,4 - fraction ancienne
+54046, Barisey-au-Plain,54,11.46,2,1,1,1,0,0,,4 - fraction ancienne
+54107, Buriville,54,11.45,2,1,1,1,0,0,,4 - fraction ancienne
+72073, Chaufour-Notre-Dame,72,11.45,2,1,1,1,0,0,,4 - fraction ancienne
+54305, Lay-Saint-Christophe,54,11.42,2,1,1,1,0,0,,4 - fraction ancienne
+38300, Penol,38,11.41,2,1,1,1,0,0,,4 - fraction ancienne
+54109, Ceintrey,54,11.40,2,1,1,1,0,0,,4 - fraction ancienne
+54331, Magnières,54,11.40,2,1,1,1,0,0,,4 - fraction ancienne
+72360, Trangé,72,11.40,2,1,1,1,0,0,,4 - fraction ancienne
+71436, Saint-Laurent-d'Andenay,71,11.39,2,1,1,1,0,0,,4 - fraction ancienne
+54250, Haraucourt,54,11.38,2,1,1,1,0,0,,4 - fraction ancienne
+57119, Buhl-Lorraine,57,11.37,2,1,1,1,0,0,,4 - fraction ancienne
+54404, Noviant-aux-Prés,54,11.33,2,1,1,1,0,0,,4 - fraction ancienne
+54113, Champenoux,54,11.31,3,1,1,1,0,0,,4 - fraction ancienne
+90090, Saint-Dizier-l'Évêque,90,11.30,2,1,1,1,0,0,,4 - fraction ancienne
+54385, Morfontaine,54,11.28,2,1,1,1,0,0,,4 - fraction ancienne
+54581, Ville-sur-Yron,54,11.25,2,1,1,1,0,0,,4 - fraction ancienne
+54201, Fontenoy-la-Joûte,54,11.19,2,1,1,1,0,0,,4 - fraction ancienne
+54208, Francheville,54,11.18,2,1,1,1,0,0,,4 - fraction ancienne
+57132, Château-Salins,57,11.18,2,1,1,1,0,0,,4 - fraction ancienne
+78615, Thiverval-Grignon,78,11.15,2,1,1,1,0,0,,4 - fraction ancienne
+54312, Lesménils,54,11.14,2,1,1,1,0,0,,4 - fraction ancienne
+54283, Jouaville,54,11.10,2,1,1,1,0,0,,4 - fraction ancienne
+57505, Niderviller,57,11.10,2,1,1,1,0,0,,4 - fraction ancienne
+38473, Sardieu,38,11.10,2,1,1,1,0,0,,4 - fraction ancienne
+54156, Diarville,54,11.08,2,1,1,1,0,0,,4 - fraction ancienne
+54593, Waville,54,11.08,3,1,1,1,0,0,,4 - fraction ancienne
+62563, Mazingarbe,62,11.06,2,1,1,1,0,0,,4 - fraction ancienne
+54179, Éply,54,11.05,2,1,1,1,0,0,,4 - fraction ancienne
+54199, Flin,54,11.00,3,1,1,1,0,0,,4 - fraction ancienne
+72008, Arnage,72,11.00,2,1,1,1,0,0,,4 - fraction ancienne
+54355, Martincourt,54,10.99,2,1,1,1,0,0,,4 - fraction ancienne
+54415, Pagny-sur-Moselle,54,10.99,2,1,1,1,0,0,,4 - fraction ancienne
+57723, Virming,57,10.98,2,1,1,1,0,0,,4 - fraction ancienne
+91421, Montgeron,91,10.98,2,1,1,1,0,0,,4 - fraction ancienne
+54463, Rosières-en-Haye,54,10.98,2,1,1,1,0,0,,4 - fraction ancienne
+54315, Leyr,54,10.95,2,1,1,1,0,0,,4 - fraction ancienne
+54291, Laluf,54,10.93,2,1,1,1,0,0,,4 - fraction ancienne
+42216, Saint-Denis-sur-Coise,42,10.93,2,1,1,1,0,0,,4 - fraction ancienne
+11220, Marseillette,11,10.91,2,1,1,1,0,0,,4 - fraction ancienne
+12130, Livinhac-le-Haut,12,10.89,2,1,1,1,0,0,,4 - fraction ancienne
+54103, Bruville,54,10.89,2,1,1,1,0,0,,4 - fraction ancienne
+25004, Abbévillers,25,10.88,2,1,1,1,0,0,,4 - fraction ancienne
+54343, Mandres-aux-Quatre-Tours,54,10.87,2,1,1,1,0,0,,4 - fraction ancienne
+54045, Barbonville,54,10.86,2,1,1,1,0,0,,4 - fraction ancienne
+54174, Écrouves,54,10.84,2,1,1,1,0,0,,4 - fraction ancienne
+57404, Lindre-Basse,57,10.80,2,1,1,1,0,0,,4 - fraction ancienne
+47298, Sénestis,47,10.78,2,1,1,1,0,0,,4 - fraction ancienne
+54515, Thélod,54,10.78,2,1,1,1,0,0,,4 - fraction ancienne
+54145, Crévic,54,10.75,2,1,1,1,0,0,,4 - fraction ancienne
+57374, Lafrimbolle,57,10.73,2,1,1,1,0,0,,4 - fraction ancienne
+54477, Saint-Julien-lès-Gorze,54,10.72,3,1,1,1,0,0,,4 - fraction ancienne
+54327, Lucey,54,10.72,2,1,1,1,0,0,,4 - fraction ancienne
+54571, Ville-en-Vermois,54,10.71,2,1,1,1,0,0,,4 - fraction ancienne
+90057, Lachapelle-sous-Chaux,90,10.70,2,1,1,1,0,0,,4 - fraction ancienne
+54351, Marbache,54,10.67,2,1,1,1,0,0,,4 - fraction ancienne
+72198,La Milesse,72,10.64,2,1,1,1,0,0,,4 - fraction ancienne
+54105, Bulligny,54,10.63,2,1,1,1,0,0,,4 - fraction ancienne
+87113,Le Palais-sur-Vienne,87,10.63,2,1,1,1,0,0,,4 - fraction ancienne
+55239, Haumont-près-Samogneux,55,10.62,2,1,0,0,0,0,,4 - fraction ancienne
+54346, Manoncourt-en-Woëvre,54,10.59,2,1,1,1,0,0,,4 - fraction ancienne
+57592, Romelfing,57,10.59,2,1,1,1,0,0,,4 - fraction ancienne
+59205, Escaudain,59,10.58,2,1,1,1,0,0,,4 - fraction ancienne
+57562, Ranguevaux,57,10.57,2,1,1,1,0,0,,4 - fraction ancienne
+62019, Aix-Noulette,62,10.57,2,1,1,1,0,0,,4 - fraction ancienne
+57587, Rodalbe,57,10.56,2,1,1,1,0,0,,4 - fraction ancienne
+81230, Rosières,81,10.55,2,1,1,1,0,0,,4 - fraction ancienne
+54060, Belleville,54,10.52,2,1,1,1,0,0,,4 - fraction ancienne
+57042, Avricourt,57,10.49,2,1,1,1,0,0,,4 - fraction ancienne
+57041, Aumetz,57,10.46,2,1,1,1,0,0,,4 - fraction ancienne
+54266, Houdreville,54,10.43,2,1,1,1,0,0,,4 - fraction ancienne
+95607, Taverny,95,10.43,2,1,1,1,0,0,,4 - fraction ancienne
+42264, Saint-Médard-en-Forez,42,10.42,2,1,1,1,0,0,,4 - fraction ancienne
+93078, Villepinte,93,10.42,2,1,1,1,0,0,,4 - fraction ancienne
+57448, Marsal,57,10.40,2,1,1,1,0,0,,4 - fraction ancienne
+42095, Firminy,42,10.37,2,1,1,1,0,0,,4 - fraction ancienne
+54251, Harbouey,54,10.36,2,1,1,1,0,0,,4 - fraction ancienne
+54159, Dombasle-sur-Meurthe,54,10.35,2,1,1,1,0,0,,4 - fraction ancienne
+54163, Domjevin,54,10.34,2,1,1,1,0,0,,4 - fraction ancienne
+57255, Gosselming,57,10.33,2,1,1,1,0,0,,4 - fraction ancienne
+62261, Cucq,62,10.29,2,1,1,1,0,0,,4 - fraction ancienne
+54018, Anoux,54,10.26,2,1,1,1,0,0,,4 - fraction ancienne
+03001, Abrest,03,10.26,2,1,1,1,0,0,,4 - fraction ancienne
+57066, Berthelming,57,10.25,2,1,1,1,0,0,,4 - fraction ancienne
+54096, Bréhain-la-Ville,54,10.24,2,1,1,1,0,0,,4 - fraction ancienne
+57114, Brouviller,57,10.23,2,1,1,1,0,0,,4 - fraction ancienne
+54595, Xermaménil,54,10.22,2,1,1,1,0,0,,4 - fraction ancienne
+21355, Longvic,21,10.21,2,1,1,1,0,0,,4 - fraction ancienne
+03306,Le Vernet,03,10.21,2,1,1,1,0,0,,4 - fraction ancienne
+54545, Vandeléville,54,10.20,2,1,1,1,0,0,,4 - fraction ancienne
+54134, Colmey,54,10.18,2,1,1,1,0,0,,4 - fraction ancienne
+57524, Ommeray,57,10.17,2,1,1,1,0,0,,4 - fraction ancienne
+57333, Hommarting,57,10.17,2,1,1,1,0,0,,4 - fraction ancienne
+57056, Bébing,57,10.14,2,1,1,1,0,0,,4 - fraction ancienne
+57017, Amanvillers,57,10.14,2,1,1,1,0,0,,4 - fraction ancienne
+54539, Vacqueville,54,10.12,2,1,1,1,0,0,,4 - fraction ancienne
+83098,Le Pradet,83,10.12,2,1,1,1,0,0,,4 - fraction ancienne
+57621, Saint-Médard,57,10.09,2,1,1,1,0,0,,4 - fraction ancienne
+57620, Sainte-Marie-aux-Chênes,57,10.08,2,1,1,1,0,0,,4 - fraction ancienne
+57257, Grémecey,57,10.06,2,1,1,1,0,0,,4 - fraction ancienne
+57491, Moyeuvre-Grande,57,10.04,2,1,1,1,0,0,,4 - fraction ancienne
+59230, Ferrière-la-Grande,59,10.04,2,1,1,1,0,0,,4 - fraction ancienne
+67421, Saales,67,10.02,2,1,1,1,0,0,,4 - fraction ancienne
+54024, Arraye-et-Han,54,10.02,2,1,1,1,0,0,,4 - fraction ancienne
+54088, Bouvron,54,10.01,2,1,1,1,0,0,,4 - fraction ancienne
+45312, Solterre,45,9.99,2,1,1,1,0,0,,4 - fraction ancienne
+57451, Marthille,57,9.99,2,1,1,1,0,0,,4 - fraction ancienne
+57281, Haboudange,57,9.98,2,1,1,1,0,0,,4 - fraction ancienne
+91691, Yerres,91,9.97,2,1,1,1,0,0,,4 - fraction ancienne
+54427, Pierre-Percée,54,9.97,3,1,1,1,0,0,,4 - fraction ancienne
+57098, Bourgaltroff,57,9.96,2,1,1,1,0,0,,4 - fraction ancienne
+54049, Baslieux,54,9.95,2,1,1,1,0,0,,4 - fraction ancienne
+67020, Barembach,67,9.92,2,1,1,1,0,0,,4 - fraction ancienne
+54408, Olley,54,9.92,2,1,1,1,0,0,,4 - fraction ancienne
+57401, Lidrezing,57,9.89,2,1,1,1,0,0,,4 - fraction ancienne
+54578, Villers-lès-Nancy,54,9.87,2,1,1,1,0,0,,4 - fraction ancienne
+57613, Saint-Jean-de-Bassel,57,9.86,2,1,1,1,0,0,,4 - fraction ancienne
+67027, Belmont,67,9.82,2,1,1,1,0,0,,4 - fraction ancienne
+54093, Brainville,54,9.81,2,1,1,1,0,0,,4 - fraction ancienne
+54378, Montigny-sur-Chiers,54,9.81,2,1,1,1,0,0,,4 - fraction ancienne
+78005, Achères,78,9.76,2,1,1,1,0,0,,4 - fraction ancienne
+06044,La Colle-sur-Loup,06,9.76,2,1,1,1,0,0,,4 - fraction ancienne
+54487, Saint-Rémy-aux-Bois,54,9.74,2,1,1,1,0,0,,4 - fraction ancienne
+57177, Dieuze,57,9.73,2,1,1,1,0,0,,4 - fraction ancienne
+06123, Saint-Laurent-du-Var,06,9.70,2,1,1,1,0,0,,4 - fraction ancienne
+54348, Manonville,54,9.65,2,1,1,1,0,0,,4 - fraction ancienne
+54101, Brouville,54,9.65,2,1,1,1,0,0,,4 - fraction ancienne
+54004, Affléville,54,9.64,2,1,1,1,0,0,,4 - fraction ancienne
+54034, Avrainville,54,9.64,2,1,1,1,0,0,,4 - fraction ancienne
+54383, Mont-sur-Meurthe,54,9.64,2,1,1,1,0,0,,4 - fraction ancienne
+21417, Missery,21,9.63,2,1,1,1,0,0,,4 - fraction ancienne
+57461, Métairies-Saint-Quirin,57,9.62,2,1,1,1,0,0,,4 - fraction ancienne
+54015, Anderny,54,9.62,2,1,1,1,0,0,,4 - fraction ancienne
+54061, Bénaménil,54,9.61,2,1,1,1,0,0,,4 - fraction ancienne
+57678, Tressange,57,9.57,2,1,1,1,0,0,,4 - fraction ancienne
+90033, Delle,90,9.57,2,1,1,1,0,0,,4 - fraction ancienne
+54063, Bernécourt,54,9.57,2,1,1,1,0,0,,4 - fraction ancienne
+57060, Bénestroff,57,9.56,2,1,1,1,0,0,,4 - fraction ancienne
+54287, Lachapelle,54,9.56,2,1,1,1,0,0,,4 - fraction ancienne
+38171,La Forteresse,38,9.55,2,1,1,1,0,0,,4 - fraction ancienne
+90023, Chaux,90,9.54,2,1,1,1,0,0,,4 - fraction ancienne
+67321, Neuviller-la-Roche,67,9.52,2,1,1,1,0,0,,4 - fraction ancienne
+54437, Pulligny,54,9.51,2,1,1,1,0,0,,4 - fraction ancienne
+21531, Rouvray,21,9.51,2,1,1,1,0,0,,4 - fraction ancienne
+57347, Insviller,57,9.49,2,1,1,1,0,0,,4 - fraction ancienne
+54079, Blénod-lès-Pont-à-Mousson,54,9.49,2,1,1,1,0,0,,4 - fraction ancienne
+62244, Coulogne,62,9.46,2,1,1,1,0,0,,4 - fraction ancienne
+54009, Allamont,54,9.46,2,1,1,1,0,0,,4 - fraction ancienne
+54055, Bayonville-sur-Mad,54,9.45,2,1,1,1,0,0,,4 - fraction ancienne
+72130, Fay,72,9.45,2,1,1,1,0,0,,4 - fraction ancienne
+90104, Vézelois,90,9.44,2,1,1,1,0,0,,4 - fraction ancienne
+54467, Rozelieures,54,9.41,2,1,1,1,0,0,,4 - fraction ancienne
+57151, Conthil,57,9.39,2,1,1,1,0,0,,4 - fraction ancienne
+90005, Auxelles-Bas,90,9.38,2,1,1,1,0,0,,4 - fraction ancienne
+54058, Béchamps,54,9.37,2,1,1,1,0,0,,4 - fraction ancienne
+54130, Clayeures,54,9.36,2,1,1,1,0,0,,4 - fraction ancienne
+90042, Évette-Salbert,90,9.36,2,1,1,1,0,0,,4 - fraction ancienne
+54510, Sornéville,54,9.36,3,1,1,1,0,0,,4 - fraction ancienne
+57305, Havange,57,9.33,2,1,1,1,0,0,,4 - fraction ancienne
+90054, Grosmagny,90,9.32,2,1,1,1,0,0,,4 - fraction ancienne
+54410, Onville,54,9.32,3,1,1,1,0,0,,4 - fraction ancienne
+54523, Thuilley-aux-Groseilles,54,9.31,2,1,1,1,0,0,,4 - fraction ancienne
+54230, Gogney,54,9.29,2,1,1,1,0,0,,4 - fraction ancienne
+54153, Dampvitoux,54,9.27,3,1,1,1,0,0,,4 - fraction ancienne
+54119, Charey,54,9.26,2,1,1,1,0,0,,4 - fraction ancienne
+42138, Maringes,42,9.26,2,1,1,1,0,0,,4 - fraction ancienne
+57634, Saulny,57,9.25,2,1,1,1,0,0,,4 - fraction ancienne
+54146, Crézilles,54,9.25,2,1,1,1,0,0,,4 - fraction ancienne
+08243, Lalobbe,08,9.24,2,1,1,1,0,0,,4 - fraction ancienne
+54154, Deneuvre,54,9.24,2,1,1,1,0,0,,4 - fraction ancienne
+54131, Clémery,54,9.22,2,1,1,1,0,0,,4 - fraction ancienne
+57158, Craincourt,57,9.20,2,1,1,1,0,0,,4 - fraction ancienne
+57685, Vahl-lès-Bénestroff,57,9.20,2,1,1,1,0,0,,4 - fraction ancienne
+54335, Maixe,54,9.19,2,1,1,1,0,0,,4 - fraction ancienne
+54296, Laneuvelotte,54,9.18,3,1,1,1,0,0,,4 - fraction ancienne
+67451, Schleithal,67,9.15,2,1,1,1,0,0,,4 - fraction ancienne
+59179, Douchy-les-Mines,59,9.14,2,1,1,1,0,0,,4 - fraction ancienne
+54244, Hagéville,54,9.14,3,1,1,1,0,0,,4 - fraction ancienne
+54536, Tucquegnieux,54,9.12,2,1,1,1,0,0,,4 - fraction ancienne
+57692, Vannecourt,57,9.09,2,1,1,1,0,0,,4 - fraction ancienne
+90068, Meroux,90,9.07,2,1,1,1,0,0,,4 - fraction ancienne
+57618, Saint-Louis,57,9.05,2,1,1,1,0,0,,4 - fraction ancienne
+54136, Conflans-en-Jarnisy,54,9.04,2,1,1,1,0,0,,4 - fraction ancienne
+54537, Ugny,54,9.02,2,1,1,1,0,0,,4 - fraction ancienne
+91657, Vigneux-sur-Seine,91,9.01,2,1,1,1,0,0,,4 - fraction ancienne
+57509, Nitting,57,9.01,2,1,1,1,0,0,,4 - fraction ancienne
+14179, Cordebugle,14,9.00,2,1,1,1,0,0,,4 - fraction ancienne
+90022, Châtenois-les-Forges,90,9.00,2,1,1,1,0,0,,4 - fraction ancienne
+54470, Saint-Baussant,54,8.99,2,1,1,1,0,0,,4 - fraction ancienne
+57022, Angevillers,57,8.99,2,1,1,1,0,0,,4 - fraction ancienne
+81033, Blaye-les-Mines,81,8.97,2,1,1,1,0,0,,4 - fraction ancienne
+54212, Fresnois-la-Montagne,54,8.96,2,1,1,1,0,0,,4 - fraction ancienne
+54553, Vaudeville,54,8.95,2,1,1,1,0,0,,4 - fraction ancienne
+57433, Maizières-lès-Metz,57,8.93,2,1,1,1,0,0,,4 - fraction ancienne
+54220, Gémonville,54,8.88,2,1,1,1,0,0,,4 - fraction ancienne
+54360, Ménil-la-Tour,54,8.87,2,1,1,1,0,0,,4 - fraction ancienne
+14601, Saint-Julien-sur-Calonne,14,8.87,2,1,1,1,0,0,,4 - fraction ancienne
+54214, Frolois,54,8.85,2,1,1,1,0,0,,4 - fraction ancienne
+42316, Unieux,42,8.84,2,1,1,1,0,0,,4 - fraction ancienne
+54564, Viéville-en-Haye,54,8.83,2,1,1,1,0,0,,4 - fraction ancienne
+54317, Lironville,54,8.79,2,1,1,1,0,0,,4 - fraction ancienne
+54533, Trieux,54,8.75,2,1,1,1,0,0,,4 - fraction ancienne
+69057, Chevinay,69,8.72,2,1,1,1,0,0,,4 - fraction ancienne
+54160, Domèvre-en-Haye,54,8.71,2,1,1,1,0,0,,4 - fraction ancienne
+11042, Blomac,11,8.71,2,1,1,1,0,0,,4 - fraction ancienne
+57414, Lorquin,57,8.71,2,1,1,1,0,0,,4 - fraction ancienne
+57582, Richemont,57,8.70,2,1,1,1,0,0,,4 - fraction ancienne
+54364, Méréville,54,8.69,2,1,1,1,0,0,,4 - fraction ancienne
+57395, Lesse,57,8.68,2,1,1,1,0,0,,4 - fraction ancienne
+73205,Le Pontet,73,8.67,2,1,1,1,0,0,,4 - fraction ancienne
+57349, Jallaucourt,57,8.66,2,1,1,1,0,0,,4 - fraction ancienne
+54434, Praye,54,8.66,2,1,1,1,0,0,,4 - fraction ancienne
+90085, Riervescemont,90,8.64,2,1,1,1,0,0,,4 - fraction ancienne
+54388, Mouacourt,54,8.63,2,1,1,1,0,0,,4 - fraction ancienne
+78586, Sartrouville,78,8.62,2,1,1,1,0,0,,4 - fraction ancienne
+43240, Solignac-sous-Roche,43,8.60,2,1,1,1,0,0,,4 - fraction ancienne
+54249, Hannonville-Suzémont,54,8.57,2,1,1,1,0,0,,4 - fraction ancienne
+54499, Seicheprey,54,8.56,2,1,1,1,0,0,,4 - fraction ancienne
+57511, Norroy-le-Veneur,57,8.55,2,1,1,1,0,0,,4 - fraction ancienne
+21241, Échevronne,21,8.55,2,1,1,1,0,0,,4 - fraction ancienne
+54262, Hoéville,54,8.55,2,1,1,1,0,0,,4 - fraction ancienne
+07040, Boucieu-le-Roi,07,8.54,2,1,1,1,0,0,,4 - fraction ancienne
+21608, Sincey-lès-Rouvray,21,8.53,2,1,1,1,0,0,,4 - fraction ancienne
+54382, Mont-Saint-Martin,54,8.53,2,1,1,1,0,0,,4 - fraction ancienne
+90026, Chèvremont,90,8.51,2,1,1,1,0,0,,4 - fraction ancienne
+54430, Pompey,54,8.50,2,1,1,1,0,0,,4 - fraction ancienne
+54371, Moineville,54,8.47,2,1,1,1,0,0,,4 - fraction ancienne
+54041, Bagneux,54,8.46,2,1,1,1,0,0,,4 - fraction ancienne
+54389, Mouaville,54,8.45,2,1,1,1,0,0,,4 - fraction ancienne
+59107, Bray-Dunes,59,8.44,2,1,0,1,0,0,,4 - fraction ancienne
+54471, Saint-Boingt,54,8.44,2,1,1,1,0,0,,4 - fraction ancienne
+57674, Tincry,57,8.40,2,1,1,1,0,0,,4 - fraction ancienne
+54295, Landres,54,8.40,2,1,1,1,0,0,,4 - fraction ancienne
+57468, Mittelbronn,57,8.40,2,1,1,1,0,0,,4 - fraction ancienne
+54127, Chenières,54,8.40,2,1,1,1,0,0,,4 - fraction ancienne
+54483, Saint-Nicolas-de-Port,54,8.36,2,1,1,1,0,0,,4 - fraction ancienne
+54328, Ludres,54,8.35,2,1,1,1,0,0,,4 - fraction ancienne
+57493, Mulcey,57,8.33,2,1,1,1,0,0,,4 - fraction ancienne
+54416, Pannes,54,8.32,2,1,1,1,0,0,,4 - fraction ancienne
+54186, Eulmont,54,8.32,2,1,1,1,0,0,,4 - fraction ancienne
+57411, Lommerange,57,8.29,2,1,1,1,0,0,,4 - fraction ancienne
+57611, Saint-Georges,57,8.25,2,1,1,1,0,0,,4 - fraction ancienne
+57485, Morville-lès-Vic,57,8.24,2,1,1,1,0,0,,4 - fraction ancienne
+54122, Chaudeney-sur-Moselle,54,8.24,2,1,1,1,0,0,,4 - fraction ancienne
+54455, Remenoville,54,8.23,2,1,1,1,0,0,,4 - fraction ancienne
+57244, Garrebourg,57,8.22,2,1,1,1,0,0,,4 - fraction ancienne
+54275, Jaulny,54,8.20,2,1,1,1,0,0,,4 - fraction ancienne
+54152, Damelevières,54,8.20,2,1,1,1,0,0,,4 - fraction ancienne
+90012, Bessoncourt,90,8.18,2,1,1,1,0,0,,4 - fraction ancienne
+57724, Vitry-sur-Orne,57,8.16,2,1,1,1,0,0,,4 - fraction ancienne
+54362, Mercy-le-Bas,54,8.14,2,1,1,1,0,0,,4 - fraction ancienne
+57353, Juvelize,57,8.13,2,1,1,1,0,0,,4 - fraction ancienne
+54513, Tantonville,54,8.13,2,1,1,1,0,0,,4 - fraction ancienne
+57303, Hauconcourt,57,8.12,2,1,1,1,0,0,,4 - fraction ancienne
+57295, Haraucourt-sur-Seille,57,8.11,2,1,1,1,0,0,,4 - fraction ancienne
+54420, Petit-Failly,54,8.09,2,1,1,1,0,0,,4 - fraction ancienne
+57084, Bioncourt,57,8.09,2,1,1,1,0,0,,4 - fraction ancienne
+54517, Thézey-Saint-Martin,54,8.08,2,1,1,1,0,0,,4 - fraction ancienne
+57488, Moussey,57,8.08,2,1,1,1,0,0,,4 - fraction ancienne
+90003, Anjoutey,90,8.07,2,1,1,1,0,0,,4 - fraction ancienne
+54190, Fécocourt,54,8.07,2,1,1,1,0,0,,4 - fraction ancienne
+54110, Cerville,54,8.06,2,1,1,1,0,0,,4 - fraction ancienne
+14699, Touques,14,8.04,2,1,1,1,0,0,,4 - fraction ancienne
+21158, Chaume-et-Courchamp,21,8.03,2,1,1,1,0,0,,4 - fraction ancienne
+54228, Giriviller,54,8.00,2,1,1,1,0,0,,4 - fraction ancienne
+67076, Colroy-la-Roche,67,7.99,2,1,1,1,0,0,,4 - fraction ancienne
+67306, Muhlbach-sur-Bruche,67,7.99,2,1,1,1,0,0,,4 - fraction ancienne
+57077, Bezange-la-Petite,57,7.99,2,1,1,1,0,0,,4 - fraction ancienne
+57754, Xanrey,57,7.98,2,1,1,1,0,0,,4 - fraction ancienne
+42102, Grammond,42,7.97,2,1,1,1,0,0,,4 - fraction ancienne
+37273,La Ville-aux-Dames,37,7.97,2,1,1,1,0,0,,4 - fraction ancienne
+54524, Thumeréville,54,7.97,2,1,1,1,0,0,,4 - fraction ancienne
+54302, Lantéfontaine,54,7.94,2,1,1,1,0,0,,4 - fraction ancienne
+90093, Sermamagny,90,7.94,2,1,1,1,0,0,,4 - fraction ancienne
+54259, Herbéviller,54,7.93,2,1,1,1,0,0,,4 - fraction ancienne
+71310, Montchanin,71,7.93,2,1,1,1,0,0,,4 - fraction ancienne
+57362, Kerprich-aux-Bois,57,7.93,2,1,1,1,0,0,,4 - fraction ancienne
+54475, Saint-Germain,54,7.92,2,1,1,1,0,0,,4 - fraction ancienne
+54002, Abbéville-lès-Conflans,54,7.92,2,1,1,1,0,0,,4 - fraction ancienne
+54556, Vého,54,7.90,2,1,1,1,0,0,,4 - fraction ancienne
+89404, Subligny,89,7.87,2,1,1,1,0,0,,4 - fraction ancienne
+54359, Méhoncourt,54,7.86,2,1,1,1,0,0,,4 - fraction ancienne
+54290, Laix,54,7.85,2,1,1,1,0,0,,4 - fraction ancienne
+54020, Anthelupt,54,7.85,2,1,1,1,0,0,,4 - fraction ancienne
+54137, Cons-la-Grandville,54,7.85,2,1,1,1,0,0,,4 - fraction ancienne
+95574, Saint-Prix,95,7.85,2,1,1,1,0,0,,4 - fraction ancienne
+90088, Rougegoutte,90,7.83,2,1,1,1,0,0,,4 - fraction ancienne
+54147, Crion,54,7.82,2,1,1,1,0,0,,4 - fraction ancienne
+57133, Château-Voué,57,7.82,2,1,1,1,0,0,,4 - fraction ancienne
+57081, Bidestroff,57,7.80,2,1,1,1,0,0,,4 - fraction ancienne
+54133, Coincourt,54,7.78,3,1,1,1,0,0,,4 - fraction ancienne
+93007,Le Blanc-Mesnil,93,7.78,2,1,1,1,0,0,,4 - fraction ancienne
+54226, Gibeaumeix,54,7.77,2,1,1,1,0,0,,4 - fraction ancienne
+54001, Abaucourt,54,7.76,2,1,1,1,0,0,,4 - fraction ancienne
+54243, Hablainville,54,7.76,2,1,1,1,0,0,,4 - fraction ancienne
+54030, Autrepierre,54,7.73,2,1,1,1,0,0,,4 - fraction ancienne
+57120, Burlioncourt,57,7.72,2,1,1,1,0,0,,4 - fraction ancienne
+54341, Mance,54,7.70,2,1,1,1,0,0,,4 - fraction ancienne
+33009, Arcachon,33,7.69,2,1,1,1,0,0,,4 - fraction ancienne
+54169, Domprix,54,7.69,2,1,1,1,0,0,,4 - fraction ancienne
+54325, Loromontzey,54,7.69,2,1,1,1,0,0,,4 - fraction ancienne
+91494,Le Plessis-Pâté,91,7.67,2,1,1,1,0,0,,4 - fraction ancienne
+90102, Vescemont,90,7.66,2,1,1,1,0,0,,4 - fraction ancienne
+54227, Giraumont,54,7.66,2,1,1,1,0,0,,4 - fraction ancienne
+54525, Tiercelet,54,7.66,2,1,1,1,0,0,,4 - fraction ancienne
+01077, Challes-la-Montagne,01,7.65,2,1,1,1,0,0,,4 - fraction ancienne
+57763, Zommange,57,7.64,2,1,1,1,0,0,,4 - fraction ancienne
+54091, Bouxières-sous-Froidmont,54,7.63,2,1,1,1,0,0,,4 - fraction ancienne
+54573, Villers-en-Haye,54,7.61,2,1,1,1,0,0,,4 - fraction ancienne
+54339, Malzéville,54,7.61,2,1,1,1,0,0,,4 - fraction ancienne
+54253, Hatrize,54,7.60,2,1,1,1,0,0,,4 - fraction ancienne
+57725, Vittersbourg,57,7.60,2,1,1,1,0,0,,4 - fraction ancienne
+54594, Xammes,54,7.57,2,1,1,1,0,0,,4 - fraction ancienne
+93027,La Courneuve,93,7.57,2,1,1,1,0,0,,4 - fraction ancienne
+57346, Insming,57,7.57,2,1,1,1,0,0,,4 - fraction ancienne
+54392, Moutrot,54,7.56,2,1,1,1,0,0,,4 - fraction ancienne
+54171, Doncourt-lès-Conflans,54,7.56,2,1,1,1,0,0,,4 - fraction ancienne
+90087, Roppe,90,7.56,2,1,1,1,0,0,,4 - fraction ancienne
+54193, Fey-en-Haye,54,7.54,3,1,1,1,0,0,,4 - fraction ancienne
+54104, Buissoncourt,54,7.54,2,1,1,1,0,0,,4 - fraction ancienne
+93046, Livry-Gargan,93,7.54,2,1,1,1,0,0,,4 - fraction ancienne
+54255, Haudonville,54,7.54,2,1,1,1,0,0,,4 - fraction ancienne
+54010, Allamps,54,7.51,2,1,1,1,0,0,,4 - fraction ancienne
+57727, Viviers,57,7.50,2,1,1,1,0,0,,4 - fraction ancienne
+57452,La Maxe,57,7.50,2,1,1,1,0,0,,4 - fraction ancienne
+54068, Beuvezin,54,7.50,2,1,1,1,0,0,,4 - fraction ancienne
+57018, Amelécourt,57,7.48,2,1,1,1,0,0,,4 - fraction ancienne
+54029, Audun-le-Roman,54,7.47,2,1,1,1,0,0,,4 - fraction ancienne
+54175, Einvaux,54,7.47,2,1,1,1,0,0,,4 - fraction ancienne
+02442, Loupeigne,02,7.44,2,1,1,1,0,0,,4 - fraction ancienne
+34077, Clapiers,34,7.43,2,1,1,1,0,0,,4 - fraction ancienne
+62186, Bully-les-Mines,62,7.43,2,1,1,1,0,0,,4 - fraction ancienne
+54019, Ansauville,54,7.41,2,1,1,1,0,0,,4 - fraction ancienne
+54254, Haucourt-Moulaine,54,7.41,2,1,1,1,0,0,,4 - fraction ancienne
+59567, Séranvillers-Forenville,59,7.39,2,1,1,1,0,0,,4 - fraction ancienne
+54495, Saulxures-lès-Nancy,54,7.39,3,1,1,1,0,0,,4 - fraction ancienne
+59002, Abscon,59,7.38,2,1,1,1,0,0,,4 - fraction ancienne
+57315, Henridorff,57,7.38,2,1,1,1,0,0,,4 - fraction ancienne
+77232, Isles-lès-Villenoy,77,7.37,2,1,1,1,0,0,,4 - fraction ancienne
+54044, Barbas,54,7.37,2,1,1,1,0,0,,4 - fraction ancienne
+54313, Létricourt,54,7.36,2,1,1,1,0,0,,4 - fraction ancienne
+57324, Hilbesheim,57,7.36,2,1,1,1,0,0,,4 - fraction ancienne
+57399, Lezey,57,7.35,2,1,1,1,0,0,,4 - fraction ancienne
+54436, Preutin-Higny,54,7.35,2,1,1,1,0,0,,4 - fraction ancienne
+57175, Diane-Capelle,57,7.33,2,1,1,1,0,0,,4 - fraction ancienne
+57424, Lucy,57,7.32,2,1,1,1,0,0,,4 - fraction ancienne
+14715, Trouville-sur-Mer,14,7.32,2,1,1,1,0,0,,4 - fraction ancienne
+54013, Amenoncourt,54,7.32,2,1,1,1,0,0,,4 - fraction ancienne
+54084, Mont-Bonvillers,54,7.32,2,1,1,1,0,0,,4 - fraction ancienne
+54197, Fléville-devant-Nancy,54,7.32,2,1,1,1,0,0,,4 - fraction ancienne
+57558, Puttigny,57,7.32,2,1,1,1,0,0,,4 - fraction ancienne
+54489, Saint-Supplet,54,7.31,2,1,1,1,0,0,,4 - fraction ancienne
+22261, Quintenic,22,7.31,2,1,1,1,0,0,,4 - fraction ancienne
+06128, Saint-Paul-de-Vence,06,7.30,2,1,1,1,0,0,,4 - fraction ancienne
+93050, Neuilly-sur-Marne,93,7.30,2,1,1,1,0,0,,4 - fraction ancienne
+14563, Saint-Benoît-d'Hébertot,14,7.30,2,1,1,1,0,0,,4 - fraction ancienne
+54173, Drouville,54,7.28,2,1,1,1,0,0,,4 - fraction ancienne
+54077, Blâmont,54,7.27,2,1,1,1,0,0,,4 - fraction ancienne
+67116, Ebersmunster,67,7.27,2,1,1,1,0,0,,4 - fraction ancienne
+54570, Villecey-sur-Mad,54,7.27,3,1,1,1,0,0,,4 - fraction ancienne
+54282, Joppécourt,54,7.26,2,1,1,1,0,0,,4 - fraction ancienne
+54543, Vallois,54,7.25,2,1,1,1,0,0,,4 - fraction ancienne
+54016, Andilly,54,7.23,2,1,1,1,0,0,,4 - fraction ancienne
+54272, Jaillon,54,7.21,2,1,1,1,0,0,,4 - fraction ancienne
+54596, Xeuilley,54,7.20,2,1,1,1,0,0,,4 - fraction ancienne
+54386, Moriviller,54,7.19,2,1,1,1,0,0,,4 - fraction ancienne
+54531, Tramont-Saint-André,54,7.19,2,1,1,1,0,0,,4 - fraction ancienne
+67314, Natzwiller,67,7.19,2,1,1,1,0,0,,4 - fraction ancienne
+54428, Pierrepont,54,7.19,2,1,1,1,0,0,,4 - fraction ancienne
+54486, Saint-Remimont,54,7.19,2,1,1,1,0,0,,4 - fraction ancienne
+91649, Vert-le-Petit,91,7.18,2,1,1,1,0,0,,4 - fraction ancienne
+88361, Provenchères-sur-Fave,88,7.17,2,1,1,1,0,0,,4 - fraction ancienne
+14079, Blonville-sur-Mer,14,7.16,2,1,1,1,0,0,,4 - fraction ancienne
+78358, Maisons-Laffitte,78,7.16,2,1,1,1,0,0,,4 - fraction ancienne
+54340, Mamey,54,7.16,2,1,1,1,0,0,,4 - fraction ancienne
+57487, Moulins-lès-Metz,57,7.15,2,1,1,1,0,0,,4 - fraction ancienne
+54469, Saint-Ail,54,7.15,2,1,1,1,0,0,,4 - fraction ancienne
+78418, Montesson,78,7.15,2,1,1,1,0,0,,4 - fraction ancienne
+54369, Millery,54,7.14,2,1,1,1,0,0,,4 - fraction ancienne
+67026, Bellefosse,67,7.14,2,1,1,1,0,0,,4 - fraction ancienne
+93032, Gagny,93,7.11,2,1,1,1,0,0,,4 - fraction ancienne
+54460, Rogéville,54,7.10,2,1,1,1,0,0,,4 - fraction ancienne
+90039, Essert,90,7.10,2,1,1,1,0,0,,4 - fraction ancienne
+90047, Fontaine,90,7.09,2,1,1,1,0,0,,4 - fraction ancienne
+54511, Sponville,54,7.08,3,1,1,1,0,0,,4 - fraction ancienne
+57496, Nébing,57,7.07,2,1,1,1,0,0,,4 - fraction ancienne
+57593, Roncourt,57,7.06,2,1,1,1,0,0,,4 - fraction ancienne
+39387, Nevy-lès-Dole,39,7.05,2,1,1,1,0,0,,4 - fraction ancienne
+59297, Hélesmes,59,7.04,2,1,1,1,0,0,,4 - fraction ancienne
+42291, Saint-Thurin,42,7.02,2,1,1,1,0,0,,4 - fraction ancienne
+68055, Bruebach,68,7.02,2,1,1,1,0,0,,4 - fraction ancienne
+54155, Deuxville,54,7.01,2,1,1,1,0,0,,4 - fraction ancienne
+54474, Sainte-Geneviève,54,6.99,2,1,1,1,0,0,,4 - fraction ancienne
+54507, Sionviller,54,6.98,2,1,1,1,0,0,,4 - fraction ancienne
+54459, Richardménil,54,6.98,2,1,1,1,0,0,,4 - fraction ancienne
+93008, Bobigny,93,6.97,2,1,1,1,0,0,,4 - fraction ancienne
+54349, Manonviller,54,6.96,2,1,1,1,0,0,,4 - fraction ancienne
+54599, Xonville,54,6.95,3,1,1,1,0,0,,4 - fraction ancienne
+57012, Algrange,57,6.95,2,1,1,1,0,0,,4 - fraction ancienne
+77023, Barcy,77,6.94,2,1,1,1,0,0,,4 - fraction ancienne
+68046, Bourbach-le-Haut,68,6.92,2,1,1,1,0,0,,4 - fraction ancienne
+57168, Danne-et-Quatre-Vents,57,6.91,2,1,1,1,0,0,,4 - fraction ancienne
+57555, Prévocourt,57,6.89,2,1,1,1,0,0,,4 - fraction ancienne
+54399, Neuviller-sur-Moselle,54,6.88,2,1,1,1,0,0,,4 - fraction ancienne
+90025, Chavannes-les-Grands,90,6.87,2,1,1,1,0,0,,4 - fraction ancienne
+57071, Bettborn,57,6.86,2,1,1,1,0,0,,4 - fraction ancienne
+90002, Angeot,90,6.86,2,1,1,1,0,0,,4 - fraction ancienne
+54497, Saxon-Sion,54,6.85,2,1,1,1,0,0,,4 - fraction ancienne
+57436, Malaucourt-sur-Seille,57,6.85,2,1,1,1,0,0,,4 - fraction ancienne
+54003, Aboncourt,54,6.84,2,1,1,1,0,0,,4 - fraction ancienne
+54535, Tronville,54,6.83,3,1,1,1,0,0,,4 - fraction ancienne
+61270, Ménil-Jean,61,6.82,2,1,1,1,0,0,,4 - fraction ancienne
+54042, Bainville-aux-Miroirs,54,6.82,2,1,1,1,0,0,,4 - fraction ancienne
+93071, Sevran,93,6.80,2,1,1,1,0,0,,4 - fraction ancienne
+54167, Dommartin-lès-Toul,54,6.78,2,1,1,1,0,0,,4 - fraction ancienne
+73052, Bourget-en-Huile,73,6.78,2,1,1,1,0,0,,4 - fraction ancienne
+54050, Bathelémont,54,6.77,3,1,1,1,0,0,,4 - fraction ancienne
+88213,La Grande-Fosse,88,6.77,2,1,1,1,0,0,,4 - fraction ancienne
+54123, Chavigny,54,6.75,2,1,1,1,0,0,,4 - fraction ancienne
+54330, Lupcourt,54,6.75,2,1,1,1,0,0,,4 - fraction ancienne
+54368, Mignéville,54,6.74,2,1,1,1,0,0,,4 - fraction ancienne
+54345, Manoncourt-en-Vermois,54,6.74,2,1,1,1,0,0,,4 - fraction ancienne
+54457, Remoncourt,54,6.74,2,1,1,1,0,0,,4 - fraction ancienne
+57481, Montois-la-Montagne,57,6.73,2,1,1,1,0,0,,4 - fraction ancienne
+73053, Bourgneuf,73,6.71,2,1,1,1,0,0,,4 - fraction ancienne
+54601, Xures,54,6.71,3,1,1,1,0,0,,4 - fraction ancienne
+54506, Sexey-les-Bois,54,6.68,2,1,1,1,0,0,,4 - fraction ancienne
+54285, Juvrecourt,54,6.68,3,1,1,1,0,0,,4 - fraction ancienne
+57181, Domnom-lès-Dieuze,57,6.67,2,1,1,1,0,0,,4 - fraction ancienne
+54562, Verdenal,54,6.67,2,1,1,1,0,0,,4 - fraction ancienne
+54473, Saint-Firmin,54,6.66,2,1,1,1,0,0,,4 - fraction ancienne
+54082, Boncourt,54,6.66,2,1,1,1,0,0,,4 - fraction ancienne
+74308, Vinzier,74,6.65,2,1,1,1,0,0,,4 - fraction ancienne
+54301, Lanfroicourt,54,6.65,2,1,1,1,0,0,,4 - fraction ancienne
+57053, Bassing,57,6.65,2,1,1,1,0,0,,4 - fraction ancienne
+54281, Jolivet,54,6.63,2,1,1,1,0,0,,4 - fraction ancienne
+54183, Essey-la-Côte,54,6.62,2,1,1,1,0,0,,4 - fraction ancienne
+57473, Moncourt,57,6.62,2,1,1,1,0,0,,4 - fraction ancienne
+57268, Guébling,57,6.62,2,1,1,1,0,0,,4 - fraction ancienne
+54358, Mazerulles,54,6.61,3,1,1,1,0,0,,4 - fraction ancienne
+54379, Mont-l'Étroit,54,6.58,2,1,1,1,0,0,,4 - fraction ancienne
+03264, Saint-Yorre,03,6.56,2,1,1,1,0,0,,4 - fraction ancienne
+57415, Lorry-lès-Metz,57,6.55,2,1,1,1,0,0,,4 - fraction ancienne
+54433, Port-sur-Seille,54,6.55,2,1,1,1,0,0,,4 - fraction ancienne
+57713, Vieux-Lixheim,57,6.54,2,1,1,1,0,0,,4 - fraction ancienne
+57397, Ley,57,6.53,2,1,1,1,0,0,,4 - fraction ancienne
+91114, Brunoy,91,6.53,2,1,1,1,0,0,,4 - fraction ancienne
+73068, Chamousset,73,6.52,2,1,1,1,0,0,,4 - fraction ancienne
+54522, Thorey-Lyautey,54,6.52,2,1,1,1,0,0,,4 - fraction ancienne
+57090, Blanche-Église,57,6.51,2,1,1,1,0,0,,4 - fraction ancienne
+57381, Laneuveville-en-Saulnois,57,6.51,2,1,1,1,0,0,,4 - fraction ancienne
+54277, Jeandelize,54,6.51,2,1,1,1,0,0,,4 - fraction ancienne
+54242, Gye,54,6.51,2,1,1,1,0,0,,4 - fraction ancienne
+54052, Battigny,54,6.50,2,1,1,1,0,0,,4 - fraction ancienne
+54583, Villey-le-Sec,54,6.49,2,1,1,1,0,0,,4 - fraction ancienne
+57664, Tarquimpol,57,6.49,2,1,1,1,0,0,,4 - fraction ancienne
+14302, Glanville,14,6.47,2,1,1,1,0,0,,4 - fraction ancienne
+29299, Tréouergat,29,6.46,2,1,1,1,0,0,,4 - fraction ancienne
+57394, Léning,57,6.45,2,1,1,1,0,0,,4 - fraction ancienne
+90043, Faverois,90,6.44,2,1,1,1,0,0,,4 - fraction ancienne
+57480, Montigny-lès-Metz,57,6.44,2,1,1,1,0,0,,4 - fraction ancienne
+57180, Dolving,57,6.44,2,1,1,1,0,0,,4 - fraction ancienne
+54248, Hamonville,54,6.43,2,1,1,1,0,0,,4 - fraction ancienne
+21481, Perrigny-lès-Dijon,21,6.41,2,1,1,1,0,0,,4 - fraction ancienne
+54207, Fraisnes-en-Saintois,54,6.41,2,1,1,1,0,0,,4 - fraction ancienne
+54051, Batilly,54,6.41,2,1,1,1,0,0,,4 - fraction ancienne
+54333, Mailly-sur-Seille,54,6.39,2,1,1,1,0,0,,4 - fraction ancienne
+54032, Autrey,54,6.39,2,1,1,1,0,0,,4 - fraction ancienne
+57344, Imling,57,6.37,2,1,1,1,0,0,,4 - fraction ancienne
+54579, Villers-sous-Prény,54,6.37,2,1,1,1,0,0,,4 - fraction ancienne
+54391, Moutiers,54,6.36,2,1,1,1,0,0,,4 - fraction ancienne
+54413, Ozerailles,54,6.34,2,1,1,1,0,0,,4 - fraction ancienne
+57494, Munster,57,6.33,2,1,1,1,0,0,,4 - fraction ancienne
+54043, Bainville-sur-Madon,54,6.33,2,1,1,1,0,0,,4 - fraction ancienne
+25057, Bethoncourt,25,6.32,2,1,1,1,0,0,,4 - fraction ancienne
+57130, Château-Bréhain,57,6.32,2,1,1,1,0,0,,4 - fraction ancienne
+57580, Riche,57,6.31,2,1,1,1,0,0,,4 - fraction ancienne
+54192, Ferrières,54,6.30,2,1,1,1,0,0,,4 - fraction ancienne
+95252, Franconville,95,6.28,2,1,1,1,0,0,,4 - fraction ancienne
+57675, Torcheville,57,6.27,2,1,1,1,0,0,,4 - fraction ancienne
+54580, Villerupt,54,6.27,2,1,1,1,0,0,,4 - fraction ancienne
+68050, Bréchaumont,68,6.27,2,1,1,1,0,0,,4 - fraction ancienne
+94054, Orly,94,6.27,2,1,1,1,0,0,,4 - fraction ancienne
+54102, Bruley,54,6.26,2,1,1,1,0,0,,4 - fraction ancienne
+54151, Cutry,54,6.26,2,1,1,1,0,0,,4 - fraction ancienne
+65160, Escaunets,65,6.25,2,1,1,1,0,0,,4 - fraction ancienne
+90006, Auxelles-Haut,90,6.25,2,1,1,1,0,0,,4 - fraction ancienne
+54139, Courbesseaux,54,6.24,2,1,1,1,0,0,,4 - fraction ancienne
+54303, Laronxe,54,6.23,2,1,1,1,0,0,,4 - fraction ancienne
+47257, Saint-Martin-Petit,47,6.22,2,1,1,1,0,0,,4 - fraction ancienne
+59426, Neuville-en-Ferrain,59,6.21,2,1,1,1,0,0,,4 - fraction ancienne
+54432, Pont-Saint-Vincent,54,6.20,2,1,1,1,0,0,,4 - fraction ancienne
+54213, Friauville,54,6.19,2,1,1,1,0,0,,4 - fraction ancienne
+54286, Labry,54,6.17,2,1,1,1,0,0,,4 - fraction ancienne
+57354, Juville,57,6.17,2,1,1,1,0,0,,4 - fraction ancienne
+90014, Boron,90,6.15,2,1,1,1,0,0,,4 - fraction ancienne
+54417, Parey-Saint-Césaire,54,6.14,2,1,1,1,0,0,,4 - fraction ancienne
+78165,Les Clayes-sous-Bois,78,6.14,2,1,1,1,0,0,,4 - fraction ancienne
+54600, Xousse,54,6.14,2,1,1,1,0,0,,4 - fraction ancienne
+95060, Bessancourt,95,6.13,2,1,1,1,0,0,,4 - fraction ancienne
+54485, Saint-Pancré,54,6.13,2,1,1,1,0,0,,4 - fraction ancienne
+77457, Solers,77,6.12,2,1,1,1,0,0,,4 - fraction ancienne
+57559, Puzieux,57,6.12,2,1,1,1,0,0,,4 - fraction ancienne
+54320, Loisy,54,6.11,2,1,1,1,0,0,,4 - fraction ancienne
+54054, Bayon,54,6.10,2,1,1,1,0,0,,4 - fraction ancienne
+54541, Valhey,54,6.09,2,1,1,1,0,0,,4 - fraction ancienne
+54440, Puxe,54,6.09,2,1,1,1,0,0,,4 - fraction ancienne
+54292, Lamath,54,6.09,2,1,1,1,0,0,,4 - fraction ancienne
+54414, Pagney-derrière-Barine,54,6.08,2,1,1,1,0,0,,4 - fraction ancienne
+57335, Honskirch,57,6.07,2,1,1,1,0,0,,4 - fraction ancienne
+59649, Wattignies-la-Victoire,59,6.07,2,1,1,1,0,0,,4 - fraction ancienne
+76576, Saint-Eustache-la-Forêt,76,6.07,2,1,1,1,0,0,,4 - fraction ancienne
+54377, Montigny,54,6.07,2,1,1,1,0,0,,4 - fraction ancienne
+54238, Gripport,54,6.06,2,1,1,1,0,0,,4 - fraction ancienne
+54307, Lebeuville,54,6.05,2,1,1,1,0,0,,4 - fraction ancienne
+59104, Boussois,59,6.03,2,1,1,1,0,0,,4 - fraction ancienne
+68065, Chavannes-sur-l'Étang,68,6.02,2,1,1,1,0,0,,4 - fraction ancienne
+94073, Thiais,94,6.02,2,1,1,1,0,0,,4 - fraction ancienne
+54558, Velaine-sous-Amance,54,6.01,3,1,1,1,0,0,,4 - fraction ancienne
+93064, Rosny-sous-Bois,93,6.00,2,1,1,1,0,0,,4 - fraction ancienne
+57300, Haselbourg,57,5.99,2,1,1,1,0,0,,4 - fraction ancienne
+54097, Bréménil,54,5.98,3,1,1,1,0,0,,4 - fraction ancienne
+90061, Lamadeleine-Val-des-Anges,90,5.98,2,1,1,1,0,0,,4 - fraction ancienne
+54551, Vaucourt,54,5.96,2,1,1,1,0,0,,4 - fraction ancienne
+59495, Recquignies,59,5.96,2,1,1,1,0,0,,4 - fraction ancienne
+54120, Charmes-la-Côte,54,5.95,2,1,1,1,0,0,,4 - fraction ancienne
+54484, Sainte-Pôle,54,5.93,3,1,1,1,0,0,,4 - fraction ancienne
+54372, Moivrons,54,5.92,2,1,1,1,0,0,,4 - fraction ancienne
+57486, Morville-sur-Nied,57,5.92,2,1,1,1,0,0,,4 - fraction ancienne
+54216, Froville,54,5.91,2,1,1,1,0,0,,4 - fraction ancienne
+54202, Fontenoy-sur-Moselle,54,5.91,2,1,1,1,0,0,,4 - fraction ancienne
+54299, Laneuveville-devant-Bayon,54,5.91,2,1,1,1,0,0,,4 - fraction ancienne
+54053, Bauzemont,54,5.90,2,1,1,1,0,0,,4 - fraction ancienne
+54508, Sivry,54,5.90,2,1,1,1,0,0,,4 - fraction ancienne
+54441, Puxieux,54,5.88,3,1,1,1,0,0,,4 - fraction ancienne
+02340, Gauchy,02,5.86,2,1,1,1,0,0,,4 - fraction ancienne
+90066, Leval,90,5.86,2,1,1,1,0,0,,4 - fraction ancienne
+59514, Rousies,59,5.85,2,1,1,1,0,0,,4 - fraction ancienne
+90097, Trévenans,90,5.84,2,1,1,1,0,0,,4 - fraction ancienne
+90052, Giromagny,90,5.83,2,1,1,1,0,0,,4 - fraction ancienne
+54357, Maxéville,54,5.83,2,1,1,1,0,0,,4 - fraction ancienne
+54323, Longwy,54,5.82,2,1,1,1,0,0,,4 - fraction ancienne
+54403, Norroy-lès-Pont-à-Mousson,54,5.80,2,1,1,1,0,0,,4 - fraction ancienne
+54158, Dolcourt,54,5.80,2,1,1,1,0,0,,4 - fraction ancienne
+57228, Fossieux,57,5.79,2,1,1,1,0,0,,4 - fraction ancienne
+54552, Vaudémont,54,5.78,2,1,1,1,0,0,,4 - fraction ancienne
+94022, Choisy-le-Roi,94,5.78,2,1,1,1,0,0,,4 - fraction ancienne
+54530, Tramont-Lassus,54,5.77,2,1,1,1,0,0,,4 - fraction ancienne
+54450, Reherrey,54,5.77,2,1,1,1,0,0,,4 - fraction ancienne
+54314, Lexy,54,5.76,2,1,1,1,0,0,,4 - fraction ancienne
+94011, Bonneuil-sur-Marne,94,5.75,2,1,1,1,0,0,,4 - fraction ancienne
+57298, Harreberg,57,5.75,2,1,1,1,0,0,,4 - fraction ancienne
+54092, Bouzanville,54,5.75,2,1,1,1,0,0,,4 - fraction ancienne
+90064, Lepuix-Neuf,90,5.74,2,1,1,1,0,0,,4 - fraction ancienne
+54293, Landécourt,54,5.74,2,1,1,1,0,0,,4 - fraction ancienne
+90028, Courtelevant,90,5.73,2,1,1,1,0,0,,4 - fraction ancienne
+54569, Ville-au-Val,54,5.72,2,1,1,1,0,0,,4 - fraction ancienne
+54221, Gerbécourt-et-Haplemont,54,5.72,2,1,1,1,0,0,,4 - fraction ancienne
+57391, Lemoncourt,57,5.72,2,1,1,1,0,0,,4 - fraction ancienne
+54247, Hammeville,54,5.71,2,1,1,1,0,0,,4 - fraction ancienne
+54532, Tremblecourt,54,5.71,2,1,1,1,0,0,,4 - fraction ancienne
+54069, Beuvillers,54,5.70,2,1,1,1,0,0,,4 - fraction ancienne
+90032, Danjoutin,90,5.70,2,1,1,1,0,0,,4 - fraction ancienne
+57280, Guntzviller,57,5.69,2,1,1,1,0,0,,4 - fraction ancienne
+54149, Crusnes,54,5.68,2,1,1,1,0,0,,4 - fraction ancienne
+57702, Vaxy,57,5.66,2,1,1,1,0,0,,4 - fraction ancienne
+54005, Affracourt,54,5.65,2,1,1,1,0,0,,4 - fraction ancienne
+54106, Bures,54,5.65,3,1,1,1,0,0,,4 - fraction ancienne
+54116, Chanteheux,54,5.64,2,1,1,1,0,0,,4 - fraction ancienne
+54284, Joudreville,54,5.64,2,1,1,1,0,0,,4 - fraction ancienne
+90072, Morvillars,90,5.63,2,1,1,1,0,0,,4 - fraction ancienne
+54184, Essey-lès-Nancy,54,5.61,3,1,1,1,0,0,,4 - fraction ancienne
+54294, Landremont,54,5.61,2,1,1,1,0,0,,4 - fraction ancienne
+54390, Mousson,54,5.60,2,1,1,1,0,0,,4 - fraction ancienne
+54565, Vigneulles,54,5.60,2,1,1,1,0,0,,4 - fraction ancienne
+57343, Illange,57,5.58,2,1,1,1,0,0,,4 - fraction ancienne
+54164, Dommarie-Eulmont,54,5.57,2,1,1,1,0,0,,4 - fraction ancienne
+54449, Rehainviller,54,5.55,2,1,1,1,0,0,,4 - fraction ancienne
+57492, Moyeuvre-Petite,57,5.55,2,1,1,1,0,0,,4 - fraction ancienne
+57586, Rochonvillers,57,5.55,2,1,1,1,0,0,,4 - fraction ancienne
+90037, Éloie,90,5.55,2,1,1,1,0,0,,4 - fraction ancienne
+54401, Nonhigny,54,5.54,2,1,1,1,0,0,,4 - fraction ancienne
+54203, Forcelles-Saint-Gorgon,54,5.54,2,1,1,1,0,0,,4 - fraction ancienne
+54070, Bey-sur-Seille,54,5.54,2,1,1,1,0,0,,4 - fraction ancienne
+54572, Ville-Houdlémont,54,5.54,2,1,1,1,0,0,,4 - fraction ancienne
+54526, Tomblaine,54,5.53,2,1,1,1,0,0,,4 - fraction ancienne
+54098, Brémoncourt,54,5.53,2,1,1,1,0,0,,4 - fraction ancienne
+54446, Réchicourt-la-Petite,54,5.51,3,1,1,1,0,0,,4 - fraction ancienne
+93072, Stains,93,5.49,2,1,1,1,0,0,,4 - fraction ancienne
+57462, Metting,57,5.49,2,1,1,1,0,0,,4 - fraction ancienne
+57504, Niderhoff,57,5.49,2,1,1,1,0,0,,4 - fraction ancienne
+59365, Louvroil,59,5.49,2,1,1,1,0,0,,4 - fraction ancienne
+57683, Uckange,57,5.48,2,1,1,1,0,0,,4 - fraction ancienne
+57565, Rédange,57,5.47,2,1,1,1,0,0,,4 - fraction ancienne
+91631, Varennes-Jarcy,91,5.45,2,1,1,1,0,0,,4 - fraction ancienne
+57427, Lutzelbourg,57,5.45,2,1,1,1,0,0,,4 - fraction ancienne
+95563, Saint-Leu-la-Forêt,95,5.45,2,1,1,1,0,0,,4 - fraction ancienne
+54142, Crantenoy,54,5.44,2,1,1,1,0,0,,4 - fraction ancienne
+59231, Ferrière-la-Petite,59,5.43,2,1,1,1,0,0,,4 - fraction ancienne
+90027, Courcelles,90,5.43,2,1,1,1,0,0,,4 - fraction ancienne
+54081, Boismont,54,5.42,2,1,1,1,0,0,,4 - fraction ancienne
+54366, Messein,54,5.40,2,1,1,1,0,0,,4 - fraction ancienne
+54387, Morville-sur-Seille,54,5.39,2,1,1,1,0,0,,4 - fraction ancienne
+57410, Lhor,57,5.39,2,1,1,1,0,0,,4 - fraction ancienne
+54121, Charmois,54,5.37,2,1,1,1,0,0,,4 - fraction ancienne
+14500, Pierrefitte-en-Auge,14,5.37,2,1,1,1,0,0,,4 - fraction ancienne
+54398, Neuviller-lès-Badonviller,54,5.37,3,1,1,1,0,0,,4 - fraction ancienne
+57065, Bermering,57,5.36,2,1,1,1,0,0,,4 - fraction ancienne
+54289, Laître-sous-Amance,54,5.36,2,1,1,1,0,0,,4 - fraction ancienne
+57622, Saint-Privat-la-Montagne,57,5.36,2,1,1,1,0,0,,4 - fraction ancienne
+57161, Cutting,57,5.36,2,1,1,1,0,0,,4 - fraction ancienne
+90075, Offemont,90,5.34,2,1,1,1,0,0,,4 - fraction ancienne
+57141, Chicourt,57,5.34,2,1,1,1,0,0,,4 - fraction ancienne
+54108, Burthecourt-aux-Chênes,54,5.34,2,1,1,1,0,0,,4 - fraction ancienne
+57518, Oberstinzel,57,5.34,2,1,1,1,0,0,,4 - fraction ancienne
+54394, Murville,54,5.31,2,1,1,1,0,0,,4 - fraction ancienne
+90030, Croix,90,5.31,2,1,1,1,0,0,,4 - fraction ancienne
+59442, Obrechies,59,5.29,2,1,1,1,0,0,,4 - fraction ancienne
+57417, Lostroff,57,5.29,2,1,1,1,0,0,,4 - fraction ancienne
+57283, Hagondange,57,5.28,2,1,1,1,0,0,,4 - fraction ancienne
+59169, Damousies,59,5.28,2,1,1,1,0,0,,4 - fraction ancienne
+54444, Raucourt,54,5.28,2,1,1,1,0,0,,4 - fraction ancienne
+91514, Quincy-sous-Sénart,91,5.27,2,1,1,1,0,0,,4 - fraction ancienne
+54178, Épiez-sur-Chiers,54,5.26,2,1,1,1,0,0,,4 - fraction ancienne
+54204, Forcelles-sous-Gugney,54,5.26,2,1,1,1,0,0,,4 - fraction ancienne
+54563, Vézelise,54,5.26,2,1,1,1,0,0,,4 - fraction ancienne
+54181, Errouville,54,5.25,2,1,1,1,0,0,,4 - fraction ancienne
+93047, Montfermeil,93,5.25,2,1,1,1,0,0,,4 - fraction ancienne
+57597, Rosselange,57,5.25,2,1,1,1,0,0,,4 - fraction ancienne
+54022, Arnaville,54,5.24,2,1,1,1,0,0,,4 - fraction ancienne
+57033, Arzviller,57,5.23,2,1,1,1,0,0,,4 - fraction ancienne
+57171, Delme,57,5.22,2,1,1,1,0,0,,4 - fraction ancienne
+57004, Achain,57,5.21,2,1,1,1,0,0,,4 - fraction ancienne
+14557, Saint-Arnoult,14,5.19,2,1,1,1,0,0,,4 - fraction ancienne
+94074, Valenton,94,5.18,2,1,1,1,0,0,,4 - fraction ancienne
+57543, Pierrevillers,57,5.17,2,1,1,1,0,0,,4 - fraction ancienne
+57211, Fèves,57,5.17,2,1,1,1,0,0,,4 - fraction ancienne
+54087, Bouillonville,54,5.17,2,1,1,1,0,0,,4 - fraction ancienne
+42031, Caloire,42,5.16,2,1,1,1,0,0,,4 - fraction ancienne
+57544, Plaine-de-Walsch,57,5.16,2,1,1,1,0,0,,4 - fraction ancienne
+54083, Bonviller,54,5.16,2,1,1,1,0,0,,4 - fraction ancienne
+54324, Lorey,54,5.14,2,1,1,1,0,0,,4 - fraction ancienne
+54085, Borville,54,5.13,2,1,1,1,0,0,,4 - fraction ancienne
+57551, Postroff,57,5.10,2,1,1,1,0,0,,4 - fraction ancienne
+57583, Richeval,57,5.10,2,1,1,1,0,0,,4 - fraction ancienne
+54501, Seranville,54,5.10,2,1,1,1,0,0,,4 - fraction ancienne
+57266, Guéblange-lès-Dieuze,57,5.08,2,1,1,1,0,0,,4 - fraction ancienne
+57528, Oron,57,5.08,2,1,1,1,0,0,,4 - fraction ancienne
+93053, Noisy-le-Sec,93,5.08,2,1,1,1,0,0,,4 - fraction ancienne
+59292, Haveluy,59,5.07,2,1,1,1,0,0,,4 - fraction ancienne
+54585, Virecourt,54,5.06,2,1,1,1,0,0,,4 - fraction ancienne
+90058, Lachapelle-sous-Rougemont,90,5.06,2,1,1,1,0,0,,4 - fraction ancienne
+54453, Rembercourt-sur-Mad,54,5.06,2,1,1,1,0,0,,4 - fraction ancienne
+90049, Foussemagne,90,5.05,2,1,1,1,0,0,,4 - fraction ancienne
+57054, Baudrecourt,57,5.05,2,1,1,1,0,0,,4 - fraction ancienne
+90062, Larivière,90,5.03,2,1,1,1,0,0,,4 - fraction ancienne
+95151, Chauvry,95,5.03,2,1,1,1,0,0,,4 - fraction ancienne
+90056, Joncherey,90,5.03,2,1,1,1,0,0,,4 - fraction ancienne
+90071, Montreux-Château,90,5.02,2,1,1,1,0,0,,4 - fraction ancienne
+54268, Housséville,54,5.01,2,1,1,1,0,0,,4 - fraction ancienne
+57166, Dalhain,57,5.01,2,1,1,1,0,0,,4 - fraction ancienne
+54356, Mattexey,54,5.00,2,1,1,1,0,0,,4 - fraction ancienne
+57173, Desseling,57,4.99,2,1,1,1,0,0,,4 - fraction ancienne
+06060, Falicon,06,4.98,2,1,1,1,0,0,,4 - fraction ancienne
+54225, Gézoncourt,54,4.97,2,1,1,1,0,0,,4 - fraction ancienne
+54480, Saint-Martin,54,4.96,2,1,1,1,0,0,,4 - fraction ancienne
+54309, Lemainville,54,4.95,2,1,1,1,0,0,,4 - fraction ancienne
+57377, Landange,57,4.94,2,1,1,1,0,0,,4 - fraction ancienne
+54224, Germonville,54,4.94,2,1,1,1,0,0,,4 - fraction ancienne
+54276, Jeandelaincourt,54,4.94,2,1,1,1,0,0,,4 - fraction ancienne
+62583, Mondicourt,62,4.94,2,1,1,1,0,0,,4 - fraction ancienne
+88345,La Petite-Fosse,88,4.92,2,1,1,1,0,0,,4 - fraction ancienne
+90007, Banvillars,90,4.91,2,1,1,1,0,0,,4 - fraction ancienne
+54519, Thiaville-sur-Meurthe,54,4.90,2,1,1,1,0,0,,4 - fraction ancienne
+57755, Xocourt,57,4.89,2,1,1,1,0,0,,4 - fraction ancienne
+54397, Neuves-Maisons,54,4.87,2,1,1,1,0,0,,4 - fraction ancienne
+54263, Homécourt,54,4.87,2,1,1,1,0,0,,4 - fraction ancienne
+54037, Azelot,54,4.84,2,1,1,1,0,0,,4 - fraction ancienne
+90100, Vauthiermont,90,4.81,2,1,1,1,0,0,,4 - fraction ancienne
+57756, Xouaxange,57,4.81,2,1,1,1,0,0,,4 - fraction ancienne
+54217, Gélacourt,54,4.81,2,1,1,1,0,0,,4 - fraction ancienne
+93031, Épinay-sur-Seine,93,4.81,2,1,1,1,0,0,,4 - fraction ancienne
+68085, Eteimbes,68,4.80,2,1,1,1,0,0,,4 - fraction ancienne
+90051, Froidefontaine,90,4.79,2,1,1,1,0,0,,4 - fraction ancienne
+54117, Chaouilley,54,4.79,2,1,1,1,0,0,,4 - fraction ancienne
+62032, Angres,62,4.79,2,1,1,1,0,0,,4 - fraction ancienne
+90009, Beaucourt,90,4.79,2,1,1,1,0,0,,4 - fraction ancienne
+90076, Pérouse,90,4.78,2,1,1,1,0,0,,4 - fraction ancienne
+57342, Ibigny,57,4.78,2,1,1,1,0,0,,4 - fraction ancienne
+57703, Veckersviller,57,4.77,2,1,1,1,0,0,,4 - fraction ancienne
+62007, Acq,62,4.77,2,1,1,1,0,0,,4 - fraction ancienne
+54033, Avillers,54,4.76,2,1,1,1,0,0,,4 - fraction ancienne
+57113, Brouderdorff,57,4.76,2,1,1,1,0,0,,4 - fraction ancienne
+90067, Menoncourt,90,4.75,2,1,1,1,0,0,,4 - fraction ancienne
+57721, Vilsberg,57,4.74,2,1,1,1,0,0,,4 - fraction ancienne
+57278, Guinzeling,57,4.74,2,1,1,1,0,0,,4 - fraction ancienne
+54237, Grimonviller,54,4.72,2,1,1,1,0,0,,4 - fraction ancienne
+57538, Pettoncourt,57,4.72,2,1,1,1,0,0,,4 - fraction ancienne
+90099, Valdoie,90,4.71,2,1,1,1,0,0,,4 - fraction ancienne
+57339, Hultehouse,57,4.70,2,1,1,1,0,0,,4 - fraction ancienne
+54458, Repaix,54,4.69,2,1,1,1,0,0,,4 - fraction ancienne
+54271, Igney,54,4.68,2,1,1,1,0,0,,4 - fraction ancienne
+57734, Voyer,57,4.68,2,1,1,1,0,0,,4 - fraction ancienne
+57616, Saint-Julien-lès-Metz,57,4.67,2,1,1,1,0,0,,4 - fraction ancienne
+57642, Scy-Chazelles,57,4.66,2,1,1,1,0,0,,4 - fraction ancienne
+81291, Taïx,81,4.65,2,1,1,1,0,0,,4 - fraction ancienne
+57525, Oriocourt,57,4.65,2,1,1,1,0,0,,4 - fraction ancienne
+90008, Bavilliers,90,4.64,2,1,1,1,0,0,,4 - fraction ancienne
+67414, Rothau,67,4.63,2,1,1,1,0,0,,4 - fraction ancienne
+57233, Fraquelfing,57,4.62,2,1,1,1,0,0,,4 - fraction ancienne
+57291, Hangviller,57,4.61,2,1,1,1,0,0,,4 - fraction ancienne
+21144, Charencey,21,4.59,2,1,1,1,0,0,,4 - fraction ancienne
+54409, Omelmont,54,4.58,2,1,1,1,0,0,,4 - fraction ancienne
+57040, Aulnois-sur-Seille,57,4.58,2,1,1,1,0,0,,4 - fraction ancienne
+54125, Chenevières,54,4.57,2,1,1,1,0,0,,4 - fraction ancienne
+54144, Crévéchamps,54,4.56,2,1,1,1,0,0,,4 - fraction ancienne
+54056, Bazailles,54,4.56,2,1,1,1,0,0,,4 - fraction ancienne
+95203, Eaubonne,95,4.53,2,1,1,1,0,0,,4 - fraction ancienne
+90001, Andelnans,90,4.52,2,1,1,1,0,0,,4 - fraction ancienne
+51118, Champigny,51,4.50,2,1,1,1,0,0,,4 - fraction ancienne
+54094, Bralleville,54,4.50,2,1,1,1,0,0,,4 - fraction ancienne
+57609, Saint-Epvre,57,4.49,2,1,1,1,0,0,,4 - fraction ancienne
+57236, Frémery,57,4.48,2,1,1,1,0,0,,4 - fraction ancienne
+11013, Argens-Minervois,11,4.47,2,1,1,1,0,0,,4 - fraction ancienne
+54582, Villette,54,4.45,2,1,1,1,0,0,,4 - fraction ancienne
+54576, Villers-le-Rond,54,4.44,2,1,1,1,0,0,,4 - fraction ancienne
+54438, Pulney,54,4.44,2,1,1,1,0,0,,4 - fraction ancienne
+44074, Indre,44,4.43,2,1,1,1,0,0,,4 - fraction ancienne
+90063, Lebetain,90,4.43,2,1,1,1,0,0,,4 - fraction ancienne
+59483, Quiévelon,59,4.41,2,1,1,1,0,0,,4 - fraction ancienne
+54476, Saint-Jean-lès-Longuyon,54,4.41,2,1,1,1,0,0,,4 - fraction ancienne
+42099, Fraisses,42,4.41,2,1,1,1,0,0,,4 - fraction ancienne
+54465, Roville-devant-Bayon,54,4.40,2,1,1,1,0,0,,4 - fraction ancienne
+54066, Bettainvillers,54,4.40,2,1,1,1,0,0,,4 - fraction ancienne
+54028, Auboué,54,4.39,2,1,1,1,0,0,,4 - fraction ancienne
+68215, Montreux-Vieux,68,4.39,2,1,1,1,0,0,,4 - fraction ancienne
+90019, Bretagne,90,4.38,2,1,1,1,0,0,,4 - fraction ancienne
+54559, Velle-sur-Moselle,54,4.37,2,1,1,1,0,0,,4 - fraction ancienne
+51109, Châlons-sur-Vesle,51,4.36,2,1,1,1,0,0,,4 - fraction ancienne
+12028, Boisse-Penchot,12,4.35,2,1,1,1,0,0,,4 - fraction ancienne
+54498, Seichamps,54,4.34,3,1,1,1,0,0,,4 - fraction ancienne
+81244, Saint-Benoît-de-Carmaux,81,4.34,2,1,1,1,0,0,,4 - fraction ancienne
+54141, Coyviller,54,4.34,2,1,1,1,0,0,,4 - fraction ancienne
+54072, Bezaumont,54,4.34,2,1,1,1,0,0,,4 - fraction ancienne
+54234, Gorcy,54,4.34,2,1,1,1,0,0,,4 - fraction ancienne
+54240, Grosrouvres,54,4.33,2,1,1,1,0,0,,4 - fraction ancienne
+54337, Malavillers,54,4.33,2,1,1,1,0,0,,4 - fraction ancienne
+54219, Gellenoncourt,54,4.30,2,1,1,1,0,0,,4 - fraction ancienne
+57719, Villers-sur-Nied,57,4.29,2,1,1,1,0,0,,4 - fraction ancienne
+54031, Autreville-sur-Moselle,54,4.28,2,1,1,1,0,0,,4 - fraction ancienne
+21452, Neuilly-lès-Dijon,21,4.28,2,1,1,1,0,0,,4 - fraction ancienne
+54554, Vaudigny,54,4.26,2,1,1,1,0,0,,4 - fraction ancienne
+54140, Courcelles,54,4.26,2,1,1,1,0,0,,4 - fraction ancienne
+93015, Coubron,93,4.25,2,1,1,1,0,0,,4 - fraction ancienne
+54209, Franconville,54,4.25,2,1,1,1,0,0,,4 - fraction ancienne
+68093, Flaxlanden,68,4.24,2,1,1,1,0,0,,4 - fraction ancienne
+54592, Vroncourt,54,4.23,2,1,1,1,0,0,,4 - fraction ancienne
+57216, Fleisheim,57,4.22,2,1,1,1,0,0,,4 - fraction ancienne
+54180, Erbéviller-sur-Amezule,54,4.20,2,1,1,1,0,0,,4 - fraction ancienne
+57010, Alaincourt-la-Côte,57,4.18,2,1,1,1,0,0,,4 - fraction ancienne
+57759, Zarbeling,57,4.16,2,1,1,1,0,0,,4 - fraction ancienne
+57407, Lixheim,57,4.16,2,1,1,1,0,0,,4 - fraction ancienne
+54246, Halloville,54,4.16,2,1,1,1,0,0,,4 - fraction ancienne
+54468, Saffais,54,4.16,2,1,1,1,0,0,,4 - fraction ancienne
+54006, Agincourt,54,4.14,2,1,1,1,0,0,,4 - fraction ancienne
+62663, Pommera,62,4.13,2,1,1,1,0,0,,4 - fraction ancienne
+51474, Saint-Brice-Courcelles,51,4.12,2,1,1,1,0,0,,4 - fraction ancienne
+54452, Reillon,54,4.10,2,1,1,1,0,0,,4 - fraction ancienne
+90021, Charmois,90,4.10,2,1,1,1,0,0,,4 - fraction ancienne
+57663, Talange,57,4.09,2,1,1,1,0,0,,4 - fraction ancienne
+90074, Novillard,90,4.09,2,1,1,1,0,0,,4 - fraction ancienne
+54168, Dommartin-sous-Amance,54,4.09,2,1,1,1,0,0,,4 - fraction ancienne
+90069, Méziré,90,4.08,2,1,1,1,0,0,,4 - fraction ancienne
+54574, Villers-la-Chèvre,54,4.07,2,1,1,1,0,0,,4 - fraction ancienne
+90045, Fêche-l'Église,90,4.07,2,1,1,1,0,0,,4 - fraction ancienne
+54380, Mont-le-Vignoble,54,4.06,2,1,1,1,0,0,,4 - fraction ancienne
+68052, Bretten,68,4.06,2,1,1,1,0,0,,4 - fraction ancienne
+54512, Tanconville,54,4.06,3,1,1,1,0,0,,4 - fraction ancienne
+57292, Hannocourt,57,4.06,2,1,1,1,0,0,,4 - fraction ancienne
+54589, Vittonville,54,4.06,2,1,1,1,0,0,,4 - fraction ancienne
+54419, Parux,54,4.06,3,1,1,1,0,0,,4 - fraction ancienne
+54493, Saulnes,54,4.05,2,1,1,1,0,0,,4 - fraction ancienne
+95219, Ermont,95,4.05,2,1,1,1,0,0,,4 - fraction ancienne
+57595, Rorbach-lès-Dieuze,57,4.03,2,1,1,1,0,0,,4 - fraction ancienne
+54252, Haroué,54,4.03,2,1,1,1,0,0,,4 - fraction ancienne
+54338, Malleloy,54,4.01,2,1,1,1,0,0,,4 - fraction ancienne
+54381, Montreux,54,4.01,2,1,1,1,0,0,,4 - fraction ancienne
+54407, Ognéville,54,3.99,2,1,1,1,0,0,,4 - fraction ancienne
+54265, Houdemont,54,3.99,2,1,1,1,0,0,,4 - fraction ancienne
+57440, Manhoué,57,3.98,2,1,1,1,0,0,,4 - fraction ancienne
+57573, Réning,57,3.98,2,1,1,1,0,0,,4 - fraction ancienne
+54126, Chenicourt,54,3.97,2,1,1,1,0,0,,4 - fraction ancienne
+93014, Clichy-sous-Bois,93,3.96,2,1,1,1,0,0,,4 - fraction ancienne
+59142, Cerfontaine,59,3.96,2,1,1,1,0,0,,4 - fraction ancienne
+57100, Bourscheid,57,3.94,2,1,1,1,0,0,,4 - fraction ancienne
+54406, Ogéviller,54,3.93,2,1,1,1,0,0,,4 - fraction ancienne
+54132, Clérey-sur-Brenon,54,3.92,2,1,1,1,0,0,,4 - fraction ancienne
+57747, Wintersbourg,57,3.92,2,1,1,1,0,0,,4 - fraction ancienne
+90044, Felon,90,3.91,2,1,1,1,0,0,,4 - fraction ancienne
+54591, Voinémont,54,3.90,2,1,1,1,0,0,,4 - fraction ancienne
+93074, Vaujours,93,3.90,2,1,1,1,0,0,,4 - fraction ancienne
+93077, Villemomble,93,3.90,2,1,1,1,0,0,,4 - fraction ancienne
+54124, Chazelles-sur-Albe,54,3.89,2,1,1,1,0,0,,4 - fraction ancienne
+54509, Sommerviller,54,3.88,2,1,1,1,0,0,,4 - fraction ancienne
+54078, Blémerey,54,3.88,2,1,1,1,0,0,,4 - fraction ancienne
+90084, Reppe,90,3.86,2,1,1,1,0,0,,4 - fraction ancienne
+57299, Hartzviller,57,3.86,2,1,1,1,0,0,,4 - fraction ancienne
+14220, Deauville,14,3.86,2,1,1,1,0,0,,4 - fraction ancienne
+57310, Hellering-lès-Fénétrange,57,3.86,2,1,1,1,0,0,,4 - fraction ancienne
+93030, Dugny,93,3.85,2,1,0,1,0,0,,4 - fraction ancienne
+90018, Brebotte,90,3.85,2,1,1,1,0,0,,4 - fraction ancienne
+02032, Aubigny-aux-Kaisnes,02,3.84,2,1,1,1,0,0,,4 - fraction ancienne
+57034, Aspach,57,3.83,2,1,1,1,0,0,,4 - fraction ancienne
+57314, Héming,57,3.82,2,1,1,1,0,0,,4 - fraction ancienne
+57446, Marimont-lès-Bénestroff,57,3.81,2,1,1,1,0,0,,4 - fraction ancienne
+94058,Le Perreux-sur-Marne,94,3.81,2,1,1,1,0,0,,4 - fraction ancienne
+29098, Lampaul-Plouarzel,29,3.81,2,1,1,1,0,0,,4 - fraction ancienne
+54529, Tramont-Émy,54,3.80,2,1,1,1,0,0,,4 - fraction ancienne
+54195, Flainval,54,3.80,2,1,1,1,0,0,,4 - fraction ancienne
+95256, Frépillon,95,3.80,2,1,1,1,0,0,,4 - fraction ancienne
+92073, Suresnes,92,3.78,2,1,1,1,0,0,,4 - fraction ancienne
+57265, Guébestroff,57,3.78,2,1,1,1,0,0,,4 - fraction ancienne
+57242, Gandrange,57,3.76,2,1,1,1,0,0,,4 - fraction ancienne
+57045, Bacourt,57,3.75,2,1,1,1,0,0,,4 - fraction ancienne
+54306, Lay-Saint-Remy,54,3.75,2,1,1,1,0,0,,4 - fraction ancienne
+54021, Armaucourt,54,3.74,2,1,1,1,0,0,,4 - fraction ancienne
+78396,Le Mesnil-le-Roi,78,3.73,2,1,1,1,0,0,,4 - fraction ancienne
+65091, Bettes,65,3.71,2,1,1,1,0,0,,4 - fraction ancienne
+54344, Mangonville,54,3.70,2,1,1,1,0,0,,4 - fraction ancienne
+54326, Lubey,54,3.69,2,1,1,1,0,0,,4 - fraction ancienne
+90077, Petit-Croix,90,3.69,2,1,1,1,0,0,,4 - fraction ancienne
+54264, Houdelmont,54,3.69,2,1,1,1,0,0,,4 - fraction ancienne
+54047, Barisey-la-Côte,54,3.69,2,1,1,1,0,0,,4 - fraction ancienne
+54090, Bouxières-aux-Dames,54,3.69,2,1,1,1,0,0,,4 - fraction ancienne
+54514, Tellancourt,54,3.69,2,1,1,1,0,0,,4 - fraction ancienne
+57002, Aboncourt-sur-Seille,57,3.68,2,1,1,1,0,0,,4 - fraction ancienne
+54239, Griscourt,54,3.67,2,1,1,1,0,0,,4 - fraction ancienne
+54520, Thiébauménil,54,3.66,2,1,1,1,0,0,,4 - fraction ancienne
+54261, Herserange,54,3.66,2,1,1,1,0,0,,4 - fraction ancienne
+54376, Montenoy,54,3.66,2,1,1,1,0,0,,4 - fraction ancienne
+54560, Veney,54,3.66,2,1,1,1,0,0,,4 - fraction ancienne
+54424, Phlin,54,3.65,2,1,1,1,0,0,,4 - fraction ancienne
+90101, Vellescot,90,3.65,2,1,1,1,0,0,,4 - fraction ancienne
+42270, Saint-Paul-en-Cornillon,42,3.65,2,1,1,1,0,0,,4 - fraction ancienne
+54464, Rouves,54,3.64,2,1,1,1,0,0,,4 - fraction ancienne
+57657, Sotzeling,57,3.61,2,1,1,1,0,0,,4 - fraction ancienne
+90034, Denney,90,3.59,2,1,1,1,0,0,,4 - fraction ancienne
+57423, Lubécourt,57,3.59,2,1,1,1,0,0,,4 - fraction ancienne
+57138, Chenois,57,3.59,2,1,1,1,0,0,,4 - fraction ancienne
+57059, Bellange,57,3.58,2,1,1,1,0,0,,4 - fraction ancienne
+67513, Waldersbach,67,3.58,2,1,1,1,0,0,,4 - fraction ancienne
+90035, Dorans,90,3.58,2,1,1,1,0,0,,4 - fraction ancienne
+54310, Leménil-Mitry,54,3.56,2,1,1,1,0,0,,4 - fraction ancienne
+54451, Réhon,54,3.55,2,1,1,1,0,0,,4 - fraction ancienne
+54492, Sanzey,54,3.53,2,1,1,1,0,0,,4 - fraction ancienne
+54257, Heillecourt,54,3.51,2,1,1,1,0,0,,4 - fraction ancienne
+57009, Ajoncourt,57,3.51,2,1,1,1,0,0,,4 - fraction ancienne
+57107, Bréhain,57,3.51,2,1,1,1,0,0,,4 - fraction ancienne
+54170, Domptail-en-l'Air,54,3.51,2,1,1,1,0,0,,4 - fraction ancienne
+93063, Romainville,93,3.49,2,1,1,1,0,0,,4 - fraction ancienne
+57647, Serémange-Erzange,57,3.49,2,1,1,1,0,0,,4 - fraction ancienne
+95061, Béthemont-la-Forêt,95,3.48,2,1,1,1,0,0,,4 - fraction ancienne
+57334, Hommert,57,3.48,2,1,1,1,0,0,,4 - fraction ancienne
+90024, Chavanatte,90,3.48,2,1,1,1,0,0,,4 - fraction ancienne
+57064, Berling,57,3.47,2,1,1,1,0,0,,4 - fraction ancienne
+88373, Raon-sur-Plaine,88,3.47,2,1,1,1,0,0,,4 - fraction ancienne
+90080, Phaffans,90,3.45,2,1,1,1,0,0,,4 - fraction ancienne
+64456, Pouliacq,64,3.44,2,1,1,1,0,0,,4 - fraction ancienne
+54555, Vaxainville,54,3.44,2,1,1,1,0,0,,4 - fraction ancienne
+54561, Vennezey,54,3.44,2,1,1,1,0,0,,4 - fraction ancienne
+14030, Authie,14,3.44,2,1,1,1,0,0,,4 - fraction ancienne
+54439, Pulnoy,54,3.42,3,1,1,1,0,0,,4 - fraction ancienne
+90055, Grosne,90,3.41,2,1,1,1,0,0,,4 - fraction ancienne
+91215, Épinay-sous-Sénart,91,3.40,2,1,1,1,0,0,,4 - fraction ancienne
+57603, Russange,57,3.39,2,1,1,1,0,0,,4 - fraction ancienne
+57761, Zilling,57,3.39,2,1,1,1,0,0,,4 - fraction ancienne
+90078, Petitefontaine,90,3.38,2,1,1,1,0,0,,4 - fraction ancienne
+54521, Thil,54,3.36,2,1,1,1,0,0,,4 - fraction ancienne
+93059, Pierrefitte-sur-Seine,93,3.36,2,1,1,1,0,0,,4 - fraction ancienne
+94015, Bry-sur-Marne,94,3.31,2,1,1,1,0,0,,4 - fraction ancienne
+90091, Saint-Germain-le-Châtelet,90,3.31,2,1,1,1,0,0,,4 - fraction ancienne
+90098, Urcerey,90,3.31,2,1,1,1,0,0,,4 - fraction ancienne
+54095, Bratte,54,3.29,2,1,1,1,0,0,,4 - fraction ancienne
+68214, Montreux-Jeune,68,3.28,2,1,1,1,0,0,,4 - fraction ancienne
+67531, Wildersbach,67,3.28,2,1,1,1,0,0,,4 - fraction ancienne
+54422, Pettonville,54,3.28,2,1,1,1,0,0,,4 - fraction ancienne
+54445, Raville-sur-Sânon,54,3.28,2,1,1,1,0,0,,4 - fraction ancienne
+54412, Othe,54,3.19,2,1,1,1,0,0,,4 - fraction ancienne
+54191, Fenneviller,54,3.18,3,1,1,1,0,0,,4 - fraction ancienne
+54429, Pierreville,54,3.17,2,1,1,1,0,0,,4 - fraction ancienne
+42100,La Gimond,42,3.17,2,1,1,1,0,0,,4 - fraction ancienne
+92062, Puteaux,92,3.17,2,1,1,1,0,0,,4 - fraction ancienne
+54278, Jevoncourt,54,3.16,2,1,1,1,0,0,,4 - fraction ancienne
+57470, Molring,57,3.15,2,1,1,1,0,0,,4 - fraction ancienne
+94052, Nogent-sur-Marne,94,3.14,2,1,1,1,0,0,,4 - fraction ancienne
+54481, Saint-Maurice-aux-Forges,54,3.12,3,1,1,1,0,0,,4 - fraction ancienne
+57406, Liocourt,57,3.12,2,1,1,1,0,0,,4 - fraction ancienne
+62386, Grenay,62,3.11,2,1,1,1,0,0,,4 - fraction ancienne
+57520, Obreck,57,3.10,2,1,1,1,0,0,,4 - fraction ancienne
+54269, Hudiviller,54,3.07,2,1,1,1,0,0,,4 - fraction ancienne
+54241, Gugney,54,3.06,2,1,1,1,0,0,,4 - fraction ancienne
+91097, Boussy-Saint-Antoine,91,3.05,2,1,1,1,0,0,,4 - fraction ancienne
+57694, Vany,57,3.04,2,1,1,1,0,0,,4 - fraction ancienne
+90082, Autrechêne,90,3.04,2,1,1,1,0,0,,4 - fraction ancienne
+92020, Châtillon,92,3.03,2,1,1,1,0,0,,4 - fraction ancienne
+57182, Donjeux,57,3.03,2,1,1,1,0,0,,4 - fraction ancienne
+54461, Romain,54,3.02,2,1,1,1,0,0,,4 - fraction ancienne
+95051, Beauchamp,95,3.01,2,1,1,1,0,0,,4 - fraction ancienne
+14755, Villerville,14,3.01,2,1,1,1,0,0,,4 - fraction ancienne
+54280, Juf,54,2.97,2,1,1,1,0,0,,4 - fraction ancienne
+54210, Fréménil,54,2.94,2,1,1,1,0,0,,4 - fraction ancienne
+14059, Benerville-sur-Mer,14,2.94,2,1,1,1,0,0,,4 - fraction ancienne
+06012, Beausoleil,06,2.89,2,1,1,1,0,0,,4 - fraction ancienne
+95426, Montlignon,95,2.88,2,1,1,1,0,0,,4 - fraction ancienne
+65476, Villenave-près-Béarn,65,2.86,2,1,1,1,0,0,,4 - fraction ancienne
+54166, Dommartin-la-Chaussée,54,2.86,2,1,1,1,0,0,,4 - fraction ancienne
+57508, Nilvange,57,2.85,2,1,1,1,0,0,,4 - fraction ancienne
+57546, Plesnois,57,2.84,2,1,1,1,0,0,,4 - fraction ancienne
+19282, Venarsal,19,2.84,2,1,1,1,0,0,,4 - fraction ancienne
+90070, Montbouton,90,2.82,2,1,1,1,0,0,,4 - fraction ancienne
+54479, Saint-Mard,54,2.82,2,1,1,1,0,0,,4 - fraction ancienne
+90004, Argiésans,90,2.77,2,1,1,1,0,0,,4 - fraction ancienne
+57614, Saint-Jean-Kourtzerode,57,2.75,2,1,1,1,0,0,,4 - fraction ancienne
+57405, Lindre-Haute,57,2.73,2,1,1,1,0,0,,4 - fraction ancienne
+57317, Hérange,57,2.73,2,1,1,1,0,0,,4 - fraction ancienne
+54442, Quevilloncourt,54,2.72,2,1,1,1,0,0,,4 - fraction ancienne
+67424, Saint-Blaise-la-Roche,67,2.70,2,1,1,1,0,0,,4 - fraction ancienne
+54447, Réclonville,54,2.69,2,1,1,1,0,0,,4 - fraction ancienne
+54577, Villers-lès-Moivrons,54,2.68,2,1,1,1,0,0,,4 - fraction ancienne
+90011, Bermont,90,2.68,2,1,1,1,0,0,,4 - fraction ancienne
+57693, Vantoux,57,2.68,2,1,1,1,0,0,,4 - fraction ancienne
+06114, Saint-André-de-la-Roche,06,2.67,2,1,1,1,0,0,,4 - fraction ancienne
+59368,La Madeleine,59,2.67,2,1,1,1,0,0,,4 - fraction ancienne
+90096, Thiancourt,90,2.66,2,1,1,1,0,0,,4 - fraction ancienne
+90036, Eguenigue,90,2.66,2,1,1,1,0,0,,4 - fraction ancienne
+90105, Villars-le-Sec,90,2.66,2,1,1,1,0,0,,4 - fraction ancienne
+54057, Beaumont,54,2.66,2,1,1,1,0,0,,4 - fraction ancienne
+54494, Saulxerotte,54,2.65,2,1,1,1,0,0,,4 - fraction ancienne
+57169, Dannelbourg,57,2.63,2,1,1,1,0,0,,4 - fraction ancienne
+54114, Champey-sur-Moselle,54,2.62,2,1,1,1,0,0,,4 - fraction ancienne
+54233, Gondrexon,54,2.62,2,1,1,1,0,0,,4 - fraction ancienne
+90086, Romagny-sous-Rougemont,90,2.62,2,1,1,1,0,0,,4 - fraction ancienne
+57247, Gerbécourt,57,2.59,2,1,1,1,0,0,,4 - fraction ancienne
+57142, Chieulles,57,2.57,2,1,1,1,0,0,,4 - fraction ancienne
+88057,Le Beulay,88,2.57,2,1,1,1,0,0,,4 - fraction ancienne
+54245, Haigneville,54,2.56,2,1,1,1,0,0,,4 - fraction ancienne
+67470, Solbach,67,2.56,2,1,1,1,0,0,,4 - fraction ancienne
+95491,Le Plessis-Bouchard,95,2.56,2,1,1,1,0,0,,4 - fraction ancienne
+57318, Hermelange,57,2.55,2,1,1,1,0,0,,4 - fraction ancienne
+57248, Givrycourt,57,2.53,2,1,1,1,0,0,,4 - fraction ancienne
+90050, Frais,90,2.50,2,1,1,1,0,0,,4 - fraction ancienne
+42055, Châtelus,42,2.48,2,1,1,1,0,0,,4 - fraction ancienne
+54274, Jarville-la-Malgrange,54,2.48,2,1,1,1,0,0,,4 - fraction ancienne
+68293, Saint-Cosme,68,2.46,2,1,1,1,0,0,,4 - fraction ancienne
+90020, Buc,90,2.45,2,1,1,1,0,0,,4 - fraction ancienne
+67050, Blancherupt,67,2.43,2,1,1,1,0,0,,4 - fraction ancienne
+67144, Fouday,67,2.42,2,1,1,1,0,0,,4 - fraction ancienne
+68024, Bellemagny,68,2.41,2,1,1,1,0,0,,4 - fraction ancienne
+90103, Vétrigne,90,2.40,2,1,1,1,0,0,,4 - fraction ancienne
+94042, Joinville-le-Pont,94,2.39,2,1,1,1,0,0,,4 - fraction ancienne
+57412, Longeville-lès-Metz,57,2.39,2,1,1,1,0,0,,4 - fraction ancienne
+91191, Crosne,91,2.32,2,1,1,1,0,0,,4 - fraction ancienne
+54218, Gélaucourt,54,2.29,2,1,1,1,0,0,,4 - fraction ancienne
+57645, Semécourt,57,2.28,2,1,1,1,0,0,,4 - fraction ancienne
+54185, Étreval,54,2.26,2,1,1,1,0,0,,4 - fraction ancienne
+57036, Attilloncourt,57,2.21,2,1,1,1,0,0,,4 - fraction ancienne
+57637, Schneckenbusch,57,2.18,2,1,1,1,0,0,,4 - fraction ancienne
+59651, Wavrechain-sous-Denain,59,2.17,2,1,1,1,0,0,,4 - fraction ancienne
+57368, Knutange,57,2.17,2,1,1,1,0,0,,4 - fraction ancienne
+90015, Botans,90,2.17,2,1,1,1,0,0,,4 - fraction ancienne
+57545, Plappeville,57,2.16,2,1,1,1,0,0,,4 - fraction ancienne
+93079, Villetaneuse,93,2.15,2,1,1,1,0,0,,4 - fraction ancienne
+57080, Bickenholtz,57,2.13,2,1,1,1,0,0,,4 - fraction ancienne
+18060, Chaumont,18,2.10,2,1,1,1,0,0,,4 - fraction ancienne
+93062,Le Raincy,93,2.08,2,1,1,1,0,0,,4 - fraction ancienne
+93013,Le Bourget,93,2.04,3,1,0,1,0,0,,4 - fraction ancienne
+76552, Sainte-Adresse,76,2.04,2,1,1,1,0,0,,4 - fraction ancienne
+92046, Malakoff,92,2.02,2,1,1,1,0,0,,4 - fraction ancienne
+54074, Bienville-la-Petite,54,2.01,2,1,1,1,0,0,,4 - fraction ancienne
+54354, Marthemont,54,2.01,2,1,1,1,0,0,,4 - fraction ancienne
+57478, Montdidier,57,1.99,2,1,1,1,0,0,,4 - fraction ancienne
+57380, Laneuveville-lès-Lorquin,57,1.98,2,1,1,1,0,0,,4 - fraction ancienne
+90031, Cunelières,90,1.92,2,1,1,1,0,0,,4 - fraction ancienne
+57539, Pévange,57,1.91,2,1,1,1,0,0,,4 - fraction ancienne
+42335, Viricelles,42,1.90,2,1,1,1,0,0,,4 - fraction ancienne
+90013, Bethonvilliers,90,1.88,2,1,1,1,0,0,,4 - fraction ancienne
+57500, Neufmoulins,57,1.88,2,1,1,1,0,0,,4 - fraction ancienne
+54482, Saint-Max,54,1.86,3,1,1,1,0,0,,4 - fraction ancienne
+90059, Lacollonge,90,1.83,2,1,1,1,0,0,,4 - fraction ancienne
+90094, Sevenans,90,1.82,2,1,1,1,0,0,,4 - fraction ancienne
+92009, Bois-Colombes,92,1.82,2,1,1,1,0,0,,4 - fraction ancienne
+39145, Chille,39,1.79,2,1,1,1,0,0,,4 - fraction ancienne
+93039,L' Île-Saint-Denis,93,1.79,2,1,1,1,0,0,,4 - fraction ancienne
+54332, Maidières,54,1.74,2,1,1,1,0,0,,4 - fraction ancienne
+90079, Petitmagny,90,1.70,2,1,1,1,0,0,,4 - fraction ancienne
+57050, Barchain,57,1.69,2,1,1,1,0,0,,4 - fraction ancienne
+57709, Vescheim,57,1.68,2,1,1,1,0,0,,4 - fraction ancienne
+90048, Fontenelle,90,1.62,2,1,1,1,0,0,,4 - fraction ancienne
+57320, Hertzing,57,1.58,2,1,1,1,0,0,,4 - fraction ancienne
+57467, Mey,57,1.55,2,1,1,1,0,0,,4 - fraction ancienne
+93033, Gournay-sur-Marne,93,1.51,2,1,1,1,0,0,,4 - fraction ancienne
+92075, Vanves,92,1.50,2,1,1,1,0,0,,4 - fraction ancienne
+57697, Vasperviller,57,1.49,2,1,1,1,0,0,,4 - fraction ancienne
+54516, They-sous-Vaudemont,54,1.48,2,1,1,1,0,0,,4 - fraction ancienne
+54544, Vandelainville,54,1.48,2,1,1,1,0,0,,4 - fraction ancienne
+57049,Le Ban-Saint-Martin,57,1.39,2,1,1,1,0,0,,4 - fraction ancienne
+57111, Bronvaux,57,1.38,2,1,1,1,0,0,,4 - fraction ancienne
+54165, Dommartemont,54,1.37,3,1,1,1,0,0,,4 - fraction ancienne
+57743, Waltembourg,57,1.34,2,1,1,1,0,0,,4 - fraction ancienne
+54443, Raon-lès-Leau,54,1.32,4,1,1,1,0,0,,4 - fraction ancienne
+14748, Vieux-Bourg,14,1.31,2,1,1,1,0,0,,4 - fraction ancienne
+54298, Laneuveville-derrière-Foug,54,1.23,2,1,1,1,0,0,,4 - fraction ancienne
+90083, Recouvrance,90,1.23,2,1,1,1,0,0,,4 - fraction ancienne
+90073, Moval,90,0.98,2,1,1,1,0,0,,4 - fraction ancienne
+90029, Cravanche,90,0.98,2,1,1,1,0,0,,4 - fraction ancienne
+90060, Lagrange,90,0.80,2,1,1,1,0,0,,4 - fraction ancienne
+90016, Bourg-sous-Châtelet,90,0.70,2,1,1,1,0,0,,4 - fraction ancienne
+57501, Neufvillage,57,0.53,2,1,1,1,0,0,,4 - fraction ancienne
+51297,,51,,2,0,0,0,0,0,,4 - fraction ancienne
+57363,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+42057,,42,,2,0,0,0,0,0,,4 - fraction ancienne
+54319,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+54267,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+90092,,90,,2,0,0,0,0,0,,4 - fraction ancienne
+76102,,76,,2,0,0,0,0,0,,4 - fraction ancienne
+57078,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+67332,,67,,2,0,0,0,0,0,,4 - fraction ancienne
+90106,,90,,2,0,0,0,0,0,,4 - fraction ancienne
+86243,,86,,2,0,0,0,0,0,,4 - fraction ancienne
+57327,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+54384,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+51401,,51,,2,0,0,0,0,0,,4 - fraction ancienne
+54454,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+57729,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+90038,,90,,2,0,0,0,0,0,,4 - fraction ancienne
+57023,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+76661,,76,,2,0,0,0,0,0,,4 - fraction ancienne
+57094,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+54361,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+57170,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+57157,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+10311,,10,,2,0,0,0,0,0,,4 - fraction ancienne
+69123, Lyon,69,,13,0,0,0,0,0,,4 - fraction ancienne
+54448,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+54503,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+55390,,55,,2,0,0,0,0,0,,4 - fraction ancienne
+42292,,42,,2,0,0,0,0,0,,4 - fraction ancienne
+59298,,59,,2,0,0,0,0,0,,4 - fraction ancienne
+13055, Marseille,13,,12,0,0,0,0,0,,4 - fraction ancienne
+57688,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+90040,,90,,2,0,0,0,0,0,,4 - fraction ancienne
+54347,,54,,2,0,0,0,0,0,,4 - fraction ancienne
+57450,,57,,2,0,0,0,0,0,,4 - fraction ancienne
+57400,,57,,2,0,0,0,0,0,,4 - fraction ancienne

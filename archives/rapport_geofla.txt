@@ -1,0 +1,40 @@
+RAPPORT D'EN-TÊTES TRF-GIS
+============================================================
+
+## Inventaire
+    .tab                   1  <- lu
+    .prj                   1
+    .shp                   1
+    .dbf                   1  <- lu
+    .shx                   1
+
+    2 fichiers à inspecter.
+
+### source_data/GEOFLA/GEOFLA_1-1_SHP_LAMB93_FR-ED111/GEOFLA/1_DONNEES_LIVRAISON_2013-12-00225/GEOFLA_1-1_SHP_LAMB93_FR-ED111/COMMUNES/COMMUNE.DBF
+    36610 enregistrements, 18 colonnes
+    ID_GEOFLA    numérique  len=10   ex: 1
+    CODE_COMM    texte      len=3    ex: 398
+    INSEE_COM    texte      len=5    ex: 71398
+    NOM_COMM     texte      len=50   ex: SAINT-CHRISTOPHE-EN-BRESSE
+    STATUT       texte      len=20   ex: Commune simple
+    X_CHF_LIEU   numérique  len=6    ex: 8517
+    Y_CHF_LIEU   numérique  len=6    ex: 66299
+    X_CENTROID   numérique  len=6    ex: 8519
+    Y_CENTROID   numérique  len=6    ex: 66291
+    Z_MOYEN      numérique  len=4    ex: 193
+    SUPERFICIE   numérique  len=10   ex: 2049
+    POPULATION   numérique  len=6    ex: 0.9
+    CODE_CANT    texte      len=2    ex: 43
+    CODE_ARR     texte      len=1    ex: 2
+    CODE_DEPT    texte      len=2    ex: 71
+    NOM_DEPT     texte      len=30   ex: SAONE-ET-LOIRE
+    CODE_REG     texte      len=2    ex: 26
+    NOM_REGION   texte      len=30   ex: BOURGOGNE
+
+### source_data/GEOFLA/ID_GEOFLA.tab
+    ~36611 lignes, séparateur TAB, 5 colonnes
+    IDGEOFLA             ex: 1.0                            2.0
+    INSEECOM             ex: 71398                          21708
+    NOMCOMM              ex: SAINT-CHRISTOPHE-EN-BRESSE     VILLY-LE-MOUTIER
+    XCHFLIEU             ex: 8517.0                         8512.0
+    YCHFLIEU             ex: 66299.0                        66616.0

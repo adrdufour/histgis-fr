@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>histgis — cantons, communes et circonscriptions, 1815-2012</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --fond: #f7f5f0;
+    --encre: #1d1c1a;
+    --gris: #6b6864;
+    --gris-clair: #d8d4cc;
+    --trait-commune: #9a958c;
+    --trait-canton: #2f2c28;
+    --trait-circo: #6d1414;
+    --accent: #6d1414;
+    --vide: #efece5;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font: 14px/1.45 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color: var(--encre); background: var(--fond);
+    display: flex; flex-direction: column;
+  }
+  header {
+    padding: 10px 16px; border-bottom: 1px solid var(--gris-clair);
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; letter-spacing: .01em; }
+  header .sous { color: var(--gris); font-size: 12.5px; }
+  main { flex: 1; display: flex; min-height: 0; }
+  #carte-zone { flex: 1; position: relative; min-width: 0; background: var(--fond); }
+  svg { width: 100%; height: 100%; display: block; cursor: grab; }
+  svg.tire { cursor: grabbing; }
+  aside {
+    width: 310px; border-left: 1px solid var(--gris-clair); overflow-y: auto;
+    padding: 14px 16px; font-size: 13px; background: #fbfaf7;
+  }
+  aside h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .07em;
+             color: var(--gris); margin: 18px 0 7px; font-weight: 600; }
+  aside h2:first-child { margin-top: 0; }
+  footer {
+    border-top: 1px solid var(--gris-clair); padding: 10px 16px 14px;
+    display: flex; flex-direction: column; gap: 8px; background: #fbfaf7;
+  }
+  .ligne { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  label { color: var(--gris); font-size: 12.5px; }
+  select, input[type=number], button {
+    font-family: inherit; font-size: 13px; padding: 4px 7px;
+    border: 1px solid var(--gris-clair); border-radius: 3px;
+    background: #fff; color: var(--encre);
+  }
+  button { cursor: pointer; }
+  button:hover:not(:disabled) { background: #f0ede7; }
+  button:disabled { opacity: .4; cursor: default; }
+  button.actif { background: var(--encre); color: var(--fond); border-color: var(--encre); }
+  #annee-aff { font-size: 27px; font-weight: 600; min-width: 3.1em;
+               font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+  /* ---- Curseur d'années : une seule barre ------------------------------
+     Le curseur est rendu transparent et posé par-dessus la jauge, qui lui
+     sert de piste. `--pouce` est la largeur du curseur : c'est de cette
+     demi-largeur que le rail est en retrait aux deux bouts, et donc de
+     laquelle `#voie` doit l'être aussi pour que 1870 tombe sous 1870. */
+  :root { --pouce: 17px; }
+  .piste { position: relative; flex: 1; min-width: 280px; height: 34px; }
+  #voie { position: absolute; left: calc(var(--pouce) / 2);
+          right: calc(var(--pouce) / 2); top: 0; }
+  #jauge { position: relative; height: 11px; border-radius: 2px;
+           overflow: hidden; background: var(--vide);
+           box-shadow: inset 0 0 0 1px rgba(0,0,0,.07); }
+  #jauge div { position: absolute; top: 0; height: 100%; }
+
+  #curseur {
+    position: absolute; left: 0; top: 0; width: 100%; height: 11px;
+    margin: 0; -webkit-appearance: none; appearance: none;
+    background: transparent; cursor: pointer;
+  }
+  #curseur::-webkit-slider-runnable-track { height: 11px; background: transparent; }
+  #curseur::-moz-range-track { height: 11px; background: transparent; }
+  #curseur::-webkit-slider-thumb {
+    -webkit-appearance: none; width: var(--pouce); height: var(--pouce);
+    margin-top: calc((11px - var(--pouce)) / 2);
+    border-radius: 50%; background: var(--accent);
+    border: 2px solid var(--fond); box-shadow: 0 1px 3px rgba(0,0,0,.35);
+  }
+  #curseur::-moz-range-thumb {
+    width: var(--pouce); height: var(--pouce); border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--fond);
+    box-shadow: 0 1px 3px rgba(0,0,0,.35);
+  }
+  #curseur:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--encre);
+                                                 outline-offset: 1px; }
+  .j-can { background: #b9c6b0; }
+  .j-cir { background: #d8b9a8; }
+  .j-both { background: #8fa384; }
+  .j-abs { background: repeating-linear-gradient(45deg, #cfc9bf 0 3px,
+           #e6e1d8 3px 6px); }
+  /* Graduation décennale : un tiret court par décennie, plus haut quand il
+     porte une étiquette. C'est ce qui permet de lire où l'on est sans compter
+     les pixels. */
+  #graduation { position: relative; height: 6px; margin-top: 1px; }
+  #graduation i { position: absolute; top: 0; width: 1px; height: 3px;
+                  background: var(--gris-clair); transform: translateX(-50%); }
+  #graduation i.haut { height: 6px; background: var(--gris); }
+  #reperes { position: relative; height: 14px; color: var(--gris); font-size: 10.5px; }
+  #reperes span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+  #reperes span.borne { color: var(--encre); font-weight: 600; }
+  /* Aux extrémités, un libellé centré sort de la piste : on le rentre. */
+  #reperes span.borne.g { transform: none; }
+  #reperes span.borne.d { transform: translateX(-100%); }
+  #bandeau {
+    position: absolute; left: 50%; top: 18px; transform: translateX(-50%);
+    background: rgba(247,245,240,.94); border: 1px solid var(--gris-clair);
+    border-left: 3px solid var(--accent); padding: 8px 13px; max-width: 78%;
+    font-size: 12.5px; color: var(--encre); border-radius: 2px; display: none;
+    box-shadow: 0 1px 6px rgba(0,0,0,.07);
+  }
+  #infobulle {
+    position: absolute; pointer-events: none; display: none;
+    background: rgba(29,28,26,.93); color: #f7f5f0; padding: 5px 9px;
+    border-radius: 3px; font-size: 12px; max-width: 260px; line-height: 1.35;
+  }
+  #infobulle b { font-weight: 600; }
+  #infobulle .sec { color: #bab5ad; font-size: 11px; }
+  .commune { stroke: var(--trait-commune); stroke-width: .4; vector-effect: non-scaling-stroke; }
+  .commune:hover { stroke: var(--encre); stroke-width: 1.2; }
+  /* Plusieurs communes d'époque sur un polygone, mais dans le même canton :
+     pas de recouvrement cantonal, seulement des noms superposés. Un liseré
+     pointillé suffit à le dire sans crier au défaut. */
+  .commune-homonymes { stroke: #40587e; stroke-width: 1.1;
+                       stroke-dasharray: 3 2; }
+  /* Repli (R5) : la commune est dessinée avec la trame GEOFLA de 2011 parce
+     qu'ANR ne la pourvoit pas à cette date. Le trait est le même, en plus pâle
+     — la forme est plausible, sa DATE ne l'est pas, et c'est tout ce que le
+     dessin peut honnêtement dire. Volontairement discret : 486 communes sont
+     dans ce cas en 1870, et les hachurer noierait la carte. */
+  .commune-repli { stroke: var(--trait-commune); stroke-opacity: .35;
+                   stroke-dasharray: 1.5 1.5; }
+  .canton-tr { fill: none; stroke: var(--trait-canton); stroke-width: 1.5;
+               vector-effect: non-scaling-stroke; stroke-linejoin: round; pointer-events: none; }
+  .circo-tr { fill: none; stroke: var(--trait-circo); stroke-width: 3.4;
+              vector-effect: non-scaling-stroke; stroke-linejoin: round;
+              stroke-linecap: round; pointer-events: none; }
+  .contour-ref { fill: var(--vide); stroke: var(--gris-clair); stroke-width: 1.5;
+                 stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
+  /* La taille du texte est posée en unités du viewBox par applique(), pas ici :
+     le viewBox est gradué en kilomètres, donc un `font-size: 9px` écrit dans
+     la feuille vaudrait neuf kilomètres de haut. C'est le défaut qui rendait
+     les étiquettes illisibles. Seul ce qui ne dépend pas de l'échelle reste
+     en CSS. */
+  .etiq { fill: #33302c; paint-order: stroke; stroke: rgba(247,245,240,.9);
+          text-anchor: middle; pointer-events: none; font-family: inherit; }
+  .etiq-circo { font-weight: 600; fill: var(--trait-circo); }
+  .etiq-commune { fill: #55504a; }
+  .surligne { stroke: #b8860b !important; stroke-width: 3.2 !important; }
+  table.rec { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.rec td { padding: 2px 0; vertical-align: top; }
+  table.rec td:last-child { text-align: right; font-variant-numeric: tabular-nums;
+                            white-space: nowrap; padding-left: 8px; }
+  .puce { display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+          margin-right: 6px; vertical-align: -1px; border: 1px solid rgba(0,0,0,.18); }
+  .note { color: var(--gris); font-size: 11.5px; line-height: 1.45; }
+  .avert { border-left: 3px solid #a8761c; margin: 8px 0;
+           color: #6b5a1e; font-size: 11.5px; background: #fdfbf2; padding: 6px 8px; }
+  .avert2 { border-left: 3px solid #40587e; margin: 8px 0;
+            color: #2c3d59; font-size: 11.5px; background: #f3f5f9; padding: 6px 8px; }
+  ul.liste { list-style: none; padding: 0; margin: 4px 0 0;
+             max-height: 260px; overflow-y: auto; }
+  ul.liste li { padding: 2px 0; cursor: pointer; display: flex;
+                justify-content: space-between; gap: 8px; }
+  ul.liste li:hover { background: #f0ede7; }
+  ul.liste li span.n { color: var(--gris); font-variant-numeric: tabular-nums; }
+  .cle { display: flex; gap: 8px; align-items: center; margin: 4px 0; font-size: 12px; }
+  .cle svg { width: 26px; height: 10px; flex: none; }
+  #chargement { position: absolute; inset: 0; display: none; place-items: center;
+                background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris); }
+  @media (max-width: 900px) { aside { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cantons, communes et circonscriptions législatives</h1>
+  <span class="sous" id="entete-sous">base <code>histgis</code> — 1815-2012</span>
+</header>
+
+<main>
+  <div id="carte-zone">
+    <svg id="carte" role="img" aria-label="Carte administrative"></svg>
+    <div id="bandeau"></div>
+    <div id="infobulle"></div>
+    <div id="chargement">chargement…</div>
+  </div>
+  <aside id="panneau"></aside>
+</main>
+
+<footer>
+  <div class="ligne">
+    <span id="annee-aff">1870</span>
+    <div class="piste">
+      <!-- La jauge de disponibilité EST la piste du curseur : deux barres
+           superposées disaient la même chose deux fois et se chevauchaient.
+           `#voie` est en retrait de la demi-largeur du curseur de chaque côté,
+           pour que graduations et segments tombent exactement sous lui. -->
+      <div id="voie">
+        <div id="jauge"></div>
+        <div id="graduation"></div>
+        <div id="reperes"></div>
+      </div>
+      <input type="range" id="curseur" min="1815" max="2012" value="1870"
+             step="1" aria-label="Année">
+    </div>
+    <button id="lecture" title="Faire défiler les années">▶ animer</button>
+  </div>
+  <div class="ligne">
+    <label for="dep">Département</label>
+    <select id="dep"></select>
+    <span style="width:8px"></span>
+    <label><input type="checkbox" id="v-communes" checked> communes</label>
+    <label><input type="checkbox" id="v-cantons" checked> cantons</label>
+    <label><input type="checkbox" id="v-circos" checked> circonscriptions</label>
+    <label for="v-noms">noms</label>
+    <select id="v-noms">
+      <option value="communes" selected>communes (au zoom)</option>
+      <option value="unites">cantons et circos</option>
+      <option value="tout">tout</option>
+      <option value="aucun">aucun</option>
+    </select>
+    <span style="width:8px"></span>
+    <label>colorier par</label>
+    <select id="teinte">
+      <option value="auto">le plus fin disponible</option>
+      <option value="canton">canton</option>
+      <option value="circo">circonscription</option>
+      <option value="aucun">rien</option>
+    </select>
+    <button id="recadrer" title="Recadrer sur le département">recadrer</button>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+// ===========================================================================
+// Données : tout vient de `cartes/export_web.py`. La page ne calcule aucune
+// géométrie et n'interpole aucune année — elle affiche ce que la base a dit,
+// et affiche explicitement qu'elle n'a rien dit quand c'est le cas.
+// ===========================================================================
+const RACINE = "donnees";
+const AN_MIN = 1815, AN_MAX = 2012;
+
+const cache = new Map();
+
+// Deux régimes, et les confondre a coûté une soirée le 20 août 2026.
+//
+// `c_<sig>.json` et `x_<sig>.json` sont adressés par leur CONTENU : leur nom
+// est le md5 du fichier lui-même. Un contenu différent porte forcément un autre
+// nom, donc le navigateur peut les garder indéfiniment.
+//
+// Le nom était naguère le md5 de la seule COMPOSITION, et ça ne pouvait plus
+// tenir : depuis que la géométrie est datée, deux années de même composition
+// peuvent avoir des contours différents. Signer sur la sortie plutôt que sur
+// l'entrée règle les deux moitiés du problème d'un coup — deux contenus
+// différents ne partagent jamais un nom, et deux contenus identiques ne
+// s'écrivent jamais deux fois.
+//
+// `index.json`, `communes.json`, `contours.json` gardent le même nom d'un
+// export à l'autre. Si le navigateur en sert une version périmée, il continue
+// de demander les configurations d'AVANT le dernier export — et rien ne le
+// trahit, puisque `annee_ref` est identique dans l'ancienne et la nouvelle.
+// C'est exactement ce qui a fait croire que Bihorel manquait dans la base
+// alors que la base, l'export et le disque étaient justes.
+//
+// La revalidation est demandée ici, côté page, et pas seulement dans
+// `servir.py` : la carte doit rester juste même servie par un autre serveur.
+const CONTENU_ADRESSE = /\/[cx]_[0-9a-f]{12}\.json$/;
+
+async function charge(url) {
+  if (cache.has(url)) return cache.get(url);
+  const opts = CONTENU_ADRESSE.test(url) ? {} : { cache: "no-cache" };
+  const p = fetch(url, opts).then(r => {
+    if (!r.ok) throw new Error(url + " : " + r.status);
+    return r.json();
+  });
+  cache.set(url, p);
+  return p;
+}
+
+// ===========================================================================
+// La géométrie d'une commune a une épaisseur temporelle
+//
+// Jusqu'au 1er septembre 2026, `communes.json` donnait un polygone par atome,
+// pour toutes les années : c'était la trame GEOFLA 2011, un instantané projeté
+// sur deux siècles. ANR-COMMUNES (`sql/82_anr_geom.sql`) reconstruit la forme
+// année par année, et chaque atome porte donc `v`, la suite de ses versions.
+//
+// `a` est la PREMIÈRE année où la version vaut ; elle vaut jusqu'à la suivante.
+// `r: 1` marque un repli sur la trame de 2011, parce qu'ANR ne pourvoit pas
+// tout — les 333 fractions, les communes qu'il fait naître après nous, et ses
+// 532 trous de chronologie non déclarés. `g: null` marque un intervalle où
+// AUCUNE source ne sait dessiner la commune : elle n'est alors pas tracée, au
+// lieu d'être tracée avec la forme d'une autre époque.
+//
+// La recherche est linéaire depuis la fin : une commune a une, deux, rarement
+// plus de cinq versions. Une dichotomie ici serait du zèle.
+// ===========================================================================
+function versionA(c, annee) {
+  if (!c) return null;
+  // Export antérieur au versionnage : le polygone est posé à plat sur l'objet.
+  // On le rend tel quel plutôt que de refuser d'afficher une carte qui était
+  // juste hier — mais `S.exportSansVersions` le dit dans le panneau.
+  if (!c.v) return c.g ? c : null;
+  for (let i = c.v.length - 1; i >= 0; i--) {
+    if (c.v[i].a <= annee) return c.v[i].g ? c.v[i] : null;
+  }
+  return null;
+}
+
+const S = {
+  index: null,        // index racine
+  dep: null,          // code du département courant
+  depIndex: null,     // dep/NN/index.json
+  communes: null,     // dep/NN/communes.json
+  contours: null,     // dep/NN/contours.json
+  annee: 1870,
+  cfgCanton: null,    // configuration cantonale chargée
+  cfgCirco: null,
+  vue: null,          // {x, y, k} panoramique et zoom
+  cadre: null,        // bbox projetée du département
+  surligne: null,
+  jeton: 0,           // pour ignorer les chargements dépassés
+};
+
+const $ = s => document.querySelector(s);
+const svg = $("#carte");
+const NS = "http://www.w3.org/2000/svg";
+
+// ---------------------------------------------------------------------------
+// Projection : conique équivalente d'Albers, calée sur le département affiché.
+// À l'échelle d'un département une projection plate suffirait, mais le calage
+// automatique coûte trois lignes et évite d'étirer le Nord par rapport au Midi
+// quand on compare deux planches.
+// ---------------------------------------------------------------------------
+function faitProjection(bbox) {
+  const [lo0, la0, lo1, la1] = bbox;
+  const lat0 = (la0 + la1) / 2 * Math.PI / 180;
+  const lon0 = (lo0 + lo1) / 2;
+  const k = Math.cos(lat0);
+  return (lon, lat) => [(lon - lon0) * k * 111.32, -(lat * 111.32)];
+}
+let proj = faitProjection([-5, 41, 10, 52]);
+
+// ---------------------------------------------------------------------------
+// GeoJSON -> chemin SVG. Les coordonnées sont déjà accrochées à une grille de
+// 25 m côté PostGIS : on ne retouche rien ici, sous peine de désaccorder les
+// limites cantonales des limites communales qu'elles suivent.
+// ---------------------------------------------------------------------------
+function anneauVersD(anneau, out) {
+  if (anneau.length < 3) return;
+  for (let i = 0; i < anneau.length; i++) {
+    const p = proj(anneau[i][0], anneau[i][1]);
+    out.push((i ? "L" : "M") + p[0].toFixed(4) + " " + p[1].toFixed(4));
+  }
+  out.push("Z");
+}
+function geomVersD(g) {
+  if (!g) return "";
+  const out = [];
+  if (g.type === "Polygon") g.coordinates.forEach(r => anneauVersD(r, out));
+  else if (g.type === "MultiPolygon")
+    g.coordinates.forEach(p => p.forEach(r => anneauVersD(r, out)));
+  else if (g.type === "GeometryCollection")
+    g.geometries.forEach(x => out.push(geomVersD(x)));
+  return out.join("");
+}
+function bboxDe(g, b) {
+  b = b || [Infinity, Infinity, -Infinity, -Infinity];
+  const vis = c => {
+    if (typeof c[0] === "number") {
+      b[0] = Math.min(b[0], c[0]); b[1] = Math.min(b[1], c[1]);
+      b[2] = Math.max(b[2], c[0]); b[3] = Math.max(b[3], c[1]);
+    } else c.forEach(vis);
+  };
+  if (g && g.coordinates) vis(g.coordinates);
+  if (g && g.geometries) g.geometries.forEach(x => bboxDe(x, b));
+  return b;
+}
+function centroide(g) {
+  // Centre de gravité surfacique du plus grand anneau extérieur : suffisant
+  // pour poser une étiquette, et robuste aux communes en archipel.
+  let best = null, bestA = -1;
+  const anneaux = [];
+  if (!g) return null;
+  if (g.type === "Polygon") anneaux.push(g.coordinates[0]);
+  else if (g.type === "MultiPolygon") g.coordinates.forEach(p => anneaux.push(p[0]));
+  else return null;
+  for (const r of anneaux) {
+    let a = 0, cx = 0, cy = 0;
+    for (let i = 0, n = r.length - 1; i < n; i++) {
+      const f = r[i][0] * r[i + 1][1] - r[i + 1][0] * r[i][1];
+      a += f; cx += (r[i][0] + r[i + 1][0]) * f; cy += (r[i][1] + r[i + 1][1]) * f;
+    }
+    a *= .5;
+    if (Math.abs(a) > bestA) { bestA = Math.abs(a); best = [cx / (6 * a), cy / (6 * a)]; }
+  }
+  return best;
+}
+
+// ---------------------------------------------------------------------------
+// Teintes : angle d'or sur la teinte, indexé sur le rang de l'unité. Deux
+// unités voisines ont donc presque toujours des teintes éloignées, sans avoir
+// à colorier un graphe d'adjacence.
+// ---------------------------------------------------------------------------
+function teinteDe(i, total) {
+  const h = (i * 137.508) % 360;
+  const s = 30 + (i % 3) * 7;
+  const l = 79 - (i % 4) * 4;
+  return `hsl(${h.toFixed(0)}, ${s}%, ${l}%)`;
+}
+
+// ===========================================================================
+// Chargement
+// ===========================================================================
+async function chargeDepartement(dep) {
+  const j = ++S.jeton;
+  $("#chargement").style.display = "grid";
+  try {
+    const [idx, com, cont] = await Promise.all([
+      charge(`${RACINE}/dep/${dep}/index.json`),
+      charge(`${RACINE}/dep/${dep}/communes.json`),
+      charge(`${RACINE}/dep/${dep}/contours.json`).catch(() => ({})),
+    ]);
+    if (j !== S.jeton) return;
+    S.dep = dep; S.depIndex = idx; S.communes = com.communes; S.contours = cont;
+    S.cadre = null; S.vue = null; S._bornes = null;
+    // Un export antérieur à l'ajout des noms se reconnaît à l'absence de `n`
+    // sur les communes. Plutôt que d'afficher une carte muette sans expliquer
+    // pourquoi, la page le dit dans le panneau.
+    const q = Object.values(S.communes)[0] || {};
+    S.exportAncien = !("n" in q);
+    // Deux générations d'export se distinguent ici, et il faut les distinguer :
+    // un export sans `v` n'est pas cassé, il est PLAT — il affichera la trame de
+    // 2011 pour toutes les années sans qu'aucun symptôme visible le trahisse.
+    // C'est exactement le genre de silence que ce projet refuse.
+    S.exportSansVersions = !("v" in q);
+    S.trame = (idx && idx.trame) || (S.index && S.index.trame) || null;
+    // L'espace d'où sort ce département. Déclaré par l'export, jamais déduit
+    // du code : un code à trois chiffres est un indice, pas une preuve, et la
+    // page n'a pas à rejouer une règle que le producteur des fichiers connaît.
+    S.espace = (idx && idx.espace) || "metropole";
+  } finally {
+    if (j === S.jeton) $("#chargement").style.display = "none";
+  }
+}
+
+async function chargeAnnee(annee) {
+  const e = S.depIndex.annees[String(annee)] || { c: "", x: "" };
+  const j = ++S.jeton;
+  const p = [];
+  p.push(e.c ? charge(`${RACINE}/dep/${S.dep}/c_${e.c}.json`) : Promise.resolve(null));
+  p.push(e.x ? charge(`${RACINE}/dep/${S.dep}/x_${e.x}.json`) : Promise.resolve(null));
+  const [c, x] = await Promise.all(p);
+  if (j !== S.jeton) return false;
+  S.cfgCanton = c; S.cfgCirco = x;
+  return true;
+}
+
+// ===========================================================================
+// Rendu
+// ===========================================================================
+function calibre() {
+  // Emprise : celle de la configuration affichée, ou à défaut du contour de
+  // référence. On la fige au premier rendu du département pour que le curseur
+  // ne fasse pas sauter la carte d'une année à l'autre.
+  if (S.cadre) return;
+  let b = [Infinity, Infinity, -Infinity, -Infinity];
+  const src = (S.cfgCanton && S.cfgCanton.unites) || (S.cfgCirco && S.cfgCirco.unites);
+  if (src) src.forEach(u => bboxDe(u.g, b));
+  else if (S.contours) Object.values(S.contours).forEach(g => bboxDe(g, b));
+  if (!isFinite(b[0])) {
+    // Emprise de dernier recours : toutes les versions de toutes les communes,
+    // et pas seulement celles de l'année courante. Le cadre est figé une fois
+    // pour le département — le calculer sur une seule année ferait dépendre le
+    // cadrage de l'année où l'on est entré dans le département.
+    Object.values(S.communes).forEach(c => {
+      if (c.v) c.v.forEach(v => bboxDe(v.g, b)); else bboxDe(c.g, b);
+    });
+  }
+  if (!isFinite(b[0])) return;
+  proj = faitProjection(b);
+  // bbox en coordonnées projetées
+  const pts = [proj(b[0], b[1]), proj(b[2], b[1]), proj(b[0], b[3]), proj(b[2], b[3])];
+  S.cadre = [
+    Math.min(...pts.map(p => p[0])), Math.min(...pts.map(p => p[1])),
+    Math.max(...pts.map(p => p[0])), Math.max(...pts.map(p => p[1])),
+  ];
+  recadre();
+}
+
+function recadre() {
+  if (!S.cadre) return;
+  const [x0, y0, x1, y1] = S.cadre;
+  const m = Math.max(x1 - x0, y1 - y0) * .04;
+  S.vue = { x: x0 - m, y: y0 - m, w: (x1 - x0) + 2 * m, h: (y1 - y0) + 2 * m };
+  applique();
+}
+
+function applique() {
+  if (!S.vue) return;
+  const r = svg.getBoundingClientRect();
+  const ar = r.width / Math.max(r.height, 1);
+  let { x, y, w, h } = S.vue;
+  if (w / h < ar) { const nw = h * ar; x -= (nw - w) / 2; w = nw; }
+  else { const nh = w / ar; y -= (nh - h) / 2; h = nh; }
+  svg.setAttribute("viewBox", `${x} ${y} ${w} ${h}`);
+  S.ech = w / Math.max(r.width, 1);   // unités de carte par pixel écran
+  echelleEcran();
+}
+
+// ---------------------------------------------------------------------------
+// Ce qui doit garder une taille à l'écran quel que soit le zoom. Les traits
+// s'en tirent avec `vector-effect: non-scaling-stroke` ; le texte et les motifs
+// de remplissage n'ont pas d'équivalent en SVG 1.1 et se règlent ici.
+// ---------------------------------------------------------------------------
+function echelleEcran() {
+  const e = S.ech || 1;
+  for (const [sel, px, contour] of [[".etiq", 11, 2.6],
+                                    [".etiq-circo", 13, 3.2],
+                                    [".etiq-commune", 8.5, 2]]) {
+    svg.querySelectorAll(sel).forEach(t => {
+      t.setAttribute("font-size", (px * e).toFixed(4));
+      t.setAttribute("stroke-width", (contour * e).toFixed(4));
+    });
+  }
+  // Hachures : 5 px de pas à l'écran. En unités de carte elles valaient
+  // six kilomètres, d'où un motif si étalé qu'il ne se lisait plus.
+  for (const id of ["hachure", "hachure-b"]) {
+    const p = svg.querySelector("#" + id);
+    if (!p) continue;
+    const pas = 5 * e;
+    p.setAttribute("width", pas); p.setAttribute("height", pas);
+    const r = p.querySelector("rect");
+    if (r) { r.setAttribute("width", pas); r.setAttribute("height", pas); }
+    p.querySelectorAll("line").forEach(l => {
+      if (l.getAttribute("y2") !== "0") l.setAttribute("y2", pas);
+      if (l.getAttribute("x2") !== "0") l.setAttribute("x2", pas);
+      l.setAttribute("stroke-width", 1.4 * e);
+    });
+  }
+  // Le point de chef-lieu et les repères ponctuels suivent la même règle.
+  svg.querySelectorAll("circle.pt").forEach(c => c.setAttribute("r", 2.2 * e));
+}
+
+function dessine() {
+  const parCanton = (S.cfgCanton && S.cfgCanton.rattachement) || {};
+  const parCirco = (S.cfgCirco && S.cfgCirco.rattachement) || {};
+  // « le plus fin disponible » : le canton quand il est là, la circonscription
+  // sinon. Entre 1986 et 1998 la base tient les circonscriptions mais pas les
+  // cantons ; colorier par canton laisserait alors une carte grise qui a l'air
+  // d'un bogue alors qu'il y a bien une information à montrer.
+  let mode = $("#teinte").value;
+  if (mode === "auto") mode = S.cfgCanton ? "canton" : (S.cfgCirco ? "circo" : "aucun");
+  const source = mode === "circo" ? S.cfgCirco : (mode === "canton" ? S.cfgCanton : null);
+  const rattach = mode === "circo" ? parCirco : (mode === "canton" ? parCanton : {});
+
+  const couleur = new Map();
+  if (source && mode !== "aucun") {
+    const ids = source.unites.map(u => u.id).sort();
+    ids.forEach((id, i) => couleur.set(id, teinteDe(i, ids.length)));
+  }
+  S.modeActif = mode;
+  S.couleurs = couleur;
+
+  // DEUX TRAMES SUR LE MÊME SOL. À Paris, les arrondissements (couche canton)
+  // et les quartiers (couche circo) couvrent le même territoire, et le dessin
+  // part de l'UNION des deux couches : les deux cartes se superposaient, noms
+  // compris — de 1876 à 1884 et de 1889 à 2012 (3 octobre 2026). Règle : un
+  // groupe qui n'est pas rattaché dans la couche ACTIVE est masqué si chacun
+  // de ses atomes porte un code INSEE que la couche active dessine déjà. Une
+  // commune connue d'une seule couche (une commune sans canton entre 1941 et
+  // 1999, par exemple) a un code que la couche active n'a pas : elle reste.
+  const inseeActifs = new Set();
+  for (const a of Object.keys(rattach)) {
+    const c = S.communes[a];
+    if (c && c.i) inseeActifs.add(c.i);
+  }
+  const masque = grp => !grp.atomes.some(x => rattach[x]) &&
+    grp.atomes.every(x => { const c = S.communes[x]; return c && c.i && inseeActifs.has(c.i); });
+
+  const frag = document.createDocumentFragment();
+  // Trois traitements pour trois situations qui ne demandent pas le même
+  // travail : l'ocre penché à droite est une coupe à tracer, le bleu-gris
+  // croisé est un artefact de la trame que rien ne tracera, le pointillé n'est
+  // qu'une superposition de noms sans recouvrement cantonal.
+  const defs = document.createElementNS(NS, "defs");
+  defs.innerHTML = `
+    <pattern id="hachure" width="6" height="6" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#f0e2c4"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#a8761c" stroke-width="1.7"/>
+    </pattern>
+    <pattern id="hachure-b" width="6" height="6" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(-45)">
+      <rect width="6" height="6" fill="#dde2ea"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#40587e" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="6" y2="0" stroke="#40587e" stroke-width="1.5"/>
+    </pattern>`;
+  frag.appendChild(defs);
+
+  const g = (cls) => { const e = document.createElementNS(NS, "g"); e.setAttribute("class", cls); frag.appendChild(e); return e; };
+
+  const vide = !S.cfgCanton && !S.cfgCirco;
+
+  // --- fond : contour de référence, pour les années sans source ------------
+  // Deux silences à ne pas confondre : la base qui ne dit rien, et le
+  // territoire qui n'est pas français. Le premier est une lacune du projet, le
+  // second un fait historique. Les afficher pareil serait s'accuser à tort.
+  if (vide) {
+    const annees = (S.depIndex.contours || []).map(Number);
+    let plusProche = null;
+    if (annees.length) {
+      plusProche = annees.reduce((a, b) =>
+        Math.abs(b - S.annee) < Math.abs(a - S.annee) ? b : a);
+      const geo = S.contours[String(plusProche)];
+      if (geo) {
+        const p = document.createElementNS(NS, "path");
+        p.setAttribute("d", geomVersD(geo));
+        p.setAttribute("class", "contour-ref");
+        g("fond").appendChild(p);
+      }
+    }
+    const abs = absencePour(S.annee);
+    const emprunt = plusProche
+      ? ` Le contour grisé est celui de ${plusProche}, emprunté pour situer les
+          lieux : ce n'est pas la carte de ${S.annee}.` : "";
+    if (abs) {
+      bandeau(`<b>Pas de département à cette date (${abs.a}-${abs.b}).</b>
+        ${echappe(abs.motif)}. Ce n'est pas une lacune de la base : il n'y a
+        rien à cartographier.${emprunt}`);
+    } else {
+      // Deux causes possibles, et il faut les distinguer : la couche cantonale
+      // a une vraie lacune de source entre 1941 et 1998, mais entre 1941 et
+      // 1945 l'absence de circonscriptions n'est pas une lacune — il n'y a pas
+      // eu d'élection. Dire « aucune source » des deux ferait passer un fait
+      // historique pour un défaut de la base.
+      const ac = absenceCirco(S.annee);
+      if (S.espace === "outremer") {
+        // Le trou n'est pas au même endroit qu'en métropole, et le dire
+        // change ce qu'il faut faire pour le combler. Ici les communes sont
+        // dessinées : ce qui manque est le fichier qui les range dans leurs
+        // cantons, pas la trame.
+        bandeau(`<b>Communes dessinées, aucun rattachement.</b> La trame
+          GEOFLA 2015 couvre ce département, mais la base ne tient ni canton ni
+          circonscription pour lui : le fichier du ministère qui pose les
+          rattachements — <code>circo/circo_outremer_1986_2012.csv</code> — ne
+          contient pas Mayotte. Ses cantons existent pourtant en base, tirés de
+          GEOFLA seul. C'est un trou d'attribution, pas un trou de carte.`);
+      } else {
+      bandeau(`<b>Aucune source pour ${S.annee}.</b> La base ne tient aucune
+        composition cantonale à cette date.` +
+        (ac ? ` Quant aux circonscriptions, il n'y en a pas : ${echappe(ac.motif)}.
+               Ce n'est pas une lacune de la base.`
+            : ` Ni électorale.`) + emprunt);
+      }
+    }
+  } else {
+    bandeau(null);
+  }
+
+  // --- communes -----------------------------------------------------------
+  // Un polygone est dessiné UNE fois, quel que soit le nombre d'atomes qui le
+  // revendiquent : c'est le regroupement par empreinte qui évite l'empilement
+  // silencieux de trois libellés et de trois cantons au même endroit.
+  S.comptes = { fraction: 0, communes: 0, homonymes: 0, repli: 0, sansGeom: 0 };
+  // `|| S.espace === "outremer"` : `vide` signifie « aucune configuration à
+  // cette date », et en métropole cela veut dire qu'on ne sait rien — ni où
+  // sont les communes, ni à quoi elles appartiennent. Outre-mer, la trame est
+  // indépendante des rattachements : on sait parfaitement dessiner Mayotte, on
+  // ne sait pas la découper. Refuser de la dessiner ferait passer un trou
+  // d'ATTRIBUTION pour un trou de GÉOMÉTRIE, et le lecteur conclurait que le
+  // projet n'a pas Mayotte alors qu'il ne lui manque qu'un fichier.
+  if ($("#v-communes").checked && (!vide || S.espace === "outremer")) {
+    const gc = g("communes");
+    // L'ORDRE DE DESSIN : les groupes rattachés dans la couche ACTIVE en
+    // dernier, donc au-dessus. Deux trames peuvent couvrir le même sol à la
+    // même date — à Paris de 1876 à 1884 et de 1889 à 1940, les quartiers
+    // (couche circo) et les arrondissements (couche canton). L'ordre suivait
+    // celui des clés, et JavaScript range les clés numériques (« 76208 »)
+    // AVANT les autres (« PQ01 ») : les quartiers, sans canton, recouvraient
+    // en gris les arrondissements coloriés, et Paris semblait n'avoir aucun
+    // canton (3 octobre 2026).
+    const ordonnes = [...groupes().values()].sort((a, b) =>
+      (a.atomes.some(x => rattach[x]) ? 1 : 0) - (b.atomes.some(x => rattach[x]) ? 1 : 0));
+    for (const grp of ordonnes) {
+      if (masque(grp)) continue;
+      // L'atome qui porte la teinte : le premier rattaché dans la couche active.
+      const aid = grp.atomes.find(x => rattach[x]) || grp.atomes[0];
+      const c = S.communes[aid];
+      if (!c) continue;
+      const vg = versionA(c, S.annee);
+      // Une commune qu'aucune source ne sait dessiner à cette date n'est pas
+      // dessinée. Elle est comptée, et le panneau le dit : un trou compté n'est
+      // pas le même objet qu'un trou passé sous silence.
+      if (!vg) { S.comptes.sansGeom++; continue; }
+      if (grp.type !== "simple") S.comptes[grp.type]++;
+      if (vg.r) S.comptes.repli++;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", geomVersD(vg.g));
+      p.setAttribute("class", "commune" +
+        (grp.type === "homonymes" ? " commune-homonymes" : "") +
+        (vg.r ? " commune-repli" : ""));
+      p.setAttribute("fill",
+        grp.type === "fraction" ? "url(#hachure)" :
+        grp.type === "communes" ? "url(#hachure-b)" :
+        (couleur.get(rattach[aid]) || "#eceae4"));
+      p.dataset.atome = aid;
+      gc.appendChild(p);
+    }
+  }
+
+  // --- cantons ------------------------------------------------------------
+  if ($("#v-cantons").checked && S.cfgCanton) {
+    const gk = g("cantons");
+    for (const u of S.cfgCanton.unites) {
+      if (!u.g) continue;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", geomVersD(u.g));
+      p.setAttribute("class", "canton-tr");
+      p.dataset.unite = u.id;
+      gk.appendChild(p);
+    }
+  }
+
+  // --- circonscriptions ---------------------------------------------------
+  if ($("#v-circos").checked && S.cfgCirco) {
+    const gx = g("circos");
+    for (const u of S.cfgCirco.unites) {
+      if (!u.g) continue;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", geomVersD(u.g));
+      p.setAttribute("class", "circo-tr");
+      p.dataset.unite = u.id;
+      gx.appendChild(p);
+    }
+  }
+
+  // --- noms ---------------------------------------------------------------
+  // Les noms de communes n'apparaissent qu'une fois zoomé : à l'échelle du
+  // département, trois cent quarante étiquettes se recouvrent et ne disent
+  // plus rien. Le seuil est en unités de carte par pixel, donc indépendant de
+  // la taille de la fenêtre.
+  const modeNoms = $("#v-noms").value;
+  if (modeNoms !== "aucun") {
+    const gn = g("noms");
+    const pose = (x, y, nom, cls) => {
+      const t = document.createElementNS(NS, "text");
+      t.setAttribute("x", x); t.setAttribute("y", y);
+      t.setAttribute("class", cls);
+      t.textContent = nom;
+      gn.appendChild(t);
+    };
+    const poseUnites = (unites, cls) => {
+      for (const u of unites || []) {
+        const c = centroide(u.g);
+        if (!c) continue;
+        const p = proj(c[0], c[1]);
+        pose(p[0], p[1], u.nom, cls);
+      }
+    };
+    if (modeNoms !== "communes") {
+      if (S.cfgCanton && $("#v-cantons").checked) poseUnites(S.cfgCanton.unites, "etiq");
+      if (S.cfgCirco && $("#v-circos").checked)
+        poseUnites(S.cfgCirco.unites, "etiq etiq-circo");
+    }
+    // Les noms de communes n'ont pas de seuil de zoom global : chaque commune
+    // porte le sien quand elle est assez grande à l'écran. Un seuil global
+    // faisait qu'à l'échelle du département *rien* n'apparaissait, y compris
+    // pour les grandes communes qui auraient tenu leur étiquette — un réglage
+    // qu'on ne peut pas distinguer d'une panne.
+    S.nomsPoses = 0;
+    if ((modeNoms === "communes" || modeNoms === "tout") && !vide) {
+      for (const grp of groupes().values()) {
+        if (masque(grp)) continue;
+        const aid = grp.atomes[0];
+        const c = S.communes[aid];
+        if (!c) continue;
+        // Un polygone contesté porte TOUS les noms qui le revendiquent, empilés
+        // — même règle que les planches PDF. Un seul nom laisserait croire à
+        // une commune unique là où il y en avait trois.
+        const noms = [...grp.noms].sort((a, b) =>
+          String(a).localeCompare(String(b), "fr"));
+        const nom = noms.join(" / ");
+        // La règle est celle qu'on énoncerait à la main : une étiquette plus
+        // large que sa commune ne se lit pas et masque ses voisines. Le seuil
+        // dépend donc de la longueur du nom, pas d'une constante — « Ars »
+        // tient dans une commune où « Saint-Étienne-du-Grès » déborde. La
+        // largeur est estimée à 0,52 cadratin par caractère, ce qui suffit pour
+        // trancher.
+        // La diagonale est mise en cache SUR LA VERSION, pas sur la commune :
+        // une commune qui perd un hameau rétrécit, et un cache posé sur l'objet
+        // commune ferait juger l'étiquette de 1900 sur la taille de 1815.
+        const vg = versionA(c, S.annee);
+        if (!vg) continue;
+        if (vg._d === undefined) {
+          const b = bboxDe(vg.g);
+          const p0 = proj(b[0], b[1]), p1 = proj(b[2], b[3]);
+          vg._d = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]);
+        }
+        const plusLong = Math.max(...noms.map(s => String(s).length));
+        if (vg._d / (S.ech || 1) < plusLong * 8.5 * 0.52) continue;
+        const p = vg.c ? proj(vg.c[0], vg.c[1]) : (() => {
+          const q = centroide(vg.g); return q ? proj(q[0], q[1]) : null;
+        })();
+        if (!p) continue;
+        if (noms.length === 1) {
+          pose(p[0], p[1], nom, "etiq etiq-commune");
+        } else {
+          // Empilés, comme dans `cartes_cantons.py` : un « A / B / C » sur une
+          // ligne déborde et se confond avec le nom du voisin.
+          const t = document.createElementNS(NS, "text");
+          t.setAttribute("x", p[0]);
+          t.setAttribute("y", p[1]);
+          t.setAttribute("class", "etiq etiq-commune");
+          noms.forEach((s, i) => {
+            const ts = document.createElementNS(NS, "tspan");
+            ts.setAttribute("x", p[0]);
+            ts.setAttribute("dy", i ? "1.15em" : "0");
+            ts.textContent = s;
+            t.appendChild(ts);
+          });
+          gn.appendChild(t);
+        }
+        S.nomsPoses++;
+      }
+    }
+  }
+
+  svg.replaceChildren(frag);
+  calibre();
+  // `calibre()` rend la main sans rien faire quand le cadre est déjà posé, donc
+  // sans passer par `applique()`. Les éléments qui viennent d'être créés
+  // n'auraient alors aucune taille d'écran : texte à zéro, hachures au pas par
+  // défaut. C'est exactement le défaut qu'on corrige ici.
+  echelleEcran();
+  panneau();
+}
+
+function bandeau(html) {
+  const b = $("#bandeau");
+  if (!html) { b.style.display = "none"; return; }
+  b.innerHTML = html;
+  b.style.display = "block";
+}
+
+// ===========================================================================
+// Panneau de droite : les recettes, pas la décoration.
+// ===========================================================================
+function panneau() {
+  const p = $("#panneau");
+  const dep = S.index.departements.find(d => d.code === S.dep) || {};
+  const nom = nomDep(dep, S.annee);
+  const kc = S.cfgCanton, kx = S.cfgCirco;
+
+  const partagees = kc ? kc.unites.reduce((s, u) => s + (u.partagees || 0), 0) : 0;
+  const sansGeom = kc ? kc.unites.reduce((s, u) => s + (u.sans_geom || 0), 0) : 0;
+  const circoSansTerr = kx ? kx.unites.filter(u => !u.g).length : 0;
+
+  // Le même comptage, mais sur la couche CIRCO — et il manquait.
+  //
+  // Une commune coupée entre plusieurs circonscriptions est représentée par
+  // autant d'atomes-fractions, qui portent TOUS le polygone entier de leur
+  // mère. Chaque circonscription revendique donc toute la ville, et leurs
+  // contours se recouvrent sur la carte : dans l'Ain de 1986, quatre paires se
+  // chevauchent, Bourg-en-Bresse étant réclamée par trois circonscriptions.
+  //
+  // Le rattachement, lui, est JUSTE — chaque fraction a bien sa
+  // circonscription. C'est le dessin qui ne sait pas partager une commune, et
+  // il le faisait silencieusement : `partagees` n'était lu que sur la couche
+  // cantonale, donc l'avertissement ne s'affichait jamais entre 1941 et 1999,
+  // où il n'y a pas de canton. Ajouté le 21 août 2026.
+  const circoPartagees = kx
+    ? kx.unites.reduce((s, u) => s + (u.partagees || 0), 0) : 0;
+
+  let h = (S.selection ? ficheCommune(S.selection) : "") +
+          `<h2>${nom} — ${S.annee}</h2><table class="rec">`;
+  h += `<tr><td>communes (atomes)</td><td>${kc ? kc.unites.reduce((s,u)=>s+u.n,0)
+        : (kx ? kx.unites.reduce((s,u)=>s+u.n,0) : "—")}</td></tr>`;
+  h += `<tr><td>cantons</td><td>${kc ? kc.unites.length : "—"}</td></tr>`;
+  h += `<tr><td>circonscriptions</td><td>${kx ? kx.unites.length : "—"}</td></tr>`;
+  if (kx && kx.unites.length) {
+    const reg = [...new Set(kx.unites.map(u => u.regime).filter(Boolean))].join(", ");
+    if (reg) h += `<tr><td>scrutin</td><td>${reg}</td></tr>`;
+  }
+  h += `</table>`;
+
+  // Un défaut d'export ne doit pas se présenter comme une carte pauvre : la
+  // page dit ce qui manque et comment le réparer.
+  if (S.exportAncien) {
+    h += `<p class="avert"><b>Export antérieur à l'ajout des noms.</b> Les
+      communes n'ont ni nom ni point de pose, et les périodes d'inexistence
+      d'un département ne sont pas motivées. Relancer
+      <code>python3 cartes/export_web.py</code>.</p>`;
+  } else if ($("#v-noms").value !== "aucun" && $("#v-noms").value !== "unites"
+             && S.nomsPoses === 0 && (kc || kx)) {
+    h += `<p class="note">Aucun nom de commune affiché à cette échelle : les
+      communes sont plus petites que leur étiquette. Zoomer les fait
+      apparaître une à une.</p>`;
+  }
+
+  if (!kc && !kx) {
+    h += `<p class="avert">Aucune source à cette date. Le trou cantonal
+      1941-1998 et l'absence de série avant 1870 sont des lacunes déclarées,
+      pas des cartes vides par accident.</p>`;
+  }
+  // Les deux recouvrements, comptés séparément — ce sont deux défauts
+  // différents, et un seul des deux désigne du travail à faire.
+  const cp = S.comptes || { fraction: 0, communes: 0, homonymes: 0 };
+  if (cp.fraction) {
+    h += `<p class="avert"><b>${cp.fraction} commune${cp.fraction>1?"s":""}
+      coupée${cp.fraction>1?"s":""} entre plusieurs cantons</b> (ocre penché).
+      Un seul code Cassini : la coupe est réelle, son tracé reste à faire.</p>`;
+  }
+  if (cp.communes) {
+    h += `<p class="avert2"><b>${cp.communes} polygone${cp.communes>1?"s":""}
+      partagé${cp.communes>1?"s":""} par plusieurs communes d'époque</b>
+      (bleu croisé), réparties entre des cantons différents. Codes Cassini
+      distincts : rien à tracer, c'est la trame qui les confond.</p>`;
+  }
+  if (cp.homonymes) {
+    h += `<p class="note"><b>${cp.homonymes}</b> polygone${cp.homonymes>1?"s":""}
+      porte${cp.homonymes>1?"nt":""} plusieurs noms d'époque dans un même
+      canton (liseré pointillé) — pas de recouvrement cantonal.</p>`;
+  }
+  if (partagees && !cp.fraction && !cp.communes) {
+    h += `<p class="note">${partagees} rattachement${partagees>1?"s":""}
+      drapeauté${partagees>1?"s":""} <code>partagee</code> en base, sans
+      recouvrement cantonal à cette date.</p>`;
+  }
+  // --- d'où vient la forme affichée ---------------------------------------
+  //
+  // La carte est HYBRIDE, et une carte hybride qui ne dit pas où elle l'est
+  // ment par omission. Trois messages, trois faits différents :
+  //
+  //   * `exportSansVersions` — l'export lui-même n'a pas d'épaisseur, tout est
+  //     de 2011. C'est le seul cas où le curseur ne déplace pas les formes.
+  //   * `cp.repli` — combien de communes affichées à CETTE année tiennent leur
+  //     forme de 2011 faute de polygone d'époque.
+  //   * `cp.sansGeom` — combien ne sont pas dessinées du tout.
+  if (S.exportSansVersions && !S.exportAncien) {
+    h += `<p class="avert"><b>Export sans épaisseur temporelle.</b> Toutes les
+      communes sont dessinées avec la trame GEOFLA 2011, quelle que soit
+      l'année : le curseur déplace les rattachements, pas les formes.
+      Réexporter avec <code>python3 cartes/export_web.py</code> sur une base où
+      <code>sql/82_anr_geom.sql</code> a été joué.</p>`;
+  } else if (cp.repli && S.trame === "geofla2015") {
+    // Outre-mer : le repli n'est pas un manque d'ANR, c'est l'absence d'ANR.
+    // Servir ici les « trois causes » de la métropole nommerait une source qui
+    // ne couvre pas ce territoire, et laisserait croire à un défaut réparable
+    // par un réexport. *Un message juste ailleurs est un message faux ici.*
+    h += `<p class="note"><b>Trame sans épaisseur temporelle.</b> Les
+      ${cp.repli} communes affichées sont dessinées par GEOFLA 2015, le même
+      instantané à toutes les dates : ANR-COMMUNES ne couvre pas l'outre-mer, et
+      <code>sql/84_carte_partition.sql</code> non plus. Les rattachements, eux,
+      suivent le curseur. La forme est juste, sa <i>date</i> n'est pas
+      attestée.</p>`;
+  } else if (cp.repli) {
+    const n = cp.repli;
+    h += `<p class="note"><b>${n} commune${n>1?"s":""}</b> dessinée${n>1?"s":""}
+      avec la trame de 2011 (liseré pâle) : ANR-COMMUNES ne les pourvoit pas à
+      cette date. La forme est plausible, sa date ne l'est pas. Trois causes —
+      les communes coupées entre cantons, qu'ANR ne sait pas découper ; celles
+      que la base fait vivre plus tôt qu'ANR ne les fait naître ; et les trous
+      de chronologie d'ANR, qu'il ne déclare pas.</p>`;
+  }
+  if (cp.sansGeom) {
+    h += `<p class="avert"><b>${cp.sansGeom} commune${cp.sansGeom>1?"s":""} non
+      dessinée${cp.sansGeom>1?"s":""}</b> : aucune source ne sait où
+      ${cp.sansGeom>1?"elles sont":"elle est"} à cette date. Le rattachement est
+      connu, la forme non — le trou est dans la trame, pas dans la composition.</p>`;
+  }
+
+  if (sansGeom) {
+    h += `<p class="avert">${sansGeom} atome${sansGeom>1?"s":""} sans géométrie :
+      l'unité concernée est incomplète, pas fausse.</p>`;
+  }
+  if (circoPartagees) {
+    h += `<p class="avert">${circoPartagees} rattachement${circoPartagees>1?"s":""}
+      de circonscription porte${circoPartagees>1?"nt":""} sur une commune
+      <b>coupée</b>. Ces communes n'ayant qu'un polygone pour toutes leurs
+      fractions, les contours des circonscriptions <b>se recouvrent</b> ici :
+      le rattachement est juste, le tracé ne sait pas partager une commune.</p>`;
+  }
+  if (circoSansTerr) {
+    h += `<p class="avert">${circoSansTerr} circonscription${circoSansTerr>1?"s":""}
+      sans territoire sur la trame — composée exclusivement de fractions de
+      communes que la trame ne peut pas porter.</p>`;
+  }
+  // La ligne « circonscriptions » du tableau affiche « — ». Sans explication,
+  // cela se lit comme une lacune ; ici c'en est une absence documentée.
+  const acPan = !kx && absenceCirco(S.annee);
+  if (acPan) {
+    h += `<p class="note"><b>Aucune circonscription en ${S.annee}, et c'est
+      exact.</b> ${echappe(acPan.motif)} (${acPan.a}-${acPan.b}).</p>`;
+  }
+
+  h += `<h2>Légende</h2>
+    <div class="cle"><svg viewBox="0 0 26 10"><line x1="1" y1="5" x2="25" y2="5"
+      stroke="var(--trait-commune)" stroke-width="1"/></svg> limite communale</div>
+    <div class="cle"><svg viewBox="0 0 26 10"><line x1="1" y1="5" x2="25" y2="5"
+      stroke="var(--trait-canton)" stroke-width="2"/></svg> limite cantonale</div>
+    <div class="cle"><svg viewBox="0 0 26 10"><line x1="1" y1="5" x2="25" y2="5"
+      stroke="var(--trait-circo)" stroke-width="4" stroke-linecap="round"/></svg>
+      limite de circonscription</div>
+    <div class="cle"><svg viewBox="0 0 26 10"><defs>
+      <pattern id="hc-a" width="5" height="5" patternUnits="userSpaceOnUse"
+        patternTransform="rotate(45)"><rect width="5" height="5" fill="#f0e2c4"/>
+        <line x1="0" y1="0" x2="0" y2="5" stroke="#a8761c" stroke-width="1.5"/>
+      </pattern></defs><rect x="1" y="1" width="24" height="8" fill="url(#hc-a)"
+      stroke="#9a958c" stroke-width=".5"/></svg>
+      commune coupée entre cantons — <b>tracé à faire</b></div>
+    <div class="cle"><svg viewBox="0 0 26 10"><defs>
+      <pattern id="hc-b" width="5" height="5" patternUnits="userSpaceOnUse"
+        patternTransform="rotate(-45)"><rect width="5" height="5" fill="#dde2ea"/>
+        <line x1="0" y1="0" x2="0" y2="5" stroke="#40587e" stroke-width="1.3"/>
+        <line x1="0" y1="0" x2="5" y2="0" stroke="#40587e" stroke-width="1.3"/>
+      </pattern></defs><rect x="1" y="1" width="24" height="8" fill="url(#hc-b)"
+      stroke="#9a958c" stroke-width=".5"/></svg>
+      plusieurs communes d'époque, cantons différents — <b>rien à tracer</b></div>
+    <div class="cle"><svg viewBox="0 0 26 10"><rect x="1" y="1" width="24"
+      height="8" fill="#eceae4" stroke="#40587e" stroke-width="1.1"
+      stroke-dasharray="3 2"/></svg>
+      plusieurs noms d'époque, même canton</div>`;
+
+  // La pastille ne s'affiche que pour la couche effectivement coloriée :
+  // une pastille qui ne correspond à rien sur la carte est pire que pas de
+  // pastille du tout.
+  const liste = (cfg, titre) => {
+    if (!cfg) return "";
+    let s = `<h2>${titre} (${cfg.unites.length})</h2><ul class="liste">`;
+    for (const u of [...cfg.unites].sort((a, b) => a.nom.localeCompare(b.nom, "fr"))) {
+      const c = S.couleurs && S.couleurs.get(u.id);
+      s += `<li data-unite="${u.id}"><span>` +
+           (c ? `<span class="puce" style="background:${c}"></span>` : "") +
+           `${echappe(u.nom)}${u.prov ? ' <span class="note">(provisoire)</span>' : ""}` +
+           `${u.g ? "" : ' <span class="note">(sans territoire)</span>'}</span>` +
+           `<span class="n">${u.n}</span></li>`;
+    }
+    return s + `</ul>`;
+  };
+  h += liste(kc, "Cantons");
+  h += liste(kx, "Circonscriptions");
+
+  h += `<h2>Ce que la carte ne dit pas</h2><p class="note">
+    Les années servies apparaissent en couleur sous le curseur : vert pour une
+    composition cantonale, ocre pour une composition électorale. Le reste est
+    du blanc de la base, pas du blanc de la page.</p>`;
+
+  p.innerHTML = h;
+  p.querySelectorAll("li[data-unite]").forEach(li => {
+    li.onmouseenter = () => surligne(li.dataset.unite);
+    li.onmouseleave = () => surligne(null);
+  });
+}
+
+function echappe(s) {
+  return String(s).replace(/[&<>"]/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function surligne(id) {
+  svg.querySelectorAll(".surligne").forEach(e => e.classList.remove("surligne"));
+  if (!id) return;
+  svg.querySelectorAll(`[data-unite="${CSS.escape(id)}"]`)
+     .forEach(e => e.classList.add("surligne"));
+}
+
+function nomDep(dep, annee) {
+  if (dep.noms) {
+    for (const [a, b, n] of dep.noms) if (annee >= a && annee <= b) return n;
+  }
+  return dep.nom || dep.code || "—";
+}
+
+// ===========================================================================
+// Nom d'une commune à une date
+//
+// `nm` est la chronologie des renommages tirée d'`insee_mvt` (`mod = '10'`),
+// sous forme [[année_début, nom], …]. Elle n'existe que pour les codes
+// effectivement renommés ; partout ailleurs `n` suffit.
+//
+// Le fichier de l'Insee commence en 1943 : pour une planche de 1885, la
+// chronologie rend le nom le plus ancien *connu*, pas le nom de 1885. C'est
+// mieux que le nom moderne et ce n'est pas la vérité — la page le dit dans la
+// fiche plutôt que de laisser croire à une exactitude qu'elle n'a pas.
+// ===========================================================================
+function nomA(c, annee) {
+  if (!c) return null;
+  if (!c.nm || !c.nm.length) return c.n;
+  let nom = c.nm[0][1];
+  for (const [a, v] of c.nm) if (annee >= a) nom = v;
+  return nom || c.n;
+}
+
+// ===========================================================================
+// Regroupement par empreinte de polygone, et classification du partage
+//
+// La règle du projet est de grouper par la géométrie, jamais par un code :
+// « un code est une reconstruction, l'empreinte est un fait »
+// (`cartes/cartes_cantons.py`). Deux atomes de même empreinte occupent
+// exactement le même terrain — les dessiner séparément les empile en silence.
+//
+// Une fois groupés, deux situations très différentes se cachaient sous le même
+// drapeau `partagee`, et ce sont les deux défauts que le projet mesure
+// séparément (12 822 km² au niveau cantonal, 3 945 au niveau des atomes) :
+//
+//   `fraction` — un SEUL code Cassini, plusieurs cantons. La commune d'époque
+//       est réellement coupée entre plusieurs cantons et la base n'en tient pas
+//       le tracé interne : Marseille, Lyon, Bourg-en-Bresse. C'est une coupe à
+//       dessiner, un chantier ouvert sur la trame IRIS.
+//
+//   `communes` — PLUSIEURS codes Cassini, donc plusieurs communes d'époque
+//       distinctes, fondues depuis en une seule et partageant un polygone de
+//       2011. Espinouse, Saint-Jurson et Le Chaffaut se partagent 29,75 km²
+//       dans les Basses-Alpes. Ce n'est pas une coupe : c'est l'artefact de la
+//       correspondance plusieurs-vers-un vers GEOFLA. Rien à tracer, et rien
+//       qui puisse l'être.
+//
+//   `homonymes` — plusieurs communes d'époque sur un polygone, mais dans le
+//       MÊME canton. Aucun recouvrement cantonal ; seulement plusieurs noms au
+//       même endroit.
+//
+// La distinction n'est pas cosmétique : l'une désigne du travail à faire,
+// l'autre une limite de la trame qu'aucun travail de tracé ne lèvera.
+// ===========================================================================
+function groupes() {
+  if (S._groupes && S._groupesCle === (S.dep + "/" + S.annee)) return S._groupes;
+  const kc = S.cfgCanton, kx = S.cfgCirco;
+  // UNION des deux couches, et non l'une OU l'autre.
+  //
+  // La version d'origine prenait `cfgCanton.rattachement` s'il existait, et ne
+  // se rabattait sur `cfgCirco` qu'à défaut. Un atome connu de la SEULE couche
+  // que l'on ne regardait pas était donc absent du jeu de groupes — donc jamais
+  // dessiné, donc invisible sur la carte, sans le moindre message.
+  //
+  // Le cas se produit dès que les deux couches ne se recouvrent pas exactement :
+  // une commune rattachée à une circonscription mais à aucun canton (entre 1941
+  // et 1999, où la couche cantonale n'existe pas), ou l'inverse. Corrigé le
+  // 20 août 2026.
+  //
+  // Ce que cela ne répare PAS : un atome absent des DEUX couches reste caché.
+  // C'est le cas des 116 communes dont la circonscription de 1986 est
+  // indéterminée (`circo/circo_1986_indetermine.csv`) et des 20 de Paris. Leur
+  // afficher un trou blanc laisse croire à une lacune de la base là où il y a
+  // une incertitude documentée — à traiter par une couche « indéterminée ».
+  const src = Object.assign({},
+                            (kx && kx.rattachement) || {},
+                            (kc && kc.rattachement) || {});
+  // OUTRE-MER : ON PART DES COMMUNES, PAS DES RATTACHEMENTS.
+  //
+  // Le paragraphe ci-dessus reconnaît qu'un atome absent des deux couches reste
+  // caché, et le range parmi les défauts à traiter. Outre-mer, ce défaut cesse
+  // d'être marginal et devient structurel : les 27 communes multicantonales
+  // n'ont aucun canton, et les 17 communes de Mayotte n'ont RIEN — le fichier
+  // du ministère qui pose les rattachements ne contient pas Mayotte. Partir des
+  // rattachements ferait donc disparaître un département entier de la carte,
+  // alors que la base porte ses communes et ses seize cantons.
+  //
+  // On n'étend PAS ce traitement à la métropole, et il faut dire pourquoi
+  // plutôt que de laisser croire à une timidité. En métropole, le rattachement
+  // est ce qui borne la VIE d'un atome : une commune créée en 1900 n'a pas de
+  // rattachement en 1870, et c'est ce filtre-là — pas la géométrie — qui
+  // l'empêche d'être dessinée sur une planche où elle n'existe pas. Partir de
+  // `S.communes` y dessinerait des communes avant leur naissance et après leur
+  // mort, en silence. Outre-mer la question ne se pose pas : la trame est un
+  // instantané de 2015, et chaque version porte l'année de départementalisation
+  // comme borne basse (`AN_DEBUT_DOM` dans `export_web.py`).
+  //
+  // *Le même geste est juste d'un côté et faux de l'autre parce que la donnée
+  // n'y a pas la même forme — c'est la raison de la condition, et elle vaut
+  // d'être écrite ici plutôt que déduite plus tard.*
+  const aids = S.espace === "outremer" ? Object.keys(S.communes)
+                                       : Object.keys(src);
+  const par = new Map();
+  for (const aid of aids) {
+    const c = S.communes[aid];
+    if (!c) continue;
+    // L'empreinte est DATÉE, et c'est un gain, pas une complication. Deux
+    // atomes qui partageaient le polygone de 2011 pouvaient en avoir deux
+    // distincts en 1870 : la trame de 2011 les confondait, celle d'ANR les
+    // sépare. Le groupe « plusieurs communes d'époque sur un même polygone »
+    // doit donc se recalculer à chaque année — ce que la clé de cache de
+    // `groupes()` fait déjà, puisqu'elle porte l'année.
+    const vg = versionA(c, S.annee);
+    const cle = (vg && vg.k) || c.k || c.i || aid;
+    if (!par.has(cle)) par.set(cle, { cle, atomes: [], cassini: new Set(),
+                                      cantons: new Set(), circos: new Set(),
+                                      noms: new Set(), disparue: true });
+    const g = par.get(cle);
+    g.atomes.push(aid);
+    if (c.s) g.cassini.add(c.s);
+    g.noms.add(nomA(c, S.annee) || c.i || aid);
+    if (!c.d) g.disparue = false;
+    if (kc && kc.rattachement[aid]) g.cantons.add(kc.rattachement[aid]);
+    if (kx && kx.rattachement[aid]) g.circos.add(kx.rattachement[aid]);
+  }
+  for (const g of par.values()) {
+    const nCassini = g.cassini.size || 1;
+    if (g.cantons.size > 1) g.type = nCassini > 1 ? "communes" : "fraction";
+    else if (nCassini > 1 || g.noms.size > 1) g.type = "homonymes";
+    else g.type = "simple";
+  }
+  S._groupes = par;
+  S._groupesCle = S.dep + "/" + S.annee;
+  return par;
+}
+
+const ETIQ_TYPE = {
+  fraction: "commune coupée entre plusieurs cantons",
+  communes: "plusieurs communes d'époque sur un même polygone, dans des cantons différents",
+  homonymes: "plusieurs communes d'époque sur un même polygone, même canton",
+  simple: "",
+};
+
+function groupeDe(aid) {
+  const c = S.communes[aid];
+  const vg = versionA(c, S.annee);
+  return groupes().get((vg && vg.k) || (c && c.k) || (c && c.i) || aid);
+}
+
+function detail(aid) {
+  const g = groupeDe(aid);
+  const c = S.communes[aid];
+  const nom = (cfg, ids) => !cfg ? []
+    : [...ids].map(id => cfg.unites.find(u => u.id === id)).filter(Boolean);
+  if (!g) return { commune: c, atomes: [aid], cantons: [], circos: [],
+                   noms: [nomA(c, S.annee)], type: "simple" };
+  return {
+    commune: c, atomes: g.atomes, type: g.type,
+    noms: [...g.noms].sort((a, b) => String(a).localeCompare(String(b), "fr")),
+    cantons: nom(S.cfgCanton, g.cantons),
+    circos: nom(S.cfgCirco, g.circos),
+    disparue: g.disparue,
+  };
+}
+
+function ficheCommune(aid) {
+  const d = detail(aid);
+  const c = d.commune;
+  if (!c) return "";
+  const n = d.cantons.length;
+  let h = `<h2>${d.noms.length > 1 ? "Polygone contesté" : "Commune"}</h2>`;
+  h += `<table class="rec">`;
+  h += `<tr><td>nom${d.noms.length > 1 ? "s" : ""} en ${S.annee}</td><td>${
+        d.noms.map(echappe).join("<br>")}</td></tr>`;
+  h += `<tr><td>code INSEE 2011</td><td>${echappe(c.i || "—")}</td></tr>`;
+  h += `<tr><td>atome${d.atomes.length > 1 ? "s" : ""}</td><td>${
+        d.atomes.map(echappe).join("<br>")}</td></tr>`;
+  h += `<tr><td>canton${n > 1 ? "s" : ""}</td><td>${
+        n ? d.cantons.map(u => echappe(u.nom)).join("<br>") : "—"}</td></tr>`;
+  h += `<tr><td>circonscription${d.circos.length > 1 ? "s" : ""}</td><td>${
+        d.circos.length ? d.circos.map(u => echappe(u.nom)).join("<br>") : "—"}</td></tr>`;
+  // D'où vient la forme affichée, commune par commune. C'est la question que le
+  // panneau global ne peut pas répondre : il dit COMBIEN de communes sont en
+  // repli, pas LESQUELLES. Sans cette ligne, un lecteur qui voit un liseré pâle
+  // n'a aucun moyen de savoir ce qu'il regarde.
+  if (c.v) {
+    const vg = versionA(c, S.annee);
+    const i = vg ? c.v.indexOf(vg) : -1;
+    const fin = (i >= 0 && i + 1 < c.v.length) ? c.v[i + 1].a - 1 : null;
+    let src;
+    if (!vg) src = "<b>aucune</b> — non dessinée à cette date";
+    else if (vg.r) src = "GEOFLA 2011 (repli)";
+    else src = `ANR-COMMUNES, ${vg.a}${fin ? "–" + fin : " et après"}`;
+    h += `<tr><td>forme</td><td>${src}</td></tr>`;
+    if (c.v.length > 1)
+      h += `<tr><td>versions</td><td>${c.v.length} entre ${AN_MIN} et ${AN_MAX}</td></tr>`;
+  }
+  h += `</table>`;
+  if (c.v) {
+    const vg = versionA(c, S.annee);
+    if (vg && vg.r && S.trame === "geofla2015") {
+      h += `<p class="note">Forme prise à GEOFLA 2015, la seule trame dont
+        l'outre-mer dispose : elle vaut à toutes les dates. La commune est bien
+        où la base la met ; sa <i>forme</i> n'est pas datée, et aucune source du
+        projet ne la date aujourd'hui.</p>`;
+    } else if (vg && vg.r) {
+      h += `<p class="note">Forme empruntée à la trame de 2011 : ANR-COMMUNES ne
+        donne pas de polygone pour cette commune en ${S.annee}. Ce n'est pas une
+        erreur de rattachement — la commune est bien où la base la met — mais sa
+        <i>forme</i> n'est pas datée.</p>`;
+    } else if (!vg) {
+      h += `<p class="avert">Aucune source ne sait dessiner cette commune en
+        ${S.annee}. Elle est rattachée, elle n'est pas tracée.</p>`;
+    }
+  }
+
+  // Les deux cas de partage ne demandent pas le même travail : le dire, c'est
+  // dire s'il y a quelque chose à faire ou non.
+  if (d.type === "fraction") {
+    h += `<p class="avert"><b>Commune coupée entre ${n} cantons.</b>
+      Un seul code Cassini : c'est bien une commune d'époque partagée, et la
+      base n'en tient pas le tracé interne. Chaque atome-fraction porte le
+      polygone entier, si bien que ces ${n} cantons se recouvrent exactement
+      ici. <b>Le tracé reste à faire</b>, sur la trame IRIS.</p>`;
+  } else if (d.type === "communes") {
+    h += `<p class="avert2"><b>${d.noms.length} communes d'époque sur un même
+      polygone, dans ${n} cantons.</b> Leurs codes Cassini diffèrent : ce ne
+      sont pas les fractions d'une commune coupée, mais des communes distinctes
+      fondues depuis en une seule, qui partagent donc un polygone unique.
+      <b>Il n'y a rien à tracer ici</b> — c'est la correspondance
+      plusieurs-vers-un vers la trame qui produit le recouvrement.
+      ANR-COMMUNES, dont la clé est justement le code Cassini, en défait la
+      plus grande part ; ce qui subsiste est ce qu'il ne défait pas.</p>`;
+  } else if (d.type === "homonymes") {
+    h += `<p class="note"><b>${d.noms.length} communes d'époque sur un même
+      polygone, dans le même canton.</b> Aucun recouvrement cantonal : seulement
+      plusieurs noms au même endroit.</p>`;
+  }
+
+  if (c.nm) {
+    h += `<h2>Chronologie du nom</h2><table class="rec">`;
+    for (const [a, v] of c.nm)
+      h += `<tr><td>${a <= 1815 ? "avant le 1<sup>er</sup> renommage connu"
+            : "à partir de " + a}</td><td>${echappe(v)}</td></tr>`;
+    h += `</table><p class="note">Renommages tirés d'<code>insee_mvt</code>
+      (<code>mod = '10'</code>). Le fichier de l'Insee commence en 1943 : le
+      premier segment est le nom le plus ancien <i>connu</i>, pas
+      nécessairement celui de ${S.annee}.</p>`;
+  } else if (c.d) {
+    h += `<p class="note">Commune absente de GEOFLA 2011 : le nom vient du
+      <code>libelle_av</code> du fichier de mouvements. Un nom entre crochets
+      est un code Insee — la commune n'a de nom dans aucune source.</p>`;
+  } else {
+    h += `<p class="note">Aucun renommage enregistré pour ce code : le nom
+      affiché est celui de GEOFLA 2011, et peut être anachronique sur une
+      planche ancienne — l'Insee ne recense les renommages qu'à partir de
+      1943.</p>`;
+  }
+  return h;
+}
+
+// ===========================================================================
+// Infobulle
+// ===========================================================================
+svg.addEventListener("mousemove", ev => {
+  const cible = ev.target.closest("[data-atome]");
+  const t = $("#infobulle");
+  if (!cible) { t.style.display = "none"; return; }
+  const aid = cible.dataset.atome;
+  const c = S.communes[aid];
+  const d = detail(aid);
+  let h = `<b>${d.noms.map(echappe).join(" / ")}</b>`;
+  if (c.i) h += ` <span class="sec">${echappe(c.i)}</span>`;
+  if (d.cantons.length === 1) h += `<br>canton : ${echappe(d.cantons[0].nom)}`;
+  else if (d.cantons.length > 1)
+    h += `<br>cantons : ${d.cantons.map(u => echappe(u.nom)).join(", ")}`;
+  if (d.circos.length === 1) h += `<br>circonscription : ${echappe(d.circos[0].nom)}`;
+  else if (d.circos.length > 1)
+    h += `<br>circonscriptions : ${d.circos.map(u => echappe(u.nom)).join(", ")}`;
+  if (ETIQ_TYPE[d.type])
+    h += `<br><span class="sec">${ETIQ_TYPE[d.type]}</span>`;
+  if (c.nm) h += `<br><span class="sec">nom renommé depuis — chronologie dans la fiche</span>`;
+  t.innerHTML = h;
+  const r = $("#carte-zone").getBoundingClientRect();
+  t.style.left = Math.min(ev.clientX - r.left + 12, r.width - 275) + "px";
+  t.style.top = (ev.clientY - r.top + 12) + "px";
+  t.style.display = "block";
+});
+svg.addEventListener("mouseleave", () => { $("#infobulle").style.display = "none"; });
+
+// Clic : épingle la commune dans le panneau. Un second clic la détache.
+svg.addEventListener("click", ev => {
+  if (tire && tire.bouge) return;          // fin d'un glisser, pas un clic
+  const cible = ev.target.closest("[data-atome]");
+  S.selection = (cible && cible.dataset.atome !== S.selection)
+    ? cible.dataset.atome : null;
+  panneau();
+});
+
+// ===========================================================================
+// Panoramique et zoom
+// ===========================================================================
+let tire = null;
+svg.addEventListener("mousedown", ev => {
+  tire = { x: ev.clientX, y: ev.clientY, v: { ...S.vue }, bouge: false };
+  svg.classList.add("tire");
+});
+window.addEventListener("mousemove", ev => {
+  if (!tire || !S.vue) return;
+  if (Math.abs(ev.clientX - tire.x) + Math.abs(ev.clientY - tire.y) > 3)
+    tire.bouge = true;
+  const r = svg.getBoundingClientRect();
+  const vb = svg.viewBox.baseVal;
+  S.vue.x = tire.v.x - (ev.clientX - tire.x) * vb.width / r.width;
+  S.vue.y = tire.v.y - (ev.clientY - tire.y) * vb.height / r.height;
+  applique();
+});
+window.addEventListener("mouseup", () => {
+  setTimeout(() => { tire = null; }, 0);   // le clic est traité avant l'oubli
+  svg.classList.remove("tire");
+});
+svg.addEventListener("wheel", ev => {
+  if (!S.vue) return;
+  ev.preventDefault();
+  const r = svg.getBoundingClientRect();
+  const vb = svg.viewBox.baseVal;
+  const mx = vb.x + (ev.clientX - r.left) / r.width * vb.width;
+  const my = vb.y + (ev.clientY - r.top) / r.height * vb.height;
+  const f = ev.deltaY > 0 ? 1.18 : 1 / 1.18;
+  S.vue = {
+    x: mx - (mx - S.vue.x) * f, y: my - (my - S.vue.y) * f,
+    w: S.vue.w * f, h: S.vue.h * f,
+  };
+  applique();
+  // Les étiquettes de communes apparaissent une à une selon la taille de
+  // chaque commune à l'écran : le zoom change donc la liste. On redessine une
+  // fois la molette calmée plutôt qu'à chaque cran, qui coûterait plusieurs
+  // centaines de chemins pour rien.
+  if ($("#v-noms").value === "communes" || $("#v-noms").value === "tout") {
+    clearTimeout(S.minuterieZoom);
+    S.minuterieZoom = setTimeout(dessine, 140);
+  }
+}, { passive: false });
+window.addEventListener("resize", applique);
+
+// ===========================================================================
+// Curseur, jauge de disponibilité
+// ===========================================================================
+// ---------------------------------------------------------------------------
+// Le curseur ne va pas de 1815 à 2012 partout : il se borne au premier et au
+// dernier millésime que la base sert pour le département affiché. Proposer
+// 1950 pour la Meurthe, disparue en 1871, ou 1890 pour la Moselle, alors
+// allemande, ce serait offrir de naviguer dans un territoire qui n'existe pas.
+// Les bornes viennent des données ; les motifs, eux, sont déclarés.
+// ---------------------------------------------------------------------------
+function bornes() {
+  if (!S.depIndex) return [AN_MIN, AN_MAX];
+  // On préfère recalculer depuis les années servies plutôt que de faire
+  // confiance au champ `bornes` : il n'existe que dans les exports récents, et
+  // une page qui dépend d'un champ absent échoue en silence — c'est-à-dire de
+  // la pire façon. Les clés d'`annees` sont là depuis toujours.
+  if (!S._bornes) {
+    const a = Object.keys(S.depIndex.annees).map(Number);
+    // `existence` avant le repli global, et c'est ce qui empêche un
+    // anachronisme de deux siècles. Un département dont la base ne sert AUCUNE
+    // année — Mayotte, dont les communes existent mais dont aucun fichier ne
+    // pose les rattachements — retombait sinon sur 1815-2012, le curseur de la
+    // page entière. Le champ dit la période où le DÉPARTEMENT existe, ce qui
+    // n'est pas la période où la base sait quelque chose de lui.
+    const ex = S.depIndex.existence;
+    S._bornes = a.length ? [Math.min(...a), Math.max(...a)]
+              : (ex ? [ex[0], ex[1]] : [AN_MIN, AN_MAX]);
+  }
+  return S._bornes;
+}
+
+function absencePour(annee) {
+  for (const [a, b, motif] of (S.depIndex && S.depIndex.absences) || [])
+    if (annee >= a && annee <= b) return { a, b, motif };
+  return null;
+}
+
+// L'absence d'OBJET ÉLECTORAL, distincte de l'absence de département.
+//
+// `absencePour` répond « pas de département à cette date » — la Moselle
+// annexée, la Meurthe disparue. Ici le département existe : ce sont les
+// circonscriptions qui n'existent pas, et pour toute la France. Sans cette
+// distinction, la page dit « aucune source » là où la bonne réponse est
+// « il n'y a pas eu d'élection », et le lecteur conclut à une lacune.
+//
+// À ne pas confondre non plus avec le trou 1941-1998 de la couche CANTONALE,
+// qui est une vraie lacune de source. Celui-ci est plus court, et il est
+// documenté plutôt que subi.
+function absenceCirco(annee) {
+  for (const [a, b, motif] of (S.index && S.index.absences_circo) || [])
+    if (annee >= a && annee <= b) return { a, b, motif };
+  return null;
+}
+
+// Année servie la plus proche, pour ne pas laisser le curseur en terrain vide.
+function plusProcheServie(annee) {
+  const an = S.depIndex.annees;
+  if (an[String(annee)]) return annee;
+  for (let d = 1; d <= AN_MAX - AN_MIN; d++) {
+    if (an[String(annee - d)]) return annee - d;
+    if (an[String(annee + d)]) return annee + d;
+  }
+  return annee;
+}
+
+function dessineJauge() {
+  const j = $("#jauge"); j.innerHTML = "";
+  if (!S.depIndex) return;
+  const [a0, a1] = bornes();
+  const n = a1 - a0 + 1;
+  // Le centre du curseur pour l'année a est à (a - a0) / (a1 - a0) de la voie :
+  // c'est cette échelle-là, et pas (a - a0) / n, qui fait tomber la graduation
+  // de 1870 exactement sous le curseur posé sur 1870.
+  const den = Math.max(1, a1 - a0);
+  const pc = a => Math.max(0, Math.min(100, (a - a0) / den * 100));
+  const pose = (d0, d1, cls) => {
+    const d = document.createElement("div");
+    d.className = cls;
+    const g0 = pc(d0 - .5), g1 = pc(d1 + .5);
+    d.style.left = g0 + "%";
+    d.style.width = (g1 - g0) + "%";
+    j.appendChild(d);
+  };
+  let cour = null, debut = a0;
+  for (let a = a0; a <= a1 + 1; a++) {
+    const e = S.depIndex.annees[String(a)];
+    const cls = !e ? (absencePour(a) ? "j-abs" : null)
+              : (e.c && e.x ? "j-both" : (e.c ? "j-can" : "j-cir"));
+    if (cls !== cour) {
+      if (cour) pose(debut, a - 1, cour);
+      cour = cls; debut = a;
+    }
+  }
+  // Graduation par décennies. Un tiret à chaque décennie, et l'étiquette
+  // seulement si la place le permet : à 142 années sur 500 pixels, quinze
+  // libellés de quatre chiffres se chevauchent. On étiquette donc une décennie
+  // sur une, deux ou cinq selon la largeur réellement disponible — mesurée,
+  // pas devinée.
+  const g = $("#graduation"); g.innerHTML = "";
+  const r = $("#reperes"); r.innerHTML = "";
+  const largeur = g.getBoundingClientRect().width || 520;
+  const pasEtiq = [10, 20, 50, 100].find(p => largeur / (n / p) >= 36) || 100;
+  // Les bornes du département sont toujours nommées : ce sont elles qui disent
+  // jusqu'où la base va. Elles occupent donc la place en premier, et une
+  // décennie trop proche renonce à son libellé — c'est ce qui produisait le
+  // « 18701870 » quand la borne tombait sur une décennie.
+  const pris = [];
+  // Un département servi sur une seule année — la Meurthe, 1870 — a ses deux
+  // bornes confondues : un seul libellé, centré.
+  const extremites = a0 === a1 ? [[a0, "borne"]]
+                               : [[a0, "borne g"], [a1, "borne d"]];
+  for (const [a, cls] of extremites) {
+    const s = document.createElement("span");
+    s.textContent = a; s.className = cls;
+    s.style.left = pc(a) + "%";
+    r.appendChild(s);
+    pris.push(pc(a));
+  }
+  const libre = x => pris.every(p => Math.abs(p - x) * largeur / 100 >= 30);
+  for (let a = Math.ceil(a0 / 10) * 10; a <= a1; a += 10) {
+    const x = pc(a);
+    const etiquette = a % pasEtiq === 0 && libre(x);
+    const t = document.createElement("i");
+    t.className = etiquette ? "haut" : "";
+    t.style.left = x + "%";
+    g.appendChild(t);
+    if (etiquette) {
+      const s = document.createElement("span");
+      s.textContent = a;
+      s.style.left = x + "%";
+      r.appendChild(s);
+      pris.push(x);
+    }
+  }
+  const c = $("#curseur");
+  c.min = a0; c.max = a1;
+}
+
+// ===========================================================================
+// Orchestration
+// ===========================================================================
+async function majAnnee(annee, redessine = true) {
+  S.annee = annee;
+  $("#annee-aff").textContent = annee;
+  $("#curseur").value = annee;
+  const ok = await chargeAnnee(annee);
+  if (ok && redessine) dessine();
+  lien();
+}
+
+async function majDep(dep) {
+  await chargeDepartement(dep);
+  S.selection = null;
+  dessineJauge();
+  const [a0, a1] = bornes();
+  // On garde l'année en cours si le département la sert ; sinon on se pose sur
+  // la plus proche qu'il serve, plutôt que d'ouvrir sur une carte vide.
+  let a = Math.min(a1, Math.max(a0, S.annee));
+  if (!S.depIndex.annees[String(a)]) a = plusProcheServie(a);
+  await majAnnee(a);
+  S.cadre = null; calibre();
+  dessine();
+  const m = S.depIndex.motifs || [];
+  if (m[0] || m[1]) {
+    const bouts = [];
+    if (m[0]) bouts.push(`existe depuis ${a0} — ${m[0]}`);
+    if (m[1]) bouts.push(`n'existe plus après ${a1} — ${m[1]}`);
+    $("#entete-sous").textContent = bouts.join(" ; ");
+  } else {
+    $("#entete-sous").textContent =
+      `base histgis — ${a0}-${a1} pour ce département, grille ` +
+      `${S.index.grille_m} m, export du ${S.index.genere}`;
+  }
+}
+
+function lien() {
+  history.replaceState(null, "", `#${S.dep}/${S.annee}`);
+}
+
+$("#curseur").addEventListener("input", ev => {
+  const a = +ev.target.value;
+  S.annee = a; $("#annee-aff").textContent = a;
+  const abs = absencePour(a);
+  $("#annee-aff").style.color = (abs || !S.depIndex.annees[String(a)])
+    ? "var(--gris)" : "";
+});
+$("#curseur").addEventListener("change", ev => majAnnee(+ev.target.value));
+$("#dep").addEventListener("change", ev => majDep(ev.target.value));
+["v-communes", "v-cantons", "v-circos", "v-noms", "teinte"]
+  .forEach(id => $("#" + id).addEventListener("change", dessine));
+$("#recadrer").addEventListener("click", () => { S.cadre = null; calibre(); });
+window.addEventListener("keydown", ev => {
+  if (ev.target.tagName === "SELECT" || ev.target.tagName === "INPUT") return;
+  const [a0, a1] = bornes();
+  if (ev.key === "ArrowLeft") majAnnee(Math.max(a0, S.annee - 1));
+  if (ev.key === "ArrowRight") majAnnee(Math.min(a1, S.annee + 1));
+});
+
+let minuterie = null;
+$("#lecture").addEventListener("click", () => {
+  const b = $("#lecture");
+  if (minuterie) {
+    clearInterval(minuterie); minuterie = null;
+    b.classList.remove("actif"); b.textContent = "▶ animer";
+    return;
+  }
+  b.classList.add("actif"); b.textContent = "■ arrêter";
+  minuterie = setInterval(() => {
+    const [a0, a1] = bornes();
+    majAnnee(S.annee >= a1 ? a0 : S.annee + 1);
+  }, 320);
+});
+
+(async function demarre() {
+  S.index = await charge(`${RACINE}/index.json`);
+  const sel = $("#dep");
+  // Deux groupes, parce que ce sont deux ESPACES de la base et non deux
+  // régions d'un même. La métropole vient de `unit`/`membership` en
+  // Lambert-93 ; l'outre-mer de `om_*` en WGS84, avec sa propre trame et sa
+  // propre couverture. Les mêler dans une liste plate ferait attendre du 971
+  // ce que le 01 sait faire — une profondeur de 1870 à 2012 — alors que
+  // l'outre-mer ne commence qu'en 1946 et n'a pas de géométrie datée.
+  //
+  // Le code à trois caractères est le repère, et c'est un fait de la source :
+  // `om_unit.dep` est `char(3)` là où `unit.dep` est `char(2)`, précisément
+  // parce que les deux ne tiennent pas dans la même colonne.
+  const groupes = new Map();
+  const groupeDe = code => code.length > 2 ? "Outre-mer" : "Métropole";
+  for (const d of S.index.departements) {
+    const titre = groupeDe(d.code);
+    if (!groupes.has(titre)) {
+      const g = document.createElement("optgroup");
+      g.label = titre;
+      groupes.set(titre, g);
+    }
+    const o = document.createElement("option");
+    o.value = d.code;
+    // Pas de plage d'années dans le libellé : elle allongeait chaque ligne et
+    // rendait la liste moins lisible pour une information que le curseur donne
+    // déjà. Elle est rappelée en tête de page une fois le département choisi.
+    o.textContent = `${d.code} — ${d.nom}`;
+    groupes.get(titre).appendChild(o);
+  }
+  // Métropole d'abord, quel que soit l'ordre des codes : `971` se range avant
+  // `99` dans un tri de chaînes, et l'outre-mer se serait glissé au milieu de
+  // la métropole sans que le libellé de groupe ait de sens.
+  for (const titre of ["Métropole", "Outre-mer"])
+    if (groupes.has(titre)) sel.appendChild(groupes.get(titre));
+  $("#entete-sous").textContent =
+    `base histgis — ${S.index.departements.length} départements, ` +
+    `grille ${S.index.grille_m} m, export du ${S.index.genere}`;
+
+  // `{2,3}` et non `{2}` : les départements d'outre-mer ont un code INSEE à
+  // trois caractères (971 à 976). Avec `{2}`, un lien partagé vers
+  // `#974/1990` ne correspondait à rien, la page retombait silencieusement sur
+  // le premier département de la liste, et l'utilisateur croyait au lien mort
+  // alors que la Réunion était bien exportée. La vérification d'appartenance à
+  // la ligne suivante reste la vraie garde ; ce motif ne fait que ne plus
+  // exclure d'avance.
+  const m = location.hash.match(/^#([0-9AB]{2,3})\/(\d{4})$/);
+  const dep = (m && S.index.departements.some(d => d.code === m[1])) ? m[1]
+            : S.index.departements[0].code;
+  S.annee = m ? Math.min(AN_MAX, Math.max(AN_MIN, +m[2])) : 1870;
+  sel.value = dep;
+  await majDep(dep);
+})().catch(e => {
+  document.body.innerHTML =
+    `<div style="padding:40px;font:15px/1.6 Georgia,serif">
+       <h2>Les données ne sont pas là</h2>
+       <p><code>${echappe(e.message)}</code></p>
+       <p>Il faut d'abord exporter la base, puis servir la page :</p>
+       <pre style="background:#efece5;padding:12px;border-radius:3px">python3 cartes/export_web.py
+python3 cartes/web/servir.py</pre>
+       <p style="color:#6b6864">Ouvrir <code>index.html</code> directement depuis
+       le disque ne peut pas marcher : les navigateurs refusent <code>fetch()</code>
+       sur <code>file://</code>.</p>
+     </div>`;
+});
+</script>
+</body>
+</html>
