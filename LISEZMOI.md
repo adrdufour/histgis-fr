@@ -7,6 +7,11 @@ Paris remontant à **1815**, extension métropolitaine avant 1870 en projet.
 
 Schéma `histgis`, EPSG:2154 partout, sans exception.
 
+> Ce fichier est la carte du dossier de travail, écrite par l'auteur pour
+> lui-même. Pour une présentation destinée à un lecteur qui découvre le dépôt,
+> voir `README.md` et le dossier `docs/` (glossaire, modèle de données,
+> reconstruction).
+
 ---
 
 ## Par où commencer
