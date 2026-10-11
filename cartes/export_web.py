@@ -250,7 +250,11 @@ NOMS_DEP = {
     "45": "Loiret", "46": "Lot", "47": "Lot-et-Garonne", "48": "Lozère",
     "49": [(AN_MIN, 1955, "Maine-et-Loire"), (1956, AN_MAX, "Maine-et-Loire")],
     "50": "Manche", "51": "Marne", "52": "Haute-Marne", "53": "Mayenne",
-    "54": "Meurthe-et-Moselle", "55": "Meuse", "56": "Morbihan", "57": "Moselle",
+    # La Meurthe d'avant 1871 vit sous le code 54 depuis `39` et `92`, et
+    # `106` (4 octobre 2026) y pose ses circonscriptions de 1815 à 1870 :
+    # sans cette plage, la planche de 1830 s'intitulait Meurthe-et-Moselle.
+    "54": [(AN_MIN, 1870, "Meurthe"), (1871, AN_MAX, "Meurthe-et-Moselle")],
+    "55": "Meuse", "56": "Morbihan", "57": "Moselle",
     "58": "Nièvre", "59": "Nord", "60": "Oise", "61": "Orne",
     "62": "Pas-de-Calais", "63": "Puy-de-Dôme", "64": [(AN_MIN, 1968, "Basses-Pyrénées"),
     (1969, AN_MAX, "Pyrénées-Atlantiques")], "65": "Hautes-Pyrénées",
@@ -309,6 +313,11 @@ NOMS_DEP = {
 # fausse — pas une commodité d'affichage.
 # ---------------------------------------------------------------------------
 ABSENCES = {
+    # Ajoutés le 4 octobre 2026, avec les découpages 1815-1870 (`106`).
+    "73": [(1815, 1859, "savoyarde — États de la maison de Savoie jusqu'au "
+                        "traité de Turin (24 mars 1860)")],
+    "74": [(1815, 1859, "savoyarde — États de la maison de Savoie jusqu'au "
+                        "traité de Turin (24 mars 1860)")],
     "57": [(1871, 1918, "annexée à l'Empire allemand — traité de Francfort "
                         "(10 mai 1871) à l'armistice du 11 novembre 1918")],
     "67": [(1871, 1918, "annexé à l'Empire allemand — traité de Francfort "

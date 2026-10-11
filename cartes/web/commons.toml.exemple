@@ -1,0 +1,23 @@
+# cartes/web/commons.toml — copier ce fichier sous ce nom et le remplir.
+# Ce fichier est ignoré par git : le jeton dépose sous TON nom.
+#
+# Jeton : https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose/oauth2
+#   * cocher « This consumer is for use only by <ton compte> » (owner-only) :
+#     approuvé immédiatement, pas d'URL de rappel ;
+#   * droits : « Upload new files » et « Upload, replace, and move files »
+#     (et « Edit existing pages », que l'upload exige) ;
+#   * copier l'« Access token » affiché à la fin — il n'est montré qu'une fois.
+
+jeton = "coller ici"
+
+# Facultatif — pour essayer sans rien publier, le Commons de test :
+# api = "https://test-commons.wikimedia.org/w/api.php"
+# api = "https://commons.wikimedia.org/w/api.php"   # (défaut)
+
+# Facultatif — contact mis dans le User-Agent, comme le demande Wikimedia.
+# À défaut, la page utilisateur du compte connecté.
+# contact = "https://commons.wikimedia.org/wiki/User:MonCompte"
+
+# Facultatif — catégories ajoutées à tous les fichiers déposés (une catégorie
+# de projet, par exemple). Elles restent modifiables dans la page.
+# categories = ["Maps by histgis"]
