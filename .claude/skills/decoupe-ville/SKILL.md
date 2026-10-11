@@ -258,6 +258,14 @@ Chaque constat va dans `cartes/a_inscrire_en_base.md`, sous la ville, avec :
 - les lignes et ancres déjà prêtes qui en dépendent (points des ancres à poser).
 
 C'est Adrien qui décide et inscrit, par un SQL numéroté ; l'entrée passe alors dans « Fait ».
+Quand il demande explicitement l'inscription (10 octobre 2026, `sql/108`, Aurillac, Falaise,
+Saint-Flour) : un fichier numéroté sur le modèle de `104` (à blanc par défaut, `-v appliquer=1`,
+table de trace qui garde l'ancienne unité et le contenu de ce qui est retiré, garde-fous sur l'état
+fautif, recette lue depuis le modèle), déclaré dans `sql/rejouer_apres_rebuild.sh` (avant `98`) et
+dans l'inventaire de `sql/diag_passages.sql` ; puis `98` sous `appliquer`, le tableau, et l'export
+des départements touchés. Relire les décrets avant d'écrire : les codes (1502 = Aurillac-I) se
+vérifient sur les communes rurales que la base leur donne à une date sûre. Une fraction garde son
+code quand ses communes changent d'unité : ce sont les ancres de la ligne qu'on réécrit.
 Relire le fichier avant chaque ville : une entrée peut déjà concerner la ville suivante. Le
 signaler dans le compte rendu (« ajouté à `a_inscrire_en_base.md` : … »).
 
@@ -290,6 +298,16 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
 - **« Je n'ai pas de source »** : Oyonnax et Bourg-en-Bresse l'étaient, et leur décret (82-77,
   JO du 26 janvier 1982) était dans `cantons/communes_coupees_1973_1984.csv` et
   `jorf_txt/JORF_19820126_21_col.txt`. Toujours chercher avant de conclure.
+- **Pas de décret dans le dépôt : la page Wikipédia « Liste des cantons de <département> »** —
+  règle d'Adrien, 7 octobre 2026, pour toute ville dont on n'a pas encore le texte. Sa section
+  d'histoire donne, changement par changement, la référence du texte (arrêté de l'an X, loi,
+  décret) avec le lien Gallica ou Légifrance, et parfois la page du plan de Gaudillère. La lire
+  AVANT toute autre recherche en ligne et avant toute déduction (IRIS, rivière, bureaux de vote) :
+  `curl "https://fr.wikipedia.org/w/index.php?title=Liste_des_cantons_des_Bouches-du-Rhône&action=raw"`.
+  Wikipédia indique la source, elle ne la remplace pas : le texte se cite depuis le JO ou le
+  Bulletin des lois. Pour Arles elle a donné l'arrêté du 17 frimaire an X (Bulletin des lois,
+  an X, p. 209), que ni le dépôt ni la recherche libre n'avaient trouvé. Gallica demande de cocher
+  « Je ne suis pas un robot » : ne pas contourner, demander à Adrien d'ouvrir la page.
 - **Une voie ferrée à plusieurs voies** : le plus court chemin dans le réseau ferré peut descendre
   jusqu'à la gare et remonter par la voie parallèle — une boucle de 10 m de large que la règle
   anti-boucle (1 m) ne voit pas (Bourg, 2 km). Prendre une seule voie : sous-chaîne
@@ -469,6 +487,108 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
   derrière un `grep`. Écrire la commande en entier.
 - **Un GeoJSON exporté par `ogr2ogr -sql` sans `-a_srs EPSG:2154`** n'a pas de projection :
   QGIS le lit en WGS84, et la couche ne s'affiche pas sur le rendu.
+- **zsh lit `echo ======` comme une commande** (`=mot` est une expansion) : un séparateur nu entre
+  deux `pose_coupe.py --ecrire` a arrêté la suite après la première passe (Caen, 9 octobre 2026).
+  Mettre les séparateurs entre guillemets, et relire ce qui a réellement été écrit.
+- **Le tramway est dans `<insee>_fer.geojson`** (Caen : 75 tronçons) : `("fer",)` le prend pour
+  une voie ferrée. Tracer sur une copie filtrée de la couche, et le dire dans la note.
+- **Une route dénivelée ne croise pas** (Caen, N814 sous l'avenue de Courseulles) : `("route", …)`
+  part alors par les bretelles de l'échangeur. Couper la ligne au croisement géométrique des deux
+  axes.
+- **La commune d'avant une annexion peut ne pas contenir l'ancre** (Troyes : 1 034 ha avant 1856,
+  1 329 ensuite, et l'ancre de Troyes-2 tombait dans les 295 ha annexés). Avant d'avancer une
+  ligne dans le temps, éprouver à chaque état de l'ANR et choisir un point intérieur à tous.
+- **Des fractions qui changent de secteur d'un régime à l'autre** (Troyes : `#1023` est l'ouest
+  avant 1973 et le nord-est après ; Caen : `#1408` est l'Est en 1967 et Caen-I, à l'ouest, en
+  1973) : toujours `--ancres-datees`, et remplacer les ancres non datées de la ville par la
+  première passe.
+- **Un décret qui récite d'anciennes limites** (Troyes 1973 : les trois axes) : les reprendre sous
+  de nouveaux identifiants pour la nouvelle période, avec une note qui cite le décret, plutôt que
+  d'allonger les anciennes. Même règle à Nice, où les lignes communes à 1973, 1982 et 1985 sont
+  répétées par régime (`06088-1985-spine`) : chaque passe est conforme seule.
+- **Deux quais d'un même canal bornent deux cantons** (Troyes : quai La Fontaine pour le I, quai du
+  Comte-Henri pour le V, 54 m d'eau entre les deux) : à la lettre le bassin n'est à aucun des deux.
+  Une seule ligne, et le dire dans la note.
+- **Le Bulletin des lois peut n'imprimer que l'intitulé** (Caen, ordonnance n° 492 du 30 décembre
+  1815 : Est / Ouest remplacent Nord / Sud de l'an X, sans un mot de la limite). La référence
+  trouvée par Wikipédia ne garantit pas un texte de limite : il faut alors Gaudillère.
+- **Wikipédia transcrit parfois le texte** (Nice, loi du 7 février 1919) : on peut tracer et
+  éprouver dessus, mais on n'écrit pas avant d'avoir lu le JO. Garder lignes, notes et commande
+  hors du scratchpad (`cartes/sorties/decoupe_nice/`) et consigner dans `a_inscrire_en_base.md`.
+- **`trace_mixte()` rend des lignes non simples dans une grande ville à relief** (Nice : l'épine
+  centrale, Gairaut avec 13 boucles retirées). Un plus court chemin écrit pour Nice sur PostGIS,
+  `cartes/sorties/decoupe_nice/route.py` (voies dans l'ordre, tronçon hors voie compté six fois,
+  réseaux eau et fer, segments et contours à la main), a tracé les 29 lignes ; il lit les tables
+  `public.nice_bd_*`. À reprendre pour Nice 1860 et 1955, et à généraliser avant une autre ville.
+- **Un texte qui nomme un quartier ou un parc sans le borner** (Nice : « parc Liserb », « quartier
+  Liserb supérieur », « quartier de l'Ariane ») : aucune donnée ne le délimite. Tracer la lecture
+  la plus simple, chiffrer l'enjeu, et demander le plan annexé au décret.
+- **Les agents en parallèle ne peuvent pas écrire, et la session non plus sans accord** : l'écriture
+  dans les CSV et `98` sous `appliquer` demandent l'accord explicite d'Adrien dans la conversation
+  (9 octobre 2026). Une fois donné, tout faire : CSV, `98`, `a_inscrire_en_base.md`,
+  `tableau_villes.py` (dictionnaire `REMARQUES`, et `REVISEES` si la ville est reprise), ce skill,
+  et le nettoyage des tables `public.<ville>_*`.
+- **Un arrêté de l'an X qui nomme des parties sans les borner** (10 octobre 2026 — Saint-Flour :
+  « le Faubourg » au Nord, « la Ville » au Sud ; Falaise : trois sections) : il donne l'ATTRIBUTION,
+  pas la ligne. Chercher alors (a) les monographies locales et annuaires sur archive.org
+  (`advancedsearch.php`, puis `<id>_djvu.txt` ; passer `tr -s ' '` avant tout grep, l'OCR a des
+  espaces doubles) : les chapitres « division par paroisses » et « par justices de paix » d'une
+  statistique d'arrondissement disent quelle paroisse est de quel canton, exceptions comprises
+  (Galeron pour Falaise) ; (b) les populations légales de l'INSEE par fraction cantonale
+  (`insee.fr/fr/statistiques/fichier/<n>/dep<NN>.pdf`, jusqu'au 1er janvier 2014), à comparer aux
+  populations des IRIS : à Saint-Flour, deux IRIS nommés « Nord » et « Sud », 38,4 % au Nord des
+  deux côtés. La ligne s'écrit alors sous la source `iris` (Saint-Flour) ou `main` (Falaise), la
+  note commence par ce qui est du texte et ce qui ne l'est pas. À essayer sur Confolens, Tartas,
+  Le Quesnoy, Avesnes.
+- **Nord et Sud ne sont pas toujours des directions** : le « Nord » de Saint-Flour est le faubourg,
+  l'est et le sud de la commune ; le « Nord » de Falaise est un coin nord-est de 320 ha. Ancres par
+  points, et ne pas déduire l'orientation du partage des seules communes voisines (l'entrée n° 97
+  concluait « est / ouest » pour Falaise, à tort).
+- **Les points triples ne bornent pas toujours la limite interne** : à Saint-Flour le bord communal
+  sépare les cantons sur 7,6 et 7,4 km ; à Falaise la part Sud touche quatre communes du canton
+  Nord, et Galeron le dit. Ils ne sont une contrainte que si rien d'autre ne parle.
+- **Lire tous les textes d'une ville avant de tracer le premier** (Aurillac) : un canton que les
+  décrets suivants ne redécrivent pas (le IV de 1973) garde sa limite, et le texte le plus récent
+  identifie les noms perdus (« route de Murat » de 1973 = « chemin départemental n° 117 » de 1985 ;
+  « promenade du Gravier » = cours Monthyon ; rue de Marmiesse prolongée par le chemin du Bousquet).
+  Dans l'autre sens, l'arrêté de l'an X a montré que la limite Nord / Sud d'avant 1973 était celle du
+  IV : mêmes communes rurales, mêmes rues dans la vieille ville (Salut, Forgerons, Rieu).
+- **Une avenue rectiligne qui s'arrête avant le bord, sans « jusqu'à la limite »** (Aurillac 1982,
+  avenue de Tronquières : 289 m du bord au plus court, 1,3 km dans l'axe) : le raccord automatique
+  part à angle droit et donne tout un quartier à un canton. Tracer les deux fermetures, chiffrer
+  l'écart (38 ha), le dire dans la note.
+- **La dernière voie du texte peut devenir limite communale avant de finir** (Aurillac, D117 le long
+  de Giou-de-Mamou, 208 m ; Falaise, route de Caen le long d'Aubigny, 230 m) : couper au point où
+  elle touche ou quitte le bord.
+- **Les communes rurales d'un ancien canton peuvent être en base sous le code de son successeur**
+  (Jussac, créé en 1985, porte quatre communes dès 1973) : la requête des contacts ne les trouve
+  pas sous le code de la fraction urbaine.
+- **Un agent peut laisser une requête tourner après son rapport** (Falaise : un `SELECT` d'une heure
+  dans PostgreSQL) : regarder `pg_stat_activity` au retour de chaque agent, et `pg_cancel_backend`.
+- **`--ecrire` bloque un export en cours** : `98` sous `appliquer` rejoue la recette de toutes les
+  villes dans une transaction (sept minutes le 10 octobre 2026), et `export_web.py --partition`
+  attend le verrou pendant ce temps. Enchaîner les passes dans un seul script, et savoir que les
+  départements déjà exportés sont à refaire.
+- **Le décret de 2014 relit celui de 1982** (Angoulême, 10 octobre 2026) : les cantons de 2015 reprennent
+  souvent les limites de 1982 en les précisant. « Le prolongement de la rue Pierre-Grenet jusqu'à la
+  limite » (1982) devient « ligne droite […] jusqu'à l'intersection du boulevard de Bigorre et de la
+  rue du Petit-Montbron » (décret 2014-195). La page Wikipédia « Liste des cantons de <département> »
+  transcrit ces décrets dans son tableau des cantons de 2015 : la lire AUSSI pour un régime de 1973
+  ou de 1982, puis collationner sur Légifrance. `curl` y reçoit un 403 ; le navigateur intégré lit
+  la page (`navigate`, puis `document.body.innerText`). C'est une lecture d'un texte par un autre
+  régime : le dire dans la note, et dire ce qui diffère entre les deux.
+- **Trancher entre deux lectures par la population** (Angoulême) : répartir la population de chaque
+  IRIS (base infracommunale de l'INSEE) au prorata des logements BD TOPO (`BDTOPO_V3:batiment`,
+  `nombre_de_logements` ; dix minutes de WFS pour une ville de 40 000 habitants) de chaque côté des
+  lignes, et comparer aux fractions cantonales des populations légales. Le Nord d'Angoulême tombait
+  à 17 habitants près ; la lecture écartée s'éloignait de 700 à 1 000. Cela départage des lectures
+  qui déplacent des habitants, pas celles qui déplacent des hectares vides.
+- **Une rivière nommée là où la BD TOPO en voit une autre** (Angoulême : « l'Anguienne depuis son
+  embouchure jusqu'au pont de Saint-Cybard » est le bras sud de la Charente ; la BD TOPO fait
+  déboucher l'Anguienne, en conduite, 300 m en amont du pont) : suivre ce que le texte en dit, par
+  morceaux bornés de `("point", x, y)`, et le dire.
+- **Une voie longue citée comme simple raccord** (« rue de Bordeaux » entre le pont et l'avenue de
+  Cognac) : `trace_mixte` la suit sur 485 m puis revient, une épingle sans surface. Regarder l'image.
 
 - **Numéroter un fichier SQL** : vérifier le numéro libre dans `sql/` *et* dans l'inventaire de
   `sql/diag_passages.sql`. `98_coupe_ville.sql` avait d'abord été écrit sous `97`, réservé : son
