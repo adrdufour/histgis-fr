@@ -277,7 +277,11 @@ REGLES = {
                           "Malaucène", "Beaumes", "Vaison-la-Romaine",
                           "Orange-Est", "Orange-Ouest", "Bollène", "Valréas"]},
         "1": {"reste": True}}},
-    {"depuis": 1831, "jusqu": 1848, "base": "1876", "copie": True},
+    # Avignon-Sud n'a en 1876 qu'un atome-fraction, sans circonscription : la
+    # « copie » de 1876 le laissait orphelin (partition rompue). Il suit
+    # Avignon-Nord, comme ailleurs les cantons d'une même ville (4 oct. 2026).
+    {"depuis": 1831, "jusqu": 1848, "base": "1876",
+     "deplacer": [(["Avignon-Sud"], "Avignon")]},
     # Telle qu'écrite, cette règle ne change RIEN : Avignon-Nord et Bédarrides
     # sont déjà dans la 1re en 1869, et Pernes, Mormoiron et Sault n'y sont pas.
     # Transcrite littéralement et SIGNALÉE — la base visée est peut-être 1852.
@@ -285,7 +289,8 @@ REGLES = {
         "1": {"reprend": ["1"], "plus": ["Avignon-Nord", "Bédarrides"],
               "moins": ["Pernes-les-Fontaines", "Mormoiron", "Sault"]},
         "2": {"reste": True}}},
-    {"depuis": 1815, "jusqu": 1820, "base": "1876", "copie": True},
+    {"depuis": 1815, "jusqu": 1820, "base": "1876",
+     "deplacer": [(["Avignon-Sud"], "Avignon")]},
   ]},
 
 "86": {
@@ -507,6 +512,11 @@ REGLES = {
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from regles_1815_21_63 import REGLES_21_63  # noqa: E402
 REGLES.update(REGLES_21_63)
+
+# Départements 01 à 20, 64 à 73 et le Var, lus sur les cartes photographiées
+# (seconde série, 4 octobre 2026).
+from regles_1815_restants import REGLES_RESTANTS  # noqa: E402
+REGLES.update(REGLES_RESTANTS)
 
 
 def composition_1876(dep, date=None):

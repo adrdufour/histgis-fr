@@ -139,7 +139,7 @@ GROUP  BY c.dep;
 \echo '   (aucune ligne = tous les noms concordent avec `unit`)'
 
 \echo ''
-\echo '-- 5. les 5 lignes interprétées, nommées'
+\echo '-- 5. les lignes interprétées, nommées'
 SELECT dep, depuis, jusqu, circonscription, canton
 FROM   c15_composition WHERE interprete = 'oui'
 ORDER  BY dep, depuis, canton;
