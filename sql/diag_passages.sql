@@ -139,6 +139,8 @@ INSERT INTO attendu (rang, fichier, temoin, role) VALUES
   ( 98, '98_coupe_ville.sql',           'p98_trace',    'villes multicantonales : lignes de coupe et ancres'),
   ( 99, '99_partition_coupes.sql',      'p99_trace',    'villes découpées dans la partition de 84 (à rejouer après 84)'),
   (101, '101_paris_fractions_quartier.sql', 'p101_trace', 'Paris : fractions de quartier coupé entre deux circonscriptions (avant 98)'),
+  (108, '108_villes_aurillac_falaise_saintflour.sql', 'p108_trace', 'Aurillac 1973-1985, Falaise-Nord/Sud rétablis avant 1941, Saint-Flour en continu (avant 98)'),
+  (109, '109_ville_angouleme.sql',     'p109_trace',   'Angoulême : deux fractions de 1941 à 1982, noms de 1973 et de 1982 (avant 98)'),
   -- Déclarée après coup : elle existait en base sans figurer ici, et le § 1 ter
   -- la signalait comme orpheline à chaque passage.
   ( 95, '95_report_deux_bouts_1969_1999.sql', 'p95_qualite', 'fondement et profondeur de 95'),

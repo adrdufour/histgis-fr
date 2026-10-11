@@ -221,6 +221,41 @@ le fait ; un lancement à la main doit y penser.
 autres non. C'est une incohérence à corriger : un fichier qui échoue faute d'un
 argument devrait le DIRE, pas produire « :: Aucun fichier ».
 
+### 3. Un fichier qui MODIFIE les périodes d'un autre : `111`
+
+Jusqu'au 11 octobre 2026, chaque fichier n'écrivait que dans des fenêtres
+libres, et sa trace suffisait à le défaire. `111_corrige_transferts.sql` est le
+premier à **raccourcir des périodes qu'il n'a pas posées** : celles que les
+transferts lus au JO ou dans ses tables annuelles démentent (une commune gardée
+dans son canton de départ après l'acte, ou mise dans son canton d'arrivée
+avant lui). Au premier essai, 20 périodes : 10 de `81`, 5 de `79`, 5 de la base
+d'origine. Les bornes d'avant sont gardées dans `p111_trace`, et
+`-v defaire=on` les rend.
+
+Trois conséquences, à connaître avant de rejouer quoi que ce soit dans cette
+région de la chaîne :
+
+1. **Rejouer `79`, `81`, `93`, `95` ou `97` après `111`** remet en cause ses
+   corrections : le report défait ses propres lignes — dont celles que `111` a
+   raccourcies — et repose sur des trous qui ne sont plus les mêmes. Rejouer
+   ensuite `110` puis `111`.
+2. **Rejouer `110` seul** : défaire `111` d'abord. Sinon `110` peut remplir les
+   trous que `111` a laissés au-delà du premier acte, et le retour arrière de
+   `111` buterait sur eux (la transaction tomberait, sans dommage, mais sans
+   rien défaire).
+   ```bash
+   psql -d histgis -v defaire=on -f sql/111_corrige_transferts.sql
+   psql -d histgis -v poser=on   -f sql/110_pose_lecture_jo.sql
+   psql -d histgis -v poser=on   -f sql/111_corrige_transferts.sql
+   ```
+3. **Ni l'un ni l'autre ne prend `-1`** : ils ouvrent et ferment leur propre
+   transaction, et ne commettent qu'avec `-v poser=on` — sans, ils calculent,
+   affichent et font ROLLBACK. Tous deux lisent `cantons/*.csv` par un `\copy`
+   relatif : les lancer depuis la RACINE.
+
+`rejouer_apres_rebuild.sh` les joue en dernier, après tout le reste, pour ces
+raisons.
+
 ### La règle générale
 
 **Une table de trace protège son fichier, pas ses voisins.** Elle dit ce qu'un
