@@ -1,0 +1,252 @@
+[[Fichier:55-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Meuse, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Depuis 1982, le [[Département français|département]] de la [[Meuse (département)|Meuse]] comprenait 31 [[cantons français|cantons]]. À la suite du [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], le nombre de cantons est réduit à 17<ref>{{Lien web |url=http://www.legifrance.gouv.fr/affichTexte.do;jsessionid=0A2729B63CE6446D36638ADC9304F573.tpdjo05v_2?cidTexte=JORFTEXT000028626147&categorieLien=id |titre=Décret n° 2014-166 du 17 février 2014 portant délimitation des cantons dans le département de la Meuse |site=legifrance.gouv.fr |consulté le=03 avril 2014}}.</ref>.
+
+== Histoire ==
+=== Découpage avant 2014 ===
+
+*1801<ref>Arrêté du 27 Vendémiaire an X (19 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f213 p. 193]</ref> : découpage d'origine
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858984 Décret n°73-788 du 23 juillet 1973]</ref> : 
+**Le [[canton de Bar-le-Duc]] est scindé en deux nouveax cantons [[canton de Bar-le-Duc-Nord|Bar-le-Duc-Nord]] et [[canton de Bar-le-Duc-Sud|-Sud]] ;
+**Le [[canton de Verdun]] est scindé en deux nouveaux cantons [[canton de Verdun-Est|Verdun-Est]] et [[canton de Verdun-Ouest|-Ouest]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000703785 Décret n° 82-93 du 26 janvier 1982]</ref> : Création du [[canton de Verdun-Centre]], détaché des deux autrees cantons de Verdun.
+
+
+[[Fichier:Cantons de la Meuse avant 2014.svg|thumb|upright=1.2|Carte des cantons de la Meuse avant le redécoupage cantonal de 2014]]
+
+==== Arrondissement de Bar-le-Duc ====
+L'[[arrondissement de Bar-le-Duc]] compte 9 cantons (préfecture : [[Bar-le-Duc]]) :
+{{colonnes|nombre=2|
+*[[Canton d'Ancerville]]
+*[[Canton de Bar-le-Duc-Nord]]
+*[[Canton de Bar-le-Duc-Sud]]
+*[[Canton de Ligny-en-Barrois]]
+*[[Canton de Montiers-sur-Saulx]]
+*[[Canton de Revigny-sur-Ornain]]
+*[[Canton de Seuil-d'Argonne]]
+*[[Canton de Vaubecourt]]
+*[[Canton de Vavincourt]]
+}}
+
+==== Arrondissement de Commercy ====
+L'[[arrondissement de Commercy]] compte 7 cantons (sous-préfecture de [[Commercy]]) :
+{{colonnes|nombre=2|
+*[[Canton de Commercy]]
+*[[Canton de Gondrecourt-le-Château]]
+*[[Canton de Pierrefitte-sur-Aire]]
+*[[Canton de Saint-Mihiel]]
+*[[Canton de Vaucouleurs]]
+*[[Canton de Vigneulles-lès-Hattonchâtel]]
+*[[Canton de Void-Vacon]]
+}}
+
+==== Arrondissement de Verdun ====
+L'[[arrondissement de Verdun]] compte 15 cantons (sous-préfecture de [[Verdun (Meuse)|Verdun]]) :
+{{colonnes|nombre=2|
+*[[Canton de Charny-sur-Meuse]]
+*[[Canton de Clermont-en-Argonne]]
+*[[Canton de Damvillers]]
+*[[Canton de Dun-sur-Meuse]]
+*[[Canton d'Étain]]
+*[[Canton de Fresnes-en-Woëvre]]
+*[[Canton de Montfaucon-d'Argonne]]
+*[[Canton de Montmédy]]
+*[[Canton de Souilly]]
+*[[Canton de Spincourt]]
+*[[Canton de Stenay]]
+*[[Canton de Varennes-en-Argonne]]
+*[[Canton de Verdun-Centre]]
+*[[Canton de Verdun-Est]]
+*[[Canton de Verdun-Ouest]]
+}}
+
+=== Redécoupage cantonal de 2014 ===
+{{Article connexe|Redécoupage cantonal de 2014 en France}}
+
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|17 février 2014}} pour le département de la [[Meuse (département)|Meuse]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Meuse (département)|Meuse]] le nombre de cantons passe ainsi de 31 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626147 |texte=Décret {{n°|2014}}-166 du 17 février 2014}} portant délimitation des cantons dans le département de la Meuse.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 21 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Meuse, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|193923|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=55 |titre= Chiffres clés Évolution et structure de la population - Département de la Meuse (55) |auteur= |date = |site =insee.fr |consulté le= 21 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|11407|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|9126|habitants}} et {{unité|13689|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2010<ref>Populations légales des communes en vigueur au {{1er}} janvier 2013, millésimées 2010 (date de référence statistique : {{1er}} janvier 2010), dans les limites territoriales en vigueur au {{1er}} janvier 2012</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Ancerville|Ancerville]]||[[Ancerville (Meuse)|Ancerville]]||{{formatnum:13454}}||1,18||25||[[Ancerville (Meuse)|Ancerville]], [[Aulnois-en-Perthois]], [[Baudonvilliers]], [[Bazincourt-sur-Saulx]], [[Brillon-en-Barrois]], [[Cousances-les-Forges]], [[Guerpont]], [[Haironville]], [[Juvigny-en-Perthois]], [[Lavincourt]], [[Lisle-en-Rigault]], [[Maulan]], [[Montplonne]], [[Nant-le-Grand]], [[Nant-le-Petit]], [[Rupt-aux-Nonains]], [[Saudrupt]], [[Savonnières-en-Perthois]], [[Silmont]], [[Sommelonne]], [[Stainville]], [[Tannois]], [[Tronville-en-Barrois]], [[Velaines]], [[Ville-sur-Saulx]].
+|-
+|2||[[Canton de Bar-le-Duc-1|Bar-le-Duc-1]]||[[Bar-le-Duc]]||{{formatnum:5425}} + fraction Bar-le-Duc|| ||12 + fraction Bar-le-Duc||1° Les communes suivantes : [[Combles-en-Barrois]], [[Érize-la-Brûlée]], [[Érize-Saint-Dizier]], [[Géry]], [[Longeville-en-Barrois]], [[Naives-Rosières]], [[Resson (Meuse)|Resson]], [[Raival]], [[Rumont (Meuse)|Rumont]], [[Savonnières-devant-Bar]], [[Seigneulles]], [[Trémont-sur-Saulx]]. <br/>2° La partie de la commune de Bar-le-Duc située sur la rive gauche de l'Ornain.
+|-
+|3||[[Canton de Bar-le-Duc-2|Bar-le-Duc-2]]||[[Bar-le-Duc]]||{{formatnum:3709}} + fraction Bar-le-Duc|| ||4 + fraction Bar-le-Duc||1° Les communes suivantes : [[Behonne]], [[Chardogne]], [[Fains-Véel]], [[Vavincourt]]. <br/>2° La partie de la commune de Bar-le-Duc située sur la rive droite de l'Ornain.
+|-
+|4||[[Canton de Belleville-sur-Meuse|Belleville-sur-Meuse]]||[[Belleville-sur-Meuse]]||{{formatnum:9385}}||0,82||27||[[Abaucourt-Hautecourt]], [[Beaumont-en-Verdunois]], [[Belleville-sur-Meuse]], [[Bezonvaux]], [[Blanzée]], [[Bras-sur-Meuse]], [[Champneuville]], [[Charny-sur-Meuse]], [[Châtillon-sous-les-Côtes]], [[Cumières-le-Mort-Homme]], [[Damloup]], [[Dieppe-sous-Douaumont]], [[Douaumont-Vaux]], [[Eix]], [[Fleury-devant-Douaumont]], [[Gincrey]], [[Grimaucourt-en-Woëvre]], [[Haumont-près-Samogneux]], [[Louvemont-Côte-du-Poivre]], [[Maucourt-sur-Orne]], [[Mogeville]], [[Moranville]], [[Moulainville]], [[Ornes]], [[Samogneux]], [[Thierville-sur-Meuse]], [[Vacherauville]].
+|-
+|5||[[Canton de Bouligny|Bouligny]]||[[Bouligny]]||{{formatnum:9562}}||0,84||26||[[Amel-sur-l'Étang]], [[Arrancy-sur-Crusnes]], [[Billy-sous-Mangiennes]], [[Bouligny]], [[Dommary-Baroncourt]], [[Domremy-la-Canne]], [[Duzey]], [[Éton (Meuse)|Éton]], [[Foameix-Ornel]], [[Gouraincourt]], [[Lanhères]], [[Loison]], [[Mangiennes]], [[Morgemoulin]], [[Muzeray]], [[Nouillonpont]], [[Pillon]], [[Rouvres-en-Woëvre]], [[Rouvrois-sur-Othain]], [[Saint-Laurent-sur-Othain]], [[Saint-Pierrevillers]], [[Senon]], [[Sorbey (Meuse)|Sorbey]], [[Spincourt]], [[Vaudoncourt (Meuse)|Vaudoncourt]], [[Villers-lès-Mangiennes]].
+|-
+|6||[[Canton de Clermont-en-Argonne|Clermont-en-Argonne]]||[[Clermont-en-Argonne]]||{{formatnum:9487}}||0,83||50||[[Aubréville]], [[Avocourt]], [[Bantheville]], [[Baulny]], [[Béthelainville]], [[Béthincourt]], [[Boureuilles]], [[Brabant-en-Argonne]], [[Brabant-sur-Meuse]], [[Brocourt-en-Argonne]], [[Charpentry]], [[Chattancourt]], [[Cheppy]], [[Cierges-sous-Montfaucon]], [[Le Claon]], [[Clermont-en-Argonne]], [[Consenvoye]], [[Cuisy (Meuse)|Cuisy]], [[Cunel]], [[Dannevoux]], [[Dombasle-en-Argonne]], [[Épinonville]], [[Esnes-en-Argonne]], [[Forges-sur-Meuse]], [[Froidos]], [[Fromeréville-les-Vallons]], [[Futeau]], [[Gercourt-et-Drillancourt]], [[Gesnes-en-Argonne]], [[Les Islettes]], [[Jouy-en-Argonne]], [[Lachalade]], [[Malancourt (Meuse)|Malancourt]], [[Marre]], [[Montblainville]], [[Montfaucon-d'Argonne]], [[Montzéville]], [[Nantillois]], [[Le Neufour]], [[Neuvilly-en-Argonne]], [[Rarécourt]], [[Récicourt]], [[Regnéville-sur-Meuse]], [[Romagne-sous-Montfaucon]], [[Septsarges]], [[Sivry-sur-Meuse]], [[Varennes-en-Argonne]], [[Vauquois]], [[Véry]], [[Vilosnes-Haraumont]].
+|-
+|7||[[Canton de Commercy|Commercy]]||[[Commercy]]||{{formatnum:12984}}||1,14||14||[[Boncourt-sur-Meuse]], [[Chonville-Malaumont]], [[Commercy]], [[Euville]], [[Frémeréville-sous-les-Côtes]], [[Girauvoisin]], [[Grimaucourt-près-Sampigny]], [[Geville]], [[Lérouville]], [[Mécrin]], [[Pont-sur-Meuse]], [[Saint-Julien-sous-les-Côtes]], [[Vadonville]], [[Vignot]].
+|-
+|8||[[Canton de Dieue-sur-Meuse|Dieue-sur-Meuse]]||[[Dieue-sur-Meuse]]||{{formatnum:12350}}||1,08||62||[[Ambly-sur-Meuse]], [[Ancemont]], [[Autrécourt-sur-Aire]], [[Bannoncourt]], [[Baudrémont]], [[Beaulieu-en-Argonne]], [[Beausite]], [[Belrain]], [[Bouquemont]], [[Brizeaux]], [[Courcelles-en-Barrois]], [[Courouvre]], [[Dieue-sur-Meuse]], [[Dompcevrin]], [[Èvres]], [[Foucaucourt-sur-Thabas]], [[Fresnes-au-Mont]], [[Génicourt-sur-Meuse]], [[Gimécourt]], [[Heippes]], [[Ippécourt]], [[Julvécourt]], [[Kœur-la-Grande]], [[Kœur-la-Petite]], [[Lahaymeix]], [[Landrecourt-Lempire]], [[Lavallée (Meuse)|Lavallée]], [[Lavoye]], [[Lemmes]], [[Levoncourt (Meuse)|Levoncourt]], [[Lignières-sur-Aire]], [[Longchamps-sur-Aire]], [[Ménil-aux-Bois]], [[Les Monthairons]], [[Neuville-en-Verdunois]], [[Nicey-sur-Aire]], [[Nixéville-Blercourt]], [[Nubécourt]], [[Osches]], [[Pierrefitte-sur-Aire]], [[Pretz-en-Argonne]], [[Rambluzin-et-Benoite-Vaux]], [[Récourt-le-Creux]], [[Rupt-devant-Saint-Mihiel]], [[Rupt-en-Woëvre]], [[Saint-André-en-Barrois]], [[Sampigny]], [[Senoncourt-les-Maujouy]], [[Seuil-d'Argonne]], [[Sommedieue]], [[Les Souhesmes-Rampont]], [[Souilly]], [[Thillombois]], [[Tilly-sur-Meuse]], [[Les Trois-Domaines]], [[Vadelaincourt]], [[Ville-devant-Belrain]], [[Villers-sur-Meuse]], [[Ville-sur-Cousances]], [[Villotte-sur-Aire]], [[Waly (France)|Waly]], [[Woimbey]].
+|-
+|9||[[Canton d'Étain|Étain]]||[[Étain (Meuse)|Étain]]||{{formatnum:10523}}||0,92||42||[[Avillers-Sainte-Croix]], [[Boinville-en-Woëvre]], [[Bonzée]], [[Braquis]], [[Buzy-Darmont]], [[Combres-sous-les-Côtes]], [[Dommartin-la-Montagne]], [[Doncourt-aux-Templiers]], [[Les Éparges]], [[Étain (Meuse)|Étain]], [[Fresnes-en-Woëvre]], [[Fromezey]], [[Gussainville]], [[Hannonville-sous-les-Côtes]], [[Harville]], [[Haudiomont]], [[Hennemont]], [[Herbeuville]], [[Herméville-en-Woëvre]], [[Labeuville]], [[Latour-en-Woëvre]], [[Maizeray]], [[Manheulles]], [[Marchéville-en-Woëvre]], [[Mouilly]], [[Moulotte]], [[Pareid]], [[Parfondrupt]], [[Pintheville]], [[Riaville]], [[Ronvaux]], [[Saint-Hilaire-en-Woëvre]], [[Saint-Jean-lès-Buzy]], [[Saint-Remy-la-Calonne]], [[Saulx-lès-Champlon]], [[Thillot]], [[Trésauvaux]], [[Ville-en-Woëvre]], [[Villers-sous-Pareid]], [[Warcq (Meuse)|Warcq]], [[Watronville]], [[Woël]].
+|-
+|10||[[Canton de Ligny-en-Barrois|Ligny-en-Barrois]]||[[Ligny-en-Barrois]]||{{formatnum:13137}}||1,15||40||[[Abainville]], [[Amanty]], [[Badonvilliers-Gérauvilliers]], [[Biencourt-sur-Orge]], [[Bonnet (Meuse)|Bonnet]], [[Le Bouchon-sur-Saulx]], [[Brauvilliers]], [[Bure (Meuse)|Bure]], [[Chanteraine]], [[Chassey-Beaupré]], [[Couvertpuis]], [[Dainville-Bertheléville]], [[Dammarie-sur-Saulx]], [[Delouze-Rosières]], [[Demange-Baudignécourt]], [[Fouchères-aux-Bois]], [[Givrauval]], [[Gondrecourt-le-Château]], [[Hévilliers]], [[Horville-en-Ornois]], [[Houdelaincourt]], [[Ligny-en-Barrois]], [[Longeaux]], [[Mandres-en-Barrois]], [[Mauvages]], [[Menaucourt]], [[Ménil-sur-Saulx]], [[Montiers-sur-Saulx]], [[Morley (Meuse)|Morley]], [[Naix-aux-Forges]], [[Nantois]], [[Ribeaucourt (Meuse)|Ribeaucourt]], [[Les Roises]], [[Saint-Amand-sur-Ornain]], [[Saint-Joire]], [[Tréveray]], [[Vaudeville-le-Haut]], [[Villers-le-Sec (Meuse)|Villers-le-Sec]], [[Vouthon-Bas]], [[Vouthon-Haut]].
+|-
+|11||[[Canton de Montmédy|Montmédy]]||[[Montmédy]]||{{formatnum:10073}}||0,88||45||[[Avioth]], [[Azannes-et-Soumazannes]], [[Bazeilles-sur-Othain]], [[Brandeville]], [[Bréhéville]], [[Breux (Meuse)|Breux]], [[Chaumont-devant-Damvillers]], [[Chauvency-le-Château]], [[Chauvency-Saint-Hubert]], [[Damvillers]], [[Delut]], [[Dombras]], [[Écouviez]], [[Écurey-en-Verdunois]], [[Étraye]], [[Flassigny]], [[Gremilly]], [[Han-lès-Juvigny]], [[Iré-le-Sec]], [[Jametz]], [[Juvigny-sur-Loison]], [[Lissey]], [[Louppy-sur-Loison]], [[Marville (Meuse)|Marville]], [[Merles-sur-Loison]], [[Moirey-Flabas-Crépion]], [[Montmédy]], [[Peuvillers]], [[Quincy-Landzécourt]], [[Remoiville]], [[Réville-aux-Bois]], [[Romagne-sous-les-Côtes]], [[Rupt-sur-Othain]], [[Thonne-la-Long]], [[Thonne-le-Thil]], [[Thonne-les-Près]], [[Thonnelle]], [[Velosnes]], [[Verneuil-Grand]], [[Verneuil-Petit]], [[Vigneul-sous-Montmédy]], [[Villécloye]], [[Ville-devant-Chaumont]], [[Vittarville]], [[Wavrille]].
+|-
+|12||[[Canton de Revigny-sur-Ornain|Revigny-sur-Ornain]]||[[Revigny-sur-Ornain]]||{{formatnum:11708}}||1,03||28||[[Andernay]], [[Beurey-sur-Saulx]], [[Brabant-le-Roi]], [[Chaumont-sur-Aire]], [[Contrisson]], [[Courcelles-sur-Aire]], [[Couvonges]], [[Érize-la-Petite]], [[Les Hauts-de-Chée]], [[Laheycourt]], [[Laimont]], [[Lisle-en-Barrois]], [[Louppy-le-Château]], [[Mognéville]], [[Nettancourt]], [[Neuville-sur-Ornain]], [[Noyers-Auzécourt]], [[Rancourt-sur-Ornain]], [[Rembercourt-Sommaisne]], [[Remennecourt]], [[Revigny-sur-Ornain]], [[Robert-Espagne]], [[Sommeilles]], [[Val-d'Ornain]], [[Vassincourt]], [[Vaubecourt]], [[Villers-aux-Vents]], [[Villotte-devant-Louppy]].
+|-
+|13||[[Canton de Saint-Mihiel|Saint-Mihiel]]||[[Saint-Mihiel]]||{{formatnum:12388}}||1,09||34||[[Apremont-la-Forêt]], [[Beney-en-Woëvre]], [[Bislée]], [[Bouconville-sur-Madt]], [[Broussey-Raulecourt]], [[Buxières-sous-les-Côtes]], [[Chaillon]], [[Chauvoncourt]], [[Dompierre-aux-Bois]], [[Han-sur-Meuse]], [[Heudicourt-sous-les-Côtes]], [[Jonville-en-Woëvre]], [[Lachaussée]], [[Lacroix-sur-Meuse]], [[Lahayville]], [[Lamorville]], [[Loupmont]], [[Maizey]], [[Montsec (Meuse)|Montsec]], [[Nonsard-Lamarche]], [[Les Paroches]], [[Rambucourt]], [[Ranzières]], [[Richecourt (Meuse)|Richecourt]], [[Rouvrois-sur-Meuse]], [[Saint-Maurice-sous-les-Côtes]], [[Saint-Mihiel]], [[Seuzey]], [[Troyon (Meuse)|Troyon]], [[Varnéville]], [[Vaux-lès-Palameix]], [[Valbois]], [[Vigneulles-lès-Hattonchâtel]], [[Xivray-et-Marvoisin]].
+|-
+|14||[[Canton de Stenay|Stenay]]||[[Stenay]]||{{formatnum:9281}}||0,81||35||[[Aincreville]], [[Autréville-Saint-Lambert]], [[Baâlon]], [[Beauclair]], [[Beaufort-en-Argonne]], [[Brieulles-sur-Meuse]], [[Brouennes]], [[Cesse]], [[Cléry-le-Grand]], [[Cléry-le-Petit]], [[Doulcon]], [[Dun-sur-Meuse]], [[Fontaines-Saint-Clair]], [[Halles-sous-les-Côtes]], [[Inor]], [[Lamouilly]], [[Laneuville-sur-Meuse]], [[Liny-devant-Dun]], [[Lion-devant-Dun]], [[Luzy-Saint-Martin]], [[Martincourt-sur-Meuse]], [[Milly-sur-Bradon]], [[Mont-devant-Sassey]], [[Montigny-devant-Sassey]], [[Moulins-Saint-Hubert]], [[Mouzay (Meuse)|Mouzay]], [[Murvaux]], [[Nepvant]], [[Olizy-sur-Chiers]], [[Pouilly-sur-Meuse]], [[Sassey-sur-Meuse]], [[Saulmory-et-Villefranche]], [[Stenay]], [[Villers-devant-Dun]], [[Wiseppe]].
+|-
+|15||[[Canton de Vaucouleurs|Vaucouleurs]]||[[Vaucouleurs (Meuse)|Vaucouleurs]]||{{formatnum:12594}}||1,1||47||[[Bovée-sur-Barboure]], [[Boviolles]], [[Brixey-aux-Chanoines]], [[Broussey-en-Blois]], [[Burey-en-Vaux]], [[Burey-la-Côte]], [[Chalaines]], [[Champougny]], [[Cousances-lès-Triconville]], [[Dagonville]], [[Épiez-sur-Meuse]], [[Erneville-aux-Bois]], [[Goussaincourt]], [[Laneuville-au-Rupt]], [[Loisey-Culey]], [[Marson-sur-Barboure]], [[Maxey-sur-Vaise]], [[Méligny-le-Grand]], [[Méligny-le-Petit]], [[Ménil-la-Horgne]], [[Montbras]], [[Montigny-lès-Vaucouleurs]], [[Naives-en-Blois]], [[Nançois-le-Grand]], [[Nançois-sur-Ornain]], [[Neuville-lès-Vaucouleurs]], [[Ourches-sur-Meuse]], [[Pagny-la-Blanche-Côte]], [[Pagny-sur-Meuse]], [[Reffroy]], [[Rigny-la-Salle]], [[Rigny-Saint-Martin]], [[Saint-Aubin-sur-Aire]], [[Saint-Germain-sur-Meuse]], [[Salmagne]], [[Saulvaux]], [[Sauvigny]], [[Sauvoy]], [[Sepvigny]], [[Sorcy-Saint-Martin]], [[Taillancourt]], [[Troussey]], [[Ugny-sur-Meuse]], [[Vaucouleurs (Meuse)|Vaucouleurs]], [[Villeroy-sur-Méholle]], [[Void-Vacon]], [[Willeroncourt]].
+|-
+|16||[[Canton de Verdun-1|Verdun-1]]||[[Verdun (Meuse)|Verdun]]||256 + fraction Verdun|| ||1 + fraction Verdun||1° La commune suivante : [[Sivry-la-Perche]]. <br/>2° La partie de la commune de Verdun située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Belleray, cours de la Meuse, pont du Sud (route départementale 330), boulevard de la Citadelle (inclus), ruisseau Sainte-Vanne, canal des Augustins (canal de l'Est), cours canalisé de la Meuse vers l'amont, canal Saint-Airy prolongé par le canal de Puty, pont Lilette, porte de la Tour-du-Champ, rue du Fort-de-Vaux (incluse), rue Georges-Chepfer (incluse), rue de Châtillon (incluse), rue du Briolet, chemin de Châtillon (inclus), allée Desandrouins (incluse), hôpital Desandrouins et son périmètre (inclus), ligne droite reliant la partie sud du périmètre de l'hôpital au chemin rural dit « Carafiole » passant au sud de l'hôpital, chemin rural dit « Carafiole », jusqu'à la limite territoriale de la commune de Belrupt-en-Verdunois.
+|-
+|17||[[Canton de Verdun-2|Verdun-2]]||[[Verdun (Meuse)|Verdun]]||{{formatnum:3196}} + fraction Verdun|| ||4 + fraction Verdun||1° Les communes suivantes : [[Belleray]], [[Belrupt-en-Verdunois]], [[Dugny-sur-Meuse]], [[Haudainville]]. <br/>2° La partie de la commune de Verdun non incluse dans le canton de Verdun-1.
+|-
+!||||||{{formatnum:193923}}||||500||
+|}
+
+=== Répartition par arrondissement ===
+[[Fichier:Cantons de la Meuse après 2014.svg|thumb|upright=1.2|Carte des cantons de la Meuse après le redécoupage cantonal de 2014]]
+
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Meuse (département)|Meuse]], c'est le cas de trois cantons ([[Canton de Dieue-sur-Meuse|Dieue-sur-Meuse]], [[Canton de Ligny-en-Barrois|Ligny-en-Barrois]] et [[Canton de Vaucouleurs|Vaucouleurs]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Bar-le-Duc|Bar-le-Duc]]
+!scope=col|[[Arrondissement de Commercy|Commercy]]
+!scope=col|[[Arrondissement de Verdun|Verdun]]
+!scope=col|Total
+|-
+|1||align="left"| Ancerville||25||||||'''25'''
+|-
+|2||align="left"| Bar-le-Duc-1||12 + fraction Bar-le-Duc||||||'''12''' + fraction Bar-le-Duc
+|-
+|3||align="left"| Bar-le-Duc-2||4 + fraction Bar-le-Duc||||||'''4''' + fraction Bar-le-Duc
+|-
+|4||align="left"| Belleville-sur-Meuse||||||28||'''28'''
+|-
+|5||align="left"| Bouligny||||||26||'''26'''
+|-
+|6||align="left"| Clermont-en-Argonne||||||50||'''50'''
+|-
+|7||align="left"| Commercy||||14||||'''14'''
+|-
+|8||align="left"| Dieue-sur-Meuse||13||26||23||'''62'''
+|-
+|9||align="left"| Étain||||||42||'''42'''
+|-
+|10||align="left"| Ligny-en-Barrois||22||19||||'''41'''
+|-
+|11||align="left"| Montmédy||||||45||'''45'''
+|-
+|12||align="left"| Revigny-sur-Ornain||28||||||'''28'''
+|-
+|13||align="left"| Saint-Mihiel||||34||||'''34'''
+|-
+|14||align="left"| Stenay||||||35||'''35'''
+|-
+|15||align="left"| Vaucouleurs||4||43||||'''47'''
+|-
+|16||align="left"| Verdun-1||||||1 + fraction Verdun||'''1''' + fraction Verdun
+|-
+|17||align="left"| Verdun-2||||||4 + fraction Verdun||'''4''' + fraction Verdun
+|-
+!||||109||136||255||500
+|}
+
+=== Modifications ===
+* Le '''canton d'Ancerville''' est agrandi.
+::Les communes de Guerpont, Maulan, Nant-le-Grand, Nant-le-Petit, Silmont, Tannois et Tronville-en-Barrois, du canton de Ligny-en-Barrois, rejoignent le nouveau canton d'Ancerville.
+
+* Le '''canton de Bar-le-Duc-Nord''' est remplacé par le '''canton de Bar-le-Duc-2'''.
+::Longeville-en-Barrois rejoint le nouveau canton de Bar-le-Duc-1.
+::Les communes de Behonne, Chardogne et Vavincourt, du canton de Vavincourt, intègrent le nouveau canton.
+
+* Le '''canton de Bar-le-Duc-Sud''' est remplacé par le '''canton de Bar-le-Duc-1'''.
+::Robert-Espagne rejoint le nouveau canton de Revigny-sur-Ornain.
+::Les communes d'Erize-la-Brûlée, Erize-Saint-Dizier, Géry, Naives-Rosières, Resson, Raival, Rumont et Seigneulles, du canton de Vavincourt, intègrent le nouveau canton.
+::Longeville-en-Barrois, du canton de Bar-le-Duc Nord, intègre le nouveau canton.
+
+* Le '''canton de Ligny-en-Barrois''' est étendu aux '''cantons de Gondrecourt-le-Château''' et '''Montiers-sur-Saulx''' qui disparaissent.
+::Les communes de Guerpont, Maulan, Nant-le-Grand, Nant-le-Petit, Silmont, Tannois, Tronville-en-Barrois et Velaines rejoignent le nouveau canton d'Ancerville.
+::Les communes de Loisey-Culey, Nançois-sur-Ornain, Salmagne et Willeroncourt rejoignent le nouveau canton de Vaucouleurs.
+
+* Le '''canton de Revigny-sur-Ornain''' est étendu au '''canton de Vaubecourt''' qui disparaît.
+::La commune de Robert-Espagne, du canton de Bar-le-Duc Sud, intègre le nouveau canton.
+
+* Le '''canton de Dieue-sur-Meuse''' est étendu aux '''cantons de Pierrefitte-sur-Aire''', '''Seuil-d'Argonne''' et '''Souilly''' qui disparaissent.
+::Les communes d'Ambly-sur-Meuse, Dieue-sur-Meuse, Génicourt-sur-Meuse, Rupt-en-Woëvre et Sommedieue, du canton de Verdun-2, intègrent le nouveau canton.
+
+* Le '''canton de Vavincourt''' est supprimé.
+::Les communes de Behonne, Chardogne et Vavincourt rejoignent le canton de Bar-le-Duc-2.
+::Les communes d'Érize-la-Brûlée, Érize-Saint-Dizier, Géry, Naives-Rosières, Raival, Resson, Rumont, et Seigneulles rejoignent le canton de Bar-le-Duc-1.
+
+* Le '''canton de Commercy''' est réduit.
+::Les communes de Cousances-lès-Triconville, Dagonville, Erneville-aux-Bois, Nançois-le-Grand et Saint-Aubin-sur-Aire rejoignent le canton de Vaucouleurs.
+
+* Le '''canton de Saint-Mihiel''' est étendu au '''canton de Vigneulles-lès-Hattonchâtel''' qui disparaît.
+* Le '''canton de Vaucouleurs''' est étendu au '''canton de Void-Vacon''' qui disparaît.
+::Les communes de Loisey-Culey, Nançois-sur-Ornain, Salmagne et Willeroncourt, du canton de Ligny-en-Barrois, intègrent le nouveau canton.
+
+* Le '''canton de Charny-sur-Meuse''' est remplacé par le '''canton de Belleville-sur-Meuse'''.
+::Les communes de Béthelainville, Béthincourt, Chattancourt, Fromeréville-les-Vallons, Marre, Montzéville rejoignent le nouveau canton de Clermont-en-Argonne.
+::Les communes d'Abaucourt-Hautecourt, Blanzée, Châtillon-sous-les-Côtes, Damloup, Dieppe-sous-Douaumont, Eix, Gincrey, Grimaucourt-en-Woëvre, Maucourt-sur-Orne, Mogeville, Moranville et Moulainville, du canton d'Etain, intègrent le nouveau canton.
+
+* Le '''canton de Clermont-en-Argonne''' est étendu au '''canton de Montfaucon-d'Argonne''' et de '''Varennes-en-Argonne''' qui disparaissent.
+::La commune de Vilosnes-Haraumont, du canton de Dun-sur-Meuse, intègre le nouveau canton.
+
+* Le '''canton de Montmédy''' est étendu au '''canton de Damvillers''' qui disparaît.
+* Le '''canton de Stenay''' est étendu au '''canton de Dun-sur-Meuse''' qui disparaît.
+* Le '''canton d'Etain''' est étendu au '''canton de Fresnes-en-Woëvre''' qui disparaît.
+::Les communes d'Abaucourt-Hautecourt, Blanzée, Châtillon-sous-les-Côtes, Damloup, Dieppe-sous-Douaumont, Eix, Gincrey, Grimaucourt-en-Woëvre, Maucourt-sur-Orne, Mogeville, Moranville et Moulainville rejoignent le nouveau [[canton de Belleville-sur-Meuse]].
+::Les communes de Foameix-Ornel, Lanhères, Morgemoulin et Rouvres-en-Woëvre rejoignent le nouveau [[canton de Bouligny]].
+
+* Le '''canton de Spincourt''' est remplacé par le '''canton de Bouligny'''.
+::Les communes de Foameix-Ornel, Lanhères, Morgemoulin et Rouvres-en-Woëvre, anciennement du canton d'Etain, intègrentle nouveau canton.
+
+* Le '''canton de Verdun Ouest''' est remplacé par le '''canton de Verdun-1'''.
+::La fraction de commune de Verdun est légèrement modifiée.
+
+* Les '''cantons de Verdun Est''' et '''Verdun Centre''' sont fusionnés en un nouveau '''canton Verdun-2'''.
+::Les communes d'Ambly-sur-Meuse, Dieue-sur-Meuse, Génicourt-sur-Meuse, Rupt-en-Woëvre et Sommedieue rejoignent le nouveau canton de Dieue-sur-Meuse.
+
+== Historique ==
+[[Fichier:Anciens cantons de la Meuse.png|vignette|Cartes des cantons de la Meuse avant 2015]]
+Par décret du {{date|23|juillet|1973}}<ref>{{Lien web |url=http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=19730725&numTexte=&pageDebut=08089&pageFin= |titre=Décret n°73-728 du 23 juillet 1973 portant création de cantons dans le Département de la Meuse |site=legifrance.gouv.fr |consulté le=5 avril 2014|brisé le = 2023-11-22}}.</ref>, afin de diminuer les écarts de population entre les cantons, il est procédé à une réorganisation des cantons des villes de [[Bar-le-Duc]] et de [[Verdun (Meuse)|Verdun]] :
+* Le [[canton de Bar-le-Duc]] est divisé en deux cantons : le [[canton de Bar-le-Duc-Nord]] et le [[canton de Bar-le-Duc-Sud]].
+* Le [[canton de Verdun]] est divisé en deux cantons : le [[canton de Verdun-Est]] et le [[canton de Verdun-Ouest]].
+
+En [[1979]], le canton de Triaucourt-Vaubecourt change de nom en [[canton de Seuil-d'Argonne]]. Cela fait suite au changement de nom de la commune de Triaucourt-en-Argonne en [[Seuil-d'Argonne]] en [[1973]].
+
+Par décret du {{date|26|janvier|1982}}<ref>{{Lien web |url=http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=19820128&numTexte=&pageDebut=00394&pageFin= |titre=Décret n°82-93 du 26 janvier 1982 portant création et modification de cantons dans le Département de la Meuse |site=legifrance.gouv.fr |consulté le=5 avril 2014|brisé le = 2023-11-22}}.</ref>, les deux cantons de Verdun sont réorganisés en trois cantons : le [[canton de Verdun-Est]], le [[canton de Verdun-Ouest]] et le nouveau [[canton de Verdun-Centre]].
+
+== Voir aussi ==
+* [[Liste des communes de la Meuse]]
+* [[Arrondissements de la Meuse]]
+
+== Notes et références ==
+{{Références}}
+
+{{Palette|Découpage administratif de la région Grand Est|Cantons de France|Cantons de la Meuse}}
+{{Portail|département de la Meuse}}
+
+[[Catégorie:Canton dans la Meuse|*]]
+[[Catégorie:Liste en rapport avec la Meuse|Canton]]
+[[Catégorie:Liste de cantons français|Meuse]]

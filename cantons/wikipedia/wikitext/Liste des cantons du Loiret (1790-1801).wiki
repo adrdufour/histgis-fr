@@ -1,0 +1,151 @@
+{{ébauche|Histoire|Loiret|droit français|politique française}}
+{{article principal|histoire du découpage cantonal du Loiret}}
+[[File:Loiret-Position.svg|thumb|Localisation du [[département français]] du [[Loiret (département)|Loiret]] sur une carte de France.]]
+La '''liste des cantons du Loiret (1790-1801)''' présente l'ensemble des [[Canton français|cantons]] du [[département français|département]] [[France|français]] du [[Loiret (département)|Loiret]], leur [[District (subdivision départementale, 1790-1795)|district]] de rattachement et leur composition en [[Commune (France)|communes]], sous la [[Révolution française]] et le début du [[Consulat (histoire de France)|Consulat]], pour la période allant de [[1790 en France|1790]] à [[1801 en France|1801]].
+
+== Histoire ==
+
+L'Assemblée adopte le principe du découpage du territoire du [[Royaume de France|royaume]] en [[département français|départements]], [[District (subdivision départementale, 1790-1795)|districts]] et [[canton français|cantons]] avec les lois des 14 et {{date France|22|décembre|1789}}<ref name="COG41">{{Lien web |url=https://projetbabel.org/gl/cog45.htm |titre= Le Code officiel géographique (COG) - 4.5. : le découpage du territoire de 1790 à 1815 |auteur=Gérard Lang |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>. La France est ainsi divisée en 83 [[Département français|départements]] par décret du {{date France|15|janvier|1790}} et la liste des départements et des districts est précisée par décret du {{date France|16|février|1790}}<ref name="COG41"/>. Le département du Loiret comprend alors {{unité|7|districts}} et {{unité|59|cantons}}<ref name="Prudhomme162">{{Harvsp| Prudhomme|1798|p=162}}.</ref>.
+
+Depuis la création du département en 1790, le découpage cantonal du Loiret a subi plusieurs changements notables. Le nombre de cantons est passé successivement de 59 en [[1790 en France|1790]] à 31 en [[1801 en France|1801]], 29 en [[1806 en France|1806]], 37 en [[1973 en France|1973]], 41 en [[1982 en France|1982]] et 21 en [[2015 en France|2015]].
+
+== Liste des cantons et districts du Loiret en 1790 ==
+
+{| class="wikitable alternance"  
+|-----
+|+Découpage cantonal du département du Loiret à la suite du décret du {{date-|15 janvier 1790}}
+!District||Nb cantons||Noms des cantons||Communes
+|-
+|rowspan="7" |[[District de Neuville|Neuville]]||rowspan="7" |7||[[Canton de Neuville-aux-Bois|La Neuville-aux-Bois]]|| [[Neuville-aux-Bois (Loiret)|Neuville-aux-Bois]]
+|-
+|[[Canton de Boisseaux|Boisseaux-la-Marche]] (puis Erceville)||[[Allainville-en-Beauce]], [[Andonville]], [[Autruy-sur-Juine]], [[Boisseaux]], [[Charmont-en-Beauce]], [[Erceville]], [[Faronville]], [[Gironville (Loiret) |Gironville]], [[Léouville]], [[Saint-Péravy-Épreux]]
+|-
+|[[Canton d'Outarville|Bazoches]]|| [[Bazoches-les-Gallerandes|Bazoches]], [[Châtillon-le-Roi|Chatillon]], [[Greneville-en-Beauce|Grigneville]], [[Greneville-en-Beauce|Guignonville]], [[Jouy-en-Pithiverais|Jouy]], [[Outarville]], [[Outarville|Teillay-le-Gaudin]]
+|-
+|[[Canton de Chilleurs-aux-Bois|Chilleurs-aux-Bois]]|| [[Attray]], [[Chilleurs-aux-Bois]], [[Courcy-aux-Loges|Courcy]], [[Mareau-aux-Bois]], [[Montigny (Loiret)|Montigny]], [[Santeau]], [[Teillay-Saint-Benoît]]
+|-
+|[[Canton de Loury|Loury]] (puis Rebréchien)|| [[Le Bourgneuf|Bourgneuf-de-Loury]], [[Loury]], [[Marigny-les-Usages|Marigny]], [[Rebréchien]], [[Traînou]], [[Vennecy]]
+|-
+|[[Canton d'Artenay|Artenay]]|| [[Artenay]], [[Bucy-le-Roi]], [[Chevilly (Loiret)|Chevilly]], [[Creuzy]], [[Lion-en-Beauce|Lion]], [[Ruan (Loiret)|Ruan]]
+|-
+|[[Canton d'Achêres|Achêres]]|| [[Aschères-le-Marché|Achêres]], [[Chaussy (Loiret)|Chaussy]], [[Crottes-en-Pithiverais]], [[Bazoches-les-Gallerandes|Izy]], [[Oison (Loiret)|Oison]], [[Tivernon]]
+|-
+|rowspan="6" |[[District de Pithiviers|Pithiviers]]||rowspan="6" |6||[[Canton de Pithiviers|Pithiviers]]|| [[Pithiviers]]
+|-
+|[[Canton de Sermaises|Sermaises]]|| [[Audeville]], [[Engenville]], [[Guigneville]], [[Intville-la-Guétard]], [[Montville (Loiret)|Montville]], [[Morville-en-Beauce|Morville]], [[Pannecières]], [[Rouvres-Saint-Jean|Rouvres]], [[Sébouville]], [[Sermaises]] 
+|-
+|[[Canton de Malesherbes|Malesherbes]]|| [[Malesherbes]]
+|-
+|[[Canton de Puiseaux|Puiseaux]]|| [[Puiseaux]]
+|-
+|[[Canton de Boynes|Boyne]]|| [[Boynes]], [[Courcelles (Loiret)|Courcelles]], [[Givraines]], [[Yèvre-le-Châtel|Souville]], [[Yèvre-la-Ville]], [[Yèvre-le-Châtel|Yèvre-le-Patriote]]
+|-
+|[[Canton de Vrigny|Vrigny-aux-Bois]]|| [[Ascoux]], [[Bouilly-en-Gâtinais]], [[Bouzonville-aux-Bois]], [[Chambon-la-Forêt]], [[Laas (Loiret)|Laas]],  [[Limiers]], [[Vrigny (Loiret)|Vrigny]]
+|-
+|rowspan="5" |[[District de Boiscommun|Boiscommun]]||rowspan="5" |5||[[Canton de Boiscommun|Boiscommun]]|| [[Boiscommun]], [[Chemault]], [[Montbarrois]], [[Montliard]], [[Nibelle]], [[Saint-Loup-des-Vignes]], [[Saint-Sauveur (Loiret)|Saint-Sauveur]], [[Saint-Michel (Loiret)|Saint-Michel]]
+|-
+|[[Canton de Batilly|Batilly]]|| [[Barville-en-Gâtinais|Barville]], [[Batilly-en-Gâtinais|Batilly]], [[Égry]], [[Gaubertin]], [[Nancray-sur-Rimarde|Nancray]]
+|-
+|[[Canton de Beaune-la-Rolande|Beaune]]|| [[Beaune-la-Rolande|Beaune]]
+|-
+|[[Canton de Bellegarde|Bellegarde]]|| [[Bellegarde (Loiret)|Bellegarde]]
+|-
+|[[Canton de Vitry-aux-Loges|Vitry-aux-Loges]]|| [[Bouzy-la-Forêt|Bouzy]], [[Châtenoy (Loiret)|Chastenoy]], [[Combreux]], [[Ingrannes]], [[Saint-Aignan-des-Gués]], [[Seichebrières]], [[Sully-la-Chapelle]], [[Sury-aux-Bois]], [[Vitry-aux-Loges]]
+|-
+|rowspan="10" |[[District de Montargis|Montargis]]||rowspan="10" |10||[[Canton de Montargis|Montargis]]|| [[Montargis]]
+|-
+|[[Canton de Corbeilles|Corbeilles]]|| [[Chapelon|Chaplon]], [[Corbeilles]], [[Courtempierre]], [[Gondreville (Loiret)|Gondreville]], [[Mignères]], [[Mignerette]], [[Sceaux-du-Gâtinais|Sceaux]], [[Treilles-en-Gâtinais|Treilles]]
+|-
+|[[Canton de Ferrières-en-Gâtinais|Ferrières]]|| [[Ferrières-en-Gâtinais|Ferrières]]
+|-
+|[[Canton de La Selle-sur-le-Bied|La Selle-sur-le-Bied]]|| [[Bazoches-sur-le-Betz|Bazoches]], [[La Chapelle-Saint-Sépulcre|La Chapelle-Sépulcre]], [[Courtemaux|Courtemault]], [[Griselles (Loiret)|Griselles]], [[Louzouer]] (ou Louzoner), [[Mérinville]], [[Pers-en-Gâtinais|Pers]], [[Rozoy-le-Vieil|Rosoy-le-Vieil]] (ou Rozoi-le-Vieil), [[Saint-Loup-de-Gonois]], [[La Selle-sur-le-Bied]] et [[Thorailles]]
+|-
+|[[Canton de Courtenay|Courtenay]]|| [[Courtenay (Loiret)|Courtenay]]
+|-
+|[[Canton de Château-Renard|Château-Renard]]|| [[Château-Renard|Châteaurenard]]
+|-
+|[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]||
+|-
+|[[Canton de Nogen-sur-Vernisson|Nogen-sur-Vernisson]]|| [[Changy (Loiret)|Changy]], [[La Chapelle-sur-Aveyron|La Chapelle-sur-Averon]], [[Montbouy]], [[Montcresson]], [[Nogent-sur-Vernisson|Nogen-sur-Vernisson]], [[Ouzouer-des-Champs|Ouruer-des-Champs]], [[Pressigny-les-Pins|Pressigny]], [[Saint-Hilaire-sur-Puiseaux]], [[Solterre|Sotterre]], [[Varennes-Changy|Varennes]]
+|-
+|[[Canton de Lorris|Lorris]]|| [[Lorris]]
+|-
+|[[Canton de Saint-Maurice-sur-Fessard|Saint-Maurice-sur-Fessard]]|| [[Chevillon-sur-Huillard|Chevillon]], [[Ladon (Loiret)|Ladon]], [[Moulon (Loiret)|Moulon]], [[Saint-Maurice-sur-Fessard]], [[Villemoutiers]] (ou Villemontiers), [[Villevoques]]
+|-
+|rowspan="8" |[[District de Gien|Gien]]||rowspan="8" |8||[[Canton de Gien|Gien]]|| [[Gien]]
+|-
+|[[Canton d'Ouzouer-sur-Loire|Saint-Benoît]]|| [[Bonnée]], [[Les Bordes (Loiret)|Les Bordes]], [[Bray-en-Val|Bray]], [[Ouzouer-sur-Loire]], [[Saint-Benoît-sur-Loire|Saint-Benoît]]
+|-
+|[[Canton d'Ouzouer-sur-Trézée|Ouzouer-sur-Trézée]]|| [[Adon]], [[Breteau]], [[Briare]], [[La Bussière (Loiret)|La Bussière]], [[Escrignelles|Ecrignelles]], [[Feins-en-Gâtinais|Feings]], [[Ouzouer-sur-Trézée]]
+|-
+|[[Canton de Bonny|Bonny]]|| [[Batilly-en-Puisaye|Batilly]], [[Bonny-sur-Loire|Bonny]], [[Champoulet]], [[Dammarie-en-Puisaye|Dammemaire]], [[Faverelles|Faverolles]], [[Ousson-sur-Loire|Ousson]]
+|-
+|[[Canton de Châtillon-sur-Loire|Chatillon]]|| [[Châtillon-sur-Loire|Chatillon]]
+|-
+|[[Canton de Poilly|Poilly]]|| [[Autry-le-Châtel|Autry]] (Autry-le-Châtel), [[Autry-la-Ville]], [[Poilly-lez-Gien|Poilly]], [[Saint-Brisson-sur-Loire|Saint-Brisson]] et [[Saint-Martin-sur-Ocre (Loiret)|Saint-Martin]]
+|-
+|[[Canton de Saint-Gondon|Saint-Gondon]] puis Coulons|| [[Cerdon (Loiret)|Cerdon]], [[Coullons]] (ou Coulons), [[Saint-Gondon]] (ou Saint-Goudon), [[Lion-en-Sullias|Lyon]] (ou Lion), [[Saint-Florent (Loiret)|Saint-Florent]]
+|-
+|[[Canton de Sully-sur-Loire|Sully]]|| [[Sully-sur-Loire|Sully]]
+|-
+|rowspan="13" |[[District d'Orléans|Orléans]]||rowspan="13" |16||[[Orléans]] ''intra'' et ''extra muros'' pour quatre cantons|| 
+|-
+|[[Canton de Patay|Patay]]|| [[Patay]]
+|-
+|[[Canton de Gidy|Gidy]]|| [[Cercottes]], [[Gidy]], [[Saran]]
+|-
+|[[Canton de Fleury-les-Aubrais|Fleury]]|| [[Chanteau]], [[Fleury-les-Aubrais|Fleury]], [[Semoy (Loiret)|Semoy]]
+|-
+|[[Canton de Saint-Jean-de-Braye|Saint-Jean-de-Braye]]|| [[Boigny-sur-Bionne]], [[Chécy]], [[Combleux]], [[Saint-Jean-de-Braye]]
+|-
+|[[Canton de Saint-Denis-de-l'Hôtel|Saint-Denis-de-l'Hôtel]]|| [[Bou (Loiret)|Bou]], [[Donnery]], [[Fay-aux-Loges]], [[Mardié]], [[Saint-Denis-de-l'Hôtel]]
+|-
+|[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]|| [[Châteauneuf-sur-Loire|Châteauneuf]], [[Germigny-des-Prés|Germigny]], [[Saint-Martin-d'Abbat|Saint-Martin-Dabat]]
+|-
+|[[Canton de Tigy|Tigy]]|| [[Férolles]], [[La Queuvre]], [[Neuvy-en-Sullias]], [[Ouvrouer-les-Champs]], [[Sigloy]], [[Tigy]], [[Vannes-sur-Cosson]], [[Vienne-en-Val]]
+|-
+|[[Canton de Jargeau|Jargeau]]|| [[Darvoy]], [[Jargeau]], [[Sandillon]]
+|-
+|La Ferté-Senneterre|| [[La Ferté-Saint-Aubin]]
+|-
+|[[Canton d'Olivet|Saint-Martin d'Olivet]]|| [[Olivet (Loiret)|Olivet]]
+|-
+|[[Canton de La Chapelle-Saint-Mesmin|La Chapelle-Saint-Mesmin]]|| [[Chaingy]], [[La Chapelle-Saint-Mesmin]], [[Saint-Jean-de-la-Ruelle]]
+|-
+|[[Canton d'Ingré|Ingré]]|| [[Bucy-Saint-Liphard|Bucy-Saint-Lephard]], [[Ingré]], [[Ormes (Loiret)|Ormes]]
+|-
+|rowspan="7" |[[District de Beaugency|Beaugency]]||rowspan="7" |7||[[Canton de Beaugency|Beaugency]]|| [[Beaugency]]
+|-
+|[[Canton d'Épieds|Epiez]]|| [[Charsonville]], [[Épieds-en-Beauce|Épieds]], [[Gémigny]], [[Saint-Sigismond (Loiret)|Saint-Sigismond]], [[Villamblain]]
+|-
+|[[Canton de Huisseau|Huisseau]]|| [[Baccon]], [[Coulmiers]], [[Huisseau-sur-Mauves|Huisseau]], [[Rozières-en-Beauce|Rozières]], [[Saint-Ay]] (ou Ay-sur-Loire)
+|-
+|[[Canton de Cléry-Saint-André|Cléri]]|| [[Cléry-Saint-André|Cléri]]
+|-
+|[[Canton de Lailli|Lailli]]|| [[Ardon (Loiret)|Ardon]], [[Dry (Loiret)|Dri]], [[Jouy-le-Potier]], [[Lailly-en-Val|Lailli]], [[Ligny-le-Ribault|Ligni]], [[Monçay]]
+|-
+|[[Canton de Baule|Bosle]] (Baule)|| [[Baule|Bosle]], [[Cravant (Loiret)|Cravant]], [[Messas]]
+|-
+|[[Canton de Meung-sur-Loire|Meun]] (Meung-sur-Loire)|| [[Meung-sur-Loire|Meun]]
+|}
+
+== Notes et références ==
+{{Références|colonnes=1}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Administration territoriale de la France]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+=== Bibliographie ===
+
+* {{Ouvrage |auteur1=Louis Marie Prudhomme |titre=Dictionnaire géographique et méthodique de la République française en 120 départements, volume 1 |lieu=Paris |éditeur=Louis Marie Prudhomme |année=1798 |pages totales=673 |lire en ligne=https://books.google.fr/books?pg=PA162-IA4&lpg=PA162-IA4&dq=D%C3%A9partement+du+loiret+fut+divis%C3%A9+en+7+districts&sig=-YnUS0xCyyfylXWCs4f50j0pFCI&ei=Dtf8Us2nFMrH0QWQmIGoCQ&id=5F0OAAAAQAAJ&hl=fr&ots=RD9_YYhLOZ&output=text |id=Prudhomme1798}}.
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}.
+
+{{Palette|Cantons du Loiret|Anciens cantons du Loiret}}
+{{Portail|Révolution française|Loiret|droit français|politique française}}
+[[Catégorie:Liste de cantons français|Loiret, 1790]]
+[[Catégorie:Liste des cantons du Loiret]]
+[[Catégorie:Histoire du Loiret|Loiret, 1790]]
+[[Catégorie:Circonscription électorale en France|Loiret, 1790]]
+[[Catégorie:1790 en France]]

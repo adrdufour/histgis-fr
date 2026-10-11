@@ -1,0 +1,202 @@
+[[Fichier:17-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Charente-Maritime, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Cet article présente la liste des '''[[cantons français|cantons]]''' du [[Département français|département]] '''de la [[Charente-Maritime]]''', par [[Arrondissement français|arrondissement]].
+
+== Histoire ==
+=== Découpage antérieur à 2014 ===
+*[[Fichier:Anciens cantons de la Charente Maritime.png|vignette|Carte des cantons de la Charente Maritime avant le redécoupage de 2014]]1801<ref>Arrêté du 27 Brumaire an X (18 novembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f37 p.17]</ref> : découpage d'origine
+*1802<ref>Arrêté du 9 Pluviôse an X (29 janvier 1802), ''Bulletin des lois'', an XI (1er semestre) n°228bis [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f192 p.2]</ref> : Le chef-lieu du canton de [[Mortagne-sur-Gironde|Mortagne]] est transféré à [[Cozes]] ([[canton de Cozes]])
+*1802<ref>Arrêté du 5 Frimaire an XI (26 novembre 1802), ''Bulletin des lois'', an XI (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f443.item p. 264]</ref> : Craétion du [[canton de Royan]], détaché du canton d'[[Arvert]], duquel le chef-lieu est transféré à [[La Tremblade]] ([[Canton de la Tremblade|canton de La Tremblade]])
+*1803<ref>Arrêté du 29 Thermidor an XI (17 août 1803), ''Bulletin des lois'', an XI (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6543685m/f1011 n° 314bis]</ref> : Création du [[canton d'Ars-en-Ré]], détaché du [[canton de Saint-Martin-de-Ré]].
+*1852<ref>Loi du 29 juin 1852, ''Bulletin des Lois'' 1852 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486128d/f1578 p. 1529]</ref> : Le canton de Rochefort est scindé en deux nouveaux cantons [[canton de Rochefort-Nord|Rochefort-Nord]] et [[canton de Rochefort-Sud|-Sud]].
+*1973<ref>Décret n° 73-665 du 13 juillet 1973</ref> :
+**Les deux cantons de [[canton de La Rochelle-Est|La Rochelle-Est]] et [[Canton de La Rochelle-Ouest|-Ouest]] sont redécoupés en quatre nouveaux cantons La Rochelle-I à -IV;
+**Le [[canton de Royan]] est scindé en deux nouveaux cantons [[canton de Royan-Est|Royan-Est]] en [[canton de Royan-Ouest|-Ouest]].
+*1982<ref>Décret n° 82-26 du 15 janvier 1982</ref> : Les quatre cantons de La Rochelle-I à -IV sont redécoupés en six nouveaux cantons La Rochelle-I à -VI.
+*1985<ref>Décret n° 85-128 du 29 janvier 1985</ref> : 
+**Les six cantons de La Rochelle-I à -VI sont redécoupés en dix nouveaux cantons La Rochelle-I à -IX et [[canton d'Aytré|Aytré]];
+**Les deux cantons de Rochefort-Nord et -Sud sont redécoupés en trois nouveaux cantons [[canton de Rochefort-Centre|Rochefort-Centre]], [[canton de Rochefort-Nord|-Nord]] et [[canton de Rochefort-Sud|-Sud]];
+**Les deux cantons de Saintes-Nord et -Sud sont redécoupés en trois nouveaux cantons [[canton de Saintes-Est|Saintes-Est]], [[Canton de Saintes-Nord|-Nord]] et [[Canton de Saintes-Ouest|-Ouest]].
+
+
+[[Fichier:Charente-Maritime department cantons map-blank-with-names.svg|vignette|upright=1.2|Carte des cantons de Charente-Maritime, antérieure à 2015.]]
+{| class="wikitable centre"
+|[[Arrondissement de Jonzac]]
+|7 cantons 
+| sous-préfecture : [[Jonzac]])
+|[[canton d'Archiac|Archiac]] - [[canton de Jonzac|Jonzac]] - [[canton de Mirambeau|Mirambeau]] - [[canton de Montendre|Montendre]] - [[canton de Montguyon|Montguyon]] - [[canton de Montlieu-la-Garde|Montlieu-la-Garde]] - [[canton de Saint-Genis-de-Saintonge|Saint-Genis-de-Saintonge]]
+|-
+|[[Arrondissement de Rochefort]] 
+|13 cantons 
+| sous-préfecture : [[Rochefort (Charente-Maritime)|Rochefort]]
+|[[canton d'Aigrefeuille-d'Aunis|Aigrefeuille-d'Aunis]] - [[canton du Château-d'Oléron|Château-d'Oléron]] - [[canton de Marennes|Marennes]] - [[canton de Rochefort-Centre|Rochefort-Centre]] - [[canton de Rochefort-Nord|Rochefort-Nord]] - [[canton de Rochefort-Sud|Rochefort-Sud]] - [[canton de Royan-Est|Royan-Est]] - [[canton de Royan-Ouest|Royan-Ouest]] - [[canton de Saint-Agnant|Saint-Agnant]] - [[canton de Saint-Pierre-d'Oléron|Saint-Pierre-d'Oléron]] - [[canton de Surgères|Surgères]] - [[canton de Tonnay-Charente|Tonnay-Charente]] - [[canton de La Tremblade|La Tremblade]]
+|-
+|[[Arrondissement de La Rochelle]] 
+|15 cantons 
+|préfecture : [[La Rochelle]]
+|[[canton d'Ars-en-Ré|Ars-en-Ré]] - [[canton d'Aytré|Aytré]] - [[canton de Courçon|Courçon]] - [[canton de La Jarrie|La Jarrie]] - [[canton de Marans|Marans]] - [[canton de La Rochelle-1|La Rochelle-1]] - [[canton de La Rochelle-2|La Rochelle-2]] - [[canton de La Rochelle-3|La Rochelle-3]] - [[canton de La Rochelle-4|La Rochelle-4]] - [[canton de La Rochelle-5|La Rochelle-5]] - [[canton de La Rochelle-6|La Rochelle-6]] - [[canton de La Rochelle-7|La Rochelle-7]] - [[canton de La Rochelle-8|La Rochelle-8]] - [[canton de La Rochelle-9|La Rochelle-9]] - [[canton de Saint-Martin-de-Ré|Saint-Martin-de-Ré]]
+|-
+|[[Arrondissement de Saintes]]
+|9 cantons 
+|sous-préfecture : [[Saintes]]
+|[[canton de Burie|Burie]] - [[canton de Cozes|Cozes]] - [[canton de Gémozac|Gémozac]] - [[canton de Pons|Pons]] - [[canton de Saintes-Est|Saintes-Est]] - [[canton de Saintes-Nord|Saintes-Nord]] - [[canton de Saintes-Ouest|Saintes-Ouest]] - [[canton de Saint-Porchaire|Saint-Porchaire]] - [[canton de Saujon|Saujon]]
+|-
+|[[Arrondissement de Saint-Jean-d'Angély]]
+|7 cantons 
+|sous-préfecture : [[Saint-Jean-d'Angély]])
+|[[canton d'Aulnay|Aulnay]] - [[canton de Loulay|Loulay]] - [[canton de Matha|Matha]] - [[canton de Saint-Hilaire-de-Villefranche|Saint-Hilaire-de-Villefranche]] - [[canton de Saint-Jean-d'Angély|Saint-Jean-d'Angély]] - [[canton de Saint-Savinien|Saint-Savinien]] - [[canton de Tonnay-Boutonne|Tonnay-Boutonne]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 8 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|27 février 2014}} pour le département de la Charente-Maritime<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Charente-Maritime]] le nombre de cantons passe ainsi de 51 à 27<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028664692 Décret {{n°|2014}}-269 du 27 février 2014 portant délimitation des cantons dans le département de la Charente-Maritime], sur ''Légifrance'' (consulté le 8 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 8 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Charente-Maritime, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|622323|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=17 |titre= Chiffres clés Évolution et structure de la population - Département de la Charente-Maritime (17) |date = |site =insee.fr |consulté le= 8 mai 2014}}.</ref>. Avec 27 cantons la population moyenne par conseiller départemental est de {{unité|23049|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|18439|habitants}} et {{unité|27659|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+=== Décret de 2019 ===
+Pour tenir compte de la création de plusieurs communes nouvelles depuis 2014, un décret pris le {{date-|26 décembre 2019}}, actualise celui de 2014 en modifiant certaines limites cantonales<ref>{{Lien web|titre=Décret no 2019-1474 du 26 décembre 2019 modifiant le décret no 2014-269 du 27 février 2014 portant délimitation des cantons dans le département de la Charente-Maritime|url=https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000039356397&categorieLien=id|site=legifrance.gouv.fr|date=7 novembre 2019|consulté le=27/01/2020}}.</ref>.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-
+!N°<ref>N° = numéro d'ordre dans le décret</ref>||Nom du Canton||[[Bureau centralisateur]]||Population 2012<ref>[http://www.insee.fr/fr/themes/detail.asp?reg_id=0&ref_id=cantons-2015 Populations légales 2012 des cantons - découpage 2015], publié par l'INSEE.</ref>||Écart /moyenne||Nombre de communes entières||Communes composant le canton
+|- 
+|1||[[Canton d'Aytré|Aytré]]||[[Aytré]]||{{formatnum:27580}}||1,17||4||[[Aytré]], [[Dompierre-sur-Mer]], [[Périgny (Charente-Maritime)|Périgny]], [[Puilboreau]].
+|-
+|2||[[Canton de Chaniers|Chaniers]]||[[Chaniers]]||{{formatnum:22231}}||0,95||27||[[Aujac (Charente-Maritime)|Aujac]], [[Aumagne]], [[Authon-Ébéon]], [[Bercloux]], [[Brizambourg]], [[Burie]], [[Bussac-sur-Charente]], [[Chaniers]], [[La Chapelle-des-Pots]], [[Chérac]], [[Dompierre-sur-Charente]], [[Le Douhet]], [[Écoyeux]], [[Fontcouverte (Charente-Maritime)|Fontcouverte]], [[Juicq]], [[Migron]], [[Nantillé]], [[Saint-Bris-des-Bois]], [[Saint-Césaire (Charente-Maritime)|Saint-Césaire]], [[Saint-Hilaire-de-Villefranche]], [[Saint-Sauvant (Charente-Maritime)|Saint-Sauvant]], [[Saint-Vaize]], [[Sainte-Même]], [[Le Seure]], [[Vénérand]], [[Villars-les-Bois]].
+|-
+|3||[[Canton de Châtelaillon-Plage|Châtelaillon-Plage]]||[[Châtelaillon-Plage]]||{{formatnum:20649}}||0,89||8||[[Angoulins]], [[Châtelaillon-Plage]], [[Fouras]], [[Île-d'Aix]], [[Saint-Laurent-de-la-Prée]], [[Saint-Vivien (Charente-Maritime)|Saint-Vivien]], [[Salles-sur-Mer]], [[Yves (Charente-Maritime)|Yves]].
+|-
+|4||[[Canton de l'Île d'Oléron|Île d'Oléron]]||[[Saint-Pierre-d'Oléron]]||{{formatnum:21790}}||0,95||8||[[La Brée-les-Bains]], [[Le Château-d'Oléron]], [[Dolus-d'Oléron]], [[Le Grand-Village-Plage]], [[Saint-Denis-d'Oléron]], [[Saint-Georges-d'Oléron]], [[Saint-Pierre-d'Oléron]], [[Saint-Trojan-les-Bains]].
+|-
+|5||[[Canton de l'Île de Ré|Île de Ré]]||[[Saint-Martin-de-Ré]]||{{formatnum:17723}}||0,78||10||[[Ars-en-Ré]], [[Le Bois-Plage-en-Ré]], [[La Couarde-sur-Mer]], [[La Flotte]], [[Loix]], [[Les Portes-en-Ré]], [[Rivedoux-Plage]], [[Saint-Clément-des-Baleines]], [[Saint-Martin-de-Ré]], [[Sainte-Marie-de-Ré]].
+|-
+|6||[[Canton de La Jarrie|La Jarrie]]||[[La Jarrie]]||{{formatnum:23378}}||0,97||14||[[Anais (Charente-Maritime)|Anais]], [[Bouhet]], [[Bourgneuf (Charente-Maritime)|Bourgneuf]], [[Clavette (Charente-Maritime)|Clavette]], [[Croix-Chapeau]], [[La Jarne]], [[La Jarrie]], [[Montroy (Charente-Maritime)|Montroy]], [[Saint-Christophe (Charente-Maritime)|Saint-Christophe]], [[Saint-Médard-d'Aunis]], [[Saint-Rogatien]], [[Sainte-Soulle]], [[Thairé]], [[Vérines]].
+|-
+|7||[[Canton de Jonzac|Jonzac]]||[[Jonzac]]||{{formatnum:20582}}||0,88||44||[[Agudelle]], [[Allas-Bocage]], [[Allas-Champagne]], [[Archiac]], [[Arthenac]], [[Brie-sous-Archiac]], [[Celles (Charente-Maritime)|Celles]], [[Clam]], [[Clion (Charente-Maritime)|Clion]], [[Champagnac (Charente-Maritime)|Champagnac]], [[Chaunac]], [[Cierzac]], [[Consac]], [[Fontaines-d'Ozillac]], [[Germignac]], [[Guitinières]], [[Jarnac-Champagne]], [[Jonzac]], [[Léoville]], [[Lonzac]], [[Lussac (Charente-Maritime)|Lussac]], [[Meux (Charente-Maritime)|Meux]], [[Mortiers (Charente-Maritime)|Mortiers]], [[Neuillac]], [[Neulles]], [[Nieul-le-Virouil]], [[Ozillac]], [[Réaux-sur-Trèfle]], [[Saint-Ciers-Champagne]], [[Saint-Dizant-du-Bois]], [[Saint-Eugène (Charente-Maritime)|Saint-Eugène]], [[Saint-Georges-Antignac]], [[Saint-Germain-de-Lusignan]], [[Saint-Germain-de-Vibrac]], [[Saint-Hilaire-du-Bois (Charente-Maritime)|Saint-Hilaire-du-Bois]], [[Saint-Maigrin]], [[Saint-Martial-de-Vitaterne]], [[Saint-Martial-sur-Né]], [[Saint-Médard (Charente-Maritime)|Saint-Médard]], [[Saint-Sigismond-de-Clermont]], [[Saint-Simon-de-Bordes]], [[Sainte-Lheurine]], [[Vibrac (Charente-Maritime)|Vibrac]], [[Villexavier]].
+|-
+|8||[[Canton de Lagord|Lagord]]||[[Lagord]]||{{formatnum:24834}}||1,05||6||[[Esnandes]], [[L'Houmeau]], [[Lagord]], [[Marsilly (Charente-Maritime)|Marsilly]], [[Nieul-sur-Mer]], [[Saint-Xandre]].
+|-
+|9||[[Canton de Marans|Marans]]||[[Marans (Charente-Maritime)|Marans]]||{{formatnum:27552}}||1,14||20||[[Andilly (Charente-Maritime)|Andilly]], [[Angliers (Charente-Maritime)|Angliers]], [[Benon]], [[Charron (Charente-Maritime)|Charron]], [[Courçon]], [[Cram-Chaban]], [[Ferrières (Charente-Maritime)|Ferrières]], [[La Grève-sur-Mignon]], [[Le Gué-d'Alleré]], [[La Laigne]], [[Longèves (Charente-Maritime)|Longèves]], [[Marans (Charente-Maritime)|Marans]], [[Nuaillé-d'Aunis]], [[La Ronde (Charente-Maritime)|La Ronde]], [[Saint-Cyr-du-Doret]], [[Saint-Jean-de-Liversay]], [[Saint-Ouen-d'Aunis]], [[Saint-Sauveur-d'Aunis]], [[Taugon]], [[Villedoux]].
+|-
+|10||[[Canton de Marennes|Marennes]]||[[Marennes-Hiers-Brouage]]||{{formatnum:21254}}||0,91||13||[[Beaugeay]], [[Bourcefranc-le-Chapus]], [[Champagne (Charente-Maritime)|Champagne]], [[La Gripperie-Saint-Symphorien]], [[Le Gua (Charente-Maritime)|Le Gua]], [[Marennes-Hiers-Brouage]], [[Moëze]], [[Nieulle-sur-Seudre]], [[Saint-Agnant (Charente-Maritime)|Saint-Agnant]], [[Saint-Froult]], [[Saint-Jean-d'Angle]], [[Saint-Just-Luzac]], [[Saint-Sornin (Charente-Maritime)|Saint-Sornin]].
+|-
+|11||[[Canton de Matha|Matha]]||[[Matha]]||{{formatnum:21581}}||0,94||62||[[Antezant-la-Chapelle]], [[Asnières-la-Giraud]], [[Aulnay (Charente-Maritime)|Aulnay]], [[Bagnizeau]], [[Ballans]], [[Bazauges]], [[Beauvais-sur-Matha]], [[Blanzac-lès-Matha]], [[Blanzay-sur-Boutonne]], [[Bresdon]], [[Brie-sous-Matha]], [[La Brousse]], [[Cherbonnières]], [[Chives]], [[Coivert]], [[Contré]], [[Courcelles (Charente-Maritime)|Courcelles]], [[Courcerac]], [[Cressé]], [[Dampierre-sur-Boutonne]], [[Les Éduts]], [[Les Églises-d'Argenteuil]], [[Fontaine-Chalendray]], [[Fontenet]], [[Gibourne]], [[Le Gicq]], [[Gourvillette]], [[Haimps]], [[Loiré-sur-Nie]], [[Louzignac]], [[Macqueville]], [[Massac (Charente-Maritime)|Massac]], [[Matha]], [[Mons (Charente-Maritime)|Mons]], [[Néré (Charente-Maritime)|Néré]], [[Neuvicq-le-Château]], [[Paillé (Charente-Maritime)|Paillé]], [[Poursay-Garnaud]], [[Prignac]], [[Rives-de-Boutonne]], [[Romazières]], [[Saint-Julien-de-l'Escap]], [[Saint-Mandé-sur-Brédoire]], [[Saint-Martial (Charente-Maritime)|Saint-Martial]], [[Saint-Martin-de-Juillers]], [[Saint-Ouen-la-Thène]], [[Saint-Pardoult]], [[Saint-Pierre-de-Juillers]], [[Saint-Pierre-de-l'Isle]], [[Saint-Séverin-sur-Boutonne]], [[Saleignes]], [[Seigné]], [[Siecq]], [[Sonnac (Charente-Maritime)|Sonnac]], [[Thors (Charente-Maritime)|Thors]], [[Les Touches-de-Périgny]], [[Varaize]], [[Vervant (Charente-Maritime)|Vervant]], [[La Villedieu (Charente-Maritime)|La Villedieu]], [[Villemorin]], [[Villiers-Couture]], [[Vinax]].
+|-
+|12||[[Canton de Pons|Pons]]||[[Pons (Charente-Maritime)|Pons]]||{{formatnum:21197}}||0,92||39||[[Avy]], [[Belluire]], [[Biron (Charente-Maritime)|Biron]], [[Bois (Charente-Maritime)|Bois]], [[Boisredon]], [[Bougneau]], [[Chadenac]], [[Champagnolles]], [[Courpignac]], [[Échebrune]], [[Fléac-sur-Seugne]], [[Givrezac]], [[Lorignac]], [[Marignac (Charente-Maritime)|Marignac]], [[Mazerolles (Charente-Maritime)|Mazerolles]], [[Mirambeau (Charente-Maritime)|Mirambeau]], [[Mosnac (Charente-Maritime)|Mosnac]], [[Plassac (Charente-Maritime)|Plassac]], [[Pérignac (Charente-Maritime)|Pérignac]], [[Pons (Charente-Maritime)|Pons]], [[Saint-Bonnet-sur-Gironde]], [[Saint-Ciers-du-Taillon]], [[Saint-Dizant-du-Gua]], [[Saint-Fort-sur-Gironde]], [[Saint-Genis-de-Saintonge]], [[Saint-Georges-des-Agoûts]], [[Saint-Germain-du-Seudre]], [[Saint-Grégoire-d'Ardennes]], [[Saint-Léger (Charente-Maritime)|Saint-Léger]], [[Saint-Martial-de-Mirambeau]], [[Saint-Palais-de-Phiolin]], [[Saint-Quantin-de-Rançanne]], [[Saint-Seurin-de-Palenne]], [[Saint-Sorlin-de-Conac]], [[Saint-Thomas-de-Conac]], [[Sainte-Ramée]], [[Salignac-de-Mirambeau]], [[Semillac]], [[Semoussac]], [[Soubran]].
+|-
+|13||[[Canton de Rochefort|Rochefort]]||[[Rochefort (Charente-Maritime)|Rochefort]]||{{formatnum:24698}}||1,09||1||[[Rochefort (Charente-Maritime)|Rochefort]].
+|-
+|14||[[Canton de La Rochelle-1|La Rochelle-1]]||[[La Rochelle]]|| {{formatnum:26122}} || ||Fraction La Rochelle ||Partie de la commune de la Rochelle située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, chemin de la digue de Richelieu, rue Philippe-Vincent, [[Boulevard Winston-Churchill (La Rochelle)|boulevard Winston-Churchill]], avenue du Maréchal-Juin, avenue Jean-Guiton, avenue Pierre-Loti, ligne de chemin de fer, avenue de la Porte-Dauphine, avenue de Fétilly, place du Champ-de-Mars, avenue du 11-Novembre-1918, jusqu'à la limite territoriale de la commune de Lagord.
+|-
+|15||[[Canton de La Rochelle-2|La Rochelle-2]]||[[La Rochelle]]|| {{formatnum:23918}} || ||Fraction La Rochelle ||Partie de la commune de La Rochelle située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, chemin de la digue de Richelieu, rue Philippe-Vincent, boulevard Winston-Churchill, avenue du Maréchal-Juin, avenue Jean-Guiton, avenue Pierre-Loti, ligne de chemin de fer, jusqu'à la limite territoriale de la commune d'Aytré.
+|-
+|16||[[Canton de La Rochelle-3|La Rochelle-3]]||[[La Rochelle]]|| {{formatnum:24083}} || ||Fraction La Rochelle ||Partie de la commune de La Rochelle non incluse dans les cantons de La Rochelle-1 et de La Rochelle-2.
+|-
+|17||[[Canton de Royan|Royan]]||[[Royan]]||{{formatnum:26640}}||1,17||3||[[Royan]], [[Saint-Georges-de-Didonne]], [[Vaux-sur-Mer]].
+|-
+|18||[[Canton de Saint-Jean-d'Angély|Saint-Jean-d'Angély]]||[[Saint-Jean-d'Angély]]||{{formatnum:27130}}||1,17||40||[[Annepont]], [[Annezay]], [[Archingeay]], [[Bernay-Saint-Martin]], [[Bignay]], [[Bords]], [[Champdolent]], [[Chantemerle-sur-la-Soie]], [[Courant (Charente-Maritime)|Courant]], [[La Croix-Comtesse]], [[La Devise]], [[Dœuil-sur-le-Mignon]], [[Essouvert]], [[Fenioux (Charente-Maritime)|Fenioux]], [[Grandjean (Charente-Maritime)|Grandjean]], [[La Jarrie-Audouin]], [[Landes (Charente-Maritime)|Landes]], [[Loulay]], [[Lozay]], [[Mazeray]], [[Migré]], [[Le Mung]], [[Nachamps]], [[Les Nouillers]], [[Puy-du-Lac]], [[Puyrolland]], [[Saint-Crépin (Charente-Maritime)|Saint-Crépin]], [[Saint-Félix (Charente-Maritime)|Saint-Félix]], [[Saint-Jean-d'Angély]], [[Saint-Loup (Charente-Maritime)|Saint-Loup]], [[Saint-Savinien]], [[Taillant]], [[Taillebourg (Charente-Maritime)|Taillebourg]], [[Ternant (Charente-Maritime)|Ternant]], [[Tonnay-Boutonne]], [[Torxé]], [[La Vergne (Charente-Maritime)|La Vergne]], [[Vergné]], [[Villeneuve-la-Comtesse]], [[Voissay]].
+|-
+|19||[[Canton de Saint-Porchaire|Saint-Porchaire]]||[[Saint-Porchaire]]||{{formatnum:19542}}||0,83||20||[[Balanzac]], [[Beurlay]], [[Crazannes]], [[Écurat]], [[Les Essards (Charente-Maritime)|Les Essards]], [[Geay (Charente-Maritime)|Geay]], [[Nancras]], [[Nieul-lès-Saintes]], [[Plassay]], [[Pont-l'Abbé-d'Arnoult]], [[Port-d'Envaux]], [[Romegoux]], [[Saint-Georges-des-Coteaux]], [[Saint-Porchaire]], [[Saint-Sulpice-d'Arnoult]], [[Sainte-Gemme (Charente-Maritime)|Sainte-Gemme]], [[Sainte-Radegonde (Charente-Maritime)|Sainte-Radegonde]], [[Soulignonne]], [[Trizay]], [[La Vallée]].
+|-
+|20||[[Canton de Saintes|Saintes]]||[[Saintes]]||{{formatnum:25645}}||1,13||1||[[Saintes]].
+|-
+|21||[[Canton de Saintonge Estuaire|Saintonge Estuaire]]||[[Meschers-sur-Gironde]]||{{formatnum:19672}}||1,12||23||[[Arces (Charente-Maritime)|Arces]], [[Barzan]], [[Boutenac-Touvent]], [[Brie-sous-Mortagne]], [[Chenac-Saint-Seurin-d'Uzet]], [[Cozes]], [[Cravans]], [[Épargnes]], [[Floirac (Charente-Maritime)|Floirac]], [[Gémozac]], [[Grézac]], [[Jazennes]], [[Meschers-sur-Gironde]], [[Meursac]], [[Montpellier-de-Médillan]], [[Mortagne-sur-Gironde]], [[Saint-André-de-Lidon]], [[Saint-Simon-de-Pellouaille]], [[Talmont-sur-Gironde]], [[Tanzac]], [[Thaims]], [[Villars-en-Pons]], [[Virollet]].
+|-
+|22||[[Canton de Saujon|Saujon]]||[[Saujon]]||{{formatnum:20517}}||0,86||9||[[Le Chay (Charente-Maritime)|Le Chay]], [[Corme-Écluse]], [[L'Éguille]], [[Médis]], [[Sablonceaux]], [[Saint-Romain-de-Benet]], [[Saint-Sulpice-de-Royan]], [[Saujon]], [[Semussac]].
+|-
+|23||[[Canton de Surgères|Surgères]]||[[Surgères]]||{{formatnum:27870}}||1,18||19||[[Aigrefeuille-d'Aunis]], [[Ardillières]], [[Ballon (Charente-Maritime)|Ballon]], [[Breuil-la-Réorte]], [[Chambon (Charente-Maritime)|Chambon]], [[Ciré-d'Aunis]], [[Forges (Charente-Maritime)|Forges]], [[Landrais]], [[Marsais]], [[Puyravault (Charente-Maritime)|Puyravault]], [[Saint-Georges-du-Bois (Charente-Maritime)|Saint-Georges-du-Bois]], [[Saint-Mard (Charente-Maritime)|Saint-Mard]], [[Saint-Pierre-d'Amilly]], [[Saint-Pierre-la-Noue]], [[Saint-Saturnin-du-Bois]], [[Surgères]], [[Le Thou]], [[Virson]], [[Vouhé (Charente-Maritime)|Vouhé]].
+|-
+|24||[[Canton de Thénac|Thénac]]||[[Thénac (Charente-Maritime)|Thénac]]||{{formatnum:19717}}||0,84||25||[[Berneuil (Charente-Maritime)|Berneuil]], [[Brives-sur-Charente]], [[Chermignac]], [[La Clisse]], [[Colombiers (Charente-Maritime)|Colombiers]], [[Corme-Royal]], [[Coulonges (Charente-Maritime)|Coulonges]], [[Courcoury]], [[Les Gonds]], [[La Jard]], [[Luchat]], [[Montils]], [[Pessines]], [[Pisany]], [[Préguillac]], [[Rétaud]], [[Rioux (Charente-Maritime)|Rioux]], [[Rouffiac (Charente-Maritime)|Rouffiac]], [[Saint-Sever-de-Saintonge]], [[Salignac-sur-Charente]], [[Tesson (Charente-Maritime)|Tesson]], [[Thénac (Charente-Maritime)|Thénac]], [[Thézac (Charente-Maritime)|Thézac]], [[Varzay]].
+|-
+|25||[[Canton de Tonnay-Charente|Tonnay-Charente]]||[[Tonnay-Charente]]||{{formatnum:26872}}||1,15||15||[[Breuil-Magné]], [[Cabariot]], [[Échillais]], [[Genouillé (Charente-Maritime)|Genouillé]], [[Loire-les-Marais]], [[Lussant]], [[Moragne]], [[Muron]], [[Port-des-Barques]], [[Saint-Coutant-le-Grand]], [[Saint-Hippolyte (Charente-Maritime)|Saint-Hippolyte]], [[Saint-Nazaire-sur-Charente]], [[Soubise (Charente-Maritime)|Soubise]], [[Tonnay-Charente]], [[Vergeroux]].
+|-
+|26||[[Canton de la Tremblade|La Tremblade]]||[[La Tremblade]]||{{formatnum:22331}}||0,95||9||[[Arvert]], [[Breuillet (Charente-Maritime)|Breuillet]], [[Chaillevette]], [[Étaules (Charente-Maritime)|Étaules]], [[Les Mathes]], [[Mornac-sur-Seudre]], [[Saint-Augustin (Charente-Maritime)|Saint-Augustin]], [[Saint-Palais-sur-Mer]], [[La Tremblade]].
+|-
+|27||[[Canton des Trois Monts|Les Trois Monts]]||[[Montendre]]||{{formatnum:23625}}||1,01||42||[[La Barde]], [[Bedenac]], [[Boresse-et-Martron]], [[Boscamnant]], [[Bran (Charente-Maritime)|Bran]], [[Bussac-Forêt]], [[Cercoux]], [[Chamouillac]], [[Chartuzac]], [[Chatenet]], [[Chepniers]], [[Chevanceaux]], [[Clérac]], [[La Clotte]], [[Corignac]], [[Coux (Charente-Maritime)|Coux]], [[Expiremont]], [[Le Fouilloux]], [[La Genétouze (Charente-Maritime)|La Genétouze]], [[Jussas]], [[Mérignac (Charente-Maritime)|Mérignac]], [[Messac (Charente-Maritime)|Messac]], [[Montendre]], [[Montguyon]], [[Montlieu-la-Garde]], [[Neuvicq]], [[Orignolles]], [[Le Pin (Charente-Maritime)|Le Pin]], [[Polignac (Charente-Maritime)|Polignac]], [[Pommiers-Moulons]], [[Pouillac]], [[Rouffignac]], [[Saint-Aigulin]], [[Saint-Martin-d'Ary]], [[Saint-Martin-de-Coux]], [[Saint-Palais-de-Négrignac]], [[Saint-Pierre-du-Palais]], [[Sainte-Colombe (Charente-Maritime)|Sainte-Colombe]], [[Souméras]], [[Sousmoulins]], [[Tugéras-Saint-Maurice]], [[Vanzac]].
+|-
+!||||||{{formatnum:628733}}||||472||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la Charente-Maritime, c'est le cas de sept cantons ([[canton de Chaniers|Chaniers]], [[canton de Châtelaillon-Plage|Châtelaillon-Plage]], [[canton de La Jarrie|La Jarrie]], [[canton de Saint-Jean-d'Angély|Saint-Jean-d'Angély]], [[canton de Saintonge Estuaire|Saintonge Estuaire]], [[canton de Saujon|Saujon]], [[canton de Thénac|Thénac]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance" style="text-align:center"
+|-----
+!N°||Canton||[[Arrondissement de Jonzac|Jonzac]]||[[Arrondissement de Rochefort|Rochefort]]||[[Arrondissement de La Rochelle|La Rochelle]]||[[Arrondissement de Saintes|Saintes]]||[[Arrondissement de Saint-Jean-d'Angély|Saint-Jean-d'Angély]]||Total
+|-
+|1||align="left"| Aytré||||||4||||||'''4'''
+|-
+|2||align="left"| Chaniers||||||||17||10||'''27'''
+|-
+|3||align="left"| Châtelaillon-Plage||||3||5||||||'''8'''
+|-
+|4||align="left"| Île d'Oléron||||8||||||||'''8'''
+|-
+|5||align="left"| Île de Ré||||||10||||||'''10'''
+|-
+|6||align="left"| La Jarrie||||2||12||||||'''14'''
+|-
+|7||align="left"| Jonzac||46||||||||||'''46'''
+|-
+|8||align="left"| Lagord||||||6||||||'''6'''
+|-
+|9||align="left"| Marans||||||20||||||'''20'''
+|-
+|10||align="left"| Marennes||||14||||||||'''14'''
+|-
+|11||align="left"| Matha||||||||||63||'''63'''
+|-
+|12||align="left"| Pons||39||||||||||'''39'''
+|-
+|13||align="left"| Rochefort||||1||||||||'''1'''
+|-
+|14||align="left"| La Rochelle-1||||||Fraction La Rochelle||||||Fraction La Rochelle
+|-
+|15||align="left"| La Rochelle-2||||||Fraction La Rochelle||||||Fraction La Rochelle
+|-
+|16||align="left"| La Rochelle-3||||||Fraction La Rochelle||||||Fraction La Rochelle
+|-
+|17||align="left"| Royan||||3||||||||'''3'''
+|-
+|18||align="left"| Saint-Jean-d'Angély||||3||||2||37||'''42'''
+|-
+|19||align="left"| Saint-Porchaire||||||||20||||'''20'''
+|-
+|20||align="left"| Saintes||||||||1||||'''1'''
+|-
+|21||align="left"| Saintonge Estuaire||||1||||23||||'''24'''
+|-
+|22||align="left"| Saujon||||2||||7||||'''9'''
+|-
+|23||align="left"| Surgères||||21||||||||'''21'''
+|-
+|24||align="left"| Thénac||4||||||21||||'''25'''
+|-
+|25||align="left"| Tonnay-Charente||||15||||||||'''15'''
+|-
+|26||align="left"| La Tremblade||||9||||||||'''9'''
+|-
+|27||align="left"| Les Trois Monts||42||||||||||'''42'''
+
+|-
+!||||131||82||58||91||110||472
+|}
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+* [[Communes de la Charente-Maritime]]
+
+{{Palette|Découpage administratif de Nouvelle-Aquitaine|Cantons de France|Cantons de la Charente-Maritime}}
+{{Portail|Charente-Maritime}}
+
+[[Catégorie:Canton en Charente-Maritime|*]]
+[[Catégorie:Liste de cantons français|Charente-Maritime]]
+[[Catégorie:Liste en rapport avec la Charente-Maritime|Cantons]]

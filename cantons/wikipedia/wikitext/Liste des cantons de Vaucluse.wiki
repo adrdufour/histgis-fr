@@ -1,0 +1,274 @@
+[[Fichier:84-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de Vaucluse, avec en surimpression les arrondissements (en nuances de bleu). Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Jusqu'en 2015, le '''département de Vaucluse''' comptait 24 cantons. Après le [[redécoupage cantonal de 2014]], le Vaucluse ne compte plus que 17 cantons.
+
+== Redécoupage cantonal de 2014 ==
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|25 février 2014}} pour le département de [[Vaucluse (département)|Vaucluse]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, prévu en {{date-|mars 2015}}<ref>En application des articles 47 et 51 de la loi n° 2013-403 du 17 mai 2013 ''relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral''</ref>, remplaçant les [[Élection cantonale française|élections cantonales]] de 2014 et 2017. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre, la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref> de [[Vaucluse (département)|Vaucluse]] le nombre de cantons passe ainsi de 24 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661556 |texte=Décret {{n°|2014}}-249 du 25 février 2014}} portant délimitation des cantons dans le département de Vaucluse.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 29 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de Vaucluse, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|543105|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=84 |titre= Chiffres clés Évolution et structure de la population - Département de Vaucluse (84) |date = |site =insee.fr |consulté le= 29 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|31947|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|25558|habitants}} et {{unité|38337|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+=== Composition détaillée ===
+{| class="wikitable alternance sortable"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population <small>({{Population de France/dernière année||Canton d'Apt}})</small>
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Apt|Apt]]||[[Apt]]||{{formatnum:{{Population de France/dernière pop||Canton d'Apt}}}}||27||[[Apt]], [[Auribeau]], [[Beaumettes]], [[Bonnieux]], [[Buoux]], [[Caseneuve]], [[Castellet (Vaucluse)|Castellet]], [[Gargas (Vaucluse)|Gargas]], [[Gignac (Vaucluse)|Gignac]], [[Gordes]], [[Goult]], [[Joucas]], [[Lacoste (Vaucluse)|Lacoste]], [[Lagarde-d'Apt]], [[Lioux]], [[Ménerbes]], [[Murs (Vaucluse)|Murs]], [[Oppède]], [[Roussillon (Vaucluse)|Roussillon]], [[Rustrel]], [[Saignon]], [[Saint-Martin-de-Castillon]], [[Saint-Pantaléon (Vaucluse)|Saint-Pantaléon]], [[Saint-Saturnin-lès-Apt]], [[Sivergues]], [[Viens]], [[Villars (Vaucluse)|Villars]].
+|-
+|2||[[Canton d'Avignon-1|Avignon-1]]||[[Avignon]]|| {{formatnum:{{Population de France/dernière pop||Canton d'Avignon-1}}}}||fraction Avignon||Partie de la commune d'Avignon située à l'ouest et au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune des Angles, ligne de chemin de fer d'Avignon à Miramas, canal de Champfleury depuis son extrémité, avenue Eisenhower, avenue Étienne-Martelange, avenue Monclar, rue Universelle, avenue Saint-Ruf, ligne de chemin de fer d'Avignon à Miramas, avenue Pierre-Semard, rond-point de la route de Marseille, chemin de l'Amandier, avenue de la Croix-Rouge, chemin des Bonnes-Huiles, chemin de la Grande-Chaussée, chemin des Pêcheraies, rue de la Garance, allée Saint-Martial, avenue du Moulin-de-Notre-Dame, avenue de la Bouquetière, canal Puy au niveau de l'extrémité de l'avenue de la Bouquetière, avenue de Tarascon, jusqu'à la limite territoriale de la commune de Rognonas.
+|-
+|3||[[Canton d'Avignon-2|Avignon-2]]||[[Avignon]]|| {{formatnum:{{Population de France/dernière pop||Canton d'Avignon-2}}}}||fraction Avignon||Partie de la commune d'Avignon située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune des Angles, ligne de chemin de fer d'Avignon à Miramas, canal de Champfleury depuis son extrémité, avenue Eisenhower, avenue Etienne-Martelange, avenue Monclar, rue Universelle, place Saint-Ruf, avenue Saint-Ruf, ligne de chemin de fer d'Avignon à Miramas, ligne de chemin de fer de Paris à Marseille, avenue de la Folie, ligne droite perpendiculaire à la rue Konrad-Adenauer, rue Konrad-Adenauer, rue Emile-Picard, rue des Frères-Lumière, chemin du Pont-des-Deux-Eaux, avenue de la Folie, rue Vincent-Van-Gogh, rue Jean-Claude-Cundier, ligne droite dans le prolongement de la rue Jean-Claude-Cundier jusqu'à la rue Mélinée-et-Missak-Manouchian, avenue de la Folie, rond-point, rue Pierre-Mendès-France, rond-point, avenue de l'Amandier, carrefour de Réalpanier, jusqu'à la limite territoriale de la commune du Pontet.
+|-
+|4||[[Canton d'Avignon-3|Avignon-3]]||[[Avignon]]||{{formatnum:{{Population de France/dernière pop||Canton d'Avignon-3}}}}||1 + fraction Avignon||
+# La commune de [[Morières-lès-Avignon]].
+# La partie de la commune d'Avignon non incluse dans les cantons d'Avignon-1 et d'Avignon-2.
+|-
+|5||[[Canton de Bollène|Bollène]]||[[Bollène]]||{{formatnum:{{Population de France/dernière pop||Canton de Bollène}}}}||9||[[Bollène]], [[Lagarde-Paréol]], [[Lamotte-du-Rhône]], [[Lapalud]], [[Mondragon]], [[Mornas]], [[Sainte-Cécile-les-Vignes]], [[Sérignan-du-Comtat]], [[Uchaux]].
+|-
+|6||[[Canton de Carpentras|Carpentras]]||[[Carpentras]]||{{formatnum:{{Population de France/dernière pop||Canton de Carpentras}}}}||3||[[Aubignan]], [[Carpentras]], [[Loriol-du-Comtat]].
+|-
+|7||[[Canton de Cavaillon|Cavaillon]]||[[Cavaillon]]||{{formatnum:{{Population de France/dernière pop||Canton de Cavaillon}}}}||2||[[Caumont-sur-Durance]], [[Cavaillon]].
+|-
+|8||[[Canton de Cheval-Blanc|Cheval-Blanc]]||[[Cheval-Blanc]]||{{formatnum:{{Population de France/dernière pop||Canton de Cheval-Blanc}}}}||14||[[Cabrières-d'Avignon]], [[Cadenet]], [[Cheval-Blanc]], [[Cucuron]], [[Lagnes]], [[Lauris]], [[Lourmarin]], [[Maubec (Vaucluse)|Maubec]], [[Mérindol]], [[Puget]], [[Puyvert]], [[Robion (Vaucluse)|Robion]], [[Taillades]], [[Vaugines]].
+|-
+|9||[[Canton de l'Isle-sur-la-Sorgue|L'Isle-sur-la-Sorgue]]||[[L'Isle-sur-la-Sorgue]]||{{formatnum:{{Population de France/dernière pop||Canton de l'Isle-sur-la-Sorgue}}}}||5||[[Châteauneuf-de-Gadagne]], [[Fontaine-de-Vaucluse]], [[L'Isle-sur-la-Sorgue]], [[Saumane-de-Vaucluse]], [[Le Thor]].
+|-
+|10||[[Canton de Monteux|Monteux]]||[[Monteux (Vaucluse)|Monteux]]||{{formatnum:{{Population de France/dernière pop||Canton de Monteux}}}}||7||[[Althen-des-Paluds]], [[Beaumes-de-Venise]], [[Caromb]], [[Entraigues-sur-la-Sorgue]], [[Monteux (Vaucluse)|Monteux]], [[Saint-Hippolyte-le-Graveyron]], [[Sarrians]].
+|-
+|11||[[Canton d'Orange|Orange]]||[[Orange (Vaucluse)|Orange]]||{{formatnum:{{Population de France/dernière pop||Canton d'Orange}}}}||3||[[Caderousse]], [[Orange (Vaucluse)|Orange]], [[Piolenc]].
+|-
+|12||[[Canton de Pernes-les-Fontaines|Pernes-les-Fontaines]]||[[Pernes-les-Fontaines]]||{{formatnum:{{Population de France/dernière pop||Canton de Pernes-les-Fontaines}}}}||21||[[Aurel (Vaucluse)|Aurel]], [[Le Beaucet]], [[Bédoin]], [[Blauvac]], [[Crillon-le-Brave]], [[Flassan]], [[Malemort-du-Comtat]], [[Mazan (Vaucluse)|Mazan]], [[Méthamis]], [[Modène (Vaucluse)|Modène]], [[Monieux]], [[Mormoiron]], [[Pernes-les-Fontaines]], [[La Roque-sur-Pernes]], [[Saint-Christol (Vaucluse)|Saint-Christol]], [[Saint-Didier (Vaucluse)|Saint-Didier]], [[Saint-Pierre-de-Vassols]], [[Saint-Trinit]], [[Sault (Vaucluse)|Sault]], [[Venasque]], [[Villes-sur-Auzon]].
+|-
+|13||[[Canton de Pertuis|Pertuis]]||[[Pertuis (Vaucluse)|Pertuis]]||{{formatnum:{{Population de France/dernière pop||Canton de Pertuis}}}}||15||[[Ansouis]], [[La Bastide-des-Jourdans]], [[La Bastidonne]], [[Beaumont-de-Pertuis]], [[Cabrières-d'Aigues]], [[Grambois]], [[Mirabeau (Vaucluse)|Mirabeau]], [[La Motte-d'Aigues]], [[Pertuis (Vaucluse)|Pertuis]], [[Peypin-d'Aigues]], [[Saint-Martin-de-la-Brasque]], [[Sannes]], [[La Tour-d'Aigues]], [[Villelaure]], [[Vitrolles-en-Luberon]].
+|-
+|14||[[Canton du Pontet|Le Pontet]]||[[Le Pontet (Vaucluse)|Pontet]]||{{formatnum:{{Population de France/dernière pop||Canton du Pontet}}}}||5||[[Jonquerettes]], [[Le Pontet (Vaucluse)|Le Pontet]], [[Saint-Saturnin-lès-Avignon]], [[Vedène]], [[Velleron]].
+|-
+|15||[[Canton de Sorgues|Sorgues]]||[[Sorgues (Vaucluse)|Sorgues]]||{{formatnum:{{Population de France/dernière pop||Canton de Sorgues}}}}||5||[[Bédarrides]], [[Châteauneuf-du-Pape]], [[Courthézon]], [[Jonquières (Vaucluse)|Jonquières]], [[Sorgues (Vaucluse)|Sorgues]].
+|-
+|16||[[Canton de Vaison-la-Romaine|Vaison-la-Romaine]]||[[Vaison-la-Romaine]]||{{formatnum:{{Population de France/dernière pop||Canton de Vaison-la-Romaine}}}}||29||[[Le Barroux]], [[Beaumont-du-Ventoux]], [[Brantes]], [[Buisson (Vaucluse)|Buisson]], [[Cairanne]], [[Camaret-sur-Aigues]], [[Crestet]], [[Entrechaux]], [[Faucon (Vaucluse)|Faucon]], [[Gigondas (Vaucluse)|Gigondas]], [[Lafare]], [[Malaucène]], [[Puyméras]], [[Rasteau]], [[Roaix]], [[La Roque-Alric]], [[Sablet]], [[Saint-Léger-du-Ventoux]], [[Saint-Marcellin-lès-Vaison]], [[Saint-Romain-en-Viennois]], [[Saint-Roman-de-Malegarde]], [[Savoillan]], [[Séguret]], [[Suzette]], [[Travaillan]], [[Vacqueyras (Vaucluse)|Vacqueyras]], [[Vaison-la-Romaine]], [[Villedieu (Vaucluse)|Villedieu]], [[Violès]].
+|-
+|17||[[Canton de Valréas|Valréas]]||[[Valréas]]||{{formatnum:{{Population de France/dernière pop||Canton de Valréas}}}}||4||[[Grillon (Vaucluse)|Grillon]], [[Richerenches]], [[Valréas]], [[Visan]].
+|-
+!||||||{{formatnum:{{Population de France/dernière pop||Vaucluse (département)}}}}||151||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de [[Vaucluse (département)|Vaucluse]], c'est le cas de trois cantons (Cheval-Blanc, Le Pontet et Vaison-la-Romaine).
+
+Le tableau suivant présentait la répartition par arrondissement avant le {{date-|1 janvier 2017}} <ref>Modification des limites des limites des arrondissements de Vaucluse en vigueur au 1er janvier 2017 : http://www.vaucluse.gouv.fr/modification-des-limites-d-arrondissements-a11028.html</ref> :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Apt|Apt]]
+!scope=col|[[Arrondissement d'Avignon|Avignon]]
+!scope=col|[[Arrondissement de Carpentras|Carpentras]]
+!scope=col|Total
+|-
+|1||align="left"| Apt||26||||||'''26'''
+|-
+|2||align="left"| Avignon-1||||fraction Avignon||||fraction Avignon
+|-
+|3||align="left"| Avignon-2||||fraction Avignon||||fraction Avignon
+|-
+|4||align="left"| Avignon-3||||1 + fraction Avignon||||'''1''' + fraction Avignon
+|-
+|5||align="left"| Bollène||||9||||'''9'''
+|-
+|6||align="left"| Carpentras||||||3||'''3'''
+|-
+|7||align="left"| Cavaillon||2||||||'''2'''
+|-
+|8||align="left"| Cheval-Blanc||12||2||||'''14'''
+|-
+|9||align="left"| L'Isle-sur-la-Sorgue||||5||||'''5'''
+|-
+|10||align="left"| Monteux||||||7||'''7'''
+|-
+|11||align="left"| Orange||||3||||'''3'''
+|-
+|12||align="left"| Pernes-les-Fontaines||||||21||'''21'''
+|-
+|13||align="left"| Pertuis||15||||||'''15'''
+|-
+|14||align="left"| Le Pontet||||4||1||'''5'''
+|-
+|15||align="left"| Sorgues||||5||||'''5'''
+|-
+|16||align="left"| Vaison-la-Romaine||||3||26||'''29'''
+|-
+|17||align="left"| Valréas||||4||||'''4'''
+|-
+!||||56||37||58||151
+|}
+
+== Historique ==
+=== Généralités ===
+La loi du {{date|22|décembre|1789}} divise la France en communes, cantons, [[District (subdivision départementale, 1790-1795)|districts]] et départements. Supprimé en {{date-|juin 1793}} par la [[Convention nationale|Convention]], le canton est rétabli par la constitution du {{date|26|octobre|1795}}, instituant le [[Directoire]].
+
+Jusqu'en 1795, les cantons ne sont qu'une circonscription électorale, et un ressort judiciaire élémentaire, celui de la [[justice de paix en France|justice de paix]]. Du {{1er|vendémiaire}} an {{VII}} ({{date|22|septembre|1798}}) au [[loi du 28 pluviôse an VIII|28 pluviôse an VIII]] ({{date|17|février|1800}}), en vertu de la loi du [[fructidor|13 fructidor]] [[Calendrier républicain|an VI]] ({{date|30|août|1798}}), les mariages furent célébrés au chef-lieu de canton, et non plus dans la commune.
+
+Lors de leur création en [[1790]], les cantons étaient bien plus nombreux qu'aujourd'hui (entre 40 et 60 selon les départements). Leur nombre fut réduit notablement (entre 30 et 50) par la loi du [[pluviôse|8 pluviôse]] [[Calendrier républicain|an IX]] ({{Date|28|janvier|1801}}) intitulée « loi portant réduction du nombre de justices de paix ».
+
+Le Vaucluse comportait 45 cantons en 1790. Il n'en subsiste que 22 après la loi du [[pluviôse|8 pluviôse]]. En [[1926]] la refonte des arrondissements de Vaucluse aboutit à une nouvelle répartition des cantons. Depuis [[1973]], avec la création de deux nouveaux cantons (Avignon-Est et Avignon-Ouest), le département de Vaucluse compte 24 cantons.
+
+=== Cantons de 1790 ===
+==== District d'Apt ====
+De [[1790]] à [[1793]] le district d'Apt fait partie du département des [[Bouches-du-Rhône]] et de [[1793]] à [[1800]] du département de [[Vaucluse (département)|Vaucluse]]. Il est composé de neuf cantons totalisant une population de {{formatnum:23354}} habitants en 1793 et {{formatnum:22671}} en 1800.
+* Canton d'Apt
+* Canton de la Bastide-des-Jourdans : [[La Bastide-des-Jourdans]], [[Beaumont-de-Pertuis]], [[Grambois]] et [[Vitrolles-en-Luberon]].
+* Canton de Bonnieux
+* Canton de Cadenet : [[Cadenet]], [[Lauris]], [[Lourmarin]], [[Mérindol]], [[Puget]] et [[Puyvert]].
+* Canton de Cucuron : [[Ansouis]], [[Cabrières-d'Aigues]], [[Cucuron]], [[La Motte-d'Aigues]], [[Sannes]] et [[Vaugines]].
+* Canton de Gordes
+* Canton de Pertuis : [[Pertuis (Vaucluse)|Pertuis]], [[Villelaure]].
+* Canton de Saint-Saturnin
+* Canton de La Tour-d'Aigues : [[La Bastidonne]], [[Mirabeau (Vaucluse)|Mirabeau]], [[Peypin-d'Aigues]], [[Saint-Martin-de-la-Brasque]] et [[La Tour-d'Aigues]].
+
+==== District d'Avignon ====
+[[Avignon]] et le [[Comtat Venaissin]] furent rattachés à la France le {{date|14|septembre|1791}}. Le {{date|28|mars|1792}}, ces territoires formèrent deux nouveaux districts, [[Avignon]] dans les [[Bouches-du-Rhône]] et [[Carpentras]] dans la [[Drôme (département)|Drôme]]. Le {{date|12|août|1793}} fut créé le département de [[Vaucluse (département)|Vaucluse]] auquel fut rattaché le district d'Avignon. Il est composé de neuf cantons totalisant une population de {{formatnum:41561}} habitants en 1793 et {{formatnum:39085}} en 1800.
+* Canton d'Avignon
+* Canton de Caumont-sur-Durance
+* Canton de Cavaillon
+* Canton de Entraigues-sur-la-Sorgue
+* Canton de l'Isle
+* Canton de Lagnes
+* Canton de Roubion
+* Canton de Sorgues
+* Canton de Le Thor
+
+==== District de Carpentras ====
+Le [[Comtat Venaissin]] fut rattaché à la France le {{date|14|septembre|1791}}. Le {{date|28|mars|1792}} le district de [[Carpentras]] est situé dans la [[Drôme (département)|Drôme]]. Le {{date|12|août|1793}} fut créé le département de [[Vaucluse (département)|Vaucluse]] auquel fut rattaché le district de Carpentras. Il est composé de quinze cantons totalisant une population de {{formatnum:38620}} habitants en 1793 et {{formatnum:37692}} en 1800.
+* Canton d'Aubignan
+* Canton de Beaumes
+* Canton de Bedoin
+* Canton de Caromb
+* Canton de Carpentras
+* Canton de Malaucène
+* Canton de Mazan
+* Canton de Monteux
+* Canton de Mourmoiron
+* Canton de Pernes
+* Canton de Sarrians
+* Canton de Sault
+* Canton de Vaison
+* Canton de Venasque
+* Canton de Villedieu
+
+==== District d'Orange ====
+En [[1790]] le district d'Orange fait partie du département de la [[Drôme (département)|Drôme]] puis des [[Bouches-du-Rhône]] de [[1790]] à [[1793]] et enfin de [[Vaucluse (département)|Vaucluse]] de [[1793]] à [[1795]]. Il est composé de neuf cantons totalisant une population de {{formatnum:22044}} habitants en 1793 et {{formatnum:21696}} en 1800.
+* Canton de Bollene
+* Canton de Camaret
+* Canton de Cecile
+* Canton de Courthezon
+* Canton de Mondragon
+* Canton d'Orange
+* Canton de Rochegude
+* Canton de Valréas
+* Canton de Visan
+
+=== Cantons de 1801 à 1926 ===
+
+Le [[départements français|département]] de [[Vaucluse (département)|Vaucluse]] comprenait 22 cantons répartis entre quatre arrondissements<ref>Arrêté du 7 Frimaire an X (28 novembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f192 p. 172]</ref> :
+
+
+==== [[arrondissement d'Apt]] ====
+Il comportait cinq cantons :
+*[[canton d'Apt]] : [[Apt (Vaucluse)|Apt]], [[Auribeau]], [[Caseneuve]], [[Castellet (Vaucluse)|Castellet]], [[Gargas (Vaucluse)|Gargas]], [[Gignac (Vaucluse)|Gignac]], [[Lagarde-d'Apt|Lagarde]], [[Rustrel]], [[Saignon]], [[Saint-Martin-de-Castillon]], [[Saint-Saturnin-lès-Apt]], [[Viens]] et [[Villars (Vaucluse)|Villars]]
+* [[canton de Bonnieux]] :[[Bonnieux]], [[Buoux]], [[Lacoste (Vaucluse)|Lacoste]], [[Ménerbes]], [[Oppède]] et [[Sivergues]]
+* [[canton de Cadenet]] : [[Cadenet]], [[Cucuron]], [[Lauris]], [[Lourmarin]], [[Mérindol]], [[Puget]], [[Puyvert]], [[Vaugines]], [[Villelaure]]
+* [[canton de Gordes]] : [[Gordes]], [[Beaumettes]], [[Goult]], [[Joucas]], [[Lioux]], [[Murs (Vaucluse)|Murs]], [[Roussillon (Vaucluse)|Roussillon]], [[Saint-Pantaléon (Vaucluse)|Saint-Pantaléon]]
+* [[canton de Pertuis]] : [[Pertuis (Vaucluse)|Pertuis]], [[Ansouis]], [[La Bastide-des-Jourdans]], [[La Bastidonne]], [[Beaumont-de-Pertuis|Beaumont]], [[Cabrières-d'Aigues]], [[Grambois]], [[Mirabeau (Vaucluse)|Mirabeau]], [[La Motte-d'Aigues]], [[Peypin-d'Aigues]], [[Saint-Martin-de-la-Brasque]], [[Sannes]], [[La Tour-d'Aigues]], [[Vitrolles-en-Luberon|Vitrolles]]
+
+==== [[arrondissement d'Avignon]] ====
+Il comportait cinq cantons :
+* ancien [[canton d'Avignon-Nord]] : [[Avignon]] (partiellement) et [[Morières-lès-Avignon]] (''Morières'' jusqu'en [[1918]]) et [[Le Pontet (Vaucluse)|Le Pontet]] (commune créée le {{date|17|février|1925}})
+* ancien [[canton d'Avignon-Sud]] : [[Avignon]] (partiellement)
+* [[canton de Bédarrides]] : [[Bédarrides]], [[Courthézon]], [[Sorgues (Vaucluse)|Sorgues]] et [[Vedène]]
+* [[canton de Cavaillon]] : [[Cavaillon]], [[Caumont-sur-Durance|Caumont]], [[Cheval-Blanc]], [[Maubec (Vaucluse)|Maubec]], [[Robion (Vaucluse)|Robion]] et [[Taillades]]
+* [[canton de l'Isle-sur-la-Sorgue|L'Isle]] : [[L'Isle-sur-la-Sorgue]] (''L'Isle'' jusqu'en [[1890]]), [[Cabrières-d'Avignon]] (''Cabrières'' jusqu'en [[1918]]), [[Châteauneuf-de-Gadagne]], [[Jonquerettes]], [[Lagnes]], [[Saint-Saturnin-lès-Avignon]], [[Saumane-de-Vaucluse]] (''Saumane'' jusqu'en [[1920]]), [[Le Thor]] et [[Fontaine-de-Vaucluse|Vaucluse]]
+
+==== [[arrondissement de Carpentras]] ====
+Il comportait cinq cantons :
+* [[canton de Carpentras-Nord]] : [[Aubignan]], [[Caromb]], [[Carpentras]] (fraction de commune), [[Loriol-du-Comtat]], [[Saint-Hippolyte-le-Graveyron]] et [[Sarrians]].
+* [[canton de Carpentras-Sud]] : [[Althen-des-Paluds]], [[Carpentras]] (fraction de commune), [[Entraigues-sur-la-Sorgue]], [[Mazan (Vaucluse)|Mazan]] et [[Monteux (Vaucluse)|Monteux]].
+* [[canton de Mormoiron]] : [[Bédoin]], [[Blauvac]], [[Crillon-le-Brave]], [[Flassan]], [[Malemort-du-Comtat]], [[Méthamis]], [[Modène (Vaucluse)|Modène]], [[Mormoiron]], [[Saint-Pierre-de-Vassols]] et [[Villes-sur-Auzon]].
+* [[canton de Pernes-les-Fontaines|Pernes]] : [[Le Beaucet]], [[Pernes-les-Fontaines|Pernes]], [[La Roque-sur-Pernes]], [[Saint-Didier (Vaucluse)|Saint-Didier]], [[Velleron]] et [[Venasque]].
+* [[canton de Sault]] : [[Aurel (Vaucluse)|Aurel]], [[Monieux]], [[Saint-Christol (Vaucluse)|Saint-Christol]], [[Saint-Trinit]] et [[Sault (Vaucluse)|Sault]].
+
+==== [[arrondissement d'Orange]] ====
+Il comportait sept cantons :
+* [[canton de Beaumes-de-Venise|Beaumes]] : [[Beaumes-de-Venise|Beaumes]], [[Gigondas (Vaucluse)|Gigondas]], [[Lafare]], [[La Roque-Alric]], [[Sablet]], [[Suzette]] et [[Vacqueyras (Vaucluse)|Vacqueyras]]
+* [[canton de Bollène]],
+* [[canton d'Orange-Est]] : [[Orange (Vaucluse)|Orange]] (partiellement), [[Camaret-sur-Aigues]] (''Camaret'' jusqu'en [[1918]]), [[Jonquières (Vaucluse)|Jonquières]], [[Sérignan-du-Comtat|Sérignan]], [[Travaillan]], [[Uchaux]] et [[Violès]]
+* [[canton d'Orange-Ouest]] : [[Orange (Vaucluse)|Orange]] (partiellement), [[Caderousse]], [[Châteauneuf-du-Pape]] (''Châteauneuf-Calcernier'' jusqu'en [[1893]]) et [[Piolenc]]
+* [[canton de Malaucène]] : [[Le Barroux]], [[Beaumont-du-Ventoux]], [[Brantes]], [[Entrechaux]], [[Malaucène]], [[Saint-Léger-du-Ventoux]] et [[Savoillan]].
+* [[canton de Vaison-la-Romaine]] : [[Buisson (Vaucluse)|Buisson]], [[Cairanne]], [[Crestet]], [[Faucon (Vaucluse)|Faucon]], [[Puyméras]], [[Rasteau]], [[Roaix]], [[Saint-Marcellin-lès-Vaison]], [[Saint-Romain-en-Viennois]], [[Saint-Roman-de-Malegarde]], [[Séguret]], [[Vaison-la-Romaine]] et [[Villedieu (Vaucluse)|Villedieu]].
+* [[canton de Valréas]] : [[Valréas]], [[Grillon (Vaucluse)|Grillon]], [[Richerenches]] et [[Visan]]
+[[Fichier:Anciens cantons de Vaucluse.png|vignette|Carte des cantons de Vaucluse avant 2015]]
+
+=== Cantons de 1926 à 2015 ===
+En 1926 ([[décret-loi Poincaré]]) le département de Vaucluse ne comporte plus que trois arrondissements avec la disparition de l'arrondissement d'Orange. Le nombre de cantons reste de 22 jusqu'en 1973.
+
+En 1973 les deux cantons d'Avignon sont redécoupés en quatre nouveaux cantons<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858749 Décret n° 73-772 du 2 août 1973]</ref>.
+De 1973 à 2015, le Vaucluse compte donc 24 cantons.
+
+En 1985, les limites infracommunales à travers Avignon sont modifiées : une partie du [[canton d'Avignon-Est]] est rattachée au [[canton d'Avignon-Nord]] et une partie du [[canton d'Avignon-Sud]] est rattachée au [[canton d'Avignon-Ouest]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000337040 Décret n° 85-152 du 31 janvier 1985]</ref>.
+
+==== [[Arrondissement d'Apt]] ====
+Il comporte six cantons :
+* [[canton d'Apt]]
+* [[canton de Bonnieux]]
+* [[canton de Cadenet]]
+* [[canton de Cavaillon]]
+* [[canton de Gordes]]
+* [[canton de Pertuis]]
+
+==== [[Arrondissement d'Avignon]] ====
+Il comporte dix cantons :
+* [[canton d'Avignon-Est]] (créé en 1973) : [[Avignon]] (partiellement) et [[Morières-lès-Avignon]]
+* [[canton d'Avignon-Nord]] : [[Avignon]] (partiellement) et [[Le Pontet]]
+* [[canton d'Avignon-Ouest]] (créé en 1973) : [[Avignon]] (partiellement)
+* [[canton d'Avignon-Sud]] : [[Avignon]] (partiellement)
+* [[canton de Bédarrides]]
+* [[canton de Bollène]]
+* [[canton de l'Isle-sur-la-Sorgue]]
+* [[canton d'Orange-Est]]
+* [[canton d'Orange-Ouest]]
+* [[canton de Valréas]]
+
+==== [[Arrondissement de Carpentras]] ====
+Il comporte huit cantons :
+* [[canton de Beaumes-de-Venise]]
+* [[canton de Carpentras-Nord]]
+* [[canton de Carpentras-Sud]]
+* [[canton de Malaucène]]
+* [[canton de Mormoiron]]
+* [[canton de Pernes-les-Fontaines]]
+* [[canton de Sault]]
+* [[canton de Vaison-la-Romaine]]
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+* [[Arrondissements de Vaucluse]], qui reprend la répartition ci-dessus en y ajoutant le découpage des arrondissements tel qu'il existait avant [[1926]] (suppression de l'ancien [[arrondissement d'Orange]]).
+* [[Élections cantonales de 2011 en Vaucluse]]
+
+{{Palette|Découpage administratif de Provence-Alpes-Côte d'Azur|Cantons de France|Cantons de Vaucluse}}
+
+{{Portail|Vaucluse}}
+
+[[Catégorie:Canton en Vaucluse|*]]
+[[Catégorie:Liste de cantons français|Vaucluse]]
+[[Catégorie:District de Vaucluse de 1793 à 1795]]
+[[Catégorie:District de la Drôme de 1790 à 1795]]
+[[Catégorie:District des Bouches-du-Rhône de 1790 à 1795]]
+[[Catégorie:Liste en rapport avec le département du Vaucluse|Cantons]]

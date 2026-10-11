@@ -1,0 +1,153 @@
+[[Fichier:04-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département des Alpes-de-Haute-Provence, avec en surimpression les arrondissements (en nuances de bleu). Carte arrêtée au {{date|1 janvier 2019}}.]]
+Le '''département des Alpes-de-Haute-Provence''' compte 15 cantons depuis le [[redécoupage cantonal de 2014]] (30 cantons auparavant).
+
+== Histoire ==
+[[Fichier:Anciens cantons des Alpes de Haute-Provence.png|vignette|Carte des cantons des Alpes de Haute-Provence avant le redécoupage de 2014]]
+
+=== Découpage cantonal antérieur à 2015 ===
+
+*1801<ref>Arrêté du 27 Vendémiaire an X (19 octobre 1801), ''Bulletin des lois'' an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f224 p.204]</ref> : Découpage d'origine.
+*1802<ref>Arrêté du 9 Pluviôse an X (29 janvier 1802), ''Bulletin des lois'' an XI (1er semestre) n°228bis [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f191 p.1]</ref> : Le chef-lieu du canton de [[Reillanne]] est transféré à [[Manosque]].
+*1802<ref>Arrêté du 5 Frimaire an XI (26 novembre 1802), ''Bulletin des lois'', an XI (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f443 p. 264]</ref> : 
+**Le chef-lieu du canton de [[Meyronnes]] est transféré à [[Saint-Paul-sur-Ubaye|Saint-Paul]] ([[Canton de Saint-Paul (Alpes-de-Haute-Provence)|canton de Saint-Paul]]);
+**Création du [[canton de Mézel]] (détaché des cantons de [[canton de Digne|Digne]] et de [[canton de Riez|Riez]]);
+**Création du [[canton de Peyruis]] (détaché des cantons de [[Canton de Saint-Étienne-les-Orgues|Saint-Etienne-les-Orgues]] et de [[canton de Forcalquier|Forcalquier]]);
+**Création du [[canton de Reillanne]] (détaché du canton de Manosque).
+*1810<ref>Loi du 13 janvier 1810, ''Bulletin des lois'' 1810 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65306788/f82 p. 50]</ref> : Le [[canton de Barcillonnette]] est transféré au département des [[Hautes-Alpes]].
+*1973<ref>Décret n° 73-714 du 23 juillet 1973 </ref> : 
+**Le canton de Digne est scindé en deux nouveaux cantons [[Canton de Digne-les-Bains-Est|Digne-Est]] et [[Canton de Digne-les-Bains-Ouest|-Ouest]];
+**Le canton de Manosque est scindé en deux nouveaux cantons [[canton de Manosque-Nord|Manosque-Nord]] et [[Canton de Manosque-Sud|-Sud]]
+*1982<ref>Décret n° 85-127 du 29 janvier 1985</ref> : 
+**Fusion des cantons d'Allos et de Colmars en un nouveaux canton [[canton d'Allos-Colmars|Allos-Colmars]] qui est transféré de l'arrondissement de [[Arrondissement de Barcelonnette|Barcelonnette]] à celui de [[arrondissement de Castellane|Castellane]];
+**Le canton de Manosque-Sud est scindé en deux nouveaux cantons [[canton de Manosque-Sud-Ouest|Manosque-Sud-Ouest]] et [[canton de Manosque-Sud-Est|-Sud-Est]] (avec modification de la limite infracommunale du [[canton de Manosque-Nord]]);
+**Modification de la limite infracommunale entre les cantons [[Canton de Digne-les-Bains-Est|Digne-Est]] et [[Canton de Digne-les-Bains-Ouest|-Ouest]].
+*1988<ref>Décret n° 88-891 du 24 août 1988. Identique au décret n° 86-251 du 20 février 1986, rapporté/retiré par décret n° 88-514 du 5 mai 1988</ref> : 
+**Suppression du [[Canton de Saint-Paul (Alpes-de-Haute-Provence)|canton de Saint-Paul]] au profit du [[canton de Barcelonnette]];
+**Suppression du [[canton de Senez]] au profit des cantons de [[canton de Barrême|Barrême]] et de [[canton de Mézel|Mézel]].
+
+Au département des Alpes-de-Haute-Provence, trois cantons trop peu peuplés sont disparus avant 2014. Cela était rare : les remodelages de cantons avant 2014 étaient presque toujours des scissions de cantons trop peuplés, résultant en une augmentation du nombre des cantons.
+
+
+Liste des 30 [[cantons français|cantons]] des [[Alpes-de-Haute-Provence]], par [[Arrondissement français|arrondissement]] :
+{| class="wikitable "
+|-
+|[[Arrondissement de Barcelonnette]]
+|2 cantons
+|[[canton de Barcelonnette]] - [[canton du Lauzet-Ubaye]]
+|-
+|[[Arrondissement de Castellane]] 
+|5 cantons
+|[[canton d'Allos-Colmars]] - [[canton d'Annot]] - [[canton de Castellane]] - [[canton d'Entrevaux]] - [[canton de Saint-André-les-Alpes]]
+|-
+|[[Arrondissement de Digne-les-Bains]] 
+|10 cantons
+|[[canton de Barrême]] - [[canton de Digne-les-Bains-Est]] - [[canton de Digne-les-Bains-Ouest]] - [[canton de La Javie]] - [[canton des Mées]] - [[canton de Mézel]] - [[canton de Moustiers-Sainte-Marie]] - [[canton de Riez]] - [[canton de Seyne]] - [[canton de Valensole]]
+|-
+|[[Arrondissement de Forcalquier]] 
+|13 cantons
+|[[canton de Banon]] - [[canton de Forcalquier]] - [[canton de Manosque-Nord]] - [[canton de Manosque-Sud-Est]] - [[canton de Manosque-Sud-Ouest]] - [[canton de La Motte-du-Caire]] - [[canton de Noyers-sur-Jabron]] - [[canton de Peyruis]] - [[canton de Reillanne]] - [[canton de Saint-Étienne-les-Orgues]] - [[canton de Sisteron]] - [[canton de Turriers]] - [[canton de Volonne]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 10 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date|24 février 2014}} pour le département des [[Alpes-de-Haute-Provence]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans les [[Alpes-de-Haute-Provence]] le nombre de cantons passe ainsi de 30 à 15<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028658214 Décret {{n°|2014}}-226 du 24 février 2014 portant délimitation des cantons dans le département des Alpes-de-Haute-Provence], sur ''Légifrance'' (consulté le 10 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision n° 2010-618 DC du {{date|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 10 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département des Alpes-de-Haute-Provence, la population de référence est la population légale en vigueur au {{date|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|160149|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=04 |titre= Chiffres clés Évolution et structure de la population - Département des Alpes-de-Haute-Provence (04) |auteur= |date = |site =insee.fr |consulté le= 10 mai 2014}}.</ref>. Avec 15 cantons la population moyenne par conseiller départemental est de {{unité|10677|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|8541|habitants}} et {{unité|12812|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"  
+|-----
+!N°<ref>N° = numéro d'ordre dans le décret</ref>||Nom du Canton||[[Bureau centralisateur]]||Population 2010||Écart /moyenne||Nombre de communes entières||Communes composant le canton
+|- 
+|1||[[Canton de Barcelonnette|Barcelonnette]]||[[Barcelonnette]]||{{formatnum:8179}}||0,77||14||[[Barcelonnette]], [[La Condamine-Châtelard]], [[Enchastrayes]], [[Faucon-de-Barcelonnette]], [[Jausiers]], [[Le Lauzet-Ubaye]], [[Pontis]], [[Méolans-Revel]], [[Saint-Paul-sur-Ubaye]], [[Saint-Pons (Alpes-de-Haute-Provence)|Saint-Pons]], [[Les Thuiles]], [[Ubaye-Serre-Ponçon]], [[Uvernet-Fours]], [[Val-d'Oronaye]]. 
+|-
+|2||[[Canton de Castellane|Castellane]]||[[Castellane]]||{{formatnum:9498}}||0,89||32||[[Allons (Alpes-de-Haute-Provence)|Allons]], [[Allos]], [[Angles (Alpes-de-Haute-Provence)|Angles]], [[Annot]], [[Beauvezer]], [[Braux (Alpes-de-Haute-Provence)|Braux]], [[Castellane]], [[Castellet-lès-Sausses]], [[Colmars]], [[Demandolx]], [[Entrevaux]], [[Le Fugeret]], [[La Garde (Alpes-de-Haute-Provence)|La Garde]], [[Lambruisse]], [[Méailles]], [[Moriez]], [[La Mure-Argens]], [[Peyroules]], [[La Rochette (Alpes-de-Haute-Provence)|La Rochette]], [[Rougon]], [[Saint-André-les-Alpes]], [[Saint-Benoît (Alpes-de-Haute-Provence)|Saint-Benoît]], [[Saint-Julien-du-Verdon]], [[Saint-Pierre (Alpes-de-Haute-Provence)|Saint-Pierre]], [[Sausses]], [[Soleilhas]], [[Thorame-Basse]], [[Thorame-Haute]], [[Ubraye]], [[Val-de-Chalvagne]], [[Vergons]], [[Villars-Colmars]]. 
+|-
+|3||[[Canton de Château-Arnoux-Saint-Auban|Château-Arnoux-Saint-Auban]]||[[Château-Arnoux-Saint-Auban]]||{{formatnum:12469}}||1,17||8||[[Aubignosc]], [[Château-Arnoux-Saint-Auban]], [[Châteauneuf-Val-Saint-Donat]], [[L'Escale (Alpes-de-Haute-Provence)|L'Escale]], [[Ganagobie]], [[Montfort (Alpes-de-Haute-Provence)|Montfort]], [[Peyruis]], [[Volonne]]. 
+|-
+|4||[[Canton de Digne-les-Bains-1|Digne-les-Bains-1]]||[[Digne-les-Bains]]||{{formatnum:1786}} + Fraction Digne-les-Bains|| ||6 + Fraction Digne-les-Bains||1° Les communes suivantes : [[Le Castellard-Mélan]], [[Hautes-Duyes]], [[Entrages]], [[Marcoux (Alpes-de-Haute-Provence)|Marcoux]], [[La Robine-sur-Galabre]], [[Thoard]]. <br/> 2° La partie de la commune de Digne-les-Bains située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Champtercier, ravin de Champtercier, limite de la section cadastrale AZ et de la section cadastrale 0 E, ligne de chemin de fer de Saint-Auban à Digne-les-Bains, ruisseau de Saint-Véran, avenue de Verdun, rond-point du 4-Septembre, avenue Henri-Jaubert, entre le numéro 15 et le numéro 17 de l'avenue Henri-Jaubert, ligne droite jusqu'à la route nationale 85, route nationale 85 en direction de Malijai, franchissement de la rivière Bléone, ligne droite dans le prolongement de l'avenue François-Cuzin, avenue François-Cuzin, montée Saint-Lazare, limite de la section cadastrale AL, limite de la section cadastrale AK, torrent des Eaux-Chaudes, limite de la section cadastrale AI, torrent des Eaux-Chaudes, jusqu'à la limite territoriale de la commune d'Entrages.
+|-
+|5||[[Canton de Digne-les-Bains-2|Digne-les-Bains-2]]||[[Digne-les-Bains]]||{{formatnum:5675}} + Fraction Digne-les-Bains|| ||6 + Fraction Digne-les-Bains||1° Les communes suivantes : [[Aiglun (Alpes-de-Haute-Provence)|Aiglun]], [[Barras (Alpes-de-Haute-Provence)|Barras]], [[Champtercier]], [[Malijai]], [[Mallemoisson]], [[Mirabeau (Alpes-de-Haute-Provence)|Mirabeau]]. <br/>2° La partie de la commune de Digne-les-Bains non incluse dans le canton de Digne-les-Bains-1.
+|-
+|6||[[Canton de Forcalquier|Forcalquier]]||[[Forcalquier]]||{{formatnum:10417}}||0,98||15||[[La Brillanne]], [[Cruis]], [[Fontienne]], [[Forcalquier]], [[Lardiers]], [[Limans]], [[Lurs]], [[Mallefougasse-Augès]], [[Montlaux]], [[Niozelles]], [[Ongles (Alpes-de-Haute-Provence)|Ongles]], [[Pierrerue (Alpes-de-Haute-Provence)|Pierrerue]], [[Revest-Saint-Martin]], [[Saint-Étienne-les-Orgues]], [[Sigonce]]. 
+|-
+|7||[[Canton de Manosque-1|Manosque-1]]||[[Manosque]]||{{formatnum:3878}} + Fraction Manosque||  ||2 + Fraction Manosque||1° Les communes suivantes : [[Montfuron]], [[Pierrevert]]. <br/>2° La partie de la commune de Manosque située au sud et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villemus, route d'Apt, avenue du Lubéron, place du Docteur-Caire, rue Léon-Mure, boulevard des Lavandes, montée des Bassins, boulevard des Combes, rue des Tourelles, boulevard Casimir-Pelloutier, boulevard Elémir-Bourges, rue des Potiers, avenue du Majoral-Mestre-Raoul-Arnaud, allée Alphonse-Daudet, ravin de Drouille, avenue Frédéric-Mistral, rond-point, avenue du Maréchal-de-Lattre-de-Tassigny, place Damase-Arbaud, avenue de la Libération, ligne de chemin de fer de Marseille à Veynes, ravin de Drouille, limite de la section cadastrale AX jusqu'au chemin de Robert, chemin de Robert, ligne de chemin de fer de Marseille à Veynes, chemin de Pimoutier, route de Marseille D 4096, jusqu'à la limite territoriale de la commune de Sainte-Tulle.
+|-
+|8||[[Canton de Manosque-2|Manosque-2]]||[[Manosque]]||{{formatnum:3117}} + Fraction Manosque||  ||2 + Fraction Manosque||1° Les communes suivantes : [[Saint-Martin-les-Eaux]], [[Volx]]. <br/>2° La partie de la commune de Manosque située au nord à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villemus, route d'Apt, avenue du Lubéron, place du Docteur-Caire, rue Léon-Mure, boulevard des Lavandes, montée des Bassins, boulevard des Combes, rue des Tourelles, boulevard Casimir-Pelloutier, boulevard Elémir-Bourges, boulevard de la Plaine, boulevard Mirabeau, rue Dauphine, montée des Vraies-Richesses, boulevard Paul-Martin-Nalin, montée de Manenc, chemin du Mont-d'Or, chemin du Docteur-Gérard-Durbet, chemin de l'Olivade, limite de la section cadastrale AS et de la section cadastrale 0 C, canal de Manosque, chemin du Pimarlet, boulevard du Maréchal-Juin (route départementale 4096), jusqu'à la limite territoriale de la commune de Volx.
+|-
+|9||[[Canton de Manosque-3|Manosque-3]]||[[Manosque]]||{{formatnum:4331}} + Fraction Manosque|| ||2 + Fraction Manosque||1° Les communes suivantes : [[Corbières (Alpes-de-Haute-Provence)|Corbières]], [[Sainte-Tulle]]. <br/>2° La partie de la commune de Manosque non incluse dans les cantons de Manosque-1 et de Manosque-2.
+|-
+|10||[[Canton d'Oraison|Oraison]]||[[Oraison (Alpes-de-Haute-Provence)|Oraison]]||{{formatnum:12536}}||1,17||3||[[Les Mées (Alpes-de-Haute-Provence)|Les Mées]], [[Oraison (Alpes-de-Haute-Provence)|Oraison]], [[Villeneuve (Alpes-de-Haute-Provence)|Villeneuve]]. 
+|-
+|11||[[Canton de Reillanne|Reillanne]]||[[Reillanne]]||{{formatnum:10676}}||1||21||[[Aubenas-les-Alpes]], [[Banon (Alpes-de-Haute-Provence)|Banon]], [[Céreste]], [[Dauphin (Alpes-de-Haute-Provence)|Dauphin]], [[L'Hospitalet]], [[Mane (Alpes-de-Haute-Provence)|Mane]], [[Montjustin]], [[Montsalier]], [[Oppedette]], [[Redortiers]], [[Reillanne]], [[Revest-des-Brousses]], [[Revest-du-Bion]], [[La Rochegiron]], [[Sainte-Croix-à-Lauze]], [[Saint-Maime]], [[Saint-Michel-l'Observatoire]], [[Saumane (Alpes-de-Haute-Provence)|Saumane]], [[Simiane-la-Rotonde]], [[Vachères]], [[Villemus]]. 
+|-
+|12||[[Canton de Riez|Riez]]||[[Riez]]||{{formatnum:9251}}||0,87||26||[[Barrême]], [[Beynes (Alpes-de-Haute-Provence)|Beynes]], [[Blieux]], [[Bras-d'Asse]], [[Le Castellet (Alpes-de-Haute-Provence)|Le Castellet]], [[Le Chaffaut-Saint-Jurson]], [[Châteauredon]], [[Chaudon-Norante]], [[Clumanc]], [[Entrevennes]], [[Estoublon]], [[Majastres]], [[Mézel]], [[Moustiers-Sainte-Marie]], [[La Palud-sur-Verdon]], [[Puimichel]], [[Puimoisson]], [[Riez]], [[Roumoules]], [[Saint-Jacques (Alpes-de-Haute-Provence)|Saint-Jacques]], [[Saint-Jeannet (Alpes-de-Haute-Provence)|Saint-Jeannet]], [[Saint-Julien-d'Asse]], [[Saint-Jurs]], [[Saint-Lions]], [[Senez]], [[Tartonne]]. 
+|-
+|13||[[Canton de Seyne|Seyne]]||[[Seyne]]||{{formatnum:8302}}||0,78||34||[[Archail]], [[Auzet]], [[Barles]], [[Bayons]], [[Beaujeu (Alpes-de-Haute-Provence)|Beaujeu]], [[Bellaffaire]], [[Le Brusquet]], [[Le Caire (Alpes-de-Haute-Provence)|Le Caire]], [[Châteaufort (Alpes-de-Haute-Provence)|Châteaufort]], [[Clamensane]], [[Claret (Alpes-de-Haute-Provence)|Claret]], [[Curbans]], [[Draix]], [[Faucon-du-Caire]], [[Gigors]], [[La Javie]], [[Melve]], [[Montclar (Alpes-de-Haute-Provence)|Montclar]], [[La Motte-du-Caire]], [[Nibles]], [[Piégut]], [[Prads-Haute-Bléone]], [[Saint-Martin-lès-Seyne]], [[Selonnet]], [[Seyne]], [[Sigoyer (Alpes-de-Haute-Provence)|Sigoyer]], [[Thèze (Alpes-de-Haute-Provence)|Thèze]], [[Turriers]], [[Valavoire]], [[Valernes]], [[Vaumeilh]], [[Venterol (Alpes-de-Haute-Provence)|Venterol]], [[Verdaches]], [[Le Vernet (Alpes-de-Haute-Provence)|Le Vernet]]. 
+|-
+|14||[[Canton de Sisteron|Sisteron]]||[[Sisteron]]||{{formatnum:12421}}||1,16||15||[[Authon (Alpes-de-Haute-Provence)|Authon]], [[Bevons]], [[Châteauneuf-Miravail]], [[Curel (Alpes-de-Haute-Provence)|Curel]], [[Entrepierres]], [[Mison]], [[Noyers-sur-Jabron]], [[Les Omergues]], [[Peipin]], [[Saint-Geniez]], [[Saint-Vincent-sur-Jabron]], [[Salignac (Alpes-de-Haute-Provence)|Salignac]], [[Sisteron]], [[Sourribes]], [[Valbelle]]. 
+|-
+|15||[[Canton de Valensole|Valensole]]||[[Valensole]]||{{formatnum:8586}}||0,8||10||[[Allemagne-en-Provence]], [[Brunet (Alpes-de-Haute-Provence)|Brunet]], [[Esparron-de-Verdon]], [[Gréoux-les-Bains]], [[Montagnac-Montpezat]], [[Quinson]], [[Sainte-Croix-du-Verdon]], [[Saint-Laurent-du-Verdon]], [[Saint-Martin-de-Brômes]], [[Valensole]]. 
+|-
+!|| ||||{{formatnum:160149}}||||200||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département des Alpes-de-Haute-Provence, c'est le cas de deux cantons ([[canton d'Oraison|Oraison]], [[canton de Seyne|Seyne]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-----
+!N°||Canton||[[Arrondissement de Barcelonnette|Barcelonnette]]||[[Arrondissement de Castellane|Castellane]]||[[Arrondissement de Digne-les-Bains|Digne-les-Bains]]||[[Arrondissement de Forcalquier|Forcalquier]]||Total
+|-
+|1||align="left"| Barcelonnette||16||||||||'''16'''
+|-
+|2||align="left"| Castellane||||32||||||'''32'''
+|-
+|3||align="left"| Château-Arnoux-Saint-Auban||||||||8||'''8'''
+|-
+|4||align="left"| Digne-les-Bains-1||||||6 + Fraction Digne-les-Bains||||'''6''' + Fraction Digne-les-Bains
+|-
+|5||align="left"| Digne-les-Bains-2||||||6 + Fraction Digne-les-Bains||||'''6''' + Fraction Digne-les-Bains
+|-
+|6||align="left"| Forcalquier||||||||15||'''15'''
+|-
+|7||align="left"| Manosque-1||||||||2 + Fraction Manosque||'''2''' + Fraction Manosque
+|-
+|8||align="left"| Manosque-2||||||||2 + Fraction Manosque||'''2''' + Fraction Manosque
+|-
+|9||align="left"| Manosque-3||||||||2 + Fraction Manosque||'''2''' + Fraction Manosque
+|-
+|10||align="left"| Oraison||||||2||1||'''3'''
+|-
+|11||align="left"| Reillanne||||||||21||'''21'''
+|-
+|12||align="left"| Riez||||||26||||'''26'''
+|-
+|13||align="left"| Seyne||||||14||20||'''34'''
+|-
+|14||align="left"| Sisteron||||||||15||'''15'''
+|-
+|15||align="left"| Valensole||||||10||||'''10'''
+|-
+!||||16||32||65||87||200
+|}
+
+== Voir aussi ==
+* [[Liste des anciens cantons des Alpes-de-Haute-Provence]]
+
+== Références ==
+{{Références}}
+
+
+{{Palette|Découpage administratif de Provence-Alpes-Côte d'Azur|Cantons de France|Cantons des Alpes-de-Haute-Provence}}
+{{Portail|Alpes-de-Haute-Provence}}
+
+[[Catégorie:Canton dans les Alpes-de-Haute-Provence|*]]
+[[Catégorie:Liste de cantons français|Alpes-de-Haute-Provence]]
+[[Catégorie:Liste en rapport avec les Alpes-de-Haute-Provence|Cantons]]

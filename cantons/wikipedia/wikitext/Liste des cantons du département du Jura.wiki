@@ -1,0 +1,153 @@
+[[Fichier:39-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département du Jura, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''département du Jura''' compte 34 [[Canton français|cantons]] depuis 1973. À partir de 2015, ce nombre est réduit à 17 à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]].
+
+== Histoire ==
+[[Fichier:Anciens cantons du Jura.png|vignette|Cartes des cantons du Jura avant 2015]]
+
+=== Découpage cantonal avant 2015 ===
+*1801<ref>Arrêté du 7 Brumaire an X (29 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f405 p. 417]</ref> : découpage d'origine
+*1802<ref>Arrêté du 9 Pluviôse an X (29 janvier 1802), ''Bullein des lois'', an XI (1er semestre) n° 228bis, [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f191 p. 1]</ref> : Le chef-lieu du canton de Saint-Laurent est transféré [[Les Petites-Chiettes|aux Petite-Chiettes]].
+*1817<ref>Ordonnance du 31 janvier 1817, ''Bulletin des lois'', 1817 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65255964/f244 p. 208]</ref> : Le chef-lieu du canton des Petite-Chiettes est transféré à [[Canton de Saint-Laurent-en-Grandvaux|Saint-Laurent]].
+*1819<ref>Ordonnance du 11 août 1819, ''Bulletin des lois'', 1819 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65255912/f236 p. 200]</ref> : Le chef-lieu du canton de [[Cousance]] est tranqsféré à [[Canton de Beaufort (Jura)|Beaufort]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682434 Décret n° 73-659 du 13 juillet 1973]</ref> : 
+**Le canton de Dole est scindé en deux nouveaux cantons [[canton de Dole-Nord-Est|Dole-Nord-Est]] et [[Canton de Dole-Sud-Ouest|-Sud-Ouest]] ;
+**Le canton de Lons-le-Saunier est scindé en deux nouveaux cantons [[canton de Lons-le-Saunier-Nord|Lons-le-Saunier-Nord]] et [[canton de Lons-le-Saunier-Sud|-Sud]].
+
+
+{| class="wikitable"  
+|-----
+|[[arrondissement de Dole]]
+|10 cantons - sous-préfecture : [[Dole (Jura)|Dole]]
+|[[canton de Chaussin]] - [[canton de Chemin]] - [[canton de Dampierre]]  - [[canton de Dole-Nord-Est]] -  [[canton de Dole-Sud-Ouest]]  - [[canton de Gendrey]]  - [[canton de Montbarrey]]  - [[canton de Montmirey-le-Château]]  - [[canton de Rochefort-sur-Nenon]]  - [[canton de Villers-Farlay]].
+|-
+|[[arrondissement de Lons-le-Saunier]]
+|19 cantons - préfecture : [[Lons-le-Saunier]]
+|[[canton d'Arbois]] - [[canton d'Arinthod]] - [[canton de Beaufort (Jura)|canton de Beaufort]] - [[canton de Bletterans]] -  [[canton de Champagnole]] - [[canton de Chaumergy]] - [[canton de Clairvaux-les-Lacs]] - [[canton de Conliège]] - [[canton de Lons-le-Saunier-Nord]] - [[canton de Lons-le-Saunier-Sud]] - [[canton de Nozeroy]] - [[canton d'Orgelet]] - [[canton des Planches-en-Montagne]] - [[canton de Poligny]] - [[canton de Saint-Amour]] - [[canton de Saint-Julien]] - [[canton de Salins-les-Bains]] - [[canton de Sellières]] - [[canton de Voiteur]].
+|-
+|[[arrondissement de Saint-Claude]]
+|5 cantons - sous-préfecture : [[Saint-Claude (Jura)|Saint-Claude]]
+| [[canton des Bouchoux]] - [[canton de Moirans-en-Montagne]] - [[canton de Morez]] - [[canton de Saint-Claude (Jura)|canton de Saint-Claude]] - [[canton de Saint-Laurent-en-Grandvaux]].
+|}
+
+Il n'existe pas d'homonymie pour l'arrondissement de Saint-Claude, mais il en existe des homonymies exactes pour les cantons de Beaufort et Saint-Claude (ainsi pour les communes chefs-lieux). Il n'y a pas d'homonymie exacte pour les cantons de Dampierre, Poligny et Saint-Julien, mais il en existe une pour les communes chefs-lieux.
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|17 février 2014}} pour le département du [[Jura (département)|Jura]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Jura (département)|Jura]] le nombre de cantons passe ainsi de 34 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626121 |texte=Décret {{n°|2014}}-165 du 17 février 2014}} portant délimitation des cantons dans le département du Jura.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 14 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département du Jura, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|261534|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=39 |titre= Chiffres clés Évolution et structure de la population - Département du Jura (39) |auteur= |date = |site =insee.fr |consulté le= 14 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|15384|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|12307|habitants}} et {{unité|18461|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-----
+! scope="col" |N°<ref>N° = numéro d'ordre dans le décret</ref>
+! scope="col" |Nom du Canton
+! scope="col" |[[Bureau centralisateur]]
+! scope="col" |Population 2012<ref>{{Lien web |url=http://www.insee.fr/fr/ppp/bases-de-donnees/donnees-detaillees/cantons-2015/pop-legales-2012-cantons-2015v3.pdf |titre= Populations légales 2012 des nouveaux cantons en vigueur à compter du 1er janvier 2015 |auteur= |date = |site =le site de l'INSEE}}.</ref>
+! scope="col" |Écart /moyenne
+! scope="col" |Nombre de communes entières
+! scope="col" |Communes composant le canton
+|-
+|1||[[Canton d'Arbois|Arbois]]||[[Arbois]]||{{formatnum:12298}}||0,80||36||[[Abergement-le-Grand]], [[Abergement-lès-Thésy]], [[Aiglepierre]], [[Arbois]], [[Aresches]], [[Les Arsures]], [[Bracon]], [[Cernans]], [[La Chapelle-sur-Furieuse]], [[La Châtelaine]], [[Chaux-Champagny]], [[Chilly-sur-Salins]], [[Clucy]], [[Dournon]], [[La Ferté]], [[Geraise]], [[Ivory]], [[Ivrey]], [[Lemuy]], [[Marnoz]], [[Mathenay]], [[Mesnay]], [[Molamboz]], [[Montigny-lès-Arsures]], [[Montmarlon]], [[Les Planches-près-Arbois]], [[Pont-d'Héry]], [[Pretin]], [[Pupillin]], [[Saint-Cyr-Montmalin]], [[Saint-Thiébaud]], [[Saizenay]], [[Salins-les-Bains]], [[Thésy]], [[Vadans (Jura)|Vadans]], [[Villette-lès-Arbois]].<br />''Constitué des anciens cantons d'Arbois et de Salins''.
+|-
+|2||[[Canton d'Authume|Authume]]||[[Authume]]||{{formatnum:13308}}||0,87||45||[[Amange]], [[Archelange]], [[Audelange]], [[Authume]], [[Auxange]], [[Baverans]], [[Biarne]], [[Brans]], [[Brevans]], [[Champagney (Jura)|Champagney]], [[Châtenois (Jura)|Châtenois]], [[Chevigny (Jura)|Chevigny]], [[Dammartin-Marpain]], [[Éclans-Nenon]], [[Falletans]], [[Frasne-les-Meulières]], [[Gendrey]], [[Gredisans]], [[Jouhe]], [[Lavangeot]], [[Lavans-lès-Dole]], [[Louvatange]], [[Malange (Jura)|Malange]], [[Menotey]], [[Moissey]], [[Montmirey-la-Ville]], [[Montmirey-le-Château]], [[Mutigney]], [[Offlanges]], [[Ougney]], [[Pagney]], [[Peintre (Jura)|Peintre]], [[Pointre]], [[Rainans]], [[Rochefort-sur-Nenon]], [[Romain (Jura)|Romain]], [[Romange]], [[Rouffange]], [[Saligney]], [[Sermange]], [[Serre-les-Moulières]], [[Taxenne]], [[Thervay]], [[Vitreux]], [[Vriange]].<br />''Constitué des anciens cantons de Rochefort, de Gendrey et de Montmirey et d'une commune de l'ancien canton de Dole-Nord-Est''.
+|-
+|3||[[Canton de Bletterans|Bletterans]]||[[Bletterans]]||{{formatnum:16867}}||1,10||58||[[Abergement-le-Petit]], [[Arlay]], [[Aumont (Jura)|Aumont]], [[Barretaine]], [[Bersaillin]], [[Biefmorin]], [[Bletterans]], [[Bois-de-Gand]], [[Brainans]], [[Champrougier]], [[Chapelle-Voland]], [[La Charme]], [[La Chassagne]], [[Le Chateley]], [[Chaumergy]], [[La Chaux-en-Bresse]], [[Chemenot]], [[Chêne-Sec]], [[Colonne (Jura)|Colonne]], [[Commenailles]], [[Cosges]], [[Darbonnay]], [[Desnes]], [[Les Deux-Fays]], [[Fontainebrux]], [[Foulenay]], [[Francheville (Jura)|Francheville]], [[Grozon]], [[Larnaud]], [[Lombard (Jura)|Lombard]], [[Mantry]], [[Miéry]], [[Monay]], [[Montholier]], [[Nance (Jura)|Nance]], [[Neuvilley]], [[Oussières]], [[Passenans]], [[Plasne]], [[Quintigny]], [[Recanoz]], [[Relans]], [[Les Repôts]], [[Ruffey-sur-Seille]], [[Rye (Jura)|Rye]], [[Saint-Lamain]], [[Saint-Lothain]], [[Sellières]], [[Sergenaux]], [[Sergenon]], [[Toulouse-le-Château]], [[Tourmont]], [[Vers-sous-Sellières]], [[Villerserine]], [[Villers-les-Bois]], [[Villevieux]], [[Le Villey]], [[Vincent-Froideville]].<br />''Constitué des anciens cantons de Bletterans, de Chaumergy et de Sellières et d'une partie de l'ancien canton de Poligny''.
+|-
+|4||[[Canton de Champagnole|Champagnole]]||[[Champagnole]]||{{formatnum:16664}}||1,09||32||[[Andelot-en-Montagne]], [[Ardon (Jura)|Ardon]], [[Bourg-de-Sirod]], [[Champagnole]], [[Chapois (Jura)|Chapois]], [[Châtelneuf (Jura)|Châtelneuf]], [[Cize (Jura)|Cize]], [[Crotenay]], [[Équevillon]], [[Le Larderet]], [[Le Latet]], [[Lent (Jura)|Lent]], [[Loulle]], [[Monnet-la-Ville]], [[Montigny-sur-l'Ain]], [[Montrond (Jura)|Montrond]], [[Mont-sur-Monnet]], [[Moutoux]], [[Les Nans]], [[Ney (Jura)|Ney]], [[Le Pasquier]], [[Pillemoine]], [[Pont-du-Navoy]], [[Saint-Germain-en-Montagne]], [[Sapois (Jura)|Sapois]], [[Sirod]], [[Supt]], [[Syam]], [[Valempoulières]], [[Vannoz]], [[Le Vaudioux]], [[Vers-en-Montagne]].<br />''Sans changement''.
+|-
+|5||[[Canton de Dole-1|Dole-1]]||[[Dole (Jura)|Dole]]||{{formatnum:18203}}||1,19||4 + fraction Dole||[[Champvans (Jura)|Champvans]], [[Foucherans (Jura)|Foucherans]], [[Monnières (Jura)|Monnières]], [[Sampans]],<br /> et la partie de la commune de [[Dole (Jura)|Dole]] située au nord et à l'est d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Champvans, ligne de chemin de fer de Dole à Dijon, rue du Mont-Roland, rue du Collège-de-l'Arc, place Jean-Boyvin, rue Raguet-Lépine, rue Charles-Sauria, rue des Arènes, place du 8-Mai-1945, rue de Besançon, rue d'Enfer, place Nationale-Charles-de-Gaulle, rue du Parlement, Grande-Rue, rue Pasteur, rue du Prelot, canal du Rhône au Rhin, Grande-Rue, cours du Doubs, jusqu'à la limite territoriale de la commune de Crissey.<br />''Constitué d'une partie de l'ancien canton de Dole-Nord-Est''.
+|-
+|6||[[Canton de Dole-2|Dole-2]]||[[Dole (Jura)|Dole]]||{{formatnum:17155}}||1,12||6 + fraction Dole||[[Choisey]], [[Crissey (Jura)|Crissey]], [[Damparis]], [[Gevry]], [[Parcey]], [[Villette-lès-Dole]],<br /> et la partie de la commune de [[Dole (Jura)|Dole]] non incluse dans le canton de Dole-1.<br />''Constitué d'une partie de l'ancien canton de Dole-Sud-Ouest et d'une commune de l'ancien canton de Dole-Nord-Est''.
+|-
+|7||[[Canton de Lons-le-Saunier-1|Lons-le-Saunier-1]]||[[Lons-le-Saunier]]||{{formatnum:14418}}||0,94||8 + fraction Lons-le-Saunier||[[Chille]], [[Condamine (Jura)|Condamine]], [[Courlans]], [[Courlaoux]], [[L'Étoile (Jura)|L'Étoile]], [[Montmorot]], [[Saint-Didier (Jura)|Saint-Didier]], [[Villeneuve-sous-Pymont]],<br /> et la partie de la commune de [[Lons-le-Saunier]] située au nord d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Montmorot, rue des Salines, rue des Capucins, rue des Écoles, rue de la Préfecture, rue Edmond-Chapuis, rue Rouget-de-Lisle, avenue de la Marseillaise, carrefour de la Libération, avenue Paul-Seguin, place des Déportés, avenue Pierre-Mendès-France, rue du Château-d'Eau, rue du Vignoble, ligne droite dans le prolongement de la rue du Vignoble jusqu'au boulevard de l'Europe, boulevard de l'Europe, jusqu'à la limite territoriale de la commune de Chille.<br />''Correspond à l'ancien canton de Lons-Nord.''
+|-
+|8||[[Canton de Lons-le-Saunier-2|Lons-le-Saunier-2]]||[[Lons-le-Saunier]]||{{formatnum:14748}}||0,96||11 + fraction Lons-le-Saunier||[[Bornay]], [[Chilly-le-Vignoble]], [[Courbouzon (Jura)|Courbouzon]], [[Frébuans]], [[Geruge]], [[Gevingey]], [[Macornay]], [[Messia-sur-Sorne]], [[Moiron]], [[Trenal]], [[Vernantois]],<br /> et la partie de la commune de [[Lons-le-Saunier]] non incluse dans le canton de Lons-le-Saunier-1.<br />''Correspond à l'ancien canton de Lons-Sud.''
+|-
+|9||[[Canton de Moirans-en-Montagne|Moirans-en-Montagne]]||[[Moirans-en-Montagne]]||{{formatnum:15716}}||1,02||50||[[Alièze]], [[Arinthod]], [[Aromas]], [[Beffia]], [[La Boissière (Jura)|La Boissière]], [[Cernon (Jura)|Cernon]], [[Chambéria]], [[Chancia]], [[Charchilla]], [[Charnod]], [[Châtel-de-Joux]],  [[Chavéria]], [[Condes (Jura)|Condes]], [[Cornod]], [[Courbette]], [[Coyron]], [[Crenans]], [[Les Crozets]], [[Dompierre-sur-Mont]], [[Dramelay]], [[Écrille]], [[Étival (Jura)|Étival]], [[Genod]], [[Jeurre]], [[Lect]], [[Maisod]], [[Marigna-sur-Valouse]], [[Marnézia]], [[Martigna]], [[Mérona]], [[Meussia]], [[Moirans-en-Montagne]], [[Montcusel]], [[Moutonne]], [[Nancuise]], [[Onoz (Jura)|Onoz]], [[Orgelet (Jura)|Orgelet]], [[Pimorin]], [[Plaisia]], [[Présilly (Jura)|Présilly]], [[Reithouse]], [[Rothonay]], [[Saint-Hymetière-sur-Valouse]], [[Sarrogna]], [[Thoirette-Coisia]], [[La Tour-du-Meix]], [[Valzin en Petite Montagne]], [[Vescles]], [[Villards-d'Héria]], [[Vosbles-Valfin]].<br />''Constitué des anciens cantons de Moirans, d'Arinthod et d'Orgelet (sauf 1 commune) et d'une commune de l'ancien canton de Conliège''.
+|-
+|10||[[Canton de Mont-sous-Vaudrey|Mont-sous-Vaudrey]]||[[Mont-sous-Vaudrey]]||{{formatnum:16654}}||1,09||39||[[Augerans]], [[Bans]], [[La Barre (Jura)|La Barre]], [[Belmont (Jura)|Belmont]], [[La Bretenière (Jura)|La Bretenière]], [[Chamblay]], [[Champagne-sur-Loue]], [[Chatelay]], [[Chissey-sur-Loue]], [[Courtefontaine (Jura)|Courtefontaine]], [[Cramans]], [[Dampierre (Jura)|Dampierre]], [[Écleux]], [[Étrepigney]], [[Évans]], [[Fraisans]], [[Germigney (Jura)|Germigney]], [[Grange-de-Vaivre]], [[La Loye]], [[Montbarrey]], [[Monteplain]], [[Mont-sous-Vaudrey]], [[Mouchard (Jura)|Mouchard]], [[Nevy-lès-Dole]], [[Orchamps]], [[Ounans]], [[Our (Jura)|Our]], [[Pagnoz]], [[Plumont]], [[Port-Lesney]], [[Ranchot]], [[Rans]], [[Salans (Jura)|Salans]], [[Santans]], [[Souvans]], [[Vaudrey]], [[La Vieille-Loye]], [[Villeneuve-d'Aval]], [[Villers-Farlay]].<br />''Constitué des anciens cantons de Montbarrey, de Dampierre et de Villers-Farlay et d'une commune de l'ancien canton de Dole-Sud-Ouest''.
+|-
+|11||[[Canton de Hauts de Bienne|Hauts de Bienne]]||[[Hauts de Bienne]]||{{formatnum:15401}}||1||7||[[Bellefontaine (Jura)|Bellefontaine]], [[Bois-d'Amont (Jura)|Bois-d'Amont]], [[Hauts de Bienne]], [[Longchaumois]], [[Morbier (Jura)|Morbier]], [[Prémanon]], [[Les Rousses]].<br />''Sans changement''.
+|-
+|12||[[Canton de Poligny|Poligny]]||[[Poligny (Jura)|Poligny]]||{{formatnum:17834}}||1,16||42||[[Baume-les-Messieurs]], [[Besain]], [[Blois-sur-Seille]], [[Blye]], [[Bonnefontaine (Jura)|Bonnefontaine]], [[Briod]], [[Buvilly]], [[Chamole]], [[Chaussenans]], [[Château-Chalon]], [[Châtillon (Jura)|Châtillon]], [[Conliège]], [[Domblans]], [[Fay-en-Montagne]], [[Le Fied]], [[Frontenay (Jura)|Frontenay]], [[Hauteroche (Jura)|Hauteroche]], [[Ladoye-sur-Seille]], [[Lavigny (Jura)|Lavigny]], [[Le Louverot]], [[La Marre]], [[Menétru-le-Vignoble]], [[Molain (Jura)|Molain]], [[Montaigu (Jura)|Montaigu]], [[Montain]], [[Nevy-sur-Seille]], [[Nogna]], [[Pannessières]], [[Perrigny (Jura)|Perrigny]], [[Picarreau]], [[Le Pin (Jura)|Le Pin]], [[Plainoiseau]], [[Poids-de-Fiole]], [[Poligny (Jura)|Poligny]], [[Publy]], [[Revigny]], [[Saint-Maur (Jura)|Saint-Maur]], [[Vaux-sur-Poligny]], [[Verges (Jura)|Verges]], [[Le Vernois]], [[Vevy]], [[Voiteur]].<br />''Constitué des anciens cantons de Voiteur et de Conliège (sauf 1 commune) et d'une partie de l'ancien canton de Poligny''.
+|-
+|13||[[Canton de Saint-Amour|Saint-Amour]]||[[Saint-Amour (Jura)|Saint-Amour]]||{{formatnum:13441}}||0,88||33||[[Andelot-Morval]], [[Augea]], [[Augisey]], [[Balanod]], [[Beaufort-Orbagna]], [[Broissia]], [[Cesancey]], [[La Chailleuse]], [[Chevreaux]], [[Cousance]], [[Cressia]], [[Cuisia]], [[Digna]], [[Gigny (Jura)|Gigny]], [[Gizia]], [[Graye-et-Charnay]], [[Loisia]], [[Maynal]], [[Monnetay]], [[Montagna-le-Reconduit]], [[Montfleur]], [[Montlainsia]], [[Montrevel (Jura)|Montrevel]], [[Rosay (Jura)|Rosay]], [[Rotalier]], [[Saint-Amour (Jura)|Saint-Amour]], [[Sainte-Agnès (Jura)|Sainte-Agnès]], [[Thoissia]], [[Les Trois Châteaux]], [[Val-d'Épy]], [[Val-Sonnette]], [[Val Suran]], [[Véria (France)|Véria]].<br />''Constitué des anciens cantons de Saint-Amour, de Saint-Julien et de Beaufort et d'une commune de l'ancien canton d'Orgelet''.
+|-
+|14||[[Canton de Saint-Claude (Jura)|Saint-Claude]]||[[Saint-Claude (Jura)|Saint-Claude]]||{{formatnum:12343}}||0,80||6||[[Avignon-lès-Saint-Claude]], [[Leschères]], [[Nanchez]], [[Ravilloles]], [[La Rixouse]], [[Saint-Claude (Jura)|Saint-Claude]].<br />''Constitué d'une partie de l'ancien canton de Saint-Claude''.
+|-
+|15||[[Canton de Saint-Laurent-en-Grandvaux|Saint-Laurent-en-Grandvaux]]||[[Saint-Laurent-en-Grandvaux]]||{{formatnum:16311}}||1,06||66||[[Arsure-Arsurette]], [[Barésia-sur-l'Ain]], [[Bief-des-Maisons]], [[Bief-du-Fourg]], [[Billecul]], [[Boissia]], [[Bonlieu]], [[Censeau]], [[Cerniébaud]], [[Les Chalesmes]], [[Charcier]], [[Charency]], [[Charézier]], [[La Chaumusse]], [[Chaux-des-Crotenay]], [[La Chaux-du-Dombief]], [[Chevrotaine]], [[Clairvaux-les-Lacs]], [[Cogna]], [[Conte (Jura)|Conte]], [[Crans (Jura)|Crans]], [[Cuvier (Jura)|Cuvier]], [[Denezières]], [[Doucier]], [[Doye]], [[Entre-deux-Monts]], [[Esserval-Tartre]], [[La Favière]], [[Foncine-le-Bas]], [[Foncine-le-Haut]], [[Fontenu]], [[Fort-du-Plasne]], [[Fraroz]], [[La Frasnée]], [[Le Frasnois]], [[Gillois]], [[Grande-Rivière Château]], [[Hautecour (Jura)|Hautecour]], [[Lac-des-Rouges-Truites]], [[Largillay-Marsonnay]], [[La Latette]], [[Longcochon]], [[Marigny (Jura)|Marigny]], [[Menétrux-en-Joux]], [[Mesnois]], [[Mièges]], [[Mignovillard]], [[Mournans-Charbonny]], [[Nozeroy]], [[Onglières]], [[Patornay]], [[Les Planches-en-Montagne]], [[Plénise]], [[Plénisette]], [[Pont-de-Poitte]], [[Rix (Jura)|Rix]], [[Saffloz]], [[Saint-Laurent-en-Grandvaux]], [[Saint-Maurice-Crillat]], [[Saint-Pierre (Jura)|Saint-Pierre]], [[Saugeot]], [[Songeson]], [[Soucia]], [[Thoiria]], [[Uxelles]], [[Vertamboz]].<br />''Constitué des anciens cantons de Saint-Laurent, de Clairvaux, de Nozeroy et des Planches''.
+|-
+|16||[[Canton des Coteaux du Lizon|Coteaux du Lizon]]||[[Saint-Lupicin|Coteaux du Lizon]]||{{formatnum:11281}}||0,73||20||[[Bellecombe]], [[Les Bouchoux]], [[Chassal-Molinges]], [[Choux (Jura)|Choux]], [[Coiserette]], [[Coteaux du Lizon]], [[Coyrière]], [[Lajoux (France)|Lajoux]], [[Lamoura]], [[Larrivoire]], [[Lavancia-Epercy]], [[Lavans-lès-Saint-Claude]], [[Les Moussières]], [[La Pesse]], [[Rogna (Jura)|Rogna]], [[Septmoncel les Molunes]], [[Vaux-lès-Saint-Claude]], [[Villard-Saint-Sauveur]], [[Viry (Jura)|Viry]], [[Vulvoz]].<br />''Constitué de l'ancien canton des Bouchoux et d'une partie de l'ancien canton de Saint-Claude''.
+|-
+|17||[[Canton de Tavaux|Tavaux]]||[[Tavaux]]||{{formatnum:18290}}||1,19||29||[[Abergement-la-Ronce]], [[Annoire]], [[Asnans-Beauvoisin]], [[Aumur]], [[Balaiseaux]], [[Bretenières]], [[Chaînée-des-Coupis]], [[Champdivers]], [[Chaussin]], [[Chemin (Jura)|Chemin]], [[Chêne-Bernard]], [[Le Deschaux]], [[Les Essards-Taignevaux]], [[Gatey]], [[Les Hays]], [[Longwy-sur-le-Doubs]], [[Molay (Jura)|Molay]], [[Neublans-Abergement]], [[Peseux (Jura)|Peseux]], [[Petit-Noir]], [[Pleure]], [[Rahon (Jura)|Rahon]], [[Saint-Aubin (Jura)|Saint-Aubin]], [[Saint-Baraing]], [[Saint-Loup (Jura)|Saint-Loup]], [[Séligney]], [[Tassenières]], [[Tavaux]], [[Villers-Robert]].<br />''Constitué des anciens cantons de Chemin et de Chaussin et d'une commune de l'ancien canton de Dole-Sud-Ouest''.
+|-
+! || || ||{{formatnum:260932}}|| ||544||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département du [[Jura (département)|Jura]], c'est le cas de deux cantons ([[Canton de Moirans-en-Montagne|Moirans-en-Montagne]] et [[Canton de Saint-Laurent-en-Grandvaux|Saint-Laurent-en-Grandvaux]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Dole|Dole]]
+!scope=col|[[Arrondissement de Lons-le-Saunier|Lons-le-Saunier]]
+!scope=col|[[Arrondissement de Saint-Claude|Saint-Claude]]
+!scope=col|Total
+|-
+|1||align="left"| Arbois||||36||||'''36'''
+|-
+|2||align="left"| Authume||46||||||'''46'''
+|-
+|3||align="left"| Bletterans||||60||||'''60'''
+|-
+|4||align="left"| Champagnole||||32||||'''32'''
+|-
+|5||align="left"| Dole-1||4 + fraction Dole||||||'''4''' + fraction Dole
+|-
+|6||align="left"| Dole-2||6 + fraction Dole||||||'''6''' + fraction Dole
+|-
+|7||align="left"| Lons-le-Saunier-1||||8 + fraction Lons-le-Saunier||||'''8''' + fraction Lons-le-Saunier
+|-
+|8||align="left"| Lons-le-Saunier-2||||11 + fraction Lons-le-Saunier||||'''11''' + fraction Lons-le-Saunier
+|-
+|9||align="left"| Moirans-en-Montagne||||47||16||'''63'''
+|-
+|10||align="left"| Mont-sous-Vaudrey||39||||||'''39'''
+|-
+|11||align="left"| Morez||||||9||'''9'''
+|-
+|12||align="left"| Poligny||||45||||'''45'''
+|-
+|13||align="left"| Saint-Amour||||51||||'''51'''
+|-
+|14||align="left"| Saint-Claude||||||7||'''7'''
+|-
+|15||align="left"| Saint-Laurent-en-Grandvaux||||58||15||'''73'''
+|-
+|16||align="left"| Saint-Lupicin||||||23||'''23'''
+|-
+|17||align="left"| Tavaux||29||||||'''29'''
+|-
+!||||125||349||70||544
+|}
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+*[[Communes du département du Jura]]
+
+{{Palette|Découpage administratif de la Bourgogne-Franche-Comté|Cantons de France|Cantons du Jura}}
+{{Portail|département du Jura}}
+
+[[Catégorie:Canton dans le département du Jura|*]]
+[[Catégorie:Liste de cantons français|Jura]]
+[[Catégorie:Liste en rapport avec le département du Jura|Cantons]]

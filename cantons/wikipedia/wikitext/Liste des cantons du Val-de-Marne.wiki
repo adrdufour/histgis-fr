@@ -1,0 +1,217 @@
+[[Fichier:94-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département du Val-de-Marne, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le [[Val-de-Marne]], [[département français]] appartenant à la [[Petite couronne de Paris|petite couronne]] et qui fait partie de la [[Région française|région]] [[Île-de-France]], est divisé en [[Canton français|cantons]], subdivisions administratives qui servent à l'[[Élections départementales en France|élection des conseillers]] généraux (jusqu'en 2015) puis des [[Conseiller départemental|conseillers départementaux]] (à compter de 2015). Historiquement, certaines administrations de l'État étaient organisées à l'échelle des cantons.
+
+Le nombre des cantons du Val-de-Marne a été modifié à trois reprises, par les décrets du {{date-|20 janvier 1976}}, du {{date-|24 décembre 1984}} et, dans le cadre du [[redécoupage cantonal de 2014 en France]], par le décret du {{date-|17 février 2014}}. Ce dernier a pris effet lors des [[élections départementales de 2015 dans le Val-de-Marne]].
+
+== La création des cantons du Val-de-Marne ==
+{{Article détaillé|Histoire du Val-de-Marne}}
+Trente-trois cantons sont créés par le décret du {{date-|20 juillet 1967}}<ref name="D67">{{Article
+|titre=Décret {{n°|67-592}} du 20 juillet 1967 portant création et délimitation des cantons des nouveaux départements de la région parisienne - Val-de-Marne
+|périodique=Journal officiel de la République française
+|lien périodique=Journal officiel de la République française
+|date=22 juillet 1967
+|pages=7360-7361
+|url texte=http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=19670722&pageDebut=07357&pageFin=&pageCourante=07360
+|consulté le=19 avril 2015
+|format=PDF
+}}.</ref> lors de la constitution du département du [[Val-de-Marne]]. Certains de ces cantons portent le même nom que d'anciens cantons de l'ancien [[département de la Seine]] et de celui de [[Seine-et-Oise]], mais sans avoir nécessairement la même délimitation.
+
+== Découpage cantonal de 1976 à 1984 ==
+Six cantons sont créés par le décret du {{date-|20 janvier 1976}}<ref name="D76">{{Article
+|titre=Décret {{n°|76-77}} du 20 janvier 1976 portant modification et création de cantons dans le département du Val-de-Marne
+|périodique=Journal officiel de la République française
+|lien périodique=Journal officiel de la République française
+|date=29 janvier 1976
+|pages=723-724
+|format=PDF
+|url texte=http://legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=19760129&numTexte=&pageDebut=00723&pageFin=00724
+|consulté le=19 avril 2015
+}}.</ref> :
+* Le [[canton de Créteil]] est scindé en deux nouveaux cantons de [[canton de Créteil-Nord|Créteil-Nord]] et de [[canton de Créteil-Sud|Créteil-Sud]] (art. 1) ;
+* Création des cantons d'[[canton d'Arcueil|Arcueil]] et de [[canton de Fresnes|Fresnes]] (art. 3) et modification des cantons de [[canton de Cachan|Cachan]], [[canton du Kremlin-Bicêtre|Le Kremlin-Bicêtre]] et [[Canton de l'Haÿ-les-Roses|L’Haÿ-les-Roses]] (art. 2) ;
+* Modification des cantons de [[canton de Vitry-sur-Seine-Ouest|Vitry-sur-Seine-Ouest]] et [[canton de Vitry-sur-Seine-Est|-Est]] (art. 4) ;
+* Les cantons de [[canton de Vincennes-Est]] et [[canton de Fontenay-sous-Bois]] sont redécoupés en trois nouveaux cantons [[Canton de Vincennes-Fontenay-Nord|Vincennes-Fontenay-Nord]], [[canton de Vincennes-Fontenay-Sud|Vincennes-Fontenay-Sud]] et [[canton de Fontenay-sous-Bois-Est|Fontenay-sous-Bois-Est]] (art. 5 et 6) ;
+* Création du [[canton de Villiers-sur-Marne]], scission du [[canton de Champigny-sur-Marne]] en deux nouveaux cantons de [[canton de Champigny-sur-Marne-Est|Champigny-sur-Marne-Est]] et [[Canton de Champigny-sur-Marne-Ouest|-Ouest]] et modification des cantons de [[canton de Bry-sur-Marne|Bry-sur-Marne]] [[canton de Chennevières-sur-Marne|Chennevières-sur-Marne]] et [[canton de Joinville-le-Pont|Joinville-le-Pont]] (art. 7 - 9).
+
+Les modification des cantons de [[canton de Villejuif|Villejuif]] et [[canton d'Ivry-sur-Seine-Ouest|Ivry-sur-Seine-Ouest]] (art. 2) et des canton d'[[canton d'Orly|Orly]] et de [[canton de Thiais|Thiais]] (art. 4) sont annulées par le [[Conseil d'État (France)|Conseil d'État]] parce qu'une partie de la commune de Villejuif (arrondissmeent de L’Haÿ-les-Roses) ne peut être attachée au canton d'Ivry-sur-Seine-Ouest (arrondissement de Créteil) et une partie de la commune de Thiais (arrondissmeent de L’Haÿ-les-Roses) ne peut être attachée au canton d'Orly (arrondissement de Créteil)<ref>[https://www.conseil-etat.fr/fr/arianeweb/CE/decision/1977-11-18/01967 Décision du 18 novembre 1977, n° 1967]</ref>.
+
+Ce redécoupage était destiné à d'éviter que certains cantons ne dépassent {{unité|25000|électeurs}}, tout en limitant le risque de basculement à gauche du département, la droite n'ayant, après les élections cantonales de 1973, qu'un siège d'avance<ref>{{Article
+|titre=Cinq nouveaux cantons seront créés dans le département du Val-de-Marne
+|périodique=Le Monde |lien périodique=Le Monde |date =24 septembre 1975
+|url texte=https://www.lemonde.fr/archives/article/1975/09/24/cinq-nouveaux-cantons-seront-crees-dans-le-departement-du-val-de-marne_2590761_1819218.html#TJdLcvIXbEBvo1vD.99
+|consulté le=7 mai 2015
+}}.</ref>.
+
+== Découpage cantonal de 1984 à 2014 ==
+[[Fichier:Anciens cantons du Val de Marne.png|vignette|Carte des cantons du Val de Marne avant 2015]]
+Un redécoupage de certains cantons est défini par le décret du {{date-|24 décembre 1984}}<ref name="D84">{{Article
+|titre=Décret {{n°|84-1242}} du 24 décembre 1984 portant modification et création de cantons dans le département du Val-de-Marne
+|périodique=Journal officiel de la République française
+|lien périodique=Journal officiel de la République française
+|date=30 décembre 1984
+|pages=4144-4155
+|format=PDF
+|url texte=http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=19841230&pageDebut=04154&pageFin=&pageCourante=04154
+|consulté le=19 avril 2015
+}}.</ref>.
+;Liste des 49 '''[[canton français|cantons]]''' du [[départements français|département]] '''du [[Val-de-Marne]]''', par arrondissement
+
+* [[arrondissement de Créteil]] (25 cantons - préfecture : [[Créteil]]) :<br>[[canton d'Alfortville-Nord]] - [[canton d'Alfortville-Sud]] - [[canton de Boissy-Saint-Léger]] - [[canton de Bonneuil-sur-Marne]] - [[canton de Charenton-le-Pont]] - [[canton de Choisy-le-Roi]] - [[canton de Créteil-Nord]] - [[canton de Créteil-Ouest]] - [[canton de Créteil-Sud]] - [[canton d'Ivry-sur-Seine-Est]] - [[canton d'Ivry-sur-Seine-Ouest]] - [[canton de Maisons-Alfort-Nord]] - [[canton de Maisons-Alfort-Sud]] - [[canton d'Orly]] - [[canton de Saint-Maur-des-Fossés-Centre]] - [[canton de Saint-Maur-des-Fossés-Ouest]] - [[canton de Saint-Maur-La Varenne]] - [[canton de Sucy-en-Brie]] - [[canton de Valenton]] - [[canton de Villecresnes]] - [[canton de Villeneuve-le-Roi]] - [[canton de Villeneuve-Saint-Georges]] - [[canton de Vitry-sur-Seine-Est]] - [[canton de Vitry-sur-Seine-Nord]] - [[canton de Vitry-sur-Seine-Ouest]]
+* [[arrondissement de L'Haÿ-les-Roses]] (9 cantons - sous-préfecture : [[L'Haÿ-les-Roses]]) :<br>[[canton d'Arcueil]] - [[canton de Cachan]] - [[canton de Chevilly-Larue]] - [[canton de Fresnes]] - [[canton de L'Haÿ-les-Roses]] - [[canton du Kremlin-Bicêtre]] - [[canton de Thiais]] - [[canton de Villejuif-Est]] - [[canton de Villejuif-Ouest]]
+* [[arrondissement de Nogent-sur-Marne]] (15 cantons - sous-préfecture : [[Nogent-sur-Marne]]) :<br>[[canton de Bry-sur-Marne]] - [[canton de Champigny-sur-Marne-Centre]] - [[canton de Champigny-sur-Marne-Est]] - [[canton de Champigny-sur-Marne-Ouest]] - [[canton de Chennevières-sur-Marne]] - [[canton de Fontenay-sous-Bois-Est]] - [[canton de Fontenay-sous-Bois-Ouest]] - [[canton de Joinville-le-Pont]] - [[canton de Nogent-sur-Marne]] - [[canton d'Ormesson-sur-Marne]] - [[canton du Perreux-sur-Marne]] - [[canton de Saint-Mandé]] - [[canton de Villiers-sur-Marne]] - [[canton de Vincennes-Est]] - [[canton de Vincennes-Ouest]]
+
+== Découpage cantonal de 2014 à aujourd'hui ==
+{{Article détaillé|Redécoupage cantonal de 2014 en France}}
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|17 février 2014}} pour le département de la [[Val-de-Marne]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, prévu en {{date-|mars 2015}}<ref>En application des articles 47 et 51 de la loi {{n°|2013-403}} du 17 mai 2013 ''relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral''</ref>, remplaçant les [[Élection cantonale française|élections cantonales]] de 2014 et 2017. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{nobr|6 ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Val-de-Marne]] le nombre de cantons passe ainsi de 49 à 25<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626311 |texte=Décret {{n°|2014}}-171 du 17 février 2014}} portant délimitation des cantons dans le département de la Val-de-Marne.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 29 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Val-de-Marne, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|1327732|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=94 |titre= Chiffres clés Évolution et structure de la population - Département de la Val-de-Marne (94) |date = |site =insee.fr |consulté le= 29 mai 2014}}.</ref>. Avec 25 cantons la population moyenne par conseiller départemental est de {{unité|53109|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|42487|habitants}} et {{unité|63731|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2012<ref>[http://www.insee.fr/fr/themes/detail.asp?reg_id=0&ref_id=cantons-2015 Populations légales 2012 des cantons - découpage 2015], publié par l'INSEE.</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Alfortville|Alfortville]]||[[Alfortville]]||{{formatnum:44397}}||0,83||1||[[Alfortville]].
+|-
+|2||[[Canton de Cachan|Cachan]]||[[Cachan]]||{{formatnum:47891}}||0,9||2||[[Arcueil]], [[Cachan]].
+|-
+|3||[[Canton de Champigny-sur-Marne-1|Champigny-sur-Marne-1]]||[[Champigny-sur-Marne]]|| {{formatnum:50409}}||||fraction Champigny-sur-Marne||Partie de la commune de Champigny-sur-Marne située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villiers-sur-Marne, rue des Nations, place de l'Union, rue Voltaire, avenue Maurice-Thorez, avenue des Grands-Godets, ligne droite dans le prolongement de l'avenue des Grands-Godets jusqu'à l'angle de la rue Marcel-Paul, rue Marcel-Paul, rue de Dunkerque, rue du Monument, prolongement de la rue du Monument jusqu'à la limite territoriale de la commune de Chennevières-sur-Marne.
+|-
+|4||[[Canton de Champigny-sur-Marne-2|Champigny-sur-Marne-2]]||[[Champigny-sur-Marne]]||{{formatnum:43764}} ||0,34||1 + fraction Champigny-sur-Marne||1° La commune suivante : [[Chennevières-sur-Marne]]. <br/>2° La partie de la commune de Champigny-sur-Marne non incluse dans le canton de Champigny-sur-Marne-1.
+|-
+|5||[[Canton de Charenton-le-Pont|Charenton-le-Pont]]||[[Charenton-le-Pont]]||{{formatnum:66509}}||||3 + fraction Nogent-sur-Marne||1° Les communes suivantes : [[Charenton-le-Pont]], [[Joinville-le-Pont]], [[Saint-Maurice (Val-de-Marne)|Saint-Maurice]]. <br/>2° La partie de la commune de Nogent-sur-Marne située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Paris, avenue des Merisiers, à l'angle de l'avenue des Merisiers et de l'avenue de Joinville, ligne perpendiculaire à l'avenue de Joinville, avenue Charles-V, avenue de Neptune, prolongement de l'avenue de Neptune jusqu'à la limite territoriale de la commune de Joinville-le-Pont.
+|-
+|6||[[Canton de Choisy-le-Roi|Choisy-le-Roi]]||[[Choisy-le-Roi]]||{{formatnum:61745}} ||||1 + fraction Villeneuve-Saint-Georges ||1° Les communes suivantes : [[Choisy-le-Roi]]. <br/>2° La partie de la commune de Villeneuve-Saint-Georges située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Valenton, avenue Winston-Churchill, rue de Paris, rue Bernard-Palissy, avenue Anatole-France, rue Ferrer-et-Siegfried, avenue de Valenton, jusqu'à la limite territoriale de la commune de Valenton.
+|-
+|7||[[Canton de Créteil-1|Créteil-1]]||[[Créteil]]|| {{formatnum:45137}}|||| fraction Créteil||Partie de la commune de Créteil située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Maisons-Alfort, rue Chéret, rue des Galets, rue des Moëllons, rue des Bleuets, rue Henri-Koch, rue Charles-Beuvin, rue du Castel, avenue Laferrière, avenue du Maréchal-de-Lattre-de-Tassigny, rue de Paris, rue des Mèches, rue de Mesly, avenue du Chemin-de-Mesly, avenue du Général-de-Gaulle route départementale D 1, chemin des Bassins, jusqu'à la limite territoriale de la commune de Valenton.
+|-
+|8||[[Canton de Créteil-2|Créteil-2]]||[[Créteil]]|| {{formatnum:44708}}|||| fraction Créteil||Partie de la commune de Créteil non incluse dans le canton de Créteil-1.
+|-
+|9||[[Canton de Fontenay-sous-Bois|Fontenay-sous-Bois]]||[[Fontenay-sous-Bois]]||{{formatnum:62468}} ||||1 + fraction Vincennes||1° Les communes suivantes : [[Fontenay-sous-Bois]]. <br/>2° La partie de la commune de Vincennes non incluse dans le canton de Vincennes.
+|-
+|10||[[Canton de L'Haÿ-les-Roses|L'Haÿ-les-Roses]]||[[L'Haÿ-les-Roses]]||{{formatnum:57587}}||1,06||2||[[Fresnes (Val-de-Marne)|Fresnes]], [[L'Haÿ-les-Roses]].
+|-
+|11||[[Canton d'Ivry-sur-Seine|Ivry-sur-Seine]]||[[Ivry-sur-Seine]]||{{formatnum:58579}}||1,09||1||[[Ivry-sur-Seine]].
+|-
+|12||[[Canton du Kremlin-Bicêtre|Le Kremlin-Bicêtre]]||[[Le Kremlin-Bicêtre]]||{{formatnum:42742}}||0,81||2||[[Gentilly (Val-de-Marne)|Gentilly]], [[Le Kremlin-Bicêtre]].
+|-
+|13||[[Canton de Maisons-Alfort|Maisons-Alfort]]||[[Maisons-Alfort]]||{{formatnum:54186}}||1||1||[[Maisons-Alfort]].
+|-
+|14||[[Canton de Nogent-sur-Marne|Nogent-sur-Marne]]||[[Nogent-sur-Marne]]||{{formatnum:60661}}||||1 + fraction Nogent-sur-Marne||1° La commune suivante : [[Le Perreux-sur-Marne]]. <br/>2° La partie de la commune de Nogent-sur-Marne non incluse dans le canton de Charenton-le-Pont.
+|-
+|15||[[Canton d'Orly|Orly]]||[[Orly]]||{{formatnum:46737}}||0,85||3||[[Ablon-sur-Seine]], [[Orly]], [[Villeneuve-le-Roi]].
+|-
+|16||[[Canton du Plateau briard|Plateau briard]]||[[Boissy-Saint-Léger]]||{{formatnum:58017}}||1,09||8||[[Boissy-Saint-Léger]], [[Mandres-les-Roses]], [[Marolles-en-Brie (Val-de-Marne)|Marolles-en-Brie]], [[Noiseau]], [[Périgny (Val-de-Marne)|Périgny]], [[La Queue-en-Brie]], [[Santeny]], [[Villecresnes]].
+|-
+|17||[[Canton de Saint-Maur-des-Fossés-1|Saint-Maur-des-Fossés-1]]||[[Saint-Maur-des-Fossés]]|| {{formatnum:61116}}|||| fraction Saint-Maur-des-Fossés||Partie de la commune de Saint-Maur-des-Fossés située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Maisons-Alfort, cours de la Marne, jusqu'au croisement du quai de la Pie et du quai de Bonneuil, quai de la Pie, avenue du Raincy, place de la Pie, rue Paul-Déroulède, boulevard du Général-Giraud, place Bourbaki, boulevard du Général-Giraud, boulevard de Créteil, rond-point du boulevard de Créteil, rue Garibaldi, place Garibaldi, place d'Adamville-Kennedy, rue Garibaldi, boulevard des Mûriers, avenue Louis-Blanc, boulevard de la Marne, avenue Jeanne-d'Arc, avenue Caffin, rue Arago, voie de chemin de fer jusqu'à la Marne et la limite territoriale de la commune de Bonneuil-sur-Marne.
+|-
+|18||[[Canton de Saint-Maur-des-Fossés-2|Saint-Maur-des-Fossés-2]]||[[Saint-Maur-des-Fossés]]||{{formatnum:65344}}||0,98||3 + fraction Saint-Maur-des-Fossés ||1° Les communes suivantes : [[Bonneuil-sur-Marne]], [[Ormesson-sur-Marne]], [[Sucy-en-Brie]]. <br/>2° La partie de la commune de Saint-Maur-des-Fossés non incluse dans le canton de Saint-Maur-des-Fossés-1.
+|-
+|19||[[Canton de Thiais|Thiais]]||[[Thiais]]||{{formatnum:53899}}||1,01||3||[[Chevilly-Larue]], [[Rungis]], [[Thiais]].
+|-
+|20||[[Canton de Villejuif|Villejuif]]||[[Villejuif]]||{{formatnum:56504}}||1,04||1||[[Villejuif]].
+|-
+|21||[[Canton de Villeneuve-Saint-Georges|Villeneuve-Saint-Georges]]||[[Villeneuve-Saint-Georges]]||{{formatnum:46090}} ||||2 + fraction Villeneuve-Saint-Georges ||1° Les communes suivantes : [[Limeil-Brévannes]], [[Valenton]]. <br/>2° La partie de la commune de Villeneuve-Saint-Georges non incluse dans le canton de Choisy-le-Roi.
+|-
+|22||[[Canton de Villiers-sur-Marne|Villiers-sur-Marne]]||[[Villiers-sur-Marne]]||{{formatnum:63032}}||1,17||3||[[Bry-sur-Marne]], [[Le Plessis-Trévise]], [[Villiers-sur-Marne]].
+|-
+|23||[[Canton de Vincennes|Vincennes]]||[[Vincennes]]||{{formatnum:62207}}||||1 + fraction Vincennes||1° La commune suivante : [[Saint-Mandé]]. <br/>2° La partie de la commune de Vincennes située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Fontenay-sous-Bois, rue Jules-Massenet, rue de la Jarry, boulevard de la Libération, jusqu'à la limite territoriale de la commune de Paris.
+|-
+|24||[[Canton de Vitry-sur-Seine-1|Vitry-sur-Seine-1]]||[[Vitry-sur-Seine]]|| {{formatnum:44920}}||||fraction Vitry-sur-Seine||Partie de la commune de Vitry-sur-Seine située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villejuif, avenue du Colonel-Fabien, rue Edouard-Tremblay, rue Meissonier, voie des Monis, rue de la Petite-Saussaie, voie Houdon, voie Van-Loo, chemin Saint-Martin, rue Edouard-Till, rue Edouard-Tremblay, rue Langlois, avenue Lucien-Français, rue de Meissen, rue de Kladno, avenue Youri-Gagarine, rue Camille-Groult, place des Martyrs-de-la-Déportation, rue du 18-Juin-1940, rue Dupetitval, avenue Guy-Môquet, [[Avenue Paul-Vaillant-Couturier (Vitry-sur-Seine)|avenue Paul-Vaillant-Couturier]], rue Neuve, [[Rue Gabriel-Péri (Vitry-sur-Seine)|rue Gabriel-Péri]], rue de l'Argonne, rue du Colonel-Moll, rue d'Odessa, voie située dans le prolongement de la rue de la Marne, avenue Jean-Jaurès, avenue du Président-Salvador-Allende (route départementale 148), pont du Port-à-l'Anglais, jusqu'à la limite territoriale de la commune d'Alfortville.
+|-
+|25||[[Canton de Vitry-sur-Seine-2|Vitry-sur-Seine-2]]||[[Vitry-sur-Seine]]|| {{formatnum:43182}} ||||fraction Vitry-sur-Seine ||Partie de la commune de Vitry-sur-Seine non incluse dans le canton de Vitry-sur-Seine-1.
+|-
+!||||||{{formatnum:1341831}}||||47||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Val-de-Marne]], c'est le cas de trois cantons ([[Canton de Charenton-le-Pont|Charenton-le-Pont]], [[Canton du Plateau briard|Plateau briard]], [[Canton de Saint-Maur-des-Fossés-2|Saint-Maur-des-Fossés-2]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Créteil|Créteil]]
+!scope=col|[[Arrondissement de Nogent-sur-Marne|Nogent-sur-Marne]]
+!scope=col|[[Arrondissement de L'Haÿ-les-Roses|L'Haÿ-les-Roses]]
+!scope=col|Total
+|-
+|1||align="left"| Alfortville||1||||||'''1'''
+|-
+|2||align="left"| Cachan||||||2||'''2'''
+|-
+|3||align="left"| Champigny-sur-Marne-1||||fraction Champigny-sur-Marne|||| fraction Champigny-sur-Marne
+|-
+|4||align="left"| Champigny-sur-Marne-2||||1 + fraction Champigny-sur-Marne||||'''1''' + fraction Champigny-sur-Marne
+|-
+|5||align="left"| Charenton-le-Pont||2||1 + fraction Nogent-sur-Marne||||'''3''' + fraction Nogent-sur-Marne
+|-
+|6||align="left"| Choisy-le-Roi||1 + fraction Villeneuve-Saint-Georges ||||||'''1''' + fraction Villeneuve-Saint-Georges
+|-
+|7||align="left"| Créteil-1|| fraction Créteil|||||| fraction Créteil
+|-
+|8||align="left"| Créteil-2|| fraction Créteil|||||| fraction Créteil
+|-
+|9||align="left"| Fontenay-sous-Bois||||1 + fraction Vincennes||||'''1''' + fraction Vincennes
+|-
+|10||align="left"| L'Haÿ-les-Roses||||||2||'''2'''
+|-
+|11||align="left"| Ivry-sur-Seine||1||||||'''1'''
+|-
+|12||align="left"| Le Kremlin-Bicêtre||||||2||'''2'''
+|-
+|13||align="left"| Maisons-Alfort||1||||||'''1'''
+|-
+|14||align="left"| Nogent-sur-Marne||||1 + fraction Nogent-sur-Marne||||'''1''' + fraction Nogent-sur-Marne
+|-
+|15||align="left"| Orly||3||||||'''3'''
+|-
+|16||align="left"| Plateau briard||6||2||||'''8'''
+|-
+|17||align="left"| Saint-Maur-des-Fossés-1|| fraction Saint-Maur-des-Fossés|||||| fraction Saint-Maur-des-Fossés
+|-
+|18||align="left"| Saint-Maur-des-Fossés-2||2 + fraction Saint-Maur-des-Fossés||1||||'''3''' + fraction Saint-Maur-des-Fossés
+|-
+|19||align="left"| Thiais||||||3||'''3'''
+|-
+|20||align="left"| Villejuif||||||1||'''1'''
+|-
+|21||align="left"| Villeneuve-Saint-Georges||2 + fraction Villeneuve-Saint-Georges ||||||'''2''' + fraction Villeneuve-Saint-Georges
+|-
+|22||align="left"| Villiers-sur-Marne||||3||||'''3'''
+|-
+|23||align="left"| Vincennes||||1 + fraction Vincennes||||'''1''' + fraction Vincennes
+|-
+|24||align="left"| Vitry-sur-Seine-1||fraction Vitry-sur-Seine||||||fraction Vitry-sur-Seine
+|-
+|25||align="left"| Vitry-sur-Seine-2||fraction Vitry-sur-Seine||||||fraction Vitry-sur-Seine
+|-
+!||||23||14||10||47
+|}
+
+== Références ==
+{{Références}}
+
+== Voir aussi ==
+* [[Organisation territoriale de la France]], [[Canton français]], [[Liste des cantons français avant 2015]], [[Conseil départemental]]
+* [[Val-de-Marne]], [[Histoire du Val-de-Marne]], [[Politique dans le Val-de-Marne]]
+* [[Liste des communes du Val-de-Marne]]
+* [[Élections départementales en France]]
+
+{{Palette|Découpage administratif d'Île-de-France|Cantons de France|Cantons du Val-de-Marne}}
+{{Portail|Val-de-Marne}}
+
+[[Catégorie:Canton dans le Val-de-Marne|*]]
+[[Catégorie:Liste de cantons français|Val-de-Marne]]
+[[Catégorie:Liste en rapport avec le Val-de-Marne|Cantons]]

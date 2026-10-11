@@ -1,0 +1,319 @@
+date,dep,decret,objet,dans_les_tables
+1958-03-27,59,,creation de cantons,oui
+1960-08-22,59,,rattachement de commune a un canton,oui
+1961-04-21,60,,modification de limites cantonales,non
+1961-04-21,80,,modification de limites cantonales,non
+1961-08-15,49,,creation de cantons,oui
+1964-08-19,,64-847,modification de limites cantonales,oui
+1966-06-03,78,66-338,creation de cantons,oui
+1967-07-22,91,67-589,creation de cantons,oui
+1967-07-22,92,67-590,creation de cantons,oui
+1967-07-22,93,67-591,creation de cantons,oui
+1967-07-22,94,67-592,creation de cantons,oui
+1967-07-22,95,67-593,creation de cantons,oui
+1967-07-22,78,67-594,creation de cantons,oui
+1967-08-09,14,67-668,creation de cantons,oui
+1967-08-09,72,67-669,creation de cantons,oui
+1967-08-09,57,67-670,creation de cantons,oui
+1967-08-10,90,67-672,creation de cantons,oui
+1970-01-21,90,,creation de cantons,oui
+1973-07-17,05,73-651,creation de cantons,oui
+1973-07-17,10,73-652,creation de cantons,oui
+1973-07-17,11,73-653,creation de cantons,oui
+1973-07-17,16,73-654,creation de cantons,oui
+1973-07-17,17,73-655,creation de cantons,oui
+1973-07-17,24,73-656,creation de cantons,oui
+1973-07-17,33,73-657,creation de cantons,oui
+1973-07-17,36,73-658,creation de cantons,oui
+1973-07-17,39,73-659,creation de cantons,oui
+1973-07-17,40,73-660,creation de cantons,oui
+1973-07-17,41,73-661,creation de cantons,oui
+1973-07-17,42,73-662,creation de cantons,oui
+1973-07-17,47,73-663,creation de cantons,oui
+1973-07-17,50,73-664,creation de cantons,oui
+1973-07-17,51,73-665,creation de cantons,oui
+1973-07-17,53,73-666,creation de cantons,oui
+1973-07-17,57,73-667,creation de cantons,oui
+1973-07-17,60,73-668,creation de cantons,oui
+1973-07-17,64,73-669,creation de cantons,oui
+1973-07-17,67,73-670,creation de cantons,oui
+1973-07-17,69,73-671,creation de cantons,oui
+1973-07-17,70,73-672,creation de cantons,oui
+1973-07-17,79,73-673,creation de cantons,oui
+1973-07-17,80,73-674,creation de cantons,oui
+1973-07-17,81,73-675,creation de cantons,oui
+1973-07-17,82,73-676,creation de cantons,oui
+1973-07-17,86,73-677,creation de cantons,oui
+1973-07-17,88,73-678,creation de cantons,oui
+1973-07-25,02,73-712,creation de cantons,oui
+1973-07-25,03,73-713,creation de cantons,oui
+1973-07-25,04,73-714,creation de cantons,oui
+1973-07-25,08,73-715,creation de cantons,oui
+1973-07-25,15,73-716,creation de cantons,oui
+1973-07-25,23,73-717,creation de cantons,oui
+1973-07-25,26,73-718,creation de cantons,oui
+1973-07-25,28,73-719,creation de cantons,oui
+1973-07-25,29,73-720,creation de cantons,oui
+1973-07-25,30,73-721,creation de cantons,oui
+1973-07-25,34,73-722,creation de cantons,oui
+1973-07-25,35,73-723,creation de cantons,oui
+1973-07-25,37,73-724,creation de cantons,oui
+1973-07-25,44,73-725,creation de cantons,oui
+1973-07-25,45,73-726,creation de cantons,oui
+1973-07-25,49,73-727,creation de cantons,oui
+1973-07-25,55,73-728,creation de cantons,oui
+1973-07-25,65,73-729,creation de cantons,oui
+1973-08-04,07,73-761,creation de cantons,oui
+1973-08-04,12,73-762,creation de cantons,oui
+1973-08-04,14,73-763,creation de cantons,oui
+1973-08-04,18,73-764,creation de cantons,oui
+1973-08-04,32,73-765,creation de cantons,oui
+1973-08-04,38,73-766,creation de cantons,oui
+1973-08-04,43,73-767,creation de cantons,oui
+1973-08-04,54,73-768,creation de cantons,oui
+1973-08-04,71,73-769,creation de cantons,oui
+1973-08-04,73,73-770,creation de cantons,oui
+1973-08-04,83,73-771,creation de cantons,oui
+1973-08-04,84,73-772,creation de cantons,oui
+1973-08-04,85,73-773,creation de cantons,oui
+1973-08-04,89,73-774,creation de cantons,oui
+1973-08-17,01,73-810,creation de cantons,oui
+1973-08-17,06,73-811,creation de cantons,oui
+1973-08-17,13,73-812,creation de cantons,oui
+1973-08-17,21,73-813,creation de cantons,oui
+1973-08-17,25,73-814,creation de cantons,oui
+1973-08-17,31,73-815,creation de cantons,oui
+1973-08-17,52,73-816,creation de cantons,oui
+1973-08-17,58,73-817,creation de cantons,oui
+1973-08-17,62,73-818,creation de cantons,oui
+1973-08-17,66,73-819,creation de cantons,oui
+1973-08-17,74,73-820,creation de cantons,oui
+1973-08-17,87,73-821,creation de cantons,oui
+1973-08-19,20,73-825,creation de cantons,oui
+1973-08-19,02,73-826,creation et modification de cantons,oui
+1973-08-19,03,73-827,creation et modification de cantons,oui
+1973-08-19,86,73-828,creation et modification de cantons,oui
+1974-06-22,37,74-595,creation et modification de cantons,oui
+1974-09-11,65,74-769,creation et modification de cantons,oui
+1975-09-26,64,75-872,creation et modification de cantons,oui
+1975-10-19,49,75-955,creation et modification de cantons,oui
+1975-11-09,77,75-1033,creation de cantons,oui
+1975-12-07,91,75-1116,creation et modification de cantons,oui
+1976-01-22,78,76-57,creation et modification de cantons,oui
+1976-01-29,93,76-76,creation et modification de cantons,oui
+1976-01-29,94,76-77,creation et modification de cantons,oui
+1976-01-29,95,76-78,creation et modification de cantons,oui
+1981-08-04,64,81-735,modification de limites cantonales,oui
+1982-01-16,03,82-22,creation et modification de cantons,oui
+1982-01-16,08,82-23,creation et modification de cantons,oui
+1982-01-16,12,82-24,creation et modification de cantons,oui
+1982-01-16,16,82-25,creation et modification de cantons,oui
+1982-01-16,17,82-26,creation et modification de cantons,oui
+1982-01-16,28,82-27,creation et modification de cantons,oui
+1982-01-16,29,82-28,creation et modification de cantons,oui
+1982-01-16,33,82-29,creation et modification de cantons,oui
+1982-01-16,48,82-30,creation et modification de cantons,oui
+1982-01-16,50,82-31,creation et modification de cantons,oui
+1982-01-16,51,82-32,creation et modification de cantons,oui
+1982-01-16,52,82-33,creation et modification de cantons,oui
+1982-01-16,53,82-34,creation et modification de cantons,oui
+1982-01-16,62,82-35,creation et modification de cantons,oui
+1982-01-16,67,82-36,creation et modification de cantons,oui
+1982-01-16,88,82-37,creation et modification de cantons,oui
+1982-01-16,78,82-38,creation et modification de cantons,oui
+1982-01-22,15,82-51,creation et modification de cantons,oui
+1982-01-22,18,82-52,creation et modification de cantons,oui
+1982-01-22,2B,82-53,creation et modification de cantons,oui
+1982-01-22,22,82-54,creation et modification de cantons,oui
+1982-01-22,25,82-55,creation et modification de cantons,oui
+1982-01-22,27,82-56,creation et modification de cantons,oui
+1982-01-22,30,82-57,creation et modification de cantons,oui
+1982-01-22,37,82-58,creation et modification de cantons,oui
+1982-01-22,44,82-59,creation et modification de cantons,oui
+1982-01-22,41,82-60,creation et modification de cantons,oui
+1982-01-22,49,82-61,creation et modification de cantons,oui
+1982-01-22,56,82-62,creation et modification de cantons,oui
+1982-01-22,60,82-63,creation et modification de cantons,oui
+1982-01-22,61,82-64,creation et modification de cantons,oui
+1982-01-22,65,82-65,creation et modification de cantons,oui
+1982-01-22,69,82-66,creation et modification de cantons,oui
+1982-01-26,01,82-77,creation et modification de cantons,oui
+1982-01-26,05,82-78,creation et modification de cantons,oui
+1982-01-26,06,82-79,creation et modification de cantons,oui
+1982-01-26,35,82-80,creation et modification de cantons,oui
+1982-01-26,45,82-81,creation et modification de cantons,oui
+1982-01-26,,82-82,creation et modification de cantons,oui
+1982-01-26,57,82-83,creation et modification de cantons,oui
+1982-01-26,66,82-84,creation et modification de cantons,oui
+1982-01-26,90,82-85,creation et modification de cantons,oui
+1982-01-26,87,82-86,creation et modification de cantons,oui
+1982-01-28,14,82-92,creation et modification de cantons,oui
+1982-01-28,55,82-93,creation et modification de cantons,oui
+1982-01-28,86,82-94,creation et modification de cantons,oui
+1982-01-28,64,82-95,creation et modification de cantons,oui
+1982-01-28,68,82-96,creation et modification de cantons,oui
+1982-01-28,76,82-97,creation et modification de cantons,oui
+1982-01-28,77,82-98,creation et modification de cantons,oui
+1982-02-04,13,82-119,creation et modification de cantons,oui
+1982-02-04,19,82-120,creation et modification de cantons,oui
+1982-02-04,2A,82-121,creation et modification de cantons,oui
+1982-02-04,63,82-122,creation et modification de cantons,oui
+1982-02-04,72,82-123,creation et modification de cantons,oui
+1982-02-05,59,82-128,creation et modification de cantons,oui
+1982-02-06,14,82-132,creation et modification de cantons,oui
+1982-02-06,37,82-133,creation et modification de cantons,oui
+1982-02-06,56,82-134,creation et modification de cantons,oui
+1982-02-06,90,82-135,modification de limites cantonales,oui
+1984-12-22,10,,modification de limites cantonales,oui
+1984-12-22,70,,modification de limites cantonales,non
+1984-12-30,01,84-1222,creation et modification de cantons,oui
+1984-12-30,09,84-1223,creation et modification de cantons,oui
+1984-12-30,26,84-1224,creation et modification de cantons,oui
+1984-12-30,28,84-1225,creation et modification de cantons,oui
+1984-12-30,32,84-1226,creation et modification de cantons,oui
+1984-12-30,37,84-1227,creation et modification de cantons,oui
+1984-12-30,41,84-1228,creation et modification de cantons,oui
+1984-12-30,42,84-1229,creation et modification de cantons,oui
+1984-12-30,43,84-1230,creation et modification de cantons,oui
+1984-12-30,46,84-1231,creation et modification de cantons,oui
+1984-12-30,47,84-1232,creation et modification de cantons,oui
+1984-12-30,53,84-1233,creation et modification de cantons,oui
+1984-12-30,54,84-1234,creation et modification de cantons,oui
+1984-12-30,57,84-1235,creation et modification de cantons,oui
+1984-12-30,62,84-1236,creation et modification de cantons,oui
+1984-12-30,71,84-1237,creation et modification de cantons,oui
+1984-12-30,81,84-1238,creation et modification de cantons,oui
+1984-12-30,87,84-1239,creation et modification de cantons,oui
+1984-12-30,90,84-1240,creation et modification de cantons,oui
+1984-12-30,92,84-1241,creation et modification de cantons,oui
+1984-12-30,94,84-1242,creation et modification de cantons,oui
+1985-01-23,10,85-71,creation et modification de cantons,oui
+1985-01-23,11,85-72,modification de limites cantonales,oui
+1985-01-23,15,85-73,creation et modification de cantons,oui
+1985-01-23,29,85-74,creation et modification de cantons,oui
+1985-01-23,69,85-75,creation et modification de cantons,oui
+1985-01-23,77,85-76,creation et modification de cantons,oui
+1985-01-23,80,85-77,creation et modification de cantons,oui
+1985-01-24,03,85-82,creation et modification de cantons,oui
+1985-01-24,91,85-83,creation et modification de cantons,oui
+1985-01-24,49,85-84,modification de limites cantonales,oui
+1985-01-24,58,85-85,creation et modification de cantons,oui
+1985-01-24,73,85-86,creation et modification de cantons,oui
+1985-01-25,38,85-92,creation et modification de cantons,oui
+1985-01-30,04,85-127,creation et modification de cantons,oui
+1985-01-30,17,85-128,creation et modification de cantons,oui
+1985-01-30,19,85-129,creation et modification de cantons,oui
+1985-01-30,44,85-130,creation et modification de cantons,oui
+1985-01-30,971,85-131,creation et modification de cantons,oui
+1985-01-30,973,85-132,creation et modification de cantons,oui
+1985-01-30,36,85-133,modification de limites cantonales,oui
+1985-01-31,972,85-139,creation et modification de cantons,oui
+1985-02-01,06,85-143,creation et modification de cantons,oui
+1985-02-01,14,85-144,creation et modification de cantons,oui
+1985-02-01,27,85-145,creation et modification de cantons,oui
+1985-02-01,34,85-146,creation et modification de cantons,oui
+1985-02-01,51,85-147,creation et modification de cantons,oui
+1985-02-01,56,85-148,modification de limites cantonales,oui
+1985-02-01,66,85-149,creation et modification de cantons,oui
+1985-02-01,70,85-150,creation et modification de cantons,oui
+1985-02-01,78,85-151,creation et modification de cantons,oui
+1985-02-01,84,85-152,modification de limites cantonales,oui
+1985-02-01,95,85-153,creation et modification de cantons,oui
+1985-08-22,,,modification de limites cantonales,non
+1985-08-22,,,modification de limites cantonales,non
+1985-09-03,,,modification de limites cantonales,non
+1986-02-26,04,86-251,suppression de cantons,oui
+1986-06-21,41,,modification de limites cantonales,non
+1986-06-28,10,,modification de limites cantonales,non
+1986-08-13,,,modification de limites cantonales,non
+1986-08-13,,,modification de limites cantonales,non
+1986-08-20,76,,modification de limites cantonales,non
+1986-09-06,76,,modification de limites cantonales,non
+1986-09-17,68,,modification de limites cantonales,non
+1986-10-30,91,,modification de limites cantonales,non
+1986-10-30,94,,modification de limites cantonales,non
+1987-02-13,87,87-94,modification de limites cantonales,oui
+1987-02-14,57,,modification de limites cantonales,non
+1987-02-28,,,modification de limites cantonales,non
+1987-04-14,38,,modification de limites cantonales,oui
+1987-06-06,12,,modification de limites cantonales,non
+1987-06-06,76,,modification de limites cantonales,non
+1987-10-23,92,,modification de limites cantonales,non
+1988-02-25,47,,modification de limites cantonales,non
+1988-02-25,91,,modification de limites cantonales,non
+1988-03-04,59,,modification de limites cantonales,oui
+1988-03-04,94,,modification de limites cantonales,oui
+1988-04-22,38,88-398,creation et modification de cantons,oui
+1988-04-22,974,88-400,creation et modification de cantons,oui
+1988-04-30,974,88-474,creation et modification de cantons,oui
+1988-05-06,04,88-514,suppression de cantons,oui
+1988-08-25,04,88-891,suppression de cantons,oui
+1988-09-30,57,,modification de limites cantonales,non
+1988-12-20,83,,modification de limites cantonales,non
+1989-08-10,27,,modification de limites cantonales,non
+1989-08-10,27,,modification de limites cantonales,non
+1989-08-10,53,,modification de limites cantonales,non
+1989-08-10,91,,modification de limites cantonales,non
+1989-10-07,59,,modification de limites cantonales,non
+1989-10-07,59,,modification de limites cantonales,non
+1989-10-07,74,,modification de limites cantonales,non
+1989-10-24,60,,modification de limites cantonales,oui
+1989-10-24,67,,modification de limites cantonales,oui
+1990-04-23,78,,modification de limites cantonales,non
+1990-04-24,78,,modification de limites cantonales,non
+1990-06-12,01,,modification de limites cantonales,oui
+1990-10-30,44,,modification de limites cantonales,non
+1990-12-05,89,,rattachement de commune a un canton,non
+1949-01-09,01,,rattachement de commune a un canton,oui
+1946-05-04,59,,rattachement de commune a un canton,non
+1948-10-28,16,,rattachement de commune a un canton,oui
+1949-06-30,62,,creation et modification de cantons,oui
+1949-09-07,46,,creation de cantons,non
+1951-09-14,19,,creation et modification de cantons,non
+1951-11-17,01,,rattachement de commune a un canton,non
+1951-11-17,11,,rattachement de commune a un canton,oui
+1951-11-17,64,,rattachement de commune a un canton,non
+1956-08-05,37,,creation et modification de cantons,oui
+1957-09-25,33,,creation de cantons,non
+1958-02-27,68,,creation et modification de cantons,oui
+1962-01-11,62,62-5,creation et modification de cantons,oui
+1962-01-27,43,,rattachement de commune a un canton,oui
+1962-01-27,67,,creation et modification de cantons,oui
+1963-06-05,49,,modification de limites cantonales,oui
+1963-10-25,80,,modification de limites cantonales,non
+1964-01-15,69,,creation et modification de cantons,non
+1964-01-30,26,,creation et modification de cantons,oui
+1964-01-30,49,,creation et modification de cantons,oui
+1964-01-30,59,,creation et modification de cantons,oui
+1964-01-30,69,,creation et modification de cantons,oui
+1964-01-30,76,,creation et modification de cantons,oui
+1964-01-30,83,,creation et modification de cantons,oui
+1964-01-30,78,,creation et modification de cantons,oui
+1964-01-30,91,,creation et modification de cantons,oui
+1964-01-30,92,,creation et modification de cantons,oui
+1964-01-30,93,,creation et modification de cantons,oui
+1964-01-30,94,,creation et modification de cantons,oui
+1964-01-30,95,,creation et modification de cantons,oui
+1964-08-04,77,,creation de cantons,non
+1968-08-10,38,,creation de cantons,oui
+1975-10-08,62,,modification de limites cantonales,oui
+1975-10-10,85,,modification de limites cantonales,oui
+1967-12-30,01,67-1205,modification de limites departementales,non
+1967-12-30,38,67-1205,modification de limites departementales,oui
+1967-12-30,69,67-1205,modification de limites departementales,non
+1968-02-21,69,68-168,modification de limites cantonales,oui
+1969-11-28,78,,modification de limites departementales,oui
+1969-11-28,91,,modification de limites departementales,non
+1975-05-16,20,75-356,modification de limites departementales,non
+1975-05-16,2A,75-356,modification de limites departementales,non
+1975-05-16,2B,75-356,modification de limites departementales,non
+1948-10-28,68,,transfert de chef-lieu,oui
+1950-03-21,57,,transfert de chef-lieu,oui
+1957-06-06,51,,transfert de chef-lieu,non
+1965-02-21,79,,changement de nom de canton,non
+1967-10-29,35,,changement de nom de canton,non
+1973-01-19,86,,transfert de chef-lieu,oui
+1985-01-18,32,,changement de nom de canton,oui
+1985-01-18,35,,changement de nom de canton,oui
+1977-11-18,94,,annulation contentieuse,non
+1978-07-12,95,,annulation contentieuse,non

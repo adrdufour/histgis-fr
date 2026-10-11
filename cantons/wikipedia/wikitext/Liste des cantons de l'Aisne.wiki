@@ -1,0 +1,256 @@
+Cet article présente la liste des '''[[Canton français|cantons]]''' du [[Département français|département]] '''de l'[[Aisne (département)|Aisne]]'''. De 57 cantons à la création des départements en 1790, le nombre est réduit à 37 lors de la refonte de la carte cantonale de 1801, puis augmente en 1973 à 42 pour suivre l'évolution démographique. Le [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], applicable à partir des [[Élections départementales françaises de 2015|élections départementales de mars 2015]], réduit le nombre de cantons à 21.
+[[Fichier:02-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de l’Aisne, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au 1er janvier 2019.]]
+== Histoire ==
+{{Article connexe|Administration de l'Aisne}}
+
+=== Création des départements, districts et cantons en 1790 ===
+L'Assemblée adopte le principe du découpage du territoire du [[Royaume de France|royaume]] en [[département français|départements]], [[District (subdivision départementale, 1790-1795)|districts]] et [[canton français|cantons]] avec les lois des 14 et {{date France|22|décembre|1789}}<ref name="COG41">{{Lien web |url=http://projetbabel.org/gl/cog45.htm |titre= Le Code officiel géographique (COG) - 4.5. : le découpage du territoire de 1790 à 1815 |auteur=Gérard Lang |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>. La France est ainsi divisée en 83 départements par décret du {{date France|15|janvier|1790}} et la liste des départements et des districts est précisée par décret du {{date France|16|février|1790}}<ref name="COG41"/>.
+
+=== Période 1801-1973 ===
+Peu de temps après leur création, les cantons sont supprimés, en tant que découpage administratif, par une loi du {{date France|26|juin|1793}}. Ils ne conservent qu'un rôle électoral. Mais, après la chute de [[Maximilien de Robespierre|Robespierre]] le 9 thermidor an II ({{date France|27|juillet|1794}}), les mesures de circonstance de la [[Convention nationale|Convention]] sont annulées par la Constitution du {{date France|22|août|1795}} (5 fructidor, an III), dite « de la République bourgeoise ». La Constitution supprime les districts, rouages administratifs liés à la [[Terreur (Révolution française)|Terreur]], et renforce le rôle des cantons, qu'elle vient de recréer<ref name="COG43">{{Lien web |url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.3. : l’œuvre révolutionnaire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 20 avril 2014}}.</ref>. La [[loi du 28 pluviôse an VIII]] ({{date France|17|février|1800}}) crée des [[arrondissement français|arrondissements]] dans {{unité|98|départements}}, dont 371 dans les {{unité|89|départements}} correspondant au territoire de la [[Constitution de 1793]]. À la même date, le nombre des cantons (correspondant au même territoire) est ramené à {{formatnum:2916}}<ref name="COG44">{{Lien web |url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.4. : le Consulat et l'Empire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 20 avril 2014}}.</ref>.
+
+L'Aisne compte alors 37 cantons répartis en cinq arrondissements<ref>Arrêté du 3 Vendémiaire an X (25 septembre 1801), ''Bulletin des lois'' an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f21 p.1]</ref>.
+
+De 1926 à 1942, l'[[arrondissement de Château-Thierry]] est supprimé, sans que cela ne modifie le découpage cantonal<ref>{{Ouvrage|langue=fr|auteur1=Bernard Gaudillère|titre=Atlas historique des circonscriptions électorales françaises|lieu=Genève|éditeur=[[Librairie Droz|Droz]]|année=1994|pages totales=840|passage=788|isbn=2-600-00065-8}}.</ref>.
+
+=== Redécoupage de 1973 ===
+{{Article connexe|Liste des cantons de l'Aisne de 1973 à 2015}}
+[[Fichier:Anciens cantons de l'Aisne.png|vignette|250x250px|Carte des anciens cantons de l'Aisne avant le redécoupage de 2014]]
+Avec le décret du {{date|23|juillet|1973}}, huit nouveaux cantons sont créés : le canton de Laon est divisé en [[Canton de Laon-Nord|Laon-Nord]] et [[Canton de Laon-Sud|Laon-Sud]], celui de Saint-Quentin est divisé en [[Canton de Saint-Quentin-Centre|Saint-Quentin - Centre]], le [[Canton de Saint-Quentin-Sud|Saint-Quentin - Sud]] et [[Canton de Saint-Quentin-Nord|Saint-Quentin - Nord]], celui de Soissons en [[Canton de Soissons-Sud|Soissons-Sud]] et [[Canton de Soissons-Nord|Soissons-Nord]], enfin le [[canton de Tergnier]] est créé par division du [[canton de La Fère]]<ref name="Decret1973">{{Légifrance|url=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500614|texte=Décret {{n°}}73-712 du 23 juillet 1973 portant création de cantons dans le département de l'Aisne}}, publié au [[Journal officiel de la République française|JORF]] {{n°|171}} du {{Date-|25 juillet 1973}}, {{p.|8076}}.</ref>{{,}}<ref name="d1973m">{{Légifrance|url=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303850|texte=Décret {{n°}}73-826 du 18 août 1973 modifiant le décret {{n°}}73-712 du 23 juillet 1973 portant création de cantons dans le département de l'Aisne (Division des cantons de Soissons et de Saint-Quentin}}, publié au [[Journal officiel de la République française|JORF]] {{n°|192}} du {{Date-|19 août 1973}}, {{p.|9016}}.</ref>. L'Aisne comprend alors 42 cantons répartis dans 5 arrondissements.
+
+
+
+
+
+
+
+
+=== Redécoupage cantonal de 2014 ===
+[[Fichier:Cantons de l'Aisne.svg|thumb|200px|Carte des cantons de l'Aisne après le redécoupage de 2014]]
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 10 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|21 février 2014}} pour le département de l'[[Aisne (département)|Aisne]]<ref name="Decret2014">{{Lien web |url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028652328|titre= Décret n° 2014-202 du 21 février 2014 portant délimitation des cantons dans le département de l'Aisne |date = |site =legifrance.gouv.fr |consulté le= 21 avril 2014}}.</ref>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour six ans au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au premier tour. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans l'[[Aisne (département)|Aisne]] le nombre de cantons passe ainsi de 42 à 21<ref name="Decret2014" />.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Decision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 10 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de l'Aisne, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|540508|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=02 |titre= Chiffres clés Évolution et structure de la population - Département de l'Aisne (02) |date = |site =insee.fr |consulté le= 10 mai 2014}}.</ref>. Avec 21 cantons la population moyenne par conseiller départemental est de {{unité|25738|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|20591|habitants}} et {{unité|30886|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Liste détaillée ===
+{| class="wikitable alternance"  
+|-----
+!N°<ref>N° = numéro d'ordre dans le décret</ref>||Nom du Canton||[[Bureau centralisateur]]||Population <small>({{Population de France/dernière année||Canton de Bohain-en-Vermandois}})</small>||Nombre de communes entières||Communes composant le canton
+|- 
+|1 || [[Canton de Bohain-en-Vermandois|Bohain-en-Vermandois]] || [[Bohain-en-Vermandois]] || {{formatnum:{{Population de France/dernière pop||Canton de Bohain-en-Vermandois}}}} || 31 || [[Aubencheul-aux-Bois]], [[Beaurevoir]], [[Becquigny (Aisne)|Becquigny]], [[Bellenglise]], [[Bellicourt]], [[Bohain-en-Vermandois]], [[Bony]], [[Brancourt-le-Grand]], [[Le Catelet]], [[Croix-Fonsomme]], [[Estrées (Aisne)|Estrées]], [[Étaves-et-Bocquiaux]], [[Fontaine-Uterte]], [[Fresnoy-le-Grand]], [[Gouy (Aisne)|Gouy]], [[Hargicourt (Aisne)|Hargicourt]], [[Lehaucourt]], [[Joncourt]], [[Lempire]], [[Levergies]], [[Magny-la-Fosse]], [[Montbrehain]], [[Montigny-en-Arrouaise]], [[Nauroy]], [[Prémont]], [[Ramicourt]], [[Seboncourt]], [[Sequehart]], [[Serain]], [[Vendhuile]], [[Villeret (Aisne)|Villeret]].
+|-
+|2 || [[Canton de Château-Thierry|Château-Thierry]] || [[Château-Thierry]] || {{formatnum:{{Population de France/dernière pop||Canton de Château-Thierry}}}} || 21 || [[Belleau (Aisne)|Belleau]], [[Bézu-Saint-Germain]], [[Blesmes]], [[Bouresches]], [[Brasles]], [[Brécy (Aisne)|Brécy]], [[Château-Thierry]], [[Chierry]], [[Coincy (Aisne)|Coincy]], [[Épaux-Bézu]], [[Épieds (Aisne)|Épieds]], [[Étampes-sur-Marne]], [[Étrépilly (Aisne)|Étrépilly]], [[Fossoy]], [[Gland (Aisne)|Gland]], [[Grisolles (Aisne)|Grisolles]], [[Mont-Saint-Père]], [[Nesles-la-Montagne]], [[Rocourt-Saint-Martin]], [[Verdilly]], [[Villeneuve-sur-Fère]].
+|-
+|3 || [[Canton de Chauny|Chauny]] || [[Chauny]] || {{formatnum:{{Population de France/dernière pop||Canton de Chauny}}}} || 21 || [[Abbécourt]], [[Amigny-Rouy]], [[Autreville (Aisne)|Autreville]], [[Beaumont-en-Beine]], [[Béthancourt-en-Vaux]], [[Caillouël-Crépigny]], [[Caumont (Aisne)|Caumont]], [[Chauny]], [[Commenchon]], [[Condren]], [[Frières-Faillouël]], [[Guivry]], [[Marest-Dampcourt]], [[Neuflieux]], [[La Neuville-en-Beine]], [[Ognes (Aisne)|Ognes]], [[Pierremande]], [[Sinceny]], [[Ugny-le-Gay]], [[Villequier-Aumont]], [[Viry-Noureuil]].
+|-
+|4 || [[Canton d'Essômes-sur-Marne|Essômes-sur-Marne]] || [[Essômes-sur-Marne]] || {{formatnum:{{Population de France/dernière pop||Canton d'Essômes-sur-Marne}}}} || 47 || [[Azy-sur-Marne]], [[Barzy-sur-Marne]], [[Bézu-le-Guéry]], [[Bonneil]], [[Celles-lès-Condé]], [[La Chapelle-sur-Chézy]], [[Charly-sur-Marne]], [[Chartèves]], [[Chézy-sur-Marne]], [[Condé-en-Brie]], [[Connigis]], [[Coupru]], [[Courboin]], [[Courtemont-Varennes]], [[Crézancy]], [[Crouttes-sur-Marne]], [[Dhuys et Morin-en-Brie]], [[Domptin]], [[L'Épine-aux-Bois]], [[Essises]], [[Essômes-sur-Marne]], [[Jaulgonne]], [[Lucy-le-Bocage]], [[Marigny-en-Orxois]], [[Mézy-Moulins]], [[Montfaucon (Aisne)|Montfaucon]], [[Monthurel]], [[Montigny-lès-Condé]], [[Montlevon]], [[Montreuil-aux-Lions]], [[Nogentel]], [[Nogent-l'Artaud]], [[Pargny-la-Dhuys]], [[Passy-sur-Marne]], [[Pavant]], [[Reuilly-Sauvigny]], [[Romeny-sur-Marne]], [[Rozoy-Bellevalle]], [[Saint-Eugène (Aisne)|Saint-Eugène]], [[Saulchery]], [[Trélou-sur-Marne]], [[Vallées en Champagne]], [[Vendières]], [[Veuilly-la-Poterie]], [[Viels-Maisons]], [[Viffort]], [[Villiers-Saint-Denis]].
+|-
+|5 || [[Canton de Fère-en-Tardenois|Fère-en-Tardenois]] || [[Fère-en-Tardenois]] || {{formatnum:{{Population de France/dernière pop||Canton de Fère-en-Tardenois}}}} || 77 || [[Aizy-Jouy]], [[Allemant (Aisne)|Allemant]], [[Augy (Aisne)|Augy]], [[Bazoches-et-Saint-Thibaut]], [[Beuvardes]], [[Blanzy-lès-Fismes]], [[Braine (Aisne)|Braine]], [[Braye (Aisne)|Braye]], [[Brenelle]], [[Bruyères-sur-Fère]], [[Bruys]], [[Bucy-le-Long]], [[Celles-sur-Aisne]], [[Cerseuil]], [[Le Charmel]], [[Chassemy]], [[Chavignon]], [[Chavonne]], [[Chéry-Chartreuve]], [[Chivres-Val]], [[Cierges]], [[Ciry-Salsogne]], [[Clamecy (Aisne)|Clamecy]], [[Condé-sur-Aisne]], [[Coulonges-Cohan]], [[Courcelles-sur-Vesle]], [[Courmont (Aisne)|Courmont]], [[Couvrelles]], [[Cys-la-Commune]], [[Dhuizel]], [[Dravegny]], [[Fère-en-Tardenois]], [[Filain (Aisne)|Filain]], [[Fresnes-en-Tardenois]], [[Goussancourt]], [[Jouaignes]], [[Laffaux]], [[Lesges]], [[Lhuys]], [[Limé]], [[Loupeigne]], [[Mareuil-en-Dôle]], [[Margival]], [[Missy-sur-Aisne]], [[Monampteuil]], [[Mont-Notre-Dame]], [[Mont-Saint-Martin (Aisne)|Mont-Saint-Martin]], [[Nanteuil-la-Fosse]], [[Nanteuil-Notre-Dame]], [[Neuville-sur-Margival]], [[Ostel]], [[Paars]], [[Pargny-Filain]], [[Pont-Arcy]], [[Presles-et-Boves]], [[Quincy-sous-le-Mont]], [[Ronchères (Aisne)|Ronchères]], [[Saint-Mard (Aisne)|Saint-Mard]], [[Sancy-les-Cheminots]], [[Saponay]], [[Les Septvallons]], [[Sergy (Aisne)|Sergy]], [[Seringes-et-Nesles]], [[Serval (Aisne)|Serval]], [[Soupir (Aisne)|Soupir]], [[Terny-Sorny]], [[Vailly-sur-Aisne]], [[Vasseny]], [[Vaudesson]], [[Vauxtin]], [[Vézilly]], [[Viel-Arcy]], [[Villers-Agron-Aiguizy]], [[Villers-sur-Fère]], [[Ville-Savoye]], [[Vuillery]].
+|-
+|6 || [[Canton de Villeneuve-sur-Aisne|Villeneuve-sur-Aisne]] || [[Villeneuve-sur-Aisne]] || {{formatnum:{{Population de France/dernière pop||Canton de Villeneuve-sur-Aisne}}}} || 76 || [[Aguilcourt]], [[Aizelles]], [[Amifontaine]], [[Aubigny-en-Laonnois]], [[Beaurieux (Aisne)|Beaurieux]], [[Berrieux]], [[Berry-au-Bac]], [[Bertricourt]], [[Boncourt (Aisne)|Boncourt]], [[Bouconville-Vauclair]], [[Bouffignereux]], [[Bourg-et-Comin]], [[Braye-en-Laonnois]], [[Bucy-lès-Pierrepont]], [[Chaudardes]], [[Chermizy-Ailles]], [[Chevregny]], [[Chivres-en-Laonnois]], [[Concevreux]], [[Condé-sur-Suippe]], [[Corbeny]], [[Coucy-lès-Eppes]], [[Courtrizy-et-Fussigny]], [[Craonne]], [[Craonnelle]], [[Cuiry-lès-Chaudardes]], [[Cuissy-et-Geny]], [[Ébouleau]], [[Évergnicourt]], [[Gizy]], [[Goudelancourt-lès-Berrieux]], [[Goudelancourt-lès-Pierrepont]], [[Guyencourt]], [[Jumigny]], [[Juvincourt-et-Damary]], [[Lappion]], [[Liesse-Notre-Dame]], [[Lor]], [[Mâchecourt]], [[Maizy]], [[La Malmaison]], [[Marchais (Aisne)|Marchais]], [[Mauregny-en-Haye]], [[Meurival]], [[Missy-lès-Pierrepont]], [[Montaigu (Aisne)|Montaigu]], [[Moulins (Aisne)|Moulins]], [[Moussy-Verneuil]], [[Muscourt]], [[Neufchâtel-sur-Aisne]], [[Neuville-sur-Ailette]], [[Nizy-le-Comte]], [[Œuilly (Aisne)|Œuilly]], [[Orainville]], [[Oulches-la-Vallée-Foulon]], [[Paissy]], [[Pancy-Courtecon]], [[Pargnan]], [[Pignicourt]], [[Ployart-et-Vaurseine]], [[Pontavert]], [[Prouvais]], [[Proviseux-et-Plesnoy]], [[Roucy]], [[Saint-Erme-Outre-et-Ramecourt]], [[Saint-Thomas (Aisne)|Saint-Thomas]], [[Sainte-Croix (Aisne)|Sainte-Croix]], [[La Selve (Aisne)|La Selve]], [[Sissonne (Aisne)|Sissonne]], [[Trucy]], [[Variscourt]], [[Vassogne]], [[Vendresse-Beaulne]], [[La Ville-aux-Bois-lès-Pontavert]], [[Villeneuve-sur-Aisne]].
+|-
+|7 || [[Canton de Guise|Guise]] || [[Guise]] || {{formatnum:{{Population de France/dernière pop||Canton de Guise}}}} || 45 || [[Aisonville-et-Bernoville]], [[Audigny]], [[Barzy-en-Thiérache]], [[Bergues-sur-Sambre]], [[Bernot (Aisne)|Bernot]], [[Boué]], [[Chigny (Aisne)|Chigny]], [[Crupilly]], [[Dorengt]], [[Esquéhéries]], [[Étreux]], [[Fesmy-le-Sart]], [[Flavigny-le-Grand-et-Beaurain]], [[Grand-Verly]], [[Grougis]], [[Guise]], [[Hannapes]], [[Hauteville (Aisne)|Hauteville]], [[Iron]], [[Lavaqueresse]], [[Leschelle]], [[Lesquielles-Saint-Germain]], [[Macquigny]], [[Malzy]], [[Marly-Gomont]], [[Mennevret]], [[Molain (Aisne)|Molain]], [[Monceau-sur-Oise]], [[La Neuville-lès-Dorengt]], [[Le Nouvion-en-Thiérache]], [[Noyales]], [[Oisy (Aisne)|Oisy]], [[Petit-Verly]], [[Proisy]], [[Proix]], [[Ribeauville]], [[Romery (Aisne)|Romery]], [[Saint-Martin-Rivière]], [[Tupigny]], [[Vadencourt (Aisne)|Vadencourt]], [[La Vallée-Mulâtre]], [[Vaux-Andigny]], [[Vénérolles]], [[Villers-lès-Guise]], [[Wassigny]].
+|-
+|8 || [[Canton d'Hirson|Hirson]] || [[Hirson]] || {{formatnum:{{Population de France/dernière pop||Canton d'Hirson}}}} || 26 || [[Any-Martin-Rieux]], [[Aubenton]], [[Beaumé]], [[Besmont]], [[Bucilly]], [[Buire]], [[Coingt]], [[Effry]], [[Éparcy]], [[La Hérie]], [[Hirson]], [[Iviers]], [[Jeantes]], [[Landouzy-la-Ville]], [[Leuze (Aisne)|Leuze]], [[Logny-lès-Aubenton]], [[Martigny (Aisne)|Martigny]], [[Mondrepuis]], [[Mont-Saint-Jean (Aisne)|Mont-Saint-Jean]], [[Neuve-Maison]], [[Ohis]], [[Origny-en-Thiérache]], [[Saint-Clément (Aisne)|Saint-Clément]], [[Saint-Michel (Aisne)|Saint-Michel]], [[Watigny]], [[Wimy]].
+|-
+|9 || [[Canton de Laon-1|Laon-1]] || [[Laon]] || {{formatnum:{{Population de France/dernière pop||Canton de Laon-1}}}} || 26 + Fraction Laon || 1° Les communes suivantes : [[Anizy-le-Grand]], [[Aulnois-sous-Laon]], [[Bassoles-Aulers]], [[Besny-et-Loizy]], [[Bourguignon-sous-Montbavin]], [[Brancourt-en-Laonnois]], [[Bucy-lès-Cerny]], [[Cerny-lès-Bucy]], [[Cessières-Suzy]], [[Chaillevois]], [[Chambry (Aisne)|Chambry]], [[Clacy-et-Thierret]], [[Crépy (Aisne)|Crépy]], [[Laniscourt]], [[Merlieux-et-Fouquerolles]], [[Molinchart]], [[Mons-en-Laonnois]], [[Montbavin]], [[Pinon (Aisne)|Pinon]], [[Prémontré]], [[Royaucourt-et-Chailvet]], [[Urcel]], [[Vaucelles-et-Beffecourt]], [[Vauxaillon]], [[Vivaise]], [[Wissignicourt]]. <br/> 2° La partie de la commune de Laon située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Besny-et-Loizy, ligne de chemin de fer de Laon à Tergnier, ligne droite perpendiculaire à la ligne de chemin de fer dans le prolongement de la rue de la Linotte, rue de la Linotte, rue de Lattre-de-Tassigny, sentier Saint-Just, rue Millon-de-Martigny, ruelle aux Loups, avenue Jean-Jaurès, avenue Aristide-Briand, rue du Mont-de-Vaux, rue Roger-Salengro, rue Midelet, rue de la Bouloire, rue de la Valise, grimpette de la Petite-Valise, rue Scheffer, place des Combattants-en-Afrique-du-Nord, rue Winston-Churchill, rue Arago, rue Paul-Langevin, rue de l'Avenir, rue du Jardin-Brizard, rue Léon-Blum, avenue Charles-de-Gaulle, jusqu'à la limite territoriale de la commune d'Athies-sous-Laon.
+|-
+|10 || [[Canton de Laon-2|Laon-2]] || [[Laon]] || {{formatnum:{{Population de France/dernière pop||Canton de Laon-2}}}} || 24 + Fraction Laon || 1° Les communes suivantes : [[Arrancy]], [[Athies-sous-Laon]], [[Bièvres (Aisne)|Bièvres]], [[Bruyères-et-Montbérault]], [[Cerny-en-Laonnois]], [[Chamouille]], [[Chérêt]], [[Chivy-lès-Étouvelles]], [[Colligis-Crandelain]], [[Eppes]], [[Étouvelles]], [[Festieux]], [[Laval-en-Laonnois]], [[Lierval]], [[Martigny-Courpierre]], [[Montchâlons]], [[Monthenault]], [[Nouvion-le-Vineux]], [[Orgeval (Aisne)|Orgeval]], [[Parfondru]], [[Presles-et-Thierny]], [[Samoussy]], [[Veslud]], [[Vorges]]. <br/>2° La partie de la commune de Laon non incluse dans le canton de Laon-1.
+|-
+|11 || [[Canton de Marle|Marle]] || [[Marle]] || {{formatnum:{{Population de France/dernière pop||Canton de Marle}}}} || 65 || [[Agnicourt-et-Séchelles]], [[Assis-sur-Serre]], [[Autremencourt]], [[Barenton-Bugny]], [[Barenton-Cel]], [[Barenton-sur-Serre]], [[Berlancourt (Aisne)|Berlancourt]], [[Bois-lès-Pargny]], [[Bosmont-sur-Serre]], [[Chalandry]], [[Châtillon-lès-Sons]], [[Chéry-lès-Pouilly]], [[Chevennes]], [[Cilly]], [[Colonfay]], [[Couvron-et-Aumencourt]], [[Crécy-sur-Serre]], [[Cuirieux]], [[Dercy]], [[Erlon]], [[Franqueville (Aisne)|Franqueville]], [[Froidmont-Cohartille]], [[Grandlup-et-Fay]], [[Le Hérie-la-Viéville]], [[Housset]], [[Landifay-et-Bertaignemont]], [[Lemé]], [[Lugny (Aisne)|Lugny]], [[Marcy-sous-Marle]], [[Marfontaine]], [[Marle]], [[Mesbrecourt-Richecourt]], [[Monceau-le-Neuf-et-Faucouzy]], [[Monceau-le-Waast]], [[Montigny-le-Franc]], [[Montigny-sous-Marle]], [[Montigny-sur-Crécy]], [[Mortiers (Aisne)|Mortiers]], [[La Neuville-Bosmont]], [[La Neuville-Housset]], [[Nouvion-et-Catillon]], [[Nouvion-le-Comte]], [[Pargny-les-Bois]], [[Pierrepont (Aisne)|Pierrepont]], [[Pouilly-sur-Serre]], [[Puisieux-et-Clanlieu]], [[Remies]], [[Rogny]], [[Rougeries]], [[Sains-Richaumont]], [[Saint-Gobert]], [[Saint-Pierre-lès-Franqueville]], [[Saint-Pierremont (Aisne)|Saint-Pierremont]], [[Sons-et-Ronchères]], [[Le Sourd]], [[Tavaux-et-Pontséricourt]], [[Thiernu]], [[Toulis-et-Attencourt]], [[La Vallée-au-Blé]], [[Verneuil-sur-Serre]], [[Vesles-et-Caumont]], [[Voharies]], [[Voulpaix]], [[Voyenne]], [[Wiège-Faty]].
+|-
+|12 || [[Canton de Ribemont|Ribemont]] || [[Ribemont]] || {{formatnum:{{Population de France/dernière pop||Canton de Ribemont}}}} || 52 || [[Alaincourt (Aisne)|Alaincourt]], [[Annois]], [[Artemps]], [[Aubigny-aux-Kaisnes]], [[Benay]], [[Berthenicourt]], [[Bray-Saint-Christophe]], [[Brissay-Choigny]], [[Brissy-Hamégicourt]], [[Cerizy]], [[Châtillon-sur-Oise]], [[Chevresis-Monceau]], [[Clastres]], [[Cugny (Aisne)|Cugny]], [[Dallon]], [[Dury (Aisne)|Dury]], [[Essigny-le-Grand]], [[La Ferté-Chevresis]], [[Flavy-le-Martel]], [[Fontaine-lès-Clercs]], [[Gibercourt]], [[Happencourt]], [[Hinacourt]], [[Itancourt]], [[Jussy (Aisne)|Jussy]], [[Ly-Fontaine]], [[Mézières-sur-Oise]], [[Mont-d'Origny]], [[Montescourt-Lizerolles]], [[Moÿ-de-l'Aisne]], [[Neuvillette (Aisne)|Neuvillette]], [[Ollezy]], [[Origny-Sainte-Benoite]], [[Parpeville]], [[Pithon]], [[Pleine-Selve (Aisne)|Pleine-Selve]], [[Regny]], [[Remigny (Aisne)|Remigny]], [[Renansart]], [[Ribemont]], [[Saint-Simon (Aisne)|Saint-Simon]], [[Seraucourt-le-Grand]], [[Séry-lès-Mézières]], [[Sissy]], [[Sommette-Eaucourt]], [[Surfontaine]], [[Thenelles]], [[Tugny-et-Pont]], [[Urvillers]], [[Vendeuil]], [[Villers-le-Sec (Aisne)|Villers-le-Sec]], [[Villers-Saint-Christophe]].
+|-
+|13 || [[Canton de Saint-Quentin-1|Saint-Quentin-1]] || [[Saint-Quentin]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Quentin-1}}}} || 24 + Fraction Saint-Quentin || 1° Les communes suivantes : [[Attilly]], [[Beauvois-en-Vermandois]], [[Caulaincourt (Aisne)|Caulaincourt]], [[Douchy (Aisne)|Douchy]], [[Étreillers]], [[Fayet (Aisne)|Fayet]], [[Fluquières]], [[Foreste]], [[Francilly-Selency]], [[Germaine (Aisne)|Germaine]], [[Gricourt]], [[Holnon]], [[Jeancourt]], [[Lanchy]], [[Maissemy]], [[Pontru]], [[Pontruet]], [[Roupy]], [[Savy (Aisne)|Savy]], [[Trefcon]], [[Vaux-en-Vermandois]], [[Vendelles]], [[Le Verguier]], [[Vermand]]. <br/>2° La partie de la commune de Saint-Quentin non incluse dans les cantons de Saint-Quentin-2 et de Saint-Quentin-3.
+|-
+|14 || [[Canton de Saint-Quentin-2|Saint-Quentin-2]] || [[Saint-Quentin]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Quentin-2}}}} || 10 + Fraction Saint-Quentin || 1° Les communes suivantes : [[Essigny-le-Petit]], [[Fieulaine]], [[Fonsomme]], [[Fontaine-Notre-Dame (Aisne)|Fontaine-Notre-Dame]], [[Lesdins]], [[Marcy (Aisne)|Marcy]], [[Morcourt (Aisne)|Morcourt]], [[Omissy]], [[Remaucourt (Aisne)|Remaucourt]], [[Rouvroy (Aisne)|Rouvroy]]. <br/>2° La partie de la commune de Saint-Quentin située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Fayet, rue du Président-John-Fitzgerald-Kennedy, rue Thiers, rue du Colonel-Fabien (toutes trois incluses), rue des Glacis, boulevard Richelieu (toutes deux exclues), place Crommelin, boulevard Roosevelt (inclus), boulevard Gambetta, rue de Crimée (tous deux exclus), avenue du Général-de-Gaulle (incluse), rue du Général-Leclerc jusqu'au pont du canal (exclue), canal de Saint-Quentin, jusqu'à l'avenue Éric-Jaulmes, avenue Éric-Jaulmes, jusqu'à la limite territoriale de la commune de Rouvroy.
+|-
+|15 || [[Canton de Saint-Quentin-3|Saint-Quentin-3]] || [[Saint-Quentin]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Quentin-3}}}} || 8 + Fraction Saint-Quentin || 1° Les communes suivantes : [[Castres (Aisne)|Castres]], [[Contescourt]], [[Gauchy]], [[Grugies]], [[Harly]], [[Homblières]], [[Mesnil-Saint-Laurent]], [[Neuville-Saint-Amand]]. <br/>2° La partie de la commune de Saint-Quentin située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Dallon, route départementale 68, rue du Docteur-Cordier, allée des Acacias, avenue Madame-François-Hugues, rue du Docteur-Cordier, rue de la Chaussée-Romaine (toutes voies exclues), rue de Paris, rue du Vieux-Port, (toutes deux incluses), rue Delavenne, canal de Saint-Quentin, jusqu'à l'avenue Éric-Jaulmes, avenue Éric-Jaulmes, jusqu'à la limite territoriale de la commune de Rouvroy.
+|-
+|16 || [[Canton de Soissons-1|Soissons-1]] || [[Soissons]] || {{formatnum:{{Population de France/dernière pop||Canton de Soissons-1}}}} || 14 + Fraction Soissons || 1° Les communes suivantes : [[Bagneux (Aisne)|Bagneux]], [[Chavigny (Aisne)|Chavigny]], [[Crouy]], [[Cuffies]], [[Cuisy-en-Almont]], [[Juvigny (Aisne)|Juvigny]], [[Leury]], [[Osly-Courtil]], [[Pasly]], [[Pommiers (Aisne)|Pommiers]], [[Vauxrezis]], [[Venizel]], [[Villeneuve-Saint-Germain]], [[Vregny]]. <br/>2° La partie de la commune de Soissons située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Pommiers, avenue de Compiègne, rue Saint-Christophe, rue du Collège, rue Saint-Quentin, cours de l'Aisne, jusqu'à la limite territoriale de la commune de Villeneuve-Saint-Germain.
+|-
+|17 || [[Canton de Soissons-2|Soissons-2]] || [[Soissons]] || {{formatnum:{{Population de France/dernière pop||Canton de Soissons-2}}}} || 12 + Fraction Soissons || 1° Les communes suivantes : [[Acy]], [[Belleu]], [[Bernoy-le-Château]], [[Billy-sur-Aisne]], [[Courmelles]], [[Mercin-et-Vaux]], [[Missy-aux-Bois]], [[Ploisy]], [[Septmonts]], [[Serches]], [[Sermoise]], [[Vauxbuin]]. <br/>2° La partie de la commune de Soissons non incluse dans le canton de Soissons-1.
+|-
+|18 || [[Canton de Tergnier|Tergnier]] || [[Tergnier]] || {{formatnum:{{Population de France/dernière pop||Canton de Tergnier}}}} || 24 || [[Achery]], [[Andelain]], [[Anguilcourt-le-Sart]], [[Beautor]], [[Bertaucourt-Epourdon|Bertaucourt-Épourdon]], [[Brie (Aisne)|Brie]], [[Charmes (Aisne)|Charmes]], [[Courbes]], [[Danizy]], [[Deuillet]], [[La Fère]], [[Fourdrain]], [[Fressancourt]], [[Liez (Aisne)|Liez]], [[Mayot]], [[Mennessis]], [[Monceau-lès-Leups]], [[Rogécourt]], [[Saint-Gobain (Aisne)|Saint-Gobain]], [[Saint-Nicolas-aux-Bois]], [[Servais]], [[Tergnier]], [[Travecy]], [[Versigny (Aisne)|Versigny]].
+|-
+|19 || [[Canton de Vervins|Vervins]] || [[Vervins]] || {{formatnum:{{Population de France/dernière pop||Canton de Vervins}}}} || 66 || [[Archon (Aisne)|Archon]], [[Les Autels (Aisne)|Les Autels]], [[Autreppes]], [[Bancigny]], [[Berlise]], [[La Bouteille]], [[Braye-en-Thiérache]], [[Brunehamel]], [[Buironfosse]], [[Burelles]], [[La Capelle]], [[Chaourse]], [[Chéry-lès-Rozoy]], [[Clairfontaine]], [[Clermont-les-Fermes]], [[Cuiry-lès-Iviers]], [[Dagny-Lambercy]], [[Dizy-le-Gros]], [[Dohis]], [[Dolignon]], [[Englancourt]], [[Erloy]], [[Étréaupont]], [[La Flamengrie (Aisne)|La Flamengrie]], [[Fontaine-lès-Vervins]], [[Fontenelle (Aisne)|Fontenelle]], [[Froidestrées]], [[Gercy]], [[Gergny]], [[Grandrieux]], [[Gronard]], [[Harcigny]], [[Hary]], [[Haution]], [[Houry]], [[Laigny]], [[Landouzy-la-Cour]], [[Lerzy]], [[Lislet]], [[Luzoir]], [[Montcornet (Aisne)|Montcornet]], [[Montloué]], [[Morgny-en-Thiérache]], [[Nampcelles-la-Cour]], [[Noircourt]], [[Papleux]], [[Parfondeval (Aisne)|Parfondeval]], [[Plomion]], [[Prisces]], [[Raillimont]], [[Renneval]], [[Résigny]], [[Rocquigny (Aisne)|Rocquigny]], [[Rouvroy-sur-Serre]], [[Rozoy-sur-Serre]], [[Saint-Algis]], [[Sainte-Geneviève (Aisne)|Sainte-Geneviève]], [[Soize]], [[Sommeron]], [[Sorbais (Aisne)|Sorbais]], [[Thenailles]], [[Le Thuel]], [[Vervins]], [[Vigneux-Hocquet]], [[La Ville-aux-Bois-lès-Dizy]], [[Vincy-Reuil-et-Magny]].
+|-
+|20 || [[Canton de Vic-sur-Aisne|Vic-sur-Aisne]] || [[Vic-sur-Aisne]] || {{formatnum:{{Population de France/dernière pop||Canton de Vic-sur-Aisne}}}} || 50 || [[Ambleny]], [[Audignicourt]], [[Barisis-aux-Bois]], [[Berny-Rivière]], [[Besmé]], [[Bichancourt]], [[Bieuxy]], [[Blérancourt]], [[Bourguignon-sous-Coucy]], [[Camelin]], [[Champs (Aisne)|Champs]], [[Cœuvres-et-Valsery]], [[Coucy-le-Château-Auffrique]], [[Coucy-la-Ville]], [[Crécy-au-Mont]], [[Cutry (Aisne)|Cutry]], [[Dommiers]], [[Épagny (Aisne)|Épagny]], [[Folembray]], [[Fontenoy (Aisne)|Fontenoy]], [[Fresnes (Aisne)|Fresnes]], [[Guny]], [[Jumencourt]], [[Landricourt (Aisne)|Landricourt]], [[Laversine]], [[Leuilly-sous-Coucy]], [[Manicamp]], [[Montigny-Lengrain]], [[Morsain]], [[Mortefontaine (Aisne)|Mortefontaine]], [[Nouvron-Vingré]], [[Pernant]], [[Pont-Saint-Mard]], [[Quierzy]], [[Quincy-Basse]], [[Ressons-le-Long]], [[Saconin-et-Breuil]], [[Saint-Aubin (Aisne)|Saint-Aubin]], [[Saint-Bandry]], [[Saint-Christophe-à-Berry]], [[Saint-Paul-aux-Bois]], [[Saint-Pierre-Aigle]], [[Selens]], [[Septvaux]], [[Tartiers]], [[Trosly-Loire]], [[Vassens]], [[Verneuil-sous-Coucy]], [[Vézaponin]], [[Vic-sur-Aisne]].
+|-
+|21 || [[Canton de Villers-Cotterêts|Villers-Cotterêts]] || [[Villers-Cotterêts]] || {{formatnum:{{Population de France/dernière pop||Canton de Villers-Cotterêts}}}} || 76 || [[Ambrief]], [[Ancienville]], [[Arcy-Sainte-Restitue]], [[Armentières-sur-Ourcq]], [[Beugneux]], [[Billy-sur-Ourcq]], [[Bonnesvalyn]], [[Breny]], [[Brumetz]], [[Bussiares]], [[Buzancy (Aisne)|Buzancy]], [[Chacrise]], [[Chaudun]], [[Chézy-en-Orxois]], [[Chouy]], [[Corcy]], [[Courchamps (Aisne)|Courchamps]], [[Coyolles]], [[Cramaille]], [[La Croix-sur-Ourcq]], [[Cuiry-Housse]], [[Dammard]], [[Dampleux]], [[Droizy]], [[Faverolles (Aisne)|Faverolles]], [[La Ferté-Milon]], [[Fleury (Aisne)|Fleury]], [[Gandelu]], [[Grand-Rozoy]], [[Haramont]], [[Hartennes-et-Taux]], [[Hautevesnes]], [[Largny-sur-Automne]], [[Latilly]], [[Launoy]], [[Licy-Clignon]], [[Longpont]], [[Louâtre]], [[Maast-et-Violaine]], [[Macogny]], [[Marizy-Sainte-Geneviève]], [[Marizy-Saint-Mard]], [[Monnes]], [[Monthiers]], [[Montigny-l'Allier]], [[Muret-et-Crouttes]], [[Nampteuil-sous-Muret]], [[Neuilly-Saint-Front]], [[Noroy-sur-Ourcq]], [[Oigny-en-Valois]], [[Oulchy-la-Ville]], [[Oulchy-le-Château]], [[Parcy-et-Tigny]], [[Passy-en-Valois]], [[Le Plessier-Huleu]], [[Priez]], [[Puiseux-en-Retz]], [[Retheuil]], [[Rozet-Saint-Albin]], [[Rozières-sur-Crise]], [[Saint-Gengoulph]], [[Saint-Rémy-Blanzy]], [[Silly-la-Poterie]], [[Sommelans]], [[Soucy (Aisne)|Soucy]], [[Taillefontaine]], [[Torcy-en-Valois]], [[Troësnes]], [[Vierzy]], [[Villemontoire]], [[Villers-Cotterêts]], [[Villers-Hélon]], [[Vivières]].
+|-
+!||||||{{Unité|{{Population de France/dernière pop||Aisne (département)}}}}||804||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de l'Aisne, c'est le cas de quatre cantons ([[canton de Fère-en-Tardenois|Fère-en-Tardenois]], [[canton de Marle|Marle]], [[canton de Vic-sur-Aisne|Vic-sur-Aisne]], [[canton de Villers-Cotterêts|Villers-Cotterêts]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-----
+!N°||Canton||[[Arrondissement de Château-Thierry|Château-Thierry]]||[[Arrondissement de Laon|Laon]]||[[Arrondissement de Saint-Quentin|Saint-Quentin]]||[[Arrondissement de Soissons|Soissons]]||[[Arrondissement de Vervins|Vervins]]||Total
+|-
+|1||align="left"| Bohain-en-Vermandois||||||31||||||'''31'''
+|-
+|2||align="left"| Château-Thierry||21||||||||||'''21'''
+|-
+|3||align="left"| Chauny||||21||||||||'''21'''
+|-
+|4||align="left"| Essômes-sur-Marne||47||||||||||'''47'''
+|-
+|5||align="left"| Fère-en-Tardenois||20||||||58||||'''78'''
+|-
+|6||align="left"| Villeneuve-sur-Aisne||||76||||||||'''76'''
+|-
+|7||align="left"| Guise||||||||||45||'''45'''
+|-
+|8||align="left"| Hirson||||||||||26||'''26'''
+|-
+|9||align="left"| Laon-1||||26 + Fraction Laon||||||||'''26''' + Fraction Laon
+|-
+|10||align="left"| Laon-2||||24 + Fraction Laon||||||||'''24''' + Fraction Laon
+|-
+|11||align="left"| Marle||||42||||||23||'''65'''
+|-
+|12||align="left"| Ribemont||||||52||||||'''52'''
+|-
+|13||align="left"| Saint-Quentin-1||||||24 + Fraction Saint-Quentin||||||'''24''' + Fraction Saint-Quentin
+|-
+|14||align="left"| Saint-Quentin-2||||||10 + Fraction Saint-Quentin||||||'''10''' + Fraction Saint-Quentin
+|-
+|15||align="left"| Saint-Quentin-3||||||8 + Fraction Saint-Quentin||||||'''8''' + Fraction Saint-Quentin
+|-
+|16||align="left"| Soissons-1||||||||14 + Fraction Soissons||||'''14''' + Fraction Soissons
+|-
+|17||align="left"| Soissons-2||||||||13 + Fraction Soissons||||'''13''' + Fraction Soissons
+|-
+|18||align="left"| Tergnier||||24||||||||'''24'''
+|-
+|19||align="left"| Vervins||||||||||66||'''66'''
+|-
+|20||align="left"| Vic-sur-Aisne||||26||||24||||'''50'''
+|-
+|21||align="left"| Villers-Cotterêts||20||||||56||||'''76'''
+|-
+!||||108||240||126||166||160||800
+|}
+
+=== Liste avec élus ===
+L'Aisne comprend 21 cantons depuis {{date-|mars 2015}}. Le tableau suivant en donne la liste, en précisant leur code INSEE, leur conseiller départemental, leur superficie, leur population issu du recensement de {{Population de France/dernière année||Canton de Villers-Cotterêts}}<ref group="Note">
+Population municipale légale en vigueur au {{Date-|1er janvier 2020}}, millésimée 2017, définie dans les limites territoriales en vigueur au {{Date-|1er janvier 2019}}, date de référence statistique : {{Date-|1er janvier 2017}}.</ref> et leur densité de population
+
+{| align="center" rules="all" cellspacing="0" cellpadding="4" style="border: 1px solid #999"
+|- style="background-color: #ECE5CA;" align="center"
+| '''Canton''' || '''Code<br/>{{Abréviation discrète|Insee|Institut national de la statistique et des études économiques}}''' || '''Conseiller départemental'''|| colspan="2" | '''Étiquette''' || '''Superficie<br/><small>({{Abréviation discrète|km{{2}}|Kilomètres carrés}})</small>''' || '''Population<br/><small>({{Abréviation discrète|hab.|Habitants}})</small>''' || '''Densité<br/><small>({{Abréviation discrète|hab./km{{2}}|Habitant par kilomètre carré}})</small>'''
+|-
+|rowspan=2| [[Canton de Bohain-en-Vermandois|Bohain-en-Vermandois]] || rowspan=2| 02 01 || Michel Collet || {{Infobox Parti politique/couleurs|rose}}| || [[Parti socialiste (France)|PS]] || align="center" rowspan=2| {{smn|286.85|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Bohain-en-Vermandois}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Bohain-en-Vermandois}}}}
+|-
+| Monique Sébastijan || {{Infobox Parti politique/couleurs|rouge}}| || [[Parti communiste français|PCF]] 
+|-
+|rowspan=2| [[Canton de Château-Thierry|Château-Thierry]] || rowspan=2| 02 02 || Bruno Beauvois || {{Infobox Parti politique/couleurs|rose clair}} | || [[Parti radical de gauche|PRG]] || align="center" rowspan=2| {{smn|207.16|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Château-Thierry}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Château-Thierry}}}}
+|-
+| Michèle Fuselier || {{Infobox Parti politique/couleurs|rose}} | || [[Parti socialiste (France)|PS]]
+|-
+|rowspan=2| [[Canton de Chauny|Chauny]] || rowspan=2| 02 03 || Jean-Luc Lanouilh || {{Infobox Parti politique/couleurs|rouge}} | || [[Parti communiste français|PCF]] || align="center" rowspan=2| {{smn|166.14|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Chauny}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Chauny}}}}
+|-
+| Fabienne Marchionni || {{Infobox Parti politique/couleurs|rouge}} | || [[Parti communiste français|PCF]]
+|-
+|rowspan=2 | [[Canton d'Essômes-sur-Marne|Essômes-sur-Marne]] || rowspan=2| 02 04 || Georges Fourré || {{Infobox Parti politique/couleurs|rose vif}} | || [[Divers gauche|DVG]] || align="center" rowspan=2| {{smn|518.35|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton d'Essômes-sur-Marne}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton d'Essômes-sur-Marne}}}}
+|-
+| Anne Maricot || {{Infobox Parti politique/couleurs|rose vif}} | || [[Divers gauche|DVG]]
+|-
+|rowspan=2| [[canton de Fère-en-Tardenois|Fère-en-Tardenois]] || rowspan=2| 02 05 || Carole Deruy || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]] || align="center" rowspan=2| {{smn|626.83|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Fère-en-Tardenois}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Fère-en-Tardenois}}}}
+|-
+| François Rampelberg || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]]
+|-
+|rowspan=2| [[Canton de Guise|Guise]] || rowspan=2| 02 07 || Armand Pollet || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]] || align="center" rowspan=2| {{smn|468.52|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Guise}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Guise}}}}
+|-
+| Marion Saillard || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]]
+|-
+|rowspan=2| [[Canton d'Hirson|Hirson]] || rowspan=2| 02 08 || Anne-Marie Fournier || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]] || align="center" rowspan=2| {{smn|349.21|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton d'Hirson}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton d'Hirson}}}}
+|-
+| Claude Mouflard || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]] 
+|-
+|rowspan=2 | [[Canton de Laon-1|Laon-1]] || rowspan=2| 02 09 || Fawaz Karimet || {{Infobox Parti politique/couleurs|rose vif}} | || [[Divers gauche|DVG]] || align="center" rowspan=2| {{smn|230.58|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Laon-1}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Laon-1}}}}
+|-
+| Annie Tujek || {{Infobox Parti politique/couleurs|rose}} | || [[Parti socialiste (France)|PS]]
+|-
+|rowspan=2 | [[Canton de Laon-2|Laon-2]] || rowspan=2| 02 10 || Thierry Delerot || {{Infobox Parti politique/couleurs|rose vif}} | || [[Divers gauche|DVG]] || align="center" rowspan=2| {{smn|179.09|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Laon-2}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Laon-2}}}}
+|-
+| Brigitte Fournié-Turquin || {{Infobox Parti politique/couleurs|vert}} | || [[Europe Écologie Les Verts|EELV]]
+|-
+|rowspan=2| [[Canton de Marle|Marle]] || rowspan=2| 02 11 || Isabelle Ittelet || {{Infobox Parti politique/couleurs|bleu ciel}}| || [[Union des démocrates et indépendants|UDI]] || align="center" rowspan=2| {{smn|627.64|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Marle}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Marle}}}}
+|-
+| [[Pierre-Jean Verzelen]] || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]]
+|-
+|rowspan=2| [[Canton de Ribemont|Ribemont]] || rowspan=2| 02 12 || Florence Bonnard-Trevisan || {{Infobox Parti politique/couleurs|rose}} | || [[Parti socialiste (France)|PS]] || align="center" rowspan=2| {{smn|465.99|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Ribemont}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Ribemont}}}}
+|-
+| Michel Potelet || {{Infobox Parti politique/couleurs|rose}} | || [[Parti socialiste (France)|PS]]
+|-
+|rowspan=2 | [[Canton de Saint-Quentin-1|Saint-Quentin-1]] || rowspan=2| 02 13 || Colette Blériot || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]] || align="center" rowspan=2| {{smn|174.59|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Saint-Quentin-1}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Saint-Quentin-1}}}}
+|-
+| Jean-Pierre Boniface || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]]
+|-
+|rowspan=2 | [[canton de Saint-Quentin-2|Saint-Quentin-2]] || rowspan=2| 02 14 || Thomas Dudebout || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]] || align="center" rowspan=2| {{smn|89.17|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Saint-Quentin-2}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Saint-Quentin-2}}}}
+|-
+| [[Pascale Gruny]] || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]]
+|-
+|rowspan=2 | [[canton de Saint-Quentin-3|Saint-Quentin-3]] || rowspan=2| 02 15 || Jocelyne Dogna || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]] || align="center" rowspan=2| {{smn|62.09|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Saint-Quentin-3}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Saint-Quentin-3}}}}
+|-
+| Freddy Grzeziczak || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]]
+|-
+|rowspan=2 | [[Canton de Soissons-1|Soissons-1]] || rowspan=2| 02 16 || Françoise Champenois || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]] || align="center" rowspan=2| {{smn|89.30|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Soissons-1}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Soissons-1}}}}
+|-
+| Pascal Tordeux || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]]
+|-
+|rowspan=2 | [[Canton de Soissons-2|Soissons-2]] || rowspan=2| 02 17 || Isabelle Létrillart || {{Infobox Parti politique/couleurs|bleu}} | || [[Les Républicains|LR]] || align="center" rowspan=2| {{smn|91.26|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Soissons-2}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Soissons-2}}}}
+|-
+| Frédéric Vanier || {{Infobox Parti politique/couleurs|bleu clair}} | || [[Divers droite|DVD]]
+|-
+|rowspan=2| [[Canton de Tergnier|Tergnier]] || rowspan=2| 02 18 || Michel Carreau || {{Infobox Parti politique/couleurs|rouge}} | || [[Parti communiste français|PCF]] || align="center" rowspan=2| {{smn|190.59|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Tergnier}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Tergnier}}}}
+|-
+| Caroline Varlet || {{Infobox Parti politique/couleurs|rouge}} | || [[Parti communiste français|PCF]]
+|-
+|rowspan=2| [[Canton de Vervins|Vervins]] || rowspan=2| 02 19 || Marie-Françoise Bertrand || {{Infobox Parti politique/couleurs|bleu ciel}} | || [[Union des démocrates et indépendants|UDI]] || align="center" rowspan=2| {{smn|641.09|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Vervins}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Vervins}}}}
+|-
+| Nicolas Fricoteaux || {{Infobox Parti politique/couleurs|bleu ciel}} | || [[Union des démocrates et indépendants|UDI]]
+|-
+|rowspan=2| [[Canton de Vic-sur-Aisne|Vic-sur-Aisne]] || rowspan=2| 02 20 || Marie-Christine Gilliot || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]] || align="center" rowspan=2| {{smn|437.40|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Vic-sur-Aisne}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Vic-sur-Aisne}}}}
+|-
+| Noël Lecoultre || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]]
+|-
+|rowspan=2 | [[Canton de Villeneuve-sur-Aisne|Villeneuve-sur-Aisne]] || rowspan=2| 02 06 || Philippe Timmerman || {{Infobox Parti politique/couleurs|bleu clair}} | || [[Divers droite|DVD]] || align="center" rowspan=2| {{smn|757.21|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Villeneuve-sur-Aisne}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Villeneuve-sur-Aisne}}}}
+|-
+| Bernadette Vannobel || {{Infobox Parti politique/couleurs|bleu clair}} | || [[Divers droite|DVD]]
+|-
+|rowspan=2| [[Canton de Villers-Cotterêts|Villers-Cotterêts]] || rowspan=2| 02 21 || Franck Briffaut || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]] || align="center" rowspan=2| {{smn|708.21|5|100}} || align="center" rowspan=2| {{formatnum:{{Population de France/dernière pop||Canton de Villers-Cotterêts}}}} || align="center" rowspan=2| {{formatnum:{{Population de France/densité||nom=Canton de Villers-Cotterêts}}}} 
+|-
+| Martine Pigoni || {{Infobox Parti politique/couleurs|gris}} | || [[Rassemblement national|FN]]
+|}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Communes de l'Aisne]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+=== Bibliographie ===
+* {{Ouvrage|prénom1=Louis-Marie|nom1=Prudhomme|titre=Dictionnaire géographique et méthodique de la République française en CXX départemens|volume=I|lieu=Paris|éditeur=Louis-Marie Prudhomme|année=1798|pages totales=673|oclc=715881089|lire en ligne=https://books.google.fr/books?id=5F0OAAAAQAAJ&printsec=frontcover}}
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}
+
+== Notes et références ==
+=== Notes ===
+{{Références|group=Note}}
+=== Références ===
+{{Références}}
+
+{{Palette|Découpage administratif des Hauts-de-France|Cantons de France|Cantons de l'Aisne}}
+{{Portail|Aisne}}
+
+[[Catégorie:Canton dans l'Aisne|*]]
+[[Catégorie:Liste de cantons français|Aisne]]
+[[Catégorie:Liste en rapport avec l'Aisne|Cantons]]

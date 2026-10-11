@@ -1,0 +1,255 @@
+
+{{ébauche|Loiret|politique}}
+[[File:Loiret-Position.svg|thumb|Localisation du [[département français]] du [[Loiret (département)|Loiret]] sur une carte de France.]]
+La '''liste des cantons du Loiret (1806-1973)''' présente l'ensemble des [[Canton français|cantons]] du [[département français|département]] [[France|français]] du [[Loiret (département)|Loiret]], leur [[arrondissement français|arrondissement]] de rattachement et leur composition en [[Commune (France)|communes]] pour la période allant de [[1806 en France|1806]] ([[Premier Empire]]) à [[1973 en France|1973]] ([[Cinquième République (France)|Cinquième République]]).
+
+== Histoire ==
+
+{{Article détaillé|histoire du découpage cantonal du Loiret}}
+
+Depuis la création du département, le découpage cantonal du Loiret a subi plusieurs changements notables. Le nombre de cantons est passé successivement de 59 en [[1790 en France|1790]] à 31 en [[1801 en France|1801]], 31 en [[1806 en France|1806]], 37 en [[1973 en France|1973]], 41 en [[1982 en France|1982]] et 21 en [[2015 en France|2015]].
+
+Selon le [[décret en France|décret impérial]] du {{date France|21|août|1806}} intitulé {{citation|décret contenant rectification de plusieurs Cantons dont sont composés les Justices de paix du département du Loiret}}, plusieurs cantons du Loiret subissent des modifications de leur périmètre, un canton est créé (Artenay), trois cantons sont supprimés (Olivet, Ingré et Chécy) et la ville d'Orléans est redécoupée (deux cantons supplémentaires)<ref name="Rondonneau">{{Ouvrage|langue=fr|auteur1=Louis Rondonneau|titre=Collection générale des lois|sous-titre=décrets, arrêtés, sénatus-consultes, avis du conseil d'État et réglemens d'administration publiés depuis 1789 jusqu'au {{1er}} avril 1814. Gouvernement Impérial : 3 juillet 1806 - 22 décembre 1808|volume=10|lieu=Paris|éditeur=Imprimerie royale|collection=Bulletin des lois|année=1819|pages totales=434|passage=485-486|lire en ligne=https://books.google.fr/books?id=V0NHAAAAcAAJ&pg=PA485|partie=2{{e}}}}.</ref>.
+
+Jusqu'en 1926, les cantons du Loiret sont répartis dans quatre arrondissements : Pithiviers, Montargis, Gien et Orléans.
+
+Le décret-loi du {{date France|10|septembre|1926}} supprime plusieurs arrondissements français dont ceux de [[arrondissement de Gien|Gien]] et de [[arrondissement de Pithiviers|Pithiviers]] dans le Loiret<ref name="Masson395">{{Harvsp|Masson|1984|p=395}}.</ref>. Les cantons sont alors distribués dans deux arrondissements.
+
+Au cours de la [[Seconde Guerre mondiale]], la loi du {{date France|1|juin|1942}} rétablit l'arrondissement de Pithiviers dans ses anciennes limites ; la suppression de l'arrondissement de Gien est en revanche maintenue<ref>{{Ouvrage|langue=fr|auteur1=Christian Poitou|auteur2=Jean-Pierre Bardet|titre=Paroisses et communes de France|sous-titre=dictionnaire d'histoire administrative et démographique|volume=45|éditeur=Éditions du Centre national de la recherche scientifique|année=1982|pages totales=533|passage=485-486|isbn=978-2-222-02930-4}}.</ref>. Les cantons sont redistribués dans quatre arrondissements.
+
+== Liste des cantons et arrondissements du Loiret ==
+
+=== 1806-1926 ===
+
+{| class="wikitable alternance"
+|-----
+|+Découpage cantonal du département du Loiret selon le décret impérial du {{date-|21 août 1806}}
+!Arrondissement ||Nb cantons||Nom canton||Communes
+|-
+|rowspan="5" | {{1er}} - [[Arrondissement de Pithiviers|Pithiviers]]||rowspan="5" | 5||[[Canton d'Outarville|Outarville]]||[[Aschères-le-Marché|Aschères]]<ref group="note">Aschères-le-Marché à partir de 1896.</ref>, [[Allainville-en-Beauce|Allainville]]<ref group="note">Allainville-en-Beauce à partir de 1919 puis absorbée par Outarville en 1972.</ref>, [[Andonville]], [[Attray]], [[Autruy-sur-Juine|Autruy]], [[Bazoches-les-Gallerandes]], [[Boisseaux]], [[Charmont-en-Beauce|Charmont]]<ref group="note">Charmont-en-Beauce à partir de 1933.</ref>,  [[Châtillon-le-Roi|Châtillon]], [[Chaussy (Loiret)|Chaussy]], [[Crottes-en-Pithiverais|Crottes]]<ref group="note">Crottes-en-Pithiverais à partir de 1972.</ref>, [[Erceville]], [[Outarville|Faronville]]<ref group="note">Faronville est absorbée par Outarville en 1972.</ref>, [[Gironville (Loiret)|Gironville]]<ref group="note">Gironville est absorbée par Charmont en 1813.</ref>, [[Greneville-en-Beauce|Grigneville]]<ref group="note">Greneville-en-Beauce à partir de 1939.</ref>, [[Greneville-en-Beauce|Gignonville]]<ref group="note">Guignonville absorbée par Grigneville en 1972.</ref>, [[Bazoches-les-Gallerandes|Izy]]<ref group="note">Izy est absorbée par Bazoches-les-Gallerandes en 1972.</ref>, [[Jouy-en-Pithiverais|Jouy]], [[Léouville|Léonville]], [[Montigny (Loiret)|Montigny]], [[Oison (Loiret)|Oison]], [[Outarville]], [[Outarville|Saint-Péravy-Épreux]]<ref group="note">Saint-Péravy-Épreux absorbée par Outarville en 1972.</ref>, [[Crottes-en-Pithiverais|Teillay-Saint-Benoît]]<ref group="note">Teillay-Saint-Benoît absorbée par Crottes-en-Pithiverais en 1972.</ref>, [[Outarville|Teillay-le-Gaudin]]<ref group="note">Teillay-le-Gaudin absorbée par Outarville en 1972.</ref>, [[Tivernon]]
+|-
+|[[Canton de Beaune-la-Rolande|Beaune]]||[[Auxy (Loiret)|Auxy]], [[Barville-en-Gâtinais|Barville]]<ref group="note">Barville-en-Gâtinais à partir de 1908.</ref>, [[Batilly-en-Gâtinais|Batilly]]<ref group="note">Batilly-en-Gâtinais à partir de 1919.</ref>, [[Beaune-la-Rolande|Beaune]], [[Boiscommun]], [[Bordeaux-en-Gâtinais|Bordeaux]]<ref group="note">Bordeaux-en-Gâtinais à partir de 1921.</ref>, [[Chambon-la-Forêt|Chambon]]<ref group="note">Chambon-la-Forêt à partir de 1913.</ref>, [[Chemault]], [[Courcelles (Loiret)|Courcelles]], [[Égry]], [[Gaubertin]], [[Juranville]], [[Lorcy]], [[Saint-Loup-des-Vignes]], [[Saint-Michel (Loiret)|Saint-Michel]], [[Montbarrois]], [[Montliard]], [[Nancray-sur-Rimarde|Nancray]]<ref group="note">Nancray-sur-Rimarde à partir de 1919.</ref>, [[Nibelle]], [[Nibelle|Saint-Sauveur]]<ref group="note">Saint-Sauveur est absorbée par Nibelle en 1813.</ref>
+|-
+|[[Canton de Malesherbes|Malesherbes]]||[[Audeville]], [[Labrosse|La Brosse]], [[Césarville-Dossainville|Césarville]], [[Coudray (Loiret)|Coudray]], [[Césarville-Dossainville|Dossainville]]<ref group="note">Dossainville absorbée par Césarville en 1977.</ref>, [[Engenville]], [[Orveau-Bellesauve|Gollainville]]<ref group="note">Gollainville absorbée par Orveau en 1828.</ref>, [[Intville-la-Guétard]], [[Mainvilliers (Loiret)|Mainvilliers]], [[Malesherbes]], [[Manchecourt|Manchecoures]], [[Montville]]<ref group="note">Montville absorbée par Engenville en 1812.</ref>, [[Morville-en-Beauce|Morville]], [[Nangeville]], [[Orveau-Bellesauve|Orveau]]<ref group="note">Orveau-Bellesauve à partir de 1933.</ref>, [[Pannecières]], [[Ramoulu]], [[Rouville (Loiret)|Rouville]]<ref group="note">Rouville absorbée par Malesherbes en 1813.</ref>, [[Rouvres-Saint-Jean|Rouvres]]<ref group="note">Rouvres-Saint-Jean à partir de 1919.</ref>, [[Sermaises]], [[Thignonville]], [[Trézan]]<ref group="note">Trézan est absorbée par Malesherbes en 1813.</ref>
+|-
+|[[Canton de Pithiviers|Pithiviers]]||[[Ascoux]], [[Bondaroy]], [[Bouilly-en-Gâtinais|Bouilly]]<ref group="note">Bouilly-en-Gâtinais à partir de 1933.</ref>, [[Le Bourg-l'Abbaye]], [[Bouzonville-aux-Bois]], [[Bouzonville-en-Beauce]]<ref group="note">Bouzonville-en-Beauce est absorbée par Pithiviers-le-Vieil en 1972.</ref>, [[Boynes]], [[Chilleurs-aux-Bois]], [[Courcy-aux-Loges|Courcy]]<ref group="note">Courcy-aux-Loges à partir de 1919.</ref>, [[Escrennes]], [[Estouy]], [[Givraines]], [[Guigneville]], [[Laas (Loiret)|Laas]], [[Vrigny (Loiret)|Limiers]]<ref group="note">Limiers est absorbée par Vrigny en 1821.</ref>, [[Mareau-aux-Bois]], [[Marsainvilliers]], [[Pithiviers]], [[Pithiviers-le-Vieil]], [[Santeau]], [[Sébouville]]<ref group="note">Sébouville est absorbée par Guigneville en 1972.</ref>, [[Yèvre-le-Châtel|Souville]]<ref group="note">Souville est absorbée par Yèvre-le-Châtel en 1821.</ref>, [[Vrigny (Loiret)|Vrigny]], [[Yèvre-la-Ville]], [[Yèvre-le-Châtel]]<ref group="note">Yèvre-le-Châtel est absorbée par Yèvre-la-Ville en 1973.</ref>
+|-
+|[[Canton de Puiseaux|Puiseaux]]||[[Augerville-la-Rivière]], [[Aulnay-la-Rivière]], [[Boësse (Loiret)|Boësse]], [[Briarres-sur-Essonne]], [[Bromeilles]], [[Desmonts]], [[Dimancheville]], [[Échilleuses]], [[Grangermont]], [[La Neuville-sur-Essonne|La Neuville]]<ref group="note">La Neuville-sur-Essonne à partir de 1919.</ref>, [[Ondreville-sur-Essonne|Ondreville]]<ref group="note">Ondreville-sur-Essonne à partir de 1919.</ref>, [[Orville (Loiret)|Orville]], [[Puiseaux]], [[Villereau (Loiret, commune supprimée)|Villereau]]<ref group="note">Villereau est absorbée par Aulnay-la-Rivière en 1821.</ref>
+|-
+|rowspan="7" | {{2e}} - [[Arrondissement de Montargis|Montargis]]||rowspan="7" | 7||[[Canton de Bellegarde|Bellegarde]]||[[Auvilliers-en-Gâtinais|Auvillier]]<ref group="note">Auvilliers-en-Gâtinais à partir de 1919.</ref>, [[Beauchamps-sur-Huillard|Beauchamps]]<ref group="note">Beauchamps-sur-Huillard à partir de 1918.</ref>, [[Bellegarde (Loiret)|Bellegarde]], [[Chapelon]], [[Fréville-du-Gâtinais|Fréville]]<ref group="note">Fréville-du-Gâtinais à partir de 1933.</ref>, [[Ladon (Loiret)|Ladon]], [[Mézières-en-Gâtinais|Méziere]]<ref group="note">Porte aussi le nom de Mézières-sous-Bellegarde puis de Mézières-en-Gâtinais à partir de 1939.</ref>, [[Moulon (Loiret)|Moulon]], [[Nesploy]], [[Ouzouer-sous-Bellegarde|Ouzoner-sur-Bellegarde]]<ref group="note">Porte aussi le nom d'Ouzouer-sous-Bellegarde.</ref>, [[Quiers-sur-Bézonde|Quiers]]<ref group="note">Quiers-sur-Bézonde à partir de 1919.</ref>, [[Villemoutiers]]<ref group="note">Porte aussi le nom de Villemontiers.</ref>
+|-
+|[[Canton de Château-Renard|Château-Renard]]||[[Château-Renard]], [[Chuelles]], [[Douchy (Loiret)|Douchy]], [[Saint-Firmin-des-Bois]], [[Saint-Germain-des-Prés (Loiret)|Saint-Germain]], [[Gy-les-Nonains]], [[Melleroy]], [[Montcorbon|Moncorbon]], [[La Selle-en-Hermoy|La Selle-en-Hermoye]], [[Triguères|Triguerres]]
+|-
+|[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]||[[Aillant-sur-Milleron]], [[La Chapelle-sur-Aveyron]], [[Le Charme]], [[Châtillon-sur-Loing]], [[Cortrat|Corterat]], [[Dammarie-sur-Loing]], [[Sainte-Geneviève-des-Bois (Loiret)|Sainte-Geneviève-des-Bois]], [[Saint-Maurice-sur-Aveyron]], [[Montbouy|Montbouï]], [[Montcresson]], [[Nogent-sur-Vernisson]], [[Pressigny-les-Pins|Précigny]], [[Solterre|Sottère]]
+|-
+|[[Canton de Courtenay|Courtenay]]||[[Bazoches-sur-le-Betz|Bazoches]], [[Chantecoq]], [[La Chapelle-Saint-Sépulcre|La Chapelle-Sépulcre]], [[La Selle-sur-le-Bied|La Celle-sur-le-Bied]], [[Courtemaux]], [[Courtenay (Loiret)|Courtenay]], [[Ervauville|Erreveauville]], [[Foucherolles (Loiret)|Foucherolles]], [[Saint-Hilaire-les-Andresis]], [[Saint-Loup-de-Gonois|Saint-Loup-de-Gonnois]], [[Louzouer]], [[Mérinville]], [[Pers-en-Gâtinais|Pers]], [[Rozoy-le-Vieil]],  [[Thorailles]]
+|-
+|[[Canton de Ferrières-en-Gâtinais|Ferrières]]||[[Le Bignon-Mirabeau|Le Bignon]], [[Chevannes (Loiret)|Chevannes]], [[Chevry-sous-le-Bignon|Chevry]], [[Corbeilles]], [[Courtempierre|Courtempierres]], [[Dordives]], [[Ferrières-en-Gâtinais|Ferrières]], [[Fontenay-sur-Loing|Fontenay]], [[Girolles (Loiret)|Girolles]], [[Gondreville (Loiret)|Gondreville]], [[Griselles (Loiret)|Griselles-les-Ferrières]], [[Mignères|Mignère]], [[Mignerette]], [[Nargis]], [[Préfontaines|Préfontaine]], [[Sceaux-du-Gâtinais|Sceaux]], [[Treilles-en-Gâtinais|Treilles]]
+|-
+|[[Canton de Lorris|Lorris]]||[[Chailly-en-Gâtinais|Chailly]], [[Varennes-Changy|Changy]], [[Coudroy]], [[La Cour-Marigny]], [[Saint-Hilaire-sur-Puiseaux]], [[Lorris]], [[Noyers (Loiret)|Noyers]], [[Oussoy-en-Gâtinais|Oussoy]], [[Ouzouer-des-Champs]], [[Presnoy]], [[Thimory]], [[Varennes-Changy|Varennes]], [[Vieilles-Maisons-sur-Joudry|Vieilles-Maisons]]
+|-
+|[[Canton de Montargis|Montargis]]||[[Amilly (Loiret)|Amilly-Saint-Firmin-des-Vignes]], [[Cepoy|Cepay]], [[Châlette-sur-Loing|Chalette]], [[Chevillon-sur-Huillard|Chevillon]], [[Conflans-sur-Loing|Conflans]], [[Corquilleroy|Corquilleroi]], [[Lombreuil]], [[Saint-Maurice-sur-Fessard|Maurice-sur-Fessard]], [[Montargis]], [[Mormant-sur-Vernisson|Mormant]], [[Pannes (Loiret)|Pannes]], [[Paucourt]], [[Villemandeur]], [[Vimory]], [[Villevoques]]
+|-
+|rowspan="5" | {{3e}} - [[Arrondissement de Gien|Gien]]||rowspan="5" | 5||[[Canton de Briare|Briarre]]||[[Adon]], [[Batilly-en-Puisaye|Batilly]], [[Breteau|Berteau]], [[Bonny-sur-Loire|Bonny]], [[Briare|Briarre]], [[Champoulet]], [[Dammarie-en-Puisaye|Dammemaire-en-Puisaye]], [[Escrignelles|Écrignelles]], [[Faverelles|Faverolles]], [[Feins-en-Gâtinais|Feins]], [[La Bussière (Loiret)|La Bussière]], [[Ousson-sur-Loire|Ousson]], [[Ouzouer-sur-Trézée|Ouzouer-sur-Trazée]], [[Thou (Loiret)|Thou]]
+|-
+|[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]||[[Autry-le-Châtel|Autry]], [[Beaulieu-sur-Loire|Beaulieu]], [[Cernoy-en-Berry|Cernoy]], [[Châtillon-sur-Loire]], [[Saint-Firmin-sur-Loire|Saint-Firmin]], [[Pierrefitte-ès-Bois|Pierrefite-ès-Bois]]
+|-
+|[[Canton de Gien|Gien]]||[[Arrabloy|Arablay]], [[Boismorand]], [[Saint-Brisson-sur-Loire|Saint-Brisson]], [[Les Choux]], [[Coullons|Coulon]], [[Gien]], [[Saint-Gondon|Saint-Goudon]], [[Langesse]], [[Le Moulinet-sur-Solin|Le Moulinet]], [[Saint-Martin-sur-Ocre (Loiret)|Saint-Martin-sur-Ocre]], [[Nevoy]], [[Poilly-lez-Gien|Poilly]]
+|-
+|[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]||[[Saint-Benoît-sur-Loire]], [[Bonnée|Bonnie]], [[Les Bordes (Loiret)|Les Bordes]], [[Bray-en-Val|Bray]], [[Dampierre-en-Burly|Dampierre]], Montereau, [[Ouzouer-sur-Loire]]
+|-
+|[[Canton de Sully-sur-Loire|Sully]]||[[Saint-Aignan-le-Jaillard]], [[Cerdon (Loiret)|Cerdon]], [[Saint-Florent (Loiret)|Saint-Florent]], [[Guilly (Loiret)|Guilly]], [[Isdes|Ides]], [[Lion-en-Sullias|Lion]], [[Saint-Père-sur-Loire|Saint-Père]], [[Sully-sur-Loire|Sully]], [[Viglain]], [[Villemurlin]]
+|-
+|rowspan="16" | {{4e}} - [[Arrondissement d'Orléans|Orléans]]||rowspan="16" | 16||[[Canton d'Artenay|Artenay]]|| [[Artenay]], [[Bucy-le-Roi]], [[Cercottes|Cerrecotte]], [[Chevilly (Loiret)|Chevilly]], [[Creuzy|Creusy]], [[Gidy]], [[Huêtre]], [[Lion-en-Beauce|Lion]], [[Ruan (Loiret)|Ruan]], [[Sougy|Songy]], [[Trinay]]
+|-
+|[[Canton de Beaugency|Beaugency]]||Bault et Villeneuve, [[Beaugency]], [[Cravant (Loiret)|Cravant]], [[Lailly-en-Val|Lailly]] et Moncay, [[Messas]], [[Tavers]], [[Villorceau]]
+|-
+|[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]||[[Saint-Aignan-des-Gués|Saint-Aignan-des-Guès]], [[Bouzy-la-Forêt|Bouzy]], [[Châteauneuf-sur-Loire|Châteauneuf]], Chenoy, [[Combreux]], [[Fay-aux-Loges]], [[Germigny-des-Prés]], [[Saint-Denis-de-l'Hôtel]], [[Saint-Martin-d'Abbat|Saint-Martin-d'Abat]], [[Seichebrières|Sechebrières]], [[Sury-aux-Bois]], [[Vitry-aux-Loges]]
+|-
+|[[Canton de Cléry-Saint-André|Notre-Dame-de-Cléry]]||[[Dry (Loiret)|Dry]], [[Mareau-aux-Prés|Mareau]], [[Mézières-lez-Cléry|Mézières]], [[Cléry-Saint-André|Notre-Dame-de-Cléry-Saint-André]]
+|-
+|[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]||[[Ardon (Loiret)|Ardon]], [[La Ferté-Saint-Aubin]], [[Jouy-le-Potier|Jouy-le-Pothier]], [[Ligny-le-Ribault|Ligny-le-Ribaud]], [[Marcilly-en-Villette|Marcilly-en-Vilette]], [[Menestreau-en-Villette|Menestreau]], [[Sennely]], [[Vannes-sur-Cosson|Vannes]]
+|-
+|[[Canton de Jargeau|Jargeau]]||[[Darvoy]], [[Férolles]], [[Jargeau]], [[La Queuvre]], [[Neuvy-en-Sullias]], [[Ouvrouer-les-Champs|Ouvrouer]], [[Sandillon]], [[Sigloy]], [[Tigy]], [[Vienne-en-Val]]
+|-
+|[[Canton de Meung-sur-Loire|Méun]]||[[Saint-Ay]], [[Baccon|Bacon]], [[Charsonville]], [[Coulmiers]], [[Épieds-en-Beauce|Épiez]], [[Huisseau-sur-Mauves|Huisseau-sur-Mauve]], [[Meung-sur-Loire|Méun]], [[Rozières-en-Beauce|Rosières]]
+|-
+|[[Canton de Neuville-aux-Bois|Neuville]]|| [[Bougy-lez-Neuville|Bougy]], [[Le Bourgneuf|Bourgneuf-de-Loury]], Saint-Germain, [[Saint-Lyé-la-Forêt|Saint-Lié]], [[Ingrannes|Ingranne]], [[Loury]], [[Neuville-aux-Bois (Loiret)|Neuville]], [[Rebrechien]], [[Sully-la-Chapelle]], [[Traînou]], [[Vennecy]], [[Villereau (Loiret)|Villerault]]
+|-
+|Orléans-1er ou [[Canton d'Orléans-Est|Orléans-Est]]|| Est d'Orléans
+|-
+|Orléans-2e ou [[Canton d'Orléans-Ouest|Orléans-Ouest]]||Ouest d'Orléans, [[Boulay-les-Barres|Boulay]], [[Chaingy]], [[La Chapelle-Saint-Mesmin]], [[Fleury-les-Aubrais|Fleury]], [[Ingré]], [[Saint-Jean-de-la-Ruelle]], [[Saran]]
+|-
+|Orléans-3e ou [[Canton d'Orléans-Sud|Orléans-Sud]]|| Sud d'Orléans, [[Saint-Cyr-en-Val]], [[Saint-Denis-en-Val]], [[Saint-Hilaire-Saint-Mesmin|Saint-Hilaire Saint-Mesmin]], [[Saint-Jean-le-Blanc (Loiret)|Saint-Jean-le-Blanc]], [[Saint-Nicolas-Saint-Mesmin]], [[Olivet (Loiret)|Olivet]], [[Saint-Pryvé-Saint-Mesmin|Saint-Privé]]
+|-
+|Orléans-4e ou [[Canton d'Orléans-Nord-Ouest|Orléans-Nord-Ouest]]|| Nord ouest d'Orléans, [[Chanteau]]
+|-
+|Orléans-5e ou [[Canton d'Orléans-Nord-Est|Orléans-Nord-Est]]|| Nord est d'Orléans, [[Boigny-sur-Bionne|Baigny]], [[Bou (Loiret)|Bou]], [[Chécy]], [[Combleux]], [[Donnery]], [[Saint-Jean-de-Braye]], [[Mardié]], [[Marigny-les-Usages|Marigny]], [[Semoy (Loiret)|Semoy]]
+|-
+|[[Canton de Patay|Patay]]||[[Bricy]], [[Bucy-Saint-Liphard]], [[La Chapelle-Onzerain|La Chapelle-Ozerain]], [[Coinces]], Gemigny, Nids, [[Ormes (Loiret)|Ormes]], [[Patay]], [[Saint-Peravy-la-Colombe]], [[Rouvray-Sainte-Croix]], [[Saint-Sigismond (Loiret)|Saint-Sigismond]], [[Tournoisis|Tournoisy]], [[Villamblain|Villambiain]], Villeneuve-sur-Cosny
+|-
+|}
+
+=== 1926-1942 ===
+
+{| class="wikitable alternance"
+|-----
+|+Distribution des cantons par arrondissement après le redécoupage du {{date-|10 septembre 1926}}
+!Arrondissement ||Nb cantons||Nom canton
+|-
+|rowspan="12" | [[Arrondissement de Montargis|Montargis]]||rowspan="12" | 12 || [[Canton de Beaune-la-Rolande|Beaune]]
+|-
+|[[Canton de Bellegarde|Bellegarde]]
+|-
+|[[Canton de Briare|Briarre]]
+|-
+|[[Canton de Château-Renard|Château-Renard]]
+|-
+|[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]
+|-
+|[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]
+|-
+|[[Canton de Courtenay|Courtenay]]
+|-
+|[[Canton de Ferrières-en-Gâtinais|Ferrières]]
+|-
+|[[Canton de Gien|Gien]]
+|-
+|[[Canton de Lorris|Lorris]]
+|-
+|[[Canton de Montargis|Montargis]]
+|-
+|[[Canton de Puiseaux|Puiseaux]]
+|-
+|rowspan="19" | [[Arrondissement d'Orléans|Orléans]]||rowspan="19" | 19 || [[Canton d'Artenay|Artenay]]
+|-
+|[[Canton de Beaugency|Beaugency]]
+|-
+|[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]
+|-
+|[[Canton de Cléry-Saint-André|Notre-Dame-de-Cléry]]
+|-
+|[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]
+|-
+|[[Canton de Jargeau|Jargeau]]
+|-
+|[[Canton de Malesherbes|Malesherbes]]
+|-
+|[[Canton de Meung-sur-Loire|Méun]]
+|-
+|[[Canton de Neuville-aux-Bois|Neuville]]
+|-
+|[[Canton d'Outarville|Outarville]]
+|-
+|[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]
+|-
+|Orléans-1{{er}} ou [[Canton d'Orléans-Est|Orléans-Est]]
+|-
+|Orléans-2{{e}} ou [[Canton d'Orléans-Ouest|Orléans-Ouest]]
+|-
+|Orléans-3{{e}} ou [[Canton d'Orléans-Sud|Orléans-Sud]]
+|-
+|Orléans-4{{e}} ou [[Canton d'Orléans-Nord-Ouest|Orléans-Nord-Ouest]]
+|-
+|Orléans-5{{e}} ou [[Canton d'Orléans-Nord-Est|Orléans-Nord-Est]]
+|-
+|[[Canton de Patay|Patay]]
+|-
+|[[Canton de Pithiviers|Pithiviers]]
+|-
+|[[Canton de Sully-sur-Loire|Sully]]
+|}
+
+=== 1942-1973 ===
+
+{| class="wikitable alternance"
+|-----
+|+Distribution des cantons par arrondissement après le redécoupage du {{date-|1 juin 1942}}
+!Arrondissement ||Nb cantons||Nom canton
+|-
+|rowspan="5" | [[Arrondissement de Pithiviers|Pithiviers]]||rowspan="5" | 5 || [[Canton de Beaune-la-Rolande|Beaune]]
+|-
+|[[Canton de Malesherbes|Malesherbes]]
+|-
+|[[Canton d'Outarville|Outarville]]
+|-
+|[[Canton de Pithiviers|Pithiviers]]
+|-
+|[[Canton de Puiseaux|Puiseaux]]
+|-
+|rowspan="10" | [[Arrondissement de Montargis|Montargis]]||rowspan="10" | 10 || [[Canton de Bellegarde|Bellegarde]]
+|-
+|[[Canton de Briare|Briarre]]
+|-
+|[[Canton de Château-Renard|Château-Renard]]
+|-
+|[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]
+|-
+|[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]
+|-
+|[[Canton de Courtenay|Courtenay]]
+|-
+|[[Canton de Ferrières-en-Gâtinais|Ferrières]]
+|-
+|[[Canton de Gien|Gien]]
+|-
+|[[Canton de Lorris|Lorris]]
+|-
+|[[Canton de Montargis|Montargis]]
+|-
+|rowspan="16" | [[Arrondissement d'Orléans|Orléans]]||rowspan="16" | 16 || [[Canton d'Artenay|Artenay]]
+|-
+|[[Canton de Beaugency|Beaugency]]
+|-
+|[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]
+|-
+|[[Canton de Cléry-Saint-André|Notre-Dame-de-Cléry]]
+|-
+|[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]
+|-
+|[[Canton de Jargeau|Jargeau]]
+|-
+|[[Canton de Meung-sur-Loire|Méun]]
+|-
+|[[Canton de Neuville-aux-Bois|Neuville]]
+|-
+|[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]
+|-
+|Orléans-1{{er}} ou [[Canton d'Orléans-Est|Orléans-Est]]
+|-
+|Orléans-2{{e}} ou [[Canton d'Orléans-Ouest|Orléans-Ouest]]
+|-
+|Orléans-3{{e}} ou [[Canton d'Orléans-Sud|Orléans-Sud]]
+|-
+|Orléans-4{{e}} ou [[Canton d'Orléans-Nord-Ouest|Orléans-Nord-Ouest]]
+|-
+|Orléans-5{{e}} ou [[Canton d'Orléans-Nord-Est|Orléans-Nord-Est]]
+|-
+|[[Canton de Patay|Patay]]
+|-
+|[[Canton de Sully-sur-Loire|Sully]]
+|}
+
+== Notes et références ==
+=== Notes ===
+{{Références|groupe=note|colonnes=2}}
+=== Références ===
+{{références|colonnes=1}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Administration territoriale de la France]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+=== Bibliographie ===
+
+* {{Ouvrage |auteur1=Louis Marie Prudhomme |titre=Dictionnaire géographique et méthodique de la République française en 120 départements, volume 1 |lieu=Paris |éditeur=Louis Marie Prudhomme |année=1798 |pages totales=673 |lire en ligne=https://books.google.fr/books?pg=PA162-IA4&lpg=PA162-IA4&dq=D%C3%A9partement+du+loiret+fut+divis%C3%A9+en+7+districts&sig=-YnUS0xCyyfylXWCs4f50j0pFCI&ei=Dtf8Us2nFMrH0QWQmIGoCQ&id=5F0OAAAAQAAJ&hl=fr&ots=RD9_YYhLOZ&output=text |id=Prudhomme}}.
+
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson1984}}.
+
+{{Palette|Cantons du Loiret|Anciens cantons du Loiret}}
+{{Portail|Loiret|politique française}}
+[[Catégorie:Liste de cantons français|Loiret, 1806]]
+[[Catégorie:Liste des cantons du Loiret]]
+[[Catégorie:Histoire du Loiret|Loiret, 1806]]
+[[Catégorie:Circonscription électorale en France|Loiret, 1806]]

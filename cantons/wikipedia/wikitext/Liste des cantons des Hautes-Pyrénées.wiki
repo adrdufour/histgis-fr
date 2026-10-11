@@ -1,0 +1,173 @@
+[[Fichier:65-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département des Hautes-Pyrénées, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] des [[Hautes-Pyrénées]]''' compte 17 [[Canton français|cantons]] à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Auparavant ce nombre était de 34.
+
+== Histoire ==
+=== Découpage avant 2015 ===
+[[Fichier:Anciens cantons des Hautes-Pyrénées.png|vignette|Cartes des cantons des Hautes-Pyrénées avant 2015]]
+Les Hautes-Pyrénées étaient divisées en 34 cantons avant 2015. Dans ce département, seules les communes de [[Lourdes]] et de [[Tarbes]] sont divisées en plusieurs fractions communales (qui appartiennent à des cantons différents mais qui ont toutes cette même commune comme chef-lieu de leur canton).
+
+*1801<ref>Arrêté du 7 Frimaire an X	(28 novembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f144 p. 124]</ref> : découpage d'origine
+*1802<ref>Arrêté du 3 Brumaire an XI (25 octobre 1802), ''Bulletin des lois'', an XI (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f185 p. 143]</ref> : 
+**Suppression du canton de [[Juncalas]], dont les communes sont rattachées au canton de Lourdes ;
+**Création du [[canton de Saint-Pé-de-Bigorre]], détaché du canton de Lourdes.
+*1803<ref>Arrêté du 26 Ventôse an XI (17 mars 1803), ''Bulletin des lois'', an XI (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f843 p. 662]</ref> : Le chef-lieu du canton d'[[Aubarède]] est transféré à [[canton de Pouyastruc|Pouyastruc]].
+*1853<ref>Loi du 7 juin 1853, ''Bulletin des lois'', 1853 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486129s/f1020 p. 973]</ref> : Modification de la limite infracommunale entre les cantons de [[canton de Tarbes-Nord|Tarbes-Nord]] (partie occidentale de la ville) et de [[canton de Tarbes-Sud|Tarbes-Sud]] (partie orientale).
+*1870<ref>Décret du 2 avril 1870, ''Bulletin des lois'', 1870 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bd6t542064935/f463 p. 439]</ref> : Le chef-lieu du canton de [[Nestier]] est ransféré à [[Canton de Saint-Laurent-de-Neste|Saint-Laurent-de-Neste]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265 Décret n° 73-729 du 23 juillet 1973]</ref> :
+**Le canton de Lourdes est scindé en deux nouveaux cantons de [[canton de Lourdes-Est|Lourdes-Est]] et [[canton de Lourdes-Ouest|-Ouest]] ;
+**Les cantons de [[canton de Tarbes-Nord|Tarbes-Nord]] et [[canton de Tarbes-Sud|-Sud]] sont redécoupés en sept nouveaux cantons Tarbes-I à -V, [[canton de Séméac|Séméac]] et [[canton d'Aureilhan|Aureilhan]].
+*1974<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000857738 Décret n° 74-769 du 2 septembre 1974]</ref> : Modification de la limite infracommunale entre les cantons de [[canton de Lourdes-Est|Lourdes-Est]] et [[canton de Lourdes-Ouest|-Ouest]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000859679 Décret n° 82-65 du 20 janvier 1982]</ref> :
+**Création du [[canton de Bordères-sur-l'Échez]], détaché du [[canton d'Aureilhan]] ;
+**Création du [[canton de Laloubère]], détaché du [[canton de Séméac]].
+
+
+Liste des 34 cantons des [[Hautes-Pyrénées]], par arrondissement :
+{| class="wikitable centre"
+|Arrondissement d'[[Arrondissement d'Argelès-Gazost|Argelès-Gazost]] (6 cantons)
+|[[Canton d'Argelès-Gazost]] - [[Canton d'Aucun]] - [[Canton de Lourdes-Est]] - [[Canton de Lourdes-Ouest]] - [[Canton de Luz-Saint-Sauveur]] - [[Canton de Saint-Pé-de-Bigorre]]
+|-
+|Arrondissement de [[Arrondissement de Bagnères-de-Bigorre|Bagnères-de-Bigorre]] (9 cantons)
+|[[Canton d'Arreau]] - [[Canton de Bagnères-de-Bigorre]] - [[Canton de La Barthe-de-Neste]] - [[Canton de Bordères-Louron]] - [[Canton de Campan]] - [[Canton de Lannemezan]] - [[Canton de Mauléon-Barousse]] - [[Canton de Saint-Laurent-de-Neste]] - [[Canton de Vielle-Aure]]
+|-
+|Arrondissement de [[Arrondissement de Tarbes|Tarbes]] (19 cantons)
+|[[Canton d'Aureilhan]] - [[Canton de Bordères-sur-l'Échez]] - [[Canton de Castelnau-Magnoac]] - [[Canton de Castelnau-Rivière-Basse]] - [[Canton de Galan]] - [[Canton de Laloubère]] - [[Canton de Maubourguet]] - [[Canton d'Ossun]] - [[Canton de Pouyastruc]] - [[Canton de Rabastens-de-Bigorre]] - [[Canton de Séméac]] - [[Canton de Tarbes-1]] - [[Canton de Tarbes-2]] - [[Canton de Tarbes-3]] - [[Canton de Tarbes-4]] - [[Canton de Tarbes-5]] - [[Canton de Tournay]] - [[Canton de Trie-sur-Baïse]] - [[Canton de Vic-en-Bigorre]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|25 février 2014}} pour le département des [[Hautes-Pyrénées]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans les [[Hautes-Pyrénées]] le nombre de cantons passe ainsi de 34 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661336 |texte=Décret {{n°|2014}}-242 du 25 février 2014}} portant délimitation des cantons dans le département des Hautes-Pyrénées.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 24 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département des Hautes-Pyrénées, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|229458|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=65 |titre= Chiffres clés Évolution et structure de la population - Département des Hautes-Pyrénées (65) |auteur= |date = |site =insee.fr |consulté le= 24 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|13498|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|10798|habitants}} et {{unité|16197|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+!scope=col|Localisation dans le département
+|-
+|1||[[Canton d'Aureilhan|Aureilhan]]||[[Aureilhan (Hautes-Pyrénées)|Aureilhan]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Aureilhan}}}} <small>({{Population de France/dernière_année||Canton d'Aureilhan}})</small>||3||[[Aureilhan (Hautes-Pyrénées)|Aureilhan]], [[Séméac]], [[Soues (Hautes-Pyrénées)|Soues]].
+|[[File:Hautes-Pyrénées - Canton Aureilhan 2015.svg|vignette]]
+|-
+|2||[[Canton de Bordères-sur-l'Échez|Bordères-sur-l'Échez]]||[[Bordères-sur-l'Échez]]||{{formatnum:{{Population de France/dernière_pop||Canton de Bordères-sur-l'Échez}}}} <small>({{Population de France/dernière_année||Canton de Bordères-sur-l'Échez}})</small>||7||[[Bazet]], [[Bordères-sur-l'Échez]], [[Bours (Hautes-Pyrénées)|Bours]], [[Chis]], [[Ibos]], [[Orleix]], [[Oursbelille]].
+|[[File:Hautes-Pyrénées - Canton Bordères-sur-l'Échez 2015.svg|vignette]]
+|-
+|3||[[Canton des Coteaux|Les Coteaux]]||[[Trie-sur-Baïse]]||{{formatnum:{{Population de France/dernière_pop||Canton des Coteaux}}}} <small>({{Population de France/dernière_année||Canton des Coteaux}})</small>||77||[[Antin]], [[Aries-Espénan]], [[Aubarède]], [[Barthe (Hautes-Pyrénées)|Barthe]], [[Bazordan]], [[Bernadets-Debat]], [[Betbèze (Hautes-Pyrénées)|Betbèze]], [[Betpouy]], [[Bonnefont]], [[Bouilh-Péreuilh]], [[Boulin (Hautes-Pyrénées)|Boulin]], [[Bugard]], [[Cabanac]], [[Campuzan]], [[Castelnau-Magnoac]], [[Castelvieilh]], [[Castéra-Lou]], [[Casterets]], [[Caubous (Hautes-Pyrénées)|Caubous]], [[Chelle-Debat]], [[Cizos]], [[Collongues (Hautes-Pyrénées)|Collongues]], [[Coussan]], [[Devèze (Hautes-Pyrénées)|Devèze]], [[Dours]], [[Estampures]], [[Fontrailles]], [[Fréchède]], [[Gaussan]], [[Gonez]], [[Guizerix]], [[Hachan]], [[Hourc]], [[Jacque (Hautes-Pyrénées)|Jacque]], [[Lalanne (Hautes-Pyrénées)|Lalanne]], [[Lalanne-Trie]], [[Lamarque-Rustaing]], [[Lansac (Hautes-Pyrénées)|Lansac]], [[Lapeyre (Hautes-Pyrénées)|Lapeyre]], [[Laran]], [[Larroque (Hautes-Pyrénées)|Larroque]], [[Laslades]], [[Lassales]], [[Lizos]], [[Louit]], [[Lubret-Saint-Luc]], [[Luby-Betmont]], [[Lustar]], [[Marquerie]], [[Marseillan (Hautes-Pyrénées)|Marseillan]], [[Mazerolles (Hautes-Pyrénées)|Mazerolles]], [[Monléon-Magnoac]], [[Monlong]], [[Mun (Hautes-Pyrénées)|Mun]], [[Oléac-Debat]], [[Organ]], [[Osmets]], [[Peyret-Saint-André]], [[Peyriguère]], [[Pouy (Hautes-Pyrénées)|Pouy]], [[Pouyastruc]], [[Puntous]], [[Puydarrieux]], [[Sabalos]], [[Sadournin]], [[Sariac-Magnoac]], [[Sère-Rustaing]], [[Soréac]], [[Souyeaux]], [[Thermes-Magnoac]], [[Thuy]], [[Tournous-Darré]], [[Trie-sur-Baïse]], [[Vidou]], [[Vieuzos]], [[Villembits]], [[Villemur]].
+|[[File:Hautes-Pyrénées - Canton Les Coteaux 2015.svg|vignette]]
+|-
+|4||[[Canton de la Haute-Bigorre|La Haute-Bigorre]]||[[Bagnères-de-Bigorre]]||{{formatnum:{{Population de France/dernière_pop||Canton de la Haute-Bigorre}}}} <small>({{Population de France/dernière_année||Canton de la Haute-Bigorre}})</small>||14||[[Antist]], [[Asté]], [[Astugue]], [[Bagnères-de-Bigorre]], [[Beaudéan]], [[Campan]], [[Gerde]], [[Hiis]], [[Labassère]], [[Montgaillard (Hautes-Pyrénées)|Montgaillard]], [[Neuilh]], [[Ordizan]], [[Pouzac]], [[Trébons]].
+|[[File:Hautes-Pyrénées - Canton La Haute-Bigorre 2015.svg|vignette]]
+|-
+|5||[[Canton de Lourdes-1|Lourdes-1]]||[[Lourdes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Lourdes-1}}}} <small>({{Population de France/dernière_année||Canton de Lourdes-2}})</small>||11 + fraction de Lourdes||1° Les communes suivantes : [[Aspin-en-Lavedan]], [[Barlest]], [[Bartrès]], [[Loubajac]], [[Omex]], [[Ossen]], [[Peyrouse]], [[Poueyferré]], [[Saint-Pé-de-Bigorre]], [[Ségus]], [[Viger (Hautes-Pyrénées)|Viger]]. <br/>2° La partie de la commune de Lourdes située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Julos, route de Julos (départementale 95), ligne de chemin de fer de Toulouse à Bayonne, section de droite dans le prolongement Nord et Sud de la rue Philadelphe-de-Gerde (cette rue étant incluse), boulevard du Lapacca, rue de Langelle, rue Mermoz, rue de Bagnères, place Marcadal, rue de la Grotte, rue du Garnavie, rue petite du Garnavie, rue Rouy, petite rue Rouy, boulevard Roger-Cazenave, boulevard du Gave, boulevard Georges-Dupierris, boulevard Soum-de-Lanne, ligne droite se prolongeant jusqu'au cours du gave de Pau, cours du gave de Pau et du canal alimentant l'usine électrique de Latour, jusqu'à la limite territoriale de la commune d'Aspin-en-Lavedan.
+|[[File:Hautes-Pyrénées - Canton Lourdes-1 2015.svg|vignette]]
+|-
+|6||[[Canton de Lourdes-2|Lourdes-2]]||[[Lourdes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Lourdes-2}}}} <small>({{Population de France/dernière_année||Canton de Lourdes-2}})</small>||27 + fraction de Lourdes||1° Les communes suivantes : [[Adé (Hautes-Pyrénées)|Adé]], [[Les Angles (Hautes-Pyrénées)|Les Angles]], [[Arrayou-Lahitte]], [[Arcizac-ez-Angles]], [[Arrodets-ez-Angles]], [[Artigues (Hautes-Pyrénées)|Artigues]], [[Berbérust-Lias]], [[Bourréac]], [[Cheust]], [[Escoubès-Pouts]], [[Gazost]], [[Ger (Hautes-Pyrénées)|Ger]], [[Germs-sur-l'Oussouet]], [[Geu]], [[Gez-ez-Angles]], [[Jarret (Hautes-Pyrénées)|Jarret]], [[Julos]], [[Juncalas]], [[Lézignan (Hautes-Pyrénées)|Lézignan]], [[Lugagnan]], [[Ossun-ez-Angles]], [[Ourdis-Cotdoussan]], [[Ourdon]], [[Ousté]], [[Paréac]], [[Saint-Créac (Hautes-Pyrénées)|Saint-Créac]], [[Sère-Lanso]]. <br/>2° La partie de la commune de Lourdes non incluse dans le canton de Lourdes-1.
+|[[File:Hautes-Pyrénées - Canton Lourdes-2 2015.svg|vignette]]
+|-
+|7||[[Canton du Moyen Adour|Moyen Adour]]||[[Barbazan-Debat]]||{{formatnum:{{Population de France/dernière_pop||Canton du Moyen Adour}}}} <small>({{Population de France/dernière_année||Canton du Moyen Adour}})</small>||15||[[Allier (Hautes-Pyrénées)|Allier]], [[Angos]], [[Arcizac-Adour]], [[Barbazan-Debat]], [[Bernac-Debat]], [[Bernac-Dessus]], [[Horgues]], [[Laloubère]], [[Momères]], [[Montignac (Hautes-Pyrénées)|Montignac]], [[Odos]], [[Salles-Adour]], [[Saint-Martin (Hautes-Pyrénées)|Saint-Martin]], [[Sarrouilles]], [[Vielle-Adour]].
+|[[File:Hautes-Pyrénées - Canton Le Moyen-Adour 2015.svg|vignette]]
+|-
+|8||[[Canton de Neste, Aure et Louron|Neste, Aure et Louron]]||[[Capvern]]||{{formatnum:{{Population de France/dernière_pop||Canton de Neste, Aure et Louron}}}} <small>({{Population de France/dernière_année||Canton de Neste, Aure et Louron}})</small>||61||[[Adervielle-Pouchergues]], [[Ancizan]], [[Aragnouet]], [[Ardengost]], [[Arreau]], [[Aspin-Aure]], [[Aulon (Hautes-Pyrénées)|Aulon]], [[Avajan]], [[Avezac-Prat-Lahitte]], [[Azet]], [[Bareilles]], [[Barrancoueu]], [[La Barthe-de-Neste]], [[Bazus-Aure]], [[Bazus-Neste]], [[Beyrède-Jumet-Camous]], [[Bordères-Louron]], [[Bourisp]], [[Cadéac]], [[Cadeilhan-Trachère]], [[Camparan]], [[Capvern]], [[Cazaux-Debat]], [[Cazaux-Fréchet-Anéran-Camors]], [[Ens (Hautes-Pyrénées)|Ens]], [[Escala]], [[Esparros]], [[Estarvielle]], [[Estensan]], [[Fréchet-Aure]], [[Gazave]], [[Génos (Hautes-Pyrénées)|Génos]], [[Germ]], [[Gouaux]], [[Grailhen]], [[Grézian]], [[Guchan]], [[Guchen]], [[Hèches]], [[Ilhet]], [[Izaux]], [[Jézeau]], [[Labastide (Hautes-Pyrénées)|Labastide]], [[Laborde (Hautes-Pyrénées)|Laborde]], [[Lançon (Hautes-Pyrénées)|Lançon]], [[Lortet (Hautes-Pyrénées)|Lortet]], [[Loudenvielle]], [[Loudervielle]], [[Mazouau]], [[Mont (Hautes-Pyrénées)|Mont]], [[Montoussé]], [[Pailhac]], [[Ris (Hautes-Pyrénées)|Ris]], [[Sailhan]], [[Saint-Arroman (Hautes-Pyrénées)|Saint-Arroman]], [[Saint-Lary-Soulan]], [[Sarrancolin]], [[Tramezaïgues]], [[Vielle-Aure]], [[Vielle-Louron]], [[Vignec]].
+|[[File:Hautes-Pyrénées - Canton Neste, Aure et Louron 2015.svg|vignette]]
+|-
+|9||[[Canton d'Ossun|Ossun]]||[[Ossun]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Ossun}}}} <small>({{Population de France/dernière_année||Canton d'Ossun}})</small>||17||[[Averan]], [[Azereix]], [[Barry (Hautes-Pyrénées)|Barry]], [[Bénac (Hautes-Pyrénées)|Bénac]], [[Gardères]], [[Hibarette]], [[Juillan]], [[Lamarque-Pontacq]], [[Lanne]], [[Layrisse]], [[Loucrup]], [[Louey]], [[Luquet]], [[Orincles]], [[Ossun]], [[Séron]], [[Visker]].
+|[[File:Hautes-Pyrénées - Canton Ossun 2015.svg|vignette]]
+|-
+|10||[[Canton de Tarbes-1|Tarbes-1]]||[[Tarbes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Tarbes-1}}}} <small>({{Population de France/dernière_année||Canton de Tarbes-1}})</small>||Fraction de Tarbes||partie de la commune de Tarbes située au nord et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Ibos, rue de la Baïse, impasse de l'Alaric, ligne droite se prolongeant jusqu'au cours de l'Echez, cours de l'Echez, rue François-Marquès, rue Sainte-Catherine, rue des Cultivateurs, rue Georges-Lassalle, rue Massey, avenue Alsace-Lorraine, rue des Mimosas, rue Louis-Blériot, boulevard des Ardennes, rue de Perseigna, jusqu'à la limite territoriale de la commune de [[Bordères-sur-l'Échez]].
+|[[File:Hautes-Pyrénées - Canton Tarbes-1 2015.svg|vignette]]
+|-
+|11||[[Canton de Tarbes-2|Tarbes-2]]||[[Tarbes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Tarbes-2}}}} <small>({{Population de France/dernière_année||Canton de Tarbes-2}})</small>||Fraction de Tarbes||Partie de la commune de Tarbes située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de Bordères-sur-l'Echez, rue de Perseigna, boulevard des Ardennes, rue Louis-Blériot, rue des Mimosas, avenue Alsace-Lorraine, rue Massey, rue Despourrins, avenue du Régiment-de-Bigorre, rue de Cronstadt, place Ferré, rue du 4-Septembre, rue du Maquis-de-Payolle, boulevard du Président-Kennedy, rond-point Trélut, chemin de l'Ormeau, jusqu'à la limite territoriale de la commune de [[Laloubère]].
+|[[File:Hautes-Pyrénées - Canton Tarbes-2 2015.svg|vignette]]
+|-
+|12||[[Canton de Tarbes-3|Tarbes-3]]||[[Tarbes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Tarbes-3}}}} <small>({{Population de France/dernière_année||Canton de Tarbes-3}})</small>||Fraction de Tarbes|| Partie de la commune de Tarbes non incluse dans les cantons de Tarbes-1 et de Tarbes-2.
+|[[File:Hautes-Pyrénées - Canton Tarbes-3 2015.svg|vignette]]
+|-
+|13||[[Canton du Val d'Adour-Rustan-Madiranais|Val d'Adour-Rustan-Madiranais]]||[[Maubourguet]]||{{formatnum:{{Population de France/dernière_pop||Canton du Val d'Adour-Rustan-Madiranais}}}} <small>({{Population de France/dernière_année||Canton du Val d'Adour-Rustan-Madiranais}})</small>||43||[[Ansost]], [[Auriébat]], [[Barbachen]], [[Bazillac]], [[Bouilh-Devant]], [[Buzon]], [[Castelnau-Rivière-Basse]], [[Caussade-Rivière]], [[Escondeaux]], [[Estirac]], [[Gensac (Hautes-Pyrénées)|Gensac]], [[Hagedet]], [[Hères]], [[Labatut-Rivière]], [[Lacassagne (Hautes-Pyrénées)|Lacassagne]], [[Lafitole]], [[Lahitte-Toupière]], [[Laméac]], [[Larreule (Hautes-Pyrénées)|Larreule]], [[Lascazères]], [[Lescurry]], [[Liac]], [[Madiran]], [[Mansan (Hautes-Pyrénées)|Mansan]], [[Maubourguet]], [[Mingot]], [[Monfaucon (Hautes-Pyrénées)|Monfaucon]], [[Moumoulous]], [[Peyrun]], [[Rabastens-de-Bigorre]], [[Saint-Lanne]], [[Saint-Sever-de-Rustan]], [[Sarriac-Bigorre]], [[Sauveterre (Hautes-Pyrénées)|Sauveterre]], [[Ségalas (Hautes-Pyrénées)|Ségalas]], [[Sénac (Hautes-Pyrénées)|Sénac]], [[Sombrun]], [[Soublecause]], [[Tostat]], [[Trouley-Labarthe]], [[Ugnouas]], [[Vidouze]], [[Villefranque (Hautes-Pyrénées)|Villefranque]].
+|[[File:Hautes-Pyrénées - Canton Le Val d'Adour-Rustan-Madiranais 2015.svg|vignette]]
+|-
+|14||[[Canton de la Vallée de l'Arros et des Baïses|La Vallée de l'Arros et des Baïses]]||[[Tournay]]||{{formatnum:{{Population de France/dernière_pop||Canton de la Vallée de l'Arros et des Baïses}}}} <small>({{Population de France/dernière_année||Canton de la Vallée de l'Arros et des Baïses}})</small>||70||[[Argelès-Bagnères]], [[Arrodets]], [[Artiguemy]], [[Asque (Hautes-Pyrénées)|Asque]], [[Banios]], [[Barbazan-Dessus]], [[Batsère]], [[Bégole]], [[Benqué-Molère]], [[Bernadets-Dessus]], [[Bettes]], [[Bonnemazon]], [[Bonrepos (Hautes-Pyrénées)|Bonrepos]], [[Bordes (Hautes-Pyrénées)|Bordes]], [[Bourg-de-Bigorre]], [[Bulan (France)|Bulan]], [[Burg (Hautes-Pyrénées)|Burg]], [[Caharet]], [[Calavanté]], [[Castelbajac (Hautes-Pyrénées)|Castelbajac]], [[Castéra-Lanusse]], [[Castillon (Hautes-Pyrénées)|Castillon]], [[Chelle-Spou]], [[Cieutat]], [[Clarac (Hautes-Pyrénées)|Clarac]], [[Esconnets]], [[Escots]], [[Espèche]], [[Espieilh]], [[Fréchendets]], [[Fréchou-Fréchet]], [[Galan (Hautes-Pyrénées)|Galan]], [[Galez]], [[Goudon]], [[Gourgue (Hautes-Pyrénées)|Gourgue]], [[Hauban (Hautes-Pyrénées)|Hauban]], [[Hitte]], [[Houeydets]], [[Lanespède]], [[Lespouey]], [[Lhez]], [[Libaros]], [[Lies (Hautes-Pyrénées)|Lies]], [[Lomné (Hautes-Pyrénées)|Lomné]], [[Luc (Hautes-Pyrénées)|Luc]], [[Lutilhous]], [[Marsas (Hautes-Pyrénées)|Marsas]], [[Mascaras (Hautes-Pyrénées)|Mascaras]], [[Mauvezin (Hautes-Pyrénées)|Mauvezin]], [[Mérilheu]], [[Molère]], [[Montastruc (Hautes-Pyrénées)|Montastruc]], [[Moulédous]], [[Oléac-Dessus]], [[Orieux]], [[Orignac]], [[Oueilloux]], [[Ozon (Hautes-Pyrénées)|Ozon]], [[Péré (Hautes-Pyrénées)|Péré]], [[Peyraube]], [[Poumarous]], [[Recurt (Hautes-Pyrénées)|Recurt]], [[Ricaud (Hautes-Pyrénées)|Ricaud]], [[Sabarros]], [[Sarlabous]], [[Sentous]], [[Sinzos]], [[Tilhouse]], [[Tournay]], [[Tournous-Devant]], [[Uzer (Hautes-Pyrénées)|Uzer]].
+|[[File:Hautes-Pyrénées - Canton La Vallée de l'Arros et des Baïses 2015.svg|vignette]]
+|-
+|15||[[Canton de la Vallée de la Barousse|La Vallée de la Barousse]]||[[Lannemezan]]||{{formatnum:{{Population de France/dernière_pop||Canton de la Vallée de la Barousse}}}} <small>({{Population de France/dernière_année||Canton de la Vallée de la Barousse}})</small>||52||[[Anères]], [[Anla]], [[Antichan]], [[Arné (Hautes-Pyrénées)|Arné]], [[Aventignan]], [[Aveux]], [[Bertren]], [[Bize (Hautes-Pyrénées)|Bize]], [[Bizous]], [[Bramevaque]], [[Campistrous]], [[Cantaous]], [[Cazarilh]], [[Clarens (Hautes-Pyrénées)|Clarens]], [[Créchets]], [[Esbareich]], [[Ferrère]], [[Gaudent]], [[Gembrie]], [[Générest]], [[Hautaget]], [[Ilheu]], [[Izaourt]], [[Lagrange (Hautes-Pyrénées)|Lagrange]], [[Lannemezan]], [[Lombrès]], [[Loures-Barousse]], [[Mauléon-Barousse]], [[Mazères-de-Neste]], [[Montégut (Hautes-Pyrénées)|Montégut]], [[Montsérié]], [[Nestier]], [[Nistos]], [[Ourde]], [[Pinas]], [[Réjaumont (Hautes-Pyrénées)|Réjaumont]], [[Sacoué]], [[Saint-Laurent-de-Neste]], [[Saint-Paul (Hautes-Pyrénées)|Saint-Paul]], [[Sainte-Marie (Hautes-Pyrénées)|Sainte-Marie]], [[Saléchan]], [[Samuran]], [[Sarp]], [[Seich]], [[Siradan]], [[Sost]], [[Tajan]], [[Thèbe]], [[Tibiran-Jaunac]], [[Troubat]], [[Tuzaguet]], [[Uglas]].
+|[[File:Hautes-Pyrénées - Canton La Vallée de la Barousse 2015.svg|vignette]]
+|-
+|16||[[Canton de la Vallée des Gaves|La Vallée des Gaves]]||[[Argelès-Gazost]]||{{formatnum:{{Population de France/dernière_pop||Canton de la Vallée des Gaves}}}} <small>({{Population de France/dernière_année||Canton de la Vallée des Gaves}})</small>||48||[[Adast]], [[Agos-Vidalos]], [[Arbéost]], [[Arcizans-Avant]], [[Arcizans-Dessus]], [[Argelès-Gazost]], [[Arras-en-Lavedan]], [[Arrens-Marsous]], [[Artalens-Souin]], [[Aucun]], [[Ayros-Arbouix]], [[Ayzac-Ost]], [[Barèges]], [[Beaucens]], [[Betpouey]], [[Boô-Silhen]], [[Bun (Hautes-Pyrénées)|Bun]], [[Cauterets]], [[Chèze]], [[Esquièze-Sère]], [[Estaing (Hautes-Pyrénées)|Estaing]], [[Esterre]], [[Ferrières (Hautes-Pyrénées)|Ferrières]], [[Gaillagos]], [[Gavarnie-Gèdre (Hautes-Pyrénées)|Gavarnie-Gèdre]], [[Gez]], [[Grust]], [[Lau-Balagnas]], [[Luz-Saint-Sauveur]], [[Ouzous]], [[Pierrefitte-Nestalas]], [[Préchac (Hautes-Pyrénées)|Préchac]], [[Saint-Pastous]], [[Saint-Savin (Hautes-Pyrénées)|Saint-Savin]], [[Saligos]], [[Salles (Hautes-Pyrénées)|Salles]], [[Sassis]], [[Sazos]], [[Sère-en-Lavedan]], [[Sers (Hautes-Pyrénées)|Sers]], [[Sireix]], [[Soulom]], [[Uz (Hautes-Pyrénées)|Uz]], [[Viella (Hautes-Pyrénées)|Viella]], [[Vier-Bordes]], [[Viey]], [[Villelongue (Hautes-Pyrénées)|Villelongue]], [[Viscos]].
+|[[File:Hautes-Pyrénées - Canton La Vallée des Gaves 2015.svg|vignette]]
+|-
+|17||[[Canton de Vic-en-Bigorre|Vic-en-Bigorre]]||[[Vic-en-Bigorre]]||{{formatnum:{{Population de France/dernière_pop||Canton de Vic-en-Bigorre}}}} <small>({{Population de France/dernière_année||Canton de Vic-en-Bigorre}})</small>||22||[[Andrest]], [[Artagnan]], [[Aurensan (Hautes-Pyrénées)|Aurensan]], [[Caixon]], [[Camalès]], [[Escaunets]], [[Gayan]], [[Lagarde (Hautes-Pyrénées)|Lagarde]], [[Marsac (Hautes-Pyrénées)|Marsac]], [[Nouilhan]], [[Oroix]], [[Pintac]], [[Pujo]], [[Saint-Lézer]], [[Sanous]], [[Sarniguet]], [[Siarrouy]], [[Talazac]], [[Tarasteix]], [[Vic-en-Bigorre]], [[Villenave-près-Béarn]], [[Villenave-près-Marsac]].
+|[[File:Hautes-Pyrénées - Canton Vic-en-Bigorre 2015.svg|vignette]]
+|-
+!||||||{{formatnum:{{Population de France/dernière_pop||Hautes-Pyrénées}}}} <small>({{Population de France/dernière_année||Hautes-Pyrénées}})</small>||469||||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département des [[Hautes-Pyrénées]], c'est le cas d'un canton ([[Canton de la Vallée de l'Arros et des Baïses|la Vallée de l'Arros et des Baïses]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Argelès-Gazost|Argelès-Gazost]]
+!scope=col|[[Arrondissement de Bagnères-de-Bigorre|Bagnères-de-Bigorre]]
+!scope=col|[[Arrondissement de Tarbes|Tarbes]]
+!scope=col|Total
+|-
+|1||align="left"| Aureilhan||||||3||'''3'''
+|-
+|2||align="left"| Bordères-sur-l'Échez||||||7||'''7'''
+|-
+|3||align="left"| Les Coteaux||||||77||'''77'''
+|-
+|4||align="left"| La Haute-Bigorre||||14||||'''14'''
+|-
+|5||align="left"| Lourdes-1||11 + fraction de Lourdes||||||'''11''' + fraction de Lourdes
+|-
+|6||align="left"| Lourdes-2||27 + fraction de Lourdes||||||'''27''' + fraction de Lourdes
+|-
+|7||align="left"| Moyen Adour||||||15||'''15'''
+|-
+|8||align="left"| Neste, Aure et Louron||||61||||'''61'''
+|-
+|9||align="left"| Ossun||||||17||'''17'''
+|-
+|10||align="left"| Tarbes-1||||||Fraction de Tarbes||Fraction de Tarbes
+|-
+|11||align="left"| Tarbes-2||||||Fraction de Tarbes||Fraction de Tarbes
+|-
+|12||align="left"| Tarbes-3||||||Fraction de Tarbes||Fraction de Tarbes
+|-
+|13||align="left"| Val d'Adour-Rustan-Madiranais||||||43||'''43'''
+|-
+|14||align="left"| La Vallée de l'Arros et des Baïses||||43||27||'''70'''
+|-
+|15||align="left"| La Vallée de la Barousse||||52||||'''52'''
+|-
+|16||align="left"| La Vallée des Gaves||47||||||'''47'''
+|-
+|17||align="left"| Vic-en-Bigorre||||||22||'''22'''
+|-
+!||||87||171||212||469
+|}
+
+== Références ==
+{{Références|références=2}}
+
+== Article connexe ==
+* [[Liste des intercommunalités des Hautes-Pyrénées]]
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de France|Cantons des Hautes-Pyrénées}}
+{{Portail|Hautes-Pyrénées|Midi-Pyrénées}}
+
+[[Catégorie:Canton dans les Hautes-Pyrénées|*]]
+[[Catégorie:Liste de cantons français|Pyrenees, Hautes]]
+[[Catégorie:Liste en rapport avec les Hautes-Pyrénées|Cantons]]

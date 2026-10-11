@@ -1,0 +1,105 @@
+{{article principal|histoire du découpage cantonal du Loiret}}
+[[File:Loiret-Position.svg|thumb|Localisation du [[département français]] du [[Loiret (département)|Loiret]] sur une carte de France.]]
+La '''liste des cantons du Loiret (1801-1806)''' présente l'ensemble des [[Canton français|cantons]] du [[département français|département]] [[France|français]] du [[Loiret (département)|Loiret]], leur [[arrondissement français|arrondissement]] de rattachement et leur composition en [[Commune (France)|communes]], sous le [[Consulat (histoire de France)|Consulat]] et le [[Premier Empire]], pour la période allant de [[1801 en France|1801]] à [[1806 en France|1806]].
+
+== Histoire ==
+{{Article détaillé|histoire du découpage cantonal du Loiret}}
+
+Le Loiret en tant que département, [[Liste des cantons du Loiret (1790-1801)|rassemblant des cantons et des districts est créé en 1790]].
+
+Peu de temps après leur création, les cantons sont supprimés, en tant que découpage administratif, par une loi du {{date France|26|juin|1793}}. Ils ne conservent qu'un rôle électoral. Mais, après la chute de [[Maximilien de Robespierre|Robespierre]] le 9 thermidor an II ({{date France|27|juillet|1794}}), les mesures de circonstance de la [[Convention nationale|Convention]] sont annulées par la Constitution du {{date France|22|août|1795}} (5 fructidor, an III), dite « de la République bourgeoise ». La Constitution supprime les districts, rouages administratifs liés à la [[Terreur (Révolution française)|Terreur]], et renforce le rôle des cantons, qu'elle vient de recréer<ref name="COG43">{{Lien web|url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.3. : l’œuvre révolutionnaire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>. La [[loi du 28 pluviôse an VIII]] ({{date France|17|février|1800}}) crée des [[arrondissement français|arrondissements]] dans {{unité|98|départements}}, dont 371 dans les {{unité|89|départements}} correspondant au territoire de la [[Constitution de l'an I|Constitution de 1793]]. À la même date, le nombre des cantons (correspondant au même territoire) est ramené à {{formatnum:2916}}. Dans le [[Loiret (département)|Loiret]], le nombre de cantons est ainsi ramené de 59 à 31<ref name="COG44">{{Lien web|url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.4. : le Consulat et l'Empire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>.
+
+Depuis la création du département, le découpage cantonal du Loiret a subi plusieurs changements notables. Le nombre de cantons est passé successivement de 59 en [[1790 en France|1790]] à 31 en [[1801 en France|1801]], 29 en [[1806 en France|1806]], 37 en [[1973 en France|1973]], 41 en [[1982 en France|1982]] et 21 en [[2015 en France|2015]].
+
+== Liste des cantons et arrondissements du Loiret (1801-1806) ==
+{| class="wikitable alternance"
+|-----
+|+Découpage cantonal du département du Loiret à la suite de l'arrêté du 9 vendémiaire an X ({{date-|1 octobre 1801}})
+!Arrondissement ||Nb cantons||Nom canton||Communes
+|-
+|rowspan="5" | {{1er}} - [[Arrondissement de Pithiviers|Pithiviers]]||rowspan="5" | 5||[[Canton d'Outarville|Bazoches-les-Gallerandes]]<ref name="Arrete1801-41">{{Lien web|url=https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f62|titre= Arrêté du 9 vendémiaire an X portant réduction des justices de paix du département du Loiret - Bulletin des lois de 1801 - page 42 |auteur= |date = |site =gallica.bnf.fr |consulté le= 27 février 2014}}.</ref>||[[Aschères-le-Marché|Acheres]], [[Allainville-en-Beauce|Allainville]], [[Andonville]], [[Attray]], [[Autruy-sur-Juine|Autruy]], [[Bazoches-les-Gallerandes]], [[Boisseaux]], [[Charmont-en-Beauce|Charmont]],  [[Châtillon-le-Roi|Châtillon]], [[Chaussy (Loiret)|Chaussy]], [[Crottes-en-Pithiverais|Crottes]], [[Erceville]], [[Outarville|Faronville]], [[Gironville (Loiret) |Gironville]], Grigneville, [[Greneville-en-Beauce|Guignonville]] et Bazinville, [[Bazoches-les-Gallerandes|Izy]], [[Jouy-en-Pithiverais|Jouy]], [[Léouville|Léonville]], [[Montigny (Loiret)|Montigny]], [[Oison (Loiret)|Oison]], [[Outarville]], [[Outarville|Saint-Péravy-Épreux]], [[Crottes-en-Pithiverais|Teillay-Saint-Benoît]], [[Outarville|Tillay-le-Gaudin]], [[Tivernon]]
+|-
+|[[Canton de Beaune-la-Rolande|Beaune]]<ref name="Arrete1801-41"/>||[[Auxy (Loiret)|Auxy]], [[Barville-en-Gâtinais|Barville]], [[Batilly-en-Gâtinais|Batilly]], [[Beaune-la-Rolande|Beaune]], [[Boiscommun|Bois-commun]], [[Bordeaux-en-Gâtinais|Bordeaux]], [[Bouilly-en-Gâtinais|Bouilly]], [[Chambon-la-Forêt|Chambon]], [[Chemault]], [[Courcelles (Loiret)|Courcelles]], [[Courcy-aux-Loges|Courcy]], [[Égry|Egry]], [[Gaubertin]], [[Juranville]], [[Vrigny (Loiret)|Limiers]], [[Lorcy]], [[Saint-Loup-des-Vignes|Saint-Loup]], [[Saint-Michel (Loiret)|Saint-Michel]], [[Montbarrois|Montbarois]], [[Montliard]], [[Nancray-sur-Rimarde|Nancray]], [[Nibelle]], [[Nibelle|Saint-Sauveur]], [[Vrigny (Loiret)|Vrigny]]
+|-
+|[[Canton de Malesherbes|Malesherbes]]<ref name="Arrete1801-41"/>||[[Audeville]], [[Labrosse|La Brosse]], [[Césarville-Dossainville|Cezarville]], [[Coudray (Loiret)|Coudray]], [[Césarville-Dossainville|Dossainville]], [[Engenville]], [[Orveau-Bellesauve|Gollainville]], [[Intville-la-Guétard|Intville-la-Guitard]], [[Mainvilliers (Loiret)|Mainvilliers]], [[Malesherbes]], [[Manchecourt|Manchecoures]], [[Montville]], [[Morville-en-Beauce|Morville]], [[Nangeville]], [[Orveau-Bellesauve|Orvau]], [[Pannecières]], [[Ramoulu]], [[Rouville (Loiret)|Rouville]], [[Rouvres-Saint-Jean|Rouvres]], [[Sermaises]], [[Thignonville]], [[Trézan]]
+|-
+|[[Canton de Pithiviers|Pithiviers]]<ref name="Arrete1801-42">{{Lien web|url=https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f63 |titre= Arrêté du 9 vendémiaire an X portant réduction des justices de paix du département du Loiret - Bulletin des lois de 1801 - page 43 |auteur= |date = |site =gallica.bnf.fr |consulté le= 27 février 2014}}.</ref>||[[Ascoux]], [[Bondaroy|Boudaroy]], Le Bourg-l'Abbaye, [[Bouzonville]], [[Boynes|Boyne]], [[Chilleurs-aux-Bois]], [[Escrennes|Écrennes]], [[Estouy|Etouy]], [[Givraines]], [[Guigneville]], [[Laas (Loiret)|Laas]], [[Mareau-aux-Bois]], [[Marsainvilliers]], [[Pithiviers]], [[Pithiviers-le-Vieil]], [[Santeau|Sauteau]], [[Sébouville]], Souville, [[Yèvre-la-Ville]], [[Yèvre-le-Châtel]]
+|-
+|[[Canton de Puiseaux|Puiseaux]]<ref name="Arrete1801-42"/>||[[Augerville-la-Rivière|Angerville-la-Rivière]], [[Aulnay-la-Rivière]], [[Boësse (Loiret)|Boësse]], [[Briarres-sur-Essonne|Briarre]], [[Bromeilles]], [[Desmonts|Desmons]], [[Dimancheville]], [[Échilleuses|Echilleuse]], [[Grangermont|Grangemont]], [[La Neuville-sur-Essonne|La Neuville]], [[Ondreville-sur-Essonne|Ondreville]], [[Orville (Loiret)|Orville]], [[Puiseaux]], [[Villereau (Loiret, commune supprimée)|Villereau]]
+|-
+|rowspan="7" | {{2e}} - [[Arrondissement de Montargis|Montargis]]||rowspan="7" | 7||[[Canton de Bellegarde|Bellegarde]]<ref name="Arrete1801-42"/>||[[Auvilliers-en-Gâtinais|Auvillier]], [[Beauchamps-sur-Huillard|Beauchamps]], [[Bellegarde (Loiret)|Bellegarde]], [[Chapelon]], [[Fréville-du-Gâtinais|Fréville]], [[Ladon (Loiret)|Ladon]], [[Mézières-en-Gâtinais|Méziere]], [[Moulon (Loiret)|Moulon]], [[Nesploy]], [[Ouzouer-sous-Bellegarde|Ouzoner-sur-Bellegarde]], [[Quiers-sur-Bézonde|Quiers]], [[Villemoutiers]],
+|-
+|[[Canton de Château-Renard|Château-Renard]]<ref name="Arrete1801-42"/>||[[Château-Renard]], [[Chuelles]], [[Douchy (Loiret)|Douchy]], [[Saint-Firmin-des-Bois]], [[Saint-Germain-des-Prés (Loiret)|Saint-Germain]], [[Gy-les-Nonains]], [[Melleroy]], [[Montcorbon|Moncorbon]], [[La Selle-en-Hermoy|La Selle-en-Hermoye]], [[Triguères|Triguerres]]
+|-
+|[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]<ref name="Arrete1801-42"/>||[[Aillant-sur-Milleron]], [[La Chapelle-sur-Aveyron]], [[Le Charme]], [[Châtillon-sur-Loing]], [[Cortrat|Corterat]], [[Dammarie-sur-Loing]], [[Sainte-Geneviève-des-Bois (Loiret)|Sainte-Geneviève-des-Bois]], [[Saint-Maurice-sur-Aveyron]], [[Montbouy|Montbouï]], [[Montcresson]], [[Nogent-sur-Vernisson]], [[Pressigny-les-Pins|Précigny]], [[Solterre|Sottère]]
+|-
+|[[Canton de Courtenay|Courtenay]]<ref name="Arrete1801-42"/>||[[Bazoches-sur-le-Betz|Bazoches]], [[Chantecoq]], [[La Chapelle-Saint-Sépulcre|La Chapelle-Sépulcre]], [[La Selle-sur-le-Bied|La Celle-sur-le-Bied]], [[Courtemaux]], [[Courtenay (Loiret)|Courtenay]], [[Ervauville|Erreveauville]], [[Foucherolles (Loiret)|Foucherolles]], [[Saint-Hilaire-les-Andresis]], [[Saint-Loup-de-Gonois|Saint-Loup-de-Gonnois]], [[Louzouer]], [[Mérinville]], [[Pers-en-Gâtinais|Pers]], [[Rozoy-le-Vieil]],  [[Thorailles]]
+|-
+|[[Canton de Ferrières-en-Gâtinais|Ferrières]]<ref name="Arrete1801-43">{{Lien web|url=https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f64 |titre= Arrêté du 9 vendémiaire an X portant réduction des justices de paix du département du Loiret - Bulletin des lois de 1801 - page 44 |auteur= |date = |site =gallica.bnf.fr |consulté le= 27 février 2014}}.</ref>||[[Le Bignon-Mirabeau|Le Bignon]], [[Chevannes (Loiret)|Chevannes]], [[Chevry-sous-le-Bignon|Chevry]], [[Corbeilles]], [[Courtempierre|Courtempierres]], [[Dordives]], [[Ferrières-en-Gâtinais|Ferrières]], [[Fontenay-sur-Loing|Fontenay]], [[Girolles (Loiret)|Girolles]], [[Gondreville (Loiret)|Gondreville]], [[Griselles (Loiret)|Griselles-les-Ferrières]], [[Mignères|Mignère]], [[Mignerette]], [[Nargis]], [[Préfontaines|Préfontaine]], [[Sceaux-du-Gâtinais|Sceaux]], [[Treilles-en-Gâtinais|Treilles]]
+|-
+|[[Canton de Lorris|Lorris]]<ref name="Arrete1801-43"/>||[[Chailly-en-Gâtinais|Chailly]], [[Varennes-Changy|Changy]], [[Coudroy]], [[La Cour-Marigny]], [[Saint-Hilaire-sur-Puiseaux]], [[Lorris]], [[Noyers (Loiret)|Noyers]], [[Oussoy-en-Gâtinais|Oussoy]], [[Ouzouer-des-Champs]], [[Presnoy]], [[Thimory]], [[Varennes-Changy|Varennes]], [[Vieilles-Maisons-sur-Joudry|Vieilles-Maisons]]
+|-
+|[[Canton de Montargis|Montargis]]<ref name="Arrete1801-43"/>||[[Amilly (Loiret)|Amilly]], Saint-Firmin-des-Vignes, [[Cepoy|Cepay]], [[Châlette-sur-Loing|Chalette]], [[Chevillon-sur-Huillard|Chevillon]], [[Conflans-sur-Loing|Conflans]], [[Corquilleroy|Corquilleroi]], [[Lombreuil]], [[Saint-Maurice-sur-Fessard|Maurice-sur-Fessard]], [[Montargis]], [[Mormant-sur-Vernisson|Mormant]], [[Pannes (Loiret)|Pannes]], [[Paucourt]], [[Villemandeur]], [[Vimory]], [[Villevoques]]
+|-
+|rowspan="5" | {{3e}} - [[Arrondissement de Gien|Gien]]||rowspan="5" | 5||[[Canton de Briare|Briarre]]<ref name="Arrete1801-43"/>||[[Adon]], [[Batilly-en-Puisaye|Batilly]], [[Breteau|Berteau]], [[Bonny-sur-Loire|Bonny]], [[Briare|Briarre]], [[Champoulet]], [[Dammarie-en-Puisaye|Dammemaire-en-Puisaye]], [[Escrignelles|Écrignelles]], [[Faverelles|Faverolles]], [[Feins-en-Gâtinais|Feins]], [[La Bussière (Loiret)|La Bussière]], [[Ousson-sur-Loire|Ousson]], [[Ouzouer-sur-Trézée|Ouzouer-sur-Trazée]], [[Thou (Loiret)|Thou]]
+|-
+|[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]<ref name="Arrete1801-43"/>||[[Autry-le-Châtel|Autry]], [[Beaulieu-sur-Loire|Beaulieu]], [[Cernoy-en-Berry|Cernoy]], [[Châtillon-sur-Loire]], [[Saint-Firmin-sur-Loire|Saint-Firmin]], [[Pierrefitte-ès-Bois|Pierrefite-ès-Bois]]
+|-
+|[[Canton de Gien|Gien]]<ref name="Arrete1801-42"/>||[[Arrabloy|Arablay]], [[Boismorand]], [[Saint-Brisson-sur-Loire|Saint-Brisson]], [[Les Choux]], [[Coullons|Coulon]], [[Gien]], [[Saint-Gondon|Saint-Goudon]], [[Langesse]], [[Saint-Martin-sur-Ocre (Loiret)|Saint-Martin-sur-Ocre]], [[Nevoy]], [[Poilly-lez-Gien|Poilly]]
+|-
+|[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]<ref name="Arrete1801-44">{{Lien web|url=https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f65 |titre= Arrêté du 9 vendémiaire an X portant réduction des justices de paix du département du Loiret - Bulletin des lois de 1801 - page 45 |auteur= |date = |site =gallica.bnf.fr |consulté le= 27 février 2014}}.</ref>||[[Saint-Benoît-sur-Loire]], [[Bonnée|Bonnie]], [[Les Bordes (Loiret)|Les Bordes]], [[Bray-en-Val|Bray]], [[Dampierre-en-Burly|Dampierre]], Montereau, [[Le Moulinet-sur-Solin|Le Moulinet]], [[Ouzouer-sur-Loire]]
+|-
+|[[Canton de Sully-sur-Loire|Sully]]<ref name="Arrete1801-44"/>||[[Saint-Aignan-le-Jaillard]], [[Cerdon (Loiret)|Cerdon]], [[Saint-Florent (Loiret)|Saint-Florent]], [[Guilly (Loiret)|Guilly]], [[Isdes|Ides]], [[Lion-en-Sullias|Lion]], [[Saint-Père-sur-Loire|Saint-Père]], [[Sully-sur-Loire|Sully]], [[Viglain]], [[Villemurlin]]
+|-
+|rowspan="14" | {{4e}} - [[Arrondissement d'Orléans|Orléans]]||rowspan="14" | 14||[[Canton de Beaugency|Beaugency]]<ref name="Arrete1801-44"/>||Bault et Villeneuve, [[Beaugency]], [[Cravant (Loiret)|Cravant]], [[Lailly-en-Val|Lailly]] et Moncay, [[Messas]], [[Tavers]], [[Villorceau]]
+|-
+|[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]<ref name="Arrete1801-44"/>||[[Saint-Aignan-des-Gués|Saint-Aignan-des-Guès]], [[Bouzy-la-Forêt|Bouzy]], [[Châteauneuf-sur-Loire|Châteauneuf]], Chenoy, [[Combreux]], [[Germigny-des-Prés]], [[Saint-Martin-d'Abbat|Saint-Martin-d'Abat]], [[Seichebrières|Sechebrières]], [[Sury-aux-Bois]], [[Vitry-aux-Loges]]
+|-
+|[[Canton de Chécy|Chécy]]<ref name="Arrete1801-44"/>||[[Boigny-sur-Bionne|Baigny]], [[Bou (Loiret)|Bon]], [[Chécy]], [[Combleux]], [[Saint-Denis-de-l'Hôtel]], [[Donnery]], [[Fay-aux-Loges]], [[Ingrannes|Ingranne]], [[Saint-Jean-de-Braye]], [[Mardié]], [[Marigny-les-Usages|Marigny]], [[Semoy (Loiret)|Semoy]], [[Sully-la-Chapelle]], [[Traînou|Trainon]], [[Vennecy]]
+|-
+|[[Canton de Cléry-Saint-André|Notre-Dame-de-Cléry]]<ref name="Arrete1801-44"/>||[[Dry (Loiret)|Dry]], [[Mareau-aux-Prés|Mareau]], [[Mézières-lez-Cléry|Mézières]], [[Cléry-Saint-André|Notre-Dame-de-Cléry-Saint-André]]
+|-
+|[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]<ref name="Arrete1801-44"/>||[[Ardon (Loiret)|Ardon]], [[La Ferté-Saint-Aubin]], [[Jouy-le-Potier|Jouy-le-Pothier]], [[Ligny-le-Ribault|Ligny-le-Ribaud]], [[Marcilly-en-Villette|Marcilly-en-Vilette]], [[Menestreau-en-Villette|Menestreau]], [[Sennely]], [[Vannes-sur-Cosson|Vannes]]
+|-
+|[[Canton de Jargeau|Jargeau]]<ref name="Arrete1801-45">{{Lien web|url=https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f66 |titre= Arrêté du 9 vendémiaire an X portant réduction des justices de paix du département du Loiret - Bulletin des lois de 1801 - page 46 |auteur= |date = |site =gallica.bnf.fr |consulté le= 27 février 2014}}.</ref>||[[Darvoy]], [[Férolles]], [[Jargeau]], [[La Queuvre]], [[Neuvy-en-Sullias]], [[Ouvrouer-les-Champs|Ouvrouer]], [[Sandillon]], [[Sigloy]], [[Tigy]], [[Vienne-en-Val]]
+|-
+|[[Canton d'Ingré|Ingré]]<ref name="Arrete1801-45"/>||Boulav, [[Bucy-Saint-Liphard|Bussy (Saint-Liphard)]], [[Chaingy]], [[La Chapelle-Saint-Mesmin]], [[Fleury-les-Aubrais|Fleury]], [[Gidy]], [[Ingré]], [[Saint-Jean-de-la-Ruelle]], [[Ormes (Loiret)|Ormes]], [[Saran]]
+|-
+|[[Canton de Meung-sur-Loire|Méun]]<ref name="Arrete1801-45"/>||[[Saint-Ay]], [[Baccon|Bacon]], [[Charsonville]], [[Coulmiers]], [[Épieds-en-Beauce|Épiez]], [[Huisseau-sur-Mauves|Huisseau-sur-Mauve]], [[Meung-sur-Loire|Méun]], [[Rozières-en-Beauce|Rosières]]
+|-
+|[[Canton de Neuville-aux-Bois|Neuville]]<ref name="Arrete1801-45"/>||[[Ambert]] et [[Chanteau]], [[Artenay]], [[Bougy-lez-Neuville|Bougy]], [[Le Bourgneuf|Bourgneuf-de-Loury]], Bussy, [[Cercottes|Cerrecotte]], [[Chevilly (Loiret)|Chevilly]], Saint-Germain, [[Saint-Lyé-la-Forêt|Saint-Lié]], Lion, [[Loury]], [[Neuville-aux-Bois (Loiret)|Neuville]], [[Rebrechien]], [[Ruan (Loiret)|Ruan]], [[Trinay]], [[Villereau (Loiret)|Villerault]]
+|-
+|[[Canton d'Olivet|Olivet]]<ref name="Arrete1801-45"/>||[[Saint-Cyr-en-Val]], [[Saint-Denis-en-Val]], [[Saint-Hilaire-Saint-Mesmin|Saint-Hilaire Saint-Mesmin]], [[Saint-Jean-le-Blanc (Loiret)|Saint-Jean-le-Blanc]], [[Saint-Nicolas-Saint-Mesmin]], [[Olivet (Loiret)|Olivet]], [[Saint-Pryvé-Saint-Mesmin|Saint-Privé]]
+|-
+|Orléans ({{1er|arrondissement}})<ref name="Arrete1801-45"/>||La ville d'Orléans est divisée en trois arrondissements de justices de paix : le premier comprend la partie orientale de la ville, le sixième arrondissement extra-muros dit du Nord, et le septième dit de l’Est
+|-
+|Orléans ({{2e|arrondissement}})<ref name="Arrete1801-45"/>||Le deuxième arrondissement de la ville d'Orléans comprend la partie méridionale, le deuxième arrondissement et le cinquième arrondissement extra muros
+|-
+|Orléans ({{3e|arrondissement}})<ref name="Arrete1801-45"/>||Le troisième arrondissement d'Orléans comprendra partie du troisième arrondissement et du quatrième arrondissement
+|-
+|[[Canton de Patay|Patay]]<ref name="Arrete1801-45"/>||[[Bricy]], La Chapelle-Ozerain, Coinces, Creusy, Gemigny, Huetre, Nids, [[Patay]], [[Saint-Peravy-la-Colombe]], [[Rouvray-Sainte-Croix]], [[Saint-Sigismond (Loiret)|Saint-Sigismond]], Sougy, [[Tournoisis|Tournoisy]], Villambiain, Villeneuve-sur-Cosny
+|-
+|}
+
+== Notes et références ==
+{{Références|colonnes=2}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Administration territoriale de la France]]
+* [[Redécoupage cantonal de 2014 en France]]
+* [[Chronologie de la France sous Napoléon]]
+
+=== Bibliographie ===
+
+* {{Ouvrage |auteur1=Louis Marie Prudhomme |titre=Dictionnaire géographique et méthodique de la République française en 120 départements, volume 1 |lieu=Paris |éditeur=Louis Marie Prudhomme |année=1798 |pages totales=673 |lire en ligne=https://books.google.fr/books?pg=PA162-IA4&lpg=PA162-IA4&dq=D%C3%A9partement+du+loiret+fut+divis%C3%A9+en+7+districts&sig=-YnUS0xCyyfylXWCs4f50j0pFCI&ei=Dtf8Us2nFMrH0QWQmIGoCQ&id=5F0OAAAAQAAJ&hl=fr&ots=RD9_YYhLOZ&output=text |id=Prudhomme}}.
+
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}.
+
+{{Palette|Cantons du Loiret|Anciens cantons du Loiret}}
+{{Portail|XIXe siècle|Premier Empire|Loiret|droit français|politique française}}
+[[Catégorie:Liste de cantons français|Loiret, 1801]]
+[[Catégorie:Liste des cantons du Loiret]]
+[[Catégorie:Histoire du Loiret|Loiret, 1801]]
+[[Catégorie:Circonscription électorale en France|Loiret, 1801]]
+[[Catégorie:1801 en France]]

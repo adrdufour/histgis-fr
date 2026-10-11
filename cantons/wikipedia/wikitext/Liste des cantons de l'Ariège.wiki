@@ -1,0 +1,250 @@
+[[Fichier:09-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de l’Ariège, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] de l'[[Ariège (département)|Ariège]]''' compte 13 [[Canton français|cantons]] à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Auparavant ce nombre était de 22 depuis 1985.
+
+== Histoire ==
+
+=== Découpage cantonal antérieur à 2015 ===
+
+*[[Fichier:Anciens cantons de l'Ariège.png|vignette|Carte des cantons de l'Ariège avant le redécoupage de 2014]]1801<ref>Arrêté du 23 Vendémiaire an X (15 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f156 p.136]</ref> : découpage d'origine.
+*1982<ref>Décret n° 84-1223 du 24 décembre 1984</ref> : 
+**Le [[canton de Pamiers]] est divisé en deux nouveaux cantons [[canton de Pamiers-Est|Pamiers-Est]] et [[Canton de Pamiers-Ouest|-Ouest]];
+**Le [[canton de Foix]] est divisé en deux nouveaus cantons [[canton de Foix-Ville|Foix-Ville]] et [[canton de Foix-Rural|Foix-Rural]] (chef-lieu [[Montgailhard]])
+
+Liste des 22 cantons de l'[[Ariège (département)|Ariège]], par arrondissement :
+{| class="wikitable centre"
+|Arrondissement de [[Arrondissement de Foix|Foix]] (9 cantons)
+|[[canton d'Ax-les-Thermes]] - [[canton de La Bastide-de-Sérou]] - [[canton des Cabannes]] - [[canton de Foix-Rural]] - [[canton de Foix-Ville]] - [[canton de Lavelanet]] - [[canton de Quérigut]] - [[canton de Tarascon-sur-Ariège]] - [[canton de Vicdessos]]
+|-
+|Arrondissement de [[Arrondissement de Pamiers|Pamiers]] (7 cantons)
+|[[canton du Fossat]] - [[canton du Mas-d'Azil]] - [[canton de Mirepoix]] - [[canton de Pamiers-Est]] - [[canton de Pamiers-Ouest]] - [[canton de Saverdun]] - [[canton de Varilhes]]
+|-
+|Arrondissement de [[Arrondissement de Saint-Girons|Saint-Girons]] (6 cantons)
+|[[canton de Castillon-en-Couserans]] - [[canton de Massat]] - [[canton d'Oust]] - [[canton de Sainte-Croix-Volvestre]] - [[canton de Saint-Girons]] - [[canton de Saint-Lizier]]
+|}
+
+==== Homonymie ====
+
+Il n'y a pas d'homonymie pour l'arrondissement de [[arrondissement de Saint-Girons|Saint-Girons]] et les cantons des [[canton des Cabannes|Cabannes]], de [[canton de Mirepoix|Mirepoix]] et de [[canton de Saint-Girons|Saint-Girons]], même s'il en existe pour chacune des communes [[chef-lieu|chefs-lieux]].
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 10 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|18 février 2014}} pour le département de l'[[Ariège (département)|Ariège]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans l'[[Ariège (département)|Ariège]] le nombre de cantons passe ainsi de 22 à 13<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028637150 Décret {{n°|2014}}-174 du 18 février 2014 portant délimitation des cantons dans le département de l'Ariège], sur ''Légifrance'' (consulté le 10 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 10 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de l'Ariège, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|152038|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=09 |titre= Chiffres clés Évolution et structure de la population - Département de l'Ariège (09) |auteur= |date = |site =insee.fr |consulté le= 10 mai 2014}}.</ref>. Avec 13 cantons la population moyenne par conseiller départemental est de {{unité|11695|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|9356|habitants}} et {{unité|14034|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable center"
+|-
+! {{abrd|N°|Numéro d'ordre dans le décret}}
+! Nom du Canton
+! [[Bureau centralisateur]]
+! Population
+! Nombre de communes
+! Communes composant le canton
+! Localisation dans le département
+! colspan=3 | Conseillers
+|-
+| rowspan=2 | 1
+| rowspan=2 | [[Canton de Haute-Ariège|Haute-Ariège]] 
+| rowspan=2 | [[Ax-les-Thermes]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Haute-Ariège}}}} <small>({{Population de France/dernière_année||Canton de Haute-Ariège}})</small>
+| rowspan=2 | 46
+| rowspan=2 | [[Albiès]], [[Appy]], [[Artigues (Ariège)|Artigues]], [[Ascou]], [[Aston (Ariège)|Aston]], [[Aulos-Sinsat]], [[Axiat]], [[Ax-les-Thermes]], [[Bestiac]], [[Bouan (Ariège)|Bouan]], [[Les Cabannes (Ariège)|Les Cabannes]], [[Carcanières]], [[Caussou]], [[Caychax-et-Senconac]], [[Château-Verdun (Ariège)|Château-Verdun]], [[Garanou]], [[L'Hospitalet-près-l'Andorre]], [[Ignaux]], [[Larcat]], [[Larnat]], [[Lassur]], [[Lordat]], [[Luzenac]], [[Mérens-les-Vals]], [[Mijanès]], [[Montaillou]], [[Orgeix]], [[Orlu (Ariège)|Orlu]], [[Ornolac-Ussat-les-Bains]], [[Pech]], [[Perles-et-Castelet]], [[Le Pla]], [[Prades (Ariège)|Prades]], [[Le Puch]], [[Quérigut]], [[Rouze]], [[Savignac-les-Ormeaux]], [[Sorgeat]], [[Tignac]], [[Unac]], [[Urs (Ariège)|Urs]], [[Ussat]], [[Vaychis]], [[Vèbre]], [[Verdun (Ariège)|Verdun]], [[Vernaux]].
+| rowspan=2 | [[File:Ariège - Canton Haute-Ariège 2015.svg|vignette]]
+| width=0.5 rowspan=6 {{Infobox Parti politique français/couleurs|PS}}| || Nathalie Canal || [[Parti socialiste (France)|PS]]
+|-
+| Alain Naudy || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| rowspan=2 | 2
+| rowspan=2 | [[Canton d'Arize-Lèze|Arize-Lèze]] 
+| rowspan=2 | [[Lézat-sur-Lèze]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton d'Arize-Lèze}}}} <small>({{Population de France/dernière_année||Canton d'Arize-Lèze}})</small>
+| rowspan=2 | 27
+| rowspan=2 | [[Artigat]], [[La Bastide-de-Besplas]], [[Les Bordes-sur-Arize]], [[Camarade (Ariège)|Camarade]], [[Campagne-sur-Arize]], [[Carla-Bayle]], [[Castéras]], [[Castex (Ariège)|Castex]], [[Daumazan-sur-Arize]], [[Durfort (Ariège)|Durfort]], [[Fornex]], [[Le Fossat]], [[Gabre]], [[Lanoux]], [[Lézat-sur-Lèze]], [[Loubaut]], [[Le Mas-d'Azil]], [[Méras]], [[Monesple]], [[Montfa (Ariège)|Montfa]], [[Pailhès (Ariège)|Pailhès]], [[Sabarat]], [[Saint-Ybars]], [[Sainte-Suzanne (Ariège)|Sainte-Suzanne]], [[Sieuras]], [[Thouars-sur-Arize]], [[Villeneuve-du-Latou]].
+| rowspan=2 | [[File:Ariège - Canton Arize-Lèze 2015.svg|vignette]]
+| Raymond Berdou || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| Muriel Freyche || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 3
+| rowspan=2 | [[Canton du Couserans Est|Couserans Est]] 
+| rowspan=2 | [[La Bastide-de-Sérou]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Couserans Est}}}} <small>({{Population de France/dernière_année||Canton du Couserans Est}})</small>
+| rowspan=2 | 37
+| rowspan=2 | [[Aigues-Juntes]], [[Aleu]], [[Allières]], [[Alos (Ariège)|Alos]], [[Alzen]], [[Aulus-les-Bains]], [[La Bastide-de-Sérou]], [[Biert]], [[Boussenac]], [[Cadarcet]], [[Castelnau-Durban]], [[Clermont (Ariège)|Clermont]], [[Couflens]], [[Durban-sur-Arize]], [[Encourtiech]], [[Ercé (Ariège)|Ercé]], [[Erp]], [[Esplas-de-Sérou]], [[Lacourt]], [[Larbont]], [[Lescure (Ariège)|Lescure]], [[Massat]], [[Montagagne]], [[Montels (Ariège)|Montels]], [[Montseron]], [[Nescus]], [[Oust (Ariège)|Oust]], [[Le Port (Ariège)|Le Port]], [[Rimont]], [[Rivèrenert]], [[Seix]], [[Sentenac-d'Oust]], [[Sentenac-de-Sérou]], [[Soueix-Rogalle]], [[Soulan]], [[Suzan]], [[Ustou]].
+| rowspan=2 | [[File:Ariège - Canton Couserans Est 2015.svg|vignette]]
+| Olivier Raton || [[Parti socialiste (France)|PS]]
+|-
+| '''Christine Tequi''' || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| rowspan=2 | 4
+| rowspan=2 | [[Canton du Couserans Ouest|Couserans Ouest]] 
+| rowspan=2 | [[Saint-Girons (Ariège)|Saint-Girons]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Couserans Ouest}}}} <small>({{Population de France/dernière_année||Canton du Couserans Ouest}})</small>
+| rowspan=2 | 29
+| rowspan=2 | [[Antras (Ariège)|Antras]], [[Argein]], [[Arrien-en-Bethmale]], [[Arrout]], [[Aucazein]], [[Audressein]], [[Augirein]], [[Balacet]], [[Balaguères]], [[Bethmale (Ariège)|Bethmale]], [[Bonac-Irazein]], [[Bordes-Uchentein]], [[Buzan]], [[Castillon-en-Couserans]], [[Cescau (Ariège)|Cescau]], [[Engomer]], [[Eycheil]], [[Galey]], [[Illartein]], [[Montégut-en-Couserans]], [[Moulis (Ariège)|Moulis]], [[Orgibet]], [[Saint-Girons (Ariège)|Saint-Girons]], [[Saint-Jean-du-Castillonnais]], [[Saint-Lary (Ariège)|Saint-Lary]], [[Salsein]], [[Sentein]], [[Sor (Ariège)|Sor]], [[Villeneuve (Ariège)|Villeneuve]].
+| rowspan=2 | [[File:Ariège - Canton Couserans Ouest 2015.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || Nadine Nény || [[Divers gauche|DVG]]
+|- bgcolor=#eee
+| Jean-Noël Vigneau || [[Divers gauche|DVG]]
+|-
+| rowspan=2 | 5
+| rowspan=2 | [[Canton de Foix|Foix]] 
+| rowspan=2 | [[Foix]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Foix}}}} <small>({{Population de France/dernière_année||Canton de Foix}})</small>
+| rowspan=2 | 6
+| rowspan=2 | [[Cos (Ariège)|Cos]], [[Ferrières-sur-Ariège]], [[Foix]], [[Ganac]], [[Montgailhard]], [[Saint-Pierre-de-Rivière]].
+| rowspan=2 | [[File:Ariège - Canton Foix 2015.svg|vignette]]
+| rowspan=8 {{Infobox Parti politique français/couleurs|PS}}| || Fabien Guichou || [[Parti socialiste (France)|PS]]
+|-
+| Véronique Rumeau || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| rowspan=2 | 6
+| rowspan=2 | [[Canton de Mirepoix|Mirepoix]] 
+| rowspan=2 | [[Mirepoix (Ariège)|Mirepoix]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Mirepoix}}}} <small>({{Population de France/dernière_année||Canton de Mirepoix}})</small>
+| rowspan=2 | 35
+| rowspan=2 | [[Aigues-Vives (Ariège)|Aigues-Vives]], [[La Bastide-de-Bousignac]], [[La Bastide-sur-l'Hers]], [[Belloc]], [[Besset]], [[Camon (Ariège)|Camon]], [[Cazals-des-Baylès]], [[Coutens]], [[Dun (Ariège)|Dun]], [[Esclagne]], [[Lagarde (Ariège)|Lagarde]], [[Lapenne]], [[Laroque-d'Olmes]], [[Léran]], [[Limbrassac]], [[Malegoude]], [[Manses]], [[Mirepoix (Ariège)|Mirepoix]], [[Montbel (Ariège)|Montbel]], [[Moulin-Neuf (Ariège)|Moulin-Neuf]], [[Le Peyrat]], [[Pradettes (Ariège)|Pradettes]], [[Régat]], [[Rieucros]], [[Roumengoux]], [[Saint-Félix-de-Tournegat]], [[Saint-Julien-de-Gras-Capou]], [[Saint-Quentin-la-Tour]], [[Sainte-Foi]], [[Tabre]], [[Teilhet (Ariège)|Teilhet]], [[Tourtrol]], [[Troye-d'Ariège]], [[Vals (Ariège)|Vals]], [[Viviès]].
+| rowspan=2 | [[File:Ariège - Canton Mirepoix 2015.svg|vignette]]
+| Nicole Quillien || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| Alain Toméo || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 7
+| rowspan=2 | [[Canton de Pamiers-1|Pamiers-1]] 
+| rowspan=2 | [[Pamiers]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Pamiers-1}}}} <small>({{Population de France/dernière_année||Canton de Pamiers-1}})</small>
+| rowspan=2 | 14 + fraction de Pamiers
+| rowspan=2 | [[Artix (Ariège)|Artix]], [[Benagues]], [[Bézac]], [[Escosse]], [[Lescousse]], [[Madière]], [[Rieux-de-Pelleport]], [[Saint-Bauzeil]], [[Saint-Jean-du-Falga]], [[Saint-Martin-d'Oydes]], [[Saint-Michel (Ariège)|Saint-Michel]], [[Saint-Victor-Rouzaud]], [[Unzent]] et la partie ouest de la commune de [[Pamiers]] {{note|groupe=alpha|Cette partie est située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Bézac, cours de l'Ariège, canal des Usines, avenue du Jeu-du-Mail, place des Héros-de-Roquefixade, boulevard d'Alsace-Lorraine, boulevard Delcassé, rue du Marché-au-Bois, rue de l'Agasse, rue de Loumet, avenue [[Irénée Cros]], avenue de Foix et route départementale 119, jusqu'à la limite territoriale de la commune de La Tour-du-Crieu.}}.
+| rowspan=2 | [[File:Ariège - Canton Pamiers-1 2015.svg|vignette]]
+| Jean-Christophe Cid || [[Parti socialiste (France)|PS]]
+|-
+| Marie-France Vilaplana || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| rowspan=2 | 8
+| rowspan=2 | [[Canton de Pamiers-2|Pamiers-2]] 
+| rowspan=2 | [[Pamiers]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Pamiers-2}}}} <small>({{Population de France/dernière_année||Canton de Pamiers-2}})</small>
+| rowspan=2 | 7 + fraction de Pamiers
+| rowspan=2 | [[Arvigna]], [[Le Carlaret]], [[Les Issards]], [[Ludiès]], [[Les Pujols]], [[Saint-Amadou]], [[La Tour-du-Crieu]] et la partie est de la commune de Pamiers {{note|groupe=alpha|Partie restante de Pamiers non-incluse dans le premier canton.}}.
+| rowspan=2 | [[File:Ariège - Canton Pamiers-2 2015.svg|vignette]]
+| Jérôme Blasquez || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| Monique Bordes || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 9
+| rowspan=2 | [[Canton du Pays d'Olmes|Pays d'Olmes]] 
+| rowspan=2 | [[Lavelanet]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Pays d'Olmes}}}} <small>({{Population de France/dernière_année||Canton du Pays d'Olmes}})</small>
+| rowspan=2 | 23
+| rowspan=2 | [[L'Aiguillon]], [[Bélesta (Ariège)|Bélesta]], [[Bénaix]], [[Carla-de-Roquefort]], [[Dreuilhe]], [[Fougax-et-Barrineuf]], [[Freychenet]], [[Ilhat]], [[Lavelanet]], [[Lesparrou]], [[Leychert]], [[Lieurac]], [[Montferrier]], [[Montségur]], [[Nalzen]], [[Péreille]], [[Raissac]], [[Roquefixade]], [[Roquefort-les-Cascades]], [[Saint-Jean-d'Aigues-Vives]], [[Sautel]], [[Soula (Ariège)|Soula]], [[Villeneuve-d'Olmes]].
+| rowspan=2 | [[File:Ariège - Canton Le Pays d'Olmes 2015.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || Jessica Miquel || [[Divers gauche|DVG]]
+|-
+| Marc Sanchez || [[Divers gauche|DVG]]
+|- bgcolor=#eee
+| rowspan=2 | 10
+| rowspan=2 | [[Canton des Portes d'Ariège|Portes d'Ariège]] 
+| rowspan=2 | [[Saverdun]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton des Portes d'Ariège}}}} <small>({{Population de France/dernière_année||Canton des Portes d'Ariège}})</small>
+| rowspan=2 | 16
+| rowspan=2 | [[La Bastide-de-Lordat]], [[Bonnac (Ariège)|Bonnac]], [[Brie (Ariège)|Brie]], [[Canté]], [[Esplas]], [[Gaudiès]], [[Justiniac]], [[Labatut (Ariège)|Labatut]], [[Lissac (Ariège)|Lissac]], [[Mazères (Ariège)|Mazères]], [[Montaut (Ariège)|Montaut]], [[Saint-Quirc]], [[Saverdun]], [[Trémoulet]], [[Le Vernet (Ariège)|Le Vernet]], [[Villeneuve-du-Paréage]].
+| rowspan=2 | [[File:Ariège - Canton Les Portes d'Ariège 2015.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| || Géraldine Pons || [[Divers droite|DVD]]
+|- bgcolor=#eee
+| Jean-Michel Soler || [[Divers droite|DVD]]
+|-
+| rowspan=2 | 11
+| rowspan=2 | [[Canton des Portes du Couserans|Portes du Couserans]] 
+| rowspan=2 | [[Saint-Lizier]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton des Portes du Couserans}}}} <small>({{Population de France/dernière_année||Canton des Portes du Couserans}})</small>
+| rowspan=2 | 28
+| rowspan=2 | [[Bagert]], [[Barjac (Ariège)|Barjac]], [[La Bastide-du-Salat]], [[Bédeille (Ariège)|Bédeille]], [[Betchat]], [[Caumont (Ariège)|Caumont]], [[Cazavet]], [[Cérizols]], [[Contrazy]], [[Fabas (Ariège)|Fabas]], [[Gajan (Ariège)|Gajan]], [[Lacave (Ariège)|Lacave]], [[Lasserre (Ariège)|Lasserre]], [[Lorp-Sentaraille]], [[Mauvezin-de-Prat]], [[Mauvezin-de-Sainte-Croix]], [[Mercenac]], [[Mérigon]], [[Montardit]], [[Montesquieu-Avantès]], [[Montgauch]], [[Montjoie-en-Couserans]], [[Prat-Bonrepaux]], [[Saint-Lizier]], [[Sainte-Croix-Volvestre]], [[Taurignan-Castet]], [[Taurignan-Vieux]], [[Tourtouse]].
+| rowspan=2 | [[File:Ariège - Canton Les Portes du Couserans 2015.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|PS}}| || Nathalie Auriac || [[Parti socialiste (France)|PS]]
+|-
+| Michel Pichan || [[Parti socialiste (France)|PS]]
+|- bgcolor=#eee
+| rowspan=2 | 12
+| rowspan=2 | [[Canton du Sabarthès|Sabarthès]] 
+| rowspan=2 | [[Tarascon-sur-Ariège]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Sabarthès}}}} <small>({{Population de France/dernière_année||Canton du Sabarthès}})</small>
+| rowspan=2 | 29
+| rowspan=2 | [[Alliat]], [[Arignac]], [[Arnave]], [[Auzat]], [[Bédeilhac-et-Aynat]], [[Bompas (Ariège)|Bompas]], [[Capoulet-et-Junac]], [[Cazenave-Serres-et-Allens]], [[Celles (Ariège)|Celles]], [[Génat]], [[Gestiès]], [[Gourbit]], [[Illier-et-Laramade]], [[Lapège]], [[Lercoul]], [[Mercus-Garrabet]], [[Miglos]], [[Montoulieu (Ariège)|Montoulieu]], [[Niaux]], [[Orus]], [[Prayols]], [[Quié]], [[Rabat-les-Trois-Seigneurs]], [[Saint-Paul-de-Jarrat]], [[Saurat]], [[Siguer]], [[Surba]], [[Tarascon-sur-Ariège]], [[Val-de-Sos]].
+| rowspan=2 | [[File:Ariège - Canton Sabarthès 2015.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || Joëlle Eychenne || [[Divers gauche|DVG]]
+|- bgcolor=#eee
+| Philippe Pujol || [[Divers gauche|DVG]]
+|-
+| rowspan=2 | 13
+| rowspan=2 | [[Canton du Val d'Ariège|Val d'Ariège]] 
+| rowspan=2 | [[Varilhes]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Val d'Ariège}}}} <small>({{Population de France/dernière_année||Canton du Val d'Ariège}})</small>
+| rowspan=2 | 28
+| rowspan=2 | [[Arabaux]], [[Baulou]], [[Bénac (Ariège)|Bénac]], [[Le Bosc (Ariège)|Le Bosc]], [[Brassac (Ariège)|Brassac]], [[Burret]], [[Calzan]], [[Cazaux (Ariège)|Cazaux]], [[Coussa]], [[Crampagna]], [[Dalou (Ariège)|Dalou]], [[Gudas]], [[L'Herm]], [[Loubens (Ariège)|Loubens]], [[Loubières]], [[Malléon]], [[Montégut-Plantaurel]], [[Pradières]], [[Saint-Félix-de-Rieutord]], [[Saint-Jean-de-Verges]], [[Saint-Martin-de-Caralp]], [[Ségura]], [[Serres-sur-Arget]], [[Varilhes]], [[Ventenac]], [[Vernajoul]], [[Verniolle]], [[Vira (Ariège)|Vira]].
+| rowspan=2 | [[File:Ariège - Canton Le Val d'Ariège 2015.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|PS}}| || Martine Esteban || [[Parti socialiste (France)|PS]]
+|-
+| Jean-Paul Ferré || [[Parti socialiste (France)|PS]]
+|-
+! colspan=3 | || {{formatnum:{{Population de France/dernière_pop||Ariège (département)}}}} <small>({{Population de France/dernière_année||Ariège (département)}})</small>||326|| colspan=5 | 
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de l'Ariège, c'est le cas de deux cantons ([[Canton de Pamiers-1|Pamiers-1]], [[Canton du Pays d'Olmes|Pays d'Olmes]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-
+!N°||Canton||[[Arrondissement de Foix|Foix]]||[[Arrondissement de Pamiers|Pamiers]]||[[Arrondissement de Saint-Girons|Saint-Girons]]||Total
+|-
+|1||align="left"| Haute-Ariège||47||||||'''47'''
+|-
+|2||align="left"| Arize-Lèze||||||27||'''27'''
+|-
+|3||align="left"| Couserans Est||||||37||'''37'''
+|-
+|4||align="left"| Couserans Ouest||||||29||'''29'''
+|-
+|5||align="left"| Foix||6||||||'''6'''
+|-
+|6||align="left"| Mirepoix||||35||||'''35'''
+|-
+|7||align="left"| Pamiers-1||3||10 + fraction de Pamiers||||'''13 + fraction de Pamiers'''
+|-
+|8||align="left"| Pamiers-2||||7 + fraction de Pamiers||||'''7 + fraction de Pamiers'''
+|-
+|9||align="left"| Pays d'Olmes||2||21||||'''23'''
+|-
+|10||align="left"| Portes d'Ariège||||16||||'''16'''
+|-
+|11||align="left"| Portes du Couserans||||||28||'''28'''
+|-
+|12||align="left"| Sabarthès||28||||||'''28'''
+|-
+|13||align="left"| Val d'Ariège||28||||||'''28'''
+|-
+!||||115||91||121||327
+|}
+
+== Notes et références ==
+=== Notes ===
+{{Références|groupe=alpha}}
+
+=== Références ===
+{{Références}}
+
+==Voir aussi==
+*[[Communes de l'Ariège]]
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de France|Cantons de l'Ariège}}
+{{Portail|Ariège}}
+
+[[Catégorie:Canton dans l'Ariège|*]]
+[[Catégorie:Liste de cantons français|Ariege]]
+[[Catégorie:Liste en rapport avec l'Ariège|Cantons]]

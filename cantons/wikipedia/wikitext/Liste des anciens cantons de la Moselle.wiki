@@ -1,0 +1,93 @@
+== Cantons du {{sp-|XVIII|-|XIX}} ==
+Cette liste n'inclut pas les anciens cantons de la [[Meurthe (département)|Meurthe]], soit jusqu'en 1871.
+{{Colonnes|nombre=4|
+* [[Ancerville (Moselle)|Canton d'Ancerville]] (?-1801)
+* [[Argancy|Canton d'Argancy]] (?-1801)
+* [[Augny|Canton d'Augny]] (?-1801)
+* [[Aumetz|Canton d'Aumetz]] (?-1801)
+* [[Beckingen|Canton de Becking]] ([[An III]]-?)
+* [[Canton de Bérus]] (1790-1793)
+* [[Canton de Betting]] ([[An III]]-1801)
+* [[Bisten (Sarre)|Canton de Bisten]] ([[An III]]-?)
+* [[Bistroff|Canton de Bistroff]] (?-1801)
+* [[Bouquenom|Canton de Bouquenom]] (1790-1793)
+* [[Canton de Breidenbach]] (1790-1801)
+* [[Burtoncourt|Canton de Burtoncourt]] (?-1801)
+* [[Goin (Moselle)|Canton de Goin]] (?-1801)
+* [[Hellimer|Canton d'Helimer]] (?-1801)
+* [[Hemmersdorf|Canton de Gros-Hémestroff]] ([[An III]]-1801)
+* [[Inglange|Canton d'Inglange]] (?-1801)
+* [[Kœnigsmacker|Canton de Kœnigsmacker]] (?-1801)
+* [[Canton de Lemberg]] (1790-1801)
+* [[Longeville-lès-Saint-Avold|Canton de Longeville]] (?-1801)
+* Canton de Lorry devant Metz (?-1801)
+* [[Canton de Launstroff]] (?-1806)
+* [[Luttange|Canton de Luttange]] (?-1801)
+* [[Morhange (Moselle)|Canton de Morhange]] (?-1801)
+* [[Noisseville|Canton de Noisseville]] (?-1801)
+* [[Œutrange|Canton d'Œutrange]] (?-1801)
+* [[Puttelange-aux-Lacs|Canton de Puttelange]] (?-1802)
+* [[Canton de Relling]] (?-1815)
+* [[Rodemack|Canton de Rodemack]] (?-1801)
+* [[Rozérieulles|Canton de Rozérieulles]] (?-1801)
+* [[Canton de Sarrelouis]] (?-1815)
+* [[Canton de Tholey]] (?-1814)
+* [[Thicourt|Canton de Thicourt]] (?-1801)
+* [[Vatimont|Canton de Vatimont]] (?-1801)
+* [[Varize (Moselle)|Canton de Varize]] (?-1801)
+* [[Vitry-sur-Orne|Canton de Vitry]] (?-1801)
+}}
+
+== Cantons supprimés après mars 2015 ==
+{{Colonnes|nombre=4|
+* [[Canton d'Albestroff]]
+* [[Canton d'Ars-sur-Moselle]]
+* [[Canton de Behren-lès-Forbach]]
+* [[Canton de Cattenom]]
+* [[Canton de Château-Salins]]
+* [[Canton de Delme]]
+* [[Canton de Dieuze]]
+* [[Canton de Fénétrange]]
+* [[Canton de Florange]]
+* [[Canton de Fontoy]]
+* [[Canton de Grostenquin]]
+* [[Canton de Lorquin]]
+* [[Canton de Maizières-lès-Metz]]
+* [[Canton de Marange-Silvange]]
+* [[Canton de Metz-Ville-1]]
+* [[Canton de Metz-Ville-2]]
+* [[Canton de Metz-Ville-3]]
+* [[Canton de Metz-Ville-4]]
+* [[Canton de Moyeuvre-Grande]]
+* [[Canton de Pange]]
+* [[Canton de Réchicourt-le-Château]]
+* [[Canton de Rohrbach-lès-Bitche]]
+* [[Canton de Saint-Avold-1]]
+* [[Canton de Saint-Avold-2]]
+* [[Canton de Sarreguemines-Campagne]]
+* [[Canton de Sierck-les-Bains]]
+* [[Canton de Thionville-Ouest]]
+* [[Canton de Thionville-Est]]
+* [[Canton de Verny]]
+* [[Canton de Vic-sur-Seille]]
+* [[Canton de Vigy]]
+* [[Canton de Volmunster]]
+* [[Canton de Woippy]]
+}}
+
+== Articles connexes ==
+* [[Liste des cantons de la Moselle]]
+
+== Sources ==
+* Ldh/[[EHESS]]/Cassini - Notices communales
+* Louis Emmanuel de CHASTELLUX, ''Le Territoire du département de la Moselle : Histoire et statistique'', 1860.
+
+== Notes et références ==
+{{Références}}
+
+{{Palette|Cantons de la Moselle|Découpage administratif de la région Grand Est}}
+{{portail|Moselle|politique française}}
+
+[[Catégorie:Ancien canton en Moselle|*]]
+[[Catégorie:Liste de cantons français|*]]
+[[Catégorie:Liste en rapport avec la Moselle|Cantons]]

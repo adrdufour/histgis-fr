@@ -1,0 +1,140 @@
+[[Fichier:15-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département du Cantal, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] du [[Cantal (département)|Cantal]]''' compte 15 [[Canton français|cantons]] depuis 2015, à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]].
+== Histoire ==
+=== Période 1790-2014 ===
+==== Découpage cantonal 1801-1973 ====
+[[Fichier:Anciens cantons du Cantal.png|vignette|Carte des cantons du Cantal avant le redécoupage de 2014]]
+1801<ref>Arrêté du 27 Vendémiaire an X (19 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f229 p.209]</ref> : découpage d'origine
+
+* [[arrondissement d'Aurillac]] (8 cantons) :
+**  [[canton d'Aurillac-Nord]], [[canton d'Aurillac-Sud]], [[canton de Laroquebrou]], [[canton de Maurs]], [[canton de Montsalvy]], [[canton de Saint-Cernin]], [[canton de Saint-Mamet-la-Salvetat]] et [[canton de Vic-sur-Cère]].
+* [[arrondissement de Mauriac]] (6 cantons) :
+** [[canton de Champs-sur-Tarentaine-Marchal]], [[canton de Mauriac]], [[canton de Pleaux]], [[canton de Riom-ès-Montagnes]], [[canton de Saignes]] et [[canton de Salers]].
+* [[arrondissement de Murat]] (3 cantons jusqu'en 1926, date à laquelle l'arrondissement est réuni avec celui de Saint-Flour)
+** [[canton d'Allanche]], [[canton de Condat]], [[canton de Murat]]
+* [[arrondissement de Saint-Flour]] (6 cantons jusqu'en 1926, puis 9 après la fusion avec l'arrondissement de Murat) :
+** [[canton de Chaudes-Aigues]], [[canton de Massiac]], [[canton de Pierrefort]], [[canton de Ruynes-en-Margeride]], [[canton de Saint-Flour-Nord]] et [[canton de Saint-Flour-Sud]].
+
+Pendant cette période, le [[Cantal (département)|Cantal]] compte 23 cantons.
+
+==== Découpage de 1973 à 2014 ====
+* En 1973, les cantons d'[[canton d'Aurillac-Nord|Aurillac-Nord]] et d'[[canton d'Aurillac-Sud|Aurillac-Sud]] sont remplacés par les cantons d'[[canton d'Aurillac-I|Aurillac-I]], [[canton d'Aurillac-II|Aurillac-II]], [[canton d'Aurillac-III|Aurillac-III]] et [[canton d'Aurillac-IV|Aurillac-IV]]<ref name="Decret1973">{{Lien web |url=http://www.legifrance.gouv.fr//jo_pdf.do?cidTexte=JORFTEXT000000500616 |titre= Décret n°73-716 du 23 juillet 1973 portant création de cantons dans le département du Cantal  |date = |site =legifrance.gouv.fr |consulté le= 2 mai 2014}}.</ref>.
+* En 1982, le [[canton d'Aurillac-III]]  est limité à la fraction d'Aurillac et les autres communes, augmentées de [[Teissières-lès-Bouliès]], constituent le [[canton d'Arpajon-sur-Cère]]<ref name="Décret1982">[http://www.legifrance.gouv.fr//jo_pdf.do?cidTexte=JORFTEXT000000336285 Décret {{n°}}82-51 du 20 janvier 1982 création et modification de cantons dans le département du Cantal (Aurillac-i-Nord,Aurillac-ii-Ouest,Aurillac-iii-Sud,arpajon-sur-cere) ].</ref>.
+* En 1985, le [[canton d'Aurillac-I]] est limité à la fraction d'Aurillac et les autres communes constituent le [[canton de Jussac]]<ref>Décret n° 85-73 du 22 janvier 1985</ref>.
+
+L'arrondissement d'Aurillac compte alors 12 cantons et le département passe de 23 cantons à 27.
+
+=== Réforme de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 9 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|13 février 2014}} pour le département du [[Cantal (département)|Cantal]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Cantal (département)|Cantal]] le nombre de cantons passe ainsi de 27 à 15<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028621855 Décret {{n°|2014}}-149 du 13 février 2014 portant délimitation des cantons dans le département du Cantal], sur ''Légifrance'' (consulté le 9 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 9 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département du Cantal, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|148162|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=15 |titre= Chiffres clés Évolution et structure de la population - Département du Cantal (15) |date = |site =insee.fr |consulté le= 9 mai 2014}}.</ref>. Avec 15 cantons la population moyenne par conseiller départemental est de {{unité|9877|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|7902|habitants}} et {{unité|11853|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+==== Décret de 2019 ====
+À la suite de la création dans le [[Cantal (département)|Cantal]], à partir de 2015, de plusieurs [[communes nouvelles]], la liste des communes de plusieurs cantons est actualisée et l'un d'entre eux est renommé par un décret en date du {{date-|7 novembre 2019}}<ref>{{Légifrance|base=JORF|numéro=INTA1923572D|texte=Décret n° 2019-1150 du 7 novembre 2019 modifiant le décret n° 2014-149 du 13 février 2014 portant délimitation des cantons dans le département du Cantal}}</ref>.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+
+{| class="wikitable alternance"  
+|-
+!N°<ref>N° = numéro d'ordre dans le décret</ref>||Nom du Canton||[[Bureau centralisateur]]||Population 2023||Écart /moyenne||Nombre de communes entières||Communes composant le canton
+|- 
+|1||[[Canton d'Arpajon-sur-Cère|Arpajon-sur-Cère]]||[[Arpajon-sur-Cère]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Arpajon-sur-Cère}}}}||1,15||14||[[Arpajon-sur-Cère]], [[Cassaniouze]], [[Junhac]], [[Labesserette]], [[Lacapelle-del-Fraisse]], [[Ladinhac]], [[Lafeuillade-en-Vézie]], [[Lapeyrugue]], [[Leucamp]], [[Montsalvy]], [[Prunet (Cantal)|Prunet]], [[Sansac-Veinazès]], [[Sénezergues]], [[Vieillevie]].
+|-
+|2||[[Canton d'Aurillac-1|Aurillac-1]]||[[Aurillac]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Aurillac-1}}}}|| ||1 + fraction Aurillac||1° La commune d'[[Ytrac]].<br />2° La partie de la commune d'Aurillac située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Ytrac, chemin d'Antuejoul, chemin des Remparts, rue de Pesteils, route de Belbex, rue Jean-Moulin, place du 8-Mai-1945, ligne de chemin de fer reliant Ytrac à Clermont-Ferrand, passerelle reliant la rue François-Maynard à la rue du Ceyla, chemin de Berthou, rue de la Montade, avenue des Volontaires, boulevard de Verdun, avenue du Plomb-du-Cantal, rue Léon-Blum, rue Victor-Jara, ligne perpendiculaire jusqu'à la rue Maurice-Ravel entre le 10 et le 16, rue Maurice-Ravel, rue Georges-Clemenceau, boulevard de Canteloube, rue de Marmiesse, rue de Baradel, chemin du Bousquet, chemin de Marmiers, jusqu'à la limite territoriale de la commune d'Arpajon-sur-Cère.
+|-
+|3||[[Canton d'Aurillac-2|Aurillac-2]]||[[Aurillac]]|| {{formatnum:{{Population de France/dernière_pop||Canton d'Aurillac-2}}}} || ||fraction Aurillac||Partie de la commune d'Aurillac située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Ytrac, chemin d'Antuejoul, chemin des Remparts, rue de Pesteils, route de Belbex, rue Gaston-Maumy, avenue de la Liberté (route départementale 120), rue Croix-du-Vialenc, rue Loucheur, rue du Docteur-Michel, rue Ribot, boulevard Louis-Dauzier, boulevard Eugène-Linthilhac, place d'Aurinques, rue du Président-Delzons, place du Square, avenue Gambetta, cours de la Jordanne, rue du Pont-d'Aliès, pont Pierre-Marty, cours de la Jordanne, rue Pierre-Marty, rue de [[Cité-sanitaire de Clairvivre|Clairvivre]], promenade, rue de la Jordanne, ligne droite perpendiculaire à la rue de la Jordanne partant entre le 10 et le 12 jusqu'à la ligne de chemin de fer, ligne de chemin de fer reliant Ytrac à Clermont-Ferrand, jusqu'à la limite territoriale de la commune d'Arpajon-sur-Cère.
+|-
+|4||[[Canton d'Aurillac-3|Aurillac-3]]||[[Aurillac]]|| {{formatnum:{{Population de France/dernière_pop||Canton d'Aurillac-3}}}} || ||fraction Aurillac||Partie de la commune d'Aurillac non incluse dans les cantons d'Aurillac-1 et d'Aurillac-2.
+|-
+|5||[[Canton de Mauriac|Mauriac]]||[[Mauriac (Cantal)|Mauriac]]||{{formatnum:{{Population de France/dernière_pop||Canton de Mauriac}}}}||1,16||20||[[Ally (Cantal)|Ally]], [[Anglards-de-Salers]], [[Barriac-les-Bosquets]], [[Brageac]], [[Chalvignac]], [[Chaussenac]], [[Drugeac]], [[Escorailles]], [[Le Fau]], [[Fontanges]], [[Mauriac (Cantal)|Mauriac]], [[Pleaux]], [[Saint-Bonnet-de-Salers]], [[Saint-Martin-Cantalès]], [[Saint-Martin-Valmeroux]], [[Saint-Paul-de-Salers]], [[Sainte-Eulalie (Cantal)|Sainte-Eulalie]], [[Salers (Cantal)|Salers]], [[Salins (Cantal)|Salins]], [[Le Vigean]].
+|-
+|6||[[Canton de Maurs|Maurs]]||[[Maurs]]||{{formatnum:{{Population de France/dernière_pop||Canton de Maurs}}}}||1,11||18||[[Boisset (Cantal)|Boisset]], [[Leynhac]], [[Marcolès]], [[Maurs]], [[Montmurat]], [[Puycapel]]<ref group="Note">[[Puycapel]] regroupe depuis le {{date|01|janvier|2019}} les anciennes communes de [[Calvinet]] et [[Mourjou]].</ref>, [[Quézac (Cantal)|Quézac]], [[Roannes-Saint-Mary]], [[Rouziers]], [[Saint-Antoine (Cantal)|Saint-Antoine]], [[Saint-Constant-Fournoulès]]<ref group="Note">[[Saint-Constant-Fournoulès]] regroupe depuis le {{date|01|janvier|2016}} les anciennes communes de [[Fournoulès]] et [[Saint-Constant (Cantal)|Saint-Constant]].</ref>, [[Saint-Étienne-de-Maurs]], [[Saint-Julien-de-Toursac]], [[Saint-Mamet-la-Salvetat]], [[Saint-Santin-de-Maurs]], [[Sansac-de-Marmiesse]], [[Le Trioulou]], [[Vitrac (Cantal)|Vitrac]].
+|-
+|7||[[Canton de Murat|Murat]]||[[Murat (Cantal)|Murat]]||{{formatnum:{{Population de France/dernière_pop||Canton de Murat}}}}||0,88||26||[[Albepierre-Bredons]], [[Allanche]], [[Celles (Cantal)|Celles]], [[Chalinargues]], [[La Chapelle-d'Alagnon]], [[Charmensac]], [[Chavagnac (Cantal)|Chavagnac]], [[Cheylade]], [[Le Claux]], [[Dienne]], [[Joursac]], [[Landeyrat]], [[Laveissenet]], [[Laveissière]], [[Lavigerie]], [[Murat (Cantal)|Murat]]<ref group="Note">La commune nouvelle de [[Murat (Cantal)|Murat]] regroupe depuis le {{date-|01/01/2017}} la commune de [[Murat (commune déléguée)|Murat]] dans son ancien périmètre et celle de [[Chastel-sur-Murat]].</ref>, [[Neussargues-Moissac]], [[Peyrusse]], [[Pradiers]], [[Saint-Saturnin (Cantal)|Saint-Saturnin]], [[Sainte-Anastasie (Cantal)|Sainte-Anastasie]], [[Ségur-les-Villas]], [[Ussel (Cantal)|Ussel]], [[Vernols]], [[Vèze]], [[Virargues]].
+|-
+|8||[[Canton de Naucelles|Naucelles]]||[[Naucelles]]||{{formatnum:{{Population de France/dernière_pop||Canton de Naucelles}}}}||0,99||16||[[Besse (Cantal)|Besse]], [[Crandelles]], [[Freix-Anglards]], [[Girgols]], [[Jussac]], [[Laroquevieille]], [[Marmanhac]], [[Naucelles]], [[Reilhac (Cantal)|Reilhac]], [[Saint-Cernin (Cantal)|Saint-Cernin]], [[Saint-Chamant (Cantal)|Saint-Chamant]], [[Saint-Cirgues-de-Malbert]], [[Saint-Illide]], [[Saint-Projet-de-Salers]], [[Teissières-de-Cornet]], [[Tournemire (Cantal)|Tournemire]].
+|-
+|9||[[Canton de Neuvéglise-sur-Truyère|Neuvéglise-sur-Truyère]]||[[Neuvéglise-sur-Truyère]]||{{formatnum:{{Population de France/dernière_pop||Canton de Neuvéglise-sur-Truyère}}}}||0,84||27||[[Alleuze]], [[Anglards-de-Saint-Flour]], [[Anterrieux]], [[Celoux]], [[Chaliers]], [[Chaudes-Aigues]], [[Chazelles (Cantal)|Chazelles]], [[Clavières]], [[Deux-Verges]], [[Espinasse (Cantal)|Espinasse]], [[Fridefont]], [[Jabrun]], [[Lieutadès]], [[Lorcières]], [[Maurines]], [[Neuvéglise-sur-Truyère]]<ref group="Note">[[Neuvéglise-sur-Truyère]] regroupe depuis le {{date|01|janvier|2017}} les anciennes communes de [[Lavastrie]], [[Neuvéglise]], [[Oradour (Cantal)|Oradour]] et [[Sériers]].</ref>, [[Rageade]], [[Ruynes-en-Margeride]], [[Saint-Georges (Cantal)|Saint-Georges]], [[Saint-Martial (Cantal)|Saint-Martial]], [[Saint-Rémy-de-Chaudes-Aigues]], [[Saint-Urcize]], [[Soulages (Cantal)|Soulages]], [[La Trinitat]], [[Vabres (Cantal)|Vabres]], [[Val d'Arcomie]]<ref group="Note">[[Val d'Arcomie]] regroupe depuis le {{date|01|janvier|2016}} les anciennes communes de [[Faverolles (Cantal)|Faverolles]], [[Loubaresse (Cantal)|Loubaresse]], [[Saint-Just (Cantal)|Saint-Just]] et [[Saint-Marc (Cantal)|Saint-Marc]].</ref>, [[Védrines-Saint-Loup]].
+|-
+|10||[[Canton de Riom-ès-Montagnes|Riom-ès-Montagnes]]||[[Riom-ès-Montagnes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Riom-ès-Montagnes}}}}||0,82||23||[[Apchon]], [[Auzers]], [[Chanterelle (Cantal)|Chanterelle]], [[Collandres]], [[Condat (Cantal)|Condat]], [[Le Falgoux]], [[Lugarde]], [[Marcenat (Cantal)|Marcenat]], [[Marchastel (Cantal)|Marchastel]], [[Méallet]], [[Menet]], [[Montboudif]], [[Montgreleix]], [[Moussages]], [[Riom-ès-Montagnes]], [[Saint-Amandin]], [[Saint-Bonnet-de-Condat]], [[Saint-Étienne-de-Chomeil]], [[Saint-Hippolyte (Cantal)|Saint-Hippolyte]], [[Saint-Vincent-de-Salers]], [[Trizac]], [[Valette (Cantal)|Valette]], [[Le Vaulmier]].
+|-
+|11||[[Canton de Saint-Flour-1|Saint-Flour-1]]||[[Saint-Flour (Cantal)|Saint-Flour]]||{{formatnum:{{Population de France/dernière_pop||Canton de Saint-Flour-1}}}}|| ||23 + fraction Saint-Flour||1° Les communes suivantes : [[Andelat]], [[Auriac-l'Église]], [[Bonnac (Cantal)|Bonnac]], [[La Chapelle-Laurent]], [[Coltines]], [[Coren]], [[Ferrières-Saint-Mary]], [[Lastic (Cantal)|Lastic]], [[Laurie (Cantal)|Laurie]], [[Leyvaux]], [[Massiac]], [[Mentières]], [[Molèdes]], [[Molompize]], [[Montchamp (Cantal)|Montchamp]], [[Rézentières]], [[Roffiac]], [[Saint-Mary-le-Plain]], [[Saint-Poncy]], [[Talizat]], [[Tiviers]], [[Valjouze]], [[Vieillespesse]].<br/> 2° La partie de la commune de Saint-Flour située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Andelat, ligne de chemin de fer Saint-Flour-Chaudes-Aigues, avenue de Clermont-Ferrand, avenue du 11-Novembre, avenue de Verdun, route départementale 10, jusqu'à la limite territoriale de la commune de Villedieu.
+|-
+|12||[[Canton de Saint-Flour-2|Saint-Flour-2]]||[[Saint-Flour (Cantal)|Saint-Flour]]||{{formatnum:{{Population de France/dernière_pop||Canton de Saint-Flour-2}}}}|| ||16 + fraction Saint-Flour||1° Les communes suivantes : [[Brezons]], [[Cézens]], [[Cussac (Cantal)|Cussac]], [[Gourdièges]], [[Lacapelle-Barrès]], [[Malbo]], [[Narnhac]], [[Paulhac (Cantal)|Paulhac]], [[Paulhenc]], [[Pierrefort]], [[Saint-Martin-sous-Vigouroux]], [[Sainte-Marie (Cantal)|Sainte-Marie]], [[Tanavelle]], [[Les Ternes]], [[Valuéjols]], [[Villedieu (Cantal)|Villedieu]].<br/> 2° La partie de la commune de Saint-Flour non incluse dans le canton de Saint-Flour-1.
+|-
+|13||[[Canton de Saint-Paul-des-Landes|Saint-Paul-des-Landes]]||[[Saint-Paul-des-Landes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Saint-Paul-des-Landes}}}}||0,85||22||[[Arnac]], [[Ayrens]], [[Cayrols]], [[Cros-de-Montvert]], [[Glénat (Cantal)|Glénat]], [[Lacapelle-Viescamp]], [[Laroquebrou]], [[Montvert]], [[Nieudan]], [[Omps]], [[Parlan]], [[Rouffiac (Cantal)|Rouffiac]], [[Le Rouget-Pers]]<ref group="Note">[[Le Rouget-Pers]] regroupe depuis le {{date|01|janvier|2016}} les anciennes communes de [[Pers (Cantal)|Pers]] et [[Le Rouget]].</ref>, [[Roumégoux (Cantal)|Roumégoux]], [[Saint-Étienne-Cantalès]], [[Saint-Gérons]], [[Saint-Paul-des-Landes]], [[Saint-Santin-Cantalès]], [[Saint-Saury]], [[Saint-Victor (Cantal)|Saint-Victor]], [[La Ségalassière]], [[Siran (Cantal)|Siran]].
+|-
+|14||[[Canton de Vic-sur-Cère|Vic-sur-Cère]]||[[Vic-sur-Cère]]||{{formatnum:{{Population de France/dernière_pop||Canton de Vic-sur-Cère}}}}||1,1||23||[[Badailhac]], [[Carlat]], [[Cros-de-Ronesque]], [[Giou-de-Mamou]], [[Jou-sous-Monjou]], [[Labrousse (Cantal)|Labrousse]], [[Lascelle]], [[Mandailles-Saint-Julien]], [[Pailherols]], [[Polminhac]], [[Raulhac]], [[Saint-Cirgues-de-Jordanne]], [[Saint-Clément (Cantal)|Saint-Clément]], [[Saint-Étienne-de-Carlat]], [[Saint-Jacques-des-Blats]], [[Saint-Simon (Cantal)|Saint-Simon]], [[Teissières-lès-Bouliès]], [[Thiézac]], [[Velzic]], [[Vézac (Cantal)|Vézac]], [[Vezels-Roussy]], [[Vic-sur-Cère]], [[Yolet]].
+|-
+|15||[[Canton d'Ydes|Ydes]]||[[Ydes]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Ydes}}}}||0,95||19||[[Antignac (Cantal)|Antignac]], [[Arches (Cantal)|Arches]], [[Bassignac]], [[Beaulieu (Cantal)|Beaulieu]], [[Champagnac (Cantal)|Champagnac]], [[Champs-sur-Tarentaine-Marchal]], [[Jaleyrac]], [[Lanobre]], [[Madic]], [[La Monselie]], [[Le Monteil (Cantal)|Le Monteil]], [[Saignes (Cantal)|Saignes]], [[Saint-Pierre (Cantal)|Saint-Pierre]], [[Sauvat]], [[Sourniac]], [[Trémouille]], [[Vebret]], [[Veyrières (Cantal)|Veyrières]], [[Ydes]].
+|-
+!|| ||||{{formatnum:148162}}||||246||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département du Cantal, c'est le cas de deux cantons, [[canton de Naucelles|Naucelles]] et [[canton de Riom-ès-Montagnes|Riom-ès-Montagnes]].
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-
+!N°||Canton||[[Arrondissement d'Aurillac|Aurillac]]||[[Arrondissement de Mauriac|Mauriac]]||[[Arrondissement de Saint-Flour|Saint-Flour]]||Total
+|-
+|1||align="left"| Arpajon-sur-Cère||14||||||'''14'''
+|-
+|2||align="left"| Aurillac-1||1 + fraction Aurillac||||||'''1''' + fraction Aurillac
+|-
+|3||align="left"| Aurillac-2||fraction Aurillac||||||fraction Aurillac
+|-
+|4||align="left"| Aurillac-3||fraction Aurillac||||||fraction Aurillac
+|-
+|5||align="left"| Mauriac||||20||||'''20'''
+|-
+|6||align="left"| Maurs||18||||||'''18'''
+|-
+|7||align="left"| Murat||||||26||'''26'''
+|-
+|8||align="left"| Naucelles||14||2||||'''16'''
+|-
+|9||align="left"| Neuvéglise-sur-Truyère||||||27||'''27'''
+|-
+|10||align="left"| Riom-ès-Montagnes||||14||9||'''23'''
+|-
+|11||align="left"| Saint-Flour-1||||||23 + fraction Saint-Flour||'''23''' + fraction Saint-Flour
+|-
+|12||align="left"| Saint-Flour-2||||||16 + fraction Saint-Flour||'''16''' + fraction Saint-Flour
+|-
+|13||align="left"| Saint-Paul-des-Landes||22||||||'''22'''
+|-
+|14||align="left"| Vic-sur-Cère||23||||||'''23'''
+|-
+|15||align="left"| Ydes||||19||||'''19'''
+|-
+!||||93||55||102||250
+|}
+
+== Notes et références ==
+=== Notes ===
+{{Références|group="Note"}}
+=== Références ===
+{{Références}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Canton français]]
+* [[Élections départementales en France]]
+
+=== Liens externes ===
+* [https://www.cantal.fr/wp-content/uploads/2019/08/limites-cantonales.png Carte des nouveaux cantons du Cantal en 2019]
+
+{{Palette|Découpage administratif de Auvergne-Rhône-Alpes|Cantons de France|Cantons du Cantal}}
+{{Portail|Cantal}}
+
+[[Catégorie:Canton dans le Cantal|*]]
+[[Catégorie:Liste de cantons français|Cantal]]
+[[Catégorie:Liste en rapport avec le Cantal|Cantons]]

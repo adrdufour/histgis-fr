@@ -1,0 +1,208 @@
+[[Fichier:30-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département du Gard, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] du [[Gard]]''' compte 23 [[Canton français|cantons]] à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Auparavant, ce nombre était de 46.
+== Histoire ==
+[[Fichier:Anciens cantons du Gard.png|vignette|Carte des cantons du Gard avant le redécoupage de 2014]]
+
+=== Composition antérieure à 2015 ===
+*1801<ref>Arrêté du 29 Vendémiaire an X (21 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f239 p. 219]</ref> : découpage d'origine
+*1858<ref>Loi du 18 mai 1858, ''Bulletin des lois'' 1858 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k97366809/f1069 p. 1029]</ref> : Suppression du [[canton de Saint-Martin-de-Valgalgues]], création du [[canton de la Grand-Combe]], modification du [[canton de Génolhac]] et scission du canton d'Alès en deux nouveaux cantons [[canton d'Alès-Est|Alès-Est]] et [[canton d'Alès-Ouest|-Ouest]]. 
+*1868<ref>Loi du 4 juillet 1868, ''Collection complète des lois'' 1868, [https://gallica.bnf.fr/ark:/12148/bpt6k54924273/f250 p. 243]</ref> : Création du [[canton de Bessèges]], détaché des canton de [[canton de Génolhac|Génolhac]] et [[canton de Saint-Ambroix|Saint-Ambroix]].
+*1880<ref>Loi du 13 mars 1880, ''JORF'' 14 mars 1880</ref> : Modification de la limite infracommunale entre les cantons Nîmes-I et -III.
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262 Décret n° 73-721 du 23 juillet 1973]</ref> :
+**Les cantons de Nîmes-I et -III sont redécoupés en quatre nouveaux cantons Nîmes-I, -III, -IV et -V.
+**Le [[canton d'Alès-Est]] est scindé en deux nouveaux cantons [[canton d'Alès-Nord-Est|Alès-Nord-Est]] et [[canton d'Alès-Sud-Est|-Sud-Est]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699084 Décret n° 82-57 du 20 janvier 1982]</ref> : Les cantons de Nîmes-III, -IV et -V sont redécoupés en cinq nouveaux cantons [[canton de Nîmes-3|Nîmes-III]], [[canton de Nîmes-4|-IV]], [[canton de Nîmes-5|-V]], [[canton de Nîmes-6|-VI]] et [[Canton de La Vistrenque|La Vistrenque]] (incluant une portion de la ville de Nîmes, chef-lieu à [[Bouillargues]])
+*1991<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172019 Décret n° 91-212 du 27 février 1991]</ref> : Création du [[canton de Rhôny-Vidourle]] (chef-lieu [[Aimargues]]), détaché du [[canton de Vauvert]].
+
+
+Liste des 46 '''[[cantons français|cantons]]''' du [[départements français|département]] '''du [[Gard]]''', par arrondissement.
+{| class="wikitable centre"
+|Arrondissement d'[[Arrondissement d'Alès|Alès]] (12 cantons) 
+|[[canton d'Alès-Nord-Est]] - [[Canton d'Alès-Ouest]] - [[Canton d'Alès-Sud-Est]] - [[canton d'Anduze]] - [[canton de Barjac]] - [[canton de Bessèges]] - [[canton de Génolhac]] - [[canton de la Grand-Combe]] - [[canton de Lédignan]] - [[canton de Saint-Ambroix]] - [[canton de Saint-Jean-du-Gard]] - [[canton de Vézénobres]]
+|-
+|Arrondissement de [[Arrondissement de Nîmes|Nîmes]] (24 cantons)
+|[[Canton d'Aigues-Mortes]] - [[Canton d'Aramon]] - [[canton de Bagnols-sur-Cèze]] - [[canton de Beaucaire]] - [[canton de Lussan]] - [[canton de Marguerittes]] - [[canton de Nîmes-1]] - [[canton de Nîmes-2]] - [[canton de Nîmes-3]] - [[canton de Nîmes-4]] - [[canton de Nîmes-5]] - [[canton de Nîmes-6]] - [[canton de Pont-Saint-Esprit]] - [[canton de Remoulins]] - [[canton de Rhôny-Vidourle]] (chef-lieu à [[Aimargues]]) - [[canton de Roquemaure]] - [[canton de Saint-Chaptes]] - [[canton de Saint-Gilles]] - [[canton de Saint-Mamert-du-Gard]] - [[canton de Sommières]] - [[canton d'Uzès]] - [[canton de Vauvert]] - [[canton de Villeneuve-lès-Avignon]] - [[canton de La Vistrenque]] (chef-lieu à [[Bouillargues]])
+|-
+|Arrondissement du [[Arrondissement du Vigan|Vigan]] (10 cantons)
+|[[canton d'Alzon]] - [[canton de Lasalle]] - [[canton de Quissac]] - [[canton de Saint-André-de-Valborgne]] - [[canton de Saint-Hippolyte-du-Fort]] - [[canton de Sauve]] - [[canton de Sumène]] - [[canton de Trèves]] - [[canton de Valleraugue]] - [[canton du Vigan]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 11 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|24 février 2014}} pour le département du [[Gard]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Gard]] le nombre de cantons passe ainsi de 46 à 23<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028658380 Décret {{n°|2014}}-226 du 24 février 2014 portant délimitation des cantons dans le département du Gard], sur ''Légifrance'' (consulté le 11 mai 2014)</ref>. Seize portent la dénomination d'un canton antérieur, mais avec des limites territoriales différentes, et sept nouveaux cantons portent une nouvelle dénomination.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 11 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département du Gard, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|709700|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=30 |titre= Chiffres clés Évolution et structure de la population - Département du Gard (30) |auteur= |date = |site =insee.fr |consulté le= 11 mai 2014}}.</ref>. Avec 23 cantons la population moyenne par conseiller départemental est de {{unité|30857|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|24685|habitants}} et {{unité|37028|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+!scope=col|Localisation dans le département
+|-
+|1||[[Canton d'Aigues-Mortes|Aigues-Mortes]]||[[Aigues-Mortes]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Aigues-Mortes}}}} <small>({{Population de France/dernière_année||Canton d'Aigues-Mortes}})</small>||7||[[Aigues-Mortes]], [[Aimargues]], [[Aubais]], [[Le Cailar]], [[Gallargues-le-Montueux]], [[Le Grau-du-Roi]], [[Saint-Laurent-d'Aigouze]].
+|[[File:Gard - Canton Aigues-Mortes 2015.svg|vignette]]
+|-
+|2||[[Canton d'Alès-1|Alès-1]]||[[Alès]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Alès-1}}}} <small>({{Population de France/dernière_année||Canton d'Alès-1}})</small>||7 + fraction d'Alès||1° Les communes suivantes : [[Anduze]], [[Bagard (Gard)|Bagard]], [[Boisset-et-Gaujac]], [[Générargues]], [[Ribaute-les-Tavernes]], [[Saint-Christol-lès-Alès]], [[Saint-Jean-du-Pin]]. <br/> 2° La partie de la commune d'Alès située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Martin-de-Valgalgues, cours du Gardon-d'Alès, cours du Grabieux, ruisseau de Bruèges, avenue d'Alsace, rue du Faubourg-d'Auvergne, quai Boissier-de-Sauvages, pont de Resca, cours du Gardon-d'Alès, jusqu'à la limite territoriale de la commune de Saint-Hilaire-de-Brethmas.
+|[[File:Gard - Canton Alès-1 2015.svg|vignette]]
+|-
+|3||[[Canton d'Alès-2|Alès-2]]||[[Alès]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Alès-2}}}} <small>({{Population de France/dernière_année||Canton d'Alès-2}})</small>||14 + fraction d'Alès||1° Les communes suivantes : [[Belvézet]], [[Bouquet (Gard)|Bouquet]], [[Brouzet-lès-Alès]], [[Fons-sur-Lussan]], [[Lussan (Gard)|Lussan]], [[Mons (Gard)|Mons]], [[Les Plans (Gard)|Les Plans]], [[Saint-Just-et-Vacquières]], [[Saint-Martin-de-Valgalgues]], [[Saint-Privat-des-Vieux]], [[Salindres]], [[Servas (Gard)|Servas]], [[Seynes]], [[Vallérargues]].<br/>2° La partie de la commune d'Alès située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Martin-de-Valgalgues, cours du Gardon-d'Alès, cours du Grabieux, ruisseau de Bruèges, avenue d'Alsace, rue du Faubourg-d'Auvergne, avenue du Maréchal-de-Lattre-de-Tassigny, ligne de chemin de fer, avenue Gaston-Mazoyer, avenue Frédéric-Joliot-Curie, avenue Youri-Gagarine, rue Baptiste-Marcet, rue Jules-Renard, rue Marcel-Pagnol, chemin de Sauvezon, route de Bagnols, jusqu'à la limite territoriale de la commune de Saint-Privat-des-Vieux.
+|[[File:Gard - Canton Alès-2 2015.svg|vignette]]
+|-
+|4||[[Canton d'Alès-3|Alès-3]]||[[Alès]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Alès-3}}}} <small>({{Population de France/dernière_année||Canton d'Alès-3}})</small>||13 + fraction d'Alès||1° Les communes suivantes : [[Castelnau-Valence]], [[Deaux]], [[Euzet]], [[Martignargues]], [[Méjannes-lès-Alès]], [[Monteils (Gard)|Monteils]], [[Saint-Césaire-de-Gauzignan]], [[Saint-Étienne-de-l'Olm]], [[Saint-Hilaire-de-Brethmas]], [[Saint-Hippolyte-de-Caton]], [[Saint-Jean-de-Ceyrargues]], [[Saint-Maurice-de-Cazevieille]], [[Vézénobres]]. <br/>2° La partie de la commune d'Alès non incluse dans les cantons d'Alès-1 et d'Alès-2.
+|[[File:Gard - Canton Alès-3 2015.svg|vignette]]
+|-
+|5||[[Canton de Bagnols-sur-Cèze|Bagnols-sur-Cèze]]||[[Bagnols-sur-Cèze]]||{{formatnum:{{Population de France/dernière_pop||Canton de Bagnols-sur-Cèze}}}} <small>({{Population de France/dernière_année||Canton de Bagnols-sur-Cèze}})</small>||11||[[Bagnols-sur-Cèze]], [[Cavillargues]], [[Chusclan]], [[Connaux]], [[Gaujac (Gard)|Gaujac]], [[Orsan]], [[Le Pin (Gard)|Le Pin]], [[Sabran (Gard)|Sabran]], [[Saint-Étienne-des-Sorts]], [[Saint-Pons-la-Calm]], [[Tresques]].
+|[[File:Gard - Canton Bagnols-sur-Cèze 2015.svg|vignette]]
+|-
+|6||[[Canton de Beaucaire|Beaucaire]]||[[Beaucaire (Gard)|Beaucaire]]||{{formatnum:{{Population de France/dernière_pop||Canton de Beaucaire}}}} <small>({{Population de France/dernière_année||Canton de Beaucaire}})</small>||7||[[Aramon (Gard)|Aramon]], [[Beaucaire (Gard)|Beaucaire]], [[Bellegarde (Gard)|Bellegarde]], [[Comps (Gard)|Comps]], [[Fourques (Gard)|Fourques]], [[Jonquières-Saint-Vincent]], [[Vallabrègues]].
+|[[File:Gard - Canton Beaucaire 2015.svg|vignette]]
+|-
+|7||[[Canton de Calvisson|Calvisson]]||[[Calvisson]]||{{formatnum:{{Population de France/dernière_pop||Canton de Calvisson}}}} <small>({{Population de France/dernière_année||Canton de Calvisson}})</small>||28||[[Aspères]], [[Aujargues]], [[Boissières (Gard)|Boissières]], [[Calvisson]], [[Cannes-et-Clairan]], [[Combas]], [[Congénies]], [[Crespian]], [[Fons (Gard)|Fons]], [[Fontanès (Gard)|Fontanès]], [[Gajan (Gard)|Gajan]], [[Junas]], [[Lecques]], [[Montignargues]], [[Montmirat]], [[Montpezat (Gard)|Montpezat]], [[Nages-et-Solorgues]], [[Parignargues]], [[La Rouvière]], [[Saint-Bauzély]], [[Saint-Clément (Gard)|Saint-Clément]], [[Saint-Geniès-de-Malgoirès]], [[Saint-Mamert-du-Gard]], [[Salinelles]], [[Sauzet (Gard)|Sauzet]], [[Sommières]], [[Souvignargues]], [[Villevieille]].
+|[[File:Gard - Canton Calvisson 2015.svg|vignette]]
+|-
+|8||[[Canton de la Grand-Combe|La Grand-Combe]]||[[La Grand-Combe]]||{{formatnum:{{Population de France/dernière_pop||Canton de la Grand-Combe}}}} <small>({{Population de France/dernière_année||Canton de la Grand-Combe}})</small>||28||[[Aujac (Gard)|Aujac]], [[Bonnevaux (Gard)|Bonnevaux]], [[Branoux-les-Taillades]], [[Cendras]], [[Chambon (Gard)|Chambon]], [[Chamborigaud]], [[Concoules]], [[Corbès]], [[Génolhac]], [[La Grand-Combe]], [[Lamelouze]], [[Laval-Pradel]], [[Malons-et-Elze]], [[Mialet (Gard)|Mialet]], [[Ponteils-et-Brésis]], [[Portes (Gard)|Portes]], [[Saint-Bonnet-de-Salendrinque]], [[Saint-Jean-du-Gard]], [[Saint-Paul-la-Coste]], [[Saint-Sébastien-d'Aigrefeuille]], [[Sainte-Cécile-d'Andorge]], [[Sainte-Croix-de-Caderle]], [[Les Salles-du-Gardon]], [[Sénéchas]], [[Soustelle (Gard)|Soustelle]], [[Thoiras]], [[Vabres (Gard)|Vabres]], [[La Vernarède]].
+|[[File:Gard - Canton La Grand-Combe 2015.svg|vignette]]
+|-
+|9||[[Canton de Marguerittes|Marguerittes]]||[[Marguerittes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Marguerittes}}}} <small>({{Population de France/dernière_année||Canton de Marguerittes}})</small>||7||[[Bouillargues]], [[Caissargues]], [[Garons]], [[Manduel]], [[Marguerittes]], [[Poulx]], [[Rodilhan]].
+|[[File:Gard - Canton Marguerittes 2015.svg|vignette]]
+|-
+|10||[[Canton de Nîmes-1|Nîmes-1]]||[[Nîmes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Nîmes-1}}}} <small>({{Population de France/dernière_année||Canton de Nîmes-1}})</small>||Fraction de Nîmes||Partie de la commune de Nîmes située au nord et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Caveirac, chemin de Cante-Perdrix prolongé en ligne droite jusqu'au chemin Jules-Lissajous et à la rue Louis-Proust, rue de l'Avocette, traverse de Tadorne, rue Vatel, avenue Kennedy, rue du Professeur-Robert-Debré, rue de la Chaufferie, boulevard des Français-Libres, chemin de Valdegour, rue Archimède, impasse Archimède, rue Max-Raphel, rue Guy-Arnaud, rue Archimède, rue Galilée, rue Thalès, place Thalès, rue Thalès, rue Gilles-Roberval, avenue Kennedy, rue de Verdun, place Séverine, rue François-Ier, rue Henri-Bataille, place Hubert-Rouger, rue Ernest-Renan, rue Fernand-Pelloutier, rue Benoît-Malon, rue des Chassaintes, rue Bernard-Lazare, rue Rabaut-Saint-Etienne, place Aristide-Briand, pont de Vierne, quai de la Fontaine, rue Pasteur, rue de la Tour-Magne, rue des Bénédictins, rue Rouget-de-Lisle, rue d'Albénas, rue de la Lampèze, rue Vincens, rue Vaissette, place du Docteur-Cantaloube, rue de la Faïence, rue de la Garrigue, rue des Trois-Fontaines, rue Demians, impasse Demians, ligne de chemin de fer, rue Pitot, rue Pitot-Prolongée, rue Ambroise-Croizat, route d'Uzès, rue des Trois-Ponts, chemin du Puits-de-Brunel, chemin de Font-Baumettes, chemin de la Calmette, route d'Uzès, jusqu'à la limite territoriale de la commune de Sainte-Anastasie.
+|[[File:Gard - Canton Nîmes-1 2015.svg|vignette]]
+|-
+|11||[[Canton de Nîmes-2|Nîmes-2]]||[[Nîmes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Nîmes-2}}}} <small>({{Population de France/dernière_année||Canton de Nîmes-2}})</small>||Fraction de Nîmes||Partie de la commune de Nîmes située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Sainte-Anastasie, route d'Uzès, chemin de la Calmette, chemin de Font-Baumettes, chemin du Puits-de-Brunel, rue des Trois-Ponts, route d'Uzès, rue Ambroise-Croizat, rue Pitot-Prolongée, rue Pitot, ligne de chemin de fer, impasse Demians, rue Demians, rue des Trois-Fontaines, rue de la Garrigue, rue de l'Enclos-Rey, rue de la Poudrière, avenue du Mont-Duplan, rue Vincent-Faïta, boulevard Etienne-Saintenac, place de la Division-Daguet, boulevard Gambetta, boulevard de l'Amiral-Courbet, place Gabriel-Péri, rue Pierre-Semard, rue de Beaucaire, route de Beaucaire, rond-point Rishon-le-Zion, boulevard du Président-Salvador-Allende, rond-point Haroun-Tazieff, rue Cristino-Garcia, cours d'eau, autoroute A 9, route de Beaucaire, jusqu'à la limite territoriale de la commune de Rodilhan.
+|[[File:Gard - Canton Nîmes-2 2015.svg|vignette]]
+|-
+|12||[[Canton de Nîmes-3|Nîmes-3]]||[[Nîmes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Nîmes-3}}}} <small>({{Population de France/dernière_année||Canton de Nîmes-3}})</small>||Fraction de Nîmes||partie de la commune de Nîmes située au sud et à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Rodilhan, route de Beaucaire, autoroute A9, cours d'eau, rue Cristino-Garcia, rond-point Haroun-Tazieff, boulevard du Président-Salvador-Allende, rond-point Rishon-le-Zion, route de Beaucaire, rue de Beaucaire, place Gabriel-Péri, boulevard de l'Amiral-Courbet, boulevard Gambetta, place de la Division-Daguet, boulevard Etienne-Saintenac, rue Vincent-Faïta, avenue du Mont-Duplan, rue de la Poudrière, rue de l'Enclos-Rey, rue de la Garrigue, rue de la Faïence, place du Docteur-Cantaloube, rue Vaissette, rue Vincens, rue de la Lampèze, rue d'Albénas, rue Rouget-de-Lisle, rue des Bénédictins, rue de la Tour-Magne, rue Pasteur, quai de la Fontaine, pont de Vierne, place Aristide-Briand, rue Rabaut-Saint-Etienne, rue Bernard-Lazare, rue des Chassaintes, rue Benoît-Malon, rue Fernand-Pelloutier, rue Ernest-Renan, rue du Mail, place Montcalm, rue de la République, rue Ruffi, boulevard du Sergent-Triaire, rue André-Simon, avenue Pierre-Gamel, boulevard du Président-Salvador-Allende, chemin bas du Mas-de-Boudan, autoroute A 9, avenue François-Mitterrand, rond-point de la Première-Division-Française-Libre, route départementale 42, jusqu'à la limite territoriale de la commune de Caissargues.
+|[[File:Gard - Canton Nîmes-3 2015.svg|vignette]]
+|-
+|13||[[Canton de Nîmes-4|Nîmes-4]]||[[Nîmes]]||{{formatnum:{{Population de France/dernière_pop||Canton de Nîmes-4}}}} <small>({{Population de France/dernière_année||Canton de Nîmes-4}})</small>||Fraction de Nîmes|| Parties de la commune de Nîmes situées : <br/>
+1° Au sud et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Caveirac, chemin de Cante-Perdrix prolongé en ligne droite jusqu'au chemin Jules-Lissajous et à la rue Louis-Proust, rue de l'Avocette, traverse de Tadorne, rue Vatel, avenue Kennedy, rue du Professeur-Robert-Debré, rue de la Chaufferie, boulevard des Français-Libres, chemin de Valdegour, rue Archimède, rue Max-Raphel, rue Guy-Arnaud, impasse Archimède, rue Archimède, rue Galilée, rue Thalès, place Thalès, rue Thalès, rue Gilles-Roberval, avenue Kennedy, rue de Verdun, place Séverine, rue François-Ier, rue Henri-Bataille, place Hubert-Rouger, rue du Mail, place Montcalm, rue de la République, rue Ruffi, boulevard du Sergent-Triaire, rue André-Simon, avenue Pierre-Gamel, boulevard du Président-Salvador-Allende, chemin bas du Mas-de-Boudan, autoroute A 9, avenue François-Mitterrand, rond-point de la Première-Division-Française-Libre, route départementale 42, jusqu'à la limite territoriale de la commune de Caissargues ;<br/>
+2° Au nord de la route départementale 135, depuis la limite territoriale de la commune de Milhaud jusqu'à la limite territoriale de la commune de Caissargues.
+|[[File:Gard - Canton Nîmes-4 2015.svg|vignette]]
+|-
+|14||[[Canton de Pont-Saint-Esprit|Pont-Saint-Esprit]]||[[Pont-Saint-Esprit]]||{{formatnum:{{Population de France/dernière_pop||Canton de Pont-Saint-Esprit}}}} <small>({{Population de France/dernière_année||Canton de Pont-Saint-Esprit}})</small>||24||[[Aiguèze]], [[Carsan]], [[Cornillon]], [[Le Garn]], [[Goudargues]], [[Issirac]], [[Laval-Saint-Roman]], [[Montclus (Gard)|Montclus]], [[Pont-Saint-Esprit]], [[La Roque-sur-Cèze]], [[Saint-Alexandre (Gard)|Saint-Alexandre]], [[Saint-André-de-Roquepertuis]], [[Saint-André-d'Olérargues]], [[Saint-Christol-de-Rodières]], [[Saint-Gervais (Gard)|Saint-Gervais]], [[Saint-Julien-de-Peyrolas]], [[Saint-Laurent-de-Carnols]], [[Saint-Marcel-de-Careiret]], [[Saint-Michel-d'Euzet]], [[Saint-Nazaire (Gard)|Saint-Nazaire]], [[Saint-Paulet-de-Caisson]], [[Salazac]], [[Vénéjan]], [[Verfeuil]].
+|[[File:Gard - Canton Pont-Saint-Esprit 2015.svg|vignette]]
+|-
+|15||[[Canton de Quissac|Quissac]]||[[Quissac (Gard)|Quissac]]||{{formatnum:{{Population de France/dernière_pop||Canton de Quissac}}}} <small>({{Population de France/dernière_année||Canton de Quissac}})</small>||44||[[Aigremont (Gard)|Aigremont]], [[Boucoiran-et-Nozières]], [[Bragassargues]], [[Brignon]], [[Brouzet-lès-Quissac]], [[Canaules-et-Argentières]], [[Cardet]], [[Carnas]], [[Cassagnoles (Gard)|Cassagnoles]], [[Colognac]], [[Corconne]], [[Cros (Gard)|Cros]], [[Cruviers-Lascours]], [[Domessargues]], [[Durfort-et-Saint-Martin-de-Sossenac]], [[Fressac]], [[Gailhan]], [[Lédignan]], [[Lézan]], [[Liouc]], [[Logrian-Florian]], [[Maruéjols-lès-Gardon]], [[Massanes (Gard)|Massanes]], [[Massillargues-Attuech]], [[Mauressargues]], [[Monoblet]], [[Montagnac (Gard)|Montagnac]], [[Moulézan]], [[Moussac (Gard)|Moussac]], [[Ners]], [[Orthoux-Sérignac-Quilhan]], [[Puechredon]], [[Quissac (Gard)|Quissac]], [[Saint-Bénézet]], [[Saint-Félix-de-Pallières]], [[Saint-Jean-de-Crieulon]], [[Saint-Jean-de-Serres]], [[Saint-Nazaire-des-Gardies]], [[Saint-Théodorit]], [[Sardan]], [[Sauve]], [[Savignargues]], [[Tornac]], [[Vic-le-Fesq]].
+|[[File:Gard - Canton Quissac 2015.svg|vignette]]
+|-
+|16||[[Canton de Redessan|Redessan]]||[[Redessan]]||{{formatnum:{{Population de France/dernière_pop||Canton de Redessan}}}} <small>({{Population de France/dernière_année||Canton de Redessan}})</small>||21||[[Argilliers]], [[Bezouce]], [[Cabrières (Gard)|Cabrières]], [[Castillon-du-Gard]], [[Collias]], [[Domazan]], [[Estézargues]], [[Fournès]], [[Lédenon]], [[Meynes]], [[Montfrin]], [[Pouzilhac]], [[Redessan]], [[Remoulins]], [[Saint-Bonnet-du-Gard]], [[Saint-Gervasy]], [[Saint-Hilaire-d'Ozilhan]], [[Sernhac]], [[Théziers]], [[Valliguières]], [[Vers-Pont-du-Gard]].
+|[[File:Gard - Canton Redessan 2015.svg|vignette]]
+|-
+|17||[[Canton de Roquemaure|Roquemaure]]||[[Roquemaure (Gard)|Roquemaure]]||{{formatnum:{{Population de France/dernière_pop||Canton de Roquemaure}}}} <small>({{Population de France/dernière_année||Canton de Roquemaure}})</small>||11||[[Codolet]], [[Laudun-l'Ardoise]], [[Lirac]], [[Montfaucon (Gard)|Montfaucon]], [[Roquemaure (Gard)|Roquemaure]], [[Saint-Geniès-de-Comolas]], [[Saint-Laurent-des-Arbres]], [[Saint-Paul-les-Fonts]], [[Saint-Victor-la-Coste]], [[Sauveterre (Gard)|Sauveterre]], [[Tavel (Gard)|Tavel]].
+|[[File:Gard - Canton Roquemaure 2015.svg|vignette]]
+|-
+|18||[[Canton de Rousson|Rousson]]||[[Rousson (Gard)|Rousson]]||{{formatnum:{{Population de France/dernière_pop||Canton de Rousson}}}} <small>({{Population de France/dernière_année||Canton de Rousson}})</small>||29||[[Allègre-les-Fumades]], [[Barjac (Gard)|Barjac]], [[Bessèges]], [[Bordezac]], [[Courry]], [[Gagnières]], [[Les Mages]], [[Le Martinet]], [[Méjannes-le-Clap]], [[Meyrannes]], [[Molières-sur-Cèze]], [[Navacelles]], [[Peyremale]], [[Potelières]], [[Rivières (Gard)|Rivières]], [[Robiac-Rochessadoule]], [[Rochegude (Gard)|Rochegude]], [[Rousson (Gard)|Rousson]], [[Saint-Ambroix (Gard)|Saint-Ambroix]], [[Saint-Brès (Gard)|Saint-Brès]], [[Saint-Denis (Gard)|Saint-Denis]], [[Saint-Florent-sur-Auzonnet]], [[Saint-Jean-de-Maruéjols-et-Avéjan]], [[Saint-Jean-de-Valériscle]], [[Saint-Julien-de-Cassagnas]], [[Saint-Julien-les-Rosiers]], [[Saint-Privat-de-Champclos]], [[Saint-Victor-de-Malcap]], [[Tharaux]].
+|[[File:Gard - Canton Rousson 2015.svg|vignette]]
+|-
+|19||[[Canton de Saint-Gilles|Saint-Gilles]]||[[Saint-Gilles (Gard)|Saint-Gilles]]||{{formatnum:{{Population de France/dernière_pop||Canton de Saint-Gilles}}}} <small>({{Population de France/dernière_année||Canton de Saint-Gilles}})</small>||8 + fraction de Nîmes||1° Les communes suivantes : [[Caveirac]], [[Clarensac]], [[Générac (Gard)|Générac]], [[Langlade (Gard)|Langlade]], [[Milhaud (Gard)|Milhaud]], [[Saint-Côme-et-Maruéjols]], [[Saint-Dézéry|Saint-Dionisy]], [[Saint-Gilles (Gard)|Saint-Gilles]].<br/>2° La partie de la commune de Nîmes non incluse dans les cantons de Nîmes-1, Nîmes-2, Nîmes-3 et Nîmes-4.
+|[[File:Gard - Canton Saint-Gilles 2015.svg|vignette]]
+|-
+|20||[[Canton d'Uzès|Uzès]]||[[Uzès]]||{{formatnum:{{Population de France/dernière_pop||Canton d'Uzès}}}} <small>({{Population de France/dernière_année||Canton d'Uzès}})</small>||31||[[Aigaliers]], [[Arpaillargues-et-Aureillac]], [[Aubussargues]], [[Baron (Gard)|Baron]], [[La Bastide-d'Engras]], [[Blauzac]], [[Bourdic]], [[La Bruguière]], [[La Calmette (Gard)|La Calmette]], [[La Capelle-et-Masmolène]], [[Collorgues]], [[Dions]], [[Flaux]], [[Foissac (Gard)|Foissac]], [[Fontarèches]], [[Garrigues-Sainte-Eulalie]], [[Montaren-et-Saint-Médiers]], [[Pougnadoresse]], [[Saint-Chaptes]], [[Saint-Dézéry]], [[Saint-Hippolyte-de-Montaigu]], [[Saint-Laurent-la-Vernède]], [[Saint-Maximin (Gard)|Saint-Maximin]], [[Saint-Quentin-la-Poterie]], [[Saint-Siffret]], [[Saint-Victor-des-Oules]], [[Sainte-Anastasie (Gard)|Sainte-Anastasie]], [[Sanilhac-Sagriès]], [[Serviers-et-Labaume]], [[Uzès]], [[Vallabrix]].
+|[[File:Gard - Canton Uzès 2015.svg|vignette]]
+|-
+|21||[[Canton de Vauvert|Vauvert]]||[[Vauvert (Gard)|Vauvert]]||{{formatnum:{{Population de France/dernière_pop||Canton de Vauvert}}}} <small>({{Population de France/dernière_année||Canton de Vauvert}})</small>||10||[[Aigues-Vives (Gard)|Aigues-Vives]], [[Aubord]], [[Beauvoisin (Gard)|Beauvoisin]], [[Bernis (Gard)|Bernis]], [[Codognan]], [[Mus (Gard)|Mus]], [[Uchaud]], [[Vauvert (Gard)|Vauvert]], [[Vergèze]], [[Vestric-et-Candiac]].
+|[[File:Gard - Canton Vauvert 2015.svg|vignette]]
+|-
+|22||[[Canton du Vigan|Le Vigan]]||[[Le Vigan (Gard)|Le Vigan]]||{{formatnum:{{Population de France/dernière_pop||Canton du Vigan}}}} <small>({{Population de France/dernière_année||Canton du Vigan}})</small>||44||[[Alzon]], [[Arphy]], [[Arre (Gard)|Arre]], [[Arrigas]], [[Aulas]], [[Aumessas]], [[Avèze (Gard)|Avèze]], [[Bez-et-Esparon]], [[Blandas]], [[Bréau-Mars]], [[La Cadière-et-Cambo]], [[Campestre-et-Luc]], [[Causse-Bégon]], [[Conqueyrac]], [[Dourbies]], [[L'Estréchure]], [[Lanuéjols (Gard)|Lanuéjols]], [[Lasalle (Gard)|Lasalle]], [[Mandagout]], [[Molières-Cavaillac]], [[Montdardier]], [[Peyrolles (Gard)|Peyrolles]], [[Les Plantiers]], [[Pommiers (Gard)|Pommiers]], [[Pompignan (Gard)|Pompignan]], [[Revens]], [[Rogues]], [[Roquedur]], [[Saint-André-de-Majencoules]], [[Saint-André-de-Valborgne]], [[Saint-Bresson (Gard)|Saint-Bresson]], [[Saint-Hippolyte-du-Fort]], [[Saint-Julien-de-la-Nef]], [[Saint-Laurent-le-Minier]], [[Saint-Martial (Gard)|Saint-Martial]], [[Saint-Roman-de-Codières]], [[Saint-Sauveur-Camprieu]], [[Saumane (Gard)|Saumane]], [[Soudorgues]], [[Sumène]], [[Trèves (Gard)|Trèves]], [[Val-d'Aigoual]], [[Le Vigan (Gard)|Le Vigan]], [[Vissec]].
+|[[File:Gard - Canton Le Vigan 2015.svg|vignette]]
+|-
+|23||[[Canton de Villeneuve-lès-Avignon|Villeneuve-lès-Avignon]]||[[Villeneuve-lès-Avignon]]||{{formatnum:{{Population de France/dernière_pop||Canton de Villeneuve-lès-Avignon}}}} <small>({{Population de France/dernière_année||Canton de Villeneuve-lès-Avignon}})</small>||5||[[Les Angles (Gard)|Les Angles]], [[Pujaut (Gard)|Pujaut]], [[Rochefort-du-Gard]], [[Saze]], [[Villeneuve-lès-Avignon]].
+|[[File:Gard - Canton Villeneuve-lès-Avignon 2015.svg|vignette]]
+|-
+!||||||{{formatnum:{{Population de France/dernière_pop||Gard}}}} <small>({{Population de France/dernière_année||Gard}})</small>||351||||
+|}
+
+[[Fichier:Carte cantons 2015 Gard.svg|800px|vignette|centre|''Liste des cantons''<br>'''1'''- [[Canton d'Aigues-Mortes|Aigues-Mortes]], '''2'''- [[Canton d'Alès-1|Alès-1]], '''3'''- [[Canton d'Alès-2|Alès-2]], '''4'''- [[Canton d'Alès-3|Alès-3]], '''5'''- [[Canton de Bagnols-sur-Cèze|Bagnols-sur-Cèze]], '''6'''- [[Canton de Beaucaire|Beaucaire]], '''7'''- [[Canton de Calvisson|Calvisson]], '''8'''- [[Canton de la Grand-Combe|La Grand-Combe]], '''9'''- [[Canton de Marguerittes|Marguerittes]], '''10'''- [[Canton de Nîmes-1|Nîmes-1]], '''11'''- [[Canton de Nîmes-2|Nîmes-2]], '''12'''- [[Canton de Nîmes-3|Nîmes-3]], '''13'''- [[Canton de Nîmes-4|Nîmes-4]], '''14'''- [[Canton de Pont-Saint-Esprit|Pont-Saint-Esprit]], '''15'''- [[Canton de Quissac|Quissac]], '''16'''- [[Canton de Redessan|Redessan]], '''17'''- [[Canton de Roquemaure|Roquemaure]], '''18'''- [[Canton de Rousson|Rousson]], '''19'''- [[Canton de Saint-Gilles|Saint-Gilles]], '''20'''- [[Canton d'Uzès|Uzès]], '''21'''- [[Canton de Vauvert|Vauvert]], '''22'''- [[Canton du Vigan|Le Vigan]], '''23'''- [[Canton de Villeneuve-lès-Avignon|Villeneuve-lès-Avignon]]]]
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département du Gard, c'est le cas de quatre cantons (Alès-2, [[canton de Calvisson|Calvisson]], [[canton de la Grand-Combe|La Grand-Combe]], [[canton de Quissac|Quissac]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Alès|Alès]]
+!scope=col|[[Arrondissement de Nîmes|Nîmes]]
+!scope=col|[[Arrondissement du Vigan|Le Vigan]]
+!scope=col|Total
+|-
+|1||align="left"| Aigues-Mortes||||7||||'''7'''
+|-
+|2||align="left"| Alès-1||7 + fraction d'Alès||||||'''7''' + fraction d'Alès
+|-
+|3||align="left"| Alès-2||10 + fraction d'Alès||4||||'''14''' + fraction d'Alès
+|-
+|4||align="left"| Alès-3||13 + fraction d'Alès||||||'''13''' + fraction d'Alès
+|-
+|5||align="left"| Bagnols-sur-Cèze||||11||||'''11'''
+|-
+|6||align="left"| Beaucaire||||7||||'''7'''
+|-
+|7||align="left"| Calvisson||||27||1||'''28'''
+|-
+|8||align="left"| La Grand-Combe||24||||4||'''28'''
+|-
+|9||align="left"| Marguerittes||||7||||'''7'''
+|-
+|10||align="left"| Nîmes-1||||Fraction de Nîmes||||Fraction de Nîmes
+|-
+|11||align="left"| Nîmes-2||||Fraction de Nîmes||||Fraction de Nîmes
+|-
+|12||align="left"| Nîmes-3||||Fraction de Nîmes||||Fraction de Nîmes
+|-
+|13||align="left"| Nîmes-4||||Fraction de Nîmes||||Fraction de Nîmes
+|-
+|14||align="left"| Pont-Saint-Esprit||||24||||'''24'''
+|-
+|15||align="left"| Quissac||17||3||24||'''44'''
+|-
+|16||align="left"| Redessan||||21||||'''21'''
+|-
+|17||align="left"| Roquemaure||||11||||'''11'''
+|-
+|18||align="left"| Rousson||29||||||'''29'''
+|-
+|19||align="left"| Saint-Gilles||||8 + fraction de Nîmes||||'''8 + fraction de Nîmes'''
+|-
+|20||align="left"| Uzès||||31||||'''31'''
+|-
+|21||align="left"| Vauvert||||10||||'''10'''
+|-
+|22||align="left"| Le Vigan||||||44||'''44'''
+|-
+|23||align="left"| Villeneuve-lès-Avignon||||5||||'''5'''
+|-
+!||||97||180||74||351
+|}
+
+== Homonymies ==
+
+Il n'y a pas d'homonymie pour l'[[arrondissement du Vigan]] et le [[canton du Vigan]], mais la commune [[chef-lieu]] a un homonyme exact dans le [[Lot (département)|Lot]].
+
+Il n'y a pas d'homonymie exacte pour les cantons de  [[canton de Barjac|Barjac]] et [[canton de Saint-Ambroix|Saint-Ambroix]], [[canton de Beaucaire|Beaucaire]], [[canton de Lussan|Lussan]], [[canton de Roquemaure|Roquemaure]], [[canton de Saint-Gilles|Saint-Gilles]] (juste une homonymie partielle), [[canton de Quissac|Quissac]] et [[canton de Trèves|Trèves]], mais les communes chefs-lieux ont chacune un ou plusieurs homonymes exacts.
+
+== Notes et références ==
+{{Références}}
+
+==Voir aussi==
+* [[Liste des communes du Gard]]
+* [[Liste des conseillers départementaux du Gard]]
+* [[Liste des conseillers généraux du Gard (2008-2015)]]
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de France|Cantons du Gard}}
+{{Portail|Gard}}
+
+[[Catégorie:Canton dans le Gard|*]]
+[[Catégorie:Liste de cantons français|Gard]]
+[[Catégorie:Liste en rapport avec le Gard|Cantons]]

@@ -1,0 +1,174 @@
+[[Fichier:Cantons of Vendée (since 2015).svg|vignette|upright=1.5|Le découpage administratif cantonal du département de la Vendée à la suite du décret du 17 février 2014.]]
+
+La '''liste des cantons de la Vendée''' valides à compter des élections de 2015 est définie par le décret du {{date-|17 février 2014}}. Elle est détaillée dans le tableau suivant, classée par [[arrondissement français|arrondissement]]. Le [[département français|département]] [[France|français]] de la [[Vendée (département)|Vendée]] ([[Région française|région]] [[Pays de la Loire]])  comprend désormais 17 [[canton français|cantons]]<ref name="Décret2014">{{Lien web |url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626253 |titre= Décret n° 2014-169 du 17 février 2014 portant délimitation des cantons dans le département de la Vendée |auteur= |date = |site =legifrance.gouv.fr |consulté le= 4 mars 2014}}.</ref>. Ce nouveau découpage entre en vigueur à compter du prochain renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}.
+
+== Histoire ==
+{{Article connexe|Liste des anciens cantons de la Vendée}}
+[[Fichier:Anciens cantons de Vendée.png|vignette|Carte des cantons de la Vendée avant 2015]]
+Depuis la création du département en 1790, le découpage cantonal de la Vendée a subi plusieurs changements notables. Le nombre de cantons est passé successivement de 58 en 1790<ref>{{ouvrage|prénom1=Louis-Marie|nom1=Prudhomme|titre=Dictionnaire géographique et méthodique de la République française en CXX départemens|volume=I|éditeur= Louis-Marie Prudhomme|lieu=[[Paris]]|année=[[1798]]|oclc=715881089|pages totales=673|lire en ligne=https://books.google.fr/books?id=5F0OAAAAQAAJ&printsec=frontcover&hl=fr#v=onepage&q&f=false|passage=216}}</ref> à 29 en [[1801]], 30 en [[1805]], 31 en [[1973]] et 17 en [[2015]].
+
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Lien web | url = http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id | titre = LOI {{n°}} 2013-403 du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral | jour = 17 | mois = mai | année = 2013 | site =  | éditeur = [[Journal officiel de la République française|JORF]] {{n°|0114}} du 18 mai 2013 {{p.|8242}}  | consulté le = 24 février 2014}}.</ref>. À partir de {{date-|mars 2015}}, date du premier renouvellement général des assemblées départementales suivant la publication du décret, les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure{{note|Le nombre total de cantons d'un départements doit obligatoirement être impair.}} et avec des conditions de seuils minimaux. Dans la [[Vendée (département)|Vendée]], le nombre de cantons doit ainsi passer de 31 à 17.
+
+Les critères du remodelage cantonal sont les suivants :
+* le territoire de chaque canton doit être défini sur des bases essentiellement démographiques ;
+* le territoire de chaque canton doit être continu ;
+* les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton.
+
+Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives. Le critère démographique est le critère essentiel.
+
+
+{{boîte déroulante/début |arrondi=0.6em|titre=Comparaison 2013-2015|alignB=center|couleurFondT=transparent|couleurFondB=transparent}}
+<center>
+{| class="wikitable alternance"
+|-----
+!colspan="4"|Avant 2015||colspan="3"|Après 2015
+|-----
+!colspan="4"|31 cantons||colspan="3"|17 cantons
+|-----
+![[Arrondissement français|Arrondissement]]||Nom du canton||Chef-lieu de canton||Nb communes||Nom du canton||[[Bureau centralisateur]]||Nb communes
+|-
+|rowspan="9"|[[Arrondissement de Fontenay-le-Comte|Fontenay-le-Comte]]||[[canton de Fontenay-le-Comte|Fontenay-le-Comte]]||[[Fontenay-le-Comte]]||11||rowspan="3"|Fontenay-le-Comte||rowspan="3"|[[Fontenay-le-Comte]]||rowspan="3"|32
+|-
+|[[canton de Maillezais|Maillezais]]||[[Maillezais]]||11
+|-
+|[[canton de Saint-Hilaire-des-Loges|Saint-Hilaire-des-Loges]]||[[Saint-Hilaire-des-Loges]]||10
+|-
+|[[canton de La Châtaigneraie|La Châtaigneraie]]||[[La Châtaigneraie]]||20||rowspan="3"|La Châtaigneraie||rowspan="3"|[[La Châtaigneraie]]||rowspan="3"|40
+|-
+|[[canton de L'Hermenault|L'Hermenault]]||[[L'Hermenault]]||12
+|-
+|[[canton de Sainte-Hermine|Sainte-Hermine]]||[[Sainte-Hermine]]||11
+|-
+|[[canton de Chaillé-les-Marais|Chaillé-les-Marais]]||[[Chaillé-les-Marais]]||13||rowspan="2"|Luçon||rowspan="2"|[[Luçon (Vendée)|Luçon]]||rowspan="2"|21
+|-
+|[[canton de Luçon|Luçon]]||[[Luçon (Vendée)|Luçon]]||10
+|-
+|[[canton de Pouzauges|Pouzauges]]||[[Pouzauges]]||6||rowspan="2"|Les Herbiers||rowspan="2"|[[Les Herbiers]]||rowspan="2"|17
+|-
+|rowspan="11"|[[Arrondissement de La Roche-sur-Yon|La Roche-sur-Yon]]||[[canton des Herbiers|Les Herbiers]]||[[Les Herbiers]]||8
+|-
+|[[canton de Rocheservière|Rocheservière]]||[[Rocheservière]]||9||rowspan="2"|Aizenay||rowspan="2"|[[Aizenay]]||rowspan="2"|14
+|-
+|[[canton du Poiré-sur-Vie|Poiré-sur-Vie]]||[[Le Poiré-sur-Vie]]||8
+|-
+|[[canton de Chantonnay|Chantonnay]]||[[Chantonnay]]||8||rowspan="2"|Chantonnay||rowspan="2"|[[Chantonnay]]||rowspan="2"|19
+|-
+|[[canton des Essarts|Les Essarts]]||[[Les Essarts (Vendée)|Les Essarts]]||9
+|-
+|[[canton de Montaigu|Montaigu]]||[[Montaigu (Vendée)|Montaigu]]||10||rowspan="2"|Montaigu||rowspan="2"|[[Montaigu (Vendée)|Montaigu]]||rowspan="2"|17
+|-
+|[[canton de Saint-Fulgent|Saint-Fulgent]]||[[Saint-Fulgent]]||8
+|-
+|[[canton de Mortagne-sur-Sèvre|Mortagne-sur-Sèvre]]||[[Mortagne-sur-Sèvre]] ||11||Mortagne-sur-Sèvre||[[Mortagne-sur-Sèvre]] ||16
+|-
+|[[canton de La Roche-sur-Yon-Nord|La Roche-sur-Yon-Nord]]||[[La Roche-sur-Yon]]||3||La Roche-sur-Yon-1||[[La Roche-sur-Yon]]||7
+|-
+|[[canton de La Roche-sur-Yon-Sud|La Roche-sur-Yon-Sud]]||[[La Roche-sur-Yon]]||10||La Roche-sur-Yon-2||[[La Roche-sur-Yon]]||
+|-
+|[[canton de Mareuil-sur-Lay-Dissais|Mareuil-sur-Lay-Dissais]]||[[Mareuil-sur-Lay-Dissais]]||11||rowspan="2"|Mareuil-sur-Lay-Dissais||rowspan="2"|[[Mareuil-sur-Lay-Dissais]]||rowspan="2"|28
+|-
+|rowspan="11"|[[Arrondissement des Sables-d'Olonne|Les Sables-d'Olonne]]||[[canton de Moutiers-les-Mauxfaits|Moutiers-les-Mauxfaits]]||[[Moutiers-les-Mauxfaits]]||13
+|-
+|[[canton de Challans|Challans]]||[[Challans]]||6||rowspan="2"|Challans||rowspan="2"|[[Challans]]||rowspan="2"|15
+|-
+|[[canton de Palluau|Palluau]]||[[Palluau]]||9
+|-
+|[[canton des Sables-d'Olonne|Les Sables-d'Olonne]]||[[Les Sables-d'Olonne]]||6||Les Sables-d'Olonne||[[Les Sables-d'Olonne]]||3
+|-
+|[[canton de L'Île-d'Yeu|L'Île-d'Yeu]]||[[L'Île-d'Yeu]]||1||L'Île-d'Yeu||L'Île-d'Yeu||1
+|-
+|[[canton de Saint-Gilles-Croix-de-Vie|Saint-Gilles-Croix-de-Vie]]||[[Saint-Gilles-Croix-de-Vie]]||14||Saint-Hilaire-de-Riez||[[Saint-Gilles-Croix-de-Vie]]||13
+|-
+|[[canton de Beauvoir-sur-Mer|Beauvoir-sur-Mer]]||[[Beauvoir-sur-Mer]]||4||rowspan="3"|Saint-Jean-de-Monts||rowspan="3"|[[Saint-Jean-de-Monts]]||rowspan="3"|14
+|-
+|[[canton de Noirmoutier-en-l'Île|Noirmoutier-en-l'Île]]||[[Noirmoutier-en-l'Île]]||4
+|-
+|[[canton de Saint-Jean-de-Monts|Saint-Jean-de-Monts]]||[[Saint-Jean-de-Monts]]||5
+|-
+|[[canton de La Mothe-Achard|La Mothe-Achard]]||[[La Mothe-Achard]]||12||rowspan="2"|Talmont-Saint-Hilaire||rowspan="2"|[[Talmont-Saint-Hilaire]]||rowspan="2"|23
+|-
+|[[canton de Talmont-Saint-Hilaire|Talmont-Saint-Hilaire]]||[[Talmont-Saint-Hilaire]]||9
+|-
+|}
+</center>
+{{boîte déroulante fin}}
+
+== Liste des cantons ==
+À la suite du [[décret (France)|décret]] n° 2014-169 du {{date|17|février|2014}} portant délimitation des [[Canton français|cantons]] dans le [[Département français|département]] de la [[Vendée (département)|Vendée]], selon le classement du [[Ministère de l'Intérieur (France)|ministère de l’Intérieur]], il existera dix-sept cantons à partir de {{date-|mars 2015}} :
+# [[canton d'Aizenay|canton d’Aizenay]] ;
+# [[canton de Challans]] ;
+# [[canton de Chantonnay]] ;
+# [[canton de La Châtaigneraie]] ;
+# [[canton de Fontenay-le-Comte]] ;
+# [[canton des Herbiers]] ;
+# [[canton de L'Île-d'Yeu|canton de L’Île-d’Yeu]] ;
+# [[canton de Luçon]] ;
+# [[canton de Mareuil-sur-Lay-Dissais]] ;
+# [[canton de Montaigu-Vendée]] ;
+# [[canton de Mortagne-sur-Sèvre]] ;
+# [[canton de La Roche-sur-Yon-1]] ;
+# [[canton de La Roche-sur-Yon-2]] ;
+# [[canton des Sables-d'Olonne|canton des Sables-d’Olonne]] ;
+# [[canton de Saint-Hilaire-de-Riez]] ;
+# [[canton de Saint-Jean-de-Monts]] ;
+# [[canton de Talmont-Saint-Hilaire]].
+
+=== Tableau détaillé ===
+Le tableau ci-après présente la composition des nouveaux cantons issue du décret de 2014. Il est ordonné selon les arrondissements d'appartenance des bureaux centralisateurs pour une meilleure lisibilité, néanmoins ce mode d'affichage ne signifie pas que la totalité des communes des cantons affichés dans un arrondissement appartiennent à cet arrondissement. 
+
+{| class="wikitable alternance"  
+|-----
+![[Arrondissement français|Arrondissement]]||N°ordre dans le décret||Nom du Canton||[[Bureau centralisateur]]||Population 2010<ref>[http://www.insee.fr/fr/ppp/bases-de-donnees/recensement/populations-legales/departement.asp?dep=85&annee=2010 Populations légales 2010 des communes de Vendée] sur le site de l'Insee</ref> <br/><small>(hab)</small> ||Superficie 2010<br/><small>(km{{Exp|2}})</small>||Densité 2010<br/><small>(hab/km{{Exp|2}})</small>||Nombre de communes entières||Communes composant le canton
+|-
+|rowspan="3"| [[Arrondissement de Fontenay-le-Comte|Fontenay-le-Comte]] ||4||La Châtaigneraie||[[La Châtaigneraie]]||30337||666,25||45,53||37||[[Antigny (Vendée)|Antigny]], [[Bazoges-en-Pareds]], [[Bourneau]], [[La Caillère-Saint-Hilaire]], [[Cezais]],  [[La Chapelle-Thémer]], [[La Châtaigneraie]], [[Cheffois]], [[L'Hermenault]], [[La Jaudonnière]], [[Loge-Fougereuse]], [[Marillet]], [[Marsais-Sainte-Radégonde]], [[Menomblet]], [[Mouilleron-Saint-Germain]], [[Petosse]], [[La Réorthe]], [[Saint-Aubin-la-Plaine]], [[Saint-Cyr-des-Gâts]], [[Saint-Étienne-de-Brillouet]], [[Saint-Hilaire-de-Voust]], [[Saint-Jean-de-Beugné]], [[Saint-Juire-Champgillon]], [[Saint-Laurent-de-la-Salle]], [[Saint-Martin-des-Fontaines]], [[Saint-Martin-Lars-en-Sainte-Hermine]], [[Saint-Maurice-des-Noues]], [[Saint-Maurice-le-Girard]], [[Saint-Pierre-du-Chemin]], [[Saint-Sulpice-en-Pareds]], [[Saint-Valérien (Vendée)|Saint-Valérien]], [[Sainte-Hermine]], [[Sérigné]], [[Terval]], [[Thiré]], [[Thouarsais-Bouildroux]], [[Vouvant]]
+|-
+|5||Fontenay-le-Comte||[[Fontenay-le-Comte]]||43570||561,88||77,54||28||[[Auchay-sur-Vendée]], [[Benet]], [[Bouillé-Courdault]], [[Damvix]], [[Doix-lès-Fontaines]], [[Faymoreau]], [[Fontenay-le-Comte]], [[Foussais-Payré]], [[Le Langon]], [[Liez (Vendée)|Liez]], [[Longèves (Vendée)|Longèves]], [[Maillé (Vendée)|Maillé]], [[Maillezais]], [[Le Mazeau]], [[Mervent]], [[Montreuil (Vendée)|Montreuil]], [[L'Orbrie]], [[Pissotte]],[[Puy-de-Serre]], [[Rives-d'Autise]], [[Saint-Hilaire-des-Loges]], [[Saint-Martin-de-Fraigneau]], [[Saint-Michel-le-Cloucq]], [[Saint-Pierre-le-Vieux (Vendée)|Saint-Pierre-le-Vieux]], [[Saint-Sigismond (Vendée)|Saint-Sigismond]], [[Les Velluire-sur-Vendée]], [[Vix (Vendée)|Vix]], [[Xanton-Chassenon]] 
+|-
+|8||Luçon||[[Luçon (Vendée)|Luçon]]||31467||573,19||54,9||21||[[Chaillé-les-Marais]], [[Champagné-les-Marais]], [[Chasnais]], [[Grues]], [[Le Gué-de-Velluire]], [[L'Île-d'Elle]], [[Lairoux]], [[Luçon (Vendée)|Luçon]], [[Les Magnils-Reigniers]], [[Moreilles]], [[Mouzeuil-Saint-Martin]], [[Nalliers (Vendée)|Nalliers]], [[Pouillé (Vendée)|Pouillé]], [[Puyravault (Vendée)|Puyravault]], [[Saint-Denis-du-Payré]], [[Saint-Michel-en-l'Herm]], [[Sainte-Gemme-la-Plaine]], [[Sainte-Radégonde-des-Noyers]], [[La Taillée]], [[Triaize]], [[Vouillé-les-Marais]] 
+|-
+|rowspan="8"|[[Arrondissement de La Roche-sur-Yon|La Roche-sur-Yon]] ||1||Aizenay||[[Aizenay]]||41831||469,81||89,04||11||[[Aizenay]], [[Beaufou]], [[Bellevigny]], [[La Genétouze (Vendée)|La Genétouze]], [[L'Herbergement]], [[Les Lucs-sur-Boulogne]], [[Montréverd]], [[Le Poiré-sur-Vie]], [[Rocheservière]], [[Saint-Denis-la-Chevasse]], [[Saint-Philbert-de-Bouaine]]
+|-
+|3||Chantonnay||[[Chantonnay]]||40420||581,83||69,47||16||[[Le Boupère]], [[Bournezeau]], [[Chantonnay]], [[Essarts-en-Bocage]], [[La Ferrière (Vendée)|La Ferrière]], [[Fougeré (Vendée)|Fougeré]], [[La Merlatière]], [[Rochetrejoux]], [[Saint-Germain-de-Prinçay]], [[Saint-Hilaire-le-Vouhis]], [[Saint-Martin-des-Noyers]], [[Saint-Prouant]], [[Saint-Vincent-Sterlanges]], [[Sainte-Cécile (Vendée)|Sainte-Cécile]], [[Sigournais]], [[Thorigny (Vendée)|Thorigny]] 
+|-
+|6||Les Herbiers||[[Les Herbiers]]||42336||472,01||89,69||14||[[Chavagnes-les-Redoux]], [[Les Epesses]], [[Les Herbiers]], [[La Meilleraie-Tillay]], [[Monsireigne]], [[Montournais]], [[Mouchamps]], [[Pouzauges]], [[Réaumur (Vendée)|Réaumur]], [[Saint-Mars-la-Réorthe]], [[Saint-Mesmin (Vendée)|Saint-Mesmin]], [[Saint-Paul-en-Pareds]], [[Sèvremont]], [[Tallud-Sainte-Gemme]]
+|-
+|9||Mareuil-sur-Lay-Dissais||[[Mareuil-sur-Lay-Dissais]]||30759||504,55||60,96||26||[[L'Aiguillon-la-Presqu'île]], [[Angles (Vendée)|Angles]], [[Bessay]], [[La Boissière-des-Landes]], [[La Bretonnière-la-Claye]], [[Le Champ-Saint-Père]], [[Château-Guibert]], [[Corpe]], [[La Couture (Vendée)|La Couture]], [[Curzon]], [[Le Givre]], [[La Jonchère]], [[Mareuil-sur-Lay-Dissais]], [[Moutiers-les-Mauxfaits]], [[Moutiers-sur-le-Lay]], [[Péault]], [[Les Pineaux]], [[Rives-de-l'Yon]], [[Rosnay (Vendée)|Rosnay]], [[Saint-Avaugourd-des-Landes]], [[Saint-Benoist-sur-Mer]], [[Saint-Cyr-en-Talmondais]], [[Saint-Vincent-sur-Graon]], [[Sainte-Pexine]], [[Le Tablier]], [[La Tranche-sur-Mer]]
+|-
+|10||Montaigu-Vendée||[[Montaigu-Vendée]]||42899||406,55||105,52||13||[[Bazoges-en-Paillers]], [[La Boissière-de-Montaigu]], [[Les Brouzils]], [[Chauché]], [[Chavagnes-en-Paillers]], [[La Copechagnière]], [[Mesnard-la-Barotière]], [[Montaigu-Vendée]], [[La Rabatelière]], [[Saint-André-Goule-d'Oie]], [[Saint-Fulgent]], [[Treize-Septiers]], [[Vendrennes]]
+|-
+|11||Mortagne-sur-Sèvre||[[Mortagne-sur-Sèvre]]||37305||321,16||116,16||15||[[Beaurepaire (Vendée)|Beaurepaire]], [[La Bernardière]], [[La Bruffière]], [[Chanverrie]], [[Cugand]], [[La Gaubretière]], [[Les Landes-Genusson]], [[Mallièvre]], [[Mortagne-sur-Sèvre]], [[Saint-Aubin-des-Ormeaux]], [[Saint-Laurent-sur-Sèvre]], [[Saint-Malô-du-Bois]], [[Saint-Martin-des-Tilleuls]], [[Tiffauges]], [[Treize-Vents]]
+|-
+|12||La Roche-sur-Yon-1||[[La Roche-sur-Yon]] ||rowspan="2"|79643||rowspan="2"|329,61||rowspan="2"|241,63 || rowspan="2"|7 ||1° Les communes suivantes : [[Dompierre-sur-Yon]], [[Landeronde]], [[Mouilleron-le-Captif]], [[Venansault]] ;<br/>2° La partie de la commune de La Roche-sur-Yon située au nord d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de La Ferrière, route départementale 160, rue François-René-de-Chateaubriand, rue Georges-Pompidou, rue du Président-de-Gaulle, place Napoléon, rue Georges-Clemenceau, place de la Vendée, rue Raymond-Poincaré, rue Roger-Salengro, rue des Sables, route des Sables-d'Olonne, route départementale 760, jusqu'à la limite territoriale de la commune des Clouzeaux.
+|-
+|13||La Roche-sur-Yon-2||[[La Roche-sur-Yon]]||1° Les communes suivantes : [[Aubigny-les-Clouzeaux]], [[La Chaize-le-Vicomte]], [[Nesmy]] ;<br/>2° La partie de la commune de La Roche-sur-Yon non incluse dans le canton de La Roche-sur-Yon-1 
+|-
+|rowspan="6"|[[Arrondissement des Sables-d'Olonne|Les Sables-d'Olonne]] ||2||Challans||[[Challans]]||42051||458,97||91,62||15||[[Apremont (Vendée)|Apremont]], [[Bois-de-Céné]], [[Challans]], [[La Chapelle-Palluau]], [[Châteauneuf (Vendée)|Châteauneuf]], [[Falleron (Vendée)|Falleron]], [[Froidfond]], [[La Garnache]], [[Grand'Landes]], [[Maché]], [[Palluau]], [[Saint-Christophe-du-Ligneron]], [[Saint-Étienne-du-Bois (Vendée)|Saint-Étienne-du-Bois]], [[Saint-Paul-Mont-Penit]], [[Sallertaine]]
+|-
+|7||L'Île d'Yeu||[[L'Île-d'Yeu]]||4591||23,32||196,87||1||[[L'Île-d'Yeu]] 
+|-
+|14||Les Sables-d'Olonne||[[Les Sables-d'Olonne]]||41574||85,66||485,34||1||[[Les Sables-d'Olonne]]
+|-
+|15||Saint-Hilaire-de-Riez||[[Saint-Hilaire-de-Riez]]||42929||277,62||154,63||13||[[L'Aiguillon-sur-Vie]], [[Brem-sur-Mer]], [[Bretignolles-sur-Mer]], [[La Chaize-Giraud]], [[Coëx]], [[Commequiers]], [[Le Fenouiller]], [[Givrand]], [[Landevieille]], [[Saint-Gilles-Croix-de-Vie]], [[Saint-Hilaire-de-Riez]], [[Saint-Maixent-sur-Vie]], [[Saint-Révérend]]
+|-
+|16||Saint-Jean-de-Monts||[[Saint-Jean-de-Monts]]||39736||392,7||101,19||14||[[Barbâtre (Vendée)|Barbâtre]], [[La Barre-de-Monts]], [[Beauvoir-sur-Mer]], [[Bouin (Vendée)|Bouin]], [[L'Épine (Vendée)|L'Épine]], [[La Guérinière]], [[Noirmoutier-en-l'Île]], [[Notre-Dame-de-Monts]], [[Notre-Dame-de-Riez]], [[Le Perrier]], [[Saint-Gervais (Vendée)|Saint-Gervais]], [[Saint-Jean-de-Monts]], [[Saint-Urbain (Vendée)|Saint-Urbain]], [[Soullans]] 
+|-
+|17||Talmont-Saint-Hilaire||[[Talmont-Saint-Hilaire]]||43330||594,48||72,89||22||[[Les Achards]], [[Avrillé (Vendée)|Avrillé]], [[Beaulieu-sous-la-Roche]], [[Le Bernard]],  [[La Chapelle-Hermier]], [[Le Girouard]], [[Grosbreuil]], [[L'Île-d'Olonne]], [[Jard-sur-Mer]], [[Longeville-sur-Mer]], [[Martinet (Vendée)|Martinet]], [[Nieul-le-Dolent]], [[Poiroux]], [[Saint-Georges-de-Pointindoux]], [[Saint-Hilaire-la-Forêt]], [[Saint-Julien-des-Landes]], [[Saint-Mathurin]], [[Saint-Vincent-sur-Jard]], [[Sainte-Flaive-des-Loups]], [[Sainte-Foy (Vendée)|Sainte-Foy]], [[Talmont-Saint-Hilaire]], [[Vairé]] 
+|-
+!Total département||||||||634778||6719,59||94,47||282||
+|}
+
+== Notes et références ==
+{{Références}}
+==Voir aussi==
+* [[Liste des anciens cantons de la Vendée]]
+* [[Administration territoriale de la France]]
+* [[Conseil général de la Vendée]]
+
+{{Palette|Découpage administratif des Pays de la Loire|Cantons de France|Cantons de la Vendée}}
+{{Portail|Vendée}}
+
+[[Catégorie:Canton dans la Vendée|*]]
+[[Catégorie:Liste de cantons français|Vendée]]
+[[Catégorie:Liste en rapport avec la Vendée|Cantons]]

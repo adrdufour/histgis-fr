@@ -1,0 +1,149 @@
+[[Fichier:52-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Haute-Marne, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Depuis 2015, le [[département français]] de la '''[[Haute-Marne]]''' est divisé en 17 cantons à la suite du [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Il était auparavant divisé en 32 '''[[Canton français|cantons]]''' depuis 1982.
+
+== Histoire ==
+[[Fichier:Anciens cantons de la Haute-Marne.png|vignette|Cartes des cantons de la Haute-Marne avant 2015]]
+
+=== Découpage cantonal de 1982 à 2015 ===
+*1801<ref>Arrêté du 17 Brumaire an X (8 novembre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f585 p. 597]</ref> : découpage d'origine.
+*1825<ref>Ordonnance du 6 septembre 1825, ''Bulletin des lois'', 1825 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65256292/f272 p. 224]</ref> : Le chef-lieu du canton de [[Sailly (Haute-Marne)|Sailly]] est transféré à [[canton de Poissons|Poissons]].
+*1834<ref>Ordonnance du 17 février 1834, ''Bulletin des lois'', 1834 (1er semestre, ordonnances) [https://gallica.bnf.fr/ark:/12148/bpt6k486412q/f118 p. 103]</ref> : Le chef-lieu du canton de [[Donjeux (Haute-Marne)|Donjeux]] est transféré à [[Canton de Doulaincourt-Saucourt|Doulaincourt]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693759 Décret n° 73-816 du 16 août 1973]</ref> :
+**Le canton de Saint-Dizier est scindé en trois nouveaux cantons [[canton de Saint-Dizier-Centre|Saint-Dizier-Centre]], -Est et [[canton de Saint-Dizier-Ouest|-Ouest]] (chef-lieu [[Éclaron-Braucourt|Éclaron]]);
+**Le canton de Chaumont est scindé en deux nouveaux cantons [[canton de Chaumont-Nord|Chaumont-Nord]] et [[Canton de Chaumont-Sud|-Sud]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000517078 Décret n° 82-33 du 15 janvier 1982]</ref> : Le canton de Saint-Dizier-Est est scindé en deux nouveaux cantons [[canton de Saint-Dizier-Nord-Est|Saint-Dizier-Nord-Est]] et [[canton de Saint-Dizier-Sud-Est|-Sud-Est]].
+
+
+Liste des 32 '''[[cantons français|cantons]]''' du [[Département français|département]] '''de la [[Haute-Marne]]''', par [[Arrondissement français|arrondissement]] :
+
+* [[arrondissement de Chaumont]] (11 cantons - préfecture : [[Chaumont (Haute-Marne)|Chaumont]]) :<br />[[canton d'Andelot-Blancheville]] - [[canton d'Arc-en-Barrois]] - [[canton de Bourmont]] - [[canton de Châteauvillain]] - [[canton de Chaumont-Nord]] - [[canton de Chaumont-Sud]] - [[canton de Clefmont]] - [[canton de Juzennecourt]] - [[canton de Nogent]] - [[canton de Saint-Blin]] - [[canton de Vignory]]
+
+* [[arrondissement de Langres]] (10 cantons - sous-préfecture : [[Langres]]) :<br />[[canton d'Auberive]] - [[canton de Bourbonne-les-Bains]] - [[canton de Fayl-Billot]] - [[canton de Laferté-sur-Amance]] - [[canton de Langres]] - [[canton de Longeau-Percey]] - [[canton de Neuilly-l'Évêque]] - [[canton de Prauthoy]] - [[canton de Terre-Natale]] - [[canton de Val-de-Meuse]]
+
+* [[arrondissement de Saint-Dizier]] (11 cantons - sous-préfecture : [[Saint-Dizier]]) :<br />[[canton de Chevillon]] - [[canton de Doulaincourt-Saucourt]] - [[canton de Doulevant-le-Château]] - [[canton de Joinville]] - [[canton de Montier-en-Der]] - [[canton de Poissons]] - [[canton de Saint-Dizier-Centre]] - [[canton de Saint-Dizier-Nord-Est]] - [[canton de Saint-Dizier-Ouest]] (chef-lieu : [[Éclaron-Braucourt-Sainte-Livière]]) - [[canton de Saint-Dizier-Sud-Est]] - [[canton de Wassy]]
+
+Il n'y a aucune homonymie pour l'arrondissement de Chaumont, même s'il en existe une pour la commune chef-lieu.
+
+Il n'y a pas d'homonymie pour le canton de Chevillon, même s'il en existe une pour la commune chef-lieu.
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|17 février 2014}} pour le département de la [[Haute-Marne]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Haute-Marne]] le nombre de cantons passe ainsi de 32 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626069 |texte=Décret {{n°|2014}}-163 du 17 février 2014}} portant délimitation des cantons dans le département de la Haute-Marne.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}},  il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 21 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Haute-Marne, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|184039|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=52 |titre= Chiffres clés Évolution et structure de la population - Département de la Haute-Marne (52) |auteur= |date = |site =insee.fr |consulté le= 21 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|10826|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|8661|habitants}} et {{unité|12991|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2010<ref>Populations légales des communes en vigueur au {{1er}} janvier 2013, millésimées 2010 (date de référence statistique : {{1er}} janvier 2010), dans les limites territoriales en vigueur au {{1er}} janvier 2012</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton de Bologne|Bologne]]||[[Bologne (Haute-Marne)|Bologne]]||{{formatnum:11010}}||1,02||38||[[Andelot-Blancheville]], [[Annéville-la-Prairie]], [[Bologne (Haute-Marne)|Bologne]], [[Bourdons-sur-Rognon]], [[Briaucourt (Haute-Marne)|Briaucourt]], [[Cerisières]], [[Chantraines]], [[Cirey-lès-Mareilles]], [[Consigny]], [[Daillancourt]], [[Darmannes]], [[Domremy-Landéville]], [[Doulaincourt-Saucourt]], [[Ecot-la-Combe]], [[Froncles]], [[La Genevroye]], [[Guindrecourt-sur-Blaise]], [[Lamancine]], [[Marbéville]], [[Mareilles]], [[Meures]], [[Mirbel]], [[Montot-sur-Rognon]], [[Ormoy-lès-Sexfontaines]], [[Oudincourt]], [[Reynel]], [[Rimaucourt]], [[Rochefort-sur-la-Côte]], [[Roches-Bettaincourt]], [[Rouécourt]], [[Sexfontaines]], [[Signéville]], [[Soncourt-sur-Marne]], [[Viéville]], [[Vignes-la-Côte]], [[Vignory]], [[Vouécourt]], [[Vraincourt]]. 
+|-
+|2||[[Canton de Bourbonne-les-Bains|Bourbonne-les-Bains]]||[[Bourbonne-les-Bains]]||{{formatnum:9682}}||0,89||36||[[Aigremont (Haute-Marne)|Aigremont]], [[Avrecourt]], [[Bourbonne-les-Bains]], [[Buxières-lès-Clefmont]], [[Celles-en-Bassigny]], [[Le Châtelet-sur-Meuse]], [[Chauffourt]], [[Choiseul (Haute-Marne)|Choiseul]], [[Clefmont]], [[Coiffy-le-Haut]], [[Daillecourt]], [[Dammartin-sur-Meuse]], [[Damrémont]], [[Enfonvelle]], [[Frécourt]], [[Fresnes-sur-Apance]], [[Is-en-Bassigny]], [[Laneuvelle]], [[Larivière-Arnoncourt]], [[Lavernoy]], [[Lavilleneuve]], [[Marcilly-en-Bassigny]], [[Melay (Haute-Marne)|Melay]], [[Montcharvot]], [[Neuvelle-lès-Voisey]], [[Noyers (Haute-Marne)|Noyers]], [[Parnoy-en-Bassigny]], [[Perrusse]], [[Rançonnières]], [[Rangecourt]], [[Sarrey]], [[Saulxures (Haute-Marne)|Saulxures]], [[Serqueux (Haute-Marne)|Serqueux]], [[Val-de-Meuse]], [[Vicq (Haute-Marne)|Vicq]], [[Voisey]]. 
+|-
+|3||[[Canton de Chalindrey|Chalindrey]]||[[Chalindrey]]||{{formatnum:11331}}||1,05||45||[[Anrosey]], [[Arbigny-sous-Varennes]], [[Belmont (Haute-Marne)|Belmont]], [[Bize (Haute-Marne)|Bize]], [[Champsevraine]], [[Celsoy]], [[Chalindrey]], [[Champigny-sous-Varennes]], [[Chaudenay (Haute-Marne)|Chaudenay]], [[Chézeaux]], [[Coiffy-le-Bas]], [[Culmont]], [[Farincourt]], [[Fayl-Billot]], [[Genevrières]], [[Gilley (Haute-Marne)|Gilley]], [[Grandchamp (Haute-Marne)|Grandchamp]], [[Grenant]], [[Guyonvelle]], [[Haute-Amance]], [[Heuilley-le-Grand]], [[Laferté-sur-Amance]], [[Les Loges (Haute-Marne)|Les Loges]], [[Maizières-sur-Amance]], [[Noidant-Chatenoy]], [[Le Pailly]], [[Palaiseul]], [[Pierremont-sur-Amance]], [[Pisseloup (Haute-Marne)|Pisseloup]], [[Poinson-lès-Fayl]], [[Pressigny (Haute-Marne)|Pressigny]], [[Rivières-le-Bois]], [[Rougeux]], [[Saint-Broingt-le-Bois]], [[Saint-Vallier-sur-Marne]], [[Saulles]], [[Savigny (Haute-Marne)|Savigny]], [[Soyers]], [[Torcenay]], [[Tornay (Haute-Marne)|Tornay]], [[Valleroy (Haute-Marne)|Valleroy]], [[Varennes-sur-Amance]], [[Velles (Haute-Marne)|Velles]], [[Violot]], [[Voncourt]]. 
+|-
+|4||[[Canton de Châteauvillain|Châteauvillain]]||[[Châteauvillain]]||{{formatnum:9618}}||0,89||37||[[Aizanville]], [[Arc-en-Barrois]], [[Aubepierre-sur-Aube]], [[Autreville-sur-la-Renne]], [[Blaisy]], [[Blessonville]], [[Braux-le-Châtel]], [[Bricon]], [[Bugnières]], [[Châteauvillain]], [[Cirfontaines-en-Azois]], [[Colombey-les-Deux-Églises]], [[Coupray]], [[Cour-l'Évêque]], [[Curmont]], [[Dancevoir]], [[Dinteville (Haute-Marne)|Dinteville]], [[Giey-sur-Aujon]], [[Gillancourt]], [[Juzennecourt]], [[Lachapelle-en-Blaisy]], [[Laferté-sur-Aube]], [[Lanty-sur-Aube]], [[Latrecey-Ormoy-sur-Aube]], [[Lavilleneuve-au-Roi]], [[Leffonds]], [[Maranville]], [[Montheries]], [[Orges (Haute-Marne)|Orges]], [[Pont-la-Ville (Haute-Marne)|Pont-la-Ville]], [[Rennepont]], [[Richebourg (Haute-Marne)|Richebourg]], [[Rizaucourt-Buchey]], [[Silvarouvres]], [[Vaudrémont]], [[Villars-en-Azois]], [[Villiers-sur-Suize]]. 
+|-
+|5||[[Canton de Chaumont-1|Chaumont-1]]||[[Chaumont (Haute-Marne)|Chaumont]]||{{formatnum:2695}} + fraction Chaumont|| ||6 + fraction Chaumont||1° Les communes suivantes : [[Brethenay]], [[Condes (Haute-Marne)|Condes]], [[Euffigneix]], [[Jonchery]], [[Riaucourt]], [[Treix]]. <br/>2° La partie de la commune de Chaumont située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villiers-le-Sec, rue des Frères-Garnier, ligne de chemin de fer, rue Pierre-Curie, avenue Émile-Cassez, avenue du Maréchal-Foch, place Émile-Goguenheim, rue piétonne du 21e-RIC, rue André-Blondel, boulevard Diderot, rue Lamartine, jusqu'à la limite territoriale de la commune de Chamarandes-Choignes.
+|-
+|6||[[Canton de Chaumont-2|Chaumont-2]]||[[Chaumont (Haute-Marne)|Chaumont]]||{{formatnum:2206}} + fraction Chaumont|| ||4 + fraction Chaumont||1° Les communes suivantes : [[Buxières-lès-Villiers]], [[Chamarandes-Choignes]], [[Laville-aux-Bois]], [[Villiers-le-Sec (Haute-Marne)|Villiers-le-Sec]]. <br/>2° La partie de la commune de Chaumont située :― au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villiers-le-Sec, rue des Frères-Garnier, ligne de chemin de fer, rue Pierre-Curie, avenue Emile-Cassez, avenue du Maréchal-Foch, place Emile-Goguenheim, rue piétonne du 21e-RIC, rue André-Blondel, boulevard Diderot, rue Lamartine, jusqu'à la limite territoriale de la commune de Champrande-Choignes ;― au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Villiers-le-Sec, chemin vicinal de Villiers-le-Sec à Brottes, route nationale 67, ligne droite reliant l'extrémité de ce chemin vicinal à l'extrémité du chemin dit de Pierre-à-l'Eau, chemin dit de Semoutiers, chemin de Richebourg à Chaumont, rue du Val-Barizien, rue Robespierre, rue des Platanes, rue d'Albi, rue de Carcassonne, rue des Erables, rue Jules-Ferry, avenue de la République, avenue Philippe-Girardel, avenue d'Ivrea, avenue Marc-Chagall, jusqu'à la limite territoriale de la commune de Chamarandes-Choignes.
+|-
+|7||[[Canton de Chaumont-3|Chaumont-3]]||[[Chaumont (Haute-Marne)|Chaumont]]||{{formatnum:2547}} + fraction Chaumont|| ||5 + fraction Chaumont||1° Les communes suivantes : [[Foulain]], [[Luzy-sur-Marne]], [[Neuilly-sur-Suize]], [[Semoutiers-Montsaon]], [[Verbiesles]]. <br/>2° La partie de la commune de Chaumont non incluse dans les cantons de Chaumont-1 et de Chaumont-2.
+|-
+|8||[[Canton d'Eurville-Bienville|Eurville-Bienville]]||[[Eurville-Bienville]]||{{formatnum:9272}}||0,86||17||[[Bayard-sur-Marne]], [[Chamouilley]], [[Chevillon (Haute-Marne)|Chevillon]], [[Curel (Haute-Marne)|Curel]], [[Domblain]], [[Eurville-Bienville]], [[Fays (Haute-Marne)|Fays]], [[Fontaines-sur-Marne]], [[Magneux (Haute-Marne)|Magneux]], [[Maizières (Haute-Marne)|Maizières]], [[Narcy (Haute-Marne)|Narcy]], [[Osne-le-Val]], [[Rachecourt-sur-Marne]], [[Roches-sur-Marne]], [[Sommancourt]], [[Troisfontaines-la-Ville]], [[Valleret]]. 
+|-
+|9||[[Canton de Joinville|Joinville]]||[[Joinville (Haute-Marne)|Joinville]]||{{formatnum:11519}}||1,06||38||[[Ambonville]], [[Arnancourt]], [[Autigny-le-Grand]], [[Autigny-le-Petit]], [[Baudrecourt (Haute-Marne)|Baudrecourt]], [[Beurville]], [[Blécourt (Haute-Marne)|Blécourt]], [[Blumeray]], [[Bouzancourt]], [[Brachay]], [[Charmes-en-l'Angle]], [[Charmes-la-Grande]], [[Chatonrupt-Sommermont]], [[Cirey-sur-Blaise]], [[Courcelles-sur-Blaise]], [[Dommartin-le-Saint-Père]], [[Donjeux (Haute-Marne)|Donjeux]], [[Doulevant-le-Château]], [[Ferrière-et-Lafolie]], [[Flammerécourt]], [[Fronville]], [[Gudmont-Villiers]], [[Guindrecourt-aux-Ormes]], [[Joinville (Haute-Marne)|Joinville]], [[Leschères-sur-le-Blaiseron]], [[Mathons]], [[Mertrud]], [[Mussey-sur-Marne]], [[Nomécourt]], [[Nully (Haute-Marne)|Nully]], [[Rouvroy-sur-Marne]], [[Rupt]], [[Saint-Urbain-Maconcourt]], [[Suzannecourt]], [[Thonnance-lès-Joinville]], [[Trémilly]], [[Vaux-sur-Saint-Urbain]], [[Vecqueville]]. 
+|-
+|10||[[Canton de Langres|Langres]]||[[Langres]]||{{formatnum:12463}}||1,15||18|| [[Beauchemin (Haute-Marne)|Beauchemin]], [[Champigny-lès-Langres]], [[Chanoy]], [[Chatenay-Mâcheron]], [[Chatenay-Vaudin]], [[Faverolles (Haute-Marne)|Faverolles]], [[Humes-Jorquenay]], [[Langres]], [[Lecey]], [[Marac]], [[Mardor]], [[Ormancey]], [[Peigney]], [[Perrancey-les-Vieux-Moulins]], [[Saint-Ciergues]], [[Saint-Martin-lès-Langres]], [[Saint-Maurice (Haute-Marne)|Saint-Maurice]], [[Saints-Geosmes]]. 
+|-
+|11||[[Canton de Nogent|Nogent]]||[[Nogent (Haute-Marne)|Nogent]]||{{formatnum:12734}}||1,18||29||[[Ageville]], [[Andilly-en-Bassigny]], [[Bannes (Haute-Marne)|Bannes]], [[Biesles]], [[Bonnecourt]], [[Changey]], [[Charmes (Haute-Marne)|Charmes]], [[Cuves (Haute-Marne)|Cuves]], [[Dampierre (Haute-Marne)|Dampierre]], [[Esnouveaux]], [[Forcey]], [[Lanques-sur-Rognon]], [[Louvières (Haute-Marne)|Louvières]], [[Mandres-la-Côte]], [[Marnay-sur-Marne]], [[Neuilly-l'Évêque]], [[Ninville]], [[Nogent (Haute-Marne)|Nogent]], [[Orbigny-au-Mont]], [[Orbigny-au-Val]], [[Plesnoy]], [[Poinson-lès-Nogent]], [[Poiseul]], [[Poulangy]], [[Rolampont]], [[Sarcey (Haute-Marne)|Sarcey]], [[Thivet]], [[Vesaignes-sur-Marne]], [[Vitry-lès-Nogent]]. 
+|-
+|12||[[Canton de Poissons|Poissons]]||[[Poissons (Haute-Marne)|Poissons]]||{{formatnum:9224}}||0,85||65||[[Aillianville]], [[Aingoulaincourt]], [[Annonville]], [[Audeloncourt]], [[Bassoncourt]], [[Bourg-Sainte-Marie]], [[Bourmont-entre-Meuse-et-Mouzon]], [[Brainville-sur-Meuse]], [[Breuvannes-en-Bassigny]], [[Busson (Haute-Marne)|Busson]], [[Chalvraines]], [[Chambroncourt]], [[Champigneulles-en-Bassigny]], [[Chaumont-la-Ville]], [[Cirfontaines-en-Ornois]], [[Clinchamp]], [[Doncourt-sur-Meuse]], [[Échenay]], [[Effincourt]], [[Épizon]], [[Germainvilliers]], [[Germay]], [[Germisay]], [[Gillaumé]], [[Graffigny-Chemin]], [[Hâcourt]], [[Harréville-les-Chanteurs]], [[Huilliécourt]], [[Humberville]], [[Illoud]], [[Lafauche]], [[Leurville]], [[Levécourt]], [[Lezéville]], [[Liffol-le-Petit]], [[Longchamp (Haute-Marne)|Longchamp]], [[Maisoncelles (Haute-Marne)|Maisoncelles]], [[Malaincourt-sur-Meuse]], [[Manois]], [[Mennouveaux]], [[Merrey]], [[Millières (Haute-Marne)|Millières]], [[Montreuil-sur-Thonnance]], [[Morionvilliers]], [[Noncourt-sur-le-Rongeant]], [[Orquevaux]], [[Outremécourt]], [[Ozières]], [[Pansey]], [[Paroy-sur-Saulx]], [[Poissons (Haute-Marne)|Poissons]], [[Prez-sous-Lafauche]], [[Romain-sur-Meuse]], [[Sailly (Haute-Marne)|Sailly]], [[Saint-Blin]], [[Saint-Thiébault]], [[Saudron]], [[Semilly]], [[Sommerécourt]], [[Soulaucourt-sur-Mouzon]], [[Thol-lès-Millières]], [[Thonnance-les-Moulins]], [[Vaudrecourt]], [[Vesaignes-sous-Lafauche]], [[Vroncourt-la-Côte]]. 
+|-
+|13||[[Canton de Saint-Dizier-1|Saint-Dizier-1]]||[[Saint-Dizier]]||{{formatnum:7585}} + fraction Saint-Dizier|| ||10 + fraction Saint-Dizier||1° Les communes suivantes : [[Allichamps]], [[Éclaron-Braucourt-Sainte-Livière]], [[Hallignicourt]], [[Humbécourt]], [[Laneuville-au-Pont]], [[Louvemont]], [[Moëslains]], [[Perthes (Haute-Marne)|Perthes]], [[Valcourt (Haute-Marne)|Valcourt]], [[Villiers-en-Lieu]].<br/> 2° La partie de la commune de Saint-Dizier située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Bettancourt-la-Ferrée, route de Bar-le-Duc, avenue du Général-Sarrail, avenue de Verdun, rue Berthelot, rue Ernest-Renan, rue Michelet, chemin du Closot, avenue de la République, ligne droite dans le prolongement de la rue Michelet jusqu'au cours de la Marne, cours de la Marne, chemin des Bonnettes, rue du Puits-Royau, rue Godard-Jeanson, rue Paul-Bert, cours de la Marne, ligne de chemin de fer, avenue Pierre-Bérégovoy, affluent de la Marne, clos Mortier, cours de la Marne, place Becquey, ligne de chemin de fer, jusqu'à la limite territoriale de la commune d'Ancerville.
+|-
+|14||[[Canton de Saint-Dizier-2|Saint-Dizier-2]]||[[Saint-Dizier]]|| fraction Saint-Dizier|| ||fraction Saint-Dizier||Partie de la commune de Saint-Dizier située à l'intérieur d'un périmètre défini par l'axe des voies et limites suivantes : route de Bar-le-Duc, avenue du Général-Sarrail, avenue de Verdun, rue Berthelot, rue Ernest-Renan, rue Michelet, chemin du Closot, avenue de la République, ligne droite dans le prolongement de la rue Michelet jusqu'au cours de la Marne, cours de la Marne, chemin des Bonnettes, rue du Puits-Royau, rue Godard-Jeanson, rue Paul-Bert, cours de la Marne, ligne de chemin de fer, avenue des États-Unis, avenue Edgard-Pisani, avenue du Président-Kennedy, place du 8-Mai-1945, rue Jean-Cassou, boulevard Henri-Dunant, avenue Raoul-Laurent.
+|-
+|15||[[Canton de Saint-Dizier-3|Saint-Dizier-3]]||[[Saint-Dizier]]||{{formatnum:2852}} + fraction Saint-Dizier|| ||2 + fraction Saint-Dizier||1° Les communes suivantes : [[Bettancourt-la-Ferrée]], [[Chancenay]]. <br/>2° La partie de la commune de Saint-Dizier non incluse dans les cantons de Saint-Dizier-1 et de Saint-Dizier-2.
+|-
+|16||[[Canton de Villegusien-le-Lac|Villegusien-le-Lac]]||[[Villegusien-le-Lac]]||{{formatnum:8979}}||0,83||54||[[Aprey]], [[Arbot]], [[Auberive]], [[Aujeurres]], [[Aulnoy-sur-Aube]], [[Baissey]], [[Bay-sur-Aube]], [[Bourg (Haute-Marne)|Bourg]], [[Brennes]], [[Chalancey]], [[Chassigny]], [[Choilley-Dardenay]], [[Cohons]], [[Colmier-le-Bas]], [[Colmier-le-Haut]], [[Coublanc (Haute-Marne)|Coublanc]], [[Courcelles-en-Montagne]], [[Cusey]], [[Dommarien]], [[Flagey (Haute-Marne)|Flagey]], [[Germaines]], [[Isômes]], [[Leuchey]], [[Longeau-Percey]], [[Maâtz]], [[Le Montsaugeonnais]], [[Mouilleron (Haute-Marne)|Mouilleron]], [[Noidant-le-Rocheux]], [[Occey]], [[Orcevaux]], [[Perrogney-les-Fontaines]], [[Poinsenot]], [[Poinson-lès-Grancey]], [[Praslay]], [[Rivière-les-Fosses]], [[Rochetaillée (Haute-Marne)|Rochetaillée]], [[Rouelles]], [[Rouvres-sur-Aube]], [[Saint-Broingt-les-Fosses]], [[Saint-Loup-sur-Aujon]], [[Ternat (Haute-Marne)|Ternat]], [[Vaillant (Haute-Marne)|Vaillant]], [[Le Val-d'Esnoms]], [[Vals-des-Tilles]], [[Vauxbons]], [[Verseilles-le-Bas]], [[Verseilles-le-Haut]], [[Vesvres-sous-Chalancey]], [[Villars-Santenoge]], [[Villegusien-le-Lac]], [[Villiers-lès-Aprey]], [[Vitry-en-Montagne]], [[Vivey]], [[Voisines (Haute-Marne)|Voisines]]. 
+|-
+|17||[[Canton de Wassy|Wassy]]||[[Wassy]]||{{formatnum:11559}}||1,07||20||[[Attancourt]], [[Bailly-aux-Forges]], [[Brousseval]], [[Ceffonds]], [[Dommartin-le-Franc]], [[Doulevant-le-Petit]], [[Frampas]], [[Laneuville-à-Rémy]], [[Montreuil-sur-Blaise]], [[Morancourt]], [[Planrupt]], [[La Porte-du-Der]], [[Rives-Dervoises]], [[Rachecourt-Suzémont]], [[Sommevoire]], [[Thilleux]], [[Vaux-sur-Blaise]], [[Ville-en-Blaisois]], [[Voillecomte]], [[Wassy]]. 
+|-
+!||||||{{formatnum:184039}}||||437||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Haute-Marne]], c'est le cas de quatre cantons ([[Canton de Bologne|Bologne]], [[Canton de Bourbonne-les-Bains|Bourbonne-les-Bains]], [[Canton de Nogent|Nogent]] et [[Canton de Poissons|Poisson]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Chaumont|Chaumont]]
+!scope=col|[[Arrondissement de Langres|Langres]]
+!scope=col|[[Arrondissement de Saint-Dizier|Saint-Dizier]]
+!scope=col|Total
+|-
+|1||align="left"| Bologne||33||||5||'''38'''
+|-
+|2||align="left"| Bourbonne-les-Bains||9||27||||'''36'''
+|-
+|3||align="left"| Chalindrey||||45|| ||'''45'''
+|-
+|4||align="left"| Châteauvillain||38||||||'''38'''
+|-
+|5||align="left"| Chaumont-1||6 + fraction Chaumont||||||'''6''' + fraction Chaumont
+|-
+|6||align="left"| Chaumont-2||4 + fraction Chaumont||||||'''4''' + fraction Chaumont
+|-
+|7||align="left"| Chaumont-3||5 + fraction Chaumont||||||'''5''' + fraction Chaumont
+|-
+|8||align="left"| Eurville-Bienville||||||17||'''17'''
+|-
+|9||align="left"| Joinville||||||38||'''38'''
+|-
+|10||align="left"| Langres||||19||||'''19'''
+|-
+|11||align="left"| Nogent||17||12||||'''29'''
+|-
+|12||align="left"| Poissons||49||||18||'''67'''
+|-
+|13||align="left"| Saint-Dizier-1||||||10 + fraction Saint-Dizier||'''10''' + fraction Saint-Dizier
+|-
+|14||align="left"| Saint-Dizier-2||||||fraction Saint-Dizier|| fraction Saint-Dizier
+|-
+|15||align="left"| Saint-Dizier-3||||||2 + fraction Saint-Dizier||'''2''' + fraction Saint-Dizier
+|-
+|16||align="left"| Villegusien-le-Lac||||57||||'''57'''
+|-
+|17||align="left"| Wassy||||||24||'''24'''
+|-
+!||||162||160||115||437
+|}
+
+== Références ==
+{{Références|références=2}}
+
+==Voir aussi==
+*[[Communes de la Haute-Marne]]
+
+{{Palette|Découpage administratif de la région Grand Est|Cantons de France|Cantons de la Haute-Marne}}
+
+{{portail|Haute-Marne}}
+
+[[Catégorie:Canton en Haute-Marne|*]]
+[[Catégorie:Liste de cantons français|Marne, Haute]]
+[[Catégorie:Liste en rapport avec la Haute-Marne|Cantons]]

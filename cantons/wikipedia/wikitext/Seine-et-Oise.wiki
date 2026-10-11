@@ -1,0 +1,337 @@
+{{coord|48|48|N|2|08|E|source:rowiki_region:FR|display=title}}
+{{Infobox Ancienne entité territoriale
+| nom français=Seine-et-Oise
+| année début=[[1790]]
+| année fin=[[1968]]
+| gouvernement=[[Département français]]
+| capitale=[[Versailles]]
+| titre capitale=Chef-lieu
+| evt1=Création
+| evt1 date={{Date|4|mars|1790}}
+| evt2=Loi prévoyant la suppression du département
+| evt2 date={{Date|10|juillet|1964}}
+| evt3=Suppression effective
+| evt3 date={{Date|1|janvier|1968}}
+| titre leaderA             = [[Liste des présidents des conseils départementaux français|Président]]
+| leaderA1 date             = 1964-1967
+| leaderA1                  = [[Adolphe Chauvin]] ([[Mouvement républicain populaire|MRP]])
+| p1=[[Île-de-France]]
+| p1 drapeau=France Ancient.svg
+| s1=[[Yvelines]]
+| s2=[[Essonne (département)|Essonne]]
+| s3=[[Hauts-de-Seine]]
+| s4=[[Seine-Saint-Denis]]
+| s5=[[Val-de-Marne]]
+| s6=[[Val-d'Oise]]
+| s1 drapeau=Flag of France.svg
+| s2 drapeau=Flag of France.svg
+| s3 drapeau=Flag of France.svg
+| s4 drapeau=Flag of France.svg
+| s5 drapeau=Flag of France.svg
+| s6 drapeau=Flag of France.svg
+| carte= Seine-et-Oise departement locator map.svg
+| légende= La Seine-et-Oise au sein de la France métropolitaine de 1947 à 1968.
+}}
+La '''Seine-et-Oise''' ([[Wikipédia:API|prononcé]] {{MSAPI|s|ɛ|.|n|‿|e| w|a|z}}) est un ancien [[Département français|département]] [[France|français]] de la [[Île-de-France|région parisienne]], créé en [[1790]] et dissous en [[1968]]. Le [[Seine (département)|département de la Seine]] était enclavé en son sein.
+
+En 1968, six départements la remplacent :
+
+Trois sont intégralement composés d'anciennes communes de la Seine-et-Oise. Ils forment avec la [[Seine-et-Marne]] la [[Géographie de l'Île-de-France#Grande couronne|grande couronne]] :
+* les [[Yvelines]] (qui reprend le numéro minéralogique de la Seine-et-Oise « 78 ») ;
+* l'[[Essonne (département)|Essonne]] (de nouveau numéro minéralogique « 91 ») ;
+* le [[Val-d'Oise]] (« 95 »).
+Les trois autres sont formés principalement d'anciennes communes de la [[Seine (département)|Seine]], auxquels ont été adjoints des communes de la Seine-et-Oise, et forment la [[Géographie de l'Île-de-France#Petite couronne|petite couronne]] :
+
+* les [[Hauts-de-Seine]] (« 92 ») ;
+* la [[Seine-Saint-Denis]] (« 93 ») ;
+* le [[Val-de-Marne]] (« 94 ») .
+
+== Histoire ==
+[[Fichier:Carte du département de la Seine-et-Oise et de la Seine 1790-1793.tiff|gauche|vignette|Carte du département de la Seine-et-Oise et du département de Paris (1790).]]
+La Seine-et-Oise fut l'un des 83 départements créés à la [[Révolution française]], le {{date|4|mars|1790}} en application de la loi du {{date|22|décembre|1789}}, à partir d'une partie de la [[Territoires du royaume de France|province]] d'[[Île-de-France]].
+
+Son chef-lieu était [[Versailles]], et il eut pour sous-préfectures Corbeil (devenu [[Corbeil-Essonnes]], remplacée par celle d'[[Évry]] à la suite du décret du {{date-|25 février 1965}}<ref>{{Lien web|titre=Pourquoi... la capitale n'est pas Corbeil-Essonnes ?|url=http://www.leparisien.fr/essonne-91/pourquoi-la-capitale-n-est-pas-corbeil-essonnes-08-07-2014-3984831.php|site=leparisien.fr|périodique=Le Parisien|date=8 juillet 2014}}</ref>), [[Étampes]] (jusqu'en [[1926]]), Mantes (devenu [[Mantes-la-Jolie]]) (sauf entre 1926 et 1943), [[Pontoise]], [[Rambouillet]] (à partir de 1812), et, après [[1962]], [[Montmorency (Val-d'Oise)|Montmorency]], [[Palaiseau]], [[Le Raincy]] et [[Saint-Germain-en-Laye]]. Deux autres arrondissements s'ajoutèrent en [[1966]], [[Argenteuil (Val-d'Oise)|Argenteuil]] et [[Étampes]], pour préparer les nouveaux départements. Ainsi, au moment de sa suppression, le département comptait 11 arrondissements, 68 cantons et 688 communes {{ref nec|(il y a aujourd'hui 686 communes dans ses limites)}}.
+
+Sa population s'élevait à {{nb|2298931 habitants}} en [[1962]] (dernier recensement avant sa suppression), et dépasserait aujourd'hui 4,5 millions d'habitants. Sa superficie était de {{Unité|5658,94 km2}} ({{Unité|565894 [[hectare|ha]]}})<ref>{{Lien web|titre=Annuaire du Bureau des Longitudes pour 1963, p. 476|url=https://gallica.bnf.fr/ark:/12148/bpt6k9672077c/f518.item.zoom|date=}}</ref>.
+
+Il était entouré par les départements de l'[[Oise (département)|Oise]] au nord, de [[Seine-et-Marne]] à l'est, du [[Loiret (département)|Loiret]] au sud, d'[[Eure-et-Loir]] et de l'[[Eure (département)|Eure]] à l'ouest. De plus, le département de la [[Seine (département)|Seine]], qui comprenait [[Paris]] et sa proche [[banlieue]], était entièrement enclavé par la Seine-et-Oise.
+
+Il a été supprimé le {{date|1 janvier 1968}} (tout comme le département de la [[Seine (département)|Seine]]), en application de la [[Réorganisation de la région parisienne en 1964|loi du 10 juillet 1964 portant réorganisation de la région parisienne]], et a constitué les départements de l'[[Essonne (département)|Essonne]], du [[Val-d'Oise]] et des [[Yvelines]]. Quelques-unes de ses communes ont également formé des parties des [[Hauts-de-Seine]] (9 communes<ref>[[Chaville]], [[Garches]], [[Marnes-la-Coquette]], [[Meudon]], [[Rueil-Malmaison]], [[Saint-Cloud]], [[Sèvres]], [[Vaucresson]] et [[Ville-d'Avray]] - Source [http://paubc.info/10/ftth-kesako-.html?view=mediawiki&article=Hauts-de-Seine paubc.info]</ref>), de la [[Seine-Saint-Denis]] (16 communes<ref>[[Aulnay-sous-Bois]], [[Clichy-sous-Bois]], [[Coubron]], [[Gagny]], [[Gournay-sur-Marne]], [[Le Blanc-Mesnil]], [[Livry-Gargan]], [[Montfermeil]], [[Neuilly-Plaisance]], [[Neuilly-sur-Marne]], [[Noisy-le-Grand]], [[Le Raincy]], [[Sevran]], [[Tremblay-en-France]], [[Vaujours]], [[Villepinte (Seine-Saint-Denis)|Villepinte]] - Source [http://www.atlas-patrimoine93.fr/pg-html/bases_doc/inventaire/fiche.php?idfic=000s000 Atlas de l’architecture et du patrimoine de la Seine-Saint-Denis]</ref>) et du [[Val-de-Marne]] (18 communes<ref>[[Ablon-sur-Seine]], [[Boissy-Saint-Léger]], [[Chennevières-sur-Marne]], [[La Queue-en-Brie]], [[Le Plessis-Trévise]], [[Limeil-Brévannes]], [[Mandres-les-Roses]], [[Marolles-en-Brie (Val-de-Marne)|Marolles-en-Brie]], [[Noiseau]], [[Ormesson-sur-Marne]], [[Périgny (Val-de-Marne)|Périgny]], [[Santeny]], [[Sucy-en-Brie]], [[Valenton]], [[Villecresnes]], [[Villeneuve-le-Roi]], [[Villeneuve-Saint-Georges]] et [[Villiers-sur-Marne]] - Source [http://archives.cg94.fr/drupal-ad94/files/imce-images/Carte_Val_de_Marne.jpg archives départementales du Val-de-Marne]</ref>). La [[Réorganisation de la région parisienne en 1964|réorganisation de la région parisienne]] en 1964 aboutit à démembrer le Grand Paris pour plusieurs raisons principales<ref name=":0">Exposés par le chercheur CNRS Emmanuel Bellanger dans le [[Marines (Val-d'Oise)|Film documentaire en ligne]], réalisé à l'occasion de la parution du livre "Val-de-Marne : Anthologie 1964 - 2014" paru aux Éditions de l'Atelier en 2014</ref> :
+* remédier à un déficit d'administration d'une collectivité fortement peuplée. L'équivalent actuel du territoire de Seine-et-Oise comporte environ 5 millions d'habitants ;
+* aujourd'hui imposer le district de la région de Paris (institué en 1961, le district regroupe Paris et la Seine, la Seine-et-Oise et la Seine-et-Marne) en démembrant le département de la Seine pour éviter l'émergence d'un contre-pouvoir trop important dans la {{Ve}} République naissante ;
+* rétablir une solidarité à l'échelle régionale et en particulier une solidarité à l'égard du territoire qui a été le plus délaissé dans l'histoire urbaine, sociale et politique du {{s mini-|XIX}} et du {{s-|XX}}, le département de Seine-et-Oise. La Seine-et-Oise était en effet le parent pauvre des politiques d'équipement, de désenclavement et d'administration. Le département de Seine-et-Oise n'avait pas bénéficié de la manne financière de la Ville de Paris (qui était un territoire plus riche), comme avait pu en bénéficier le département de la Seine<ref name=":0" /> ;
+* cantonner l'influence du [[Parti communiste français]] à un seul territoire, la [[Seine-Saint-Denis]], et éviter que le PCF, à la faveur d'une alliance avec le PS de l'époque, la SFIO, ne reprenne les rênes du Grand Paris, donc du département de la Seine<ref name=":0" />.
+
+=== Langue ===
+D'après [[Abel Hugo]], vers 1835, le langage des habitants de Seine-et-Oise ne différait de celui des [[Paris]]iens que dans les campagnes, où le peuple avait naturellement un vocabulaire varié et des locutions qui tenaient à son état, au genre de ses occupations agricoles et industrielles, inconnues à celui de la capitale<ref name="France pittoresque">{{Ouvrage|auteur1=[[Abel Hugo]]|titre=France pittoresque ou description pittoresque, topographique et statistique des départements et colonies de la France|éditeur=Delloye|lieu=Paris|année=1835|tome=3}}</ref>.
+
+Par suite de l'ancien séjour de la [[Cour de France|cour]] à [[Versailles]], les habitants de cette ville et des environs avaient un langage plus riche, plus figuré et plus nuancé d'expressions recherchées que ceux des autres arrondissements du département<ref name="France pittoresque"/>.
+
+== Héraldique ==
+{{Blason-ville-fr
+| img1=Blason département fr Yvelines.svg
+| l1=120px
+| legende1=Blason de Seine-et-Oise 
+| texte= Les armes de Seine-et-Oise se [[blasonnement|blasonnent]] ainsi :
+
+''d’azur semé de fleurs de lys d’or aux deux bandes ondées d’argent brochant sur le tout.
+
+Ce blason a été créé en [[1943]] sous l'égide de la commission départementale d'héraldique. Le fond d'azur semé de [[fleur de lys|fleurs de lys]] d'or reprend les [[:Image:Blason pays fr FranceAncien.svg|armes de France ancienne]] qui sont aussi celles de l'[[Île-de-France]], les deux bandes ondées d'argent symbolisent les deux principaux cours d'eau qui irriguent le département, la [[Seine]] et l'[[Oise (rivière)|Oise]].
+
+Il a été repris par le nouveau département des [[Yvelines]] lors de sa création en 1968<ref>''Les armoiries des Yvelines'', ''Connaître les Yvelines'', {{1er|semestre}} 1992, conseil général des Yvelines, p. 4.</ref>.
+}}
+
+== Histoire des divisions administratives ==
+<gallery>
+Image:SeineEtOise.png|Carte de Seine-et-Oise vers 1800.
+Image:SeineEtOise1931-1964.svg|Carte des cantons de Seine-et-Oise entre 1931 et 1964.
+Image:SeineEtOise1964-1967.png|Carte des cantons de Seine-et-Oise entre 1964 et 1967.
+Image:Image taken from page 27 of 'L'enseignement pratique de la géographie. Atlas, cartes, textes & questionnaires ... Cours móyen' (16404362229).jpg|Arrondissements entre 1812 et 1926.
+Image:Arrondissements Seine-Et-Oise 1931-1943.png|Arrondissements entre 1931 et 1943.
+Image:Arrondissements Seine-Et-Oise 1943-1962.png|Arrondissements entre 1943 et 1962.
+Image:Arrondissements Seine-Et-Oise 1962-1964.png|Arrondissements entre 1962 et 1964.
+</gallery>
+
+[[Fichier:Ile de France departments 1969 evolution map-fr.svg|vignette|La création des départements de [[Paris]], des [[Hauts-de-Seine]], de la [[Seine-Saint-Denis]], du [[Val-de-Marne]], de l'[[Essonne (département)|Essonne]], des [[Yvelines]], du [[Val-d'Oise]] à partir de la [[Seine (département)|Seine]] et de Seine-et-Oise en 1968.]]
+=== Modifications administratives (1790-1967) ===
+Au cours de ses 177 ans d'existence, l'organisation du territoire de la Seine-et-Oise a connu de nombreuses évolutions<ref name="SPLAF Seine-et-Oise">[http://splaf.free.fr/78o.html Ancien département de Seine-et-Oise, SPLAF (site sur la population et les limites administratives de la France)].</ref>.
+* [[1790]] (décret du {{date-|26 février}} prenant effet le {{date-|4 mars}}) : création du département de Seine-et-Oise avec 9 districts : Corbeil, [[Dourdan]], Étampes, [[Gonesse]], Mantes, [[Montfort-l'Amaury|Montfort]], Pontoise, Saint-Germain et Versailles, divisés en 59 cantons
+* [[1795]] : disparition des districts
+* [[1800]] ([[Loi du 28 pluviôse an VIII]]) : création des arrondissements : [[Corbeil-Essonnes|Corbeil]], [[Étampes]], [[Mantes-la-Jolie|Mantes]], [[Pontoise]] et [[Versailles]].
+* 1801<ref>Arrêté du 3 Brumaire an X (25 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f309 p. 321]</ref> : Découpage d'origine en 36 cantons.
+* 1802<ref>Arrêté du 9 Pluviôse an X (29 janvier 1802), ''Bulletin des lois'', an XI (1er semestre) n° 228bis [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f191 p. 1]</ref> : Le cherf-lieu du canton du [[La Villeneuve-en-Chevrie|Villeneuve-en-Chevrie]] est transféré à [[Canton de Bonnières-sur-Seine|Bonnières]].
+* 1811<ref>Loi du 19 juillet 1811, ''Bulletin des lois'', 1811 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k445366d/f111.item p. 81]</ref> : création de l'arrondissement de Rambouillet
+* Après la victoire des [[Guerre de la Septième Coalition|coalisés]] à la [[bataille de Waterloo]] ({{date|18 juin 1815}}), le département est occupé par les troupes [[prusse|prussiennes]] de {{date-|juin 1815}} à novembre [[1818]] (voir [[Occupation#Occupations de la France à la fin du Premier Empire|occupation de la France à la fin du Premier Empire]]).
+* [[1882]]<ref>Loi du 7 avril 1882, ''Bulletin des lois'' 1882 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k2141124/f936 p. 913] = [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=09%2F04%2F1882+%3E+09%2F04%2F1882 ''JORF'', 9 avril 1882], p. 1915</ref> : création du [[canton du Raincy]], détaché du [[canton de Gonesse]]
+* [[1919]]<ref>Loi du 22 octobre 1919, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=23%2F10%2F1919+%3E+23%2F10%2F1919 ''JORF'', 23 octobre 1919], p. 11.727</ref> : création du [[canton de Villeneuve-Saint-Georges]], détaché du [[canton de Boissy-Saint-Léger]]
+* [[1922]]<ref>Loi du 14 février 1922, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=15%2F02%2F1922+%3E+15%2F02%2F1922 ''JORF'', 15 février 1922], p. 1958</ref> : création du [[canton d'Aulnay-sous-Bois]], détaché du [[canton de Gonesse]].
+* [[1924]]<ref>Loi du 12 avril 1924, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=13%2F04%2F1924+%3E+13%2F04%2F1924 ''JORF'', 13 avril 1924], p. 3446</ref> : création du [[canton de Maisons-Laffitte]], détaché des cantons de [[canton de Saint-Germain-en-Laye|Saint-Germain-en-Laye]] et d'Argenteuil.
+* [[1926]] ([[Décret-loi Poincaré]]) : suppression des arrondissements d'Étampes et Mantes.
+* [[1931]]<ref>Loi du 21 juillet 1931, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=25%2F07%2F1931+%3E+25%2F07%2F1931 ''JORF'', 25 juillet 1931], p. 8147</ref> : création du [[canton de Taverny]], détaché du [[canton de Montmorency]].
+* [[1943]] (loi du {{date-|26 novembre}}) : restauration de l'arrondissement de Mantes
+* [[1962]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000672766 Décret n° 62-1294 du 7 novembre 1962]</ref> : création des arrondissements de Montmorency, Palaiseau, Le Raincy et Saint-Germain-en-Laye
+* [[1964]]<ref>Décret du 28 janvier 1964, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=30%2F01%2F1964+%3E+30%2F01%2F1964 ''JORF'' 30 janvier 1964], p. 1090. Les limites infracommunales entre les quatre nouveaux cantons de Versailles à travers la ville de Versailles sont seulement définies par référence à un plan annexé non publié au Journal officiel. Un plan se trouve à la p. 618 dans {{Ouvrage|langue=fr|auteur1=Bernard Gaudillère|titre=Atlas historique des circonscriptions électorales françaises|lieu=Genève|éditeur=[[Librairie Droz]]|collection=Hautes Études médiévales et modernes|numéro dans collection=74|année=1995|pages totales=839|isbn=2-600-00065-8}}</ref> : le nombre de cantons passe de 41 à 67:
+**La commune de [[Méry-sur-Oise]] est trasférée du [[canton de l'Isle-Adam]] au [[canton de Pontoise]] ;
+**La commune de [[Butry-sur-Oise]] est transférée du [[canton de Pontoise]] au [[canton de l'Isle-Adam]] ;
+**Création du [[canton de Chennevières-sur-Marne]], détaché du [[canton de Boissy-Saint-Léger]] ;
+**Création du [[canton d'Enghien-les-Bains]], détaché du [[canton de Montmorency]] ;
+**Création du [[canton de Saint-Leu-la-Forêt]], détaché du [[canton de Taverny]] ;
+**Création du [[canton de Conflans-Sainte-Honorine]], détaché du [[canton de Poissy]] ;
+**Création du [[canton de Chatou]], détaché du [[canton de Saint-Germain-en-Laye]] ;
+**Le [[canton d'Écouen]] est scindé en deux nouveaux cantons d’Écouen-Lochères et de Sarcelles-Centre (la commune de [[Sarcelles]] est divisée entre ces deux cantons)
+**Le [[canton de Corbeil-Essonnes]] est scindé en deux nouveaux cantons de Corbeil-Essonnes-Nord et de Corbeil-Essonnes-Sud ;
+**Création des cantons de [[canton de Brunoy|Brunoy]] et de [[canton de Montgeron|Montgeron]], détachés du [[canton de Villeneuve-Saint-Georges]] ;
+**Création des cantons du [[Canton du Blanc-Mesnil|Blanc-Mesnil]] et de [[canton de Sevran|Sevran]], détachés du [[canton d'Aulnay-sous-Bois]] ;
+**Création des cantons de [[Livry-Gargan]] et de [[canton de Neuilly-Plaisance|Neuilly-Plaisance]], détachés du [[canton du Raincy]] ;
+**Création des cantons de [[canton de Rueil-Malmaison|Rueil-Malmaison]] et de [[canton de La Celle-Saint-Cloud|la Celle-Saint-Cloud]], détachés du [[canton de Marly-le-Roi]] ;
+**Création des cantons de [[canton de Meudon|Meudon]] et de [[canton de Saint-Cloud|Saint-Cloud]], détachés du [[canton de Sèvres]] ;
+**Le canton d’Argenteuil est scindé en quatre nouveaux cantons [[canton d'Argenteuil-Nord|Argenteuil-Nord]], Argenteuil-Sud, [[canton de Cormeilles-en-Parisis|Cormeilles-en-Parisis]] et [[canton de Houilles|Houilles]] ;
+**Création des cantons d’[[canton d'Athis-Mons|Athis-Mons]], de [[canton de Massy|Massy]], de [[canton de Savigny-sur-Orge|Savigny-sur-Orge]], de [[canton de Juvisy-sur-Orge|Juvisy-sur-Orge]] et de [[canton de Villeneuve-le-Roi|Villeneuve-le-Roi]], détachés du [[canton de Longjumeau]] ;
+**Les trois cantons de Versailles sont redécoupés en quatre nouveaux cantons [[canton de Versailles-Nord|Versailles-Nord]], [[canton de Versailles-Nord-Ouest|-Nord-Ouest]], [[canton de Versailles-Ouest|-Ouest]] et [[canton de Versailles-Sud|-Sud]]. 
+* [[1964]]<ref>[https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000319965 Loi n° 64-707 du 10 juillet 1964]</ref> : la suppression du département est programmée
+* [[1965]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000310579 Décret n° 65-142 du 25 février 1965]</ref> : les chefs-lieux des nouveaux départements sont désignés
+* [[1966]]<ref>Trois décrets n° 66-338 à n° 66-340 du 2 juin 1966</ref> : la création de l'arrondissement d'Argenteuil, la restauration de l'arrondissement d'Étampes, le transfert du chef-lieu de l'arrondissement de Corbeil à Évry, la création du [[canton de Saint-Arnoult-en-Yvelines]] (détaché du [[canton de Dourdan]]) et quelques transferts de cantons entre arrondissements font coïncider les limites des arrondissements et des cantons avec les limites des futurs départements
+* [[1967]]<ref>Six décrets n° 67-589 à n° 67-594 du 20 juillet 1967</ref> : création des cantons des nouveaux départements
+* [[1967]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000330666 Décret n° 67-792 du 19 stpembre 1967]</ref> : l'entrée en vigueur complète de la loi du {{date-|10 juillet 1964}} est fixée au {{date-|1 janvier 1968}}
+* [[1968]] ({{1er}} janvier) : dissolution du département de Seine-et-Oise (entrée en fonction des conseils généraux des nouveaux départements, élus en 1967)
+
+=== Division en arrondissements à travers le temps (1800-1967) ===
+* 1800-1812 : 5 arrondissements (Versailles, Pontoise, [[Arrondissement de Corbeil|Corbeil]], [[Arrondissement d'Étampes|Étampes]], Mantes)
+* 1812-1926 : 6 arrondissements (Versailles, Pontoise, Rambouillet, [[Arrondissement de Corbeil|Corbeil]], [[Arrondissement d'Étampes|Étampes]], Mantes)
+* 1926-1943 : 4 arrondissements (Versailles, Pontoise, Rambouillet, [[Arrondissement de Corbeil|Corbeil]])
+* 1943-1962 : 5 arrondissements (Versailles, Pontoise, Rambouillet, [[Arrondissement de Corbeil|Corbeil/Corbeil-Essonnes]], Mantes)
+* 1962-1966 : 9 arrondissements (Versailles, Pontoise, Rambouillet, [[Arrondissement de Corbeil|Corbeil-Essonnes]], Mantes, Montmorency, Palaiseau, Le Raincy, Saint-Germain-en-Laye)
+* 1966-1967 : 11 arrondissements (Versailles, Pontoise, Rambouillet, [[Arrondissement d'Évry|Évry]], [[Arrondissement d'Étampes|Étampes]], Mantes, [[Arrondissement d'Argenteuil|Argenteuil]], Montmorency, Palaiseau, Le Raincy, Saint-Germain-en-Laye)
+
+== Arrondissements et cantons ==
+[[File:Arrondissements Seine-Et-Oise 1943-1962.png|thumb|Arrondissements entre 1943 et 1962 :
+{{Légende/Début}}
+{{Légende|#FFAEC9|[[Arrondissement de Mantes]]}}
+{{Légende|#FF7F3B|[[Arrondissement de Pontoise]]}}
+{{Légende|#FFC90E|[[Arrondissement de Versailles]]}}
+{{Légende|#EA004D|[[Arrondissement de Rambouillet]]}}
+{{Légende|#ED1C22|[[Arrondissement de Corbeil]]}}
+{{Légende/Fin}}]]
+Les arrondissements de Seine-et-Oise étaient composés des cantons suivants :
+
+=== Arrondissement de Corbeil puis d'Évry (1800-1967) ===
+[[Fichier:Juvisy-sur-Orge Seine-et-Oise Essonne.jpg|300px|vignette|droite|Ancien panneau « Seine-et-Oise » rue des Gaulois à [[Juvisy-sur-Orge]] ([[Essonne (département)|Essonne]]).]]
+* [[Canton d'Arpajon]] (1800-1962)
+* [[Canton de Boissy-Saint-Léger]] (1800-1967)
+** [[Canton de Villeneuve-Saint-Georges]] (1919-1967)
+*** [[Canton de Brunoy]] (1964-1967)
+*** [[Canton de Montgeron]] (1964-1967)
+** [[Canton de Chennevières-sur-Marne]] (1964-1967)
+* [[Canton de Corbeil-Essonnes|Canton de Corbeil]] (1800-1964) (''Corbeil-Essonnes à partir de 1951'')
+** [[Canton de Corbeil-Essonnes|Canton de Corbeil-Essonnes-Nord]] (1964-1967)
+** [[Canton de Corbeil-Essonnes|Canton de Corbeil-Essonnes-Sud]] (1964-1967)
+* [[Canton de Longjumeau]] (1800-1962)
+* [[Canton de La Ferté-Alais]] (1926-1966)
+* [[Canton de Milly-la-Forêt]] (1926-1967)
+* [[Canton de Juvisy-sur-Orge]] (1966-1967)
+* [[Canton de Villeneuve-le-Roi]] (1966-1967)
+
+Le chef-lieu de cet arrondissement a été transféré de Corbeil-Essonnes (Corbeil jusqu'en 1951) à Évry en 1966.
+
+''De 1966 à 1967, le rattachement à cet arrondissement des cantons de Boissy-Saint-Léger, Chennevières-sur-Marne, Villeneuve-le-Roi et Villeneuve-Saint-Georges (qui devaient rejoindre le département du Val-de-Marne) est effectué à titre provisoire.''
+
+=== Arrondissement d'Étampes (1800-1926 puis 1966-1967) ===
+[[Fichier:Milly N837.jpg|300px|vignette|droite|Ancien panneau « Seine-et-Oise »<br>à [[Milly-la-Forêt]] ([[Essonne (département)|Essonne]]).]]
+* [[Canton de Dourdan|Canton de Dourdan-Nord]] (1800-1812)
+* [[Canton de Dourdan-Sud]] (1800-1812)
+* [[Canton de Dourdan]] (1967)
+* [[Canton d'Étampes]] (1800-1926 puis 1966-1967)
+* [[Canton de La Ferté-Alais]] (1800-1926 puis 1966-1967)
+* [[Canton de Méréville]] (1800-1926 puis 1966-1967)
+* [[Canton de Milly-la-Forêt]] (1800-1926)
+* [[Canton de Saint-Chéron]] (1967)
+
+=== Arrondissement de Mantes (1800-1926 puis 1943-1967) ===
+* [[Canton de Bonnières-sur-Seine]] (1800-1926 puis 1943-1967) (''le chef-lieu de ce canton était à La Villeneuve-en-Chevrie jusqu'en 1802'')
+* [[Canton de Houdan]] (1800-1926 puis 1943-1967)
+* [[Canton de Limay]] (1800-1926 puis 1943-1967)
+* [[Canton de Magny-en-Vexin]] (1800-1926 puis 1943-1966)
+* [[Canton de Mantes-la-Jolie|Canton de Mantes]] (1800-1926 puis 1943-1967) (''Mantes-la-Jolie à partir de 1953'')
+* [[Canton de Meulan-en-Yvelines|Canton de Meulan]] (1943-1967)
+
+=== Arrondissement de Pontoise (1800-1967) ===
+[[Fichier:Panneau entrée Neuilly Plaisance 7.jpg|300px|vignette|droite|Ancien panneau « Seine-et-Oise »<br>à [[Neuilly-Plaisance]] ([[Seine-Saint-Denis]]).]]
+* [[Canton d'Écouen]] (1800-1962)
+* [[Canton de Gonesse]] (1800-1962)
+** [[Canton du Raincy]] (1882-1962)
+** [[Canton d'Aulnay-sous-Bois]] (1922-1962)
+* [[Canton de l'Isle-Adam|Canton de L'Isle-Adam]] (1800-1967)
+* [[Canton de Luzarches]] (1800-1962)
+* [[Canton de Marines]] (1800-1967)
+* [[Canton de Montmorency]] (1800-1962)
+** [[Canton de Taverny]] (1931-1967)
+*** [[Canton de Saint-Leu-la-Forêt]] (1964-1967)
+* [[Canton de Pontoise]] (1800-1967)
+* [[Canton de Magny-en-Vexin]] (1926-1943 puis 1966-1967)
+* [[Canton d'Argenteuil-Nord|Canton d'Argenteuil]] (1962-1964)
+** [[Canton d'Argenteuil-Nord]] (1964-1966)
+** [[Canton de Bezons|Canton d'Argenteuil-Sud]] (1964-1966)
+** [[Canton de Cormeilles-en-Parisis]] (1964-1966)
+** [[Canton de Houilles]] (1964-1966)
+
+=== Arrondissement de Versailles (1800-1967) ===
+* [[Canton d'Argenteuil-Nord|Canton d'Argenteuil]] (1800-1962)
+* [[Canton de Chevreuse]] (1800-1812)
+* [[Canton de Limours]] (1800-1812)
+* [[Canton de Marly-le-Roi]] (1800-1962)
+* [[Canton de Meulan-en-Yvelines|Canton de Meulan]] (1800-1943)
+* [[Canton de Montfort-l'Amaury]] (1800-1812)
+* [[Canton de Palaiseau]] (1800-1962)
+* [[Canton de Poissy]] (1800-1962)
+* [[Canton de Rambouillet]] (1800-1812)
+* [[Canton de Saint-Germain-en-Laye]] (1800-1962)
+** [[Canton de Maisons-Laffitte]] (1924-1962)
+* [[Canton de Sèvres]] (1800-1967)
+** [[Canton de Meudon]] (1964-1967)
+** [[Canton de Saint-Cloud]] (1964-1967)
+* [[Canton de Versailles-Nord]] (1800-1967)
+* [[Canton de Versailles-Nord-Ouest|Canton de Versailles-Ouest]] (1800-1967)
+** [[Canton de Versailles-Nord-Ouest]] (1964-1967)
+* [[Canton de Versailles-Sud]] (1800-1967)
+* [[Canton de Bonnières-sur-Seine]] (1926-1943)
+* [[Canton de Limay]] (1926-1943)
+* [[Canton de Mantes-la-Jolie|Canton de Mantes]] (1926-1943)
+
+''De 1966 à 1967, le rattachement à cet arrondissement des cantons de Meudon, Saint-Cloud et Sèvres (qui devaient rejoindre le département des Hauts-de-Seine) est effectué à titre provisoire.''
+
+=== Arrondissement de Rambouillet (1812-1967) ===
+* [[Canton de Chevreuse]] (1812-1967)
+* [[Canton de Dourdan|Canton de Dourdan-Nord]] (1812-1966)
+* [[Canton de Dourdan-Sud]] (1812-1966)
+** [[Canton de Saint-Arnoult-en-Yvelines]] (1966-1967)
+* [[Canton de Limours]] (1812-1962)
+* [[Canton de Montfort-l'Amaury]] (1812-1967)
+* [[Canton de Rambouillet]] (1812-1967)
+* [[Canton d'Étampes]] (1926-1966)
+* [[Canton de Houdan]] (1926-1943)
+* [[Canton de Méréville]] (1926-1966)
+
+=== Arrondissement de Montmorency (1962-1967) ===
+* [[Canton d'Écouen]] (1962-1964)
+** [[Canton d'Écouen|Canton d'Écouen-Lochère]] (1964-1967)
+** [[Canton de Sarcelles-Nord-Est|Canton de Sarcelles-Centre]] (1964-1967)
+* [[Canton de Gonesse]] (1962-1967)
+* [[Canton de Luzarches]] (1962-1967)
+* [[Canton de Montmorency]] (1962-1967)
+** [[Canton d'Enghien-les-Bains]] (1964-1967)
+
+=== Arrondissement de Palaiseau (1962-1967) ===
+* [[Canton d'Arpajon]] (1962-1967)
+* [[Canton de Limours]] (1962-1967)
+* [[Canton de Longjumeau]] (1962-1967)
+** [[Canton d'Athis-Mons]] (1964-1967)
+** [[Canton de Juvisy-sur-Orge]] (1964-1966)
+** [[Canton de Massy]] (1964-1967)
+** [[Canton de Savigny-sur-Orge]] (1964-1967)
+** [[Canton de Villeneuve-le-Roi]] (1964-1966)
+* [[Canton de Palaiseau]] (1962-1967)
+
+=== Arrondissement du Raincy (1962-1967) ===
+* [[Canton d'Aulnay-sous-Bois]] (1962-1967)
+** [[Canton du Blanc-Mesnil]] (1964-1967)
+** [[Canton de Sevran]] (1964-1967)
+* [[Canton du Raincy]] (1962-1967)
+** [[Canton de Livry-Gargan]] (1964-1967)
+** [[Canton de Neuilly-Plaisance]] (1964-1967)
+
+=== Arrondissement de Saint-Germain-en-Laye (1962-1967) ===
+* [[Canton de Maisons-Laffitte]] (1962-1967)
+* [[Canton de Marly-le-Roi]] (1962-1967)
+** [[Canton de La Celle-Saint-Cloud]] (1964-1967)
+** [[Canton de Rueil-Malmaison]] (1964-1967)
+* [[Canton de Poissy]] (1962-1967)
+** [[Canton de Conflans-Sainte-Honorine]] (1964-1967)
+* [[Canton de Saint-Germain-en-Laye]] (1962-1967)
+** [[Canton de Chatou]] (1964-1967)
+* [[Canton de Houilles]] (1966-1967)
+
+''De 1966 à 1967, le rattachement à cet arrondissement du canton de Rueil-Malmaison (qui devait rejoindre le département des Hauts-de-Seine) est effectué à titre provisoire.''
+
+=== Arrondissement d'Argenteuil (1966-1967) ===
+* [[Canton d'Argenteuil-Nord]] (1966-1967)
+* [[Canton de Bezons|Canton d'Argenteuil-Sud]] (1966-1967)
+* [[Canton de Cormeilles-en-Parisis]] (1966-1967)
+
+== Économie ==
+{{...}}
+Le Val-d'Oise et les Yvelines partagent la [[Chambre de commerce et d'industrie en France|Chambre de commerce et d'industrie]] de Versailles{{refnec}}.
+
+== Notes et références ==
+<references />
+
+== Voir aussi ==
+{{Autres projets
+| commons = Category:Seine-et-Oise
+| Wiktionary = Seine-et-Oise
+}}
+
+=== Bibliographie ===
+* {{Ouvrage | titre=L'ancien département de Seine-et-Oise - Histoire, géographie, statistique, administration| éditeur=Éditions du Bastion (réédition de l'ouvrage de 1883)|auteur= V.A. Malte-Brun| année =1990 | lieu=Paris| pages=253  | isbn= }}
+* {{Ouvrage | titre=Géographie de Seine-et-Oise| éditeur=[[Hachette Livre|Hachette]] |auteur= Paul Joanne | année =1906| lieu=Paris| pages=71  | isbn= }}
+* [[Adolphe Dutilleux]], ''Recherches sur les routes anciennes dans le département de Seine-et-Oise, accompagnées d'une carte de ces voies de communication'', Versailles, Cerf, 1881 [https://gallica.bnf.fr/ark:/12148/bpt6k1120724. (lire en ligne)]
+* [[Adolphe Dutilleux]], ''Topographie ecclésiastique du département de Seine-et-Oise, accompagnée d'une carte du diocèse de Versailles indiquant les divisions ecclésiastiques anciennes'', Versailles, Céret, 1874 [https://gallica.bnf.fr/ark:/12148/bpt6k503852s.texteImage (lire en ligne)]
+* J. Hippolyte Daniel, ''Biographie des hommes remarquables de Seine-et-Oise: depuis le commencement de la monarchie jusqu'{{quand|à ce jour}}. Précédée d'un Aperçu historique, et suivie d'écrits relatifs à ce département'', Paris & Versailles : Angé, 1837, 280 p. [https://books.google.fr/books?id=8CDRAAAAMAAJ&printsec=frontcover&hl=fr#v=onepage&q&f=false]
+
+=== Articles connexes ===
+* [[Conseil général de Seine-et-Oise]]
+* [[Liste des députés de Seine-et-Oise]]
+* [[Communauté urbaine Grand Paris Seine et Oise]]
+* L'ancien Office d’[[Habitation à bon marché]] de Seine-et-Oise, devenu OPAC [[Groupe Opievoy|OPIVOY]]
+* [[Île-de-France]]
+* [[Volontaires nationaux pendant la Révolution#Seine-et-Oise|Volontaires nationaux de Seine-et-Oise pendant la Révolution]]
+* [[L'Informateur de Seine-et-Oise]]
+
+=== Liens externes ===
+{{Liens}}
+* [http://splaf.free.fr/78o.html Ancien département de Seine-et-Oise, SPLAF (site sur la population et les limites administratives de la France)]
+* [http://www.yvelines.fr/archives/patrimoine-mobilier/CAA/accueil.htm Fonds photographique de l'ancienne Seine-et-Oise] sur le site des [[Archives départementales des Yvelines|Archives départementales des Yvelines et de l'ancienne Seine-et-Oise]]
+
+{{Portail|Île-de-France}}
+
+[[Catégorie:Seine-et-Oise|*]]
+[[Catégorie:Ancien département français]]

@@ -1,0 +1,117 @@
+[[Fichier:DEP45 cantons.svg|thumb|300px|Carte des cantons du Loiret avec représentation de la densité de population (INSEE, 2007)]]
+La '''liste des cantons du Loiret sur la période 1982-2015''' présente la liste et les caractéristiques des 41 [[canton français|cantons]] du [[département français|département]] [[France|français]] du [[Loiret (département)|Loiret]] ([[Région française|région]] [[Centre-Val de Loire]]) classés par [[arrondissement français|arrondissement]] qui ont existé entre le découpage cantonal défini par le décret du {{date France|25|janvier|1982}} et celui du {{date France|25|février|2014}}.
+
+== Histoire ==
+{{Article détaillé|histoire du découpage cantonal du Loiret}}
+Depuis la création du département en 1790, le découpage cantonal du Loiret a subi plusieurs changements notables. Le nombre de cantons est passé successivement de 59 en [[1790 en France|1790]] à 31 en [[1801 en France|1801]], 29 en [[1806 en France|1806]], 37 en [[1973 en France|1973]], 41 en [[1982 en France|1982]] et 21 en [[2015 en France|2015]].
+
+== Liste des cantons ==
+{| class="wikitable alternance"  
+|-----
+!Arrondissement||Code canton||Nom du canton||Chef-lieu de canton||Superficie||Population||Nombre de communes||Communes composant le canton
+|-
+|rowspan="12"|[[Arrondissement de Montargis|Montargis]]||4504||[[Canton de Bellegarde|Bellegarde]]||[[Bellegarde (Loiret)|Bellegarde]]||{{unité|150.2|km|2}}||{{Dernière population de canton de France|nombre|Canton de Bellegarde}}<br/><small>({{Dernière population de canton de France|date|Canton de Bellegarde}}</small>)||12||[[Auvilliers-en-Gâtinais]], [[Beauchamps-sur-Huillard]], [[Bellegarde (Loiret)|Bellegarde]], [[Chapelon]], [[Fréville-du-Gâtinais]], [[Ladon (Loiret)|Ladon]], [[Mézières-en-Gâtinais]], [[Moulon (Loiret)|Moulon]], [[Nesploy]], [[Ouzouer-sous-Bellegarde]], [[Quiers-sur-Bézonde]], [[Villemoutiers]].
+|-
+|4505||[[Canton de Briare|Briare]]||[[Briare]]||{{unité|327.1|km|2}}||{{Dernière population de canton de France|nombre|Canton de Briare}}<br/><small>({{Dernière population de canton de France|date|Canton de Briare}}</small>)||14||[[Adon]], [[Batilly-en-Puisaye]], [[Bonny-sur-Loire]], [[Breteau]], [[Briare]], [[La Bussière (Loiret)|La Bussière]], [[Champoulet]], [[Dammarie-en-Puisaye]], [[Escrignelles]], [[Faverelles]], [[Feins-en-Gâtinais]], [[Ousson-sur-Loire]], [[Ouzouer-sur-Trézée]], [[Thou (Loiret)|Thou]].
+|-
+|4507||[[Canton de Château-Renard|Château-Renard]]||[[Château-Renard]]||{{unité|266.2|km|2}}||{{Dernière population de canton de France|nombre|Canton de Château-Renard}}<br/><small>({{Dernière population de canton de France|date|Canton de Château-Renard}}</small>)||10||[[Château-Renard]], [[Chuelles]], [[Douchy (Loiret)|Douchy]], [[Gy-les-Nonains]], [[Melleroy]], [[Montcorbon]], [[Saint-Firmin-des-Bois]], [[Saint-Germain-des-Prés (Loiret)|Saint-Germain-des-Prés]], [[La Selle-en-Hermoy]], [[Triguères]]
+|-
+|4508||[[Canton de Châtillon-Coligny|Châtillon-Coligny]]||[[Châtillon-Coligny]]||{{unité|304.7|km|2}}||{{Dernière population de canton de France|nombre|Canton de Châtillon-Coligny}}<br/><small>({{Dernière population de canton de France|date|Canton de Châtillon-Coligny}}</small>)||12||[[Aillant-sur-Milleron]], [[La Chapelle-sur-Aveyron]], [[Le Charme]], [[Châtillon-Coligny]], [[Cortrat]], [[Dammarie-sur-Loing]], [[Montbouy]], [[Montcresson]], [[Nogent-sur-Vernisson]], [[Pressigny-les-Pins]], [[Sainte-Geneviève-des-Bois (Loiret)|Sainte-Geneviève-des-Bois]], [[Saint-Maurice-sur-Aveyron]].
+|-
+|4509||[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]||[[Châtillon-sur-Loire]]||{{unité|220.2|km|2}}||{{Dernière population de canton de France|nombre|Canton de Châtillon-sur-Loire}}<br/><small>({{Dernière population de canton de France|date|Canton de Châtillon-sur-Loire}}</small>)||6||[[Autry-le-Châtel]], [[Beaulieu-sur-Loire]], [[Cernoy-en-Berry]], [[Châtillon-sur-Loire]], [[Pierrefitte-ès-Bois]], [[Saint-Firmin-sur-Loire]]
+|-
+|4511||[[Canton de Courtenay|Courtenay]]||[[Courtenay (Loiret)|Courtenay]]||{{unité|223.4|km|2}}||{{Dernière population de canton de France|nombre|Canton de Courtenay}}<br/><small>({{Dernière population de canton de France|date|Canton de Courtenay}}</small>)||15||[[Bazoches-sur-le-Betz]], [[Chantecoq]], [[La Chapelle-Saint-Sépulcre]], [[Courtemaux]], [[Courtenay (Loiret)|Courtenay]], [[Ervauville]], [[Foucherolles (Loiret)|Foucherolles]], [[Louzouer]], [[Mérinville]], [[Pers-en-Gâtinais]], [[Rozoy-le-Vieil|Rosoy-le-Vieil]], [[Saint-Hilaire-les-Andrésis]].[[Saint-Loup-de-Gonois]], [[La Selle-sur-le-Bied]]; [[Thorailles]]
+|-
+|4512||[[Canton de Ferrières-en-Gâtinais|Ferrières-en-Gâtinais]]||[[Ferrières-en-Gâtinais]]||{{unité|273.7|km|2}}||{{Dernière population de canton de France|nombre|Canton de Ferrières-en-Gâtinais}}<br/><small>({{Dernière population de canton de France|date|Canton de Ferrières-en-Gâtinais}}</small>)||17||[[Le Bignon-Mirabeau]], [[Chevannes (Loiret)|Chevannes]], [[Chevry-sous-le-Bignon]], [[Corbeilles]], [[Courtempierre]], [[Dordives]], [[Ferrières-en-Gâtinais]], [[Fontenay-sur-Loing]], [[Girolles (Loiret)|Girolles]], [[Gondreville (Loiret)|Gondreville]], [[Griselles (Loiret)|Griselles]], [[Mignères]].[[Mignerette]], [[Nargis]]; [[Préfontaines]], [[Sceaux-du-Gâtinais]]; [[Treilles-en-Gâtinais]]
+|-
+|4514||[[Canton de Gien|Gien]]||[[Gien]]||{{unité|357.8|km|2}}||{{Dernière population de canton de France|nombre|Canton de Gien}}<br/><small>({{Dernière population de canton de France|date|Canton de Gien}}</small>)||11||[[Boismorand]], [[Les Choux]], [[Coullons]], [[Gien]], [[Langesse]], [[Le Moulinet-sur-Solin]], [[Nevoy]], [[Poilly-lez-Gien]], [[Saint-Brisson-sur-Loire]], [[Saint-Gondon]], [[Saint-Martin-sur-Ocre (Loiret)|Saint-Martin-sur-Ocre]]
+|-
+|4516||[[Canton de Lorris|Lorris]]||[[Lorris]]||{{unité|271.8|km|2}}||{{Dernière population de canton de France|nombre|Canton de Lorris}}<br/><small>({{Dernière population de canton de France|date|Canton de Lorris}}</small>)||13||[[Chailly-en-Gâtinais]], [[Coudroy]], [[La Cour-Marigny]], [[Lorris]], [[Montereau (Loiret)|Montereau]], [[Noyers (Loiret)|Noyers]], [[Oussoy-en-Gâtinais]], [[Ouzouer-des-Champs]], [[Presnoy]], [[Saint-Hilaire-sur-Puiseaux]], [[Thimory]], [[Varennes-Changy]].[[Vieilles-Maisons-sur-Joudry]]
+|-
+|4519||[[Canton de Montargis|Montargis]]||[[Montargis]]||{{unité|4.5|km|2}}||{{Dernière population de canton de France|nombre|Canton de Montargis}}<br/><small>({{Dernière population de canton de France|date|Canton de Montargis}}</small>)||1||[[Montargis]]
+|-
+|4532||[[Canton d'Amilly|Amilly]]||[[Amilly (Loiret)|Amilly]]||{{unité|150.1|km|2}}||{{Dernière population de canton de France|nombre|Canton d'Amilly}}<br/><small>({{Dernière population de canton de France|date|Canton d'Amilly}}</small>)||9||[[Amilly (Loiret)|Amilly]], [[Chevillon-sur-Huillard]], [[Conflans-sur-Loing]], [[Lombreuil]], [[Mormant-sur-Vernisson]], [[Saint-Maurice-sur-Fessard]], [[Solterre]], [[Villemandeur]], [[Vimory]]
+|-
+|4533||[[Canton de Châlette-sur-Loing|Châlette-sur-Loing]]||[[Châlette-sur-Loing]]||{{unité|81.7|km|2}}||{{Dernière population de canton de France|nombre|Canton de Châlette-sur-Loing}}<br/><small>({{Dernière population de canton de France|date|Canton de Châlette-sur-Loing}}</small>)||6||[[Cepoy]], [[Châlette-sur-Loing]], [[Corquilleroy]], [[Pannes (Loiret)|Pannes]], [[Paucourt]], [[Villevoques]]
+|-
+|rowspan="24"|[[Arrondissement d'Orléans|Orléans]]||4501||[[Canton d'Artenay|Artenay]]||[[Artenay]]||{{unité|196.9|km|2}}||{{Dernière population de canton de France|nombre|Canton d'Artenay}}<br/><small>({{Dernière population de canton de France|date|Canton d'Artenay}}</small>)||10||[[Artenay]], [[Bucy-le-Roi]], [[Cercottes]], [[Chevilly (Loiret)|Chevilly]], [[Gidy]], [[Huêtre]], [[Lion-en-Beauce]], [[Ruan (Loiret)|Ruan]], [[Sougy]], [[Trinay]]
+|-
+|4502||[[Canton de Beaugency|Beaugency]]||[[Beaugency]]||{{unité|145.4|km|2}}||{{Dernière population de canton de France|nombre|Canton de Beaugency}}<br/><small>({{Dernière population de canton de France|date|Canton de Beaugency}}</small>)||7||[[Baule]], [[Beaugency]], [[Cravant (Loiret)|Cravant]], [[Lailly-en-Val]], [[Messas]], [[Tavers]], [[Villorceau]]
+|-
+|4506||[[Canton de Châteauneuf-sur-Loire|Châteauneuf-sur-Loire]]||[[Châteauneuf-sur-Loire]]||{{unité|317.4|km|2}}||{{Dernière population de canton de France|nombre|Canton de Châteauneuf-sur-Loire}}<br/><small>({{Dernière population de canton de France|date|Canton de Châteauneuf-sur-Loire}}</small>)||12||[[Bouzy-la-Forêt]], [[Châteauneuf-sur-Loire]], [[Châtenoy (Loiret)|Châtenoy]], [[Combreux]], [[Fay-aux-Loges]], [[Germigny-des-Prés]], [[Saint-Aignan-des-Gués]], [[Saint-Denis-de-l'Hôtel]], [[Saint-Martin-d'Abbat]], [[Seichebrières]], [[Sury-aux-Bois]], [[Vitry-aux-Loges]]
+|-
+|4510||[[Canton de Cléry-Saint-André|Cléry-Saint-André]]||[[Cléry-Saint-André]]||{{unité|131.5|km|2}}||{{Dernière population de canton de France|nombre|Canton de Cléry-Saint-André}}<br/><small>({{Dernière population de canton de France|date|Canton de Cléry-Saint-André}}</small>)||5||[[Cléry-Saint-André]], [[Dry (Loiret)|Dry]], [[Jouy-le-Potier]], [[Mareau-aux-Prés]], [[Mézières-lez-Cléry]]
+|-
+|4513||[[Canton de la Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]||[[La Ferté-Saint-Aubin]]||{{unité|364.6|km|2}}||{{Dernière population de canton de France|nombre|Canton de la Ferté-Saint-Aubin}}<br/><small>({{Dernière population de canton de France|date|Canton de la Ferté-Saint-Aubin}}</small>)||6||[[Ardon (Loiret)|Ardon]], [[La Ferté-Saint-Aubin]], [[Ligny-le-Ribault]], [[Marcilly-en-Villette]], [[Ménestreau-en-Villette]], [[Sennely]]
+|-
+|4515||[[Canton de Jargeau|Jargeau]]||[[Jargeau]]||{{unité|245.8|km|2}}||{{Dernière population de canton de France|nombre|Canton de Jargeau}}<br/><small>({{Dernière population de canton de France|date|Canton de Jargeau}}</small>)||10||[[Darvoy]], [[Férolles]], [[Jargeau]], [[Neuvy-en-Sullias]], [[Ouvrouer-les-Champs]], [[Sandillon]], [[Sigloy]], [[Tigy]], [[Vannes-sur-Cosson]], [[Vienne-en-Val]]
+|-
+|4518||[[Canton de Meung-sur-Loire|Meung-sur-Loire]]||[[Meung-sur-Loire]]||{{unité|222.7|km|2}}||{{Dernière population de canton de France|nombre|Canton de Meung-sur-Loire}}<br/><small>({{Dernière population de canton de France|date|Canton de Meung-sur-Loire}}</small>)||10||[[Baccon]], [[Le Bardon]], [[Chaingy]], [[Charsonville]], [[Coulmiers]], [[Épieds-en-Beauce]], [[Huisseau-sur-Mauves]], [[Meung-sur-Loire]], [[Rozières-en-Beauce]], [[Saint-Ay]]
+|-
+|4520||[[Canton de Neuville-aux-Bois|Neuville-aux-Bois]]||[[Neuville-aux-Bois (Loiret)|Neuville-aux-Bois]]||{{unité|247.9|km|2}}||{{Dernière population de canton de France|nombre|Canton de Neuville-aux-Bois}}<br/><small>({{Dernière population de canton de France|date|Canton de Neuville-aux-Bois}}</small>)||10||[[Bougy-lez-Neuville]], [[Ingrannes]], [[Loury]], [[Neuville-aux-Bois (Loiret)|Neuville-aux-Bois]], [[Rebréchien]], [[Saint-Lyé-la-Forêt]], [[Sully-la-Chapelle]], [[Traînou]], [[Vennecy]], [[Villereau (Loiret)|Villereau]]
+|-
+|4521||[[Canton d'Orléans-Bourgogne|Orléans-Bourgogne]]||[[Orléans]]||{{unité||km|2}}||{{Dernière population de canton de France|nombre|Canton d'Orléans-Bourgogne}}<br/><small>({{Dernière population de canton de France|date|Canton d'Orléans-Bourgogne}}</small>)||1||Fraction d'[[Orléans]]
+|-
+|4522||[[Canton d'Orléans-Carmes|Orléans-Carmes]]||[[Orléans]]||{{unité||km|2}}||{{Dernière population de canton de France|nombre|Canton d'Orléans-Carmes}}<br/><small>({{Dernière population de canton de France|date|Canton d'Orléans-Carmes}}</small>)||1||Fraction d'[[Orléans]]
+|-
+|4523||[[Canton d'Orléans-Bannier|Orléans-Bannier]]||[[Orléans]]||{{unité||km|2}}||{{Dernière population de canton de France|nombre|Canton d'Orléans-Bannier}}<br/><small>({{Dernière population de canton de France|date|Canton d'Orléans-Bannier}}</small>)||1||Fraction d'[[Orléans]]
+|-
+|4524||[[Canton d'Orléans-Saint-Marc-Argonne|Orléans-Saint-Marc-Argonne]]||[[Orléans]]||{{unité||km|2}}||{{Dernière population de canton de France|nombre|Canton d'Orléans-Saint-Marc-Argonne}}<br/><small>({{Dernière population de canton de France|date|Canton d'Orléans-Saint-Marc-Argonne}}</small>)||1||Fraction d'[[Orléans]]
+|-
+|4525||[[Canton d'Orléans-Saint-Marceau|Orléans-Saint-Marceau]]||[[Orléans]]||{{unité||km|2}}||{{Dernière population de canton de France|nombre|Canton d'Orléans-Saint-Marceau}}<br/><small>({{Dernière population de canton de France|date|Canton d'Orléans-Saint-Marceau}}</small>)||1||Fraction d'[[Orléans]]
+|-
+|4527||[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]||[[Ouzouer-sur-Loire]]||{{unité|157.9|km|2}}||{{Dernière population de canton de France|nombre|Canton d'Ouzouer-sur-Loire}}<br/><small>({{Dernière population de canton de France|date|Canton d'Ouzouer-sur-Loire}}</small>)||6||[[Bonnée]], [[Les Bordes (Loiret)|Les Bordes]], [[Bray-en-Val]], [[Dampierre-en-Burly]], [[Ouzouer-sur-Loire]], [[Saint-Benoît-sur-Loire]]
+|-
+|4528||[[Canton de Patay|Patay]]||[[Patay]]||{{unité|201.8|km|2}}||{{Dernière population de canton de France|nombre|Canton de Patay}}<br/><small>({{Dernière population de canton de France|date|Canton de Patay}}</small>)||13||[[Boulay-les-Barres]], [[Bricy]], [[Bucy-Saint-Liphard]], [[La Chapelle-Onzerain]], [[Coinces]], [[Gémigny]], [[Patay]], [[Rouvray-Sainte-Croix]], [[Saint-Péravy-la-Colombe]], [[Saint-Sigismond (Loiret)|Saint-Sigismond]], [[Tournoisis]], [[Villamblain]], [[Villeneuve-sur-Conie]]
+|-
+|4531||[[Canton de Sully-sur-Loire|Sully-sur-Loire]]||[[Sully-sur-Loire]]||{{unité|357.8|km|2}}||{{Dernière population de canton de France|nombre|Canton de Sully-sur-Loire}}<br/><small>({{Dernière population de canton de France|date|Canton de Sully-sur-Loire}}</small>)||10||[[Cerdon (Loiret)|Cerdon]], [[Guilly (Loiret)|Guilly]], [[Isdes]], [[Lion-en-Sullias]], [[Saint-Aignan-le-Jaillard]], [[Saint-Florent (Loiret)|Saint-Florent]], [[Saint-Père-sur-Loire]], [[Sully-sur-Loire]], [[Viglain]], [[Villemurlin]]
+|-
+|4534||[[Canton de Fleury-les-Aubrais|Fleury-les-Aubrais]]||[[Fleury-les-Aubrais]]||{{unité|39|km|2}}||{{Dernière population de canton de France|nombre|Canton de Fleury-les-Aubrais}}<br/><small>({{Dernière population de canton de France|date|Canton de Fleury-les-Aubrais}}</small>)||2||[[Chanteau]], [[Fleury-les-Aubrais]]
+|-
+|4535||[[Canton d'Olivet|Olivet]]||[[Olivet (Loiret)|Olivet]]||{{unité|46.4|km|2}}||{{Dernière population de canton de France|nombre|Canton d'Olivet}}<br/><small>({{Dernière population de canton de France|date|Canton d'Olivet}}</small>)||3||[[Olivet (Loiret)|Olivet]], [[Saint-Hilaire-Saint-Mesmin]], [[Saint-Pryvé-Saint-Mesmin]]
+|-
+|4536||[[Canton de Saint-Jean-de-Braye|Saint-Jean-de-Braye]]||[[Saint-Jean-de-Braye]]||{{unité|21.5|km|2}}||{{Dernière population de canton de France|nombre|Canton de Saint-Jean-de-Braye}}<br/><small>({{Dernière population de canton de France|date|Canton de Saint-Jean-de-Braye}}</small>)||2||[[Saint-Jean-de-Braye]], [[Semoy (Loiret)|Semoy]]
+|-
+|4537||[[Canton de Saint-Jean-de-la-Ruelle|Saint-Jean-de-la-Ruelle]]||[[Saint-Jean-de-la-Ruelle]]||{{unité|6.1|km|2}}||{{Dernière population de canton de France|nombre|Canton de Saint-Jean-de-la-Ruelle}}<br/><small>({{Dernière population de canton de France|date|Canton de Saint-Jean-de-la-Ruelle}}</small>)||1||[[Saint-Jean-de-la-Ruelle]]
+|-
+|4538||[[Canton de Chécy|Chécy]]||[[Chécy]]||{{unité|79.1|km|2}}||{{Dernière population de canton de France|nombre|Canton de Chécy}}<br/><small>({{Dernière population de canton de France|date|Canton de Chécy}}</small>)||7||[[Boigny-sur-Bionne]], [[Bou (Loiret)|Bou]], [[Chécy]], [[Combleux]], [[Donnery]], [[Mardié]], [[Marigny-les-Usages]]
+|-
+|4539||[[Canton d'Ingré|Ingré]]||[[Ingré]]||{{unité|67.6|km|2}}||{{Dernière population de canton de France|nombre|Canton d'Ingré}}<br/><small>({{Dernière population de canton de France|date|Canton d'Ingré}}</small>)||4||[[La Chapelle-Saint-Mesmin]], [[Ingré]], [[Ormes (Loiret)|Ormes]], [[Saran]]
+|-
+|4540||[[Canton de Saint-Jean-le-Blanc|Saint-Jean-le-Blanc]]||[[Saint-Jean-le-Blanc (Loiret)|Saint-Jean-le-Blanc]]||{{unité|69|km|2}}||{{Dernière population de canton de France|nombre|Canton de Saint-Jean-le-Blanc}}<br/><small>({{Dernière population de canton de France|date|Canton de Saint-Jean-le-Blanc}}</small>)||3||[[Saint-Cyr-en-Val]], [[Saint-Denis-en-Val]], [[Saint-Jean-le-Blanc (Loiret)|Saint-Jean-le-Blanc]]
+|-
+|4541||[[Canton d'Orléans-La Source|Orléans-La Source]]||[[Orléans]]||{{unité||km|2}}||{{Dernière population de canton de France|nombre|Canton d'Orléans-La Source}}<br/><small>({{Dernière population de canton de France|date|Canton d'Orléans-La Source}}</small>)||1||Fraction d'[[Orléans]]
+|-
+|rowspan="5"|[[Arrondissement de Pithiviers|Pithiviers]]||4503||[[Canton de Beaune-la-Rolande|Beaune-la-Rolande]]||[[Beaune-la-Rolande]]||{{unité|224.8|km|2}}||{{Dernière population de canton de France|nombre|Canton de Beaune-la-Rolande}}<br/><small>({{Dernière population de canton de France|date|Canton de Beaune-la-Rolande}}</small>)||18||[[Auxy (Loiret)|Auxy]], [[Barville-en-Gâtinais]], [[Batilly-en-Gâtinais]], [[Beaune-la-Rolande]], [[Boiscommun]], [[Bordeaux-en-Gâtinais]], [[Chambon-la-Forêt]], [[Courcelles (Loiret)|Courcelles]], [[Égry]], [[Gaubertin]], [[Juranville]], [[Lorcy]], [[Montbarrois]], [[Montliard]], [[Nancray-sur-Rimarde]], [[Nibelle]]; [[Saint-Loup-des-Vignes]], [[Saint-Michel (Loiret)|Saint-Michel]]
+|-
+|4517||[[Canton du Malesherbois|Malesherbes]]||[[Malesherbes (Loiret)|Malesherbes]]||{{unité|210.3|km|2}}||{{Dernière population de canton de France|nombre|Canton de Malesherbes}}<br/><small>({{Dernière population de canton de France|date|Canton de Malesherbes}}</small>)||17||[[Audeville]], [[Labrosse]], [[Césarville-Dossainville]], [[Coudray (Loiret)|Coudray]], [[Engenville]], [[Intville-la-Guétard]], [[Mainvilliers (Loiret)|Mainvilliers]], [[Malesherbes (Loiret)|Malesherbes]], [[Manchecourt]], [[Morville-en-Beauce]], [[Nangeville]], [[Orveau-Bellesauve]], [[Pannecières]], [[Ramoulu]]; [[Rouvres-Saint-Jean]], [[Sermaises]]; [[Thignonville]].
+|-
+|4526||[[Canton d'Outarville|Outarville]]||[[Outarville]]||{{unité|301.8|km|2}}||{{Dernière population de canton de France|nombre|Canton d'Outarville}}<br/><small>({{Dernière population de canton de France|date|Canton d'Outarville}}</small>)||18||[[Andonville]], [[Aschères-le-Marché]], [[Attray]], [[Autruy-sur-Juine]], [[Bazoches-les-Gallerandes]], [[Boisseaux]], [[Charmont-en-Beauce]], [[Châtillon-le-Roi]], [[Chaussy (Loiret)|Chaussy]], [[Crottes-en-Pithiverais]], [[Erceville]], [[Greneville-en-Beauce]], [[Jouy-en-Pithiverais]], [[Léouville]]; [[Montigny (Loiret)|Montigny]], [[Oison (Loiret)|Oison]]; [[Outarville]], [[Tivernon]].
+|-
+|4529||[[Canton de Pithiviers|Pithiviers]]||[[Pithiviers]]||{{unité|338.1|km|2}}||{{Dernière population de canton de France|nombre|Canton de Pithiviers}}<br/><small>({{Dernière population de canton de France|date|Canton de Pithiviers}}</small>)||20||[[Ascoux]], [[Bondaroy]], [[Bouilly-en-Gâtinais]], [[Bouzonville-aux-Bois]], [[Boynes]], [[Chilleurs-aux-Bois]], [[Courcy-aux-Loges]], [[Dadonville]], [[Escrennes]], [[Estouy]], [[Givraines]], [[Guigneville]], [[Laas (Loiret)|Laas]], [[Mareau-aux-Bois]], [[Marsainvilliers]], [[Pithiviers]]; [[Pithiviers-le-Vieil]], [[Santeau]], [[Vrigny (Loiret)|Vrigny]], [[Yèvre-la-Ville]].
+|-
+|4530||[[Canton de Puiseaux|Puiseaux]]||[[Puiseaux]]||{{unité|123|km|2}}||{{Dernière population de canton de France|nombre|Canton de Puiseaux}}<br/><small>({{Dernière population de canton de France|date|Canton de Puiseaux}}</small>)||13||[[Augerville-la-Rivière]], [[Aulnay-la-Rivière]], [[Boësses]], [[Briarres-sur-Essonne]], [[Bromeilles]], [[Desmonts]], [[Dimancheville]], [[Échilleuses]], [[Grangermont]], [[La Neuville-sur-Essonne]], [[Ondreville-sur-Essonne]], [[Orville (Loiret)|Orville]], [[Puiseaux]].
+
+|}
+
+== Notes et références ==
+{{Références|colonnes=2}}
+
+== Voir aussi ==
+=== Articles connexes ===
+
+* [[Canton français]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+=== Bibliographie ===
+
+* {{Ouvrage |auteur1=Louis Marie Prudhomme |titre=Dictionnaire géographique et méthodique de la République française en 120 départements, volume 1 |lieu=Paris |éditeur=Louis Marie Prudhomme |année=1798 |pages totales=673 |lire en ligne=https://books.google.fr/books?pg=PA162-IA4&lpg=PA162-IA4&dq=D%C3%A9partement+du+loiret+fut+divis%C3%A9+en+7+districts&sig=-YnUS0xCyyfylXWCs4f50j0pFCI&ei=Dtf8Us2nFMrH0QWQmIGoCQ&id=5F0OAAAAQAAJ&hl=fr&ots=RD9_YYhLOZ&output=text |id=Prudhomme}}.
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}.
+
+{{Palette|Histoire du Loiret|Cantons du Loiret|Anciens cantons du Loiret}}
+{{Portail|histoire|Loiret|droit français|politique française}}
+
+[[Catégorie:Liste de cantons français|Loiret]]
+[[Catégorie:Liste des cantons du Loiret]]
+[[Catégorie:Histoire du Loiret]]
+[[Catégorie:Circonscription électorale en France]]

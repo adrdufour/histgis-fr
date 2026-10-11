@@ -1,0 +1,219 @@
+Le [[département français]] de la [[Haute-Saône]] était découpé en trente-deux [[Canton français|cantons]] avant que le nombre de cantons ne soit ramené à dix-sept en [[2015]].
+
+== Redécoupage cantonal actuel ==
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|17 février 2014}} pour le département de la [[Haute-Saône]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Haute-Saône]] le nombre de cantons passe ainsi de 32 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626095 |texte=Décret {{n°|2014}}-164 du 17 février 2014}} portant délimitation des cantons dans le département de la Haute-Saône.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 26 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Haute-Saône, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|239548|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=70 |titre= Chiffres clés Évolution et structure de la population - Département de la Haute-Saône (70) |auteur= |date = |site =insee.fr |consulté le= 26 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|14091|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|11273|habitants}} et {{unité|16909|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+<center>La Haute-Saône et ses '''17 cantons''' :</center>
+{{Carte des nouveaux cantons de la Haute-Saône}}
+
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2012<ref>{{Lien web |url=http://www.insee.fr/fr/ppp/bases-de-donnees/donnees-detaillees/cantons-2015/pop-legales-2012-cantons-2015v3.pdf |titre= Populations légales 2012 des nouveaux cantons en vigueur à compter du 1er janvier 2015 |auteur= |date = |site =le site de l'INSEE}}.</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton de Dampierre-sur-Salon|Dampierre-sur-Salon]]||[[Dampierre-sur-Salon]]||{{formatnum:11502}}||0,82||50||[[Achey]], [[Argillières]], [[Attricourt]], [[Autet]], [[Autrey-lès-Gray]], [[Auvet-et-la-Chapelotte]], [[Bouhans-et-Feurg]], [[Brotte-lès-Ray]], [[Broye-les-Loups-et-Verfontaine]], [[Champlitte]], [[Chargey-lès-Gray]], [[Courtesoult-et-Gatey]], [[Dampierre-sur-Salon]], [[Delain (Haute-Saône)|Delain]], [[Denèvre]], [[Écuelle]], [[Fahy-lès-Autrey]], [[Fédry]], [[Ferrières-lès-Ray]], [[Fleurey-lès-Lavoncourt]], [[Fouvent-Saint-Andoche]], [[Framont]], [[Francourt]], [[Grandecourt]], [[Larret]], [[Lavoncourt]], [[Lœuilley]], [[Membrey]], [[Mont-Saint-Léger]], [[Montot (Haute-Saône)|Montot]], [[Montureux-et-Prantigny]], [[Oyrières]], [[Percey-le-Grand]], [[Pierrecourt (Haute-Saône)|Pierrecourt]], [[Poyans]], [[Ray-sur-Saône]], [[Recologne (Haute-Saône)|Recologne]], [[Renaucourt]], [[Rigny]], [[Roche-et-Raucourt]], [[Savoyeux]], [[Theuley]], [[Tincey-et-Pontrebeau]], [[Vaite]], [[Vanne (Haute-Saône)|Vanne]], [[Vars (Haute-Saône)|Vars]], [[Vauconcourt-Nervezain]], [[Vereux]], [[Villers-Vaudey]], [[Volon]].
+|-
+|2||[[Canton de Gray|Gray]]||[[Gray (Haute-Saône)|Gray]]||{{formatnum:14494}}||1,03||24||[[Ancier]], [[Angirey]], [[Apremont (Haute-Saône)|Apremont]], [[Arc-lès-Gray]], [[Battrans]], [[Champtonnay]], [[Champvans (Haute-Saône)|Champvans]], [[Cresancey]], [[Esmoulins]], [[Essertenne-et-Cecey]], [[Germigney (Haute-Saône)|Germigney]], [[Gray (Haute-Saône)|Gray]], [[Gray-la-Ville]], [[Igny (Haute-Saône)|Igny]], [[Mantoche]], [[Nantilly]], [[Noiron]], [[Onay]], [[Saint-Broing]], [[Saint-Loup-Nantouard]], [[Sauvigney-lès-Gray]], [[Le Tremblois]], [[Velesmes-Échevanne]], [[Velet]].
+|-
+|3||[[Canton d'Héricourt-1|Héricourt-1]]||[[Héricourt (Haute-Saône)|Héricourt]]||{{formatnum:15894}}||1,13||14 + fraction Héricourt||1° Les communes suivantes : [[Brevilliers]], [[Chagey]], [[Châlonvillars]], [[Champagney (Haute-Saône)|Champagney]], [[Clairegoutte]], [[Échavanne]], [[Échenans-sous-Mont-Vaudois]], [[Errevet]], [[Frahier-et-Chatebier]], [[Frédéric-Fontaine]], [[Luze]], [[Mandrevillars]], [[Plancher-Bas]], [[Plancher-les-Mines]]. <br/>2° La partie de la commune d'Héricourt située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Luze, route départementale 16, route du Col-des-Croix, avenue du Mont-Vaudois, avenue Léon-Jouhaux, rue Jean-Marie-Tjibaou, rue des Frères-Lumière, rue Pierre-et-Marie-Curie, chemin de la rue Pierre-et-Marie-Curie à la rue René-Descartes, rue René-Descartes, chemin dans le prolongement de la rue René-Descartes, route départementale 438 jusqu'à la limite territoriale de la commune de Brevilliers.
+|-
+|4||[[Canton d'Héricourt-2|Héricourt-2]]||[[Héricourt (Haute-Saône)|Héricourt]]||{{formatnum:13455}}||0,95||13 + fraction Héricourt||1° Les communes suivantes : [[Belverne]], [[Champey]], [[Chavanne]], [[Chenebier]], [[Coisevaux]], [[Courmont (Haute-Saône)|Courmont]], [[Couthenans]], [[Étobon]], [[Saulnot]], [[Trémoins]], [[Verlans]], [[Villers-sur-Saulnot]], [[Vyans-le-Val]]. <br/>2° La partie de la commune d'Héricourt non incluse dans le canton d'Héricourt-1.
+|-
+|5||[[Canton de Jussey|Jussey]]||[[Jussey]]||{{formatnum:12542}}||0,89||65||[[Aboncourt-Gesincourt]], [[Aisey-et-Richecourt]], [[Alaincourt (Haute-Saône)|Alaincourt]], [[Ambiévillers]], [[Arbecey]], [[Augicourt]], [[Barges (Haute-Saône)|Barges]], [[La Basse-Vaivre]], [[Betaucourt]], [[Betoncourt-sur-Mance]], [[Blondefontaine]], [[Bougey]], [[Bourbévelle]], [[Bourguignon-lès-Morey]], [[Bousseraucourt]], [[Cemboing]], [[Cendrecourt]], [[Chargey-lès-Port]], [[Charmes-Saint-Valbert]], [[Chauvirey-le-Châtel]], [[Chauvirey-le-Vieil]], [[Cintrey]], [[Combeaufontaine]], [[Confracourt]], [[Cornot]], [[Corre]], [[Demangevelle]], [[Fouchécourt (Haute-Saône)|Fouchécourt]], [[Gevigney-et-Mercey]], [[Gourgeon]], [[Hurecourt]], [[Jonvelle]], [[Jussey]], [[Lambrey]], [[Lavigney]], [[Magny-lès-Jussey]], [[Malvillers]], [[Melin]], [[Molay (Haute-Saône)|Molay]], [[Montcourt]], [[Montdoré]], [[Montigny-lès-Cherlieu]], [[La Neuvelle-lès-Scey]], [[Oigney]], [[Ormoy (Haute-Saône)|Ormoy]], [[Ouge]], [[Passavant-la-Rochère]], [[Pont-du-Bois]], [[Preigney]], [[Purgerot]], [[La Quarte]], [[Raincourt]], [[Ranzevelle]], [[La Roche-Morey]], [[La Rochelle (Haute-Saône)|La Rochelle]], [[Rosières-sur-Mance]], [[Saint-Marcel (Haute-Saône)|Saint-Marcel]], [[Selles (Haute-Saône)|Selles]], [[Semmadon]], [[Tartécourt]], [[Vauvillers (Haute-Saône)|Vauvillers]], [[Vernois-sur-Mance]], [[Villars-le-Pautel]], [[Vitrey-sur-Mance]], [[Vougécourt]].
+|-
+|6||[[Canton de Lure-1|Lure-1]]||[[Lure]]||{{formatnum:14098}}||1||20 + fraction Lure||1° Les communes suivantes : [[Adelans-et-le-Val-de-Bithaine]], [[Betoncourt-lès-Brotte]], [[Bouhans-lès-Lure]], [[Châteney]], [[Châtenois (Haute-Saône)|Châtenois]], [[La Creuse]], [[Creveney]], [[Dambenoît-lès-Colombe]], [[Franchevelle]], [[Froideterre]], [[Genevrey]], [[Linexert]], [[Malbouhans]], [[La Neuvelle-lès-Lure]], [[Quers]], [[Ronchamp]], [[Saint-Germain (Haute-Saône)|Saint-Germain]], [[Saulx (Haute-Saône)|Saulx]], [[Servigney (Haute-Saône)|Servigney]], [[Velleminfroy]]. <br/>2° La partie de la commune de Lure située au nord d'une ligne définie, d'une part, par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Bouhans-lès-Lure, ligne de chemin de fer de Paris à Bâle, avenue Carnot, rue Henri-Marsot, ligne droite tracée dans le prolongement de la rue Henri-Marsot, jusqu'à la limite territoriale de la commune de Froideterre.
+|-
+|7||[[Canton de Lure-2|Lure-2]]||[[Lure]]||{{formatnum:12717}}||0,90||21 + fraction Lure||1° Les communes suivantes : [[Amblans-et-Velotte]], [[Andornay]], [[Arpenans]], [[Les Aynans]], [[La Côte (Haute-Saône)|La Côte]], [[Faymont]], [[Frotey-lès-Lure]], [[Genevreuille]], [[Lomont]], [[Lyoffans]], [[Magny-Danigon]], [[Magny-Jobert]], [[Magny-Vernois]], [[Moffans-et-Vacheresse]], [[Mollans]], [[Palante (Haute-Saône)|Palante]], [[Pomoy]], [[Roye (Haute-Saône)|Roye]], [[Le Val-de-Gouhenans]], [[Vouhenans]], [[Vy-lès-Lure]]. <br/>2° La partie de la commune de Lure non incluse dans le canton de Lure-1.
+|-
+|8||[[Canton de Luxeuil-les-Bains|Luxeuil-les-Bains]]||[[Luxeuil-les-Bains]]||{{formatnum:14994}}||1,06||11 + 1 fraction ||1° Les communes suivantes : [[Ailloncourt]], [[Baudoncourt]], [[Breuches]], [[Brotte-lès-Luxeuil]], [[La Chapelle-lès-Luxeuil]], [[Citers]], [[Esboz-Brest]], [[Froideconche]], [[Luxeuil-les-Bains]], [[Ormoiche]], [[Saint-Sauveur (Haute-Saône)|Saint-Sauveur]].<br/>2° La partie de la commune de [[Fougerolles-Saint-Valbert]] correspondant à la commune déléguée de [[Saint-Valbert]].
+|-
+|9||[[Canton de Marnay|Marnay]]||[[Marnay (Haute-Saône)|Marnay]]||{{formatnum:14878}}||1,05||50||[[Arsans]], [[Autoreille]], [[Avrigney-Virey]], [[Bard-lès-Pesmes]], [[Bay (Haute-Saône)|Bay]], [[Beaumotte-lès-Pin]], [[Bonboillon]], [[Bonnevent-Velloreille]], [[Bresilley]], [[Broye-Aubigney-Montseugny]], [[Brussey]], [[Bucey-lès-Gy]], [[Chambornay-lès-Pin]], [[Chancey]], [[Charcenne]], [[Chaumercenne]], [[Chenevrey-et-Morogne]], [[Chevigney]], [[Choye]], [[Citey]], [[Courcuire]], [[Cugney]], [[Cult]], [[Étuz]], [[Gézier-et-Fontenelay]], [[La Grande-Résie]], [[Gy (Haute-Saône)|Gy]], [[Hugier]], [[Lieucourt]], [[Malans (Haute-Saône)|Malans]], [[Marnay (Haute-Saône)|Marnay]], [[Montagney]], [[Montboillon]], [[Motey-Besuche]], [[Pesmes]], [[Pin (Haute-Saône)|Pin]], [[La Résie-Saint-Martin]], [[Sauvigney-lès-Pesmes]], [[Sornay (Haute-Saône)|Sornay]], [[Tromarey]], [[Vadans (Haute-Saône)|Vadans]], [[Valay]], [[Vantoux-et-Longevelle]], [[Velleclaire]], [[Vellefrey-et-Vellefrange]], [[Velloreille-lès-Choye]], [[Venère]], [[Villefrancon]], [[Villers-Chemin-et-Mont-lès-Étrelles]], [[Vregille]].
+|-
+|10||[[Canton de Mélisey|Mélisey]]||[[Mélisey (Haute-Saône)|Mélisey]]||{{formatnum:11507}}||0,82||33||[[Amage]], [[Amont-et-Effreney]], [[Belfahy]], [[Belmont (Haute-Saône)|Belmont]], [[Belonchamp]], [[Beulotte-Saint-Laurent]], [[Breuchotte]], [[La Bruyère (Haute-Saône)|La Bruyère]], [[La Corbière]], [[Corravillers]], [[Écromagny]], [[Esmoulières]], [[Faucogney-et-la-Mer]], [[Les Fessey]], [[Fresse (Haute-Saône)|Fresse]], [[Haut-du-Them-Château-Lambert]], [[Lantenot]], [[La Lanterne-et-les-Armonts]], [[La Longine]], [[Magnivray]], [[Mélisey (Haute-Saône)|Mélisey]], [[La Montagne (Haute-Saône)|La Montagne]], [[Montessaux]], [[La Proiselière-et-Langle]], [[Raddon-et-Chapendu]], [[Rignovelle]], [[La Rosière (Haute-Saône)|La Rosière]], [[Saint-Barthélemy (Haute-Saône)|Saint-Barthélemy]], [[Saint-Bresson (Haute-Saône)|Saint-Bresson]], [[Sainte-Marie-en-Chanois]], [[Servance-Miellin]], [[Ternuay-Melay-et-Saint-Hilaire]], [[La Voivre (Haute-Saône)|La Voivre]].
+|-
+|11||[[Canton de Port-sur-Saône|Port-sur-Saône]]||[[Port-sur-Saône]]||{{formatnum:14719}}||1,04||46||[[Amance (Haute-Saône)|Amance]], [[Amoncourt]], [[Anchenoncourt-et-Chazel]], [[Anjeux]], [[Auxon (Haute-Saône)|Auxon]], [[Bassigney]], [[Baulay]], [[Betoncourt-Saint-Pancras]], [[Bougnon]], [[Bouligney]], [[Bourguignon-lès-Conflans]], [[Breurey-lès-Faverney]], [[Buffignécourt]], [[Chaux-lès-Port]], [[Conflandey]], [[Contréglise]], [[Cubry-lès-Faverney]], [[Cuve (Haute-Saône)|Cuve]], [[Dampierre-lès-Conflans]], [[Dampvalley-Saint-Pancras]], [[Équevilley]], [[Faverney]], [[Flagy (Haute-Saône)|Flagy]], [[Fleurey-lès-Faverney]], [[Fontenois-la-Ville]], [[Girefontaine]], [[Grattery]], [[Jasney]], [[Mailleroncourt-Saint-Pancras]], [[Melincourt]], [[Menoux]], [[Mersuay]], [[Montureux-lès-Baulay]], [[La Pisseure]], [[Plainemont]], [[Polaincourt-et-Clairefontaine]], [[Port-sur-Saône]], [[Provenchère (Haute-Saône)|Provenchère]], [[Saint-Remy (Haute-Saône)|Saint-Remy]], [[Saponcourt]], [[Scye]], [[Senoncourt]], [[Le Val-Saint-Éloi]], [[Vauchoux]], [[Venisey]], [[Villers-sur-Port]].
+|-
+|12||[[Canton de Rioz|Rioz]]||[[Rioz]]||{{formatnum:15382}}||1,09||52||[[Aulx-lès-Cromary]], [[Authoison]], [[La Barre (Haute-Saône)|La Barre]], [[Beaumotte-Aubertans]], [[Besnans]], [[Bouhans-lès-Montbozon]], [[Boulot (Haute-Saône)|Boulot]], [[Boult]], [[Bussières (Haute-Saône)|Bussières]], [[Buthiers (Haute-Saône)|Buthiers]], [[Cenans]], [[Chambornay-lès-Bellevaux]], [[Chassey-lès-Montbozon]], [[Chaux-la-Lotière]], [[Cirey]], [[Cognières]], [[Cordonnet]], [[Cromary]], [[Dampierre-sur-Linotte]], [[Échenoz-le-Sec]], [[Filain (Haute-Saône)|Filain]], [[Fondremand]], [[Fontenois-lès-Montbozon]], [[Hyet]], [[Larians-et-Munans]], [[Loulans-Verchamp]], [[Le Magnoray]], [[Maizières (Haute-Saône)|Maizières]], [[La Malachère]], [[Maussans]], [[Montarlot-lès-Rioz]], [[Montbozon]], [[Neuvelle-lès-Cromary]], [[Ormenans]], [[Pennesières]], [[Perrouse]], [[Quenoche]], [[Recologne-lès-Rioz]], [[Rioz]], [[Roche-sur-Linotte-et-Sorans-les-Cordiers]], [[Ruhans]], [[Sorans-lès-Breurey]], [[Thieffrans]], [[Thiénans]], [[Traitiéfontaine]], [[Trésilley]], [[Vandelans]], [[Vellefaux]], [[Villers-Bouton]], [[Villers-Pater]], [[Voray-sur-l'Ognon]], [[Vy-lès-Filain]].
+|-
+|13||[[Canton de Saint-Loup-sur-Semouse|Saint-Loup-sur-Semouse]]||[[Saint-Loup-sur-Semouse]]||{{formatnum:15979}}||1,13||22 + 1 fraction||1° Les communes suivantes : [[Abelcourt]], [[Aillevillers-et-Lyaumont]], [[Ainvelle (Haute-Saône)|Ainvelle]], [[Briaucourt (Haute-Saône)|Briaucourt]], [[Conflans-sur-Lanterne]], [[Corbenay]], [[Éhuns]], [[Fleurey-lès-Saint-Loup]], [[Fontaine-lès-Luxeuil]], [[Francalmont]], [[Hautevelle]], [[Magnoncourt]], [[Mailleroncourt-Charette]], [[Meurcourt]], [[Neurey-en-Vaux]], [[Saint-Loup-sur-Semouse]], [[Sainte-Marie-en-Chaux]], [[La Vaivre]], [[Velorcey]], [[La Villedieu-en-Fontenette]], [[Villers-lès-Luxeuil]], [[Visoncourt]].<br/>2° La partie de la commune de [[Fougerolles-Saint-Valbert]] non incluse dans le canton de [[Canton de Luxeuil-les-Bains|Luxeuil-les-Bains]].
+|-
+|14||[[Canton de Scey-sur-Saône-et-Saint-Albin|Scey-sur-Saône-et-Saint-Albin]]||[[Scey-sur-Saône-et-Saint-Albin]]||{{formatnum:12360}}||0,88||44||[[Aroz]], [[Baignes]], [[Les Bâties]], [[Beaujeu-Saint-Vallier-Pierrejux-et-Quitteur]], [[Bourguignon-lès-la-Charité]], [[Boursières]], [[Bucey-lès-Traves]], [[Chantes]], [[La Chapelle-Saint-Quillain]], [[Chassey-lès-Scey]], [[Chemilly (Haute-Saône)|Chemilly]], [[Clans (Haute-Saône)|Clans]], [[Étrelles-et-la-Montbleuse]], [[Ferrières-lès-Scey]], [[Frasne-le-Château]], [[Fresne-Saint-Mamès]], [[Fretigney-et-Velloreille]], [[Grandvelle-et-le-Perrenot]], [[Lieffrans]], [[Mailley-et-Chazelot]], [[Mercey-sur-Saône]], [[Neuvelle-lès-la-Charité]], [[Noidans-le-Ferroux]], [[Oiselay-et-Grachaux]], [[Ovanches]],[[Pontcey]], [[Raze]], [[La Romaine (Haute-Saône)|La Romaine]], [[Rosey (Haute-Saône)|Rosey]], [[Rupt-sur-Saône]], [[Saint-Gand]], [[Sainte-Reine (Haute-Saône)|Sainte-Reine]], [[Scey-sur-Saône-et-Saint-Albin]], [[Seveux-Motey]], [[Soing-Cubry-Charentenay]], [[Traves]], [[Vaux-le-Moncelot]], [[Velle-le-Châtel]], [[Velleguindry-et-Levrecey]], [[Vellemoz]], [[Vellexon-Queutrey-et-Vaudey]], [[La Vernotte]], [[Vy-le-Ferroux]], [[Vy-lès-Rupt]].
+|-
+|15||[[Canton de Vesoul-1|Vesoul-1]]||[[Vesoul]]||{{formatnum:16590}}||1,18||11 + fraction Vesoul||1° Les communes suivantes : [[Andelarre]], [[Andelarrot]], [[Chariez]], [[Charmoille (Haute-Saône)|Charmoille]], [[Échenoz-la-Méline]], [[Mont-le-Vernois]], [[Montigny-lès-Vesoul]], [[Noidans-lès-Vesoul]], [[Pusey (Haute-Saône)|Pusey]], [[Pusy-et-Épenoux]], [[Vaivre-et-Montoille]]. <br/>2° La partie de la commune de Vesoul située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Pusey, route départementale 457, route de Paris (route nationale 19), rue du Point-du-Jour, rue du Grand-Grésil, rue Miroudot-Saint-Ferjeux, rue Serpente, rue Saint-Georges, place de la République, rue Georges-Genoux, rue de l'Aigle-Noir, rue des Ilottes, rue Edgar-Faure, rue du Capitaine-Gramspacher, cours du Durgeon, rue du Commandant-Girardot, route nationale 57, jusqu'à la limite territoriale des communes de Navenne et d'Échenoze-la-Méline.
+|-
+|16||[[Canton de Vesoul-2|Vesoul-2]]||[[Vesoul]]||{{formatnum:16712}}||1,19||12 + fraction Vesoul||1° Les communes suivantes : [[Colombier (Haute-Saône)|Colombier]], [[Comberjon]], [[Coulevon]], [[Frotey-lès-Vesoul]], [[Montcey]], [[Navenne]], [[Quincey (Haute-Saône)|Quincey]], [[Varogne]], [[Vellefrie]], [[La Villeneuve-Bellenoye-et-la-Maize]], [[Villeparois]], [[Vilory]]. <br/>2° La partie de la commune de Vesoul non incluse dans le canton de Vesoul-1.
+|-
+|17||[[Canton de Villersexel|Villersexel]]||[[Villersexel]]||{{formatnum:11927}}||0,85||47||[[Aillevans]], [[Athesans-Étroitefontaine]], [[Autrey-le-Vay]], [[Autrey-lès-Cerre]], [[Beveuge]], [[Borey]], [[Calmoutier]], [[Cerre-lès-Noroy]], [[Colombe-lès-Vesoul]], [[Colombotte]], [[Courchaton]], [[Crevans-et-la-Chapelle-lès-Granges]], [[Dampvalley-lès-Colombe]], [[La Demie]], [[Esprels]], [[Fallon (Haute-Saône)|Fallon]], [[Georfans]], [[Gouhenans]], [[Grammont (Haute-Saône)|Grammont]], [[Granges-la-Ville]], [[Granges-le-Bourg]], [[Liévans]], [[Longevelle]], [[Les Magny]], [[Marast]], [[Mélecey]], [[Mignavillers]], [[Moimay]], [[Montjustin-et-Velotte]], [[Neurey-lès-la-Demie]], [[Noroy-le-Bourg]], [[Oppenans]], [[Oricourt]], [[Pont-sur-l'Ognon]], [[Saint-Ferjeux]], [[Saint-Sulpice (Haute-Saône)|Saint-Sulpice]], [[Secenans]], [[Senargent-Mignafans]], [[Vallerois-le-Bois]], [[Vallerois-Lorioz]], [[Vellechevreux-et-Courbenans]], [[La Vergenne]], [[Villafans]], [[Villargent]], [[Villers-la-Ville (Haute-Saône)|Villers-la-Ville]], [[Villers-le-Sec (Haute-Saône)|Villers-le-Sec]], [[Villersexel]].
+|-
+!||||||{{formatnum:239750}}||||545||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Haute-Saône]], c'est le cas de trois cantons ([[Canton de Jussey|Jussey]], [[Canton de Port-sur-Saône|Port-sur-Saône]] et [[Canton de Villersexel|Villersexel]],).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Lure|Lure]]
+!scope=col|[[Arrondissement de Vesoul|Vesoul]]
+!scope=col|Total
+|-
+|1||align="left"| Dampierre-sur-Salon||||50||'''50'''
+|-
+|2||align="left"| Gray||||24||'''24'''
+|-
+|3||align="left"| Héricourt-1||14 + fraction Héricourt||||'''14''' + fraction Héricourt
+|-
+|4||align="left"| Héricourt-2||14 + fraction Héricourt||||'''14''' + fraction Héricourt
+|-
+|5||align="left"| Jussey||7||58||'''65'''
+|-
+|6||align="left"| Lure-1||20 + fraction Lure||||'''20''' + fraction Lure
+|-
+|7||align="left"| Lure-2||21 + fraction Lure||||'''21''' + fraction Lure
+|-
+|8||align="left"| Luxeuil-les-Bains||12||||'''12'''
+|-
+|9||align="left"| Marnay||||50||'''50'''
+|-
+|10||align="left"| Mélisey||34||||'''34'''
+|-
+|11||align="left"| Port-sur-Saône||16||30||'''46'''
+|-
+|12||align="left"| Rioz||||52||'''52'''
+|-
+|13||align="left"| Saint-Loup-sur-Semouse||23||||'''23'''
+|-
+|14||align="left"| Scey-sur-Saône-et-Saint-Albin||||47||'''47'''
+|-
+|15||align="left"| Vesoul-1||||11 + fraction Vesoul||'''11''' + fraction Vesoul
+|-
+|16||align="left"| Vesoul-2||||12 + fraction Vesoul||'''12''' + fraction Vesoul
+|-
+|17||align="left"| Villersexel||31||16||'''47'''
+|-
+!||||194||351||545
+|}
+
+== Ancien découpage cantonal ==
+
+<center>La Haute-Saône avec son découpage à 32 cantons<br /><small>(Depuis 2015 la délimitation de ces cantons est obsolète)</small></center>
+{{Carte des cantons de la Haute-Saône}}
+
+=== Historique de 1801 à 2014 ===
+*[[Fichier:Anciens cantons de la Haute-Saône.png|vignette|Carte des cantons de la Haute-Saône avant 2015]]1801<ref>Arrêté du 17 Frimaire an X (8 décembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f277 p. 257]</ref> : Découpage d'origine.
+*1826<ref>Ordonnance du 26 juillet 1826, ''Bulletin des lois'', 1826 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6525648d/f147 p. 95]</ref> : 
+**Création du [[canton de Marnay]], détaché des cantons de [[canton de Pesmes|Pesmes]] et de [[canton de Gy|Gy]] ;
+**La commune de [[Montseugny]] est transféré du [[canton de Gray]] au [[canton de Pesmes]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500393 Décret n° 73-672 du 13 juillet 1973]</ref> : Le canton de Vesoul est scindé en deux nouveaux cantons [[canton de Vesoul-Est|Vesoul-Est]] et [[canton de Vesoul-Ouest|-Ouest]].
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000517829 Décret n° 85-150 du 31 janvier 1985]</ref> :
+**Création du [[canton de Saint-Sauveur]], détaché du [[Canton de Luxeuil-les-Bains|canton de Luxeuil]] ;
+**Le canton de Héricourt est scindé en deux nouveaux cantons [[canton de Héricourt-Est|Héricourt-Est]] et [[canton de Héricourt-Ouest|-Ouest]] ;
+**Le canton de Lure est scindé en deux nouveaux cantons [[canton de Lure-Nord|Lure-Nord]] et [[canton de Lure-Sud|-Sud]].
+
+=== Répartition par arrondissement ===
+Liste des 32 '''[[cantons français|cantons]]''' du [[Département français|département]] '''de la [[Haute-Saône]]''', par [[Arrondissement français|arrondissement]] :
+* '''[[Arrondissement de Vesoul]]''' (19 cantons - préfecture : [[Vesoul]]) :<br />[[canton d'Amance]] - [[canton d'Autrey-lès-Gray]] - [[canton de Champlitte]] - [[canton de Combeaufontaine]] - [[canton de Dampierre-sur-Salon]] - [[canton de Fresne-Saint-Mamès]] - [[canton de Gray]] - [[canton de Gy]] - [[canton de Jussey]] - [[canton de Marnay]] - [[canton de Montbozon]] - [[canton de Noroy-le-Bourg]] - [[canton de Pesmes]] - [[canton de Port-sur-Saône]] - [[canton de Rioz]] - [[canton de Scey-sur-Saône-et-Saint-Albin]] - [[canton de Vesoul-Est]] - [[canton de Vesoul-Ouest]] - [[canton de Vitrey-sur-Mance]]
+* '''[[Arrondissement de Lure]]''' (13 cantons - sous-préfecture : [[Lure]]) :<br />[[canton de Champagney]] - [[canton de Faucogney-et-la-Mer]] - [[canton de Héricourt-Est]] - [[canton de Héricourt-Ouest]] - [[canton de Lure-Nord]] - [[canton de Lure-Sud]] - [[canton de Luxeuil-les-Bains]] - [[canton de Mélisey]] - [[canton de Saint-Loup-sur-Semouse]] - [[canton de Saint-Sauveur]] - [[canton de Saulx]] - [[canton de Vauvillers]] - [[canton de Villersexel]]
+
+Il n'y a pas la moindre homonymie pour les cantons de Champagney, Mélisey, Vauvillers, Amance, Gray, Gy, Marnay, mais il en existe une pour chacune des communes chefs-lieux.
+
+Il n'a pas d'homonymie exacte pour le canton de Saint-Sauveur, mais il en existe une pour la commune chef-lieu.
+
+=== Démographie ===
+Évolution de la population (chiffres sans doubles comptes, source [[Insee]]):
+{| rules="all" cellpadding="4" cellspacing="0" style="text-align: right; border: 1px solid #999; border-right: 2px solid #999; border-bottom: 2px solid #999"
+|- align="center"
+! Canton !! 1982 !! 1990 !! 1999 !! Conseiller général
+|-
+| align="left" | [[canton d'Amance]] || {{formatnum:6328}} || {{formatnum:6087}} || {{formatnum:5063}} || Jean-Paul Pugin (DVG)
+|-
+| align="left" | [[canton d'Autrey-lès-Gray]] || {{formatnum:4590}} || {{formatnum:4703}} || {{formatnum:4914}} || Alain Blinette (UMP)
+|-
+| align="left" | [[canton de Champagney]] || {{formatnum:11212}} || {{formatnum:11205}} || {{formatnum:11064}} || Gérard Poivey (PRG)
+|-
+| align="left" | [[canton de Champlitte]] || {{formatnum:3034}} || {{formatnum:2811}} || {{formatnum:2732}} || Gilles Teuscher (UMP)
+|-
+| align="left" | [[canton de Combeaufontaine]] || {{formatnum:3033}} || {{formatnum:3021}} || {{formatnum:3090}} || Joëlle Laure-Libersa (DVG)
+|-
+| align="left" | [[canton de Dampierre-sur-Salon]] || {{formatnum:5221}} || {{formatnum:5076}} || {{formatnum:4847}} || Charles Gauthier (UMP)
+|-
+| align="left" | [[canton de Faucogney-et-la-Mer]] || {{formatnum:4660}} || {{formatnum:4104}} || {{formatnum:3930}} || Laurent Seguin (DVG)
+|-
+| align="left" | [[canton de Fresne-Saint-Mamès]] || {{formatnum:3984}} || {{formatnum:4010}} || {{formatnum:4093}} || Jean-Pierre Chausse(DVG)
+|-
+| align="left" | [[canton de Gray]] || {{formatnum:15466}} || {{formatnum:14728}} || {{formatnum:14280}} || Claudy Chauvelot-Duban (PS)
+|-
+| align="left" | [[canton de Gy]] || {{formatnum:4048}} || {{formatnum:4130}} || {{formatnum:4403}} || Paul Cheviet (DVG)
+|-
+| align="left" | [[canton de Héricourt-Est]] || rowspan="2" | {{formatnum:18444}} || {{formatnum:9955}} || {{formatnum:10637}} || Jean-Jacques Joly (PS)
+|-
+| align="left" | [[canton de Héricourt-Ouest]] || {{formatnum:8530}} || {{formatnum:8659}} || Fernand Burkhalter (PS)
+|-
+| align="left" | [[canton de Jussey]] || {{formatnum:6993}} || {{formatnum:6237}} || {{formatnum:6012}} || Michel Désiré (DVG)
+|-
+| align="left" | [[canton de Lure-Nord]] || rowspan="2" | {{formatnum:18804}} || {{formatnum:9698}} || {{formatnum:9656}} || Raoul Juif (PS)
+|-
+| align="left" | [[canton de Lure-Sud]] || {{formatnum:9295}} || {{formatnum:9340}} || Robert Morlot (DVG)
+|-
+| align="left" | [[canton de Luxeuil-les-Bains]] || {{formatnum:10137}} || {{formatnum:9000}} || {{formatnum:8609}} || Frédéric Burghard (UMP)
+|-
+| align="left" | [[canton de Marnay]] || {{formatnum:4361}} || {{formatnum:4698}} || {{formatnum:5220}} || Maurice Fassenet (DVG)
+|-
+| align="left" | [[canton de Mélisey]] || {{formatnum:6992}} || {{formatnum:6509}} || {{formatnum:6198}} || Rose-Marie Daviot (PRG)
+|-
+| align="left" | [[canton de Montbozon]] || {{formatnum:4766}} || {{formatnum:4857}} || {{formatnum:4983}} || Edwige Eme (PS)
+|-
+| align="left" | [[canton de Noroy-le-Bourg]] || {{formatnum:3767}} || {{formatnum:3978}} || {{formatnum:4090}} || Gérard Bontour (PS)
+|-
+| align="left" | [[canton de Pesmes]] || {{formatnum:3667}} || {{formatnum:3644}} || {{formatnum:3843}} || Jean-Claude Gay (Modem)
+|-
+| align="left" | [[canton de Port-sur-Saône]] || {{formatnum:6516}} || {{formatnum:6434}} || {{formatnum:6775}} || [[Jean-Paul Mariot]] (PS)
+|-
+| align="left" | [[canton de Rioz]] || {{formatnum:5333}} || {{formatnum:5981}} || {{formatnum:6981}} || [[Yves Krattinger]] (PS)
+|-
+| align="left" | [[canton de Saint-Loup-sur-Semouse]] || {{formatnum:16494}} || {{formatnum:15896}} || {{formatnum:15255}} || Nadine Bathelot (DVG)
+|-
+| align="left" | [[canton de Saint-Sauveur]] || {{formatnum:8995}} || {{formatnum:9151}} || {{formatnum:9112}} || Joël Daval (DVG)
+|-
+| align="left" | [[canton de Saulx]] || {{formatnum:2892}} || {{formatnum:3044}} || {{formatnum:3246}} || Michel Weyermann (PS)
+|-
+| align="left" | [[canton de Scey-sur-Saône-et-Saint-Albin]] || {{formatnum:5983}} || {{formatnum:6187}} || {{formatnum:6201}} || Carmen Friquet (UMP)
+|-
+| align="left" | [[canton de Vauvillers]] || {{formatnum:3823}} || {{formatnum:3935}} || {{formatnum:3874}} || Frédéric Laurent (UMP)
+|-
+| align="left" | [[canton de Vesoul-Est]] || {{formatnum:16881}} || {{formatnum:16618}} || {{formatnum:15861}} || Jean-Claude Ayala (UMP)
+|-
+| align="left" | [[canton de Vesoul-Ouest]] || {{formatnum:15679}} || {{formatnum:16654}} || {{formatnum:17658}} || [[Alain Chrétien]] (UMP)
+|-
+| align="left" | [[canton de Villersexel]] || {{formatnum:7212}} || {{formatnum:7140}} || {{formatnum:6881}} || Gérard Pelleteret (DVG)
+|-
+| align="left" | [[canton de Vitrey-sur-Mance]] || {{formatnum:2647}} || {{formatnum:2334}} || {{formatnum:2225}} || Serge Deroy (UMP)
+|}
+
+== Références ==
+{{Références|références=2}}
+
+==Voir aussi==
+*[[Communes de la Haute-Saône]]
+
+{{Palette|Découpage administratif de la Bourgogne-Franche-Comté|Cantons de France}}
+{{Portail|Haute-Saône}}
+
+[[Catégorie:Canton en Haute-Saône|*]]
+[[Catégorie:Liste de cantons français|Saone, Haute]]
+[[Catégorie:Liste en rapport avec la Haute-Saône|Cantons]]

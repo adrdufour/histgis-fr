@@ -1,0 +1,258 @@
+[[Fichier:49-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de Maine-et-Loire, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Cette page liste les '''[[cantons français|cantons]]''' du [[départements français|département]] [[France|français]] de '''[[Maine-et-Loire]]''', avec leur [[code Insee]]. Dans le cadre de la réforme territoriale, un nouveau découpage territorial pour le département de Maine-et-Loire est défini par le décret du {{date-|26 février 2014}}. Le département qui comptait 41 cantons, n'en compte plus dès lors que 21.
+
+Voir aussi les listes [[arrondissements de Maine-et-Loire|des arrondissements]], [[Liste des communes de Maine-et-Loire|des communes]], [[Liste des anciennes communes de Maine-et-Loire|des anciennes communes]], et [[Liste des intercommunalités de Maine-et-Loire|des intercommunalités]] du département.
+
+Il y a une homonymie exacte pour le canton d'Allonnes (avec celui existant dans la [[Sarthe (département)|Sarthe]]), comme il existe une homonymie pour la commune chef-lieu.
+
+Il n'y a aucune homonymie pour le canton de Gennes, mais il en existe une pour la commune chef-lieu.
+
+== Histoire ==
+[[Fichier:Anciens cantons du Maine et Loire.png|vignette|Cartes des cantons du Maine et Loire avant 2015]]
+
+=== Liste des cantons avant la réforme de 2014 ===
+*1801<ref>Arrêté du 27 Brumaire an X (18 novembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f73 p. 53]</ref> : découpage d'origine.
+*1875<ref>Loi du 3 février 1875, ''Bulletin des lois'', 1875 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k210067b/f58 p. 36]</ref> : Le chef-lieu du canton de [[Briollay]] est transféré à [[canton de Tiercé|Tiercé]].
+*1961<ref>Décret du 10 août 1961, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=15%2F08%2F1961+%3E+15%2F08%2F1961 ''JORF'', 15 août 1961], p. 7659</ref> : Le canton de Cholet est scindé en deux nouveaux cantons de [[canton de Cholet-Est|Cholet-Est]] et [[canton de Cholet-Ouest|-Ouest]].
+*1963<ref>Décret du 30 mai 1963, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=05%2F06%2F1963+%3E+05%2F06%2F1963 ''JORF'', 5 juin 1963], p. 5038</ref> : Le quartier dit de la Croix-Verte de la ville de Saumur est transféré du canton de Saumur-Nord-Est au canton de Saumur-Nord-Ouest. Le canton de Saumur-Nord-Ouest est désormais dénommé [[canton de Saumur-Nord|Saumur-Nord]] et le chef-lieu du canton de Saumur-Nord-Est est transféré à [[Canton d'Allonnes (Maine-et-Loire)|Allonnes]].
+*1964<ref>Décret du 28 janvier 1964, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=30%2F01%2F1964+%3E+30%2F01%2F1964 ''JORF'', 30 janvier 1964], p. 1092. La limite infracommunale entre les cantons d'Angers-Est et d'Angers-Nord est seulement définie par référence à un plan annexé non publié au Journal officiel.</ref> : Le [[Canton d'Angers-Nord-Est|canton d’Angers-Nord-Est]] est scindé en deux nouveaux cantons [[canton d'Angers-Nord|Angers-Nord]] et [[canton d'Angers-Est|Angers-Est]]. Les cantons d’Angers-Nord-Ouest et d’Angers-Sud-Est prennent respectivement les noms d’[[canton d'Angers-Ouest|Angers-Ouest]] et d’[[canton d'Angers-Sud|Angers-Sud]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523 Décret n° 73-727 du 23 juillet 1973] modifié par [https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913 décret n° 75-955 du 16 octobre 1975]</ref> : 
+**Les quatre cantons d'Angers sont redécoupés en sept nouveaux cantons Angers-I à -VII ;
+**Les deux cantons de Cholet sont redécoupés en trois nouveaux cantons Cholet-I à -III.
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754? Décret n° 82-61 du 20 janvier 1982]</ref> : Création du canton d'Angers-VIII, détaché du canton d'Angers-VII
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000871540? Décret n°85-84 du 23 janvier 1985]. Un plan se trouve à la p. 379 dans {{Ouvrage|langue=fr|auteur1=Bernard Gaudillère|titre=Atlas historique des circonscriptions électorales françaises|lieu=Genève|éditeur=[[Librairie Droz]]|collection=Hautes Études médiévales et modernes|numéro dans collection=74|année=1995|pages totales=839|isbn=2-600-00065-8}}</ref> : 
+**Les cantons d'Angers-III, -IV et -V sont redécoupes en trois nouveaux cantons [[canton d'Angers-Sud|Angers-Sud]], [[canton d'Angers-Centre|Angers-Centre]] et [[canton d'Angers-Trélazé|Angers-Trélazé]]. 
+**Les cantons d’Angers-I, -II, -VI, -VII et -VIII prennent respectivement les dénominations d’[[canton d'Angers-Nord-Est|Angers-Nord-Est]], [[canton d'Angers-Est|Angers-Est]], [[canton d'Angers-Ouest|Angers-Ouest]], [[canton d'Angers-Nord|Angers-Nord]] et [[canton d'Angers-Nord-Ouest|Angers-Nord-Ouest]].
+
+
+{| class="wikitable sortable centre"
+|-
+! [[Code Insee]]
+! [[Arrondissements de Maine-et-Loire|Arrondissement]]
+! [[Canton (France)|Cantons]]
+! Population<br />(2009)<ref>Insee, Populations légales 2009 (population municipale), [http://www.insee.fr/fr/ppp/bases-de-donnees/recensement/populations-legales/departement.asp?dep=49&annee=2009 Cantons de Maine-et-Loire], consultées le 5 février 2012</ref>
+! Superficie<br /> (en km²)<ref name="ign">IGN, [http://professionnels.ign.fr/ficheProduitCMS.do?idDoc=5323862 Répertoire Géographique des Communes (RCG 2010)], consulté le 2 février 2011</ref>
+|----
+| 49 01 || Angers || [[canton d'Angers-Nord-Est|Angers-Nord-Est]] || align="right" | {{formatnum:32719}} || align="right" | 69,88
+|-
+| 49 02 || Angers || [[canton d'Angers-Est|Angers-Est]] || align="right" | {{formatnum:27823}} || align="right" | 23,72
+|-
+| 49 03 || Angers || [[canton d'Angers-Centre|Angers-Centre]] || align="right" | {{formatnum:35968}} || align="right" |  
+|-
+| 49 04 || Saumur || [[canton de Baugé|Baugé]] || align="right" | {{formatnum:11608}} || align="right" | 268,25
+|-
+| 49 05 || Angers || [[canton de Beaufort-en-Vallée|Beaufort-en-Vallée]] || align="right" | {{formatnum:18781}} || align="right" | 169,6
+|-
+| 49 06 || Cholet || [[canton de Beaupréau|Beaupréau]] || align="right" | {{formatnum:27558}} || align="right" | 276,69
+|-
+| 49 07 || Segré || [[canton de Candé|Candé]] || align="right" | {{formatnum:7616}} || align="right" | 223,56
+|-
+| 49 08 || Angers || [[canton de Chalonnes-sur-Loire|Chalonnes-sur-Loire]] || align="right" | {{formatnum:12156}} || align="right" | 111,92
+|-
+| 49 09 || Cholet || [[canton de Champtoceaux|Champtoceaux]] || align="right" | {{formatnum:15123}} || align="right" | 156,34
+|-
+| 49 10 || Segré || [[canton de Châteauneuf-sur-Sarthe|Châteauneuf-sur-Sarthe]] || align="right" | {{formatnum:12713}} || align="right" | 237,07
+|-
+| 49 11 || Cholet || [[canton de Chemillé|Chemillé]] || align="right" | {{formatnum:16275}} || align="right" | 219,38
+|-
+| 49 12 || Cholet || [[canton de Cholet-2|Cholet 2]] || align="right" | {{formatnum:26180}} || align="right" | 202,25
+|-
+| 49 13 || Saumur || [[canton de Doué-la-Fontaine|Doué-la-Fontaine]] || align="right" | {{formatnum:14490}} || align="right" | 233,45
+|-
+| 49 14 || Angers || [[canton de Durtal|Durtal]] || align="right" | {{formatnum:10417}} || align="right" | 204,85
+|-
+| 49 15 || Saumur || [[canton de Gennes|Gennes]] || align="right" | {{formatnum:7651}} || align="right" | 163,71
+|-
+| 49 16 || Segré || [[canton du Lion-d'Angers|Le Lion-d'Angers]] || align="right" | {{formatnum:12712}} || align="right" | 213,8
+|-
+| 49 17 || Saumur || [[canton de Longué-Jumelles|Longué-Jumelles]] || align="right" | {{formatnum:13511}} || align="right" | 267,55
+|-
+| 49 18 || Angers || [[canton du Louroux-Béconnais|Le Louroux-Béconnais]] || align="right" | {{formatnum:10331}} || align="right" | 249,64
+|-
+| 49 19 || Cholet || [[canton de Montfaucon-Montigné|Montfaucon-Montigné]] || align="right" | {{formatnum:25407}} || align="right" | 229
+|-
+| 49 20 || Saumur || [[canton de Montreuil-Bellay|Montreuil-Bellay]] || align="right" | {{formatnum:13007}} || align="right" | 228,79
+|-
+| 49 21 || Cholet || [[canton de Montrevault|Montrevault]] || align="right" | {{formatnum:15491}} || align="right" | 198,85
+|-
+| 49 22 || Saumur || [[canton de Noyant|Noyant]] || align="right" | {{formatnum:6163}} || align="right" | 304,75
+|-
+| 49 23 || Angers || [[canton des Ponts-de-Cé|Les Ponts-de-Cé]] || align="right" | {{formatnum:39115}} || align="right" | 215,19
+|-
+| 49 24 || Segré || [[canton de Pouancé|Pouancé]] || align="right" | {{formatnum:10340}} || align="right" | 247,65
+|-
+| 49 25 || Cholet || [[canton de Saint-Florent-le-Vieil|Saint-Florent-le-Vieil]] || align="right" | {{formatnum:17617}} || align="right" | 191,87
+|-
+| 49 26 || Angers || [[canton de Saint-Georges-sur-Loire|Saint-Georges-sur-Loire]] || align="right" | {{formatnum:16669}} || align="right" | 177,01
+|-
+| 49 27 || Saumur || [[canton d'Allonnes (Maine-et-Loire)|Allonnes (Maine-et-Loire)]] || align="right" | {{formatnum:12219}} || align="right" | 166,52
+|-
+| 49 28 || Saumur || [[canton de Saumur-Nord|Saumur-Nord]] || align="right" | {{formatnum:11040}} || align="right" | 51,17
+|-
+| 49 29 || Saumur || [[canton de Saumur-Sud|Saumur-Sud]] || align="right" | {{formatnum:31118}} || align="right" | 103,63
+|-
+| 49 30 || Segré || [[canton de Segré|Segré]] || align="right" | {{formatnum:17038}} || align="right" | 241,54
+|-
+| 49 31 || Angers || [[canton de Seiches-sur-le-Loir|Seiches-sur-le-Loir]] || align="right" | {{formatnum:12160}} || align="right" | 208,86
+|-
+| 49 32 || Angers || [[canton de Thouarcé|Thouarcé]] || align="right" | {{formatnum:20444}} || align="right" | 311,74
+|-
+| 49 33 || Angers || [[canton de Tiercé|Tiercé]] || align="right" | {{formatnum:14986}} || align="right" | 152,67
+|-
+| 49 34 || Saumur || [[canton de Vihiers|Vihiers]] || align="right" | {{formatnum:15159}} || align="right" | 374,95
+|-
+| 49 35 || Cholet || [[canton de Cholet-1|Cholet 1]] || align="right" | {{formatnum:25604}} || align="right" | 40,75
+|-
+| 49 36 || Angers || [[canton d'Angers-Trélazé|Angers-Trélazé]] || align="right" | {{formatnum:30232}} || align="right" | 50,08
+|-
+| 49 37 || Angers || [[canton d'Angers-Sud|Angers-Sud]] || align="right" | {{formatnum:23579}} || align="right" |  
+|-
+| 49 38 || Angers || [[canton d'Angers-Ouest|Angers-Ouest]] || align="right" | {{formatnum:34119}} || align="right" | 39,15
+|-
+| 49 39 || Angers || [[canton d'Angers-Nord|Angers-Nord]] || align="right" | {{formatnum:26420}} || align="right" | 84,54
+|-
+| 49 40 || Cholet || [[canton de Cholet-3|Cholet 3]] || align="right" | {{formatnum:28477}} || align="right" | 42,96
+|-
+| 49 41 || Angers || [[canton d'Angers-Nord-Ouest|Angers-Nord-Ouest]] || align="right" | {{formatnum:20046}} || align="right" | 15,85
+|-class="sortbottom"
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|26 février 2014}} pour le département de [[Maine-et-Loire]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. En [[Maine-et-Loire]] le nombre de cantons passe ainsi de 41 à 21<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028664392 |texte=Décret {{n°|2014}}-259 du 26 février 2014}} portant délimitation des cantons dans le département de Maine-et-Loire.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}},  il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 20 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de Maine-et-Loire, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|784810|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=49 |titre= Chiffres clés Évolution et structure de la population - Département de Maine-et-Loire (49) |auteur= |date = |site =insee.fr |consulté le= 20 mai 2014}}.</ref>. Avec 21 cantons la population moyenne par conseiller départemental est de {{unité|37372|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|29898|habitants}} et {{unité|44846|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+'''NB''' : Cette liste présente la composition des cantons tels que définis dans le décret du {{date-|26 février 2014}} qui se base sur le découpage communal en vigueur à cette date. Certaines communes ont depuis été intégrées dans des [[commune nouvelle|communes nouvelles]] qui peuvent couvrir plusieurs cantons. En l'absence de texte officiel prenant en compte ces communes nouvelles, le décret de 2014 continue à s'appliquer.
+
+{| class="wikitable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population <small>({{Population de France/dernière année||Canton d'Angers-1}})</small>
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1 || [[Canton d'Angers-1|Angers-1]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-1}}}} || fraction Angers || Partie de la commune d'Angers située à l'intérieur du périmètre défini par l'axe des voies et limites suivantes :  cours de la Maine, pont de la Haute-Chaîne, boulevard Ayrault, boulevard Carnot, rue Pierre-Lise, avenue Montaigne jusqu'à la limite territoriale de la commune de Saint-Barthélemy-d'Anjou, rue du Grand-Montrejeau, chemin de Villechien, rocade Est, boulevard d'Estienne-d'Orves, boulevard Jacques-Millot, boulevard Joseph-Bédier, avenue de-Lattre-de-Tassigny, rue Auguste-Blandeau, rue du Docteur-Guichard, boulevard de Strasbourg, boulevard Yvonne-Poirel, rue Moirin, rue Eblé, boulevard Yvonne-Poirel, pont Noir, rue Jacques-Bordier, boulevard Marc-Leclerc, rond-point de la Baumette, boulevard Olivier-Couffon, ligne droite dans le prolongement de la rue Faidherbe jusqu'au cours de la Maine, cours de la Maine.
+|-
+|2 || [[Canton d'Angers-2|Angers-2]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-2}}}} || 2 + fraction Angers || 1° Les communes suivantes : [[Bouchemaine]], [[Sainte-Gemmes-sur-Loire]]. <br/>2° La partie de la commune d'Angers située au sud et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Beaucouzé, route départementale 323, cours de la Maine, ligne droite dans le prolongement de la rue Faidherbe, boulevard Olivier-Couffon, rond-point de la Baumette, boulevard Marc-Leclerc, rue Jacques-Bordier, pont Noir, boulevard Yvonne-Poirel, rue Eblé, rue Moirin, boulevard Yvonne-Poirel, boulevard de Strasbourg, rue du Docteur-Guichard, rue Auguste-Blandeau, avenue de-Lattre-de-Tassigny et son prolongement en ligne droite, jusqu'à la limite territoriale de la commune des Ponts-de-Cé.
+|-
+|3 || [[Canton d'Angers-3|Angers-3]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-3}}}} || 7 + fraction Angers || 1° Les communes suivantes : [[Beaucouzé]], [[Béhuard]], [[Saint-Clément-de-la-Place]], [[Saint-Lambert-la-Potherie]], [[Saint-Léger-de-Linières]], [[Saint-Martin-du-Fouilloux (Maine-et-Loire)|Saint-Martin-du-Fouilloux]], [[Savennières]]. <br/>2° La partie de la commune d'Angers située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Avrillé, avenue René-Gasnier, rue Saint-Lazare, place du Docteur-Bichon, boulevard Georges-Clemenceau, boulevard Descazeaux, place de la Laiterie, rue Beaurepaire, pont de Verdun, cours de la Maine, route départementale 323, jusqu'à la limite territoriale de la commune de Beaucouzé.
+|-
+|4 || [[Canton d'Angers-4|Angers-4]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-4}}}} || 2 + fraction Angers et Longuenée-en-Anjou|| 1° Les communes suivantes : [[Avrillé (Maine-et-Loire)|Avrillé]], [[Longuenée-en-Anjou]], [[Montreuil-Juigné]]. <br/>2° La partie de la commune d'Angers située au nord et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Cantenay-Épinard, cours de la Mayenne, cours de la Maine, pont de Verdun, rue Beaurepaire, boulevard Descazeaux, place de la Laiterie, boulevard Georges-Clemenceau, place du Docteur-Bichon, rue Saint-Lazare, avenue René-Gasnier, jusqu'à la limite territoriale de la commune d'Avrillé.
+|-
+|5 || [[Canton d'Angers-5|Angers-5]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-5}}}} || 6 + fraction Angers || 1° Les communes suivantes : [[Briollay]], [[Cantenay-Épinard]], [[Écouflant]], [[Écuillé]], [[Feneu]], [[Soulaire-et-Bourg]]. <br/>2° La commune d'Angers située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Écouflant, avenue Victor-Chatenay, avenue Pasteur, rue Émile-Blavier, rue de Jérusalem, rue Édouard-et-Renée-Cœffard, boulevard des Deux-Croix, rue Joseh-Cussoneau, avenue Montaigne, rue Pierre-Lise, boulevard Saint-Michel, boulevard Carnot, boulevard Ayrault, pont de la Haute-Chaîne, cours de la Maine, cours de la Mayenne, jusqu'à la limite territoriale de la commune de Cantenay-Épinard.
+|-
+|6 || [[Canton d'Angers-6|Angers-6]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-6}}}} || 12 + fraction Angers || 1° Les communes suivantes : [[La Chapelle-Saint-Laud]], [[Cornillé-les-Caves]], [[Corzé]], [[Huillé-Lézigné]], [[Jarzé Villages]], [[Marcé]], [[Montreuil-sur-Loir]], [[Rives-du-Loir-en-Anjou]], [[Saint-Barthélemy-d'Anjou]], [[Seiches-sur-le-Loir]], [[Sermaise (Maine-et-Loire)|Sermaise]], [[Verrières-en-Anjou]]. <br/>2° La partie de la commune d'Angers située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Barthélemy-d'Anjou, avenue Victor-Chatenay, avenue Pasteur, rue Émile-Blavier, rue de Jérusalem, rue Édouard-et-Renée-Cœffard, boulevard des Deux-Croix, rue Joseph-Cussonneau, avenue Montaigne, jusqu'à la limite territoriale de la commune de Saint-Barthélemy-d'Anjou.
+|-
+|7 || [[Canton d'Angers-7|Angers-7]] || [[Angers]] || {{formatnum:{{Population de France/dernière pop||Canton d'Angers-7}}}} || 5 + fraction Angers || 1° Les communes suivantes : [[Loire-Authion]], [[La Ménitré]], [[Le Plessis-Grammoire]], [[Sarrigné]], [[Trélazé]]. <br/>2° La partie de la commune d'Angers non incluse dans les cantons d'Angers-1, d'Angers-2, d'Angers-3, d'Angers-4, d'Angers-5 et d'Angers-6.
+|-
+|8 || [[Canton de Beaufort-en-Anjou|Beaufort-en-Anjou]]<ref group="Note">Canton de Beaufort-en-Vallée jusqu'au 5 mars 2020</ref> || [[Beaufort-en-Anjou]] || {{formatnum:{{Population de France/dernière pop||Canton de Beaufort-en-Anjou}}}} || 6 || [[Baugé-en-Anjou]], [[Beaufort-en-Anjou]], [[Les Bois d'Anjou]], [[Mazé-Milon]], [[Noyant-Villages]], [[La Pellerine (Maine-et-Loire)|La Pellerine]]. 
+|-
+|9 || [[Canton de Beaupréau-en-Mauges|Beaupréau-en-Mauges]]<ref group="Note">Canton de Beaupréau jusqu'au 5 mars 2020</ref> || [[Beaupréau-en-Mauges]] || {{formatnum:{{Population de France/dernière pop||Canton de Beaupréau-en-Mauges}}}} || 3 || [[Beaupréau-en-Mauges]], [[Bégrolles-en-Mauges]], [[Montrevault-sur-Èvre]]. 
+|-
+|10 || [[Canton de Chalonnes-sur-Loire|Chalonnes-sur-Loire]] || [[Chalonnes-sur-Loire]] || {{formatnum:{{Population de France/dernière pop||Canton de Chalonnes-sur-Loire}}}} || 13 + 1 fraction Erdre-en-Anjou|| [[Bécon-les-Granits]], [[Chalonnes-sur-Loire]], [[Champtocé-sur-Loire]], [[Chaudefonds-sur-Layon]], [[Denée (Maine-et-Loire)|Denée]], [[Erdre-en-Anjou]], [[Ingrandes-Le Fresne sur Loire]], [[La Possonnière]], [[Rochefort-sur-Loire]], [[Saint-Augustin-des-Bois]], [[Saint-Georges-sur-Loire]], [[Saint-Germain-des-Prés (Maine-et-Loire)|Saint-Germain-des-Prés]], [[Saint-Sigismond (Maine-et-Loire)|Saint-Sigismond]], [[Val d'Erdre-Auxence]]. 
+|-
+|11 || [[Canton de Chemillé-en-Anjou|Chemillé-en-Anjou]]<ref group="Note">Canton de Chemillé-Melay jusqu'au 5 mars 2020</ref> || [[Chemillé-en-Anjou]] || {{formatnum:{{Population de France/dernière pop||Canton de Chemillé-en-Anjou}}}} || 7 || [[Aubigné-sur-Layon]], [[Beaulieu-sur-Layon]], [[Bellevigne-en-Layon]], [[Chemillé-en-Anjou]], [[Mozé-sur-Louet]], [[Terranjou]], [[Val-du-Layon]]. 
+|-
+|12 || [[Canton de Cholet-1|Cholet-1]] || [[Cholet]] || {{formatnum:{{Population de France/dernière pop||Canton de Cholet-1}}}} || fraction Cholet || Partie de la commune de Cholet située à l'ouest et au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Léger-sous-Cholet, chemin communal n° 5, rue Charles-Lindbergh, boulevard des Bois-Lavau (route départementale 13), boulevard du Pont-de-Pierre, boulevard Hérault, place de la République, boulevard Gustave-Richard, rue Nationale, rue Sadi-Carnot, rue de Lorraine, rue de Maulévrier (route départementale 20), jusqu'à la limite territoriale de la commune de Mazières-en-Mauges.
+|-
+|13 || [[Canton de Cholet-2|Cholet-2]] || [[Cholet]] || {{formatnum:{{Population de France/dernière pop||Canton de Cholet-2}}}} || 19 + fraction Cholet || 1° Les communes suivantes : [[Cernusson]], [[Les Cerqueux]], [[Chanteloup-les-Bois]], [[Cléré-sur-Layon]], [[Coron (Maine-et-Loire)|Coron]], [[Lys-Haut-Layon]], [[Maulévrier]], [[Mazières-en-Mauges]], [[Montilliers]], [[Nuaillé]], [[Passavant-sur-Layon]], [[La Plaine (Maine-et-Loire)|La Plaine]], [[Saint-Paul-du-Bois]], [[Somloire]], [[La Tessoualle]], [[Toutlemonde]], [[Trémentines]], [[Vezins (Maine-et-Loire)|Vezins]], [[Yzernay]]. <br/>2° La partie de la commune de Cholet non incluse dans le canton de Cholet-1.
+|-
+|14 || [[Canton de Doué-en-Anjou|Doué-en-Anjou]]<ref group="Note">Canton de Doué-la-Fontaine jusqu'au 5 mars 2020</ref> || [[Doué-en-Anjou]] || {{formatnum:{{Population de France/dernière pop||Canton de Doué-en-Anjou}}}} || 17 + 2 fractions|| [[Antoigné]], [[Bellevigne-les-Châteaux]], [[Brissac Loire Aubance]], [[Brossay]], [[Cizay-la-Madeleine]], [[Le Coudray-Macouard]], [[Courchamps (Maine-et-Loire)|Courchamps]], [[Dénezé-sous-Doué]], [[Doué-en-Anjou]], [[Épieds (Maine-et-Loire)|Épieds]], [[Gennes-Val-de-Loire]], [[Louresse-Rochemenier]], [[Montreuil-Bellay]], [[Le Puy-Notre-Dame]], [[Saint-Just-sur-Dive]], [[Saint-Macaire-du-Bois]], [[Tuffalun]], [[Les Ulmes]], [[Vaudelnay]]. 
+|-
+|15 || [[Canton de Longué-Jumelles|Longué-Jumelles]] || [[Longué-Jumelles]] || {{formatnum:{{Population de France/dernière pop||Canton de Longué-Jumelles}}}} || 17 + 1 fraction  Gennes-Val-de-Loire|| [[Allonnes (Maine-et-Loire)|Allonnes]], [[Blou]], [[Brain-sur-Allonnes]], [[La Breille-les-Pins]], [[Courléon]], [[Gennes-Val-de-Loire]], [[La Lande-Chasles]], [[Longué-Jumelles]], [[Mouliherne]], [[Neuillé]], [[Saint-Clément-des-Levées]], [[Saint-Philbert-du-Peuple]], [[Varennes-sur-Loire]], [[Vernantes]], [[Vernoil-le-Fourrier]], [[Villebernier]], [[Vivy]]. 
+|-
+|16 || [[Canton de Mauges-sur-Loire|Mauges-sur-Loire]]<ref group="Note">Canton de La Pommeraye jusqu'au 5 mars 2020</ref> || [[Mauges-sur-Loire]] || {{formatnum:{{Population de France/dernière pop||Canton de Mauges-sur-Loire}}}} || 2 || [[Mauges-sur-Loire]], [[Orée d'Anjou]]. 
+|-
+|17 || [[Canton des Ponts-de-Cé|Les Ponts-de-Cé]] || [[Les Ponts-de-Cé]] || {{formatnum:{{Population de France/dernière pop||Canton des Ponts-de-Cé}}}} || 7 + 1 fraction Brissac Loire Aubance || [[Blaison-Gohier]], [[Brissac Loire Aubance]], [[Les Garennes sur Loire]], [[Mûrs-Erigné]], [[Les Ponts-de-Cé]], [[Saint-Jean-de-la-Croix]], [[Saint-Melaine-sur-Aubance]], [[Soulaines-sur-Aubance]]. 
+|-
+|18 || [[Canton de Sèvremoine|Sèvremoine]]<ref group="Note">Canton de Saint-Macaire-en-Mauges jusqu'au 5 mars 2020</ref> || [[Sèvremoine]] || {{formatnum:{{Population de France/dernière pop||Canton de Sèvremoine}}}} || 6 ||[[Le May-sur-Èvre]], [[La Romagne (Maine-et-Loire)|La Romagne]], [[Saint-Christophe-du-Bois]], [[Saint-Léger-sous-Cholet]], [[La Séguinière]], [[Sèvremoine]]. 
+|-
+|19 || [[Canton de Saumur|Saumur]] || [[Saumur]] || {{formatnum:{{Population de France/dernière pop||Canton de Saumur}}}} || 11 || [[Artannes-sur-Thouet]], [[Distré]], [[Fontevraud-l'Abbaye]], [[Montsoreau]], [[Parnay (Maine-et-Loire)|Parnay]], [[Rou-Marson]], [[Saumur]], [[Souzay-Champigny]], [[Turquant]], [[Varrains]], [[Verrie]]. 
+|-
+|20 || [[Canton de Segré-en-Anjou Bleu|Segré-en-Anjou Bleu]]<ref group="Note">Canton de Segré jusqu'au 5 mars 2020</ref> || [[Segré-en-Anjou Bleu]] || {{formatnum:{{Population de France/dernière pop||Canton de Segré-en-Anjou Bleu}}}} || 11 || [[Angrie]], [[Armaillé]], [[Bouillé-Ménard]], [[Bourg-l'Évêque]], [[Candé]], [[Carbay]], [[Challain-la-Potherie]], [[Chazé-sur-Argos]], [[Loiré]], [[Ombrée d'Anjou]]. 
+|-
+|21 || [[Canton de Tiercé|Tiercé]] || [[Tiercé (Maine-et-Loire)|Tiercé]] || {{formatnum:{{Population de France/dernière pop||Canton de Tiercé}}}} || 19 + 2 fractions || [[Baracé]], [[Chambellay]], [[Cheffes]], [[Chenillé-Champteussé]],  [[Durtal]], [[Erdre-en-Anjou]], [[Étriché]], [[Grez-Neuville]], [[Les Hauts-d'Anjou]], [[La Jaille-Yvon]], [[Juvardeil]], [[Le Lion-d'Angers]], [[Longuenée-en-Anjou]], [[Miré (Maine-et-Loire)|Miré]], [[Montigné-lès-Rairies]], [[Montreuil-sur-Maine]], [[Morannes sur Sarthe-Daumeray]], [[Les Rairies]], [[Sceaux-d'Anjou]], [[Thorigné-d'Anjou]], [[Tiercé (Maine-et-Loire)|Tiercé]]. 
+|-
+!||||||{{formatnum:{{Population de France/dernière pop||Maine-et-Loire}}}}||358||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de [[Maine-et-Loire]], c'est le cas de cinq cantons ([[Canton de Beaufort-en-Vallée|Beaufort-en-Vallée]], [[Canton de Chalonnes-sur-Loire|Chalonnes-sur-Loire]], [[Canton de Chemillé-Melay|Chemillé-Melay]], [[Canton de Cholet-2|Cholet-2]] et [[Canton de Tiercé|Tiercé]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Angers|Angers]]
+!scope=col|[[Arrondissement de Cholet|Cholet]]
+!scope=col|[[Arrondissement de Saumur|Saumur]]
+!scope=col|[[Arrondissement de Segré|Segré]]
+!scope=col|Total
+|-
+|1||align="left"| Angers-1||fraction Angers||||||||fraction Angers
+|-
+|2||align="left"| Angers-2||2 + fraction Angers||||||||'''2''' + fraction Angers
+|-
+|3||align="left"| Angers-3||8 + fraction Angers||||||||'''8''' + fraction Angers
+|-
+|4||align="left"| Angers-4||5 + fraction Angers||||||||'''5''' + fraction Angers
+|-
+|5||align="left"| Angers-5||6 + fraction Angers||||||||'''6''' + fraction Angers
+|-
+|6||align="left"| Angers-6||18 + fraction Angers||||||||'''18''' + fraction Angers
+|-
+|7||align="left"| Angers-7||11 + fraction Angers||||||||'''11''' + fraction Angers
+|-
+|8||align="left"| Beaufort-en-Vallée||7||||25||||'''32'''
+|-
+|9||align="left"| Beaupréau||||22||||||'''22'''
+|-
+|10||align="left"| Chalonnes-sur-Loire||16||||||1||'''17'''
+|-
+|11||align="left"| Chemillé-Melay||12||9||3||||'''24'''
+|-
+|12||align="left"| Cholet-1||||fraction Cholet||||||fraction Cholet
+|-
+|13||align="left"| Cholet-2||||10 + fraction Cholet||15||||'''25''' + fraction Cholet
+|-
+|14||align="left"| Doué-la-Fontaine||||||34||||'''34'''
+|-
+|15||align="left"| Longué-Jumelles||||||18||||'''18'''
+|-
+|16||align="left"| La Pommeraye||||20||||||'''20'''
+|-
+|17||align="left"| Les Ponts-de-Cé||17||||||||'''17'''
+|-
+|18||align="left"| Saint-Macaire-en-Mauges||||15||||||'''15'''
+|-
+|19||align="left"| Saumur||||||12||||'''12'''
+|-
+|20||align="left"| Segré||||||||35||'''35'''
+|-
+|21||align="left"| Tiercé||9||||||25||'''34'''
+|-
+!||||112||77||107||61||357
+|}
+
+== Notes et références ==
+=== Notes ===
+{{Références|group=Note}}
+
+=== Références ===
+{{Références}}
+
+{{Palette|Découpage administratif des Pays de la Loire|Cantons de France|Cantons de Maine-et-Loire}}
+{{Portail|Maine-et-Loire|Politique française}}
+
+[[Catégorie:Canton en Maine-et-Loire|*]]
+[[Catégorie:Liste de cantons français|Maine-et-Loire]]
+[[Catégorie:Liste en rapport avec le département de Maine-et-Loire|Cantons]]
