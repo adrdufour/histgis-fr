@@ -1,6 +1,6 @@
 # Ce qui reste à faire
 
-**Arrêté au 6 septembre 2026, file d'attente mise à jour le 24 septembre.** Les tâches sont classées par valeur, pas par
+**Arrêté au 6 septembre 2026, file d'attente mise à jour le 24 septembre, puis le 11 octobre (point 0 et § 1 quater).** Les tâches sont classées par valeur, pas par
 facilité. Le blocage est indiqué quand il y en a un : beaucoup de choses
 attendent quelque chose plutôt que quelqu'un.
 
@@ -26,6 +26,7 @@ une source à trouver : ce sont des commandes à lancer et des sorties à lire.
 
 | # | tâche | pourquoi maintenant |
 |---|---|---|
+| 0 | **Réexporter la carte, puis la promouvoir** | `110` (691 périodes) et `111` sont dans la base : `p111_trace` compte 40 lignes (20 `modifie`, 20 `insere`), mesuré le 11 octobre au soir — cette ligne disait « à rejouer », il l'a été. Mais le dernier export, `sorties/part_2026-10-11`, s'est achevé à 6 h 13, **avant** la pose de `110` (12 h 21) ; et `cartes/web/donnees`, la carte servie, date du 10 octobre et en diffère. Aucun des deux ne montre `110` ni `111`. Détail : § 1 quater |
 | 1 | **Ce qui reste des trous cantonaux 1941-1998 — de la lecture, plus de règle** | Trois reports par les deux bouts, sur des jalons jugés par la géométrie (`96`) : `93` 29 841 lignes (1941-1953), `97` 30 453 (1941-1967), `95` 24 041 (1969-1998). Restent au 23 septembre au soir : **`95` 1 426 désaccords**, dont 109 trous corses d'« autre numéro » (le décret n° 73-825 n'est lu qu'à 15 lignes) ; **`93` 150 désaccords** ; les désaccords de `97` que l'annexe VII annonce (Metz-Campagne → Rombas, Belfort-Centre → Danjoutin…) ; les **échanges croisés** que `96` ne voit pas (Falaise-Nord/Sud, Issoudun-Nord/Sud : un bloc mal lu ensemble se touche lui-même) ; les fractions ; les « accord mais nommé ». Mesures : `diag_deux_bouts_1969_1999.sql`, `diag_deux_bouts_1955_1967.sql`, `diag_corse_1976.sql` |
 | 2 | **Achever le dépouillement du recensement de 1954** | `94` l'a chiffré le 6 septembre : le jalon ne couvre que **79,0 %** des communes vivantes en 1940, et les **7 870 manquantes vivaient** — ce n'est pas de la mortalité, c'est de la lecture. Vaut 102 310 atome-années sur la seule fenêtre 1941-1953, plus le jalon lui-même, plus le report vers 1962 à venir. **Premier levier de toute la période.** Voir § 1 bis |
 | 3 | **Afficher `repris` dans `cartes/web/index.html`** | l'export pose `repris` par unité à côté de `anr` et `repli` ; la page l'ignore. Une unité qui doit sa forme à une reprise doit pouvoir le dire, sans quoi la légende laisse croire à une trame entièrement attestée. **Seul point de cette file qui ne demande pas la base** |
@@ -241,6 +242,23 @@ géométrie**. Restent à voir sur la carte, et seulement là :
   page fait ce qu'il annonce.
 
 ---
+
+## 1 quater. Après les JO lus et leurs tables annuelles — 11 octobre 2026
+
+`110` a posé 691 périodes dans les trous (JO lus à la main, tables analytiques
+annuelles du JO 1941-1990) ; `111` corrige les périodes que les transferts
+démentent. Ce qu'ils laissent, du plus rentable au moins :
+
+| tâche | ce qu'on sait | où |
+|---|---|---|
+| **Les 202 communes de cantons recomposés qu'aucun bord ne nomme** | presque toutes de Seine-et-Oise, 1964-1967 : les unités de ces cantons n'existent pas en base entre l'éclatement annoncé et 1968. Les créer (unités et versions), puis rejouer `110` | `sorties/p110_evenements.csv`, issue « aucun bord ne porte le nom du JO » |
+| **Les 50 communes de cantons recomposés, « place occupée »** | `111` ne traite que les transferts. Même instruction à faire pour les recompositions : la base contredit-elle le JO, ou l'a-t-elle simplement devancé ? | idem, issue « place occupée » |
+| **Les 177 transferts isolés introuvables dans les tables** | 274 non datés, 97 retrouvés. Le reste : artefacts de la base (un report qui a mal lu un bord) ou noms que l'OCR des tables 1941-1957 a trop abîmés (colonnes encore mêlées). Commencer par ceux dont les deux bords sont des jalons (1954, 1968) | `cantons/mouvements_cantonaux.csv` moins `cantons/dates_par_tables_jo.csv` |
+| **Prouver l'absence d'acte par les tables** | les tables retrouvent 228 des 233 décrets de création et de recomposition connus : leur silence pour un (département, année) vaut présomption d'absence. Reste à en tirer une liste et à la donner aux reports comme « rien n'a bougé » attesté. Moins sûr pour les rattachements avant 1958 | `cantons/tables_jo_actes.csv`, `cantons/rappel_tables.csv` |
+| **Deux transferts laissés par `111`** | Orgerus (78) : la base la met en 7815, code qui a été L'Isle-Adam puis Montfort-l'Amaury ; Ferreux (10) : « Romilly-sur-Seine » contre « Romilly-sur-Seine 1er canton », le numéro fait échouer la comparaison | à la main |
+| **Corse 1975 : 7 communes sans unité** | Ajaccio, Bastia, Bonifacio : cantons de la loi 75-356 qui n'ont pas d'unité en base | `110` § 6 bis |
+| **Rejouer dans le bon ordre** | `111` raccourcit des périodes de `79`, `81` et de la base d'origine. Rejouer un report, puis `110`, puis `111` ; rejouer `110` seul : défaire `111` d'abord | `sql/README.md`, « Qui dépend de qui », § 3 |
+| Restes de la lecture des JO | le décret 68-168 et la table des changements de nom de 1985 ne sont pas lus | `cantons/wikipedia/lecture_jo.md` |
 
 ## 1 ter. L'intervalle noir entre les deux reports — 1 072 dép-années
 

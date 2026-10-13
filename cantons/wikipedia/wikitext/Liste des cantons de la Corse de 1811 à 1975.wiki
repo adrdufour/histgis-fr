@@ -1,0 +1,155 @@
+Cet article présente la '''liste des [[Cantons français|cantons]] de la [[Corse]] de 1811 à 1975'''.
+
+== Historique ==
+*1811<ref>Sénatus-consulte organique du 19 avril 1811 portant réunion des départements du Golo et du Liamone en un seul departement sous le nom de département de la Corse, ''Bulletin des Lois 1811'' (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k4453651/f395 p. 361] (avec énumération des cantons) + Décret du 24 avril 1811 concernant l'organisation administrative et judiciaire de la Corse, ''Bulletin des Lois 1811'' (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k4453651/f413.item p. 379]</ref> : Découpage d'origine suite à la réunion des départments [[Golo (département)|Golo]] et [[Liamone (département)|Liamone]]. Alors que les communes des autres départements sont énumérées par canton dans un arrêté sur base de la loi du 8 Pluviôse an IX (28 janvier 1801) portant réduction des justices de paix, cela n'est pas le cas pour la Corse. Le [[sénatus-consulte]] énumère les cantons mais pas les communes par canton.
+*1824<ref>Ordonnance du 31 mars 1824, ''Bulletin des lois'' 1824 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65233339/f25 p.169]</ref> : Le chef-lieu du canton de [[Fiumorbo (région)|Fiumorbo]] est transféré à [[Ventiseri]].
+*1828<ref>Ordonnance du 13 avril 1828 portant fixation définitive des chefs-lieux des cantons de justice de paix du département de la Corse, ''Bulletin des lois'' 1828 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65288948/f420 p.376]</ref> : Les chefs-lieux de plusieurs cantons sont fixés; les cantons portent désormais le nom de leur chef-lieu.
+*1850<ref>Décret du 2 avril 1850, ''Bulletin des lois'' 1850 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486124w/f424 p. 393]</ref> : Le chef-lieu du canton d'[[Algajola]] est transféré à [[Muro (Haute-Corse)|Muro]].
+*1861<ref>Loi du 20 avril 1861, ''Bulletin des lois'' 1861 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k9736482f/f477 p. 445]</ref> : Création du canton de [[Ghisoni]], détaché du canton de [[Vezzani]].
+*1874<ref>Décret du 21 décembre 1874, ''Bulletin des lois'' 1875 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k210067b/f65 p. 43]</ref> : Le nom du chef-lieu du canton de Serraggio est modifié: canton de [[Venaco]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303619 Décret n° 73-825 du 18 août 1973]</ref> : Remodelage général des cantons :
+**Les deux cantons de Bastia sont redécoupés en cinq nouveaux cantons Bastia-I (Centre), -II (Fango), -III (Turette), -IV (Cimbalo) et -V (Montesoro);
+**Le canton d'Ajaccio est scindé en cinq nouveaux cantons Ajaccio-I (Ouest-Ville), -II (Vieille-Ville-Sud), -III (Centre-Ville-Nord), -IV (Nord) et -V (Est);
+**Création du [[canton de Figari]], détaché des cantons de [[canton de Levie|Levie]] et de [[Canton de Tallano-Scopamène|Serra-di-Scopamene]];
+**15 fusions de deux canton et 3 fusions de trois cantons. Ces fusions de cantons rurales étaient rare : les remodelages de cantons avant 2014 étaient presque toujours des scissions de cantons trop peuplés, résultant en une augmentation du nombre des cantons.
+*1975<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000521934 Loi n° 75-356 du 15 mai 1975 portant réorganisation de la Corse]</ref> : Le département de la Corse est scindé en deux nouveaux départements [[liste des cantons de la Corse-du-Sud|Corse-du-Sud]] et [[liste des cantons de la Haute-Corse|Haute-Corse]]. La loi énumère les communes par canton.
+
+== Liste des cantons ==
+{| class="wikitable"
+! canton 1811-28 !! canton 1828 !! canton (chef-lieu) 1973 !! n° INSEE !! arr.
+|-
+| Sevinfuori || Piana || [[Canton des Deux-Sevi|Deux-Sevi]] ([[Piana]]) || 35 || Ajaccio
+|-
+| Sevidentro || Évisa || Deux-Sevi (Piana) || 35 || Ajaccio
+|-
+| Vico || Vico || [[Canton des Deux-Sorru|Deux-Sorru]] ([[Vico (Corse-du-Sud)|Vico]]) || 61 || Ajaccio
+|-
+| Sorroinsu || Soccia || Deux-Sorru (Vico) || 61 || Ajaccio
+|-
+| Cruzini || Salice || [[canton de Cruzini-Cinarca|Cruzini-Cinarca]] ([[Sari-d'Orcino]]) || 51 || Ajaccio
+|-
+| Orcino || Sari-d'Orcino || Cruzini-Cinarca (Sari-d’Orcino) || 51 || Ajaccio
+|-
+| Cevalo || Bocognano || [[canton de Celavo-Mezzana|Celavo-Mezzana]] ([[Bocognano]]) || 6 || Ajaccio
+|-
+| Mezzana || Sarrola-Carcopino || Celavo-Mezzana (Bocognano) || 6 || Ajaccio
+|-
+| Ajaccio || Ajaccio || [[Canton d'Ajaccio-1|Ajaccio-I]], [[Canton d'Ajaccio-2|-II]], [[Canton d'Ajaccio-3|-III]], [[Canton d'Ajaccio-4|-IV]] et [[Canton d'Ajaccio-5|-V]] || 1,63-66 || Ajaccio
+|-
+| Sampiero || Bastelica || [[canton de Bastelica|Bastelica]] || 2 || Ajaccio
+|-
+| Ornano || Santa-Maria-Siché || [[canton de Santa-Maria-Siché|Santa-Maria-Siché]] || 48 || Ajaccio
+|-
+| Talavo || Zicavo || [[canton de Zicavo|Zicavo]] || 62 || Ajaccio
+|-
+| Taravo || Petreto-Bicchisano || [[canton de Petreto-Bicchisano|Petreto-Bicchisano]] || 34 || Sartene
+|-
+| Vallinco || Olmeto || [[Canton d'Olmeto|Olmeto]] || 30 || Sartene
+|-
+| Tallano || Sainte Lucie-de-Tallano || [[canton de Tallano-Scopamène|Tallano-Scopamène]] ([[Serra-di-Scopamène]]) || 55 || Sartene
+|-
+| Scopamene || Serra-di-Scopamène || Tallano-Scopamène (Serra-di-Scopamène) || 55 || Sartene
+|-
+| Sartène || Sartène || [[Canton de Sartène|Sartène]] || 53 || Sartene
+|-
+|  ||  || [[canton de Figari|Figari]] || 70 || Sartene
+|-
+| Bonifacio || Bonifacio || [[canton de Bonifacio|Bonifacio]] || 7 || Sartene
+|-
+| Porto-Vecchio || Porto-Vecchio || [[Canton de Porto-Vecchio|Porto-Vecchio]] || 40 || Sartene
+|-
+| Carbini || Levie || [[Canton de Levie|Levie]] || 22 || Sartene
+|-
+| Tenda || Santo-Pietro-di-Tenda || [[Canton du Haut-Nebbio|Haut-Nebbio]] ([[Murato]]) || 26 || Bastia
+|-
+| Canale || Lama || Haut-Nebbio (Murato) || 26 || Bastia
+|-
+| Bivinco || Murato || Haut-Nebbio (Murato) || 26 || Bastia
+|-
+| Saint-Florent || Saint-Florent || [[Canton de la Conca-d'Oro|La Conca-d’Oro]] ([[Oletta]]) || 29 || Bastia
+|-
+| Tuda || Oletta || La Conca-d’Oro (Oletta) || 29 || Bastia
+|-
+| Capobianco || Rogliano || [[Canton de Capobianco|Capobianco]] ([[Rogliano]]) || 42 || Bastia
+|-
+| Seneca || Luri || Capobianco (Rogliano) || 42 || Bastia
+|-
+| Sagro || Brando || [[Canton de Sagro-di-Santa-Giulia|Sagro-di-Santa-Giulia]] ([[Brando (Haute-Corse)|Brando]]) || 9 || Bastia
+|-
+| Santa-Giulia || Nonza || Sagro-di-Santa-Giulia (Brando) || 9 || Bastia
+|-
+| Pietrabugno || San-Martino-di-Lota || [[Canton de San-Martino-di-Lota|San-Martino-di-Lota]] || 45 || Bastia
+|-
+| Bastia-I (Terra Vecchia) et -II (Terra Nova) || Bastia (2 cantons) || [[Canton de Bastia-1|Bastia-I]], [[canton de Bastia-2|-II]], [[canton de Bastia-3|-III]], [[canton de Bastia-4|-IV]] et [[canton de Bastia-5|-V]] || 3,4,67-69 || Bastia
+|-
+| Mariana || Borgo || [[Canton de Borgo|Borgo]] || 8 || Bastia
+|-
+| Casinca || Vescovato || [[Canton de Vescovato|Vescovato]] || 59 || Bastia
+|-
+| Costera || Campitello || [[Canton d'Alto-di-Casaconi|Alto-di-Casaconi]] ([[Campitello]]) || 14 || Bastia
+|-
+| Casacconi || Campile || Alto-di-Casaconi (Campitello) || 14 || Bastia
+|-
+| Ampugnani || La Porta || [[Canton de Fiumalto-d'Ampugnani|Fiumalto-d’Ampugnani]] ([[La Porta]]) || 39 || Bastia
+|-
+| Tavogna || Pero-Casevecchie || Fiumalto-d’Ampugnani (La Porta) || 39 || Bastia
+|-
+| Moriani || San-Nicolao || [[Canton de Campoloro-Moriani|Campoloro-di-Moriani]] ([[Cervione]]) || 16 || Bastia
+|-
+| Campoloro || Cervione || Campoloro-di-Moriani (Cervione) || 16 || Bastia
+|-
+| Ile de Capraia || ([[Traité de Paris (1814)|au royaume de Sardaigne en 1814]]) ||  ||  || Bastia
+|-
+| Paraso || Belgodere || [[Canton de Belgodère|Belgodere]] || 5 || Calvi
+|-
+| Regino || Algajola, 1850: Muro || Belgodere || 5 || Calvi
+|-
+| Patro || Olmi-Cappelîa || Belgodere || 5 || Calvi
+|-
+| Santo-Angelo || Ile-Rousse || [[Canton de l'Île-Rousse|Ile-Rousse]] || 20 || Calvi
+|-
+| Calvi || Calvi || [[Canton de Calvi|Calvi]] || 12 || Calvi
+|-
+| Montegrosso || Calenzana || [[Canton de Calenzana|Calenzana]] || 11 || Calvi
+|-
+| Vecchio || Serraggio; 1874: Venaco || [[Canton de Venaco|Venaco]] || 58 || Corte
+|-
+| Corte || Corte || [[Canton de Corte|Corte]] || 17 || Corte
+|-
+| Golo || Omessa || [[Canton de Niolu-Omessa|Niolu-Omessa]] ([[Calacuccia]]) || 10 || Corte
+|-
+| Niolo || Calacuccia || Niolu-Omessa (Calacuccia) || 10 || Corte
+|-
+| Caccia || Castifao || [[Canton de Castifao-Morosaglia|Castifao-Morosaglia]] ([[Morosaglia]]) || 25 || Corte
+|-
+| Rostino || Morosaglia || Castifao-Morosaglia (Morosaglia) || 25 || Corte
+|-
+| Mercurio || Sermano || [[Canton de Bustanico|Bustanico]] ([[Sermano]]) || 54 || Corte
+|-
+| Vallerustie || Saint-Laurent || Bustanico (Sermano) || 54 || Corte
+|-
+| Tavignano || Piedicorte || Bustanico (Sermano) || 54 || Corte
+|-
+| Orezza || Piedicroce || [[Canton d'Orezza-Alesani|Orezza-Alesani]] ([[Piedicroce]]) || 37 || Corte
+|-
+| Alesani || Valle-d'Alesani || Orezza-Alesani (Piedicroce) || 37 || Corte
+|-
+| Verde || Pietra || [[Canton de Moïta-Verde|Moita-Verde]] ([[Moïta]]) || 24 || Corte
+|-
+| Serra || Moita || Moita-Verde (Moita) || 24 || Corte
+|-
+| Sorba || Vezzani || [[Canton de Vezzani|Vezzani]] || 60 || Corte
+|-
+|  || Ghisoni (°1861) || [[Canton de Ghisoni|Ghisoni]] || 19 || Corte 
+|-
+| Fiumorbo || Prunelli || [[Canton de Prunelli-di-Fiumorbo|Prunelli]] || 41 || Corte
+|}
+
+== Notes et références ==
+{{Références}}
+
+{{Portail|Corse}}
+
+[[Catégorie:Liste de cantons français]]
+[[Catégorie:Liste en rapport avec la Corse]]
+[[Catégorie:Administration territoriale en Corse]]

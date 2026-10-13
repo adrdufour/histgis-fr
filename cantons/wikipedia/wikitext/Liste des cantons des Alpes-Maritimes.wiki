@@ -1,0 +1,258 @@
+[[Fichier:Département Alpes-Maritimes Arrondissement Kantone 2017.png|vignette|upright=1.4|Découpage cantonal du département des Alpes-Maritimes, avec en surimpression les arrondissements (en nuances de rose) - Carte arrêtée au 1er janvier 2019.]]
+Le '''département des Alpes-Maritimes''' compte 27 cantons depuis le [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]] (52 cantons auparavant).
+
+== Histoire ==
+=== À la création du département en 1860 ===
+[[Fichier:Map of Alpes-Maritimes Department, France, with Communes 1860.svg|thumb|Le département en 1860 (cantons de l'arr. de Grasse en teintes vertes, Nice en violettes et Puget-Théniers en bleues)]]
+Le {{date|23/06/1860}}, le département des Alpes-Maritimes est recréé par le regroupement de la partie de la [[Province de Nice (1859-1860)|province sarde de Nice]] rattachée à la France, avec l'[[arrondissement de Grasse]], détaché du département du [[Var (département)|Var]]<ref>Loi du 23 juin 1860, ''Bulletin des lois'', 1860 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k9736238b/f1053 p. 1025]</ref>. Le décret impérial du {{date|24/10/1860}} établit la division du département en [[Arrondissements des Alpes-Maritimes|arrondissements]], cantons et communes<ref name="décret1860">Décret impérial n°8364 du {{date|24/10/1860}} qui établit la division du département des Alpes-Maritimes en arrondissements, cantons et communes (voir {{Ouvrage |auteur1= |titre=[[Bulletin des lois]] de l'Empire français {{XIe}} série. Règne de [[Napoléon III]], empereur des Français|sous-titre=Deuxième semestre de 1860 contenant les lois et décrets d'intérêt public et général publiés depuis le {{1er}} juillet jusqu'au {{date|31/12/1860}}|lieu=Paris|éditeur=Imprimerie impériale|année=1861|tome=XVI|passage=960|isbn= |lire en ligne=https://www.google.fr/books/edition/Bulletin_des_lois_de_la_R%C3%A9publique_fran/6iktAAAAYAAJ?hl=fr&gbpv=1}}).</ref>. Il définit ainsi trois arrondissements : [[arrondissement de Grasse|Grasse]], [[arrondissement de Nice|Nice]] et [[arrondissement de Puget-Théniers|Puget-Théniers]].
+
+Liste des 25 cantons des [[Alpes-Maritimes]], par arrondissement en 1860<ref name="décret1860"/>{{,}}<ref name="Courrière1">{{Chapitre |auteur1=Henri Courrière|titre chapitre=Les conseillers généraux et les élections cantonales dans les Alpes-Maritimes à la fin du Second Empire (1860-1870)|auteurs ouvrage=Jean-François Tanguy, Jean Le Bihan, Yann Lagadec (dir.)|titre ouvrage=Le canton, un territoire du quotidien ?|lieu=Rennes|éditeur=Presses universitaires de Rennes|année=2009|isbn=9782753566637|lire en ligne=https://books.openedition.org/pur/100008?lang=fr|passage=173-185}}.</ref> :
+{| class="wikitable alternance"
+|[[Arrondissement de Grasse]]
+|8 cantons
+|[[Canton d'Antibes-Centre|Antibes]] - [[Canton du Bar-sur-Loup|Le Bar]] - [[Canton de Cannes-Est|Cannes]] - [[Canton de Coursegoules|Coursegoules]] - [[Canton de Grasse-Nord|Grasse]] - [[Canton de Saint-Auban|Saint-Auban]] - [[Canton de Saint-Vallier-de-Thiey|Saint-Vallier]] - [[Canton de Vence|Vence]]
+|-
+|[[Arrondissement de Nice]]
+|11 cantons
+|[[Canton de Breil-sur-Roya|Breil]] - [[Canton de Contes|Contes]] - [[Canton de L'Escarène|L'Escarène]] - [[Canton de Levens|Levens]] - [[Canton de Menton|Menton]] - [[Canton de Nice-Est|Nice-Est]] - [[Canton de Nice-Ouest|Nice-Ouest]] - [[Canton de Saint-Martin-Vésubie|Saint-Martin-Lantosque]] -<br/> [[Canton de Sospel|Sospel]] - [[Canton de Lantosque|Utelle]] - [[Canton de Villefranche-sur-Mer|Villefranche]]
+|-
+|[[Arrondissement de Puget-Théniers]]
+|6 cantons
+|[[Canton de Guillaumes|Guillaumes]] - [[Canton de Puget-Théniers|Puget-Théniers]] - [[Canton de Roquestéron|Roquesteron]] - [[Canton de Saint-Étienne-de-Tinée|Saint-Étienne]] - [[Canton de Saint-Sauveur-sur-Tinée|Saint-Sauveur]] - [[Canton de Villars-sur-Var|Villars]]
+|}
+
+Les communes de [[Menton (Alpes-Maritimes)|Menton]] et [[Roquebrune-Cap-Martin|Roquebrune]], bien qu'encore [[Villes libres de Menton et Roquebrune|villes libres]] sous la souveraineté ''de jure'' de la [[Monaco|Principauté de Monaco]] (mais administrées par la France depuis le plébiscite d'{{date|avril 1860}}), sont mentionnées dans le décret comme formant le [[canton de Menton]] avec trois autres communes<ref name="Masson">{{Ouvrage|langue=fr|auteur=[[Jean-Louis Masson (homme politique, 1947)|Jean-Louis Masson]]|titre=Provinces, départements, régions|sous-titre=l'organisation administrative de la France, d'hier à demain|lieu=Paris|éditeur=Lanore|passage=349|nature ouvrage=thèse de doctorat en droit remaniée|année=1984|pages totales=698|isbn=2-85157-003-X|bnf=36619081|lire en ligne=https://books.google.com/books?id=pbspjvZst5UC&printsec=frontcover}}.</ref>. Cette situation est régularisée par le traité du {{date|02/02/1861}} entérinant l'annexion de Menton et Roquebrune à la France<ref name="Masson"/>.
+
+Les cantons des arrondissements de Nice et de Puget-Théniers sont pourvus pour la première fois de conseillers généraux à l'issue d'élections cantonales organisées les {{date|30/12/1860}} et {{date|07/01/1861}}<ref name="Courrière1"/>{{,}}<ref>{{Ouvrage |auteur1=Henri Courrière|titre=L’État, la nation et la petite patrie.La vie politique à Nice et dans les Alpes-Maritimes de 1860 à 1898 : genèse d’un département français|lieu=Nice|éditeur=Thèse pour obtenir le grade de docteur de l'[[université Nice-Sophia-Antipolis]]|année=2008|passage=1031|isbn= |lire en ligne=https://www.academia.edu/31452196/La_vie_politique_%C3%A0_Nice_et_dans_les_Alpes_Maritimes_de_1860_%C3%A0_1898_gen%C3%A8se_dun_d%C3%A9partement_fran%C3%A7ais_volume_IV_annexes?auto=download}}.</ref>.
+[[Fichier:Anciens cantons des Alpes Maritimes.png|vignette|Carte des cantons des Alpes Maritimes avant le redécoupage de 2014]]
+
+=== Modifications du découpage cantonal avant 2014 ===
+Entre 1860 et le [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], au moins quatre lois et huit décrets ont modifié le découpage cantonal du département, la plupart du temps pour créer des cantons sur le littoral de plus en plus urbanisé : en 1881, 1904, 1919, 1922, 1951, 1955, 1957, 1973, 1982, 1985 et 1997<ref>{{Lien web |titre=Question n°833 de la députée Marie-Jo Zimmermann à la ministre de l'Intérieur durant la {{XIIIe}} législature|url=https://questions.assemblee-nationale.fr/q13/13-833QE.htm|date=04/12/2007|site=questions.assemblee-nationale.fr|consulté le=5 juin 2021}}.</ref>. Ces lois et décrets portent progressivement le nombre de cantons de 25 à 52. Le détail de ces modifications est indiqué dans le tableau ci-dessous.
+
+En 1926, l'arrondissement de Puget-Théniers est fusionné dans celui de Nice. En 1953, le chef-lieu du [[Canton de Lantosque|canton d'Utelle]] est transféré à [[Lantosque]]<ref>{{Article |auteur1= |titre=Décret du 31 octobre 1953 portant transfert à Lantosque du chef-lieu de canton d'Utelle (arrondissement de Nice, département des Alpes-Maritimes)|périodique={{JORF}}|date=06/11/1953|pages=10016|lire en ligne=https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=06%2F11%2F1953+%3E+06%2F11%2F1953|consulté le=22 juin 2021}}.</ref>.
+{| class="wikitable centre"
+|+ Modifications du découpage cantonal des Alpes-Maritimes avant le redécoupage de 2014
+|-
+! Loi / Décret !! Cantons !! Redécoupés en !! Observations !! Sources
+|-
+| Loi du<br/> {{date|30/07/1881}} || [[Canton de Vence|Vence]] || [[Canton de Vence|Vence]], [[Canton de Cagnes-sur-Mer|Cagnes]] || 1 canton créé<br/> (le département passe<br/> de 25 à 26 cantons) || style="text-align:center" | <ref>Loi du {{date|30/07/1881}} qui distrait plusieurs communes du canton de Vence (Alpes-Maritimes) pour former un nouveau canton, dont le chef-lieu est fixé à Cagnes (voir {{Ouvrage |auteur1= |titre=[[Bulletin des lois]] de la République française, {{XIIe}} série|sous-titre=Deuxième semestre de 1881, contenant les lois et décrets d'intérêt public et général publiés depuis le {{1er}} juillet jusqu'au {{date|31/12/1881}}|lieu=Paris|éditeur=Imprimerie nationale|année=1882|tome=23|passage=451|isbn= |lire en ligne=https://www.google.fr/books/edition/Bulletin_des_lois_Partie_principale/JgtU7GMWOd0C?hl=fr&gbpv=1}}).</ref>
+|-
+| Loi du<br/> {{date|29/01/1904}} || [[Canton de Saint-Martin-Vésubie|Saint-Martin-Vésubie]] || [[Canton de Saint-Martin-Vésubie|Saint-Martin-Vésubie]], [[Canton de Roquebillière|Roquebillière]] || 1 canton créé<br/> (le département passe<br/> de 26 à 27 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Loi du {{date|29/01/1904}} divisant en deux circonscriptions cantonales le canton de Saint-Martin-Vésubie (Alpes-Maritimes)|périodique={{JORF}}|date=13/02/1904|pages=1041|lire en ligne=https://gallica.bnf.fr/ark:/12148/bpt6k6517735g/f0.item|consulté le=22 juin 2021}}.</ref>
+|-
+| Loi du<br/> {{date|07/02/1919}} || [[Canton de Nice-Est|Nice-Est]], [[Canton de Nice-Ouest|Nice-Ouest]] || [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]], [[Canton de Nice-4|Nice-4]] || 2 cantons créés<br/> (le département passe<br/> de 27 à 29 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Loi du 7 février 1919 subdivisant en quatre cantons les cantons actuels de Nice Est et Nice Ouest|périodique={{JORF}}|date=09/02/1919|pages=1498|lire en ligne=https://gallica.bnf.fr/ark:/12148/bpt6k6361179m/f2.item|consulté le=6 juin 2021 }}.</ref>
+|-
+| Loi du <br/> {{date|27/12/1922}} || [[Canton de Villefranche-sur-Mer|Villefranche]] || [[Canton de Villefranche-sur-Mer|Villefranche]], [[Canton de Beausoleil|Beausoleil]] || 1 canton créé<br/> (le département passe<br/> de 29 à 30 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Loi du {{date|27/12/1922}} distrayant la commune de Beausoleil du canton de Villefranche (arrondissement de Nice, département des Alpes-Maritimes) pour en former un nouveau canton ayant Beausoleil pour chef-lieu|périodique={{JORF}}|date=29/12/1922|pages=12407|lire en ligne=https://gallica.bnf.fr/ark:/12148/bpt6k64543032/f3.item|consulté le=11 juin 2021 }}.</ref>
+|-
+| Décret du<br/> {{date|11/09/1951}} || [[Canton de Breil-sur-Roya|Breil]] || [[Canton de Breil-sur-Roya|Breil]], [[Canton de Tende|Tende]] || 1 canton créé<br/> (le département passe<br/> de 30 à 31 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret du 11 septembre 1951 portant érection, en canton distinct ayant Tende pour chef-lieu, des communes de Tende et de La Brigue, dépendant actuellement du canton de Breil (arrondissement de Nice, département des Alpes-Maritimes)|périodique={{JORF}}|date=12/09/1951|pages=9502|lire en ligne=https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=12%2F09%2F1951+%3E+12%2F09%2F1951|consulté le=11 juin 2021 }}.</ref>
+|-
+| Décret du<br/> {{date|11/09/1951}} || [[Canton de Roquestéron|Roquestéron]], [[Canton de Puget-Théniers|Puget-Théniers]] || [[Canton de Roquestéron|Roquestéron]], [[Canton de Puget-Théniers|Puget-Théniers]] || limites modifiées || style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret du 11 septembre 1951 portant rattachement de la commune
+de [[Saint-Antonin (Alpes-Maritimes)|Saint-Antonin]] (canton de Roquestéron, arrondissement de Nice, département des Alpes-Maritimes) au canton de Puget-Théniers (mêmes arrondissement et département)|périodique={{JORF}}|date=12/09/1951|pages=9503|lire en ligne=https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=12%2F09%2F1951+%3E+12%2F09%2F1951|consulté le=11 juin 2021 }}.</ref>
+|-
+| Décret du<br/> {{date|19/01/1955}} || [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]],<br/> [[Canton de Nice-4|Nice-4]] || [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]],<br/> [[Canton de Nice-4|Nice-4]], [[Canton de Nice-5|Nice-5]], [[Canton de Nice-6|Nice-6]] || 2 cantons créés<br/> (le département passe<br/> de 31 à 33 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret du 19 janvier 1955 portant sectionnement de la ville de Nice (arrondissement de Nice, département des Alpes-Maritimes) en six cantons|périodique={{JORF}}|date=21/01/1955|pages=807|lire en ligne=https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=21%2F01%2F1955+%3E+21%2F01%2F1955|consulté le=6 juin 2021 }}.</ref>
+|-
+| Décret du<br/> {{date|21/10/1957}} || [[Canton de Cannes-Est|Cannes]] || [[Canton de Cannes-Est|Cannes]], [[Canton du Cannet|Le Cannet]] || 1 canton créé<br/> (le département passe<br/> de 33 à 34 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret du {{date|21/10/1957}}|périodique={{JORF}}|date=23/10/1957|pages=10135|lire en ligne=https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=23%2F10%2F1957+%3E+23%2F10%2F1957|consulté le=22 juin 2021 }}.</ref> 
+|-
+| rowspan=3 | Décret du<br/> {{date|16/08/1973}} || [[Canton de Nice-4|Nice-4]], [[Canton de Nice-5|Nice-5]], [[Canton de Nice-6|Nice-6]] || [[Canton de Nice-4|Nice-4]], [[Canton de Nice-5|Nice-5]], [[Canton de Nice-6|Nice-6]],<br/> [[Canton de Nice-7|Nice-7]], [[Canton de Nice-8|Nice-8]], [[Canton de Nice-9|Nice-9]],<br/> [[Canton de Nice-10|Nice-10]], [[Canton de Nice-11|Nice-11]] || rowspan=3 | 7 cantons créés<br/> (le département passe<br/> de 34 à 41 cantons) || rowspan=3 style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret n°73-811 du 16 août 1973|périodique={{JORF}}|date=17/08/1973|pages=8916-8918|lire en ligne=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000854922|consulté le=5 juin 2021 }}.</ref> 
+|-
+| [[Canton d'Antibes|Antibes]] || [[Canton d'Antibes-Nord|Antibes-Nord]], [[Canton d'Antibes-Sud|Antibes-Sud]] 
+|-
+| [[Canton de Cannes-Est|Cannes]] || [[Canton de Cannes-Est|Cannes-Est]], [[Canton de Cannes-Ouest|Cannes-Ouest]] 
+|-
+| rowspan=3 | Décret du<br/> {{date|25/01/1982}} || [[Canton de Cagnes-sur-Mer|Cagnes-sur-Mer]] || [[Canton de Cagnes-sur-Mer-Est|Cagnes-sur-Mer-Est]],<br/> [[Canton de Cagnes-sur-Mer-Ouest|Cagnes-sur-Mer-Ouest]] || rowspan=3 | 5 cantons créés <br/> (le département passe<br/> de 41 à 46 cantons) || rowspan=3 style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret n°82-79 du 25 janvier 1982|périodique={{JORF}}|date=26/01/1982|pages=372-374|lire en ligne=https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=26%2F01%2F1982+%3E+26%2F01%2F1982|consulté le=5 juin 2021 }}.</ref>
+|-
+| [[Canton du Cannet|Le Cannet]] || [[Canton du Cannet|Le Cannet]], [[Canton de Mougins|Mougins]] 
+|-
+| [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]],<br/> [[Canton de Nice-7|Nice-7]], [[Canton de Nice-9|Nice-9]], [[Canton de Nice-10|Nice-10]] || [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]],<br/> [[Canton de Nice-7|Nice-7]], [[Canton de Nice-9|Nice-9]], [[Canton de Nice-10|Nice-10]],<br/> [[Canton de Nice-12|Nice-12]], [[Canton de Nice-13|Nice-13]], [[Canton de Nice-14|Nice-14]] 
+|-
+| rowspan=7 | Décret du<br/> {{date|31/01/1985}} || [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]] || [[Canton de Nice-1|Nice-1]], [[Canton de Nice-2|Nice-2]], [[Canton de Nice-3|Nice-3]]<br/> (limites modifiées) || rowspan=7 | 5 cantons créés<br/> (le département passe<br/> de 46 à 51 cantons) || rowspan=7 style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret n°85-143 du 31 janvier 1985|périodique={{JORF}}|date=01/02/1985|pages=1378-1379|lire en ligne=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000508156|consulté le=5 juin 2021 }}.</ref>
+|-
+| [[Canton de Nice-10|Nice-10]], [[Canton de Nice-14|Nice-14]] || [[Canton de Nice-10|Nice-10]], [[Canton de Nice-14|Nice-14]]<br/> (limites modifiées) 
+|-
+| [[Canton d'Antibes-Nord|Antibes-Nord]],<br/> [[Canton d'Antibes-Sud|Antibes-Sud]] || [[Canton d'Antibes-Biot|Antibes-Biot]], [[Canton d'Antibes-Centre|Antibes-Centre]],<br/> [[Canton de Vallauris-Antibes-Ouest|Vallauris-Antibes-Ouest]] 
+|-
+| [[Canton de Cagnes-sur-Mer-Est|Cagnes-sur-Mer-Est]],<br/> [[Canton de Cagnes-sur-Mer-Ouest|Cagnes-sur-Mer-Ouest]] || [[Canton de Cagnes-sur-Mer-Centre|Cagnes-sur-Mer-Centre]],<br/> [[Canton de Cagnes-sur-Mer-Ouest|Cagnes-sur-Mer-Ouest]],<br/> [[Canton de Saint-Laurent-du-Var-Cagnes-sur-Mer-Est|Saint-Laurent-du-Var-Cagnes-sur-Mer-Est]] 
+|-
+| [[Canton de Cannes-Est|Cannes-Est]],<br/> [[Canton de Cannes-Ouest|Cannes-Ouest]] || [[Canton de Cannes-Est|Cannes-Est]], [[Canton de Cannes-Centre|Cannes-Centre]],<br/> [[Canton de Mandelieu-Cannes-Ouest|Mandelieu-Cannes-Ouest]]
+|-
+| [[Canton de Gasse|Grasse]] || [[Canton de Grasse-Nord|Grasse-Nord]], [[Canton de Grasse-Sud|Grasse-Sud]]
+|-
+| [[Canton de Vence|Vence]] || [[Canton de Vence|Vence]], [[Canton de Carros|Carros]]
+|-
+| Décret du<br/> {{date|21/02/1997}} || [[Canton de Menton|Menton]] || [[Canton de Menton-Est|Menton-Est]], [[Canton de Menton-Ouest|Menton-Ouest]] || 1 canton créé<br/> (le département passe<br/> de 51 à 52 cantons) || style="text-align:center" | <ref>{{Article |auteur1= |titre=Décret du 21 février 1997 portant modification et création de cantons dans le département des Alpes-Maritimes|périodique={{JORF}}|date=23/02/1997|pages=|lire en ligne=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199056|consulté le=5 juin 2021 }}.</ref>
+|}
+
+Liste des 52 cantons des [[Alpes-Maritimes]], par arrondissement, de 1997 à 2014 :
+{| class="wikitable alternance"
+|[[Arrondissement de Grasse]]
+|19 cantons
+|[[Canton d'Antibes-Biot|Antibes-Biot]] - [[Canton d'Antibes-Centre|Antibes-Centre]] - [[Canton du Bar-sur-Loup|Le Bar-sur-Loup]] - [[Canton de Cagnes-sur-Mer-Centre|Cagnes-sur-Mer-Centre]] - [[Canton de Cagnes-sur-Mer-Ouest|Cagnes-sur-Mer-Ouest]] - [[Canton de Cannes-Centre|Cannes-Centre]] - [[Canton de Cannes-Est|Cannes-Est]] - [[Canton du Cannet|Le Cannet]] - [[Canton de Carros|Carros]] - [[Canton de Coursegoules|Coursegoules]] - [[Canton de Grasse-Nord|Grasse-Nord]] - [[Canton de Grasse-Sud|Grasse-Sud]] - [[Canton de Mandelieu-Cannes-Ouest|Mandelieu-Cannes-Ouest]] - [[Canton de Mougins|Mougins]] - [[Canton de Saint-Auban|Saint-Auban]] - [[Canton de Saint-Laurent-du-Var-Cagnes-sur-Mer-Est|Saint-Laurent-du-Var-Cagnes-sur-Mer-Est]] - [[Canton de Saint-Vallier-de-Thiey|Saint-Vallier-de-Thiey]] - [[Canton de Vallauris-Antibes-Ouest|Vallauris-Antibes-Ouest]] - [[Canton de Vence|Vence]]
+|-
+|[[Arrondissement de Nice]]
+|33 cantons
+|[[Canton de Beausoleil|Beausoleil]] - [[Canton de Breil-sur-Roya|Breil-sur-Roya]] - [[Canton de Contes|Contes]] - [[Canton de L'Escarène|L'Escarène]] - [[Canton de Guillaumes|Guillaumes]] - [[Canton de Lantosque|Lantosque]] - [[Canton de Levens|Levens]] - [[Canton de Menton-Est|Menton-Est]] - [[Canton de Menton-Ouest|Menton-Ouest]] - [[Canton de Nice-1|Nice-1]] - [[Canton de Nice-2|Nice-2]] - [[Canton de Nice-3|Nice-3]] - [[Canton de Nice-4|Nice-4]] - [[Canton de Nice-5|Nice-5]] - [[Canton de Nice-6|Nice-6]] - [[Canton de Nice-7|Nice-7]] - [[Canton de Nice-8|Nice-8]] - [[Canton de Nice-9|Nice-9]] - [[Canton de Nice-10|Nice-10]] - [[Canton de Nice-11|Nice-11]] - [[Canton de Nice-12|Nice-12]] - [[Canton de Nice-13|Nice-13]] - [[Canton de Nice-14|Nice-14]] - [[Canton de Puget-Théniers|Puget-Théniers]] - [[Canton de Roquebillière|Roquebillière]] - [[Canton de Roquestéron|Roquestéron]] - [[Canton de Saint-Étienne-de-Tinée|Saint-Étienne-de-Tinée]] - [[Canton de Saint-Martin-Vésubie|Saint-Martin-Vésubie]] - [[Canton de Saint-Sauveur-sur-Tinée|Saint-Sauveur-sur-Tinée]] - [[Canton de Sospel|Sospel]] - [[Canton de Tende|Tende]] - [[Canton de Villars-sur-Var|Villars-sur-Var]] - [[Canton de Villefranche-sur-Mer|Villefranche-sur-Mer]]
+
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 10 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date|24 février 2014}} pour le département des [[Alpes-Maritimes]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 12,5 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans les [[Alpes-Maritimes]] le nombre de cantons passe ainsi de 52 à 27<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028658238 Décret {{n°|2014}}-227 du 24 février 2014 portant délimitation des cantons dans le département des Alpes-Maritimes], sur ''Légifrance'' (consulté le 10 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision n° 2010-618 DC du {{date|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 10 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département des Alpes-Maritimes, la population de référence est la population légale en vigueur au {{date|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|1078729|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=06 |titre= Chiffres clés Évolution et structure de la population - Département des Alpes-Maritimes (06) |date = |site =insee.fr |consulté le= 10 mai 2014}}.</ref>. Avec 27 cantons la population moyenne par conseiller départemental est de {{unité|39953|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|31962|habitants}} et {{unité|47944|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"  
+|-----
+!N°<ref>N° = numéro d'ordre dans le décret</ref>||Nom du Canton||[[Bureau centralisateur]]||Population 2010||Écart /moyenne||Nombre de communes entières||Communes composant le canton||Localisation
+|- 
+|1||[[Canton d'Antibes-1|Antibes-1]]||[[Antibes]]||{{formatnum:28252}} + fraction Antibes||  ||1 + fraction Antibes||1° La commune de [[Vallauris]] ;<br/>2° La partie de la commune d'Antibes située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Vallauris, chemin des Brusquets, déviation nord du chemin des Brusquets, ligne droite jusqu'au cours d'eau, cours d'eau, chemin de la Forêt, ligne droite reliant l'extrémité du chemin de la Forêt traversant le vallon des Eucalyptus à celle du chemin partant de l'intersection du chemin des Terriers et du boulevard André-Breton, chemin des Terriers, chemin des Ames-du-Purgatoire, chemin de Rabiac-Estagnol, chemin de Fontmerle, route de Saint-Jean, chemin des Eucalyptus, chemin de Lauvert, route départementale 6107, rond-point de la Badine, route de la Badine, rue Pierre-Loti, boulevard Raymond-Poincaré, avenue de l'Amiral-Courbet, boulevard Charles-Guillaumot, ligne droite prolongeant la rue des Iles jusqu'au littoral.|| [[Fichier:Locator map of Kanton Antibes-1.png|200px]]
+|-
+|2||[[Canton d'Antibes-2|Antibes-2]]||[[Antibes]]|| fraction Antibes ||  ||fraction Antibes||Partie de la commune d'Antibes située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite prolongeant la rue des Iles, boulevard Charles-Guillaumot, avenue de l'Amiral-Courbet, boulevard Raymond-Poincaré, rue Pierre-Loti, route de la Badine, rond-point de la Badine, route départementale 6107, chemin de Lauvert, chemin des Eucalyptus, route de Saint-Jean, chemin de Fontmerle, chemin de Rabiac-Estagnol, avenue Philippe-Rochat, boulevard du Général-Vautrin, ligne de chemin de fer, passerelle Saint-Roch, place Pierre-Semard, avenue du 11-Novembre, avenue de Verdun, quai des Pêcheurs, promenade Courtine, promenade de l'Amiral-de-Grasse, ligne droite prolongeant la rue des Arceaux, jusqu'au littoral.||[[Fichier:Locator map of Kanton Antibes-2.png|200px]]
+|-
+|3||[[Canton d'Antibes-3|Antibes-3]]||[[Antibes]]||{{formatnum:9449}} + fraction Antibes|| ||1 + fraction Antibes||1° La commune suivante : [[Biot (Alpes-Maritimes)|Biot]].<br/>2° La partie de la commune d'Antibes située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite prolongeant la rue des Arceaux, promenade de l'Amiral-de-Grasse, promenade Courtine, quai des Pêcheurs, avenue de Verdun, avenue du 11-Novembre, place Pierre-Semard, passerelle Saint-Roch, ligne de chemin de fer, boulevard du Général-Vautrin, avenue Philippe-Rochat, chemin de Rabiac-Estagnol, chemin des Ames-du-Purgatoire, route de Grasse, avenue des Martyrs-de-la-Résistance, chemin des Combes, {{2e|avenue}}, chemin de Saint-Claude, chemin des Rastines, ligne droite reliant l'extrémité du chemin des Rastines à celle du chemin de la Valmasque, chemin de la Valmasque, jusqu'à la limite territoriale de la commune de Biot.||[[Fichier:Locator map of Kanton Antibes-3.png|200px]]
+|-
+|4||[[Canton de Beausoleil|Beausoleil]]||[[Beausoleil (Alpes-Maritimes)|Beausoleil]]||{{formatnum:35613}}||0,89||7||[[Beaulieu-sur-Mer]], [[Beausoleil (Alpes-Maritimes)|Beausoleil]], [[Cap-d'Ail]], [[Èze]], [[Saint-Jean-Cap-Ferrat]], [[La Turbie]], [[Villefranche-sur-Mer]].||[[Fichier:Locator map of Kanton Beausoleil.png|200px]] 
+|-
+|5||[[Canton de Cagnes-sur-Mer-1|Cagnes-sur-Mer-1]]||[[Cagnes-sur-Mer]]|| Fraction Cagnes-sur-Mer || ||Fraction Cagnes-sur-Mer||Partie de la commune de Cagnes-sur-Mer située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de la Gaude, cours de la Cagne, chemin du Brecq, avenue Marcel-Pagnol, avenue du Colonel-Jeanpierre, avenue de la Gaude, avenue Jean-Mermoz, ligne droite perpendiculaire à l'avenue Jean-Mermoz jusqu'à l'intersection de l'impasse Colettes-d'Azur, impasse Colettes-d'Azur, ligne droite dans le prolongement de l'impasse Colettes-d'Azur, chemin du Vallon-des-Vaux, chemin du Val-Fleuri, ligne de chemin de fer, jusqu'à la limite territoriale de la commune de Saint-Laurent-du-Var.||[[Fichier:Locator map of Kanton Cagnes-sur-Mer-1.png|200px]]
+|-
+|6||[[Canton de Cagnes-sur-Mer-2|Cagnes-sur-Mer-2]]||[[Cagnes-sur-Mer]]||{{formatnum:36784}} + fraction Cagnes-sur-Mer|| ||2 + fraction Cagnes-sur-Mer||1° Les communes suivantes : [[La Gaude]], [[Saint-Laurent-du-Var]].<br/>2° La partie de la commune de Cagnes-sur-Mer non incluse dans le canton de Cagnes-sur-Mer-1.||[[Fichier:Locator map of Kanton Cagnes-sur-Mer-2.png|200px]]
+|-
+|7||[[Canton de Cannes-1|Cannes-1]]||[[Cannes]]||Fraction Cannes|| ||Fraction Cannes + Le Cannet|| 1° La partie de la commune de Cannes située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune du Cannet, avenue du Général-de-Gaulle, boulevard du Perrier, boulevard Renée-et-Irène-Paillassou, boulevard du Riou, rue du Pont-Saint-Victor, avenue de la Croix-des-Gardes, avenue Jean-de-Noailles, avenue du Docteur-Raymond-Picaud, chemin de la Nadine, ligne de chemin de fer, ligne droite prolongeant la rue Alexandre-Pascal jusqu'au littoral ;<br/>2° La partie de la commune du Cannet située à l'ouest de l'avenue Franklin-Roosevelt, depuis la limite territoriale de la commune de Mougins jusqu'à la limite territoriale de la commune de Cannes.||[[Fichier:Locator map of Kanton Cannes-1.png|200px]]
+|-
+|8||[[Canton de Cannes-2|Cannes-2]]||[[Cannes]]|| Fraction Cannes || ||Fraction Cannes|| Partie de la commune de Cannes non incluse dans le canton de Cannes-1.||[[Fichier:Locator map of Kanton Cannes-2.png|200px]]
+|-
+|9||[[Canton de Le Cannet|Le Cannet]]||[[Le Cannet]]||{{formatnum:18917}} + Fraction Le Cannet|| ||1  + Fraction Le Cannet||1° La commune suivante : [[Mougins]].<br/>2° La partie de la commune du Cannet non incluse dans le canton de Cannes-1.||[[Fichier:Locator map of Kanton Le Cannet.png|200px]]
+|-
+|10||[[Canton de Contes|Contes]]||[[Contes (Alpes-Maritimes)|Contes]]||{{formatnum:35082}}||0,88||20||[[Bendejun]], [[Berre-les-Alpes]], [[Blausasc]], [[Breil-sur-Roya]], [[La Brigue]], [[Cantaron]], [[Châteauneuf-Villevieille]], [[Coaraze]], [[Contes (Alpes-Maritimes)|Contes]], [[Drap (Alpes-Maritimes)|Drap]], [[L'Escarène]], [[Fontan]], [[Lucéram]], [[Moulinet (Alpes-Maritimes)|Moulinet]], [[Peille]], [[Peillon]], [[Saorge]], [[Sospel]], [[Touët-de-l'Escarène]], [[Tende (Alpes-Maritimes)|Tende]].||[[Fichier:Locator map of Kanton Contes.png|200px]] 
+|-
+|11||[[Canton de Grasse-1|Grasse-1]]||[[Grasse]]||{{formatnum:23926}} + Fraction Grasse|| ||18 + Fraction Grasse||1° Les communes suivantes : [[Amirat]], [[Andon (Alpes-Maritimes)|Andon]], [[Briançonnet]], [[Cabris]], [[Caille (Alpes-Maritimes)|Caille]], [[Collongues (Alpes-Maritimes)|Collongues]], [[Escragnolles]], [[Gars]], [[Le Mas]], [[Les Mujouls]], [[Peymeinade]], [[Saint-Auban]], [[Saint-Cézaire-sur-Siagne]], [[Saint-Vallier-de-Thiey]], [[Séranon]], [[Spéracèdes]], [[Le Tignet]], [[Valderoure]].<br/>2° La partie de la commune de Grasse située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Peymenade, chemin de la Panouche, place Sainte-Anne, vieux-chemin de Sainte-Anne, route de Draguignan, avenue de la Libération, avenue du Maréchal-Leclerc, avenue Mathias-Duval, boulevard Carnot, boulevard Fragonard, avenue Chiris, avenue Antoine-de-Saint-Exupéry, boulevard du Commandant-Autran, avenue Jean-XXIII, chemin de Saint-Jean, jusqu'à la limite territoriale de la commune de Châteauneuf-Grasse.||[[Fichier:Locator map of Kanton Grasse-1.png|200px]]
+|-
+|12||[[Canton de Grasse-2|Grasse-2]]||[[Grasse]]||{{formatnum:10198}} + Fraction Grasse|| ||1 + Fraction Grasse||1° La commune suivante : [[Mouans-Sartoux]].<br/> 2° La partie de la commune de Grasse non incluse dans le canton de Grasse-1.||[[Fichier:Locator map of Kanton Grasse-2.png|200px]]
+|-
+|13||[[Canton de Mandelieu-la-Napoule|Mandelieu-la-Napoule]]||[[Mandelieu-la-Napoule]]||{{formatnum:38567}}||0,97||5||[[Auribeau-sur-Siagne]], [[Mandelieu-la-Napoule]], [[Pégomas]], [[La Roquette-sur-Siagne]], [[Théoule-sur-Mer]].||[[Fichier:Locator map of Kanton Mandelieu-la-Napoule.png|200px]] 
+|-
+|14||[[Canton de Menton|Menton]]||[[Menton (Alpes-Maritimes)|Menton]]||{{formatnum:45217}}||1,13||6||[[Castellar (Alpes-Maritimes)|Castellar]], [[Castillon (Alpes-Maritimes)|Castillon]], [[Gorbio]], [[Menton (Alpes-Maritimes)|Menton]], [[Roquebrune-Cap-Martin]], [[Sainte-Agnès (Alpes-Maritimes)|Sainte-Agnès]].||[[Fichier:Locator map of Kanton Menton.png|200px]] 
+|-
+|15||[[Canton de Nice-1|Nice-1]]||[[Nice]]|| fraction Nice ||||fraction Nice||Partie de la commune de Nice située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite prolongeant la rue Lenval, promenade des Anglais, avenue de Fabron, avenue Mont-Rabeau, avenue de la Vallière, allée des Lions, boulevard Edouard-Herriot, boulevard Carlone, avenue de la Bornala, vieux-chemin de Saint-Antoine  (raccourci n° 1), route de Saint-Antoine, vieux-chemin de Saint-Antoine (raccourci n° 2), route de Saint-Antoine, vieux-chemin de Saint-Antoine (raccourci n° 4), ligne droite perpendiculaire à la route de Saint-Antoine tracée jusqu'au n° 19 de la route de Canta-Galet, route de Canta-Galet, ligne droite perpendiculaire à la route de Canta-Galet tracée jusqu'à l'extrémité de l'avenue Antoine-Galante, avenue Antoine-Galante, chemin des Collettes, chemin de la Gouletta, chemin du Vallon-Monari, ligne droite jusqu'à la route de Bellet, route de Bellet, avenue des Agaves, boulevard de la Madeleine, ligne droite reliant la rue des Etoiles et la corniche de Magnan, chemin Apraxine, avenue d'Estienne-d'Orves, route de Saint-Pierre-de-Féric, avenue du Dauphiné, boulevard du Tzarewitch, avenue Gay, rue Oscar-II, boulevard Gambetta, rue de l'Abbé-Grégoire, square du Colonel-Jean-Pierre, rue de la Reine-Jeanne, avenue Jean-Médecin, place Masséna, avenue des Phocéens et son prolongement en ligne droite jusqu'au littoral.||[[Fichier:Locator map of Kanton Nice-1.png|200px]]
+|-
+|16||[[Canton de Nice-2|Nice-2]]||[[Nice]]|| fraction Nice ||||fraction Nice||Partie de la commune de Nice située :<br/> 1° A l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite prolongeant la rue Lenval, promenade des Anglais, avenue de Fabron, avenue Mont-Rabeau, avenue de la Vallière, allée des Lions, boulevard Edouard-Herriot, boulevard Carlone, avenue de la Bornala, vieux-chemin de Saint-Antoine (raccourci n° 1), route de Saint-Antoine, vieux-chemin de Saint-Antoine (raccourci n° 2), route de Saint-Antoine, vieux-chemin de Saint-Antoine (raccourci n° 4), ligne droite perpendiculaire à la route de Saint-Antoine tracée jusqu'au n° 19 de la route de Canta-Galet, route de Canta-Galet, ligne droite perpendiculaire à la route de Canta-Galet tracée jusqu'à l'extrémité de l'avenue Antoine-Galante, avenue Antoine-Galante, chemin des Collettes, chemin de la Gouletta, chemin du Vallon-Monari, ligne droite jusqu'à la route de Bellet, route de Bellet, avenue des Agaves, boulevard de la Madeleine, rue des Etoiles, chemin des Treuyes, route de Bellet, autoroute A 8, boulevard de la Madeleine, chemin du Génie, jusqu'à la limite territoriale de la commune de Colomars.||[[Fichier:Locator map of Kanton Nice-2.png|200px]]
+|-
+|17||[[Canton de Nice-3|Nice-3]]||[[Nice]]||{{formatnum:16877}}||0,42||3 + fraction Nice||1° Les communes suivantes : [[Le Broc (Alpes-Maritimes)|Le Broc]], [[Carros]], [[Gattières]]. 2° La partie de la commune de Nice située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite prolongeant l'avenue du Docteur-Émile-Roux, boulevard René-Cassin, avenue du Capitaine-Ferber, promenade Edouard-Corniglion-Molinier, avenue des Grenouillères, boulevard René-Cassin, rue Jules-Belleudy, rue Auguste-Pegurier, avenue Saint-Augustin, boulevard du Mercantour, route de Grenoble, avenue Yvonne-Vittone, avenue Henri-Matisse, rue Alphonse-Ier, avenue Sainte-Marguerite, avenue Louis-Cappatti, avenue de la Corniche-Fleurie, chemin de l'Arieta, chemin du Caporal-de-Spagnol-Soubran, avenue de la Corniche-Fleurie, chemin de la Ginestière, cours d'eau, chemin de la Ginestière, cours d'eau, chemin de Crémat, chemin de Saquier, route de Bellet, jusqu'à la limite territoriale de la commune de Colomars.||[[Fichier:Locator map of Kanton Nice-3.png|200px]]
+|-
+|18||[[Canton de Nice-4|Nice-4]]||[[Nice]]||fraction Nice ||||fraction Nice||Partie de la commune de Nice située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Colomars, chemin du Génie, boulevard de la Madeleine, autoroute A 8, route de Bellet, chemin des Treuyes, rue des Etoiles, ligne droite reliant la rue des Etoiles à la corniche de Magnan, chemin Apraxine, avenue d'Estienne-d'Orves, route de Saint-Pierre-de-Féric, avenue du Dauphiné, boulevard du Tzarewitch, avenue Gay, rue Oscar-II, boulevard Gambetta, ligne de chemin de fer, rue Cros-de-Capeu, rue Georges-Doublet, rue Henry-de-Cessole, rue du Grand-Pin, boulevard de Cessole, avenue Cyrnos, avenue du Caire, chemin de la Maion-Grossa, boulevard de Cessole, avenue de la Vallière, avenue Valentiny, avenue de Saint-Sylvestre, avenue du Ray, avenue Gravier, vieux-chemin de Gairault, autoroute A 8, avenue de Gairault, chemin de la Séréna, autoroute A 8, avenue du parc Maria-Séréna, ligne droite entre l'avenue du parc Maria-Séréna et l'avenue André-Beauduc, avenue André-Beauduc, route d'Aspremont, jusqu'à la limite territoriale de la commune de Falicon.||[[Fichier:Locator map of Kanton Nice-4.png|200px]]
+|-
+|19||[[Canton de Nice-5|Nice-5]]||[[Nice]]||fraction Nice ||||fraction Nice||Partie de la commune de Nice située à l'intérieur d'un périmètre défini par l'axe des voies et limites suivantes : boulevard Gambetta, ligne de chemin de fer, rue Cros-de-Capeu, rue Georges-Doublet, rue Henry-de-Cessole, rue du Grand-Pin, boulevard de Cessole, avenue Cyrnos, avenue du Caire, chemin de la Maion-Grossa, boulevard de Cessole, avenue de la Vallière, avenue Valentiny, avenue de Saint-Sylvestre, avenue du Ray, avenue Gravier, avenue Vismara, avenue Henri-Dunant, chemin de Riba-de-Mouela, avenue Scudéri, avenue Jean-de-la-Fontaine, petite avenue des Orangers, avenue des Mimosas, ligne droite prolongeant l'avenue de la Marne et passant par l'avenue des Poilus et l'avenue Mireille jusqu'à la rue des Lilas, rue des Lilas, avenue de Brancolar, avenue Daviot, avenue Saint-Lambert, avenue Joseph-Vallot, avenue Valrose, avenue Raymond-Comboul, rue Rouget-de-L'Isle, rue de la Reine-Jeanne, square du Colonel-Jean-Pierre, rue de l'Abbé-Grégoire.||[[Fichier:Locator map of Kanton Nice-5.png|200px]]
+|-
+|20||[[Canton de Nice-6|Nice-6]]||[[Nice]]|| fraction Nice ||||fraction Nice||Partie de la commune de Nice située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Falicon, route d'Aspremont, avenue André-Beauduc, ligne droite entre l'avenue du parc Maria-Séréna et l'avenue André-Beauduc, avenue du parc Maria-Séréna, autoroute A 8, chemin de la Séréna, avenue de Gairault, autoroute A 8, vieux-chemin de Gairault, avenue Gravier, avenue Vismara, avenue Henri-Dunant, chemin de Riba-de-Mouela, avenue Scudéri, avenue Jean-de-la-Fontaine, petite avenue des Orangers, avenue des Mimosas, ligne droite prolongeant l'avenue de la Marne et passant par l'avenue des Poilus et l'avenue Mireille jusqu'à la rue des Lilas, rue des Lilas, avenue de Brancolar, avenue Daviot, avenue Saint-Lambert, avenue Joseph-Vallot, avenue Valrose, avenue Raymond-Comboul, rue Rouget-de-L'Isle, avenue Jean-Médecin, place Masséna, boulevard Jean-Jaurès, avenue Saint-Sébastien, boulevard Risso, place de l'Armée-du-Rhin, boulevard Jean-Baptiste-Vérany, ligne de chemin de fer, avenue de l'Arbre-Inférieur, boulevard Pasteur (exclu, jusqu'à la rue Claude-Bernard), rue Claude-Bernard, boulevard Pasteur, corniche Sainte-Rosalie, chemin Saint-Yriel, terrasse de Cimiez, chemin reliant la terrasse de Cimiez à la place du Docteur-Charles-Paschetta, montée Clément, corniche du Frère-Marc, chemin Saint-Yriel, avenue des Roches-Choisies, petite avenue du Prince-de-Galles, avenue des Arènes-de-Cimiez, avenue de Flirey, avenue de Valombrose, voie d'accès contournant les pavillons M, J, I du centre hospitalier universitaire, emprise de la blanchisserie interhospitalière du centre hospitalier universitaire de Nice (exclue), avenue Joseph-Raybaud, emprise du centre hospitalier Sainte-Marie (exclue), jusqu'à la limite territoriale de la commune de Saint-André-de-la-Roche.||[[Fichier:Locator map of Kanton Nice-6.png|200px]]
+|-
+|21||[[Canton de Nice-7|Nice-7]]||[[Nice]]||{{formatnum:15336}} + fraction Nice||||2 + fraction Nice||1° Les communes suivantes : [[Saint-André-de-la-Roche]], [[La Trinité (Alpes-Maritimes)|La Trinité]].<br/>2° La partie de la commune de Nice située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-André-de-la-Roche, emprise du centre hospitalier Sainte-Marie (incluse), avenue Joseph-Raybaud, emprise de la blanchisserie interhospitalière du centre hospitalier universitaire de Nice (incluse), voie d'accès contournant les pavillons M, J, I du centre hospitalier universitaire, avenue de Valombrose, avenue de Flirey, avenue des Arènes-de-Cimiez, petite avenue du Prince-de-Galles, avenue des Roches-Choisies, chemin Saint-Yriel, corniche du Frère-Marc, montée Clément, boulevard Pasteur, rue du Docteur-Louis-Prat, avenue du Maréchal-Lyautey, pont René-Coty, cours du Paillon, ligne droite prolongeant la résidence Bon-Voyage, résidence Bon-Voyage (incluse), boulevard de l'Observatoire, ligne droite prolongeant le boulevard de l'Observatoire jusqu'au rond-point de la route de Turin, bretelle d'autoroute, autoroute A 8, jusqu'à la limite territoriale de la commune de La Trinité.||[[Fichier:Locator map of Kanton Nice-7.png|200px]]
+|-
+|22||[[Canton de Nice-8|Nice-8]]||[[Nice]]||fraction Nice ||||fraction Nice||Partie de la commune de Nice située à l'intérieur d'un périmètre défini par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de La Trinité, autoroute A 8, bretelle d'autoroute, ligne droite prolongeant le boulevard de l'Observatoire jusqu'au rond-point de la route de Turin, boulevard de l'Observatoire, ligne droite prolongeant la résidence Bon-Voyage, résidence Bon-Voyage (exclue), cours du Paillon, rue du Docteur-Louis-Prat, boulevard Pasteur, montée Clément, chemin reliant la terrasse de Cimiez à la place du Docteur-Charles-Paschetta, terrasse de Cimiez, chemin Saint-Yriel, corniche Sainte-Rosalie, boulevard Pasteur, rue Claude-Bernard, boulevard Pasteur (inclus, jusqu'à l'angle de la rue de la Gendarmerie), avenue de l'Arbre-Inférieur, ligne de chemin de fer, boulevard Jean-Baptiste-Vérany, place de l'Armée-du-Rhin, boulevard Pierre-Sola, rue Auguste-Gal, rue Théodore-Gasiglia, rue Arson, place Auguste-Blanqui, boulevard de Riquier, rue Smollet, rue Soleau, avenue du Mont-Alban, corniche André-Joly, château Riquier, rue de l'Abbé-Salvetti, boulevard du Mont-Boron, boulevard de l'Armée-des-Alpes, boulevard Bischoffsheim, boulevard de l'Observatoire, ligne droite prolongeant le boulevard de l'Observatoire jusqu'au rond-point de la route de Turin, bretelle d'autoroute, autoroute A 8, jusqu'à la limite territoriale de la commune de La Trinité.||[[Fichier:Locator map of Kanton Nice-8.png|200px]]
+|-
+|23||[[Canton de Nice-9|Nice-9]]||[[Nice]]|| fraction Nice ||||fraction Nice||Partie de la commune de Nice non incluse dans les cantons de Nice-1, Nice-2, Nice-3, Nice-4, Nice-5, Nice-6, Nice-7 et Nice-8.||[[Fichier:Locator map of Kanton Nice-9.png|200px]]
+|-
+|24||[[Canton de Tourrette-Levens|Tourrette-Levens]]||[[Tourrette-Levens]]||{{formatnum:34099}}||0,85||28||[[Aspremont (Alpes-Maritimes)|Aspremont]], [[Belvédère (Alpes-Maritimes)|Belvédère]], [[La Bollène-Vésubie]], [[Castagniers]], [[Clans (Alpes-Maritimes)|Clans]], [[Colomars]], [[Duranus]], [[Falicon]], [[Ilonse]], [[Isola (Alpes-Maritimes)|Isola]], [[Lantosque]], [[Levens]], [[Marie (Alpes-Maritimes)|Marie]], [[Rimplas]], [[Roquebillière]], [[Roubion (Alpes-Maritimes)|Roubion]], [[Roure (Alpes-Maritimes)|Roure]], [[La Roquette-sur-Var]], [[Saint-Blaise (Alpes-Maritimes)|Saint-Blaise]], [[Saint-Dalmas-le-Selvage]], [[Saint-Étienne-de-Tinée]], [[Saint-Martin-du-Var]], [[Saint-Martin-Vésubie]], [[Saint-Sauveur-sur-Tinée]], [[Tourrette-Levens]], [[Utelle]], [[Valdeblore]], [[Venanson]].||[[Fichier:Locator map of Kanton Tourrette-Levens.png|200px]] 
+|-
+|25||[[Canton de Valbonne|Valbonne]]||[[Valbonne]]||{{formatnum:29994}} + fraction Antibes||||11 + fraction Antibes||1° Les communes suivantes : [[Le Bar-sur-Loup]], [[Caussols]], [[Châteauneuf-Grasse]], [[Cipières]], [[Courmes]], [[Gourdon (Alpes-Maritimes)|Gourdon]], [[Gréolières]], [[Opio]], [[Le Rouret]], [[Tourrettes-sur-Loup]], [[Valbonne]]. <br/>2° La partie de la commune d'Antibes non incluse dans les cantons d'Antibes-1, Antibes-2 et Antibes-3.||[[Fichier:Locator map of Kanton Valbonne.png|200px]]
+|-
+|26||[[Canton de Vence|Vence]]||[[Vence]]||{{formatnum:37299}}|| ||47||[[Aiglun (Alpes-Maritimes)|Aiglun]], [[Ascros]], [[Auvare]], [[Bairols]], [[Beuil]], [[Bézaudun-les-Alpes]], [[Bonson (Alpes-Maritimes)|Bonson]], [[Bouyon]], [[Châteauneuf-d'Entraunes]], [[Conségudes]], [[Coursegoules]], [[La Croix-sur-Roudoule]], [[Cuébris]], [[Daluis]], [[Entraunes]], [[Les Ferres]], [[Gilette]], [[Guillaumes]], [[Lieuche]], [[Malaussène]], [[Massoins]], [[La Penne]], [[Péone]], [[Pierlas]], [[Pierrefeu]], [[Puget-Rostang]], [[Puget-Théniers]], [[Revest-les-Roches]], [[Rigaud (Alpes-Maritimes)|Rigaud]], [[La Roque-en-Provence]], [[Roquestéron]], [[Saint-Antonin (Alpes-Maritimes)|Saint-Antonin]], [[Saint-Jeannet (Alpes-Maritimes)|Saint-Jeannet]], [[Saint-Léger (Alpes-Maritimes)|Saint-Léger]], [[Saint-Martin-d'Entraunes]], [[Sallagriffon]], [[Sauze]], [[Sigale]], [[Thiéry (Alpes-Maritimes)|Thiéry]], [[Toudon]], [[Touët-sur-Var]], [[La Tour (Alpes-Maritimes)|La Tour]], [[Tourette-du-Château]], [[Tournefort (Alpes-Maritimes)|Tournefort]], [[Vence]], [[Villars-sur-Var]], [[Villeneuve-d'Entraunes]].||[[Fichier:Locator map of Kanton Vence.png|200px]] 
+|-
+|27||[[Canton de Villeneuve-Loubet|Villeneuve-Loubet]]||[[Villeneuve-Loubet]]||{{formatnum:32537}}||0,81||4||[[La Colle-sur-Loup]], [[Roquefort-les-Pins]], [[Saint-Paul-de-Vence]], [[Villeneuve-Loubet]].||[[Fichier:Locator map of Kanton Villeneuve-Loubet.png|200px]] 
+|-
+!|| ||||{{formatnum:1078729}}||||163||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département des Alpes-Maritimes, c'est le cas de deux cantons ([[canton de Nice-3|Nice-3]], [[canton de Vence|Vence]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-----
+!N°||Canton||[[Arrondissement de Grasse|Grasse]]||[[Arrondissement de Nice|Nice]]||Total
+|-
+|1||align="left"| Antibes-1||1 + fraction Antibes||||'''1''' + fraction Antibes
+|-
+|2||align="left"| Antibes-2||fraction Antibes||||fraction Antibes
+|-
+|3||align="left"| Antibes-3||1 + fraction Antibes||||'''1''' + fraction Antibes
+|-
+|4||align="left"| Beausoleil||||7||'''7'''
+|-
+|5||align="left"| Cagnes-sur-Mer-1||Fraction Cagnes-sur-Mer||||Fraction Cagnes-sur-Mer
+|-
+|6||align="left"| Cagnes-sur-Mer-2||2 + Fraction Cagnes-sur-Mer||||'''2''' + Fraction Cagnes-sur-Mer
+|-
+|7||align="left"| Cannes-1||Fraction Cannes + Le Cannet||||Fraction Cannes + Le Cannet
+|-
+|8||align="left"| Cannes-2||Fraction Cannes||||Fraction Cannes
+|-
+|9||align="left"| Le Cannet||1 + Fraction Le Cannet||||'''1''' + Fraction Le Cannet
+|-
+|10||align="left"| Contes||||20||'''20'''
+|-
+|11||align="left"| Grasse-1||18 + Fraction Grasse||||'''18''' + Fraction Grasse
+|-
+|12||align="left"| Grasse-2||1 + Fraction Grasse||||'''1''' + Fraction Grasse
+|-
+|13||align="left"| Mandelieu-la-Napoule||5||||'''5'''
+|-
+|14||align="left"| Menton||||6||'''6'''
+|-
+|15||align="left"| Nice-1||||Fraction Nice||Fraction Nice
+|-
+|16||align="left"| Nice-2||||Fraction Nice||Fraction Nice
+|-
+|17||align="left"| Nice-3||3||fraction Nice||'''3''' + fraction Nice
+|-
+|18||align="left"| Nice-4||||Fraction Nice||Fraction Nice
+|-
+|19||align="left"| Nice-5||||Fraction Nice||Fraction Nice
+|-
+|20||align="left"| Nice-6||||Fraction Nice||Fraction Nice
+|-
+|21||align="left"| Nice-7||||2 + fraction Nice||'''2''' + fraction Nice
+|-
+|22||align="left"| Nice-8||||Fraction Nice||Fraction Nice
+|-
+|23||align="left"| Nice-9||||Fraction Nice||Fraction Nice
+|-
+|24||align="left"| Tourrette-Levens||||28||'''28'''
+|-
+|25||align="left"| Valbonne||11 + fraction Antibes||||'''11''' + fraction Antibes
+|-
+|26||align="left"| Vence||10||37||'''47'''
+|-
+|27||align="left"| Villeneuve-Loubet||4||||'''4'''
+|-
+!||||62||101||163
+|}
+
+== Notes et références ==
+{{Références|taille=35}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Liste des communes des Alpes-Maritimes]]
+* [[Liste des conseillers départementaux des Alpes-Maritimes]]
+
+=== Liens externes ===
+* {{Lien web
+ | langue      = fr
+ | titre       = Les cantons
+ | url         = https://www.departement06.fr/divisions-administratives/les-cantons-3151.html
+ | date        = 
+ | site        = departement06.fr
+ | éditeur     = [[Conseil départemental des Alpes-Maritimes|CD Alpes-Maritimes]]
+ | consulté le = 26 juin 2020
+}}.
+
+{{Palette|Découpage administratif de Provence-Alpes-Côte d'Azur|Cantons de France|Cantons des Alpes-Maritimes}}
+{{Portail|Alpes-Maritimes}}
+
+[[Catégorie:Canton dans les Alpes-Maritimes|*]]
+[[Catégorie:Liste de cantons français|Alpes-Maritimes]]
+[[Catégorie:Liste en rapport avec les Alpes-Maritimes|Cantons des Alpes-Maritimes]]

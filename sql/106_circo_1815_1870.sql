@@ -11,6 +11,8 @@
 --   # sans la Moselle), d'un coup ; la boucle s'arrête au premier refus :
 --   for d in 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 \
 --            42 43 44 45 46 47 48 49 50 51 52 53 55 56 58 59 60 61 62 63 99; do
+--   # seconde série (4 octobre 2026, `circo/regles_1815_restants.py`) :
+--   #   01 à 11, 13 à 20, 64 à 73, 83 — l'Aveyron (12) n'est pas photographié.
 --     psql -d histgis -P pager=off -1 -v appliquer=1 -v dep=$d \
 --          -f sql/106_circo_1815_1870.sql > build/p106_$d.log || break
 --   done
@@ -48,6 +50,19 @@
 --     1820-1831) : posés entiers d'un seul côté. À reprendre à l'atome.
 -- Voir `circo/verif_1815_21_63.md`.
 --
+-- LES COMMUNES QUI ONT CHANGÉ DE CANTON, LUES COMMUNE PAR COMMUNE
+-- ===============================================================
+-- `cantons/changements_communes_1815_1870.csv` (le même que `107`) : avant
+-- la date de l'acte, l'atome suit pour la circo le canton qu'il avait ALORS,
+-- pas son canton de 1870. Premier cas, 10 octobre 2026 : le canton de
+-- Villars (01), créé par la loi du 18 juillet 1868 sur Saint-Trivier-sur-
+-- Moignans, Chalamont, Meximieux et Châtillon-sur-Chalaronne. Effet réel en
+-- 1820-1821 seulement : Birieux (Meximieux) et Marlieux, Saint-Germain-sur-
+-- Renon, Saint-Paul-de-Varax (Chalamont) passent de la 1re à la 2e ; aux
+-- autres divisions, les quatre cantons sont dans la même circo que Villars.
+-- Un acte qui tombe au milieu d'une division coupe le rattachement à sa date
+-- quand l'ancien et le nouveau canton ne sont pas dans la même circo.
+--
 -- LES CANTONS NE SONT PAS POSÉS PAR DÉFAUT
 -- ========================================
 -- `105` posait aussi les CANTONS avant 1870, parce que Gaudillère garantit
@@ -55,6 +70,9 @@
 -- Comme `91` pour la Seine, ce fichier ne pose donc que des circonscriptions.
 -- `-v cantons=1` pose aussi les cantons, pour un département dont on sait les
 -- cantons stables.
+-- 6 octobre 2026 : les cantons 1815-1870 sont désormais posés par `107`,
+-- France entière, avec les exceptions de l'atlas. NE PLUS utiliser
+-- `-v cantons=1` : ses rattachements chevaucheraient ceux de `107`.
 --
 -- CE QUI EST POSÉ
 -- ===============
@@ -107,6 +125,13 @@ SET search_path TO histgis, public;
 \endif
 \set d70 '1870-01-01'
 
+-- LA MEURTHE : `c15_composition` la range sous 99 (le code de TRF-GIS), mais
+-- `39_meurthe_1870.sql` a rendu ses 29 cantons au 54, et ses unités vivent
+-- sous dep = '54' (identifiants 99xx inchangés). On lit donc les atomes et on
+-- pose les unités dans le 54 — sans collision : le 54 n'a rien avant 1870, et
+-- la Meurthe-et-Moselle commence en 1871. La trace reste tenue sous '99'.
+SELECT CASE WHEN :'dep' = '99' THEN '54' ELSE :'dep' END AS dep_u \gset
+
 DO $$
 BEGIN
     IF to_regclass('histgis.atom_geom_anr') IS NULL
@@ -148,7 +173,19 @@ CREATE TABLE IF NOT EXISTS circo_1815_trace (
 DROP TABLE IF EXISTS t106_absent;
 CREATE TEMP TABLE t106_absent (dep text, depuis int, canton text);
 INSERT INTO t106_absent VALUES
-    ('25', 1815, 'Montbéliard'), ('25', 1815, 'Audincourt');
+    ('25', 1815, 'Montbéliard'), ('25', 1815, 'Audincourt'),
+    -- seconde série (6 octobre 2026) : les `absents` de regles_1815_restants,
+    -- que cette table n'avait pas reçus — le 06 était refusé en 2 bis et la
+    -- boucle s'arrêtait là, sans poser 07 à 20, 64 à 73 ni 83.
+    -- L'arrondissement de Grasse, varois jusqu'en 1860 et représenté par la
+    -- 1re du Var jusqu'en 1863 :
+    ('06', 1860, 'Antibes'), ('06', 1860, 'Cannes'),
+    ('06', 1860, 'Coursegoules'), ('06', 1860, 'Grasse'),
+    ('06', 1860, 'Le Bar'), ('06', 1860, 'Saint-Auban'),
+    ('06', 1860, 'Saint-Vallier'), ('06', 1860, 'Vence'),
+    -- Villeurbanne, isérois jusqu'en 1852 :
+    ('69', 1815, 'Villeurbanne'), ('69', 1820, 'Villeurbanne'),
+    ('69', 1831, 'Villeurbanne');
 
 DROP TABLE IF EXISTS t106_college;
 CREATE TEMP TABLE t106_college (dep text, depuis int, jusqu int);
@@ -156,8 +193,22 @@ CREATE TEMP TABLE t106_college (dep text, depuis int, jusqu int);
 \else
 INSERT INTO t106_college VALUES
     ('48', 1820, 1831), ('48', 1852, 1870),
-    ('88', 1820, 1824), ('88', 1828, 1831);
+    ('88', 1820, 1824), ('88', 1828, 1831),
+    -- seconde série de photos (4 octobre 2026) :
+    ('04', 1820, 1831), ('04', 1852, 1870),
+    ('05', 1820, 1831), ('05', 1852, 1870),
+    ('20', 1820, 1831), ('20', 1852, 1857),
+    ('65', 1820, 1831),
+    ('66', 1820, 1831), ('66', 1852, 1869);
 \endif
+
+-- Les communes qui ont changé de canton, à la date de l'acte (en-tête).
+DROP TABLE IF EXISTS t106_ancien;
+CREATE TEMP TABLE t106_ancien (
+    dep text, insee text, cassini text, commune text, canton_avant text,
+    canton_apres text, cree text, date_acte date, acte text, source text);
+\copy t106_ancien FROM 'cantons/changements_communes_1815_1870.csv' WITH (FORMAT csv, HEADER true)
+DELETE FROM t106_ancien WHERE dep <> :'dep_u';
 
 -- La réparation des noms, une seule fois.
 CREATE OR REPLACE FUNCTION pg_temp.repare(nom text) RETURNS text
@@ -179,7 +230,7 @@ WITH a70 AS (
       JOIN unit u ON u.unit_id = m.unit_id AND u.niveau = 'canton'
       JOIN atom a ON a.atom_id = m.atom_id
      WHERE m.niveau = 'canton' AND m.periode @> :'d70'::date
-       AND u.dep = :'dep'
+       AND u.dep = :'dep_u'
 ), ne_anr AS (
     SELECT atom_id, min(lower(periode)) AS ne_le
       FROM atom_geom_anr GROUP BY atom_id
@@ -187,7 +238,7 @@ WITH a70 AS (
     SELECT an.id_com::text AS cassini,
            make_date(min((nullif(an.startdt::text, ''))::numeric::int), 1, 1) AS ne_le
       FROM anr_commune an
-     WHERE an.id_com::text IN (SELECT cassini FROM a70 WHERE fraction)
+     WHERE an.id_com::text IN (SELECT cassini FROM a70)
      GROUP BY 1
 ), ne_n AS (
     -- Les atomes « N » de `15` (creation_arriere) : un territoire détaché de
@@ -211,7 +262,9 @@ WITH a70 AS (
 SELECT a70.*,
        CASE WHEN a70.atom_id LIKE 'N%' THEN nn.ne_le
             WHEN a70.fraction          THEN nm.ne_le
-            ELSE na.ne_le END AS ne_le
+            -- sans polygone ANR (« ANR ignore cet id_com », `83`) : on tente
+            -- la commune brute dans `anr_commune` avant de renoncer.
+            ELSE coalesce(na.ne_le, nm.ne_le) END AS ne_le
   FROM a70
   LEFT JOIN ne_anr  na ON na.atom_id = a70.atom_id
   LEFT JOIN ne_mere nm ON nm.cassini = a70.cassini
@@ -233,7 +286,8 @@ SELECT atom_id, cassini, canton, ne_le
   FROM t106_atome
  WHERE ne_le > DATE '1815-01-01' OR ne_le IS NULL
  ORDER BY ne_le NULLS FIRST, canton;
--- « sans_naissance » doit être 0 : la pose refuse sinon.
+-- « sans_naissance » : ces atomes ne seront PAS posés (date d'entrée inconnue),
+-- ils resteront un trou de 1815 à 1870. La pose refuse au-delà de 2 %.
 
 -- ---------------------------------------------------------------------------
 -- 2. Les divisions et leurs unités
@@ -246,8 +300,8 @@ SELECT DISTINCT
        make_date(c.depuis, 1, 1) AS du,
        make_date(c.jusqu,  1, 1) AS au,
        CASE WHEN c.circonscription ~ '^[0-9]+$'
-            THEN :'dep' || '-' || lpad(c.circonscription, 2, '0')
-            ELSE :'dep' || '-' || c.circonscription END
+            THEN :'dep_u' || '-' || lpad(c.circonscription, 2, '0')
+            ELSE :'dep_u' || '-' || c.circonscription END
          || '@' || c.depuis                                  AS unit_id,
        CASE WHEN c.circonscription ~ '^[0-9]+$'
             THEN c.departement || ' ' || c.circonscription
@@ -271,7 +325,7 @@ SELECT EXISTS (SELECT 1 FROM t106_div WHERE depuis < 1848) AS avant_1848 \gset
 INSERT INTO t106_div
 SELECT DISTINCT 1848, 1852, 'département', canton,
        DATE '1848-01-01', DATE '1852-01-01',
-       'L' || :'dep' || '01@1848',
+       'L' || :'dep_u' || '01@1848',
        :'nom_dep' || ' — scrutin de liste départemental', false, 'liste'
   FROM t106_atome;
 \endif
@@ -281,7 +335,7 @@ SELECT DISTINCT 1848, 1852, 'département', canton,
 INSERT INTO t106_div
 SELECT DISTINCT k.depuis, k.jusqu, 'département', a.canton,
        make_date(k.depuis, 1, 1), make_date(k.jusqu, 1, 1),
-       :'dep' || '-D@' || k.depuis,
+       :'dep_u' || '-D@' || k.depuis,
        :'nom_dep' || ' — collège de département', true, 'uninominal'
   FROM t106_college k CROSS JOIN t106_atome a
  WHERE k.dep = :'dep';
@@ -319,17 +373,66 @@ SELECT DISTINCT d.depuis, d.canton
  ORDER BY 1, 2;
 -- Attendu : aucune ligne. Une ligne ici et une en 2 bis = un nom à accorder.
 
+\echo ''
+\echo '=== 2 quater. Le CSV des communes qui ont changé de canton ==='
+DROP TABLE IF EXISTS t106_ancien_ko;
+CREATE TEMP TABLE t106_ancien_ko AS
+SELECT x.commune, x.cassini, x.canton_avant, x.canton_apres,
+       'commune introuvable dans son canton de 1870' AS probleme
+  FROM t106_ancien x
+ WHERE NOT EXISTS (SELECT 1 FROM t106_atome a
+                    WHERE a.cassini = x.cassini AND a.canton = x.canton_apres)
+UNION ALL
+SELECT x.commune, x.cassini, x.canton_avant, x.canton_apres,
+       'canton d''avant absent d''une division antérieure à l''acte'
+  FROM t106_ancien x
+  JOIN (SELECT DISTINCT depuis, du FROM t106_div
+         WHERE circonscription <> 'département') d ON d.du < x.date_acte
+ WHERE NOT EXISTS (SELECT 1 FROM t106_div y
+                    WHERE y.depuis = d.depuis AND y.canton = x.canton_avant)
+   AND NOT EXISTS (SELECT 1 FROM t106_absent z
+                    WHERE z.dep = :'dep' AND z.depuis = d.depuis
+                      AND z.canton = x.canton_avant);
+SELECT x.commune, x.canton_avant, x.canton_apres, x.date_acte,
+       (SELECT count(*) FROM t106_atome a
+         WHERE a.cassini = x.cassini AND a.canton = x.canton_apres) AS atomes
+  FROM t106_ancien x ORDER BY x.canton_apres, x.canton_avant, x.commune;
+SELECT * FROM t106_ancien_ko ORDER BY 1;
+-- Attendu : atomes >= 1 sur chaque ligne, et la seconde requête vide.
+
 -- ---------------------------------------------------------------------------
 -- 3. Ce qui va être posé
 -- ---------------------------------------------------------------------------
+-- Chaque atome en morceaux de canton : un seul (son canton de 1870), ou deux
+-- pour une commune du CSV (l'ancien canton avant l'acte, celui de 1870
+-- après). Deux morceaux qui tombent dans la même circo d'une division se
+-- recollent (min/max) ; sinon le rattachement est coupé à la date de l'acte.
 DROP TABLE IF EXISTS t106_pose;
 CREATE TEMP TABLE t106_pose AS
+WITH morceau AS (
+    SELECT a.atom_id, a.ne_le, a.canton, a.ne_le AS des, :'d70'::date AS jusqua
+      FROM t106_atome a
+     WHERE NOT EXISTS (SELECT 1 FROM t106_ancien x
+                        WHERE x.cassini = a.cassini AND x.canton_apres = a.canton)
+    UNION ALL
+    SELECT a.atom_id, a.ne_le, x.canton_avant, a.ne_le, x.date_acte
+      FROM t106_atome a
+      JOIN t106_ancien x ON x.cassini = a.cassini AND x.canton_apres = a.canton
+    UNION ALL
+    SELECT a.atom_id, a.ne_le, a.canton, greatest(a.ne_le, x.date_acte),
+           :'d70'::date
+      FROM t106_atome a
+      JOIN t106_ancien x ON x.cassini = a.cassini AND x.canton_apres = a.canton
+)
 SELECT 'circo'::text AS niveau, d.depuis || '-' || d.jusqu AS division,
-       a.atom_id, d.unit_id,
-       greatest(d.du, a.ne_le) AS valid_from, d.au AS valid_to, a.ne_le
-  FROM t106_atome a
-  JOIN t106_div d ON d.canton = a.canton
- WHERE a.ne_le < d.au;
+       m.atom_id, d.unit_id,
+       min(greatest(d.du, m.des)) AS valid_from,
+       max(least(d.au, m.jusqua)) AS valid_to, m.ne_le
+  FROM morceau m
+  JOIN t106_div d ON d.canton = m.canton
+ WHERE m.ne_le IS NOT NULL                       -- greatest() ignore les NULL
+   AND greatest(d.du, m.des) < least(d.au, m.jusqua)
+ GROUP BY 1, 2, 3, 4, 7;
 
 \if :{?cantons}
 -- Les cantons, sur option : de la première division où le canton figure, ou
@@ -384,15 +487,34 @@ DELETE FROM circo_1815_trace WHERE dep = :'dep';
 DO $$
 DECLARE n bigint;
 BEGIN
+    -- Un atome sans naissance connue n'est PAS posé : sa date d'entrée est
+    -- inconnue, et l'on n'en invente pas. Il reste un trou, listé en
+    -- recette 1. Au-delà de 2 % des atomes, c'est un défaut systématique
+    -- (prérequis manquant, jointure fausse) : on refuse.
+    SELECT count(*) INTO n FROM t106_atome;
+    IF n = 0 THEN
+        RAISE EXCEPTION 'Aucun atome du département à 1870 : rien à poser '
+            '(le code de département des cantons n''est pas celui attendu ?).';
+    END IF;
+
     SELECT count(*) INTO n FROM t106_atome WHERE ne_le IS NULL;
-    IF n > 0 THEN
-        RAISE EXCEPTION '% atome(s) sans naissance ANR. Voir la recette 1.', n;
+    IF n > 0.02 * (SELECT count(*) FROM t106_atome) THEN
+        RAISE EXCEPTION '% atome(s) sans naissance, plus de 2 %% du département. '
+            'Voir la recette 1.', n;
+    ELSIF n > 0 THEN
+        RAISE NOTICE '% atome(s) sans naissance connue : non posés (recette 1).', n;
     END IF;
 
     SELECT count(*) INTO n FROM t106_trou WHERE NOT voulu;
     IF n > 0 THEN
         RAISE EXCEPTION '% (division, canton) sans circonscription. Voir la '
             'recette 2 bis.', n;
+    END IF;
+
+    SELECT count(*) INTO n FROM t106_ancien_ko;
+    IF n > 0 THEN
+        RAISE EXCEPTION '% problème(s) dans le CSV des communes qui ont changé '
+            'de canton. Voir la recette 2 quater.', n;
     END IF;
 
     SELECT count(*) INTO n
@@ -421,7 +543,7 @@ END $$;
 WITH ins AS (
     INSERT INTO unit (unit_id, niveau, dep, code, regime, segment_depuis,
                       nom, provisoire)
-    SELECT DISTINCT d.unit_id, 'circo', :'dep',
+    SELECT DISTINCT d.unit_id, 'circo', :'dep_u',
            split_part(d.unit_id, '@', 1), d.regime, d.depuis, d.nom,
            d.provisoire
       FROM t106_div d
@@ -458,7 +580,7 @@ SELECT v.d AS a_la_date,
                ('1840-06-01'), ('1850-06-01'), ('1855-06-01'), ('1860-06-01'),
                ('1865-06-01'), ('1869-06-01')) v(d)
   JOIN membership m ON m.periode @> v.d
-  JOIN unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau AND u.dep = :'dep'
+  JOIN unit u ON u.unit_id = m.unit_id AND u.niveau = m.niveau AND u.dep = :'dep_u'
  GROUP BY v.d ORDER BY v.d;
 -- Attendu : à chaque date, atomes_circo = les atomes nés à cette date
 -- (recette 1), et le nombre de circonscriptions de la recette 2.

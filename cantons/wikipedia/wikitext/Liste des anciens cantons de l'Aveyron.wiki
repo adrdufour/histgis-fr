@@ -1,0 +1,101 @@
+La '''liste des anciens cantons de l'Aveyron''' présente la liste et les caractéristiques des [[canton français|cantons]] du [[département français|département]] [[France|français]] de l'[[Aveyron (département)|Aveyron]], classés par [[arrondissement français|arrondissement]], qui ont existé antérieurement au découpage cantonal défini par le décret du {{date-|21 février 2014}}.
+
+Depuis la création du département en 1790, le découpage cantonal de l'Aveyron a subi plusieurs changements notables.
+
+== Histoire ==
+=== Création des départements, districts et cantons en 1790 ===
+L'[[Assemblée nationale (1789)|Assemblée nationale]] adopte le principe du découpage du territoire du [[Royaume de France|royaume]] en [[département français|départements]], [[District (subdivision départementale, 1790-1795)|districts]] et [[canton français|cantons]] avec les lois des 14 et {{date France|22|décembre|1789}}<ref name="COG41">{{Lien web |url=http://projetbabel.org/gl/cog45.htm |titre= Le Code officiel géographique (COG) - 4.5. : le découpage du territoire de 1790 à 1815 |auteur=Gérard Lang |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>. La France est ainsi divisée en 83 départements par décret du {{date France|15|janvier|1790}} et la liste des départements et des districts est précisée par décret du {{date France|16|février|1790}}<ref name="COG41"/>.
+
+=== Période 1801-1973 ===
+Peu de temps après leur création, les cantons sont supprimés, en tant que découpage administratif, par une loi du {{date France|26|juin|1793}}. Ils ne conservent qu'un rôle électoral. Mais, après la chute de [[Maximilien de Robespierre|Robespierre]] le 9 thermidor an II ({{date France|27|juillet|1794}}), les mesures de circonstance de la [[Convention nationale|Convention]] sont annulées par la Constitution du {{date France|22|août|1795}} (5 fructidor, an III), dite « de la République bourgeoise ». La Constitution supprime les districts, rouages administratifs liés à la [[Terreur (Révolution française)|Terreur]], et renforce le rôle des cantons, qu'elle vient de recréer<ref name="COG43">{{Lien web |url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.3. : l’œuvre révolutionnaire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 20 avril 2014}}.</ref>. La [[loi du 28 pluviôse an VIII]] ({{date France|17|février|1800}}) crée des [[arrondissement français|arrondissements]] dans {{unité|98|départements}}, dont 371 dans les {{unité|89|départements}} correspondant au territoire de la [[Constitution de 1793]]. À la même date, le nombre des cantons (correspondant au même territoire) est ramené à {{formatnum:2916}}<ref name="COG44">{{Lien web |url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.4. : le Consulat et l'Empire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 20 avril 2014}}.</ref>.
+
+*1801<ref>Arrêté du 7 Frimarie an X (28 novembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f173 p.153]</ref> : découpage d'origine
+*1803<ref>Arrêté du 26 Ventôse an XI (17 mars 1803), ''Bulletin des lois'', an XI (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f843 p.662]</ref> : Le chef-lieu du canton de [[La Selve (Aveyron)|La Selve]] est transféré à [[Réquista]]. ([[canton de Réquista]])
+*1808<ref>[[Sénatus-consulte]] du 4 novembre 1808, ''Bulletin des lois'' 1808 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k445361h/f216 p.194]</ref> : Le [[Canton de Saint-Antonin-Noble-Val|canton de Saint-Antonin]] est transféré au nouveau département de [[Tarn-et-Garonne]].
+*1881<ref>Loi du 12 avril 1881, ''Bulletin des lois'' 1881 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k214110c/f385 p.360]</ref> : Création du [[canton de Decazeville]], détaché du [[canton d'Aubin]].
+*1922<ref>Décret du 6 mars 1922</ref> : Le chef-lieu du canton d'[[Asprières]] est transféré à [[Capdenac-Gare]]. ([[canton de Capdenac-Gare]])
+*1973<ref>Décret n° 73-762 du 2 août 1973</ref> :
+**Le canton de Millau est divisé en deux nouveaux cantons [[canton de Millau-Est|Millau-Est]] et [[Canton de Millau-Ouest|-Ouest]];
+**Le canton de Rodez est divisé en deux nouveaux cantons [[canton de Rodez-Est|Rodez-Est]] et [[canton de Rodez-Ouest|-Ouest]];
+**Les cantons de [[canton de Naucelle|Naucelle]], [[canton de Bozouls|Bozouls]], [[Canton d'Espalion|Espalion]], [[Canton de Cassagnes-Bégonhès|Cassagnes-Bégonhès]] et [[Canton de Baraqueville-Sauveterre|Sauveterre-de-Rouergue]] sont remodelés, le chef-lieu du canton de [[Sauveterre-de-Rouergue]] est transféré à [[Baraqueville]];
+**Les cantons de [[canton de Camarès|Camarès]] et de [[canton de Saint-Affrique|Saint-Affrique]] sont remodelés.
+*1982<ref>Décret n° 82-24 du 15 janvier 1982</ref> : Création du [[canton de Rodez-Nord]], détaché des cantons de Rodez-Est et -Ouest.
+
+=== Redécoupage de 1973 ===
+[[Fichier:Anciens cantons de l'Aveyron.png|vignette|Carte des cantons de l'Aveyron avant le redécoupage de 2014]]
+Avec le décret du {{date|2|août|1973}}, quatre nouveaux cantons sont créés et plusieurs sont modifiés : le canton de Millau est divisé en [[Canton de Millau-Est|Millau-Est]] et [[Canton de Millau-Ouest|Millau-Ouest]], celui de Rodez est divisé en [[Canton de Rodez-Est|Rodez-Est]] et [[Canton de Rodez-Ouest|Rodez-Ouest]]<ref name="Decret1973">{{Lien web |url=http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=19730804&numTexte=&pageDebut=08533&pageFin= |titre=  Décret n°73-762 du 2 août 1973 portant création et modifications de cantons dans le département de l'Aveyron |auteur= |date = |site =legifrance.gouv.fr |consulté le= 20 avril 2014|brisé le = 2023-11-22}}.</ref>. Le département comprend alors 46 cantons.
+* '''[[Arrondissement de Millau]]''' (15 cantons - sous-préfecture : [[Millau]]) :
+** [[Canton de Belmont-sur-Rance]]
+** [[Canton de Camarès]]
+** [[Canton de Campagnac]]
+** [[Canton de Cornus]]
+** [[Canton de Millau-Est]]
+** [[Canton de Millau-Ouest]]
+** [[Canton de Nant]]
+** [[Canton de Peyreleau]]
+** [[Canton de Saint-Affrique]]
+** [[Canton de Saint-Beauzély]]
+** [[Canton de Saint-Rome-de-Tarn]]
+** [[Canton de Saint-Sernin-sur-Rance]]
+** [[Canton de Salles-Curan]]
+** [[Canton de Sévérac-le-Château]]
+** [[Canton de Vézins-de-Lévézou]]
+* '''[[Arrondissement de Rodez]]''' (23 cantons - préfecture : [[Rodez]]) :
+** [[Canton de Baraqueville-Sauveterre]]
+** [[Canton de Bozouls]]
+** [[Canton de Cassagnes-Bégonhès]]
+** [[Canton de Conques]]
+** [[Canton d'Entraygues-sur-Truyère]]
+** [[Canton d'Espalion]]
+** [[Canton d'Estaing]]
+** [[Canton de Laguiole]]
+** [[Canton de Laissac]]
+** [[Canton de Marcillac-Vallon]]
+** [[Canton de Mur-de-Barrez]]
+** [[Canton de Naucelle]]
+** [[Canton de Pont-de-Salars]]
+** [[Canton de Réquista]]
+** [[Canton de Rignac]]
+** [[Canton de Rodez-Est]]
+** [[Canton de Rodez-Nord]]
+** [[Canton de Rodez-Ouest]]
+** [[Canton de Saint-Amans-des-Cots]]
+** [[Canton de Saint-Chély-d'Aubrac]]
+** [[Canton de Sainte-Geneviève-sur-Argence]]
+** [[Canton de Saint-Geniez-d'Olt]]
+** [[Canton de Salvetat-Peyralès]]
+* '''[[Arrondissement de Villefranche-de-Rouergue]]''' (8 cantons - sous-préfecture : [[Villefranche-de-Rouergue]]) :
+** [[Canton d'Aubin]]
+** [[Canton de Capdenac-Gare]]
+** [[Canton de Decazeville]]
+** [[Canton de Montbazens]]
+** [[Canton de Najac]]
+** [[Canton de Rieupeyroux]]
+** [[Canton de Villefranche-de-Rouergue]]
+** [[Canton de Villeneuve]]
+
+=== Redécoupage de 2014 ===
+{{Article détaillé|liste des cantons de l'Aveyron}}
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Lien web | url = http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id | titre = LOI {{n°}} 2013-403 du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral | jour = 17 | mois = mai | année = 2013 | site =  | éditeur = [[Journal officiel de la République française|JORF]] {{n°|0114}} du 18 mai 2013 {{p.|8242}}  | consulté le = 20 avril 2014}}.</ref>. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte au prochain renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les électeurs de chaque canton élisent désormais au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présentent en binôme de candidats. Les conseillers départementaux sont élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure{{note|Le nombre total de cantons d'un départements doit obligatoirement être impair.}}. Dans l'[[Aveyron (département)|Aveyron]], le nombre de cantons passe ainsi de 46 à 23<ref>{{Lien web | url = http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028652414 | titre = Décret n° 2014-205 du 21 février 2014 portant délimitation des cantons dans le département de l'Aveyron| jour = 21 | mois = février | année = 2014 | site =  | éditeur = [[Journal officiel de la République française|JORF]] | consulté le = 20 avril 2014}}.</ref>.
+
+== Voir aussi ==
+* [[Liste des communes de l'Aveyron]]
+* [[Liste des cantons de l'Aveyron]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+== Notes et références ==
+{{Références}}
+
+=== Bibliographie ===
+
+* {{Ouvrage|prénom1=Louis-Marie|nom1=Prudhomme|titre=Dictionnaire géographique et méthodique de la République française en CXX départemens|volume=I|lieu=Paris|éditeur=Louis-Marie Prudhomme|année=1798|pages totales=673|oclc=715881089|lire en ligne=https://books.google.fr/books?id=5F0OAAAAQAAJ&printsec=frontcover}}
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de l'Aveyron}}
+{{Portail|Aveyron}}
+
+[[Catégorie:Canton dans l'Aveyron|*]]
+[[Catégorie:Liste de cantons français|*]]
+[[Catégorie:Liste en rapport avec l'Aveyron|Cantons]]

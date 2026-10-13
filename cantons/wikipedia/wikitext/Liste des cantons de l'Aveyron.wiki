@@ -1,0 +1,378 @@
+[[Fichier:12-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de l’Aveyron, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] de l'[[Aveyron (département)|Aveyron]]''' compte 23 [[Canton français|cantons]] à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Auparavant ce nombre était de 46, depuis 1973.
+
+== Histoire ==
+[[Fichier:Anciens cantons de l'Aveyron.png|vignette|Carte des cantons de l'Aveyron avant le redécoupage de 2014]]
+
+=== Période 1790-2014 ===
+{{Article connexe|Liste des anciens cantons de l'Aveyron}}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 10 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|21 février 2014}} pour le département de l'[[Aveyron (département)|Aveyron]]<ref name="www.legifrance.gouv.fr_Décret_2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans l'[[Aveyron (département)|Aveyron]] le nombre de cantons passe ainsi de 46 à 23<ref name="www.legifrance.gouv.fr_Décret_2014"/>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 10 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de l'Aveyron, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|276805|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=12 |titre= Chiffres clés Évolution et structure de la population - Département de l'Aveyron (12) |auteur= |date = |site =insee.fr |consulté le= 10 mai 2014}}.</ref>. Avec 23 cantons la population moyenne par conseiller départemental est de {{unité|12035|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|9628|habitants}} et {{unité|14442|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable center"
+! {{abrd|N°|Numéro d'ordre dans le décret}}
+! scope=col | Nom du Canton
+! scope=col | [[Bureau centralisateur]]
+! scope=col | Population <small>({{Population de France/dernière_année||Aveyron (département)}})</small>
+! scope=col | Nombre de communes
+! scope=col | Communes composant le canton
+! scope=col | Localisation dans le département
+! colspan=3 scope=col | Conseillers
+|-
+| rowspan=2 | 1
+| rowspan=2 | [[Canton d'Aubrac et Carladez|Aubrac et Carladez]] 
+| rowspan=2 | [[Laguiole (Aveyron)|Laguiole]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton d'Aubrac et Carladez}}}}
+| rowspan=2 | 21
+| rowspan=2 | [[Brommat]], [[Campouriez]], [[Cantoin]], [[Cassuéjouls]], [[Condom-d'Aubrac]], [[Curières]], [[Florentin-la-Capelle]], [[Huparlac]], [[Lacroix-Barrez]], [[Laguiole (Aveyron)|Laguiole]], [[Montézic]], [[Montpeyroux (Aveyron)|Montpeyroux]], [[Mur-de-Barrez]], [[Murols]], [[Saint-Amans-des-Cots]], [[Saint-Chély-d'Aubrac]], [[Argences en Aubrac]], [[Saint-Symphorien-de-Thénières]], [[Soulages-Bonneval]], [[Taussac]] et [[Thérondels]].
+| rowspan=2 | [[File:Aveyron - Canton Aubrac et Carladez 2015.svg|vignette|300x300px]]
+| width=0.5 rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| || Vincent Alazard || [[Divers droite|DVD]]
+|-
+| Annie Cazard || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 2
+| rowspan=2 bgcolor=#eee | [[Canton d'Aveyron et Tarn|Aveyron et Tarn]]  
+| rowspan=2 bgcolor=#eee | [[Rieupeyroux]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton d'Aveyron et Tarn}}}} 
+| rowspan=2 bgcolor=#eee | 17
+| rowspan=2 bgcolor=#eee | [[Le Bas Ségala]], [[Bor-et-Bar]], [[La Capelle-Bleys]], [[Castelmary]], [[Crespin (Aveyron)|Crespin]], [[La Fouillade]], [[Lescure-Jaoul]], [[Lunac]], [[Monteils (Aveyron)|Monteils]], [[Morlhon-le-Haut]], [[Najac]], [[Prévinquières]], [[Rieupeyroux]], [[Saint-André-de-Najac]], [[La Salvetat-Peyralès]], [[Sanvensa]] et [[Tayrac (Aveyron)|Tayrac]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Aveyron et Tarn 2015.svg|vignette|300x300px]]
+| rowspan=3 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | André At || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| bgcolor=#eee | Brigitte Mazars || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 3
+| rowspan=2 | [[Canton de Causse-Comtal|Causse-Comtal]] 
+| rowspan=2 | [[Sébazac-Concourès]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Causse-Comtal}}}}
+| rowspan=2 | 7
+| rowspan=2 | [[Agen-d'Aveyron]], [[Bozouls]], [[Gabriac (Aveyron)|Gabriac]], [[La Loubière]], [[Montrozier]], [[Rodelle]] et [[Sébazac-Concourès]].
+| rowspan=2 | [[File:Aveyron - Canton Causse-Comtal 2015.svg|vignette|300x300px]]
+| Magali Bessaou || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| || Jean-Luc Calmelly || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 4
+| rowspan=2 bgcolor=#eee | [[Canton des Causses-Rougiers|Causses-Rougiers]]  
+| rowspan=2 bgcolor=#eee | [[La Cavalerie (Aveyron)|La Cavalerie]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton des Causses-Rougiers}}}} 
+| rowspan=2 bgcolor=#eee | 43
+| rowspan=2 bgcolor=#eee | [[Arnac-sur-Dourdou]], [[Balaguier-sur-Rance]], [[La Bastide-Solages]], [[Belmont-sur-Rance]], [[Brasc]], [[Brusque (Aveyron)|Brusque]], [[Camarès]], [[La Cavalerie (Aveyron)|La Cavalerie]], [[Le Clapier]], [[Combret]], [[Cornus (Aveyron)|Cornus]], [[Coupiac]], [[La Couvertoirade]], [[Fayet (Aveyron)|Fayet]], [[Gissac]], [[L'Hospitalet-du-Larzac]], [[Lapanouse-de-Cernon]], [[Laval-Roquecezière]], [[Marnhagues-et-Latour]], [[Martrin]], [[Mélagues]], [[Montagnol]], [[Montclar (Aveyron)|Montclar]], [[Montfranc]], [[Montlaur (Aveyron)|Montlaur]], [[Fondamente]], [[Murasson]], [[Peux-et-Couffouleux]], [[Plaisance (Aveyron)|Plaisance]], [[Pousthomy]], [[Mounes-Prohencoux]], [[Rebourguil]], [[Saint-Beaulize]], [[Sainte-Eulalie-de-Cernon]], [[Saint-Jean-et-Saint-Paul]], [[Saint-Juéry (Aveyron)|Saint-Juéry]], [[Saint-Sernin-sur-Rance]], [[Saint-Sever-du-Moustier]], [[Sauclières]], [[La Serre]], [[Sylvanès]], [[Tauriac-de-Camarès]] et [[Viala-du-Pas-de-Jaux]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Causses-Rougiers 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|DVC}}| || bgcolor=#eee | Monique Aliès || bgcolor=#eee | [[Divers centre|DVC]]
+|-
+| {{Infobox Parti politique français/couleurs|PRV}}| || bgcolor=#eee | Christophe Laborie || bgcolor=#eee | [[Parti radical (France)|PRV]]
+|-
+| rowspan=2 | 5
+| rowspan=2 | [[Canton de Ceor-Ségala|Ceor-Ségala]] 
+| rowspan=2 | [[Baraqueville]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Ceor-Ségala}}}}
+| rowspan=2 | 18
+| rowspan=2 | [[Boussac (Aveyron)|Boussac]], [[Cabanès (Aveyron)|Cabanès]], [[Camboulazet]], [[Camjac]], [[Baraqueville]], [[Castanet (Aveyron)|Castanet]], [[Centrès]], [[Colombiès]], [[Gramond]], [[Manhac]], [[Meljac]], [[Moyrazès]], [[Naucelle]], [[Pradinas]], [[Quins]], [[Saint-Just-sur-Viaur]], [[Sauveterre-de-Rouergue]] et [[Tauriac-de-Naucelle]].
+| rowspan=2 | [[File:Aveyron - Canton Ceor-Ségala 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|UDI}}| || Jacques Barbezange || [[Union des démocrates et indépendants|UDI]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| || Virginie Firmin || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 6
+| rowspan=2 bgcolor=#eee | [[Canton d'Enne et Alzou|Enne et Alzou]]  
+| rowspan=2 bgcolor=#eee | [[Aubin (Aveyron)|Aubin]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton d'Enne et Alzou}}}} 
+| rowspan=2 bgcolor=#eee | 11
+| rowspan=2 bgcolor=#eee | [[Anglars-Saint-Félix]], [[Aubin (Aveyron)|Aubin]], [[Auzits]], [[Belcastel (Aveyron)|Belcastel]], [[Bournazel (Aveyron)|Bournazel]], [[Cransac-les-Thermes]], [[Escandolières]], [[Firmi]], [[Goutrens]], [[Mayran (Aveyron)|Mayran]] et [[Rignac (Aveyron)|Rignac]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Enne et Alzou 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | Hélian Cabrolier || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| bgcolor=#eee | Graziella Pierini || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| rowspan=2 | 7
+| rowspan=2 | [[Canton de Lot et Dourdou|Lot et Dourdou]] 
+| rowspan=2 | [[Decazeville]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Lot et Dourdou}}}}
+| rowspan=2 | 11
+| rowspan=2 | [[Almont-les-Junies]], [[Boisse-Penchot]], [[Decazeville]], [[Flagnac]], [[Livinhac-le-Haut]], [[Conques-en-Rouergue]], [[Saint-Félix-de-Lunel]], [[Saint-Parthem]], [[Saint-Santin]], [[Sénergues]] et [[Viviez]].
+| rowspan=2 | [[File:Aveyron - Canton Lot et Dourdou 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| || Michèle Buessinger || [[Divers droite|DVD]]
+|-
+| Christian Tieulié || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 8
+| rowspan=2 bgcolor=#eee | [[Canton de Lot et Montbazinois|Lot et Montbazinois]]  
+| rowspan=2 bgcolor=#eee | [[Capdenac-Gare]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Lot et Montbazinois}}}} 
+| rowspan=2 bgcolor=#eee | 16
+| rowspan=2 bgcolor=#eee | [[Les Albres]], [[Asprières]], [[Balaguier-d'Olt]], [[Bouillac (Aveyron)|Bouillac]], [[Capdenac-Gare]], [[Foissac (Aveyron)|Foissac]], [[Galgan]], [[Lugan (Aveyron)|Lugan]], [[Montbazens]], [[Naussac (Aveyron)|Naussac]], [[Peyrusse-le-Roc]], [[Roussennac]], [[Salles-Courbatiès]], [[Causse-et-Diège]], [[Sonnac (Aveyron)|Sonnac]] et [[Valzergues]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Lot et Montbazinois 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|PS}}| || bgcolor=#eee | Bertrand Cavalerie || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | Cathy Mouly || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| rowspan=2 | 9
+| rowspan=2 | [[Canton de Lot et Palanges|Lot et Palanges]] 
+| rowspan=2 | [[Saint Geniez d'Olt et d'Aubrac]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Lot et Palanges}}}}
+| rowspan=2 | 13
+| rowspan=2 | [[Bertholène]], [[Castelnau-de-Mandailles]], [[Gaillac-d'Aveyron]], [[Laissac-Sévérac l'Église]], [[Lassouts]], [[Palmas d'Aveyron]], [[Pierrefiche (Aveyron)|Pierrefiche]], [[Pomayrols]], [[Prades-d'Aubrac]], [[Saint-Côme-d'Olt]], [[Sainte-Eulalie-d'Olt]], [[Saint Geniez d'Olt et d'Aubrac]] et [[Vimenet]].
+| rowspan=2 | [[File:Aveyron - Canton Lot et Palanges 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|DVD}}| || Christian Naudan || [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|UDI}}| || Christine Presne || [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=2 bgcolor=#eee | 10
+| rowspan=2 bgcolor=#eee | [[Canton de Lot et Truyère|Lot et Truyère]]  
+| rowspan=2 bgcolor=#eee | [[Espalion]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Lot et Truyère}}}} 
+| rowspan=2 bgcolor=#eee | 14
+| rowspan=2 bgcolor=#eee | [[Bessuéjouls]], [[Campuac]], [[Le Cayrol]], [[Coubisou]], [[Le Fel]], [[Entraygues-sur-Truyère]], [[Espalion]], [[Espeyrac]], [[Estaing (Aveyron)|Estaing]], [[Golinhac]], [[Le Nayrac]], [[Saint-Hippolyte (Aveyron)|Saint-Hippolyte]], [[Sébrazac]] et [[Villecomtal]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Lot et Truyère 2015.svg|vignette|300x300px]]
+| rowspan=3 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | [[Jean-Claude Anglars]] || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| bgcolor=#eee | Francine Lafon || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 11
+| rowspan=2 | [[Canton de Millau-1|Millau-1]] 
+| rowspan=2 | [[Millau]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Millau-1}}}}
+| rowspan=2 | 3 + fraction de Millau
+| rowspan=2 | [[Comprégnac]], [[Creissels]], [[Saint-Georges-de-Luzençon]] et la première partie de [[Millau]]{{note|groupe=alpha|texte=Cette partie est située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Aguessac, cours du Tarn, cours du ruisseau de Ladoux, rue Étienne-Delmas, boulevard Emile-Lauret, avenue Jean-Jaurès, ligne de chemin de fer Béziers-Neussargues, tunnel sous la ligne de chemin de fer entre la rue Beau-Soleil et la rue Jules-Massenet, avenue de Calès, boulevard Jean-Gabriac, avenue du Pont-Lerouge, cours du Tarn, jusqu'à la limite territoriale de la commune de Creissels.}}.
+| rowspan=2 | [[File:Aveyron - Canton Millau-1 2015.svg|vignette|300x300px]]
+| Claude Assier || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| || Hélène Rivière || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 12
+| rowspan=2 bgcolor=#eee | [[Canton de Millau-2|Millau-2]]  
+| rowspan=2 bgcolor=#eee | [[Millau]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Millau-2}}}} 
+| rowspan=2 bgcolor=#eee | 5 + fraction de Millau
+| rowspan=2 bgcolor=#eee | [[Aguessac]], [[Compeyre]], [[Nant (Aveyron)|Nant]], [[Paulhe]], [[Saint-Jean-du-Bruel]] et la seconde partie de [[Millau]]{{note|groupe=alpha|texte=Partie non-incluse dans le canton de Millau-1.}}.
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Millau-2 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|UDI}}| || bgcolor=#eee | [[Jean-François Galliard]] || bgcolor=#eee | [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=4 {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | Anne Pailhas || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 13
+| rowspan=2 | [[Canton des Monts du Réquistanais|Monts du Réquistanais]] 
+| rowspan=2 | [[Réquista]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton des Monts du Réquistanais}}}}
+| rowspan=2 | 14
+| rowspan=2 | [[Arvieu]], [[Auriac-Lagast]], [[Calmont (Aveyron)|Calmont]], [[Cassagnes-Bégonhès]], [[Comps-la-Grand-Ville]], [[Connac]], [[Durenque]], [[Lédergues]], [[Réquista]], [[Rullac-Saint-Cirq]], [[Saint-Jean-Delnous]], [[Sainte-Juliette-sur-Viaur]], [[Salmiech]] et [[La Selve (Aveyron)|La Selve]].
+| rowspan=2 | [[File:Aveyron - Canton Les Monts du Réquistanais 2015.svg|vignette|300x300px]]
+| Michel Causse || [[Divers droite|DVD]]
+|-
+| Nathalie Puel || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 14
+| rowspan=2 bgcolor=#eee | [[Canton du Nord-Lévezou|Nord-Lévezou]]  
+| rowspan=2 bgcolor=#eee | [[Luc-la-Primaube]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton du Nord-Lévezou}}}} 
+| rowspan=2 bgcolor=#eee | 4
+| rowspan=2 bgcolor=#eee | [[Flavin]], [[Luc-la-Primaube]], [[Olemps]] et [[Sainte-Radegonde (Aveyron)|Sainte-Radegonde]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Nord-Lévezou 2015.svg|vignette|300x300px]]
+| bgcolor=#eee | Dominique Gombert || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|UDI}}| || bgcolor=#eee | Jean-Philippe Sadoul || bgcolor=#eee | [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=2 | 15
+| rowspan=2 | [[Canton de Raspes et Lévezou|Raspes et Lévezou]] 
+| rowspan=2 | [[Pont-de-Salars]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Raspes et Lévezou}}}}
+| rowspan=2 | 22
+| rowspan=2 | [[Alrance]], [[Arques (Aveyron)|Arques]], [[Ayssènes]], [[Broquiès]], [[Brousse-le-Château]], [[Canet-de-Salars]], [[Les Costes-Gozon]], [[Curan]], [[Lestrade-et-Thouels]], [[Pont-de-Salars]], [[Prades-Salars]], [[Saint-Laurent-de-Lévézou]], [[Saint-Léons]], [[Saint-Rome-de-Tarn]], [[Saint-Victor-et-Melvieu]], [[Salles-Curan]], [[Ségur]], [[Trémouilles]], [[Le Truel]], [[Vézins-de-Lévézou]], [[Le Vibal]] et [[Villefranche-de-Panat]].
+| rowspan=2 | [[File:Aveyron - Canton Raspes et Lévezou 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|DVD}}| || Nadine Fraysse || [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|HOR}}| || '''[[Arnaud Viala]]''' || [[Horizons|HOR]]
+|-
+| rowspan=2 bgcolor=#eee | 16
+| rowspan=2 bgcolor=#eee | [[Canton de Rodez-1|Rodez-1]]  
+| rowspan=2 bgcolor=#eee | [[Rodez]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Rodez-1}}}} 
+| rowspan=2 bgcolor=#eee | Fraction de Rodez
+| rowspan=2 bgcolor=#eee | La première partie de [[Rodez]]{{note|groupe=alpha|texte=Cette partie est située à l'ouest et au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Druelle, routes départementales 994 et 840, avenue de la Gineste, giratoire de Saint-Félix, avenue de la Gineste entre le giratoire Saint-Félix et le carrefour Saint-Eloi, avenue du Maréchal-Joffre, avenue de Paris, avenue Durand-de-Gros, avenue Tarayre, rue Béteille, avenue Victor-Hugo, avenue Amans-Rodat, avenue de Toulouse, rond-point de la Mouline, route de la Mouline, jusqu'à la limite territoriale de la commune d'Olemps.}}.
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Rodez-1 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | Arnaud Combet || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| bgcolor=#eee | Sarah Vidal || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| rowspan=2 | 17
+| rowspan=2 | [[Canton de Rodez-2|Rodez-2]] 
+| rowspan=2 | [[Rodez]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Rodez-2}}}}
+| rowspan=2 | 1 + fraction de Rodez
+| rowspan=2 | [[Le Monastère]] et la deuxième parti de [[Rodez]]{{note|groupe=alpha|texte=Partie non incluse dans les cantons de Rodez-1 et de Rodez-Onet.}}.
+| rowspan=2 | [[File:Aveyron - Canton Rodez-2 2015.svg|vignette|300x300px]]
+| {{Infobox Parti politique français/couleurs|LR}}| || Serge Julien || [[Les Républicains|LR]]
+|-
+| rowspan=3 {{Infobox Parti politique français/couleurs|DVD}}| || Emilie Saules-Le Bars || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 18
+| rowspan=2 bgcolor=#eee | [[Canton de Rodez-Onet|Rodez-Onet]]  
+| rowspan=2 bgcolor=#eee | [[Rodez]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Rodez-Onet}}}} 
+| rowspan=2 bgcolor=#eee | 1 + fraction de Rodez
+| rowspan=2 bgcolor=#eee | [[Onet-le-Château]] et la dernière partie de [[Rodez]]{{note|groupe=alpha|texte=Cette partie est située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Druelle, routes départementales 994 et 840, avenue de la Gineste, giratoire de Saint-Félix, avenue de la Gineste entre le giratoire Saint-Félix et le carrefour Saint-Eloi, avenue du Maréchal-Joffre, route départementale 988, jusqu'à la limite territoriale de la commune d'Onet-le-Château.}}.
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Rodez-Onet 2015.svg|vignette|300x300px]]
+| bgcolor=#eee | Valérie Abadie-Roques || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| bgcolor=#eee | Jean-Philippe Abinal || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 19
+| rowspan=2 | [[Canton de Saint-Affrique|Saint-Affrique]] 
+| rowspan=2 | [[Saint-Affrique]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Affrique}}}}
+| rowspan=2 | 11
+| rowspan=2 | [[La Bastide-Pradines]], [[Calmels-et-le-Viala]], [[Roquefort-sur-Soulzon]], [[Saint-Affrique]], [[Saint-Félix-de-Sorgues]], [[Saint-Izaire]], [[Saint-Jean-d'Alcapiès]], [[Saint-Rome-de-Cernon]], [[Tournemire (Aveyron)|Tournemire]], [[Vabres-l'Abbaye]] et [[Versols-et-Lapeyre]].
+| rowspan=2 | [[File:Aveyron - Canton Saint-Affrique 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|LR}}| || [[Sébastien David (homme politique)|Sébastien David]] || [[Les Républicains|LR]]
+|-
+| [[Émilie Gral]] || [[Les Républicains|LR]]
+|-
+| rowspan=2 bgcolor=#eee | 20
+| rowspan=2 bgcolor=#eee | [[Canton de Tarn et Causses|Tarn et Causses]]  
+| rowspan=2 bgcolor=#eee | [[Sévérac d'Aveyron]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Tarn et Causses}}}} 
+| rowspan=2 bgcolor=#eee | 18
+| rowspan=2 bgcolor=#eee | [[Campagnac (Aveyron)|Campagnac]], [[La Capelle-Bonance]], [[Castelnau-Pégayrols]], [[La Cresse]], [[Montjaux]], [[Mostuéjouls]], [[Peyreleau]], [[Rivière-sur-Tarn]], [[La Roque-Sainte-Marguerite]], [[Saint-André-de-Vézines]], [[Saint-Beauzély]], [[Saint-Laurent-d'Olt]], [[Saint-Martin-de-Lenne]], [[Saint-Saturnin-de-Lenne]], [[Sévérac d'Aveyron]], [[Verrières (Aveyron)|Verrières]], [[Veyreau]] et [[Viala-du-Tarn]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Tarn et Causses 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | Kateline Durand || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| bgcolor=#eee | Edmond Gros || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| rowspan=2 | 21
+| rowspan=2 | [[Canton du Vallon|Vallon]] 
+| rowspan=2 | [[Salles-la-Source]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Vallon}}}}
+| rowspan=2 | 10
+| rowspan=2 | [[Clairvaux-d'Aveyron]], [[Druelle Balsac]], [[Marcillac-Vallon]], [[Mouret (Aveyron)|Mouret]], [[Muret-le-Château]], [[Nauviale]], [[Pruines]], [[Saint-Christophe-Vallon]], [[Salles-la-Source]] et [[Valady]].
+| rowspan=2 | [[File:Aveyron - Canton Vallon 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|SE}}| || Sylvain Couffignal || [[Indépendant (politique)|SE]]
+|-
+| Nathalie Dugast || [[Indépendant (politique)|SE]]
+|-
+| rowspan=2 bgcolor=#eee | 22
+| rowspan=2 bgcolor=#eee | [[Canton de Villefranche-de-Rouergue|Villefranche-de-Rouergue]]  
+| rowspan=2 bgcolor=#eee | [[Villefranche-de-Rouergue]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Villefranche-de-Rouergue}}}} 
+| rowspan=2 bgcolor=#eee | 3
+| rowspan=2 bgcolor=#eee | [[La Rouquette (Aveyron)|La Rouquette]], [[Vailhourles]] et [[Villefranche-de-Rouergue]].
+| rowspan=2 bgcolor=#eee | [[File:Aveyron - Canton Villefranche-de-Rouergue 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|PRG}}| || bgcolor=#eee | Stéphanie Bayol || bgcolor=#eee | [[Parti radical de gauche|PRG]]
+|-
+| bgcolor=#eee | Éric Cantournet || bgcolor=#eee | [[Parti radical de gauche|PRG]]
+|-
+| rowspan=2 | 23
+| rowspan=2 | [[Canton de Villeneuvois et Villefranchois|Villeneuvois et Villefranchois]] 
+| rowspan=2 | [[Villeneuve (Aveyron)|Villeneuve]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Villeneuvois et Villefranchois}}}}
+| rowspan=2 | 20
+| rowspan=2 | [[Ambeyrac]], [[Brandonnet]], [[La Capelle-Balaguier]], [[Compolibat]], [[Drulhe]], [[Lanuéjouls]], [[Maleville]], [[Martiel]], [[Montsalès]], [[Ols-et-Rinhodes]], [[Privezac]], [[Sainte-Croix (Aveyron)|Sainte-Croix]], [[Saint-Igest]], [[Saint-Rémy (Aveyron)|Saint-Rémy]], [[Salvagnac-Cajarc]], [[Saujac]], [[Savignac (Aveyron)|Savignac]], [[Toulonjac]], [[Vaureilles]] et [[Villeneuve (Aveyron)|Villeneuve]].
+| rowspan=2 | [[File:Aveyron - Canton Villeneuvois et Villefranchois 2015.svg|vignette|300x300px]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| ||Jean-Pierre Masbou  || [[Divers droite|DVD]]
+|-
+| Gisèle Rigal || [[Divers droite|DVD]]
+|-
+! colspan=3 | 
+! {{formatnum:{{Population de France/dernière_pop||Aveyron (département)}}}}
+! 285
+! colspan=5 | 
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de l'Aveyron, c'est le cas de deux cantons ([[Canton de Causse-Comtal|Causse-Comtal]], [[Canton de Lot et Dourdou|Lot et Dourdou]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-
+!N°||Canton||[[Arrondissement de Millau|Millau]]||[[Arrondissement de Rodez|Rodez]]||[[Arrondissement de Villefranche-de-Rouergue|Villefranche-de-Rouergue]]||Total
+|-
+|1||align="left"| Aubrac et Carladez||||21||||'''21'''
+|-
+|2||align="left"| Aveyron et Tarn||||||17||'''17'''
+|-
+|3||align="left"| Causse-Comtal||1||6||||'''7'''
+|-
+|4||align="left"| Causses-Rougiers||43||||||'''43'''
+|-
+|5||align="left"| Ceor-Ségala||||||18||'''18'''
+|-
+|6||align="left"| Enne et Alzou||||||11||'''11'''
+|-
+|7||align="left"| Lot et Dourdou||||3||8||'''11'''
+|-
+|8||align="left"| Lot et Montbazinois||||||16||'''16'''
+|-
+|9||align="left"| Lot et Palanges||||13||||'''13'''
+|-
+|10||align="left"| Lot et Truyère||||14||||'''14'''
+|-
+|11||align="left"| Millau-1||3 + fraction de Millau||||||'''3''' + fraction de Millau
+|-
+|12||align="left"| Millau-2||5 + fraction de Millau||||||'''5''' + fraction de Millau
+|-
+|13||align="left"| Monts du Réquistanais||10||||4||'''14'''
+|-
+|14||align="left"| Nord-Lévezou||1||3||||'''4'''
+|-
+|15||align="left"| Raspes et Lévezou||22||||||'''22'''
+|-
+|16||align="left"| Rodez-1||||Fraction de Rodez||||Fraction de Rodez
+|-
+|17||align="left"| Rodez-2||||1 + fraction de Rodez||||'''1''' + fraction de Rodez
+|-
+|18||align="left"| Rodez-Onet||||1 + fraction de Rodez||||'''1''' + fraction de Rodez
+|-
+|19||align="left"| Saint-Affrique||11||||||'''11'''
+|-
+|20||align="left"| Tarn et Causses||12||6||||'''18'''
+|-
+|21||align="left"| Vallon||||10||||'''10'''
+|-
+|22||align="left"| Villefranche-de-Rouergue||||||3||'''3'''
+|-
+|23||align="left"| Villeneuvois et Villefranchois||||||20||'''20'''
+|-
+!||||109||79||97||285
+|}
+
+== Voir aussi ==
+* [[Communes de l'Aveyron]]
+* [[Liste des anciens cantons de l'Aveyron]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+== Notes et références ==
+=== Notes ===
+<references group="alpha"/>
+=== Références ===
+{{Références | références=
+
+<ref name="www.legifrance.gouv.fr_Décret_2014">{{ lien web
+ | date =21 février 2014 
+ | url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028652414
+ | titre= Décret n° 2014-205 du 21 février 2014 portant délimitation des cantons dans le département de l'Aveyron
+ | auteur= 
+ | site =legifrance.gouv.fr |consulté le= 4 mars 2014}}.</ref>
+
+}}
+
+=== Bibliographie ===
+
+* {{Ouvrage|prénom1=Louis-Marie|nom1=Prudhomme|titre=Dictionnaire géographique et méthodique de la République française en CXX départemens|volume=I|lieu=Paris|éditeur=Louis-Marie Prudhomme|année=1798|pages totales=673|oclc=715881089|lire en ligne=https://books.google.fr/books?id=5F0OAAAAQAAJ&printsec=frontcover}}
+* {{Ouvrage |langue=fr |auteur1=Jean-Louis Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de France|Cantons de l'Aveyron}}
+{{Portail|Aveyron|Massif central}}
+
+[[Catégorie:Canton dans l'Aveyron|*]]
+[[Catégorie:Liste de cantons français|Aveyron]]
+[[Catégorie:Liste en rapport avec l'Aveyron|Cantons]]

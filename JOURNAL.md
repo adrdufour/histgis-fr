@@ -9614,3 +9614,128 @@ Ménage : `RESTE_A_FAIRE.md` — le point 1 de la file (1955-1967) est fait par
 la file est renumérotée de 1 à 6, avec ses deux renvois internes ; le § 2
 (« rien n'est commencé ») dit ce que `98` a posé. Les cinq scripts de commit
 déjà joués passent dans `build/scripts_joues/`.
+
+## 10-11 octobre 2026 — le trou 1940-1998 par le JO : Wikipédia, les JO lus, leurs tables
+
+**Ce qui a été fait.** Les pages « Liste des cantons de … » de Wikipédia
+(104 + 10) ont été récoltées et confrontées au registre et aux mouvements de la
+base (`cantons/wikipedia/note_wikipedia.md`) : elles ne disent presque rien des
+transferts isolés, mais elles ont désigné 60 actes absents du registre. Les 28
+JO correspondants ont été lus (`cantons/wikipedia/lecture_jo.md`) :
+13 transferts, 73 cantons recomposés 1949-1968, la Corse de la loi 75-356.
+Puis les **50 tables analytiques annuelles du JO, 1941-1990** (4,4 Go,
+`JORF/tables/`) ont été téléchargées et dépouillées
+(`cantons/tables_jo.md`).
+
+**La date d'effet — règle C, décidée le 11 octobre.** Un rattachement de
+commune vaut le lendemain de sa parution ; une création ou une recomposition,
+au premier tour du renouvellement qui suit. Pour les transferts tirés des
+tables, la parution est estimée par la page du JO (le plus récent acte signé
+aux pages qui précèdent, plus un jour) : écart médian d'un jour sur 236 actes
+dont on connaît la date.
+
+**`110` posé : 691 périodes**, toutes dans des trous — recompositions 207
+(106 atomes), Corse 325 (163), transferts lus 17 (10), transferts des tables
+142 (73). Les essais ont buté sur la réutilisation des codes de Seine-et-Oise
+(7803 : Aulnay-sous-Bois jusqu'en 1940, La Celle-Saint-Cloud après 1967) : le
+nom d'une unité se compare désormais à celui qu'elle porte PENDANT la
+période posée, et un code qui portait un autre nom juste avant est refusé.
+
+**Les tables valent mieux qu'attendu.** Premier jet : 24 des 257 décrets
+connus retrouvés. Les décrets de 1973, 1982, 1984 et 1985 n'y sont pas des
+articles mais des **listes par département** sous un seul en-tête (« Création
+et modification de cantons dans les départements suivants : Ain. — D. 82-77… »),
+où le mot « canton » n'apparaît qu'une fois. Lues ligne à ligne, avec les noms
+de département que l'OCR abîme (« Sai'the », « Saône-et-Loife ») : **228 des
+233 créations et recompositions**. Les manquants de 1986-1990 sont des parties
+de territoire passées d'une commune à l'autre, rangées sous « Circonscriptions
+administratives territoriales » — sans effet sur les communes entières.
+
+**97 des 274 transferts isolés retrouvés**, chacun dans une seule année ; les
+six contrôles sont justes (Saint-Couat 1951, Chambéon 1955, La
+Chapelle-Bertin 1962, Salles-Mongiscard 1951, Crézières 1955, Belmont 1955).
+Les premiers essais rapprochaient « Saint-Mandé » de « Saint-Cloud » par le
+seul mot « saint » : le canton d'arrivée doit ressembler EN ENTIER, et une
+ville qui donne son nom au canton d'arrivée n'est pas cherchée.
+
+**20 transferts tombaient sur une période déjà posée** — 110 s'en abstient.
+`111` est le premier fichier qui **raccourcit des périodes qu'il n'a pas
+posées** : 15 communes gardées dans leur canton de départ après l'acte
+(Toussus-le-Noble et Châteaufort encore à Bièvres jusqu'en 1976, contre le
+décret du 21 novembre 1969 ; Milizac et Guipronvel à Plabennec…), 5 mises
+dans leur canton d'arrivée dès le 23 septembre 1973 par le report de `79`
+(Prémontré, Arrans…). 10 de ces périodes venaient de `81`, 5 de `79`, 5 de la
+base d'origine. Les bornes d'avant sont gardées : **posé, puis défait le même
+jour pour éprouver le retour arrière** — à rejouer.
+
+**Ce que cela change à la chaîne.** `110` et `111` entrent dans
+`rejouer_apres_rebuild.sh`, en dernier, sans `-1` (ils tiennent leur propre
+transaction et ne commettent qu'avec `-v poser=on`). Rejouer un report après
+eux remet `111` en cause ; rejouer `110` seul exige de défaire `111` d'abord
+(`sql/README.md`, « Qui dépend de qui », § 3).
+
+*Une source qu'on croyait muette — « aucune autre source ne les date en
+bloc », disait `ETAT.md` des transferts isolés — était l'index du Journal
+officiel lui-même, publié chaque année.*
+
+## 11 octobre 2026, le ménage — ce que le journal avait sauté, et une ligne que la base dément
+
+**Le journal passait du 24 septembre au 10 octobre sans un mot.** Seize
+jours, douze fichiers de chaîne (`99` à `109`, et les deux `101`), la carte
+étendue à 1815, le dépôt sur Wikimedia Commons : tout cela était écrit dans les
+en-têtes des fichiers, dans `rejouer_apres_rebuild.sh`, dans
+`cartes/web/LISEZMOI.md` et dans `cartes/a_inscrire_en_base.md`, mais nulle
+part dans les quatre documents qui font foi. Ce qui suit est **reconstitué
+après coup à partir de ces en-têtes**, pas raconté le jour même ; les chiffres
+sont les leurs.
+
+- **3 octobre — les villes découpées atteignent la carte, et la Seine d'avant
+  1870 perd ses trous.** `99` remplace les fonctions de partition de `84` : 59
+  villes avaient des lignes, 57 passaient la recette de `98`, et la carte
+  dessinait toujours chaque fraction par la commune entière. `100` rend à
+  Nogent le sol du Perreux (environ 3,9 km² sans propriétaire de 1815 à 1859) ;
+  `101_seine_annexees` prolonge les onze annexées jusqu'en 1863, fin de la
+  division électorale de 1857 ; `102` fait de même pour les lambeaux pris à
+  treize voisines (bois de Boulogne, les Ternes). `101_paris_fractions_quartier`
+  pose les quartiers de Paris coupés entre deux circonscriptions — décision
+  d'Adrien du 3 octobre : des fractions, découpées par `98` comme les villes.
+  `103` fait porter les cantons de Paris par ses quartiers de 1941 à 2012, une
+  seule trame à la fois ; `104` prolonge la banlieue de 1954 à 1968, et dit que
+  c'est une hypothèse.
+- **4 octobre — 1815-1870 hors de la Seine.** `diag_yonne_1815` montre qu'ANR
+  est la source que `64` disait manquer ; `105` pose l'Yonne. Les photos de
+  l'atlas (`photo_1815_1870/`, 118 puis 120) sont transcrites dans
+  `circo/regles_1815_21_63.py` et `circo/regles_1815_restants.py`,
+  `circo/composition_1815_1870.csv` passe de 14 à 57 départements, et `106`
+  généralise `105` : un département par appel. `64` entre dans le script.
+- **6 octobre — les cantons de 1815 à 1870.** Remarque d'Adrien : la carte
+  avait des circonscriptions et aucun canton. `107` remonte le canton de 1870,
+  sauf les exceptions de l'atlas. Entre le 4 et le 6, la page apprend à déposer une carte
+  sur Wikimedia Commons (`cartes/web/commons.py`, jeton hors dépôt) et à dessiner
+  une liste de communes (`noms_cog.py`, `fonds_communes.py`).
+- **10 octobre — les découpes corrigent la base.** `108` (Falaise-Nord et -Sud
+  intervertis de 1815 à 1941 par la nomenclature de 1940 ; Aurillac, Saint-Flour)
+  et `109` (Angoulême 1941-1982) inscrivent les entrées n° 97, 103, 104 et 77
+  de `a_inscrire_en_base.md`. `cartes/coupes_ville.csv` compte 412 lignes pour
+  124 clés.
+
+**`111` est dans la base.** L'entrée d'hier et `RESTE_A_FAIRE.md` disaient
+« posé, puis défait le même jour — à rejouer », et donnaient le contrôle :
+`SELECT count(*) FROM p111_trace` vaut 0 tant que ce n'est pas fait. Il vaut
+**40** ce soir — 20 `modifie`, 20 `insere`, chacun retrouvé dans `membership`.
+Les trois documents sont corrigés. Ce qui reste vrai : aucun export ne le
+montre. `sorties/part_2026-10-11` s'est achevé à 6 h 13, `110` a été posé à
+12 h 21, et `cartes/web/donnees` date du 10. Le point 0 de la file devient
+« réexporter, puis promouvoir ».
+
+**Le dossier.** 55 Go, dont 33 dans `sorties/` : cinq exports périmés y pèsent
+25 Go (`LISEZMOI.md`, « Ce qu'on peut archiver »). `sql/CHAINE.md` reçoit
+`94` à `109`, qui manquaient à son inventaire : 130 fichiers, pas 84.
+`wikipedia_cantons_complements_2.json` quitte la racine pour
+`cantons/wikipedia/`. Les `.txt` nus des tables annuelles du JO sortent du
+dépôt avant d'y être entrés : ils viennent de `pdftotext`, pas de tesseract, et
+pèsent 94 Mo. Rien n'est supprimé ; le doublon de la table de 1955 va dans
+`_to_delete/`, que git ignore désormais.
+
+*Un contrôle écrit dans la file d'attente n'avait pas été relancé avant d'en
+recopier le résultat : la ligne disait zéro, la base disait quarante.*

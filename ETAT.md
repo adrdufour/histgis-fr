@@ -1,7 +1,9 @@
 # État de la base `histgis`
 
-**Dernière mise à jour : 2 septembre 2026**, après le chargement d'ANR-COMMUNES
-et la réécriture de `export_web.py`.
+**Dernière mise à jour : 11 octobre 2026** — § 1 (les couches posées depuis le
+24 septembre) et § 2.3 (les JO lus, leurs tables, `110` et `111`). Le reste du
+fichier est celui du 2 septembre, après le chargement d'ANR-COMMUNES et la
+réécriture de `export_web.py` : chaque tableau porte sa date de mesure.
 
 Trois documents, trois rôles. **`ETAT.md`** (ici) dit où en est chaque couche
 *aujourd'hui* — un état, pas un récit : ce qui est faux est corrigé sur place,
@@ -48,6 +50,13 @@ rattachements depuis le chargement initial. Ce qui suit est **ce que chaque
 | circo 1986 (1986-2010) | 534 unités, 37 132 rattachements | `28`, `43` | 20 août |
 | jalon 1954 | 30 035 atomes, 2 946 cantons | `66`-`69` | 28 août |
 | jalon 1968 | 32 659 rattachements, 2 899 cantons | `58`, `59` | 28 août |
+| reports par les deux bouts | 1941-1953 : 29 841 lignes ; 1941-1967 : 30 453 ; 1969-1998 : 24 041 | `93`, `97`, `95`, sur des jalons jugés par `96` | 23 sept. |
+| Seine 1815-1967, compléments | sol du Perreux rendu à Nogent, annexées et lambeaux prolongés jusqu'en 1863, cantons de Paris portés par les quartiers, banlieue prolongée de 1954 à 1968 (hypothèse) | `100` à `104` | 3 oct. — non chiffré ici |
+| circonscriptions 1815-1870 | un département par appel, 84 journaux dans `build/p106_NN.log` ; hors 75 (`87`-`91`), 89 (`105`), 57 (pas de trame de 1870) et l'Aveyron, non photographié | `64`, `105`, `106` | 4-6 oct. — effectifs dans les journaux |
+| cantons 1815-1870 | le canton de 1870 remonté à 1815, sauf les exceptions de l'atlas ; France entière | `107` | 6 oct. — `build/p107.log` |
+| villes multicantonales découpées | 412 lignes de coupe pour 124 clés (communes et quartiers de Paris) dans `cartes/coupes_ville.csv` ; la carte les lit depuis `99` | `98`, `99`, `101_paris_fractions_quartier`, `108`, `109` | 11 oct., compté dans le CSV |
+| trous 1941-1998, par le JO | 691 périodes | `110` | 11 oct. |
+| périodes démenties par un transfert | 20 modifiées, 20 insérées | `111` | 11 oct., `p111_trace` |
 | salves 1973 / 1982 | 1 905 rattachements, 270 cantons | `75` | 28 août |
 | salves restantes | 873 rattachements, 128 cantons | `76` | 28 août |
 | transferts datés INSEE | 32 rattachements, 13 cantons | `77` | 28 août |
@@ -521,6 +530,8 @@ rendre : elle a été appariée parce que son canton concordait.
 | 66 transferts de commune | 30 datés au jour près par l'INSEE | `77` |
 | 1987-1999 par report arrière depuis 1999 | inférence validée (§ 3.4) | `79` |
 | 1969 → premier acte du département | inférence validée, **posée le 6 sept. 2026** | `81` |
+| 1941-1998, dans les trous | JO lus à la main (13 transferts, 73 cantons recomposés 1949-1968, Corse 1975) et **tables annuelles du JO** (93 transferts isolés). Convention de date (règle C), **posé le 11 oct. 2026** : 691 périodes | `110` |
+| périodes démenties par ces transferts | raccourcies, l'avant ou l'après rendu au bon canton : 20 périodes de `79`, `81` et de la base d'origine. Posé, défait le 11 oct. 2026 pour éprouver le retour arrière, **puis rejoué : la base le porte** — `p111_trace` compte 40 lignes (20 `modifie`, 20 `insere`), mesuré le 11 oct. au soir. La carte servie, exportée avant, ne le montre pas encore | `111` |
 
 **Asymétrie à connaître avant toute lecture.** L'incertitude de date ne pèse que
 sur les cantons *modifiés*. La part des actes de création pure s'effondre avec
@@ -565,11 +576,22 @@ portent les exceptions, bâties en creux avec leur fondement cité. Le registre
 consolidé compte **723 démembrements réels, dont 559 datés au décret (77 %)**,
 90 % de ces dates tombant dans les décennies 1970 et 1980.
 
-**Ce que le registre ne recensera jamais** : les **274 transferts isolés de
-communes** entre cantons. L'annexe VII de Gaudillère ne consigne pas ce type de
-mouvement, et aucune autre source ne les date en bloc. C'est une limite connue,
-pas une lacune du dépouillement. S'y ajoutent les **48 cantons créés entre 1986
-et 1999**, nommés un par un mais non datés faute de source couvrant la fenêtre.
+**Les 274 transferts isolés de communes** entre cantons — ceux que l'annexe VII
+de Gaudillère ne consigne pas, et que le registre Légifrance ignore faute de
+texte indexé avant 1990 — **sont datés pour 97 d'entre eux** depuis le
+11 octobre 2026, par les **tables analytiques annuelles du JO** (1941-1990,
+`JORF/tables/`) : chaque commune n'y paraît qu'une année, avec la page et le
+plus souvent la date du décret (`cantons/dates_par_tables_jo.csv`). La date de
+parution est estimée par la page : écart médian d'un jour sur 236 actes connus.
+93 sont entrés par `110` (73 posés dans un trou) et `111` (18 corrigés sur une
+période qui les démentait ; 2 laissés : Orgerus, Ferreux). **177 restent introuvables** dans les tables —
+artefacts de la base ou noms que l'OCR a trop abîmés. Les tables retrouvent
+228 des 233 décrets de création et de recomposition connus par ailleurs : leur
+silence, pour un département et une année, vaut désormais présomption
+d'absence d'acte (moins sûrement pour les rattachements avant 1958, dont la
+mise en colonnes est encore mêlée). Détail : `cantons/tables_jo.md`.
+S'y ajoutent les **48 cantons créés entre 1986 et 1999**, nommés un par un mais
+non datés faute de source couvrant la fenêtre.
 
 ### 2.4 Cantons 1999-2012 — posés, contrôlés
 

@@ -1,0 +1,118 @@
+[[File:Cantons du Rhône (2017).svg|thumb|Les 13 cantons du Rhône (en vigueur à compter de {{date||mars|2015}}) avec la limite entre les arrondissements à compter de {{date||février|2017}}.]]
+Le [[Rhône (département)|département du Rhône]] comprend 13 cantons.
+
+Avant le {{date|1|janvier|2015}}, le département comptait 54 cantons mais les 31 cantons situés sur le territoire de la [[métropole de Lyon]] ont été supprimés par la création de cette dernière [[Collectivité territoriale en France|collectivité]]. À l'issue des [[Élections départementales de 2015 dans le Rhône|élections départementales de 2015]], le nombre de cantons passe à 13 en vertu du [[redécoupage cantonal de 2014 en France|redécoupage de 2014]].
+
+== Découpage de 2014 ==
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité femmes-hommes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|27 février 2014}} pour le département du [[Rhône (département)|Rhône]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au conseil départemental, nouvelle appellation des conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Ce nouveau découpage tient également compte de la loi {{n°|2014-58}} du {{date-|27 janvier 2014}} de modernisation de l'action publique territoriale et d'affirmation des métropoles, notamment ses articles 26, 36 et 39, qui créent une collectivité à statut particulier, au sens de l’article 72 de la Constitution, dénommée [[métropole de Lyon]]<ref>[http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=20140128&numTexte=3&pageDebut=01562&pageFin=01618 LOI no 2014-58 du 27 janvier 2014] de modernisation de l'action publique territoriale et d’affirmation des métropoles.</ref>. Les anciens cantons situés sur ce territoire disparaissent de fait et dans le [[Rhône (département)|Rhône]] le nombre de cantons passe ainsi à 13<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028664642 |texte=Décret {{n°|2014}}-267 du 27 février 2014}} portant délimitation des cantons dans le département du Rhône.</ref>.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 26 mai 2014|brisé le = 2023-11-22}}.</ref>.
+
+=== Liste des cantons ===
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Anse|Anse]]||[[Anse (Rhône)|Anse]]||15||[[Ambérieux]], [[Anse (Rhône)|Anse]], [[Chasselay (Rhône)|Chasselay]], [[Chazay-d'Azergues]], [[Les Chères]], [[Civrieux-d'Azergues]], [[Dommartin (Rhône)|Dommartin]], [[Lachassagne]], [[Lentilly]], [[Lozanne]], [[Lucenay]], [[Marcilly-d'Azergues]], [[Marcy (Rhône)|Marcy]], [[Morancé]], [[Pommiers (Rhône)|Pommiers]].
+|-
+|2||[[Canton de L'Arbresle|L'Arbresle]]||[[L'Arbresle]]||26||[[L'Arbresle]], [[Bessenay]], [[Bibost]], [[Brullioles]], [[Brussieu]], [[Chambost-Longessaigne]], [[Chevinay]], [[Courzieu]], [[Éveux]], [[Fleurieux-sur-l'Arbresle]], [[Les Halles]], [[Haute-Rivoire]], [[Longessaigne]], [[Montromant]], [[Montrottier]], [[Sain-Bel]], [[Saint-Clément-les-Places]], [[Saint-Genis-l'Argentière]], [[Saint-Julien-sur-Bibost]], [[Saint-Laurent-de-Chamousset]], [[Saint-Pierre-la-Palud]], [[Sainte-Foy-l'Argentière]], [[Savigny (Rhône)|Savigny]], [[Sourcieux-les-Mines]], [[Souzy]], [[Villechenève]].
+|-
+|3||[[Canton de Belleville-en-Beaujolais|Belleville-en-Beaujolais]]||[[Belleville-en-Beaujolais]]||27||[[Les Ardillats]], [[Beaujeu (Rhône)|Beaujeu]], [[Belleville (Rhône)|Belleville]], [[Cenves]], [[Cercié]], [[Charentay]], [[Chénas]], [[Chiroubles (Rhône)|Chiroubles]], [[Corcelles-en-Beaujolais]], [[Dracé]], [[Émeringes]], [[Fleurie]], [[Juliénas]], [[Jullié]], [[Lancié]], [[Lantignié]], [[Marchampt]], [[Odenas]], [[Quincié-en-Beaujolais]], [[Régnié-Durette]], [[Saint-Didier-sur-Beaujeu]], [[Saint-Étienne-la-Varenne]], [[Saint-Lager]], [[Taponas]], [[Vauxrenard]], [[Vernay (Rhône)|Vernay]], [[Villié-Morgon]].
+|-
+|4||[[Canton du Val d'Oingt|Val-d'Oingt]]||[[Val d'Oingt]]||23||[[Alix (Rhône)|Alix]], [[Bagnols (Rhône)|Bagnols]], [[Belmont-d'Azergues]], [[Le Breuil (Rhône)|Le Breuil]], [[Bully (Rhône)|Bully]], [[Chamelet]], [[Charnay (Rhône)|Charnay]], [[Châtillon (Rhône)|Châtillon]], [[Chessy (Rhône)|Chessy]], [[Cogny (Rhône)|Cogny]], [[Frontenas]], [[Légny]], [[Létra]], [[Porte des Pierres Dorées]], [[Moiré (Rhône)|Moiré]], [[Saint-Germain-Nuelles]], [[Saint-Jean-des-Vignes]], [[Saint-Vérand (Rhône)|Saint-Vérand]], [[Sainte-Paule (Rhône)|Sainte-Paule]], [[Ternand]], [[Theizé]], [[Val d'Oingt]], [[Ville-sur-Jarnioux]].
+|-
+|5||[[Canton de Brignais|Brignais]]||[[Brignais]]||6||[[Brignais]], [[Brindas]], [[Chaponost]], [[Grézieu-la-Varenne]], [[Messimy (Rhône)|Messimy]], [[Vourles]].
+|-
+|6||[[Canton de Genas|Genas]]||[[Genas]]||8||[[Colombier-Saugnieu]], [[Genas]], [[Jons]], [[Pusignan]], [[Saint-Bonnet-de-Mure]], [[Saint-Laurent-de-Mure]], [[Saint-Pierre-de-Chandieu]], [[Toussieu]].
+|-
+|7||[[Canton de Gleizé|Gleizé]]||[[Gleizé]]||15||[[Arnas]], [[Blacé]], [[Denicé]], [[Gleizé]], [[Lacenas]], [[Limas]], [[Montmelas-Saint-Sorlin]], [[Le Perréon]], [[Rivolet]], [[Saint-Cyr-le-Chatoux]], [[Saint-Étienne-des-Oullières]], [[Saint-Georges-de-Reneins]], [[Saint-Julien (Rhône)|Saint-Julien]], [[Salles-Arbuissonnas-en-Beaujolais]], [[Vaux-en-Beaujolais]].
+|-
+|8||[[Canton de Mornant|Mornant]]||[[Mornant]]||19||[[Ampuis]], [[Beauvallon (Rhône)|Beauvallon]], [[Chaussan]], [[Condrieu]], [[Échalas (Rhône)|Échalas]], [[Les Haies]], [[Loire-sur-Rhône]], [[Longes]], [[Mornant]], [[Riverie]], [[Saint-Cyr-sur-le-Rhône]], [[Saint-Laurent-d'Agny]], [[Saint-Romain-en-Gal]], [[Saint-Romain-en-Gier]], [[Chabanière]], [[Sainte-Colombe (Rhône)|Sainte-Colombe]], [[Soucieu-en-Jarrest]], [[Trèves (Rhône)|Trèves]], [[Tupin-et-Semons]].
+|-
+|9||[[Canton de Saint-Symphorien-d'Ozon|Saint-Symphorien-d'Ozon]]||[[Saint-Symphorien-d'Ozon]]||11||[[Chaponnay]], [[Communay]], [[Marennes (Rhône)|Marennes]], [[Millery (Rhône)|Millery]], [[Montagny (Rhône)|Montagny]], [[Orliénas]], [[Saint-Symphorien-d'Ozon]], [[Sérézin-du-Rhône]], [[Simandres]], [[Taluyers]], [[Ternay (Rhône)|Ternay]].
+|-
+|10||[[Canton de Tarare|Tarare]]||[[Tarare (Rhône)|Tarare]]||18||[[Affoux]], [[Ancy]], [[Chambost-Allières]], [[Dième]], [[Grandris]], [[Joux]], [[Lamure-sur-Azergues]], [[Saint-Appolinaire]], [[Saint-Clément-sur-Valsonne]], [[Saint-Forgeux]], [[Saint-Just-d'Avray]], [[Saint-Marcel-l'Éclairé]], [[Saint-Romain-de-Popey]], [[Sarcey (Rhône)|Sarcey]], [[Les Sauvages (Rhône)|Les Sauvages]], [[Tarare (Rhône)|Tarare]], [[Valsonne]], [[Vindry-sur-Turdine]].
+|-
+|11||[[Canton de Thizy-les-Bourgs|Thizy-les-Bourgs]]||[[Thizy-les-Bourgs]]||21||[[Aigueperse (Rhône)|Aigueperse]], [[Amplepuis]], [[Azolette]], [[Chénelette]], [[Claveisolles]], [[Cours (Rhône)|Cours]], [[Cublize]], [[Deux-Grosnes]], [[Meaux-la-Montagne]], [[Poule-les-Écharmeaux]], [[Propières]], [[Ranchal]], [[Ronno]], [[Saint-Bonnet-des-Bruyères]], [[Saint-Bonnet-le-Troncy]], [[Saint-Clément-de-Vers]], [[Saint-Igny-de-Vers]], [[Saint-Jean-la-Bussière]], [[Saint-Nizier-d'Azergues]], [[Saint-Vincent-de-Reins]], [[Thizy-les-Bourgs]].
+|-
+|12||[[Canton de Vaugneray|Vaugneray]]||[[Vaugneray]]||18||[[Aveize]], [[La Chapelle-sur-Coise]], [[Coise]], [[Duerne]], [[Grézieu-le-Marché]], [[Larajasse]], [[Meys (Rhône)|Meys]], [[Pollionnay]], [[Pomeys]], [[Rontalon]], [[Saint-André-la-Côte]], [[Saint-Martin-en-Haut]], [[Saint-Symphorien-sur-Coise]], [[Sainte-Catherine (Rhône)|Sainte-Catherine]], [[Sainte-Consorce]], [[Thurins]], [[Vaugneray]], [[Yzeron]].
+|-
+|13||[[Canton de Villefranche-sur-Saône|Villefranche-sur-Saône]]||[[Villefranche-sur-Saône]]||1||[[Villefranche-sur-Saône]].
+|-
+!||||||226||
+|}
+
+== Découpage précédent ==
+[[Fichier:Anciens cantons du Rhône.png|vignette|Carte des cantons du Rhône avant 2015]]
+
+=== Historique ===
+*1801<ref>Arrêté du 15 Brumaire an X (6 novembre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f542 p.554]; plan des six cantons de Lyon dans Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.520</ref> : découpage d'origine
+*1833<ref>Ordonnance du 4 mai 1833, ''Bulletin des lois'' 1833 (1er semestre, ordonnances) [https://gallica.bnf.fr/ark:/12148/bpt6k6529928x/f286.item p. 262]</ref> : Le chef-lieu du canton de [[Sainte-Colombe (Rhône)|Sainte-Colombe]] est transféré à [[Condrieu]] ([[canton de Condrieu]])
+*1836<ref>Ordonnance du 5 mai 1836, ''Bulletin des lois'' 1836 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486414g/f193.item p. 175]</ref> : Le chef-lieu du canton de [[Saint-Nizier-d'Azergues|Saint-Nizier]] est transféré à [[Lamure-sur-Azergues|Lamure]] ([[Canton de Lamure-sur-Azergues|canton de Lamure]])
+*1843<ref>Loi du 24 juillet 1843, ''Bulletin des lois'' 1843 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486428b/f86.item p. 63]; Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.521</ref> : Création du [[Canton de Lyon-VI|canton de La Guillotière]], détaché du [[canton de Lyon-I]].
+*1852<ref>Décret du 24 mars 1852, ''Bulletin des lois'' 1852 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486128d/f899.item p. 850]</ref> : Les communes de Villeurbanne, Vaux, Bron et Vénissieux sont transférées du [[Isère (département)|département de l'Isère]] au département du Rhône et rejoignent le [[Canton de Lyon-VI|canton de La Guillotière]].
+*1854<ref>Loi du 22 juin 1854, ''Bulletin des lois'' 1854 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486132g/f1622.item p. 1622]; plan dans Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.522</ref> : Le canton de La Guillotière est scindé en deux nouveaux cantons [[canton de Lyon-VI|Lyon-VII]] et [[Canton de Villeurbanne-Sud|Villeurbanne]].
+*1862<ref>Loi du 6 juillet 1862, ''Bulletin des lois'' 1862 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k97375660/f145.item p. 121]; plan dans Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.522</ref> : Création du [[canton de Lyon-VII|canton de Lyon-VIII]], détaché du [[canton de Lyon-VI|canton de Lyon-VII]].
+*1867<ref>Loi et Décret du 17 juillet 1867, ''Bulletin des lois'' 1867 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486159t/f68.item p. 47]; plan dans Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.523</ref> : Modification des limites infracommunales entre les cantons de Lyon-II et -III, entre les cvantons de Lyon-III et -IV et entre les cantons de Lyon-VII et -VIII.
+*1869<ref>Loi du 8 mai 1869, ''Bulletin des lois'' 1869 (1er semestre)[https://gallica.bnf.fr/ark:/12148/bd6t54119686/f441.item p. 421]</ref> : Création du [[canton d'Amplepuis]], détaché des cantons de Tarare, Thizy et Lamure.
+*1914<ref>Loi du 19 avril 1914, ''Bulletin des lois'' 1914 [https://gallica.bnf.fr/ark:/12148/bpt6k220780s/f1164.item.r p. 1101], plan dans Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.526</ref> : La ville de Lyon est redécoupée en douze cantons: les cantons de Lyon-I à -VI (à l'Ouest du Rhône) ne sont pas modifiés, la rive gauche est redécoupé en six cantons Lyon-VII à Lyon-XII. Le canton de Villeurbanne ne contient plus une partie de la ville de Lyon.
+*1964<ref>Décret du 10 janvier 1964, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=15%2F01%2F1964+%3E+15%2F01%2F1964 ''JORF'' 15 janvier 1964], p. 527</ref> : Le canton de Villeurbanne est scindé en trois nouveaux cantons [[canton de Villeurbanne-Nord|Villeurbanne-Nord]], [[canton de Villeurbanne-Sud|-Sud]] et [[canton de Bron|Bron]].
+*1964<ref>Décret du 28 janvier 1964, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=30%2F01%2F1964+%3E+30%2F01%2F1964 ''JORF'' 30 janvier 1964], p. 1093, plan dans Bernard Gaudillère, ''Atlas historique des circonscriptions électorales françaises'', 1995, p.527</ref> : Création du canton de Lyon-XIII, détaché du canton de Lyon-XII.
+*1964<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000852865 Décret n° 64-847 du 12 août 1964]</ref> : Modification de la limite entre les cantons de [[canton de Lyon-IV|Lyon-V]] et [[canton de Lyon-V|-VI]] à l'occasion de la création du [[9e arrondissement de Lyon]].
+*1967-69<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880759 Loi n° 67-1205 du 29 décembre 1967] + [https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000877293 Décret n° 68-168 du 21 février 1968] + Décret du 12 avril 1969, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=19%2F04%2F1969+%3E+19%2F04%2F1969 ''JORF'' 19 avril 1969], p. 3861</ref> : 
+**Sont transférés du [[Isère (département)|département de l'Isère]] au département du Rhône :
+***Le [[canton de Saint-Symphorien-d'Ozon]];
+***Les communes de [[Décines-Charpieu]], [[Chassieu]], [[Meyzieu]], [[Genas]], [[Pusignan]], [[Jonage]] et [[Jons]] ([[canton de Meyzieu]]) ;
+***Les communes de [[Saint-Bonnet-de-Mure]] et [[Saint-Laurent-de-Mure]] (transférées du [[Canton d'Heyrieux|canton d’Heyrieux]] au [[canton de Meyzieu]]) ;
+***Les communes de [[Toussieu]] et [[Saint-Pierre-de-Chandieu]] (transférées du [[Canton d'Heyrieux|canton d’Heyrieux]] au [[canton de Saint-Symphorien-d’Ozon]]) ;
+**Sont transférées du [[Ain (département)|département de l'Ain]] au département du Rhône :
+***Les communes de [[Rillieux]] et [[Crépieux-la-Pape]] (transférées du [[canton de Montluel]] au nouveau [[Canton de Rillieux-la-Pape|canton de Rillieux]]) ;
+***Les communes de [[Genay (métropole de Lyon)|Genay]] et [[Montanay]] (transférées du [[canton de Trévoux]] au [[canton de Neuville-sur-Saône]]) ;
+***Les communes de [[Sathonay-Camp]] et [[Sathonay-Village]] (transférées du [[canton de Trévoux]] au canton de Rillieux).
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858737 Décret n° 73-671 du 13 juillet 1973]</ref> : 
+**Création des cantons de [[Canton de Vénissieux-Nord|Vénissieux]] (détaché du [[canton de Bron]]) et [[Canton d'Oullins|Oullins]], détaché de [[Canton de Saint-Genis-Laval|Saint-Genis-Laval]];
+**La commune de [[Saint-Fons]] est transférée du canton de Bron au [[canton de Saint-Symphorien-d'Ozon]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000690848 Décret n° 82-66 du 20 janvier 1982]</ref> : 
+**Création des cantons de [[canton de Saint-Priest|Saint-Priest]] (détaché du [[Canton de Saint-Symphorien-d'Ozon|canton de Saint-Symphorien-d’Ozon]]), [[Canton de Décines-Charpieu|Décines]] (détaché de [[canton de Meyzieu|Meyzieu]]), [[canton de Caluire-et-Cuire|Caluire-et-Cuire]] (détaché de [[canton de Neuville-sur-Saône|Neuville-sur-Saône]]) et [[canton de Vaulx-en-Velin|Vaulx-en-Velin]] (détaché de [[canton de Bron|Bron]]) ;
+**Le canton de Vénissieux est scindé en deux nouveaux cantons [[canton de Vénissieux-Nord|Vénissieux-Nord]] et [[canton de Vénissieux-Sud|-Sud]];
+**Villeurbanne passe de deux à trois cantons ([[Canton de Villeurbanne-Nord|Nord]], [[Canton de Villeurbanne-Centre|Centre]] et [[Canton de Villeurbanne-Sud|Sud]])
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688586 Décret n° 85-75 du 22 janvier 1985]</ref> : Création des cantons de [[canton de Sainte-Foy-lès-Lyon|Sainte-Foy-lès-Lyon]] (détaché du [[canton d'Oullins]]), [[canton d'Irigny|Irigny]] (détaché de [[canton de Saint-Genis-Laval|Saint-Genis-Laval]]), [[canton de Saint-Fons|Saint-Fons]] (détaché de [[Canton de Saint-Symphorien-d'Ozon|Saint-Symphorien-d'Ozon]]) et [[canton de Tassin-la-Demi-Lune|Tassin-la-Demi-Lune]] (détaché de [[canton de Vaugneray|Vaugneray]])
+*2000<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000581642 Décret du 28 février 2000]</ref> :
+**Création des cantons d'[[Canton d'Écully|Ecully]] (détaché du [[canton de Limonest]]) et [[canton de Gleizé|Gleizé]] (détaché de [[canton de Villefranche-sur-Saône|Villefranche-sur-Saône]]);
+**Fusion des cantons de Lyon-I et -II: le [[canton de Lyon-I]] est élargi et le canton de Lyon-II disparaît. (En 1999, le Conseil d'Etat avait ordonné la suppression du deuxième canton, trop peu peuplé)<ref>[https://www.conseil-etat.fr/fr/arianeweb/CE/decision/1999-01-06/178608 Décision du 6 janvier 1999, n° 178.608]</ref>
+**Les sept cantons Lyon-III à -IX sont renumérotés [[canton de Lyon-II|Lyon-II]], [[canton de Lyon-III|-III]], [[canton de Lyon-IV|-IV]], [[canton de Lyon-V|-V]], [[canton de Lyon-VI|-VI]], [[canton de Lyon-VII|-VII]] et [[canton de Lyon-VIII|-VIII]];
+**Les trois cantons Lyon-X, -XII et -XIII sont remplacés par quatre nouveaux cantons [[canton de Lyon-IX|Lyon-IX]], [[canton de Lyon-X|-X]], [[canton de Lyon-XII|-XII]] et [[canton de Lyon-XIV|-XIV]];
+**Création du [[canton de Lyon-XIII]], détaché du [[canton de Lyon-XI]].
+
+=== Avant janvier 2015 ===
+Le [[Département français|département]] du [[Rhône (département)|Rhône]] comptait 54 [[cantons français|cantons]] :
+* [[Arrondissement de Lyon (ensemble de communes)|Arrondissement de Lyon]] (43 cantons) : [[canton de l'Arbresle]] - [[canton de Bron]] - [[canton de Caluire-et-Cuire]] - [[canton de Condrieu]] - [[canton de Décines-Charpieu]] - [[canton d'Écully]] - [[canton de Givors]] - [[canton d'Irigny]] - [[canton de Limonest]] - [[canton de Lyon-I]] - [[canton de Lyon-II]] - [[canton de Lyon-III]] - [[canton de Lyon-IV]] - [[canton de Lyon-V]] - [[canton de Lyon-VI]] - [[canton de Lyon-VII]] - [[canton de Lyon-VIII]] - [[canton de Lyon-IX]] - [[canton de Lyon-X]] - [[canton de Lyon-XI]] - [[canton de Lyon-XII]] - [[canton de Lyon-XIII]] - [[canton de Lyon-XIV]] - [[canton de Meyzieu]] - [[canton de Mornant]] - [[canton de Neuville-sur-Saône]] - [[canton d'Oullins]] - [[canton de Rillieux-la-Pape]] - [[canton de Sainte-Foy-lès-Lyon]] - [[canton de Saint-Fons]] - [[canton de Saint-Genis-Laval]] - [[canton de Saint-Laurent-de-Chamousset]] - [[canton de Saint-Priest]] - [[canton de Saint-Symphorien-d'Ozon]] - [[canton de Saint-Symphorien-sur-Coise]] - [[canton de Tassin-la-Demi-Lune]] - [[canton de Vaugneray]] - [[canton de Vaulx-en-Velin]] - [[canton de Vénissieux-Nord]] - [[canton de Vénissieux-Sud]] - [[canton de Villeurbanne-Centre]] - [[canton de Villeurbanne-Nord]] - [[canton de Villeurbanne-Sud]]
+* [[Arrondissement de Villefranche-sur-Saône]] (11 cantons) : [[canton d'Amplepuis]] - [[canton d'Anse]] - [[canton de Beaujeu]] - [[canton de Belleville]] - [[canton du Bois-d'Oingt]] - [[canton de Gleizé]] - [[canton de Lamure-sur-Azergues]] - [[canton de Monsols]] - [[canton de Tarare]] - [[canton de Thizy]] - [[canton de Villefranche-sur-Saône]]
+
+=== De janvier à mars 2015 ===
+Situation transitoire entre la création de la métropole de Lyon et les élections départementales de {{date-|mars 2015}}<ref>[http://www.rhone.fr/content/view/rhone2015/29171]</ref> :
+* [[Arrondissement de Lyon (ensemble de communes)|Arrondissement de Lyon]] : il n'existe plus de cantons au sein de la [[métropole de Lyon]], cette collectivité n'élisant pas de conseillers généraux. Les cantons à cheval entre la métropole et le département sont maintenus.
+* [[Arrondissement de Villefranche-sur-Saône]] (23 cantons) : [[canton d'Amplepuis]] - [[canton d'Anse]] - [[canton de l'Arbresle]] -  [[canton de Beaujeu]] - [[canton de Belleville]] - [[canton du Bois-d'Oingt]] - [[canton de Condrieu]] - [[canton de Décines-Charpieu]] - [[canton de Givors]] - [[canton de Gleizé]] - [[canton de Lamure-sur-Azergues]] - [[canton de Limonest]] - [[canton de Meyzieu]] - [[canton de Monsols]] - [[canton de Mornant]] - [[canton de Saint-Genis-Laval]] - [[canton de Saint-Laurent-de-Chamousset]] - [[canton de Saint-Symphorien-d'Ozon]] - [[canton de Saint-Symphorien-sur-Coise]] -  [[canton de Tarare]] - [[canton de Thizy]] - [[canton de Vaugneray]] - [[canton de Villefranche-sur-Saône]]
+
+Les limites des deux arrondissements ont été redéfinies en fonction de celles des deux collectivités territoriales : celui de [[Arrondissement de Lyon (ensemble de communes)|Lyon]] pour la [[métropole de Lyon]] et celui de [[arrondissement de Villefranche-sur-Saône|Villefranche-sur-Saône]] pour le département du [[Rhône (département)|Rhône]].
+
+== Références ==
+{{Références|références=2}}
+
+== Voir aussi ==
+* [[Communes du Rhône]]
+
+{{Palette|Découpage administratif de Auvergne-Rhône-Alpes|Cantons de France|Cantons du Rhône|Anciens cantons du Rhône}}
+{{Portail|Département du Rhône}}
+
+[[Catégorie:Canton dans le département du Rhône|*]]
+[[Catégorie:Liste de cantons français|Rhone]]
+[[Catégorie:Liste en rapport avec le département du Rhône|Cantons]]

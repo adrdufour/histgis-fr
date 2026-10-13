@@ -7,6 +7,9 @@ servir.py — sert `cartes/web/` en local et ouvre la page.
     python3 cartes/web/servir.py 9000       # autre port
     python3 cartes/web/servir.py --sans-navigateur
 
+Il sert aussi les routes du dépôt sur Wikimedia Commons (`/commons/…`,
+voir `commons.py` et LISEZMOI.md), actives seulement si `commons.toml` existe.
+
 Pourquoi un serveur plutôt qu'un double-clic
 --------------------------------------------
 La page charge ses données par `fetch()`. Les navigateurs traitent chaque
@@ -23,6 +26,7 @@ donc très redondant.
 import argparse
 import gzip
 import io
+import json
 import os
 import socketserver
 import sys
@@ -32,6 +36,13 @@ from http.server import SimpleHTTPRequestHandler
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent
+sys.path.insert(0, str(RACINE))
+from commons import Commons, ErreurCommons  # noqa: E402
+
+COMMONS = Commons(RACINE / "commons.toml")
+# Une carte de département avec ses communes pèse quelques mégaoctets ; au-delà
+# de 60 Mo c'est une erreur, pas une carte.
+CORPS_MAX = 60 * 1024 * 1024
 
 
 class Gestionnaire(SimpleHTTPRequestHandler):
@@ -64,6 +75,78 @@ class Gestionnaire(SimpleHTTPRequestHandler):
         else:
             self.send_header("Cache-Control", "no-cache")
         super().end_headers()
+
+    # ------------------------------------------------------------------
+    # Routes Commons
+    #
+    # Le serveur détient un jeton qui peut déposer des fichiers sous le nom de
+    # son propriétaire. N'importe quelle page ouverte dans le même navigateur
+    # peut envoyer un POST vers 127.0.0.1 : sans garde, un site tiers pourrait
+    # déposer sur Commons à sa place. Deux gardes, chacune suffisante :
+    #   * `Content-Type: application/json` obligatoire — un formulaire ou un
+    #     fetch « simple » d'une autre origine ne peut pas le poser sans
+    #     requête préalable CORS, à laquelle ce serveur ne répond pas ;
+    #   * l'en-tête `Origin`, s'il est présent, doit être celui de la page.
+    # ------------------------------------------------------------------
+    def _origine_ok(self):
+        o = self.headers.get("Origin")
+        if not o:
+            return True
+        hote = self.headers.get("Host", "")
+        return o in (f"http://{hote}", f"https://{hote}")
+
+    def _json(self, code, obj):
+        corps = json.dumps(obj, ensure_ascii=False).encode("utf-8")
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(corps)))
+        self.end_headers()
+        self.wfile.write(corps)
+
+    def do_GET(self):
+        if self.path.split("?", 1)[0] == "/commons/etat":
+            if not self._origine_ok():
+                return self._json(403, {"erreur": "origine refusée"})
+            COMMONS.recharge()          # le fichier a pu être créé entre-temps
+            try:
+                return self._json(200, COMMONS.etat())
+            except ErreurCommons as e:
+                return self._json(502, {"erreur": str(e)})
+        return super().do_GET()
+
+    def do_POST(self):
+        route = self.path.split("?", 1)[0]
+        if route not in ("/commons/verifier", "/commons/envoi", "/commons/wikipedia"):
+            return self._json(404, {"erreur": "route inconnue"})
+        if not self._origine_ok():
+            return self._json(403, {"erreur": "origine refusée"})
+        if not self.headers.get("Content-Type", "").startswith("application/json"):
+            return self._json(415, {"erreur": "JSON attendu"})
+        n = int(self.headers.get("Content-Length") or 0)
+        if n > CORPS_MAX:
+            return self._json(413, {"erreur": "fichier trop gros"})
+        try:
+            q = json.loads(self.rfile.read(n).decode("utf-8"))
+        except ValueError:
+            return self._json(400, {"erreur": "JSON illisible"})
+        try:
+            if route == "/commons/wikipedia":
+                titres = q.get("titres", [])
+                if not isinstance(titres, list):
+                    return self._json(400, {"erreur": "titres : liste attendue"})
+                return self._json(200, {"titres": COMMONS.verifie_wikipedia(titres)})
+            if route == "/commons/verifier":
+                return self._json(200, COMMONS.verifie(
+                    q.get("fichier", ""), q.get("categories", [])))
+            nom, svg, texte = q.get("nom"), q.get("svg"), q.get("texte")
+            if not (nom and svg and texte):
+                return self._json(400, {"erreur": "nom, svg et texte requis"})
+            if not nom.lower().endswith(".svg"):
+                return self._json(400, {"erreur": "le nom doit finir par .svg"})
+            return self._json(200, COMMONS.depose(
+                nom, svg.encode("utf-8"), texte, bool(q.get("ignorer"))))
+        except ErreurCommons as e:
+            return self._json(502, {"erreur": str(e)})
 
     def send_head(self):
         chemin = self.translate_path(self.path)

@@ -1,0 +1,268 @@
+[[Fichier:Carte Cantons Savoie 2015 (numéros).png|vignette|upright=1.9|{{colonnes|taille=10|1=1. [[Canton d'Aix-les-Bains-1|Aix-les-Bains-1]]<br>2. [[Canton d'Aix-les-Bains-2|Aix-les-Bains-2]]<br> 3. [[Canton d'Albertville-1|Albertville-1]]<br>4. [[Canton d'Albertville-2|Albertville-2]]<br>5. [[Canton de Bourg-Saint-Maurice|Bourg-Saint-Maurice]]<br>6. [[Canton de Bugey savoyard|Bugey savoyard]]<br>7. [[Canton de Chambéry-1|Chambéry-1]]<br>8. [[Canton de Chambéry-2|Chambéry-2]]<br>9. [[Canton de Chambéry-3|Chambéry-3]]<br>10. [[Canton de Modane|Modane]]<br>11. [[Canton de Montmélian|Montmélian]]<br> 12. [[Canton de La Motte-Servolex|La Motte-Servolex]]<br>13. [[Canton de Moûtiers|Moûtiers]]<br>14. [[Canton du Pont-de-Beauvoisin (Savoie)|Le Pont-de-Beauvoisin]]<br>15. [[Canton de La Ravoire|La Ravoire]]<br> 16. [[Canton de Saint-Alban-Leysse|Saint-Alban-Leysse]]<br>17. [[Canton de Saint-Jean-de-Maurienne|Saint-Jean-de-Maurienne]]<br>18. [[Canton de Saint-Pierre-d'Albigny|Saint-Pierre-d'Albigny]]<br>19. [[Canton d'Ugine|Ugine]]}}]]
+
+La '''liste des cantons de la Savoie''' regroupe les 19 [[canton français|cantons]] que compte le [[département français]] de la [[Savoie (département)|Savoie]] en [[région française|région]] [[Auvergne-Rhône-Alpes]].
+
+Ce découpage en 19 cantons fait suite à la loi du {{date|17 mai 2013}} relative, entre-autres, à l'élection des conseillers départementaux<ref>{{Lien web | url = http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id | titre = LOI {{n°|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral | jour = 17 | mois = mai | année = 2013 | site =legifrance.gouv.fr  | éditeur = [[Journal officiel de la République française|JORF]] {{n°|0114}} du 18 mai 2013 {{p.|8242}}  | consulté le = 24 février 2014}}.</ref>, et du décret du {{date|27 février 2014}} portant délimitation des cantons dans le département de la Savoie<ref name="décret">{{Lien web|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028664798|titre=DÉCRET {{n°|2014-272}} du 27 février 2014 portant délimitation des cantons dans le département de la Savoie|jour=27|mois=février|année=2014|site=legifrance.gouv.fr|éditeur=[[Journal officiel de la République française|JORF]] {{n°|0051}} du {{date|1er mars 2014}} {{p.|4011}}|consulté le=2 mars 2014}}.</ref>.
+
+En vigueur à compter du renouvellement de l'assemblée départementale de 2015, les 19 cantons sont listés ci-après dans leur ordre officiel et alphabétique.
+
+Les 37 anciens cantons existant avant 2015 sont listés à la suite des cantons actuels, selon leurs [[arrondissement français|arrondissements]] respectifs que sont l'[[arrondissement d'Albertville]], l'[[arrondissement de Chambéry]] et l’[[arrondissement de Saint-Jean-de-Maurienne]].
+
+== Liste des cantons à compter de 2015 ==
+=== Contexte du redécoupage ===
+{{article détaillé|Redécoupage cantonal de 2014 en France}}
+[[Fichier:Découpage cantonal de la Savoie (2015).png|vignette|Découpage cantonal du département en 2015 avec en rouge les (sous-)préfectures.]]
+
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date|27 février 2014}} pour le département de la [[Savoie (département)|Savoie]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, prévu en {{date|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{nobr|6 ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Savoie (département)|Savoie]] le nombre de cantons passe ainsi de 37 à 19<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028664798 |texte=Décret {{n°|2014}}-272 du 27 février 2014}} portant délimitation des cantons dans le département de la Savoie.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 27 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Savoie, la population de référence est la population légale en vigueur au {{date|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|414959|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=73 |titre= Chiffres clés Évolution et structure de la population - Département de la Savoie (73) |auteur= |date = |site =insee.fr |consulté le= 27 mai 2014}}.</ref>. Avec 19 cantons la population moyenne par conseiller départemental est de {{unité|21840|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|17472|habitants}} et {{unité|26208|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+=== Composition détaillée ===
+
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2010<ref>Populations légales des communes en vigueur au {{date|1er janvier 2013}}, millésimées 2010 (date de référence statistique : {{date|1er janvier 2010}}), dans les limites territoriales en vigueur au {{date|1er janvier 2012}}</ref>
+!scope=col|Écart à la moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+!scope=col|Situation du canton en Savoie
+|- 
+|1||[[Canton d'Aix-les-Bains-1|Aix-les-Bains-1]]||[[Aix-les-Bains]]||{{formatnum:17792}} + fraction Aix-les-Bains||||9 + fraction Aix-les-Bains||1° Les communes suivantes : [[La Biolle]], [[Brison-Saint-Innocent]], [[Entrelacs (Savoie)|Entrelacs]], [[Grésy-sur-Aix]], [[Montcel (Savoie)|Montcel]], [[Pugny-Chatenod]], [[Saint-Offenge]], [[Saint-Ours (Savoie)|Saint-Ours]], [[Trévignin]]. <br/>2° La partie de la commune d'Aix-les-Bains située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Tresserve, au droit de l'intersection du chemin Sous-le-Bois et de la montée de la Reine-Victoria, chemin Sous-le-Bois, carrefour Lamartine, boulevard du Maréchal-de-Lattre-de-Tassigny, rue Maryse-Bastié, rue Jean-Mermoz, boulevard Pierpont-Morgan, carrefour des Hôpitaux, avenue Franklin-Roosevelt, jusqu'à la limite territoriale de la commune de Grésy-sur-Aix.<br/>Le canton comprend les anciens cantons d'[[Canton d'Albens|Albens]] et d'[[Canton d'Aix-les-Bains-Nord-Grésy|Aix-les-Bains-Nord-Grésy-sur-Aix]].||[[Fichier:Carte Canton Aix-les-Bains-1.png|200px]]
+|-
+|2||[[Canton d'Aix-les-Bains-2|Aix-les-Bains-2]]||[[Aix-les-Bains]]||{{formatnum:5207}} + fraction Aix-les-Bains||||2 + fraction Aix-les-Bains||1° Les communes suivantes : [[Mouxy]], [[Tresserve]]. <br/>2° La partie de la commune d'Aix-les-Bains non incluse dans le canton d'Aix-les-Bains-1.<br/>Le canton comprend les anciens cantons d'Aix-les-Bains-Centre et d'Aix-les-Bains-Sud.||[[Fichier:Carte Canton Aix-les-Bains-2.png|200px]]
+|-
+|3||[[Canton d'Albertville-1|Albertville-1]]||[[Albertville]]||{{formatnum:8407}} + fraction Albertville||0||8 + fraction Albertville||1° Les communes suivantes : [[Allondaz]], [[La Bâthie]], [[Cevins]], [[Esserts-Blay]], [[Mercury (Savoie)|Mercury]], [[Rognaix]], [[Saint-Paul-sur-Isère]], [[Tours-en-Savoie]]. <br/>2° La partie de la commune d'Albertville située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Gilly-sur-Isère, avenue du Général-de-Gaulle (exclue), ligne de chemin de fer jusqu'à la gare (incluse), avenue Jean-Jaurès, pont du Mirantin, avenue du 8-Mai-1945, promenade Édouard-Herriot (incluse), ligne de chemin de fer de la Tarentaise, chemin de la Pierre-du-Roy et son prolongement jusqu'à la limite territoriale de la commune de Grignon.<br/>Le canton comprend les anciens cantons d'[[Canton d'Albertville-Nord|Albertville-Nord]] et d'[[Canton d'Albertville-Sud|Albertville-Sud]].||[[Fichier:Carte Canton Albertville-1.png|200px]]
+|-
+|4||[[Canton d'Albertville-2|Albertville-2]]||[[Albertville]]||{{formatnum:14093}} + fraction Albertville||||14 + fraction Albertville||1° Les communes suivantes : [[Bonvillard]], [[Cléry (Savoie)|Cléry]], [[Frontenex]], [[Gilly-sur-Isère]], [[Grésy-sur-Isère]], [[Grignon (Savoie)|Grignon]], [[Montailleur]], [[Monthion]], [[Notre-Dame-des-Millières]], [[Plancherine]], [[Saint-Vital (Savoie)|Saint-Vital]], [[Sainte-Hélène-sur-Isère]], [[Tournon (Savoie)|Tournon]], [[Verrens-Arvey]]. <br/>2° La partie de la commune d'Albertville non incluse dans le canton d'Albertville-1.<br>Le canton comprend les anciens cantons d'[[Canton d'Albertville-Sud|Albertville-Sud]] et de [[Canton de Grésy-sur-Isère|Grésy-sur-Isère]].||[[Fichier:Carte Canton Albertville-2.png|200px]]
+|-
+|5||[[Canton de Bourg-Saint-Maurice|Bourg-Saint-Maurice]]||[[Bourg-Saint-Maurice]]||{{formatnum:25709}}||1,18||12||[[Aime-la-Plagne]], [[Bourg-Saint-Maurice]], [[Les Chapelles]], [[Landry (Savoie)|Landry]], [[Montvalezan]], [[La Plagne-Tarentaise]], [[Peisey-Nancroix]], [[Sainte-Foy-Tarentaise]], [[Séez]], [[Tignes]], [[Val-d'Isère]], [[Villaroger]].<br>Le canton comprend les anciens cantons d'[[Canton d'Aime|Aime]] et de Bourg-Saint-Maurice.||[[Fichier:Carte Canton Bourg-Saint-Maurice.png|200px]]
+|-
+|6||[[Canton du Bugey savoyard|Bugey savoyard]]||[[Yenne]]||{{formatnum:18747}}||0,86||30||[[Avressieux]], [[La Balme]], [[Billième]], [[Champagneux]], [[Chanaz]], [[La Chapelle-Saint-Martin]], [[Chindrieux]], [[Conjux]], [[Gerbaix]], [[Jongieux]], [[Loisieux]], [[Lucey (Savoie)|Lucey]], [[Marcieux]], [[Meyrieux-Trouet]], [[Motz]], [[Novalaise]], [[Ontex (Savoie)|Ontex]], [[Rochefort (Savoie)|Rochefort]], [[Ruffieux]], [[Saint-Genix-les-Villages]], [[Saint-Jean-de-Chevelu]], [[Saint-Paul (Savoie)|Saint-Paul]], [[Saint-Pierre-d'Alvey]], [[Saint-Pierre-de-Curtille]], [[Sainte-Marie-d'Alvey]], [[Serrières-en-Chautagne]], [[Traize]], [[Verthemex]], [[Vions]], [[Yenne]].<br>Le canton comprend les anciens cantons de [[Canton de Ruffieux|Ruffieux]], de [[Canton de Saint-Genix-sur-Guiers|Saint-Genix-sur-Guiers]] et de [[Canton de Yenne|Yenne]].||[[Fichier:Carte Canton Bugey savoyard.png|200px]]
+|-
+|7||[[Canton de Chambéry-1|Chambéry-1]]||[[Chambéry]]||{{formatnum:1510}} + fraction Chambéry||||1 + fraction Chambéry||1° Les communes suivantes : [[Sonnaz]]. <br/>2° La partie de la commune de Chambéry située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Cognin, avenue du Repos, avenue des Chevaliers-Tireurs, cours de l'Hyères, échangeur de la Boisse, route départementale 911a, avenue de la Boisse, ligne droite perpendiculaire à l'avenue de la Boisse tracée au niveau de l'extrémité du chemin de la Rotonde, chemin de la Rotonde, rue du Docteur-Vernier, chemin de la Cassine, avenue d'Aix-les-Bains, incluse jusqu'à la ligne droite perpendiculaire à cette avenue tracée au niveau de l'extrémité de la rue de la Bionne, jusqu'à la limite territoriale de la commune de Bassens.<br>Le canton comprend les anciens cantons de [[Canton de Chambéry-Nord|Chambéry-Nord]], de [[Canton de Chambéry-Est|Chambéry-Est]] et de [[Canton de Chambéry-Sud-Ouest|Chambéry-Sud-Ouest]].||[[Fichier:Carte Canton Chambéry-1.png|200px]]
+|-
+|8||[[Canton de Chambéry-2|Chambéry-2]]||[[Chambéry]]||{{formatnum:3968}} + fraction Chambéry||||1 + fraction Chambéry||1° Les communes suivantes : [[Jacob-Bellecombette]]. <br/>2° La partie de la commune de Chambéry située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Bassens, avenue d'Aix-les-Bains (exclue depuis le niveau de la ligne droite tracée depuis l'extrémité de la rue de la Bionne), avenue d'Aix-les-Bains, boulevard de Lemenc, rue Saint-François-de-Salles, rue Victor-Hugo, boulevard du Théâtre, place des Eléphants, rue de Boigne, rue Favre, place du 8-Mai-1945, place de l'Hôtel-de-Ville, rue Bonivard, rue de la Trésorerie, faubourg Maché, place Saint-Pierre-de-Maché, avenue de Lyon, montée Saint-Sébastien, jusqu'à la limite territoriale de la commune de Jacob-Bellecombette.<br>Le canton comprend les anciens cantons de [[Canton de Chambéry-Sud|Chambéry-Sud]], de [[Canton de Chambéry-Est|Chambéry-Est]] et de [[Canton de Cognin|Cognin]].||[[Fichier:Carte Canton Chambéry-2.png|200px]]
+|-
+|9||[[Canton de Chambéry-3|Chambéry-3]]||[[Chambéry]]||{{formatnum:5913}} + fraction Chambéry||||1 + fraction Chambéry||1° Les communes suivantes : [[Cognin]]. <br/>2° La partie de la commune de Chambéry non incluse dans les cantons de Chambéry-1 et de Chambéry-2.<br>Le canton comprend les anciens cantons de [[Canton de Chambéry-Sud-Ouest|Chambéry-Sud-Ouest]] et de [[Canton de Cognin|Cognin]].||[[Fichier:Carte Canton Chambéry-3.png|200px]]
+|-
+|10||[[Canton de Modane|Modane]]||[[Modane]]||{{formatnum:15024}}||0,69||16||[[Aussois]], [[Avrieux]], [[Bessans]], [[Bonneval-sur-Arc]], [[Fourneaux (Savoie)|Fourneaux]], [[Freney (Savoie)|Freney]], [[Modane]], [[Orelle]], [[Saint-André (Savoie)|Saint-André]], [[Saint-Martin-d'Arc]], [[Saint-Martin-de-la-Porte]], [[Saint-Michel-de-Maurienne]], [[Val-Cenis]], [[Valloire]], [[Valmeinier]], [[Villarodin-Bourget]].<br>Le canton comprend les anciens cantons de [[Canton de Lanslebourg-Mont-Cenis|Lanslebourg-Mont-Cenis]], de Modane et de [[Canton de Saint-Michel-de-Maurienne|Saint-Michel-de-Maurienne]].||[[Fichier:Carte Canton Modane.png|200px]]
+|-
+|11||[[Canton de Montmélian|Montmélian]]||[[Montmélian]]||{{formatnum:23089}}||1,06||27||[[Apremont (Savoie)|Apremont]], [[Arbin]], [[Arvillard]], [[Bourget-en-Huile]], [[La Chapelle-Blanche (Savoie)|La Chapelle-Blanche]], [[La Chavanne]], [[Chignin]], [[La Croix-de-la-Rochette]], [[Détrier]], [[Laissaud]], [[Les Mollettes]], [[Montmélian]], [[Myans]], [[Planaise]], [[Le Pontet (Savoie)|Le Pontet]], [[Porte-de-Savoie]], [[Presle]],[[Rotherens]], [[Saint-Pierre-de-Soucy]], [[Sainte-Hélène-du-Lac]], [[La Table]], [[La Trinité (Savoie)|La Trinité]], [[Valgelon-La Rochette]], [[Le Verneil]], [[Villard-d'Héry]], [[Villard-Sallet]], [[Villaroux]].<br>Le canton comprend les anciens cantons de Montmélian et de [[Canton de La Rochette|La Rochette]].||[[Fichier:Carte Canton Montmélian.png|200px]]
+|-
+|12||[[Canton de La Motte-Servolex|La Motte-Servolex]]||[[La Motte-Servolex]]||{{formatnum:23837}}||1,09||8||[[Bourdeau (Savoie)|Bourdeau]], [[Le Bourget-du-Lac]], [[La Chapelle-du-Mont-du-Chat]], [[Drumettaz-Clarafond]], [[Méry (Savoie)|Méry]], [[La Motte-Servolex]], [[Viviers-du-Lac]], [[Voglans]].<br>Le canton comprend les anciens cantons d'[[Canton d'Aix-les-Bains-Sud|Aix-les-Bains-Sud]] et de La Motte-Servolex.||[[Fichier:Carte Canton La Motte-Servolex.png|200px]]
+|-
+|13||[[Canton de Moûtiers|Moûtiers]]||[[Moûtiers]]||{{formatnum:26158}}||1,2||18|| [[Les Allues]], [[Les Avanchers-Valmorel]], [[Les Belleville]], [[Bozel]], [[Brides-les-Bains]], [[Champagny-en-Vanoise]], [[Courchevel]], [[Fontaine-le-Puits]], [[Grand-Aigueblanche]], [[Hautecour (Savoie)|Hautecour]], [[La Léchère]], [[Montagny (Savoie)|Montagny]], [[Moûtiers]], [[Notre-Dame-du-Pré]], [[Planay (Savoie)|Planay]], [[Pralognan-la-Vanoise]], [[Saint-Marcel (Savoie)|Saint-Marcel]], [[Salins-Fontaine]].<br>Le canton comprend les anciens cantons de [[Canton de Bozel|Bozel]] et de Moûtiers.||[[Fichier:Carte Canton Moûtiers.png|200px]]
+|-
+|14||[[Canton du Pont-de-Beauvoisin (Savoie)|Le Pont-de-Beauvoisin]]||[[Le Pont-de-Beauvoisin (Savoie)|Le Pont-de-Beauvoisin]]||{{formatnum:19444}}||0,89||27||[[Aiguebelette-le-Lac]], [[Attignat-Oncin]], [[Ayn]], [[La Bauche]], [[Belmont-Tramonet]], [[La Bridoire]], [[Corbel (Savoie)|Corbel]], [[Domessin]], [[Dullin]], [[Les Échelles]], [[Entremont-le-Vieux]], [[Lépin-le-Lac]], [[Montagnole]], [[Nances]], [[Le Pont-de-Beauvoisin (Savoie)|Le Pont-de-Beauvoisin]], [[Saint-Alban-de-Montbel]], [[Saint-Béron]], [[Saint-Cassin]], [[Saint-Christophe (Savoie)|Saint-Christophe]], [[Saint-Franc]], [[Saint-Jean-de-Couz]], [[Saint-Pierre-d'Entremont (Savoie)|Saint-Pierre-d'Entremont]], [[Saint-Pierre-de-Genebroz]], [[Saint-Sulpice (Savoie)|Saint-Sulpice]], [[Saint-Thibaud-de-Couz]], [[Verel-de-Montbel]], [[Vimines]].<br>Le canton comprend les anciens cantons des [[Canton des Échelles|Échelles]], du Pont-de-Beauvoisin et de [[Canton de Cognin|Cognin]].||[[Fichier:Carte Canton Le Pont-de-Beauvoisin.png|200px]]
+|-
+|15||[[Canton de La Ravoire|La Ravoire]]||[[La Ravoire]]||{{formatnum:21511}}||0,98||5||[[Barberaz]], [[Challes-les-Eaux]], [[La Ravoire]], [[Saint-Baldoph]], [[Saint-Jeoire-Prieuré]].<br>Le canton reste inchangé.||[[Fichier:Carte Canton La Ravoire.png|200px]]
+|-
+|16||[[Canton de Saint-Alban-Leysse|Saint-Alban-Leysse]]||[[Saint-Alban-Leysse]]||{{formatnum:22043}}||1,01||24||[[Aillon-le-Jeune]], [[Aillon-le-Vieux]], [[Arith]], [[Barby (Savoie)|Barby]], [[Bassens (Savoie)|Bassens]], [[Bellecombe-en-Bauges]], [[Le Châtelard (Savoie)|Le Châtelard]], [[La Compôte]], [[Curienne]], [[Les Déserts]], [[Doucy-en-Bauges]], [[École (Savoie)|École]], [[Jarsy]], [[Lescheraines]], [[La Motte-en-Bauges]], [[Le Noyer (Savoie)|Le Noyer]], [[Puygros]], [[Saint-Alban-Leysse]], [[Saint-François-de-Sales (Savoie)|Saint-François-de-Sales]], [[Saint-Jean-d'Arvey]], [[Sainte-Reine (Savoie)|Sainte-Reine]], [[Thoiry (Savoie)|Thoiry]], [[La Thuile (Savoie)|La Thuile]], [[Verel-Pragondran]].<br>Le canton comprend les anciens cantons du [[Canton du Châtelard|Châtelard]], de Saint-Alban-Leysse et de [[Canton de Saint-Pierre-d'Albigny|Saint-Pierre-d'Albigny]].||[[Fichier:Carte Canton Saint-Alban-Leysse.png|200px]]
+|-
+|17||[[Canton de Saint-Jean-de-Maurienne|Saint-Jean-de-Maurienne]]||[[Saint-Jean-de-Maurienne]]||{{formatnum:22748}}||1,04||26||[[Albiez-le-Jeune]], [[Albiez-Montrond]], [[La Chambre (Savoie)|La Chambre]], [[La Chapelle (Savoie)|La Chapelle]], [[Les Chavannes-en-Maurienne]], [[Fontcouverte-la-Toussuire]], [[Jarrier]], [[Montricher-Albanne]], [[Montvernier]], [[Notre-Dame-du-Cruet]], [[La Tour-en-Maurienne]], [[Saint-Alban-des-Villards]], [[Saint-Avre]], [[Saint-Colomban-des-Villards]], [[Saint-Étienne-de-Cuines]], [[Saint-François-Longchamp]], [[Saint-Jean-d'Arves]], [[Saint-Jean-de-Maurienne]], [[Saint-Julien-Mont-Denis]], [[Saint-Martin-sur-la-Chambre]], [[Saint-Pancrace (Savoie)|Saint-Pancrace]], [[Saint-Rémy-de-Maurienne]], [[Saint-Sorlin-d'Arves]], [[Sainte-Marie-de-Cuines]], [[Villarembert]], [[Villargondran]].<br>Le canton comprend les anciens cantons de [[Canton de La Chambre|La Chambre]] et de Saint-Jean-de-Maurienne.||[[Fichier:Carte Canton Saint-Jean-de-Maurienne.png|200px]]
+|-
+|18||[[Canton de Saint-Pierre-d'Albigny|Saint-Pierre-d'Albigny]]||[[Saint-Pierre-d'Albigny]]||{{formatnum:18140}}||0,83||25||[[Aiton]], [[Argentine (Savoie)|Argentine]], [[Betton-Bettonet]], [[Bonvillaret]], [[Bourgneuf (Savoie)|Bourgneuf]], [[Chamousset]], [[Chamoux-sur-Gelon]], [[Champ-Laurent]], [[Châteauneuf (Savoie)|Châteauneuf]], [[Coise-Saint-Jean-Pied-Gauthier]], [[Cruet]], [[Épierre]], [[Fréterive]], [[Hauteville (Savoie)|Hauteville]], [[Montendry]], [[Montgilbert]], [[Montsapey]], [[Saint-Alban-d'Hurtières|Saint-Alban-des-Hurtières]], [[Saint-Georges-d'Hurtières|Saint-Georges-des-Hurtières]], [[Saint-Jean-de-la-Porte]], [[Saint-Léger (Savoie)|Saint-Léger]], [[Saint-Pierre-d'Albigny]], [[Saint-Pierre-de-Belleville]], [[Val-d'Arc]], [[Villard-Léger]].<br>Le canton comprend les anciens cantons d'[[Canton d'Aiguebelle|Aiguebelle]], de [[Canton de Chamoux-sur-Gelon|Chamoux-sur-Gelon]] et de Saint-Pierre-d'Albigny.||[[Fichier:Carte Canton Saint-Pierre-d'Albigny.png|200px]]
+|-
+|19||[[Canton d'Ugine|Ugine]]||[[Ugine]]||{{formatnum:17651}}||0,81||16||[[Beaufort (Savoie)|Beaufort]], [[Césarches]], [[Cohennoz]], [[Crest-Voland]], [[Flumet]], [[La Giettaz]], [[Hauteluce]], [[Marthod]], [[Notre-Dame-de-Bellecombe]], [[Pallud]], [[Queige]], [[Saint-Nicolas-la-Chapelle (Savoie)|Saint-Nicolas-la-Chapelle]], [[Thénésol]], [[Ugine]], [[Venthon]], [[Villard-sur-Doron]].<br>Le canton comprend les anciens cantons d'[[Canton d'Albertville-Nord|Albertville-Nord]], de [[Canton de Beaufort-sur-Doron|Beaufort-sur-Doron]] et d'Ugine.||[[Fichier:Carte Canton Ugine.png|200px]]
+|-
+!||||||{{formatnum:414959}}||||304||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Savoie (département)|Savoie]], c'est le cas du canton de [[Canton de Saint-Pierre-d'Albigny|Saint-Pierre-d'Albigny]].
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Albertville|Albertville]]
+!scope=col|[[Arrondissement de Chambéry|Chambéry]]
+!scope=col|[[Arrondissement de Saint-Jean-de-Maurienne|Saint-Jean-de-Maurienne]]
+!scope=col|Total
+|-
+|1||align="left"| Aix-les-Bains-1||||15 + fraction Aix-les-Bains||||'''15''' + fraction Aix-les-Bains
+|-
+|2||align="left"| Aix-les-Bains-2||||2 + fraction Aix-les-Bains||||'''2''' + fraction Aix-les-Bains
+|-
+|3||align="left"| Albertville-1||8 + fraction Albertville||||||'''8''' + fraction Albertville
+|-
+|4||align="left"| Albertville-2||14 + fraction Albertville||||||'''14''' + fraction Albertville
+|-
+|5||align="left"| Bourg-Saint-Maurice||17||||||'''17'''
+|-
+|6||align="left"| Bugey savoyard||||32||||'''32'''
+|-
+|7||align="left"| Chambéry-1||||1 + fraction Chambéry||||'''1''' + fraction Chambéry
+|-
+|8||align="left"| Chambéry-2||||1 + fraction Chambéry||||'''1''' + fraction Chambéry
+|-
+|9||align="left"| Chambéry-3||||1 + fraction Chambéry||||'''1''' + fraction Chambéry
+|-
+|10||align="left"| Modane||||||20||'''20'''
+|-
+|11||align="left"| Montmélian||||29||||'''29'''
+|-
+|12||align="left"| La Motte-Servolex||||8||||'''8'''
+|-
+|13||align="left"| Moûtiers||26||||||'''26'''
+|-
+|14||align="left"| Le Pont-de-Beauvoisin||||27||||'''27'''
+|-
+|15||align="left"| La Ravoire||||5||||'''5'''
+|-
+|16||align="left"| Saint-Alban-Leysse||||24||||'''24'''
+|-
+|17||align="left"| Saint-Jean-de-Maurienne||||||30||'''30'''
+|-
+|18||align="left"| Saint-Pierre-d'Albigny||||14||12||'''26'''
+|-
+|19||align="left"| Ugine||16||||||'''16'''
+|-
+!||||82||161||62||305
+|}
+
+== Cantons de 1860 à 2014 ==
+[[Fichier:Anciens cantons de la Savoie.png|vignette|Carte des cantons de la Savoie avant 2015]]
+
+=== Historique de 1860 à 2014 ===
+*1860<ref>Décret du 25 juin 1860, ''Bulletin des lois'' 1860 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k9736489b/f40 p. 4] Ce décret donne la liste des cantons par arrondisement mais pas de liste des communes par canton.</ref> : Découpage d'origine.
+*1860<ref>Décret du 24 novembre 1860, ''Bulletin des lois'' 1860 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k9736489b/f1163 p. 1126]. La limite infracommunale est seulement définie par référence à un plan annexé non publié. Un plan se trouve à la p. 550 dans {{Ouvrage|auteur1=Bernard Gaudillère|titre=Atlas historique des circonscriptions électorales françaises|lieu=Genève|éditeur=[[Librairie Droz]]|collection=Hautes Études médiévales et modernes|numéro dans collection=74|année=1995|pages totales=839|isbn=2-600-00065-8}}.</ref> : Le canton de Chambéry est scindé en deux nouveaux cantons [[canton de Chambéry-Nord|Chambéry-Nord]] et [[canton de Chambéry-Sud|-Sud]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693751 Décret n° 73-770 du 2 août 1973]</ref> : 
+**Le canton d'Albertville est scindé en deux nouveaux cantons [[canton d'Albertville-Nord|Albertville-Nord]] et [[Canton d'Albertville-Sud|-Sud]] ;
+**Création des cantons de [[canton de Chambéry-Sud-Ouest|Chambéry-Sud-Ouest]], [[Canton de la Ravoire|La Ravoire]] et [[canton de Saint-Alban-Leysse|Saint-Alban-Leysse]], détachés des cantons de [[canton de Chambéry-Nord|Chambéry-Nord]] et [[canton de Chambéry-Sud|-Sud]] ;
+**Création du canton de Grésy-sur-Aix, détaché du [[canton d'Aix-les-Bains]].
+**La commune de [[Marthod]] est transférée de l’ancien canton d’Albertville au [[Canton d'Ugine|canton d’Ugine]].
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682300 Décret n° 85-86 du 23 janvier 1985]</ref> : 
+**Création du [[canton de Chambéry-Est]], détaché des cantons de [[canton de Chambéry-Nord|Chambéry-Nord]] et de [[canton de Saint-Alban-Leysse|Saint-Alban-Leysse]] ;
+**Création du [[canton de Cognin]], détaché des cantons de [[Canton de la Motte-Servolex|La Motte-Servolex]] et de [[Canton de la Ravoire|La Ravoire]] ;
+**Les [[canton d'Aix-les-Bains]] et de Grésy-sur-Aix sont redécoupés en trois nouveaux cantons [[canton d'Aix-les-Bains-Nord-Grésy|Aix-les-Bains-Nord-Grésy]] (chef-lieu [[Grésy-sur-Aix]]), [[Canton d'Aix-les-Bains-Centre|Aix-les-Bains-Centre]] et [[Canton d'Aix-les-Bains-Sud|Aix-les-Bains-Sud]] (chef-lieu [[Drumettaz-Clarafond]]).
+
+=== Arrondissement d'Albertville (9 cantons) ===
+[[Fichier:Carte Cantons Arr. Albertville.png|vignette|Cantons de l'[[arrondissement d'Albertville]] :
+{{Liste numérotée pour légende
+ | [[Canton d'Aime|Aime]]
+ | [[Canton d'Albertville-Sud|Albertville-Nord]]
+ | [[Canton d'Albertville-Sud|Albertville-Sud]]
+ | [[Canton de Beaufort-sur-Doron|Beaufort-s/-Doron]]
+ | [[Canton de Bourg-Saint-Maurice|Bourg-Saint-Maurice]]
+ | [[Canton de Bozel|Bozel]]
+ | [[Canton de Grésy-sur-Isère|Grésy-sur-Isère]]
+ | [[Canton de Moûtiers|Moûtiers]]
+ | [[Canton d'Ugine|Ugine]]
+}}]]
+L'[[arrondissement d'Albertville]]<ref>[http://www.insee.fr/fr/bases-de-donnees/esl/comparateur.asp?codgeo=arr-731 INSEE - Arrondissement d'Albertville, chiffres-clés]</ref> est l'arrondissement le plus vaste du département avec {{unité|2466|km|2}} de superficie. Cet arrondissement englobe notamment toute la [[vallée de la Tarentaise]] d'[[Albertville]] à [[Val d'Isère]] ainsi que le [[massif du Beaufortain]] et le [[val d'Arly]], et comprend de vastes zones de moyenne et de haute montagne. Avec {{formatnum:110638}} habitants en 2009, sa [[densité de population]] de 45 habitants par km² est de fait relativement faible.
+
+L'arrondissement compte 82 communes réparties dans 9 cantons et son chef-lieu est [[Albertville]], par ailleurs également sous-préfecture du département et elle-même divisée en deux cantons.
+* [[Canton d'Aime]] (9 communes)
+* [[Canton d'Albertville-Nord]] (7 communes)
+* [[Canton d'Albertville-Sud]] (10 communes)
+* [[Canton de Beaufort-sur-Doron]] (4 communes)
+* [[Canton de Bourg-Saint-Maurice]] (8 communes)
+* [[Canton de Bozel]] (10 communes)
+* [[Canton de Grésy-sur-Isère]] (11 communes)
+* [[Canton de Moûtiers]] (16 communes)
+* [[Canton d'Ugine]] (8 communes)
+
+=== Arrondissement de Chambéry (22 cantons) ===
+L'[[arrondissement de Chambéry]]<ref>[http://www.insee.fr/fr/bases-de-donnees/esl/comparateur.asp?codgeo=arr-732 INSEE - Arrondissement de Chambéry, chiffres-clés]</ref> est l’arrondissement le moins vaste du département avec {{unité|1586|km|2}} de superficie, mais également le plus peuplé avec une population de {{formatnum:255672}} habitants en 2009, soit plus de la moitié de la population du département. Son territoire couvre notamment la cluse de [[Chambéry]] incluant [[Aix-les-Bains]] et le [[lac du Bourget]], les massifs des [[Massif des Bauges|Bauges]] et de la [[Massif de la Chartreuse|Chartreuse]], la partie sud de la [[Combe de Savoie]], la [[Chautagne]] et l’[[Avant-pays savoyard]].
+
+[[Fichier:Carte Cantons Arr. Chambéry.png|vignette|Cantons de l’[[arrondissement de Chambéry]] :
+{{Liste pour légende
+ | 1. [[Canton d'Aix-les-Bains-Centre|Aix-les-Bains-Centre]]
+ | 2. [[Canton d'Aix-les-Bains-Nord-Grésy|Aix-les-Bains-Nord-Grésy]]
+ | 3. [[Canton d'Aix-les-Bains-Sud|Aix-les-Bains-Sud]]
+ | 4. [[Canton d'Albens|Albens]]
+ | 5a : [[Canton de Chambéry-Est|Chambéry-Est]]
+ | b : [[Canton de Chambéry-Nord/Sonnaz|Chambéry-Nord/Sonnaz]]
+ | c : [[Canton de Chambéry-Sud|Chambéry-Sud]]
+ | d : [[Canton de Chambéry-Sud/Ouest|Chambéry Sud/Ouest]]
+ | 6. [[Canton de Chamoux-sur-Gelon|Chamoux-sur-Gelon]]
+ | 7. [[Canton du Châtelard|Le Châtelard]]
+ | 8. [[Canton de Cognin|Cognin]]
+ | 9. [[Canton de Montmélian|Montmélian]]
+ | 10. [[Canton de La Motte-Servolex|La Motte-Servolex]]
+ | 11. [[Canton de La Ravoire|La Ravoire]]
+ | 12. [[Canton de La Rochette|La Rochette]]
+ | 13. [[Canton des Échelles|Les Échelles]] 
+ | 14. [[Canton du Pont-de-Beauvoisin (Savoie)|Le Pont-de-Beauvoisin]]
+ | 15. [[Canton de Ruffieux|Ruffieux]]
+ | 16. [[Canton de Saint-Alban-Leysse|Saint-Alban-Leysse]]
+ | 17. [[Canton de Saint-Genix-sur-Guiers|Saint-Genix-sur-Guiers]]
+ | 18. [[Canton de Saint-Pierre-d'Albigny|Saint-Pierre-d'Albigny]]
+ | 19. [[Canton de Yenne|Yenne]]
+}}]]
+
+L'arrondissement compte 161 communes réparties dans 22 cantons et son chef-lieu est la commune de [[Chambéry]], également chef-lieu et préfecture du département, et divisée en 4 cantons.
+* [[Canton d'Aix-les-Bains-Centre]] (1 commune)
+* [[Canton d'Aix-les-Bains-Nord-Grésy]] (8 communes)
+* [[Canton d'Aix-les-Bains-Sud]] (7 communes)
+* [[Canton d'Albens]] (8 communes)
+* [[Canton de Chambéry-Est]] (1 commune)
+* [[Canton de Chambéry-Nord]] (2 communes)
+* [[Canton de Chambéry-Sud]] (1 commune)
+* [[Canton de Chambéry-Sud-Ouest]] (1 commune)
+* [[Canton de Chamoux-sur-Gelon]] (10 communes)
+* [[Canton du Châtelard]] (14 communes)
+* [[Canton de Cognin]] (6 communes)
+* [[Canton de Montmélian]] (15 communes)
+* [[Canton de La Motte-Servolex]] (4 communes)
+* [[Canton de La Ravoire]] (5 communes)
+* [[Canton de La Rochette (Savoie)|Canton de La Rochette]] (14 communes)
+* [[Canton des Échelles]] (11 communes)
+* [[Canton du Pont-de-Beauvoisin (Savoie)|Canton du Pont-de-Beauvoisin]] (12 communes)
+* [[Canton de Ruffieux]] (8 communes)
+* [[Canton de Saint-Alban-Leysse]] (9 communes)
+* [[Canton de Saint-Genix-sur-Guiers]] (10 communes)
+* [[Canton de Saint-Pierre-d'Albigny]] (5 communes)
+* [[Canton de Yenne]] (14 communes)
+
+=== Arrondissement de Saint-Jean-de-Maurienne (6 cantons) ===
+[[Fichier:Carte Cantons Arr. St-Jean-de-Maurienne.png|vignette|Cantons de l'[[arrondissement de Saint-Jean-de-Maurienne|arr. de Saint-Jean-de-M{{exp|ne}}]] :
+{{Liste numérotée pour légende
+ | [[Canton d'Aiguebelle|Aiguebelle]]
+ | [[Canton de La Chambre|La Chambre]]
+ | [[Canton de Lanslebourg-Mont-Cenis|Lanslebourg-Mont-Cenis]]
+ | [[Canton de Modane|Modane]]
+ | [[Canton de Saint-Jean-de-Maurienne|Saint-Jean-de-Maurienne]]
+ | [[Canton de Saint-Michel-de-Maurienne|Saint-Michel-de-Maurienne]]
+}}]]
+L'[[arrondissement de Saint-Jean-de-Maurienne]]<ref>[http://www.insee.fr/fr/bases-de-donnees/esl/comparateur.asp?codgeo=arr-733 INSEE - Arrondissement de Saint-Jean-de-Maurienne, chiffres-clés]</ref> est un arrondissement de {{unité|1976|km|2}} de superficie couvrant la totalité de la [[Maurienne|vallée de la Maurienne]], d'[[Aiton]] à [[Bonneval-sur-Arc]]. Il est à ce titre, et comme l’arrondissement d'Albertville, composé en quasi-totalité de moyenne et de haute montagne. Il est également l’arrondissement le moins peuplé et le moins densément peuplé du département, avec {{formatnum:44697}} habitants en 2009, soit 23 habitants par km².
+
+L'arrondissement compte 62 communes réparties dans 6 cantons et son chef-lieu est la commune de [[Saint-Jean-de-Maurienne]], par ailleurs sous-préfecture du département.
+* [[Canton d'Aiguebelle]] (12 communes)
+* [[Canton de La Chambre]] (14 communes)
+* [[Canton de Lanslebourg-Mont-Cenis]] (7 communes)
+* [[Canton de Modane]] (7 communes)
+* [[Canton de Saint-Jean-de-Maurienne]] (16 communes)
+* [[Canton de Saint-Michel-de-Maurienne]] (6 communes)
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Conseil départemental de la Savoie]]
+* [[Redécoupage cantonal de 2014 en France]]
+* [[Liste des cantons de la Haute-Savoie]]
+
+=== Bibliographie ===
+* {{Article|auteur=[[Institut national de la statistique et des études économiques|Insee]]|titre=Les nouveaux cantons du département de la Savoie|périodique=Insee Flash Rhône-Alpes|numéro=11|mois=février|année=2015|issn=2273-3981|format=pdf|lire en ligne=http://www.insee.fr/fr/insee_regions/rhone-alpes/themes/insee-flash/IFRA_11/IFRA_11.pdf}}
+* Frédéric Caille (Maître de conférences en science politique, Université de Savoie ), Esther Deloche (Docteur en histoire), ''Annuaire intégral des conseillers généraux de Savoie et Haute-Savoie 1860-2014'', [[Assemblée des pays de Savoie]], Chambéry, 2015, 594 pages (Pour la lecture de l'introduction et l'accès aux cartes : [https://www.academia.edu/11453256/Introduction_et_cartes_Annuaire_Int%C3%A9gral_des_Conseillers_G%C3%A9n%C3%A9raux_de_Savoie_et_Haute-Savoie_1860-2014 Lire en ligne])
+
+=== Liens externes ===
+* [http://www.cg73.fr/fr/fonction/index.shtm Conseil général de Savoie]
+
+== Notes et références ==
+{{références}}
+
+{{Palette|Découpage administratif de Auvergne-Rhône-Alpes|Cantons de France|Cantons de la Savoie}}
+{{Portail|Savoie}}
+
+[[Catégorie:Canton en Savoie|*]]
+[[Catégorie:Liste de cantons français|Savoie]]
+[[Catégorie:Liste en rapport avec la Savoie|Cantons]]

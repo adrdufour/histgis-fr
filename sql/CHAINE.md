@@ -6,7 +6,14 @@ chaîne s'était arrêtée après `24`, la couche des circonscriptions était re
 vide, et le contrôle indépendant n'en avait rien dit — il ne regarde que 1870 et
 1940.
 
-**Relu et complété le 2 septembre 2026.** Ils sont **84**, pas 46 ; l'inventaire
+**Recompté le 11 octobre 2026 : 130 fichiers `.sql`**, numérotés de `01` à
+`111`, dont 19 `diag_*` et 2 `banc_*_donnees`. L'inventaire du § 1 c s'arrêtait
+à `93` : `94` à `109` y sont entrés ce jour-là, relevés dans les en-têtes des
+fichiers et dans `rejouer_apres_rebuild.sh`. **Deux fichiers portent le numéro
+`101`** (`101_seine_annexees_1859_1862` et `101_paris_fractions_quartier`) et
+deux le `40` : c'est le nom entier qui désigne un fichier, jamais le numéro.
+
+**Relu et complété le 2 septembre 2026.** Ils étaient alors **84**, pas 46 ; l'inventaire
 du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 (`58`-`83`), décrit plus bas en prose mais absent de l'ordre d'exécution.
 
@@ -222,6 +229,58 @@ bien.
 `64_composition_1815_stage.sql`, `70_report_1940_1954.sql` et
 `71_desaccords_report_geometrie.sql` sont en lecture seule et se lancent à la
 demande ; ils ne figurent pas ici pour cette raison.
+
+#### `94` à `109` — entrés dans le script du 23 septembre au 10 octobre 2026
+
+Ordre du script, qui n'est pas celui des numéros. Le rôle est celui que
+l'en-tête de chaque fichier déclare ; la colonne « place » dit ce qu'il exige
+avant lui.
+
+| fichier | rôle | place |
+|---|---|---|
+| `94_absents_1954_diag.sql` | lecture seule : les atomes que `93` n'a pas pu poser, faute d'être lus dans le jalon de 1954 | à la demande |
+| `96_jalons_lecture_absurde.sql` | juge les jalons par la géométrie : écarte les lectures de 1954 et de 1968 qu'un report ne doit pas prendre pour bout | avant `95` et `97` |
+| `95_report_deux_bouts_1969_1999.sql` | **1969-1998**, l'intervalle noir entre `81` et `79`, par ses deux bouts ; Corse recodée en 1976 comprise | après `96`, `79`, `81` |
+| `97_report_deux_bouts_1941_1967.sql` | **1941-1967** par les deux bouts : la carte vide de 1955 à 1967 et les absents de 1954. Laisse la Seine de côté | après `96`, `95` |
+| `100_nogent_perreux_avant_1860.sql` | rend à Nogent le sol du Perreux, sans propriétaire dans ANR de 1815 à 1859. Écrit dans `atom_geom_anr` | après `82`/`89` |
+| `101_seine_annexees_1859_1862.sql` | prolonge le sol des onze annexées jusqu'au 1er janvier 1863, fin de la division électorale de 1857 | après `82`/`89`, **avant `91`** |
+| `102_seine_lambeaux_1860_1862.sql` | même règle pour les lambeaux que Paris prend en 1860 aux communes qui survivent (bois de Boulogne, les Ternes) | après `101` |
+| `103_paris_cantons_1941_1998.sql` | les cantons de Paris portés par ses **quartiers** de 1941 à 2012 : une seule trame à la fois sur le même sol | après `52`-`57` |
+| `104_seine_cantons_1955_1967.sql` | prolonge le canton de 1954 des 80 communes de banlieue jusqu'en 1968 — **une hypothèse**, dite comme telle | après `87`, `103` |
+| `64_composition_1815_stage.sql` | dépose `c15_composition` (découpages 1815-1870 lus dans Gaudillère). N'écrit rien d'autre ; entré dans le script le 4 octobre, un rebuild l'ayant emporté sans rien signaler | avant `105`-`107` |
+| `105_yonne_1815_1870.sql` | l'Yonne avant 1870, cantons et circonscriptions, bornée par la vie ANR de chaque atome | après `64`, `82` |
+| `106_circo_1815_1870.sql` | `105` généralisé : les **circonscriptions 1815-1870**, un département par appel (`-v dep=NN`), 84 journaux `build/p106_NN.log`. Refuse 75, 89 et 57 | après `64`, `82`, `15`, `39` |
+| `107_cantons_1815_1870.sql` | les **cantons 1815-1870**, France entière en un appel : le canton de 1870 remonté, sauf les exceptions de l'atlas. Se retire par `-v retirer=1` | comme `106` |
+| `108_villes_aurillac_falaise_saintflour.sql` | ce que la découpe de trois villes a montré : Falaise-Nord et -Sud rétablis de 1815 à 1941, Aurillac 1973-1985 (`a_inscrire_en_base.md` n° 97, 103, 104) | après `107`, **avant `98`** |
+| `109_ville_angouleme.sql` | Angoulême en deux fractions de 1941 à 1982, noms de 1973 et 1982 (n° 77) | après `107`, **avant `98`** |
+| `101_paris_fractions_quartier.sql` | les quartiers de Paris coupés entre deux circonscriptions : atomes-fraction `PQnn#<côté>` | après `52`-`57`, **avant `98`** |
+| `98_coupe_ville.sql` | les villes multicantonales : lit `cartes/coupes_ville.csv` et ses ancres, juge chaque ville, fournit `carte_coupe_ville()` | après `iris_ville`, `101`, `108`, `109` |
+| `84_carte_partition.sql` | (déjà au § `84`) ne modifie rien : fonctions de la carte | après tout ce qui pose |
+| `99_partition_coupes.sql` | remplace `carte_partition_atome` de `84` par une version qui découpe les villes à lignes. **À rejouer après tout rejeu de `84`**, sans quoi la carte redevient hachurée sans que rien n'échoue | après `84` et `98` |
+
+`106` à `109` écrivent chacun leur journal dans `build/` (`p106_NN.log`,
+`p107.log`…), et le script s'arrête au premier refus.
+
+#### `110` et `111` — entrés dans le script le 11 octobre 2026, en DERNIER
+
+| # | fichier | rôle | trace | `-v` |
+|---|---|---|---|---|
+| y | `110_pose_lecture_jo.sql` | pose dans les TROUS les JO lus à la main (13 transferts, 73 cantons recomposés 1949-1968, Corse 1975) et les **tables analytiques annuelles du JO** (93 transferts isolés datés, nature `transfert_table`). Date d'effet : règle C — lendemain de la parution pour un transfert, premier tour du renouvellement suivant pour une recomposition. Premier passage réel le 11 octobre 2026 : **691 périodes** — recompositions 207, Corse 325, transferts lus 17, tables 142 | `p110_trace`, `p110_qualite` | **`poser=on`**, pas de `-1` |
+| z | `111_corrige_transferts.sql` | **raccourcit** les périodes que ces transferts démentent : coupe à l'effet et pose la suite au canton d'arrivée (cas A), ou fait commencer à l'effet et rend l'avant au canton de départ (cas B). Essai du 11 octobre 2026 : 20 périodes (15 A, 5 B) | `p111_trace` (bornes d'avant), `p111_qualite` | **`poser=on`**, `defaire=on`, pas de `-1` |
+
+**Pourquoi en dernier, après le bloc ANR et `98`.** `110` ne remplit que les
+trous que les reports (`79`, `81`, `93`, `95`, `97`) et `103` à `109` ont
+laissés : c'est sur cet état qu'il a été jugé, et joué plus tôt il prendrait
+leur place. `111` modifie des périodes de `79`, de `81` et de la base
+d'origine : il passe après ceux qui les posent. Ni l'un ni l'autre ne touche
+une fraction ni ne lit `atom_geom_anr` — ils sont donc hors du bloc ANR, et
+joués même quand celui-ci est sauté.
+
+**Ce qu'ils ne supportent pas** : être rejoués isolément dans le désordre. Voir
+« Qui dépend de qui », § 3, dans `README.md`.
+
+Sources et méthode : `cantons/wikipedia/note_wikipedia.md`,
+`cantons/wikipedia/lecture_jo.md`, `cantons/tables_jo.md`.
 
 
 ### Contraintes d'ordre, mesurées en les violant

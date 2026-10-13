@@ -1,0 +1,294 @@
+[[Fichier:74-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Haute-Savoie, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le [[département français]] de [[Haute-Savoie]] comprend, à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], dix-sept [[Canton français|cantons]]<ref>{{Lien web|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028621987|titre=Décret {{n°|2014-185}} du {{nobr|18 février 2014}} portant délimitation des cantons dans le département de la Haute-Savoie |date= 21 février 2014 |éditeur=[[Légifrance]]|consulté le=octobre 2014}}.</ref>, à la place des 34 lors du précédent redécoupage.
+
+== Redécoupage cantonal de 2014 ==
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|13 février 2014}} pour le département de la [[Haute-Savoie]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, prévu en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Haute-Savoie]] le nombre de cantons passe ainsi de 34 à 17<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028621987 |texte=Décret {{n°|2014}}-153 du 13 février 2014}} portant délimitation des cantons dans le département de la Haute-Savoie.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 27 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Haute-Savoie, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|738088|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=74 |titre= Chiffres clés Évolution et structure de la population - Département de la Haute-Savoie (74) |auteur= |date = |site =insee.fr |consulté le= 27 mai 2014}}.</ref>. Avec 17 cantons la population moyenne par conseiller départemental est de {{unité|43417|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|34734|habitants}} et {{unité|52100|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2010<ref>Populations légales des communes en vigueur au {{1er}} janvier 2013, millésimées 2010 (date de référence statistique : {{1er}} janvier 2010), dans les limites territoriales en vigueur au {{1er}} janvier 2012</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Annecy-1|Annecy-1]]||[[Annecy]]||{{formatnum:29019}} + fraction Annecy||||8 + fraction Annecy||1° Les communes suivantes : [[La Balme-de-Sillingy]], [[Choisy]], [[Lovagny]], [[Mésigny]], [[Nonglard]], [[Poisy]], [[Sallenôves]], [[Sillingy]].<br/>2° La partie de la commune d'Annecy située au nord et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune d'Annecy-le-Vieux, ligne de chemin de fer Annecy―La Roche-sur-Foron, boulevard du Lycée, boulevard Decouz, avenue Berthollet, ligne de chemin de fer Annecy―Aix-les-Bains, y compris l'emprise de la gare, jusqu'à la limite territoriale de la commune de Cran-Gevrier. La partie de la commune d'Annecy correspondant à la commune déléguée de [[Meythet]].
+|-
+|2||[[Canton d'Annecy-2|Annecy-2]]||[[Annecy]]||{{formatnum:3882}} + fraction Annecy||||1 + fraction Annecy||1° Les communes suivantes : [[Sévrier]]. <br/>2° La partie de la commune d'Annecy non incluse dans le canton d'Annecy-1.
+|-
+|3||[[Canton d'Annecy-3|Annecy-3]]||[[Annecy]]||{{formatnum:49532}}||1,14||7 + 1 fraction||1° Les communes suivantes : [[Argonay]], [[Charvonnex]], [[Épagny-Metz-Tessy]], [[Fillière (Haute-Savoie)|Fillière]], [[Groisy]], [[Nâves-Parmelan]],  [[Villaz]].<br/>2° La partie de la commune d'Annecy correspondant à la commune déléguée d'[[Annecy-le-Vieux]] et [[Pringy (Haute-Savoie)|Pringy]].
+|-
+|4||[[Canton d'Annemasse|Annemasse]]||[[Annemasse]]||{{formatnum:45967}}||1,06||3||[[Ambilly]], [[Annemasse]], [[Ville-la-Grand]].
+|-
+|5||[[Canton de Bonneville|Bonneville]]||[[Bonneville (Haute-Savoie)|Bonneville]]||{{formatnum:49564}}||1,14||20||[[Arenthon]], [[Ayse]], [[Bonneville (Haute-Savoie)|Bonneville]], [[Brizon]], [[Contamine-sur-Arve]], [[Faucigny (Haute-Savoie)|Faucigny]], [[Fillinges]], [[Marcellaz]], [[Marignier]], [[Mégevette]], [[Onnion]], [[Peillonnex]], [[Glières-Val-de-Borne]], [[Saint-Jean-de-Tholome]], [[Saint-Jeoire]], [[Saint-Pierre-en-Faucigny]], [[La Tour (Haute-Savoie)|La Tour]], [[Ville-en-Sallaz]], [[Viuz-en-Sallaz]], [[Vougy (Haute-Savoie)|Vougy]].
+|-
+|6||[[Canton de Cluses|Cluses]]||[[Cluses]]||{{formatnum:50198}}||1,16||16||[[Châtillon-sur-Cluses]], [[Cluses]], [[Marnaz]], [[Mieussy]], [[Mont-Saxonnex]], [[Morillon (Haute-Savoie)|Morillon]], [[Nancy-sur-Cluses]], [[Le Reposoir]], [[La Rivière-Enverse]], [[Saint-Sigismond (Haute-Savoie)|Saint-Sigismond]], [[Samoëns]], [[Scionzier]], [[Sixt-Fer-à-Cheval]], [[Taninges]], [[Thyez]], [[Verchaix]].
+|-
+|7||[[Canton d'Évian-les-Bains|Évian-les-Bains]]||[[Évian-les-Bains]]||{{formatnum:45033}}||1,04||33||[[Abondance (Haute-Savoie)|Abondance]], [[La Baume]], [[Bernex (Haute-Savoie)|Bernex]], [[Le Biot]], [[Bonnevaux (Haute-Savoie)|Bonnevaux]], [[Champanges]], [[La Chapelle-d'Abondance]], [[Châtel]], [[Chevenoz]], [[La Côte-d'Arbroz]], [[Essert-Romand]], [[Évian-les-Bains]], [[Féternes]], [[La Forclaz (Haute-Savoie)|La Forclaz]], [[Les Gets]], [[Larringes]], [[Lugrin]], [[Marin (Haute-Savoie)|Marin]], [[Maxilly-sur-Léman]], [[Meillerie]], [[Montriond]], [[Morzine]], [[Neuvecelle]], [[Novel]], [[Publier]], [[Saint-Gingolph (Haute-Savoie)|Saint-Gingolph]], [[Saint-Jean-d'Aulps]], [[Saint-Paul-en-Chablais]], [[Seytroux]], [[Thollon-les-Mémises]], [[Vacheresse]], [[La Vernaz]], [[Vinzier]].
+|-
+|8||[[Canton de Faverges-Seythenex|Faverges-Seythenex]]||[[Faverges-Seythenex]]||{{formatnum:39420}}||0,91||23||[[Alex (Haute-Savoie)|Alex]], [[La Balme-de-Thuy]], [[Bluffy]], [[Le Bouchet-Mont-Charvin]], [[Chevaline]], [[Les Clefs]], [[La Clusaz]], [[Dingy-Saint-Clair]], [[Doussard]], [[Faverges-Seythenex]], [[Giez (Haute-Savoie)|Giez]], [[Le Grand-Bornand]], [[Lathuile]], [[Manigod]], [[Menthon-Saint-Bernard]], [[Saint-Ferréol (Haute-Savoie)|Saint-Ferréol]], [[Saint-Jean-de-Sixt]], [[Serraval]], [[Talloires-Montmin]], [[Thônes]], [[Val-de-Chaise]], [[Veyrier-du-Lac]], [[Les Villards-sur-Thônes]].
+|-
+|9||[[Canton de Gaillard|Gaillard]]||[[Gaillard (Haute-Savoie)|Gaillard]]||{{formatnum:35599}}||0,82||10||[[Arthaz-Pont-Notre-Dame]], [[Bonne (commune)|Bonne]], [[Cranves-Sales]], [[Étrembières]], [[Gaillard (Haute-Savoie)|Gaillard]], [[Juvigny (Haute-Savoie)|Juvigny]], [[Lucinges]], [[Machilly]], [[Saint-Cergues]], [[Vétraz-Monthoux]].
+|-
+|10||[[Canton du Mont-Blanc|Le Mont-Blanc]]||[[Passy (Haute-Savoie)|Passy]]||{{formatnum:31724}}||0,73||7||[[Chamonix-Mont-Blanc]], [[Les Contamines-Montjoie]], [[Les Houches]], [[Passy (Haute-Savoie)|Passy]], [[Saint-Gervais-les-Bains]], [[Servoz]], [[Vallorcine]].
+|-
+|11||[[Canton de La Roche-sur-Foron|La Roche-sur-Foron]]||[[la Roche-sur-Foron]]||{{formatnum:46721}}||1,08||27||[[Allonzier-la-Caille]], [[Amancy]], [[Andilly (Haute-Savoie)|Andilly]], [[Arbusigny]], [[Cercier]], [[Cernex]], [[La Chapelle-Rambaud]], [[Copponex]], [[Cornier]], [[Cruseilles]], [[Cuvat]], [[Etaux|Étaux]], [[Menthonnex-en-Bornes]], [[Monnetier-Mornex]], [[La Muraz]], [[Nangy]], [[Pers-Jussy]], [[Reignier-Ésery|Reignier-Esery]], [[La Roche-sur-Foron]], [[Saint-Blaise (Haute-Savoie)|Saint-Blaise]], [[Saint-Laurent (Haute-Savoie)|Saint-Laurent]], [[Saint-Sixt]], [[Le Sappey]], [[Scientrier]], [[Villy-le-Bouveret]], [[Villy-le-Pelloux]], [[Vovray-en-Bornes]].
+|-
+|12||[[Canton de Rumilly|Rumilly]]||[[Rumilly (Haute-Savoie)|Rumilly]]||{{formatnum:40047}}||0,92||28||[[Alby-sur-Chéran]], [[Allèves]], [[Bloye]], [[Boussy]], [[Chainaz-les-Frasses]], [[Chapeiry]], [[Crempigny-Bonneguête]], [[Cusy (Haute-Savoie)|Cusy]], [[Étercy]], [[Gruffy]], [[Hauteville-sur-Fier]], [[Héry-sur-Alby]], [[Lornay]], [[Marcellaz-Albanais]], [[Marigny-Saint-Marcel]], [[Massingy (Haute-Savoie)|Massingy]], [[Moye (Haute-Savoie)|Moye]], [[Mûres]], [[Rumilly (Haute-Savoie)|Rumilly]], [[Saint-Eusèbe (Haute-Savoie)|Saint-Eusèbe]], [[Saint-Félix (Haute-Savoie)|Saint-Félix]], [[Saint-Sylvestre (Haute-Savoie)|Saint-Sylvestre]], [[Sales (Haute-Savoie)|Sales]], [[Thusy]], [[Vallières-sur-Fier]], [[Vaulx (Haute-Savoie)|Vaulx]], [[Versonnex (Haute-Savoie)|Versonnex]], [[Viuz-la-Chiésaz]].
+|-
+|13||[[Canton de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]||[[Saint-Julien-en-Genevois]]||{{formatnum:50932}}||1,17||40||[[Archamps]], [[Bassy]], [[Beaumont (Haute-Savoie)|Beaumont]], [[Bossey]], [[Challonges]], [[Chaumont (Haute-Savoie)|Chaumont]], [[Chavannaz]], [[Chêne-en-Semine]], [[Chênex]], [[Chessenaz]], [[Chevrier]], [[Chilly (Haute-Savoie)|Chilly]], [[Clarafond-Arcine]], [[Clermont (Haute-Savoie)|Clermont]], [[Collonges-sous-Salève]], [[Contamine-Sarzin]], [[Desingy]], [[Dingy-en-Vuache]], [[Droisy (Haute-Savoie)|Droisy]], [[Éloise]], [[Feigères (Haute-Savoie)|Feigères]], [[Franclens]], [[Frangy]], [[Jonzier-Épagny]], [[Marlioz]], [[Menthonnex-sous-Clermont]], [[Minzier]], [[Musièges]], [[Neydens]], [[Présilly (Haute-Savoie)|Présilly]], [[Saint-Germain-sur-Rhône]], [[Saint-Julien-en-Genevois]], [[Savigny (Haute-Savoie)|Savigny]], [[Seyssel (Haute-Savoie)|Seyssel]], [[Usinens]], [[Valleiry]], [[Vanzy]], [[Vers (Haute-Savoie)|Vers]], [[Viry (Haute-Savoie)|Viry]], [[Vulbens]].
+|-
+|14||[[Canton de Sallanches|Sallanches]]||[[Sallanches]]||{{formatnum:31412}}||0,72||9||[[Arâches-la-Frasse]], [[Combloux]], [[Cordon (Haute-Savoie)|Cordon]], [[Demi-Quartier]], [[Domancy]], [[Magland]], [[Megève]], [[Praz-sur-Arly]], [[Sallanches]].
+|-
+|15||[[Canton de Sciez|Sciez]]||[[Sciez]]||{{formatnum:42574}}||0,98||25||[[Anthy-sur-Léman]], [[Ballaison]], [[Boëge]], [[Bogève]], [[Bons-en-Chablais]], [[Brenthonne]], [[Burdignin]], [[Chens-sur-Léman]], [[Douvaine]], [[Excenevex]], [[Fessy]], [[Habère-Lullin]], [[Habère-Poche]], [[Loisin]], [[Lully (Haute-Savoie)|Lully]], [[Margencel]], [[Massongy]], [[Messery]], [[Nernier]], [[Saint-André-de-Boëge]], [[Saxel]], [[Sciez]], [[Veigy-Foncenex]], [[Villard (Haute-Savoie)|Villard]], [[Yvoire]].
+|-
+|16||[[Canton d'Annecy-4|Annecy-4]]||[[Annecy]]||{{formatnum:47789}}||1,1||9 + 1 fraction||1° Les communes suivantes : [[La Chapelle-Saint-Maurice]], [[Chavanod]], [[Duingt]], [[Entrevernes]], [[Leschaux]], [[Montagny-les-Lanches]], [[Quintal (Haute-Savoie)|Quintal]], [[Saint-Eustache (Haute-Savoie)|Saint-Eustache]], [[Saint-Jorioz]].<br/>2° La partie de la commune d'Annecy correspondant aux communes déléguées de [[Seynod]] et [[Cran-Gevrier]].
+|-
+|17||[[Canton de Thonon-les-Bains|Thonon-les-Bains]]||[[Thonon-les-Bains]]||{{formatnum:48296}}||1,11||12||[[Allinges]], [[Armoy]], [[Bellevaux (Haute-Savoie)|Bellevaux]], [[Cervens]], [[Draillant]], [[Lullin]], [[Lyaud]], [[Orcier]], [[Perrignier]], [[Reyvroz]], [[Thonon-les-Bains]], [[Vailly (Haute-Savoie)|Vailly]].
+|-
+!||||||{{formatnum:738088}}||||294||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Haute-Savoie]], c'est le cas de quatre cantons ([[Canton de Bonneville|Bonneville]], [[Canton d'Évian-les-Bains|Évian-les-Bains]], [[Canton de Faverges|Faverges]] et [[Canton de La Roche-sur-Foron|La Roche-sur-Foron]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Annecy|Annecy]]
+!scope=col|[[Arrondissement de Bonneville|Bonneville]]
+!scope=col|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]
+!scope=col|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]
+!scope=col|Total
+|-
+|1||align="left"| Annecy-1||9 + fraction Annecy||||||||'''9''' + fraction Annecy
+|-
+|2||align="left"| Annecy-2||1 + fraction Annecy||||||||'''1''' + fraction Annecy
+|-
+|3||align="left"| Annecy-le-Vieux||14||||||||'''14'''
+|-
+|4||align="left"| Annemasse||||||3||||'''3'''
+|-
+|5||align="left"| Bonneville||||19||1||||'''20'''
+|-
+|6||align="left"| Cluses||||16||||||'''16'''
+|-
+|7||align="left"| Évian-les-Bains||||2||||31||'''33'''
+|-
+|8||align="left"| Faverges||26||1||||||'''27'''
+|-
+|9||align="left"| Gaillard||||||10||||'''10'''
+|-
+|10||align="left"| Le Mont-Blanc||||7||||||'''7'''
+|-
+|11||align="left"| La Roche-sur-Foron||2||7||18||||'''27'''
+|-
+|12||align="left"| Rumilly||29||||||||'''29'''
+|-
+|13||align="left"| Saint-Julien-en-Genevois||||||40||||'''40'''
+|-
+|14||align="left"| Sallanches||||9||||||'''9'''
+|-
+|15||align="left"| Sciez||||||||25||'''25'''
+|-
+|16||align="left"| Seynod||11||||||||'''11'''
+|-
+|17||align="left"| Thonon-les-Bains||||||||12||'''12'''
+|-
+!||||93||61||72||68||294
+|}
+
+==Découpage cantonal de 1860 à 2014 ==
+=== Historique ===
+*[[Fichier:Anciens cantons de la Haute-Savoie.png|vignette|Carte des cantons de la Haute-Savoie avant 2015]]1860<ref>Décret du 25 juin 1860, ''Bulletin des lois'', 1860 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k9736489b/f40 p. 4] (Liste des cantons par arrondisement mais pas de liste des communes par canton)</ref> : Découpage d'origine. 
+*1860<ref>Décret du 20 décembre 1860, ''Bulletin des lois'', 1861 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k9736482f/f37 p. 5]</ref> : 
+**Suppression du [[canton de Duingt]] au profit des nouveaux cantons d'[[Canton d'Alby-sur-Chéran|Alby]] et d'[[canton d'Annecy-Nord|Annecy-Nord]];
+**Création du [[Canton d'Alby-sur-Chéran|canton d'Alby]], détaché des cantons de [[canton de Duingt|Duingt]] et d'[[canton d'Albens|Albens]] ; 
+**Le [[canton d'Annecy]] est scindé en deux nouveaux cantons Annecy-Nord et -Sud ;
+**Création du [[canton de Cruseilles]], détaché des cantons [[canton d'Annecy|Annecy]] (communes [[Cercier]] et [[Allonzier-la-Caille|Allonzier]]), [[Canton de Reignier-Ésery|Reignier]], [[Canton de Saint-Julien-en-Genevois|Saint-Julien]] et [[Canton de Thorens-Glières|Thorens]] ;
+**Création du [[canton de Frangy]], détaché des cantons de [[Canton de Saint-Julien-en-Genevois|Sain-Julien]] et de [[Canton de Seyssel (Haute-Savoie)|Seyssel]] ;
+**Création du [[canton de Boëge]], détaché des cantons de [[canton de Saint-Jeoire|Saint-Jeoire]] et de [[Canton de Thonon-les-Bains|Thonon]] ;
+**La commune de [[Veigy-Foncenex]] est transférée du [[canton d'Annemasse]] au [[canton de Douvaine]] ;
+**Les communes d'[[Archamps]] et de [[Collonges-sous-Salève|Collonges]] sont transférées du [[canton d'Annemasse]] au [[Canton de Saint-Julien-en-Genevois|canton de Saint-Julien]].
+*1864<ref>Loi du 17 février 1864, ''Bulletin des lois'', 1864 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486150d/f325 p. 301]</ref> : Création du [[Canton de Chamonix-Mont-Blanc|canton de Chamonix]], détaché du [[Canton de Saint-Gervais-les-Bains|canton de Saint-Gervais]].
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000854925 Décret n° 73-820 du 16 août 1973]</ref> :
+**Le canton d'Annemasse est scindé en deux nouveaux cantons [[canton d'Annemasse-Nord|Annemasse-Nord]] et [[canton d'Annemasse-Sud|-Sud]] ;
+**Création du [[canton de Scionzier]], détaché du [[canton de Cluses]] ;
+**Les deux cantons d'Annecy sont redécoupés en cinq nouveaux cantons [[canton d'Annecy-Centre|Annecy-Centre]], [[canton d'Annecy-Nord-Est|Annecy-Nord-Est]], [[canton d'Annecy-Nord-Ouest|Annecy-Nord-Ouest]], [[canton d'Annecy-le-Vieux|Annecy-le-Vieux]] et [[Canton de Seynod|Seynod]] ;
+**La commune d'Avregny, fusionnée avec [[Allonzier-la-Caille]], est transférée du [[canton d'Annecy-Nord]] au [[canton de Cruseilles]].
+**La commune de [[Balmont]], fusionnée avec [[Seynod]], est trasférée du [[Canton d'Alby-sur-Chéran|canton d’Alby-sur-Chéran]] au [[canton de Seynod]].
+*1997<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000199792 Décret du 26.02.1997]</ref> : Le [[canton de Thonon-les-Bains]] est scindé en deux nouveaux cantons [[canton de Thonon-les-Bains-Est|Thonon-les-Bains-Est]] et [[canton de Thonon-les-Bains-Ouest|-Ouest]].
+
+=== Liste des cantons avant la réforme de 2014 ===
+{| class="wikitable sortable alternance"
+|-
+! [[Canton français|Canton]]
+! [[Liste des circonscriptions législatives de la Haute-Savoie|Circonscription]]
+! [[Arrondissements de la Haute-Savoie|Arrondissement]]
+|-
+| {{Tri|Abondance|[[Canton d'Abondance]]}}
+| {{Tri|5|[[Cinquième circonscription de la Haute-Savoie|Cinquième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|-
+| {{Tri|Alby-sur-Cheran|[[Canton d'Alby-sur-Chéran]]}}
+| {{Tri|2|[[Deuxième circonscription de la Haute-Savoie|Deuxième]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Annecy-Centre|[[Canton d'Annecy-Centre]]}}
+| {{Tri|2|[[Deuxième circonscription de la Haute-Savoie|Deuxième]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Annecy-Nord-Est|[[Canton d'Annecy-Nord-Est]]}}
+| {{Tri|2|[[Deuxième circonscription de la Haute-Savoie|Deuxième]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Annecy-Nord-Ouest|[[Canton d'Annecy-Nord-Ouest]]}}
+| {{Tri|1|[[Première circonscription de la Haute-Savoie|Première]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Annecy-Vieux|[[Canton d'Annecy-le-Vieux]]}}
+| {{Tri|1|[[Première circonscription de la Haute-Savoie|Première]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Annemasse-Nord|[[Canton d'Annemasse-Nord]]}}
+| {{Tri|4|[[Quatrième circonscription de la Haute-Savoie|Quatrième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|Annemasse-Sud|[[Canton d'Annemasse-Sud]]}}
+| {{Tri|4|[[Quatrième circonscription de la Haute-Savoie|Quatrième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|Biot|[[Canton du Biot]]}}
+| {{Tri|5|[[Cinquième circonscription de la Haute-Savoie|Cinquième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|-
+| {{Tri|Boege|[[Canton de Boëge]]}}
+| {{Tri|3|[[Troisième circonscription de la Haute-Savoie|Troisième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|-
+| {{Tri|Bonneville|[[Canton de Bonneville (Haute-Savoie)|Canton de Bonneville]]}}
+| {{Tri|3|[[Troisième circonscription de la Haute-Savoie|Troisième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Chamonix-Mont-Blanc|[[Canton de Chamonix-Mont-Blanc]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Cluses|[[Canton de Cluses]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Cruseilles|[[Canton de Cruseilles]]}}
+| {{Tri|3|[[Troisième circonscription de la Haute-Savoie|Troisième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|Douvaine|[[Canton de Douvaine]]}}
+| {{Tri|5|[[Cinquième circonscription de la Haute-Savoie|Cinquième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|-
+| {{Tri|Evian-les-Bains|[[Canton d'Évian-les-Bains]]}}
+| {{Tri|5|[[Cinquième circonscription de la Haute-Savoie|Cinquième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|-
+| {{Tri|Faverges|[[Canton de Faverges]]}}
+| {{Tri|2|[[Deuxième circonscription de la Haute-Savoie|Deuxième]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Frangy|[[Canton de Frangy]]}}
+| {{Tri|4|[[Quatrième circonscription de la Haute-Savoie|Quatrième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|La Roche-sur-Foron|[[Canton de La Roche-sur-Foron]]}}
+| {{Tri|3|[[Troisième circonscription de la Haute-Savoie|Troisième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Reignier-Esery|[[Canton de Reignier-Ésery]]}}
+| {{Tri|3|[[Troisième circonscription de la Haute-Savoie|Troisième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|Rumilly|[[Canton de Rumilly]]}}
+| {{Tri|1|[[Première circonscription de la Haute-Savoie|Première]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Saint-Gervais-les-Bains|[[Canton de Saint-Gervais-les-Bains]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Saint-Jeoire-en-Faucigny|[[Canton de Saint-Jeoire-en-Faucigny]]}}
+| {{Tri|3|[[Troisième circonscription de la Haute-Savoie|Troisième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Saint-Julien-en-Genevois|[[Canton de Saint-Julien-en-Genevois]]}}
+| {{Tri|4|[[Quatrième circonscription de la Haute-Savoie|Quatrième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|Sallanches|[[Canton de Sallanches]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Samoens|[[Canton de Samoëns]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Scionzier|[[Canton de Scionzier]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Seynod|[[Canton de Seynod]]}}
+| {{Tri|2|[[Deuxième circonscription de la Haute-Savoie|Deuxième]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Seyssel|[[Canton de Seyssel (Haute-Savoie)|Canton de Seyssel]]}}
+| {{Tri|4|[[Quatrième circonscription de la Haute-Savoie|Quatrième]]}}
+| {{Tri|Saint-Julien-en-Genevois|[[Arrondissement de Saint-Julien-en-Genevois|Saint-Julien-en-Genevois]]}}
+|-
+| {{Tri|Taninges|[[Canton de Taninges]]}}
+| {{Tri|6|[[Sixième circonscription de la Haute-Savoie|Sixième]]}}
+| {{Tri|Bonneville|[[Arrondissement de Bonneville|Bonneville]]}}
+|-
+| {{Tri|Thones|[[Canton de Thônes]]}}
+| {{Tri|2|[[Deuxième circonscription de la Haute-Savoie|Deuxième]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Thorens-Glières|[[Canton de Thorens-Glières]]}}
+| {{Tri|1|[[Première circonscription de la Haute-Savoie|Première]]}}
+| {{Tri|Annecy|[[Arrondissement d'Annecy|Annecy]]}}
+|-
+| {{Tri|Thonon-les-Bains-Est|[[Canton de Thonon-les-Bains-Est]]}}
+| {{Tri|5|[[Cinquième circonscription de la Haute-Savoie|Cinquième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|-
+| {{Tri|Thonon-les-Bains-Ouest|[[Canton de Thonon-les-Bains-Ouest]]}}
+| {{Tri|5|[[Cinquième circonscription de la Haute-Savoie|Cinquième]]}}
+| {{Tri|Thonon-les-Bains|[[Arrondissement de Thonon-les-Bains|Thonon-les-Bains]]}}
+|}
+
+== Voir aussi ==
+=== Bibliographie ===
+* Frédéric Caille (Maître de conférences en science politique, Université de Savoie ), Esther Deloche (Docteur en histoire), ''Annuaire intégral des conseillers généraux de Savoie et Haute-Savoie 1860-2014'', [[Assemblée des pays de Savoie]], Chambéry, 2015, 594 pages (Pour la lecture de l'introduction et l'accès aux cartes : [https://www.academia.edu/11453256/Introduction_et_cartes_Annuaire_Int%C3%A9gral_des_Conseillers_G%C3%A9n%C3%A9raux_de_Savoie_et_Haute-Savoie_1860-2014 Lire en ligne])
+
+=== Articles connexes ===
+* [[Conseil départemental de la Haute-Savoie]]
+* [[Liste des conseillers généraux de la Haute-Savoie]]
+* [[Liste des communes de la Haute-Savoie]]
+
+== Notes et références ==
+{{références|colonnes=2}}
+
+{{Palette|Découpage administratif de Auvergne-Rhône-Alpes|Cantons de France|Cantons de la Haute-Savoie}}
+{{Portail|Savoie}}
+
+[[Catégorie:Canton en Haute-Savoie|*]]
+[[Catégorie:Liste de cantons français|Savoie, Haute]]
+[[Catégorie:Liste en rapport avec la Haute-Savoie|Cantons]]

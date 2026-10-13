@@ -1,0 +1,437 @@
+[[Fichier:35-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département d'Ille-et-Vilaine, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] d'[[Ille-et-Vilaine]]''' compte 27 [[Canton français|cantons]] depuis 2015. Avant le [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], ce nombre était de 53 depuis 1995.
+
+== Découpage actuel ==
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|18 février 2014}} pour le département d'[[Ille-et-Vilaine]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. En [[Ille-et-Vilaine]] le nombre de cantons passe ainsi de 53 à 27<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028637230 |texte=Décret {{n°|2014}}-177 du 18 février 2014}} portant délimitation des cantons dans le département d'Ille-et-Vilaine.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}},  il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 13 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département d'Ille-et-Vilaine, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|988140|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=35 |titre= Chiffres clés Évolution et structure de la population - Département d'Ille-et-Vilaine (35) |auteur= |date = |site =insee.fr |consulté le= 13 mai 2014}}.</ref>. Avec 27 cantons la population moyenne par conseiller départemental est de {{unité|36598|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|29278|habitants}} et {{unité|43917|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+=== Composition détaillée ===
+{| class="wikitable alternance sortable"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population {{Population de France/dernière année||Canton de Val-Couesnon}}
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+|- 
+|1 || [[Canton de Val-Couesnon|Val-Couesnon]]<ref group="Note">Canton d'Antrain jusqu'au 5 mars 2020</ref> || [[Val-Couesnon]] || {{formatnum:{{Population de France/dernière pop||Canton de Val-Couesnon}}}} || 24 || [[Andouillé-Neuville]], [[Aubigné (Ille-et-Vilaine)|Aubigné]], [[Bazouges-la-Pérouse]], [[Le Châtellier (Ille-et-Vilaine)|Le Châtellier]], [[Chauvigné]], [[Feins]], [[Maen Roch]], [[Marcillé-Raoul]], [[Montreuil-sur-Ille]], [[Mouazé]], [[Noyal-sous-Bazouges]], [[Les Portes du Coglais]], [[Rimou]], [[Romazy]], [[Saint-Aubin-d'Aubigné]], [[Saint-Germain-en-Coglès]], [[Saint-Hilaire-des-Landes]], [[Saint-Marc-le-Blanc]], [[Saint-Rémy-du-Plain]], [[Sens-de-Bretagne]], [[Le Tiercent]], [[Val-Couesnon]], [[Vieux-Vy-sur-Couesnon]]. 
+|-
+|2 || [[Canton de Bain-de-Bretagne|Bain-de-Bretagne]] || [[Bain-de-Bretagne]] || {{formatnum:{{Population de France/dernière pop||Canton de Bain-de-Bretagne}}}} || 20 || [[Bain-de-Bretagne]], [[La Bosse-de-Bretagne]], [[Chanteloup (Ille-et-Vilaine)|Chanteloup]], [[La Couyère]], [[Crevin]], [[La Dominelais]], [[Ercé-en-Lamée]], [[Grand-Fougeray]], [[Lalleu]], [[La Noë-Blanche]], [[Pancé]], [[Le Petit-Fougeray]], [[Pléchâtel]], [[Poligné]], [[Saint-Sulpice-des-Landes (Ille-et-Vilaine)|Saint-Sulpice-des-Landes]], [[Sainte-Anne-sur-Vilaine]], [[Saulnières (Ille-et-Vilaine)|Saulnières]], [[Le Sel-de-Bretagne]], [[Teillay]], [[Tresbœuf]]. 
+|-
+|3 || [[Canton de Betton|Betton]] || [[Betton]] || {{formatnum:{{Population de France/dernière pop||Canton de Betton}}}} || 6 || [[Betton]], [[Cesson-Sévigné]], [[La Chapelle-des-Fougeretz]], [[Chevaigné]], [[Montgermont]], [[Saint-Grégoire (Ille-et-Vilaine)|Saint-Grégoire]]. 
+|-
+|4 || [[Canton de Bruz|Bruz]] || [[Bruz]] || {{formatnum:{{Population de France/dernière pop||Canton de Bruz}}}} || 5 || [[Bruz]], [[Chartres-de-Bretagne]], [[Laillé]], [[Noyal-Châtillon-sur-Seiche]], [[Pont-Péan]]. 
+|-
+|5 || [[Canton de Châteaugiron|Châteaugiron]] || [[Châteaugiron]] || {{formatnum:{{Population de France/dernière pop||Canton de Châteaugiron}}}} || 11 || [[Boistrudan]], [[Châteaubourg (Ille-et-Vilaine)|Châteaubourg]], [[Châteaugiron]], [[Domagné]], [[Domloup]], [[Louvigné-de-Bais]], [[Noyal-sur-Vilaine]], [[Piré-Chancé]], [[Saint-Didier (Ille-et-Vilaine)|Saint-Didier]], [[Saint-Jean-sur-Vilaine]], [[Servon-sur-Vilaine]]. 
+|-
+|6 || [[Canton de Combourg|Combourg]] || [[Combourg]] || {{formatnum:{{Population de France/dernière pop||Canton de Combourg}}}} || 24 || [[La Baussaine]], [[Bonnemain]], [[Cardroc]], [[La Chapelle-aux-Filtzméens]], [[Combourg]], [[Cuguen]], [[Dingé]], [[Les Iffs]], [[Lanrigan]], [[Longaulnay]], [[Lourmais]], [[Meillac]], [[Mesnil-Roc'h]], [[Plesder]], [[Pleugueneuc]], [[Québriac]], [[Saint-Brieuc-des-Iffs]], [[Saint-Domineuc]], [[Saint-Léger-des-Prés]], [[Saint-Thual]], [[Tinténiac]], [[Trémeheuc]], [[Trévérien]], [[Trimer]]. 
+|-
+|7 || [[Canton de Dol-de-Bretagne|Dol-de-Bretagne]] || [[Dol-de-Bretagne]] || {{formatnum:{{Population de France/dernière pop||Canton de Dol-de-Bretagne}}}} || 31 || [[Baguer-Morvan]], [[Baguer-Pican]], [[La Boussac]], [[Broualan]], [[Châteauneuf-d'Ille-et-Vilaine]], [[Cherrueix]], [[Dol-de-Bretagne]], [[Epiniac]], [[La Fresnais]], [[Hirel]], [[Lillemer]], [[Miniac-Morvan]], [[Mont-Dol]], [[Pleine-Fougères]], [[Plerguer]], [[Roz-Landrieux]], [[Roz-sur-Couesnon]], [[Sains (Ille-et-Vilaine)|Sains]], [[Saint-Benoît-des-Ondes]], [[Saint-Broladre]], [[Saint-Georges-de-Gréhaigne]], [[Saint-Guinoux]], [[Saint-Marcan]], [[Saint-Père-Marc-en-Poulet]], [[Saint-Suliac]], [[Sougéal]], [[Trans-la-Forêt]], [[Le Tronchet (Ille-et-Vilaine)|Le Tronchet]], [[Vieux-Viel]], [[La Ville-ès-Nonais]], [[Le Vivier-sur-Mer]]. 
+|-
+|8 || [[Canton de Fougères-1|Fougères-1]] || [[Fougères]] || {{formatnum:{{Population de France/dernière pop||Canton de Fougères-1}}}} || 15 + fraction Fougères || 1° Les communes suivantes : [[Billé]], [[La Chapelle-Saint-Aubert]], [[Combourtillé]], [[Gosné]], [[Javené]], [[Lécousse]], [[Livré-sur-Changeon]], [[Mézières-sur-Couesnon]], [[Parcé]], [[Rives-du-Couesnon]], [[Romagné]], [[Saint-Aubin-du-Cormier]], [[Saint-Christophe-de-Valains]], [[Saint-Ouen-des-Alleux]], [[Saint-Sauveur-des-Landes]]. <br/>2° La partie de la commune de Fougères située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Lécousse, route départementale 155, boulevard Saint-Germain, boulevard de Rennes, rue de la Forêt, rue des Prés, rue des Feuteries, place de la République, boulevard de la Chesnardière, boulevard Edmond-Roussin, avenue Georges-Pompidou, rue Paul-Féval, rue du Clos-Pichon, rue de la Maladrerie, rue de la Monnerie, promenade du Gué-Maheu, rue de Saint-Nazaire, allée de Saint-Herblain, promenade du Gué-Maheu, route départementale 179, jusqu'à la limite territoriale de la commune de Javené.
+|-
+|9 || [[Canton de Fougères-2|Fougères-2]] || [[Fougères]] || {{formatnum:{{Population de France/dernière pop||Canton de Fougères-2}}}} || 17 + fraction Fougères || 1° Les communes suivantes : [[La Bazouge-du-Désert]], [[Beaucé]], [[La Chapelle-Janson]], [[Le Ferré]], [[Fleurigné]], [[Laignelet]], [[Landéan]], [[Le Loroux]], [[Louvigné-du-Désert]], [[Luitré]], [[Mellé]], [[Monthault]], [[Parigné]], [[Poilley (Ille-et-Vilaine)|Poilley]], [[Saint-Georges-de-Reintembault]], [[La Selle-en-Luitré]], [[Villamée]]. <br/>2° La partie de la commune de Fougères non incluse dans le canton de Fougères-1.
+|-
+|10 || [[Canton de la Guerche-de-Bretagne|La Guerche-de-Bretagne]] || [[La Guerche-de-Bretagne]] || {{formatnum:{{Population de France/dernière pop||Canton de la Guerche-de-Bretagne}}}} || 31 || [[Arbrissel]], [[Argentré-du-Plessis]], [[Availles-sur-Seiche]], [[Bais (Ille-et-Vilaine)|Bais]], [[Brielles]], [[Chelun]], [[Coësmes]], [[Domalain]], [[Drouges]], [[Eancé]], [[Essé]], [[Étrelles]], [[Forges-la-Forêt]], [[Gennes-sur-Seiche]], [[La Guerche-de-Bretagne]], [[Marcillé-Robert]], [[Martigné-Ferchaud]], [[Moulins (Ille-et-Vilaine)|Moulins]], [[Moussé]], [[Moutiers (Ille-et-Vilaine)|Moutiers]], [[Le Pertre]], [[Rannée]], [[Retiers]], [[Saint-Germain-du-Pinel]], [[Sainte-Colombe (Ille-et-Vilaine)|Sainte-Colombe]], [[La Selle-Guerchaise]], [[Le Theil-de-Bretagne]], [[Thourie]], [[Torcé]], [[Vergéal]], [[Visseiche]]. 
+|-
+|11 || [[Canton de Guichen|Guichen]] || [[Guichen]] || {{formatnum:{{Population de France/dernière pop||Canton de Guichen}}}} || 15 || [[Baulon]], [[Bourg-des-Comptes]], [[Bovel]], [[Les Brulais]], [[La Chapelle-Bouëxic]], [[Comblessac]], [[Goven]], [[Guichen]], [[Guignen]], [[Lassy (Ille-et-Vilaine)|Lassy]], [[Loutehel]], [[Mernel]], [[Saint-Séglin]], [[Saint-Senoux]], [[Val d'Anast]]. 
+|-
+|12 || [[Canton de Janzé|Janzé]] || [[Janzé]] || {{formatnum:{{Population de France/dernière pop||Canton de Janzé}}}} || 10 || [[Amanlis]], [[Bourgbarré]], [[Brie (Ille-et-Vilaine)|Brie]], [[Corps-Nuds]], [[Janzé]], [[Nouvoitou]], [[Orgères (Ille-et-Vilaine)|Orgères]], [[Saint-Armel (Ille-et-Vilaine)|Saint-Armel]], [[Saint-Erblon (Ille-et-Vilaine)|Saint-Erblon]], [[Vern-sur-Seiche]]. 
+|-
+|13 || [[Canton de Liffré|Liffré]] || [[Liffré]] || {{formatnum:{{Population de France/dernière pop||Canton de Liffré}}}} || 9 || [[Acigné]], [[La Bouëxière]], [[Brécé]], [[Chasné-sur-Illet]], [[Dourdain]], [[Ercé-près-Liffré]], [[Liffré]], [[Saint-Sulpice-la-Forêt]], [[Thorigné-Fouillard]]. 
+|-
+|14 || [[Canton de Melesse|Melesse]] || [[Melesse]] || {{formatnum:{{Population de France/dernière pop||Canton de Melesse}}}} || 15 || [[Clayes]], [[Gévezé]], [[Guipel]], [[Hédé-Bazouges]], [[Langouet]], [[Melesse]], [[La Mézière]], [[Montreuil-le-Gast]], [[Parthenay-de-Bretagne]], [[Saint-Germain-sur-Ille]], [[Saint-Gilles (Ille-et-Vilaine)|Saint-Gilles]], [[Saint-Gondran]], [[Saint-Médard-sur-Ille]], [[Saint-Symphorien (Ille-et-Vilaine)|Saint-Symphorien]], [[Vignoc]]. 
+|-
+|15 || [[Canton de Montauban-de-Bretagne|Montauban-de-Bretagne]] || [[Montauban-de-Bretagne]] || {{formatnum:{{Population de France/dernière pop||Canton de Montauban-de-Bretagne}}}} || 22 || [[Bécherel]], [[Bléruais]], [[Boisgervilly]], [[La Chapelle-Chaussée]], [[La Chapelle-du-Lou-du-Lac]], [[Le Crouais]], [[Gaël (Ille-et-Vilaine)|Gaël]], [[Irodouër]], [[Landujan]], [[Langan]], [[Médréac]], [[Miniac-sous-Bécherel]], [[Montauban-de-Bretagne]], [[Muel (Ille-et-Vilaine)|Muel]], [[Quédillac]], [[Romillé]], [[Saint-Malon-sur-Mel]], [[Saint-Maugan]], [[Saint-Méen-le-Grand]], [[Saint-Onen-la-Chapelle]], [[Saint-Pern]], [[Saint-Uniac]]. 
+|-
+|16 || [[Canton de Montfort-sur-Meu|Montfort-sur-Meu]] || [[Montfort-sur-Meu]] || {{formatnum:{{Population de France/dernière pop||Canton de Montfort-sur-Meu}}}} || 15 || [[Bédée]], [[Breteil]], [[Iffendic]], [[Maxent]], [[Monterfil]], [[Montfort-sur-Meu]], [[La Nouaye]], [[Paimpont]], [[Plélan-le-Grand]], [[Pleumeleuc]], [[Saint-Gonlay]], [[Saint-Péran]], [[Saint-Thurial]], [[Talensac]], [[Treffendel]]. 
+|-
+|17 || [[Canton de Redon|Redon]] || [[Redon]] || {{formatnum:{{Population de France/dernière pop||Canton de Redon}}}} || 15 || [[Bains-sur-Oust]], [[Bruc-sur-Aff]], [[La Chapelle-de-Brain]], [[Guipry-Messac]], [[Langon (Ille-et-Vilaine)|Langon]], [[Lieuron]], [[Lohéac]], [[Pipriac]], [[Redon]], [[Renac]], [[Saint-Ganton]], [[Saint-Just (Ille-et-Vilaine)|Saint-Just]], [[Saint-Malo-de-Phily]], [[Sainte-Marie (Ille-et-Vilaine)|Sainte-Marie]], [[Sixt-sur-Aff]]. 
+|-
+|18 || [[Canton de Rennes-1|Rennes-1]] || [[Rennes]] || {{formatnum:{{Population de France/dernière pop||Canton de Rennes-1}}}} || fraction Rennes || Partie de la commune de Rennes située au nord d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Saint-Grégoire, rue de l'Amiral-Gaspard-de-Coligny, avenue Germaine-Dulac, avenue André-Mussat, avenue de Cucille, rue Robert-d'Arbrissel, rue Louis-Joubin, ligne de chemin de fer de Rennes à Saint-Malo, passage piétonnier donnant accès à l'avenue du 41e-Régiment-d'Infanterie, avenue du 41e-Régiment-d'Infanterie, boulevard du Maréchal-de-Lattre-de-Tassigny, rue Pierre-Gourdel, rue de Dinan, rue d'Echange, contour Saint-Aubin, rue de Bonne-Nouvelle, rue d'Antrain, rue Lesage, rue du Général-Maurice-Guillaudot, place Saint-Mélaine (parc du Thabor inclus), rue de la Palestine à partir de l'intersection avec l'avenue de Grignan, boulevard de Metz, rue de Fougères, route de Fougères, jusqu'à la limite territoriale de la commune de Cesson-Sévigné.
+|-
+|19 || [[Canton de Rennes-2|Rennes-2]] || [[Rennes]] || {{formatnum:{{Population de France/dernière pop||Canton de Rennes-2}}}} || fraction Rennes || Partie de la commune de Rennes située à l'est d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Cesson-Sévigné, route de Fougères, rue de Fougères, boulevard de Metz, rue de la Palestine jusqu'à l'intersection avec l'avenue de Grignan, place Saint-Mélaine (parc du Thabor exclu), rue du Général-Maurice-Guillaudot, contour de la Motte, rue Gambetta, pont Pasteur, avenue Jean-Janvier, boulevard de Beaumont, place de la Gare, rue Raoul-Dautry, ligne de chemin de fer de Paris-Montparnasse à Brest, rue Saint-Hélier, rue Adolphe-Leray, boulevard Franklin-Roosevelt, rue de Vern, rue Martin-Feuillée, boulevard Léon-Bourgeois, rue de Châteaugiron, rue de la 87e-Division-Territoriale, rue Auguste-Pavie, jusqu'à la limite territoriale de la commune de Cesson-Sévigné.
+|-
+|20 || [[Canton de Rennes-3|Rennes-3]] || [[Rennes]] || {{formatnum:{{Population de France/dernière pop||Canton de Rennes-3}}}} || 1 + fraction Rennes || 1° La commune suivante : [[Chantepie]].<br/>2° La partie de la commune de Rennes située au sud d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Noyal-Châtillon-sur-Seiche, route nationale 136, route nationale 137, [[avenue Henri-Fréville]], boulevard Georges-Clemenceau, boulevard Émile-Combes, rue André-Rouault, boulevard Oscar-Leroux, rue Adolphe-Leray, boulevard Franklin-Roosevelt, rue de Vern, rue Martin-Feuillée, boulevard Léon-Bourgeois, rue de Châteaugiron, rue de la 87e-Division-Territoriale, rue Auguste-Pavie, jusqu'à la limite territoriale de la commune de Cesson-Sévigné.
+|-
+|21 || [[Canton de Rennes-4|Rennes-4]] || [[Rennes]] || {{formatnum:{{Population de France/dernière pop||Canton de Rennes-4}}}} || fraction Rennes || Partie de la commune de Rennes située à l'intérieur du périmètre suivant : à partir de la limite territoriale de la commune de Saint-Jacques-de-la-Lande, boulevard Georges-Clemenceau, boulevard Émile-Combes, rue André-Rouault, boulevard Oscar-Leroux, rue Adolphe-Leray, rue Saint-Hélier, ligne de chemin de fer de Paris-Montparnasse à Brest, rue Raoul-Dautry, boulevard de Beaumont, place de la Gare, avenue Jean-Janvier, pont Pasteur, rue Gambetta, contour de la Motte, rue du Général-Maurice-Guillaudot, rue Lesage, rue d'Antrain, rue de Bonne-Nouvelle, contour Saint-Aubin, rue d'Echange, rue de Dinan, rue Pierre-Gourdel, boulevard du Maréchal-de-Lattre-de-Tassigny, quai d'Ille-et-Rance, pont de Bretagne, quai de la Prévalaye, rue d'Inkermann, lignes de chemin de fer de Paris-Montparnasse à Brest et de Rennes à Redon, jusqu'à la limite territoriale de la commune de Saint-Jacques-de-la-Lande.
+|-
+|22 || [[Canton de Rennes-5|Rennes-5]] || [[Rennes]] || {{formatnum:{{Population de France/dernière pop||Canton de Rennes-5}}}} || 1 + fraction Rennes || 1° La commune suivante : [[Saint-Jacques-de-la-Lande]]. <br/> 2° La partie de la commune de Rennes située au sud d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Vezin-le-Coquet, route de Vezin, rue de Saint-Brieuc, rue Louis-Guilloux, rue de Lorient, ligne de chemin de fer de Paris-Montparnasse à Brest, quai d'Auchel, pont Robert-Schuman, quai de la Prévalaye, rue d'Inkermann, lignes de chemin de fer de Paris-Montparnasse à Brest et de Rennes à Redon, jusqu'à la limite territoriale de la commune de Saint-Jacques-de-la-Lande ;
+|-
+|23 || [[Canton de Rennes-6|Rennes-6]] || [[Rennes]] || {{formatnum:{{Population de France/dernière pop||Canton de Rennes-6}}}} || 1 + fraction Rennes || 1° La commune suivante : [[Pacé (Ille-et-Vilaine)|Pacé]]. <br/>2° La partie de la commune de Rennes non incluse dans les cantons de Rennes-1, Rennes-2, Rennes-3, Rennes-4 et Rennes-5.
+|-
+|24 || [[Canton du Rheu|Le Rheu]] || [[Le Rheu]] || {{formatnum:{{Population de France/dernière pop||Canton du Rheu}}}} || 9 || [[Bréal-sous-Montfort]], [[La Chapelle-Thouarault]], [[Chavagne]], [[Cintré]], [[L'Hermitage]], [[Mordelles]], [[Le Rheu]], [[Le Verger]], [[Vezin-le-Coquet]]. 
+|-
+|25 || [[Canton de Saint-Malo-1|Saint-Malo-1]] || [[Saint-Malo]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Malo-1}}}} || 4 + fraction Saint-Malo || 1° Les communes suivantes : [[Cancale]], [[La Gouesnière]], [[Saint-Coulomb]], [[Saint-Méloir-des-Ondes]]. <br/>2° La partie de la commune de Saint-Malo située au nord d'une ligne définie par l'axe des voies et limites suivantes : plage des Bas-Sablons, rue de l'Amiral-Magon, place Bouvet, rue Ville-Pépin, place de la Roulais, rue de la Nation, rue de la Pie, rue de la Marne, boulevard des Talards, rue Pierre-de-Coubertin, rue des Antilles, rue Michel-de-la-Bardelière, avenue du Général-de-Gaulle, rue de la Guymauvière, rue du Grand-Jardin, rue du Mottais, rue des Bregeons, rue de la Ville-es-Cours, route départementale 2, ligne de chemin de fer de Rennes à Saint-Malo, jusqu'à la limite territoriale de la commune de Saint-Jouan-des-Guérets.
+|-
+|26 || [[Canton de Saint-Malo-2|Saint-Malo-2]] || [[Saint-Malo]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Malo-2}}}} || 7 + fraction Saint-Malo || 1° Les communes suivantes : [[Dinard]], [[Le Minihic-sur-Rance]], [[Pleurtuit]], [[La Richardais]], [[Saint-Briac-sur-Mer]], [[Saint-Jouan-des-Guérets]], [[Saint-Lunaire]]. <br/>2° La partie de la commune de Saint-Malo non incluse dans le canton de Saint-Malo-1.
+|-
+|27 || [[Canton de Vitré|Vitré]] || [[Vitré (Ille-et-Vilaine)|Vitré]] || {{formatnum:{{Population de France/dernière pop||Canton de Vitré}}}} || 22 || [[Balazé]], [[Bréal-sous-Vitré]], [[Champeaux (Ille-et-Vilaine)|Champeaux]], [[La Chapelle-Erbrée]], [[Châtillon-en-Vendelais]], [[Cornillé]], [[Erbrée]], [[Landavran]], [[Marpiré]], [[Mecé]], [[Mondevert]], [[Montautour]], [[Montreuil-des-Landes]], [[Montreuil-sous-Pérouse]], [[Pocé-les-Bois]], [[Princé]], [[Saint-Aubin-des-Landes]], [[Saint-Christophe-des-Bois]], [[Saint-M'Hervé]], [[Taillis (Ille-et-Vilaine)|Taillis]], [[Val-d'Izé]], [[Vitré (Ille-et-Vilaine)|Vitré]]. 
+|-
+!||||||{{formatnum:{{Population de France/dernière pop||Ille-et-Vilaine}}}}||||353||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département d'Ille-et-Vilaine, c'est le cas de cinq cantons ([[canton d'Antrain|Antrain]], [[canton de Bruz|Bruz]], [[canton de Châteaugiron|Châteaugiron]], [[canton de Combourg|Combourg]], [[canton de Fougères-1|Fougères-1]]).
+
+Le tableau suivant présente la répartition par arrondissement avant le redécoupage de 2017 :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Fougères-Vitré|Fougères-Vitré]]
+!scope=col|[[Arrondissement de Redon|Redon]]
+!scope=col|[[Arrondissement de Rennes|Rennes]]
+!scope=col|[[Arrondissement de Saint-Malo|Saint-Malo]]
+!scope=col|Total
+|-
+|1||align="left"| Antrain||21||||10||||'''31'''
+|-
+|2||align="left"| Bain-de-Bretagne||||20||||||'''20'''
+|-
+|3||align="left"| Betton||||||6||||'''6'''
+|-
+|4||align="left"| Bruz||||1||4||||'''5'''
+|-
+|5||align="left"| Châteaugiron||6||||8||||'''14'''
+|-
+|6||align="left"| Combourg||||||6||20||'''26'''
+|-
+|7||align="left"| Dol-de-Bretagne||||||||31||'''31'''
+|-
+|8||align="left"| Fougères-1||18 + fraction Fougères||||1||||'''19''' + fraction Fougères
+|-
+|9||align="left"| Fougères-2||17 + fraction Fougères||||||||'''17''' + fraction Fougères
+|-
+|10||align="left"| La Guerche-de-Bretagne||31||||||||'''31'''
+|-
+|11||align="left"| Guichen||||16||||||'''16'''
+|-
+|12||align="left"| Janzé||||||10||||'''10'''
+|-
+|13||align="left"| Liffré||||||9||||'''9'''
+|-
+|14||align="left"| Melesse||||||15||||'''15'''
+|-
+|15||align="left"| Montauban-de-Bretagne||||||23||||'''23'''
+|-
+|16||align="left"| Montfort-sur-Meu||||||15||||'''15'''
+|-
+|17||align="left"| Redon||||15||||||'''15'''
+|-
+|18||align="left"| Rennes-1||||||fraction Rennes||||fraction Rennes
+|-
+|19||align="left"| Rennes-2||||||fraction Rennes||||fraction Rennes
+|-
+|20||align="left"| Rennes-3||||||1 + fraction Rennes||||'''1''' + fraction Rennes
+|-
+|21||align="left"| Rennes-4||||||fraction Rennes||||fraction Rennes
+|-
+|22||align="left"| Rennes-5||||||1 + fraction Rennes||||'''1''' + fraction Rennes
+|-
+|23||align="left"| Rennes-6||||||1 + fraction Rennes||||'''1''' + fraction Rennes
+|-
+|24||align="left"| Le Rheu||||||9||||'''9'''
+|-
+|25||align="left"| Saint-Malo-1||||||||4 + fraction Saint-Malo||'''4''' + fraction Saint-Malo
+|-
+|26||align="left"| Saint-Malo-2||||||||7 + fraction Saint-Malo||'''7''' + fraction Saint-Malo
+|-
+|27||align="left"| Vitré||22||||||||'''22'''
+|-
+!||||116||52||120||63||351
+|}
+
+== Découpage cantonal antérieur à 2015 ==
+[[Fichier:Anciens cantons de l'Ille et Vilaine.png|vignette|Carte des cantons de l'Ille et Vilaine avant le redécoupage de 2014]]
+
+===Historique===
+[[File:Arrondissements et cantons d'Ille-et-Vilaine.svg|thumb|Arrondissements et cantons du département d'Ille-et-Vilaine]]
+
+*1801<ref>Arrêté du 27 Brumaire an X (18 novembre 1801), ''Bulletin des lois'', an X (1er semestre, 2e partie) [https://gallica.bnf.fr/ark:/12148/bpt6k6515730s/f45	p. 25]</ref> : découpage d'origine
+*1845<ref>Loi du 19 juillet 1845 (septième loi de ce jour relative à des changements de circonscriptions territoriales), ''Bulletin des lois'', 1845 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486432d/f340 p. 309]</ref> : Les deux cantons de Vitré-Nord et -Sud sont redécoupés en duex nouveaux cantons [[canton de Vitré-Est|Vitré-Est]] et [[canton de Vitré-Ouest|-Ouest]].
+*1879<ref>Décret du 31 juillet 1879, ''Bulletin des lois'' 1879 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k214107p/f216 p. 185]</ref> : Le chef-lieu du canton de Pleurtuit est transféré à [[canton de Dinard|Dinard]].
+*1967<ref>Arrêté du 26 octobre 1967, ''JORF'' 29 octobre 1967, p. 10.644</ref> : Le canton de Saint-Malo est renommé [[Canton de Saint-Malo-Nord|Saint-Malo-Nord]] et le canton de Saint-Servan est renommé [[canton de Saint-Malo-Sud|Saint-Malo-Sud]] parce que [[Saint-Servan]] est fusionnée avec [[Saint-Malo]] (et [[Paramé]])
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858982 Décret n° 73-723 du 23 juillet 1973]</ref> : 
+**Les quatre cantons de Rennes-Nord-Est, -Nord-Ouest, -Sud-Est et -Sud-Ouest sont redécoupés en dix nouveaux cantons Rennes-I à -X.
+**La commune de [[Montreuil-le-Gast]] est transféré de l’ancien canton de Rennes-Nord-Est au [[Canton de Saint-Aubin-d'Aubigné|canton de Saint-Aubin-d’Aubigné]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699629 Décret n° 82-80 du 25 janvier 1982]</ref> : Chacun des cantons de Rennes-VII et -VIII est scindé en deux nouveaux cantons Rennes-VII-1, -VII-2, -VIII-1 et -VIII-2. 
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000690188 Décret du 16 janvier 1985], ''JORF'' 18 janvier 1985, p. 686</ref> : Les noms des douze cantons de Rennes sont changés:
+**Rennes-I = [[Canton de Rennes-Centre-Ouest|Rennes-Centre]]
+**Rennes-II = [[canton de Rennes-Centre-Ouest|Rennes-Centre-Ouest]]
+**Rennes-III = [[canton de Rennes-Nord-Ouest|Rennes-Nord-Ouest]]
+**Rennes-IV = [[canton de Rennes-Nord|Rennes-Nord]]
+**Rennes-V = [[canton de Rennes-Nord-Est|Rennes-Nord-Est]]
+**Rennes-VI = [[canton de Rennes-Est|Rennes-Est]]
+**Rennes-VII-1 = [[canton de Rennes-Sud-Est|Rennes-Sud-Est]]
+**Rennes-VII-2 = [[Canton de Rennes-le-Blosne|Rennes-le Blosne]]
+**Rennes-VIII-1 = [[canton de Bruz|Bruz]]
+**Rennes-VIII-2 = [[Canton de Rennes-Bréquigny|Rennes-Bréquigny]]
+**Rennes-IX = [[canton de Rennes-Centre-Sud|Rennes-Centre-Sud]]
+**Rennes-X = [[canton de Rennes-Sud-Ouest|Rennes-Sud-Ouest]]
+*1991<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000718412 Décret n° 91-214 du 27 février 1991]</ref> : 
+**Création du [[canton de Cesson-Sévigné]], détaché du [[canton de Rennes-Est]] ;
+**Création du [[canton de Betton]], détaché du [[canton de Rennes-Nord]].
+
+=== Liste par arrodissement des cantons===
+Liste par arrondissement des 53  anciens cantons du département d'Ille-et-Vilaine.
+
+{| class="wikitable"
+! Arrondissement
+! Chef-lieu
+! Nb. de cantons
+! Canton
+! nb. de communes
+! Communes
+|-
+| rowspan="25" | [[Arrondissement de Rennes]]
+| rowspan="25" | Rennes
+| rowspan="25" | 25
+| [[Canton de Bécherel]]
+| 10
+| [[Bécherel]], [[Cardroc]], [[La Chapelle-Chaussée]], [[Les Iffs]], [[Irodouër]], [[Langan]], [[Miniac-sous-Bécherel]], [[Romillé]], [[Saint-Brieuc-des-Iffs]], [[Saint-Pern]]
+|-
+| [[Canton de Betton]]
+| 4
+| [[Betton]], [[La Chapelle-des-Fougeretz]], [[Montgermont]], [[Saint-Grégoire (Ille-et-Vilaine)|Saint-Grégoire]]
+|-
+| [[Canton de Bruz]]
+| 7
+| [[Bourgbarré]], [[Bruz]], [[Chartres-de-Bretagne]], [[Noyal-Châtillon-sur-Seiche]], [[Orgères (Ille-et-Vilaine)|Orgères]], [[Pont-Péan]], [[Saint-Erblon (Ille-et-Vilaine)|Saint-Erblon]]
+|-
+| [[Canton de Cesson-Sévigné]]
+| 2
+| [[Acigné]], [[Cesson-Sévigné]]
+|-
+| [[Canton de Châteaugiron]]
+| 9
+| [[Brécé]], [[Chancé]], [[Châteaugiron]], [[Domloup]], [[Nouvoitou]], [[Noyal-sur-Vilaine]], [[Saint-Armel (Ille-et-Vilaine)|Saint-Armel]], [[Saint-Aubin-du-Pavail]], [[Servon-sur-Vilaine]]
+|-
+| [[Canton de Hédé]]
+| 10
+| [[Dingé]], [[Guipel]], [[Hédé-Bazouges]], [[Langouët]], [[Lanrigan]], [[La Mézière]], [[Québriac]], [[Saint-Gondran]], [[Saint-Symphorien (Ille-et-Vilaine)|Saint-Symphorien]], [[Vignoc]]
+|-
+| [[Canton de Janzé]]
+| 6
+| [[Amanlis]], [[Boistrudan]], [[Brie (Ille-et-Vilaine)|Brie]], [[Corps-Nuds]], [[Janzé]], [[Piré-sur-Seiche]]
+|-
+| [[Canton de Liffré]]
+| 8
+| [[Thorigné-Fouillard]], [[Liffré]], [[La Bouëxière]], [[Ercé-près-Liffré]], [[Saint-Sulpice-la-Forêt]], [[Chasné-sur-Illet]], [[Livré-sur-Changeon]], [[Dourdain]]
+|-
+| [[Canton de Montauban-de-Bretagne]]
+| 8
+| [[Boisgervilly]], [[La Chapelle-du-Lou]], [[Landujan]], [[Le Lou-du-Lac]], [[Montauban-de-Bretagne]], [[Médréac]], [[Saint-M'Hervon]], [[Saint-Uniac]]
+|-
+| [[Canton de Montfort-sur-Meu]]
+| 11
+| [[Bédée]], [[Breteil]], [[La Chapelle-Thouarault]], [[Clayes]], [[Iffendic]], [[Montfort-sur-Meu]], [[La Nouaye]], [[Pleumeleuc]], [[Saint-Gonlay]], [[Talensac]], [[Le Verger]]
+|-
+| [[Canton de Mordelles]]
+| 6
+| [[Chavagne]], [[Cintré]], [[L'Hermitage]], [[Mordelles]], [[Le Rheu]], [[Saint-Gilles (Ille-et-Vilaine)|Saint-Gilles]]
+|-
+| [[Canton de Plélan-le-Grand]]
+| 8
+| [[Bréal-sous-Montfort]], [[Maxent]], [[Monterfil]], [[Paimpont]], [[Plélan-le-Grand]], [[Saint-Péran]], [[Saint-Thurial]], [[Treffendel]]
+|-
+| [[Canton de Rennes-Bréquigny]]
+| <1
+| Rennes (quartier Bréquigny)
+|-
+| [[Canton de Rennes-Centre]]
+| <1
+| Rennes (quartiers du Colombier, Liberté, et Thabor)
+|-
+| [[Canton de Rennes-Centre-Ouest]]
+| <1
+| Rennes (quartiers de la Touche, Papu, Bourg-l'Evêque, Moulin du Comte, Chézy-Dinan)
+|-
+| [[Canton de Rennes-Centre-Sud]]
+| <1
+| Rennes (quartier Sud-Gare)
+|-
+| [[Canton de Rennes-Est]]
+| <1
+| Rennes ([[quartier Jeanne d'Arc - Longs-Champs - Atalante Beaulieu]])
+|-
+| [[Canton de Rennes-le-Blosne]]
+| <1
+| Rennes (quartier Le Blosne)
+|-
+| [[Canton de Rennes-Nord]]
+| <1
+| Rennes (quartiers de la Bellangerais, Saint-Martin, La Motte-Brulon et Beauregard)
+|-
+| [[Canton de Rennes-Nord-Est]]
+| <1
+| Rennes (quartier Maurepas)
+|-
+| [[Canton de Rennes-Nord-Ouest]]
+| 3+
+| Rennes ([[Quartier Villejean - Beauregard#Villejean|quartier Villejean]]), [[Gévezé]], [[Pacé (Ille-et-Vilaine)|Pacé]], [[Parthenay-de-Bretagne]]
+|-
+| [[Canton de Rennes-Sud-Est]]
+| 2+
+| Rennes (quartier Poterie et Alphonse Guerin), [[Chantepie]], [[Vern-sur-Seiche]]
+|-
+| [[Canton de Rennes-Sud-Ouest]]
+| 2+
+| Rennes (quartier Cleunay-Arsenal-Redon), [[Saint-Jacques-de-la-Lande]], [[Vezin-le-Coquet]]
+|-
+| [[Canton de Saint-Aubin-d'Aubigné]]
+| 15
+| [[Andouillé-Neuville]], [[Aubigné (Ille-et-Vilaine)|Aubigné]], [[Chevaigné]], [[Feins]], [[Gahard]], [[Melesse]], [[Montreuil-le-Gast]], [[Montreuil-sur-Ille]], [[Mouazé]], [[Romazy]], [[Saint-Aubin-d'Aubigné]], [[Saint-Germain-sur-Ille]], [[Saint-Médard-sur-Ille]], [[Sens-de-Bretagne]], [[Vieux-Vy-sur-Couesnon]]
+|-
+| [[Canton de Saint-Méen-le-Grand]]
+| 9
+| [[Bléruais]], [[Le Crouais]], [[Gaël (Ille-et-Vilaine)|Gaël]], [[Muel (Ille-et-Vilaine)|Muel]], [[Quédillac]], [[Saint-Malon-sur-Mel]], [[Saint-Maugan]], [[Saint-Méen-le-Grand]], [[Saint-Onen-la-Chapelle]]
+|-
+| rowspan="12" | [[Arrondissement de Fougères-Vitré]]
+| rowspan="12" | Fougères
+| rowspan="12" | 12
+| [[Canton d'Antrain]]
+| 10
+| [[Antrain]], [[Bazouges-la-Pérouse]], [[Chauvigné]], [[La Fontenelle (Ille-et-Vilaine)|La Fontenelle]], [[Marcillé-Raoul]], [[Noyal-sous-Bazouges]], [[Rimou]], [[Saint-Ouen-la-Rouërie]], [[Saint-Rémy-du-Plain]], [[Tremblay (Ille-et-Vilaine)|Tremblay]]
+|-
+| [[Canton d'Argentré-du-Plessis]]
+| 9
+| [[Argentré-du-Plessis]], [[Brielles]], [[Domalain]], [[Étrelles]], [[Gennes-sur-Seiche]], [[Le Pertre]], [[Saint-Germain-du-Pinel]], [[Torcé]], [[Vergéal]]
+|-
+| [[Canton de Châteaubourg]]
+| 6
+| [[Châteaubourg (Ille-et-Vilaine)|Châteaubourg]], [[Domagné]], [[Louvigné-de-Bais]], [[Ossé]], [[Saint-Didier (Ille-et-Vilaine)|Saint-Didier]], [[Saint-Jean-sur-Vilaine]]
+|-
+| [[Canton de Fougères-Nord]]
+| 10
+| [[Beaucé]], [[La Chapelle-Janson]], [[Fleurigné]], [[Fougères]] (fraction), [[Laignelet]], [[Landéan]], [[Le Loroux]], [[Luitré]], [[Parigné]], [[La Selle-en-Luitré]]
+|-
+| [[Canton de Fougères-Sud]]
+| 9
+| [[Billé]], [[Combourtillé]], [[Dompierre-du-Chemin]], [[Fougères]] (fraction), [[Javené]], [[Lécousse]], [[Parcé]], [[Romagné]], [[Saint-Sauveur-des-Landes]]
+|-
+| [[Canton de la Guerche-de-Bretagne]]
+| 12
+| [[Availles-sur-Seiche]], [[Bais (Ille-et-Vilaine)|Bais]], [[Chelun]], [[Drouges]], [[Eancé]], [[La Guerche-de-Bretagne]], [[Moutiers (Ille-et-Vilaine)|Moutiers]], [[Moulins (Ille-et-Vilaine)|Moulins]], [[Moussé]], [[Rannée]], [[La Selle-Guerchaise]], [[Visseiche]]
+|-
+| [[Canton de Louvigné-du-Désert]]
+| 8
+| [[La Bazouge-du-Désert]], [[Le Ferré]], [[Louvigné-du-Désert]], [[Mellé]], [[Monthault]], [[Poilley (Ille-et-Vilaine)|Poilley]], [[Saint-Georges-de-Reintembault]], [[Villamée]]
+|-
+| [[Canton de Retiers]]
+| 10
+| [[Arbrissel]], [[Coësmes]], [[Essé]], [[Forges-la-Forêt]], [[Marcillé-Robert]], [[Martigné-Ferchaud]], [[Retiers]], [[Sainte-Colombe (Ille-et-Vilaine)|Sainte-Colombe]], [[Le Theil-de-Bretagne]], [[Thourie]]
+|-
+| [[Canton de Saint-Aubin-du-Cormier]]
+| 10
+| [[La Chapelle-Saint-Aubert]], [[Gosné]], [[Mézières-sur-Couesnon]], [[Saint-Aubin-du-Cormier]], [[Saint-Christophe-de-Valains]], [[Saint-Georges-de-Chesné]], [[Saint-Jean-sur-Couesnon]], [[Saint-Marc-sur-Couesnon]], [[Saint-Ouen-des-Alleux]], [[Vendel]]
+|-
+| [[Canton de Saint-Brice-en-Coglès]]
+| 11
+| [[Baillé]], [[Le Châtellier (Ille-et-Vilaine)|Le Châtellier]], [[Coglès]], [[Montours]], [[Saint-Brice-en-Coglès]], [[Saint-Étienne-en-Coglès]], [[Saint-Germain-en-Coglès]], [[Saint-Hilaire-des-Landes]], [[Saint-Marc-le-Blanc]], [[La Selle-en-Coglès]], [[Le Tiercent]]
+|-
+| [[Canton de Vitré-Est]]
+| 10
+| [[Balazé]], [[Bréal-sous-Vitré]], [[La Chapelle-Erbrée]], [[Châtillon-en-Vendelais]], [[Erbrée]], [[Mondevert]], [[Montautour]], [[Princé]], [[Saint-M'Hervé]], [[Vitré (Ille-et-Vilaine)|Vitré]] (fraction)
+|-
+| [[Canton de Vitré-Ouest]]
+| 13
+| [[Champeaux (Ille-et-Vilaine)|Champeaux]], [[Cornillé]], [[Landavran]], [[Marpiré]], [[Mecé]], [[Montreuil-des-Landes]], [[Montreuil-sous-Pérouse]], [[Pocé-les-Bois]], [[Saint-Aubin-des-Landes]], [[Saint-Christophe-des-Bois]], [[Taillis (Ille-et-Vilaine)|Taillis]], [[Val-d'Izé]], [[Vitré (Ille-et-Vilaine)|Vitré]] (fraction)
+|-
+| rowspan="7" | [[Arrondissement de Redon]]
+| rowspan="7" | Redon
+| rowspan="7" | 7
+| [[Canton de Bain-de-Bretagne]]
+| 9
+| [[Bain-de-Bretagne]], [[Crevin]], [[Ercé-en-Lamée]], [[Messac (Ille-et-Vilaine)|Messac]], [[La Noë-Blanche]], [[Pancé]], [[Pléchâtel]], [[Poligné]], [[Teillay]]
+|-
+| [[Canton de Grand-Fougeray]]
+| 4
+| [[Grand-Fougeray]], [[La Dominelais]], [[Sainte-Anne-sur-Vilaine]], [[Saint-Sulpice-des-Landes (Ille-et-Vilaine)|Saint-Sulpice-des-Landes]]
+|-
+| [[Canton de Guichen]]
+| 8
+| [[Baulon]], [[Bourg-des-Comptes]], [[Goven]], [[Guichen]], [[Guignen]], [[Laillé]], [[Lassy (Ille-et-Vilaine)|Lassy]], [[Saint-Senoux]]
+|-
+| [[Canton de Maure-de-Bretagne]]
+| 9
+| [[Bovel]], [[Les Brulais]], [[Campel]], [[La Chapelle-Bouëxic]], [[Comblessac]], [[Loutehel]], [[Maure-de-Bretagne]], [[Mernel]], [[Saint-Séglin]]
+|-
+| [[Canton de Pipriac]]
+| 9
+| [[Bruc-sur-Aff]], [[Guipry]], [[Lieuron]], [[Lohéac]], [[Pipriac]], [[Saint-Ganton]], [[Saint-Just (Ille-et-Vilaine)|Saint-Just]], [[Saint-Malo-de-Phily]], [[Sixt-sur-Aff]]
+|-
+| [[Canton de Redon]]
+| 6
+| [[Bains-sur-Oust]], [[La Chapelle-de-Brain]], [[Langon (Ille-et-Vilaine)|Langon]], [[Redon]], [[Renac]], [[Sainte-Marie (Ille-et-Vilaine)|Sainte-Marie]]
+|-
+| [[Canton du Sel-de-Bretagne]]
+| 8
+| [[La Bosse-de-Bretagne]], [[Chanteloup (Ille-et-Vilaine)|Chanteloup]], [[La Couyère]], [[Lalleu]], [[Le Petit-Fougeray]], [[Saulnières (Ille-et-Vilaine)|Saulnières]], [[Le Sel-de-Bretagne]], [[Tresbœuf]]
+|-
+| rowspan="9" | [[Arrondissement de Saint-Malo]]
+| rowspan="9" | Saint-Malo
+| rowspan="9" | 9
+| [[Canton de Cancale]]
+| 6
+| [[Cancale]], [[La Fresnais]], [[Hirel]], [[Saint-Benoît-des-Ondes]], [[Saint-Coulomb]], [[Saint-Méloir-des-Ondes]]
+|-
+| [[Canton de Châteauneuf-d'Ille-et-Vilaine]]
+| 9
+| [[Châteauneuf-d'Ille-et-Vilaine]], [[Lillemer]], [[Miniac-Morvan]], [[Plerguer]], [[Saint-Guinoux]], [[Saint-Père-Marc-en-Poulet]], [[Saint-Suliac]], [[Le Tronchet (Ille-et-Vilaine)|Le Tronchet]], [[La Ville-ès-Nonais]]
+|-
+| [[Canton de Combourg]]
+| 10
+| [[Bonnemain]], [[Combourg]], [[Cuguen]], [[Lanhélin]], [[Lourmais]], [[Meillac]], [[Saint-Léger-des-Prés]], [[Saint-Pierre-de-Plesguen]], [[Trémeheuc]], [[Tressé]]
+|-
+| [[Canton de Dinard]]
+| 6
+| [[Dinard]], [[Le Minihic-sur-Rance]], [[Pleurtuit]], [[La Richardais]], [[Saint-Briac-sur-Mer]], [[Saint-Lunaire]]
+|-
+| [[Canton de Dol-de-Bretagne]]
+| 8
+| [[Baguer-Morvan]], [[Baguer-Pican]], [[Cherrueix]], [[Dol-de-Bretagne]], [[Epiniac]], [[Mont-Dol]], [[Roz-Landrieux]], [[Le Vivier-sur-Mer]]
+|-
+| [[Canton de Pleine-Fougères]]
+| 11
+| [[La Boussac]], [[Broualan]], [[Pleine-Fougères]], [[Roz-sur-Couesnon]], [[Sains (Ille-et-Vilaine)|Sains]], [[Saint-Broladre]], [[Saint-Georges-de-Gréhaigne]], [[Saint-Marcan]], [[Sougéal]], [[Trans-la-Forêt]], [[Vieux-Viel]]
+|-
+| [[Canton de Saint-Malo-Nord]]
+| <1
+| [[Saint-Malo]] (fraction)
+|-
+| [[Canton de Saint-Malo-Sud]]
+| 2+
+| [[Saint-Malo]] (fraction), [[La Gouesnière]], [[Saint-Jouan-des-Guérets]]
+|-
+| [[Canton de Tinténiac]]
+| 10
+| [[La Baussaine]], [[La Chapelle-aux-Filtzméens]], [[Longaulnay]], [[Pleugueneuc]], [[Plesder]], [[Saint-Domineuc]], [[Saint-Thual]], [[Tinténiac]], [[Trévérien]], [[Trimer]]
+|}
+
+== Homonymies ==
+Il n'y a pas d'homonymie pour l'ancien canton de Châteaubourg, mais la commune chef-lieu a un [[homonymie|homonyme]].
+
+== Notes et références ==
+=== Notes ===
+{{Références|group=Note}}
+
+=== Références ===
+{{Références|références=2}}
+
+== Voir aussi ==
+* [[Liste des communes d'Ille-et-Vilaine]]
+* [[Liste des intercommunalités d'Ille-et-Vilaine]]
+
+{{Palette |Découpage administratif de la Bretagne|Cantons de France|Cantons d'Ille-et-Vilaine}}
+{{Portail|Ille-et-Vilaine}}
+
+[[Catégorie:Canton en Ille-et-Vilaine|*]]
+[[Catégorie:Liste de cantons français|Ille-et-Vilaine]]
+[[Catégorie:Liste en rapport avec le département d'Ille-et-Vilaine|Cantons]]

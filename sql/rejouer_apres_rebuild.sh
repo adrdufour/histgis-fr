@@ -437,6 +437,7 @@ $PSQL -f "$ICI/40_scission_circo.sql"
 #   90 exige 57 (l'unité L7501@1848) et les onze annexées de 89
 #   91 exige les circos parisiennes de 1863 (55), les annexées (89) et 1954 (68)
 #   105 exige c15_composition (64) et atom_geom_anr (82) ; 64 n'exige rien
+#   106 exige 64, 82, creation_trace (15) et la Meurthe rendue au 54 (39)
 #   84 exige 82 — « PRÉREQUIS : jouer sql/82_anr_geom.sql avant celui-ci »
 #
 # `-1` là où le fichier le demande, et nulle part ailleurs : `38`, `39`, `92`
@@ -631,6 +632,55 @@ if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
     etape "105 — l'Yonne, 1815-1870 : cantons et circonscriptions"
     $PSQL -1 -v appliquer=1 -f "$ICI/105_yonne_1815_1870.sql"
 
+    # Ajouté le 4 octobre 2026. `106` est `105` généralisé : les
+    # circonscriptions 1815-1870 de `c15_composition`, un département par
+    # appel, sur les atomes de 1870. Il exige `64`, `82` et `creation_trace`
+    # (`15`), et lit la Meurthe dans le 54, donc après `39`. Refuse 75 (`87` à
+    # `91`), 89 (`105`) et 57 (pas de trame française de 1870 en base).
+    # Le 84 est dans la liste : sans lui, la carte de la Drôme d'avant 1870
+    # absorbe l'Enclave des Papes (+127 km² à Vinsobres, par comblement).
+    # Journal par département dans build/p106_NN.log.
+    # Seconde série de photos (4 octobre 2026) : 01-11, 13-20, 64-73, 83.
+    for d in 01 02 03 04 05 06 07 08 09 10 11 13 14 15 16 17 18 19 20 \
+             21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 \
+             41 42 43 44 45 46 47 48 49 50 51 52 53 55 56 58 59 60 61 62 63 \
+             64 65 66 67 68 69 70 71 72 73 83 \
+             99 74 76 77 78 79 80 81 82 84 85 86 87 88; do
+        etape "106 — circonscriptions 1815-1870, département $d"
+        $PSQL -P pager=off -1 -v appliquer=1 -v dep="$d" \
+              -f "$ICI/106_circo_1815_1870.sql" > "$RACINE/build/p106_$d.log" 2>&1 \
+            || { echo "  106 refusé sur $d — voir build/p106_$d.log" >&2; exit 1; }
+    done
+
+    # Ajouté le 6 octobre 2026. `107` pose les CANTONS 1815-1870 que `106` ne
+    # pose pas : le canton de 1870 remonté à 1815, sauf les exceptions de
+    # l'atlas (cantons pas encore créés ou pas encore scindés). France
+    # entière en un appel ; mêmes prérequis que `106`. Exclut 75, 89, 57.
+    etape "107 — cantons 1815-1870, France entière"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/107_cantons_1815_1870.sql" > "$RACINE/build/p107.log" 2>&1 \
+        || { echo "  107 refusé — voir build/p107.log" >&2; exit 1; }
+
+    # Ajouté le 10 octobre 2026. `108` inscrit ce que la découpe d'Aurillac, de
+    # Falaise et de Saint-Flour a montré (cartes/a_inscrire_en_base.md, n° 97,
+    # 103, 104) : Falaise-Nord et -Sud rétablis de 1815 à 1941, les quatre
+    # cantons d'Aurillac de 1973 à 1985, les fractions en continu. APRÈS `107`
+    # (il corrige des appartenances que `107` pose) et AVANT `98` (qui juge les
+    # villes sur les appartenances de leurs fractions).
+    etape "108 — Aurillac, Falaise, Saint-Flour : cantons corrigés par la découpe"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/108_villes_aurillac_falaise_saintflour.sql" > "$RACINE/build/p108.log" 2>&1 \
+        || { echo "  108 refusé — voir build/p108.log" >&2; exit 1; }
+
+    # Ajouté le 10 octobre 2026. `109` inscrit l'entrée n° 77 de
+    # cartes/a_inscrire_en_base.md : Angoulême en deux fractions de 1941 à
+    # 1982 (l'atome entier quitte Angoulême-2 en 1968-1973), noms de 1973 et
+    # de 1982. Même place que `108` : après `107`, avant `98`.
+    etape "109 — Angoulême : deux fractions de 1941 à 1982"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/109_ville_angouleme.sql" > "$RACINE/build/p109.log" 2>&1 \
+        || { echo "  109 refusé — voir build/p109.log" >&2; exit 1; }
+
     # --- les villes multicantonales -----------------------------------------
     # Cinquième prérequis hors chaîne, découvert le 23 septembre 2026 :
     # `iris_ville` — 4 219 IRIS, la trame d'accrochage des 119 villes à
@@ -687,6 +737,44 @@ else
     echo "  Le GeoPackage se demande à l'équipe ANR-COMMUNES ; le CSV de" >&2
     echo "  variantes s'engendre par sorties/anr/anr_variantes_verdict.py." >&2
 fi
+
+# ============================================================================
+# LES JO LUS, ET LEURS TABLES ANNUELLES — ajouté le 11 octobre 2026
+# ============================================================================
+# `110` pose dans les TROUS ce que disent les JO lus à la main
+# (`cantons/transferts_complement.csv` : 13 transferts ;
+# `composition_complement.csv` : 73 cantons recomposés, 1949-1968 ;
+# `corse_1975.csv` : la Corse de la loi 75-356) et les tables analytiques
+# annuelles du JO (`transferts_tables_jo.csv` : 93 transferts isolés datés).
+# `111` corrige les périodes que ces transferts DÉMENTENT : une commune gardée
+# dans son canton de départ après l'acte, ou mise dans son canton d'arrivée
+# avant lui.
+#
+# Ils viennent APRÈS TOUT LE RESTE, et c'est un ordre imposé :
+#   * `110` ne remplit que les trous laissés par les reports (`79`, `81`, `93`,
+#     `95`, `97`) et par `103` à `109`. Joué avant eux, il prendrait des places
+#     qui leur reviennent, et ce n'est pas l'état dans lequel il a été jugé ;
+#   * `111` MODIFIE des périodes que d'autres ont posées — `79`, `81`, la base
+#     d'origine. Il doit passer après eux, sans quoi ils les reposeraient par
+#     dessus ses corrections ou buteraient sur elles.
+# Hors du bloc ANR : ni l'un ni l'autre ne lit `atom_geom_anr`.
+#
+# PAS DE `-1` : chacun ouvre et ferme sa propre transaction (BEGIN, puis
+# COMMIT avec `-v poser=on`, ROLLBACK sans). Une transaction englobante n'y
+# ajouterait rien qu'un avertissement.
+#
+# Rejouer `110` SEUL, hors de cette chaîne : défaire `111` d'abord
+# (`-v defaire=on`), puis `110`, puis `111` — voir `sql/README.md`, « Qui
+# dépend de qui », § 3.
+etape "110 — les JO lus et leurs tables, posés dans les trous (règle C)"
+$PSQL -P pager=off -v poser=on \
+      -f "$ICI/110_pose_lecture_jo.sql" > "$RACINE/build/p110.log" 2>&1 \
+    || { echo "  110 refusé — voir build/p110.log" >&2; exit 1; }
+
+etape "111 — les périodes que ces transferts démentent, corrigées"
+$PSQL -P pager=off -v poser=on \
+      -f "$ICI/111_corrige_transferts.sql" > "$RACINE/build/p111.log" 2>&1 \
+    || { echo "  111 refusé — voir build/p111.log" >&2; exit 1; }
 
 # ============================================================================
 # LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026

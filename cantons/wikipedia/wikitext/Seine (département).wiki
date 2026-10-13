@@ -1,0 +1,208 @@
+{{Voir homonymes|Seine (homonymie)}}
+{{redirect|Département de Paris (1790-1795)|homonymie=Département de Paris}}
+{{coord|48|51|N|2|21|E|source:rowiki_region:FR|display=title}}
+{{Infobox Ancienne entité territoriale
+ | nom                    = Seine
+ | année début            = 1790
+ | année fin              = 1968
+ | gouvernement           = [[Département français]]
+ | capitale               = [[Paris]]
+ | titre capitale         = Chef-lieu
+ | blason                 = Blason departement fr Seine (ancien 75).svg
+ | carte                  = Seine departement locator map.svg
+ | légende                = Le département de la Seine, de 1947 à 1965.
+ | evt1                   = Création du département de Paris
+ | superficie             = 475,41 km²
+ | evt1 date              = {{Date|4|mars|1790}}
+ | evt2                   = Renommé département de la Seine
+ | evt2 date              = {{Date|22|août|1795}}
+ | evt3                   = Loi de suppression du département
+ | evt3 date              = {{Date|10|juillet|1964}}
+ | evt4                   = Suppression effective
+ | evt4 date              = {{Date|1|janvier|1968}}
+ | p1                     = [[Île-de-France]]
+ | p1 drapeau             = France Ancient.svg
+ | s1                     = [[Paris (département)|Paris]]
+ | s2                     = [[Hauts-de-Seine]]
+ | s3                     = [[Seine-Saint-Denis]]
+ | s4                     = [[Val-de-Marne]]
+ | s1 drapeau             = Blason paris 75.svg
+ | s2 drapeau             = Blason département fr Hauts-de-Seine.svg
+ | s3 drapeau             = Blason département fr Seine-Saint-Denis.svg
+ | s4 drapeau             = Blason département fr Val-de-Marne.svg
+}}
+
+La '''Seine''' est un ancien [[département français]], créé le {{date|4 mars 1790}} sous le nom de '''département de Paris''' et supprimé le {{date|1 janvier 1968}}, tout comme le département de [[Seine-et-Oise]] dans lequel il était enclavé, en application de la [[Réorganisation de la région parisienne en 1964|loi du {{date|10 juillet 1964}} portant sur la réorganisation de la région parisienne]]. Il était alors identifié par le code 75.
+
+Il est alors redéployé en quatre nouveaux départements :
+* [[Paris (département)|Paris]], une commune divisée en 20 [[Arrondissements de Paris|arrondissements]], reprenant le code 75,
+* Et dans les [[Géographie de l'Île-de-France|départements de petite couronne]] :
+** les [[Hauts-de-Seine]] ({{nombre|27 communes}}), code 92,
+** la [[Seine-Saint-Denis]] ({{nombre|24 communes}}), code 93,
+** le [[Val-de-Marne]] ({{nombre|29 communes}}), code 94.
+
+== Histoire ==
+Le {{date|13|janvier|1790|en France}}, l'[[Assemblée constituante de 1789]] décrète la création du département de « Paris », composé de la ville de Paris et des [[Commune (France)|municipalités]] comprises dans un [[Rayon (géométrie)|rayon]] de trois [[lieue]]s (environ {{unité|12|km}}) à partir du [[Parvis Notre-Dame - place Jean-Paul-II|parvis de Notre-Dame]]<ref>« L'Assemblée nationale décrète ce qui suit : {{citation|[…] 6° Que Paris seul est établi en département avec trois lieues de rayon à partir du parvis Notre-Dame}} - ''Archives parlementaires de 1787 à 1860'', première série (1787 à 1799), t. XI, p. 180.</ref>.
+
+Le {{date|19|janvier|1790|en France}}, elle précise les limites du département<ref>« L'Assemblée nationale décrète : Que le département de Paris aura environ trois lieues de rayon, excepté depuis [[Meudon]] jusqu'au-dessous de [[Saint-Cloud]], où il suivra les murs du parc [du [[Château de Meudon|château]]] de Meudon, et par une ligne qui, embrassant [[Clamart]] et [[Issy-les-Moulineaux|Les Moulineaux]], ira finir au [[Pont de Sèvres|pont]] de [[Sèvres]], d'où le milieu de la rivière servira de limite, les deux ponts de Sèvres et de [[Pont de Saint-Cloud|pont]] de Saint-Cloud réservés néanmoins en entier au département de Paris ; qu'au-dessous de Saint-Cloud, les limites s'élèveront au nord-ouest jusque vis-à-vis le village des [[Carrières-sur-Seine|carrières de Saint-Denis]], à partir duquel le milieu de la rivière bornera le département, en remontant jusqu'au territoire de la paroisse d'[[Épinay-sur-Seine|Épinay]] ; que depuis ce point, le rayon aura trois lieues jusqu'au coude de la [[Marne (rivière)|Marne]] à [[Champigny-sur-Marne|Champigny]] ; qu'il aura trois lieues et demie (environ {{unité|14|km}}) depuis le coude de la Marne jusqu'à [[Bonneuil-sur-Marne|Bonneuil]] ; et que depuis Bonneuil jusqu'au-dessus du [[Le Plessis-Robinson|Plessis-Piquet]], le rayon de trois lieues, à partir du parvis Notre-Dame, servira de règle, conformément au décret de l'Assemblée, qui a décidé que ce rayon s'étendrait à trois lieues au plus ; enfin, que depuis les bornes du Plessis-Piquet, une ligne tirée jusqu'aux murs du parc [du château] de Meudon, clora le département », ''Archives parlementaires de 1787 à 1860'', première série (1787 à 1799), t. XI, p. 236.</ref>.
+
+Le {{date|10|février|1790|en France}}, elle décrète la division du département en trois [[District (subdivision départementale, 1790-1795)|districts]]<ref>«L'Assemblée nationale décrète, d'après l'avis du comité de constitution, que le département de Paris est divisé en trois districts; l'un est formé par la ville de Paris, un autre à Saint-Denis et le troisième à Bourg-la-Reine; que ces deux derniers sont purement administratifs; de sorte que tous les établissements de judicature seront fixés à Paris», Archives parlementaires de 1787 à 1860, première série (1787 à 1799), t.XI, p. 539).</ref> :
+# Le [[district de Paris]], composé de la seule ville de [[Paris]] ;
+# Le [[district de Franciade|district de Saint-Denis]], ayant son chef-lieu à [[Saint-Denis (Seine-Saint-Denis)|Saint-Denis]], renommé [[Franciade]] en 1793 ;
+# Le district de Bourg-la-Reine, ayant son chef-lieu à [[Bourg-la-Reine]], renommé [[district de Bourg de l'Égalité]] en 1792.
+
+Les deux derniers districts sont seulement administratifs.
+
+=== Proposition de blason ===
+{{Blasonnement
+| image=Blason departement fr Seine (ancien 75).svg
+| descript=d'azur semé de fleurs de lys d'or à la fasce ondée d'argent brochant sur le tout
+| texte= Armoiries proposées par Robert Louis. Ce sont les armes de l'Île-de-France avec une fasce ondée évoquant la [[Seine]].
+}}
+[[Fichier:Travaux d'agrandissement du palais de Justice de Paris, 1840-1874, ND5493 (1 of 2).jpg|vignette|centre|Le département de la Seine a aussi été héraldiquement symbolisé par un trio d’écus, celui de Paris le chef-lieu de département accompagné de ceux des chefs-lieux d’arrondissement [[Sceaux (Hauts-de-Seine)|Sceaux]] et [[Saint-Denis (Seine-Saint-Denis)|Saint-Denis]].]]
+
+== Chronologie politique et administrative ==
+{{Article détaillé|Liste des conseillers généraux de la Seine}}
+
+=== Création du département et de ses subdivisions ===
+[[Fichier:Dépt. de la Seine (région du nord) - Fonds Ancely - B315556101 A LEVASSEUR 075.jpg|thumb|upright|La Seine en 1854.]]
+* [[1790]] ({{date|4 mars}}) : création du département de « [[Paris]] » avec trois districts : [[District de Paris|Paris]], [[District de Bourg de l'Égalité|Bourg-la-Reine]], [[District de Franciade|Saint-Denis]], par [[Décret de la division de la France en départements|décrets]] des {{date|15 janvier}}, 16 et {{date|26 février 1790}} entrant en application le {{Date|4|mars|1790}}<ref>[http://www.assemblee-nationale.fr/histoire/images-decentralisation/decentralisation/patente-d.jpg Lettres-patentes du roi], sur le site de l'[[assemblée nationale (France)|Assemblée nationale]].</ref>.
+* [[1795]] ({{date|22 août}}, Constitution du 5 Fructidor an III) : le département de « [[Paris]] » devient le département de la « Seine »<ref>La [[Constitution du 5 fructidor an III]] indique, dans son article 3 du Titre premier intitulé {{citation|''Division du territoire''}}, la liste des 89 départements. Parmi eux figure {{citation|la Seine}}.</ref>.
+* [[1800]] ({{date|17 février}}, loi du 28 pluviôse an VIII et arrête du 25 fructidor an IX<ref>{{Article|titre=Arrête du 25 fructidor an IX, portant fixation des justices de paix du département de la Seine|périodique=Bulletin des lois de la République|lien périodique=Bulletin des lois|année=1801|tome=III|numéro=102|pages=353-354|url texte=https://gallica.bnf.fr/ark:/12148/bpt6k65122445/f1|consulté le=23 juin 2015}}.</ref>) : création de 3 [[Arrondissement (France)|arrondissements]], dont deux sont divisés en 4 cantons chacun
+** Paris constitue à elle seule un arrondissement (''la ville est par ailleurs, divisée en [[Anciens arrondissements de Paris|12 arrondissements municipaux]]'')
+** L'[[Arrondissement de Saint-Denis (Seine-Saint-Denis)|arrondissement de Saint-Denis]] est constitué des cantons : [[Nanterre]], [[Neuilly-sur-Seine]], [[Pantin]] et [[Saint-Denis (Seine-Saint-Denis)|Saint-Denis]]
+** L'[[arrondissement de Sceaux]] est constitué des cantons : [[Charenton-le-Pont]], [[Sceaux (Hauts-de-Seine)|Sceaux]], [[Villejuif]] et [[Vincennes]]
+
+=== Modifications des subdivisions ===
+[[Fichier:Département de la Seine avant-après 1860.png|thumb|upright|La Seine et ses communes avant les annexions de [[1860]] au profit de Paris (ligne rouge).]]
+* [[1829]] : le canton de Nanterre devient le canton de [[Courbevoie]]<ref>{{Article|titre=Ordonnance du Roi du {{1er}} mars 1829, portant que le Chef-lieu de la Justice de paix du canton de Nanterre département de la Seine, sera transféré à Courbevoie, commune du même canton|périodique=Bulletin des lois du royaume de France|lien périodique=Bulletin des lois|tome=10|numéro=280|pages=107-108|année=1829|date=|url texte=https://gallica.bnf.fr/ark:/12148/bpt6k6526170t/f147|consulté le=23 juin 2015}}.</ref>.
+* [[1860]] : le nombre d'arrondissements municipaux de [[Paris]] passe de 12 aux [[Arrondissements de Paris|20 arrondissements actuels]], à la suite de l'[[Arrondissements de Paris#Extension de 1860|annexion des communes]] situées au-delà de l'ancien [[mur des Fermiers généraux]] jusqu'à l'[[Enceintes de Paris#Enceinte de Thiers|Enceinte de Thiers]].
+* [[1880]] : suppression des sous-préfets de [[Saint-Denis (Seine-Saint-Denis)|Saint-Denis]] et [[Sceaux (Hauts-de-Seine)|Sceaux]]; les arrondissements continuent d'exister mais sont directement placés sous l'autorité du préfet de la Seine<ref>Loi du 02.04.1880, [https://gallica.bnf.fr/ark:/12148/bpt6k2141082/f463.image ''Bulletin des lois'' 1880 (1er semestre) p. 432]</ref>.
+* [[1893]] : création de 13 nouveaux cantons alors que le nombre de justices de paix reste inchangé<ref>{{Article|titre=Loi du 13 avril 1893 augmentant le nombre de circonscriptions cantonales des arrondissements de Sceaux et de Saint-Denis (Seine)|périodique=Journal officiel|lien périodique=Journal officiel de la République française|date=14/04/1893|volume=1893|numéro=101|pages=1|url texte=https://gallica.bnf.fr/ark:/12148/bpt6k6231054c/f1|consulté le=14 juin 2015}}.</ref>.
+** 8 dans l'[[Arrondissement de Saint-Denis (Seine-Saint-Denis)|arrondissement de Saint-Denis]] : [[Asnières-sur-Seine]], [[Aubervilliers]], [[Boulogne-Billancourt]], [[Clichy]], [[Levallois-Perret]], [[Noisy-le-Sec]], [[Puteaux]] et [[Saint-Ouen-sur-Seine]].
+** 5 dans l'[[arrondissement de Sceaux]] : [[Ivry-sur-Seine]], [[Montreuil (Seine-Saint-Denis)|Montreuil]], [[Nogent-sur-Marne]], [[Saint-Maur-des-Fossés]] et [[Vanves]].
+*** Les communes de [[Rosny-sous-Bois]] et [[Villemomble]] sont transférées du [[canton de Vincennes]] (arrondissement de Sceaux) au [[canton de Pantin]] (arrondissement de Saint-Denis)<ref>Néanmoins pour l'élection d'un [[Chambre des députés (Troisième République)|député]] en [[élections législatives françaises de 1936|1936]], ils rejoignent [[Montreuil (Seine-Saint-Denis)|Montreuil]] dans la première circonscription de l'arrondissement de Sceaux (Loi du 20.03.1936)</ref>.
+* [[1897]] (Loi du 20.02.1897) : La commune de [[Clamart]] est transférée du [[canton de Sceaux]] au [[canton de Vanves]].
+* [[1908]] : création du canton de [[Colombes]] ([[Arrondissement de Saint-Denis (Seine-Saint-Denis)|arrondissement de Saint-Denis]]), par scission du canton de [[Courbevoie]]<ref>{{Article |titre=Loi du 14 avril 1908, distrayant les communes de Colombes et de Bois-Colombes (Seine) du canton de Courbevoie pour former un nouveau canton ayant Colombes pour chef-lieu |périodique=Journal officiel de la République française |lien périodique=Journal officiel de la République française |date=15/4/1908 |volume=1908 |numéro=105 |pages=2651 |url texte=https://gallica.bnf.fr/ark:/12148/bpt6k62762287/f3|consulté le=15 juin 2015 }}.</ref>.
+* [[1909]] (Loi du 26.02.1909) : La commune de [[Villetaneuse]] est transférée du [[canton d'Aubervilliers]] au canton de Saint-Denis.
+* [[1912]] (Loi du 23.12.1912) : La commune de [[Pierrefitte-sur-Seine|Pierrefitte]] est transférée du [[canton d'Aubervilliers]] au canton de Saint-Denis.
+* [[1921]] (Loi du 18.07.1921) : La commune du [[Le Bourget (Seine-Saint-Denis)|Bourget]] est transférée du [[canton de Noisy-le-Sec]] au [[canton d'Aubervilliers]].
+* [[1925]]<ref>Loi du 29 mai 1925 fixant le nombre et le mode d’élection des conseillers généraux de la Seine, ''JORF'' 30 mai 1925, [https://gallica.bnf.fr/ark:/12148/bpt6k6492099d/f2 p. 5054] + Loi du 29.05.1925 supprimant les conseils d’arrondissement de Saint-Denis et de Sceaux, ''JORF'' 30 mai 1925, [https://gallica.bnf.fr/ark:/12148/bpt6k6492099d/f4 p. 5056]</ref> : Les 22 cantons sont découpés en 40 circonscriptions uninominales pour l'élection des conseillers généraux de la banlieue et les [[Conseil d'arrondissement|conseils d’arrondissement]] de Saint-Denis et de Sceaux sont supprimés.
+* [[1935]]<ref>Loi du 10 avril 1935 concernant les conditions d'élection des membres du conseil municipal de Paris et du conseil général de la Seine, ''JORF'' 12 avril 1935, [https://gallica.bnf.fr/ark:/12148/bpt6k65477374/f2 p. 4090]</ref> : Les 22 cantons sont découpés en 50 circonscriptions uninominales pour l'élection des conseillers généraux de la banlieue.
+* [[1945]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000508833 Ordonnance n° 45-478 du 24 mars 1945]</ref> : Les 60 conseillers généraux de la banlieue sont élus à la représentation proportionnelle dans le cadre de cinq circonscriptions (''secteurs'') ; les cantons sont abandonnés comme cadre d'élection des conseillers généraux.
+* [[1947]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000316039 Loi n° 47-1733 du 5 septembre 1947]</ref> : Les 60 conseillers généraux de la banlieue sont élus à la représentation proportionnelle dans le cadre de six circonscriptions.
+* [[1959]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000874976 Ordonnance n° 59-232 du 4 février 1959]</ref> : Les 60 conseillers généraux de la banlieue sont élus dans le cadre de 60 circonscriptions uninominales.
+
+=== Suppression du département et création de nouveaux départements ===
+[[Fichier:Département de la Seine - 1968.svg|thumb|250px|Le département de la Seine avec ses {{nombre|81 communes}} tel qu'il est entre [[1929]] et [[1968]], la ville de Paris s'étant agrandie à plusieurs reprises entre [[1860]] et [[1929]]. Les couleurs montrent comment le département est découpé en [[Réorganisation de la région parisienne en 1964|1964]] : {{Légende/Début}} {{Légende|#d6d7ee|Commune de Paris}} {{Légende|#f8eaad|Communes intégrées aux [[Hauts-de-Seine]]}} {{Légende|#d6d7ad|Communes intégrées à la [[Seine-Saint-Denis]]}} {{Légende|#f8d7ad|Communes intégrées au [[Val-de-Marne]]}} {{Légende/Fin}}]]
+* [[1964]]<ref>[https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000319965 Loi n° 64-707 du 10 juillet 1964 portant réorganisation de la région parisienne]</ref> : la suppression des départements de la Seine et de [[Seine-et-Oise]] est programmée. Implicitement, l'arrondissement de [[Arrondissement de Sceaux|Sceaux]] disparaît complètement. Celui de Saint-Denis se voit modifié et intégré à la [[Seine-Saint-Denis]].
+* [[1965]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000310579 Décret n° 65-142 du 25 février 1965 portant fixation de chefs-lieux de départements créés par la loi du 10 juillet 1964 (...)]</ref> : les chefs-lieux des nouveaux départements sont désignés, créant de ce fait les arrondissements de [[Arrondissement de Bobigny|Bobigny]], [[Arrondissement de Créteil|Créteil]] et [[Arrondissement de Nanterre|Nanterre]].
+* [[1966]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000887331 Décret n° 66-1049 du 30 décembre 1966 portant création des arrondissements de Nogent-sur-Marne et d'Antony]</ref> : création de l'[[arrondissement d'Antony]] et de l'[[arrondissement de Nogent-sur-Marne]].
+* [[1968]] ({{1er janvier}}) : La Seine est officiellement supprimée à la suite de la [[réorganisation de la région parisienne en 1964]]. Cette réorganisation aboutit à démembrer la Seine et la [[Seine-et-Oise]] pour quatre raisons principales<ref name=":0">Exposés par le chercheur CNRS Emmanuel Bellanger dans le [https://www.youtube.com/watch?v=2EA-T7odWeE film documentaire en ligne], réalisé à l'occasion de la parution du livre "Val-de-Marne : Anthologie 1964 - 2014" paru aux Éditions de l'Atelier en 2014.</ref> :
+** Recréer des départements d'un poids démographique du même ordre que les autres départements français, alors que la Seine pesait pour plus de 15 % de la population française.
+** Imposer le district de la région de Paris (institué en 1961, le district regroupe [[Paris]] et la Seine, la [[Seine-et-Oise]] et la [[Seine-et-Marne]]) en démembrant la Seine pour éviter l'émergence d'un contre-pouvoir trop important dans la {{Ve}} République naissante.
+** {{refnec|Rétablir une solidarité à l'échelle régionale et en particulier une solidarité à l'égard du territoire qui a été le plus délaissé dans l'histoire urbaine, sociale et politique des {{s2-|XIX|XX}}, le département de [[Seine-et-Oise]].}}
+** Cantonner l'influence du [[Parti communiste français|PCF]] à un seul territoire, la [[Seine-Saint-Denis]], et éviter que le [[Parti communiste français|PCF]], à la faveur d'une alliance avec la [[Section française de l'Internationale ouvrière|SFIO]], reprenne les rênes du Grand Paris, donc du département de la Seine<ref name=":0" />.
+
+=== Répartition des communes entre les nouveaux départements ===
+[[Fichier:Ile de France departments 1969 evolution map-fr.svg|thumb|upright|La création des départements de [[Paris (département)|Paris]], des [[Hauts-de-Seine]], de la [[Seine-Saint-Denis]], du [[Val-de-Marne]], de l'[[Essonne (département)|Essonne]], des [[Yvelines]], du [[Val-d'Oise]], à partir de la Seine et de la [[Seine-et-Oise]] en [[1968]].]]
+Les 81 communes du département de la Seine sont réparties entre quatre départements, comme suit :
+
+==== Paris (75) ====
+Département comprenant :
+* Une commune issue de la Seine : [[Paris]].
+
+==== Hauts-de-Seine (92) ====
+Département comprenant :
+* 27 communes issues de la Seine : [[Antony]], [[Asnières-sur-Seine]], [[Bagneux (Hauts-de-Seine)|Bagneux]], [[Bois-Colombes]], [[Boulogne-Billancourt]], [[Bourg-la-Reine]], [[Châtenay-Malabry]], [[Châtillon (Hauts-de-Seine)|Châtillon]], [[Clamart]], [[Clichy]], [[Colombes]], [[Courbevoie]], [[Fontenay-aux-Roses]], [[La Garenne-Colombes]], [[Gennevilliers]], [[Issy-les-Moulineaux]], [[Levallois-Perret]], [[Malakoff (Hauts-de-Seine)|Malakoff]], [[Montrouge]], [[Nanterre]], [[Neuilly-sur-Seine]], [[Le Plessis-Robinson]], [[Puteaux]], [[Sceaux (Hauts-de-Seine)|Sceaux]], [[Suresnes]], [[Vanves]], [[Villeneuve-la-Garenne]] ;
+* auxquelles s'ajoutent 9 communes issues de [[Seine-et-Oise]] : [[Chaville]], [[Garches]], [[Marnes-la-Coquette]], [[Meudon]], [[Rueil-Malmaison]], [[Saint-Cloud]], [[Sèvres]], [[Vaucresson]], [[Ville-d'Avray]].
+
+==== Seine-Saint-Denis (93) ====
+Département comprenant :
+* 24 communes issues de la Seine : [[Aubervilliers]], [[Bagnolet]], [[Bobigny]], [[Bondy]], [[Le Bourget (Seine-Saint-Denis)|Le Bourget]], [[La Courneuve]], [[Drancy]], [[Dugny]], [[Épinay-sur-Seine]], [[L'Île-Saint-Denis]], [[Les Lilas]], [[Montreuil (Seine-Saint-Denis)|Montreuil]], [[Noisy-le-Sec]], [[Pantin]], [[Les Pavillons-sous-Bois]], [[Pierrefitte-sur-Seine]], [[Le Pré-Saint-Gervais]], [[Romainville]], [[Rosny-sous-Bois]], [[Saint-Denis (Seine-Saint-Denis)|Saint-Denis]], [[Saint-Ouen-sur-Seine]], [[Stains]], [[Villemomble]], [[Villetaneuse]] ;
+* auxquelles s'ajoutent 16 communes issues de [[Seine-et-Oise]] : [[Aulnay-sous-Bois]], [[Le Blanc-Mesnil]], [[Clichy-sous-Bois]], [[Coubron]], [[Gagny]], [[Gournay-sur-Marne]], [[Livry-Gargan]], [[Montfermeil]], [[Neuilly-Plaisance]], [[Neuilly-sur-Marne]], [[Noisy-le-Grand]], [[Le Raincy]], [[Sevran]], [[Tremblay-en-France]], [[Vaujours]], [[Villepinte (Seine-Saint-Denis)|Villepinte]].
+
+==== Val-de-Marne (94) ====
+Département comprenant :
+* 29 communes issues de la Seine : [[Alfortville]], [[Arcueil]], [[Bonneuil-sur-Marne]], [[Bry-sur-Marne]], [[Cachan]], [[Champigny-sur-Marne]], [[Charenton-le-Pont]], [[Chevilly-Larue]], [[Choisy-le-Roi]], [[Créteil]], [[Fontenay-sous-Bois]], [[Fresnes (Val-de-Marne)|Fresnes]], [[Gentilly (Val-de-Marne)|Gentilly]], [[L'Haÿ-les-Roses]], [[Ivry-sur-Seine]], [[Joinville-le-Pont]], [[Le Kremlin-Bicêtre]], [[Maisons-Alfort]], [[Nogent-sur-Marne]], [[Orly]], [[Le Perreux-sur-Marne]], [[Rungis]], [[Saint-Mandé]], [[Saint-Maur-des-Fossés]], [[Saint-Maurice (Val-de-Marne)|Saint-Maurice]], [[Thiais]], [[Villejuif]], [[Vincennes]], [[Vitry-sur-Seine]] ;
+* auxquelles s'ajoutent 18 communes issues de [[Seine-et-Oise]] : [[Ablon-sur-Seine]], [[Boissy-Saint-Léger]], [[Chennevières-sur-Marne]], [[La Queue-en-Brie]], [[Le Plessis-Trévise]], [[Limeil-Brévannes]], [[Mandres-les-Roses]], [[Marolles-en-Brie (Val-de-Marne)|Marolles-en-Brie]], [[Noiseau]], [[Ormesson-sur-Marne]], [[Périgny (Val-de-Marne)|Périgny]], [[Santeny]], [[Sucy-en-Brie]], [[Valenton]], [[Villecresnes]], [[Villeneuve-le-Roi]], [[Villeneuve-Saint-Georges]], [[Villiers-sur-Marne]].
+
+== Arrondissements et cantons ==
+<gallery>
+Image:Arrondissements Seine 1800-1860.png|Arrondissements entre 1800 et 1860 (loi du 25 fructidor an IX)
+Image:Arrondissements Seine 1860-1893.png|Arrondissements entre 1860 et 1893 (loi du 16 juin 1859)
+Image:Arrondissements Seine 1893-1908.png|Arrondissements entre 1893 et 1908 (loi du 13 avril 1893)
+Image:Arrondissements Seine 1908-1929.png|Arrondissements entre 1908 et 1929 (loi du 14 avril 1908)
+Image:Arrondissements Seine 1929-1968.png|Arrondissements et cantons entre 1929 et 1962 (décrets du 3 avril 1925 et 18 avril 1929)
+Image:Département de la Seine - 1968.svg|Arrondissements et communes entre 1965 et 1966 (Paris, Bobigny, Créteil et Nanterre)
+</gallery>
+{{Légende/Début}}
+{{Légende|#d6d7ee|[[Arrondissement de Paris (ensemble de communes)|Arrondissement de Paris]]}}
+{{Légende|#d6d7ad|[[Arrondissement de Saint-Denis (Seine-Saint-Denis)|Arrondissement de Saint-Denis]] (de Bobigny en 1965-1966)}}
+{{Légende|#f8eaad|[[Arrondissement de Sceaux]] (de Nanterre en 1965-1966)}}
+{{Légende/Fin}}
+Les arrondissements de la Seine étaient composés des cantons suivants :
+
+=== Arrondissement de Paris ===
+L'arrondissement de Paris n'était pas composé de cantons, mais d'une unique commune, [[Paris]], divisée en arrondissement municipaux :
+* [[Anciens arrondissements de Paris|12 arrondissements municipaux]] (1800-1859)
+* [[Arrondissements de Paris|20 arrondissements municipaux]] (1860-1967)
+
+Malgré la disparition du département de la Seine, ces [[Circonscription administrative (France)|circonscriptions administratives]] (arrondissement départemental, commune, arrondissements municipaux) existent encore aujourd'hui et ont toujours le même ressort géographique.
+
+=== Arrondissement de Saint-Denis ===
+* [[Canton de Courbevoie-Nord|Canton de Nanterre puis de Courbevoie]] (1800-1967) ''(le chef-lieu de ce canton a été transféré de Nanterre à Courbevoie en 1829)''
+** [[Canton d'Asnières-sur-Seine]] (1893-1967)
+** [[Canton de Puteaux]] (1893-1967)
+** [[Canton de Colombes-Sud|Canton de Colombes]] (1908-1967)
+* [[Canton de Neuilly-sur-Seine]] (1800-1967)
+** [[Canton de Boulogne-Billancourt-Nord-Est|Canton de Boulogne-Billancourt]] (1893-1967)
+** [[Canton de Clichy]] (1893-1967)
+** [[Canton de Levallois-Perret]] (1893-1967)
+* [[Canton de Pantin]] (1800-1967)
+** [[Canton de Noisy-le-Sec]] (1893-1967)
+* [[Canton de Saint-Denis-1 (Seine-Saint-Denis)|Canton de Saint-Denis]] (1800-1967)
+** [[Canton d'Aubervilliers]] (1893-1967)
+** [[Canton de Saint-Ouen-sur-Seine|Canton de Saint-Ouen]] (1893-1967)
+
+=== Arrondissement de Sceaux ===
+* [[Canton de Charenton-le-Pont]] (1800-1967)
+** [[Canton de Nogent-sur-Marne]] (1893-1967)
+** [[Canton de Saint-Maur-des-Fossés-1|Canton de Saint-Maur-des-Fossés]] (1893-1967)
+* [[Canton de Sceaux]] (1800-1967)
+** [[Canton de Vanves]] (1893-1967)
+* [[Canton de Villejuif]] (1800-1967)
+** [[Canton d'Ivry-sur-Seine]] (1893-1967)
+* [[Canton de Vincennes]] (1800-1967)
+** [[Canton de Montreuil-1|Canton de Montreuil]] (1893-1967)
+
+== Démographie ==
+Lors de sa suppression, le département comptait {{formatnum:5700968}} habitants, répartis comme suit :
+* {{nombre|2590771|habitants}} de [[Paris]],
+* {{nombre|1250061|habitants}} des {{nombre|27|communes}} intégrées aux [[Hauts-de-Seine]],
+* {{nombre|967847|habitants}} des {{nombre|29|communes}} intégrées au [[Val-de-Marne]],
+* {{nombre|892289|habitants}} des {{nombre|24|communes}} intégrées à la [[Seine-Saint-Denis]].
+{{clr}}
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+{{Autres projets|commons=Category:Seine (department)}}
+=== Bibliographie ===
+* Arlette Schweitz, ''Les parlementaire de la Seine sous la Troisième République'', publications de la Sorbonne, 2001.
+
+=== Articles connexes ===
+* [[Liste des communes de la Seine]]
+* [[Conseil général de la Seine]] - [[Liste des conseillers généraux de la Seine]]
+* [[Liste des préfets de la Seine]]
+* [[Liste des députés de la Seine]] - [[Liste des sénateurs de la Seine]]
+
+=== Liens externes ===
+{{Liens}}
+* [http://splaf.free.fr/75o.html Histoire de la Seine, par le {{abr|SPLAF|Site sur la Population et les Limites Administratives de la France}}]
+
+{{Portail|XVIIIe siècle|France au XIXe siècle|XXe siècle|Paris|Hauts-de-Seine|Seine-Saint-Denis|Val-de-Marne}}
+
+[[Catégorie:Seine (département)|*]]
+[[Catégorie:Enclave intérieure en France]]

@@ -1,0 +1,423 @@
+{{à sourcer|date=novembre 2013}}
+[[Fichier:37-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département d'Indre-et-Loire, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le [[département français]] d'[[Indre-et-Loire]] est découpé en trois  [[Arrondissement français|arrondissements]] et depuis le dernier redécoupage de 1984 en trente-sept [[Canton français|cantons]]. À partir de 2015, ce nombre est réduit à dix-neuf à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]].
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2010<ref>Populations légales des communes en vigueur au {{1er}} janvier 2013, millésimées 2010 (date de référence statistique : {{1er}} janvier 2010), dans les limites territoriales en vigueur au {{1er}} janvier 2012</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Amboise|Amboise]]||[[Amboise]]||{{formatnum:27443}}||0,88||14||[[Amboise]], [[Cangey]], [[Chargé]], [[Limeray]], [[Lussault-sur-Loire]], [[Montreuil-en-Touraine]], [[Mosnes]], [[Nazelles-Négron]], [[Neuillé-le-Lierre]], [[Noizay]], [[Pocé-sur-Cisse]], [[Saint-Ouen-les-Vignes]], [[Saint-Règle]], [[Souvigny-de-Touraine]].
+|-
+|2||[[Canton de Ballan-Miré|Ballan-Miré]]||[[Ballan-Miré]]||{{formatnum:25040}}||0,81||7||[[Ballan-Miré]], [[Berthenay]], [[Druye]], [[La Riche]], [[Saint-Genouph]], [[Savonnières]], [[Villandry]].
+|-
+|3||[[Canton de Bléré|Bléré]]||[[Bléré]]||{{formatnum:25287}}||0,81||17||[[Athée-sur-Cher]], [[Azay-sur-Cher]], [[Bléré]], [[Céré-la-Ronde]], [[Chenonceaux]], [[Chisseaux]], [[Cigogné]], [[Civray-de-Touraine]], [[Cormery]], [[Courçay]], [[La Croix-en-Touraine]], [[Dierre]], [[Épeigné-les-Bois]], [[Francueil]], [[Luzillé]], [[Saint-Martin-le-Beau]], [[Sublaines]].
+|-
+|4||[[Canton de Château-Renault|Château-Renault]]||[[Château-Renault]]||{{formatnum:36618}}||1,18||36||[[Autrèche]], [[Auzouer-en-Touraine]], [[Beaumont-Louestault]], [[Le Boulay]], [[Bueil-en-Touraine]], [[Cerelles]], [[Charentilly]], [[Château-Renault]], [[Chemillé-sur-Dême]], [[Crotelles]], [[Dame-Marie-les-Bois]], [[Épeigné-sur-Dême]], [[La Ferrière (Indre-et-Loire)|La Ferrière]], [[Les Hermites]], [[Marray]], [[Monthodon]], [[Morand (Indre-et-Loire)|Morand]], [[Neuillé-Pont-Pierre]], [[Neuville-sur-Brenne]], [[Neuvy-le-Roi]], [[Nouzilly]], [[Pernay]], [[Rouziers-de-Touraine]], [[Saint-Antoine-du-Rocher]], [[Saint-Aubin-le-Dépeint]], [[Saint-Christophe-sur-le-Nais]], [[Saint-Laurent-en-Gâtines]], [[Saint-Nicolas-des-Motets]], [[Saint-Paterne-Racan]], [[Saint-Roch]], [[Saunay]], [[Semblançay]], [[Sonzay]], [[Villebourg]], [[Villedômer]].
+|-
+|5||[[Canton de Chinon|Chinon]]||[[Chinon]]||{{formatnum:34238}}||1,1||27||[[Avoine (Indre-et-Loire)|Avoine]], [[Azay-le-Rideau]], [[Beaumont-en-Véron]], [[Bréhémont]], [[Candes-Saint-Martin]], [[La Chapelle-aux-Naux]], [[Cheillé]], [[Chinon]], [[Cinais]], [[Couziers]], [[Huismes]], [[Lerné]], [[Lignières-de-Touraine]], [[Marçay (Indre-et-Loire)|Marçay]], [[Rigny-Ussé]], [[Rivarennes (Indre-et-Loire)|Rivarennes]], [[Rivière (Indre-et-Loire)|Rivière]], [[La Roche-Clermault]], [[Saché]], [[Saint-Benoît-la-Forêt]], [[Saint-Germain-sur-Vienne]], [[Savigny-en-Véron]], [[Seuilly]], [[Thilouze]], [[Thizay (Indre-et-Loire)|Thizay]], [[Vallères]], [[Villaines-les-Rochers]].
+|-
+|6||[[Canton de Descartes|Descartes]]||[[Descartes (Indre-et-Loire)|Descartes]]||{{formatnum:25398}}||0,82||38||[[Abilly]], [[Barrou]], [[Betz-le-Château]], [[Bossay-sur-Claise]], [[Bossée]], [[Bournan]], [[Boussay (Indre-et-Loire)|Boussay]], [[La Celle-Guenand]], [[La Celle-Saint-Avant]], [[Chambon (Indre-et-Loire)|Chambon]], [[La Chapelle-Blanche-Saint-Martin]], [[Charnizay]], [[Chaumussay]], [[Ciran]], [[Civray-sur-Esves]], [[Cussay]], [[Descartes (Indre-et-Loire)|Descartes]], [[Draché]], [[Esves-le-Moutier]], [[Ferrière-Larçon]], [[Le Grand-Pressigny]], [[La Guerche]], [[Ligueil]], [[Louans]], [[Le Louroux]], [[Manthelan]], [[Marcé-sur-Esves]], [[Mouzay (Indre-et-Loire)|Mouzay]], [[Neuilly-le-Brignon]], [[Paulmy]], [[Le Petit-Pressigny]], [[Preuilly-sur-Claise]], [[Saint-Flovier]], [[Sepmes]], [[Tournon-Saint-Pierre]], [[Varennes (Indre-et-Loire)|Varennes]], [[Vou]], [[Yzeures-sur-Creuse]].
+|-
+|7||[[Canton de Joué-lès-Tours|Joué-lès-Tours]]||[[Joué-lès-Tours]]||{{formatnum:35976}}||1,16||1||[[Joué-lès-Tours]].
+|-
+|8||[[Canton de Langeais|Langeais]]||[[Langeais]]||{{formatnum:34709}}||1,12||29||[[Ambillou]], [[Avrillé-les-Ponceaux]], [[Benais]], [[Bourgueil]], [[Braye-sur-Maulne]], [[Brèches]], [[Channay-sur-Lathan]], [[La Chapelle-sur-Loire]], [[Château-la-Vallière]], [[Chouzé-sur-Loire]], [[Cinq-Mars-la-Pile]], [[Cléré-les-Pins]], [[Continvoir]], [[Coteaux sur Loire]], [[Couesmes]], [[Courcelles-de-Touraine]], [[Gizeux]], [[Hommes]], [[Langeais]], [[Lublé]], [[Marcilly-sur-Maulne]], [[Mazières-de-Touraine]], [[Restigné]], [[Rillé]], [[Saint-Laurent-de-Lin]], [[Saint-Nicolas-de-Bourgueil]], [[Savigné-sur-Lathan]], [[Souvigné (Indre-et-Loire)|Souvigné]], [[Villiers-au-Bouin]].
+|-
+|9||[[Canton de Loches|Loches]]||[[Loches]]||{{formatnum:25439}}||0,82||28||[[Azay-sur-Indre]], [[Beaulieu-lès-Loches]], [[Beaumont-Village]], [[Bridoré]], [[Chambourg-sur-Indre]], [[Chanceaux-près-Loches]], [[Chédigny]], [[Chemillé-sur-Indrois]], [[Dolus-le-Sec]], [[Ferrière-sur-Beaulieu]], [[Genillé]], [[Le Liège]], [[Loché-sur-Indrois]], [[Loches]], [[Montrésor]], [[Nouans-les-Fontaines]], [[Orbigny (Indre-et-Loire)|Orbigny]], [[Perrusson]], [[Reignac-sur-Indre]], [[Saint-Hippolyte (Indre-et-Loire)|Saint-Hippolyte]], [[Saint-Jean-Saint-Germain]], [[Saint-Quentin-sur-Indrois]], [[Saint-Senoch]], [[Sennevières]], [[Tauxigny-Saint-Bauld]], [[Verneuil-sur-Indre]], [[Villedômain]], [[Villeloin-Coulangé]].
+|-
+|10||[[Canton de Montlouis-sur-Loire|Montlouis-sur-Loire]]||[[Montlouis-sur-Loire]]||{{formatnum:32700}}||1,05||5||[[Chambray-lès-Tours]], [[Larçay]], [[Montlouis-sur-Loire]], [[Véretz]], [[La Ville-aux-Dames]].
+|-
+|11||[[Canton de Monts|Monts]]||[[Monts (Indre-et-Loire)|Monts]]||{{formatnum:32579}}||1,05||10||[[Artannes-sur-Indre]], [[Esvres]], [[Montbazon]], [[Monts (Indre-et-Loire)|Monts]], [[Pont-de-Ruan]], [[Saint-Branchs]], [[Sorigny]], [[Truyes]], [[Veigné]], [[Villeperdue]].
+|-
+|12||[[Canton de Saint-Cyr-sur-Loire|Saint-Cyr-sur-Loire]]||[[Saint-Cyr-sur-Loire]]||{{formatnum:35962}}||1,16||5||[[Fondettes]], [[Luynes (Indre-et-Loire)|Luynes]], [[La Membrolle-sur-Choisille]], [[Saint-Cyr-sur-Loire]], [[Saint-Étienne-de-Chigny]].
+|-
+|13||[[Canton de Sainte-Maure-de-Touraine|Sainte-Maure-de-Touraine]]||[[Sainte-Maure-de-Touraine]]||{{formatnum:27401}}||0,88||43||[[Anché (Indre-et-Loire)|Anché]], [[Antogny-le-Tillac]], [[Assay]], [[Avon-les-Roches]], [[Braslou]], [[Braye-sous-Faye]], [[Brizay]], [[Champigny-sur-Veude]], [[Chaveignes]], [[Chezelles (Indre-et-Loire)|Chezelles]], [[Courcoué]], [[Cravant-les-Côteaux]], [[Crissay-sur-Manse]], [[Crouzilles]], [[Faye-la-Vineuse]], [[L'Île-Bouchard]], [[Jaulnay]], [[Lémeré]], [[Ligré]], [[Luzé]], [[Maillé (Indre-et-Loire)|Maillé]], [[Marcilly-sur-Vienne]], [[Marigny-Marmande]], [[Neuil]], [[Nouâtre]], [[Noyant-de-Touraine]], [[Panzoult]], [[Parçay-sur-Vienne]], [[Ports (Indre-et-Loire)|Ports]], [[Pouzay]], [[Pussigny]], [[Razines]], [[Richelieu (Indre-et-Loire)|Richelieu]], [[Rilly-sur-Vienne]], [[Saint-Épain]], [[Sainte-Catherine-de-Fierbois]], [[Sainte-Maure-de-Touraine]], [[Sazilly]], [[Tavant]], [[Theneuil]], [[La Tour-Saint-Gelin]], [[Trogues]], [[Verneuil-le-Château]].
+|-
+|14||[[Canton de Saint-Pierre-des-Corps|Saint-Pierre-des-Corps]]||[[Saint-Pierre-des-Corps]]||{{formatnum:29174}}||0,94||2||[[Saint-Avertin]], [[Saint-Pierre-des-Corps]].
+|-
+|15||[[Canton de Tours-1|Tours-1]]||[[Tours]]|| fraction Tours||  ||fraction Tours||Partie de la commune de Tours située au nord de l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Cyr-sur-Loire, quai de Portillon, quai Paul-Bert, allée de la Loire, cours de la Loire, suivant la limite territoriale de la commune de Saint-Pierre-des-Corps et jusqu'à la limite territoriale de la commune de Rochecorbon.
+|-
+|16||[[Canton de Tours-2|Tours-2]]||[[Tours]]||fraction Tours||  ||fraction Tours||Partie de la commune de Tours située à l'est de l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Pierre-des-Corps, pont Mirabeau, allée de la Loire, quai Paul-Bert, [[Pont Wilson (Tours)|pont Wilson]], [[Rue Nationale (Tours)|rue Nationale]], [[Place Jean-Jaurès (Tours)|place Jean-Jaurès]], [[Boulevard Béranger (Tours)|boulevard Béranger]], rue de Sébastopol, rue d'Entraigues, rue George-Sand, rue Roger-Salengro, avenue de Grammont, rue Parmentier, rue Blaise-Pascal, boulevard De-Lattre-de-Tassigny, avenue du Général-de-Gaulle, avenue de Grammont, boulevard Richard-Wagner, jusqu'à la limite territoriale de la commune de Saint-Pierre-des-Corps.
+|-
+|17||[[Canton de Tours-3|Tours-3]]||[[Tours]]|| fraction Tours||  ||fraction Tours||Partie de la commune de Tours située au sud de l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Joué-lès-Tours, route des Deux-Lions, avenue Jean-Portalis, cours du Cher, pont Saint-Sauveur, rue Auguste-Chevallier, rue Stéphane-Pitard, boulevard Marchand-Duplessis, boulevard Jean-Royer, rue Auguste-Chevallier, rue de Boisdenier, rue Giraudeau, rue Roger-Salengro, avenue de Grammont, rue Parmentier, rue Blaise-Pascal, boulevard De-Lattre-de-Tassigny, avenue du Général-de-Gaulle, avenue de Grammont, boulevard Richard-Wagner, jusqu'à la limite territoriale de la commune de Saint-Pierre-des-Corps.
+|-
+|18||[[Canton de Tours-4|Tours-4]]||[[Tours]]||fraction Tours||  ||fraction Tours||Partie de la commune de [[Tours]] non incluse dans les cantons de Tours-1, Tours-2 et Tours-3.
+|-
+|19||[[Canton de Vouvray|Vouvray]]||[[Vouvray (Indre-et-Loire)|Vouvray]]||{{formatnum:27734}}||0,89||10||[[Chanceaux-sur-Choisille]], [[Chançay]], [[Mettray]], [[Monnaie (Indre-et-Loire)|Monnaie]], [[Notre-Dame-d'Oé]], [[Parçay-Meslay]], [[Reugny (Indre-et-Loire)|Reugny]], [[Rochecorbon]], [[Vernou-sur-Brenne]], [[Vouvray (Indre-et-Loire)|Vouvray]].
+|-
+!||||||{{formatnum:590515}}||||279||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département d'[[Indre-et-Loire]], c'est le cas du [[canton de Langeais]].
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Chinon|Chinon]]
+!scope=col|[[Arrondissement de Tours|Tours]]
+!scope=col|[[Arrondissement de Loches|Loches]]
+!scope=col|Total
+|-
+|1||align="left"| Amboise||||14||||'''14'''
+|-
+|2||align="left"| Ballan-Miré||||7||||'''7'''
+|-
+|3||align="left"| Bléré||||17||||'''17'''
+|-
+|4||align="left"| Château-Renault||||36||||'''36'''
+|-
+|5||align="left"| Chinon||27||||||'''27'''
+|-
+|6||align="left"| Descartes||||||38||'''38'''
+|-
+|7||align="left"| Joué-lès-Tours||||1||||'''1'''
+|-
+|8||align="left"| Langeais||17||15||||'''32'''
+|-
+|9||align="left"| Loches||||||29||'''29'''
+|-
+|10||align="left"| Montlouis-sur-Loire||||5||||'''5'''
+|-
+|11||align="left"| Monts||||10||||'''10'''
+|-
+|12||align="left"| Saint-Cyr-sur-Loire||||5||||'''5'''
+|-
+|13||align="left"| Sainte-Maure-de-Touraine||43||||||'''43'''
+|-
+|14||align="left"| Saint-Pierre-des-Corps||||2||||'''2'''
+|-
+|15||align="left"| Tours-1||||fraction Tours||||fraction Tours
+|-
+|16||align="left"| Tours-2||||fraction Tours||||fraction Tours
+|-
+|17||align="left"| Tours-3||||fraction Tours||||fraction Tours
+|-
+|18||align="left"| Tours-4||||fraction Tours||||fraction Tours
+|-
+|19||align="left"| Vouvray||||10||||'''10'''
+|-
+!||||87||123||67||279
+|}
+
+== Historique ==
+=== Découpage de 1790 ===
+À sa création le département, comptait trente-cinq cantons et sept [[District (subdivision départementale, 1790-1795)|districts]]<ref>[http://archives.cg37.fr/UploadFile/GED/General/1264493709.pdf Liste des chefs-lieux de districts et de cantons d'Indre-et-Loire à la Révolution et des communes qui leur sont rattachées (1790)]{{pdf}}</ref>.
+
+'''[[District de Tours]]''' :
+:Canton de Tours : [[Tours]], [[Saint-Étienne-Extra]] (ou Saint-Étienne-du-Chardonnet), [[Quartier Saint-Symphorien de Tours|Saint-Symphorien]], [[La Riche|Notre-Dame-la-Riche]], [[Saint-Pierre-des-Corps]], [[Beaumont-lès-Tours|Beaumont]], [[Sainte-Radegonde-en-Touraine|Sainte-Radegonde]], [[Mettray]], [[Saint-Cyr-sur-Loire]], [[Berthenay]] et [[Saint-Genouph]]
+:Canton de Saint-Christophe : [[Saint-Christophe-sur-le-Nais|Saint-Christophe]], [[Saint-Aubin-le-Dépeint|Saint-Aubin]], [[Saint-Paterne-Racan|Saint Paterne]], [[Neuillé-Pont-Pierre]] et [[Sonzay]]
+:Canton de Luynes : [[Luynes (Indre-et-Loire)|Luynes]], [[Semblançay]], [[Le Serrain]], [[Charentilly]], [[Pernay]], [[Vallières (Indre-et-Loire)|Vallières]], [[Fondettes]], [[Saint-Roch]] et [[Saint-Étienne-de-Chigny]]
+:Canton de Vouvray : [[Vouvray (Indre-et-Loire)|Vouvray]], [[Chanceaux-sur-Choisille|Chanceaux]], [[Notre-Dame-d'Oé]], [[Parçay]], [[Rochecorbon]], [[Saint-Georges-sur-Loire (Indre-et-Loire)|Saint-Georges]], [[Vernou-sur-Brenne|Vernou]] et [[Chançay]]
+:Canton de Mont-Loire (Montlouis) : [[Montlouis-sur-Loire|Mont-Loire]], [[La Ville-aux-Dames]], [[Véretz]], [[Larçay]] et [[Azay-sur-Cher]]
+:Canton de Cormery : [[Cormery]], [[Truyes]], [[Esvres]] et [[Saint-Branchs]]
+:Canton de Montbazon : [[Montbazon]], [[Veigné]], [[Sorigny]], [[Villeperdue]], [[Artannes-sur-Indre|Artannes]], [[Pont-de-Ruan]], [[Chambray-lès-Tours|Chambray]] et [[Monts (Indre-et-Loire)|Monts]]
+:Canton de Ballan : [[Ballan (Indre-et-Loire)|Ballan]], [[Joué-lès-Tours|Joué]], [[Saint-Avertin]], [[Miré (Indre-et-Loire)|Miré]], [[Druye]], [[Savonnières]] et [[Villandry]]
+
+'''[[District d'Amboise]]''' :
+:Canton d'Amboise : [[Amboise]], [[Saint-Denis-Hors|St-Denis-Hors-Faubourgs]], [[Saint-Martin-le-Beau]], [[Lussault-sur-Loire|Lussault]], [[Chargé]], [[Mosnes]], [[Saint-Règle]], [[Souvigny-de-Touraine|Souvigny]] et [[Négron]]
+:Canton de Bléré : [[Bléré]], [[Chisseaux]], [[Chenonceaux]], [[Civray-de-Touraine|Civray]], [[La Croix-en-Touraine|La Croix]], [[Dierre]], [[Athée-sur-Cher|Athée]], [[Cigogné]] et [[Courçay]]
+:Canton de Luzillé : [[Luzillé]], [[Sublaines]], [[Francueil]], [[Épeigné-les-Bois|Épeigné]] et [[Céré-la-Ronde|Céré]]
+:Canton de Saint-Ouen : [[Saint-Ouen-les-Vignes|Saint-Ouen]], [[Nazelles]], [[Noizay]], [[Montreuil-en-Touraine|Montreuil]], [[Cangey]], [[Limeray]], [[Pocé-sur-Cisse|Pocé]] et [[Fleuray]]
+
+'''[[District de Châteaurenault|District de Château-Renault]]''' :
+:Canton de Château-Renault : [[Château-Renault]], [[Neuville-sur-Brenne|Neuville]], [[Saunay]], [[Saint-Nicolas-des-Motets]], [[Morand (Indre-et-Loire)|Morand]], [[Dame-Marie-les-Bois|Dame-Marie]], [[Autrèche]], [[Auzouer-en-Touraine|Auzouer]], [[Le Boulay]], [[Les Hermites]], [[Le Sentier (Indre-et-Loire)|Le Sentier]] et [[Monthodon]]
+:Canton de Monnaie : [[Monnaie (Indre-et-Loire)|Monnaie]], [[Villedômer]], [[Neuillé-le-Lierre]], [[Reugny (Indre-et-Loire)|Reugny]], [[Crotelles]], [[Saint-Laurent-en-Gâtines]], [[Nouzilly]], [[Cerelles]], [[Saint-Antoine-du-Rocher]], [[Rouziers-de-Touraine|Rouziers]] et [[Chenusson]]
+:Canton de Neuvy : [[Neuvy-le-Roi|Neuvy]], [[Beaumont-la-Ronce]], [[Marray]], [[La Ferrière (Indre-et-Loire)|La Ferrière]], [[Rorthes]], [[Les Pins (Indre-et-Loire)|Les Pins]], [[Épeigné-sur-Dême|Épeigné]], [[Chemillé-sur-Dême|Chemillé]], [[Villebourg]], [[Bueil-en-Touraine|Bueil]] et [[Louestault]]
+
+'''[[District de Loches]]''' :
+:Canton de Loches : [[Loches]], [[Beaulieu-lès-Loches|Beaulieu]] (Saint-André, Saint-Laurent, Saint-Pierre), [[Azay-sur-Indre]], [[Reignac-sur-Indre|Reignac (Le fau)]], [[Chambourg-sur-Indre|Chambourg]], [[Chanceaux-près-Loches|Chanceaux]], [[Verneuil-sur-Indre|Verneuil]], [[Perrusson]], [[Saint-Jean (Indre-et-Loire)|Saint-Jean]], [[Oizay]], [[Cerçay]], [[Bridoré]], [[Chédigny]], [[Saint-Quentin-sur-Indrois|Saint-Quentin]], [[Ferrière-sur-Beaulieu]], [[Saint-Germain (Indre-et-Loire)|Saint-Germain]], [[Saint-Hippolyte (Indre-et-Loire)|La Chapelle-Saint-Hippolyte]], [[Vitray (Indre-et-Loire)|Vitray]], [[Sennevières]]
+:Canton de Ligueil : [[Ligueil]], [[Mouzay (Indre-et-Loire)|Mouzay]], [[Vou]], [[Ciran]], [[Varennes (Indre-et-Loire)|Varennes]], [[Saint-Senoch]], [[Esves-le-Moutier]], [[La Chapelle-Blanche-Saint-Martin|La Chapelle-Blanche]], [[Sepmes]] et [[Bournan]]
+:Canton de Manthelan : [[Manthelan]], [[Dolus-le-Sec|Dolus]], [[Bossée]], [[Le Louroux]], [[Louans]], [[Saint-Bauld]], [[Tauxigny]] et [[Sainte-Catherine-de-Fierbois|Sainte-Catherine]]
+:Canton de Montrésor : [[Montrésor]], [[Beaumont-Village]], [[Le Liège]], [[Orbigny (Indre-et-Loire)|Orbigny]], [[Genillé]], [[Chemillé-sur-Indrois|Chemillé]], [[Villeloin (ancienne commune)|Villeloin]], [[Coulangé]], [[Nouans-les-Fontaines|Nouans]], [[Aubigny (Indre-et-Loire)|Aubigny]], [[Loché-sur-Indrois|Loché]], [[Villedômain]] et [[Écueillé]]
+
+'''[[District de Chinon]]''' : 
+:Canton de Chinon : [[Chinon]] (Saint-Étienne, Saint-Mexme, Saint-Jacques, Saint-Maurice), [[Saint-Mexme-les-Champs]], [[Cravant-les-Côteaux|Cravant]], [[Saint-Louand]], [[Beaumont-en-Véron|Beaumont]], [[Savigny-en-Véron|Savigny]], [[Avoine (Indre-et-Loire)|Avoine]], [[Parilly (Indre-et-Loire)|Parilly]], [[La Roche-Clermault]], [[Cinais]], [[Marçay (Indre-et-Loire)|Marçay]], [[Rivière (Indre-et-Loire)|Rivière]], [[Anché (Indre-et-Loire)|Anché]], [[Ligré]] et [[Huismes]]
+:Canton de Richelieu : [[Richelieu (Indre-et-Loire)|Richelieu]], [[Le Sablon (Indre-et-Loire)|Le Sablon]], [[Grazay (Indre-et-Loire)|Grazay]], [[Assay]], [[Lémeré]], [[Champigny-sur-Veude]], [[Chaveignes]], [[La Tour-Saint-Gelin]], [[Courcoué]], [[Braslou]], [[Braye-sous-Faye|Braye]], [[Razines]], [[Faye-la-Vineuse|Faye]], [[Saint-Jouin-lès-Faye|Saint-Jouin]] et [[Marnay (Indre-et-Loire)|Marnay]]
+:Canton de Marigny-Marmande : [[Marigny-Marmande]], [[Verneuil-le-Château|Verneuil]], [[Luzé]], [[Pont-Amboizé]], [[Jaulnay]], [[Nancré]], [[Pontçay]], [[Pussigny]], [[Antogny-le-Tillac|Antogny]] et [[Ports (Indre-et-Loire)|Ports]]
+:Canton de L'Île-Bouchard : [[L'Île-Bouchard]] ([[Saint-Maurice-de-l'Île-Bouchard|Saint-Maurice]], [[Saint-Gilles-de-l'Île-Bouchard|Saint-Gilles]]), [[Sazilly]], [[Tavant]], [[Brizay]], [[Theneuil]], [[Lièze]], [[Chezelles (Indre-et-Loire)|Chezelles]], [[Parçay-sur-Vienne|Parçay]], [[Rilly-sur-Vienne|Rilly]], [[Panzoult]], [[Avon-les-Roches|Avon]], [[Crouzilles]], [[Mougon (Indre-et-Loire)|Mougon]], [[Trogues]] et [[Crissay-sur-Manse|Crissay]]
+:Canton de Sainte-Maure : [[Sainte-Maure-de-Touraine|Sainte-Maure]], [[Neuil]], [[Saint-Épain]], [[Montgauger]], [[Noyant-de-Touraine|Noyant]], [[Pouzay]], [[Maillé (Indre-et-Loire)|Maillé-Argenson]], [[Nouâtre]], [[Marcilly-sur-Vienne|Marcilly]] et [[Noyers (Indre-et-Loire)|Noyers]]
+:Canton d'Azay-le-Rideau : [[Azay-le-Rideau]], [[Thilouze]], [[Villaines-les-Rochers|Villaines]], [[Saché]], [[Cheillé]], [[Lignières-de-Touraine|Lignières]] et [[Vallères]]
+:Canton de Candes : [[Candes-Saint-Martin|Candes]], [[Saint-Germain-sur-Vienne|Saint-Germain]], [[Couziers]], [[Lerné]], [[Thizay (Indre-et-Loire)|Thizay]] et [[Seuilly]]
+:Canton de Rigny : [[Rigny (Indre-et-Loire)|Rigny]], [[Rivarennes (Indre-et-Loire)|Rivarennes]], [[Bréhémont]], [[La Chapelle-aux-Naux]] et [[Saint-Benoît-la-Forêt|Saint-Benoit]]
+
+'''[[District de Preuilly]]''' :
+:Canton de Preuilly : [[Preuilly-sur-Claise|Preuilly]], [[Chaumussay]], [[Boussay (Indre-et-Loire)|Boussay]], [[Bossay-sur-Claise|Bossay]], [[Saint-Michel-du-Bois]], [[Yzeures-sur-Creuse|Yzeures]], [[Tournon-Saint-Pierre|Saint-Pierre-de-Tournon]] et [[Chambon (Indre-et-Loire)|Chambon]]
+:Canton de Lahaye : [[La Haye-Descartes|Lahaye]], [[Draché]], [[Civray-sur-Esves|Civray]], [[La Celle-Saint-Avant]], [[Marcé-sur-Esves|Marcé]], [[Cussay]], [[Neuilly-le-Brignon|Neuilly]], [[Balesmes]]
+:Canton du Grand-Pressigny : [[Le Grand-Pressigny]], [[Le Petit-Pressigny]], [[Paulmy]], [[Ferrière-Larçon]], [[Abilly]], [[La Celle-Guenand]], [[Étableaux|Saint-Martin-d'Etableaux]], [[La Guerche]] et [[Barrou]]
+:Canton de Flovier : [[Saint-Flovier|Flovier]], [[Sainte-Jullite|Sainte-Julitte]], [[Betz-le-Château|Betz]], [[Charnizay]] et [[Saint-Michel-des-Landes]]
+
+'''[[District de Langeais]]''' :
+:Canton de Langeais : [[Langeais]] (Saint-Jean, [[Saint-Laurent-de-Langeais|Saint-Laurent]]), [[Cinq-Mars-la-Pile|Cinq-Mars]], [[Saint-Michel-sur-Loire]], [[Saint-Patrice (Indre-et-Loire)|Saint-Patrice]], [[Les Essards (Indre-et-Loire)|Les Essards]] et [[Mazières-de-Touraine|Mazières]]
+:Canton de Bourgueil : [[Bourgueil]], [[Saint-Nicolas-de-Bourgueil|Saint-Nicolas]], [[Ingrandes-de-Touraine|Ingrandes]], [[La Chapelle-Blanche-Saint-Martin|La Chapelle-Blanche]], [[Chouzé-sur-Loire]], [[Benais]], [[Saint-Philibert-de-la-Pelouse|Saint-Philibert]] et [[Restigné]]
+:Canton de Savigné : [[Savigné-sur-Lathan|Savigné]], [[Gizeux]], [[Continvoir]], [[Avrillé-les-Ponceaux|Avrillé]], [[Saint-Symphorien-les-Ponceaux|Saint-Symphorien]], [[Hommes]], [[Cléré-les-Pins|Cléré]], [[Ambillou]], [[Rillé]], [[Courcelles-de-Touraine|Courcelles]] et [[Channay-sur-Lathan|Channay]]
+:Canton de Valjoieux (Château-la-Vallière) : [[Château-la-Vallière]], [[Villiers-au-Bouin|Villiers]], [[Braye-sur-Maulne|Braye]], [[Marcilly-sur-Maulne|Marcilly]], [[Lublé]], [[Saint-Laurent-de-Lin]], [[Chouzé-le-Sec]], [[Couesmes]], [[Souvigné (Indre-et-Loire)|Souvigné]] et [[Brèches]]
+
+=== Découpage de 1801 ===
+En [[1798]], la commune d'[[Écueillé]] quitte le département d'Indre-et-Loire où elle faisait partie du canton de Montrésor, et rejoint le département de l'Indre<ref>{{Cassini-Ehess|id=12490|titre=Ecueillé|consulté le=25 juin 2021}}</ref>.
+
+Un arrêté consulaire du 5 Vendémiaire an X (27 septembre 1801)<ref>''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f57 p. 37]</ref>
+rédécoupe le département en cantons et arrondissements et réduit le nombre des cantons. Il est basé sur la loi du 8 Pluviôse an IX ({{date|28|janvier|1801}}) portant réduction du nombre de justices de paix.
+
+Plusieurs cantons sont alors supprimés : [[Ballan (Indre-et-Loire)|Ballan]], [[Candes-Saint-Martin|Candes]], [[Cormery]], [[Luynes (Indre-et-Loire)|Luynes]], [[Luzillé]], [[Manthelan]], [[Marigny-Marmande]], [[Monnaie (Indre-et-Loire)|Monnaie]], [[Montlouis-sur-Loire|Mont-Loire]], [[Neuvy-le-Roi|Neuvy]], [[Rigny-Ussé|Rigny]], [[Saint-Flovier]], [[Saint-Ouen-les-Vignes|Saint-Ouen]] et [[Savigné-sur-Lathan|Savigné]]. Dans le même temps, les cantons de Tours-Centre, Tours-Nord, Tours-Sud et Neuillé-Pont-Pierre sont créés.
+
+'''Arrondissement de Tours'''
+:Canton d'Amboise : [[Amboise]], [[Cangey]], [[Chargé]], [[Fleuray]], [[Limeray]], [[Lussault-sur-Loire|Lussault]], [[Montreuil-en-Touraine|Montreuil]], [[Mosnes]], [[Nazelles]], [[Négron]], [[Pocé-sur-Cisse]], [[Saint-Denis-Hors]], [[Saint-Martin-le-Beau]], [[Saint-Ouen-les-Vignes|Saint-Ouen]], [[Saint-Règle]], [[Souvigny-de-Touraine|Souvigny]]
+:Canton de Bléré : [[Bléré]], [[Azay-sur-Cher]], [[Athée-sur-Cher|Athée]], [[Céré-la-Ronde|Céré]], [[Chenonceaux]], [[Chisseaux]], [[Cigogné]], [[Civray-de-Touraine|Civray]], [[Courçay]], [[La Croix-en-Touraine|La Croix]], [[Dierre]], [[Épeigné-les-Bois|Épeigné]], [[Francueil]], [[Luzillé]], [[Sublaines]]
+:Canton de Château-Renault : [[Château-Renault]], [[Autrèche]], [[Auzouer-en-Touraine|Auzouer]], [[Le Boulay]], [[Chenusson]], [[Crotelles]], [[Dame-Marie-les-Bois]], [[Les Hermites]], [[Monthodon]], [[Morand (Indre-et-Loire)|Morand]], [[Neuville-sur-Brenne|Neuville]], [[Nouzilly]], [[Saint-Laurent-en-Gâtines]], [[Saint-Nicolas-des-Motets]], [[Saunay]], [[Le Sentier (Indre-et-Loire)|Le Sentier]], [[Villedômer]]
+:Canton de Montbazon : [[Montbazon]], [[Artannes-sur-Indre|Artannes]], [[Ballan (Indre-et-Loire)|Ballan]], [[Chambray-lès-Tours|Chambray]], [[Cormery]], [[Druye]], [[Esvres]], [[Miré (Indre-et-Loire)|Miré]] [[Monts (Indre-et-Loire)|Monts]], [[Pont-de-Ruan]], [[Saint-Branchs]], [[Sorigny]], [[Truyes]], [[Veigné]], [[Villeperdue]]
+:Canton de Neuillé-Pont-Pierre : [[Neuillé-Pont-Pierre]], [[Beaumont-la-Ronce]],[[Cerelles]], [[Charentilly]], [[Pernay]], [[Rouziers-de-Touraine|Rouziers]], [[Saint-Antoine-du-Rocher]], [[Saint-Roch]], [[Semblançay]], [[Le Serrain]], [[Sonzay]]
+:Canton de Saint-Christophe : [[Saint-Christophe-sur-le-Nais|Saint-Christophe]], [[Bueil-en-Touraine|Bueil]], [[Chemillé-sur-Dême|Chemillé]], [[Épeigné-sur-Dême|Épeigné]], [[La Ferrière (Indre-et-Loire)|La Ferrière]], [[Louestault]], [[Marray]], [[Neuvy-le-Roi|Neuvy]], [[Les Pins (Indre-et-Loire)|Les Pins]], [[Rorthes]], [[Saint-Aubin-le-Dépeint|Saint-Aubin]], [[Saint-Paterne-Racan|Saint Paterne]], [[Villebourg]]
+:Canton de Tours-Centre : [[Tours]]
+:Canton de Tours-Nord : [[Tours]], [[Fondettes]], [[Luynes (Indre-et-Loire)|Luynes]], [[Mettray]], [[Saint-Cyr-sur-Loire]], [[La Ville-aux-Dames]], [[Saint-Étienne-de-Chigny]], [[Saint-Georges-sur-Loire (Indre-et-Loire)|Saint-Georges]], [[Quartier Saint-Symphorien de Tours|Saint-Symphorien]], [[Sainte-Radegonde-en-Touraine|Sainte-Radegonde]], [[Vallières (Indre-et-Loire)|Vallières]]
+:Canton de Tours-Sud : [[Tours]], [[Joué-lès-Tours]], [[Larçay]], [[Montlouis-sur-Loire]], [[La Riche]], [[Saint-Avertin]], [[Saint-Genouph]], [[Saint-Pierre-des-Corps]], [[Savonnières]], [[Véretz]], [[Villandry]], [[Beaumont-lès-Tours]], [[Saint-Étienne-Extra]] 
+:Canton de Vouvray : [[Vouvray (Indre-et-Loire)|Vouvray]], [[Chançay]], [[Chanceaux-sur-Choisille|Chanceaux]], [[Monnaie (Indre-et-Loire)|Monnaie]], [[Neuillé-le-Lierre]], [[Noizay]], [[Notre-Dame-d'Oé]], [[Parçay-Meslay]], [[Reugny (Indre-et-Loire)|Reugny]], [[Rochecorbon]], [[Vernou-sur-Brenne|Vernou]]
+
+'''Arrondissement de Chinon'''
+:Canton d'Azay-le-Rideau : [[Azay-le-Rideau]], [[Bréhémont]], [[La Chapelle-aux-Naux]], [[Cheillé]], [[Lignières-de-Touraine|Lignières]], [[Rigny (Indre-et-Loire)|Rigny]], [[Rivarennes (Indre-et-Loire)|Rivarennes]], [[Saché]], [[Saint-Benoît-la-Forêt|Saint-Benoit]], [[Thilouze]], [[Vallères]], [[Villaines-les-Rochers|Villaines]]
+:Canton de Bourgueil : [[Bourgueil]], [[Benais]], [[La Chapelle-Blanche-Saint-Martin|La Chapelle-Blanche]], [[Chouzé-sur-Loire]], [[Restigné]], [[Saint-Nicolas-de-Bourgueil|Saint-Nicolas]], [[Saint-Philibert-de-la-Pelouse|Saint-Philibert]]
+:Canton de Château-la-Vallière : [[Château-la-Vallière]], [[Ambillou]],[[Braye-sur-Maulne|Braye]], [[Brèches]], [[Channay-sur-Lathan|Channay]], [[Chouzé-le-Sec]], [[Couesmes]], [[Courcelles-de-Touraine|Courcelles]], [[Hommes]], [[Lublé]], [[Marcilly-sur-Maulne|Marcilly]], [[Rillé]], [[Saint-Laurent-de-Lin]], [[Savigné-sur-Lathan|Savigné]], [[Souvigné (Indre-et-Loire)|Souvigné]], [[Villiers-au-Bouin|Villiers]]
+:Canton de Chinon : [[Chinon]], [[Avoine (Indre-et-Loire)|Avoine]], [[Beaumont-en-Véron|Beaumont]], [[Candes-Saint-Martin|Candes]], [[Cinais]], [[Couziers]], [[Huismes]], [[Lerné]], [[Parilly (Indre-et-Loire)|Parilly]], [[La Roche-Clermault]], [[Saint-Louand]], [[Savigny-en-Véron|Savigny]], [[Saint-Germain-sur-Vienne|Saint-Germain]], [[Seuilly]], [[Thizay (Indre-et-Loire)|Thizay]]
+:Canton de L'Île-Bouchard : [[L'Île-Bouchard]] ([[Saint-Maurice-de-l'Île-Bouchard|Saint-Maurice]], [[Saint-Gilles-de-l'Île-Bouchard|Saint-Gilles]]), [[Anché (Indre-et-Loire)|Anché]], [[Avon-les-Roches|Avon]], [[Brizay]], [[Chezelles (Indre-et-Loire)|Chezelles]], [[Cravant-les-Côteaux|Cravant]], [[Crissay-sur-Manse|Crissay]], [[Crouzilles]], [[Lièze]], [[Mougon (Indre-et-Loire)|Mougon]], [[Panzoult]], [[Parçay-sur-Vienne|Parçay]], [[Rilly-sur-Vienne|Rilly]], [[Rivière (Indre-et-Loire)|Rivière]], [[Sazilly]], [[Tavant]], [[Theneuil]], [[Trogues]]
+:Canton de Langeais : [[Langeais]], [[Avrillé-les-Ponceaux|Avrillé]], [[Cinq-Mars-la-Pile|Cinq-Mars]], [[Cléré-les-Pins|Cléré]], [[Continvoir]], [[Les Essards (Indre-et-Loire)|Les Essards]], [[Gizeux]], [[Ingrandes-de-Touraine|Ingrandes]], [[Mazières-de-Touraine|Mazières]], [[Saint-Michel-sur-Loire]], [[Saint-Patrice (Indre-et-Loire)|Saint-Patrice]], [[Saint-Symphorien-les-Ponceaux|Saint-Symphorien]],
+:Canton de Sainte-Maure : [[Sainte-Maure-de-Touraine|Sainte-Maure]], [[Maillé (Indre-et-Loire)|Maillé]], [[Marcilly-sur-Vienne|Marcilly]], [[Neuil]], [[Nouâtre]], [[Noyant-de-Touraine|Noyant]], [[Noyers (Indre-et-Loire)|Noyers]], [[Pouzay]], [[Saint-Épain]]
+:Canton de Richelieu : [[Richelieu (Indre-et-Loire)|Richelieu]], [[Assay]], [[Braslou]], [[Braye-sous-Faye|Braye]], [[Champigny-sur-Veude]], [[Chaveignes]], [[Courcoué]], [[Faye-la-Vineuse|Faye]], [[Grazay (Indre-et-Loire)|Grazay]], [[Lémeré]], [[Ligré]], [[Marçay (Indre-et-Loire)|Marçay]], [[Razines]], [[Le Sablon (Indre-et-Loire)|Le Sablon]], [[La Tour-Saint-Gelin]]
+
+'''Arrondissement de Loches'''
+:Canton de Loches : [[Loches]], [[Azay-sur-Indre]], [[Beaulieu-lès-Loches|Beaulieu]], [[Chambourg-sur-Indre|Chambourg]], [[Chédigny]], [[Dolus-le-Sec|Dolus]], [[Chanceaux-près-Loches|Chanceaux]], [[Ferrière-sur-Beaulieu]], [[Perrusson]], [[Reignac-sur-Indre|Reignac]], [[Saint-Bauld]], [[Saint-Germain (Indre-et-Loire)|Saint-Germain]], [[Saint-Hippolyte (Indre-et-Loire)|Saint-Hippolyte]], [[Saint-Jean (Indre-et-Loire)|Saint-Jean]], [[Saint-Quentin-sur-Indrois|Saint-Quentin]], [[Sennevières]], [[Tauxigny]], [[Vitray (Indre-et-Loire)|Vitray]]
+:Canton de Ligueil : [[Ligueil]], [[Bossée]], [[Bournan]], [[La Chapelle-Blanche-Saint-Martin|La Chapelle-Blanche]], [[Ciran]], [[Esves-le-Moutier]], [[Louans]], [[Le Louroux]], [[Manthelan]], [[Mouzay (Indre-et-Loire)|Mouzay]], [[Saint-Senoch]], [[Sainte-Catherine-de-Fierbois|Sainte-Catherine]], [[Varennes (Indre-et-Loire)|Varennes]], [[Vou]]
+:Canton de Montrésor : [[Montrésor]], [[Aubigny (Indre-et-Loire)|Aubigny]], [[Beaumont-Village]], [[Chemillé-sur-Indrois|Chemillé]], [[Coulangé]], [[Genillé]], [[Le Liège]], [[Loché-sur-Indrois|Loché]], [[Orbigny (Indre-et-Loire)|Orbigny]], [[Nouans-les-Fontaines|Nouans]], [[Villedômain]], [[Villeloin (ancienne commune)|Villeloin]]
+:Canton de Preuilly : [[Preuilly-sur-Claise|Preuilly]], [[Bossay-sur-Claise|Bossay]], [[Boussay (Indre-et-Loire)|Boussay]], [[Chambon (Indre-et-Loire)|Chambon]], [[Chaumussay]], [[Charnizay]], [[Saint-Michel-du-Bois]], [[Tournon-Saint-Pierre]], [[Yzeures-sur-Creuse|Yzeures]]
+:Canton de Lahaye : [[La Haye-Descartes|Lahaye]], [[Abilly]], [[Balesmes]], [[La Celle-Saint-Avant]], [[Civray-sur-Esves|Civray]], [[Cussay]], [[Draché]], [[Marcé-sur-Esves|Marcé]], [[Neuilly-le-Brignon|Neuilly]], [[Sepmes]]
+:Canton du Grand-Pressigny : [[Le Grand-Pressigny]], [[Barrou]], [[Betz-le-Château|Betz]], [[Bridoré]], [[La Celle-Guenand]], [[Étableaux|Saint-Martin-d'Etableaux]], [[Ferrière-Larçon]], [[La Guerche]], [[Paulmy]], [[Le Petit-Pressigny]], [[Saint-Flovier|Flovier]], [[Sainte-Jullite|Sainte-Julitte]], [[Verneuil-sur-Indre|Verneuil]]
+
+=== Découpage entre 1803 et 2010 ===
+==== 1803 ====
+Le chef-lieu du canton de [[Saint-Christophe-sur-le-Nais|Saint-Christophe]] est transféré à [[canton de Neuvy-le-Roi|Neuvy-le-Roi]]<ref>Arrêté du 29 Thermidor an XI (17 août 1803), ''Bulletin des lois'', an XI (2e sem.)	[https://gallica.bnf.fr/ark:/12148/bpt6k6543685m/f1011 n° 314bis]</ref>.
+
+==== 1808 ====
+Par sa fusion avec [[Rochecorbon]], [[Saint-Georges-sur-Loire (Indre-et-Loire)|Saint-Georges]] revient dans le canton de Vouvay.
+
+==== 1816 ====
+L'ordonnance royale du {{date|27|mars|1816}} distrait la commune de [[Bridoré]] du canton du Grand-Pressigny et la réunit à celui de Loches.
+
+[[Verneuil-sur-Indre]] quitte le canton du Grand-Pressigny pour rejoindre celui de Loches.
+
+==== 1817 ====
+Par sa fusion avec [[Gizeux]], [[Saint-Philibert-de-la-Pelouse]] passe du canton de Bourgueil à celui de Langeais.
+
+==== 1824 ====
+La loi du {{date|21|juillet|1824}} distrait le canton de Château-la-Vallière de l’arrondissement de Chinon et le réunit à celui de Tours.
+
+==== 1832 ====
+La loi du {{date|28|mars|1832}} distrait Sainte-Catherine-de-Fierbois du canton de Ligueil et la réunit à celui de Sainte-Maure.
+
+==== 1873 ====
+[[La Membrolle-sur-Choisille]] est créée à partir de Mettray et rejoint le canton de Tours-Nord.
+
+==== 1916 ====
+La loi du {{date|2|décembre|1916}} distrait Saint-Martin-le-Beau d’Amboise et la réunit à celui de Bléré.
+
+==== 1938 ====
+Le décret du {{date|7|octobre|1938}} distrait La Ville-aux-Dames du canton de Tours-Nord et la réunit à celui de Tours-Sud.
+
+==== 1951 ====
+[[La Ferrière (Indre-et-Loire)|La Ferrière]] quitte le canton de Neuvy-le-Roi pour celui de Château-Renault.
+
+==== 1956 ====
+En [[1956]], le canton de Tours-Sud es scindé en trois nouveaux cantons :
+* Le [[canton de Tours-Sud]] : une partie de la ville de Tours (les quartiers Prébendes, Liberté, Blaise-Pascal et Beaujardin).
+* Le [[canton de Tours-Ouest]] : une partie de la ville de Tours (les quartiers la Riche-Lamarline et Rabelais) et les communes de [[Berthenay]], [[Joué-lès-Tours]], [[la Riche]], [[Saint-Genouph]], [[Savonnières]] et [[Villandry]].
+* Le [[canton de Tours-Est]] : une partie de la ville de Tours (le quartier de la Fuye) et les communes de [[Larçay]], [[Montlouis-sur-Loire]], [[Saint-Avertin]], [[Saint-Pierre-des-Corps]], [[Véretz]] et [[la Ville-aux-Dames]]<ref>Décret du 4 août 1956, ''JORF'' 5 août 1956, p. 7380</ref>.
+
+==== 1957 ====
+[[Marçay (Indre-et-Loire)|Marçay]] quitte le canton de Richelieu pour celui de Chinon.
+
+==== 1968 ====
+[[Rivière (Indre-et-Loire)|Rivière]] quitte le canton de l'Ile Bouchard pour rejoindre celui de Chinon.
+
+==== 1973 ====
+En [[1973]], les cinq cantons de Tours sont redécoupés en huit nouveaux cantons :
+*Cinq cantons dans la [[Tours|ville de Tours]] : les cantons de [[canton de Tours-Centre|Tours-Centre-I]] (seul qui rest inchangé), [[canton de Tours-Est|Tours-Est-II]], Tours-Nord-III, [[canton de Tours-Ouest|Tours-Ouest-IV]], [[canton de Tours-Sud|Tours-Sud-V]] et [[Canton de Tours-Val-du-Cher|Tours-Val du Cher-VI]] ;
+*Trois nouveaux cantons hors la ville de Tours :
+**[[Canton de Saint-Pierre-des-Corps]] : les communes de [[Saint-Pierre-des-Corps]], [[Larçay]], [[Montlouis-sur-Loire]], [[Saint-Avertin]], [[Véretz]] et [[la Ville-aux-Dames]].
+**[[Canton de Saint-Cyr-sur-Loire]] : les communes de [[Saint-Cyr-sur-Loire]], [[Fondettes]], [[Luynes (Indre-et-Loire)|Luynes]], [[La Membrolle-sur-Choisille]], [[Mettray]] et [[Saint-Étienne-de-Chigny|Saint-Etienne-de-Chigny]].
+**[[Canton de Joué-lès-Tours]] : les communes de [[Joué-lès-Tours]], [[Berthenay]], [[La Riche]], [[Saint-Genouph]], [[Savonnières]] et [[Villandry]]<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681264 Décret n°73-724 du 23 juillet 1973] modifié par [https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000304603 décret n° 74-595 du 17 juin 1974]</ref>.
+
+==== 1977 ====
+[[Continvoir]] quitte le canton de Langeais pour rejoindre celui de Bourgueil.
+
+[[Gizeux]] est distrait du canton de Langeais pour intégré celui de Bourgueil.
+
+==== 1982 ====
+En [[1982]] :
+*Le canton de Tours-Nord est scindé en deux nouveux cantons [[canton de Tours-Nord-Est|Tours-Nord-Est]] et [[canton de Tours-Nord-Ouest|Tours-Nord-Ouest]]. (art. 1)
+*Le [[canton de Montbazon]] est modifié. Il comprend les communes de Artannes-sur-Indre, Chambray-lès-Tours, Cormery, Esvres, Montbazon, Monts, Pont-du-Ruan, Saint-Branchs, Sorigny, Truyes, Veigné et Villeperdue. (art. 2)
+*Le [[canton de Ballan-Miré]] est créé, détaché du [[canton de Joué-lès-Tours]]. Le canton de Ballan-Miré comprend les communes de Ballan-Miré, Berthenay, Druye, La Riche, Savonnières, Saint-Genoulph et Villandry. Seulement la commune de Joué-lès-Tours reste dans son canton (art. 3 modifié)
+*Le [[canton de Saint-Avertin]] est créé, détaché du [[canton de Saint-Pierre-des-Corps]]. Le canton de Saint-Avertin comprend les communes de Saint-Avertin, Larçay, Montlouis-sur-Loire, Veretz et La Ville-aux-Dames. Seulement la commune de Saint-Pierre-des-Corps reste dans son canton. (art. 4 modifié)<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880995 Décret n°82-58 du 20 janvier 1982] modifié par [https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880463 décret n°82-133 du 5 février 1982]</ref>
+
+==== 1984 ====
+En [[1984]] :
+*Le [[canton de Joué-lès-Tours]] est scindé en deux nouveaux cantons [[canton de Joué-lès-Tours-Nord|Joué-lès-Tours-Nord]] et [[canton de Joué-lès-Tours-Sud|-Sud]]. (art. 1)
+*Le [[canton de Chambray-lès-Tours]] est créé, détaché du [[canton de Montbazon]]. Le canton de Chambray-lès-Tours comprend les communes de Cormery, Esvres, Saint-Branchs, Truyes et Chambray-lèsTours. Dans le canton de Montbazon restent les communes d’Artannes-sur-Indre, Monts, Pont-de-Ruan, Sorigny, Veigné, Villeperdue et Montbazon. (art. 2)
+*Le [[canton de Luynes]] est créé, détaché du [[canton de Saint-Cyr-sur-Loire]]. Le canton de Luynes comprend les communes de Fondettes, Mettray, La Membrolle-sur-Choisille, Saint-Etienne-de-Chigny et Luynes. Seulement la commune de Saint-Cyr-sur-Loire reste dans son canton. (art. 3)
+*Le [[canton de Montlouis-sur-Loire]] est créé, détaché du [[canton de Saint-Avertin]]. Le canton de Montlouis-sur-Loire comprend les communes de Larçay, Véretz, La Ville-aux-Dames et Montlouis-sur-Loire. Seulement la commune de Saint-Avertin reste dans son canton. (art. 4)
+*Une partie du [[Canton de Tours-Sud|canton de Tours-Sud-V]] est transféré au [[Canton de Tours-Centre|canton de Tours-Centre-I]] (modification de la limite infracommunale) (art. 5)<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000519558 Décret n° 84-1227 du 24 décembre 1984]</ref>
+
+==== 2010 ====
+Le décret du {{date|23|février|2010}} modifie les limites communales entre [[Tours]] ([[canton de Tours-Nord-Est]]) et [[Rochecorbon]] ([[canton de Vouvray]])<ref>{{Légifrance|base=JORF|numéro=IOCA0929580D|texte=Décret du {{Date|23|2|2010}} portant modification des limites territoriales de communes et de cantons du département d'Indre-et-Loire}}, publié au [[Journal officiel de la République française|JORF]] du {{Date|25|2|2010}}.</ref>.
+
+=== Découpage entre 2010 et 2014 ===
+[[Image:Canton Indre-et-Loire.png|thumb|upright=2.0|Carte du découpage administratif d'Indre-et-Loire en 2010.]]
+==== Arrondissement de Chinon ====
+[[Fichier:Anciens cantons de l'Indre et Loire.png|vignette|Cartes des cantons de l'Indre et Loire avant 2015]]
+L'[[arrondissement de Chinon]] (sous-préfecture [[Chinon]]) est subdivisé en sept cantons :
+
+{| border="0" rules="all" style="border: 1px solid #999; background-color:#FFFFFF"
+|- bgcolor="#ece5ca"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton d'Azay-le-Rideau]] || align="center" | 12 || [[Azay-le-Rideau]], [[Bréhémont]], [[Cheillé]], [[La Chapelle-aux-Naux]], [[Lignières-de-Touraine]], [[Rigny-Ussé]], [[Rivarennes (Indre-et-Loire)|Rivarennes]], <br /> [[Saché]], [[Saint-Benoît-la-Forêt]], [[Thilouze]], [[Vallères]], [[Villaines-les-Rochers]]
+|-
+| [[Canton de Bourgueil]] || align="center" | 8 || [[Benais]], [[Bourgueil]], [[Chouzé-sur-Loire]], [[Continvoir]], [[Gizeux]], [[La Chapelle-sur-Loire]], [[Restigné]], <br /> [[Saint-Nicolas-de-Bourgueil]]
+|-
+| [[Canton de Chinon]] || align="center" | 15 || [[Avoine (Indre-et-Loire)|Avoine]], [[Beaumont-en-Véron]], [[Candes-Saint-Martin]], [[Chinon]], [[Cinais]], [[Couziers]], [[Huismes]], <br /> [[La Roche-Clermault]], [[Lerné]], [[Marçay (Indre-et-Loire)|Marçay]], [[Rivière (Indre-et-Loire)|Rivière]], [[Saint-Germain-sur-Vienne]], [[Savigny-en-Véron]], [[Seuilly]], [[Thizay (Indre-et-Loire)|Thizay]]
+|-
+| [[Canton de l'Île-Bouchard]] || align="center" | 15 || [[Anché (Indre-et-Loire)|Anché]], [[Avon-les-Roches]], [[Brizay]], [[Chezelles (Indre-et-Loire)|Chezelles]], [[Cravant-les-Côteaux]], [[Crissay-sur-Manse]], [[Crouzilles]], <br /> [[L'Île-Bouchard]], [[Panzoult]], [[Parçay-sur-Vienne]], [[Rilly-sur-Vienne]], [[Sazilly]], [[Tavant]], [[Theneuil]], [[Trogues]]
+|-
+| [[Canton de Langeais]] || align="center" | 9 || [[Avrillé-les-Ponceaux]], [[Cinq-Mars-la-Pile]], [[Cléré-les-Pins]], [[Ingrandes-de-Touraine]], [[Langeais]], [[Les Essards (Indre-et-Loire)|Les Essards]], <br /> [[Mazières-de-Touraine]], [[Saint-Michel-sur-Loire]], [[Saint-Patrice (Indre-et-Loire)|Saint-Patrice]]
+|-
+| [[Canton de Richelieu]] || align="center" | 16 || [[Assay]], [[Braslou]], [[Braye-sous-Faye]], [[Champigny-sur-Veude]], [[Chaveignes]], [[Courcoué]], [[Faye-la-Vineuse]], [[Jaulnay]], <br /> [[La Tour-Saint-Gelin]], [[Lémeré]], [[Ligré]], [[Luzé]], [[Marigny-Marmande]], [[Razines]], [[Richelieu (Indre-et-Loire)|Richelieu]], [[Verneuil-le-Château]]
+|-
+| [[Canton de Sainte-Maure-de-Touraine]] || align="center" | 12 || [[Antogny-le-Tillac]], [[Maillé (Indre-et-Loire)|Maillé]], [[Marcilly-sur-Vienne]], [[Neuil]], [[Nouâtre]], [[Noyant-de-Touraine]], [[Ports (Indre-et-Loire)|Ports]], [[Pouzay]], [[Pussigny]], <br /> [[Saint-Épain]], [[Sainte-Catherine-de-Fierbois]], [[Sainte-Maure-de-Touraine]]
+|}
+
+==== Arrondissement de Loches ====
+L'[[arrondissement de Loches]] (sous-préfecture [[Loches]]) est subdivisé en six cantons :
+
+{| border="0" rules="all" style="border: 1px solid #999; background-color:#FFFFFF"
+|- bgcolor="#ece5ca"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton de Descartes]] || align="center" | 9 || [[Abilly]], [[Civray-sur-Esves]], [[Cussay]], [[Descartes (Indre-et-Loire)|Descartes]], [[Draché]], [[La Celle-Saint-Avant]], [[Marcé-sur-Esves]], <br /> [[Neuilly-le-Brignon]], [[Sepmes]]
+|-
+| [[Canton du Grand-Pressigny]] || align="center" | 9 || [[Barrou]], [[Betz-le-Château]], [[Ferrière-Larçon]], [[La Celle-Guénand]], [[La Guerche]], [[Le Grand-Pressigny]], [[Le Petit-Pressigny]], <br /> [[Paulmy]], [[Saint-Flovier]]
+|-
+| [[Canton de Ligueil]] || align="center" | 13 || [[Bossée]], [[Bournan]], [[Ciran]], [[Esves-le-Moutier]], [[La Chapelle-Blanche-Saint-Martin]], [[Le Louroux]], [[Ligueil]], [[Louans]], [[Manthelan]], <br /> [[Mouzay (Indre-et-Loire)|Mouzay]], [[Saint-Senoch]], [[Varennes (Indre-et-Loire)|Varennes]], [[Vou]]
+|-
+| [[Canton de Loches]] || align="center" | 18 || [[Azay-sur-Indre]], [[Beaulieu-lès-Loches]], [[Bridoré]], [[Chambourg-sur-Indre]], [[Chanceaux-près-Loches]], [[Chédigny]], [[Dolus-le-Sec]], <br /> [[Ferrière-sur-Beaulieu]], [[Loches]], [[Perrusson]], [[Reignac-sur-Indre]], [[Saint-Bauld]], [[Saint-Hippolyte (Indre-et-Loire)|Saint-Hippolyte]], [[Saint-Jean-Saint-Germain]], <br /> [[Saint-Quentin-sur-Indrois]], [[Sennevières]], [[Tauxigny]], [[Verneuil-sur-Indre]]
+|-
+| [[Canton de Montrésor]] || align="center" | 10 || [[Beaumont-Village]], [[Chemillé-sur-Indrois]], [[Genillé]], [[Le Liège]], [[Loché-sur-Indrois]], [[Montrésor]], [[Nouans-les-Fontaines]], <br /> [[Orbigny (Indre-et-Loire)|Orbigny]], [[Villedômain]], [[Villeloin-Coulangé]]
+|-
+| [[Canton de Preuilly-sur-Claise]] || align="center" | 8 || [[Bossay-sur-Claise]], [[Boussay (Indre-et-Loire)|Boussay]], [[Chambon (Indre-et-Loire)|Chambon]], [[Charnizay]], [[Chaumussay]], [[Preuilly-sur-Claise]], <br /> [[Tournon-Saint-Pierre]], [[Yzeures-sur-Creuse]]
+|}
+
+==== Arrondissement de Tours ====
+L'[[arrondissement de Tours]] (préfecture [[Tours]]) est subdivisé en vingt-cinq cantons :
+
+{| border="0" rules="all" style="border: 1px solid #999; background-color:#FFFFFF"
+|- bgcolor="#ece5ca"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton d'Amboise]] || align="center" | 12 || [[Amboise]], [[Cangey]], [[Chargé]], [[Limeray]], [[Lussault-sur-Loire]], [[Montreuil-en-Touraine]], [[Mosnes]], [[Nazelles-Négron]], <br /> [[Pocé-sur-Cisse]], [[Saint-Ouen-les-Vignes]], [[Saint-Règle]], [[Souvigny-de-Touraine]]
+|-
+| [[Canton de Ballan-Miré]] || align="center" | 7 || [[Ballan-Miré]], [[Berthenay]], [[Druye]], [[La Riche]], [[Saint-Genouph]], [[Savonnières]], <br /> [[Villandry]]
+|-
+| [[Canton de Bléré]] || align="center" | 16 || [[Athée-sur-Cher]], [[Azay-sur-Cher]], [[Bléré]], [[Céré-la-Ronde]], [[Chenonceaux]], [[Chisseaux]], [[Cigogné]], [[Civray-de-Touraine]], [[Courçay]], <br /> [[Dierre]], [[Épeigné-les-Bois]], [[Francueil]], [[La Croix-en-Touraine]], [[Luzillé]], [[Saint-Martin-le-Beau]], [[Sublaines]]
+|-
+| [[Canton de Chambray-lès-Tours]] || align="center" | 5 || [[Chambray-lès-Tours]], [[Cormery]], [[Esvres|Esvres-sur-Indre]], [[Saint-Branchs]], [[Truyes]]
+|-
+| [[Canton de Château-la-Vallière]] || align="center" | 15 || [[Ambillou]], [[Braye-sur-Maulne]], [[Brèches]], [[Channay-sur-Lathan]], [[Château-la-Vallière]], [[Couesmes]], [[Courcelles-de-Touraine]], <br /> [[Hommes]], [[Lublé]], [[Marcilly-sur-Maulne]], [[Rillé]], [[Saint-Laurent-de-Lin]], [[Savigné-sur-Lathan]], [[Souvigné (Indre-et-Loire)|Souvigné]], [[Villiers-au-Bouin]]
+|-
+| [[Canton de Château-Renault]] || align="center" | 16 || [[Autrèche]], [[Auzouer-en-Touraine]], [[Château-Renault]], [[Crotelles]], [[Dame-Marie-les-Bois]], [[La Ferrière (Indre-et-Loire)|La Ferrière]], [[Le Boulay]], <br /> [[Les Hermites]], [[Monthodon]], [[Morand (Indre-et-Loire)|Morand]], [[Neuville-sur-Brenne]], [[Nouzilly]], [[Saint-Laurent-en-Gâtines]], <br /> [[Saint-Nicolas-des-Motets]], [[Saunay]], [[Villedômer]]
+|-
+| [[Canton de Joué-lès-Tours-Nord]] || align="center" |  || Partie de [[Joué-lès-Tours]]
+|-
+| [[Canton de Joué-lès-Tours-Sud]] || align="center" |  || Partie de [[Joué-lès-Tours]]
+|-
+| [[Canton de Luynes]] || align="center" | 5 || [[Fondettes]], [[La Membrolle-sur-Choisille]], [[Luynes (Indre-et-Loire)|Luynes]], [[Mettray]], [[Saint-Étienne-de-Chigny]]
+|-
+| [[Canton de Montbazon]] || align="center" | 7 || [[Artannes-sur-Indre]], [[Montbazon]], [[Monts (Indre-et-Loire)|Monts]], [[Pont-de-Ruan]], [[Sorigny]], [[Veigné]], [[Villeperdue]]
+|-
+| [[Canton de Montlouis-sur-Loire]] || align="center" | 4 || [[Larçay]], [[Montlouis-sur-Loire]], [[Véretz]], [[La Ville-aux-Dames]]
+|-
+|[[Canton de Monts]]
+!10
+|[[Artannes-sur-Indre]], [[Esvres|Esvres-sur-Indre]], [[Montbazon]], [[Monts (Indre-et-Loire)|Monts]], [[Pont-de-Ruan]], [[Saint-Branchs]], [[Sorigny]], [[Truyes]], [[Veigné]], [[Villeperdue]]
+|-
+| [[Canton de Neuillé-Pont-Pierre]] || align="center" | 10 || [[Beaumont-la-Ronce]], [[Cerelles]], [[Charentilly]], [[Neuillé-Pont-Pierre]], [[Pernay]], [[Rouziers-de-Touraine]], <br /> [[Saint-Antoine-du-Rocher]], [[Saint-Roch]], [[Semblançay]], [[Sonzay]]
+|-
+| [[Canton de Neuvy-le-Roi]] || align="center" | 10 || [[Bueil-en-Touraine]], [[Chemillé-sur-Dême]], [[Épeigné-sur-Dême]], [[Louestault]], [[Marray]], [[Neuvy-le-Roi]], <br /> [[Saint-Aubin-le-Dépeint]], [[Saint-Christophe-sur-le-Nais]], [[Saint-Paterne-Racan]], [[Villebourg]]
+|-
+| [[Canton de Saint-Avertin]] || align="center" | 1 || [[Saint-Avertin]]
+|-
+| [[Canton de Saint-Cyr-sur-Loire]] || align="center" | 1 || [[Saint-Cyr-sur-Loire]]
+|-
+| [[Canton de Saint-Pierre-des-Corps]] || align="center" | 1 || [[Saint-Pierre-des-Corps]]
+|-
+| [[Canton de Tours-Centre]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Tours-Est]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Tours-Nord-Est]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Tours-Nord-Ouest]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Tours-Ouest]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Tours-Sud]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Tours-Val-du-Cher]] || align="center" |  || Partie de [[Tours]]
+|-
+| [[Canton de Vouvray]] || align="center" | 11 || [[Chançay]], [[Chanceaux-sur-Choisille]], [[Monnaie (Indre-et-Loire)|Monnaie]], [[Neuillé-le-Lierre]], [[Noizay]], [[Notre-Dame-d'Oé]], [[Parçay-Meslay]], [[Reugny (Indre-et-Loire)|Reugny]], <br /> [[Rochecorbon]], [[Vernou-sur-Brenne]], [[Vouvray (Indre-et-Loire)|Vouvray]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|base=JORF|numéro=INTX1238496L|texte=Loi {{numéro|2013-403}} du {{Date|17|5|2013}}}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral, publiée au [[Journal officiel de la République française|JORF]] du {{Date|18|5|2013}}.</ref>. Un nouveau découpage territorial est défini par décret du {{date|18 février 2014}} pour le département d'[[Indre-et-Loire]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. En [[Indre-et-Loire]] le nombre de cantons passe ainsi de 37 à 19<ref name="Décret2014">{{Légifrance|base=JORF|numéro=INTA1324886D|texte=Décret {{Numéro|2014-179}} du {{Date|18|2|2014}}}} portant délimitation des cantons dans le département d'Indre-et-Loire, publié au [[Journal officiel de la République française|JORF]] du {{Date|22|2|2014}}.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2010618dc/ccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 14 mai 2014|format=pdf}}.</ref>. Pour le département d'Indre-et-Loire, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|590515|habitants}}<ref name="PopDep-2010">{{Lien web |url=https://www.insee.fr/fr/statistiques/2044418?sommaire=2133795&geo=DEP-37 |titre=Évolution et structure de la population en 2010 - Département d'Indre-et-Loire (37) |date = |site =insee.fr |consulté le= 14 mai 2014}}.</ref>. Avec 19 cantons la population moyenne par conseiller départemental est de {{unité|31080|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|24864|habitants}} et {{unité|37296|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+== Pour approfondir ==
+=== Articles connexes ===
+* [[Conseil départemental d'Indre-et-Loire]]
+* [[Liste des arrondissements d'Indre-et-Loire]]
+* [[Liste des communes d'Indre-et-Loire]]
+* [[Liste des anciennes communes d'Indre-et-Loire]]
+* [[Liste des députés d'Indre-et-Loire]]
+* [[Liste des sénateurs d'Indre-et-Loire]]
+* [[Liste des conseillers généraux d'Indre-et-Loire]]
+* [[Liste des préfets d'Indre-et-Loire]]
+
+=== Liens externes ===
+{{…}}
+
+=== Bibliographie ===
+{{…}}
+
+=== Sources ===
+* {{Lien web
+   |url=http://cassini.ehess.fr
+   |titre=Notice des communes "Des villages de Cassini aux communes d'aujourd'hui"
+   |site =site de l'École des hautes études en sciences sociales
+   }}
+
+=== Notes et références ===
+{{références|colonnes=1}}
+
+{{Palette|Découpage administratif du Centre-Val de Loire|Cantons de France|Cantons d'Indre-et-Loire}}
+{{Portail|Indre-et-Loire}}
+
+[[Catégorie:Canton en Indre-et-Loire|*]]
+[[Catégorie:Liste de cantons français|Indre-et-Loire]]
+[[Catégorie:Liste en rapport avec le département d'Indre-et-Loire|Cantons]]

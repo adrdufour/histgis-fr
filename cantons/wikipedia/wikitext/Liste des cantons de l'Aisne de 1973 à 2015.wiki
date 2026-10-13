@@ -1,0 +1,129 @@
+{{Article général|Liste des cantons de l'Aisne}}
+
+Cet article présente '''la liste des [[Canton français|cantons]]''' du [[Département français|département]] '''de l'[[Aisne (département)|Aisne]]''' '''entre 1973 et 2015'''.
+
+== Histoire ==
+De {{Nobr|57 cantons}} à la création des départements en 1790, le nombre est réduit à 37 lors de la refonte de la carte cantonale de 1801. Avec le décret du {{date|23|juillet|1973}}, huit nouveaux cantons sont créés : le canton de Laon est divisé en [[Canton de Laon-Nord|Laon-Nord]] et [[Canton de Laon-Sud|Laon-Sud]], celui de Saint-Quentin est divisé en [[Canton de Saint-Quentin-Centre|Saint-Quentin - Centre]], le [[Canton de Saint-Quentin-Sud|Saint-Quentin - Sud]] et [[Canton de Saint-Quentin-Nord|Saint-Quentin - Nord]], celui de Soissons en [[Canton de Soissons-Sud|Soissons-Sud]] et [[Canton de Soissons-Nord|Soissons-Nord]], enfin le [[canton de Tergnier]] est créé par division du [[canton de La Fère]]. Le [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], applicable à partir des [[Élections départementales françaises de 2015|élections départementales de mars 2015]], supprime le découpage et redéfinit les limites des cantons.
+
+== Composition ==
+
+L'Aisne comprend alors {{Nobr|42 cantons}} répartis dans {{Nobr|5 arrondissements}}. Le tableau suivant en donne la liste, en précisant leur code [[Institut national de la statistique et des études économiques|INSEE]], leur circonscription, le nombre de communes du canton, leur superficie, leur population et leur densité de population
+[[Fichier:Arrondissements et cantons de l'Aisne.svg|vignette|upright=1.5|Carte des cantons de l'Aisne entre 1978 et 2015]]
+{| align="center" rules="all" cellspacing="0" cellpadding="4" style="border: 1px solid #999"
+|---
+| align=center bgcolor=lightblue |'''Canton''' || align=center bgcolor=lightblue |'''INSEE''' || align=center bgcolor=lightblue | '''Circ.'''|| align=center bgcolor=lightblue | '''Comm.'''|| align=center bgcolor=lightblue | '''Superficie (km)²''' || align=center bgcolor=lightblue | '''Population (2008)''' || align=center bgcolor=lightblue | '''Densité (hab./km²)'''
+|---
+| colspan="8"  align=center bgcolor=lightgreen| '''[[Arrondissement de Château-Thierry]]'''
+|---
+|[[Canton de Charly-sur-Marne|Charly-sur-Marne]] ||align=center  |02 07 ||align=center  | [[Cinquième circonscription de l'Aisne|5]] ||align=center | [[Canton de Charly-sur-Marne#Composition|19]] ||align=center |212,08||align=center |{{formatnum:14693}} || align=center |69,28	
+|---
+|[[Canton de Château-Thierry|Château-Thierry]] || align=center|02 08||align=center  | [[Cinquième circonscription de l'Aisne|5]] ||align=center | [[Canton de Château-Thierry#Composition|21]] ||align=center | 209,18 ||align=center| {{formatnum:29064}} || align=center | 138,94	
+|---
+|[[Canton de Condé-en-Brie|Condé-en-Brie]] || align=center | 02 10 || align=center | [[Cinquième circonscription de l'Aisne|5]] ||align=center  |[[Canton de Condé-en-Brie#Composition|27]] ||align=center | 242,80 || align=center | {{formatnum:8614}} || align=center | 35,48
+|---
+|[[Canton de Fère-en-Tardenois|Fère-en-Tardenois]] || align=center | 02 15 || align=center | [[Cinquième circonscription de l'Aisne|5]] ||align=center|[[Canton de Fère-en-Tardenois#Composition|23]] ||align=center | 269,18 || align=center | {{formatnum:9458}} || align=center | 35,14
+|---
+|[[Canton de Neuilly-Saint-Front|Neuilly-Saint-Front]] || align=center | 02 22 || align=center | [[Cinquième circonscription de l'Aisne|5]]||align=center | [[Canton de Neuilly-Saint-Front#Composition|33]]||align=center | 260,06 || align=center | {{formatnum:10289}} || align=center | 39,56
+|---
+| colspan="8"  align=center bgcolor=lightblue| '''[[Arrondissement de Laon]]'''
+|---
+|[[Canton d'Anizy-le-Château|Anizy-le-Château]] || align=center | 02 01 || align=center | [[Première circonscription de l'Aisne|1]] ||align=center |[[Canton d'Anizy-le-Château#Composition|23]]||align=center |146,30|| align=center |{{formatnum:10586}} || align=center | 72,36
+|---
+|[[Canton de Chauny|Chauny]] || align=center | 02 09 || align=center | [[Quatrième circonscription de l'Aisne|4]] ||align=center  | [[Canton de Chauny#Composition|20]] ||align=center |158,57|| align=center | {{formatnum:24300}} || align=center | 153,24
+|---
+|[[Canton de Coucy-le-Château-Auffrique|Coucy-le-Château-Auffrique]] || align=center | 02 11 || align=center | [[Quatrième circonscription de l'Aisne|4]] ||align=center  | [[Canton de Coucy-le-Château-Auffrique#Composition|29]] ||align=center |244,58 || align=center |{{formatnum:11725}} || align=center | 47,94
+|---
+|[[Canton de Craonne|Craonne]] || align=center | 02 12 || align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de Craonne#Composition|34]] ||align=center |193,46|| align=center | {{formatnum:5736}} || align=center | 29,59
+|---
+|[[Canton de Crécy-sur-Serre|Crécy-sur-Serre]] || align=center | 02 13 || align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de Crécy-sur-Serre#Composition|19]] ||align=center | 193,88|| align=center | {{formatnum:8213}} || align=center | 42,36
+|---
+|[[Canton de La Fère|La Fère]] || align=center | 02 14 || align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de La Fère#Composition|20]] ||align=center |154,52|| align=center | {{formatnum:12259}} || align=center | 79,34
+|---
+|[[Canton de Laon-Nord|Laon-Nord]] || align=center | 02 18 || align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de Laon-Nord#Composition|9]] ||align=center |102,18|| align=center |{{formatnum:16363}} || align=center |160,14
+|---
+|[[Canton de Laon-Sud|Laon-Sud]] || align=center | 02 38|| align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de Laon-Sud#Composition|20]] ||align=center |153,47|| align=center | {{formatnum:23694}} || align=center | 154,39
+|---
+|[[Canton de Marle|Marle]] || align=center | 02 19|| align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton de Marle#Composition|23]]||align=center |234,78|| align=center | {{formatnum:7127}} || align=center | 30,36
+|---
+|[[Canton de Neufchâtel-sur-Aisne|Neufchâtel-sur-Aisne]] || align=center | 02 21|| align=center | [[Première circonscription de l'Aisne|1]] ||align=center  |[[Canton de Neufchâtel-sur-Aisne#Composition|28]]||align=center | 282,96|| align=center |{{formatnum:9911}} || align=center | 35,03
+|---
+|[[Canton de Rozoy-sur-Serre|Rozoy-sur-Serre]] || align=center | 02 26|| align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de Rozoy-sur-Serre#Composition|30]] ||align=center |257,17|| align=center |{{formatnum:7583}} || align=center |29,49
+|---
+|[[Canton de Sissonne|Sissonne]] || align=center | 02 30 || align=center | [[Première circonscription de l'Aisne|1]] ||align=center  | [[Canton de Sissonne#Composition|20]]||align=center |302,74|| align=center | {{formatnum:10415}} || align=center | 34,40
+|---
+|[[Canton de Tergnier|Tergnier]] || align=center | 02 42|| align=center | [[Quatrième circonscription de l'Aisne|4]] ||align=center  | [[Canton de Tergnier#Composition|4]]||align=center |36,07 || align=center | {{formatnum:17965}} || align=center | 498,06
+|---
+! colspan="8"  align=center bgcolor=yellow | '''[[Arrondissement de Saint-Quentin]]'''
+|---
+|[[Canton de Bohain-en-Vermandois|Bohain-en-Vermandois]] || align=center | 02 03 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  |[[Canton de Bohain-en-Vermandois#Composition|13]] ||align=center | 147,59 || align=center | {{formatnum:14392}} || align=center | 97,51
+|---
+|[[Canton du Catelet|Catelet]] || align=center | 02 06|| align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center  | [[Canton du Catelet#Composition|18]] ||align=center | 139,26|| align=center | {{formatnum:8457}} || align=center | 60,73
+|---
+|[[Canton de Moÿ-de-l'Aisne|Moÿ-de-l'Aisne]] || align=center | 02 20 || align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center  | [[Canton de Moÿ-de-l'Aisne#Composition|17]]||align=center |127,56|| align=center | {{formatnum:7897}} || align=center | 61,91
+|---
+|[[Canton de Ribemont|Ribemont]] || align=center | 02 25 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton de Ribemont#Composition|15]] ||align=center |199,62|| align=center | {{formatnum:8644}} || align=center | 43,30
+|---
+|[[Canton de Saint-Quentin-Centre|Saint-Quentin-Centre]] || align=center | 02 28 || align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center  | [[Canton de Saint-Quentin-Centre#Composition|1]] ||align=center |7,52 || align=center | {{formatnum:20027}} || align=center | 2 663,16
+|---
+|[[Canton de Saint-Quentin-Nord|Saint-Quentin-Nord]] || align=center | 02 39 || align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center  | [[Canton de Saint-Quentin-Nord#Composition|11]] ||align=center |83,78|| align=center | {{formatnum:24784}} || align=center | 295,82
+|---
+|[[Canton de Saint-Quentin-Sud|Saint-Quentin-Sud]] || align=center | 02 40|| align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center | [[Canton de Saint-Quentin-Sud#Composition|6]]  ||align=center |45,52|| align=center | {{formatnum:26730}} || align=center | 587,21
+|---
+|[[Canton de Saint-Simon|Saint-Simon]] || align=center | 02 29 || align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center  | [[Canton de Saint-Simon#Composition|23]] ||align=center |153,02|| align=center | {{formatnum:11498}} || align=center | 75,14
+|---
+|[[Canton de Vermand|Vermand]] || align=center | 02 33 || align=center | [[Deuxième circonscription de l'Aisne|2]] ||align=center  | [[Canton de Vermand#Composition|24]] ||align=center |167,30|| align=center | {{formatnum:9450}} || align=center | 56,49
+|---
+! colspan="8"  align=center bgcolor=lightpink| '''[[Arrondissement de Soissons]]'''
+|---
+|[[Canton de Braine|Braine]] || align=center | 02 04 || align=center | [[Cinquième circonscription de l'Aisne|5]] ||align=center  | [[Canton de Braine#Composition|41]] ||align=center |257,46|| align=center | {{formatnum:11116}} || align=center | 43,18
+|---
+|[[Canton d'Oulchy-le-Château|Oulchy-le-Château]] || align=center | 02 24 || align=center | [[Cinquième circonscription de l'Aisne|5]] ||align=center  | [[Canton d'Oulchy-le-Château#Composition|26]] ||align=center |231,76|| align=center | {{formatnum:5709}} || align=center | 24,63
+|---
+|[[Canton de Soissons-Nord|Soissons-Nord]] || align=center | 02 31 || align=center | [[Quatrième circonscription de l'Aisne|4]] ||align=center  | [[Canton de Soissons-Nord#Composition|11]] ||align=center |68,88 || align=center | {{formatnum:21734}} || align=center | 315,53
+|---
+|[[Canton de Soissons-Sud|Soissons-Sud]] || align=center | 02 41 || align=center | [[Quatrième circonscription de l'Aisne|4]] ||align=center  | [[Canton de Soissons-Sud#Composition|11]] ||align=center |64,69|| align=center | {{formatnum:27517}} || align=center | 425,37
+|---
+|[[Canton de Vailly-sur-Aisne|Vailly-sur-Aisne]] || align=center | 02 32 || align=center | [[Cinquième circonscription de l'Aisne|5]] ||align=center | [[Canton de Vailly-sur-Aisne#Composition|26]]||align=center |162,30 || align=center |{{formatnum:10071}} || align=center | 62,05
+|---
+|[[Canton de Vic-sur-Aisne|Vic-sur-Aisne]] || align=center | 02 35 || align=center | [[Quatrième circonscription de l'Aisne|4]] ||align=center  | [[Canton de Vic-sur-Aisne#Composition|25]] ||align=center | 217,00 || align=center | {{formatnum:10594}} || align=center | 48,82
+|---
+|[[Canton de Villers-Cotterêts|Villers-Cotterêts]] || align=center | 02 36 || align=center | [[Cinquième circonscription de l'Aisne|5]] ||align=center  | [[Canton de Villers-Cotterêts#Composition|20]] ||align=center |240,42 || align=center |{{formatnum:15197}} || align=center | 63,21
+|---
+! colspan="8"  align=center bgcolor=lightgrey | '''[[Arrondissement de Vervins]]'''
+|---
+|[[Canton d'Aubenton|Aubenton]] || align=center | 02 02 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton d'Aubenton#Composition|13]] ||align=center |156,86|| align=center | {{formatnum:3232}} || align=center | 20,60
+|---
+|[[Canton de La Capelle|La Capelle]] || align=center | 02 05 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center | [[Canton de La Capelle#Composition|18]] ||align=center |192,68 || align=center | {{formatnum:8011}} || align=center | 41,58
+|---
+|[[Canton de Guise|Guise]] || align=center | 02 16 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton de Guise#Composition|19]] ||align=center |192,38|| align=center | {{formatnum:10915}} || align=center | 56,74
+|---
+|[[Canton d'Hirson|Hirson]] || align=center | 02 17 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton d'Hirson#Composition|13]] ||align=center |192,33|| align=center | {{formatnum:18907}} || align=center | 98,30
+|---
+|[[Canton du Nouvion-en-Thiérache|Nouvion-en-Thiérache]] || align=center | 02 23|| align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center | [[Canton de Nouvion-en-Thiérache#Composition|9]] ||align=center | 139,24 || align=center | {{formatnum:6717}} || align=center | 48,24
+|---
+|[[Canton de Sains-Richaumont|Sains-Richaumont]] || align=center | 02 27|| align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton de Sains-Richaumont#Composition|19]] ||align=center |171,88|| align=center | {{formatnum:4398}} || align=center | 25,59
+|---
+|[[Canton de Vervins|Vervins]] || align=center | 02 34 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center  | [[Canton de Vervins#Composition|24]] ||align=center |232,33 || align=center | {{formatnum:8162}} || align=center | 35,13
+|---
+|[[Canton de Wassigny|Wassigny]] || align=center | 02 37 || align=center | [[Troisième circonscription de l'Aisne|3]] ||align=center| [[Canton de Wassigny#Composition|15]] ||align=center| 122,91 || align=center | {{formatnum:6656}} || align=center | 54,15
+|---
+|}
+
+== Notes et références ==
+{{À compléter}}
+{{Références}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Communes de l'Aisne]]
+* [[Redécoupage cantonal de 2014 en France]]
+
+=== Bibliographie ===
+* {{Ouvrage|prénom1=Louis-Marie|nom1=Prudhomme|lien auteur1=Louis-Marie Prudhomme|titre=Dictionnaire géographique et méthodique de la République française en CXX départemens|volume=I|lieu=Paris|éditeur=Louis-Marie Prudhomme|année=1798|pages totales=673|oclc=715881089|lire en ligne=https://books.google.fr/books?id=5F0OAAAAQAAJ&printsec=frontcover}}
+* {{Ouvrage |langue=fr |auteur1=[[Jean-Louis Masson (homme politique, 1947)|Jean-Louis Masson]] |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926 |id=Masson}}
+
+{{Portail|Aisne}}
+
+[[Catégorie:Canton dans l'Aisne|*]]
+[[Catégorie:Liste de cantons français|*]]
+[[Catégorie:Liste en rapport avec l'Aisne|Cantons]]

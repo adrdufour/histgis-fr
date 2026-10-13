@@ -1,0 +1,158 @@
+[[Fichier:48-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Lozère, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] de la [[Lozère (département)|Lozère]]''' compte 13 [[Canton français|cantons]] à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Auparavant ce nombre était de 25 depuis 1982.
+
+== Histoire ==
+[[Fichier:Anciens cantons de la Lozère.png|vignette|Cartes des cantons de la Lozère avant 2015]]
+
+=== Découpage cantonal de 1801 à 2015  ===
+[[Image:ArrondissementsDeLozere.svg|thumb|right|Les arrondissements de la Lozère et le découpage cantonal d'avant 2015.]]
+
+*1801<ref>Arrêté du 5 Brumaire an X (27 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f319 p. 331]</ref> : Découpage d'origine
+*1803<ref>Arrêté du 29 Thermidor an XI (17 août 1803), ''Bulletin des lois'', an XI (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6543685m/f1011 n° 314bis]</ref> : Le chef-lieu du [[canton de Saint-Alban-sur-Limagnole|canton de Saint-Alban]] est transféré à [[Serverette]].
+*1827<ref>Ordonnance du 1er septembre 1827, ''Bulletin des lois'', 1827 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6525871b/f334 p. 294]</ref> : Le chef-lieu du canton de [[Chirac (Lozère)|Chirac]] est transféré à [[canton de Saint-Germain-du-Teil|Saint-Germain-du-Teil]].
+*1839<ref>Ordonnance du 11 août 1839, ''Bulletin des lois'', 1839 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486421p/f356 p. 326]</ref> : Le chef-lieu du canton de [[Saint-Georges-de-Lévéjac]] est transféré à [[Canton du Massegros|Massegros]].
+*1897<ref>Décret du 9 mars 1897, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=13%2F03%2F1897+%3E+13%2F03%2F1897 ''JORF'', 13 mars 1897], p. 1514</ref> : Le chef-lieu du canton de [[Serverette]] est transféré à [[Canton de Saint-Alban-sur-Limagnole|Saint-Alban]].
+*1982<ref name="Decret1982">{{Lien web |url=http://www.legifrance.gouv.fr//jo_pdf.do?cidTexte=JORFTEXT000000880645 |titre= Décret n°82-30 du 15 janvier 1982|auteur= |date = |site =Légifrance|consulté le= 20 mai 2014}}, création et modification de cantons dans le département de la Lozère (Mende).</ref> : Le [[canton de Mende]] est scindé en deux nouveaux cantons [[Canton de Mende-Sud|Mende-Sud]] et [[Canton de Mende-Nord|Mende-Nord]].
+
+
+Depuis 1982, le département de la [[Lozère (département)|Lozère]] comprenait 25 cantons. La répartition par arrondissement était la suivante :
+
+Liste des 25 cantons de la [[Lozère (département)|Lozère]], par arrondissement :
+{| class="wikitable centre"
+|Arrondissement de [[Arrondissement de Florac|Florac]] (7 cantons)
+|[[canton de Barre-des-Cévennes]] - [[canton de Florac]] - [[canton du Massegros]] - [[canton de Meyrueis]] - [[canton du Pont-de-Montvert]] - [[canton de Sainte-Enimie]] - [[canton de Saint-Germain-de-Calberte]]
+|-
+|Arrondissement de [[Arrondissement de Mende|Mende]] (18 cantons)
+|[[canton d'Aumont-Aubrac]] - [[canton du Bleymard]] - [[canton de la Canourgue]] - [[canton de Chanac]] - [[canton de Châteauneuf-de-Randon]] - [[canton de Fournels]] - [[canton de Grandrieu]] - [[canton de Langogne]] - [[canton du Malzieu-Ville]] - [[canton de Marvejols]] - [[canton de Mende-Nord]] - [[canton de Mende-Sud]] - [[canton de Nasbinals]] - [[canton de Saint-Alban-sur-Limagnole]] - [[canton de Saint-Amans]] - [[canton de Saint-Chély-d'Apcher]] - [[canton de Saint-Germain-du-Teil]] - [[canton de Villefort]]
+|}
+
+==== Homonymies ====
+
+Les cantons de [[canton de Saint-Amans|Saint-Amans]] et de [[canton de Villefort|Villefort]] n'ont pas d'homonyme, mais les communes [[chef-lieu|chefs-lieux]] sont chacune homonymes, exactes ou partielles, d'une ou plusieurs autres localités.
+
+=== Découpage cantonal à partir de 2015 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|25 février 2014}} pour le département de la [[Lozère (département)|Lozère]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 12.5 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Lozère (département)|Lozère]] le nombre de cantons passe ainsi de 25 à 13<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661432 |texte=Décret {{n°|2014}}-245 du 25 février 2014}} portant délimitation des cantons dans le département de la Lozère.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =Conseil constitutionnel|consulté le= 20 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Lozère, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|77082|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=48 |titre= Chiffres clés Évolution et structure de la population - Département de la Lozère (48) |auteur= |date = |site =insee.fr |consulté le= 20 mai 2014}}.</ref>. Avec 13 cantons la population moyenne par conseiller départemental est de {{unité|5929|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|4744|habitants}} et {{unité|7115|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+==== Décret de 2020 ====
+À la suite de la création dans la [[Lozère (département)|Lozère]], à partir de 2015, de plusieurs [[communes nouvelles]], la liste des communes de plusieurs cantons est modifiée et trois d'entre eux sont renommés par un décret du {{date-|05/03/2020}}<ref>{{Légifrance|base=JORF|numéro= INTA2001146D|texte=Décret n° 2020-206 du 5 mars 2020}}, modifiant le décret n° 2014-245 du 25 février 2014 portant délimitation des cantons dans le département de la Lozère.</ref>.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+!scope=col|Localisation dans le département
+|-
+|1 || [[Canton de Peyre en Aubrac|Peyre en Aubrac]] || [[Peyre en Aubrac]] ||{{formatnum:{{Population de France/dernière_pop||Canton de Peyre  en Aubrac}}}} <small>({{Population de France/dernière_année||Canton de Peyre en Aubrac}})</small>|| 25 || [[Albaret-le-Comtal]], [[Arzenc-d'Apcher]], [[Les Bessons]], [[Brion (Lozère)|Brion]], [[Le Buisson (Lozère)|Le Buisson]], [[Chauchailles]], [[La Fage-Montivernoux]], [[La Fage-Saint-Julien]], [[Fournels]], [[Grandvals]], [[Les Hermaux]], [[Marchastel (Lozère)|Marchastel]], [[Les Monts-Verts]], [[Nasbinals]], [[Noalhac]], [[Peyre en Aubrac]], [[Prinsuéjols-Malbouzon]], [[Recoules-d'Aubrac]], [[Saint-Juéry (Lozère)|Saint-Juéry]], [[Saint-Laurent-de-Muret]], [[Saint-Laurent-de-Veyrès]], [[Saint-Pierre-de-Nogaret]], [[Les Salces]], [[Termes (Lozère)|Termes]], [[Trélans]].
+|[[File:Lozère - Canton Aumont-Aubrac 2015.svg|vignette]]
+|-
+|2 || [[Canton de la Canourgue|La Canourgue]] || [[La Canourgue]] ||{{formatnum:{{Population de France/dernière_pop||Canton de la Canourgue}}}} <small>({{Population de France/dernière_année||Canton de la Canourgue}})</small>|| 8 || [[Banassac-Canilhac]], [[La Canourgue]], [[Chanac]], [[Laval-du-Tarn]], [[La Malène]], [[Massegros Causses Gorges]], [[Saint-Saturnin (Lozère)|Saint-Saturnin]], [[La Tieule]].
+|[[File:Lozère - Canton La Canourgue 2015.svg|vignette]]
+|-
+|3 || [[Canton de Bourgs sur Colagne|Bourgs sur Colagne]] || [[Bourgs sur Colagne]] ||{{formatnum:{{Population de France/dernière_pop||Canton de Bourgs sur Colagne}}}} <small>({{Population de France/dernière_année||Canton de Bourgs sur Colagne}})</small>|| 12 || [[Balsièges]], [[Barjac (Lozère)|Barjac]], [[Bourgs-sur-Colagne]], [[Cultures]], [[Esclanèdes]], [[Gabrias]], [[Grèzes (Lozère)|Grèzes]], [[Montrodat]], [[Palhers]], [[Saint-Bonnet-de-Chirac]], [[Saint-Germain-du-Teil]], [[Les Salelles (Lozère)|Les Salelles]].
+|[[File:Lozère - Canton Chirac 2015.svg|vignette]]
+|-
+|4 || [[Canton du Collet-de-Dèze|Le Collet-de-Dèze]] || [[Le Collet-de-Dèze]] ||{{formatnum:{{Population de France/dernière_pop||Canton du Collet-de-Dèze}}}} <small>({{Population de France/dernière_année||Canton du Collet-de-Dèze}})</small>|| 23 || [[Barre-des-Cévennes]], [[Bassurels]], [[Cans-et-Cévennes]], [[Cassagnas]], [[Le Collet-de-Dèze]], [[Fraissinet-de-Fourques]], [[Gabriac (Lozère)|Gabriac]], [[Moissac-Vallée-Française]], [[Molezon]], [[Le Pompidou]], [[Rousses]], [[Saint-André-de-Lancize]], [[Saint-Étienne-Vallée-Française]], [[Saint-Germain-de-Calberte]], [[Saint-Hilaire-de-Lavit]], [[Saint-Julien-des-Points]], [[Saint-Martin-de-Boubaux]], [[Saint-Martin-de-Lansuscle]], [[Saint-Michel-de-Dèze]], [[Saint-Privat-de-Vallongue]], [[Sainte-Croix-Vallée-Française]], [[Vebron]], [[Ventalon-en-Cévennes]].
+|[[File:Lozère - Canton Le Collet-de-Dèze 2015.svg|vignette]]
+|-
+|5 || [[Canton de Florac Trois Rivières|Florac Trois Rivières]] || [[Florac Trois Rivières]] ||{{formatnum:{{Population de France/dernière_pop||Canton de Florac Trois Rivières}}}} <small>({{Population de France/dernière_année||Canton de Florac Trois Rivières}})</small>|| 9 || [[Florac Trois Rivières]], [[Gatuzières]], [[Gorges du Tarn Causses]], [[Hures-la-Parade]], [[Ispagnac]], [[Mas-Saint-Chély]], [[Meyrueis]], [[Le Rozier]], [[Saint-Pierre-des-Tripiers]].
+|[[File:Lozère - Canton Florac 2015.svg|vignette]]
+|-
+|6 || [[Canton de Grandrieu|Grandrieu]] || [[Grandrieu (Lozère)|Grandrieu]] || {{formatnum:{{Population de France/dernière_pop||Canton de Grandrieu}}}} <small>({{Population de France/dernière_année||Canton de Grandrieu}})</small> || 19 || [[Allenc]], [[Arzenc-de-Randon]], [[Badaroux]], [[Bel-Air-Val-d'Ance]], [[Le Born (Lozère)|Le Born]], [[Chadenet]], [[Châteauneuf-de-Randon]], [[Chaudeyrac]], [[Grandrieu (Lozère)|Grandrieu]], [[Laubert]], [[Montbel (Lozère)|Montbel]], [[La Panouse]], [[Pelouse (Lozère)|Pelouse]], [[Pierrefiche (Lozère)|Pierrefiche]], [[Saint-Frézal-d'Albuges]], [[Saint-Jean-la-Fouillouse]], [[Saint-Paul-le-Froid]], [[Saint-Sauveur-de-Ginestoux|Saint-Sauveur-de-Ginestroux]], [[Sainte-Hélène (Lozère)|Sainte-Hélène]].
+|[[File:Lozère - Canton Grandrieu 2015.svg|vignette]]
+|-
+|7 || [[Canton de Langogne|Langogne]] || [[Langogne]] || {{formatnum:{{Population de France/dernière_pop||Canton de Langogne}}}} <small>({{Population de France/dernière_année||Canton de Langogne}})</small> || 9 || [[Auroux (Lozère)|Auroux]], [[Chastanier]], [[Cheylard-l'Évêque]], [[Langogne]], [[Luc (Lozère)|Luc]], [[Naussac-Fontanes]], [[Rocles (Lozère)|Rocles]], [[Saint-Bonnet-Laval]], [[Saint-Flour-de-Mercoire]].
+|[[File:Lozère - Canton Langogne 2015.svg|vignette]]
+|-
+|8 || [[Canton de Marvejols|Marvejols]] || [[Marvejols]] || {{formatnum:{{Population de France/dernière_pop||Canton de Marvejols}}}} <small>({{Population de France/dernière_année||Canton de Marvejols}})</small> || 5 || [[Antrenas]], [[Lachamp-Ribennes]], [[Marvejols]], [[Recoules-de-Fumas]], [[Saint-Léger-de-Peyre]].
+|[[File:Lozère - Canton Marvejols 2015.svg|vignette]]
+|-
+|9 || [[Canton de Mende-1|Mende-1]] || [[Mende (Lozère)|Mende]] || {{formatnum:{{Population de France/dernière_pop||Canton de Mende-1}}}} <small>({{Population de France/dernière_année||Canton de Mende-1}})</small> || Fraction de Mende || Partie de la commune de Mende située au nord du cours du Lot, depuis la limite territoriale de la commune de Balsièges, jusqu'à la limite territoriale de la commune de Badaroux.
+|[[File:Lozère - Canton Mende-1 2015.svg|vignette]]
+|-
+|10 || [[Canton de Mende-2|Mende-2]] || [[Mende (Lozère)|Mende]] || {{formatnum:{{Population de France/dernière_pop||Canton de Mende-2}}}} <small>({{Population de France/dernière_année||Canton de Mende-2}})</small> || Fraction de Mende || Partie de la commune de Mende non incluse dans le canton de Mende-1.
+|[[File:Lozère - Canton Mende-2 2015.svg|vignette]]
+|-
+|11 || [[Canton de Saint-Alban-sur-Limagnole|Saint-Alban-sur-Limagnole]] || [[Saint-Alban-sur-Limagnole]] || {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Alban-sur-Limagnole}}}} <small>({{Population de France/dernière_année||Canton de Saint-Alban-sur-Limagnole}})</small> || 17 || [[Chastel-Nouvel]], [[Chaulhac]], [[Fontans]], [[Julianges]], [[Lajo]], [[Les Laubies]], [[Le Malzieu-Forain]], [[Le Malzieu-Ville]], [[Monts-de-Randon]], [[Paulhac-en-Margeride]], [[Saint-Alban-sur-Limagnole]], [[Saint-Denis-en-Margeride]], [[Saint-Gal]], [[Saint-Léger-du-Malzieu]], [[Saint-Privat-du-Fau]], [[Sainte-Eulalie (Lozère)|Sainte-Eulalie]], [[Serverette]].
+|[[File:Lozère - Canton Saint-Alban-sur-Limagnole 2015.svg|vignette]]
+|-
+|12 || [[Canton de Saint-Chély-d'Apcher|Saint-Chély-d'Apcher]] || [[Saint-Chély-d'Apcher]] || {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Chély-d'Apcher}}}} <small>({{Population de France/dernière_année||Canton de Saint-Chély-d'Apcher}})</small> || 6 || [[Albaret-Sainte-Marie]], [[Blavignac]], [[Prunières (Lozère)|Prunières]], [[Rimeize (Lozère)|Rimeize]], [[Saint-Chély-d'Apcher]], [[Saint-Pierre-le-Vieux (Lozère)|Saint-Pierre-le-Vieux]].
+|[[File:Lozère - Canton Saint-Chély-d'Apcher 2015.svg|vignette]]
+|-
+|13 || [[Canton de Saint-Étienne-du-Valdonnez|Saint-Étienne-du-Valdonnez]] || [[Saint-Étienne-du-Valdonnez]] || {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Étienne-du-Valdonnez}}}} <small>({{Population de France/dernière_année||Canton de Saint-Étienne-du-Valdonnez}})</small> || 18 || [[Altier (Lozère)|Altier]], [[La Bastide-Puylaurent]], [[Bédouès-Cocurès]], [[Les Bondons]], [[Brenoux]], [[Cubières (Lozère)|Cubières]], [[Cubiérettes]], [[Lanuéjols (Lozère)|Lanuéjols]], [[Mont Lozère et Goulet]], [[Pied-de-Borne]], [[Pont-de-Montvert-Sud-Mont-Lozère]], [[Pourcharesses]], [[Prévenchères]], [[Saint-André-Capcèze]], [[Saint-Bauzile (Lozère)|Saint-Bauzile]], [[Saint-Étienne-du-Valdonnez]], [[Vialas]], [[Villefort (Lozère)|Villefort]].
+|[[File:Lozère - Canton Saint-Étienne-du-Valdonnez 2015.svg|vignette]]
+|-
+!||||||{{formatnum:{{Population de France/dernière_pop||Lozère (département)}}}} <small>({{Population de France/dernière_année||Lozère (département)}})</small>||152||||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Lozère (département)|Lozère]], c'est le cas de deux cantons ([[Canton de la Canourgue|La Canourgue]] et [[Canton de Saint-Étienne-du-Valdonnez|Saint-Étienne-du-Valdonnez]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Florac|Florac]]
+!scope=col|[[Arrondissement de Mende|Mende]]
+!scope=col|Total
+|-
+|1||align="left"| Peyre en Aubrac||||25||'''25'''
+|-
+|2||align="left"| La Canourgue||2||6||'''8'''
+|-
+|3||align="left"| Bourgs sur Colagne||||12||'''12'''
+|-
+|4||align="left"| Le Collet-de-Dèze||23||||'''23'''
+|-
+|5||align="left"| Florac Trois Rivières||9||||'''9'''
+|-
+|6||align="left"| Grandrieu||||19||'''19'''
+|-
+|7||align="left"| Langogne||||9||'''9'''
+|-
+|8||align="left"| Marvejols||||5||'''5'''
+|-
+|9||align="left"| Mende-1||||Fraction de Mende||'''Fraction de Mende'''
+|-
+|10||align="left"| Mende-2||||Fraction de Mende||'''Fraction de Mende'''
+|-
+|11||align="left"| Saint-Alban-sur-Limagnole||||17||'''17'''
+|-
+|12||align="left"| Saint-Chély-d'Apcher||||6||'''6'''
+|-
+|13||align="left"| Saint-Étienne-du-Valdonnez||4||14||'''18'''
+|-
+!||||38||114||152
+|}
+
+== Notes et références ==
+===Références===
+{{Références}}
+
+== Voir aussi ==
+=== Articles connexes ===
+
+* [[Arrondissements de la Lozère]]
+* [[Conseil départemental de la Lozère]]
+* [[Liste des anciennes communes de la Lozère]]
+* [[Liste des communes de la Lozère]]
+* [[Liste des conseillers départementaux de la Lozère]]
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de France|Cantons de la Lozère}}
+{{Portail|Lozère}}
+
+[[Catégorie:Canton en Lozère|*]]
+[[Catégorie:Liste de cantons français|Lozère]]
+[[Catégorie:Liste en rapport avec la Lozère|Cantons]]

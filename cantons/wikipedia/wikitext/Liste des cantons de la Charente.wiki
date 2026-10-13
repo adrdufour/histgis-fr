@@ -1,0 +1,154 @@
+[[Fichier:16-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Charente, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] de la [[Charente (département)|Charente]]''' compte 19 [[Canton français|cantons]] depuis 2015. Avant l'entrée en vigueur du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], le département comptait 35 cantons.
+
+== Histoire ==
+=== Découpage cantonal avant 2015 ===
+
+*[[Fichier:Anciens cantons de la Charente.png|vignette|Carte des cantons de la Charente avant le redécoupage de 2014]]1801<ref>Arrêté du 5 Brumaire an X (27 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f303 p.283]</ref> : découpage d'origine
+*1802<ref>Arrêté du 9 Pluviôse an X (29 janvier 1802), ''Bulletin des lois'', an XI (1er semestre) n°228bis [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f192 p.2]</ref> : Le canton de Confolens est scindé en deux cantons [[canton de Confolens-Nord|Confolens-Nord]] et [[canton de Confolens-Sud|-Sud]]
+*1863<ref>Loi du 16 mai 1863, ''Bulletin des lois'' 1863 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bd6t5403203c/f935.item p. 903]</ref> : Modification de la limite infracommunale entre les deux cantons d'Angoulême.
+*1948<ref>Décret du 26 octobre 1948, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=28%2F10%2F1948+%3E+28%2F10%2F1948 ''JORF'' 28 octobre 1948], p. 10472</ref> : La commune de [[Taponnat-Fleurignac|Taponnat]] est transférée du [[canton de Montembœuf]] au [[canton de La Rochefoucauld]].
+*1973<ref>Décret n° 73-654 du 13 juillet 1973</ref> :
+**Le canton de Cognac est scindé en deux nouveaux cantons [[canton de Cognac-Nord|Cognac-Nord]] et [[Canton de Cognac-Sud|-Sud]];
+**Création des cantons de [[Canton de la Couronne|La Couronne]], [[Canton de Ruelle-sur-Touvre|Ruelle]] et [[canton de Soyaux|Soyaux]], détachés des deux cantons d'Angoulême, qui sont renommés Angoulême-Ville-I, Angoulême-Ville-II.
+*1982<ref name="Decret1982">{{Lien web |url=http://www.legifrance.gouv.fr//jo_pdf.do?cidTexte=JORFTEXT000000332886 |titre= Décret n°82-25 du 15 janvier 1982 modification et création de cantons dans le département de la Charente (Angouleme et Ruelle)  |date = |site =legifrance.gouv.fr |consulté le= 2 mai 2014}}.</ref> : 
+**Les cantons d'Angoulême-Ville-I et Angoulême-Ville-II sont remplacés par trois nouveaux cantons [[canton d'Angoulême-Est|Angoulême-Est]], [[canton d'Angoulême-Ouest|-Ouest]] et [[canton d'Angoulême-Nord|-Nord]]
+**Création du [[Canton de Gond-Pontouvre|canton du Gond-Pontouvre]], détaché du [[Canton de Ruelle-sur-Touvre|canton de Ruelle]].
+
+
+Liste des 35 anciens [[canton français|cantons]] de la [[Charente (département)|Charente]], par [[Arrondissement français|arrondissement]] :
+[[Image:Cantons16.svg|thumb|350px|Arrondissements et cantons de la Charente après la réforme de 2008]]
+{| class="wikitable centre"
+|[[Arrondissement d'Angoulême]]
+|16 cantons
+|[[Canton d'Angoulême-Est|Angoulême-Est]] - [[Canton d'Angoulême-Nord|Angoulême-Nord]] - [[Canton d'Angoulême-Ouest|Angoulême-Ouest]] - [[Canton d'Aubeterre-sur-Dronne|Aubeterre-sur-Dronne]] - [[Canton de Blanzac-Porcheresse|Blanzac-Porcheresse]] - [[Canton de Chalais|Chalais]] - [[Canton de La Couronne|La Couronne]] - [[Canton de Gond-Pontouvre|Gond-Pontouvre]] - [[Canton de Hiersac|Hiersac]] - [[Canton de Montbron|Montbron]] - [[Canton de Montmoreau-Saint-Cybard|Montmoreau-Saint-Cybard]] - [[Canton de La Rochefoucauld|La Rochefoucauld]] - [[Canton de Ruelle-sur-Touvre|Ruelle-sur-Touvre]] - [[Canton de Saint-Amant-de-Boixe|Saint-Amant-de-Boixe]] - [[Canton de Soyaux|Soyaux]] - [[Canton de Villebois-Lavalette|Villebois-Lavalette]]
+|-
+|[[Arrondissement de Cognac]]
+|9 cantons
+|[[Canton de Baignes-Sainte-Radegonde|Baignes-Sainte-Radegonde]] - [[Canton de Barbezieux-Saint-Hilaire|Barbezieux-Saint-Hilaire]] - [[Canton de Brossac|Brossac]] - [[Canton de Châteauneuf-sur-Charente|Châteauneuf-sur-Charente]] - [[Canton de Cognac-Nord|Cognac-Nord]] - [[Canton de Cognac-Sud|Cognac-Sud]] - [[Canton de Jarnac|Jarnac]] - [[Canton de Rouillac|Rouillac]] - [[Canton de Segonzac|Segonzac]]
+|-
+|[[Arrondissement de Confolens]]
+|10 cantons 
+| [[Canton d'Aigre|Aigre]] - [[Canton de Chabanais|Chabanais]] - [[Canton de Champagne-Mouton|Champagne-Mouton]] - [[Canton de Confolens-Nord|Confolens-Nord]] - [[Canton de Confolens-Sud|Confolens-Sud]] - [[Canton de Mansle|Mansle]] - [[Canton de Montembœuf|Montembœuf]] - [[Canton de Ruffec|Ruffec]] - [[Canton de Saint-Claud|Saint-Claud]] - [[Canton de Villefagnan|Villefagnan]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 9 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|20 février 2014}} pour le département de la [[Charente (département)|Charente]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Charente (département)|Charente]] le nombre de cantons passe ainsi de 35 à 19<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028638343 Décret {{n°|2014}}-195 du 20 février 2014 portant délimitation des cantons dans le département de la Charente], sur ''Légifrance'' (consulté le 9 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =le site du [[Conseil constitutionnel (France)|Conseil constitutionnel]] |consulté le= 9 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Charente, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|351577|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=16 |titre= Chiffres clés Évolution et structure de la population - Département de la Charente (16) |date = |site =insee.fr |consulté le= 9 mai 2014}}.</ref>. Avec 19 cantons la population moyenne par conseiller départemental est de {{unité|18504|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|14803|habitants}} et {{unité|22205|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable alternance"  
+|-----
+!N°<ref>N° = numéro d'ordre dans le décret</ref>||Nom du Canton||[[Bureau centralisateur]]||Population 2012<ref>[http://www.insee.fr/fr/themes/detail.asp?reg_id=0&ref_id=cantons-2015 Populations légales 2012 des cantons - découpage 2015], publié par l'INSEE.</ref>||Écart /moyenne||Nombre de communes entières||Communes composant le canton
+|- 
+|1||[[Canton d'Angoulême-1|Angoulême-1]]||[[Angoulême]]||{{formatnum:21864}}|| ||1 + fraction Angoulême||1° La commune : [[Fléac]]. <br/>2° La partie de la commune d'Angoulême située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Saint-Yrieix-sur-Charente, cours de la Charente, pont Saint-Cybard, rue de Bordeaux, avenue de Cognac, rue Léonard-Jarraud, rue de la Corderie, place Perrot, rue de Montmoreau, voie de l'Europe jusqu'à l'intersection de la rue Pierre-Grenet, rue Pierre-Grenet, ligne droite dans le prolongement de la rue Pierre-Grenet jusqu'à l'intersection du boulevard de Bigorre et de la rue du Petit-Montbron, chemin des Eaux-Claires au pont Valto, jusqu'à la limite territoriale de la commune de la Couronne.
+|-
+|2||[[Canton d'Angoulême-2|Angoulême-2]]||[[Angoulême]]||{{formatnum:16149}}|| ||1 + fraction Angoulême||1° La commune : [[l'Isle-d'Espagnac]]. <br/>2° La partie de la commune d'Angoulême située au nord d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Saint-Yrieix-sur-Charente, cours de la Charente, pont Saint-Cybard, rue de Bordeaux, avenue de Cognac, rue Léonard-Jarraud, rue de la Corderie, place Perrot, avenue Gambetta, boulevard de la République, place Victor-Hugo (incluse), boulevard René-Chabasse (exclu), boulevard René-Liédot (exclu), boulevard Chanzy (inclus), rue d'Angoulême-à-Grapillet (exclu), jusqu'à la limite territoriale de la commune de Soyaux.
+|-
+|3||[[Canton d'Angoulême-3|Angoulême-3]]||[[Angoulême]]||{{formatnum:22451}}|| ||1 + fraction Angoulême||1° La commune : [[Soyaux]]. <br/>2° La partie de la commune d'Angoulême non incluse dans les cantons d'Angoulême-1 et d'Angoulême-2.
+|-
+|4||[[Canton de Boëme-Échelle|Boëme-Échelle]]||[[Roullet-Saint-Estèphe]]||{{formatnum:17899}}||0,94||13||[[Bouëx]], [[Claix (Charente)|Claix]], [[Dignac]], [[Dirac (Charente)|Dirac]], [[Garat (Charente)|Garat]], [[Mouthiers-sur-Boëme]], [[Plassac-Rouffiac]], [[Roullet-Saint-Estèphe]], [[Sers (Charente)|Sers]], [[Torsac]], [[Vœuil-et-Giget]], [[Voulgézac]], [[Vouzan]].
+|-
+|5||[[Canton de Boixe-et-Manslois|Boixe-et-Manslois]]||[[Vars (Charente)|Vars]]||{{formatnum:17536}}||0,93||36||[[Ambérac]], [[Anais (Charente)|Anais]], [[Aunac-sur-Charente]], [[Aussac-Vadalle]], [[La Boixe]], [[Cellefrouin]], [[Cellettes (Charente)|Cellettes]], [[La Chapelle (Charente)|La Chapelle]], [[Chenon]], [[Coulonges (Charente)|Coulonges]], [[Fontenille (Charente)|Fontenille]], [[Juillé (Charente)|Juillé]], [[Lichères]], [[Lonnes]], [[Luxé]], [[Maine-de-Boixe]], [[Mansle-les-Fontaines]], [[Mouton (Charente)|Mouton]], [[Nanclars]], [[Puyréaux]], [[Saint-Amant-de-Boixe]], [[Saint-Ciers-sur-Bonnieure]], [[Saint-Front (Charente)|Saint-Front]], [[Saint-Groux]], [[La Tâche (Charente)|La Tâche]], [[Tourriers]], [[Val-de-Bonnieure]], [[Valence (Charente)|Valence]], [[Val-de-Bonnieure]], [[Ventouse (Charente)|Ventouse]], [[Vervant (Charente)|Vervant]], [[Villejoubert]], [[Villognon]], [[Vouharte]], [[Xambes]].
+|-
+|6||[[Canton de Charente-Bonnieure|Charente-Bonnieure]]||[[Chasseneuil-sur-Bonnieure]]||{{formatnum:17321}}||0,93||32||[[Alloue]], [[Beaulieu-sur-Sonnette]], [[Benest]], [[Le Bouchage (Charente)|Le Bouchage]], [[Champagne-Mouton]], [[Chasseneuil-sur-Bonnieure]], [[Chassiecq]], [[Cherves-Châtelars]], [[Le Grand-Madieu]], [[Lésignac-Durand]], [[Le Lindois]], [[Lussac (Charente)|Lussac]], [[Massignac]], [[Mazerolles (Charente)|Mazerolles]], [[Montembœuf]], [[Mouzon (Charente)|Mouzon]], [[Nieuil]], [[Parzac]], [[Les Pins]], [[Roussines (Charente)|Roussines]], [[Saint-Claud]], [[Saint-Coutant (Charente)|Saint-Coutant]], [[Saint-Laurent-de-Céris]], [[Saint-Mary (Charente)|Saint-Mary]], [[Sauvagnac]], [[Suaux]], [[Terres-de-Haute-Charente]], [[Turgon (Charente)|Turgon]], [[Verneuil (Charente)|Verneuil]], [[Le Vieux-Cérier]], [[Vieux-Ruffec]], [[Vitrac-Saint-Vincent]].
+|-
+|7||[[Canton de Charente-Champagne|Charente-Champagne]]||[[Segonzac (Charente)|Segonzac]]||{{formatnum:17191}}||0,93||21|| [[Angeac-Champagne]], [[Angeac-Charente]], [[Bellevigne]], [[Birac (Charente)|Birac]], [[Bonneuil (Charente)|Bonneuil]], [[Bouteville]], [[Châteauneuf-sur-Charente]], [[Criteuil-la-Magdeleine]], [[Gensac-la-Pallue]], [[Genté]], [[Graves-Saint-Amant]], [[Juillac-le-Coq]], [[Lignières-Ambleville]], [[Mosnac-Saint-Simeux]], [[Saint-Fort-sur-le-Né]], [[Saint-Preuil]], [[Saint-Simon (Charente)|Saint-Simon]], [[Salles-d'Angles]], [[Segonzac (Charente)|Segonzac]], [[Verrières (Charente)|Verrières]], [[Vibrac (Charente)|Vibrac]].
+|-
+|8||[[Canton de Charente-Nord|Charente-Nord]]||[[Ruffec (Charente)|Ruffec]]||{{formatnum:18924}}||1,04||46||[[Les Adjots]], [[Aigre (Charente)|Aigre]], [[Barbezières]], [[Barro (Charente)|Barro]], [[Bernac (Charente)|Bernac]], [[Bessé]], [[Bioussac]], [[Brettes]], [[Charmé]], [[La Chèvrerie]], [[Condac]], [[Courcôme]], [[Couture (Charente)|Couture]], [[Ébréon]], [[Empuré]], [[La Faye]], [[La Forêt-de-Tessé]], [[Fouqueure]], [[Les Gours]], [[Ligné (Charente)|Ligné]], [[Londigny]], [[Longré]], [[Lupsault]], [[La Magdeleine]], [[Montjean (Charente)|Montjean]], [[Nanteuil-en-Vallée]], [[Oradour (Charente)|Oradour]], [[Paizay-Naudouin-Embourie]], [[Poursac]], [[Raix]], [[Ranville-Breuillaud]], [[Ruffec (Charente)|Ruffec]], [[Saint-Fraigne]], [[Saint-Georges (Charente)|Saint-Georges]], [[Saint-Gourson]], [[Saint-Martin-du-Clocher]], [[Saint-Sulpice-de-Ruffec]], [[Salles-de-Villefagnan]], [[Souvigné (Charente)|Souvigné]], [[Taizé-Aizie]], [[Theil-Rabier]], [[Tusson]], [[Verdille]], [[Verteuil-sur-Charente]], [[Villefagnan]], [[Villiers-le-Roux]].
+|-
+|9||[[Canton de Charente-Sud|Charente-Sud]]||[[Barbezieux-Saint-Hilaire]]||{{formatnum:20115}}||1,07||40||[[Angeduc]], [[Baignes-Sainte-Radegonde]], [[Barbezieux-Saint-Hilaire]], [[Barret]], [[Bécheresse]], [[Berneuil (Charente)|Berneuil]], [[Boisbreteau]], [[Bors (canton de Charente-Sud)|Bors]], [[Brie-sous-Barbezieux]], [[Brossac]], [[Challignac]], [[Champagne-Vigny]], [[Chantillac]], [[Chillac]], [[Condéon]], [[Coteaux-du-Blanzacais]], [[Étriac]], [[Guimps]], [[Guizengeard]], [[Lachaise]], [[Ladiville]], [[Lagarde-sur-le-Né]], [[Montmérac]], [[Oriolles]], [[Passirac]], [[Pérignac (Charente)|Pérignac]], [[Reignac (Charente)|Reignac]], [[Saint-Aulais-la-Chapelle]], [[Saint-Bonnet]], [[Saint-Félix (Charente)|Saint-Félix]], [[Saint-Médard (Charente)|Saint-Médard]], [[Saint-Palais-du-Né]], [[Saint-Vallier (Charente)|Saint-Vallier]], [[Sainte-Souline]], [[Salles-de-Barbezieux]], [[Sauvignac]], [[Le Tâtre]], [[Touvérac]], [[Val des Vignes]], [[Vignolles]].
+|-
+|10||[[Canton de Charente-Vienne|Charente-Vienne]]||[[Confolens]]||{{formatnum:19028}}||1,04||27||[[Abzac (Charente)|Abzac]], [[Ambernac]], [[Ansac-sur-Vienne]], [[Brigueuil]], [[Brillac]], [[Chabanais]], [[Chabrac]], [[Chassenon]], [[Chirac (Charente)|Chirac]], [[Confolens]], [[Épenède]], [[Esse]], [[Étagnac]], [[Exideuil]], [[Hiesse]], [[Lessac]], [[Lesterps]], [[Manot]], [[Montrollet]], [[Oradour-Fanais]], [[Pleuville]], [[Pressignac]], [[Saint-Christophe (Charente)|Saint-Christophe]], [[Saint-Maurice-des-Lions]], [[Saint-Quentin-sur-Charente]], [[Saulgond]], [[Terres-de-Haute-Charente]].
+|-
+|11||[[Canton de Cognac-1|Cognac-1]]||[[Cognac (Charente)|Cognac]]||{{formatnum:16797}}|| ||6 + fraction Cognac||1° Les communes suivantes : [[Boutiers-Saint-Trojan]], [[Bréville (Charente)|Bréville]], [[Louzac-Saint-André]], [[Mesnac]], [[Saint-Brice (Charente)|Saint-Brice]], [[Val-de-Cognac]]. <br/>2° La partie de la commune de Cognac située au nord d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Javrezac, avenue de Saintes, boulevard de Javrezac, rue de la Croix-Montamette, rue de Crouin, boulevard Oscar-Planat, cours de la Charente, rue du Port, rue de Gâte-Bourse, place Edouard-Martell, allée Bernard-Guionnet, rue du 14-Juillet, place François-Ier, rue Henri-Fichon, rue de la République, rue de l'Echassier, jusqu'à la limite territoriale de la commune de Châteaubernard.
+|-
+|12||[[Canton de Cognac-2|Cognac-2]]||[[Cognac (Charente)|Cognac]]||{{formatnum:17541}}|| ||6 + fraction Cognac||1° Les communes suivantes : [[Ars (Charente)|Ars]], [[Châteaubernard]], [[Gimeux]], [[Javrezac]], [[Merpins]], [[Saint-Laurent-de-Cognac]].<br/> 2° La partie de la commune de Cognac non incluse dans le canton de Cognac-1.
+|-
+|13||[[Canton de La Couronne|La Couronne]]||[[La Couronne (Charente)|La Couronne]]||{{formatnum:15597}}||0,82||4||[[La Couronne (Charente)|La Couronne]], [[Nersac]], [[Puymoyen]], [[Saint-Michel (Charente)|Saint-Michel]].
+|-
+|14||[[Canton de Gond-Pontouvre|Gond-Pontouvre]]||[[Gond-Pontouvre]]||{{formatnum:19513}}||1,05||4||[[Balzac (Charente)|Balzac]], [[Champniers (Charente)|Champniers]], [[Gond-Pontouvre]], [[Saint-Yrieix-sur-Charente]].
+|-
+|15||[[Canton de Jarnac|Jarnac]]||[[Jarnac]]||{{formatnum:15971}}||0,86||17||[[Bassac (Charente)|Bassac]], [[Bourg-Charente]], [[Chassors]], [[Fleurac (Charente)|Fleurac]], [[Foussignac]], [[Houlette (Charente)|Houlette]], [[Jarnac]], [[Julienne (Charente)|Julienne]], [[Mainxe-Gondeville]], [[Mérignac (Charente)|Mérignac]], [[Les Métairies]], [[Nercillac]], [[Réparsac]], [[Saint-Même-les-Carrières]], [[Sainte-Sévère (Charente)|Sainte-Sévère]], [[Sigogne]], [[Triac-Lautrait]].
+|-
+|16||[[Canton de Touvre-et-Braconne|Touvre-et-Braconne]]||[[Ruelle-sur-Touvre]]||{{formatnum:18900}}||1||6||[[Brie (Charente)|Brie]], [[Jauldes]], [[Magnac-sur-Touvre]], [[Mornac (Charente)|Mornac]], [[Ruelle-sur-Touvre]], [[Touvre]].
+|-
+|17||[[Canton de Tude-et-Lavalette|Tude-et-Lavalette]]||[[Chalais (Charente)|Chalais]]||{{formatnum:18182}}||0,99||49||[[Aubeterre-sur-Dronne]], [[Bardenac]], [[Bazac]], [[Bellon (Charente)|Bellon]], [[Bessac]], [[Blanzaguet-Saint-Cybard]], [[Boisné-La Tude]], [[Bonnes (Charente)|Bonnes]], [[Bors (canton de Tude-et-Lavalette)|Bors]], [[Brie-sous-Chalais]], [[Chadurie]], [[Chalais (Charente)|Chalais]], [[Châtignac]], [[Combiers]], [[Courgeac]], [[Courlac]], [[Curac]], [[Deviat]], [[Édon (Charente)|Édon]], [[Les Essards (Charente)|Les Essards]], [[Fouquebrune]], [[Gurat]], [[Juignac]], [[Laprade (Charente)|Laprade]], [[Magnac-lès-Gardes]], [[Médillac]], [[Montboyer]], [[Montignac-le-Coq]], [[Montmoreau]], [[Nabinaud]], [[Nonac]], [[Orival (Charente)|Orival]], [[Palluaud]], [[Pillac]], [[Poullignac]], [[Rioux-Martin]], [[Ronsenac]], [[Rouffiac (Charente)|Rouffiac]], [[Rougnac]], [[Saint-Avit (Charente)|Saint-Avit]], [[Saint-Laurent-des-Combes (Charente)|Saint-Laurent-des-Combes]], [[Saint-Martial (Charente)|Saint-Martial]], [[Saint-Quentin-de-Chalais]], [[Saint-Romain (Charente)|Saint-Romain]], [[Saint-Séverin (Charente)|Saint-Séverin]], [[Salles-Lavalette]], [[Vaux-Lavalette]], [[Villebois-Lavalette]], [[Yviers]].
+|-
+|18||[[Canton de Val de Nouère|Val de Nouère]]||[[Linars (Charente)|Linars]]||{{formatnum:20850}}||1,11||23||[[Asnières-sur-Nouère]], [[Champmillon]], [[Courbillac]], [[Douzat]], [[Échallat]], [[Genac-Bignac]], [[Hiersac]], [[Linars (Charente)|Linars]], [[Marcillac-Lanville]], [[Mareuil (Charente)|Mareuil]], [[Marsac (Charente)|Marsac]], [[Mons (Charente)|Mons]], [[Moulidars]], [[Rouillac (Charente)|Rouillac]], [[Saint-Amant-de-Nouère]], [[Saint-Cybardeaux]], [[Saint-Genis-d'Hiersac]], [[Saint-Saturnin (Charente)|Saint-Saturnin]], [[Sireuil (Charente)|Sireuil]], [[Trois-Palis]], [[Val-d'Auge]], [[Vaux-Rouillac]], [[Vindelle]].
+|-
+|19||[[Canton de Val de Tardoire|Val de Tardoire]]||[[La Rochefoucauld-en-Angoumois]]||{{formatnum:21828}}||1,18||27||[[Agris]], [[Bunzac]], [[Charras]], [[Chazelles (Charente)|Chazelles]], [[Coulgens]], [[Écuras]], [[Eymouthiers]], [[Feuillade]], [[Grassac]], [[Mainzac]], [[Marillac-le-Franc]], [[Marthon]], [[Montbron]], [[Moulins-sur-Tardoire]], [[Orgedeuil]], [[Pranzac]], [[Rivières (Charente)|Rivières]], [[La Rochefoucauld-en-Angoumois]], [[La Rochette (Charente)|La Rochette]], [[Rouzède]], [[Saint-Adjutory]], [[Saint-Germain-de-Montbron]], [[Saint-Sornin (Charente)|Saint-Sornin]], [[Souffrignac]], [[Taponnat-Fleurignac]], [[Vouthon]], [[Yvrac-et-Malleyrand]].
+|-
+!|| ||||{{formatnum:353657}}||||402||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la Charente, c'est le cas de quatre cantons ([[canton de Boixe-et-Manslois|Boixe-et-Manslois]], [[canton de Charente-Sud|Charente-Sud]], [[canton de Tude-et-Lavalette|Tude-et-Lavalette]], [[canton de Val de Nouère|Val de Nouère]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-----
+!N°||Canton||[[Arrondissement d'Angoulême|Angoulême]]||[[Arrondissement de Cognac|Cognac]]||[[Arrondissement de Confolens|Confolens]]||Total
+|-
+|1||align="left"| Angoulême-1||1 + fraction Angoulême||||||'''1''' + fraction Angoulême
+|-
+|2||align="left"| Angoulême-2||1 + fraction Angoulême||||||'''1''' + fraction Angoulême
+|-
+|3||align="left"| Angoulême-3||1 + fraction Angoulême||||||'''1''' + fraction Angoulême
+|-
+|4||align="left"| Boëme-Échelle||13||||||'''13'''
+|-
+|5||align="left"| Boixe-et-Manslois||15||||26||'''41'''
+|-
+|6||align="left"| Charente-Bonnieure||||||34||'''34'''
+|-
+|7||align="left"| Charente-Champagne||||27||||'''27'''
+|-
+|8||align="left"| Charente-Nord||||||49||'''49'''
+|-
+|9||align="left"| Charente-Sud||11||35||||'''46'''
+|-
+|10||align="left"| Charente-Vienne||||||29||'''29'''
+|-
+|11||align="left"| Cognac-1||||7 + fraction Cognac||||'''7''' + fraction Cognac
+|-
+|12||align="left"| Cognac-2||||6 + fraction Cognac||||'''6''' + fraction Cognac
+|-
+|13||align="left"| La Couronne||4||||||'''4'''
+|-
+|14||align="left"| Gond-Pontouvre||4||||||'''4'''
+|-
+|15||align="left"| Jarnac||||18||||'''18'''
+|-
+|16||align="left"| Touvre-et-Braconne||6||||||'''6'''
+|-
+|17||align="left"| Tude-et-Lavalette||54||2|| ||'''56'''
+|-
+|18||align="left"| Val de Nouère||14||16||||'''30'''
+|-
+|19||align="left"| Val de Tardoire||28||||1||'''29'''
+|-
+!||||153||112||139||404
+|}
+
+== Notes et références ==
+{{Références|colonnes=2}}
+
+== Articles connexes ==
+* [[Politique de la Charente]]
+* [[Liste des conseillers généraux de la Charente]]
+* [[Liste des circonscriptions législatives de la Charente]]
+
+{{Palette|Découpage administratif de Nouvelle-Aquitaine|Cantons de France|Cantons de la Charente}}
+{{Portail|Charente}}
+
+[[Catégorie:Canton en Charente|*]]
+[[Catégorie:Liste de cantons français|Charente]]
+[[Catégorie:Liste en rapport avec la Charente|Cantons]]

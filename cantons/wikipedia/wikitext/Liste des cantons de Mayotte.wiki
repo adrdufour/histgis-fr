@@ -1,0 +1,112 @@
+[[Fichier:Cantons de Mayotte depuis 2015.png|vignette|Carte des cantons de Mayotte après le redécoupage de 2015]]
+Les '''cantons de Mayotte''' sont les [[Canton français|cantons]] du [[département d'outre-mer]] de [[Mayotte]]. Le chef-lieu de département est [[Mamoudzou]].
+
+== Liste des cantons de Mayotte ==
+=== Avant 2014 ===
+[[Fichier:Anciens cantons de Mayotte.png|vignette|Carte des cantons de Mayotte avant 2015]]
+Les cantons étaient au nombre de 19, chaque canton correspondant à une des [[Liste des communes de Mayotte|17 communes de Mayotte]], à l'exception de [[Mamoudzou]] qui était divisé en trois cantons depuis 1994<ref>Décret n° 77-509 du 18.05.1977 et décret n° 94-41 du 13.01.1994</ref> :
+
+{|class="wikitable"
+|-
+!scope="col"| Nom
+!scope="col"| [[Code Insee]]
+!scope="col"| Commune
+|-
+| [[Canton d'Acoua]] || 97601 || [[Acoua]]
+|-
+| [[Canton de Bandraboua]] || 97602 || [[Bandraboua]]
+|-
+| [[Canton de Bandrélé]] || 97603 || [[Bandrele]]
+|-
+| [[Canton de Bouéni]] || 97604 || [[Bouéni]]
+|-
+| [[Canton de Chiconi]] || 97605 || [[Chiconi]]
+|-
+| [[Canton de Chirongui]] || 97606 || [[Chirongui]]
+|-
+| [[Canton de Dembeni]] || 97607 || [[Dembeni (Mayotte)|Dembeni]]
+|-
+| [[Canton de Dzaoudzi]] || 97608 || [[Dzaoudzi]]
+|-
+| [[Canton de Kani-Kéli]] || 97609 || [[Kani-Kéli]]
+|-
+| [[Canton de Koungou]] || 97610 || [[Koungou]]
+|-
+| [[Canton de Mamoudzou-1|Canton de Mamoudzou-I]] || 97611 ||rowspan="3"| [[Mamoudzou]]
+|- 
+| [[Canton de Mamoudzou-2|Canton de Mamoudzou-II]] || 97611
+|- 
+| [[Canton de Mamoudzou-3|Canton de Mamoudzou-III]] || 97611
+|- 
+| [[Canton de Mtsamboro]] || 97612 || [[Mtsamboro]]
+|- 
+| [[Canton de M'Tsangamouji]] || 97613 || [[M'Tsangamouji]]
+|- 
+| [[Canton d'Ouangani]] || 97614 || [[Ouangani]]
+|- 
+| [[Canton de Pamandzi]] || 97615 || [[Pamandzi]]
+|- 
+| [[Canton de Sada]] || 97616 || [[Sada (Mayotte)|Sada]]
+|- 
+| [[Canton de Tsingoni]] || 97617 || [[Tsingoni]]
+|}
+
+=== Depuis le redécoupage de 2014 ===
+À la suite de la loi du {{date-|17 mai 2013}}, un [[Redécoupage cantonal de 2014 en France|nouveau découpage cantonal]] est mis en place à Mayotte. Depuis les [[Élections départementales françaises de 2015|élections départementales de 2015]], un binôme homme-femme est désormais élu dans chaque canton. Un décret en conseil d'État, paru le {{date-|13 février 2014}}, crée 13 nouveaux cantons<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028622087 Décret {{n°|2014}}-157 du 13 février 2014], [[Légifrance]]. Consulté le 17 novembre 2014.</ref> :
+
+{| class="wikitable alternance sortable"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2017<ref>[https://www.insee.fr/fr/statistiques/3291783?sommaire=2120838 Décret n°2017-1688 du 14 décembre 2017] authentifiant les résultats du recensement de la population effectué à Mayotte en 2017.</ref>
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton de Bandraboua|Bandraboua]]||[[Bandraboua]]||{{formatnum:19883}}||fraction Bandraboua + fraction Koungou||1° Dans la commune de [[Bandraboua]], les villages suivants : Bandraboua, Dzoumogne, Bouyouni ;<br /> 2° Dans la commune de [[Koungou]], les villages suivants : Longoni, Kangani, Trévani.
+|-
+|2||[[Canton de Bouéni|Bouéni]]||[[Bouéni]]||{{formatnum:15056}}||2 + fraction Bandrele||1° Les communes de [[Bouéni]] et de [[Kani-Kéli]] ;<br />2° Dans la commune de [[Bandrele]], les villages suivants : Bambo Est, M'tsamoudou, Dapani.
+|-
+|3||[[Canton de Dembeni|Dembeni]]||[[Dembeni (Mayotte)|Dembeni]]||{{formatnum:22770}}||1 + fraction Bandrele||1° La commune de [[Dembeni (Mayotte)|Dembeni]] ;<br />2° Dans la commune de [[Bandrele]], les villages suivants : Bandrele, Hamouro, Nyambadao. 
+|-
+|4||[[Canton de Dzaoudzi|Dzaoudzi]]||[[Dzaoudzi]]||{{formatnum:17831}}||1||[[Dzaoudzi]]. 
+|-
+|5||[[Canton de Koungou|Koungou]]||[[Koungou]]||{{formatnum:23129}}||fraction Koungou||Dans la commune de [[Koungou]], les villages suivants : Koungou, Majicavo-Koropa, Majicavo-Lamir. 
+|-
+|6||[[Canton de Mamoudzou-1|Mamoudzou-1]]||[[Mamoudzou]]||{{formatnum:22626}}||fraction Mamoudzou||Dans la commune de [[Mamoudzou]], les villages suivants : Passamainty, Tsoundzou 1, Tsoundzou 2, Vahibé.
+|-
+|7||[[Canton de Mamoudzou-2|Mamoudzou-2]]||[[Mamoudzou]]||{{formatnum:25620}}||fraction Mamoudzou||Dans la commune de [[Mamoudzou]], les villages suivants : Mtsapere et Kavani.
+|-
+|8||[[Canton de Mamoudzou-3|Mamoudzou-3]]||[[Mamoudzou]]||{{formatnum:23191}}||fraction Mamoudzou||Dans la commune de [[Mamoudzou]], les villages suivants : Mamoudzou et Kaweni.
+|-
+|9||[[Canton de Mtsamboro|Mtsamboro]]||[[Mtsamboro]]||{{formatnum:16030}}||2 + fraction Bandraboua||1° Les communes d'[[Acoua]] et de [[Mtsamboro]]. <br/>2° Dans la commune de [[Bandraboua]], les villages suivants : Handrema et Mtsangamboua.
+|-
+|10||[[Canton d'Ouangani|Ouangani]]||[[Ouangani]]||{{formatnum:18498}}||2||[[Chiconi]], [[Ouangani]].
+|-
+|11||[[Canton de Pamandzi|Pamandzi]]||[[Pamandzi]]||{{formatnum:11442}}||1||[[Pamandzi]]. 
+|-
+|12||[[Canton de Sada|Sada]]||[[Sada (Mayotte)|Sada]]||{{formatnum:20076}}||2||[[Chirongui]], [[Sada (Mayotte)|Sada]]. 
+|-
+|13||[[Canton de Tsingoni|Tsingoni]]||[[Tsingoni]]||{{formatnum:20366}}||2||[[M'Tsangamouji]], [[Tsingoni]]. 
+|-
+|}
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+
+=== Liens externes ===
+* [http://www.cg976.fr/ Site du conseil départemental de Mayotte]
+
+=== Articles connexes ===
+* [[Liste des communes de Mayotte]]
+* [[Liste des circonscriptions législatives de Mayotte]]
+* [[Élections cantonales de 2011 à Mayotte]]
+{{Palette|Découpage administratif de Mayotte|Cantons de France|Cantons de Mayotte}}
+
+{{Portail|Politique française|Mayotte}}
+
+[[Catégorie:Liste de cantons français|Mayotte]]
+[[Catégorie:Liste en rapport avec Mayotte|Canton]]
+[[Catégorie:Canton à Mayotte|*]]

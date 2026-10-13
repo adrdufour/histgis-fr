@@ -176,6 +176,51 @@
   #chargement { position: absolute; inset: 0; display: none; place-items: center;
                 background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris); }
   @media (max-width: 900px) { aside { display: none; } }
+  /* ---- Dialogue d'export vers Commons -------------------------------- */
+  dialog#commons { width: min(1180px, 96vw); max-height: 94vh; padding: 0;
+    border: 1px solid var(--gris-clair); border-radius: 4px; background: var(--fond);
+    color: var(--encre); box-shadow: 0 8px 40px rgba(0,0,0,.25); }
+  #commons [hidden] { display: none !important; }
+  dialog#commons::backdrop { background: rgba(29,28,26,.35); }
+  .c-entete { display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 16px; border-bottom: 1px solid var(--gris-clair); margin: 0; }
+  .c-entete h2 { font-size: 15px; margin: 0; font-weight: 600; }
+  #c-corps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 16px; padding: 14px 16px; }
+  #c-vide { padding: 20px 16px; }
+  .c-apercu { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .c-apercu img { width: 100%; max-height: 66vh; object-fit: contain; background: #fff;
+    border: 1px solid var(--gris-clair); border-radius: 3px; }
+  .c-form { display: flex; flex-direction: column; gap: 6px; min-width: 0;
+    max-height: 78vh; overflow-y: auto; font-size: 13px; }
+  .c-form > label { margin-top: 6px; }
+  .c-form input[type=text], .c-form textarea { width: 100%; font: 12.5px/1.4
+    ui-monospace, "DejaVu Sans Mono", Menlo, monospace; padding: 5px 7px;
+    border: 1px solid var(--gris-clair); border-radius: 3px; background: #fff;
+    color: var(--encre); }
+  .c-form select { max-width: 100%; }
+  .c-ok { color: #2e6b34; font-weight: 600; }
+  .c-ko { color: #a1261b; font-weight: 600; }
+  .c-succes { border-left: 3px solid #2e6b34; background: #f1f7ef; padding: 6px 8px; }
+  #c-cats-etat { font-size: 12px; line-height: 1.6; }
+  .c-sug { font-size: 11.5px; padding: 1px 6px; margin: 1px 0; }
+  a.bouton { font-size: 13px; padding: 4px 7px; border: 1px solid var(--gris-clair);
+    border-radius: 3px; background: #fff; color: var(--encre); text-decoration: none; }
+  a.bouton:hover { background: #f0ede7; }
+  @media (max-width: 900px) { #c-corps { grid-template-columns: 1fr; } }
+  dialog#commons { overflow-y: auto; }
+  .c-wiki { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px;
+    border-top: 1px solid var(--gris-clair); padding-top: 10px; font-size: 13px; }
+  .c-wiki textarea { width: 100%; font: 12.5px/1.4 ui-monospace, "DejaVu Sans Mono", Menlo,
+    monospace; padding: 5px 7px; border: 1px solid var(--gris-clair); border-radius: 3px;
+    background: #fff; color: var(--encre); }
+  #c-wiki-etat { font-size: 12px; line-height: 1.6; }
+  /* Le formulaire défile : ses champs gardent leur hauteur au lieu de
+     s'écraser quand le bloc de la liste de communes l'allonge. */
+  .c-form > * { flex-shrink: 0; }
+  .c-sous { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  #c-liste-etat { font-size: 12px; line-height: 1.6; }
+  .c-form .ligne input[type=text] { width: auto; }
 </style>
 </head>
 <body>
@@ -236,8 +281,108 @@
       <option value="aucun">rien</option>
     </select>
     <button id="recadrer" title="Recadrer sur le département">recadrer</button>
+    <button id="ouvre-commons" title="Exporter la carte de l'année affichée vers Wikimedia Commons">Commons…</button>
   </div>
 </footer>
+
+<!-- Export vers Wikimedia Commons : voir le second <script> et `commons.py`. -->
+<dialog id="commons" aria-labelledby="c-titre">
+  <form method="dialog" class="c-entete">
+    <h2 id="c-titre">Exporter vers Wikimedia Commons</h2>
+    <button value="fermer" title="Fermer">✕</button>
+  </form>
+  <div id="c-vide" class="note" hidden></div>
+  <div id="c-corps">
+    <div class="c-apercu">
+      <img id="c-img" alt="Aperçu de l'image à déposer">
+      <div id="c-poids" class="note"></div>
+    </div>
+    <div class="c-form">
+      <div class="ligne">
+        <label><input type="radio" name="c-niveau" value="circo" checked> circonscriptions</label>
+        <label><input type="radio" name="c-niveau" value="canton"> cantons</label>
+        <label><input type="radio" name="c-niveau" value="liste"> liste de communes</label>
+      </div>
+      <div id="c-bloc-unites" class="c-sous">
+      <div class="ligne">
+        <label><input type="radio" name="c-type" value="departement" checked>
+          carte du département</label>
+        <label><input type="radio" name="c-type" value="situation">
+          situation <span id="c-type-situ">d'une circonscription</span></label>
+      </div>
+      <select id="c-circo" aria-label="Unité"></select>
+      <div class="ligne">
+        <label><input type="checkbox" id="c-communes" checked> limites communales</label>
+        <label><input type="checkbox" id="c-cantons" checked> <span id="c-cantons-lib">limites cantonales</span></label>
+        <label><input type="checkbox" id="c-numeros" checked> <span id="c-numeros-lib">numéros</span></label>
+      </div>
+      </div>
+      <!-- Carte d'une liste de communes (AOP, intercommunalité…) : voir
+           « Carte d'une liste de communes » dans le second <script>. -->
+      <div id="c-bloc-liste" class="c-sous" hidden>
+        <label for="c-liste">Communes — une par ligne ou séparées par des virgules ;
+          codes INSEE acceptés ; « Nom (21) » pour un homonyme</label>
+        <textarea id="c-liste" rows="7" spellcheck="false"
+          placeholder="Époisses&#10;Semur-en-Auxois&#10;Saint-Martin (21)&#10;89025"></textarea>
+        <div id="c-liste-etat"></div>
+        <div class="ligne">
+          <label for="c-filtre">limiter aux départements</label>
+          <input type="text" id="c-filtre" placeholder="21, 89" spellcheck="false" style="width:9em">
+          <label for="c-annee-liste">limites communales de</label>
+          <input type="number" id="c-annee-liste" min="1815" max="2012" step="1" style="width:5.5em">
+        </div>
+        <div class="ligne">
+          <label for="c-ensemble">Nom de l'ensemble</label>
+          <input type="text" id="c-ensemble" spellcheck="false" style="flex:1;min-width:12em"
+            placeholder="AOP Époisses, communauté de communes du Montbardois…">
+          <select id="c-nature" aria-label="Nature de l'ensemble">
+            <option value="aop">appellation d'origine</option>
+            <option value="epci">intercommunalité</option>
+            <option value="autre" selected>autre</option>
+          </select>
+        </div>
+        <label for="c-source-liste">Source de la liste (cahier des charges, arrêté de périmètre…)</label>
+        <input type="text" id="c-source-liste" spellcheck="false">
+        <div class="ligne">
+          <label><input type="radio" name="c-type-liste" value="communes" checked> carte des communes</label>
+          <label><input type="radio" name="c-type-liste" value="france"> situation en France</label>
+        </div>
+        <div class="ligne">
+          <label><input type="checkbox" id="c-l-communes" checked> limites communales</label>
+          <label><input type="checkbox" id="c-l-noms"> noms des communes</label>
+          <label><input type="checkbox" id="c-l-deps" checked> noms des départements</label>
+          <label><input type="checkbox" id="c-l-medaillon" checked> médaillon France</label>
+        </div>
+      </div>
+      <label for="c-nom">Nom du fichier sur Commons</label>
+      <input type="text" id="c-nom" spellcheck="false">
+      <div id="c-nom-etat" class="note"></div>
+      <label for="c-texte">Description (wikitexte)</label>
+      <textarea id="c-texte" rows="15" spellcheck="false"></textarea>
+      <label for="c-cats">Catégories — une par ligne, vérifiées sur Commons</label>
+      <textarea id="c-cats" rows="4" spellcheck="false"></textarea>
+      <div id="c-cats-etat"></div>
+      <div class="ligne" style="margin-top:8px">
+        <button type="button" id="c-verifier">vérifier</button>
+        <button type="button" id="c-reinit" title="Revenir au nom, à la description et aux catégories proposés">réinitialiser</button>
+        <a id="c-telecharger" class="bouton" download>télécharger le SVG</a>
+        <button type="button" id="c-deposer" class="actif">déposer sur Commons</button>
+      </div>
+      <div id="c-compte" class="note"></div>
+      <div id="c-resultat"></div>
+    </div>
+    <div class="c-wiki">
+      <div class="ligne">
+        <b>Paragraphe pour Wikipédia (wikicode)</b>
+        <label><input type="checkbox" id="c-w-communes"> lister les communes</label>
+        <label><input type="checkbox" id="c-w-rouges"> retirer les liens rouges</label>
+        <button type="button" id="c-w-copier">copier</button>
+      </div>
+      <textarea id="c-wiki" rows="10" spellcheck="false" aria-label="Paragraphe pour Wikipédia"></textarea>
+      <div id="c-wiki-etat"></div>
+    </div>
+  </div>
+</dialog>
 
 <script>
 "use strict";
@@ -462,8 +607,92 @@ async function chargeAnnee(annee) {
   p.push(e.x ? charge(`${RACINE}/dep/${S.dep}/x_${e.x}.json`) : Promise.resolve(null));
   const [c, x] = await Promise.all(p);
   if (j !== S.jeton) return false;
-  S.cfgCanton = c; S.cfgCirco = x;
+  [S.cfgCanton, S.cfgCirco] = deplieMeres(c, x, annee);
   return true;
+}
+
+// ===========================================================================
+// Une ville découpée ne se dessine pas deux fois — 6 octobre 2026
+//
+// De 1870 à 1940, les deux couches ne rattachent pas la même chose : la couche
+// cantonale tient les FRACTIONS (`24214#0323`, `24214#0324` : Moulins-Est et
+// Moulins-Ouest), la couche électorale (TRF-GIS) tient la commune-MÈRE entière
+// (`24214`, dans la 1re circonscription). `groupes()` prend l'union des deux :
+// la mère était donc dessinée en entier, et les fractions par-dessus — ou
+// par-dessous, selon la couche active. Depuis que `99` découpe les fractions,
+// chaque morceau a son empreinte, et la mère entière recouvre les morceaux :
+// la découpe ne se voyait pas. 88 villes au moins dans l'export du 5 octobre.
+//
+// Règle : dans une couche qui tient la mère sans ses fractions, alors que
+// l'autre couche tient ces fractions et qu'elles ont une forme à la date, la
+// mère est remplacée par ses fractions, chacune rattachée à l'unité de la mère.
+// C'est vrai par construction : la ville entière est dans cette unité, donc
+// chacun de ses morceaux aussi. Effet de bord voulu : `cantonsParCirco()`, qui
+// joint les deux couches par atome, retrouve les cantons de la ville.
+//
+// GARDE-FOU : on ne déplie que si les fractions COUVRENT la mère (90 % de son
+// aire, empreintes distinctes comptées une fois). Aubagne 1986-1998 a deux
+// fractions de 55 ha pour une commune de 5 443 : les déplier ferait disparaître
+// 98 % de la commune. Mieux vaut alors la superposition, qui se voit, qu'un
+// trou, qui passerait pour une lacune de la trame.
+//
+// On copie la configuration au lieu de la modifier : les fichiers `c_`/`x_`
+// sont mis en cache par signature et servent à d'autres années, où les
+// fractions n'ont pas forcément de forme.
+// ===========================================================================
+function aireRelative(g) {
+  // Aire en degrés² corrigés de la latitude : elle ne sert qu'à comparer deux
+  // formes voisines, jamais à afficher des hectares.
+  let a = 0;
+  for (const p of polygonesDe(g)) {
+    p.forEach((r, i) => {
+      let s = 0;
+      const k = Math.cos(r[0][1] * Math.PI / 180);
+      for (let j = 0, n = r.length; j < n; j++) {
+        const [x1, y1] = r[j], [x2, y2] = r[(j + 1) % n];
+        s += x1 * k * y2 - x2 * k * y1;
+      }
+      a += (i === 0 ? 1 : -1) * Math.abs(s / 2);
+    });
+  }
+  return a;
+}
+
+function deplieMeres(c, x, annee) {
+  if (!c || !x || !S.communes) return [c, x];
+  const couvre = (m, fs) => {
+    const vm = versionA(S.communes[m], annee);
+    if (!vm) return true;
+    const vus = new Map();
+    for (const f of fs) {
+      const v = versionA(S.communes[f], annee);
+      vus.set(v.k || f, v.g);
+    }
+    let a = 0;
+    for (const g of vus.values()) a += aireRelative(g);
+    return a >= 0.9 * aireRelative(vm.g);
+  };
+  const plie = (cible, autre) => {
+    const fr = new Map();           // mère -> fractions de l'autre couche
+    for (const aid of Object.keys(autre.rattachement)) {
+      const i = aid.indexOf("#");
+      if (i < 0 || aid in cible.rattachement) continue;
+      if (!versionA(S.communes[aid], annee)) continue;
+      const m = aid.slice(0, i);
+      if (!(m in cible.rattachement)) continue;
+      if (!fr.has(m)) fr.set(m, []);
+      fr.get(m).push(aid);
+    }
+    for (const [m, fs] of fr) if (!couvre(m, fs)) fr.delete(m);
+    if (!fr.size) return cible;
+    const r = Object.assign({}, cible.rattachement);
+    for (const [m, fs] of fr) {
+      for (const f of fs) r[f] = r[m];
+      delete r[m];
+    }
+    return Object.assign({}, cible, { rattachement: r, meresDepliees: fr.size });
+  };
+  return [plie(c, x), plie(x, c)];
 }
 
 // ===========================================================================
@@ -1702,6 +1931,2238 @@ python3 cartes/web/servir.py</pre>
        sur <code>file://</code>.</p>
      </div>`;
 });
+</script>
+<script>
+"use strict";
+// ===========================================================================
+// Export vers Wikimedia Commons
+//
+// Deux images, toutes deux tirées de ce que la page a DÉJÀ chargé pour
+// l'année affichée — aucune requête à la base, aucune géométrie recalculée :
+//
+//   * la carte du département : ses circonscriptions coloriées et numérotées,
+//     limites cantonales et communales en trait fin ;
+//   * la carte de situation d'UNE circonscription : le département en grisé,
+//     la circonscription en rouge — le format des cartes de localisation des
+//     articles de Wikipédia.
+//
+// Le dépôt suit parliamentdiagram (github.com/slashme/parliamentdiagram) :
+// la page fabrique le SVG et le wikitexte `{{Information}}`, `servir.py`
+// détient le jeton et parle à l'API (voir `commons.py`). Description, licence
+// et catégories sont pré-remplies et restent modifiables avant l'envoi ; les
+// catégories sont vérifiées en direct sur Commons, parce qu'une catégorie
+// devinée qui n'existe pas range le fichier nulle part — en silence.
+// ===========================================================================
+
+// ---------------------------------------------------------------------------
+// Réglages éditoriaux : c'est ICI qu'on corrige une catégorie ou une source,
+// pas dans le code qui suit.
+// ---------------------------------------------------------------------------
+const COMMONS = {
+  licence: "{{self|cc-by-sa-4.0}}",
+  largeurMax: 1100,               // côté le plus long de l'image, en pixels
+  // Catégories par défaut. `{dep}` : nom ACTUEL du département (c'est sous
+  // lui que Commons range les cartes, même historiques) ; `{periode}` : la
+  // catégorie du régime, ci-dessous.
+  categories: {
+    departement: ["Maps of legislative constituencies of France",
+                  "Maps of the history of {dep}", "{periode}"],
+    circo: ["Locator maps of legislative constituencies of France",
+            "Maps of the history of {dep}", "{periode}"],
+    cantons: ["Maps of cantons of France", "Maps of the history of {dep}", "{periode}"],
+    cantonSituation: ["Locator maps of cantons of France",
+                      "Maps of the history of {dep}", "{periode}"],
+  },
+  periodes: [            // [première année, dernière, catégorie, chambre fr, chambre en]
+    [1814, 1830, "Maps of the Bourbon Restoration",
+     "Chambre des députés des départements", "Chamber of Deputies"],
+    [1830, 1848, "Maps of the July Monarchy",
+     "Chambre des députés", "Chamber of Deputies"],
+    [1848, 1851, "Maps of the French Second Republic",
+     "Assemblée nationale", "National Assembly"],
+    [1852, 1870, "Maps of the Second French Empire",
+     "Corps législatif", "Corps législatif"],
+    [1871, 1940, "Maps of the French Third Republic",
+     "Chambre des députés", "Chamber of Deputies"],
+    [1945, 1958, "Maps of the French Fourth Republic",
+     "Assemblée nationale", "National Assembly"],
+    [1958, 2100, "Maps of the French Fifth Republic",
+     "Assemblée nationale", "National Assembly"],
+  ],
+  // Source de la COMPOSITION électorale, par période. Le fond communal est
+  // ajouté à part (ANR-COMMUNES, GEOFLA en repli).
+  sources: [
+    [1815, 1869, "Bernard Gaudillère, ''Atlas historique des circonscriptions " +
+                 "électorales françaises'', Genève, Droz, 1995"],
+    [1870, 1940, "TRF-GIS (V. Gay), Harvard Dataverse, CC BY 4.0"],
+    [1986, 2012, "Ministère de l'Intérieur, tableaux de correspondance " +
+                 "communes-cantons-circonscriptions (Licence Ouverte)"],
+  ],
+  // Source de la COMPOSITION cantonale, par période.
+  sourcesCantons: [
+    [1870, 1940, "TRF-GIS (V. Gay), Harvard Dataverse, CC BY 4.0"],
+    [1941, 1998, "base ''histgis'' : registre des mouvements cantonaux (décrets, " +
+                 "''Journal officiel''), recensements de 1954 et 1968"],
+    [1999, 2012, "Insee, Code officiel géographique (Licence Ouverte)"],
+  ],
+  // Paragraphe pour Wikipédia : le suffixe que portent les titres des articles
+  // de circonscription hors Ve République (« Première circonscription de la
+  // Seine (Quatrième République) »), selon la première année du découpage.
+  // Seul celui de la IVe est attesté ; les autres sont des paris, que la
+  // vérification des liens tranche.
+  regimesWiki: [
+    [1814, 1830, "Restauration"], [1831, 1848, "Monarchie de Juillet"],
+    [1849, 1851, "Deuxième République"], [1852, 1870, "Second Empire"],
+    [1871, 1940, "Troisième République"], [1945, 1957, "Quatrième République"],
+    [1958, 2100, ""],
+  ],
+  // Élections législatives générales, pour dire lesquelles un découpage a servi.
+  elections: [1815, 1816, 1820, 1824, 1827, 1830, 1831, 1834, 1837, 1839, 1842,
+              1846, 1848, 1849, 1852, 1857, 1863, 1869, 1871, 1876, 1877, 1881,
+              1885, 1889, 1893, 1898, 1902, 1906, 1910, 1914, 1919, 1924, 1928,
+              1932, 1936, 1945, 1946, 1951, 1956, 1958, 1962, 1967, 1968, 1973,
+              1978, 1981, 1986, 1988, 1993, 1997, 2002, 2007, 2012],
+  // Douze teintes douces et distinctes pour la carte départementale.
+  palette: ["#e9c79c", "#b5d2ac", "#c6c0e2", "#f2d98b", "#a7cbe4", "#e5b5b4",
+            "#d0e2a4", "#d9c0a2", "#b3dcd3", "#efc4dc", "#d6d3a6", "#c2d6f0"],
+  rouge: "#c12838", rougeTrait: "#7a1020",
+  // Carte d'une liste de communes : la nature de l'ensemble donne le libellé
+  // de la description et ses catégories propres ; `parDep` s'ajoute pour
+  // chaque département touché. Des propositions, vérifiées en direct.
+  natures: {
+    aop: { fr: "appellation d'origine", en: "protected designation of origin",
+           categories: ["Maps of appellations d'origine contrôlée"] },
+    epci: { fr: "intercommunalité", en: "intercommunal structure",
+            categories: ["Locator maps of intercommunalities of France"] },
+    autre: { fr: "ensemble de communes", en: "group of municipalities",
+             categories: ["Locator maps of communes of France"] },
+  },
+  categoriesListe: { parDep: ["Maps of {dep}"] },
+};
+
+// ---------------------------------------------------------------------------
+// Petits outils de langue
+// ---------------------------------------------------------------------------
+// « de l'Ain », « de la Côte-d'Or », « du Nord », « des Bouches-du-Rhône »,
+// « de Saône-et-Loire ». Une description qui écrit « du département de
+// Côte-d'Or » se lit comme une traduction automatique ; mieux vaut une table.
+const DEP_MASC = new Set(["Nord", "Rhône", "Gard", "Gers", "Lot", "Jura",
+  "Cantal", "Calvados", "Var", "Tarn", "Doubs", "Cher", "Loiret", "Finistère",
+  "Morbihan", "Pas-de-Calais", "Puy-de-Dôme", "Haut-Rhin", "Bas-Rhin",
+  "Vaucluse", "Val-de-Marne", "Val-d'Oise", "Territoire de Belfort",
+  "Loir-et-Cher", "Haut-Rhin"]);
+const DEP_PLUR = /^(Bouches|Basses|Hautes|Côtes|Deux|Pyrénées|Alpes|Ardennes|Landes|Vosges|Yvelines|Hauts)\b/;
+function deDep(nom) {
+  if (DEP_PLUR.test(nom)) return "des " + nom;
+  if (DEP_MASC.has(nom)) return "du " + nom;
+  const voyelle = /^[AEIOUYÉÈH]/.test(nom) && !/^Haute?-/.test(nom);
+  if (/-et-/.test(nom) || nom === "Paris" || nom === "Mayotte")
+    return (voyelle ? "d'" : "de ") + nom;
+  if (voyelle) return "de l'" + nom;
+  return "de la " + nom;
+}
+const xmlEsc = s => String(s).replace(/[&<>"]/g, c =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const nomFichierPropre = s => s.replace(/[#<>\[\]|{}\/:\\]+/g, "-")
+  .replace(/\s+/g, " ").trim();
+
+function periodeDe(annee) {
+  return COMMONS.periodes.find(([a, b]) => annee >= a && annee <= b) || null;
+}
+function sourceDe(annee) {
+  const s = COMMONS.sources.find(([a, b]) => annee >= a && annee <= b);
+  return s ? s[2] : "base ''histgis''";
+}
+function nomModerne(dep) {
+  return dep.noms && dep.noms.length ? dep.noms[dep.noms.length - 1][2] : dep.nom;
+}
+// Les noms en base portent quelques scories qu'il ne faut pas reporter sur
+// Commons : « 01e circonscription n° 02 » (après 1958, le code du département
+// pris pour un ordinal), « Paris 1e » pour « 1re », « Chalon (sur-Saône-1-
+// sur-Saône-2) » pour une ville partagée non découpée, « Lisieux () ».
+const ordinal = n => (+n === 1 ? "1re" : `${+n}e`);
+function nomCommons(u) {
+  let n = String(u.nom || u.code || "");
+  let m = /^[0-9AB]+e circonscription n° 0*(\d+)$/.exec(n);
+  if (m) {
+    const dep = S.index.departements.find(d => d.code === S.dep) || {};
+    return `${nomDep(dep, S.annee)} ${ordinal(m[1])} circonscription`;
+  }
+  m = /^Paris (\d+)\/(\d+)e circonscription$/.exec(n);
+  if (m) return `Paris ${+m[2] === 1 ? "1er" : m[2] + "e"} arrondissement, ${ordinal(m[1])} circonscription`;
+  n = n.replace(/\b1e (circonscription)/, "1re $1");
+  m = /^(.+?) \(([^()]*)\)$/.exec(n);
+  if (m && /\d/.test(m[2]) && !/circonscription/.test(m[1])) {
+    // ville partagée : « Chalon (sur-Saône-1-sur-Saône-2) »
+    const t = m[2].split("-"), i = t.findIndex(x => /^\d+$/.test(x));
+    const ville = i > 0 ? `${m[1]}-${t.slice(0, i).join("-")}` : m[1];
+    const nums = t.filter(x => /^\d+$/.test(x));
+    const suite = nums.length > 2 && nums.every((x, k) => k === 0 || +x === +nums[k - 1] + 1);
+    const liste = suite ? `${ordinal(nums[0])} à ${ordinal(nums[nums.length - 1])}`
+      : nums.slice(0, -1).map(ordinal).join(", ") + " et " + ordinal(nums[nums.length - 1]);
+    return `${ville} (${liste} circonscriptions, non séparées)`;
+  }
+  return n.replace(/ \(\)$/, "");
+}
+
+// Le libellé court posé sur la carte : « 1 » pour `21-01` ou `2101`,
+// « Beaune » pour un collège d'arrondissement, rien pour un scrutin de liste.
+//  - Un code à suffixe littéral (`75-nord`, `75-sud`, `75-tout` : la
+//    banlieue de la Seine) ne dit rien du numéro : on le prend dans le nom
+//    (« Seine 13e circonscription — Sceaux » → 13 ; « collège de
+//    Saint-Denis » → Saint-Denis).
+//  - Les codes TRF-GIS 80 et au-delà (`0380`) ne sont pas des numéros : c'est
+//    une ville partagée entre circonscriptions et laissée entière. On pose les
+//    numéros des circonscriptions qu'elle mêle (« 3-4 »), ou rien.
+function etiquetteCourte(u) {
+  const c = String(u.code || "");
+  if (u.regime === "liste" || /^L/.test(c)) return "";
+  const tiret = c.includes("-");
+  const reste = tiret ? c.slice(c.indexOf("-") + 1)
+              : (c.startsWith(S.dep) ? c.slice(S.dep.length) : c);
+  if (/^\d+$/.test(reste)) {
+    if (tiret || +reste < 80) return String(+reste);
+    const m = /^(.+?) \(([^()]*)\)$/.exec(String(u.nom || ""));
+    if (!m) return "";
+    const t = m[2].split("-"), i = t.findIndex(x => /^\d+$/.test(x));
+    const ville = i > 0 ? `${m[1]}-${t.slice(0, i).join("-")}` : m[1];
+    const nums = t.filter(x => /^\d+$/.test(x)).map(k => {
+      const v = S.cfgCirco.unites.find(w => w.nom === `${ville}-${k}`);
+      return v ? etiquetteCourte(v) : null;
+    });
+    return nums.length && nums.every(x => x && /^\d+$/.test(x)) ? nums.join("-") : "";
+  }
+  if (/^\d+\/\d+$/.test(reste)) return reste;   // Paris 1881 : 1re du 10e arr.
+  const nom = String(u.nom || "");
+  let m = /(\d+)(?:re|er|e|ème) circonscription/.exec(nom);
+  if (m) return String(+m[1]);
+  m = /collège (?:de |d'|du |des )(.+)$/.exec(nom);
+  if (m && m[1] !== "département") return m[1];
+  return reste;
+}
+
+// ---------------------------------------------------------------------------
+// Période de validité du découpage affiché
+//
+// Les fichiers `x_<sig>.json` sont signés sur leur CONTENU, géométrie
+// comprise : deux années du même découpage peuvent porter deux signatures si
+// ANR-COMMUNES édite un polygone entre-temps (la Côte-d'Or a deux fichiers
+// pour le découpage de 1831). Comparer les signatures couperait une
+// législature en deux. On compare donc les identifiants d'unités, qui portent
+// l'année de leur version (`21-01@1852`) et ne changent qu'avec le découpage.
+// ---------------------------------------------------------------------------
+async function plageDecoupage() {
+  const ids = S.cfgCirco.unites.map(u => u.id).sort().join("|");
+  const an = S.depIndex.annees;
+  const [b0, b1] = bornes();
+  const memes = async a => {
+    const e = an[String(a)];
+    if (!e || !e.x) return false;
+    const x = await charge(`${RACINE}/dep/${S.dep}/x_${e.x}.json`);
+    return x.unites.map(u => u.id).sort().join("|") === ids;
+  };
+  let a0 = S.annee, a1 = S.annee;
+  while (a0 - 1 >= b0 && await memes(a0 - 1)) a0--;
+  while (a1 + 1 <= b1 && await memes(a1 + 1)) a1++;
+  return { a0, a1, ouvertDebut: a0 === b0, ouvertFin: a1 === b1 };
+}
+
+// ---------------------------------------------------------------------------
+// Géométrie : projection propre à l'image, en pixels
+// ---------------------------------------------------------------------------
+function polygonesDe(g, out = []) {
+  if (!g) return out;
+  if (g.type === "Polygon") out.push(g.coordinates);
+  else if (g.type === "MultiPolygon") g.coordinates.forEach(p => out.push(p));
+  else if (g.type === "GeometryCollection") g.geometries.forEach(x => polygonesDe(x, out));
+  return out;
+}
+
+function fabriqueProjection(geoms, largeur = COMMONS.largeurMax, marge = 12) {
+  let b = [Infinity, Infinity, -Infinity, -Infinity];
+  geoms.forEach(g => bboxDe(g, b));
+  const pj = faitProjection(b);   // la même que la page : rien ne bouge
+  const p0 = pj(b[0], b[3]), p1 = pj(b[2], b[1]);
+  const lx = p1[0] - p0[0], ly = p1[1] - p0[1];
+  const s = (largeur - 2 * marge) / Math.max(lx, ly);
+  const W = Math.round(lx * s + 2 * marge), H = Math.round(ly * s + 2 * marge);
+  const px = (lon, lat) => {
+    const q = pj(lon, lat);
+    return [(q[0] - p0[0]) * s + marge, (q[1] - p0[1]) * s + marge];
+  };
+  return { px, W, H };
+}
+
+function cheminPx(g, P) {
+  const out = [];
+  for (const poly of polygonesDe(g)) {
+    for (const r of poly) {
+      if (r.length < 3) continue;
+      // Demi-pixel : deux communes voisines arrondissent leur limite commune
+      // au même point, donc la partagent encore. Puis on retire les sommets
+      // ALIGNÉS sur leurs voisins (allers-retours compris) : le tracé reste
+      // exactement le même — un point retiré d'un côté de la limite et gardé
+      // de l'autre est sur le segment, il n'ouvre aucune lisière. C'est ce
+      // qui divise le poids : la grille de 25 m multiplie les sommets qui se
+      // confondent à cette échelle.
+      const pts = [];
+      for (const c of r) {
+        const q = P.px(c[0], c[1]);
+        const x = Math.round(q[0] * 2) / 2, y = Math.round(q[1] * 2) / 2;
+        const d = pts[pts.length - 1];
+        if (d && d[0] === x && d[1] === y) continue;
+        pts.push([x, y]);
+        while (pts.length >= 3) {
+          const [a, b, c2] = pts.slice(-3);
+          if ((b[0] - a[0]) * (c2[1] - a[1]) - (b[1] - a[1]) * (c2[0] - a[0]) !== 0) break;
+          pts.splice(pts.length - 2, 1);
+          const n = pts.length;
+          if (n >= 2 && pts[n - 1][0] === pts[n - 2][0] && pts[n - 1][1] === pts[n - 2][1]) pts.pop();
+        }
+      }
+      if (pts.length > 1 && pts[0][0] === pts[pts.length - 1][0] &&
+          pts[0][1] === pts[pts.length - 1][1]) pts.pop();
+      if (pts.length < 3) continue;
+      // Coordonnées relatives : exactes, puisque tout est en demi-pixels.
+      out.push("M" + pts[0][0] + " " + pts[0][1]);
+      for (let i = 1; i < pts.length; i++)
+        out.push("l" + (pts[i][0] - pts[i - 1][0]) + " " + (pts[i][1] - pts[i - 1][1]));
+      out.push("z");
+    }
+  }
+  return out.join("");
+}
+
+// Point d'étiquette : le point intérieur le plus éloigné des bords du plus
+// grand polygone (recherche sur grille, affinée deux fois). Le centroïde de
+// la page tombe hors des circonscriptions en croissant — et un numéro posé
+// chez le voisin est pire que pas de numéro.
+function poleInterieur(g, P) {
+  let meilleur = null, aire = -1;
+  for (const poly of polygonesDe(g)) {
+    const anneaux = poly.map(r => r.map(c => P.px(c[0], c[1])));
+    const ext = anneaux[0];
+    let a = 0;
+    for (let i = 0, n = ext.length - 1; i < n; i++)
+      a += ext[i][0] * ext[i + 1][1] - ext[i + 1][0] * ext[i][1];
+    if (Math.abs(a) > aire) { aire = Math.abs(a); meilleur = anneaux; }
+  }
+  if (!meilleur) return null;
+  const dedans = (x, y) => {
+    let c = false;
+    for (const r of meilleur)
+      for (let i = 0, j = r.length - 1; i < r.length; j = i++)
+        if ((r[i][1] > y) !== (r[j][1] > y) &&
+            x < (r[j][0] - r[i][0]) * (y - r[i][1]) / (r[j][1] - r[i][1]) + r[i][0])
+          c = !c;
+    return c;
+  };
+  const dist = (x, y) => {
+    let d = Infinity;
+    for (const r of meilleur)
+      for (let i = 0; i < r.length - 1; i++) {
+        const [ax, ay] = r[i], [bx, by] = r[i + 1];
+        const dx = bx - ax, dy = by - ay;
+        const t = Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) /
+                                          (dx * dx + dy * dy || 1)));
+        d = Math.min(d, Math.hypot(x - ax - t * dx, y - ay - t * dy));
+      }
+    return d;
+  };
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  meilleur[0].forEach(([x, y]) => {
+    x0 = Math.min(x0, x); y0 = Math.min(y0, y);
+    x1 = Math.max(x1, x); y1 = Math.max(y1, y);
+  });
+  let best = null, bestD = -1;
+  let cx = (x0 + x1) / 2, cy = (y0 + y1) / 2, lx = x1 - x0, ly = y1 - y0;
+  for (let passe = 0; passe < 3; passe++) {
+    const n = 18;
+    for (let i = 0; i <= n; i++) for (let j = 0; j <= n; j++) {
+      const x = cx - lx / 2 + lx * i / n, y = cy - ly / 2 + ly * j / n;
+      if (!dedans(x, y)) continue;
+      const d = dist(x, y);
+      if (d > bestD) { bestD = d; best = [x, y]; }
+    }
+    if (!best) break;
+    [cx, cy] = best; lx /= 6; ly /= 6;
+  }
+  if (best) best.d = bestD;        // rayon libre : la taille d'un nom en dépend
+  return best;
+}
+
+// Coloriage glouton : deux circonscriptions dont les emprises se touchent ne
+// reçoivent pas la même teinte. L'emprise est un voisinage grossier, mais
+// avec douze teintes pour rarement plus de dix unités, il suffit.
+function teintesCircos(unites) {
+  const bb = unites.map(u => bboxDe(u.g));
+  const touche = (a, b) => !(a[2] < b[0] || b[2] < a[0] || a[3] < b[1] || b[3] < a[1]);
+  const t = [];
+  unites.forEach((u, i) => {
+    const pris = new Set();
+    for (let j = 0; j < i; j++) if (touche(bb[i], bb[j])) pris.add(t[j]);
+    let k = 0;
+    while (pris.has(k % COMMONS.palette.length) && k < COMMONS.palette.length) k++;
+    t.push(k % COMMONS.palette.length);
+  });
+  return unites.map((u, i) => COMMONS.palette[t[i]]);
+}
+
+// ---------------------------------------------------------------------------
+// Fabrication du SVG
+//
+// Deux niveaux depuis le 6 octobre 2026 : les circonscriptions (numérotées)
+// ou les cantons (nommés). L'autre couche se superpose en trait : les cantons
+// en trait fin sous les circonscriptions, les circonscriptions en trait épais
+// sur les cantons.
+// ---------------------------------------------------------------------------
+function unitesDe(niveau) {
+  const k = niveau === "canton" ? S.cfgCanton : S.cfgCirco;
+  if (!k) return [];
+  return [...k.unites].filter(u => u.g).sort(niveau === "canton"
+    ? (a, b) => nomTriCanton(a).localeCompare(nomTriCanton(b), "fr", { numeric: true })
+    : (a, b) => String(a.code).localeCompare(String(b.code), "fr", { numeric: true }));
+}
+// Paris d'abord, dans l'ordre des arrondissements, puis la banlieue.
+const nomTriCanton = u => cantonParis(u) ? " " + String(cantonParis(u)).padStart(2, "0")
+                                          : String(u.nom || "");
+
+// Coloriage des cantons. L'emprise, qui suffit pour une dizaine de
+// circonscriptions, ne suffit plus pour quarante cantons : presque toutes les
+// emprises se chevauchent et douze teintes s'épuisent. On prend donc le vrai
+// voisinage — deux unités qui partagent au moins deux sommets, ce qui est sûr
+// puisque l'export pose toutes les formes sur la même grille — et on colorie
+// en DSATUR (la plus contrainte d'abord). Repli sur l'emprise si aucune
+// géométrie ne se touche.
+function teintesVoisines(unites) {
+  const sommets = new Map();
+  unites.forEach((u, i) => {
+    for (const poly of polygonesDe(u.g)) for (const r of poly) for (const c of r) {
+      const k = c[0] + "," + c[1];
+      let s = sommets.get(k);
+      if (!s) sommets.set(k, s = new Set());
+      s.add(i);
+    }
+  });
+  const compte = unites.map(() => new Map());
+  for (const s of sommets.values()) {
+    if (s.size < 2) continue;
+    for (const a of s) for (const b of s)
+      if (a !== b) compte[a].set(b, (compte[a].get(b) || 0) + 1);
+  }
+  const adj = compte.map(m => [...m].filter(([, n]) => n >= 2).map(([j]) => j));
+  if (adj.every(a => !a.length)) return teintesCircos(unites);
+  const n = unites.length, N = COMMONS.palette.length, t = new Array(n).fill(-1);
+  for (let pas = 0; pas < n; pas++) {
+    let m = -1, ms = -1, md = -1;
+    for (let i = 0; i < n; i++) {
+      if (t[i] >= 0) continue;
+      const sat = new Set(adj[i].map(j => t[j]).filter(x => x >= 0)).size;
+      if (sat > ms || (sat === ms && adj[i].length > md)) { m = i; ms = sat; md = adj[i].length; }
+    }
+    const pris = new Set(adj[m].map(j => t[j]));
+    let k = 0;
+    while (pris.has(k) && k < N) k++;
+    t[m] = k % N;
+  }
+  return t.map(k => COMMONS.palette[k]);
+}
+
+// Le nom posé sur un canton : « 5e » pour l'arrondissement de Paris qui fait
+// canton, le nom du canton sinon.
+function etiquetteCanton(u) {
+  const n = cantonParis(u);
+  if (n) return n === 1 ? "1er" : n + "e";
+  return String(u.nom || "");
+}
+// Taille et coupure d'un nom de canton : le plus grand corps qui tienne dans
+// le disque libre autour du point d'étiquette (`d`, en pixels), sur une ligne,
+// ou sur deux en coupant à un tiret ou une espace près du milieu quand le
+// nom y gagne nettement.
+function miseEnLignes(t, d) {
+  d = d || 10;
+  const corps = lignes => Math.min(15,
+    (1.9 * d) / (0.58 * Math.max(...lignes.map(s => s.length))),
+    (1.6 * d) / (1.15 * lignes.length));
+  let lignes = [t], f = corps(lignes);
+  if (t.length > 9) {
+    const coupes = [...t.matchAll(/[- ]/g)].map(m => m.index);
+    if (coupes.length) {
+      const i = coupes.reduce((a, b) =>
+        Math.abs(b - t.length / 2) < Math.abs(a - t.length / 2) ? b : a);
+      const deux = [t.slice(0, t[i] === "-" ? i + 1 : i), t.slice(i + 1)];
+      const f2 = corps(deux);
+      if (f2 > f * 1.15) { lignes = deux; f = f2; }
+    }
+  }
+  return { lignes, taille: Math.max(7, Math.round(f * 2) / 2) };
+}
+
+function fabriqueSVG(o) {
+  const canton = o.niveau === "canton";
+  const kx = S.cfgCirco, kc = S.cfgCanton, kp = canton ? kc : kx;
+  const unites = unitesDe(o.niveau);
+  const P = fabriqueProjection(unites.map(u => u.g));
+  const cible = o.type === "situation" ? unites.find(u => u.id === o.unite) : null;
+  const L = [];
+  L.push(`<?xml version="1.0" encoding="UTF-8"?>`);
+  L.push(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" ` +
+         `width="${P.W}" height="${P.H}" viewBox="0 0 ${P.W} ${P.H}">`);
+  L.push(`<title>${xmlEsc(o.titre)}</title>`);
+  L.push(`<desc>${xmlEsc(o.desc)}</desc>`);
+
+  // 1. aplats
+  const teintes = canton ? teintesVoisines(unites) : teintesCircos(unites);
+  L.push(`<g id="${canton ? "cantons-aplats" : "circonscriptions"}" stroke="none" fill-rule="evenodd">`);
+  unites.forEach((u, i) => {
+    const f = cible ? (u === cible ? COMMONS.rouge : "#f1ede4") : teintes[i];
+    L.push(`<path id="${xmlEsc(canton ? "k-" + u.id : "c-" + u.code)}" fill="${f}" d="${cheminPx(u.g, P)}"/>`);
+  });
+  L.push(`</g>`);
+
+  // 2. limites communales — chaque polygone une fois, quel que soit le nombre
+  //    d'atomes qui le revendiquent (même règle que la carte)
+  if (o.communes) {
+    const vus = new Set(), d = [];
+    for (const aid of Object.keys(kp.rattachement)) {
+      const vg = versionA(S.communes[aid], S.annee);
+      if (!vg || vus.has(vg.g)) continue;
+      vus.add(vg.g);
+      d.push(cheminPx(vg.g, P));
+    }
+    L.push(`<path id="communes" fill="none" stroke="#ffffff" stroke-opacity="${cible ? .55 : .85}" ` +
+           `stroke-width="0.5" stroke-linejoin="round" d="${d.join("")}"/>`);
+  }
+  // 3. sous les circonscriptions, les limites cantonales quand la base en
+  //    tient à cette date
+  if (!canton && o.autre && kc) {
+    const d = kc.unites.filter(u => u.g).map(u => cheminPx(u.g, P));
+    L.push(`<path id="cantons" fill="none" stroke="#5d574f" stroke-opacity=".75" ` +
+           `stroke-width="0.9" stroke-linejoin="round" d="${d.join("")}"/>`);
+  }
+  // 4. limites de la couche principale, puis la cible par-dessus
+  L.push(`<g id="limites" fill="none" stroke-linejoin="round" stroke-linecap="round">`);
+  unites.forEach(u => {
+    if (u === cible) return;
+    L.push(`<path stroke="${cible ? "#8f897f" : "#2b2722"}" ` +
+           `stroke-width="${cible || canton ? 1.1 : 1.8}" d="${cheminPx(u.g, P)}"/>`);
+  });
+  if (cible)
+    L.push(`<path stroke="${COMMONS.rougeTrait}" stroke-width="1.8" d="${cheminPx(cible.g, P)}"/>`);
+  L.push(`</g>`);
+  // 5. sur les cantons, les circonscriptions en trait épais
+  if (canton && o.autre && kx) {
+    const d = kx.unites.filter(u => u.g).map(u => cheminPx(u.g, P));
+    L.push(`<path id="circonscriptions" fill="none" stroke="#1d1c1a" ` +
+           `stroke-opacity="${cible ? .55 : .9}" stroke-width="${cible ? 1.6 : 3.4}" ` +
+           `stroke-linejoin="round" stroke-linecap="round" d="${d.join("")}"/>`);
+  }
+
+  // 6. numéros ou noms. Le liseré est un second <text> dessous, et non
+  //    `paint-order` : tous les moteurs de rendu ne le lisent pas, et un
+  //    numéro sans liseré disparaît sur une limite communale.
+  if (o.numeros) {
+    const lis = [], txt = [];
+    for (const u of unites) {
+      const t = canton ? etiquetteCanton(u) : etiquetteCourte(u);
+      if (!t) continue;
+      const p = poleInterieur(u.g, P);
+      if (!p) continue;
+      const sur = u === cible;
+      let taille, lignes = [t];
+      if (canton) ({ taille, lignes } = miseEnLignes(t, p.d));
+      else taille = /^\d+$/.test(t) ? 34 : /^[\d\/-]+$/.test(t) ? 28 : (t.length > 12 ? 19 : 23);
+      const x = p[0].toFixed(1), y = p[1].toFixed(1);
+      let pos, corps;
+      if (lignes.length === 1) {
+        pos = `x="${x}" y="${y}" dy="0.35em" font-size="${taille}"`;
+        corps = xmlEsc(t);
+      } else {
+        pos = `x="${x}" y="${y}" font-size="${taille}"`;
+        corps = lignes.map((l, k) => `<tspan x="${x}" dy="${k ? "1.1em"
+          : (0.35 - 0.55 * (lignes.length - 1)).toFixed(2) + "em"}">${xmlEsc(l)}</tspan>`).join("");
+      }
+      lis.push(`<text ${pos} stroke="${sur ? COMMONS.rougeTrait : "#ffffff"}">${corps}</text>`);
+      txt.push(`<text ${pos} fill="${sur ? "#ffffff" : "#1d1c1a"}">${corps}</text>`);
+    }
+    L.push(`<g id="${canton ? "noms" : "numeros"}" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" ` +
+           `font-weight="bold" text-anchor="middle">`);
+    L.push(`<g fill="none" stroke-width="${canton ? 3 : 5}" stroke-linejoin="round">${lis.join("")}</g>`);
+    L.push(txt.join(""));
+    L.push(`</g>`);
+  }
+  L.push(`</svg>`);
+  return L.join("\n");
+}
+
+// ---------------------------------------------------------------------------
+// Compositions
+//
+// Les deux couches se joignent par atome (pas avant 1870 : la base n'y tient
+// que les circonscriptions). Une unité d'une couche qui touche plusieurs unités
+// de l'autre y figure « (partie) ».
+// ---------------------------------------------------------------------------
+function compositionCroisee() {
+  const kx = S.cfgCirco, kc = S.cfgCanton;
+  if (!kx || !kc) return null;
+  const parX = new Map(), parC = new Map();
+  for (const [aid, cx] of Object.entries(kx.rattachement)) {
+    const ck = kc.rattachement[aid];
+    if (!ck) continue;
+    if (!parX.has(cx)) parX.set(cx, new Set());
+    parX.get(cx).add(ck);
+    if (!parC.has(ck)) parC.set(ck, new Set());
+    parC.get(ck).add(cx);
+  }
+  const ux = new Map(kx.unites.map(u => [u.id, u]));
+  const uc = new Map(kc.unites.map(u => [u.id, u]));
+  // « (partie) » ne se dit que d'un canton coupé entre circonscriptions : une
+  // circonscription s'étend toujours sur plusieurs cantons, le dire de chacune
+  // ne dirait rien.
+  const liste = (par, inverse, unites) => {
+    const r = new Map();
+    for (const [k, s] of par)
+      r.set(k, [...s].map(j => ({ u: unites.get(j), partie: !!inverse && inverse.get(j).size > 1 }))
+                     .filter(e => e.u));
+    return r;
+  };
+  return { cantonsDe: liste(parX, parC, uc), circosDe: liste(parC, null, ux) };
+}
+
+function cantonsParCirco() {
+  const c = compositionCroisee();
+  if (!c) return null;
+  const r = new Map();
+  for (const [cx, l] of c.cantonsDe)
+    r.set(cx, l.map(e => e.u.nom + (e.partie ? " (partie)" : ""))
+      .sort((a, b) => a.localeCompare(b, "fr")));
+  return r;
+}
+
+// Les communes d'une unité, par nom. La clé est (code INSEE, nom) : deux
+// homonymes du département restent deux communes, et les fractions d'une ville
+// découpée retrouvent leur mère — qui est alors « (partie) » partout où elle
+// est coupée.
+function communesDe(niveau) {
+  const k = niveau === "canton" ? S.cfgCanton : S.cfgCirco;
+  const par = new Map(), unitesDe_ = new Map(), info = new Map();
+  if (!k) return par;
+  for (const [aid, uid] of Object.entries(k.rattachement)) {
+    const c = S.communes[aid];
+    const nom = nomCommuneWiki(aid);
+    if (!c || !nom) continue;
+    const cle = (c.i || c.s || aid) + "|" + nom;
+    // Le nom de 2012, quand la commune a changé de nom depuis : le titre de
+    // l'article est le plus souvent le nom actuel (Mirebeau → Mirebeau-sur-Bèze).
+    const actuel = CX.cog && CX.cog[c.i];
+    info.set(cle, { nom, dep: depDuCode(c.i),
+                    actuel: actuel && actuel !== nom && c.nm && c.nm.length ? actuel : null });
+    if (!par.has(uid)) par.set(uid, new Set());
+    par.get(uid).add(cle);
+    if (!unitesDe_.has(cle)) unitesDe_.set(cle, new Set());
+    unitesDe_.get(cle).add(uid);
+  }
+  const r = new Map();
+  for (const [uid, s] of par)
+    r.set(uid, [...s].map(cle => Object.assign({ partie: unitesDe_.get(cle).size > 1 }, info.get(cle)))
+      .sort((a, b) => a.nom.localeCompare(b.nom, "fr")));
+  return r;
+}
+
+// ---------------------------------------------------------------------------
+// Noms : communes, cantons, circonscriptions
+// ---------------------------------------------------------------------------
+const sansAccents = s => String(s).replace(/œ/g, "oe").replace(/Œ/g, "OE")
+  .replace(/æ/g, "ae").replace(/Æ/g, "AE").normalize("NFD").replace(/[̀-ͯ]/g, "")
+  .toUpperCase().replace(/^(L'|LE |LA |LES )/, "").replace(/[^A-Z0-9]+/g, "");
+const PARTICULES = new Set(["de", "du", "des", "la", "le", "les", "sur", "sous",
+  "en", "et", "lès", "lez", "les", "aux", "au", "d", "l", "à", "a"]);
+function casseTitre(n) {
+  return String(n).toLowerCase().split(/([-' ])/).map((m, i) =>
+    /^[-' ]$/.test(m) || (i > 0 && PARTICULES.has(m)) ? m
+      : m.charAt(0).toUpperCase() + m.slice(1)).join("");
+}
+// Le nom d'une commune à la date, en casse et accents : la chronologie des
+// renommages d'abord (déjà typographiée), puis le COG 2012 si le nom en
+// capitales de GEOFLA y concorde, et en dernier recours une casse de titre
+// sans accents — que l'état des liens signale.
+function nomCommuneWiki(aid) {
+  const c = S.communes && S.communes[aid];
+  if (!c) return null;
+  if (c.nm && c.nm.length) return nomA(c, S.annee);
+  const n = String(c.n || "");
+  if (!n || n !== n.toUpperCase()) return n || null;
+  const cog = CX.cog && CX.cog[c.i];
+  if (cog && sansAccents(cog) === sansAccents(n)) return cog;
+  const t = casseTitre(n);
+  CX.devines.add(t);        // signalé s'il paraît dans le paragraphe
+  return t;
+}
+function depDuCode(code) {
+  if (!code) return null;
+  const k = /^97/.test(code) ? code.slice(0, 3) : code.slice(0, 2);
+  const d = S.index.departements.find(x => x.code === k);
+  return d ? nomModerne(d) : null;
+}
+
+const maj = s => s.charAt(0).toUpperCase() + s.slice(1);
+// Un canton de la Seine nommé « Paris-05 » est un arrondissement de Paris.
+function cantonParis(u) {
+  if (S.dep !== "75") return null;
+  const m = /^Paris-0*(\d+)$/.exec(String(u.nom || ""));
+  return m ? +m[1] : null;
+}
+const arrParis = n => `${n === 1 ? "1er" : n + "e"} arrondissement de Paris`;
+// La préposition devant un nom de lieu : « d'Auxonne », « du Blanc »,
+// « des Andelys », « de La Ferté-Macé », « de Beaune-Nord ». Le h n'est pas
+// élidé : la page ne sait pas lequel est aspiré, la vérification des liens
+// le dira.
+function deLieu(nom) {
+  let m;
+  if ((m = /^Le (.+)$/.exec(nom))) return { prep: "du ", nom: m[1] };
+  if ((m = /^Les (.+)$/.exec(nom))) return { prep: "des ", nom: m[1] };
+  if (/^[AEIOUYÂÉÈÊÎÔ]/.test(nom)) return { prep: "d'", nom };
+  return { prep: "de ", nom };
+}
+function nomCanton(u) {
+  const n = cantonParis(u);
+  if (n) return arrParis(n);
+  const { prep, nom } = deLieu(String(u.nom || ""));
+  return `canton ${prep}${nom}`;
+}
+function enCanton(u) {
+  const n = cantonParis(u);
+  if (n) {
+    const s = n % 10 === 1 && n !== 11 ? "st" : n % 10 === 2 && n !== 12 ? "nd"
+            : n % 10 === 3 && n !== 13 ? "rd" : "th";
+    return `the ${n}${s} arrondissement of Paris`;
+  }
+  return `the canton of ${u.nom}`;
+}
+
+// Nombres en lettres (orthographe traditionnelle dans le texte : « vingt et
+// une ») et ordinaux pour les titres d'articles, qui suivent l'usage de
+// Wikipédia (« Vingt-et-unième circonscription du Nord »).
+const UNITES_FR = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept",
+  "huit", "neuf", "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize"];
+const DIZAINES_FR = { 2: "vingt", 3: "trente", 4: "quarante", 5: "cinquante", 6: "soixante" };
+function lettres(n, fem = false, trait = false) {
+  const un = fem ? "une" : "un", et = trait ? "-et-" : " et ";
+  if (n === 1) return un;
+  if (n < 17) return UNITES_FR[n];
+  if (n < 20) return "dix-" + UNITES_FR[n - 10];
+  if (n < 70) {
+    const d = DIZAINES_FR[Math.floor(n / 10)], u = n % 10;
+    return u === 0 ? d : u === 1 ? d + et + un : d + "-" + UNITES_FR[u];
+  }
+  if (n < 80) return n === 71 ? "soixante" + et + "onze" : "soixante-" + lettres(n - 60, fem, trait);
+  if (n === 80) return "quatre-vingts";
+  if (n < 100) return "quatre-vingt-" + lettres(n - 80, fem, trait);
+  return String(n);
+}
+function ordinalLettres(n) {
+  if (n === 1) return "première";
+  const c = lettres(n, false, true);
+  if (c === "quatre-vingts") return "quatre-vingtième";
+  return c.replace(/(un|cinq|neuf|e|)$/, m =>
+    m === "un" ? "unième" : m === "cinq" ? "cinquième" : m === "neuf" ? "neuvième"
+      : m === "e" ? "ième" : "ième");
+}
+const etListe = l => l.length <= 1 ? (l[0] || "") : l.slice(0, -1).join(", ") + " et " + l[l.length - 1];
+
+// Une circonscription : son numéro départemental quand elle en a un
+// (Gaudillère, 1946-1958, depuis 1958), sinon son nom (les circonscriptions
+// d'arrondissement de 1876-1919 : « Beaune-1 », « Semur »).
+function affCirco(u) {
+  const nc = nomCommons(u);
+  const m = /(\d+)(?:re|er|e) circonscription$/.exec(nc);
+  if (m) return { n: +m[1], court: `${ordinal(m[1])} circonscription`,
+                  prose: `${ordinal(m[1])} circonscription` };
+  const v = /^(.+)-(\d+)$/.exec(nc);
+  if (v) return { n: null, court: nc, prose: `${ordinal(v[2])} circonscription de ${v[1]}` };
+  if (/circonscription|collège/.test(nc)) return { n: null, court: nc, prose: `circonscription « ${nc} »` };
+  return { n: null, court: nc, prose: `circonscription de ${nc}` };
+}
+
+// ---------------------------------------------------------------------------
+// Nom de fichier, description, catégories
+// ---------------------------------------------------------------------------
+function contexte(plage) {
+  const dep = S.index.departements.find(d => d.code === S.dep) || {};
+  const { a0, a1 } = plage;
+  return {
+    dep, nomEpoque: nomDep(dep, S.annee), moderne: nomModerne(dep),
+    per: periodeDe(S.annee), a0, a1,
+    periodeTxt: a0 === a1 ? `${a0}` : `${a0}-${a1}`,
+    deLaPeriode: a0 === a1 ? `en ${a0}` : `de ${a0} à ${a1}`,
+    enPeriode: a0 === a1 ? `in ${a0}` : `from ${a0} to ${a1}`,
+  };
+}
+
+function fondCommunal(k) {
+  const repli = k.unites.reduce((s, u) => s + (u.repli || 0), 0);
+  return S.trame === "geofla2015"
+    ? "IGN, GEOFLA 2015 (Licence Ouverte)"
+    : "ANR-COMMUNES, trame communale historique datée (Zenodo)" +
+      (repli ? " ; IGN, GEOFLA 2011 (Licence Ouverte) pour " + repli +
+               " commune" + (repli > 1 ? "s" : "") + " non pourvue" + (repli > 1 ? "s" : "") : "");
+}
+
+function assemble(X, a) {
+  let { fr, en } = a;
+  if (X.moderne !== X.nomEpoque) {
+    fr += `\nLe département s'appelle aujourd'hui ${X.moderne}.`;
+    en += ` The department is now called ${X.moderne}.`;
+  }
+  const auj = new Date().toISOString().slice(0, 10);
+  const texte =
+`=={{int:filedesc}}==
+{{Information
+|description={{fr|1=${fr}}}
+{{en|1=${en}}}
+|date=${auj}
+|source={{own}}, d'après la base ''histgis'' (projet_carte).
+* ${a.source}
+* Fond communal : ${a.fond}
+|author=[[User:{{subst:REVISIONUSER}}]]
+|other versions=${a.autre}
+}}
+
+=={{int:license-header}}==
+${COMMONS.licence}`;
+  const vars = { dep: X.moderne, periode: X.per ? X.per[2] : "" };
+  const cats = a.categories
+    .map(c => c.replace(/\{(\w+)\}/g, (_, k) => vars[k] || ""))
+    .concat(CX.categoriesEnPlus || [])
+    .filter(Boolean);
+  return {
+    nom: nomFichierPropre(a.nom), texte, categories: [...new Set(cats)],
+    titre: a.titre, desc: `${a.titre}. Base histgis (projet_carte).`,
+  };
+}
+
+function proposition(o, plage) {
+  return o.niveau === "canton" ? propositionCanton(o, plage) : propositionCirco(o, plage);
+}
+
+function propositionCirco(o, plage) {
+  const X = contexte(plage);
+  const { nomEpoque, periodeTxt, deLaPeriode, enPeriode, per, a0, a1 } = X;
+  const kx = S.cfgCirco;
+  const unites = unitesDe("circo");
+  const liste = unites.length === 1 && unites[0].regime === "liste";
+  const elections = COMMONS.elections.filter(a => a >= a0 && a <= a1);
+  const chambreFr = per ? per[3] : "Chambre des députés";
+  const chambreEn = per ? per[4] : "Chamber of Deputies";
+  const cpc = cantonsParCirco();
+  const cible = o.type === "situation" ? kx.unites.find(u => u.id === o.unite) : null;
+
+  const ligneUnite = u => {
+    const ks = cpc && cpc.get(u.id);
+    const t = etiquetteCourte(u);
+    return `* ${t && /^[\d\/-]+$/.test(t) ? "n° " + t + " — " : ""}${nomCommons(u)} : ` +
+           `${u.n} commune${u.n > 1 ? "s" : ""}` +
+           (ks && ks.length ? ` ; canton${ks.length > 1 ? "s" : ""} : ${ks.join(", ")}` : "");
+  };
+
+  let nom, fr, en, titre;
+  if (!cible) {
+    nom = `Circonscriptions législatives ${deDep(nomEpoque)} (${periodeTxt}).svg`;
+    titre = `Circonscriptions législatives ${deDep(nomEpoque)}, ${periodeTxt}`;
+    fr = `Carte des circonscriptions électorales (${chambreFr}) du département ` +
+         `${deDep(nomEpoque)}, découpage en vigueur ${deLaPeriode}` +
+         (liste ? ` : scrutin de liste départemental, le département forme une seule circonscription.`
+                : ` : ${unites.length} circonscription${unites.length > 1 ? "s" : ""}, un député par circonscription.`);
+    en = `Map of the electoral constituencies (${chambreEn}) of the ${nomEpoque} ` +
+         `department, France, ${enPeriode}` +
+         (liste ? ` (department-wide list voting, one single constituency).`
+                : ` (${unites.length} single-member constituencies).`);
+    if (!liste) fr += "\n" + unites.map(ligneUnite).join("\n");
+  } else {
+    nom = `${nomCommons(cible)} ${periodeTxt} (localisation).svg`;
+    titre = `${nomCommons(cible)}, ${periodeTxt}`;
+    fr = `Carte de situation : ${nomCommons(cible)} (${chambreFr}), dans le département ` +
+         `${deDep(nomEpoque)}, découpage en vigueur ${deLaPeriode}.\n` + ligneUnite(cible);
+    en = `Locator map of the constituency « ${nomCommons(cible)} » (${chambreEn}) within the ` +
+         `${nomEpoque} department, France, ${enPeriode}.`;
+  }
+  if (elections.length) {
+    fr += `\nÉlections générales sur ce découpage : ${elections.join(", ")}.`;
+    en += ` General elections held on these boundaries: ${elections.join(", ")}.`;
+  }
+  return assemble(X, {
+    nom, titre, fr, en,
+    source: "Composition électorale : " + sourceDe(S.annee),
+    fond: fondCommunal(kx),
+    autre: cible ? `[[:File:${nomFichierPropre(`Circonscriptions législatives ${deDep(nomEpoque)} (${periodeTxt}).svg`)}]]` : "",
+    categories: cible ? COMMONS.categories.circo : COMMONS.categories.departement,
+  });
+}
+
+function propositionCanton(o, plage) {
+  const X = contexte(plage);
+  const { nomEpoque, periodeTxt, deLaPeriode, enPeriode } = X;
+  const kc = S.cfgCanton;
+  const unites = unitesDe("canton");
+  const cible = o.type === "situation" ? unites.find(u => u.id === o.unite) : null;
+  const croise = compositionCroisee();
+  const communes = communesDe("canton");
+  const ligne = u => {
+    const xs = croise && croise.circosDe.get(u.id);
+    const nb = (communes.get(u.id) || []).length || u.n;
+    return `* ${maj(nomCanton(u))} : ${nb} commune${nb > 1 ? "s" : ""}` +
+      (xs && xs.length ? ` ; circonscription${xs.length > 1 ? "s" : ""} : ` +
+        xs.map(e => nomCommons(e.u) + (e.partie ? " (partie)" : "")).join(", ") : "");
+  };
+  const fichierDep = `Cantons ${deDep(nomEpoque)} (${periodeTxt}).svg`;
+  let nom, fr, en, titre;
+  if (!cible) {
+    nom = fichierDep;
+    titre = `Cantons ${deDep(nomEpoque)}, ${periodeTxt}`;
+    fr = `Carte des cantons du département ${deDep(nomEpoque)}, découpage en vigueur ` +
+         `${deLaPeriode} : ${unites.length} canton${unites.length > 1 ? "s" : ""}.\n` +
+         unites.map(ligne).join("\n");
+    en = `Map of the cantons of the ${nomEpoque} department, France, ${enPeriode} ` +
+         `(${unites.length} canton${unites.length > 1 ? "s" : ""}).`;
+  } else {
+    nom = `${maj(nomCanton(cible))} (${nomEpoque}) ${periodeTxt} (localisation).svg`;
+    titre = `${maj(nomCanton(cible))} (${nomEpoque}), ${periodeTxt}`;
+    fr = `Carte de situation : ${nomCanton(cible)}, dans le département ${deDep(nomEpoque)}, ` +
+         `découpage cantonal en vigueur ${deLaPeriode}.\n` + ligne(cible);
+    en = `Locator map of ${enCanton(cible)} within the ${nomEpoque} department, France, ${enPeriode}.`;
+  }
+  return assemble(X, {
+    nom, titre, fr, en,
+    source: "Composition cantonale : " + sourceCantonDe(S.annee),
+    fond: fondCommunal(kc),
+    autre: cible ? `[[:File:${nomFichierPropre(fichierDep)}]]` : "",
+    categories: cible ? COMMONS.categories.cantonSituation : COMMONS.categories.cantons,
+  });
+}
+function sourceCantonDe(annee) {
+  const s = COMMONS.sourcesCantons.find(([a, b]) => annee >= a && annee <= b);
+  return s ? s[2] : "base ''histgis''";
+}
+
+// ===========================================================================
+// Paragraphe pour Wikipédia
+//
+// Le texte d'un article, et non plus la description d'un fichier : une phrase
+// d'introduction, puis la composition de chaque unité, liens compris — sur le
+// modèle du paragraphe de Paris en 1946 :
+//
+//   À compter de 1946, Paris comprend trois circonscriptions, sur les six
+//   que compte le [[Seine (département)|département de la Seine]].
+//   * [[Première circonscription de la Seine (Quatrième République)|1re
+//     circonscription]] : [[5e arrondissement de Paris|5e]], … et
+//     [[15e arrondissement de Paris|15e arrondissements]]
+//
+// Un titre d'article se devine mal (homonymes, « (Côte-d'Or) » ou non, canton
+// redirigé vers sa commune) : chaque lien porte une liste de titres candidats,
+// que `servir.py` soumet à fr.wikipedia. Le premier qui existe, n'est pas une
+// page d'homonymie et — redirection suivie — mène bien à ce qu'on vise
+// (« Canton… », « …circonscription… ») est retenu ; à défaut le lien reste
+// rouge, et l'état sous le texte le dit.
+// ===========================================================================
+function lienWP(cands, aff, motif = null) {
+  cands = cands.filter(Boolean);
+  if (!cands.length) return aff;
+  cands.forEach(t => CX.wpDemandes.add(t));
+  const verifies = cands.every(t => CX.wp.has(t));
+  let titre = null;
+  for (const t of cands) {
+    const r = CX.wp.get(t);
+    if (!r || !r.existe || r.homonymie) continue;
+    const c = r.cible || t;
+    if (motif && !motif.test(c)) continue;
+    titre = c;
+    break;
+  }
+  if (titre) CX.wpBleus++;
+  else {
+    const homo = cands.find(t => (CX.wp.get(t) || {}).homonymie);
+    titre = homo && homo !== cands[0] ? cands[0] : cands[cands.length - 1];
+    if (verifies) {
+      CX.wpRouges.set(titre, homo ? "homonymie" : "rouge");
+      if ($c("c-w-rouges").checked) return aff;
+    }
+  }
+  return maj(titre) === maj(aff) ? `[[${aff}]]` : `[[${titre}|${aff}]]`;
+}
+
+function titresCirco(n, X) {
+  // Le régime se lit sur la première année du découpage ÉLECTORAL — pas sur
+  // celle du découpage cantonal quand le paragraphe porte sur un canton.
+  const a0 = CX.plages.circo ? CX.plages.circo.a0 : S.annee;
+  const r = COMMONS.regimesWiki.find(([a, b]) => a0 >= a && a0 <= b);
+  const suffixe = r ? r[2] : "";
+  return [`${maj(ordinalLettres(n))} circonscription ${deDep(X.nomEpoque)}` +
+          (suffixe ? ` (${suffixe})` : "")];
+}
+const RE_CIRCO = /circonscription/i, RE_CANTON = /^Canton /, RE_ARR = /arrondissement/;
+function lienCirco(u, X, aff = null) {
+  const a = affCirco(u);
+  if (!a.n) return aff || a.court;
+  return lienWP(titresCirco(a.n, X), aff || a.court, RE_CIRCO);
+}
+function titresCanton(u, X) {
+  const n = cantonParis(u);
+  if (n) return [arrParis(n)];
+  const { prep, nom } = deLieu(String(u.nom || ""));
+  const base = `Canton ${prep}${nom}`;
+  return [`${base} (${X.nomEpoque})`, X.moderne !== X.nomEpoque ? `${base} (${X.moderne})` : null, base];
+}
+function lienCanton(u, X) {
+  const n = cantonParis(u);
+  if (n) return lienWP([arrParis(n)], `${n === 1 ? "1er" : n + "e"} arrondissement`, RE_ARR);
+  return lienWP(titresCanton(u, X), String(u.nom || ""), RE_CANTON);
+}
+function lienCommune(c) {
+  if (CX.devines.has(c.nom)) CX.nomsDevines.add(c.nom);
+  return lienWP([c.dep ? `${c.nom} (${c.dep})` : null, c.nom,
+                 c.actuel && c.dep ? `${c.actuel} (${c.dep})` : null, c.actuel], c.nom) +
+         (c.partie ? " (partie)" : "");
+}
+function lienDep(X) {
+  return lienWP([`${X.nomEpoque} (département)`, X.nomEpoque],
+                `département ${deDep(X.nomEpoque)}`, /département|^[^(]+$/);
+}
+function phrasePeriode() {
+  const p = CX.plage;
+  if (p.a0 === p.a1) return `En ${p.a0}`;
+  if (p.ouvertFin) return `À compter de ${p.a0}`;
+  return `De ${p.a0} à ${p.a1}`;
+}
+function listeCommunes(cs) {
+  return `${cs.length} commune${cs.length > 1 ? "s" : ""} (${etListe(cs.map(lienCommune))})`;
+}
+
+// Ce qui compose une circonscription : arrondissements de Paris, cantons, ou
+// à défaut de couche cantonale ses communes (comptées, ou listées sur demande).
+function compoCirco(u, X, croise, communes, lister, prose) {
+  const ks = croise && croise.cantonsDe.get(u.id);
+  if (ks && ks.length) {
+    const arr = ks.filter(e => cantonParis(e.u)).sort((a, b) => cantonParis(a.u) - cantonParis(b.u));
+    const cts = ks.filter(e => !cantonParis(e.u))
+      .sort((a, b) => String(a.u.nom).localeCompare(String(b.u.nom), "fr"));
+    const morceaux = [];
+    if (arr.length) {
+      const l = arr.map((e, i) => {
+        const n = cantonParis(e.u), ord = n === 1 ? "1er" : n + "e";
+        const aff = i === arr.length - 1 ? `${ord} arrondissement${arr.length > 1 ? "s" : ""}` : ord;
+        return lienWP([arrParis(n)], aff, RE_ARR) + (e.partie ? " (partie)" : "");
+      });
+      morceaux.push((prose ? (arr.length > 1 ? "les " : "le ") : "") + etListe(l));
+    }
+    if (cts.length) {
+      const l = cts.map(e => {
+        const { prep, nom } = deLieu(String(e.u.nom || ""));
+        return prep + lienWP(titresCanton(e.u, X), nom, RE_CANTON) + (e.partie ? " (partie)" : "");
+      });
+      morceaux.push((prose ? (cts.length > 1 ? "les " : "le ") : "") +
+                    (cts.length > 1 ? "cantons " : "canton ") + etListe(l));
+    }
+    return morceaux.join(prose ? " et " : " ; ");
+  }
+  const cs = (communes && communes.get(u.id)) || [];
+  if (!cs.length) return `${u.n} commune${u.n > 1 ? "s" : ""}`;
+  return lister ? listeCommunes(cs) : `${cs.length} commune${cs.length > 1 ? "s" : ""}`;
+}
+
+function paragrapheWiki(o) {
+  CX.wpDemandes = new Set(); CX.wpRouges = new Map(); CX.wpBleus = 0;
+  CX.nomsDevines = new Set();
+  if (o.niveau === "liste") return wikiListe();
+  const X = contexte(CX.plage);
+  const lister = $c("c-w-communes").checked;
+  return o.niveau === "canton" ? wikiCantons(o, X, lister) : wikiCircos(o, X, lister);
+}
+
+function wikiCircos(o, X, lister) {
+  const unites = unitesDe("circo");
+  const croise = compositionCroisee();
+  const communes = communesDe("circo");
+  const per = phrasePeriode();
+  const liste = unites.length === 1 && unites[0].regime === "liste";
+  const cible = o.type === "situation" ? unites.find(u => u.id === o.unite) : null;
+  if (cible) {
+    const a = affCirco(cible);
+    return `${per}, la ${a.prose}${a.n ? " " + deDep(X.nomEpoque) : ""} comprend ` +
+           compoCirco(cible, X, croise, communes, lister, true) + ".";
+  }
+  if (liste)
+    return `${per}, le ${lienDep(X)} forme une seule circonscription, ` +
+           `dont les députés sont élus au scrutin de liste.`;
+  // « 1re circonscription » quand elle a un numéro départemental, sinon
+  // « 1re circonscription de Beaune », « circonscription de Semur ».
+  const puce = u => `* ${lienCirco(u, X, affCirco(u).n ? null : maj(affCirco(u).prose))} : ` +
+                    compoCirco(u, X, croise, communes, lister, false);
+  const paris = S.dep === "75" ? unites.filter(u => /^Paris\b/.test(nomCommons(u))) : [];
+  if (paris.length && paris.length < unites.length) {
+    const reste = unites.filter(u => !paris.includes(u));
+    return `${per}, Paris comprend ${lettres(paris.length, true)} circonscription` +
+      `${paris.length > 1 ? "s" : ""}, sur les ${lettres(unites.length, true)} que compte ` +
+      `le ${lienDep(X)}.\n\n` + paris.map(puce).join("\n") +
+      `\n\nLe reste du département ${reste.length > 1 ? "forme les " + lettres(reste.length, true) +
+        " autres circonscriptions" : "forme la dernière circonscription"} :\n\n` +
+      reste.map(puce).join("\n");
+  }
+  return `${per}, le ${lienDep(X)} comprend ${lettres(unites.length, true)} circonscription` +
+         `${unites.length > 1 ? "s" : ""}.\n\n` + unites.map(puce).join("\n");
+}
+
+function wikiCantons(o, X, lister) {
+  const unites = unitesDe("canton");
+  const croise = compositionCroisee();
+  const communes = communesDe("canton");
+  const per = phrasePeriode();
+  const cible = o.type === "situation" ? unites.find(u => u.id === o.unite) : null;
+  if (cible) {
+    const cs = communes.get(cible.id) || [];
+    const n = cantonParis(cible);
+    let t = n
+      ? `${per}, le ${arrParis(n)} forme un canton ${deDep(X.nomEpoque)}.`
+      : `${per}, le ${nomCanton(cible)} comprend ${lettres(cs.length || cible.n)} commune` +
+        `${(cs.length || cible.n) > 1 ? "s" : ""}` +
+        (cs.length ? ` : ${etListe(cs.map(lienCommune))}.` : ".");
+    // Au scrutin de liste, la circonscription est le département : rien à dire.
+    const xs = croise && (croise.circosDe.get(cible.id) || [])
+      .filter(e => e.u.regime !== "liste" && !/^L/.test(String(e.u.code || "")));
+    if (xs && xs.length) {
+      const l = xs.map(e => "la " + lienCirco(e.u, X));
+      t += xs.length === 1
+        ? ` Il fait partie de ${l[0]}${affCirco(xs[0].u).n ? " " + deDep(X.nomEpoque) : ""}.`
+        : ` Il est partagé entre ${etListe(l)}.`;
+    }
+    return t;
+  }
+  const puce = u => {
+    if (cantonParis(u)) return `* ${lienCanton(u, X)}`;
+    const cs = communes.get(u.id) || [];
+    const nb = cs.length || u.n;
+    return `* ${lienCanton(u, X)} : ` +
+      (lister && cs.length ? listeCommunes(cs) : `${nb} commune${nb > 1 ? "s" : ""}`);
+  };
+  const np = unites.filter(cantonParis).length;
+  return `${per}, le ${lienDep(X)} comprend ${lettres(unites.length)} canton` +
+         `${unites.length > 1 ? "s" : ""}` +
+         (np ? `, dont les ${lettres(np)} arrondissements de Paris` : "") + `.\n\n` +
+         unites.map(puce).join("\n");
+}
+
+function afficheEtatLiens() {
+  const z = $c("c-wiki-etat");
+  const n = CX.wpDemandes.size;
+  const verifies = [...CX.wpDemandes].every(t => CX.wp.has(t));
+  const morceaux = [];
+  if (!n) morceaux.push(`<span class="note">aucun lien à vérifier</span>`);
+  else if (!verifies) morceaux.push(`<span class="note">liens en cours de vérification sur fr.wikipedia…</span>`);
+  else {
+    morceaux.push(`<span class="c-ok">✓</span> ${CX.wpBleus} lien${CX.wpBleus > 1 ? "s" : ""} bleu${CX.wpBleus > 1 ? "s" : ""}`);
+    const r = [...CX.wpRouges];
+    if (r.length) {
+      const lien = ([t, e]) => `<a href="https://fr.wikipedia.org/wiki/${encodeURIComponent(t.replace(/ /g, "_"))}"
+        target="_blank" rel="noopener">${echappe(t)}</a>${e === "homonymie" ? " (homonymie)" : ""}`;
+      morceaux.push(`<span class="c-ko">✗</span> ${r.length} lien${r.length > 1 ? "s" : ""} rouge${r.length > 1 ? "s" : ""}` +
+        ($c("c-w-rouges").checked ? " (retirés du texte)" : "") + " : " +
+        r.slice(0, 40).map(lien).join(", ") + (r.length > 40 ? ", …" : ""));
+    }
+  }
+  if (CX.nomsDevines.size)
+    morceaux.push(`<span class="c-ko">!</span> nom${CX.nomsDevines.size > 1 ? "s" : ""} sans accents, ` +
+      `absent${CX.nomsDevines.size > 1 ? "s" : ""} du COG 2012 : ${echappe([...CX.nomsDevines].slice(0, 20).join(", "))}` +
+      (CX.cogAbsent ? ` — <code>noms_cog.json</code> manque : lancer <code>cartes/web/noms_cog.py</code>` : ""));
+  z.innerHTML = morceaux.map(m => `<div>${m}</div>`).join("");
+}
+
+function majWiki(force = false) {
+  const t = paragrapheWiki(optionsCommons());
+  if (force || !$c("c-wiki").dataset.touche) $c("c-wiki").value = t;
+  afficheEtatLiens();
+}
+
+function verifieLiensBientot(delai = 300) {
+  clearTimeout(CX.minuterieWP);
+  CX.minuterieWP = setTimeout(verifieLiens, delai);
+}
+async function verifieLiens() {
+  const manquants = [...CX.wpDemandes].filter(t => !CX.wp.has(t));
+  if (!manquants.length) return afficheEtatLiens();
+  try {
+    const r = await appelCommons("commons/wikipedia", { titres: manquants });
+    for (const [t, v] of Object.entries(r.titres || {})) CX.wp.set(t, v);
+  } catch (err) {
+    $c("c-wiki-etat").innerHTML = `<span class="note">liens non vérifiés : ${echappe(err.message)}</span>`;
+    return;
+  }
+  majWiki();
+}
+
+// ===========================================================================
+// Carte d'une liste de communes — 6 octobre 2026
+//
+// Une AOP, une communauté de communes, un pays, un parc : un ensemble de
+// communes qui ne suit ni les cantons ni, souvent, les départements. On saisit
+// la liste (noms ou codes INSEE), la page la résout, charge le ou les
+// départements qu'elle touche, et dessine l'une de deux images :
+//
+//   * la carte des communes : les départements concernés en grisé, leurs
+//     communes en trait blanc, celles de la liste en rouge — avec, en
+//     médaillon, la France des départements, ceux de la liste en rouge ;
+//   * la situation en France : le médaillon en grand, les communes en rouge
+//     sur leurs départements rosés.
+//
+// La liste se donne avec les noms d'AUJOURD'HUI, la base parle le COG 2012.
+// `fonds_communes.py` fait le pont : `cog_actuel.json` ramène chaque commune
+// nouvelle (Haut Valromey, Cherbourg-en-Cotentin) aux communes de 2012 qui la
+// composent, et la carte la dessine par elles. `france.json` porte le
+// médaillon, simplifié à 800 m et daté par époques (1871, 1919, 1968).
+//
+// Le fond communal est celui d'une année — par défaut la dernière de la base —
+// lu comme la page le lit : une commune, ce sont les atomes que la composition
+// de cette année rattache au département et qui portent son code INSEE
+// (Premeaux ET Prissey pour Premeaux-Prissey). Les fichiers d'un département
+// tiennent aussi les communes qu'il a perdues (la Seine-et-Oise garde
+// Corbreuse après 1968) : sans la composition de l'année, l'Yvelines de 1990
+// s'étendrait jusqu'à Étampes. Rien n'est recalculé.
+// ===========================================================================
+const EPOQUES_DEP = [-10000, 1871, 1919, 1968];    // les mêmes que fonds_communes.py
+const CL = { cogActuel: null, inactives: new Set(), millesime: null, france: null,
+             absents: [], index: null, res: null, minuterie: null, minTexte: null, jeton: 0 };
+
+async function chargeFondsListe() {
+  const essaie = async (f, defaut) => {
+    try { return await charge(`${RACINE}/${f}`); }
+    catch (e) { if (!CL.absents.includes(f)) CL.absents.push(f); return defaut; }
+  };
+  if (!CL.cogActuel) {
+    const j = await essaie("cog_actuel.json", {});
+    CL.cogActuel = j.communes || {};
+    CL.inactives = new Set(j.inactives_2012 || []);
+    CL.millesime = j.millesime || null;
+  }
+  if (!CL.france) CL.france = (await essaie("france.json", {})).departements || {};
+  await chargeCog();
+}
+
+// « St-Jean » et « Saint-Jean », « Le Creusot » et « Creusot », « Époisses »
+// et « EPOISSES » : une seule clé.
+const cleNom = s => sansAccents(String(s).trim()
+  .replace(/\bSte\b\.?/gi, "Sainte").replace(/\bSt\b\.?/gi, "Saint"));
+const depDeCode = code => /^97/.test(code) ? code.slice(0, 3) : code.slice(0, 2);
+const RE_CODE = /\b(\d[\dAB]\d{3})\b/i;
+
+// L'index des noms : communes d'aujourd'hui d'abord (rang 0), puis le COG
+// 2012 — les communes actives en 2012 (1), celles qu'une commune nouvelle a
+// absorbées depuis (2), celles qui n'étaient déjà plus des communes (3). Le
+// rang ne départage que des homonymes ; il n'écarte jamais un nom unique.
+function indexNoms() {
+  if (CL.index) return CL.index;
+  const ix = new Map(), parCode = new Map(), absorbes = new Set();
+  const ajoute = e => {
+    const k = cleNom(e.nom);
+    if (!ix.has(k)) ix.set(k, []);
+    ix.get(k).push(e);
+  };
+  for (const [code, [nom, membres]] of Object.entries(CL.cogActuel || {})) {
+    const e = { code, nom, membres, rang: 0 };
+    ajoute(e); parCode.set(code, e);
+    membres.forEach(m => { if (membres.length > 1 || m !== code) absorbes.add(m); });
+  }
+  for (const [code, nom] of Object.entries(CX.cog || {})) {
+    const rang = absorbes.has(code) ? 2 : CL.inactives.has(code) ? 3 : 1;
+    const e = { code, nom, membres: [code], rang };
+    ajoute(e);
+    if (!parCode.has(code)) parCode.set(code, e);
+  }
+  CL.index = { ix, parCode };
+  return CL.index;
+}
+
+// « Montbard (21) », « Montbard (Côte-d'Or) » : le département qui lève une
+// homonymie. Un qualificatif qui n'en est pas un reste dans le nom.
+function depDeQualif(q) {
+  q = String(q).trim();
+  if (/^(\d{1,2}|2[AB]|97\d)$/i.test(q)) return q.toUpperCase().padStart(2, "0");
+  const k = cleNom(q);
+  for (const d of S.index.departements) {
+    const noms = [d.nom, ...(d.noms || []).map(x => x[2])];
+    if (noms.some(n => cleNom(n) === k)) return d.code;
+  }
+  return null;
+}
+function depsFiltre(texte) {
+  const s = new Set();
+  String(texte || "").split(/[,;\n]+/)
+    .flatMap(t => /^[\s\dAB]+$/i.test(t) ? t.trim().split(/\s+/) : [t])
+    .map(t => t.trim()).filter(Boolean)
+    .forEach(t => { const d = depDeQualif(t); if (d) s.add(d); });
+  return s;
+}
+function analyseLigne(brut) {
+  const s = brut.replace(/^\s*(?:[-*•·–]|\d{1,3}[.)])\s+/, "").trim();
+  const mc = RE_CODE.exec(s);
+  if (mc) return { brut, code: mc[1].toUpperCase(), nom: s.replace(RE_CODE, "").replace(/^[\s\t|:-]+|[\s\t|:-]+$/g, "") };
+  const m = /^(.+?)\s*\(([^()]+)\)$/.exec(s);
+  if (m) { const d = depDeQualif(m[2]); if (d) return { brut, nom: m[1], dep: d }; }
+  return { brut, nom: s };
+}
+
+function resoutListe(texte, filtre) {
+  const { ix, parCode } = indexNoms();
+  const lignes = texte.split(/[\n;,]+/).map(s => s.trim()).filter(Boolean).map(brut => {
+    const a = analyseLigne(brut);
+    let cands = [];
+    if (a.code && parCode.has(a.code)) cands = [parCode.get(a.code)];
+    else if (a.nom) cands = ix.get(cleNom(a.nom)) || [];
+    const parC = new Map();          // un code sous deux graphies : une fois
+    for (const e of cands) if (!parC.has(e.code) || e.rang < parC.get(e.code).rang) parC.set(e.code, e);
+    cands = [...parC.values()];
+    if (a.dep) cands = cands.filter(e => depDeCode(e.code) === a.dep);
+    if (filtre.size) cands = cands.filter(e => filtre.has(depDeCode(e.code)));
+    if (cands.length > 1) {
+      const r = Math.min(...cands.map(e => e.rang));
+      cands = cands.filter(e => e.rang === r);
+    }
+    return { brut, cands, e: cands.length === 1 ? cands[0] : null };
+  });
+  // Un homonyme se départage par les départements des communes sûres : une
+  // AOP de Bourgogne qui dit « Saint-Romain » ne parle pas de la Vienne.
+  const sures = new Set(lignes.filter(l => l.e).map(l => depDeCode(l.e.code)));
+  for (const l of lignes) {
+    if (l.e || l.cands.length < 2) continue;
+    const c = l.cands.filter(e => sures.has(depDeCode(e.code)));
+    if (c.length === 1) { l.e = c[0]; l.deduit = true; }
+  }
+  const vus = new Set();
+  for (const l of lignes) {
+    if (l.e && vus.has(l.e.code)) { l.doublon = true; l.e = null; }
+    else if (l.e) vus.add(l.e.code);
+  }
+  return lignes;
+}
+
+// Le dossier d'export qui tient une commune à une date. Le code dit le
+// département d'aujourd'hui ; avant 1968, l'Essonne est en Seine-et-Oise,
+// avant 1976 la Corse-du-Sud en Corse, avant 1871 Belfort dans le Haut-Rhin.
+function dossiersPour(code, Y) {
+  const d = depDeCode(code);
+  let l = [d];
+  if ((d === "2A" || d === "2B") && Y < 1976) l = ["20", d];
+  else if ((d === "91" || d === "95") && Y < 1968) l = ["78", "75"];
+  else if ((d === "92" || d === "93" || d === "94") && Y < 1968) l = ["75", "78"];
+  else if (d === "90" && Y < 1871) l = ["68"];
+  else if ((d === "54" || d === "57") && Y < 1871) l = [d, d === "54" ? "57" : "54"];
+  const ok = new Set(S.index.departements.filter(x => {
+    const [a, b] = x.bornes || [AN_MIN, AN_MAX];
+    return Y >= a && Y <= b;
+  }).map(x => x.code));
+  return l.filter(x => ok.has(x));
+}
+
+async function chargeDossier(code, Y) {
+  const base = `${RACINE}/dep/${code}`;
+  const [idx, com, cont] = await Promise.all([
+    charge(`${base}/index.json`), charge(`${base}/communes.json`),
+    charge(`${base}/contours.json`).catch(() => ({})),
+  ]);
+  if ((idx.absences || []).some(([a, b]) => Y >= a && Y <= b)) return null;
+  const e = (idx.annees || {})[String(Y)] || {};
+  const [c, x] = await Promise.all([
+    e.c ? charge(`${base}/c_${e.c}.json`) : null,
+    e.x ? charge(`${base}/x_${e.x}.json`) : null,
+  ]);
+  const rat = new Set([...Object.keys((c && c.rattachement) || {}),
+                       ...Object.keys((x && x.rattachement) || {})]);
+  const dep = S.index.departements.find(d => d.code === code) || { code, nom: code };
+  return { code, dep, nomEpoque: nomDep(dep, Y), moderne: nomModerne(dep),
+           communes: com.communes, contours: cont, rat: rat.size ? rat : null, Y };
+}
+
+// Les atomes dessinables d'un dossier à la date : ceux que la composition de
+// l'année rattache, et ceux dont le code désigne ce dossier à cette date. Le
+// second critère seul écarterait déjà Corbreuse de l'Yvelines de 1990 ; le
+// premier ne suffit pas seul : une ville partagée entre cantons que la base
+// ne découpe pas (Saint-Denis de La Réunion) n'est rattachée à aucun.
+function atomesDe(D) {
+  if (D._atomes) return D._atomes;
+  const out = [];
+  for (const [aid, c] of Object.entries(D.communes)) {
+    if (!(D.rat && D.rat.has(aid)) && !(c.i && dossiersPour(c.i, D.Y).includes(D.code))) continue;
+    const v = versionA(c, D.Y);
+    if (v && v.g) out.push({ aid, c, v });
+  }
+  return (D._atomes = out);
+}
+
+function aireApprox(g) {
+  let s = 0;
+  for (const poly of polygonesDe(g)) poly.forEach((r, k) => {
+    let a = 0;
+    for (let i = 0; i < r.length - 1; i++) a += r[i][0] * r[i + 1][1] - r[i + 1][0] * r[i][1];
+    s += (k ? -1 : 1) * Math.abs(a) / 2;
+  });
+  return s;
+}
+// Le contour du département : `contours.json` est, pour chaque année servie,
+// l'union des communes de la composition — trouée quand celle-ci est
+// incomplète (la Côte-d'Or perd 125 km² en 1955). On prend le plus étendu de
+// l'époque de la date, comme `fonds_communes.py` pour le médaillon. À défaut,
+// les communes elles-mêmes.
+function contourDossier(D) {
+  const ks = Object.keys(D.contours || {}).map(Number).sort((a, b) => a - b);
+  const ep = y => EPOQUES_DEP.filter(b => y >= b).length - 1;
+  let cands = ks.filter(k => ep(k) === ep(D.Y));
+  if (!cands.length && ks.length)
+    cands = [ks.reduce((a, b) => Math.abs(b - D.Y) < Math.abs(a - D.Y) ? b : a)];
+  let best = null, ba = -1;
+  for (const k of cands) {
+    const g = D.contours[String(k)], a = aireApprox(g);
+    if (a > ba) { ba = a; best = g; }
+  }
+  return best || { type: "GeometryCollection", geometries: atomesDe(D).map(a => a.v.g) };
+}
+// Les limites communales de fond : un trait par polygone, quel que soit le
+// nombre d'atomes qui le revendiquent ; une fraction de ville ne double pas
+// sa mère quand celle-ci est dessinée.
+function fondCommunes(D) {
+  const meres = new Set(atomesDe(D).filter(a => !a.c.f).map(a => a.c.i));
+  const vus = new Set(), out = [];
+  for (const a of atomesDe(D)) {
+    if (a.c.f && meres.has(a.c.i)) continue;
+    const k = a.v.k || a.aid;
+    if (vus.has(k)) continue;
+    vus.add(k); out.push(a.v.g);
+  }
+  return out;
+}
+
+function anneeListe() {
+  const v = parseInt($c("c-annee-liste").value, 10);
+  const max = (S.index && S.index.an_max) || AN_MAX;
+  return Number.isFinite(v) ? Math.min(max, Math.max(AN_MIN, v)) : max;
+}
+
+async function prepareListe() {
+  const j = ++CL.jeton;
+  await chargeFondsListe();
+  if (j !== CL.jeton) return;
+  const Y = anneeListe(), texte = $c("c-liste").value;
+  if (!texte.trim()) { CL.res = null; afficheEtatListe(); return; }
+  $c("c-liste-etat").innerHTML = `<span class="note">résolution de la liste et chargement des départements…</span>`;
+  const lignes = resoutListe(texte, depsFiltre($c("c-filtre").value));
+  const codes = new Set();
+  lignes.forEach(l => l.e && l.e.membres.forEach(m => dossiersPour(m, Y).forEach(d => codes.add(d))));
+  const D = new Map(), echecs = [];
+  await Promise.all([...codes].map(async c => {
+    try { const d = await chargeDossier(c, Y); if (d) D.set(c, d); }
+    catch (err) { echecs.push(c); }
+  }));
+  if (j !== CL.jeton) return;
+  const choisies = [];
+  for (const l of lignes) {
+    if (!l.e) { l.statut = l.doublon ? "doublon" : l.cands.length > 1 ? "ambigu" : "inconnu"; continue; }
+    const atomes = [], manquants = [];
+    for (const m of l.e.membres) {
+      const nomM = cleNom((CX.cog && CX.cog[m]) || l.e.nom);
+      let pris = false;
+      for (const dc of dossiersPour(m, Y)) {
+        const d = D.get(dc);
+        if (!d) continue;
+        let h = atomesDe(d).filter(a => a.c.i === m);
+        // Une commune disparue avant 2012 n'a pas d'atome à son code (l'atome
+        // porte celui de la commune qui l'a absorbée) : on la cherche par nom.
+        if (!h.length) h = atomesDe(d).filter(a =>
+          cleNom(nomA(a.c, Y) || "") === nomM || cleNom(a.c.n || "") === nomM);
+        if (h.length) { h.forEach(a => atomes.push(Object.assign({ d }, a))); pris = true; break; }
+      }
+      if (!pris) manquants.push(m);
+    }
+    l.manquants = manquants;
+    if (!atomes.length) { l.statut = "sansForme"; continue; }
+    l.statut = "ok";
+    choisies.push({ e: l.e, nom: l.e.nom, atomes, dossier: atomes[0].d.code });
+  }
+  const utiles = [...new Set(choisies.map(c => c.dossier))].sort();
+  const dossiers = utiles.map(c => {
+    const d = D.get(c);
+    d.contour = contourDossier(d);
+    d.sansCompo = !d.rat;
+    return d;
+  });
+  choisies.sort((a, b) => a.dossier.localeCompare(b.dossier) || a.nom.localeCompare(b.nom, "fr"));
+  CL.res = { Y, lignes, choisies, dossiers, echecs };
+  const defaut = (id, v) => { if (!$c(id).dataset.touche) $c(id).checked = v; };
+  defaut("c-l-noms", choisies.length <= 30);
+  defaut("c-l-deps", dossiers.length > 1);
+  afficheEtatListe();
+}
+
+function afficheEtatListe() {
+  const z = $c("c-liste-etat"), R = CL.res, m = [];
+  const s = (n, x = "s") => n > 1 ? x : "";
+  if (CL.absents.length)
+    m.push(`<span class="c-ko">!</span> ${CL.absents.map(f => `<code>${f}</code>`).join(", ")} ` +
+      `manque${s(CL.absents.length, "nt")} : lancer <code>python3 cartes/web/fonds_communes.py</code>`);
+  if (CX.cogAbsent)
+    m.push(`<span class="c-ko">!</span> <code>noms_cog.json</code> manque : lancer <code>python3 cartes/web/noms_cog.py</code>`);
+  if (R) {
+    const ok = R.choisies;
+    if (ok.length)
+      m.push(`<span class="c-ok">✓</span> ${ok.length} commune${s(ok.length)} — ` +
+        R.dossiers.map(d => `${echappe(d.nomEpoque)} (${ok.filter(c => c.dossier === d.code).length})`).join(", "));
+    const nouv = R.lignes.filter(l => l.statut === "ok" && l.e.membres.length > 1);
+    if (nouv.length)
+      m.push(`<span class="note">↻ dessinée${s(nouv.length)} par ses communes de 2012 :</span> ` +
+        nouv.map(l => `${echappe(l.e.nom)} (${l.e.membres.length})`).join(", "));
+    const ded = R.lignes.filter(l => l.deduit);
+    if (ded.length)
+      m.push(`<span class="note">homonyme${s(ded.length)} départagé${s(ded.length)} par les autres départements de la liste :</span> ` +
+        ded.map(l => `${echappe(l.brut)} → ${l.e.code}`).join(", "));
+    const amb = R.lignes.filter(l => l.statut === "ambigu");
+    if (amb.length)
+      m.push(`<span class="c-ko">?</span> homonyme${s(amb.length)} à préciser :<br>` + amb.map(l =>
+        `${echappe(l.brut)} : ` + l.cands.slice(0, 12).map(e =>
+          `<button type="button" class="c-sug" data-brut="${echappe(l.brut)}" data-code="${e.code}"
+            title="${echappe(e.nom)} — ${e.code}">${echappe(depDuCode(e.code) || depDeCode(e.code))}</button>`).join(" ")
+      ).join("<br>"));
+    const inc = R.lignes.filter(l => l.statut === "inconnu");
+    if (inc.length)
+      m.push(`<span class="c-ko">✗</span> introuvable${s(inc.length)} : ${inc.map(l => echappe(l.brut)).join(", ")}`);
+    const sf = R.lignes.filter(l => l.statut === "sansForme");
+    if (sf.length)
+      m.push(`<span class="c-ko">⌀</span> sans forme dans le fond de ${R.Y} : ` +
+        sf.map(l => `${echappe(l.brut)} (${l.e.code})`).join(", "));
+    const part = R.lignes.filter(l => l.statut === "ok" && l.manquants.length);
+    if (part.length)
+      m.push(`<span class="c-ko">!</span> dessinée${s(part.length)} en partie : ` +
+        part.map(l => `${echappe(l.e.nom)} (manque ${l.manquants.join(", ")})`).join(", "));
+    const dbl = R.lignes.filter(l => l.statut === "doublon");
+    if (dbl.length) m.push(`<span class="note">doublon${s(dbl.length)} ignoré${s(dbl.length)} : ${dbl.map(l => echappe(l.brut)).join(", ")}</span>`);
+    if (R.echecs.length) m.push(`<span class="c-ko">!</span> département${s(R.echecs.length)} absent${s(R.echecs.length)} de l'export : ${R.echecs.join(", ")}`);
+  }
+  z.innerHTML = m.map(x => `<div>${x}</div>`).join("");
+  z.querySelectorAll("button[data-brut]").forEach(b => b.onclick = () => precise(b.dataset.brut, b.dataset.code));
+}
+
+// Un clic sur un homonyme écrit son code devant le nom, dans la liste même :
+// la saisie reste la seule source, et se relit.
+function precise(brut, code) {
+  const t = $c("c-liste"), morceaux = t.value.split(/([\n;,])/);
+  const i = morceaux.findIndex(x => x.trim() === brut);
+  if (i < 0) return;
+  morceaux[i] = morceaux[i].replace(brut, `${code} ${brut}`);
+  t.value = morceaux.join("");
+  relisteBientot(0);
+}
+function relisteBientot(delai = 600) {
+  clearTimeout(CL.minuterie);
+  CL.minuterie = setTimeout(async () => { await prepareListe(); regenere(); }, delai);
+}
+
+// La France des départements à une date, pour le médaillon. Avant 1870 la
+// base n'a pas de contour : on prend la France de 1870. L'outre-mer (`dom`)
+// n'y paraît qu'à partir de sa départementalisation (1946, Mayotte 2011) :
+// avant, ce sont des colonies, et la carte des départements ne les montre pas.
+function franceA(Y) {
+  const Ye = Math.max(Y, 1870), out = [];
+  for (const [code, d] of Object.entries(CL.france || {})) {
+    const [a, b] = d.bornes || [AN_MIN, AN_MAX];
+    if (Ye < Math.max(a, 1870) || Ye > b) continue;
+    if ((d.absences || []).some(([x, y]) => Ye >= x && Ye <= y)) continue;
+    let v = d.v[0];
+    for (const w of d.v) if (w.a <= Ye) v = w;
+    out.push({ code, g: v.g, dom: !!d.outremer });
+  }
+  return out;
+}
+
+// La France entière en un plan : la métropole, et l'outre-mer en cases
+// empilées en bas à gauche, sur l'Atlantique — la disposition des cartes de
+// France de Wikipédia. Chaque case a sa propre échelle (la Guyane y est plus
+// petite que la Martinique) : c'est l'usage, et le cadre de la case le dit.
+// Une `partie` = un département, sa projection et son décalage dans l'image.
+function planFrance(fr, largeur, marge = 12) {
+  const metro = fr.filter(f => !f.dom), dom = fr.filter(f => f.dom)
+    .sort((a, b) => a.code.localeCompare(b.code));
+  const P = fabriqueProjection(metro.map(f => f.g), largeur, marge);
+  const parties = metro.map(f => ({ f, P, x: 0, y: 0 })), cases = [];
+  if (dom.length) {
+    const c = Math.max(24, Math.round(P.W * 0.105)), gap = Math.max(3, Math.round(c * 0.07));
+    const x0 = Math.max(2, Math.round(marge / 2));
+    let y = P.H - Math.max(2, Math.round(marge / 2)) - dom.length * c - (dom.length - 1) * gap;
+    for (const f of dom) {
+      const Pd = fabriqueProjection([f.g], c, Math.max(2, Math.round(c * 0.06)));
+      parties.push({ f, P: Pd, x: x0 + (c - Pd.W) / 2, y: y + (c - Pd.H) / 2 });
+      cases.push({ x: x0, y, c, code: f.code });
+      y += c + gap;
+    }
+  }
+  return { W: P.W, H: P.H, parties, cases };
+}
+const decale = p => p.x || p.y ? ` transform="translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})"` : "";
+// Un chemin par partie décalée, un seul pour toute la métropole.
+function cheminPlan(plan, garde, attrs) {
+  const out = [], metro = plan.parties.filter(p => !p.f.dom && garde(p.f));
+  if (metro.length) out.push(`<path ${attrs} d="${metro.map(p => cheminPx(p.f.g, p.P)).join("")}"/>`);
+  for (const p of plan.parties.filter(p => p.f.dom && garde(p.f)))
+    out.push(`<path${decale(p)} ${attrs} d="${cheminPx(p.f.g, p.P)}"/>`);
+  return out.join("");
+}
+const casesPlan = (plan, epaisseur) => plan.cases.map(k =>
+  `<rect x="${k.x + .5}" y="${k.y + .5}" width="${k.c - 1}" height="${k.c - 1}" ` +
+  `fill="#ffffff" stroke="#8f897f" stroke-width="${epaisseur}"/>`).join("");
+
+// Le médaillon se pose dans le coin le plus vide ; si aucun ne l'est assez
+// (un ensemble qui remplit son cadre), on élargit l'image à droite — ou en
+// bas pour une carte en largeur — plutôt que de couvrir des communes.
+function placeMedaillon(R, P, W, H, Pf) {
+  const simples = new Map(franceA(R.Y).map(f => [f.code, f.g]));
+  const anneaux = [];
+  for (const d of R.dossiers)
+    for (const poly of polygonesDe(simples.get(d.code) || d.contour))
+      anneaux.push(poly[0].map(c => P.px(c[0], c[1])));
+  const dedans = (x, y) => anneaux.some(r => {
+    let c = false;
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++)
+      if ((r[i][1] > y) !== (r[j][1] > y) &&
+          x < (r[j][0] - r[i][0]) * (y - r[i][1]) / (r[j][1] - r[i][1]) + r[i][0]) c = !c;
+    return c;
+  });
+  const w = Pf.W, h = Pf.H, m = 8;
+  let best = null, bestC = 2;
+  for (const [x, y] of [[W - w - m, m], [m, m], [W - w - m, H - h - m], [m, H - h - m]]) {
+    if (x < 0 || y < 0) continue;
+    let n = 0;
+    for (let i = 0; i <= 10; i++) for (let j = 0; j <= 10; j++)
+      if (dedans(x + w * i / 10, y + h * j / 10)) n++;
+    if (n / 121 < bestC) { bestC = n / 121; best = [x, y]; }
+  }
+  if (best && bestC <= 0.04) return { x: best[0], y: best[1], W, H, Pf };
+  return W <= H * 1.25 ? { x: W, y: m + 4, W: W + w + m, H: Math.max(H, h + 2 * m), Pf }
+                       : { x: W - w - m, y: H, W, H: H + h + m, Pf };
+}
+
+const POLICE = "DejaVu Sans, Liberation Sans, Arial, sans-serif";
+// Des noms avec liseré : un second <text> dessous, comme pour les cantons.
+function etiquettesSVG(id, items, attrs) {
+  if (!items.length) return "";
+  const lis = [], txt = [];
+  for (const { x, y, t, taille, ancre } of items) {
+    const pos = `x="${x.toFixed(1)}" y="${y.toFixed(1)}" dy="0.35em" font-size="${taille}"` +
+                (ancre ? ` text-anchor="${ancre}"` : "");
+    lis.push(`<text ${pos}>${xmlEsc(t)}</text>`);
+    txt.push(`<text ${pos}>${xmlEsc(t)}</text>`);
+  }
+  return `<g id="${id}" font-family="${POLICE}" text-anchor="middle" ${attrs.texte}>` +
+    `<g fill="none" stroke="#ffffff" stroke-width="${attrs.halo}" stroke-linejoin="round">${lis.join("")}</g>` +
+    `<g stroke="none">${txt.join("")}</g></g>`;
+}
+const geomCommune = c => ({ type: "GeometryCollection", geometries: c.atomes.map(a => a.v.g) });
+// Une commune de quelques pixels (Saint-Jean-de-Losne : 1,6 km²) disparaît
+// sous ses limites et sous son propre nom : on la marque d'un point, et son nom
+// se pose à côté. `rayon` : en deçà de ce rayon libre (pixels), le point.
+// `P` : une projection, ou une fonction commune -> partie {P, x, y} quand les
+// communes ne sont pas toutes dans le même repère (l'outre-mer en cases).
+function reperesSVG(R, P, rayon, r) {
+  const poles = R.choisies.map(c => {
+    const q = typeof P === "function" ? P(c) : { P, x: 0, y: 0 };
+    const p = q && poleInterieur(geomCommune(c), q.P);
+    if (p) { p[0] += q.x; p[1] += q.y; }
+    return p;
+  });
+  const pts = poles.filter(p => p && p.d < rayon)
+    .map(p => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="${r}"/>`);
+  return { poles, svg: pts.length ? `<g id="reperes" fill="${COMMONS.rouge}" stroke="#ffffff" ` +
+    `stroke-width="1">${pts.join("")}</g>` : "" };
+}
+
+function fabriqueSVGListe(o) {
+  return o.typeListe === "france" ? svgListeFrance(o) : svgListeCommunes(o);
+}
+function enteteSVG(L, W, H, o) {
+  L.push(`<?xml version="1.0" encoding="UTF-8"?>`);
+  L.push(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" ` +
+         `width="${Math.round(W)}" height="${Math.round(H)}" viewBox="0 0 ${Math.round(W)} ${Math.round(H)}">`);
+  L.push(`<title>${xmlEsc(o.titre)}</title>`);
+  L.push(`<desc>${xmlEsc(o.desc)}</desc>`);
+}
+
+function svgListeCommunes(o) {
+  const R = CL.res;
+  const P = fabriqueProjection(R.dossiers.map(d => d.contour));
+  let W = P.W, H = P.H, med = null;
+  const fr = o.medaillon ? franceA(R.Y) : [];
+  if (fr.length) {
+    const tw = Math.round(Math.max(170, 0.27 * Math.max(W, H)));
+    med = placeMedaillon(R, P, W, H, planFrance(fr, tw, 5));
+    W = med.W; H = med.H;
+  }
+  const L = [];
+  enteteSVG(L, W, H, o);
+  // 1. départements en grisé, 2. communes de la liste en rouge
+  L.push(`<g id="departements" fill="#f1ede4" stroke="none" fill-rule="evenodd">`);
+  R.dossiers.forEach(d => L.push(`<path id="dep-${d.code}" d="${cheminPx(d.contour, P)}"/>`));
+  L.push(`</g>`);
+  L.push(`<g id="communes-choisies" fill="${COMMONS.rouge}" stroke="none" fill-rule="evenodd">`);
+  R.choisies.forEach(c => c.atomes.forEach(a => L.push(`<path d="${cheminPx(a.v.g, P)}"/>`)));
+  L.push(`</g>`);
+  // 3. limites communales, puis départementales
+  if (o.communes) {
+    const d = R.dossiers.flatMap(D => fondCommunes(D).map(g => cheminPx(g, P)));
+    L.push(`<path id="communes" fill="none" stroke="#ffffff" stroke-opacity=".85" ` +
+           `stroke-width="0.5" stroke-linejoin="round" d="${d.join("")}"/>`);
+  }
+  L.push(`<path id="limites-departementales" fill="none" stroke="#5d574f" stroke-width="1.4" ` +
+         `stroke-linejoin="round" d="${R.dossiers.map(d => cheminPx(d.contour, P)).join("")}"/>`);
+  const rep = reperesSVG(R, P, 3, 3.5);
+  L.push(rep.svg);
+  // 4. noms
+  if (o.nomsDeps) {
+    const it = R.dossiers.map(d => {
+      const p = poleInterieur(d.contour, P);
+      return p && { x: p[0], y: p[1], t: d.nomEpoque, taille: Math.max(13, Math.min(24, Math.round(p.d / 5))) };
+    }).filter(Boolean);
+    L.push(etiquettesSVG("noms-departements", it,
+      { texte: `fill="#6b6864" font-style="italic" letter-spacing="1"`, halo: 4 }));
+  }
+  if (o.nomsCommunes) {
+    const it = R.choisies.map((c, i) => {
+      const p = rep.poles[i];
+      if (!p) return null;
+      if (p.d >= 8) return { x: p[0], y: p[1], t: c.nom, taille: 11 };
+      // à côté du point, à droite — à gauche si le nom sortirait du cadre
+      const dx = Math.max(p.d, 4) + 2, large = 0.62 * 11 * c.nom.length;
+      return p[0] + dx + large > P.W - 4
+        ? { x: p[0] - dx, y: p[1], t: c.nom, taille: 11, ancre: "end" }
+        : { x: p[0] + dx, y: p[1], t: c.nom, taille: 11, ancre: "start" };
+    }).filter(Boolean);
+    L.push(etiquettesSVG("noms-communes", it, { texte: `fill="#1d1c1a" font-weight="bold"`, halo: 3 }));
+  }
+  // 5. médaillon : la France des départements, ceux de la liste en rouge
+  if (med) {
+    const { Pf } = med, sel = new Set(R.dossiers.map(d => d.code));
+    L.push(`<g id="medaillon" transform="translate(${med.x.toFixed(1)} ${med.y.toFixed(1)})">`);
+    L.push(`<rect x="0.5" y="0.5" width="${Pf.W - 1}" height="${Pf.H - 1}" fill="#ffffff" stroke="#8f897f" stroke-width="1"/>`);
+    L.push(casesPlan(Pf, 0.6));
+    L.push(cheminPlan(Pf, f => !sel.has(f.code),
+      `fill="#e4dfd5" stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round"`));
+    L.push(cheminPlan(Pf, f => sel.has(f.code),
+      `fill="${COMMONS.rouge}" stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round"`));
+    L.push(`</g>`);
+  }
+  L.push(`</svg>`);
+  return L.join("\n");
+}
+
+function svgListeFrance(o) {
+  const R = CL.res, fr = franceA(R.Y);
+  if (!fr.length) return svgListeCommunes(Object.assign({}, o, { medaillon: false }));
+  const plan = planFrance(fr, COMMONS.largeurMax);
+  const sel = new Set(R.dossiers.map(d => d.code));
+  const metro = plan.parties.find(p => !p.f.dom);
+  const partieDe = c => plan.parties.find(p => p.f.code === c.dossier) || metro;
+  const L = [];
+  enteteSVG(L, plan.W, plan.H, o);
+  L.push(`<g id="outre-mer">${casesPlan(plan, 0.8)}</g>`);
+  L.push(`<g id="departements" fill="#f1ede4" stroke="none">` +
+         cheminPlan(plan, f => !sel.has(f.code), "") + `</g>`);
+  L.push(`<g id="departements-liste" fill="#f3cbc6" stroke="none">` +
+         cheminPlan(plan, f => sel.has(f.code), "") + `</g>`);
+  L.push(`<g id="communes-choisies" fill="${COMMONS.rouge}" stroke="none" fill-rule="evenodd">`);
+  R.choisies.forEach(c => {
+    const p = partieDe(c);
+    c.atomes.forEach(a => L.push(`<path${decale(p)} d="${cheminPx(a.v.g, p.P)}"/>`));
+  });
+  L.push(`</g>`);
+  L.push(`<g id="limites-departementales" fill="none" stroke="#8f897f" stroke-width="0.7" ` +
+         `stroke-linejoin="round">` + cheminPlan(plan, () => true, "") + `</g>`);
+  L.push(reperesSVG(R, partieDe, 1.5, 2.2).svg.replace(`stroke-width="1"`, `stroke-width="0.6"`));
+  if (o.nomsDeps) {
+    const it = plan.parties.filter(p => sel.has(p.f.code)).map(p => {
+      const q = poleInterieur(p.f.g, p.P);
+      const d = R.dossiers.find(x => x.code === p.f.code);
+      if (!q || !d) return null;
+      // une case d'outre-mer est trop petite pour un nom posé dedans : à droite
+      return p.f.dom ? { x: p.x + p.P.W + 4, y: p.y + p.P.H / 2, t: d.nomEpoque, taille: 12, ancre: "start" }
+                     : { x: q[0], y: q[1], t: d.nomEpoque, taille: 12 };
+    }).filter(Boolean);
+    L.push(etiquettesSVG("noms-departements", it,
+      { texte: `fill="#1d1c1a" font-style="italic"`, halo: 3 }));
+  }
+  L.push(`</svg>`);
+  return L.join("\n");
+}
+
+// --- nom de fichier, description, catégories ------------------------------
+function propositionListe(o) {
+  const R = CL.res, Y = R.Y, n = R.choisies.length, deps = R.dossiers;
+  const ens = $c("c-ensemble").value.trim() || "Communes sélectionnées";
+  const nat = COMMONS.natures[$c("c-nature").value] || COMMONS.natures.autre;
+  const recent = Y >= ((S.index && S.index.an_max) || AN_MAX);
+  const france = o.typeListe === "france";
+  const parDep = deps.map(d => ({ d, cs: R.choisies.filter(c => c.dossier === d.code) }));
+  const sfx = recent ? "" : ` ${Y}`;
+  const fichier = t => `${ens}${sfx} (${t === "france" ? "localisation en France" : "localisation"}).svg`;
+  const nouvelles = R.choisies.filter(c => c.e.membres.length > 1);
+  const pl = (k, a, b) => k > 1 ? b : a;
+  const ouFr = deps.length > 1
+    ? `réparties entre ${deps.length} départements (${etListe(deps.map(d => d.nomEpoque))})`
+    : `du département ${deDep(deps[0].nomEpoque)}`;
+  const ouEn = deps.length > 1
+    ? `in ${deps.length} departments (${etListe(deps.map(d => d.nomEpoque)).replace(/ et /, " and ")})`
+    : `in the ${deps[0].nomEpoque} department`;
+  let fr = (france ? `Carte de situation en France : ` : `Carte de localisation des communes : `) +
+    `${ens} (${nat.fr}), ${n} ${pl(n, "commune", "communes")} ${ouFr}. Limites communales de ${Y}.`;
+  if (nouvelles.length)
+    fr += ` ${pl(nouvelles.length, "La commune nouvelle", "Les communes nouvelles")} créée${pl(nouvelles.length, "", "s")} ` +
+          `depuis 2012 (${etListe(nouvelles.map(c => c.nom))}) ${pl(nouvelles.length, "est dessinée", "sont dessinées")} ` +
+          `par les communes qu'elle${pl(nouvelles.length, "", "s")} réuni${pl(nouvelles.length, "t", "ssent")}.`;
+  fr += "\n" + parDep.map(({ d, cs }) => `* ${d.nomEpoque} (${cs.length}) : ${cs.map(c => c.nom).join(", ")}`).join("\n");
+  const en = (france ? `Locator map within France: ` : `Locator map of the municipalities: `) +
+    `${ens} (${nat.en}), ${n} ${pl(n, "municipality", "municipalities")} ${ouEn}, France. ` +
+    `Municipal boundaries as of ${Y}.`;
+  const repli = R.choisies.reduce((s, c) => s + (c.atomes.some(a => a.v.r) ? 1 : 0), 0);
+  const src = $c("c-source-liste").value.trim();
+  const sources = [`Liste des communes : ${src || "''à préciser''"}`,
+    `Codes et noms : Insee, Code officiel géographique 2012 et mouvements des communes ` +
+    `jusqu'en ${CL.millesime || 2025} (Licence Ouverte)`];
+  if (france || o.medaillon) sources.push("Départements : contours de la base ''histgis'', simplifiés");
+  const cats = [...nat.categories];
+  deps.forEach(d => COMMONS.categoriesListe.parDep.forEach(c => cats.push(c.replace("{dep}", d.moderne))));
+  if (!recent) {
+    deps.forEach(d => cats.push(`Maps of the history of ${d.moderne}`));
+    cats.push("{periode}");
+  }
+  return assemble({ moderne: "", nomEpoque: "", per: recent ? null : periodeDe(Y) }, {
+    nom: fichier(france ? "france" : "communes"),
+    titre: `${ens}${sfx}` + (france ? ", situation en France" : ""),
+    fr, en,
+    source: sources.join("\n* "),
+    fond: "ANR-COMMUNES, trame communale historique datée (Zenodo)" +
+          (repli ? ` ; IGN, GEOFLA 2011 (Licence Ouverte) pour ${repli} commune${pl(repli, "", "s")}` : ""),
+    autre: `[[:File:${nomFichierPropre(fichier(france ? "communes" : "france"))}]]`,
+    categories: cats,
+  });
+}
+
+function noteListe() {
+  const R = CL.res, n = R.choisies.length;
+  const sc = R.dossiers.filter(d => d.sansCompo);
+  return `${n} commune${n > 1 ? "s" : ""}, ${R.dossiers.length} département${R.dossiers.length > 1 ? "s" : ""}, ` +
+    `limites communales de ${R.Y}` +
+    (sc.length ? ` — pas de composition en ${R.Y} pour ${sc.map(d => d.nomEpoque).join(", ")} : ` +
+                 `communes retenues sur leur seul code INSEE` : "") +
+    ($c("c-source-liste").value.trim() ? "" : " — penser à citer la source de la liste") +
+    (R.Y < 1870 ? " — médaillon : la France de 1870, la base n'a pas de contour plus ancien" : "");
+}
+
+// --- paragraphe pour Wikipédia ---------------------------------------------
+function wikiListe() {
+  const R = CL.res;
+  if (!R || !R.choisies.length) return "";
+  const ens = $c("c-ensemble").value.trim() || "Cet ensemble";
+  const n = R.choisies.length;
+  const lien = c => lienCommune({ nom: c.nom, dep: depDuCode(c.e.code), actuel: null, partie: false });
+  const lienD = d => lienWP([`${d.nomEpoque} (département)`, d.nomEpoque], d.nomEpoque, /département|^[^(]+$/);
+  const parDep = R.dossiers.map(d => ({ d, cs: R.choisies.filter(c => c.dossier === d.code) }));
+  const t = `${maj(ens)} regroupe ${lettres(n, true)} commune${n > 1 ? "s" : ""}`;
+  if (parDep.length === 1) {
+    const { d, cs } = parDep[0];
+    return `${t} du département ${deDep(d.nomEpoque).replace(d.nomEpoque, lienD(d))} : ` +
+           `${etListe(cs.map(lien))}.`;
+  }
+  return `${t}, réparties entre ${lettres(parDep.length)} départements :\n\n` +
+    parDep.map(({ d, cs }) => `* ${lienD(d)} (${cs.length}) : ${etListe(cs.map(lien))}`).join("\n");
+}
+
+// ===========================================================================
+// Dialogue
+// ===========================================================================
+const CX = { etat: null, svg: null, url: null, plage: null, plages: {}, minuterie: null,
+             categoriesEnPlus: [], cog: null, cogAbsent: false,
+             wp: new Map(), wpDemandes: new Set(), wpRouges: new Map(), wpBleus: 0,
+             nomsDevines: new Set(), devines: new Set(), minuterieWP: null };
+const $c = id => document.getElementById(id);
+const CHAMPS = ["c-nom", "c-texte", "c-cats", "c-wiki"];
+const oublieRetouches = () => CHAMPS.forEach(i => delete $c(i).dataset.touche);
+
+function optionsCommons() {
+  return {
+    niveau: document.querySelector("input[name=c-niveau]:checked").value,
+    type: document.querySelector("input[name=c-type]:checked").value,
+    unite: $c("c-circo").value,
+    communes: $c("c-communes").checked,
+    autre: $c("c-cantons").checked,
+    numeros: $c("c-numeros").checked,
+    // liste de communes
+    typeListe: document.querySelector("input[name=c-type-liste]:checked").value,
+    communesListe: $c("c-l-communes").checked,
+    nomsCommunes: $c("c-l-noms").checked,
+    nomsDeps: $c("c-l-deps").checked,
+    medaillon: $c("c-l-medaillon").checked,
+  };
+}
+
+// La liste des unités et les libellés suivent le niveau choisi.
+function remplitUnites() {
+  const canton = optionsCommons().niveau === "canton";
+  const sel = $c("c-circo"), garde = sel.value;
+  sel.innerHTML = "";
+  unitesDe(canton ? "canton" : "circo").forEach(u => {
+    const o = document.createElement("option");
+    o.value = u.id; o.textContent = canton ? maj(nomCanton(u)) : nomCommons(u);
+    sel.appendChild(o);
+  });
+  if ([...sel.options].some(o => o.value === garde)) sel.value = garde;
+  $c("c-type-situ").textContent = canton ? "d'un canton" : "d'une circonscription";
+  $c("c-cantons-lib").textContent = canton ? "limites des circonscriptions" : "limites cantonales";
+  $c("c-numeros-lib").textContent = canton ? "noms" : "numéros";
+  $c("c-cantons").disabled = canton ? !unitesDe("circo").length : !S.cfgCanton;
+}
+
+// Les deux cartes n'ont pas les mêmes réglages par défaut : la carte de
+// situation se lit d'un coup d'œil, sans communes ni autre couche — et, pour
+// un canton, sans les quarante noms de ses voisins.
+function reglagesParDefaut() {
+  const o = optionsCommons(), situ = o.type === "situation";
+  $c("c-communes").checked = !situ;
+  $c("c-cantons").checked = !situ && !$c("c-cantons").disabled;
+  $c("c-numeros").checked = !(situ && o.niveau === "canton");
+}
+
+async function chargeCog() {
+  if (CX.cog) return;
+  try { CX.cog = await charge(`${RACINE}/noms_cog.json`); }
+  catch (e) { CX.cog = {}; CX.cogAbsent = true; }
+}
+
+async function plageDe(niveau) {
+  if (!CX.plages[niveau])
+    CX.plages[niveau] = await (niveau === "canton" ? plageCantons() : plageDecoupage());
+  return CX.plages[niveau];
+}
+
+// Même question que `plageDecoupage()`, pour les cantons : les identifiants
+// d'unités cantonales ne portent pas d'année (`2101` en 1876 comme en 1982),
+// on compare donc la composition elle-même — atome par atome, le NOM du canton
+// qui le tient. Une commune qui change de canton coupe la plage ; une forme
+// redessinée, non. La base ne tenant pas de cantons avant 1870 (et de façon
+// inégale entre 1941 et 1998), une plage qui bute sur une année sans couche
+// cantonale est dite ouverte : le découpage peut valoir au-delà.
+async function plageCantons() {
+  const an = S.depIndex.annees, memo = new Map();
+  const [b0, b1] = bornes();
+  const sig = async a => {
+    const e = an[String(a)];
+    if (!e || !e.c) return null;
+    if (!memo.has(e.c)) {
+      const c = await charge(`${RACINE}/dep/${S.dep}/c_${e.c}.json`);
+      const nom = new Map(c.unites.map(u => [u.id, u.nom]));
+      memo.set(e.c, Object.entries(c.rattachement).map(([x, k]) => x + ">" + nom.get(k)).sort().join("|"));
+    }
+    return memo.get(e.c);
+  };
+  const ref = await sig(S.annee);
+  let a0 = S.annee, a1 = S.annee;
+  while (a0 - 1 >= b0 && await sig(a0 - 1) === ref) a0--;
+  while (a1 + 1 <= b1 && await sig(a1 + 1) === ref) a1++;
+  return { a0, a1,
+           ouvertDebut: a0 === b0 || (await sig(a0 - 1)) === null,
+           ouvertFin: a1 === b1 || (await sig(a1 + 1)) === null };
+}
+
+async function ouvreCommons() {
+  const dlg = $c("commons");
+  $c("c-resultat").innerHTML = "";
+  const peutX = unitesDe("circo").length > 0, peutC = unitesDe("canton").length > 0;
+  // Sans circonscription ni canton à cette date, il reste la liste de
+  // communes, qui ne dépend pas du département affiché.
+  $c("c-corps").hidden = false; $c("c-vide").hidden = true;
+  const rx = document.querySelector("input[name=c-niveau][value=circo]");
+  const rc = document.querySelector("input[name=c-niveau][value=canton]");
+  const rl = document.querySelector("input[name=c-niveau][value=liste]");
+  rx.disabled = !peutX; rc.disabled = !peutC;
+  const niv0 = optionsCommons().niveau;
+  if ((niv0 === "circo" && !peutX) || (niv0 === "canton" && !peutC))
+    (peutX ? rx : peutC ? rc : rl).checked = true;
+  if (!$c("c-annee-liste").value) $c("c-annee-liste").value = (S.index && S.index.an_max) || AN_MAX;
+  // Une nouvelle année ou un nouveau département : les champs retouchés à la
+  // main pour une autre carte n'ont plus de sens, ni la période calculée.
+  const cle = S.dep + "/" + S.annee;
+  const neuf = CX.cle !== cle;
+  if (neuf) { oublieRetouches(); CX.plages = {}; }
+  CX.cle = cle;
+  remplitUnites();
+  if (neuf) reglagesParDefaut();
+  dlg.showModal();
+  // L'état du compte d'abord : il apporte les catégories de `commons.toml`,
+  // qui doivent figurer dans la première proposition.
+  const niv = optionsCommons().niveau;
+  await Promise.all([niv === "liste" ? prepareListe() : plageDe(niv), etatCommons(), chargeCog()]);
+  regenere();
+}
+
+function regenere(force = false) {
+  const o = optionsCommons();
+  const liste = o.niveau === "liste";
+  $c("c-bloc-unites").hidden = liste;
+  $c("c-bloc-liste").hidden = !liste;
+  $c("c-w-communes").disabled = liste;      // une liste se liste toujours
+  $c("c-circo").disabled = o.type !== "situation";
+  let p, note;
+  if (liste) {
+    if (!CL.res || !CL.res.choisies.length) return videListe();
+    p = propositionListe(o);
+    o.titre = p.titre; o.desc = p.desc;
+    o.communes = o.communesListe;
+    CX.svg = fabriqueSVGListe(o);
+    note = noteListe();
+  } else {
+    CX.plage = CX.plages[o.niveau];
+    if (!CX.plage) return;            // la plage arrive : on sera rappelé
+    p = proposition(o, CX.plage);
+    o.titre = p.titre; o.desc = p.desc;
+    CX.svg = fabriqueSVG(o);
+    note = `découpage ${o.niveau === "canton" ? "cantonal " : ""}en vigueur ${CX.plage.a0 === CX.plage.a1 ? "en " + CX.plage.a0
+      : "de " + CX.plage.a0 + " à " + CX.plage.a1}` +
+      (CX.plage.ouvertDebut || CX.plage.ouvertFin
+        ? " (borne de la base : le découpage peut valoir au-delà)" : "");
+  }
+  if (CX.url) URL.revokeObjectURL(CX.url);
+  CX.url = URL.createObjectURL(new Blob([CX.svg], { type: "image/svg+xml" }));
+  $c("c-img").src = CX.url;
+  $c("c-poids").textContent = `${(CX.svg.length / 1024).toFixed(0)} Ko — ` + note;
+  const pose = (id, v) => { if (force || !$c(id).dataset.touche) $c(id).value = v; };
+  pose("c-nom", p.nom);
+  pose("c-texte", p.texte);
+  pose("c-cats", p.categories.join("\n"));
+  majWiki(force);
+  if (force) oublieRetouches();
+  const a = $c("c-telecharger");
+  a.href = CX.url; a.download = $c("c-nom").value || "carte.svg";
+  verifieBientot(0);
+  verifieLiensBientot();
+}
+
+// Une liste vide ou dont rien n'est trouvé : pas d'image, rien à déposer.
+function videListe() {
+  CX.svg = null;
+  if (CX.url) { URL.revokeObjectURL(CX.url); CX.url = null; }
+  $c("c-img").removeAttribute("src");
+  $c("c-telecharger").removeAttribute("href");
+  $c("c-poids").textContent = $c("c-liste").value.trim()
+    ? "aucune commune de la liste n'a pu être dessinée — voir sous la liste"
+    : "saisir une liste de communes";
+  if (!$c("c-wiki").dataset.touche) $c("c-wiki").value = "";
+  $c("c-wiki-etat").innerHTML = "";
+}
+
+function categoriesSaisies() {
+  return [...new Set($c("c-cats").value.split("\n")
+    .map(s => s.replace(/^\s*\[\[\s*Category:|^\s*Category:|\]\]\s*$/gi, "").trim())
+    .filter(Boolean))];
+}
+function texteFinal() {
+  return $c("c-texte").value.trimEnd() + "\n\n" +
+    categoriesSaisies().map(c => `[[Category:${c}]]`).join("\n") + "\n";
+}
+
+async function appelCommons(route, corps) {
+  const r = await fetch(route, corps === undefined ? {} : {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(corps),
+  });
+  if (r.status === 404 || r.status === 501)
+    throw new Error("ce serveur ne connaît pas les routes Commons — lancer cartes/web/servir.py");
+  const j = await r.json().catch(() => ({ erreur: `réponse illisible (${r.status})` }));
+  if (!r.ok) throw new Error(j.erreur || `HTTP ${r.status}`);
+  return j;
+}
+
+async function etatCommons() {
+  const e = $c("c-compte"), b = $c("c-deposer");
+  e.textContent = "connexion à Commons…";
+  try {
+    CX.etat = await appelCommons("commons/etat");
+    CX.categoriesEnPlus = CX.etat.categories || [];
+    if (CX.etat.utilisateur) {
+      e.innerHTML = `Dépôt sous le compte <b>${echappe(CX.etat.utilisateur)}</b>` +
+        (CX.etat.api.includes("commons.wikimedia.org") ? "" :
+         ` — <b>API de test</b> : ${echappe(CX.etat.api)}`) +
+        (CX.etat.peut_deposer === false ? ` — <b>ce compte n'a pas le droit de téléverser</b>` : "");
+      b.disabled = CX.etat.peut_deposer === false;
+    } else {
+      e.textContent = CX.etat.message || "non connecté";
+      b.disabled = true;
+    }
+  } catch (err) {
+    CX.etat = null;
+    e.textContent = err.message;
+    b.disabled = true;
+  }
+}
+
+function verifieBientot(delai = 700) {
+  clearTimeout(CX.minuterie);
+  CX.minuterie = setTimeout(verifie, delai);
+}
+
+async function verifie() {
+  const nom = $c("c-nom").value.trim(), cats = categoriesSaisies();
+  $c("c-telecharger").download = nom || "carte.svg";
+  const zn = $c("c-nom-etat"), zc = $c("c-cats-etat");
+  try {
+    const r = await appelCommons("commons/verifier", { fichier: nom, categories: cats });
+    if (nom !== $c("c-nom").value.trim()) return;      // dépassé par la frappe
+    const f = r.fichier || {};
+    zn.innerHTML = f.invalide ? `<span class="c-ko">nom refusé par Commons</span>`
+      : f.existe ? `<span class="c-ko">existe déjà :</span> <a href="${echappe(f.url)}"
+          target="_blank" rel="noopener">voir le fichier</a> — choisir un autre nom,
+          sauf à vouloir le remplacer`
+      : `<span class="c-ok">nom libre</span>`;
+    zc.innerHTML = cats.map(c => {
+      const i = r.categories[c] || {};
+      const lien = `<a href="https://commons.wikimedia.org/wiki/Category:${
+        encodeURIComponent(c.replace(/ /g, "_"))}" target="_blank" rel="noopener">${echappe(c)}</a>`;
+      if (i.existe && !i.redirection) return `<div><span class="c-ok">✓</span> ${lien}</div>`;
+      if (i.existe) return `<div><span class="c-ko">↪</span> ${lien} — catégorie
+        <b>redirigée</b> : la remplacer par sa cible</div>`;
+      const sug = (i.suggestions || []).map(s =>
+        `<button type="button" class="c-sug" data-de="${echappe(c)}" data-vers="${echappe(s)}">${echappe(s)}</button>`).join(" ");
+      return `<div><span class="c-ko">✗</span> ${echappe(c)} — <b>n'existe pas</b>` +
+             (sug ? `<br><span class="note">remplacer par :</span> ${sug}` : "") + `</div>`;
+    }).join("");
+    zc.querySelectorAll(".c-sug").forEach(b => b.onclick = () => {
+      $c("c-cats").value = categoriesSaisies()
+        .map(c => c === b.dataset.de ? b.dataset.vers : c).join("\n");
+      $c("c-cats").dataset.touche = "1";
+      verifieBientot(0);
+    });
+  } catch (err) {
+    zn.textContent = ""; zc.innerHTML = `<span class="note">vérification impossible : ${echappe(err.message)}</span>`;
+  }
+}
+
+async function depose(ignorer = false) {
+  const b = $c("c-deposer"), z = $c("c-resultat");
+  const nom = $c("c-nom").value.trim().replace(/(\.svg)*$/i, ".svg");
+  if (!CX.svg) { z.innerHTML = `<p class="avert">rien à déposer : pas d'image</p>`; return; }
+  b.disabled = true; z.innerHTML = `<p class="note">envoi de ${echappe(nom)}…</p>`;
+  let d;
+  try {
+    d = await appelCommons("commons/envoi",
+      { nom, svg: CX.svg, texte: texteFinal(), ignorer });
+  } catch (err) {
+    z.innerHTML = `<p class="avert">${echappe(err.message)}</p>`;
+    b.disabled = false;
+    return;
+  }
+  const up = d.upload || {};
+  if (up.result === "Success") {
+    const url = (up.imageinfo && up.imageinfo.descriptionurl) ||
+      "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(nom.replace(/ /g, "_"));
+    z.innerHTML = `<p class="c-succes">Déposé : <a href="${echappe(url)}" target="_blank"
+      rel="noopener">${echappe(up.filename || nom)}</a></p>`;
+    b.disabled = false;
+    verifieBientot(0);
+    return;
+  }
+  if (d.error) {
+    const auth = /mwoauth|invalid.?auth|badaccess|notloggedin/i.test(d.error.code || "");
+    z.innerHTML = `<p class="avert"><b>${echappe(d.error.code)}</b> : ${echappe(d.error.info || "")}` +
+      (auth ? `<br>Le jeton est refusé ou périmé : en créer un nouveau et le mettre dans
+               <code>cartes/web/commons.toml</code>.` : "") + `</p>`;
+    b.disabled = false;
+    return;
+  }
+  if (up.result === "Warning") {
+    const av = up.warnings || {};
+    const lignes = Object.entries(av).map(([k, v]) => {
+      if (k === "exists" || k === "exists-normalized" || k === "page-exists")
+        return `un fichier <b>de ce nom</b> existe déjà sur Commons`;
+      if (k === "duplicate")
+        return `<b>doublon</b> exact de : ${[].concat(v).map(f =>
+          `<a href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(f)}" target="_blank" rel="noopener">${echappe(f)}</a>`).join(", ")}`;
+      if (k === "was-deleted") return `un fichier de ce nom a été <b>supprimé</b> : changer de nom`;
+      if (k === "badfilename") return `nom refusé, Commons propose : ${echappe(v)}`;
+      return `${echappe(k)} : ${echappe(JSON.stringify(v))}`;
+    });
+    z.innerHTML = `<div class="avert"><b>Commons avertit :</b><br>${lignes.join("<br>")}</div>`;
+    if (d.histgis && d.histgis.peut_forcer) {
+      const f = document.createElement("button");
+      f.type = "button";
+      f.textContent = "déposer quand même";
+      f.title = "Écrase ou duplique en connaissance de cause — Commons peut le refuser selon les droits du compte";
+      f.onclick = () => depose(true);
+      z.appendChild(f);
+    }
+    b.disabled = false;
+    return;
+  }
+  z.innerHTML = `<p class="avert">Réponse inattendue : <code>${echappe(JSON.stringify(d))}</code></p>`;
+  b.disabled = false;
+}
+
+// --- branchements ----------------------------------------------------------
+$c("ouvre-commons").addEventListener("click", ouvreCommons);
+document.querySelectorAll("input[name=c-niveau]").forEach(r =>
+  r.addEventListener("change", async () => {
+    remplitUnites();
+    reglagesParDefaut();
+    oublieRetouches();
+    const niv = optionsCommons().niveau;
+    if (niv === "liste") await prepareListe(); else await plageDe(niv);
+    regenere();
+  }));
+// Liste de communes : la saisie, le filtre et l'année relancent la résolution
+// (et le chargement des départements) ; le nom de l'ensemble, sa nature et
+// sa source ne touchent qu'aux textes.
+["c-liste", "c-filtre", "c-annee-liste"].forEach(id =>
+  $c(id).addEventListener("input", () => relisteBientot()));
+["c-ensemble", "c-source-liste"].forEach(id => $c(id).addEventListener("input", () => {
+  clearTimeout(CL.minTexte);
+  CL.minTexte = setTimeout(() => regenere(), 400);
+}));
+$c("c-nature").addEventListener("change", () => regenere());
+document.querySelectorAll("input[name=c-type-liste]").forEach(r =>
+  r.addEventListener("change", () => { oublieRetouches(); regenere(); }));
+["c-l-communes", "c-l-noms", "c-l-deps", "c-l-medaillon"].forEach(id =>
+  $c(id).addEventListener("change", () => { $c(id).dataset.touche = "1"; regenere(); }));
+document.querySelectorAll("input[name=c-type]").forEach(r =>
+  r.addEventListener("change", () => {
+    reglagesParDefaut();
+    oublieRetouches();
+    regenere();
+  }));
+// Changer d'unité change de fichier : les retouches faites pour la précédente
+// n'ont plus d'objet. Les cases à cocher, elles, ne touchent qu'à l'image.
+$c("c-circo").addEventListener("change", () => {
+  oublieRetouches();
+  regenere();
+});
+["c-communes", "c-cantons", "c-numeros"].forEach(id =>
+  $c(id).addEventListener("change", () => regenere()));
+CHAMPS.forEach(id => $c(id).addEventListener("input", () => {
+  $c(id).dataset.touche = "1";
+  if (id === "c-nom" || id === "c-cats") verifieBientot();
+}));
+["c-w-communes", "c-w-rouges"].forEach(id => $c(id).addEventListener("change", () => {
+  delete $c("c-wiki").dataset.touche;
+  majWiki();
+  verifieLiensBientot(0);
+}));
+$c("c-w-copier").addEventListener("click", async () => {
+  const b = $c("c-w-copier"), t = $c("c-wiki");
+  try { await navigator.clipboard.writeText(t.value); }
+  catch (e) { t.select(); document.execCommand("copy"); }
+  b.textContent = "copié ✓";
+  setTimeout(() => { b.textContent = "copier"; }, 1500);
+});
+$c("c-reinit").addEventListener("click", () => regenere(true));
+$c("c-verifier").addEventListener("click", () => { verifieBientot(0); verifieLiensBientot(0); });
+$c("c-deposer").addEventListener("click", () => depose(false));
+$c("commons").addEventListener("keydown", ev => ev.stopPropagation());
 </script>
 </body>
 </html>

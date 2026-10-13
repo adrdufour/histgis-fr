@@ -61,6 +61,14 @@ jorf_txt/*_raw.txt
 # reproduiraient donc pas à l'identique.
 jorf_txt/*_col.txt
 
+# Tables analytiques annuelles du JO, 1941-1990 : leurs `.txt` nus ne viennent
+# PAS de tesseract mais de `pdftotext -layout` sur les PDF de `JORF/tables/`
+# (voir l'en-tête de `cantons/tables_jo.py`) — refaits à l'identique en
+# quelques minutes, et 94 Mo, plus que tout le dépôt. La règle ci-dessus
+# (« les .txt nus restent ») ne vaut donc pas pour eux. Ce que les scripts en
+# tirent — `cantons/tables_jo_actes.csv` et les autres — est versionné.
+jorf_txt/TABLE_ANALYTIQUE_JORF_*.txt
+
 # Données de la carte web : 3,3 Go et 1 546 fichiers, entièrement refaits
 # par `python3 cartes/export_web.py --jobs N`. Elles avaient été suivies par
 # inadvertance et pesaient à elles seules 96 % du bruit de `git status` — la
@@ -71,6 +79,10 @@ jorf_txt/*_col.txt
 # index.html, servir.py et LISEZMOI.md sont du code et de la doc, écrits à
 # la main, et restent suivis.
 cartes/web/donnees/
+
+# Jeton d'accès Wikimedia Commons : il dépose des fichiers sous le nom de son
+# propriétaire. Jamais suivi ; le modèle est `commons.toml.exemple`.
+cartes/web/commons.toml
 
 # Sauvegardes prises avant une transformation risquée (`.avant_appariement`,
 # `.avant_correction`…). Ce sont des filets de sécurité locaux, utiles tant
@@ -94,7 +106,14 @@ __pycache__/
 .venv/
 venv/
 
+# --- antichambre de la corbeille ----------------------------------------
+# Ce qu'on a écarté sans oser le supprimer : pages téléchargées par erreur,
+# doublons. Rien n'y est lu par un script ; se vide à la main.
+/_to_delete/
+
 # --- système -----------------------------------------------------------
+# Verrous de LibreOffice (`.~lock.fichier.xlsx#`), posés tant qu'il est ouvert.
+.~lock.*#
 .DS_Store
 Thumbs.db
 *~

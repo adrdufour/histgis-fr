@@ -1,0 +1,807 @@
+[[Fichier:44-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de la Loire-Atlantique, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le [[département français]] de la '''[[Loire-Atlantique]]''' est divisé en 31 '''[[Canton français|cantons]]''' depuis le [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Les premières élections correspondantes ont eu lieu en {{date-|mars 2015}}. Auparavant, entre 1985 et 2014, le département comprenait 59 cantons.
+
+== Histoire ==
+[[Fichier:Anciens cantons de la Loire Atlantique.png|vignette|Cartes des cantons de la Loire Atlantique avant 2015]]
+
+=== Découpage cantonal entre 1801 et 2015 ===
+
+*1801<ref>Arrêté du 15 Brumaire an X (6 novembre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f484 p. 496]</ref> : découpage d'origine.
+*1802<ref>Arrêté du 9 Pluviôse an X (29 janvier 1802), ''Bulletin des lois'', an XI (1er semestre) n°228bis [https://gallica.bnf.fr/ark:/12148/bpt6k6566855n/f191 p. 1]</ref> : Le chef-lieu du canton de [[Vieillevigne (Loire-Atlantique)|Vieillevigne]] est transféré à [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]].
+*1908<ref>Loi du 3 avril 1908, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=05%2F04%2F1908+%3E+05%2F04%2F1908 ''JORF'' 5 avril 1908]</ref> : A la suite de l'annexion de [[Chantenay-sur-Loire]] et de [[Doulon]] :
+**L’ancienne commune de Doulon est transféré [[canton de Carquefou]] au deuxième canton de Nantes ;
+**Création du septième canton de Nantes (comprenant Saint-Herblain, Indre et l'ancienne commune de Chantenay-sur-Loire), détaché du sixième canton de Nantes.
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307522 Décret n° 73-725 du 23 juillet 1973]</ref> :
+**Les sept cantons de Nantes sont redécoupés en onze nouveaux cantons Nantes-I à -X et Saint-Herblain ;
+**Création du [[canton de Rezé]], détaché du [[canton de Bouaye]] ;
+**Le canton de Saint-Nazaire est scindé en trois nouveaux cantons [[canton de Saint-Nazaire-Est|Saint-Nazaire-Est]], [[canton de Saint-Nazaire-Ouest|Saint-Nazaire-Ouest]] et [[canton de Montoir-de-Bretagne|Montoir-de-Bretagne]].
+*1976<ref>Décret du 20 août 1976, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=28%2F08%2F1976+%3E+28%2F08%2F1976 ''JORF'' 28 août 1976]</ref> : Les cantons de [[Canton de Saint-Étienne-de-Montluc|Saint-Etienne-de-Montluc]] et du [[canton du Pellerin|Pellerin]] sont transférés de l'[[arrondissement de Saint-Nazaire]] à l'[[arrondissement de Nantes]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880998 Décret n° 82-59 du 20 janvier 1982]</ref> :
+**Le canton de Saint-Herblain est scindé en deux nouveaux cantons [[canton de Saint-Herblain-Est|Saint-Herblain-Est]] et [[canton de Saint-Herblain-Ouest-Indre|Saint-Herblain-Ouest-Indre]] ;
+**Création du [[canton d’Orvault]], détaché du [[canton de La Chapelle-sur-Erdre]] ;
+**Création du [[canton de Saint-Nazaire-Centre]], détaché du [[canton de Saint-Nazaire-Ouest]]
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682070 Décret n° 85-130 du 29 janvier 1985]</ref> :
+**Création du [[canton de Vertou-Vignoble]] (chef-lieu [[Basse-Goulaine]]), détaché du [[canton de Vertou]] ;
+**Création du [[Canton de la Baule-Escoublac|canton de La Baule-Escoublac]], détaché des cantons de [[canton de Guérande|Guérande]] et de [[canton de Saint-Nazaire-Ouest|Saint-Nazaire-Ouest]] ;
+**Une partie du [[canton de Saint-Nazaire-Centre]] est transférée au [[canton de Saint-Nazaire-Ouest]] ;
+**Création du [[Canton de Nantes-11|canton de Nantes-XI]], détaché des cantons de [[canton de Nantes-5|Nantes-V]] et [[canton de Nantes-6|-VI]] ;
+**Une partie du [[canton de Nantes-7|canton de Nantes-VII]] est transférée au [[Canton de Nantes-6|canton de Nantes-VI]]
+
+==== Arrondissement d'Ancenis ====
+L'[[arrondissement d'Ancenis]] (sous-préfecture [[Ancenis]]) est divisé en 5 cantons :
+
+{| class="wikitable sortable"
+|- bgcolor="#cccccc"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton d'Ancenis]] || align="center" | 8 || [[Ancenis]], [[Anetz]], [[Mésanger]], [[Oudon]], [[Pouillé-les-Coteaux]], [[La Roche-Blanche (Loire-Atlantique)|La Roche-Blanche]], [[Saint-Géréon]], [[Saint-Herblon]]
+|-
+| [[Canton de Ligné]] || align="center" | 4 || [[Le Cellier]], [[Couffé]], [[Ligné (Loire-Atlantique)|Ligné]], [[Mouzeil]]
+|-
+| [[Canton de Riaillé]] || align="center" | 5 || [[Joué-sur-Erdre]], [[Pannecé]], [[Riaillé]], [[Teillé (Loire-Atlantique)|Teillé]], [[Trans-sur-Erdre]]
+|-
+| [[Canton de Saint-Mars-la-Jaille]] || align="center" | 6 || [[Bonnœuvre]], [[Maumusson (Loire-Atlantique)|Maumusson]], [[Le Pin (Loire-Atlantique)|Le Pin]], [[Saint-Mars-la-Jaille]], [[Saint-Sulpice-des-Landes (Loire-Atlantique)|Saint-Sulpice-des-Landes]], [[Vritz]]
+|-
+| [[Canton de Varades]] || align="center" | 6 || [[Belligné]], [[La Chapelle-Saint-Sauveur (Loire-Atlantique)|La Chapelle-Saint-Sauveur]], [[Le Fresne-sur-Loire]], [[Montrelais]], [[La Rouxière]], [[Varades]]
+|}
+
+==== Arrondissement de Châteaubriant ====
+L'[[arrondissement de Châteaubriant]] (sous-préfecture [[Châteaubriant]]) est divisé en 10 cantons :
+
+{| class="wikitable sortable"
+|- bgcolor="#cccccc"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton de Blain]] || align="center" | 5 || [[Blain]], [[Bouvron (Loire-Atlantique)|Bouvron]], [[Fay-de-Bretagne]], [[Le Gâvre]], [[Notre-Dame-des-Landes]] 
+|-
+| [[Canton de Châteaubriant]] || align="center" | 4 || [[Châteaubriant]], [[Ruffigné]], [[Saint-Aubin-des-Châteaux]], [[Soudan (Loire-Atlantique)|Soudan]]
+|-
+| [[Canton de Derval]] || align="center" | 6 || [[Derval (Loire-Atlantique)|Derval]], [[Jans]], [[Lusanger]], [[Mouais]], [[Saint-Vincent-des-Landes]], [[Sion-les-Mines]]
+|-
+| [[Canton de Guémené-Penfao]] || align="center" | 5 || [[Conquereuil]], [[Guémené-Penfao]], [[Marsac-sur-Don]], [[Massérac]], [[Pierric]]
+|-
+| [[Canton de Moisdon-la-Rivière]] || align="center" | 5 || [[Grand-Auverné]], [[Issé]], [[Louisfert]], [[La Meilleraye-de-Bretagne]], [[Moisdon-la-Rivière]]
+|-
+| [[Canton de Nort-sur-Erdre]] || align="center" | 6 || [[Casson]], [[Héric]], [[Nort-sur-Erdre]], [[Petit-Mars]], [[Saint-Mars-du-Désert (Loire-Atlantique)|Saint-Mars-du-Désert]], [[Les Touches]]
+|-
+| [[Canton de Nozay]] || align="center" | 8 || [[Abbaretz]], [[La Chevallerais]], [[La Grigonnais]], [[Nozay (Loire-Atlantique)|Nozay]], [[Puceul]], [[Saffré]], [[Treffieux]], [[Vay]]
+|-
+| [[Canton de Rougé]] || align="center" | 5 || [[Fercé]], [[Noyal-sur-Brutz]], [[Rougé]], [[Soulvache]], [[Villepot]]
+|-
+| [[Canton de Saint-Julien-de-Vouvantes]] || align="center" | 5 || [[La Chapelle-Glain]], [[Erbray]], [[Juigné-des-Moutiers]], [[Petit-Auverné]], [[Saint-Julien-de-Vouvantes]] 
+|-
+| [[Canton de Saint-Nicolas-de-Redon]] || align="center" | 4 || [[Avessac]], [[Fégréac]], [[Plessé]], [[Saint-Nicolas-de-Redon]]
+|}
+
+==== Arrondissement de Nantes ====
+L'[[arrondissement de Nantes]] (préfecture [[Nantes]]) est divisé en 29 cantons (dont 11 pour la seule commune de Nantes) :
+
+{| class="wikitable sortable"
+|- bgcolor="#cccccc"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton d'Aigrefeuille-sur-Maine]] || align="center" | 8 || [[Aigrefeuille-sur-Maine]], [[Le Bignon]], [[Geneston]], [[Maisdon-sur-Sèvre]], [[Montbert]], [[La Planche]], [[Remouillé]], [[Vieillevigne (Loire-Atlantique)|Vieillevigne]]
+|-
+| [[Canton de Bouaye]] || align="center" | 6 || [[Bouaye]], [[Brains]], [[Pont-Saint-Martin (Loire-Atlantique)|Pont-Saint-Martin]], [[Rezé]] (partiel), [[Saint-Aignan-Grandlieu]], [[Saint-Léger-les-Vignes]]
+|-
+| [[Canton de Carquefou]] || align="center" | 4 || [[Carquefou]], [[Mauves-sur-Loire]], [[Sainte-Luce-sur-Loire]], [[Thouaré-sur-Loire]]
+|-
+| [[Canton de la Chapelle-sur-Erdre]] || align="center" | 4 || [[La Chapelle-sur-Erdre]], [[Grandchamp-des-Fontaines]], [[Sucé-sur-Erdre]], [[Treillières]]
+|-
+| [[Canton de Clisson]] || align="center" | 7 || [[Boussay (Loire-Atlantique)|Boussay]], [[Clisson]], [[Gétigné]], [[Gorges (Loire-Atlantique)|Gorges]], [[Monnières (Loire-Atlantique)|Monnières]], [[Saint-Hilaire-de-Clisson]], [[Saint-Lumine-de-Clisson]]
+|-
+| [[Canton de Legé]] || align="center" | 3 || [[Corcoué-sur-Logne]], [[Legé]], [[Touvois]]
+|-
+| [[Canton du Loroux-Bottereau]] || align="center" | 7 || [[Barbechat]], [[La Boissière-du-Doré]], [[La Chapelle-Basse-Mer]], [[Le Landreau]], [[Le Loroux-Bottereau]], [[La Remaudière]], [[Saint-Julien-de-Concelles]]
+|-
+| [[Canton de Machecoul]] || align="center" | 6 || [[Machecoul]], [[La Marne (Loire-Atlantique)|La Marne]], [[Paulx]], [[Saint-Étienne-de-Mer-Morte]], [[Saint-Mars-de-Coutais]], [[Saint-Même-le-Tenu]]
+|-
+| [[Canton de Nantes-1]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-2]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-3]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-4]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-5]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-6]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-7]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-8]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-9]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton de Nantes-10]] || align="center" | 2 || [[Nantes]] (partiel), [[Saint-Sébastien-sur-Loire]]
+|-
+| [[Canton de Nantes-11]] || align="center" | 1 || [[Nantes]] (partiel)
+|-
+| [[Canton d'Orvault]] || align="center" | 2 || [[Orvault]], [[Sautron]]
+|-
+| [[Canton du Pellerin]] || align="center" | 8 || [[Cheix-en-Retz]], [[La Montagne (Loire-Atlantique)|La Montagne]], [[Le Pellerin]], [[Port-Saint-Père]], [[Rouans]], [[Sainte-Pazanne]], [[Saint-Jean-de-Boiseau]], [[Vue (Loire-Atlantique)|Vue]]
+|-
+| [[Canton de Rezé]] || align="center" | 2 || [[Bouguenais]], [[Rezé]] (partiel)
+|-
+| [[Canton de Saint-Étienne-de-Montluc]] || align="center" | 5 || [[Cordemais]], [[Couëron]], [[Saint-Étienne-de-Montluc]], [[Le Temple-de-Bretagne]], [[Vigneux-de-Bretagne]]
+|-
+| [[Canton de Saint-Herblain-Est]] || align="center" | 1 || [[Saint-Herblain]] (partiel)
+|-
+| [[Canton de Saint-Herblain-Ouest-Indre]] || align="center" | 2 || [[Indre (Loire-Atlantique)|Indre]], [[Saint-Herblain]] (partiel)
+|-
+| [[Canton de Saint-Philbert-de-Grand-Lieu]] || align="center" | 5 || [[La Chevrolière]], [[La Limouzinière]], [[Saint-Colomban (Loire-Atlantique)|Saint-Colomban]], [[Saint-Lumine-de-Coutais]], [[Saint-Philbert-de-Grand-Lieu]]
+|-
+| [[Canton de Vallet]] || align="center" | 5 || [[La Chapelle-Heulin]], [[Mouzillon]], [[Le Pallet]], [[La Regrippière]], [[Vallet (Loire-Atlantique)|Vallet]]
+|-
+| [[Canton de Vertou]] || align="center" | 2 || [[Les Sorinières]], [[Vertou]]
+|-
+| [[Canton de Vertou-Vignoble]] || align="center" | 5 || [[Basse-Goulaine]], [[Château-Thébaud]], [[La Haie-Fouassière]], [[Haute-Goulaine]], [[Saint-Fiacre-sur-Maine]]
+|}
+
+==== Arrondissement de Saint-Nazaire ====
+L'[[arrondissement de Saint-Nazaire]] (sous-préfecture [[Saint-Nazaire]]) est divisé en 15 cantons (dont 3 pour la seule commune de Saint-Nazaire) :
+
+{| class="wikitable sortable"
+|- bgcolor="#cccccc"
+! Canton || Nombres de<br />communes || Communes
+|-
+| [[Canton de la Baule-Escoublac]] || align="center" | 2 || [[La Baule-Escoublac]], [[Pornichet]]
+|-
+| [[Canton de Bourgneuf-en-Retz]] || align="center" | 6 || [[La Bernerie-en-Retz]], [[Bourgneuf-en-Retz]], [[Chéméré]], [[Fresnay-en-Retz]], [[Les Moutiers-en-Retz]], [[Saint-Hilaire-de-Chaléons]]
+|-
+| [[Canton du Croisic]] || align="center" | 3 || [[Batz-sur-Mer]], [[Le Croisic]], [[Le Pouliguen]]
+|-
+| [[Canton de Guérande]] || align="center" | 6 || [[Guérande]], [[Mesquer]], [[Piriac-sur-Mer]], [[Saint-André-des-Eaux (Loire-Atlantique)|Saint-André-des-Eaux]], [[Saint-Molf]], [[La Turballe]]
+|-
+| [[Canton d'Herbignac]] || align="center" | 4 || [[Assérac]], [[La Chapelle-des-Marais]], [[Herbignac]], [[Saint-Lyphard]]
+|-
+| [[Canton de Montoir-de-Bretagne]] || align="center" | 4 || [[Donges]], [[Montoir-de-Bretagne]], [[Saint-Malo-de-Guersac]], [[Trignac]]
+|-
+| [[Canton de Paimbœuf]] || align="center" | 3 || [[Corsept]], [[Paimbœuf]], [[Saint-Brevin-les-Pins]]
+|-
+| [[Canton de Pontchâteau]] || align="center" | 6 || [[Besné]], [[Crossac]], [[Pontchâteau]], [[Sainte-Anne-sur-Brivet]], [[Sainte-Reine-de-Bretagne]], [[Saint-Joachim (Loire-Atlantique)|Saint-Joachim]]
+|-
+| [[Canton de Pornic]] || align="center" | 5 || [[Arthon-en-Retz]], [[La Plaine-sur-Mer]], [[Pornic]], [[Préfailles]], [[Saint-Michel-Chef-Chef]]
+|-
+| [[Canton de Saint-Gildas-des-Bois]] || align="center" | 5 || [[Drefféac]], [[Guenrouet]], [[Missillac]], [[Saint-Gildas-des-Bois]], [[Sévérac (Loire-Atlantique)|Sévérac]]
+|-
+| [[Canton de Saint-Nazaire-Centre]] || align="center" | 1 || [[Saint-Nazaire]] (partiel)
+|-
+| [[Canton de Saint-Nazaire-Est]] || align="center" | 1 || [[Saint-Nazaire]] (partiel)
+|-
+| [[Canton de Saint-Nazaire-Ouest]] || align="center" | 1 || [[Saint-Nazaire]] (partiel)
+|-
+| [[Canton de Saint-Père-en-Retz]] || align="center" | 4 || [[Chauvé]], [[Frossay]], [[Saint-Père-en-Retz]], [[Saint-Viaud]]
+|-
+| [[Canton de Savenay]] || align="center" | 8 || [[Bouée (Loire-Atlantique)|Bouée]], [[Campbon]], [[La Chapelle-Launay]], [[Lavau-sur-Loire]], [[Malville]], [[Prinquiau]], [[Quilly (Loire-Atlantique)|Quilly]], [[Savenay]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|25 février 2014}} pour le département de la [[Loire-Atlantique]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans la [[Loire-Atlantique]] le nombre de cantons passe ainsi de 59 à 31<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661362 |texte=Décret {{n°|2014}}-243 du 25 février 2014}} portant délimitation des cantons dans le département de la Loire-Atlantique.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment  sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}},  il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |auteur= |date = |site =conseil-constitutionnel.fr |consulté le= 19 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de la Loire-Atlantique, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|1282052|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=44 |titre= Chiffres clés Évolution et structure de la population - Département de la Loire-Atlantique (44) |auteur= |date = |site =insee.fr |consulté le= 19 mai 2014}}.</ref>. Avec 31 cantons la population moyenne par conseiller départemental est de {{unité|41357|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|33085|habitants}} et {{unité|49628|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition ==
+=== Composition détaillée ===
+{| class="wikitable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population :
+!scope=col|Nombre de communes
+!scope=col|Communes composant le canton
+|- 
+|1 || [[Canton d'Ancenis-Saint-Géréon|Ancenis-Saint-Géréon]] || [[Ancenis-Saint-Géréon]] ||46 126
+| 12 || [[Ancenis-Saint-Géréon]], [[Couffé]], [[Loireauxence]], [[Mésanger]], [[Montrelais]], [[Oudon]], [[Pannecé]], [[Le Pin (Loire-Atlantique)|Le Pin]], [[Pouillé-les-Côteaux]], [[La Roche-Blanche (Loire-Atlantique)|La Roche-Blanche]], [[Vair-sur-Loire]], [[Vallons-de-l'Erdre]]. 
+|-
+|2 || [[Canton de la Baule-Escoublac|La Baule-Escoublac]] || [[La Baule-Escoublac]] || {{formatnum:{{Population de France/dernière pop||Canton de la Baule-Escoublac}}}} || 6 || [[Batz-sur-Mer]], [[La Baule-Escoublac]], [[Le Croisic]], [[Pornichet]], [[Le Pouliguen]], [[Saint-André-des-Eaux (Loire-Atlantique)|Saint-André-des-Eaux]]. 
+|-
+|3 || [[Canton de Blain|Blain]] || [[Blain]] || {{formatnum:{{Population de France/dernière pop||Canton de Blain}}}} || 14 || [[Blain]], [[Bouée (Loire-Atlantique)|Bouée]], [[Bouvron (Loire-Atlantique)|Bouvron]], [[Campbon]], [[La Chapelle-Launay]], [[Cordemais]], [[Le Gâvre]], [[Lavau-sur-Loire]], [[Malville]], [[Prinquiau]], [[Quilly (Loire-Atlantique)|Quilly]], [[Saint-Étienne-de-Montluc]], [[Savenay]], [[Le Temple-de-Bretagne]]. 
+|-
+|4 || [[Canton de Carquefou|Carquefou]] || [[Carquefou]] || {{formatnum:{{Population de France/dernière pop||Canton de Carquefou}}}} || 4 || [[Carquefou]], [[Mauves-sur-Loire]], [[Sainte-Luce-sur-Loire]], [[Thouaré-sur-Loire]]. 
+|-
+|5 || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]] || [[La Chapelle-sur-Erdre]] || {{formatnum:{{Population de France/dernière pop||Canton de la Chapelle-sur-Erdre}}}} || 6 || [[La Chapelle-sur-Erdre]], [[Fay-de-Bretagne]], [[Grandchamp-des-Fontaines]], [[Sucé-sur-Erdre]], [[Treillières]], [[Vigneux-de-Bretagne]]. 
+|-
+|6 || [[Canton de Châteaubriant|Châteaubriant]] || [[Châteaubriant]] || {{formatnum:{{Population de France/dernière pop||Canton de Châteaubriant}}}} || 19 || [[La Chapelle-Glain]], [[Châteaubriant]], [[Erbray]], [[Fercé]], [[Grand-Auverné]], [[Issé]], [[Juigné-des-Moutiers]], [[Louisfert]], [[La Meilleraye-de-Bretagne]], [[Moisdon-la-Rivière]], [[Noyal-sur-Brutz]], [[Petit-Auverné]], [[Rougé]], [[Ruffigné]], [[Saint-Aubin-des-Châteaux]], [[Saint-Julien-de-Vouvantes]], [[Soudan (Loire-Atlantique)|Soudan]], [[Soulvache]], [[Villepot]]. 
+|-
+|7 || [[Canton de Clisson|Clisson]] || [[Clisson]] || {{formatnum:{{Population de France/dernière pop||Canton de Clisson}}}} || 12 || [[Aigrefeuille-sur-Maine]], [[Boussay (Loire-Atlantique)|Boussay]], [[Clisson]], [[Gétigné]], [[Gorges (Loire-Atlantique)|Gorges]], [[Maisdon-sur-Sèvre]], [[Monnières (Loire-Atlantique)|Monnières]], [[La Planche]], [[Remouillé]], [[Saint-Hilaire-de-Clisson]], [[Saint-Lumine-de-Clisson]], [[Vieillevigne (Loire-Atlantique)|Vieillevigne]]. 
+|-
+|8 || [[Canton de Guémené-Penfao|Guémené-Penfao]] || [[Guémené-Penfao]] || {{formatnum:{{Population de France/dernière pop||Canton de Guémené-Penfao}}}} || 19 || [[Abbaretz]], [[La Chevallerais]], [[Conquereuil]], [[Derval (Loire-Atlantique)|Derval]], [[La Grigonnais]], [[Guémené-Penfao]], [[Jans]], [[Lusanger]], [[Marsac-sur-Don]], [[Massérac]], [[Mouais]], [[Nozay (Loire-Atlantique)|Nozay]], [[Pierric]], [[Puceul]], [[Saffré]], [[Saint-Vincent-des-Landes]], [[Sion-les-Mines]], [[Treffieux]], [[Vay]]. 
+|-
+|9 || [[Canton de Guérande|Guérande]] || [[Guérande]] || {{formatnum:{{Population de France/dernière pop||Canton de Guérande}}}} || 10 || [[Assérac]], [[La Chapelle-des-Marais]], [[Guérande]], [[Herbignac]], [[Mesquer]], [[Piriac-sur-Mer]], [[Saint-Joachim (Loire-Atlantique)|Saint-Joachim]], [[Saint-Lyphard]], [[Saint-Molf]], [[La Turballe]]. 
+|-
+|10 || [[Canton de Machecoul-Saint-Même|Machecoul-Saint-Même]] || [[Machecoul-Saint-Même]] || {{formatnum:{{Population de France/dernière pop||Canton de Machecoul-Saint-Même}}}} || 12 + fraction [[Chaumes-en-Retz]]||[[Cheix-en-Retz]], [[Chéméré]] (commune délégués), [[Machecoul-Saint-Même]], [[La Marne (Loire-Atlantique)|La Marne]], [[Paulx]], [[Port-Saint-Père]], [[Rouans]], [[Saint-Étienne-de-Mer-Morte]], [[Saint-Hilaire-de-Chaléons]], [[Saint-Mars-de-Coutais]], [[Sainte-Pazanne]], [[Villeneuve-en-Retz]], [[Vue (Loire-Atlantique)|Vue]]. 
+|-
+|11 || [[Canton de Nantes-1|Nantes-1]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-1}}}} || fraction Nantes || Partie de la commune de Nantes située à l'intérieur du périmètre défini par l'axe des voies et limites suivantes : rue Sarrazin, rue Fredureau, rue Yves-Bodiguel, place Viarme, rue des Hauts-Pavés, place de la Fontaine-Morgane, rue du Bourget, rue de Miséricorde, rue Gabriel-Luneau, rue Charles-Monselet, place Anatole-France, boulevard Meusnier-de-Querlon, boulevard des Anglais, boulevard Lelasseur, boulevard des Frères-de-Goncourt, boulevard Gabriel-Lauriol, boulevard du Petit-Port, cours du Cens, cours de l'Erdre, pont du Général-de-la-Motte-Rouge, place Waldeck-Rousseau, rue Desaix, rue François-Farineau, rue de la Béraudière, rue de l'Amiral-Ronarc'h, avenue Chanzy, rue du Général-Buat, rue de Courson, rue Gaston-Turpin, rue de Coulmiers, rue d'Aurelle-de-Paladines, rue des Rochettes, avenue Ludovic-Cormerais, ligne droite dans le prolongement de l'avenue Ludovic-Cormerais, impasse Philibert, rue de Coulmiers, boulevard de Stalingrad, ligne de tramway, cours du Commandant-d'Estienne-d'Orves, place Neptune, cours Franklin-Roosevelt, cours des Cinquante-Otages, rue de Feltre, rue du Calvaire, rue La Fayette, place Aristide-Briand, rue Mercœur, rue Jean-Jaurès.
+|-
+|12 || [[Canton de Nantes-2|Nantes-2]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-2}}}} || fraction Nantes || Partie de la commune de Nantes située à l'intérieur du périmètre défini par l'axe des voies et limites suivantes : cours de la Loire (bras de la Madeleine), canal Saint-Félix, quai Malakoff, pont de la Rotonde, cours John-Kennedy, boulevard de Stalingrad, rue de Coulmiers, impasse Philibert, ligne droite dans le prolongement de l'avenue Ludovic-Cormerais, avenue Ludovic-Cormerais, rue des Rochettes, rue d'Aurelle-de-Paladines, rue de Coulmiers, rue Gaston-Turpin, rue de Courson, rue du Général-Buat, avenue Chanzy, rue de l'Amiral-Ronarc'h, rue de la Béraudière, rue François-Farineau, rue Desaix, place Waldeck-Rousseau, pont du Général-de-la-Motte-Rouge, cours de l'Erdre, chemin de halage, rue du Port-Boyer, rue de la Cornouaille, rond-point des Combattants-d'Indochine, rue des Marsauderies, rue du Croissant, rue des Maraîchers, rue du Petit-Bel-Air, rue du Croissant, route de Sainte-Luce, rue Jean-Julien-Lemordant, rue Joseph-Doury, ligne droite dans le prolongement de l'avenue Praud, avenue Praud, boulevard Auguste-Peneau, rue de la Pâture, ligne de chemin de fer, jusqu'à la limite territoriale de la commune de Sainte-Luce-sur-Loire.
+|-
+|13 || [[Canton de Nantes-3|Nantes-3]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-3}}}} || fraction Nantes || Partie de la commune de Nantes située au sud d'une ligne définie par l'axe des voies et limites suivantes : cours de la Loire (bras de la Madeleine), pont Anne-de-Bretagne, quai de la Fosse, rue Charles-Brunellière, place René-Bouhier, rue Lamoricière, rue de Gigant, rue Marie-Anne-du-Bocage, rue Harouys, rue Faustin-Hélie, rue Mercœur, place Aristide-Briand, rue La Fayette, rue du Calvaire, rue de Feltre, cours des Cinquante-Otages, cours Franklin-Roosevelt, place Neptune, cours du Commandant-d'Estienne d'Orves, ligne de tramway, pont de la Rotonde, quai Malakoff, canal Saint-Félix, cours de la Loire (bras de la Madeleine).
+|-
+|14 || [[Canton de Nantes-4|Nantes-4]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-4}}}} || fraction Nantes || Partie de la commune de Nantes située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Herblain, boulevard Émile-Romanet, rue du Jamet, rue Jean-Olivesi, rue Lucien-Aubert, rue Romain-Rolland, rue Firmin-Colas, rue de l'Etang, boulevard Jean-Moulin, rue des Alouettes, rue du Bois-Hardy, rue du Moulin-de-l'Abbaye, rue des Pavillons, rue du Bois-Hercé, boulevard Léon-Jouhaux, boulevard René-Coty, rue de l'Amiral-du-Chaffault, rue de Plaisance, rue de la Montagne, boulevard Pasteur, chemin Guilbaud, rue Nicolas-Appert, rue Renan, chemin des Rivières, avenue du Midi, rue Littré, rue Bouchaud, rue du Coteau, rue Bouchaud, rue des Dervallières, rue Francis-Merlant, rue George-Sand, boulevard Luc-Olivier-Merson, place Anatole-France, rue Charles-Monselet, rue Gabriel-Luneau, rue de Miséricorde, rue du Bourget, place de la Fontaine-Morgane, rue des Hauts-Pavés, place Viarme, rue Yves-Bodiguel, rue Fredureau, rue Sarrazin, rue Jean-Jaurès, rue Faustin-Hélie, rue Harouys, rue Marie-Anne-du-Bocage, rue de Gigant, rue Lamoricière, place René-Bouhier, rue Charles-Brunellière, quai de la Fosse, pont Anne-de-Bretagne, cours de la Loire (bras de la Madeleine).
+|-
+|15 || [[Canton de Nantes-5|Nantes-5]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-5}}}} || fraction Nantes || Partie de la commune de Nantes située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Herblain, boulevard Emile-Romanet, rue du Jamet, rue Jean-Olivesi, rue Lucien-Aubert, rue Romain-Rolland, rue Firmin-Colas, rue de l'Etang, boulevard Jean-Moulin, rue des Alouettes, rue du Bois-Hardy, rue du Moulin-de-l'Abbaye, rue des Pavillons, rue du Bois-Hercé, boulevard Léon-Jouhaux, boulevard René-Coty, rue de l'Amiral-du-Chaffault, rue de Plaisance, rue de la Montagne, boulevard Pasteur, chemin Guilbaud, rue Nicolas-Appert, rue Renan, chemin des Rivières, avenue du Midi, rue Littré, rue Bouchaud, rue du Coteau, rue Bouchaud, rue des Dervallières, rue Francis-Merlant, rue George-Sand, boulevard Luc-Olivier-Merson, boulevard Meusnier-de-Querlon, boulevard des Anglais, rue Chanoine-Larose, rue Georges-Méliès, rue de la Maison-Blanche, jusqu'à la limite territoriale de la commune de Saint-Herblain.
+|-
+|16 || [[Canton de Nantes-6|Nantes-6]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-6}}}} || fraction Nantes || Partie de la commune de Nantes située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Herblain, rue de la Maison-Blanche, rue Georges-Méliès, rue Chanoine-Larose, boulevard des Anglais, boulevard Le-Lasseur, rond-point de Rennes, boulevard des Frères-de-Goncourt, boulevard Gabriel-Lauriol, boulevard du Petit-Port, cours du Cens, cours de l'Erdre, jusqu'à la limite territoriale de la commune de La Chapelle-sur-Erdre.
+|-
+|17 || [[Canton de Nantes-7|Nantes-7]] || [[Nantes]] || {{formatnum:{{Population de France/dernière pop||Canton de Nantes-7}}}} || fraction Nantes || Partie de la commune de Nantes non incluse dans les cantons de Nantes-1, Nantes-2, Nantes-3, Nantes-4, Nantes-5 et Nantes-6.
+|-
+|18 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Nort-sur-Erdre]] || {{formatnum:{{Population de France/dernière pop||Canton de Nort-sur-Erdre}}}} || 14 || [[Casson]], [[Le Cellier]], [[Héric]], [[Joué-sur-Erdre]], [[Ligné (Loire-Atlantique)|Ligné]], [[Mouzeil]], [[Nort-sur-Erdre]], [[Notre-Dame-des-Landes]], [[Petit-Mars]], [[Riaillé]], [[Saint-Mars-du-Désert (Loire-Atlantique)|Saint-Mars-du-Désert]], [[Teillé (Loire-Atlantique)|Teillé]], [[Les Touches]], [[Trans-sur-Erdre]]. 
+|-
+|19 || [[Canton de Pontchâteau|Pontchâteau]] || [[Pontchâteau]] || {{formatnum:{{Population de France/dernière pop||Canton de Pontchâteau}}}} || 13 || [[Avessac]], [[Crossac]], [[Drefféac]], [[Fégréac]], [[Guenrouet]], [[Missillac]], [[Plessé]], [[Pontchâteau]], [[Saint-Gildas-des-Bois]], [[Saint-Nicolas-de-Redon]], [[Sainte-Anne-sur-Brivet]], [[Sainte-Reine-de-Bretagne]], [[Sévérac (Loire-Atlantique)|Sévérac]]. 
+|-
+|20 || [[Canton de Pornic|Pornic]] || [[Pornic]] || {{formatnum:{{Population de France/dernière pop||Canton de Pornic}}}} || 8 + fraction [[Chaumes-en-Retz]]|| [[Arthon-en-Retz]] (commune déléguée), [[La Bernerie-en-Retz]], [[Chauvé]], [[Les Moutiers-en-Retz]], [[La Plaine-sur-Mer]], [[Pornic]], [[Préfailles]], [[Saint-Michel-Chef-Chef]]. 
+|-
+|21 || [[Canton de Rezé-1|Rezé-1]] || [[Rezé]] || {{formatnum:{{Population de France/dernière pop||Canton de Rezé-1}}}} || 5 + fraction Rezé || 1° Les communes suivantes : [[Bouaye]], [[Bouguenais]], [[Brains]], [[Saint-Aignan-Grandlieu]], [[Saint-Léger-les-Vignes]]. <br/>2° La partie de la commune de Rezé située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Bouguenais, ligne de chemin de fer, rue Victor-Hugo, rue Henri-Barbusse, rue du Port-aux-Blés, rue Émile-Zola, boulevard du Général-de-Gaulle, jusqu'à la limite territoriale de la commune de Nantes.
+|-
+|22 || [[Canton de Rezé-2|Rezé-2]] || [[Rezé]] || {{formatnum:{{Population de France/dernière pop||Canton de Rezé-2}}}} || fraction Rezé || Partie de la commune de Rezé non incluse dans le canton de Rezé-1.
+|-
+|23 || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]] || [[Saint-Brevin-les-Pins]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Brevin-les-Pins}}}} || 9 || [[Corsept]], [[Frossay]], [[La Montagne (Loire-Atlantique)|La Montagne]], [[Paimbœuf]], [[Le Pellerin]], [[Saint-Brevin-les-Pins]], [[Saint-Jean-de-Boiseau]], [[Saint-Père-en-Retz]], [[Saint-Viaud]]. 
+|-
+|24 || [[Canton de Saint-Herblain-1|Saint-Herblain-1]] || [[Saint-Herblain]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Herblain-1}}}} || 3 + fraction Saint-Herblain || 1° Les communes suivantes : [[Couëron]], [[Indre (Loire-Atlantique)|Indre]], [[Sautron]]. <br/>2° La partie de la commune de Saint-Herblain située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune d'Indre, quai Emile-Cormerais, rue du Plessis-Bouchet, rue du Souvenir-Français, chemin du Vigneau, rue Vasco-de-Gama, place Magellan, rue Christophe-Colomb, impasse Charles-Trenet, rue François-Rabelais, allée Prosper-Mérimée, avenue Louis-Guilloux, boulevard du Val-de-la-Chézine, rue Paul-Dukas, ligne droite dans le prolongement de la rue du Congo, allée Jean-Philippe-Rameau, allée Antonio-Vivaldi, avenue des Naudières, avenue des Bergeronnettes, avenue des Rouges-Gorges, avenue des Roitelets, avenue de Cheverny, avenue des Thébaudières, jusqu'à la limite territoriale de la commune d'Orvault.
+|-
+|25 || [[Canton de Saint-Herblain-2|Saint-Herblain-2]] || [[Saint-Herblain]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Herblain-2}}}} || 1 + fraction Saint-Herblain || 1° La commune suivante : [[Orvault]]. <br/> 2° La partie de la commune de Saint-Herblain non incluse dans le canton de Saint-Herblain-1.
+|-
+|26 || [[Canton de Saint-Nazaire-1|Saint-Nazaire-1]] || [[Saint-Nazaire]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Nazaire-1}}}} || fraction Saint-Nazaire || Partie de la commune de Saint-Nazaire non incluse dans le canton de Saint-Nazaire-2
+|-
+|27 || [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]] || [[Saint-Nazaire]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Nazaire-2}}}} || 5 + fraction Saint-Nazaire || 1° Les communes suivantes : [[Besné]], [[Donges]], [[Montoir-de-Bretagne]], [[Saint-Malo-de-Guersac]], [[Trignac]]. <br/>2° La partie de la commune de Saint-Nazaire située à l'est d'une ligne définie par l'axe des voies et limites suivantes : à partir de la limite territoriale de la commune de Trignac et du cours du Brivet, ligne de chemin de fer de Paris à La Baule, boulevard Louis-Antoine-de-Bougainville, rue Charles-Longuet, route de Guindreff, rue Albert-Camus, boulevard de l'Hôpital, rue Louis-Joseph-Gay-Lussac, rue Michel-Faraday, boulevard Jean-Mermoz, rue du Commandant-Gustave-Gâté, rue du Général-de-Gaulle, avenue de la République, rue de la Paix et des Arts, rue Roger-Salengro, rue de Saintonge, rue du Dolmen, rue de Stalingrad, place de l'Industrie, rue Henri-Gautier, rue des Frères-Pereire, boulevard Paul-Leferme, avenue du Pertuis, avenue des Frégates, médiane de la forme écluse Joubert, jusqu'au rivage de la Loire.
+|-
+|28 || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]] || [[Saint-Philbert-de-Grand-Lieu]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Philbert-de-Grand-Lieu}}}} || 12 || [[Le Bignon]], [[La Chevrolière]], [[Corcoué-sur-Logne]], [[Geneston]], [[Legé]], [[La Limouzinière]], [[Montbert]], [[Pont-Saint-Martin (Loire-Atlantique)|Pont-Saint-Martin]], [[Saint-Colomban (Loire-Atlantique)|Saint-Colomban]], [[Saint-Lumine-de-Coutais]], [[Saint-Philbert-de-Grand-Lieu]], [[Touvois]]. 
+|-
+|29 || [[Canton de Saint-Sébastien-sur-Loire|Saint-Sébastien-sur-Loire]] || [[Saint-Sébastien-sur-Loire]] || {{formatnum:{{Population de France/dernière pop||Canton de Saint-Sébastien-sur-Loire}}}} || 3 || [[Basse-Goulaine]], [[Haute-Goulaine]], [[Saint-Sébastien-sur-Loire]]. 
+|-
+|30 || [[Canton de Vallet|Vallet]] || [[Vallet (Loire-Atlantique)|Vallet]] || {{formatnum:{{Population de France/dernière pop||Canton de Vallet}}}} || 11 || [[La Boissière-du-Doré]], [[La Chapelle-Heulin]], [[Divatte-sur-Loire]], [[Le Landreau]], [[Le Loroux-Bottereau]], [[Mouzillon]], [[Le Pallet]], [[La Regrippière]], [[La Remaudière]], [[Saint-Julien-de-Concelles]], [[Vallet (Loire-Atlantique)|Vallet]]. 
+|-
+|31 || [[Canton de Vertou|Vertou]] || [[Vertou]] || {{formatnum:{{Population de France/dernière pop||Canton de Vertou}}}} || 5 || [[Château-Thébaud]], [[La Haie-Fouassière]], [[Saint-Fiacre-sur-Maine]], [[Les Sorinières]], [[Vertou]]. 
+|-
+!||||||{{formatnum:{{Population de France/dernière pop||Loire-Atlantique}}}}||221||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de la [[Loire-Atlantique]], c'est le cas de six cantons ([[Canton de Blain|Blain]], [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]], [[Canton de Machecoul|Machecoul]], [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]], [[Canton de Pontchâteau|Pontchâteau]] et [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Châteaubriant|Châteaubriant]]
+!scope=col|[[Arrondissement de Nantes|Nantes]]
+!scope=col|[[Arrondissement de Saint-Nazaire|Saint-Nazaire]]
+!scope=col|[[Arrondissement d'Ancenis|Ancenis]]
+!scope=col|Total
+|-
+|1||align="left"| Ancenis||||||||22||'''22'''
+|-
+|2||align="left"| La Baule-Escoublac||||||6||||'''6'''
+|-
+|3||align="left"| Blain||3||3||8||||'''14'''
+|-
+|4||align="left"| Carquefou||||4||||||'''4'''
+|-
+|5||align="left"| La Chapelle-sur-Erdre||1||5||||||'''6'''
+|-
+|6||align="left"| Châteaubriant||19||||||||'''19'''
+|-
+|7||align="left"| Clisson||||12||||||'''12'''
+|-
+|8||align="left"| Guémené-Penfao||19||||||||'''19'''
+|-
+|9||align="left"| Guérande||||||10||||'''10'''
+|-
+|10||align="left"| Machecoul||||11||4||||'''15'''
+|-
+|11||align="left"| Nantes-1||||fraction Nantes||||||fraction Nantes
+|-
+|12||align="left"| Nantes-2||||fraction Nantes||||||fraction Nantes
+|-
+|13||align="left"| Nantes-3||||fraction Nantes||||||fraction Nantes
+|-
+|14||align="left"| Nantes-4||||fraction Nantes||||||fraction Nantes
+|-
+|15||align="left"| Nantes-5||||fraction Nantes||||||fraction Nantes
+|-
+|16||align="left"| Nantes-6||||fraction Nantes||||||fraction Nantes
+|-
+|17||align="left"| Nantes-7||||fraction Nantes||||||fraction Nantes
+|-
+|18||align="left"| Nort-sur-Erdre||7||||||7||'''14'''
+|-
+|19||align="left"| Pontchâteau||4||||9||||'''13'''
+|-
+|20||align="left"| Pornic||||||8||||'''8'''
+|-
+|21||align="left"| Rezé-1||||5 + fraction Rezé||||||'''5''' + fraction Rezé
+|-
+|22||align="left"| Rezé-2||||fraction Rezé||||||fraction Rezé
+|-
+|23||align="left"| Saint-Brevin-les-Pins||||3||6||||'''9'''
+|-
+|24||align="left"| Saint-Herblain-1||||3 + fraction Saint-Herblain||||||'''3''' + fraction Saint-Herblain
+|-
+|25||align="left"| Saint-Herblain-2||||1 + fraction Saint-Herblain||||||'''1''' + fraction Saint-Herblain
+|-
+|26||align="left"| Saint-Nazaire-1||||||fraction Saint-Nazaire||||fraction Saint-Nazaire
+|-
+|27||align="left"| Saint-Nazaire-2||||||5 + fraction Saint-Nazaire||||'''5''' + fraction Saint-Nazaire
+|-
+|28||align="left"| Saint-Philbert-de-Grand-Lieu||||12||||||'''12'''
+|-
+|29||align="left"| Saint-Sébastien-sur-Loire||||3||||||'''3'''
+|-
+|30||align="left"| Vallet||||12||||||'''12'''
+|-
+|31||align="left"| Vertou||||5||||||'''5'''
+|-
+!||||53||82||57||29||221
+|}
+
+=== Tableau récapitulatif par commune ===
+{| class="wikitable sortable"
+|-
+!width="20%"| Commune
+!width="5%"| Code Insee
+!width="35%"| Canton en vigueur avant {{date-|mars 2015}}
+!width="35%"| Canton en vigueur depuis {{date-|mars 2015}}
+|-
+| | [[Abbaretz]] || 44001 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Aigrefeuille-sur-Maine]] || 44002 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Ancenis]] || 44003 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Anetz]] || 44004 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Arthon-en-Retz]] || 44005 || [[Canton de Pornic|Pornic]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[Assérac]] || 44006 || [[Canton d'Herbignac|Herbignac]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Avessac]] || 44007 || [[Canton de Saint-Nicolas-de-Redon|Saint-Nicolas-de-Redon]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Barbechat]] || 44008 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Basse-Goulaine]] || 44009 || [[Canton de Vertou-Vignoble|Vertou-Vignoble]] || [[Canton de Saint-Sébastien-sur-Loire|Saint-Sébastien-sur-Loire]]
+|-
+| | [[Batz-sur-Mer]] || 44010 || [[Canton du Croisic|Le Croisic]] || [[Canton de la Baule-Escoublac|La Baule-Escoublac]]
+|-
+| | [[Belligné]] || 44011 || [[Canton de Varades|Varades]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Besné]] || 44013 || [[Canton de Pontchâteau|Pontchâteau]] || [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]]
+|-
+| | [[Blain]] || 44015 || [[Canton de Blain|Blain]] || [[Canton de Blain|Blain]]
+|-
+| | [[Bonnœuvre]] || 44017 || [[Canton de Saint-Mars-la-Jaille|Saint-Mars-la-Jaille]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Bouaye]] || 44018 || [[Canton de Bouaye|Bouaye]] || [[Canton de Rezé-1|Rezé-1]]
+|-
+| | [[Bouée (Loire-Atlantique)|Bouée]] || 44019 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Bouguenais]] || 44020 || [[Canton de Rezé|Rezé]] || [[Canton de Rezé-1|Rezé-1]]
+|-
+| | [[Bourgneuf-en-Retz]] || 44021 || [[Canton de Bourgneuf-en-Retz|Bourgneuf-en-Retz]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Boussay (Loire-Atlantique)|Boussay]] || 44022 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Bouvron (Loire-Atlantique)|Bouvron]] || 44023 || [[Canton de Blain|Blain]] || [[Canton de Blain|Blain]]
+|-
+| | [[Brains]] || 44024 || [[Canton de Bouaye|Bouaye]] || [[Canton de Rezé-1|Rezé-1]]
+|-
+| | [[Campbon]] || 44025 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Carquefou]] || 44026 || [[Canton de Carquefou|Carquefou]] || [[Canton de Carquefou|Carquefou]]
+|-
+| | [[Casson]] || 44027 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Châteaubriant]] || 44036 || [[Canton de Châteaubriant|Châteaubriant]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Château-Thébaud]] || 44037 || [[Canton de Vertou-Vignoble|Vertou-Vignoble]] || [[Canton de Vertou|Vertou]]
+|-
+| | [[Chauvé]] || 44038 || [[Canton de Saint-Père-en-Retz|Saint-Père-en-Retz]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[Cheix-en-Retz]] || 44039 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Chéméré]] || 44040 || [[Canton de Bourgneuf-en-Retz|Bourgneuf-en-Retz]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Clisson]] || 44043 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Conquereuil]] || 44044 || [[Canton de Guémené-Penfao|Guémené-Penfao]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Corcoué-sur-Logne]] || 44156 || [[Canton de Legé|Legé]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Cordemais]] || 44045 || [[Canton de Saint-Étienne-de-Montluc|Saint-Étienne-de-Montluc]] || [[Canton de Blain|Blain]]
+|-
+| | [[Corsept]] || 44046 || [[Canton de Paimbœuf|Paimbœuf]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Couëron]] || 44047 || [[Canton de Saint-Étienne-de-Montluc|Saint-Étienne-de-Montluc]] || [[Canton de Saint-Herblain-1|Saint-Herblain-1]]
+|-
+| | [[Couffé]] || 44048 || [[Canton de Ligné|Ligné]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Crossac]] || 44050 || [[Canton de Pontchâteau|Pontchâteau]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Derval (Loire-Atlantique)|Derval]] || 44051 || [[Canton de Derval|Derval]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Donges]] || 44052 || [[Canton de Montoir-de-Bretagne|Montoir-de-Bretagne]] || [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]]
+|-
+| | [[Drefféac]] || 44053 || [[Canton de Saint-Gildas-des-Bois|Saint-Gildas-des-Bois]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Erbray]] || 44054 || [[Canton de Saint-Julien-de-Vouvantes|Saint-Julien-de-Vouvantes]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Fay-de-Bretagne]] || 44056 || [[Canton de Blain|Blain]] || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]]
+|-
+| | [[Fégréac]] || 44057 || [[Canton de Saint-Nicolas-de-Redon|Saint-Nicolas-de-Redon]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Fercé]] || 44058 || [[Canton de Rougé|Rougé]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Fresnay-en-Retz]] || 44059 || [[Canton de Bourgneuf-en-Retz|Bourgneuf-en-Retz]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Frossay]] || 44061 || [[Canton de Saint-Père-en-Retz|Saint-Père-en-Retz]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Geneston]] || 44223 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Gétigné]] || 44063 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Gorges (Loire-Atlantique)|Gorges]] || 44064 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Grand-Auverné]] || 44065 || [[Canton de Moisdon-la-Rivière|Moisdon-la-Rivière]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Grandchamp-des-Fontaines]] || 44066 || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]] || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]]
+|-
+| | [[Guémené-Penfao]] || 44067 || [[Canton de Guémené-Penfao|Guémené-Penfao]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Guenrouet]] || 44068 || [[Canton de Saint-Gildas-des-Bois|Saint-Gildas-des-Bois]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Guérande]] || 44069 || [[Canton de Guérande|Guérande]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Haute-Goulaine]] || 44071 || [[Canton de Vertou-Vignoble|Vertou-Vignoble]] || [[Canton de Saint-Sébastien-sur-Loire|Saint-Sébastien-sur-Loire]]
+|-
+| | [[Herbignac]] || 44072 || [[Canton d'Herbignac|Herbignac]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Héric]] || 44073 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Indre (Loire-Atlantique)|Indre]] || 44074 || [[Canton de Saint-Herblain-Ouest-Indre|Saint-Herblain-Ouest-Indre]] || [[Canton de Saint-Herblain-1|Saint-Herblain-1]]
+|-
+| | [[Issé]] || 44075 || [[Canton de Moisdon-la-Rivière|Moisdon-la-Rivière]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Jans]] || 44076 || [[Canton de Derval|Derval]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Joué-sur-Erdre]] || 44077 || [[Canton de Riaillé|Riaillé]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Juigné-des-Moutiers]] || 44078 || [[Canton de Saint-Julien-de-Vouvantes|Saint-Julien-de-Vouvantes]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[La Baule-Escoublac]] || 44055 || [[Canton de la Baule-Escoublac|La Baule-Escoublac]] || [[Canton de la Baule-Escoublac|La Baule-Escoublac]]
+|-
+| | [[La Bernerie-en-Retz]] || 44012 || [[Canton de Bourgneuf-en-Retz|Bourgneuf-en-Retz]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[La Boissière-du-Doré]] || 44016 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[La Chapelle-Basse-Mer]] || 44029 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[La Chapelle-des-Marais]] || 44030 || [[Canton d'Herbignac|Herbignac]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[La Chapelle-Glain]] || 44031 || [[Canton de Saint-Julien-de-Vouvantes|Saint-Julien-de-Vouvantes]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[La Chapelle-Heulin]] || 44032 || [[Canton de Vallet|Vallet]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[La Chapelle-Launay]] || 44033 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[La Chapelle-Saint-Sauveur (Loire-Atlantique)|La Chapelle-Saint-Sauveur]] || 44034 || [[Canton de Varades|Varades]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[La Chapelle-sur-Erdre]] || 44035 || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]] || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]]
+|-
+| | [[La Chevallerais]] || 44221 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[La Chevrolière]] || 44041 || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[La Grigonnais]] || 44224 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[La Haie-Fouassière]] || 44070 || [[Canton de Vertou-Vignoble|Vertou-Vignoble]] || [[Canton de Vertou|Vertou]]
+|-
+| | [[La Limouzinière]] || 44083 || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[La Marne (Loire-Atlantique)|La Marne]] || 44090 || [[Canton de Machecoul|Machecoul]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[La Meilleraye-de-Bretagne]] || 44095 || [[Canton de Moisdon-la-Rivière|Moisdon-la-Rivière]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[La Montagne (Loire-Atlantique)|La Montagne]] || 44101 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[La Plaine-sur-Mer]] || 44126 || [[Canton de Pornic|Pornic]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[La Planche]] || 44127 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[La Regrippière]] || 44140 || [[Canton de Vallet|Vallet]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[La Remaudière]] || 44141 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[La Roche-Blanche (Loire-Atlantique)|La Roche-Blanche]] || 44222 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[La Rouxière]] || 44147 || [[Canton de Varades|Varades]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[La Turballe]] || 44211 || [[Canton de Guérande|Guérande]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Lavau-sur-Loire]] || 44080 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Le Bignon]] || 44014 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Le Cellier]] || 44028 || [[Canton de Ligné|Ligné]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Le Croisic]] || 44049 || [[Canton du Croisic|Le Croisic]] || [[Canton de la Baule-Escoublac|La Baule-Escoublac]]
+|-
+| | [[Le Fresne-sur-Loire]] || 44060 || [[Canton de Varades|Varades]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Le Gâvre]] || 44062 || [[Canton de Blain|Blain]] || [[Canton de Blain|Blain]]
+|-
+| | [[Le Landreau]] || 44079 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Le Loroux-Bottereau]] || 44084 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Le Pallet]] || 44117 || [[Canton de Vallet|Vallet]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Le Pellerin]] || 44120 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Le Pin (Loire-Atlantique)|Le Pin]] || 44124 || [[Canton de Saint-Mars-la-Jaille|Saint-Mars-la-Jaille]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Le Pouliguen]] || 44135 || [[Canton du Croisic|Le Croisic]] || [[Canton de la Baule-Escoublac|La Baule-Escoublac]]
+|-
+| | [[Le Temple-de-Bretagne]] || 44203 || [[Canton de Saint-Étienne-de-Montluc|Saint-Étienne-de-Montluc]] || [[Canton de Blain|Blain]]
+|-
+| | [[Legé]] || 44081 || [[Canton de Legé|Legé]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Les Moutiers-en-Retz]] || 44106 || [[Canton de Bourgneuf-en-Retz|Bourgneuf-en-Retz]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[Les Sorinières]] || 44198 || [[Canton de Vertou|Vertou]] || [[Canton de Vertou|Vertou]]
+|-
+| | [[Les Touches]] || 44205 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Ligné (Loire-Atlantique)|Ligné]] || 44082 || [[Canton de Ligné|Ligné]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Louisfert]] || 44085 || [[Canton de Moisdon-la-Rivière|Moisdon-la-Rivière]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Lusanger]] || 44086 || [[Canton de Derval|Derval]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Machecoul]] || 44087 || [[Canton de Machecoul|Machecoul]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Maisdon-sur-Sèvre]] || 44088 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Malville]] || 44089 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Marsac-sur-Don]] || 44091 || [[Canton de Guémené-Penfao|Guémené-Penfao]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Massérac]] || 44092 || [[Canton de Guémené-Penfao|Guémené-Penfao]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Maumusson (Loire-Atlantique)|Maumusson]] || 44093 || [[Canton de Saint-Mars-la-Jaille|Saint-Mars-la-Jaille]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Mauves-sur-Loire]] || 44094 || [[Canton de Carquefou|Carquefou]] || [[Canton de Carquefou|Carquefou]]
+|-
+| | [[Mésanger]] || 44096 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Mesquer]] || 44097 || [[Canton de Guérande|Guérande]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Missillac]] || 44098 || [[Canton de Saint-Gildas-des-Bois|Saint-Gildas-des-Bois]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Moisdon-la-Rivière]] || 44099 || [[Canton de Moisdon-la-Rivière|Moisdon-la-Rivière]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Monnières (Loire-Atlantique)|Monnières]] || 44100 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Montbert]] || 44102 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Montoir-de-Bretagne]] || 44103 || [[Canton de Montoir-de-Bretagne|Montoir-de-Bretagne]] || [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]]
+|-
+| | [[Montrelais]] || 44104 || [[Canton de Varades|Varades]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Mouais]] || 44105 || [[Canton de Derval|Derval]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Mouzeil]] || 44107 || [[Canton de Ligné|Ligné]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Mouzillon]] || 44108 || [[Canton de Vallet|Vallet]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Nantes]] || 44109 || [[Canton de Nantes-1|Nantes-1]], [[Canton de Nantes-2|Nantes-2]], [[Canton de Nantes-3|Nantes-3]], [[Canton de Nantes-4|Nantes-4]], [[Canton de Nantes-5|Nantes-5]], [[Canton de Nantes-6|Nantes-6]], [[Canton de Nantes-7|Nantes-7]], [[Canton de Nantes-8|Nantes-8]], [[Canton de Nantes-9|Nantes-9]], [[Canton de Nantes-10|Nantes-10]] || [[Canton de Nantes-1|Nantes-1]], [[Canton de Nantes-2|Nantes-2]], [[Canton de Nantes-3|Nantes-3]], [[Canton de Nantes-4|Nantes-4]], [[Canton de Nantes-5|Nantes-5]], [[Canton de Nantes-6|Nantes-6]], [[Canton de Nantes-7|Nantes-7]]
+|-
+| | [[Nort-sur-Erdre]] || 44110 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Notre-Dame-des-Landes]] || 44111 || [[Canton de Blain|Blain]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Noyal-sur-Brutz]] || 44112 || [[Canton de Rougé|Rougé]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Nozay (Loire-Atlantique)|Nozay]] || 44113 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Orvault]] || 44114 || [[Canton d'Orvault|Orvault]] || [[Canton de Saint-Herblain-2|Saint-Herblain-2]]
+|-
+| | [[Oudon]] || 44115 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Paimbœuf]] || 44116 || [[Canton de Paimbœuf|Paimbœuf]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Pannecé]] || 44118 || [[Canton de Riaillé|Riaillé]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Paulx]] || 44119 || [[Canton de Machecoul|Machecoul]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Petit-Auverné]] || 44121 || [[Canton de Saint-Julien-de-Vouvantes|Saint-Julien-de-Vouvantes]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Petit-Mars]] || 44122 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Pierric]] || 44123 || [[Canton de Guémené-Penfao|Guémené-Penfao]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Piriac-sur-Mer]] || 44125 || [[Canton de Guérande|Guérande]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Plessé]] || 44128 || [[Canton de Saint-Nicolas-de-Redon|Saint-Nicolas-de-Redon]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Pontchâteau]] || 44129 || [[Canton de Pontchâteau|Pontchâteau]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Pont-Saint-Martin (Loire-Atlantique)|Pont-Saint-Martin]] || 44130 || [[Canton de Bouaye|Bouaye]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Pornic]] || 44131 || [[Canton de Pornic|Pornic]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[Pornichet]] || 44132 || [[Canton de la Baule-Escoublac|La Baule-Escoublac]] || [[Canton de la Baule-Escoublac|La Baule-Escoublac]]
+|-
+| | [[Port-Saint-Père]] || 44133 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Pouillé-les-Côteaux]] || 44134 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Préfailles]] || 44136 || [[Canton de Pornic|Pornic]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[Prinquiau]] || 44137 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Puceul]] || 44138 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Quilly (Loire-Atlantique)|Quilly]] || 44139 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Remouillé]] || 44142 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Rezé]] || 44143 || [[Canton de Bouaye|Bouaye]], [[Canton de Rezé|Rezé]] || [[Canton de Rezé-1|Rezé-1]], [[Canton de Rezé-2|Rezé-2]]
+|-
+| | [[Riaillé]] || 44144 || [[Canton de Riaillé|Riaillé]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Rouans]] || 44145 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Rougé]] || 44146 || [[Canton de Rougé|Rougé]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Ruffigné]] || 44148 || [[Canton de Châteaubriant|Châteaubriant]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Saffré]] || 44149 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Saint-Aignan-Grandlieu]] || 44150 || [[Canton de Bouaye|Bouaye]] || [[Canton de Rezé-1|Rezé-1]]
+|-
+| | [[Saint-André-des-Eaux (Loire-Atlantique)|Saint-André-des-Eaux]] || 44151 || [[Canton de Guérande|Guérande]] || [[Canton de la Baule-Escoublac|La Baule-Escoublac]]
+|-
+| | [[Saint-Aubin-des-Châteaux]] || 44153 || [[Canton de Châteaubriant|Châteaubriant]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Saint-Brevin-les-Pins]] || 44154 || [[Canton de Paimbœuf|Paimbœuf]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Saint-Colomban (Loire-Atlantique)|Saint-Colomban]] || 44155 || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Sainte-Anne-sur-Brivet]] || 44152 || [[Canton de Pontchâteau|Pontchâteau]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Sainte-Luce-sur-Loire]] || 44172 || [[Canton de Carquefou|Carquefou]] || [[Canton de Carquefou|Carquefou]]
+|-
+| | [[Sainte-Pazanne]] || 44186 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Sainte-Reine-de-Bretagne]] || 44189 || [[Canton de Pontchâteau|Pontchâteau]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Saint-Étienne-de-Mer-Morte]] || 44157 || [[Canton de Machecoul|Machecoul]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Saint-Étienne-de-Montluc]] || 44158 || [[Canton de Saint-Étienne-de-Montluc|Saint-Étienne-de-Montluc]] || [[Canton de Blain|Blain]]
+|-
+| | [[Saint-Fiacre-sur-Maine]] || 44159 || [[Canton de Vertou-Vignoble|Vertou-Vignoble]] || [[Canton de Vertou|Vertou]]
+|-
+| | [[Saint-Géréon]] || 44160 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Saint-Gildas-des-Bois]] || 44161 || [[Canton de Saint-Gildas-des-Bois|Saint-Gildas-des-Bois]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Saint-Herblain]] || 44162 || [[Canton de Saint-Herblain-Est|Saint-Herblain-Est]], [[Canton de Saint-Herblain-Ouest-Indre|Saint-Herblain-Ouest-Indre]] || [[Canton de Saint-Herblain-1|Saint-Herblain-1]], [[Canton de Saint-Herblain-2|Saint-Herblain-2]] 
+|-
+| | [[Saint-Herblon]] || 44163 || [[Canton d'Ancenis|Ancenis]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Saint-Hilaire-de-Chaléons]] || 44164 || [[Canton de Bourgneuf-en-Retz|Bourgneuf-en-Retz]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Saint-Hilaire-de-Clisson]] || 44165 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Saint-Jean-de-Boiseau]] || 44166 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Saint-Joachim (Loire-Atlantique)|Saint-Joachim]] || 44168 || [[Canton de Pontchâteau|Pontchâteau]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Saint-Julien-de-Concelles]] || 44169 || [[Canton du Loroux-Bottereau|Le Loroux-Bottereau]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Saint-Julien-de-Vouvantes]] || 44170 || [[Canton de Saint-Julien-de-Vouvantes|Saint-Julien-de-Vouvantes]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Saint-Léger-les-Vignes]] || 44171 || [[Canton de Bouaye|Bouaye]] || [[Canton de Rezé-1|Rezé-1]]
+|-
+| | [[Saint-Lumine-de-Clisson]] || 44173 || [[Canton de Clisson|Clisson]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Saint-Lumine-de-Coutais]] || 44174 || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Saint-Lyphard]] || 44175 || [[Canton d'Herbignac|Herbignac]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Saint-Malo-de-Guersac]] || 44176 || [[Canton de Montoir-de-Bretagne|Montoir-de-Bretagne]] || [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]]
+|-
+| | [[Saint-Mars-de-Coutais]] || 44178 || [[Canton de Machecoul|Machecoul]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Saint-Mars-du-Désert (Loire-Atlantique)|Saint-Mars-du-Désert]] || 44179 || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Saint-Mars-la-Jaille]] || 44180 || [[Canton de Saint-Mars-la-Jaille|Saint-Mars-la-Jaille]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Saint-Même-le-Tenu]] || 44181 || [[Canton de Machecoul|Machecoul]] || [[Canton de Machecoul|Machecoul]]
+|-
+| | [[Saint-Michel-Chef-Chef]] || 44182 || [[Canton de Pornic|Pornic]] || [[Canton de Pornic|Pornic]]
+|-
+| | [[Saint-Molf]] || 44183 || [[Canton de Guérande|Guérande]] || [[Canton de Guérande|Guérande]]
+|-
+| | [[Saint-Nazaire]] || 44184 || [[Canton de Saint-Nazaire-Centre|Saint-Nazaire-Centre]], [[Canton de Saint-Nazaire-Est|Saint-Nazaire-Est]], [[Canton de Saint-Nazaire-Ouest|Saint-Nazaire-Ouest]] || [[Canton de Saint-Nazaire-1|Saint-Nazaire-1]], [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]]
+|-
+| | [[Saint-Nicolas-de-Redon]] || 44185 || [[Canton de Saint-Nicolas-de-Redon|Saint-Nicolas-de-Redon]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Saint-Père-en-Retz]] || 44187 || [[Canton de Saint-Père-en-Retz|Saint-Père-en-Retz]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Saint-Philbert-de-Grand-Lieu]] || 44188 || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Saint-Sébastien-sur-Loire]] || 44190 || [[Canton de Nantes-10|Nantes-10]] || [[Canton de Saint-Sébastien-sur-Loire|Saint-Sébastien-sur-Loire]]
+|-
+| | [[Saint-Sulpice-des-Landes (Loire-Atlantique)|Saint-Sulpice-des-Landes]] || 44191 || [[Canton de Saint-Mars-la-Jaille|Saint-Mars-la-Jaille]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Saint-Viaud]] || 44192 || [[Canton de Saint-Père-en-Retz|Saint-Père-en-Retz]] || [[Canton de Saint-Brevin-les-Pins|Saint-Brevin-les-Pins]]
+|-
+| | [[Saint-Vincent-des-Landes]] || 44193 || [[Canton de Derval|Derval]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Sautron]] || 44194 || [[Canton d'Orvault|Orvault]] || [[Canton de Saint-Herblain-1|Saint-Herblain-1]]
+|-
+| | [[Savenay]] || 44195 || [[Canton de Savenay|Savenay]] || [[Canton de Blain|Blain]]
+|-
+| | [[Sévérac (Loire-Atlantique)|Sévérac]] || 44196 || [[Canton de Saint-Gildas-des-Bois|Saint-Gildas-des-Bois]] || [[Canton de Pontchâteau|Pontchâteau]]
+|-
+| | [[Sion-les-Mines]] || 44197 || [[Canton de Derval|Derval]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Soudan (Loire-Atlantique)|Soudan]] || 44199 || [[Canton de Châteaubriant|Châteaubriant]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Soulvache]] || 44200 || [[Canton de Rougé|Rougé]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Sucé-sur-Erdre]] || 44201 || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]] || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]]
+|-
+| | [[Teillé (Loire-Atlantique)|Teillé]] || 44202 || [[Canton de Riaillé|Riaillé]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Thouaré-sur-Loire]] || 44204 || [[Canton de Carquefou|Carquefou]] || [[Canton de Carquefou|Carquefou]]
+|-
+| | [[Touvois]] || 44206 || [[Canton de Legé|Legé]] || [[Canton de Saint-Philbert-de-Grand-Lieu|Saint-Philbert-de-Grand-Lieu]]
+|-
+| | [[Trans-sur-Erdre]] || 44207 || [[Canton de Riaillé|Riaillé]] || [[Canton de Nort-sur-Erdre|Nort-sur-Erdre]]
+|-
+| | [[Treffieux]] || 44208 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Treillières]] || 44209 || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]] || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]]
+|-
+| | [[Trignac]] || 44210 || [[Canton de Montoir-de-Bretagne|Montoir-de-Bretagne]] || [[Canton de Saint-Nazaire-2|Saint-Nazaire-2]]
+|-
+| | [[Vallet (Loire-Atlantique)|Vallet]] || 44212 || [[Canton de Vallet|Vallet]] || [[Canton de Vallet|Vallet]]
+|-
+| | [[Varades]] || 44213 || [[Canton de Varades|Varades]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Vay]] || 44214 || [[Canton de Nozay|Nozay]] || [[Canton de Guémené-Penfao|Guémené-Penfao]]
+|-
+| | [[Vertou]] || 44215 || [[Canton de Vertou|Vertou]] || [[Canton de Vertou|Vertou]]
+|-
+| | [[Vieillevigne (Loire-Atlantique)|Vieillevigne]] || 44216 || [[Canton d'Aigrefeuille-sur-Maine|Aigrefeuille-sur-Maine]] || [[Canton de Clisson|Clisson]]
+|-
+| | [[Vigneux-de-Bretagne]] || 44217 || [[Canton de Saint-Étienne-de-Montluc|Saint-Étienne-de-Montluc]] || [[Canton de la Chapelle-sur-Erdre|La Chapelle-sur-Erdre]]
+|-
+| | [[Villepot]] || 44218 || [[Canton de Rougé|Rougé]] || [[Canton de Châteaubriant|Châteaubriant]]
+|-
+| | [[Vritz]] || 44219 || [[Canton de Saint-Mars-la-Jaille|Saint-Mars-la-Jaille]] || [[Canton d'Ancenis|Ancenis]]
+|-
+| | [[Vue (Loire-Atlantique)|Vue]] || 44220 || [[Canton du Pellerin|Le Pellerin]] || [[Canton de Machecoul|Machecoul]]
+|}
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+* [[Liste des communes de la Loire-Atlantique]]
+
+{{Palette|Découpage administratif des Pays de la Loire|Cantons de France|Cantons de la Loire-Atlantique}}
+{{Portail|Loire-Atlantique|Politique française}}
+
+[[Catégorie:Canton en Loire-Atlantique|#]]
+[[Catégorie:Liste en rapport avec la Loire-Atlantique|Cantons]]
+[[Catégorie:Liste de cantons français|Loire-Atlantique]]

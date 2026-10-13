@@ -1,0 +1,421 @@
+Cet article présente la liste des '''[[Canton français|cantons]]''' du [[Département français|département]] '''de l'[[Ain (département)|Ain]]'''. De 49 cantons à la création des départements en 1790, le nombre est réduit à 32 lors de la refonte de la carte cantonale de 1801, puis augmente peu à peu jusqu'à 43 pour suivre l'évolution démographique. Le [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]], applicable à partir des [[Élections départementales françaises de 2015|élections départementales de mars 2015]], réduit le nombre de cantons à 23.
+
+== Histoire ==
+=== Création des cantons en 1790 ===
+[[Fichier:Département de l'Ain divisé en 9 districts et 61 cantons, Atlas national de France, 1792.jpg|vignette|upright=1.5|Carte du département de l'Ain divisé en 9 districts et en 61 cantons en 1792.<br />Atlas national de France.]]
+Le [[Décret de la division de la France en départements|décret du 22 décembre 1789]] de l'[[Assemblée constituante de 1789|Assemblée nationale constituante]] prévoit la division du [[royaume de France]] en [[Département français|départements]], ceux-ci étant découpés en [[District (subdivision départementale, 1790-1795)|districts]] et ces districts en plusieurs [[Canton français|cantons]]. Le ''Comité de constitution'' est chargé d'organiser la création de ces nouvelles divisions administratives, sur proposition des [[Liste des députés aux États généraux de 1789, par ordre, bailliage et sénéchaussée|députés des provinces]]<ref>{{Ouvrage |prénom1=Serge |nom1=Bonin |directeur1=oui |prénom2=Claude |nom2=Langlois |directeur2=oui |auteur3=[[Daniel Nordman]] |prénom4=Marie-Vic |nom4=Ozouf-Marinier |prénom5=Alexandra |nom5=Laclau |titre=Le territoire |sous-titre=Les limites administratives |volume=5 |tome=2 |lieu=Paris |éditeur=[[École des hautes études en sciences sociales|Édition de l'École des hautes études en sciences sociales]] |collection=Atlas de la Révolution française |année=1989 |pages totales=128 |passage=54 |isbn=978-2-7132-0942-0 |id=a}}.</ref>. Les délimitations, d'abord indécises voire contestées, sont définitivement fixées en {{date-|juin 1791}}<ref>[https://books.google.com.do/books?id=0f5UAAAAcAAJ&pg=PA69 Décret des 14 et 28 juin 1791] relatifs aux limites des départements et es districts.</ref>.
+
+En 1790, le département de l'[[Ain (département)|Ain]] comprend 9 districts<ref>[https://books.google.com.do/books?id=K2X7S9G4eRsC&dq=&pg=PA38 Suite des décrets sur la division du royaume du 25 janvier 1790], Département de [[Bresse]].</ref> et 49 cantons{{note|Le nombre de districts et de cantons a été établi à partir de l''''Atlas national de France'', de Pierre Dumez et Pierre-Grégoire Chanlaire, édité en 1791<ref>{{Ouvrage |prénom1=Serge |nom1=Bonin |directeur1=oui |prénom2=Claude |nom2=Langlois |directeur2=oui |prénom3=Daniel |nom3=Nordman |prénom4=Marie-Vic |nom4=Ozouf-Marinier |prénom5=Alexandra |nom5=Laclau |titre=Le territoire |sous-titre=Réalités et représentations |volume=4 |tome=2 |lieu=Paris |éditeur=[[École des hautes études en sciences sociales|Édition de l'École des hautes études en sciences sociales]] |collection=Atlas de la Révolution française |année=1989 |pages totales=128 |passage=54 |isbn=978-2-7132-0929-1}}.</ref>. Voir la liste complète des districts et cantons en 1790 et des arrondissements en cantons en 1800 pour ce département<ref>{{Harvsp|Ozouf-Marinier|1989|id=a|p=83}}.</ref>.|group="note"}}.
+* [[District de Belley]] : [[canton de Belley]], canton de [[Ceyzérieu]], [[canton de Champagne-en-Valromey|canton de Champagne]], [[canton d'Hauteville-Lompnes|canton d'Hauteville]], [[canton de Lhuis]], canton de [[Saint-Benoît (Ain)|Saint-Benoît-de-Seyssieu]], [[canton de Seyssel (Ain)|canton de Seyssel]], canton de [[Songieu]] et [[canton de Virieu-le-Grand]].
+* [[District de Bourg (Ain)|District de Bourg]] : [[canton de Bourg-en-Bresse|canton de Bourg]], [[canton de Ceyzériat]], [[canton de Chavannes]], [[canton de Coligny]], [[canton de Montrevel-en-Bresse|canton de Montrevel]], [[canton de Pont-d'Ain|canton de Pontdain]] et [[canton de Treffort-Cuisiat|canton de Treffort]]
+* [[District de Châtillon-les-Dombes]] : [[canton de Châtillon-sur-Chalaronne|canton de Châtillon-les-Dombes]], canton de [[Marlieux]] et [[canton de Pont-de-Veyle]]
+* [[District de Gex]] : [[canton de Collonges]], [[canton de Ferney-Voltaire|canton de Ferney]], [[canton de Gex]] et [[canton de Thoiry]]
+* [[District de Montluel]] : [[canton de Chalamont]], [[canton de Meximieux]] et [[canton de Montluel]].
+* [[District de Nantua]] : canton de [[Billiat]], [[canton de Brénod]], [[canton de Châtillon-sur-Chalaronne|canton de Châtillon-de-Michaille]], canton du [[Le Grand-Abergement|Grand-Abergement]], canton de [[Leyssard]], canton de [[Montréal-la-Cluse|Montréal]], canton de [[Nantua]], canton d'[[Oyonnax]] et canton de [[Sonthonnax-la-Montagne|Sonthonnax]].
+* [[District de Pont-de-Vaux]] : [[canton de Bâgé-le-Châtel]], [[canton de Pont-de-Vaux]] et [[canton de Saint-Trivier-de-Courtes]]
+* [[District de Saint-Rambert]] : [[canton d'Ambérieu-en-Bugey|canton d'Ambérieu]], canton d'[[Ambronay]], canton d'[[Aranc]], [[canton de Lagnieu]], [[canton de Poncin]], [[canton de Saint-Rambert-en-Bugey|canton de Saint-Rambert]] et canton de [[Villebois]].
+* [[District de Trévoux]] : canton de [[Montmerle-sur-Saône|Montmerle]], canton de [[Saint-Trivier-sur-Moignans|Saint-Trivier-en-Dombes]], [[canton de Thoissey]] et [[canton de Trévoux]].
+
+=== Réduction du nombre de cantons en 1801 ===
+En [[juin 1793]], la [[Convention nationale|Convention]] supprime le [[Canton français|canton]] en tant que division administrative ; il est rétabli par la [[Constitution de l'an III|constitution du 5 fructidor an III]] ({{date|22|août|1795}}), dans laquelle disparaissent les [[District (subdivision départementale, 1790-1795)|districts]]. Le [[Consulat (histoire de France)|Consulat]], par la loi du 28 pluviôse an VIII ({{date|17|février|1800}})<ref>[https://gallica.bnf.fr/ark:/12148/bpt6k6534793j/f268.image Loi {{n°|115}} du 28 pluviôse an VIII] concernant la division du territoire de la République et l'administration, bulletin des lois de la République, {{n°|17}}.</ref>, réintroduit un niveau de division équivalent à l'ancien district par la création de l'[[Arrondissement français|arrondissement communal]] et procède à une réorganisation complète des justices de paix{{note|Sur l'ensemble du territoire métropolitain, le nombre de justices de paix sera compris entre {{unité|3000}} et {{unité|3500}}<ref>[https://books.google.com.do/books?id=EKZCAAAAcAAJ&pg=PA285 Loi {{n°|512}} du 8 pluviôse an IX] portant réduction des justices des paix, bulletin des lois de la République, {{n°|67}}.</ref>, au lieu de {{unité|4660}} créés en 1790.|group="note"}}.
+
+L'arrêté du 9 vendémiaire an X ({{date|1|10|1801}}) fixe le nombre de cantons du département de l'Ain à 32 et précise les communes formant chacun de ces cantons<ref>Arrêté {{n°|886}} portant réduction des justices de paix du département de l'Ain, ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f67 p. 47].</ref>.
+* [[Arrondissement de Bourg-en-Bresse|Arrondissement de Bourg]] : [[canton de Bâgé-le-Châtel]] - [[canton de Bourg]] - [[canton de Ceyzériat]] - [[canton de Coligny]] - [[canton de Montrevel-en-Bresse|canton de Montrevel]] - [[canton de Pont-d'Ain]] - [[canton de Pont-de-Vaux]] - [[canton de Pont-de-Veyle]] - [[canton de Treffort-Cuisiat|canton de Treffort]] - [[canton de Saint-Trivier-de-Courtes]]
+* [[Arrondissement de Nantua]] : [[canton de Brénod]] - [[Canton de Bellegarde-sur-Valserine|canton de Châtillon-en-Michaille]] - [[canton d'Izernore|Mornay]] - [[canton de Nantua]] - [[canton d'Oyonnax]]
+* [[Arrondissement de Belley]] : [[canton d'Ambérieu-en-Bugey|canton d'Ambérieu]] - [[canton de Belley]] - [[canton de Champagne-en-Valromey|canton de Champagne]] - [[canton d'Hauteville-Lompnes|canton d'Hauteville]] - [[canton de Lhuis]] - [[canton de Lagnieu]] - [[canton de Poncin]] - [[canton de Saint-Rambert-en-Bugey|canton de Saint-Rambert]] - [[canton de Seyssel (Ain)|canton de Seyssel]] - [[canton de Virieu-le-Grand]]
+* [[Arrondissement de Trévoux]] : [[canton de Chalamont]] - [[canton de Châtillon-sur-Chalaronne]] - [[canton de Meximieux]] - [[canton de Montluel]] - [[canton de Thoissey]] - [[canton de Trévoux]] - [[canton de Saint-Trivier-sur-Moignans]]
+
+=== Modifications de 1801 à 2014 ===
+Les cantons du département de l'Ain ont été affectés diverses modifications depuis leur découpage de 1801<ref>{{Ouvrage|langue=fr|auteur1=Bernard Gaudillère|titre=Atlas historique des circonscriptions électorales françaises|lieu=Genève|éditeur=[[Librairie Droz|Droz]]|année=1994|pages totales=840|passage=787|isbn=2-600-00065-8}}.</ref> :
+* {{date-|20 mars 1806}}<ref>Loi du 20 mars 1806, ''Bulletin des lois'', 1er Vendémiarie an XIV - 31 mai 1806, [https://gallica.bnf.fr/ark:/12148/bpt6k445357f/f419 p. 389]</ref> : le [[canton de Poncin]] passe de l'[[arrondissement de Belley]] à celui de [[Arrondissement de Nantua|Nantua]].
+* {{date-|8 novembre 1814}}<ref>Loi relative à la circonscription d'un arrondissement communal formé du pays de Gex, dépendant du département de l'Ain, et à la division du département du Mont-Blanc en trois arrondissemens (...), ''Bulletin des lois'' 1814 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486115x/f378 p.351]</ref> : les cantons de [[Canton de Gex|Gex]], [[Canton de Collonges|Collonges]] et [[Canton de Ferney-Voltaire|Ferney]], appartenant depuis 1801 au [[département du Léman]], réintègrent l'Ain dans un nouvel arrondissement, celui de [[Arrondissement de Gex|Gex]].
+* {{date-|19 juillet 1826}}<ref>Ordonnance du 19 juillet 1826, ''Bulletin des lois'' 1826 (2e semestre), [https://gallica.bnf.fr/ark:/12148/bpt6k6525648d/f119 p.67]</ref> : le chef-lieu du canton de [[Mornay (Ain)|Mornay]] est transféré à [[Izernore]] ; le canton est renommé [[canton d'Izernore]].
+* {{date-|18 juillet 1868}} : création du [[Canton de Villars-les-Dombes|canton de Villars]] à partir de communes des cantons de Chalamont, Saint-Trivier, Châtillon-de-Michaille et Meximieux.
+* {{date-|7 août 1913}} : le chef-lieu du canton de [[Châtillon-en-Michaille|Châtillon-de-Michaille]] est transféré à [[Bellegarde-sur-Valserine|Bellegarde]] ; le canton est renommé [[canton de Bellegarde-sur-Valserine|canton de Bellegarde]].
+* {{date-|10 septembre 1926}} : suppression des arrondissements de [[Arrondissement de Gex|Gex]] et de [[Arrondissement de Trévoux|Trévoux]].
+* {{date-|27 décembre 1933}}<ref>{{Article|titre=Loi du 27 décembre 1933 portant fixation de l'organisation douanière et fiscale des territoires visés par l'arrêt de la cour permanente de justice internationale du 7 juin 1932 |url=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000313466 |périodique=[[Journal officiel de la République française]] |date=1933-12-29 |passage=13013}}.</ref> : rétablissement de l'[[arrondissement de Gex]].
+* {{date-|9 janvier 1949}} : [[Saint-Sulpice (Ain)|Saint-Sulpice]] passe du [[canton de Bâgé-le-Châtel]] à celui de [[Canton de Montrevel-en-Bresse|Montrevel]].
+* {{date-|14 novembre 1951}}<ref>Décret du 14 novembre 1951, ''JORF'' 17.11.1951, p. 11415</ref> : [[Dompierre-sur-Chalaronne]] passe du [[canton de Thoissey]] à [[Canton de Châtillon-sur-Chalaronne|celui de Châtillon-sur-Chalaronne]].
+* {{date-|29 décembre 1967}} : six communes sont cédées au [[Rhône (département)|Rhône]] (Genay, Montanay, Sathonay-Camp et Sathonay-Village – du [[canton de Trévoux]] – Crépieux et Rillieux – [[canton de Montluel]])
+* {{date-|16 août 1973}}<ref>{{Article|titre=Décret n° 73-810 du 16 août 1973|url=https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000000303616 |périodique=[[Journal officiel de la République française]] |date=1973-08-17 |passage=8916}}.</ref> : création des cantons de [[canton de Bourg-en-Bresse-I|Bourg-en-Bresse-I]], [[canton de Bourg-en-Bresse-II|Bourg-en-Bresse-II]] et [[canton de Bourg-en-Bresse-III|Bourg-en-Bresse-III]], par division du [[canton de Bourg-en-Bresse]].
+* Le {{date|25|1|1982}}, plusieurs cantons sont modifiés en vue des [[élections cantonales françaises de 1982|cantonales de 1982]]<ref>{{Article|titre=Décret {{n°}}82-77 du 25 janvier 1982 relatif à la création et modification de cantons dans le département de l'Ain |url=https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000000883847 |périodique=[[Journal officiel de la République française]] |date=1982-01-26 |passage=371}}.</ref> :
+** les [[canton de Bourg-en-Bresse-I|cantons de Bourg-en-Bresse-I]], [[canton de Bourg-en-Bresse-II|Bourg-en-Bresse-II]] et [[canton de Bourg-en-Bresse-III|Bourg-en-Bresse-III]] sont remplacés par quatre nouveaux cantons : [[canton de Bourg-Nord-Centre|Bourg-Nord-Centre]], [[canton de Bourg-Est|Bourg-Est]], [[canton de Bourg-Sud|Bourg-Sud]], [[canton de Bourg-Couronne|Bourg-Couronne]] ;
+** les cantons d'[[Canton d'Oyonnax-Sud|Oyonnax-Sud]] et [[Canton d'Oyonnax-Sud|Oyonnax-Nord]] sont créés par division du [[canton d'Oyonnax]].
+** le [[canton de Miribel]] est créé par scission du [[canton de Montluel]].
+* Le {{date|22|12|1984}}, plusieurs cantons sont modifiés en vue des [[élections cantonales françaises de 1985|cantonales de 1985]]<ref>{{Article|titre=Décret {{n°}}84-1222 du 24 décembre 1984 portant modification et création de cantons dans le département de l'Ain |url=https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332215 |périodique=[[Journal officiel de la République française]] |date=1984-12-30 |passage=4146}}.</ref> :
+** Le [[canton de Reyrieux]] est créé par scission du [[canton de Trévoux]] ;
+** Le [[canton de Bourg-Couronne]] est supprimé et trois communes sont ôtées des [[canton de Bourg-Est|cantons de Bourg-Est]] et [[canton de Bourg-Sud|Bourg-Sud]] pour former deux nouveaux cantons : [[Canton de Péronnas|Péronnas]] et [[Canton de Viriat|Viriat]].
+
+=== Situation avant le redécoupage de 2014 ===
+[[Fichier:Map of Ain Department, France, Cantons 2012.svg|vignette|Cantons du département de l'Ain à la veille du [[Redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]].]]
+* '''[[Arrondissement de Belley]]''' (9 cantons - sous-préfecture [[Belley]]) : [[canton d'Ambérieu-en-Bugey]] - [[canton de Belley]] - [[canton de Champagne-en-Valromey]] - [[canton d'Hauteville-Lompnes]] - [[canton de Lagnieu]] - [[canton de Lhuis]] - [[canton de Saint-Rambert-en-Bugey]] - [[canton de Seyssel (Ain)|canton de Seyssel]] - [[canton de Virieu-le-Grand]]
+* '''[[Arrondissement de Bourg-en-Bresse]]''' (24 cantons - préfecture [[Bourg-en-Bresse]]) : [[canton de Bâgé-le-Châtel]] - [[canton de Bourg-en-Bresse-Est]] - [[canton de Bourg-en-Bresse-Nord-Centre]] - [[canton de Bourg-en-Bresse-Sud]] - [[canton de Ceyzériat]] - [[canton de Chalamont]] - [[canton de Châtillon-sur-Chalaronne]] - [[canton de Coligny]] - [[canton de Meximieux]] - [[canton de Miribel]] - [[canton de Montluel]] - [[canton de Montrevel-en-Bresse]] - [[canton de Péronnas]] - [[canton de Pont-d'Ain]] - [[canton de Pont-de-Vaux]] - [[canton de Pont-de-Veyle]] - [[canton de Reyrieux]] - [[canton de Saint-Trivier-de-Courtes]] - [[canton de Saint-Trivier-sur-Moignans]] - [[canton de Thoissey]] - [[canton de Treffort-Cuisiat]] - [[canton de Trévoux]] - [[canton de Villars-les-Dombes]] - [[canton de Viriat]]
+* '''[[Arrondissement de Gex]]''' (3 cantons - sous-préfecture [[Gex]]) : [[canton de Collonges]] - [[canton de Ferney-Voltaire]] - [[canton de Gex]]
+* '''[[Arrondissement de Nantua]]''' (7 cantons - sous-préfecture [[Nantua]]) : [[canton de Bellegarde-sur-Valserine]] - [[canton de Brénod]] - [[canton d'Izernore]] - [[canton de Nantua]] - [[canton d'Oyonnax-Nord]] - [[canton d'Oyonnax-Sud]] - [[canton de Poncin]]
+[[Fichier:Anciens cantons de l'Ain.png|centré|vignette|Carte et noms des cantons avant 2015]]
+
+== Redécoupage cantonal de 2014 ==
+[[Fichier:Map of Ain Department, France, Cantons 2014.svg|vignette|Cantons de l'Ain depuis 2015.]]
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id Loi {{numéro|2013-403}} du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral], [[Journal officiel de la République française|JORF]] {{numéro|0114}} du 18 mai 2013, {{p.|8242}} (consulté le 10 mai 2014)</ref>. Un nouveau découpage territorial est défini par décret du {{date-|13 février 2014}} pour le département de l'[[Ain (département)|Ain]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour six ans au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 12,5 % des inscrits au premier tour. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans l'[[Ain (département)|Ain]] le nombre de cantons passe ainsi de 43 à 23<ref name="Décret2014">[http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028621797 Décret {{n°|2014}}-147 du 13 février 2014 portant délimitation des cantons dans le département de l'Ain], sur ''Légifrance'' (consulté le 10 mai 2014)</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision n° 2010-618 DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision n° 2010-618 DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 10 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de l'Ain, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|597341|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=01 |titre= Chiffres clés Évolution et structure de la population - Département de l'Ain (01) |date = |site =insee.fr |consulté le= 10 mai 2014}}.</ref>. Avec 23 cantons la population moyenne par conseiller départemental est de {{unité|25971|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|20777|habitants}} et {{unité|31166|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+En 2020, à la suite de la fusion entre [[Bellegarde-sur-Valserine]], [[Châtillon-en-Michaille]] et [[Lancrans]], en 2019, le canton de Bellegarde-sur-Valserine est renommé en [[canton de Valserhône]].
+
+=== Composition détaillée ===
+
+{| class="wikitable center"
+|-
+! {{abrd|N°|Numéro d'ordre dans le décret}}
+! Nom du Canton
+! [[Bureau centralisateur]]
+! Population <small>(2022)</small>
+! Nombre de communes
+! Communes composant le canton
+! Localisation dans le département
+! colspan=3 | Conseillers
+|-
+| rowspan=2 | 1
+| rowspan=2 | [[Canton d'Ambérieu-en-Bugey|Ambérieu-en-Bugey]] 
+| rowspan=2 | [[Ambérieu-en-Bugey]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton d'Ambérieu-en-Bugey}}}}
+| rowspan=2 | 18
+| rowspan=2 | [[L'Abergement-de-Varey]], [[Ambérieu-en-Bugey]], [[Ambronay]], [[Ambutrix]], [[Arandas]], [[Argis]], [[Bettant]], [[Château-Gaillard (Ain)|Château-Gaillard]], [[Cleyzieu]], [[Conand]], [[Douvres (Ain)|Douvres]], [[Nivollet-Montgriffon]], [[Oncieu]], [[Saint-Denis-en-Bugey]], [[Saint-Maurice-de-Rémens]], [[Saint-Rambert-en-Bugey]], [[Torcieu]], [[Vaux-en-Bugey]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Ambérieu-en-Bugey.svg|vignette]]
+| width=0.5 rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| || Joël Brunet || [[Divers droite|DVD]]
+|-
+| Aurélie Petit || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 2
+| rowspan=2 bgcolor=#eee | [[Canton d'Attignat|Attignat]]  
+| rowspan=2 bgcolor=#eee | [[Attignat]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton d'Attignat}}}} 
+| rowspan=2 bgcolor=#eee | 18
+| rowspan=2 bgcolor=#eee | [[Attignat]], [[Béréziat]], [[Bresse Vallons]], [[Buellas]], [[Confrançon]], [[Curtafond]], [[Foissiat]], [[Jayat]], [[Malafretaz]], [[Marsonnas]], [[Montcet]], [[Montracol]], [[Montrevel-en-Bresse]], [[Polliat]], [[Saint-Didier-d'Aussiat]], [[Saint-Martin-le-Châtel]], [[Saint-Sulpice (Ain)|Saint-Sulpice]], [[Vandeins]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Attignat.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|DVC}}| || bgcolor=#eee | Clotilde Fournier || bgcolor=#eee | [[Divers centre|DVC]]
+|-
+| {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | Walter Martin || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 3
+| rowspan=2 | [[Canton de Valserhône|Valserhône]] 
+| rowspan=2 | [[Valserhône]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Valserhône}}}}
+| rowspan=2 | 12
+| rowspan=2 | [[Billiat]], [[Champfromier]], [[Chanay]], [[Confort (Ain)|Confort]], [[Giron (Ain)|Giron]], [[Injoux-Génissiat]], [[Montanges]], [[Plagne (Ain)|Plagne]], [[Saint-Germain-de-Joux|Saint Germain-de-Joux]], [[Surjoux-Lhopital]], [[Valserhône]], [[Villes]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Bellegarde-sur-Valserine.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVG}}| || Guy Larmanjat || [[Divers gauche|DVG]]
+|-
+| Anne-Laure Olliet || [[Divers gauche|DVG]]
+|-
+| rowspan=2 bgcolor=#eee | 4
+| rowspan=2 bgcolor=#eee | [[Canton de Belley|Belley]]  
+| rowspan=2 bgcolor=#eee | [[Belley]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Belley}}}} 
+| rowspan=2 bgcolor=#eee | 33
+| rowspan=2 bgcolor=#eee | [[Ambléon]], [[Andert-et-Condon]], [[Arboys en Bugey]], [[Belley]], [[Brégnier-Cordon]], [[Brens (Ain)|Brens]], [[La Burbanche]], [[Ceyzérieu]], [[Chazey-Bons]], [[Cheignieu-la-Balme]], [[Colomieu]], [[Contrevoz]], [[Conzieu]], [[Cressin-Rochefort]], [[Cuzieu (Ain)|Cuzieu]], [[Flaxieu]], [[Groslée-Saint-Benoît]], [[Izieu]], [[Lavours]], [[Magnieu]], [[Marignieu]], [[Massignieu-de-Rives]], [[Murs-et-Gélignieux]], [[Parves et Nattages]], [[Peyrieu]], [[Pollieu]], [[Prémeyzel]], [[Rossillon]], [[Saint-Germain-les-Paroisses]], [[Saint-Martin-de-Bavel]], [[Virieu-le-Grand]], [[Virignin]], [[Vongnes]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Belley.svg|vignette]]
+| rowspan=4 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | Aurélie Borel || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| bgcolor=#eee | Jean-Yves Hédon || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 5
+| rowspan=2 | [[Canton de Bourg-en-Bresse-1|Bourg-en-Bresse-1]] 
+| rowspan=2 | [[Bourg-en-Bresse]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Bourg-en-Bresse-1}}}}
+| rowspan=2 | 1 + fraction de Bourg-en-Bresse
+| rowspan=2 | [[Viriat]] et la première partie de [[Bourg-en-Bresse]]{{note|groupe=alpha|Partie non-incluse dans le canton de Bourg-en-Bresse-2}}.
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Bourg-1.svg|vignette]]
+| Marie-Jo Bardet || [[Les Républicains|LR]]
+|-
+| Alexis Morand || [[Les Républicains|LR]]
+|-
+| rowspan=2 bgcolor=#eee | 6
+| rowspan=2 bgcolor=#eee | [[Canton de Bourg-en-Bresse-2|Bourg-en-Bresse-2]]  
+| rowspan=2 bgcolor=#eee | [[Bourg-en-Bresse]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Bourg-en-Bresse-2}}}} 
+| rowspan=2 bgcolor=#eee | 3 + fraction de Bourg-en-Bresse
+| rowspan=2 bgcolor=#eee | [[Péronnas]], [[Saint-Denis-lès-Bourg]], [[Saint-Rémy (Ain)|Saint-Rémy]] et la seconde partie de [[Bourg-en-Bresse]]{{note|groupe=alpha|Partie de la commune située à l'ouest et au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-Denis-lès-Bourg, ligne de chemin de fer Bourg-Mâcon, avenue des Anciens-Combattants, boulevard Paul-Bert jusqu'à la place Perrier-Labalme, avenue Jean-Marie-Verne, rue de la Fraternité, rue Amédée-Fornet, rue Alfred-de-Vigny, avenue Jean-Marie-Verne, boulevard Paul-Valéry, rue Tony-Ferret, boulevard de Brou, ligne de chemin de fer Bourg-Bellegarde jusqu'à son intersection avec la rivière Reyssouze, cours d'eau Reyssouze jusqu'à la limite territoriale de la commune de Montagnat.}}.
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Bourg-2.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | Hélène Cédileau || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | Pierre Lurin || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 7
+| rowspan=2 | [[Canton de Ceyzériat|Ceyzériat]] 
+| rowspan=2 | [[Ceyzériat]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Ceyzériat}}}}
+| rowspan=2 | 22
+| rowspan=2 | [[Certines]], [[Ceyzériat]], [[Chalamont]], [[Châtenay (Ain)|Châtenay]], [[Châtillon-la-Palud]], [[Crans (Ain)|Crans]], [[Dompierre-sur-Veyle]], [[Druillat]], [[Journans]], [[Lent (Ain)|Lent]], [[Montagnat]], [[Le Plantay]], [[Revonnas]], [[Saint-André-sur-Vieux-Jonc]], [[Saint-Just (Ain)|Saint-Just]], [[Saint-Martin-du-Mont (Ain)|Saint-Martin-du-Mont]], [[Saint-Nizier-le-Désert]], [[Servas (Ain)|Servas]], [[Tossiat]], [[La Tranclière]], [[Versailleux]], [[Villette-sur-Ain]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Ceyzériat.svg|vignette]]
+| Jean-Yves Flochon || [[Les Républicains|LR]]
+|-
+| rowspan=3 {{Infobox Parti politique français/couleurs|DVD}}| || Martine Tabouret || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 8
+| rowspan=2 bgcolor=#eee | [[Canton de Châtillon-sur-Chalaronne|Châtillon-sur-Chalaronne]]  
+| rowspan=2 bgcolor=#eee | [[Châtillon-sur-Chalaronne]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Châtillon-sur-Chalaronne}}}} 
+| rowspan=2 bgcolor=#eee | 26
+| rowspan=2 bgcolor=#eee | [[L'Abergement-Clémenciat]], [[La Chapelle-du-Châtelard]], [[Châtillon-sur-Chalaronne]], [[Condeissiat]], [[Dompierre-sur-Chalaronne]], [[Garnerans]], [[Genouilleux]], [[Guéreins]], [[Illiat]], [[Marlieux]], [[Mogneneins]], [[Montceaux]], [[Montmerle-sur-Saône]], [[Neuville-les-Dames]], [[Peyzieux-sur-Saône]], [[Romans (Ain)|Romans]], [[Saint-André-le-Bouchoux]], [[Saint-Didier-sur-Chalaronne]], [[Saint-Étienne-sur-Chalaronne]], [[Saint-Georges-sur-Renon]], [[Saint-Germain-sur-Renon]], [[Saint-Paul-de-Varax]], [[Sandrans]], [[Sulignat]], [[Thoissey]], [[Valeins]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Chatillon Chalaronne.svg|vignette]]
+| bgcolor=#eee | Patricia Chmara || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| bgcolor=#eee | Patrick Mathias || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 9
+| rowspan=2 | [[Canton de Gex|Gex]] 
+| rowspan=2 | [[Gex]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Gex}}}}
+| rowspan=2 | 7
+| rowspan=2 | [[Cessy]], [[Divonne-les-Bains]], [[Gex]], [[Grilly]], [[Sauverny (Ain)|Sauverny]], [[Versonnex (Ain)|Versonnex]], [[Vesancy]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Gex.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|LR}}| || Véronique Baude || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| ||Pierre Ginot  || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 10
+| rowspan=2 bgcolor=#eee | [[Canton de Plateau d'Hauteville|Plateau d'Hauteville]]  
+| rowspan=2 bgcolor=#eee | [[Plateau d'Hauteville]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Plateau d'Hauteville}}}} 
+| rowspan=2 bgcolor=#eee | 26
+| rowspan=2 bgcolor=#eee | [[Anglefort]], [[Aranc]], [[Armix]], [[Artemare]], [[Arvière-en-Valromey]], [[Brénod]], [[Chaley]], [[Champagne-en-Valromey]], [[Champdor-Corcelles]], [[Chevillard (Ain)|Chevillard]], [[Condamine (Ain)|Condamine]], [[Corbonod]], [[Corlier]], [[Culoz-Béon]], [[Évosges]], [[Haut Valromey]], [[Izenave]], [[Lantenay (Ain)|Lantenay]], [[Outriaz]], [[Plateau d'Hauteville]], [[Prémillieu]], [[Seyssel (Ain)|Seyssel]], [[Talissieu]], [[Tenay]], [[Valromey-sur-Séran]], [[Vieu-d'Izenave]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Hauteville-Lompnès.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | Philippe Emin || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | Annie Meuriau || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 11
+| rowspan=2 | [[Canton de Lagnieu|Lagnieu]] 
+| rowspan=2 | [[Lagnieu]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Lagnieu}}}}
+| rowspan=2 | 26
+| rowspan=2 | [[Bénonces]], [[Blyes]], [[Briord]], [[Charnoz-sur-Ain]], [[Chazey-sur-Ain]], [[Innimond]], [[Lagnieu]], [[Leyment]], [[Lhuis]], [[Lompnas]], [[Loyettes]], [[Marchamp]], [[Montagnieu (Ain)|Montagnieu]], [[Ordonnaz]], [[Saint-Jean-de-Niost]], [[Saint-Maurice-de-Gourdans]], [[Saint-Sorlin-en-Bugey]], [[Saint-Vulbas]], [[Sainte-Julie (Ain)|Sainte-Julie]], [[Sault-Brénaz]], [[Seillonnaz]], [[Serrières-de-Briord]], [[Souclin]], [[Villebois]], [[Villieu-Loyes-Mollon]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Lagnieu.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|LR}}| || [[Charles de La Verpillière]] || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| || Viviane Vaudray || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 12
+| rowspan=2 bgcolor=#eee | [[Canton de Meximieux|Meximieux]]  
+| rowspan=2 bgcolor=#eee | [[Meximieux]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Meximieux}}}} 
+| rowspan=2 bgcolor=#eee | 15
+| rowspan=2 bgcolor=#eee | [[Balan (Ain)|Balan]], [[Béligneux]], [[Bourg-Saint-Christophe]], [[Bressolles (Ain)|Bressolles]], [[Dagneux]], [[Faramans (Ain)|Faramans]], [[Joyeux (Ain)|Joyeux]], [[Meximieux]], [[Le Montellier]], [[Montluel]], [[Pérouges]], [[Pizay]], [[Rignieux-le-Franc]], [[Saint-Éloi (Ain)|Saint-Éloi]], [[Sainte-Croix (Ain)|Sainte-Croix]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Meximieux.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|MoDem}}| || bgcolor=#eee | [[Romain Daubié]] || bgcolor=#eee | [[Mouvement démocrate (France)|MoDem]]
+|-
+| rowspan=2 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee |Élisabeth Laroche  || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 13
+| rowspan=2 | [[Canton de Miribel|Miribel]] 
+| rowspan=2 | [[Miribel (Ain)|Miribel]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Miribel}}}}
+| rowspan=2 | 13
+| rowspan=2 | [[Beynost]], [[La Boisse]], [[Miribel (Ain)|Miribel]], [[Neyron]], [[Niévroz]], [[Saint-Maurice-de-Beynost]], [[Thil (Ain)|Thil]], [[Tramoyes]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Miribel.svg|vignette]]
+| Jean-Pierre Gaitet || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|HOR}}| || Caroline Terrier || [[Horizons|HOR]]
+|-
+| rowspan=2 bgcolor=#eee | 14
+| rowspan=2 bgcolor=#eee | [[Canton de Nantua|Nantua]]  
+| rowspan=2 bgcolor=#eee | [[Nantua]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Nantua}}}} 
+| rowspan=2 bgcolor=#eee | 17
+| rowspan=2 bgcolor=#eee | [[Apremont (Ain)|Apremont]], [[Béard-Géovreissiat]], [[Belleydoux]], [[Bellignat]], [[Brion (Ain)|Brion]], [[Charix]], [[Échallon]], [[Géovreisset]], [[Groissiat]], [[Maillat]], [[Martignat]], [[Montréal-la-Cluse]], [[Nantua]], [[Les Neyrolles]], [[Le Poizat-Lalleyriat]], [[Port (Ain)|Port]], [[Saint-Martin-du-Frêne]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Nantua.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | '''Jean Deguerry''' || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| bgcolor=#eee | Laurence Poncet || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 15
+| rowspan=2 | [[Canton d'Oyonnax|Oyonnax]] 
+| rowspan=2 | [[Oyonnax]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton d'Oyonnax}}}}
+| rowspan=2 | 2
+| rowspan=2 | [[Arbent]], [[Oyonnax]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Oyonnax.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|DVD}}| || Carmen Flore || [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|UDI}}| || Michel Perraud || [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=2 bgcolor=#eee | 16
+| rowspan=2 bgcolor=#eee | [[Canton de Pont-d'Ain|Pont-d'Ain]]  
+| rowspan=2 bgcolor=#eee | [[Pont-d'Ain]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Pont-d'Ain}}}} 
+| rowspan=2 bgcolor=#eee | 24
+| rowspan=2 bgcolor=#eee | [[Bolozon]], [[Boyeux-Saint-Jérôme]], [[Ceignes]], [[Cerdon (Ain)|Cerdon]], [[Challes-la-Montagne]], [[Dortan]], [[Izernore]], [[Jujurieux]], [[Labalme]], [[Leyssard]], [[Matafelon-Granges]], [[Mérignat]], [[Neuville-sur-Ain]], [[Nurieux-Volognat]], [[Peyriat]], [[Poncin]], [[Pont-d'Ain]], [[Priay]], [[Saint-Alban (Ain)|Saint-Alban]], [[Saint-Jean-le-Vieux (Ain)|Saint-Jean-le-Vieux]], [[Samognat]], [[Serrières-sur-Ain]], [[Sonthonnax-la-Montagne]], [[Varambon]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Pont-d'Ain.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | [[Damien Abad]] || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| bgcolor=#eee | Marie-Christine Chapel || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 17
+| rowspan=2 | [[Canton de Replonges|Replonges]] 
+| rowspan=2 | [[Replonges]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Replonges}}}}
+| rowspan=2 | 31
+| rowspan=2 | [[Arbigny]], [[Asnières-sur-Saône]], [[Bâgé-Dommartin]], [[Bâgé-le-Châtel]], [[Boissey (Ain)|Boissey]], [[Boz]], [[Chavannes-sur-Reyssouze]], [[Chevroux (Ain)|Chevroux]], [[Courtes]], [[Curciat-Dongalon]], [[Feillens]], [[Gorrevod]], [[Lescheroux]], [[Mantenay-Montlin]], [[Manziat]], [[Ozan]], [[Pont-de-Vaux]], [[Replonges]], [[Reyssouze]], [[Saint-André-de-Bâgé]], [[Saint-Bénigne]], [[Saint-Étienne-sur-Reyssouze]], [[Saint-Jean-sur-Reyssouze]], [[Saint-Julien-sur-Reyssouze]], [[Saint-Nizier-le-Bouchoux]], [[Saint-Trivier-de-Courtes]], [[Sermoyer]], [[Servignat]], [[Vernoux]], [[Vescours]], [[Vésines]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Replonges.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|LR}}| || Guy Billoudet || [[Les Républicains|LR]]
+|-
+| rowspan=3 {{Infobox Parti politique français/couleurs|DVD}}| || Valérie Guyon || [[Divers droite|DVD]]
+|-
+| rowspan=2 bgcolor=#eee | 18
+| rowspan=2 bgcolor=#eee | [[Canton de Saint-Étienne-du-Bois|Saint-Étienne-du-Bois]]  
+| rowspan=2 bgcolor=#eee | [[Saint-Étienne-du-Bois (Ain)|Saint-Étienne-du-Bois]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Étienne-du-Bois}}}} 
+| rowspan=2 bgcolor=#eee | 28
+| rowspan=2 bgcolor=#eee | [[Beaupont]], [[Bény]], [[Bohas-Meyriat-Rignat]], [[Chavannes-sur-Suran]], [[Cize (Ain)|Cize]], [[Coligny (Ain)|Coligny]], [[Cormoz]], [[Corveissiat]], [[Courmangoux]], [[Domsure]], [[Drom (Ain)|Drom]], [[Grand-Corent]], [[Hautecourt-Romanèche]], [[Jasseron]], [[Marboz]], [[Meillonnas]], [[Nivigne et Suran]], [[Pirajoux]], [[Pouillat]], [[Ramasse]], [[Saint-Étienne-du-Bois (Ain)|Saint-Étienne-du-Bois]], [[Salavre]], [[Simandre-sur-Suran]], [[Val-Revermont]], [[Verjon]], [[Villemotier]], [[Villereversure]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Saint-Etienne-du-Bois.svg|vignette]]
+| bgcolor=#eee | Alain Chapuis || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| bgcolor=#eee | Catherine Journet || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 19
+| rowspan=2 | [[Canton de Saint-Genis-Pouilly|Saint-Genis-Pouilly]] 
+| rowspan=2 | [[Saint-Genis-Pouilly]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Genis-Pouilly}}}}
+| rowspan=2 | 4
+| rowspan=2 | [[Ferney-Voltaire]], [[Ornex]], [[Prévessin-Moëns]], [[Saint-Genis-Pouilly]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Saint-Genis-Pouilly.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|LR}}| || Aurélie Charillon || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|UDI}}| || Pierre-Marie Philipps || [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=2 bgcolor=#eee | 20
+| rowspan=2 bgcolor=#eee | [[Canton de Thoiry|Thoiry]]  
+| rowspan=2 bgcolor=#eee | [[Thoiry (Ain)|Thoiry]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Thoiry}}}} 
+| rowspan=2 bgcolor=#eee | 16
+| rowspan=2 bgcolor=#eee | [[Challex]], [[Chevry (Ain)|Chevry]], [[Chézery-Forens]], [[Collonges (Ain)|Collonges]], [[Crozet (Ain)|Crozet]], [[Échenevex]], [[Farges (Ain)|Farges]], [[Léaz]], [[Lélex (Ain)|Lélex]], [[Mijoux]], [[Péron]], [[Pougny (Ain)|Pougny]], [[Saint-Jean-de-Gonville]], [[Ségny]], [[Sergy (Ain)|Sergy]], [[Thoiry (Ain)|Thoiry]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Thoiry.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|LR}}| || bgcolor=#eee | Muriel Benier || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| bgcolor=#eee | Michel Brulhart || bgcolor=#eee | [[Les Républicains|LR]]
+|-
+| rowspan=2 | 21
+| rowspan=2 | [[Canton de Trévoux|Trévoux]] 
+| rowspan=2 | [[Trévoux]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Trévoux}}}}
+| rowspan=2 | 12
+| rowspan=2 | [[Beauregard (Ain)|Beauregard]], [[Frans]], [[Jassans-Riottier]], [[Massieux]], [[Misérieux]], [[Parcieux]], [[Reyrieux]], [[Saint-Bernard (Ain)|Saint-Bernard]], [[Saint-Didier-de-Formans]], [[Sainte-Euphémie (Ain)|Sainte-Euphémie]], [[Toussieux]], [[Trévoux]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Trévoux.svg|vignette]]
+| {{Infobox Parti politique français/couleurs|UDI}}| || Nathalie Barde || [[Union des démocrates et indépendants|UDI]]
+|-
+| {{Infobox Parti politique français/couleurs|LR}}| || Marc Péchoux || [[Les Républicains|LR]]
+|-
+| rowspan=2 bgcolor=#eee | 22
+| rowspan=2 bgcolor=#eee | [[Canton de Villars-les-Dombes|Villars-les-Dombes]]  
+| rowspan=2 bgcolor=#eee | [[Villars-les-Dombes]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Villars-les-Dombes}}}} 
+| rowspan=2 bgcolor=#eee | 25
+| rowspan=2 bgcolor=#eee | [[Ambérieux-en-Dombes]], [[Ars-sur-Formans]], [[Baneins]], [[Birieux]], [[Bouligneux]], [[Chaleins]], [[Chaneins]], [[Civrieux (Ain)|Civrieux]], [[Fareins]], [[Francheleins]], [[Lapeyrouse (Ain)|Lapeyrouse]], [[Lurcy]], [[Messimy-sur-Saône]], [[Mionnay]], [[Monthieux]], [[Rancé (Ain)|Rancé]], [[Relevant]], [[Saint-André-de-Corcy]], [[Saint-Jean-de-Thurigneux]], [[Saint-Marcel (Ain)|Saint-Marcel]], [[Saint-Trivier-sur-Moignans]], [[Sainte-Olive]], [[Savigneux (Ain)|Savigneux]], [[Villars-les-Dombes]], [[Villeneuve (Ain)|Villeneuve]].
+| rowspan=2 bgcolor=#eee | [[File:Map of Ain Department, France, Cantons 2015 Villars-les-Dombes.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|UDI}}| || bgcolor=#eee | Alexandrine Butillon || bgcolor=#eee | [[Union des démocrates et indépendants|UDI]]
+|-
+| bgcolor=#eee | Henri Cormorèche || bgcolor=#eee | [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=2 | 23
+| rowspan=2 | [[Canton de Vonnas|Vonnas]] 
+| rowspan=2 | [[Vonnas]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Vonnas}}}}
+| rowspan=2 | 19
+| rowspan=2 | [[Bey (Ain)|Bey]], [[Biziat]], [[Chanoz-Châtenay]], [[Chaveyriat]], [[Cormoranche-sur-Saône]], [[Crottet]], [[Cruzilles-lès-Mépillat]], [[Grièges]], [[Laiz]], [[Mézériat]], [[Perrex]], [[Pont-de-Veyle]], [[Saint-André-d'Huiriat]], [[Saint-Cyr-sur-Menthon]], [[Saint-Genis-sur-Menthon]], [[Saint-Jean-sur-Veyle]], [[Saint-Julien-sur-Veyle]], [[Saint-Laurent-sur-Saône]], [[Vonnas]].
+| rowspan=2 | [[File:Map of Ain Department, France, Cantons 2015 Vonnas.svg|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|PS}}| || Christophe Greffet || [[Parti socialiste (France)|PS]]
+|-
+| Mireille Louis || [[Parti socialiste (France)|PS]]
+|-
+! colspan=3 | 
+! {{formatnum:{{Population de France/dernière_pop||Ain (département)}}}}
+! 391
+! colspan=5 | 
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de l'Ain, c'est le cas de quatre cantons ([[canton de Bellegarde-sur-Valserine|Bellegarde-sur-Valserine]], [[canton d'Hauteville-Lompnes|Hauteville-Lompnes]], [[canton de Lagnieu|Lagnieu]], [[canton de Pont-d'Ain|Pont-d'Ain]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+|-
+!N°||Canton||[[Arrondissement de Belley|Belley]]||[[Arrondissement de Bourg-en-Bresse|Bourg-en-Bresse]]||[[Arrondissement de Gex|Gex]]||[[Arrondissement de Nantua|Nantua]]||Total
+|-
+|1||align="left"| Ambérieu-en-Bugey||18||||||||'''18'''
+|-
+|2||align="left"| Attignat||||19||||||'''19'''
+|-
+|3||align="left"| Bellegarde-sur-Valserine||1||||2||11||'''15'''
+|-
+|4||align="left"| Belley||37||||||||'''37'''
+|-
+|5||align="left"| Bourg-en-Bresse-1||||1 + fraction Bourg-en-Bresse||||||'''1''' + fraction Bourg-en-Bresse
+|-
+|6||align="left"| Bourg-en-Bresse-2||||3 + fraction Bourg-en-Bresse||||||'''3''' + fraction Bourg-en-Bresse
+|-
+|7||align="left"| Ceyzériat||||22||||||'''22'''
+|-
+|8||align="left"| Châtillon-sur-Chalaronne||||26||||||'''26'''
+|-
+|9||align="left"| Gex||||||7||||'''7'''
+|-
+|10||align="left"| Plateau d'Hauteville||28||||||12||'''41'''
+|-
+|11||align="left"| Lagnieu||22||4||||||'''26'''
+|-
+|12||align="left"| Meximieux||||15||||||'''15'''
+|-
+|13||align="left"| Miribel||||8||||||'''8'''
+|-
+|14||align="left"| Nantua||||||||18||'''18'''
+|-
+|15||align="left"| Oyonnax||||||||2||'''2'''
+|-
+|16||align="left"| Pont-d'Ain||||4||||20||'''24'''
+|-
+|17||align="left"| Replonges||||32||||||'''32'''
+|-
+|18||align="left"| Saint-Étienne-du-Bois||||28||||||'''28'''
+|-
+|19||align="left"| Saint-Genis-Pouilly||||||4||||'''4'''
+|-
+|20||align="left"| Thoiry||||||16||||'''16'''
+|-
+|21||align="left"| Trévoux||||12||||||'''12'''
+|-
+|22||align="left"| Villars-les-Dombes||||25||||||'''25'''
+|-
+|23||align="left"| Vonnas||||19||||||'''19'''
+|-
+!||||107||219||29||64||419
+|}
+
+== Homonymies ==
+Le canton de Seyssel a un homonyme exact ([[canton de Seyssel (Haute-Savoie)|canton de Seyssel]]) dans le département de la [[Haute-Savoie]].
+
+Il n'y a pas d'homonymie pour les cantons de Miribel et de Collonges (mais il y a une homonymie pour chacune des communes chefs-lieux).
+
+== Annexes ==
+=== Notes ===
+{{Références|groupe=note}}
+{{Références|groupe=alpha}}
+
+=== Références ===
+{{Références}}
+
+=== Articles connexes ===
+* [[Anciens cantons de Bourg-en-Bresse]]
+* [[Liste des communes de l'Ain]]
+
+{{Palette|Découpage administratif de Auvergne-Rhône-Alpes|Cantons de France|Cantons de l'Ain}}
+{{Portail|Ain}}
+
+[[Catégorie:Canton dans l'Ain|*]]
+[[Catégorie:Liste de cantons français|Ain]]
+[[Catégorie:Liste en rapport avec l'Ain|Cantons]]

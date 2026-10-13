@@ -1,0 +1,208 @@
+[[Fichier:Loiret-Position.svg|thumb|Localisation du [[département français]] du [[Loiret (département)|Loiret]] sur une carte de France.]]
+L’'''histoire du découpage cantonal du Loiret''' décrit les modifications successives apportées aux périmètres des cantons du [[département français|département]] [[France|français]] du [[Loiret (département)|Loiret]].
+
+Depuis la création du département en 1790, le découpage cantonal du Loiret a subi plusieurs changements notables. Le nombre de cantons est passé successivement de 59 en [[1790 en France|1790]] à 31 en [[1801 en France|1801]] et en [[1806 en France|1806]], 37 en [[1973 en France|1973]], 41 en [[1982 en France|1982]] et 21 en [[2015 en France|2015]].
+
+Le rattachement des cantons a de même plusieurs fois changé. Le nombre d'[[Arrondissement français|arrondissements]] est en effet passé de 4 en 1801 à 2 en [[1926 en France|1926]] puis à 3 en [[1942 en France|1942]].
+
+== Création des départements, districts et cantons en 1790 ==
+
+{{article détaillé|liste des cantons du Loiret (1790-1801)}}
+
+L'Assemblée adopte le principe du découpage du territoire du [[Royaume de France|royaume]] en [[département français|départements]], [[District (subdivision départementale, 1790-1795)|districts]] et [[canton français|cantons]] avec les lois des 14 et {{date France|22|décembre|1789}}<ref name="COG41">{{Lien web |url=http://projetbabel.org/gl/cog45.htm |titre= Le Code officiel géographique (COG) - 4.5. : le découpage du territoire de 1790 à 1815 |auteur=Gérard Lang |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>. La France est ainsi divisée en 83 départements par décret du {{date France|15|janvier|1790}} et la liste des départements et des districts est précisée par décret du {{date France|16|février|1790}}<ref name="COG41"/>. Le département du Loiret comprend alors {{unité|7|districts}} et {{unité|59|cantons}}<ref name="Prudhomme162">{{Harvsp| Prudhomme|1798|p=162}}.</ref>.
+
+== Découpage en arrondissements et cantons en 1801 ==
+
+{{article détaillé|liste des cantons du Loiret (1801-1806)}}
+
+Peu de temps après leur création, les cantons sont supprimés, en tant que découpage administratif, par une loi du {{date France|26|juin|1793}}. Ils ne conservent qu'un rôle électoral. Mais, après la chute de [[Maximilien de Robespierre|Robespierre]] le 9 thermidor an II ({{date France|27|juillet|1794}}), les mesures de circonstance de la [[Convention nationale|Convention]] sont annulées par la Constitution du {{date France|22|août|1795}} (5 fructidor, an III), dite « de la République bourgeoise ». La Constitution supprime les districts, rouages administratifs liés à la [[Terreur (Révolution française)|Terreur]], et renforce le rôle des cantons, qu'elle vient de recréer<ref name="COG43">{{Lien web|url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.3. : l’œuvre révolutionnaire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>. La [[loi du 28 pluviôse an VIII]] ({{date France|17|février|1800}}) crée des [[arrondissement français|arrondissements]] dans {{unité|98|départements}}, dont 371 dans les {{unité|89|départements}} correspondant au territoire de la [[Constitution de l'an I|Constitution de 1793]]. À la même date, le nombre des cantons (correspondant au même territoire) est ramené à {{formatnum:2916}}. Dans le [[Loiret (département)|Loiret]], le nombre de cantons est ainsi ramené de 59 à 31<ref name="COG44">{{Lien web|url=http://projetbabel.org/gl/cog43.htm |titre= Le Code officiel géographique (COG) - 4.4. : le Consulat et l'Empire |auteur=Gérard Lang  |date =juin 2007 |site =projetbabel.org |consulté le= 27 février 2014}}.</ref>.
+
+== Redécoupage de 1806 ==
+
+{{article détaillé|liste des cantons du Loiret (1806-1973)}}
+
+Selon le [[décret en France|décret impérial]] du {{date France|21|août|1806}} intitulé {{citation|décret contenant rectification de plusieurs Cantons dont sont composés les Justices de paix du département du Loiret}}, plusieurs cantons du Loiret subissent des modifications de leur périmètre, un canton est créé (Artenay), trois cantons sont supprimés (Olivet, Ingré et Chécy) et la ville d'Orléans est redécoupée (deux cantons supplémentaires)<ref name="Rondonneau">{{Ouvrage|langue=fr|auteur1=Louis Rondonneau|titre=Collection générale des lois|sous-titre=décrets, arrêtés, sénatus-consultes, avis du conseil d'État et réglemens d'administration publiés depuis 1789 jusqu'au {{1er}} avril 1814. Gouvernement Impérial : 3 juillet 1806 - 22 décembre 1808|volume=10|lieu=Paris|éditeur=Imprimerie royale|collection=Bulletin des lois|année=1819|pages totales=434|passage=485-486|lire en ligne=https://books.google.fr/books?id=V0NHAAAAcAAJ&pg=PA485|partie=2{{e}}}}.</ref>.
+
+Dans l'[[arrondissement de Pithiviers]], quatre communes du canton de Beaune (Bouilly, Courcy, Limiers et Vrigny) sont transférées au canton de Pithiviers<ref name="Rondonneau"/>.
+
+Dans l'[[arrondissement de Gien]], Lemoulinet passe du [[canton d'Ouzouer-sur-Loire]] à celui de [[Canton de Gien|Gien]]<ref name="Rondonneau"/>.
+
+Dans l'[[arrondissement d'Orléans]], la ville d'[[Orléans]] est divisée en cinq cantons : Orléans-{{1er}} ou [[Canton d'Orléans-Est|Orléans-Est]] ; Orléans-{{2e}} ou [[Canton d'Orléans-Ouest|Orléans-Ouest]] ; Orléans-{{3e}} ou [[Canton d'Orléans-Sud|Orléans-Sud]] qui intègre le sud de la ville et absorbe le [[canton d'Olivet]], supprimé ; Orléans-{{4e}} ou [[Canton d'Orléans-Nord-Ouest|Orléans-Nord-Ouest]] qui intègre le Nord ouest de la ville, absorbe une partie du [[canton d'Ingré]], supprimé, ainsi que la commune de [[Chanteau]] alors dans le [[canton de Neuville-aux-Bois|canton de Neuville]] ; Orléans-{{5e}} ou [[Canton d'Orléans-Nord-Est|Orléans-Nord-Est]] recouvrant le Nord est de la ville et absorbant une partie du [[canton de Chécy]], supprimé<ref name="Rondonneau"/>.
+
+Le [[canton d'Artenay]], créé en 1790, supprimé en 1801, est recréé, il est composé des communes de [[Gidy]] (ex-canton d'Ingré), [[Artenay]], [[Bucy-le-Roi]], [[Cercottes]], [[Chevilly (Loiret)|Chevilly]], [[Lion-en-Beauce]], [[Ruan (Loiret)|Ruan]] et [[Trinay]], toutes sept transférées du canton de Neuville, et de [[Creuzy]], [[Huêtre]], et Songy venant du [[canton de Patay]]<ref name="Rondonneau"/>.
+
+Les communes de [[Bucy-Saint-Liphard]] et [[Ormes (Loiret)|Ormes]] (ex-canton d'Ingré) sont transférées dans le canton de Patay<ref name="Rondonneau"/>.
+
+Issues du canton de Chécy supprimé, les communes de [[Saint-Denis-de-l'Hôtel]] et [[Fay-aux-Loges]] sont transférées vers le [[Canton de Châteauneuf-sur-Loire|canton de Châteauneuf]] tandis qu'[[Ingrannes]], [[Sully-la-Chapelle]], [[Traînou]] et [[Vennecy]] sont rattachées à celui de Neuville<ref name="Rondonneau"/>.
+
+Le cherf-lieu du canton de [[Bazoches-les-Gallerandes]] est transféré à [[canton d'Outarville|Outarville]].
+
+== Réorganisation des arrondissements : 1926 et 1942 ==
+
+Sous la [[Troisième République (France)|Troisième République]], en raison d'un endettement considérable et de l'effort nécessaire pour la [[Dommage de guerre|reconstruction]] post-[[Première Guerre mondiale]], la France traverse une crise financière qui se mue en crise économique, puis en crise politique. Deux gouvernements sont emportés, le [[Gouvernement Briand X|gouvernement Briand]] le {{date France|18|juillet|1926}} et le [[Gouvernement Herriot II|gouvernement Herriot]] le {{date France|21|juillet|1926}}. Le {{date France|24|juillet|1926}}, [[Raymond Poincaré]] est appelé à former le cabinet qui prend par la suite le nom de cabinet d’Union nationale. Le franc s’effondre par rapport aux autres monnaies et l'État est au bord de la [[banqueroute]]. Pour réduire les dépenses de l’État, Poincaré, qui bénéficie d’un large soutien, fait voter plusieurs décrets-lois réformant en profondeur l’administration française : 106 arrondissements sont ainsi supprimés avec le décret-loi du {{date France|10|septembre|1926}}. Dans le Loiret, les arrondissements de [[arrondissement de Gien|Gien]] et de [[arrondissement de Pithiviers|Pithiviers]] sont supprimés<ref name="Masson395">{{Harvsp|Masson|1984|p=395}}.</ref>.
+
+Au cours de la [[Seconde Guerre mondiale]], sous le [[régime de Vichy]], en [[1942 en France|1942]], l'arrondissement de Pithiviers est rétabli dans ses limites de 1926.
+
+== Redécoupage de 1973 ==
+
+{{Article détaillé|liste des cantons du Loiret (1973-1982)}}
+
+Avec le décret du {{date France|23|juillet|1973}}, neuf nouveaux cantons sont créés, trois disparaissent et deux sont renommés<ref name="Decret1973">{{Lien web |url=http://www.legifrance.gouv.fr//jo_pdf.do?cidTexte=JORFTEXT000000858983 |titre= Décret n°73-726 du 23 juillet 1973 portant création de cantons dans le département du Loiret  |auteur= |date = |site =legifrance.gouv.fr |consulté le= 2 mars 2014}}.</ref> :
+* Le [[canton de Montargis]] est divisé en trois cantons : [[canton d'Amilly|Amilly]], [[Canton de Châlette-sur-Loing|Châlette-sur-Loing]] et Montargis, qui demeure avec la seule commune de [[Montargis]] ;
+* Le [[canton d'Orléans-Nord-Ouest]] est divisé en trois cantons : [[Canton d'Orléans-Bannier|Orléans-Bannier]] (ou Orléans-III), [[Canton de Fleury-les-Aubrais|Fleury-les-Aubrais]] et [[Canton de Saint-Jean-de-la-Ruelle|Saint-Jean-de-la-Ruelle]] ;
+* Le [[canton d’Orléans-Nord-Est]] est divisé en deux cantons : [[Canton d'Orléans-Saint-Marc-Argonne|Orléans-Saint-Marc]] (ou Orléans-IV) et de [[Canton de Saint-Jean-de-Braye|Saint-Jean-de-Braye]] ;
+* Le [[canton d'Orléans-Sud]] est divisé en deux cantons : [[Canton d'Orléans-Saint-Marceau - La Source|Orléans-Saint-Marceau - La Source]] (ou Orléans-V) et [[Canton d'Olivet|Olivet]] ;
+* Le [[canton d'Orléans-Est]] prend le nom d'[[Canton d'Orléans-Bourgogne|Orléans-Bourgogne]] (ou Orléans-I) ;
+* Le [[canton d'Orléans-Ouest]] prend le nom d'[[Canton d'Orléans-Carmes|Orléans-Carmes]] (ou Orléans-II).
+
+En outre la commune de [[Boulay-les-Barres]], antérieurement dans le canton d'Orléans-Nord-Ouest est rattachée au [[canton de Patay]].
+
+Le nombre de cantons passe ainsi de 31 à 37.
+[[Fichier:Anciens cantons du Loiret.png|vignette|Cartes des cantons du Loiret entre 1982 et 2015]]
+
+== Redécoupage de 1982 ==
+
+{{Article détaillé|liste des cantons du Loiret (1982-2015)}}
+
+Avec le décret du {{date France|25|janvier|1982}}, quatre nouveaux cantons sont créés (Chécy, Ingré, Saint-Jean-le-Blanc et Orléans-la Source), onze sont remaniés et un est renommé<ref name="Decret1982">{{Lien web |url=http://www.legifrance.gouv.fr//jo_pdf.do?cidTexte=JORFTEXT000000520398 |titre= Décret n°82-81 du 25 janvier 1982 création et modification de cantons dans le département du Loiret (Saint-jean-de-braye,checy,olivet,saint-jean-le-blanc,meung-sur-Loire,saint-jean-de-la-ruelle,fleury-les-aubrais,ingre,orleans-saint-marceau,orleans-la-source,orleans-bourgogne,orleans-carmes,orleans-bannier,orleans-saint-marc-argonne)  |auteur= |date = |site =legifrance.gouv.fr |consulté le= 2 mars 2014}}.</ref> :
+* Le canton de Saint-Jean-de-Braye est divisé en deux cantons : Saint-Jean-de-Braye et Chécy ;
+* Le canton d'Olivet est divisé en deux cantons : Olivet et Saint-Jean-le-Blanc ;
+* Le canton d'Orléans-Saint-Marceau - La Source est divisé en deux cantons : Orléans-Saint-Marceau et Orléans-La Source ;
+* Le canton d'Ingré est créé (avec les communes de Saran, Ingré, La Chapelle et Ormes)
+* Les compositions et délimitations territoriales des cantons de Meung-sur-Loire, Saint-Jean-de-la-Ruelle, Fleury-les-Aubrais, Ingré, Orléans-Bourgogne, Orléans-Carmes, Orléans-Bannier, Orléans-Saint-Marc sont remaniées, le canton d'Orléans-Saint-Marc étant renommé Orléans-Saint-Marc-Argonne.
+Le nombre de cantons passe ainsi de 37 à 41.
+
+== Redécoupage de 2014 ==
+
+{{Article détaillé|liste des cantons du Loiret}}
+
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date France|17|mai|2013}}<ref>{{Lien web | url = http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id | titre = LOI {{n°}} 2013-403 du 17 mai 2013 relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral | jour = 17 | mois = mai | année = 2013 | site =  | éditeur = [[Journal officiel de la République française|JORF]] {{n°|0114}} du 18 mai 2013 {{p.|8242}}  | consulté le = 24 février 2014}}.</ref>. Les conseillers départementaux seront élus au scrutin majoritaire binominal mixte au prochain renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date|mars 2015}}. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux sera renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre sera divisé par deux avec arrondi à l'unité impaire supérieure{{note|Le nombre total de cantons d'un départements doit obligatoirement être impair.}}. Dans le [[Loiret (département)|Loiret]], le nombre de cantons doit ainsi passer de 41 à 21.
+
+Le [[Liste des préfets du Loiret|Préfet du Loiret]] communique le {{date France|13|décembre|2013}} à l'Assemblée départementale le projet de révision de la carte cantonale du département établi par le [[Ministère de l'Intérieur (France)|Ministère de l'Intérieur]], pour qu'elle émette un avis, en application de l'article L.191-1 du [[Code électoral (France)|Code électoral]] relatif à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires<ref name="Rep16dec2013">{{Lien web |url=http://www.larep.fr/loiret/actualite/pays/loire-sologne/2013/12/16/la-nouvelle-carte-des-cantons-du-loiret_1804553.html |titre= La nouvelle carte des cantons du Loiret |auteur= |date =16 décembre 2013 |site = le site de La République du Centre|consulté le= 28 février 2014}}.</ref>. Le Conseil général doit se prononcer dans un délai de six semaines à compter de cette saisine, en application de l'article L. 3113-2 du [[Code général des collectivités territoriales]]. Il s'agit d'un avis simple qui ne lie pas le gouvernement. À défaut de réponse dans ce délai, l'avis du Conseil général est réputé rendu. Dans le Loiret la date-butoir est le {{date France|24|janvier|2014}}.
+
+Différentes oppositions se font entendre. Dans la région naturelle du [[Giennois]], par exemple, certains élus déplorent la séparation en deux du [[canton de Gien]], la partie sud devant être rattachée aux cantons de [[canton de Sully-sur-Loire|Sully-sur-Loire]] et [[canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]], le nord allant avec ceux de [[Canton de Briare|Briare]] et [[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]<ref name="Rep21dec2013">{{Lien web |url=http://www.larep.fr/loiret/actualite/pays/giennois/gien/2013/12/21/le-nouveau-decoupage-des-cantons-du-loiret-provoque-stupeur-et-indignation-dans-le-giennois_1812374.html |titre= Le nouveau découpage des cantons du Loiret provoque stupeur et indignation dans le Giennois |auteur= |date =21 décembre 2013 |site =le site de La République du Centre |consulté le= 28 février 2014}}.</ref>. Dans la région naturelle du [[Pithiverais]], certains élus sont mécontents devant la réduction du nombre de cantons : alors qu'il compte actuellement cinq cantons (Pithiviers, Malesherbes, Outarville, Puiseaux, Beaune-la-Rolande) le Pithiverais n'en conservera que deux : l'Ouest regroupé sous le nom de Pithiviers, l'Est sous celui de Malesherbes<ref name="Rep26dec2013">{{Lien web |url=http://www.larep.fr/loiret/actualite/pays/pithiverais-beauce/pithiviers/2013/12/26/le-nouveau-decoupage-cantonal-fait-grincer-bien-des-dents-dans-le-nord-loiret_1816891.html |titre= Le découpage cantonal agace dans le Pithiverais |auteur=Stéphane Boutet |date =26 décembre 2013 |site =le site de La République du Centre |consulté le= 28 février 2014}}.</ref>.
+
+Lors de la présentation du projet de redécoupage cantonal pour le Loiret aux élus départementaux et aux maires présents le {{date France|21|janvier|2014}} le préfet du Loiret et de la région Centre, M. [[Pierre-Étienne Bisch]], a mis en avant les deux principales avancées du projet<ref name="Prefjan2014">{{Lien web |url=http://www.loiret.gouv.fr/Services-de-l-Etat/Prefecture-et-sous-prefectures/Salle-de-presse/Communiques-de-presse/Le-redecoupage-cantonal-dans-le-departement-du-Loiret/(language)/fre-FR |titre= Le redécoupage cantonal dans le département du Loiret |auteur= |date =21 janvier 2014 |site =le site de la Préfecture de ragion Centre |consulté le= 5 mars 2014}}.</ref> :  
+* Égalité de représentation : avant la réforme, l’écart entre le canton le moins peuplé et le canton le plus peuplé est de 5,3. Le projet réduit cet écart maximal à 1,5.
+* Parité : Le nouveau mode de scrutin choisi par le Législateur prévoit l’élection, dans chaque canton, d’un binôme solidaire mixte. Dès 2015, la part des femmes élues dans les conseils départementaux sera de 50 %, contre une moyenne nationale de 13,8 % à ce jour (17,1 % dans le Loiret).
+
+L'assemblée départementale réunie en session extraordinaire au [[château de Chamerolles]] ([[Chilleurs-aux-Bois]]) ce même jour émet un avis défavorable. Les élus de la majorité départementale de droite ont été rejoints par les trois élus [[Parti communiste français|communistes]] qui jugent que le découpage cantonal leur est défavorable<ref name="Magjan2014">{{Lien web |url=http://www.magcentre.fr/loiret-le-conseil-general-repousse-le-decoupage-propose-par-manuel-valls/ |titre= Loiret: le conseil général rejette le redécoupage des cantons proposé par Manuel Valls |auteur= |date =23 janvier 2014 |site =magcentre.fr |consulté le= 28 février 2014}}.</ref>. Le département du Loiret rejoint ainsi l'ensemble des départements de droite déjà engagés dans une fronde contre la réforme. Le thème de la sous-représentation des territoires ruraux est mis en avant. [[Éric Doligé]] ([[Union pour un mouvement populaire|UMP]]), [[Liste des sénateurs du Loiret|sénateur]], conseiller général du [[canton de Meung-sur-Loire]] et [[Liste des présidents du conseil général du Loiret|président du conseil général]] affirme dans un communiqué : {{Citation|la nouvelle carte vise à faire éclater l’agglomération d’Orléans et à briser les intercommunalités riveraines, avec pour conséquence de faire que le canton le plus peuplé sera rural et que les cantons très urbains seront les moins peuplés}}. Il ajoute : {{citation|Ce redécoupage favorise l’urbain et s’attaque ouvertement à la ruralité qui fait pourtant la force et l’équilibre de notre territoire. […] Les cantons urbains auront une surface très réduite alors que les cantons ruraux seront, eux, très étendus}}<ref name="CourrierMairesjan2014">{{Lien web |url=http://www.courrierdesmaires.fr/28929/un-a-un-les-departements-de-droite-sopposent-au-redecoupage-cantonal-de-leur-territoire/ |titre= Un à un, les départements de droite s’opposent au redécoupage cantonal de leur territoire |auteur= |date =8 janvier 2014 |site =courrierdesmaires.fr |consulté le= 28 février 2014}}.</ref>.
+
+Le décret définissant le nouveau découpage cantonal est signé par le Premier Ministre le {{date France|25|février|2014}}<ref name="Décret2014">{{Lien web |url=http://www.legifrance.gouv.fr/jopdf/common/jo_pdf.jsp?numJO=0&dateJO=20140228&numTexte=21&pageDebut=03919&pageFin=03921 |titre= Décret no 2014-244 du 25 février 2014 portant délimitation des cantons dans le département du Loiret |auteur= |date = |site =legifrance.gouv.fr |consulté le= 28 février 2014}}.</ref>. Le découpage est quasiment identique au projet de {{date|décembre 2013}}, à l'exception de deux modifications. La première concerne le Nord d'Orléans où un bout (délimité par les rues Lahire, Caban, Pasteur, de la Gare et avenue de Paris) du futur Orléans-3 passe dans Orléans-1. La deuxième concerne la commune de [[Baccon]] qui est transférée du canton de Meung-sur-Loire vers le [[canton de Beaugency]]. Le nouveau découpage prend ainsi en compte une des observations formulées par l'assemblée départementale au sujet des limites territoriales du canton de Beaugency. En effet, celui-ci avait été jugé en inadéquation avec les critères posés par le [[Conseil d'État (France)|Conseil d'État]] dans la mesure où la population de ce canton était inférieure de plus de 20 % à la population moyenne départementale<ref name="Rep1mars2014">{{Article |langue=fr |auteur1= Anne-Marie Coursimault |titre= Les vingt et un cantons du Loiret avalisés. |sous-titre= |périodique= La République du Centre|lieu= Orléans |numéro= 21139|titre numéro= |jour=1er |mois=mars |année=2014 |pages= 5|issn= |isbn= |consulté le=7 mars 2014 |id= |libellé= }}</ref>.
+
+== Chronologie ==
+{| class="wikitable "  
+|-----
+!1801||1806-1973||1973-1982||colspan="3"|1982-2015||colspan="3"|2015-
+|-
+!rowspan="2"|31 cantons||rowspan="2"|31 cantons||rowspan="2"|37 cantons||colspan="3"|41 cantons||colspan="3"|21 cantons
+|-
+!Arrond.||Code||Nom||Arrond.||Code||Nom
+|-
+|[[Canton de Gien|Gien]]||[[Canton de Gien|Gien]]||[[Canton de Gien|Gien]]||1||14||[[Canton de Gien|Gien]]||rowspan="2"|1||rowspan="2"|07||rowspan="2"|[[Canton de Gien|Gien]]
+|-
+|[[Canton de Briare|Briarre]]||[[Canton de Briare|Briarre]]||[[Canton de Briare|Briare]]||1||05||[[Canton de Briare|Briare]]
+|-
+|[[Canton de Lorris|Lorris]]||[[Canton de Lorris|Lorris]]||[[Canton de Lorris|Lorris]]||1||16||[[Canton de Lorris|Lorris]]||rowspan="3"|1||rowspan="3"|08||rowspan="3"|[[Canton de Lorris|Lorris]]
+|- 
+|[[Canton de Bellegarde|Bellegarde]]||[[Canton de Bellegarde|Bellegarde]]||[[Canton de Bellegarde|Bellegarde]]||1||04||[[Canton de Bellegarde|Bellegarde]]
+|-
+|[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]||[[Canton de Châtillon-Coligny|Châtillon-sur-Loing]]||[[Canton de Châtillon-Coligny|Châtillon-Coligny]]||1||08||[[Canton de Châtillon-Coligny|Châtillon-Coligny]]
+|-
+|[[Canton de Courtenay|Courtenay]]||[[Canton de Courtenay|Courtenay]]||[[Canton de Courtenay|Courtenay]]||1||11||[[Canton de Courtenay|Courtenay]]||rowspan="3"|1||rowspan="3"|04||rowspan="3"|[[Canton de Courtenay|Courtenay]]
+|-
+|[[Canton de Château-Renard|Châteaurenard]]||[[Canton de Château-Renard|Châteaurenard]]||[[Canton de Château-Renard|Châteaurenard]]||1||07||[[Canton de Château-Renard|Château-Renard]]
+|-
+|[[Canton de Ferrières-en-Gâtinais|Ferrières]]||[[Canton de Ferrières-en-Gâtinais|Ferrières]]||[[Canton de Ferrières-en-Gâtinais|Ferrières]]||1||12||[[Canton de Ferrières-en-Gâtinais|Ferrières-en-Gâtinais]]
+|-
+|rowspan="3"|[[Canton de Montargis|Montargis]]||rowspan="3"|[[Canton de Montargis|Montargis]]||[[Canton de Montargis|Montargis]]||1||19||[[Canton de Montargis|Montargis]]||rowspan="2"|1||rowspan="2"|11||rowspan="2"|[[Canton de Montargis|Montargis]]
+|-
+|[[Canton d'Amilly|Amilly]] ||1||32||[[Canton d'Amilly|Amilly]]
+|-
+|[[Canton de Châlette-sur-Loing|Châlette-sur-Loing]]||1||33||[[Canton de Châlette-sur-Loing|Châlette-sur-Loing]]||rowspan="2"|1||rowspan="2"|02||rowspan="2"|[[Canton de Châlette-sur-Loing|Châlette-sur-Loing]]
+|-
+|[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]||[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]||[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]||1||09||[[Canton de Châtillon-sur-Loire|Châtillon-sur-Loire]]
+|-
+|[[Canton de Beaugency|Beaugency]]||[[Canton de Beaugency|Beaugency]]||[[Canton de Beaugency|Beaugency]]||2||02||[[Canton de Beaugency|Beaugency]]||rowspan="2"|2||rowspan="2"|01||rowspan="2"|[[Canton de Beaugency|Beaugency]]
+|-
+|[[Canton de Cléry-Saint-André|Notre-Dame-de-Cléry]]||[[Canton de Cléry-Saint-André|Notre-Dame-de-Cléry]]||[[Canton de Cléry-Saint-André|Cléry-Saint-André]]||2||10||[[Canton de Cléry-Saint-André|Cléry-Saint-André]]
+|-
+|[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]||[[Canton de Châteauneuf-sur-Loire|Châteauneuf]]||[[Canton de Châteauneuf-sur-Loire|Châteauneuf-sur-Loire]]||2||06||[[Canton de Châteauneuf-sur-Loire|Châteauneuf-sur-Loire]]||rowspan="2"|2||rowspan="2"|03||rowspan="2"|[[Canton de Châteauneuf-sur-Loire|Châteauneuf-sur-Loire]]
+|-
+||[[Canton de Jargeau|Jargeau]]||[[Canton de Jargeau|Jargeau]]||[[Canton de Jargeau|Jargeau]]||2||15||[[Canton de Jargeau|Jargeau]]
+|-
+|rowspan="2"|[[Canton de Meung-sur-Loire|Méun]]||[[Canton de Meung-sur-Loire|Méun]]||[[Canton de Meung-sur-Loire|Meung-sur-Loire]]||2||18||[[Canton de Meung-sur-Loire|Meung-sur-Loire]]||rowspan="3"|2||rowspan="3"|10||rowspan="3"|[[Canton de Meung-sur-Loire|Meung-sur-Loire]]
+|-
+|[[Canton d'Artenay|Artenay]]||[[Canton d'Artenay|Artenay]]||2||01||[[Canton d'Artenay|Artenay]]
+|-
+|[[Canton de Patay|Patay]]||[[Canton de Patay|Patay]]||[[Canton de Patay|Patay]]||2||28||[[Canton de Patay|Patay]]
+|-
+|rowspan="12"|Orléans-1<br/>Orléans-2<br/>Orléans-3<br/>[[Canton d'Olivet|Olivet]]<br/>[[Canton de Chécy|Chécy]]||rowspan="13"|[[Canton d'Orléans-Ouest|Orléans-Ouest]]<br/>[[Canton d'Orléans-Nord-Ouest|Orléans-Nord-Ouest]]<br/>[[Canton d'Orléans-Nord-Est|Orléans-Nord-Est]]<br/>[[Canton d'Orléans-Sud|Orléans-Sud]]<br/>[[Canton d'Orléans-Est|Orléans-Est]]||rowspan="6"|Orléans-1<br/>Orléans-2<br/>Orléans-3<br/>Orléans-4<br/>Orléans-5||2||23||[[Canton d'Orléans-Bannier|Orléans-Bannier]]||rowspan="2"|2||rowspan="2"|13||rowspan="2"| [[canton d'Orléans-1|Orleans-1]]
+|-
+|2||24||[[Canton d'Orléans-Saint-Marc-Argonne|Orléans-Saint-Marc-Argonne]]
+|-
+|2||21||[[Canton d'Orléans-Bourgogne|Orléans-Bourgogne]]||rowspan="2"|2||rowspan="2"|14||rowspan="2"|[[canton d'Orléans-2|Orleans-2]]
+|-
+|2||25||[[Canton d'Orléans-Saint-Marceau|Orléans-Saint-Marceau]]
+|-
+|2||22||[[Canton d'Orléans-Carmes|Orléans-Carmes]]||2||15||[[canton d'Orléans-3|Orléans-3]]
+|-
+|2||41||[[Canton d'Orléans-La Source|Orléans-La Source]]||2||16||[[canton d'Orléans-4|Orléans-4]]
+|-
+|[[Canton de Fleury-les-Aubrais|Fleury-les-Aubrais]]||2||34||[[Canton de Fleury-les-Aubrais|Fleury-les-Aubrais]]||2||06||[[Canton de Fleury-les-Aubrais|Fleury-les-Aubrais]]
+|-
+|rowspan="2"|[[Canton d'Olivet|Olivet]] ||2||35||[[Canton d'Olivet|Olivet]]||2||12||[[Canton d'Olivet|Olivet]]
+|-
+|2||40||[[Canton de Saint-Jean-le-Blanc|Saint-Jean-le-Blanc]]||2||20||[[Canton de Saint-Jean-le-Blanc|Saint-Jean-le-Blanc]]
+|-
+|[[Canton de Saint-Jean-de-la-Ruelle|Saint-Jean-de-la-Ruelle]]||2||36||[[Canton de Saint-Jean-de-la-Ruelle|Saint-Jean-de-la-Ruelle]]||rowspan="2"|2||rowspan="2"|19||rowspan="2"|[[Canton de Saint-Jean-de-la-Ruelle|Saint-Jean-de-la-Ruelle]]
+|-
+|[[Canton de Chécy|Chécy]]||2||38||[[Canton de Chécy|Chécy]]
+|-
+|[[Canton de Saint-Jean-de-Braye|Saint-Jean-de-Braye]]||2||37||[[Canton de Saint-Jean-de-Braye|Saint-Jean-de-Braye]]||rowspan="2"|2||rowspan="2"|18||rowspan="2"|[[Canton de Saint-Jean-de-Braye|Saint-Jean-de-Braye]]
+|-
+|[[Canton d'Ingré|Ingré]]||[[Canton d'Ingré|Ingré]]||2||39||[[Canton d'Ingré|Ingré]]
+|-
+|[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]||[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]||[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]||2||13||[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]||2||05 ||[[Canton de La Ferté-Saint-Aubin|La Ferté-Saint-Aubin]]
+|-
+|[[Canton de Sully-sur-Loire|Sully]]||[[Canton de Sully-sur-Loire|Sully]]||[[Canton de Sully-sur-Loire|Sully-sur-Loire]]||2||21||[[Canton de Sully-sur-Loire|Sully-sur-Loire]]||rowspan="2"|2||rowspan="2"|21||rowspan="2"|[[Canton de Sully-sur-Loire|Sully-sur-Loire]]
+|-
+|[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]||[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]||[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]||2||27||[[Canton d'Ouzouer-sur-Loire|Ouzouer-sur-Loire]]
+|-
+|[[Canton de Neuville-aux-Bois|Neuville]]||[[Canton de Neuville-aux-Bois|Neuville]]||[[Canton de Neuville-aux-Bois|Neuville-aux-Bois]]||2||20||[[Canton de Neuville-aux-Bois|Neuville-aux-Bois]]||rowspan="3"|3||rowspan="3"|17||rowspan="3"|[[Canton de Pithiviers|Pithiviers]]
+|-
+|[[Canton de Pithiviers|Pithiviers]]||[[Canton de Pithiviers|Pithiviers]]||[[Canton de Pithiviers|Pithiviers]]||3||29||[[Canton de Pithiviers|Pithiviers]]
+|-
+|[[Canton de Bazoches-les-Gallerandes|Bazoches-les-Gallerandes]]||[[Canton d'Outarville|Outarville]]||[[Canton d'Outarville|Outarville]]||3||26||[[Canton d'Outarville|Outarville]]
+|-
+|[[Canton de Malesherbes|Malesherbes]]||[[Canton de Malesherbes|Malesherbes]]||[[Canton de Malesherbes|Malesherbes]]||3||17||[[Canton de Malesherbes|Malesherbes]]||rowspan="3"|3||rowspan="3"|09||rowspan="3"|[[Canton de Malesherbes|Malesherbes]]
+|-
+|[[Canton de Puiseaux|Puiseaux]]||[[Canton de Puiseaux|Puiseaux]]||[[Canton de Puiseaux|Puiseaux]]||3||30||[[Canton de Puiseaux|Puiseaux]]
+|-
+|[[Canton de Beaune-la-Rolande|Beaune]]||[[Canton de Beaune-la-Rolande|Beaune]]||[[Canton de Beaune-la-Rolande|Beaune-la-Rolande]]||3||03||[[Canton de Beaune-la-Rolande|Beaune-la-Rolande]]
+|}
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Histoire du Loiret]]
+* [[Redécoupage cantonal de 2014 en France]]
+* [[Administration territoriale de la France]]
+
+=== Bibliographie ===
+
+* {{Ouvrage |prénom1=Louis Marie |nom1=Prudhomme |titre=Dictionnaire géographique et méthodique de la République française en 120 départements, volume 1 |lieu=Paris |éditeur=Louis Marie Prudhomme |année=1798 |pages totales=673 |lire en ligne=https://books.google.fr/books?pg=PA162-IA4&lpg=PA162-IA4&dq=D%C3%A9partement+du+loiret+fut+divis%C3%A9+en+7+districts&sig=-YnUS0xCyyfylXWCs4f50j0pFCI&ei=Dtf8Us2nFMrH0QWQmIGoCQ&id=5F0OAAAAQAAJ&hl=fr&ots=RD9_YYhLOZ&output=text}}.
+
+* {{Ouvrage |langue=fr |prénom1=Jean-Louis |nom1=Masson |titre=Provinces, départements, régions : l'organisation administrative de la France |lieu=Paris |éditeur=Fernand Lanore |année=1984 |pages totales=703 |isbn=2-85157-003-X |lire en ligne=https://books.google.fr/books?id=pbspjvZst5UC&pg=PA395&dq=D%C3%A9cret-Loi+10+septembre+1926}}.
+
+{{Palette|Histoire du Loiret|Cantons du Loiret|Anciens cantons du Loiret}}
+{{Portail|histoire|Loiret|droit français|politique française}}
+
+{{DEFAULTSORT:Histoire du decoupage cantonal cantonal du Loiret}}
+[[Catégorie:Histoire du Loiret]]
+[[Catégorie:Circonscription électorale en France]]
+[[Catégorie:Canton dans le Loiret]]

@@ -1,0 +1,291 @@
+[[Fichier:59-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département du Nord, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''département du Nord''' compte 41 cantons depuis le [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]] (79 cantons auparavant).
+
+== Histoire ==
+[[Fichier:Anciens cantons du Nord.png|vignette|Carte des cantons du Nord avant 2015]]
+
+=== Découpage cantonal de 1801 à 2014 ===
+*1801<ref>Arrêté du 15 Vendémiaire an X (7 octobre 1801) ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f89 p. 69]</ref> : découpage d'origine
+*? Rectification du découpage d'origine: Le [[canton d'Armentières]] est transféré de l'[[arrondissement d'Hazebrouck]] à l'[[arrondissement de Lille]].
+*1818<ref>Ordonnance du 8 juillet 1818, ''Bulletin des lois'' 1818 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k65397829/f80.item p. 32]</ref> : Le chef-lieu du canton de Templeuve est tranféré à [[canton de Cysoing|Cysoing]].
+*1867<ref>Loi du 24 juillet 1867, ''Bulletin des lois'', 1867 (2e semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k486159t/f94 p. 73]. La limite infracommunale entre les deux cantons à travers Roubaix est seulement définie par référence à un plan annexé non publié au Bulletin.</ref> : Le canton de Roubaix est scindé en deux nouveaux cantons [[canton de Roubaix-Est|Roubaix-Est]] (incluant [[Wattrelos]]) et [[canton de Roubaix-Ouest|Roubaix-Ouest]] (incluant [[Croix (Nord)|Croix]] et [[Wasquehal]]) 
+*1875<ref>Loi du 3 février 1875, ''Bulletin des lois'', 1875 (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k210067b/f59 p. 37]. La nouvelle limite infracommunale est seulement définie par référence à un plan annexé non publié au Bulletin.</ref> : La limite infracommunale des deux cantons de Dunkerque est modifiée: une partie du [[canton de Dunkerque-Est]] est transférée au [[canton de Dunkerque-Ouest]].
+*1886<ref>Loi du 29 décembre 1886, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=30%2F12%2F1886+%3E+30%2F12%2F1886 ''JORF'', 30 décembre 1886], p. 6037</ref> : Création du [[canton de Denain]], détaché du [[canton de Bouchain]].
+*1889<ref>Loi du 5 juin 1889, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=07%2F06%2F1889+%3E+07%2F06%2F1889 ''JORF'', 7 juin 1889], p. 2617</ref> : Lille passe de cinq à huit cantons : 
+**Les cantons de [[canton de Lille-Ouest|Lille-Ouest]] et de [[canton de Lille-Sud-Est|Lille-Sud-Est]] restent inchangés;
+**Le canton de Lille-Centre est renommé [[canton de Lille-Nord|Lille-Nord]];
+**Création des cantons de [[canton de Lille-Sud|Lille-Sud]] et de [[canton de Lille-Centre|Lille-Centre]], détachés du [[canton de Lille-Sud-Ouest]];
+**Création du [[canton de Lille-Est]], détaché du [[canton de Lille-Nord-Est]]<ref>{{Lien web |titre=Plan contemporain des cantons et des circonscriptions législatives de Lille en |url=http://gallica.bnf.fr/ark:/12148/btv1b8444247h |site=[[Gallica]] |date=1893 |consulté le=7 septembre 2026}}.</ref>.
+*1892<ref>Loi du 20 juillet 1892, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=21%2F07%2F1892+%3E+21%2F07%2F1892 ''JORF'', 21 juillet 1892], p. 3813</ref> : Création du [[canton de Roubaix-Nord]], détaché des cantons de [[canton de Roubaix-Est|Roubaix-Est]] et [[canton de Roubaix-Ouest|-Ouest]] (La commune de [[Wattrelos]] est partagée entre les cantons de Roubaix-Est et de Roubaix-Nord)
+*1895<ref>Loi du 20 juillet 1895, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=21%2F07%2F1895+%3E+21%2F07%2F1895 ''JORF'', 21 juillet 1895], p. 4141</ref> : Création du [[canton de Tourcoing-Nord-Est]], détaché du canton de [[canton de Tourcoing-Nord|Tourcoing-Nord]]
+*1910<ref>Loi du 7 juillet 1910, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=08%2F07%2F1910+%3E+08%2F07%2F1910 ''JORF'', 8 juillet 1910], p. 5870</ref> : Le [[canton de Maubeuge]] est scindé en deux nouveaux cantons [[canton de Maubeuge-Nord|Maubeuge-Nord]] et [[canton de Maubeuge-Sud|-Sud]].
+*1922<ref>Loi du 27 décembre 1922, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=29%2F12%2F1922+%3E+29%2F12%2F1922 ''JORF'', 29 décembre 1922], p. 12.419</ref> : Modification des limites infracommunales entre les trois cantons de Douai à travers la ville de Douai.
+*1946<ref>Décret du 3 mai 1946, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=04%2F05%2F1946+%3E+04%2F05%2F1946 ''JORF'', 4 mai 1946], p. 3763</ref> : La commune de [[Rainsars]] est transférée du [[canton de Trélon]] au [[canton d'Avesnes-sur-Helpe-Sud]] (La commune de [[Sains-du-Nord]] n’est plus une [[Enclave et exclave|exclave]] du canton d'Avesnes-sur-Helpe-Sud. La commune de [[Liessies]] demeure une exclave du [[canton de Solre-le-Château]], séparé par la commune de [[Felleries]], [[canton d'Avesnes-sur-Helpe-Nord]])
+*1958<ref>Décret du 26 mars 1958, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=27%2F03%2F1958+%3E+27%2F03%2F1958 ''JORF'', 27 mars 1958], p. 3009</ref>: Création du [[canton d'Hautmont]], détaché du [[canton de Maubeuge-Nord]]. En outre, [[Neuf-Mesnil]] est transférée du [[canton de Bavay]] au canton d'Hautmont et les communes de [[Jeumont]] et [[Marpent]] sont transférées du [[canton de Maubeuge-Sud]] au canton de Maubeuge-Nord.
+*1964<ref>Décret du 28 janiver 1964, [https://www.legifrance.gouv.fr/jorf/jo/period/?datePubli=30%2F01%2F1964+%3E+30%2F01%2F1964 ''JORF'', 30 janvier 1964], p. 1093</ref>: Création du [[canton de Marcq-en-Barœul]], détaché du [[canton de Tourcoing-Sud]].
+*1982<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516328 Décret n° 82-128 du 4 février 1982]</ref> :
+**Création du [[canton de Lomme]], détaché du [[canton d'Haubourdin]];
+**Création du [[canton de Villeneuve-d'Ascq]], détaché du [[canton de Lannoy]];
+**Création du [[canton de Roubaix-Centre]], détaché du [[Canton de Roubaix-Est|canton de Roubaix–Est]];
+**Création du [[canton d'Anzin]], détaché du [[canton de Valenciennes-Nord]];
+**Création des cantons de [[canton de Coudekerque-Branche|Coudekerque-Branche]] et de [[canton de Grande-Synthe|Grande-Synthe]], détachés des cantons de [[canton de Dunkerque-Est|Dunkerque-Est]] et [[canton de Dunkerque-Ouest|-Ouest]].
+*1991<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172020 Décret n° 91-216 du 27 février 1991]</ref> :
+**Le canton de Villeneuve-d'Ascq est scindé en deux nouveaux cantons [[canton de Villeneuve-d'Ascq-Nord|Villeneuve-d'Ascq-Nord]] et [[canton de Villeneuve-d'Ascq-Sud|-Sud]];
+**Le canton de Seclin est scindé en deux nouveaux cantons [[canton de Seclin-Nord|Seclin-Nord]] et [[canton de Seclin-Sud|-Sud]];
+**Le [[canton de Douai-Ouest]] est scindé en deux nouveaux cantons [[canton de Douai-Sud-Ouest|Douai-Sud-Ouest]] et [[canton de Douai-Nord-Est|Douai-Nord-Est]] (sic, mieux : « -N.O. »).
+
+
+
+Liste des 79 '''[[cantons français|cantons]]''' du [[départements français|département]] '''du [[Nord (département français)|Nord]]''', par arrondissement :
+
+* [[Arrondissement d'Avesnes-sur-Helpe]] (12 cantons - sous-préfecture : [[Avesnes-sur-Helpe]]) :<br />[[Canton d'Avesnes-sur-Helpe-Nord|Avesnes-sur-Helpe-Nord]] - [[Canton d'Avesnes-sur-Helpe-Sud|Avesnes-sur-Helpe-Sud]] - [[Canton de Bavay|Bavay]] - [[Canton de Berlaimont|Berlaimont]] - [[Canton d'Hautmont|Hautmont]] - [[Canton de Landrecies|Landrecies]] - [[Canton de Maubeuge-Nord|Maubeuge-Nord]] - [[Canton de Maubeuge-Sud|Maubeuge-Sud]] - [[Canton du Quesnoy-Est|Le Quesnoy-Est]] - [[Canton du Quesnoy-Ouest|Le Quesnoy-Ouest]] - [[Canton de Solre-le-Château|Solre-le-Château]] - [[Canton de Trélon|Trélon]]
+
+* [[Arrondissement de Cambrai]] (7 cantons - sous-préfecture : [[Cambrai]]) :<br />[[Canton de Cambrai-Est|Cambrai-Est]] - [[Canton de Cambrai-Ouest|Cambrai-Ouest]] - [[Canton de Carnières|Carnières]] - [[Canton du Cateau-Cambrésis|Le Cateau-Cambrésis]] - [[Canton de Clary|Clary]] - [[Canton de Marcoing|Marcoing]] - [[Canton de Solesmes|Solesmes]]
+
+* [[Arrondissement de Douai]] (7 cantons - sous-préfecture : [[Douai]]) :<br />[[Canton d'Arleux|Arleux]] - [[Canton de Douai-Nord|Douai-Nord]] - [[Canton de Douai-Nord-Est|Douai-Nord-Est]] - [[Canton de Douai-Sud|Douai-Sud]] - [[Canton de Douai-Sud-Ouest|Douai-Sud-Ouest]] - [[Canton de Marchiennes|Marchiennes]] - [[Canton d'Orchies|Orchies]]
+
+* [[Arrondissement de Dunkerque]] (16 cantons - sous-préfecture : [[Dunkerque]]) :<br />[[Canton de Bailleul-Nord-Est|Bailleul-Nord-Est]] - [[Canton de Bailleul-Sud-Ouest|Bailleul-Sud-Ouest]] - [[Canton de Bergues|Bergues]] - [[Canton de Bourbourg|Bourbourg]] - [[Canton de Cassel|Cassel]] - [[Canton de Coudekerque-Branche|Coudekerque-Branche]] - [[Canton de Dunkerque-Est|Dunkerque-Est]] - [[Canton de Dunkerque-Ouest|Dunkerque-Ouest]] - [[Canton de Grande-Synthe|Grande-Synthe]] - [[Canton de Gravelines|Gravelines]] - [[Canton d'Hazebrouck-Nord|Hazebrouck-Nord]] - [[Canton d'Hazebrouck-Sud|Hazebrouck-Sud]] - [[Canton d'Hondschoote|Hondschoote]] - [[Canton de Merville|Merville]] - [[Canton de Steenvoorde|Steenvoorde]] - [[Canton de Wormhout|Wormhout]]
+
+* [[Arrondissement de Lille]] (28 cantons - préfecture : [[Lille]]) :<br />[[Canton d'Armentières|Armentières]] - [[Canton de La Bassée|La Bassée]] - [[Canton de Cysoing|Cysoing]] - [[Canton d'Haubourdin|Haubourdin]] - [[Canton de Lannoy|Lannoy]] - [[Canton de Lille-Centre|Lille-Centre]] - [[Canton de Lille-Est|Lille-Est]] - [[Canton de Lille-Nord|Lille-Nord]] - [[Canton de Lille-Nord-Est|Lille-Nord-Est]] - [[Canton de Lille-Ouest|Lille-Ouest]] - [[Canton de Lille-Sud|Lille-Sud]] - [[Canton de Lille-Sud-Est|Lille-Sud-Est]] - [[Canton de Lille-Sud-Ouest|Lille-Sud-Ouest]] - [[Canton de Lomme|Lomme]] - [[Canton de Marcq-en-Barœul|Marcq-en-Barœul]] - [[Canton de Pont-à-Marcq|Pont-à-Marcq]] - [[Canton de Quesnoy-sur-Deûle|Quesnoy-sur-Deûle]] - [[Canton de Roubaix-Centre|Roubaix-Centre]] - [[Canton de Roubaix-Est|Roubaix-Est]] - [[Canton de Roubaix-Nord|Roubaix-Nord]] - [[Canton de Roubaix-Ouest|Roubaix-Ouest]] - [[Canton de Seclin-Nord|Seclin-Nord]] - [[Canton de Seclin-Sud|Seclin-Sud]] - [[Canton de Tourcoing-Nord|Tourcoing-Nord]] - [[Canton de Tourcoing-Nord-Est|Tourcoing-Nord-Est]] - [[Canton de Tourcoing-Sud|Tourcoing-Sud]] - [[Canton de Villeneuve-d'Ascq-Nord|Villeneuve-d'Ascq-Nord]] - [[Canton de Villeneuve-d'Ascq-Sud|Villeneuve-d'Ascq-Sud]]
+
+* [[Arrondissement de Valenciennes]] (9 cantons - sous-préfecture : [[Valenciennes]]) :<br />[[Canton d'Anzin|Anzin]] - [[Canton de Bouchain|Bouchain]] - [[Canton de Condé-sur-l'Escaut|Condé-sur-l'Escaut]] - [[Canton de Denain|Denain]] - [[Canton de Saint-Amand-les-Eaux-Rive droite|Saint-Amand-les-Eaux-Rive&nbsp;droite]] - [[Canton de Saint-Amand-les-Eaux-Rive gauche|Saint-Amand-les-Eaux-Rive&nbsp;gauche]] - [[Canton de Valenciennes-Est|Valenciennes-Est]] - [[Canton de Valenciennes-Nord|Valenciennes-Nord]] - [[Canton de Valenciennes-Sud|Valenciennes-Sud]]
+
+==== Homonymies ====
+Il n'y a pas d'homonymies pour les cantons de [[Canton de Bailleul-Nord-Est|Bailleul-Nord-Est]], [[Canton de Bailleul-Sud-Ouest|Bailleul-Sud-Ouest]], [[Canton de Merville|Merville]] et [[Canton de Solesmes|Solesmes]], mais chacune des communes [[Chef-lieu|chefs-lieux]] a un ou plusieurs homonymes exacts ou partiels.
+
+=== Redécoupage cantonal de 2014 ===
+[[Fichier:Carte des nouveaux cantons du Nord.svg|thumb|upright=1.2|Carte des nouveaux cantons du Nord.]]
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi française du 6 juin 2000 sur l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|17 février 2014}} pour le département du [[Nord (département français)|Nord]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, prévu en {{date-|mars 2015}}<ref>En application des articles 47 et 51 de la loi n° 2013-403 du 17 mai 2013 ''relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral''</ref>, remplaçant les [[Élection cantonale française|élections cantonales]] de 2014 et 2017. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans le [[Nord (département français)|Nord]] le nombre de cantons passe ainsi de 79 à 41<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028626173 |texte=Décret {{n°|2014}}-167 du 17 février 2014}} portant délimitation des cantons dans le département du Nord.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 30 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département du Nord, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|2576770|habitants}}<ref name="PopDep-2010">{{Lien web |titre=Chiffres clés Évolution et structure de la population - Département du Nord (59) |url=https://web.archive.org/web/20150925112616/http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=59 |site=[[Institut national de la statistique et des études économiques|Insee]] via [[Internet Archive]] |consulté le=7 septembre 2026}}.</ref>. Avec 41 cantons la population moyenne par conseiller départemental est de {{unité|62848|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|50278|habitants}} et {{unité|75418|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable sortable alternance"
+|-----
+!scope=col|N°<ref>N° = numéro d'ordre dans le décret</ref>
+!scope=col|Nom du Canton
+!scope=col|[[Bureau centralisateur]]
+!scope=col|Population 2012<ref>http://www.insee.fr/fr/ppp/bases-de-donnees/donnees-detaillees/cantons-2015/pop-legales-2012-cantons-2015v3.pdf</ref>
+!scope=col|Écart /moyenne
+!scope=col|Nombre de communes entières
+!scope=col|Communes composant le canton
+|- 
+|1||[[Canton d'Aniche|Aniche]]||[[Aniche]]||{{formatnum:59996}}||0,95||26||[[Aniche]], [[Arleux]], [[Auberchicourt]], [[Aubigny-au-Bac]], [[Brunémont]], [[Bugnicourt]], [[Cantin]], [[Dechy]], [[Écaillon (Nord)|Écaillon]], [[Erchin]], [[Estrées (Nord)|Estrées]], [[Féchain]], [[Férin]], [[Fressain]], [[Gœulzin]], [[Guesnain]], [[Hamel (Nord)|Hamel]], [[Lécluse]], [[Lewarde]], [[Loffre]], [[Marcq-en-Ostrevent]], [[Masny]], [[Monchecourt]], [[Montigny-en-Ostrevent]], [[Roucourt (Nord)|Roucourt]], [[Villers-au-Tertre]].
+|-
+|2||[[Canton d'Annœullin|Annœullin]]||[[Annœullin]]||{{formatnum:75757}}||1,18||24||[[Allennes-les-Marais]], [[Annœullin]], [[Aubers]], [[La Bassée]], [[Bauvin]], [[Camphin-en-Carembault]], [[Carnin]], [[Don (Nord)|Don]], [[Fournes-en-Weppes]], [[Fromelles]], [[Hantay]], [[Herlies]], [[Illies]], [[Le Maisnil]], [[Marquillies]], [[Ostricourt]], [[Phalempin]], [[Provin]], [[Radinghem-en-Weppes]], [[Sainghin-en-Weppes]], [[Salomé (Nord)|Salomé]], [[Wahagnies]], [[Wavrin]], [[Wicres]].
+|-
+|3||[[Canton d'Anzin|Anzin]]||[[Anzin]]||{{formatnum:52618}}||0,84||6||[[Anzin]], [[Beuvrages]], [[Bruay-sur-l'Escaut]], [[Escautpont]], [[Fresnes-sur-Escaut]], [[Onnaing]].
+|-
+|4||[[Canton d'Armentières|Armentières]]||[[Armentières]]||{{formatnum:64936}}||1,01||11||[[Armentières]], [[Bois-Grenier]], [[Capinghem]], [[La Chapelle-d'Armentières]], [[Deûlémont]], [[Erquinghem-Lys]], [[Frelinghien]], [[Houplines]], [[Pérenchies]], [[Prémesques]], [[Warneton (Nord)|Warneton]].
+|-
+|5||[[Canton d'Aulnoye-Aymeries|Aulnoye-Aymeries]]||[[Aulnoye-Aymeries]]||{{formatnum:51774}}||0,82||39||[[Amfroipret]], [[Audignies]], [[Aulnoye-Aymeries]], [[Bachant]], [[Bavay]], [[Bellignies]], [[Berlaimont]], [[Bermeries]], [[Bettrechies]], [[Boussières-sur-Sambre]], [[Bry (Nord)|Bry]], [[Écuélin]], [[Eth (Nord)|Eth]], [[Feignies]], [[La Flamengrie (Nord)|La Flamengrie]], [[Frasnoy]], [[Gommegnies]], [[Gussignies]], [[Hargnies (Nord)|Hargnies]], [[Hon-Hergies]], [[Houdain-lez-Bavay]], [[Jenlain]], [[Leval (Nord)|Leval]], [[La Longueville]], [[Mecquignies]], [[Monceau-Saint-Waast]], [[Neuf-Mesnil]], [[Noyelles-sur-Sambre]], [[Obies]], [[Pont-sur-Sambre]], [[Preux-au-Sart]], [[Saint-Remy-Chaussée]], [[Saint-Waast]], [[Sassegnies]], [[Taisnières-sur-Hon]], [[Vieux-Mesnil]], [[Taisnières-sur-Hon]], [[Vieux-Mesnil]], [[Villereau (Nord)|Villereau]], [[Wargnies-le-Grand]], [[Wargnies-le-Petit]].
+|-
+|6||[[Canton d'Aulnoy-lez-Valenciennes|Aulnoy-lez-Valenciennes]]||[[Aulnoy-lez-Valenciennes]]||{{formatnum:52883}}||0,84||20||[[Artres]], [[Aubry-du-Hainaut]], [[Aulnoy-lez-Valenciennes]], [[Bellaing]], [[Famars]], [[Haspres]], [[Haulchin (Nord)|Haulchin]], [[Haveluy]], [[Hérin]], [[Maing]], [[Monchaux-sur-Écaillon]], [[Oisy (Nord)|Oisy]], [[Petite-Forêt]], [[Prouvy]], [[Quérénaing]], [[Rouvignies]], [[La Sentinelle (Nord)|La Sentinelle]], [[Thiant]], [[Trith-Saint-Léger]], [[Verchain-Maugré]].
+|-
+|7||[[Canton d'Avesnes-sur-Helpe|Avesnes-sur-Helpe]]||[[Avesnes-sur-Helpe]]||{{formatnum:59323}}||0,95||52||[[Avesnes-sur-Helpe]], [[Beaudignies]], [[Beaufort (Nord)|Beaufort]], [[Beaurepaire-sur-Sambre]], [[Boulogne-sur-Helpe]], [[Bousies]], [[Cartignies]], [[Croix-Caluyau]], [[Dompierre-sur-Helpe]], [[Dourlers]], [[Éclaibes]], [[Englefontaine]], [[Étrœungt]], [[Le Favril (Nord)|Le Favril]], [[Floursies]], [[Floyon]], [[Fontaine-au-Bois]], [[Forest-en-Cambrésis]], [[Ghissignies]], [[Grand-Fayt]], [[Haut-Lieu]], [[Hautmont]], [[Hecq]], [[Jolimetz]], [[Landrecies]], [[Larouillies]], [[Limont-Fontaine]], [[Locquignol]], [[Louvignies-Quesnoy]], [[Marbaix]], [[Maresches]], [[Maroilles (Nord)|Maroilles]], [[Neuville-en-Avesnois]], [[Orsinval]], [[Petit-Fayt]], [[Poix-du-Nord]], [[Petit-Fayt]], [[Poix-du-Nord]], [[Potelle]], [[Preux-au-Bois]], [[Prisches]], [[Le Quesnoy]], [[Raucourt-au-Bois]], [[Robersart]], [[Ruesnes]], [[Saint-Aubin (Nord)|Saint-Aubin]], [[Saint-Hilaire-sur-Helpe]], [[Saint-Remy-du-Nord]], [[Salesches]], [[Semousies]], [[Sepmeries]], [[Taisnières-en-Thiérache]], [[Vendegies-au-Bois]], [[Villers-Pol]].
+|-
+|8||[[Canton de Bailleul|Bailleul]]||[[Bailleul (Nord)|Bailleul]]||{{formatnum:51288}}||0,8||23||[[Bailleul (Nord)|Bailleul]], [[Berthen]], [[Boeschepe]], [[Borre (France)|Borre]], [[Caëstre]], [[Cassel (Nord)|Cassel]], [[Le Doulieu]], [[Eecke]], [[Flêtre]], [[Godewaersvelde]], [[Hondeghem]], [[Merris]], [[Méteren]], [[Nieppe]], [[Oxelaëre]], [[Pradelles (Nord)|Pradelles]], [[Sainte-Marie-Cappel]], [[Saint-Jans-Cappel]], [[Saint-Sylvestre-Cappel]], [[Staple]], [[Steenwerck]], [[Strazeele]], [[Vieux-Berquin]].
+|-
+|9||[[Canton de Cambrai|Cambrai]]||[[Cambrai]]||{{formatnum:57396}}||0,9||27||[[Abancourt (Nord)|Abancourt]], [[Anneux]], [[Aubencheul-au-Bac]], [[Bantigny]], [[Blécourt (Nord)|Blécourt]], [[Boursies]], [[Cambrai]], [[Cuvillers]], [[Doignies]], [[Escaudœuvres]], [[Eswars]], [[Estrun]], [[Fontaine-Notre-Dame (Nord)|Fontaine-Notre-Dame]], [[Fressies]], [[Haynecourt]], [[Hem-Lenglet]], [[Mœuvres]], [[Neuville-Saint-Rémy]], [[Paillencourt]], [[Proville]], [[Raillencourt-Sainte-Olle]], [[Ramillies (Nord)|Ramillies]], [[Sailly-lez-Cambrai]], [[Sancourt (Nord)|Sancourt]], [[Thun-l'Évêque]], [[Thun-Saint-Martin]], [[Tilloy-lez-Cambrai]].
+|-
+|10||[[Canton du Cateau-Cambrésis|Le Cateau-Cambrésis]]||[[Le Cateau-Cambrésis]]||{{formatnum:52659}}||0,82||56||[[Awoingt]], [[Banteux]], [[Bantouzelle]], [[Bazuel]], [[Beaumont-en-Cambrésis]], [[Bertry]], [[Briastre]], [[Busigny]], [[Cantaing-sur-Escaut]], [[Le Cateau-Cambrésis]], [[Catillon-sur-Sambre]], [[Cattenières]], [[Caullery (Nord)|Caullery]], [[Clary]], [[Crèvecœur-sur-l'Escaut]], [[Dehéries]], [[Élincourt]], [[Esnes (Nord)|Esnes]], [[Flesquières]], [[Fontaine-au-Pire]], [[Gonnelieu]], [[Gouzeaucourt]], [[La Groise]], [[Haucourt-en-Cambrésis]], [[Honnechy]], [[Honnecourt-sur-Escaut]], [[Inchy]], [[Lesdain (Nord)|Lesdain]], [[Ligny-en-Cambrésis]], [[Malincourt]], [[Marcoing]], [[Maretz]], [[Masnières]], [[Maurois (Nord)|Maurois]], [[Mazinghien]], [[Montay]], [[Mazinghien]], [[Montay]], [[Montigny-en-Cambrésis]], [[Neuvilly]], [[Niergnies]], [[Noyelles-sur-Escaut]], [[Ors]], [[Pommereuil]], [[Rejet-de-Beaulieu]], [[Reumont]], [[Ribécourt-la-Tour]], [[Les Rues-des-Vignes]], [[Rumilly-en-Cambrésis]], [[Saint-Benin]], [[Saint-Souplet]], [[Séranvillers-Forenville]], [[Troisvilles]], [[Villers-Guislain]], [[Villers-Outréaux]], [[Villers-Plouich]], [[Walincourt-Selvigny]], [[Wambaix]].
+|-
+|11||[[Canton de Caudry|Caudry]]||[[Caudry]]||{{formatnum:52156}}||0,83||33||[[Avesnes-les-Aubert]], [[Beaurain]], [[Beauvois-en-Cambrésis]], [[Bermerain]], [[Béthencourt]], [[Bévillers]], [[Boussières-en-Cambrésis]], [[Cagnoncles]], [[Capelle (Nord)|Capelle]], [[Carnières (Nord)|Carnières]], [[Caudry]], [[Cauroir]], [[Escarmain]], [[Estourmel]], [[Haussy]], [[Iwuy]], [[Montrécourt]], [[Naves (Nord)|Naves]], [[Quiévy]], [[Rieux-en-Cambrésis]], [[Romeries]], [[Saint-Aubert (Nord)|Saint-Aubert]], [[Saint-Hilaire-lez-Cambrai]], [[Saint-Martin-sur-Écaillon]], [[Saint-Python]], [[Saint-Vaast-en-Cambrésis]], [[Saulzoir]], [[Solesmes (Nord)|Solesmes]], [[Sommaing]], [[Vendegies-sur-Écaillon]], [[Vertain]], [[Viesly]], [[Villers-en-Cauchies]].
+|-
+|12||[[Canton de Coudekerque-Branche|Coudekerque-Branche]]||[[Coudekerque-Branche]]||{{formatnum:50660}}||0,81||9||[[Armbouts-Cappel]], [[Bergues]], [[Bierne]], [[Cappelle-la-Grande]], [[Coudekerque-Branche]], [[Spycker]], [[Steene]], [[Téteghem-Coudekerque-Village]], [[Uxem]].
+|-
+|13||[[Canton de Croix|Croix]]||[[Croix (Nord)|Croix]]||{{formatnum:72759}}||1,16||5||[[Croix (Nord)|Croix]], [[Hem (Nord)|Hem]], [[Lannoy]], [[Lys-lez-Lannoy]], [[Wasquehal]].
+|-
+|14||[[Canton de Denain|Denain]]||[[Denain]]||{{formatnum:69660}}||1,1||18||[[Abscon]], [[Avesnes-le-Sec]], [[Bouchain (Nord)|Bouchain]], [[Denain]], [[Douchy-les-Mines]], [[Émerchicourt]], [[Escaudain]], [[Hordain]], [[Lieu-Saint-Amand]], [[Lourches]], [[Marquette-en-Ostrevant]], [[Mastaing]], [[Neuville-sur-Escaut]], [[Noyelles-sur-Selle]], [[Rœulx]], [[Wasnes-au-Bac]], [[Wavrechain-sous-Denain]], [[Wavrechain-sous-Faulx]].
+|-
+|15||[[Canton de Douai|Douai]]||[[Douai]]||{{formatnum:64511}}||1,03||7||[[Courchelettes]], [[Cuincy]], [[Douai]], [[Esquerchin]], [[Flers-en-Escrebieux]], [[Lambres-lez-Douai]], [[Lauwin-Planque]].
+|-
+|16||[[Canton de Dunkerque-1|Dunkerque-1]]||[[Dunkerque]]||{{formatnum:53372}}||||fraction Dunkerque||Partie de la commune de Dunkerque située à l'est de la limite territoriale de la commune de Grande-Synthe et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite dans la continuité de l'avenue de la Libération-Henry-Loorius, digue des Alliés, rue de la Plage, place Paul-Asseman, avenue de la Libération-Henry-Loorius, avenue des Bains, rue Godefroy-d'Estrades, pont Carnot, rue du 110e-Régiment-d'Infanterie, rue des Arbres, rue Jules-Hocquet, rue de l'Est, rue Benjamin-Morel, place Calonne, rue Lavoisier, rue du Sud, rue Thiers, avenue Guynemer, rue de l'Ecluse-de-Bergues, rue du Ponceau, rond-point de l'Arrière-Port, rue Belle-Vue, rue du Magasin-Général, route de l'Ile-Jeanty, quai de Mardyck, quai aux Bois, quai de la Concorde, rue du Pont-Royal, quai des Jardins, rue de la Cunette, boulevard Victor-Hugo, pont Gutenberg, jusqu'à la limite territoriale de la commune de Coudekerque-Branche.
+|-
+|17||[[Canton de Dunkerque-2|Dunkerque-2]]||[[Dunkerque]]||{{formatnum:52221}}||||4 + fraction Dunkerque||1° Les communes suivantes : [[Bray-Dunes]], [[Ghyvelde]], [[Leffrinckoucke]], [[Zuydcoote]].<br />2° La partie de la commune de Dunkerque située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis le littoral, ligne droite dans la continuité de l'avenue de la Libération-Henry-Loorius, digue des Alliés, rue de la Plage, place Paul-Asseman, avenue de la Libération-Henry-Loorius, avenue des Bains, rue Godefroy-d'Estrades, pont Carnot, rue du 110e-Régiment-d'Infanterie, rue des Arbres, rue Jules-Hocquet, rue de l'Est, rue Benjamin-Morel, place Calonne, rue Lavoisier, rue du Sud, rue Thiers, avenue Guynemer, rue de l'Ecluse-de-Bergues, rue du Ponceau, rond-point de l'Arrière-Port, rue Belle-Vue, rue du Magasin-Général, route de l'Ile-Jeanty, quai de Mardyck, quai aux Bois, quai de la Concorde, rue du Pont-Royal, quai des Jardins, rue de la Cunette, boulevard Victor-Hugo, pont Gutenberg, jusqu'à la limite territoriale de la commune de Coudekerque-Branche.
+|-
+|18||[[Canton de Faches-Thumesnil|Faches-Thumesnil]]||[[Faches-Thumesnil]]||{{formatnum:75237}}||1,19||12||[[Chemy]], [[Emmerin]], [[Faches-Thumesnil]], [[Gondecourt]], [[Haubourdin]], [[Herrin]], [[Houplin-Ancoisne]], [[Noyelles-lès-Seclin]], [[Seclin]], [[Templemars]], [[Vendeville]], [[Wattignies]].
+|-
+|19||[[Canton de Fourmies|Fourmies]]||[[Fourmies]]||{{formatnum:56093}}||0,89||46||[[Aibes]], [[Anor]], [[Avesnelles]], [[Baives]], [[Bas-Lieu]], [[Beaurieux (Nord)|Beaurieux]], [[Bérelles]], [[Beugnies]], [[Bousignies-sur-Roc]], [[Cerfontaine (Nord)|Cerfontaine]], [[Choisies]], [[Clairfayts]], [[Colleret]], [[Cousolre]], [[Damousies]], [[Dimechaux]], [[Dimont]], [[Eccles (Nord)|Eccles]], [[Eppe-Sauvage]], [[Felleries]], [[Féron]], [[Ferrière-la-Petite]], [[Flaumont-Waudrechies]], [[Fourmies]], [[Glageon]], [[Hestrud]], [[Lez-Fontaine]], [[Liessies]], [[Moustier-en-Fagne]], [[Obrechies]], [[Ohain (Nord)|Ohain]], [[Quiévelon]], [[Rainsars]], [[Ramousies]], [[Recquignies]], [[Rousies]], [[Sains-du-Nord]], [[Sars-Poteries]], [[Sémeries]], [[Solre-le-Château]], [[Solrinnes]], [[Trélon]], [[Wallers-en-Fagne]], [[Wattignies-la-Victoire]], [[Wignehies]], [[Willies]].
+|-
+|20||[[Canton de Grande-Synthe|Grande-Synthe]]||[[Grande-Synthe]]||{{formatnum:58437}} + fraction Dunkerque||||13 + fraction Dunkerque||1° Les communes suivantes : [[Bourbourg]], [[Brouckerque]], [[Cappelle-Brouck]], [[Craywick]], [[Drincham]], [[Grande-Synthe]], [[Grand-Fort-Philippe]], [[Gravelines]], [[Looberghe]], [[Loon-Plage]], [[Pitgam]], [[Saint-Georges-sur-l'Aa]], [[Saint-Pierre-Brouck]].<br />2° La partie de la commune de Dunkerque située entre les communes de Grande-Synthe, Spycker et Loon-Plage.
+|-
+|21||[[Canton d'Hazebrouck|Hazebrouck]]||[[Hazebrouck]]||{{formatnum:58624}}||0,92||16||[[Blaringhem]], [[Boëseghem]], [[Ebblinghem]], [[Estaires]], [[La Gorgue]], [[Haverskerque]], [[Hazebrouck]], [[Lynde]], [[Merville (Nord)|Merville]], [[Morbecque]], [[Neuf-Berquin]], [[Renescure]], [[Sercus]], [[Steenbecque]], [[Thiennes]], [[Wallon-Cappel]].
+|-
+|22||[[Canton de Lambersart|Lambersart]]||[[Lambersart]]||{{formatnum:70636}}||1,12||8||[[Bousbecque]], [[Comines (Nord)|Comines]], [[Lambersart]], [[Linselles]], [[Lompret (Nord)|Lompret]], [[Quesnoy-sur-Deûle]], [[Verlinghem]], [[Wervicq-Sud]].
+|-
+|23||[[Canton de Lille-1|Lille-1]]||[[Lille]]||{{formatnum:73143}}||||4 + fraction Lille||1° Les communes suivantes : [[La Madeleine (Nord)|La Madeleine]], [[Marquette-lez-Lille]], [[Saint-André-lez-Lille]], [[Wambrechies]].<br />2° La partie de la commune de Lille située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-André-lez-Lille, cours du canal de la Deûle, boulevard de la Liberté, square Daubenton, rue Macquart, square Dutilleul, rue de Tenremonde, place Maurice-Schumann, rue Thiers, rue Esquermoise, place du Général-de-Gaulle, rue des Sept-Agaches, place du Théâtre, boulevard Carnot, rue des Canonniers, rue des Urbanistes, jusqu'à la limite territoriale de la commune de La Madeleine.
+|-
+|24||[[Canton de Lille-2|Lille-2]]||[[Lille]]||{{formatnum:70237}}||||3 + fraction Lille||1° Les communes suivantes : [[Bondues]], [[Marcq-en-Barœul]], [[Mouvaux]].<br />2° La partie de la commune de Lille située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de La Madeleine, rue du Ballon, rue du Bois, rue Gassendi, rue Le Verrier, rue Saint-Luc, rue Jules-Vallès, pont Thiers, jusqu'à la limite territoriale de la commune de Mons-en-Barœul.
+|-
+|25||[[Canton de Lille-3|Lille-3]]||[[Lille]]||{{formatnum:70329}}||||1 + fraction Lille||1° La commune suivante : [[Mons-en-Barœul]].<br />2° La partie de la commune de Lille située au sud et à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Mons-en-Barœul, pont Thiers, rue Jules-Vallès, rue Saint-Luc, rue Le Verrier, rue Gassendi, rue du Bois, rue du Ballon, limite territoriale de la commune de La Madeleine, boulevard Louis-Pasteur, pont de Flandres, rue Javary, rue du Cheminot-Coquelin, boulevard du Président-Hoover, boulevard Paul-Painlevé, ligne droite dans le prolongement du boulevard Paul-Painlevé, voie rapide urbaine, autoroute A 25, jusqu'à la limite territoriale de la commune de Ronchin.
+|-
+|26||[[Canton de Lille-4|Lille-4]]||[[Lille]]||{{formatnum:68245}}||||2 + fraction Lille||1° Les communes suivantes : [[Lezennes]], [[Ronchin]].<br />2° La partie de la commune de Lille située à l'intérieur du périmètre défini par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Ronchin, autoroute A 25, voie rapide urbaine, ligne droite dans le prolongement du boulevard Paul-Painlevé, boulevard Paul-Painlevé, boulevard du Président-Hoover, rue du Cheminot-Coquelin, rue Javary, pont de Flandres, boulevard Louis-Pasteur, pont de Karkhof, rue de Luxembourg, pont d'Erfurt, boulevard Louis-Pasteur jusqu'à la limite territoriale de la commune de La Madeleine, rue des Urbanistes, rue des Canonniers, boulevard Carnot, place du Théâtre, rue des Sept-Agaches, place du Général-de-Gaulle, rue Esquermoise, rue Thiers, place Maurice-Schumann, rue de Tenremonde, square Dutilleul, rue Macquart, square Daubenton, boulevard Vauban, rue de Solférino, place de Sébastopol, rue des Postes, rue Brûle-Maison, rue d'Artois, boulevard Victor-Hugo, place Barthélemy-Dorez, rue du Faubourg-des-Postes, autoroute A 25, rue de Jussieu, ligne de chemin de fer, jusqu'à la limite territoriale de la commune de Ronchin.
+|-
+|27||[[Canton de Lille-5|Lille-5]]||[[Lille]]||{{formatnum:71869}}||||fraction Lille||1° La partie de la commune de Lille située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Loos, autoroute A 25, boulevard de la Moselle, boulevard de Lorraine, avenue Léon-Jouhaux, cours du canal de la Deûle, avenue de Soubise, passerelle Edmond-Ory, jusqu'à la limite territoriale de la commune de Lambersart.<br />2° La partie de la commune de Lille située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Saint-André-lez-Lille, cours du canal de la Deûle, boulevard de la Liberté, square Daubenton, boulevard Vauban, rue de Solférino, place de Sébastopol, rue des Postes, rue Brûle-Maison, rue d'Artois, boulevard Victor-Hugo, place Barthélemy-Dorez, rue du Faubourg-des-Postes, autoroute A 25, rue de Jussieu, ligne de chemin de fer, jusqu'à la limite territoriale de la commune de Ronchin.
+|-
+|28||[[Canton de Lille-6|Lille-6]]||[[Lille]]||{{formatnum:73048}}||||9 + fraction Lille||1° Les communes suivantes : [[Beaucamps-Ligny]], [[Englos]], [[Ennetières-en-Weppes]], [[Erquinghem-le-Sec]], [[Escobecques]], [[Hallennes-lez-Haubourdin]], [[Loos (Nord)|Loos]], [[Santes]], [[Sequedin]].<br />2° La partie de la commune de Lille non incluse dans les cantons de Lille-1, Lille-2, Lille-3, Lille-4 et Lille-5.
+|-
+|29||[[Canton de Marly|Marly]]||[[Marly (Nord)|Marly]]||{{formatnum:61782}}||0,99||17||[[Condé-sur-l'Escaut]], [[Crespin (Nord)|Crespin]], [[Curgies]], [[Estreux]], [[Hergnies]], [[Marly (Nord)|Marly]], [[Odomez]], [[Préseau]], [[Quarouble]], [[Quiévrechain]], [[Rombies-et-Marchipont]], [[Saint-Aybert]], [[Saultain]], [[Sebourg]], [[Thivencelle]], [[Vicq (Nord)|Vicq]], [[Vieux-Condé]].
+|-
+|30||[[Canton de Maubeuge|Maubeuge]]||[[Maubeuge]]||{{formatnum:65467}}||1,04||14||[[Assevent]], [[Bersillies]], [[Bettignies]], [[Boussois]], [[Élesmes]], [[Ferrière-la-Grande]], [[Gognies-Chaussée]], [[Jeumont]], [[Louvroil]], [[Mairieux]], [[Marpent]], [[Maubeuge]], [[Vieux-Reng]], [[Villers-Sire-Nicole]].
+|-
+|31||[[Canton d'Orchies|Orchies]]||[[Orchies]]||{{formatnum:53350}}||0,85||16||[[Aix (Nord)|Aix]], [[Anhiers]], [[Auby]], [[Auchy-lez-Orchies]], [[Beuvry-la-Forêt]], [[Bouvignies (Nord)|Bouvignies]], [[Coutiches]], [[Faumont]], [[Flines-lez-Raches]], [[Landas]], [[Nomain]], [[Orchies]], [[Râches]], [[Raimbeaucourt]], [[Roost-Warendin]], [[Saméon]].
+|-
+|32||[[Canton de Roubaix-1|Roubaix-1]]||[[Roubaix]]||{{formatnum:72178}}||||fraction Roubaix||Partie de la commune de Roubaix située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Wattrelos, cours du canal de Roubaix, pont Nyckés, boulevard Gambetta, rue Pierre-de-Roubaix, boulevard de Mulhouse, boulevard de Reims, boulevard de Lyon, place du Travail, boulevard de Fourmies, place Charles-Louis-Spriet, avenue Linné, rue Léon-Marlot, avenue Alfred-Motte, jusqu'à la limite territoriale de la commune de Hem.
+|-
+|33||[[Canton de Roubaix-2|Roubaix-2]]||[[Roubaix]]||{{formatnum:73391}}||||2 + fraction Roubaix||1° Les communes suivantes : [[Leers]], [[Wattrelos]].<br />2° La partie de la commune de Roubaix non incluse dans le canton de Roubaix-1.
+|-
+|34||[[Canton de Saint-Amand-les-Eaux|Saint-Amand-les-Eaux]]||[[Saint-Amand-les-Eaux]]||{{formatnum:58673}}||0,93||19||[[Bousignies]], [[Brillon]], [[Bruille-Saint-Amand]], [[Château-l'Abbaye]], [[Flines-lès-Mortagne]], [[Hasnon]], [[Hélesmes]], [[Lecelles]], [[Maulde]], [[Millonfosse]], [[Mortagne-du-Nord]], [[Nivelle (Nord)|Nivelle]], [[Raismes]], [[Rosult]], [[Rumegies]], [[Saint-Amand-les-Eaux]], [[Sars-et-Rosières]], [[Thun-Saint-Amand]], [[Wallers]].
+|-
+|35||[[Canton de Sin-le-Noble|Sin-le-Noble]]||[[Sin-le-Noble]]||{{formatnum:70220}}||1,12||15||[[Bruille-lez-Marchiennes]], [[Erre (Nord)|Erre]], [[Fenain]], [[Hornaing]], [[Lallaing]], [[Marchiennes]], [[Pecquencourt]], [[Rieulay]], [[Sin-le-Noble]], [[Somain]], [[Tilloy-lez-Marchiennes]], [[Vred]], [[Wandignies-Hamage]], [[Warlaing]], [[Waziers]].
+|-
+|36||[[Canton de Templeuve-en-Pévèle|Templeuve-en-Pévèle]]||[[Templeuve-en-Pévèle]]||{{formatnum:73871}}||1,15||32||[[Anstaing]], [[Attiches]], [[Avelin]], [[Bachy]], [[Baisieux (Nord)|Baisieux]], [[Bersée]], [[Bourghelles]], [[Bouvines]], [[Camphin-en-Pévèle]], [[Cappelle-en-Pévèle]], [[Chéreng]], [[Cobrieux]], [[Cysoing]], [[Ennevelin]], [[Fretin]], [[Genech]], [[Gruson]], [[Lesquin]], [[Louvil]], [[Mérignies]], [[Moncheaux]], [[Mons-en-Pévèle]], [[Mouchin]], [[La Neuville]], [[Péronne-en-Mélantois]], [[Pont-à-Marcq]], [[Sainghin-en-Mélantois]], [[Templeuve-en-Pévèle]], [[Thumeries]], [[Tourmignies]], [[Tressin]], [[Wannehain]].
+|-
+|37||[[Canton de Tourcoing-1|Tourcoing-1]]||[[Tourcoing]]||{{formatnum:66105}}||||3 + fraction Tourcoing||1° Les communes suivantes : [[Halluin]], [[Neuville-en-Ferrain]], [[Roncq]].<br />2° La partie de la commune de Tourcoing située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de Neuville-en-Ferrain, rue Robert-Schuman, rue Marcel-Beyens, rue du Roitelet, chaussée Gramme, chaussée Fernand-Forest, rue Francis-de-Pressensé, rue des Maraîchers, rue des Phalempins, rue de la Latte, rue de Roncq, rue Jean-Jaurès, rue de la Fin-de-la-Guerre, rue du Repos, square de l'Abattoir, rue Jean-Froissart, rue de Paris, rond-point de la route départementale 770, jusqu'à la limite territoriale de la commune de Mouvaux.
+|-
+|38||[[Canton de Tourcoing-2|Tourcoing-2]]||[[Tourcoing]]||{{formatnum:71018}}||||fraction Tourcoing||Partie de la commune de Tourcoing non incluse dans le canton de Tourcoing-1.
+|-
+|39||[[Canton de Valenciennes|Valenciennes]]||[[Valenciennes]]||{{formatnum:54051}}||0,86||2||[[Saint-Saulve]], [[Valenciennes]].
+|-
+|40||[[Canton de Villeneuve-d'Ascq|Villeneuve-d'Ascq]]||[[Villeneuve-d'Ascq]]||{{formatnum:72530}}||1,16||5||[[Forest-sur-Marque]], [[Sailly-lez-Lannoy]], [[Toufflers]], [[Villeneuve-d'Ascq]], [[Willems]].
+|-
+|41||[[Canton de Wormhout|Wormhout]]||[[Wormhout]]||{{formatnum:52712}}||0,83||45||[[Arnèke]], [[Bambecque]], [[Bavinchove]], [[Bissezeele]], [[Bollezeele]], [[Broxeele]], [[Buysscheure]], [[Crochte]], [[Eringhem]], [[Esquelbecq]], [[Hardifort]], [[Herzeele]], [[Holque]], [[Hondschoote]], [[Houtkerque]], [[Hoymille]], [[Killem]], [[Lederzeele]], [[Ledringhem]], [[Merckeghem]], [[Millam]], [[Nieurlet]], [[Noordpeene]], [[Ochtezeele]], [[Oost-Cappel]], [[Oudezeele]], [[Quaëdypre]], [[Rexpoëde]], [[Rubrouck]], [[Saint-Momelin]], [[Socx]], [[Steenvoorde]], [[Terdeghem]], [[Volckerinckhove]], [[Warhem]], [[Watten]], [[Wemaers-Cappel]], [[West-Cappel]], [[Winnezeele]], [[Wormhout]], [[Wulverdinghe]], [[Wylder]], [[Zegerscappel]], [[Zermezeele]], [[Zuytpeene]].
+|-
+!||||||{{formatnum:2587128}}||||648||
+|}
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Ce n'est le cas d'aucun canton dans le département du [[Nord (département français)|Nord]].
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement d'Avesnes-sur-Helpe|Avesnes-sur-Helpe]]
+!scope=col|[[Arrondissement de Cambrai|Cambrai]]
+!scope=col|[[Arrondissement de Douai|Douai]]
+!scope=col|[[Arrondissement de Dunkerque|Dunkerque]]
+!scope=col|[[Arrondissement de Lille|Lille]]
+!scope=col|[[Arrondissement de Valenciennes|Valenciennes]]
+!scope=col|Total
+|-
+|1||align="left"| Aniche||||||26||||||||'''26'''
+|-
+|2||align="left"| Annœullin||||||||||24||||'''24'''
+|-
+|3||align="left"| Anzin||||||||||||6||'''6'''
+|-
+|4||align="left"| Armentières||||||||||11||||'''11'''
+|-
+|5||align="left"| Aulnoye-Aymeries||39||||||||||||'''39'''
+|-
+|6||align="left"| Aulnoy-lez-Valenciennes||||||||||||20||'''20'''
+|-
+|7||align="left"| Avesnes-sur-Helpe||52||||||||||||'''52'''
+|-
+|8||align="left"| Bailleul||||||||23||||||'''23'''
+|-
+|9||align="left"| Cambrai||||27||||||||||'''27'''
+|-
+|10||align="left"| Le Cateau-Cambrésis||||56||||||||||'''56'''
+|-
+|11||align="left"| Caudry||||33||||||||||'''33'''
+|-
+|12||align="left"| Coudekerque-Branche||||||||9||||||'''9'''
+|-
+|13||align="left"| Croix||||||||||5||||'''5'''
+|-
+|14||align="left"| Denain||||||||||||18||'''18'''
+|-
+|15||align="left"| Douai||||||7||||||||'''7'''
+|-
+|16||align="left"| Dunkerque-1|||||||| fraction Dunkerque|||||| fraction Dunkerque
+|-
+|17||align="left"| Dunkerque-2||||||||4 + fraction Dunkerque||||||'''4''' + fraction Dunkerque
+|-
+|18||align="left"| Faches-Thumesnil||||||||||12||||'''12'''
+|-
+|19||align="left"| Fourmies||46||||||||||||'''46'''
+|-
+|20||align="left"| Grande-Synthe||||||||13 + fraction Dunkerque||||||'''13''' + fraction Dunkerque
+|-
+|21||align="left"| Hazebrouck||||||||16||||||'''16'''
+|-
+|22||align="left"| Lambersart||||||||||8||||'''8'''
+|-
+|23||align="left"| Lille-1||||||||||4 + fraction Lille||||'''4''' + fraction Lille
+|-
+|24||align="left"| Lille-2||||||||||3 + fraction Lille||||'''3''' + fraction Lille
+|-
+|25||align="left"| Lille-3||||||||||1 + fraction Lille||||'''1''' + fraction Lille
+|-
+|26||align="left"| Lille-4||||||||||2 + fraction Lille||||'''2''' + fraction Lille
+|-
+|27||align="left"| Lille-5|||||||||| fraction Lille|||| fraction Lille
+|-
+|28||align="left"| Lille-6||||||||||9 + fraction Lille||||'''9''' + fraction Lille
+|-
+|29||align="left"| Marly||||||||||||17||'''17'''
+|-
+|30||align="left"| Maubeuge||14||||||||||||'''14'''
+|-
+|31||align="left"| Orchies||||||16||||||||'''16'''
+|-
+|32||align="left"| Roubaix-1|||||||||| fraction Roubaix|||| fraction Roubaix
+|-
+|33||align="left"| Roubaix-2||||||||||1 + fraction Roubaix||||'''1''' + fraction Roubaix
+|-
+|34||align="left"| Saint-Amand-les-Eaux||||||||||||19||'''19'''
+|-
+|35||align="left"| Sin-le-Noble||||||15||||||||'''15'''
+|-
+|36||align="left"| Templeuve-en-Pévèle||||||||||32||||'''32'''
+|-
+|37||align="left"| Tourcoing-1||||||||||3 + fraction Tourcoing||||'''3''' + fraction Tourcoing
+|-
+|38||align="left"| Tourcoing-2|||||||||| fraction Tourcoing|||| fraction Tourcoing
+|-
+|39||align="left"| Valenciennes||||||||||||2||'''2'''
+|-
+|40||align="left"| Villeneuve-d'Ascq||||||||||5||||'''5'''
+|-
+|41||align="left"| Wormhout||||||||45||||||'''45'''
+|-
+!||||151||116||64||111||124||82||648
+|}
+
+=== Découpage par arrondissement depuis [[Redécoupage cantonal de 2014 en France|2015]] ===
+Liste des 41 '''[[cantons français|cantons]]''' du [[départements français|département]] français du '''[[Nord (département français)|Nord]]''', par arrondissement :
+
+* [[Arrondissement d'Avesnes-sur-Helpe]] (4 cantons - sous-préfecture : [[Avesnes-sur-Helpe]]) :<br />[[Canton d'Aulnoye-Aymeries|Aulnoye-Aymeries]] - [[Canton d'Avesnes-sur-Helpe|Avesnes-sur-Helpe]] - [[Canton de Fourmies|Fourmies]] - [[Canton de Maubeuge|Maubeuge]]
+
+* [[Arrondissement de Cambrai]] (3 cantons - sous-préfecture : [[Cambrai]]) :<br />[[Canton de Cambrai|Cambrai]] - [[Canton du Cateau-Cambrésis|Le Cateau-Cambrésis]] - [[Canton de Caudry|Caudry]]
+
+* [[Arrondissement de Douai]] (4 cantons - sous-préfecture : [[Douai]]) :<br />[[Canton d'Aniche|Aniche]] - [[Canton de Douai|Douai]] - [[Canton d'Orchies|Orchies]] - [[Canton de Sin-le-Noble|Sin-le-Noble]]
+
+* [[Arrondissement de Dunkerque]] (7 cantons - sous-préfecture : [[Dunkerque]]) :<br />[[Canton de Bailleul|Bailleul]] - [[Canton de Coudekerque-Branche|Coudekerque-Branche]] - [[Canton de Dunkerque-1|Dunkerque-1]] - [[Canton de Dunkerque-2|Dunkerque-2]] - [[Canton de Grande-Synthe|Grande-Synthe]] - [[Canton d'Hazebrouck|Hazebrouck]] - [[Canton de Wormhout|Wormhout]]
+
+* [[Arrondissement de Lille]] (17 cantons - préfecture : [[Lille]]) :<br />[[Canton d'Annœullin|Annœullin]] - [[Canton d'Armentières|Armentières]] - [[Canton de Croix|Croix]] - [[Canton de Faches-Thumesnil|Faches-Thumesnil]] - [[Canton de Lambersart|Lambersart]] - [[Canton de Lille-1|Lille-1]] - [[Canton de Lille-2|Lille-2]] - [[Canton de Lille-3|Lille-3]] - [[Canton de Lille-4|Lille-4]] - [[Canton de Lille-5|Lille-5]] - [[Canton de Lille-6|Lille-6]] - [[Canton de Roubaix-1|Roubaix-1]] - [[Canton de Roubaix-2|Roubaix-2]] - [[Canton de Templeuve-en-Pévèle|Templeuve-en-Pévèle]] - [[Canton de Tourcoing-1|Tourcoing-1]] - [[Canton de Tourcoing-2|Tourcoing-2]] - [[Canton de Villeneuve-d'Ascq|Villeneuve-d’Ascq]]
+
+* [[Arrondissement de Valenciennes]] (6 cantons - sous-préfecture : [[Valenciennes]]) :<br />[[Canton d'Anzin|Anzin]] - [[Canton d'Aulnoy-lez-Valenciennes|Aulnoy-lez-Valenciennes]] - [[Canton de Denain|Denain]] - [[Canton de Marly|Marly]] - [[Canton de Saint-Amand-les-Eaux|Saint-Amand-les-Eaux]] - [[Canton de Valenciennes|Valenciennes]]
+
+== Références ==
+{{Références|références=2}}
+
+== Voir aussi ==
+* [[Communes du Nord]]
+* [[Cantons du Pas-de-Calais]]
+
+{{Palette|Découpage administratif des Hauts-de-France|Cantons de France|Cantons du Nord|Découpage administratif du Nord}}
+{{Portail|Nord-Pas-de-Calais}}
+
+[[Catégorie:Canton dans le département du Nord|*]]
+[[Catégorie:Liste de cantons français|Nord]]
+[[Catégorie:Liste en rapport avec  le département du Nord|Cantons]]

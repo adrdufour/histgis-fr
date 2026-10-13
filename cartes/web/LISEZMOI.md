@@ -11,6 +11,20 @@ python3 cartes/export_web.py        # tous les départements ; --dsn pour une au
 python3 cartes/web/servir.py        # ouvre http://127.0.0.1:8765/index.html
 ```
 
+**Un export complet efface `dep/` en entier, outre-mer compris** : le relancer
+ensuite avec `python3 cartes/export_web.py --outremer`, sans quoi le groupe
+« Outre-mer » disparaît du sélecteur. C'est ce qui est arrivé à l'export du
+4 octobre 2026 au soir ; les cinq dossiers ont été recopiés le 6 octobre depuis
+`sorties/part_2026-10-04_1815` (l'ancien index est gardé dans
+`donnees/index.avant_outremer.json`).
+
+Pour la carte d'une liste de communes (export Commons, ci-dessous), une fois
+après chaque export : `python3 cartes/web/noms_cog.py` puis
+`python3 cartes/web/fonds_communes.py`.
+
+Pour déposer des cartes sur Wikimedia Commons : voir
+[plus bas](#exporter-vers-wikimedia-commons).
+
 Ouvrir `index.html` par un double-clic ne peut pas marcher : la page charge ses
 données par `fetch()`, et les navigateurs refusent la requête sur `file://`.
 `servir.py` sert le dossier et compresse le JSON à la volée.
@@ -27,6 +41,218 @@ Options utiles :
 Dans la page : flèches ← → pour avancer d'un an, molette pour zoomer, glisser
 pour déplacer, clic sur une commune pour l'épingler dans le panneau, `#01/1885`
 dans l'URL pour pointer une planche précise.
+
+## Exporter vers Wikimedia Commons
+
+Le bouton **Commons…**, en bas à droite, prépare l'une des quatre images pour
+l'année affichée — deux par niveau, circonscriptions ou cantons —, et la dépose
+sur Commons avec description, licence et catégories pré-remplies — et,
+depuis le 6 octobre 2026, la carte d'une liste de communes, [plus
+bas](#carte-dune-liste-de-communes-aop-intercommunalité) :
+
+| image | contenu | nom proposé |
+|---|---|---|
+| **carte du département** | circonscriptions coloriées et numérotées, limites cantonales et communales en trait fin | `Circonscriptions législatives de la Côte-d'Or (1852-1869).svg` |
+| **situation d'une circonscription** | le département en grisé, la circonscription choisie en rouge | `Côte-d'Or 2e circonscription 1852-1869 (localisation).svg` |
+| **carte des cantons** | cantons coloriés et nommés, circonscriptions en trait épais, communes en trait fin | `Cantons de la Côte-d'Or (1875-1891).svg` |
+| **situation d'un canton** | le département en grisé, le canton choisi en rouge | `Canton de Mirebeau (Côte-d'Or) 1875-1891 (localisation).svg` |
+
+Les cantons (6 octobre 2026) suivent les mêmes règles, avec trois différences.
+Le **coloriage** prend le vrai voisinage (deux cantons qui partagent des
+sommets) et non l'emprise, qui ne suffit plus pour quarante unités. Les
+**noms** prennent le plus grand corps qui tienne dans le canton, sur deux lignes
+au besoin ; un canton de la Seine nommé `Paris-05` est affiché « 5e ». La
+**période** compare la composition (atome → nom du canton), puisque les
+identifiants d'unités cantonales ne portent pas d'année ; une plage qui bute
+sur une année sans couche cantonale est dite ouverte.
+
+L'image est un **SVG** autonome (styles en attributs, police DejaVu Sans, que
+le moteur de rendu de Commons possède), licence **CC BY-SA 4.0**
+(`{{self|cc-by-sa-4.0}}`). Rien n'est recalculé : tout vient des fichiers que
+la page a déjà chargés, dans la projection de la page.
+
+**La période du titre est celle du découpage, pas l'année du curseur.** Les
+fichiers `x_<sig>.json` étant signés sur leur contenu, géométrie comprise, un
+même découpage peut en avoir plusieurs (la Côte-d'Or en a deux pour celui de
+1831) : la page compare donc les identifiants d'unités (`21-01@1852`) des
+années voisines. Quand la plage touche une borne de la base, l'aperçu le dit —
+le découpage peut valoir au-delà.
+
+**La description** (`{{Information}}`, `{{fr}}` + `{{en}}`) donne la chambre,
+la période, le nombre de circonscriptions, les élections générales tenues sur
+ce découpage, et pour chaque circonscription le nombre de communes et — quand
+la base tient la couche cantonale à cette date, donc pas avant 1870 — ses
+cantons, avec « (partie) » pour un canton partagé. Sources : la composition
+électorale selon la période (Gaudillère avant 1870, TRF-GIS 1870-1940, le
+ministère après 1986), le fond communal (ANR-COMMUNES, et GEOFLA quand des
+communes sont en repli). Tout se règle dans l'objet `COMMONS`, en tête du
+second `<script>` d'`index.html` : catégories, sources, chambres, palette.
+
+**Les catégories sont vérifiées en direct** : ✓ existe, ↪ catégorie redirigée,
+✗ absente — avec, pour celles qui manquent, des suggestions de Commons à
+cliquer. Celles de `COMMONS.categories` sont des propositions, pas des
+certitudes : elles n'ont pas pu être vérifiées à l'écriture. *Une catégorie
+qui n'existe pas ne produit pas d'erreur, elle range le fichier nulle part.*
+Le nom de fichier est vérifié de même (libre / existe déjà).
+
+Nom, description et catégories sont modifiables ; une retouche est gardée tant
+qu'on ne change pas d'unité, de niveau, d'année ou de type de carte
+(« réinitialiser » revient à la proposition). « télécharger le SVG » marche
+sans rien configurer.
+
+### Paragraphe pour Wikipédia
+
+Sous le formulaire, un second champ donne en wikicode le paragraphe d'article
+qui va avec l'image, sur le modèle de :
+
+> À compter de 1946, Paris comprend trois circonscriptions, sur les six que
+> compte le [[Seine (département)|département de la Seine]].
+> * [[Première circonscription de la Seine (Quatrième République)|1re circonscription]] :
+>   [[5e arrondissement de Paris|5e]], … et [[15e arrondissement de Paris|15e arrondissements]]
+
+| carte | paragraphe |
+|---|---|
+| circonscriptions du département | une puce par circonscription : ses arrondissements de Paris et ses cantons (« (partie) » pour un canton coupé), ou à défaut de couche cantonale — avant 1870 — son nombre de communes |
+| situation d'une circonscription | une phrase : « la 1re circonscription de … comprend les cantons de … » |
+| cantons du département | une puce par canton, avec son nombre de communes |
+| situation d'un canton | ses communes, toutes liées, et sa circonscription |
+
+« lister les communes » remplace les nombres par la liste liée. Le texte se
+retouche à la main comme les autres champs ; « copier » le met dans le
+presse-papiers.
+
+**Les liens sont vérifiés sur fr.wikipedia** (route `/commons/wikipedia` de
+`servir.py`, lecture publique, sans jeton). Chaque lien porte des titres
+candidats — `Antony (Hauts-de-Seine)` puis `Antony`, `Canton de Sceaux (Seine)`
+puis `Canton de Sceaux` ; le premier qui existe, n'est pas une page d'homonymie
+et, redirection suivie, mène bien à un canton (ou une circonscription, un
+arrondissement) est retenu, et la redirection est remplacée par sa cible. Un
+`Canton d'Asnières` redirigé vers la commune n'est donc **pas** pris pour un
+lien bleu. Ce qui reste rouge est listé sous le texte ; « retirer les liens
+rouges » les remplace par du texte simple.
+
+Les titres des circonscriptions hors Ve République portent un suffixe de
+régime (`COMMONS.regimesWiki`) : seul « (Quatrième République) » est attesté,
+les autres sont des paris que la vérification tranche — les circonscriptions
+d'arrondissement de 1876-1919 (« Beaune-1 ») ne sont pas liées du tout,
+Wikipédia n'ayant pas de convention pour elles.
+
+**Les noms de communes viennent du COG 2012**, pas de GEOFLA : `communes.json`
+porte `MIREBEAU-SUR-BEZE`, et un titre de Wikipédia est sensible à la casse et
+aux accents. `python3 cartes/web/noms_cog.py` écrit `donnees/noms_cog.json`
+(code INSEE → nom typographié, article compris) depuis
+`sources/cog/2012/france2012.txt` ; la page ne s'en sert que si le nom en
+capitales concorde, et signale les noms qu'elle a dû deviner.
+
+### Carte d'une liste de communes (AOP, intercommunalité…)
+
+Ajoutée le 6 octobre 2026. Le troisième niveau du dialogue, **liste de
+communes**, ne dépend ni du département ni de l'année affichés : on colle une
+liste — une commune par ligne, ou séparées par des virgules —, la page la
+résout, charge le ou les départements qu'elle touche et dessine l'une de deux
+images :
+
+| image | contenu | nom proposé |
+|---|---|---|
+| **carte des communes** | les départements touchés en grisé, leurs communes en trait blanc, celles de la liste en rouge ; en médaillon, la France des départements, ceux de la liste en rouge | `AOP Époisses (localisation).svg` |
+| **situation en France** | la France des départements, ceux de la liste rosés, les communes en rouge | `AOP Époisses (localisation en France).svg` |
+
+**Saisie.** Noms (casse, accents, article et « St- » indifférents) ou codes
+INSEE ; « Nom (21) » ou « Nom (Côte-d'Or) » lève une homonymie, et le champ
+« limiter aux départements » la lève pour toute la liste. Un homonyme qui
+reste est d'abord départagé par les départements des communes sûres (une
+liste bourguignonne qui dit « Saint-Romain » ne parle pas de la Vienne) ;
+sinon la page propose ses départements, et un clic écrit le code devant le
+nom, dans la liste même. Sous la liste : trouvées, communes nouvelles,
+homonymes, introuvables, sans forme à la date, doublons.
+
+**Noms d'aujourd'hui, base de 2012.** Une liste d'AOP ou d'intercommunalité
+se donne avec les communes en vigueur ; la base parle le COG 2012.
+`fonds_communes.py` rejoue les mouvements de `sources/v_mvt_commune_2025.csv`
+postérieurs au 1ᵉʳ janvier 2012 et écrit `donnees/cog_actuel.json` : une
+commune nouvelle (Valforêt, Haut Valromey, Cherbourg-en-Cotentin) est dessinée
+par les communes de 2012 qu'elle réunit, et la description le dit. Un code
+INSEE se lit comme un code d'aujourd'hui : `01187` est Haut Valromey, pas
+Hotonnes — pour Hotonnes seule, l'écrire en toutes lettres.
+
+**Le fond est celui d'une année** (« limites communales de », par défaut la
+dernière de la base). Une commune y est l'ensemble des atomes que la
+composition de cette année rattache au dossier et qui portent son code —
+Premeaux *et* Prissey pour Premeaux-Prissey ; une commune absorbée avant 2012
+se cherche par son nom. Passer par la composition n'est pas un luxe : les
+fichiers d'un département tiennent aussi les communes qu'il a perdues (la
+Seine-et-Oise garde Corbreuse après 1968). Sans composition à la date, toutes
+les communes du fichier sont dessinées, et la note sous l'aperçu le dit. Une
+année ancienne ajoute l'année au nom du fichier et les catégories d'histoire.
+Le dossier suit l'époque : une commune de l'Essonne est cherchée en
+Seine-et-Oise avant 1968, de Corse-du-Sud en Corse avant 1976.
+
+**Le contour départemental** est pris dans `contours.json`, qui n'est pas une
+suite de frontières mais l'union des communes de chaque composition — trouée
+quand celle-ci est incomplète (la Côte-d'Or perd 125 km² en 1955). On retient
+le plus étendu de l'époque de la date. Même règle pour **le médaillon**
+(`donnees/france.json`, simplifié à 800 m), sur quatre époques seulement : avant
+1871, 1871-1918, 1919-1967, depuis 1968 — les seules où la carte des
+départements change à cette échelle. Avant 1870 la base n'a pas de contour :
+le médaillon montre la France de 1870, et l'aperçu le signale.
+
+**L'outre-mer** est dans `france.json` aussi, chaque département dans sa case,
+empilées en bas à gauche sur l'Atlantique, chacune à sa propre échelle (et
+simplifiée quatre fois moins que la métropole). Les cases paraissent dans le
+médaillon et sur la situation en France à partir de la départementalisation
+(1946, Mayotte 2011). Une liste de communes d'outre-mer marche comme une autre :
+la carte des communes est celle du département, le médaillon le colore dans sa
+case. Les communes partagées entre cantons que la base ne découpe pas
+(Saint-Denis de La Réunion) ne sont rattachées à aucun canton : une commune est
+donc retenue soit par la composition de l'année, soit par son code INSEE quand
+celui-ci désigne le dossier à cette date.
+
+**Le médaillon** se pose dans le coin le plus vide ; si aucun ne l'est (moins
+de 4 % couvert), l'image s'élargit à droite, ou en bas pour une carte en
+largeur. Une commune de quelques pixels est marquée d'un point rouge, et son
+nom posé à côté.
+
+**Description et catégories** : nature (appellation d'origine,
+intercommunalité, autre — `COMMONS.natures`), nombre de communes, liste par
+département, source de la liste (champ à remplir : l'aperçu le rappelle tant
+qu'il est vide, et la description porte « à préciser »), sources du COG. Les
+catégories viennent de `COMMONS.natures` et de `COMMONS.categoriesListe`
+(« Maps of {dep} » par département) : des propositions, vérifiées comme les
+autres. Le paragraphe pour Wikipédia liste toujours les communes, liées.
+
+### Mettre en place le dépôt
+
+Le procédé est celui de
+[parliamentdiagram](https://github.com/slashme/parliamentdiagram) : la page
+fabrique l'image et le wikitexte, le serveur local détient le jeton et parle à
+l'API (`commons.py`, appelé par `servir.py`). Mais là où parliamentdiagram, en
+service public, passe par le flux OAuth 1.0a complet, la page tourne ici pour
+une seule personne : un **jeton OAuth 2 « owner-only »** suffit, approuvé sur-le-champ.
+
+1. Sur meta.wikimedia.org,
+   [proposer un consommateur OAuth 2](https://meta.wikimedia.org/wiki/Special:OAuthConsumerRegistration/propose/oauth2) :
+   cocher *This consumer is for use only by …* ; droits *Edit existing pages*,
+   *Upload new files*, *Upload, replace, and move files*.
+2. Copier l'**Access token** affiché à la fin (il n'est montré qu'une fois).
+3. `cp cartes/web/commons.toml.exemple cartes/web/commons.toml`, y coller le
+   jeton. Le fichier est dans `.gitignore`.
+4. Relancer `servir.py`. Le dialogue affiche « Dépôt sous le compte … ».
+
+Pour un premier essai sans rien publier, mettre
+`api = "https://test-commons.wikimedia.org/w/api.php"` dans `commons.toml` —
+le dialogue signale alors « API de test ».
+
+**Avertissements.** Si Commons répond qu'un fichier de ce nom existe déjà, ou
+que le contenu est le doublon d'un fichier existant, le dialogue l'affiche et
+propose « déposer quand même ». Comme dans parliamentdiagram, le serveur
+n'accepte `ignorewarnings` que pour le couple (nom, contenu) qui vient de
+recevoir cet avertissement : la page ne peut pas forcer un écrasement d'elle-même.
+
+**Le jeton dépose sous ton nom, et n'importe quelle page ouverte dans le même
+navigateur peut envoyer une requête à 127.0.0.1.** `servir.py` refuse donc les
+routes `/commons/…` à toute autre origine que la sienne, et n'accepte que du
+`application/json` — qu'un site tiers ne peut pas envoyer sans une requête
+préalable CORS à laquelle le serveur ne répond pas.
 
 ## Le curseur ne va pas de 1815 à 2012 partout
 
@@ -204,6 +430,9 @@ donnees/dep/NN/communes.json        atomes, chacun avec sa LISTE DE VERSIONS
 donnees/dep/NN/c_<sig>.json         une configuration cantonale
 donnees/dep/NN/x_<sig>.json         une configuration électorale
 donnees/dep/NN/contours.json        emprises de référence, pour les années vides
+donnees/noms_cog.json               code INSEE → nom typographié (noms_cog.py)
+donnees/cog_actuel.json             communes 2025 → codes 2012 (fonds_communes.py)
+donnees/france.json                 médaillon : départements simplifiés, par époque (fonds_communes.py)
 ```
 
 `<sig>` est le md5 du **contenu** du fichier, pas de ce qui l'a engendré.

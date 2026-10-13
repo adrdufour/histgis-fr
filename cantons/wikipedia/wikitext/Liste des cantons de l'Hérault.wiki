@@ -1,0 +1,500 @@
+[[Fichier:34-Cantons-2019.png|vignette|upright=1.4|Découpage cantonal du département de l'Hérault, avec en surimpression les arrondissements (en nuances de bleu) - Carte arrêtée au {{date-|1er janvier 2019}}.]]
+Le '''[[Département français|département]] de l'[[Hérault (département)|Hérault]]''' compte 25 [[Canton français|cantons]] à la suite du [[redécoupage cantonal de 2014 en France|redécoupage cantonal de 2014]]. Auparavant ce nombre était de 49 depuis 1991.
+
+== Histoire ==
+=== Période de 1790 et 1801 ===
+; Dans le [[district de Saint-Pons]] (1790, 9 cantons) puis [[arrondissement de Saint-Pons]] (1801, 5 cantons) :
+{{colonnes|taille=15|
+# Olargues ;
+# Olonzac ;
+# Saint-Chinian ;
+# Saint-Pons ;
+# La Salvetat d'Anglès ;
+# Anglès ;
+# Cessenon ;
+# Cruzy ;
+# La Livinière.
+}}
+En 1801 disparaissent les trois derniers. Le canton d'Anglès va au [[Tarn (département)|Tarn]].
+; Dans le [[district de Montpellier]] (1790, 15 cantons), puis [[arrondissement de Montpellier]] (1801, 14 cantons) :
+{{colonnes|taille=15|
+# Castries ;
+# Claret ;
+# Frontignan ;
+# Ganges ;
+# Lunel ;
+# Les Matelles ;
+# Mauguio ;
+# Saint-Martin-de-Londres ;
+# Sète ;
+# Montpellier ;
+# Marsillargues ;
+# Pignan ;
+# Poussan ;
+# Restinclières ;
+# Saint-Georges.
+}}
+En l'an II, le canton de Castries est rattaché à celui de Marsillargues. En 1801 les cantons de 11 à 15 sont supprimés et sont remplacés par :
+{{colonnes|taille=15|
+: 11. Montpellier-2 ;
+: 12. Montpellier-3 ;
+: 13. Aniane ;
+: 14. Mèze.
+}}
+; Dans le [[district de Lodève]] (1790, 12 cantons), puis [[arrondissement de Lodève]] (1801, 5 cantons) :
+{{colonnes|taille=15|
+# Le Caylar ;
+# Clermont-Lodève ;
+# Gignac ;
+# Lodève ;
+# Lunas ;
+# Aniane ;
+# Aspiran ;
+# Montpeyroux ;
+# Octon ;
+# Saint-André-de-Sangonis ;
+# Saint-Jean-de-la Blaquière ;
+# Saint-Pargoire ;
+# Soubès.
+}}
+En 1801, le canton d'Aniane va à Montpellier. Les cantons 7 à 13 sont supprimés.
+; Dans le [[district de Béziers]] (1790, 15 cantons), puis [[arrondissement de Béziers]] (1801, 12 cantons) :
+{{colonnes|taille=15|
+# Agde ;
+# Bédarieux ;
+# Capestang ;
+# Florensac ;
+# Montagnac ;
+# Murviel ;
+# Pézenas ;
+# Roujan ;
+# Servian ;
+# Béziers ;
+# Cazouls ;
+# Fontès ;
+# Magalas ;
+# Le Poujol ;
+# Mèze.
+}}
+En 1801, le canton de Mèze va à Montpellier. Les cantons 11 à 14 sont supprimés. Le canton de Béziers-2 est créé. Celui de Saint-Gervais est donné par le département du Tarn<ref>{{Ouvrage|langue=fr|auteur1=Claude Motte|auteur2=Martin Elisabeth Martin Laprade|auteur3=Jean-Marc Peysson|titre=Paroisses et communes de France|sous-titre=Hérault|lieu=Paris|éditeur=[[CNRS Éditions|Éditions du CNRS]]|année=1989|pages totales=490|isbn=2-222-04293-3}}</ref>.
+[[Fichier:Anciens cantons de l'Hérault.png|vignette|Carte des cantons de l'Hérault avant le redécoupage de 2014]]
+
+=== Découpage cantonal de 1801 à 2015 ===
+
+*1801<ref>Arrêté du 3 Brumaire an X (25 octobre 1801), ''Bulletin des lois'', an X (1er semestre) [https://gallica.bnf.fr/ark:/12148/bpt6k6566479p/f293 p. 273]</ref> : découpage d'origine
+*1973<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681263 Décret n° 73-722 du 23 juillet 1973]</ref> : 
+**Montpellier passe de trois à neuf cantons (le premier canton reste inchangé) ;
+**Béziers passe de deux à quatre cantons;
+**Le canton de Sète est scindé en deux nouveaux cantons Sète-I et -II.
+*1985<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000337030 Décret n° 85-146 du 31 janvier 1985]</ref> : 
+**Une partie du [[canton de Béziers-4|canton de Béziers-IV]] est transférée au [[Canton de Béziers-1|canton de Béziers-I]] (modification de la limite infracommunale) ;
+**La commune de [[Lespignan]] est transférée du [[canton de Béziers-4|canton de Béziers-IV]] au [[Canton de Béziers-3|canton de Béziers-III]] ;
+**Une partie du [[Canton de Sète-2|canton de Sète-II]] est transférée au [[Canton de Sète-1|canton de Sète-I]] (modification de la limite infracommunale) ;
+**Montpelleir passe de neuf à dix cantons (les cantons de Montpellier-V et -VIII restent inchangés).
+*1991<ref>[https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000172018 Décret n° 91-213 du 27 février 1991]</ref> : 
+**Création du [[canton de Castelnau-le-Lez]], détaché du [[canton de Montpellier-3|canton de Montpellier-III]] ;
+**Création du [[canton de Lattes]], détaché du [[canton de Montpellier-5|canton de Montpellier-V]] ;
+**Création du [[canton de Pignan]], détaché du [[canton de Montpellier-8|canton de Montpellier-VIII]]. 
+
+
+Liste des 49 cantons de l'[[Hérault (département)|Hérault]], par arrondissement :
+{| class="wikitable centre"
+|Arrondissement de [[Arrondissement de Béziers|Béziers]] (19 cantons)
+|[[canton d'Agde]] - [[canton de Bédarieux]] - [[canton de Béziers-1]] - [[canton de Béziers-2]] - [[canton de Béziers-3]] - [[canton de Béziers-4]] - [[canton de Capestang]] - [[canton de Florensac]] - [[Canton de Montagnac (Hérault)|canton de Montagnac]] - [[canton de Murviel-lès-Béziers]] - [[canton d'Olargues]] - [[canton d'Olonzac]] - [[canton de Pézenas]] - [[canton de Roujan]] - [[canton de Saint-Chinian]] - [[canton de Saint-Gervais-sur-Mare]] - [[canton de Saint-Pons-de-Thomières]] - [[canton de La Salvetat-sur-Agout]] - [[canton de Servian]]
+|-
+|Arrondissement de [[Arrondissement de Lodève|Lodève]] (8 cantons)
+|[[canton d'Aniane]] - [[canton du Caylar]] - [[canton de Clermont-l'Hérault]] - [[canton de Ganges]] - [[canton de Gignac]] - [[canton de Lodève]] - [[canton de Lunas]] - [[canton de Saint-Martin-de-Londres]]
+|-
+|Arrondissement de [[Arrondissement de Montpellier|Montpellier]] (22 cantons)
+|[[canton de Castelnau-le-Lez]] - [[canton de Castries]] - [[canton de Claret]] - [[canton de Frontignan]] - [[canton de Lattes]] - [[canton de Lunel]] - [[canton des Matelles]] - [[canton de Mauguio]] - [[canton de Mèze]] - [[canton de Montpellier-1]] - [[canton de Montpellier-2]] - [[canton de Montpellier-3]] - [[canton de Montpellier-4]] - [[canton de Montpellier-5]] - [[canton de Montpellier-6]] - [[canton de Montpellier-7]] - [[canton de Montpellier-8]] - [[canton de Montpellier-9]] - [[canton de Montpellier-10]] - [[canton de Pignan]] - [[canton de Sète-1]] - [[canton de Sète-2]]
+|}
+
+=== Redécoupage cantonal de 2014 ===
+Dans la poursuite de la réforme territoriale engagée en 2010, l'Assemblée nationale adopte définitivement le {{date France|17|avril|2013}} la réforme du mode de scrutin pour les élections départementales destinée à [[Loi tendant à favoriser l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives|garantir la parité hommes/femmes]]. Les lois (loi organique 2013-402 et loi 2013-403) sont promulguées le {{date|17|mai|2013}}<ref>{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027414225&categorieLien=id|texte=Loi {{numéro|2013-403}} du 17 mai 2013}} relative à l'élection des conseillers départementaux, des conseillers municipaux et des conseillers communautaires, et modifiant le calendrier électoral.</ref>. Un nouveau découpage territorial est défini par décret du {{date-|26 février 2014}} pour le département de l'[[Hérault (département)|Hérault]]<ref name="Décret2014"/>. Celui-ci entre en vigueur lors du premier renouvellement général des assemblées départementales suivant la publication du décret, soit en {{date-|mars 2015}}. Les conseillers départementaux sont élus au scrutin majoritaire binominal mixte. Les électeurs de chaque canton éliront au Conseil départemental, nouvelle appellation des Conseils généraux, deux membres de sexe différent, qui se présenteront en binôme de candidats. Les conseillers départementaux seront élus pour {{unité|6|ans}} au scrutin binominal majoritaire à deux tours, l'accès au second tour nécessitant 10 % des inscrits au {{1er|tour}}. En outre la totalité des conseillers départementaux est renouvelée.
+
+Ce nouveau mode de scrutin nécessite un redécoupage des cantons dont le nombre est divisé par deux avec arrondi à l'unité impaire supérieure si ce nombre n'est pas entier impair et avec des conditions de seuils minimaux<ref>Article 4 de la loi du 17 mai 2013 modifiant l'article L 191 -1 du code électoral.</ref>. Dans l'[[Hérault (département)|Hérault]] le nombre de cantons passe ainsi de 49 à 25<ref name="Décret2014">{{Légifrance|url=http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028664358 |texte=Décret {{n°|2014}}-258 du 26 février 2014}} portant délimitation des cantons dans le département de l'Hérault.</ref>.
+
+Les critères du remodelage cantonal sont les suivants : le territoire de chaque canton doit être défini sur des bases essentiellement démographiques, le territoire de chaque canton doit être continu et les communes de moins de {{unité|3500|habitants}} sont entièrement comprises dans le même canton. Il n’est fait référence, ni aux limites des arrondissements, ni à celles des circonscriptions législatives.
+
+Conformément à de multiples décisions du [[Conseil constitutionnel (France)|Conseil constitutionnel]] depuis 1985 et notamment sa décision {{numéro|2010-618}} DC du {{date-|9 décembre 2010}}, il est admis que le principe d’égalité des électeurs au regard des critères démographiques est respecté lorsque le ratio conseiller/habitant de la circonscription est compris dans une fourchette de 20 % de part et d'autre du ratio moyen conseiller/habitant du département<ref name="Décision2010">{{Lien web |url=http://www.conseil-constitutionnel.fr/conseil-constitutionnel/root/bank/download/2010618DCccc_618dc.pdf |titre= Décision {{numéro|2010-618}} DC – 9 décembre 2010 - Loi de réforme des collectivités territoriales |date = |site =conseil-constitutionnel.fr |consulté le= 13 mai 2014|brisé le = 2023-11-22}}.</ref>. Pour le département de l'Hérault, la population de référence est la population légale en vigueur au {{date-|1 janvier 2013}}, à savoir la population millésimée 2010, soit {{unité|1044558|habitants}}<ref name="PopDep-2010">{{Lien web |url=http://www.insee.fr/fr/themes/tableau_local.asp?ref_id=POP&millesime=2010&nivgeo=DEP&codgeo=34 |titre= Chiffres clés Évolution et structure de la population - Département de l'Hérault (34) |date = |site =insee.fr |consulté le= 13 mai 2014}}.</ref>. Avec 25 cantons la population moyenne par conseiller départemental est de {{unité|41782|habitants}}. Ainsi la population de chaque nouveau canton doit-elle être comprise entre {{unité|33426|habitants}} et {{unité|50139|habitants}} pour respecter le principe de l'égalité citoyenne au vu des critères démographiques.
+
+== Composition actuelle ==
+=== Composition détaillée ===
+{| class="wikitable center"
+! scope=col | {{abrd|N°|Numéro d'ordre dans le décret}}
+! scope=col | Nom du Canton
+! scope=col | [[Bureau centralisateur]]
+! scope=col | Population
+! scope=col | Nombre de communes
+! scope=col | Communes composant le canton
+! scope=col | Localisation dans le département
+! colspan=3 scope=col | Conseillers
+|-
+| rowspan=2 | 1
+| rowspan=2 | [[Canton d'Agde|Agde]] 
+| rowspan=2 | [[Agde]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton d'Agde}}}} <small>({{Population de France/dernière_année||Canton d'Agde}})</small>
+| rowspan=2 | 5 
+| rowspan=2 | [[Agde]], [[Bessan]], [[Marseillan (Hérault)|Marseillan]], [[Portiragnes]] et [[Vias]].
+| rowspan=2 | [[File:Canton d'Agde.png|vignette]]
+| width=0.5 {{Infobox Parti politique français/couleurs|LR}}| || Marie-Christine Fabre de Roussac || [[Les Républicains|LR]]
+|-
+| width=0.5 {{Infobox Parti politique français/couleurs|UDI}}| || Sébastien Frey || [[Union des démocrates et indépendants|UDI]]
+|-
+| rowspan=2 bgcolor=#eee | 2
+| rowspan=2 bgcolor=#eee | [[Canton de Béziers-1|Béziers-1]] 
+| rowspan=2 bgcolor=#eee | [[Béziers]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Béziers-1}}}} <small>({{Population de France/dernière_année||Canton de Béziers-1}})</small>
+| rowspan=2 bgcolor=#eee | 5 + faction de Béziers
+| rowspan=2 bgcolor=#eee | [[Lespignan]], [[Nissan-lez-Enserune]], [[Sérignan]], [[Valras-Plage]], [[Vendres]] et la partie sud de la commune de Béziers{{note|groupe=alpha|Cette partie est située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Colombiers (Hérault)|Colombiers]], route départementale 609, route de Narbonne, route d'Espagne, pont Neuf, avenue du Colonel-d'Ornano, boulevard de Verdun, carrefour de l'Hours, avenue du Président-Wilson, rond-point Winston-Churchill, boulevard du Maréchal-de-Lattre-de-Tassigny, rue Eugène-Gilbert, rue Henri-Pégoud, rue Emmanuel-Séra, rue Louis-Carayon, rue Jean-Mermoz, rue Louis-Blériot, rue Robert-Fronval, place Injalbert, boulevard de Genève, rue André-Chénier, rue Jean-Valette, rue Giuseppe-Verdi, rue Castelbon-de-Beauxhostes, avenue Emile-Claparède, avenue Pierre-Verdier, rue de l'Abbé-de-l'Epée, rue Frédéric-Bérard, rue Claude-Bernard, avenue Jean-Constans, carrefour du Maréchal-Leclerc, avenue du Puech-de-Valras, ligne de chemin de fer de Béziers à Bédarieux, avenue de la Voie-Domitienne, rond-point Vincent-Badie, ligne droite du rond-point Vincent-Badie à l'extrémité de la rue de la Ginieisse, rue de la Ginieisse, voie communale 12, ligne droite dans le prolongement de la voie communale 12, jusqu'à la limite territoriale de la commune de [[Villeneuve-lès-Béziers]].}}.
+| rowspan=2 bgcolor=#eee | [[File:Canton de Béziers-1.png|vignette]]
+| rowspan=3 {{Infobox Parti politique français/couleurs|DVD}} | || bgcolor=#eee | Marie Hirth || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| bgcolor=#eee | Denis Marsala || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 3
+| rowspan=2 | [[Canton de Béziers-2|Béziers-2]] 
+| rowspan=2 | [[Béziers]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Béziers-2}}}} <small>({{Population de France/dernière_année||Canton de Béziers-2}})</small>
+| rowspan=2 | 2 + fraction de Béziers
+| rowspan=2 | [[Corneilhan]], [[Lignan-sur-Orb]] et la partie nord-ouest de la commune de Béziers{{note|groupe=alpha|Cette partie est située au nord et à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Colombiers (Hérault)|Colombiers]], route départementale 609, route de Narbonne, route d'Espagne, pont Neuf, avenue du Colonel-d'Ornano, boulevard de Verdun, carrefour de l'Hours, avenue du Président-Wilson, rond-point Winston-Churchill, boulevard du Maréchal-de-Lattre-de-Tassigny, rue Eugène-Gilbert, rue Henri-Pégoud, rue Emmanuel-Séra, rue Louis-Carayon, rue Jean-Mermoz, rue Louis-Blériot, rue Robert-Fronval, boulevard de Genève, rue André-Chénier, rue Jean-Valette, rue Giuseppe-Verdi, rue Castelbon-de-Beauxhostes, avenue Emile-Claparède, boulevard Ernest-Perreal, boulevard Yves-Nat, place du 8-Mai-1945, avenue Jean-Moulin, rue de l'Hort-de-Monseigneur, rue Georges-Seurat, rue Auguste-Renoir, rue Albert-Gleizes, ligne droite dans le prolongement de la rue Albert-Gleizes, avenue Henri-Pech, avenue du Préfet-Claude-Erignac, rue Edouard-Branly, rue Marcelin-Berthelot, rue de la Renardière, rue de l'Occident, rue de la Croix-de-la-Reille, avenue du Préfet-Claude-Erignac, ruisseau de Bagnols, jusqu'à la limite territoriale de la commune de [[Corneilhan]].}}
+| rowspan=2 | [[File:Canton de Béziers-2.png|vignette]]
+| Marie-Emmanuelle Camous|| [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|RN}}| || Gilles Sacaze|| [[Rassemblement national|RN]]
+|-
+| rowspan=2 bgcolor=#eee | 4
+| rowspan=2 bgcolor=#eee | [[Canton de Béziers-3|Béziers-3]] 
+| rowspan=2 bgcolor=#eee | [[Béziers]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Béziers-3}}}} <small>({{Population de France/dernière_année||Canton de Béziers-3}})</small>
+| rowspan=2 bgcolor=#eee | 8 + fraction de Béziers
+| rowspan=2 bgcolor=#eee | [[Bassan (Hérault)|Bassan]], [[Boujan-sur-Libron]], [[Cers]], [[Espondeilhan]], [[Lieuran-lès-Béziers]], [[Sauvian]], [[Servian]], [[Villeneuve-lès-Béziers]] et la partie nord-est de la commune de Béziers{{note|groupe=alpha|Parties non-comprises dans les autres cantons de Béziers.}}.
+| rowspan=2 bgcolor=#eee | [[File:Canton de Béziers-3.png|vignette]]
+| {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | Jean-Louis Respaud || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|RN}}| || bgcolor=#eee | Nicole Zénon || bgcolor=#eee | [[Rassemblement national|RN]]
+|-
+| rowspan=2 | 5
+| rowspan=2 | [[Canton de Cazouls-lès-Béziers|Cazouls-lès-Béziers]] 
+| rowspan=2 | [[Cazouls-lès-Béziers]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Cazouls-lès-Béziers}}}} <small>({{Population de France/dernière_année||Canton de Cazouls-lès-Béziers}})</small>
+| rowspan=2 | 28
+| rowspan=2 | [[Autignac]], [[Cabrerolles]], [[Causses-et-Veyran]], [[Caussiniojouls]], [[Cazouls-lès-Béziers]], [[Colombiers (Hérault)|Colombiers]], [[Faugères (Hérault)|Faugères]], [[Fos (Hérault)|Fos]], [[Fouzilhon]], [[Gabian (Hérault)|Gabian]], [[Laurens (Hérault)|Laurens]], [[Magalas]], [[Margon (Hérault)|Margon]], [[Maraussan]], [[Maureilhan]], [[Montady]], [[Montesquieu (Hérault)|Montesquieu]], [[Murviel-lès-Béziers]], [[Neffiès]], [[Pailhès (Hérault)|Pailhès]], [[Pouzolles]], [[Puimisson]], [[Roquessels]], [[Roujan]], [[Saint-Geniès-de-Fontedit]], [[Saint-Nazaire-de-Ladarez]], [[Thézan-lès-Béziers]] et [[Vailhan]].
+| rowspan=2 | [[File:Canton de Cazouls-lès-Béziers.png|vignette]]
+| rowspan=4 {{Infobox Parti politique français/couleurs|PS}}| || Séverine Saur || [[Parti socialiste (France)|PS]]
+|-
+| Philippe Vidal || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 bgcolor=#eee | 6
+| rowspan=2 bgcolor=#eee | [[Canton de Clermont-l'Hérault|Clermont-l'Hérault]] 
+| rowspan=2 bgcolor=#eee | [[Clermont-l'Hérault]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Clermont-l'Hérault}}}} <small>({{Population de France/dernière_année||Canton de Clermont-l'Hérault}})</small>
+| rowspan=2 bgcolor=#eee | 39
+| rowspan=2 bgcolor=#eee | [[Les Aires]], [[Aspiran]], [[Avène]], [[Bédarieux]], [[Le Bousquet-d'Orb]], [[Brenas]], [[Brignac (Hérault)|Brignac]], [[Camplong (Hérault)|Camplong]], [[Canet (Hérault)|Canet]], [[Carlencas-et-Levas]], [[Ceilhes-et-Rocozels]], [[Ceyras]], [[Clermont-l'Hérault]], [[Combes (Hérault)|Combes]], [[Graissessac]], [[Hérépian]], [[Joncels]], [[Lacoste (Hérault)|Lacoste]], [[Lamalou-les-Bains]], [[Liausson]], [[Lunas-les-Châteaux]], [[Mérifons]], [[Mourèze]], [[Nébian]], [[Octon]], [[Paulhan (Hérault)|Paulhan]], [[Pézènes-les-Mines]], [[Le Poujol-sur-Orb]], [[Le Pradal]], [[Saint-Étienne-Estréchoux]], [[Saint-Félix-de-Lodez]], [[Saint-Geniès-de-Varensal]], [[Saint-Gervais-sur-Mare]], [[Salasc]], [[Taussac-la-Billière]], [[La Tour-sur-Orb]], [[Valmascle]], [[Villemagne-l'Argentière]] et [[Villeneuvette]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Clermont-l'Hérault.png|vignette]]
+| bgcolor=#eee | Jean-Luc Falip || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| bgcolor=#eee | Marie Passieux || bgcolor=#eee | [[Parti socialiste (France)|PS]] 
+|-
+| rowspan=2 | 7
+| rowspan=2 | [[Canton du Crès|Le Crès]] 
+| rowspan=2 | [[Le Crès]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton du Crès}}}} <small>({{Population de France/dernière_année||Canton du Crès}})</small>
+| rowspan=2 | 11
+| rowspan=2 | [[Baillargues]], [[Beaulieu (Hérault)|Beaulieu]], [[Castries (Hérault)|Castries]], [[Le Crès]], [[Montaud (Hérault)|Montaud]], [[Restinclières]], [[Saint-Brès (Hérault)|Saint-Brès]], [[Saint-Drézéry]], [[Saint-Geniès-des-Mourgues]], [[Sussargues]] et [[Vendargues]].
+| rowspan=2 | [[File:Canton du Crès.png|vignette]]
+| {{Infobox Parti politique français/couleurs|DVG}}| || Yvon Pellet || [[Divers gauche|DVG]]
+|-
+| rowspan=3 {{Infobox Parti politique français/couleurs|PS}}| || Claudine Vassas Mejri || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 bgcolor=#eee | 8
+| rowspan=2 bgcolor=#eee | [[Canton de Frontignan|Frontignan]] 
+| rowspan=2 bgcolor=#eee | [[Frontignan]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Frontignan}}}} <small>({{Population de France/dernière_année||Canton de Frontignan}})</small>
+| rowspan=2 bgcolor=#eee | 6
+| rowspan=2 bgcolor=#eee | [[Balaruc-les-Bains]], [[Balaruc-le-Vieux]], [[Frontignan]], [[Gigean]], [[Mireval]] et [[Vic-la-Gardiole]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Frontignan.png|vignette]]
+| bgcolor=#eee | Jean-Franck Cappellini || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| bgcolor=#eee | Sylvie Pradelle || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 9
+| rowspan=2 | [[Canton de Gignac|Gignac]] 
+| rowspan=2 | [[Gignac (Hérault)|Gignac]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Gignac}}}} <small>({{Population de France/dernière_année||Canton de Gignac}})</small>
+| rowspan=2 | 28
+| rowspan=2 | [[Aniane]], [[Arboras]], [[Argelliers]], [[Aumelas]], [[Bélarga]], [[La Boissière (Hérault)|La Boissière]], [[Campagnan]], [[Gignac (Hérault)|Gignac]], [[Jonquières (Hérault)|Jonquières]], [[Lagamas]], [[Montarnaud]], [[Montpeyroux (Hérault)|Montpeyroux]], [[Plaissan]], [[Popian]], [[Le Pouget]], [[Pouzols]], [[Puéchabon]], [[Puilacher]], [[Saint-André-de-Sangonis]], [[Saint-Bauzille-de-la-Sylve]], [[Saint-Guilhem-le-Désert]], [[Saint-Guiraud]], [[Saint-Jean-de-Fos]], [[Saint-Pargoire]], [[Saint-Paul-et-Valmalle]], [[Saint-Saturnin-de-Lucian]], [[Tressan]] et [[Vendémian]].
+| rowspan=2 | [[File:Canton de Gignac.png|vignette]]
+| rowspan=3 {{Infobox Parti politique français/couleurs|DVG}}| || Nicole Morere || [[Divers gauche|DVG]]
+|-
+| Jean-François Soto || [[Divers gauche|DVG]]
+|-
+| rowspan=2 bgcolor=#eee | 10
+| rowspan=2 bgcolor=#eee | [[Canton de Lattes|Lattes]] 
+| rowspan=2 bgcolor=#eee | [[Lattes]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Lattes}}}} <small>({{Population de France/dernière_année||Canton de Lattes}})</small>
+| rowspan=2 bgcolor=#eee | 5
+| rowspan=2 bgcolor=#eee | [[Juvignac]], [[Lattes]], [[Lavérune]], [[Pérols]] et [[Saint-Jean-de-Védas]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Lattes.png|vignette]]
+| bgcolor=#eee | Cyril Meunier || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| rowspan=3 {{Infobox Parti politique français/couleurs|PS}}| || bgcolor=#eee | Patricia Weber || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 11
+| rowspan=2 | [[Canton de Lodève|Lodève]] 
+| rowspan=2 | [[Lodève]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Lodève}}}} <small>({{Population de France/dernière_année||Canton de Lodève}})</small>
+| rowspan=2 | 54
+| rowspan=2 | [[Agonès]], [[Le Bosc (Hérault)|Le Bosc]], [[Brissac (Hérault)|Brissac]], [[Causse-de-la-Selle]], [[Le Caylar]], [[Cazilhac (Hérault)|Cazilhac]], [[Celles (Hérault)|Celles]], [[Claret (Hérault)|Claret]], [[Le Cros]], [[Ferrières-les-Verreries]], [[Fontanès (Hérault)|Fontanès]], [[Fozières]], [[Ganges]], [[Gorniès]], [[Laroque (Hérault)|Laroque]], [[Lauret (Hérault)|Lauret]], [[Lauroux]], [[Lavalette (Hérault)|Lavalette]], [[Lodève]], [[Mas-de-Londres]], [[Montoulieu (Hérault)|Montoulieu]], [[Moulès-et-Baucels]], [[Notre-Dame-de-Londres]], [[Olmet-et-Villecun]], [[Pégairolles-de-Buèges]], [[Pégairolles-de-l'Escalette]], [[Les Plans (Hérault)|Les Plans]], [[Poujols]], [[Le Puech]], [[Les Rives]], [[Romiguières]], [[Roqueredonde]], [[Rouet (Hérault)|Rouet]], [[Saint-André-de-Buèges]], [[Saint-Bauzille-de-Putois]], [[Saint-Étienne-de-Gourgas]], [[Saint-Félix-de-l'Héras]], [[Saint-Jean-de-Buèges]], [[Saint-Jean-de-la-Blaquière]], [[Saint-Martin-de-Londres]], [[Saint-Maurice-Navacelles]], [[Saint-Michel (Hérault)|Saint-Michel]], [[Saint-Pierre-de-la-Fage]], [[Saint-Privat (Hérault)|Saint-Privat]], [[Sauteyrargues]], [[Sorbs]], [[Soubès]], [[Soumont]], [[Usclas-du-Bosc]], [[La Vacquerie-et-Saint-Martin-de-Castries]], [[Vacquières]], [[Valflaunès]], [[Viols-en-Laval]] et [[Viols-le-Fort]].
+| rowspan=2 | [[File:Canton de Lodève.png|vignette]]
+| Gaëlle Lévêque || [[Parti socialiste (France)|PS]]
+|-
+| Jacques Rigaud || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 bgcolor=#eee | 12
+| rowspan=2 bgcolor=#eee | [[Canton de Lunel]] 
+| rowspan=2 bgcolor=#eee | [[Lunel]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Lunel}}}} <small>({{Population de France/dernière_année||Canton de Lunel}})</small>
+| rowspan=2 bgcolor=#eee | 14
+| rowspan=2 bgcolor=#eee | [[Boisseron]], [[Campagne (Hérault)|Campagne]], [[Entre-Vignes]], [[Galargues]], [[Garrigues (Hérault)|Garrigues]], [[Lunel]], [[Lunel-Viel]], [[Marsillargues]], [[Saint-Just (Hérault)|Saint-Just]], [[Saint-Nazaire-de-Pézan]], [[Saint-Sériès]], [[Saturargues]], [[Saussines]] et [[Villetelle]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Lunel.png|vignette]]
+| {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | Jérôme Boisson || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | Paulette Gougeon || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 13
+| rowspan=2 | [[Canton de Mauguio]] 
+| rowspan=2 | [[Mauguio]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Mauguio}}}} <small>({{Population de France/dernière_année||Canton de Mauguio}})</small>
+| rowspan=2 | 8
+| rowspan=2 | [[Candillargues]], [[La Grande-Motte]], [[Lansargues]], [[Mauguio]], [[Mudaison]], [[Palavas-les-Flots]], [[Saint-Aunès]] et [[Valergues]].
+| rowspan=2 | [[File:Canton de Mauguio.png|vignette]]
+| {{Infobox Parti politique français/couleurs|LR}}| || Brice Bonnefoux || [[Les Républicains|LR]]
+|-
+| {{Infobox Parti politique français/couleurs|DVC}}| || Patricia Moullin-Traffort || [[Divers centre|DVC]]
+|-
+| rowspan=2 bgcolor=#eee | 14
+| rowspan=2 bgcolor=#eee | [[Canton de Mèze]] 
+| rowspan=2 bgcolor=#eee | [[Mèze]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Mèze}}}} <small>({{Population de France/dernière_année||Canton de Mèze}})</small>
+| rowspan=2 bgcolor=#eee | 18
+| rowspan=2 bgcolor=#eee | [[Adissan]], [[Aumes]], [[Bouzigues]], [[Cabrières (Hérault)|Cabrières]], [[Cazouls-d'Hérault]], [[Fontès]], [[Lézignan-la-Cèbe]], [[Lieuran-Cabrières]], [[Loupian]], [[Mèze]], [[Montagnac (Hérault)|Montagnac]], [[Montbazin]], [[Nizas (Hérault)|Nizas]], [[Péret]], [[Poussan]], [[Saint-Pons-de-Mauchiens]], [[Usclas-d'Hérault]] et [[Villeveyrac]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Mèze.png|vignette]]
+| rowspan=3 {{Infobox Parti politique français/couleurs|PS}}| || bgcolor=#eee | Audrey Imbert || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| bgcolor=#eee | Christophe Morgo || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 15
+| rowspan=2 | [[Canton de Montpellier-1]] 
+| rowspan=2 | [[Montpellier]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Montpellier-1}}}} <small>({{Population de France/dernière_année||Canton de Montpellier-1}})</small>
+| rowspan=2 | 1 + fraction de Montpellier
+| rowspan=2 | [[Grabels]] et la partie nord-ouest de Montpellier{{note|groupe=alpha|Cette partie est située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Grabels]], avenue Ernest-Hemingway, rond-point de l'Appel-du-18-Juin-1940, avenue Ernest-Hemingway, rond-point du Château-d'O, avenue des Moulins, rue Jean-Bart, rond-point de La Pérouse, avenue du Professeur-Louis-Ravas, rue Paul-Rimbaud, rue Marius-Carrieu, avenue Paul-Bringuier, avenue de Lodève, allée de Paris, rue Jules-Guesde, ligne droite dans le prolongement de la rue Georges-Briquet, avenue de la Liberté, route nationale 109, jusqu'à la limite territoriale de la commune de [[Juvignac]].}}.
+| rowspan=2 | [[File:Canton de Montpellier1.png|vignette]]
+| Manar Bouida  || [[Parti socialiste (France)|PS]]
+|-
+| {{Infobox Parti politique français/couleurs|LÉ}}| || Rachid El Moudden || [[Les Écologistes|LÉ]]
+|-
+| rowspan=2 bgcolor=#eee | 16
+| rowspan=2 bgcolor=#eee | [[Canton de Montpellier-2]] 
+| rowspan=2 bgcolor=#eee | [[Montpellier]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Montpellier-2}}}} <small>({{Population de France/dernière_année||Canton de Montpellier-2}})</small>
+| rowspan=2 bgcolor=#eee | Fraction de Montpellier
+| rowspan=2 bgcolor=#eee | La partie nord de Montpellier{{note|groupe=alpha|Cette partie est située au nord d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Castelnau-le-Lez]], limite Sud du [[Parc zoologique de Montpellier|zoo de Lunaret]], avenue du Val-de-Montferrand, place de la Voie-Domitienne, route de Mende, rue Henri-Dunant, avenue Frédéric-Sabatier-d'Espeyran, avenue Charles-Flahaut, rue Auguste-Broussonnet, rue de la Portalière-des-Masques, avenue d'Assas, rue de Las-Sorbes, avenue de la Gaillarde, rue de Louvain, rue Gabriel-Buchet, avenue de l'Ecole-d'Agriculture, rue Boussinesq, boulevard Benjamin-Milhaud, avenue de Lodève, ligne droite dans le prolongement de l'impasse des Oiseaux-Bleus, avenue de la Liberté, ligne droite dans le prolongement de la rue Georges-Briquet, rue Jules-Guesde, allée de Paris, avenue de Lodève, avenue Paul-Bringuier, rue Marius-Carrieu, rue Paul-Rimbaud, avenue du Professeur-Louis-Ravas, rond-point La Pérouse, avenue des Moulins, rond-point du Château-d'O, avenue Ernest-Hemingway, rond-point de l'Appel-du-18-Juin-1940, avenue Ernest-Hemingway, jusqu'à la limite territoriale de la commune de [[Grabels]].}}.
+| rowspan=2 bgcolor=#eee | [[File:Canton de Montpellier2.png|vignette]]
+| rowspan=5 {{Infobox Parti politique français/couleurs|PS}}| || bgcolor=#eee | Jean-Louis Gély || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| bgcolor=#eee | Gabrielle Zanetto-Pourreau || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 17
+| rowspan=2 | [[Canton de Montpellier-3]] 
+| rowspan=2 | [[Montpellier]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Montpellier-3}}}} <small>({{Population de France/dernière_année||Canton de Montpellier-3}})</small>
+| rowspan=2 | Fraction de Montpellier
+| rowspan=2 | La partie est de Montpellier{{note|groupe=alpha|Cette partie est située à l'est d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Castelnau-le-Lez]], avenue François-Delmas, avenue de Nîmes, avenue Saint-Lazare, rue Max-Mousseron, rue du Jeu-de-Mail-des-Abbés, avenue de Castelnau, rue du 81e-Régiment-d'Infanterie, rue Francis-Garnier, rue Lakanal, rue Bosquet, rue du Faubourg-Boutonnet, place Albert-Ier, boulevard Pasteur, boulevard Louis-Blanc, rue des Ecoles-Laïques, rue de l'Aiguillerie, rue de la Draperie-Rouge, rue de l'Herberie, rue de la Vieille, rue Saint-Ravy, rue Joubert, rue Voltaire, rue Saint-Côme, rue Jules-Latreilhe, rue de la Fontaine, rue Lapeyronie, grand-rue Jean-Moulin, boulevard du Jeu-de-Paume, boulevard de l'Observatoire, boulevard Victor-Hugo, rue Joffre, rue du Clos-René, rue Aristide-Ollivier, avenue Henri-Frenay, rue du Pont-de-Lattes, boulevard de Strasbourg, avenue Albert-Dubout, avenue du Petit-Train, chemin de Moulares, ligne droite jusqu'au cours du Lez à l'intersection avec l'avenue du Pirée, cours du Lez, jusqu'à la limite territoriale de la commune de [[Lattes]].}}.
+| rowspan=2 | [[File:Canton de Montpellier3.png|vignette]]
+| Jérôme Moynier || [[Parti socialiste (France)|PS]]
+|-
+| Karine Wisniewski || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 bgcolor=#eee | 18
+| rowspan=2 bgcolor=#eee | [[Canton de Montpellier-4]] 
+| rowspan=2 bgcolor=#eee | [[Montpellier]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Montpellier-4}}}} <small>({{Population de France/dernière_année||Canton de Montpellier-4}})</small>
+| rowspan=2 bgcolor=#eee | Fraction de Montpellier
+| rowspan=2 bgcolor=#eee | La partie sud de Montpellier{{note|groupe=alpha|Cette partie est située au sud d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Saint-Jean-de-Védas]], route de Lavérune, avenue de la Croix-du-Capitaine, rue de Claret, avenue de Toulouse, boulevard Berthelot, boulevard Vieussens, boulevard Rabelais, boulevard d'Orient, boulevard de Strasbourg, avenue Albert-Dubout, avenue du Petit-Train, chemin de Moularès, ligne droite jusqu'au cours du Lez à l'intersection avec l'avenue du Pirée, cours du Lez, jusqu'à la limite territoriale de la commune de [[Lattes]].}}.
+| rowspan=2 bgcolor=#eee | [[File:Canton de Montpellier4.png|vignette]]
+| bgcolor=#eee | Jean Almarcha || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| {{Infobox Parti politique français/couleurs|PCF}}| || bgcolor=#eee | Corinne Gournay-Garcia || bgcolor=#eee | [[Parti communiste français|PCF]]
+|-
+| rowspan=2 | 19
+| rowspan=2 | [[Canton de Montpellier-5]] 
+| rowspan=2 | [[Montpellier]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Montpellier-5}}}} <small>({{Population de France/dernière_année||Canton de Montpellier-5}})</small>
+| rowspan=2 | Fraction de Montpellier
+| rowspan=2 | La partie ouest de Montpellier{{note|groupe=alpha|Cette partie est située à l'ouest d'une ligne définie par l'axe des voies et limites suivantes : depuis la limite territoriale de la commune de [[Saint-Jean-de-Védas]], route de Lavérune, avenue de la Croix-du-Capitaine, rue de Claret, avenue de Toulouse, boulevard Berthelot, boulevard Vieussens, boulevard Rabelais, boulevard d'Orient, boulevard de Strasbourg, rue du Pont-de-Lattes, avenue Henri-Frenay, rue Aristide-Ollivier, rue du Clos-René, rue Joffre, boulevard Victor-Hugo, boulevard de l'Observatoire, boulevard du Jeu-de-Paume, grand-rue Jean-Moulin, rue Lapeyronie, rue de la Fontaine, rue Jules-Latreilhe, rue Saint-Côme, rue Voltaire, rue Joubert, rue Saint-Ravy, rue de la Vieille, rue de l'Herberie, rue de la Draperie-Rouge, rue de l'Aiguillerie, rue des Ecoles-Laïques, boulevard Louis-Blanc, boulevard Pasteur, place Albert-Ier, rue Auguste-Broussonnet, rue de la Portalière-des-Masques, avenue d'Assas, rue de Las-Sorbes, avenue de la Gaillarde, rue de Louvain, avenue de l'Ecole-d'Agriculture-Gabriel-Buchet, rue Boussinesq, boulevard Benjamin-Milhaud, avenue de Lodève, ligne droite dans le prolongement de l'impasse des Oiseaux-Bleus, avenue de la Liberté, route nationale 109, jusqu'à la limite territoriale de la commune de [[Juvignac]].}}.
+| rowspan=2 | [[File:Canton de Montpellier5.png|vignette]]
+| {{Infobox Parti politique français/couleurs|PS}}| || Zita Chelvi-Sandin || [[Parti socialiste (France)|PS]]
+|-
+| {{Infobox Parti politique français/couleurs|LÉ}}| || Sébastien Cristol || [[Les Écologistes|LÉ]]
+|-
+| rowspan=2 bgcolor=#eee | 20
+| rowspan=2 bgcolor=#eee | [[Canton de Montpellier - Castelnau-le-Lez]] 
+| rowspan=2 bgcolor=#eee | [[Montpellier]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Montpellier - Castelnau-le-Lez}}}} <small>({{Population de France/dernière_année||Canton de Montpellier - Castelnau-le-Lez}})</small>
+| rowspan=2 bgcolor=#eee | 4 + fraction de Montpellier
+| rowspan=2 bgcolor=#eee | [[Castelnau-le-Lez]], [[Clapiers]], [[Jacou]], [[Montferrier-sur-Lez]] et la partie nord-est de Montpellier{{note|groupe=alpha|Parties non-comprises dans les autres cantons de Montpellier.}}.
+| rowspan=2 bgcolor=#eee | [[File:Canton de Montpellier-Castelnau-le-Lez.png|vignette]]
+| {{Infobox Parti politique français/couleurs|PS}}| || bgcolor=#eee | Renaud Calvat || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| {{Infobox Parti politique français/couleurs|LÉ}}| || bgcolor=#eee | Jacqueline Markovic || bgcolor=#eee | [[Les Écologistes|LÉ]]
+|-
+| rowspan=2 | 21
+| rowspan=2 | [[Canton de Pézenas]] 
+| rowspan=2 | [[Pézenas]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Pézenas}}}} <small>({{Population de France/dernière_année||Canton de Pézenas}})</small>
+| rowspan=2 | 15
+| rowspan=2 | [[Abeilhan]], [[Alignan-du-Vent]], [[Castelnau-de-Guers]], [[Caux]], [[Coulobres]], [[Florensac]], [[Montblanc (Hérault)|Montblanc]], [[Nézignan-l'Évêque]], [[Pézenas]], [[Pinet]], [[Pomérols]], [[Puissalicon]], [[Saint-Thibéry]], [[Tourbes]] et [[Valros]].
+| rowspan=2 | [[File:Canton de Pézenas.png|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|PS}}| || Julie Garcin Saudo || [[Parti socialiste (France)|PS]]
+|-
+| Vincent Gaudy || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 bgcolor=#eee | 22
+| rowspan=2 bgcolor=#eee | [[Canton de Pignan]] 
+| rowspan=2 bgcolor=#eee | [[Pignan]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Pignan}}}} <small>({{Population de France/dernière_année||Canton de Pignan}})</small>
+| rowspan=2 bgcolor=#eee | 8
+| rowspan=2 bgcolor=#eee | [[Cournonsec]], [[Cournonterral]], [[Fabrègues]], [[Murviel-lès-Montpellier]], [[Pignan]], [[Saint-Georges-d'Orques]], [[Saussan]] et [[Villeneuve-lès-Maguelone]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Pignan.png|vignette]]
+| {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | Michelle Cassar || bgcolor=#eee | [[Divers gauche|DVG]]
+|-
+| rowspan=2 {{Infobox Parti politique français/couleurs|DVD}}| || bgcolor=#eee | Jacques Martinier || bgcolor=#eee | [[Divers droite|DVD]]
+|-
+| rowspan=2 | 23
+| rowspan=2 | [[Canton de Saint-Gély-du-Fesc]] 
+| rowspan=2 | [[Saint-Gély-du-Fesc]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Gély-du-Fesc}}}} <small>({{Population de France/dernière_année||Canton de Saint-Gély-du-Fesc}})</small>
+| rowspan=2 | 20
+| rowspan=2 | [[Assas (Hérault)|Assas]], [[Buzignargues]], [[Cazevieille]], [[Combaillaux]], [[Guzargues]], [[Les Matelles]], [[Murles]], [[Prades-le-Lez]], [[Saint-Bauzille-de-Montmel]], [[Saint-Clément-de-Rivière]], [[Saint-Gély-du-Fesc]], [[Saint-Hilaire-de-Beauvoir]], [[Saint-Jean-de-Cornies]], [[Saint-Jean-de-Cuculles]], [[Saint-Mathieu-de-Tréviers]], [[Saint-Vincent-de-Barbeyrargues]], [[Sainte-Croix-de-Quintillargues]], [[Teyran]], [[Le Triadou]] et [[Vailhauquès]].
+| rowspan=2 | [[File:Canton de Saint-Gély-du-Fesc.png|vignette]]
+| Michèle Lernout || [[Divers droite|DVD]]
+|-
+| {{Infobox Parti politique français/couleurs|PS}}| || Jérôme Lopez || [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 bgcolor=#eee | 24
+| rowspan=2 bgcolor=#eee | [[Canton de Saint-Pons-de-Thomières]] 
+| rowspan=2 bgcolor=#eee | [[Saint-Pons-de-Thomières]]
+| rowspan=2 bgcolor=#eee | {{formatnum:{{Population de France/dernière_pop||Canton de Saint-Pons-de-Thomières}}}} <small>({{Population de France/dernière_année||Canton de Saint-Pons-de-Thomières}})</small>
+| rowspan=2 bgcolor=#eee | 59
+| rowspan=2 bgcolor=#eee | [[Agel]], [[Aigne]], [[Aigues-Vives (Hérault)|Aigues-Vives]], [[Assignan]], [[Azillanet]], [[Babeau-Bouldoux]], [[Beaufort (Hérault)|Beaufort]], [[Berlou]], [[Boisset (Hérault)|Boisset]], [[Cambon-et-Salvergues]], [[Capestang]], [[Cassagnoles (Hérault)|Cassagnoles]], [[Castanet-le-Haut]], [[La Caunette]], [[Cazedarnes]], [[Cébazan]], [[Cessenon-sur-Orb]], [[Cesseras]], [[Colombières-sur-Orb]], [[Courniou]], [[Creissan]], [[Cruzy]], [[Félines-Minervois]], [[Ferrals-les-Montagnes]], [[Ferrières-Poussarou]], [[Fraisse-sur-Agout]], [[La Livinière]], [[Minerve (Hérault)|Minerve]], [[Mons (Hérault)|Mons]], [[Montels (Hérault)|Montels]], [[Montouliers]], [[Olargues]], [[Olonzac]], [[Oupia]], [[Pardailhan]], [[Pierrerue (Hérault)|Pierrerue]], [[Poilhes]], [[Prades-sur-Vernazobre]], [[Prémian]], [[Puisserguier]], [[Quarante (Hérault)|Quarante]], [[Rieussec]], [[Riols]], [[Roquebrun]], [[Rosis]], [[Saint-Chinian]], [[Saint-Étienne-d'Albagnan]], [[Saint-Jean-de-Minervois]], [[Saint-Julien (Hérault)|Saint-Julien]], [[Saint-Martin-de-l'Arçon]], [[Saint-Pons-de-Thomières]], [[Saint-Vincent-d'Olargues]], [[La Salvetat-sur-Agout]], [[Siran (Hérault)|Siran]], [[Le Soulié]], [[Vélieux]], [[Verreries-de-Moussans]], [[Vieussan]] et [[Villespassans]].
+| rowspan=2 bgcolor=#eee | [[File:Canton de Saint-Pons-de-Thomières.png|vignette]]
+| {{Infobox Parti politique français/couleurs|DVG}}| || bgcolor=#eee | '''[[Kléber Mesquida]]''' || bgcolor=#eee | [[La Convention|CONV]]
+|-
+| {{Infobox Parti politique français/couleurs|PS}}| || bgcolor=#eee | Marie-Pierre Pons || bgcolor=#eee | [[Parti socialiste (France)|PS]]
+|-
+| rowspan=2 | 25
+| rowspan=2 | [[Canton de Sète]] 
+| rowspan=2 | [[Sète]]
+| rowspan=2 | {{formatnum:{{Population de France/dernière_pop||Canton de Sète}}}} <small>({{Population de France/dernière_année||Canton de Sète}})</small>
+| rowspan=2 | 1
+| rowspan=2 | [[Sète]]
+| rowspan=2 | [[File:Canton de Sète.png|vignette]]
+| rowspan=2 {{Infobox Parti politique français/couleurs|PCF}}| || Gabriel Blasco || [[Parti communiste français|PCF]]
+|-
+| Véronique Calueba || [[Parti communiste français|PCF]]
+|-
+! colspan=3 | 
+! {{formatnum:{{Population de France/dernière_pop||Hérault (département)}}}} <small>({{Population de France/dernière_année||Hérault (département)}})</small>
+! 342
+! colspan=5 | 
+|}
+
+[[Fichier:Carte cantons 2015 Hérault.svg|800px|vignette|centre|''Liste des cantons''<br>'''1'''- [[Canton d'Agde|Agde]], '''2'''- [[Canton de Béziers-1|Béziers-1]], '''3'''- [[Canton de Béziers-2|Béziers-2]], '''4'''- [[Canton de Béziers-3|Béziers-3]], '''5'''- [[Canton de Cazouls-lès-Béziers|Cazouls-lès-Béziers]], '''6'''- [[Canton de Clermont-l'Hérault|Clermont-l'Hérault]], '''7'''- [[Canton du Crès|Le Crès]], '''8'''- [[Canton de Frontignan|Frontignan]], '''9''' [[Canton de Gignac|Gignac]], '''10'''- [[Canton de Lattes|Lattes]], '''11'''- [[Canton de Lodève|Lodève]], '''12'''- [[Canton de Lunel|Lunel]], '''13'''- [[Canton de Mauguio|Mauguio]], '''14'''- [[Canton de Mèze|Mèze]], '''15'''- [[Canton de Montpellier-1|Montpellier-1]], '''16'''- [[Canton de Montpellier-2|Montpellier-2]], '''17'''- [[Canton de Montpellier-3|Montpellier-3]], '''18'''- [[Canton de Montpellier-4|Montpellier-4]], '''19'''- [[Canton de Montpellier-5|Montpellier-5]], '''20'''- [[Canton de Montpellier - Castelnau-le-Lez|Montpellier - Castelnau-le-Lez]], '''21'''- [[Canton de Pézenas|Pézenas]], '''22'''- [[Canton de Pignan|Pignan]], '''23'''- [[Canton de Saint-Gély-du-Fesc|Saint-Gély-du-Fesc]], '''24'''- [[Canton de Saint-Pons-de-Thomières|Saint-Pons-de-Thomières]], '''25'''- [[Canton de Sète|Sète]]]]
+
+=== Répartition par arrondissement ===
+Contrairement à l'ancien découpage où chaque canton était inclus à l'intérieur d'un seul arrondissement, le nouveau découpage territorial s'affranchit des limites des arrondissements. Certains cantons peuvent être composés de communes appartenant à des arrondissements différents. Dans le département de l'Hérault, c'est le cas de quatre cantons ([[canton d'Agde|Agde]], [[canton de Clermont-l'Hérault|Clermont-l'Hérault]], [[canton de Mèze|Mèze]], [[canton de Saint-Gély-du-Fesc|Saint-Gély-du-Fesc]]).
+
+Le tableau suivant présente la répartition par arrondissement :
+
+{| class="wikitable alternance"  style="text-align:center"
+!scope=col|N°
+!scope=col|Canton
+!scope=col|[[Arrondissement de Béziers|Béziers]]
+!scope=col|[[Arrondissement de Lodève|Lodève]]
+!scope=col|[[Arrondissement de Montpellier|Montpellier]]
+!scope=col|Total
+|-
+|1||align="left"| Agde||4||||1||'''5'''
+|-
+|2||align="left"| Béziers-1||5 + fraction de Béziers||||||'''5 + fraction de Béziers'''
+|-
+|3||align="left"| Béziers-2||2 + fraction de Béziers||||||'''2 + fraction de Béziers'''
+|-
+|4||align="left"| Béziers-3||8 + fraction de Béziers||||||'''8 + fraction de Béziers'''
+|-
+|5||align="left"| Cazouls-lès-Béziers||28||||||'''28'''
+|-
+|6||align="left"| Clermont-l'Hérault||24||16||||'''40'''
+|-
+|7||align="left"| Le Crès||||||11||'''11'''
+|-
+|8||align="left"| Frontignan||||||6||'''6'''
+|-
+|9||align="left"| Gignac||||28||||'''28'''
+|-
+|10||align="left"| Lattes||||||5||'''5'''
+|-
+|11||align="left"| Lodève||||54||||'''54'''
+|-
+|12||align="left"| Lunel||||||14||'''14'''
+|-
+|13||align="left"| Mauguio||||||8||'''8'''
+|-
+|14||align="left"| Mèze||7||5||6||'''18'''
+|-
+|15||align="left"| Montpellier-1||||||1 + fraction de Montpellier||'''1''' + fraction de Montpellier
+|-
+|16||align="left"| Montpellier-2||||||Fraction de Montpellier||Fraction de Montpellier
+|-
+|17||align="left"| Montpellier-3||||||Fraction de Montpellier||Fraction de Montpellier
+|-
+|18||align="left"| Montpellier-4||||||Fraction de Montpellier||Fraction de Montpellier
+|-
+|19||align="left"| Montpellier-5||||||Fraction de Montpellier||Fraction de Montpellier
+|-
+|20||align="left"| Montpellier - Castelnau-le-Lez||||||4 + fraction de Montpellier ||'''4''' + fraction de Montpellier
+|-
+|21||align="left"| Pézenas||15||||||'''15'''
+|-
+|22||align="left"| Pignan||||||8||'''8'''
+|-
+|23||align="left"| Saint-Gély-du-Fesc||||19||1||'''20'''
+|-
+|24||align="left"| Saint-Pons-de-Thomières||59||||||'''59'''
+|-
+|25||align="left"| Sète||||||1||'''1'''
+|-
+!||||153||122||67||342
+|}
+
+== Homonymies ==
+Il n'y a pas de stricte homonymie pour les cantons de [[Canton de Montagnac (Hérault)|Montagnac]], [[canton de Gignac|Gignac]], [[canton de Lunas|Lunas]] et [[canton de Claret|Claret]], mais les communes [[chef-lieu|chefs-lieux]] ont chacune un ou plusieurs homonymes exacts ou partiels.
+
+== Notes et références ==
+=== Notes ===
+{{références|groupe=alpha}}
+
+=== Références ===
+{{Références|références=2}}
+
+== Voir aussi ==
+[[Communes de l'Hérault]]
+
+{{Palette|Découpage administratif d'Occitanie|Cantons de France|Cantons de l'Hérault|Politique dans l'Hérault}}
+{{Portail|Hérault}}
+
+[[Catégorie:Canton dans l'Hérault|*]]
+[[Catégorie:Liste de cantons français|Herault]]
+[[Catégorie:Liste en rapport avec l'Hérault|Cantons]]
