@@ -33,6 +33,7 @@ une source à trouver : ce sont des commandes à lancer et des sorties à lire.
 | 4 | **Où est passé le sol des 318 ?** | ils ne sont PAS sans géométrie — `diag_sans_geometrie.sql` en a trouvé zéro le 5 septembre. Ils sont absents du **résultat** de `carte_partition_atome`, pas des tables qu'elle lit : un polygone entièrement recouvert par un mieux classé perd toutes ses faces. La question utile est « à qui leur sol a-t-il été donné ? », § 6 du même fichier, à coller dans une session où `diag_partition.sql` vient de matérialiser `d84`. Si le sol est repris à ~100 %, **la carte n'a pas de trou : elle a un défaut de légende** |
 | 5 | **La couture entre départements vaut 0,019 km² et non 0** | 1,9 ha ne tranche pas entre « des lisières » et « un vrai doublon parmi des lisières ». Jouer le § 9 de `sql/diag_partition.sql`, qui nomme les paires et porte une colonne `deux_reprises`. Mesuré au passage : le triple don d'Anthé et Thézac existait dans la règle, pas sur la carte — `partition_un_dep` ne rend que les atomes `dedans`, et elles habitent le 47 |
 | 6 | **Rendre au banc de `84` une entrée qui ne soit pas sa propre sortie** | son entrée est devenue sa sortie ; il ne peut plus rien réfuter. Les règles se mesurent en SQL contre la base |
+| 7 | **Var : ranger Toulon-Est et Toulon-Ouest dans les circonscriptions de 1958** | sorti de `113` le 19 octobre 2026 : les fractions de Toulon posées par `116` portent ces deux cantons en 1958, que l'atlas (Toulon-1 en 4e, Toulon-2 en 3e) ne range pas. Adrien tranchera en faisant le Var : un alias dans `circo/composition_1958.py`, puis ce script et `113` rejoués |
 
 **Avant et après chaque point, `psql -d histgis -f sql/diag_passages.sql`** —
 lecture seule. Il dit quels fichiers sont réellement passés, lesquels ont une
@@ -555,7 +556,7 @@ demande 17 et 2025 en offre 1).
 | **Marquer les 113 communes indéterminées de 1986 sur la carte** | forte | aucun — voir ci-dessous |
 | **Contrôler la couche circo** par les §§ 1, 3, 4 et 6 de l'annexe VI | forte | aucun : ce sont les seules sections qui ne passent pas par les cantons |
 | Contrôle indépendant de la couche moderne | forte | les contours publiés sur data.gouv.fr peuvent jouer le rôle que GEOFLA a joué pour les cantons |
-| Le découpage de **1958** hors Paris | moyenne | suspendu au trou cantonal ; 57 circos de 1986 sont reprises de 1981 (annexe VI § 7), et Marseille est constructible à 87 % par l'atlas |
+| Le découpage de **1958** hors Paris — ce que `113` n'a pas posé | moyenne | 68 départements posés le 13 octobre. Restent, par cause (`circo/composition_1958_etat.csv`) : **cantons divisés**, à descendre à l'atome avec les notes de l'atlas déjà recopiées (13, 33, 37, 38, 62, 69, 76, 90) ; **trame cantonale de 1958 absente de la base** (61, 71, 72, 73, 74, 77) ; **lecture à reprendre** (06, 44, 59, 68, la Corse de 1978) ; **à rephotographier** : Seine-et-Oise 1958-1967 de plus près, Jura et Haute-Saône, absents. Puis les 31 « DOUTE » de `circo/regles_1958_1986.py` à relire sur l'original, et le tableau de l'ordonnance n° 58-945 à confronter |
 | **Paris en 1986** | moyenne | demanderait une autre source que le tableau de l'Intérieur |
 | Les 8 atomes coupés entre circos sans l'être entre cantons | faible | il faudrait des atomes-fractions taillés sur les circonscriptions |
 

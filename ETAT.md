@@ -52,11 +52,14 @@ rattachements depuis le chargement initial. Ce qui suit est **ce que chaque
 | jalon 1968 | 32 659 rattachements, 2 899 cantons | `58`, `59` | 28 août |
 | reports par les deux bouts | 1941-1953 : 29 841 lignes ; 1941-1967 : 30 453 ; 1969-1998 : 24 041 | `93`, `97`, `95`, sur des jalons jugés par `96` | 23 sept. |
 | Seine 1815-1967, compléments | sol du Perreux rendu à Nogent, annexées et lambeaux prolongés jusqu'en 1863, cantons de Paris portés par les quartiers, banlieue prolongée de 1954 à 1968 (hypothèse) | `100` à `104` | 3 oct. — non chiffré ici |
+| bois de Boulogne et de Vincennes hors de Paris, 1863-1925/1929 | 18,12 km² rendus à 8 communes, 27 fenêtres datées | `118` | 18 oct. — `build/p118.log` |
 | circonscriptions 1815-1870 | un département par appel, 84 journaux dans `build/p106_NN.log` ; hors 75 (`87`-`91`), 89 (`105`), 57 (pas de trame de 1870) et l'Aveyron, non photographié | `64`, `105`, `106` | 4-6 oct. — effectifs dans les journaux |
+| circonscriptions 1958-1986 | 73 départements sur les cartes de l'atlas (19 oct., après `120` ; le Var sorti, Toulon-Est/Ouest à ranger) : 271 unités, 30 788 rattachements (1 082 par repli sur le premier canton connu) ; lecture de carte sur photo, 31 « DOUTE », non confrontée au JO ; 23 divisions en attente (`circo/composition_1958_etat.csv`) | `113` | 13 oct. — `build/p113.log` |
 | cantons 1815-1870 | le canton de 1870 remonté à 1815, sauf les exceptions de l'atlas ; France entière | `107` | 6 oct. — `build/p107.log` |
 | villes multicantonales découpées | 412 lignes de coupe pour 124 clés (communes et quartiers de Paris) dans `cartes/coupes_ville.csv` ; la carte les lit depuis `99` | `98`, `99`, `101_paris_fractions_quartier`, `108`, `109` | 11 oct., compté dans le CSV |
 | trous 1941-1998, par le JO | 691 périodes | `110` | 11 oct. |
 | périodes démenties par un transfert | 20 modifiées, 20 insérées | `111` | 11 oct., `p111_trace` |
+| trous traversant 1968, et chaînage par l'acte | 5 451 périodes, 178 361 atome-années (Belley, Civrieux) | `120` | 19 oct., `p120_qualite` ; reste dans `p120_reste` |
 | salves 1973 / 1982 | 1 905 rattachements, 270 cantons | `75` | 28 août |
 | salves restantes | 873 rattachements, 128 cantons | `76` | 28 août |
 | transferts datés INSEE | 32 rattachements, 13 cantons | `77` | 28 août |
@@ -657,12 +660,15 @@ qui a raison (105,4 km² officiels, bois compris), GEOFLA qui généralise.
 **386 circonscriptions sur 15 divisions de 1863 à 1986**, chacune rendant
 105,43 km² — Paris entier à chaque date. Quatorze divisions se résolvent sans un
 nom hors trame. Deux acquis non cherchés : **1958-1986 est posé** alors qu'il
-est bloqué nationalement (à Paris il se définit par quartiers, pas par cantons),
+était bloqué nationalement (il ne l'est plus depuis `113`, 13 octobre) (à Paris il se définit par quartiers, pas par cantons),
 et le régime de scrutin se lit dans les données — 1919-1928 et 1945-1958 ne
 comptent que 3 circonscriptions pour 80 quartiers, scrutin de liste par secteur.
 
-**Limites** : la trame ne vaut qu'à partir de 1860 (bois annexés en 1852 et
-1860) ; sa fidélité aux limites de 1876 est réputée, non vérifiée ; 16 noms
+**Limites** : la trame est celle d'aujourd'hui. Les deux bois en sont
+retirés de 1863 à leur annexion par `118` — Boulogne le 3 avril 1925,
+Neuilly et le bois de Vincennes le 18 avril 1929 ; la zone des
+fortifications, annexée de 1925 à 1930, ne l'est pas, faute d'IRIS à elle :
+Paris fait 87,3 km² en 1900 au lieu d'environ 78 ; sa fidélité aux limites de 1876 est réputée, non vérifiée ; 16 noms
 d'avant 1860 se résolvent contre la trame moderne en désignant d'autres
 territoires, et ne sont écartés que par une barrière de date.
 

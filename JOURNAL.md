@@ -9739,3 +9739,315 @@ pèsent 94 Mo. Rien n'est supprimé ; le doublon de la table de 1955 va dans
 
 *Un contrôle écrit dans la file d'attente n'avait pas été relancé avant d'en
 recopier le résultat : la ligne disait zéro, la base disait quarante.*
+
+**`112` — premier lot de `a_inscrire_en_base.md`.** Vingt-cinq entrées (n° 3, 8,
+9, 11, 12, 13, 16, 18, 19, 30, 36, 48, 49, 80, 81, 83 à 86, 88 à 91, 95, 99) :
+les villes dont cantons et fractions existent, que la base faisait commencer à
+la date du COG (1982 à 1998) et que le JO date du décret. 98 périodes posées,
+4 retirées (l'atome entier de Mayenne et de Poitiers en 1968-1973), 6 changées
+d'unité (Abrest, Saint-Yorre, Le Vernet : Vichy-Sud avant Cusset-Sud), 18 noms.
+Aucune unité, aucun atome créé. `98` rejoué : les villes du lot sont conformes
+à leur date de départ, et se tirent à chaque période posée. Restent 75 entrées,
+celles qui demandent une unité nouvelle, un texte ou un arbitrage.
+
+## 13 octobre 2026 — les cartes de 1958 de l'atlas, transcrites ; rien en base
+
+Adrien dépose `Photos-1-001/` : 139 photos des planches de Gaudillère pour
+1940-1995. Lues : les cartes « 1958-1986 » (et 1958-1973 / 1973-1986 pour
+l'Isère et le Rhône, 1958-1978 puis 1978-1986 pour la Corse) de **88
+départements**, dans `circo/regles_1958_1986.py` — pour chaque
+circonscription, la liste des cantons sous les noms de l'atlas, et les notes
+de l'atlas sur les cantons divisés recopiées mot à mot (Pas-de-Calais, Gironde,
+Indre-et-Loire, Isère, Rhône, Seine-Maritime, Belfort, Seine-et-Oise…).
+
+`circo/controle_1958.py` (lecture seule) confronte chaque département aux
+cantons que la base porte en décembre 1958 : **46 forment une partition sans
+reste**, 45 sont « à voir ». Dans ces 45 : des graphies (Sète/Cette,
+Montpont/Montpon…), les cantons de ville que la base n'a pas à cette date
+(Nice, Lille, Amiens, Toulon…), et **huit départements où la base n'a presque
+aucun canton en 1958** (61, 71, 72, 73, 74, 76, 77, 78) — le trou cantonal,
+pas la transcription.
+
+Non lus : la Seine-et-Oise de 1958 hors ses notes (carte trop dense sur la
+photo), les découpages de 1967 de la région parisienne (fond communal),
+l'outre-mer. Absents des photos : le Jura et la Haute-Saône. Une trentaine de
+lectures sont marquées « DOUTE » dans le fichier, surtout autour des grandes
+villes. Aucune ligne n'est posée en base.
+
+**Le même soir — `113` : posé.** Adrien : « va y ». `circo/composition_1958.py`
+rapproche les cantons de l'atlas des unités de la base (identité, puis 27
+alias écrits à la main — chefs-lieux déplacés comme Utelle/Lantosque,
+Landser/Sierentz, Gorze/Ars ; graphies ; villes numérotées —, puis préfixe
+unique) et juge chaque division : **68 posables sur 91**.
+`sql/113_circo_1958.sql` les pose par le canton de l'atome au 1ᵉʳ décembre
+1958, sur `[1958-01-01, 1986-11-24)` comme la Seine (la Corse jusqu'en 1978) :
+**251 unités, 27 883 rattachements**, dont 2 158 par repli sur le premier
+canton connu de l'atome. Recettes à zéro : aucun atome dans deux
+circonscriptions, aucune période déjà occupée. Au 1ᵉʳ décembre 1958, 25 891
+atomes ont une circonscription, contre 160 la veille.
+
+Ce qui manque est nommé : la recette 4 bis liste, par département posé, les
+atomes à canton connu restés sans circonscription — quelques unités à chaque
+fois, presque toutes des fractions de ville dont le canton n'existe pas en
+1958 dans la base ; 77 en Moselle. `113` entre dans
+`rejouer_apres_rebuild.sh`, après `111`. Aucun export n'a tourné.
+
+## 18 octobre 2026 — les bois de Boulogne et de Vincennes rendus à leurs communes jusqu'en 1925-1929
+
+Adrien : « corrige paris et les bois de boulogne et vincenne jusqu'en 192x ».
+
+### Le défaut
+
+De 1863 à aujourd'hui, Paris est dessiné sur les 80 quartiers d'IRIS, qui
+sont ceux de 2011 : **bois compris**. Au 1900-06-01, les quartiers Bel-Air et
+Picpus portaient les 10,06 km² du bois de Vincennes, Auteuil, la Muette et
+la Porte-Dauphine les 8,80 km² du bois de Boulogne ; la 2/12e circonscription
+faisait 13,23 km². ANR commet la même faute : il ôte les bois aux communes
+riveraines en 1860 et les donne au Paris agrandi. `102` ne les leur rendait
+que jusqu'en 1863.
+
+Or la Ville n'avait que la **propriété** des bois (1852 et 1860). Le
+territoire restait aux communes jusqu'aux décrets d'annexion :
+
+    part de Boulogne                 décret du 3 avril 1925 (JO du 5)
+    part de Neuilly                  décret du 18 avril 1929 (JO du 19)
+    bois de Vincennes, 7 communes    décrets du 18 avril 1929, un par commune
+
+Dates prises dans Wikipédia, recoupées pour 1925 par les notices de voies des
+Archives nationales ; **les deux JO restent à lire** (`JORF/` ne les a pas).
+
+### `118` — la règle
+
+Les cinq IRIS « Bois de … » découpent les deux bois au mètre près. La part de
+chaque commune est l'intersection de cet IRIS avec son polygone ANR du
+**1859-06-01** — date où ANR porte déjà la redistribution de 1860 : le
+hors-les-murs de Passy et d'Auteuil est à Boulogne, celui de Bercy à
+Charenton. Ce qu'ANR laisse aux annexées dans l'IRIS du bois (0,74 km²) est la
+zone des fortifications, intra-muros : elle reste à Paris.
+
+    Boulogne 554,9 ha   Neuilly 280,6   Fontenay 224,6   Saint-Maurice 212,0
+    Vincennes 206,8     Nogent 138,6    Saint-Mandé 110,1  Charenton 84,4
+    Joinville : rien    total 18,12 km² sur 18,86
+
+Les fenêtres ANR des huit communes sont coupées en 1863 et au décret ; les
+quartiers PQ45, 46, 61, 62, 63, qui n'avaient pas de fenêtre, en reçoivent une
+amputée des parts non encore annexées (source `iris-bois_118`). Ce sont des
+fractions : après 1929, `84` les rend à leur repli, le quartier entier.
+
+### Recette — la Seine ne bouge pas, Paris grandit deux fois
+
+    date         Paris      Seine     bois hors de Paris
+    1900-06-01   87,30 km²  479,64    18,12
+    1927-06-01   92,85      479,64    12,58
+    1930-06-01  105,42      479,64     0,01
+
+*Un premier passage de la recette donnait 84,38 / 92,85 / 101,68 : elle ne
+comptait que les `PQnn` et oubliait les fractions de quartier, qui vivent à
+certaines dates et pas à d'autres. Le sol était juste, la mesure ne l'était
+pas.*
+
+### Ce qui reste
+
+- **La zone non aedificandi**, annexée commune par commune de 1925 à 1930,
+  reste parisienne dès 1863 : aucun IRIS ne la sépare. Paris fait 87,3 km² en
+  1900 au lieu d'environ 78.
+- **Trouvé en passant, non corrigé : les vingt cantons de Paris de 1870 à
+  1940 ne sont pas dessinés.** Les arrondissements-cantons (76219, 76223…)
+  portent le canton, les quartiers `PQnn` la circonscription ; le treillis de
+  `84` donne toutes les faces aux quartiers et les arrondissements n'en
+  gardent aucune. Au 1900-06-01, `carte_partition(…, 'canton', '75')` rend
+  les 21 cantons de banlieue et aucun canton parisien.
+- Rejouer `102` seul demande de défaire `118` d'abord (`-v defaire=1`).
+
+`118` entre dans `rejouer_apres_rebuild.sh` juste après `102`.
+
+## 18 octobre 2026 — les vingt cantons de Paris de 1876 à 1940 rendus à la carte
+
+### Le défaut, vu en vérifiant `118`
+
+Au 1900-06-01, `carte_partition('1900-06-01', 'canton', '75')` rendait les
+21 cantons de banlieue et **aucun canton parisien**. Diagnostic à blanc sur
+`carte_partition_atome('1900-06-01', '75')` : 83 quartiers sortent (65 en
+`departage`), les 20 arrondissements 76208-76227 n'en sortent pas du tout.
+
+Les arrondissements portent le canton (7515-7534, [1870, 1941)), les
+quartiers `PQ…` la circonscription sur [1876, 1885) et [1889, 1941). Les deux
+trames vivent ensemble sur le même sol, et le treillis de `84` ne connaît pas
+les niveaux : sur chaque face, deux replis se disputent — l'arrondissement
+(16,4 km² pour le 12e) et son quartier — et l'arbitrage départage par l'aire.
+Le quartier gagne toujours. L'arrondissement n'a plus de face, et son canton
+plus de sol.
+
+L'en-tête de `103` disait de 1876-1940 que « le partage n'y a rien coupé ».
+C'était vrai des quartiers ; les arrondissements, eux, y perdaient tout.
+
+### `119` — la règle de `103`, une trame à la fois
+
+Sur ses périodes de circo, chaque quartier (fractions `PQnn#…` comprises,
+même code INSEE) reçoit le canton de son arrondissement. Le rattachement de
+l'arrondissement [1870, 1941) est remplacé par ce qui reste : [1870, 1876) et
+[1885, 1889), le scrutin de liste, où il porte aussi la circonscription et où
+les quartiers ne vivent pas. 20 rattachements retirés (`p119_modif`), 217
+posés — 177 de quartier, 40 restes d'arrondissement (`p119_trace`).
+
+### Recette (à blanc, puis appliqué / rejoué / défait dans une transaction annulée)
+
+    date         cantons Paris  banlieue   Paris km²  Seine km²  recouvrement
+    1872-06-01        20            8        87,30     479,64      0
+    1880-06-01        20            8        87,30     479,64      0
+    1887-06-01        20            8        87,30     479,64      0
+    1900-06-01        20           21        87,30     479,64      0
+    1927-06-01        20           22        92,85     479,64      0
+    1935-06-01        20           22       105,42     479,64      0
+
+À chaque borne de période, l'union des quartiers vivants égale
+l'arrondissement à moins d'un hectare. Paris grandit en 1925 et en 1929 comme
+`118` l'a voulu. Aux deux fenêtres de scrutin de liste, les arrondissements
+retombent sur leur repli bois compris, et les communes riveraines, datées,
+gardent le bois.
+
+### Ce qui reste
+
+- **L'ordre avec `103`.** `103` lit le canton des arrondissements au
+  1940-06-01 ; joué après `119`, il n'y trouverait rien et rendrait 1941-1998
+  aux arrondissements. `119` passe après `103` dans
+  `rejouer_apres_rebuild.sh`, et un rejeu isolé de `103` demande de défaire
+  `119` d'abord (`-v defaire=1`).
+- `119` n'est **pas appliqué** : il attend l'accord d'Adrien
+  (`psql -d histgis -1 -v appliquer=1 -f sql/119_paris_cantons_1870_1940.sql`,
+  puis `cartes/export_web.py 75 --partition --role histgis_carte`).
+
+## 19 octobre 2026 — les trous par-delà 1968 : Belley, Civrieux, et `120`
+
+### Deux exemples, deux familles nationales
+
+Signalés par Adrien en ouvrant le comblement département par département :
+**Belley** (01034) sans canton du 1955-01-01 au 1998-03-15, **Civrieux**
+(01105) sans canton du 1973-09-23 au 1985-03-10.
+
+Mesuré dans `membership` (trous intérieurs à [1941, 1999]) : 8 500 trous,
+240 764 atome-années, 8 043 atomes.
+
+- **Belley est absente du jalon de 1968.** `95` comble [1969, 1999] et `97`
+  [1941, 1967], chacun avec le jalon de 1968 pour bout : un trou qui le
+  TRAVERSE n'est entièrement dans aucune des deux fenêtres. 4 840 trous à
+  même canton aux deux bouts, 168 738 atome-années, 91 départements — sept
+  presque entiers (76, 77, 71, 61, 74, 72, 73).
+- **Civrieux est un désaccord expliqué.** Trévoux à gauche (`81`, arrêté au
+  premier acte de l'Ain), Reyrieux à droite, ouvert le 1985-03-10 par le
+  décret n° 84-1222 qui nomme la commune. La règle de composition de `110` ne
+  porte que sur ses propres lectures, et le décret n° 82-77 (Bourg, Oyonnax,
+  Montluel, Miribel) tombe dans le trou.
+
+### `120_trous_par_dela_1968.sql` — posé
+
+Règle de `93`/`95`/`97` sans la fenêtre (`accord`), plus `accord_confirme`
+(les actes qui nomment la commune la placent dans le canton même des deux
+bouts), `chainage_acte` (un seul acte la nomme, il ouvre le bout droit, aucun
+autre acte du département dans le trou) et `chainage_acte_large`, **décidé par
+Adrien le 19 octobre** : un acte intermédiaire ne bloque pas si son titre
+Légifrance nomme ses cantons, que tous ont une composition lue (une lettre
+d'OCR près : « Oycnnax-Sud ») et qu'aucune ne nomme la commune.
+
+    accord                4 840 lignes   168 738 atome-années
+    accord_confirme         173            3 856
+    chainage_acte           365            4 855
+    chainage_acte_large      73              912
+    total                 5 451          178 361   (p120_trace, p120_qualite)
+
+Ain : 354 atomes cantonnés en 1980 avant, 408 après (422 en 1999). Ce qui
+reste est dans `p120_reste`, par verdict : `desaccord_sans_acte` (1 205 trous,
+~21 000 a-a), `nomme_milieu` (652), `fraction` (386), `chainage_bloque`
+(280), `plusieurs_actes`, `identite_glissante` (le même code pour deux
+cantons), `accord_nomme`, `acte_autre_canton`, `corse_1976`. C'est la matière
+du travail département par département.
+
+Garde-fou à connaître : `identite_glissante` compare le nom de l'unité aux
+deux bords, mais une unité dont la seule version date de 1999 a le même nom
+partout. Cas trouvé : les jalons de 1954 et 1968 rangent sept communes au sud
+de Brive sous « Brive-la-Gaillarde-Sud-Est » (1930) ; `120` les y laisse de
+1955 à 1968. L'identité était déjà fausse aux deux jalons.
+
+### `113` rejoué, après `composition_1958.py`
+
+Le CSV de composition datait du 13 octobre, AVANT `114`-`117` : il était déjà
+périmé pour la chaîne. Régénéré, avec six alias (La Ferté-Frênel,
+Chalon-sur-Saône-Nord/Sud, Le Pont-de-Beauvoisin, Brive-Sud, Metz-Ville).
+Posables : 68 → **73** départements (+ Orne, Saône-et-Loire, Sarthe, Savoie,
+Haute-Savoie, Seine-et-Marne — ceux dont la trame de 1958 manquait), **moins
+le Var** : les fractions de Toulon posées par `116` portent Toulon-Est et
+Toulon-Ouest en 1958, que l'atlas (Toulon-1 en 4e, Toulon-2 en 3e) ne range
+pas sans décision. 30 788 rattachements (27 883), dont 1 082 par repli
+(2 158). Ancien journal : `build/p113_2026-10-13.log`.
+
+## 20 octobre 2026 — Miribel et Servas : l'extraction du JO perdait le dernier nom, et la chaîne rejouée en entier
+
+### Le défaut, dans `cantons/composition_jo.py`
+
+Signalé par Adrien sur la carte de l'Ain : Miribel et Servas sans canton
+après `120`. Le décret n° 82-77 écrit « …Thil **et de Miribel** » : `SEPARE`
+coupe sur « et », laisse « de Miribel », qui ne commence pas par une
+majuscule, et le nom tombe sans un mot — souvent le chef-lieu (Miribel,
+Montluel). Le n° 84-1222 finit sa liste de Péronnas sur « …Saint-Rémy et
+Servas. 30 décembre 1984 » : `FIN` n'arrête qu'avant une majuscule, Servas
+emporte le pied de page et ne s'apparie plus.
+
+Trois corrections, une quatrième trouvée par la vérification :
+
+- « de », « d' » retirés en tête de nom ; « du », « des » rendus « Le »,
+  « Les » (« et du Mesnil-Saint-Denis » est Le Mesnil-Saint-Denis) ;
+- un nom coupé à « . » suivi d'un blanc (le pied de page, « Cachan. « Le ») ;
+- **recollage** : « L’Isle, d’Espagnac » (n° 82-25, une virgule d'OCR) donnait
+  « Espagnac », apparié en Corrèze et posé par `75` dans le canton charentais
+  de Ruelle de 1982 à 1999. Deux voisins sont recollés quand le nom recollé
+  est une commune exacte du département et que la seconde moitié seule n'en
+  est pas une.
+
+`composition_jo.csv` : **+193 lignes, 8 corrigées** (la plupart en 78, 91,
+93, 94, 95, 01, 10, 16). `acte_composition` 4 991 → 5 176.
+
+### La chaîne, jouée de bout en bout pour la première fois depuis le 22 septembre
+
+Sauvegarde : `build/histgis_avant_rebuild_2026-10-19.dump`. Six passages
+(`build/rebuild_2026-10-19*.log`, `rebuild_2026-10-20[ef].log`) ; cinq
+défauts d'ORDRE, tous dans des étapes ajoutées depuis le 22 septembre et
+jouées à la main dans un autre ordre :
+
+1. `load_cog.sh` : le § 5 de `23` joint `cog_rat` à `commune_moderne` avant
+   que l'autovacuum l'ait analysée — plus de trente minutes de boucle
+   imbriquée. `ANALYZE histgis.commune_moderne` ajouté avant `23`.
+2. `102` avant `91` : le lambeau se calcule contre les atomes de la Seine
+   vivants en 1860, que `91` fait vivre. Zéro lambeau, puis `118` refusait.
+   `90` et `91` montent après `101`.
+3. `118` et `119` appellent `carte_partition_atome` / `carte_partition` de `84` :
+   descendus après `84` et `99`.
+4. `103` avant `101_paris_fractions_quartier` : 305 rattachements au lieu de
+   329 — les fractions de quartier de 1986 sans canton. Descendu avant `118`.
+5. `112` refusait sur six communes de Troyes (n° 8) que la nouvelle lecture
+   du décret 73-652 fait poser par `75` et `95` à la même unité et aux mêmes
+   dates : une pose déjà portée au même canton est retirée et affichée (§ 0),
+   tout autre recouvrement reste refusé.
+
+Et une conséquence de la lecture, réglée par l'arbitrage existant de `115`
+(13 octobre : Bourg I → 0137, II → 0105, III → 0138, « les communes rurales
+suivent leur canton ») : Servas (III) et Saint-Just (II), que le décret 73-810
+nomme mais que l'ancienne extraction perdait, ajoutées à sa liste.
+
+### Recettes
+
+Comparée commune par commune à la sauvegarde, à onze dates de 1945 à 2005 :
+**1870-1940, 1998 et 2005 identiques** ; 1960 +28, 1968 +13, 1975 et 1980 +49,
+1985 +38, 1990 +37. Deux communes changent de canton par un décret
+désormais lu — Trois-Puits (Reims-VII dès 1973, n° 73-665), Ferreux-Quincey
+(Nogent dès 1974) —, et **une perd sa période de 1973-1982 : L'Huisserie**,
+que le n° 73-666 nomme dans Laval-Sud-Est, canton sans unité. C'était un
+report que l'acte dément ; à lire avec la Mayenne.
+
+`diag_passages.sql` : 60 passées, 2 vides attendues (`42`, `84`), 0 absente.
+`85` sans `-v` : zéro fraction à libérer — les trois occupants de 1982-1999
+sont de `38` lui-même. `composition_1958.py` régénéré après le rebuild :
+identique, `113` est juste.
+
+Ain, après tout cela : Belley, Civrieux, **Miribel (Montluel jusqu'en 1982,
+puis Miribel)**, **Servas (Bourg-III, Bourg-Couronne, Péronnas)** et
+Saint-Just pourvus sur toute la période.

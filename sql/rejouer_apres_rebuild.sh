@@ -603,20 +603,23 @@ if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
     etape "101 — les annexées jusqu'à la fin de la division 1857-1863"
     $PSQL -1 -v appliquer=1 -f "$ICI/101_seine_annexees_1859_1862.sql"
 
-    etape "102 — les lambeaux pris par Paris en 1860 (bois de Boulogne, Ternes)"
-    $PSQL -1 -v appliquer=1 -f "$ICI/102_seine_lambeaux_1860_1862.sql"
-
-    etape "103 — les cantons de Paris 1941-1998, par les deux bouts"
-    $PSQL -1 -v appliquer=1 -f "$ICI/103_paris_cantons_1941_1998.sql"
-
-    etape "104 — les cantons de banlieue de la Seine prolongés de 1955 à 1967 (hypothèse)"
-    $PSQL -1 -v appliquer=1 -f "$ICI/104_seine_cantons_1955_1967.sql"
-
+    # `90` et `91` ICI, et non après `104` : `102` calcule le lambeau contre
+    # les atomes de la Seine VIVANTS sur [1860,1863), et ce sont les
+    # rattachements de `91` qui les font vivre. Joués après lui, `102` ne
+    # trouvait aucun lambeau et `118` refusait — rebuild du 19 octobre 2026.
+    # `102` avait été joué à la main le 3 octobre, `91` déjà en place.
+    # Ni `90` ni `91` ne lisent ce que posent `102`, `118`, `103`, `119`, `104`.
     etape "90 — la Seine de 1848 : la limite déclarée par 57 est levée"
     $PSQL -1 -v appliquer=1 -f "$ICI/90_seine_1848_banlieue.sql"
 
     etape "91 — la banlieue de la Seine, 1815-1870 (planches Gaudillère)"
     $PSQL -1 -v appliquer=1 -f "$ICI/91_seine_1815_1870.sql"
+
+    etape "102 — les lambeaux pris par Paris en 1860 (bois de Boulogne, Ternes)"
+    $PSQL -1 -v appliquer=1 -f "$ICI/102_seine_lambeaux_1860_1862.sql"
+
+    etape "104 — les cantons de banlieue de la Seine prolongés de 1955 à 1967 (hypothèse)"
+    $PSQL -1 -v appliquer=1 -f "$ICI/104_seine_cantons_1955_1967.sql"
 
     # --- l'Yonne avant 1870 -------------------------------------------------
     # Ajoutés le 4 octobre 2026. `64` dépose la composition cantonale des
@@ -681,6 +684,49 @@ if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
           -f "$ICI/109_ville_angouleme.sql" > "$RACINE/build/p109.log" 2>&1 \
         || { echo "  109 refusé — voir build/p109.log" >&2; exit 1; }
 
+    # Ajouté le 11 octobre 2026. `112` inscrit un premier lot de 25 entrées de
+    # cartes/a_inscrire_en_base.md : les villes dont les fractions existent
+    # mais commencent à la date du COG (1982 à 1998) au lieu de celle du
+    # décret. Ne crée ni unité ni atome. Même place que `108` et `109`.
+    etape "112 — villes : la date du décret à la place de celle du COG"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/112_villes_date_du_decret.sql" > "$RACINE/build/p112.log" 2>&1 \
+        || { echo "  112 refusé — voir build/p112.log" >&2; exit 1; }
+
+    # Ajouté le 13 octobre 2026. `114` inscrit le deuxième lot (38 entrées) :
+    # fractions oubliées ou rangées sous un autre canton, trous comblés,
+    # Rennes 1815-1941, Aubagne au 2004-03-21. Ne crée ni unité ni atome.
+    # Après `112` (Lamécourt, Sedan-Est), avant `98`.
+    etape "114 — villes : deuxième lot de a_inscrire_en_base.md"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/114_villes_lot_2.sql" > "$RACINE/build/p114.log" 2>&1 \
+        || { echo "  114 refusé — voir build/p114.log" >&2; exit 1; }
+
+    # Ajouté le 13 octobre 2026. `115` inscrit les régimes de 1973 que l'on
+    # croyait sans unité (Antibes, Cannes, Manosque, Chambéry, Bourg, Gap,
+    # Sarcelles, Montluçon-Nord, Caen-Nord) sous l'unité du régime suivant.
+    etape "115 — villes : les régimes portés par l'unité suivante"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/115_villes_nomenclature.sql" > "$RACINE/build/p115.log" 2>&1 \
+        || { echo "  115 refusé — voir build/p115.log" >&2; exit 1; }
+
+    # Ajouté le 13 octobre 2026. `116` couvre le trou de 1941 pour les
+    # fractions de 61 villes (même régime en 1940 et à la reprise, ou fin de
+    # régime connue), et Moulins de 1941 à 1985.
+    etape "116 — villes : les fractions de 1941 à la reprise de leur régime"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/116_villes_couverture_1941.sql" > "$RACINE/build/p116.log" 2>&1 \
+        || { echo "  116 refusé — voir build/p116.log" >&2; exit 1; }
+
+    # Ajouté le 13 octobre 2026. `117` crée ce que 114 à 116 ne pouvaient pas :
+    # la fraction de Caen-V (1973), les unités C17-Rochefort (avant 1852) et
+    # C01-Bourg-Couronne (1982-1985), et passe les fractions de La Rochelle de
+    # l'atome de Laleu à celui de La Rochelle.
+    etape "117 — créations : Caen-V, Rochefort, Bourg-Couronne ; La Rochelle"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/117_creations_caen_rochefort_bourg_larochelle.sql" > "$RACINE/build/p117.log" 2>&1 \
+        || { echo "  117 refusé — voir build/p117.log" >&2; exit 1; }
+
     # --- les villes multicantonales -----------------------------------------
     # Cinquième prérequis hors chaîne, découvert le 23 septembre 2026 :
     # `iris_ville` — 4 219 IRIS, la trame d'accrochage des 119 villes à
@@ -727,6 +773,43 @@ PY
         etape "99 — les villes découpées entrent dans la partition (fonctions)"
         $PSQL -1 -f "$ICI/99_partition_coupes.sql"
     fi
+
+    # `118` et `119` ICI, après `84` et `99`, et non dans le bloc de la Seine :
+    # leur recette (§ 5) appelle `carte_partition_atome` / `carte_partition`,
+    # que `84` définit. Ajoutés le 18 octobre et joués à la main après tout le
+    # reste, ils n'avaient jamais tourné dans la chaîne ; au rebuild du
+    # 19 octobre 2026, `118` y tombait sur « function carte_partition_atome
+    # does not exist ». `119` reste après `103`, qu'il suppose joué.
+    # `103` ICI aussi, après `101_paris_fractions_quartier` : il pose le
+    # canton des fractions de quartier de 1986 (`PQ22#86N`…), que ce `101`-là
+    # crée. Joué plus haut, il en posait 305 au lieu de 329 (rebuild du
+    # 19 octobre 2026) ; le 3 octobre il avait été joué à la main après lui.
+    etape "103 — les cantons de Paris 1941-1998, par les deux bouts"
+    $PSQL -1 -v appliquer=1 -f "$ICI/103_paris_cantons_1941_1998.sql"
+
+    # Ajouté le 18 octobre 2026. `118` prolonge `102` jusqu'aux décrets
+    # d'annexion des bois : Boulogne le 3 avril 1925, Neuilly et les sept
+    # communes du bois de Vincennes le 18 avril 1929. Il recoupe les fenêtres
+    # [1863,…) que `102` pose : à jouer APRÈS lui, et à défaire
+    # (`-v defaire=1`) avant tout rejeu isolé de `102`.
+    etape "118 — les bois de Boulogne et de Vincennes hors de Paris jusqu'en 1925-1929"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/118_paris_bois_1925_1929.sql" > "$RACINE/build/p118.log" 2>&1 \
+        || { echo "  118 refusé — voir build/p118.log" >&2; exit 1; }
+
+    # Ajouté le 18 octobre 2026. `119` étend la règle de `103` à 1876-1940 :
+    # quand les quartiers portent la circonscription, ils portent aussi le
+    # canton de leur arrondissement, et l'arrondissement ne le garde qu'au
+    # scrutin de liste (1870-1876, 1885-1889). Sans lui, le treillis de `84`
+    # donne toutes les faces aux quartiers et les vingt cantons parisiens
+    # disparaissent de la carte. APRÈS `103`, qui lit le canton des
+    # arrondissements au 1940-06-01 ; défaire `119` (`-v defaire=1`) avant
+    # tout rejeu isolé de `103`.
+    etape "119 — les cantons de Paris 1876-1940 portés par les quartiers"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/119_paris_cantons_1870_1940.sql" > "$RACINE/build/p119.log" 2>&1 \
+        || { echo "  119 refusé — voir build/p119.log" >&2; exit 1; }
+
 else
     echo "  GeoPackage ANR ou build/anr_variantes.csv absent — 82 sauté," >&2
     echo "  et avec lui 89, 90, 91 et 84, qui exigent tous atom_geom_anr." >&2
@@ -775,6 +858,30 @@ etape "111 — les périodes que ces transferts démentent, corrigées"
 $PSQL -P pager=off -v poser=on \
       -f "$ICI/111_corrige_transferts.sql" > "$RACINE/build/p111.log" 2>&1 \
     || { echo "  111 refusé — voir build/p111.log" >&2; exit 1; }
+
+# Ajouté le 19 octobre 2026. `120` comble les trous que `93`, `95` et `97` ne
+# voyaient pas : ceux qui TRAVERSENT 1968, faute de bout au jalon (Belley), par
+# l'accord des deux bouts ; et les désaccords qu'un seul acte lu explique en
+# ouvrant le bout droit (Civrieux, décret n° 84-1222), par le chaînage —
+# `chainage_large` décidé par Adrien le 19 octobre 2026. Il lit les trous que
+# laissent `110` et `111` : il passe après eux, et avant `113`, qui lit les
+# cantons de 1958. Depuis la racine : ses \copy lisent `cantons/`.
+etape "120 — trous par-delà 1968, et chaînage par l'acte"
+( cd "$RACINE" && $PSQL -P pager=off -v poser=on -v chainage_large=on \
+      -f "$ICI/120_trous_par_dela_1968.sql" > "$RACINE/build/p120.log" 2>&1 ) \
+    || { echo "  120 refusé — voir build/p120.log" >&2; exit 1; }
+
+# Ajouté le 13 octobre 2026. `113` pose les circonscriptions de 1958-1986 des
+# 68 départements « posables » de `circo/composition_1958_etat.csv`, par le
+# canton que chaque atome a au 1er décembre 1958. Il LIT les cantons : il passe
+# donc après tout ce qui en pose ou en corrige (`93`, `97`, `110`, `111`), et
+# `circo/composition_1958.py` doit être rejoué AVANT lui si la trame cantonale
+# de 1958 a changé (il écrit les identifiants d'unité dans le CSV ; `113`
+# refuse, recette 1 bis, si l'un d'eux a disparu ou changé de nom).
+etape "113 — circonscriptions 1958-1986 (cartes de Gaudillère)"
+( cd "$RACINE" && $PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/113_circo_1958.sql" > "$RACINE/build/p113.log" 2>&1 ) \
+    || { echo "  113 refusé — voir build/p113.log" >&2; exit 1; }
 
 # ============================================================================
 # LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026

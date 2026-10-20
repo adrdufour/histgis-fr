@@ -1,6 +1,7 @@
 jo,canton,motif,extrait
 JORF_19670722_169,Longjumeau,nom non apparie (91),Lojigjumeau
 JORF_19670722_169,Dourdan,nom non apparie (91),Roinvillesous-Dourdan
+JORF_19670722_169,Stains,prefixe ambigu (93),Pierrefitte -> 93059 PIERREFITTE-SUR-SEINE|93059 Pierrefitte-sur-Seine
 JORF_19670722_169,Raincy,nom non apparie (93),Raincy
 JORF_19670722_169,Cormeilles-en-Parisis,nom non apparie (95),Ilerblay
 JORF_19670722_169,Vésinet,nom non apparie (78),Vésinet
@@ -56,9 +57,9 @@ JORF_19730819_192,Saint-Quentin-Nord,nom non apparie (02),Marcy Lesdins
 JORF_19730819_192,Saint-Quentin-Nord,nom non apparie (02),Foussomme
 JORF_19730819_192,Moulins-Ouest,nom non apparie (03),Avenues
 JORF_19760129_24,Pré-Saint-Gervais qui prend le nom de canton des Lilas,nom non apparie (93),Lilas
-JORF_19760129_24,Cachan,nom non apparie (94),Cachan. « Le
 JORF_19760129_24,Thiais,nom non apparie (94),à l'exception de la partie incluse dans le
 JORF_19820116_13,Villers-Semeuse,nom non apparie (08),Gernelle la Grande-Ville
+JORF_19820116_13,Rodez-Ouest,nom non apparie (12),Luc el de Druelle
 JORF_19820116_13,Saint-Médard-en-Jalles,nom non apparie (33),Taillan
 JORF_19820116_13,Saint-Médard-en-Jalles,nom non apparie (33),Haillan
 JORF_19820116_13,Carbon-Blanc,prefixe ambigu (33),Saint-Sulpice -> 33481 SAINT-SULPICE-DE-GUILLERAGUES|33482 SAINT-SULPICE-DE-POMMIERS|33483 SAINT-SULPICE-ET-CAMEYRAC|33480 SAINT-SULPICE-DE-FALEYRENS
@@ -86,6 +87,7 @@ JORF_19850123_19,Aurillac-II,prefixe ambigu (15),Saint- -> 15216 SAINT-URCIZE|15
 JORF_19850123_19,Aurillac-II,nom non apparie (15),Paul-des-Landes
 JORF_19850124_20,Ulis,nom non apparie (91),Ulis
 JORF_19850130_25,Manosque-Nord,nom non apparie (04),Voix
+JORF_19850130_25,La Baule-Escoublac,nom non apparie (44),Pomichet
 JORF_19850130_25,Goyave,nom non apparie (971),Goyave
 JORF_19850130_25,Gourbeyre,nom non apparie (971),Gourbeyre
 JORF_19850130_25,Matoury,nom non apparie (973),Matoury

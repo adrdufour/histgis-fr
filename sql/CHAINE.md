@@ -29,6 +29,13 @@ du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 
 ## 0. AVERTISSEMENT — le trou est comblé, il n'est pas éprouvé
 
+> **JOUÉE DE BOUT EN BOUT LE 20 OCTOBRE 2026** (`rebuild.sh` puis
+> `rejouer_apres_rebuild.sh`, `FIN rc=0`, 29 minutes), après cinq corrections
+> d'ordre — `ANALYZE` avant `23`, `90`/`91` avant `102`, `118`/`119` après
+> `84`/`99`, `103` après les fractions de quartier, `112` tolérant une pose
+> déjà portée au même canton. `diag_passages.sql` : 60 passées, 0 absente ;
+> `85` : zéro fraction à libérer. Détail : `JOURNAL.md`, 20 octobre.
+
 > **`rejouer_apres_rebuild.sh` va désormais jusqu'à `84`.** Complété le
 > 6 septembre 2026 : les vingt-deux étapes qui manquaient y sont, dans l'ordre
 > du § 1 c ci-dessous, avec leurs `-v`, leur `-1` là où le fichier le demande,
@@ -245,7 +252,9 @@ avant lui.
 | `100_nogent_perreux_avant_1860.sql` | rend à Nogent le sol du Perreux, sans propriétaire dans ANR de 1815 à 1859. Écrit dans `atom_geom_anr` | après `82`/`89` |
 | `101_seine_annexees_1859_1862.sql` | prolonge le sol des onze annexées jusqu'au 1er janvier 1863, fin de la division électorale de 1857 | après `82`/`89`, **avant `91`** |
 | `102_seine_lambeaux_1860_1862.sql` | même règle pour les lambeaux que Paris prend en 1860 aux communes qui survivent (bois de Boulogne, les Ternes) | après `101` |
+| `118_paris_bois_1925_1929.sql` | les **bois de Boulogne et de Vincennes** hors de Paris de 1863 aux décrets d'annexion (3 avril 1925 pour la part de Boulogne, 18 avril 1929 pour Neuilly et les sept communes du bois de Vincennes) : la part de l'IRIS du bois que le polygone ANR de 1859 donne à chaque commune lui est rendue, les quartiers PQ45, 46, 61, 62, 63 en sont privés. 18,12 km², 27 fenêtres (`p118_trace`). Défaire (`-v defaire=1`) avant un rejeu isolé de `102` | après `102` |
 | `103_paris_cantons_1941_1998.sql` | les cantons de Paris portés par ses **quartiers** de 1941 à 2012 : une seule trame à la fois sur le même sol | après `52`-`57` |
+| `119_paris_cantons_1870_1940.sql` | la règle de `103` étendue à **1876-1940** : les quartiers portent le canton de leur arrondissement sur leurs périodes de circo, l'arrondissement ne le garde qu'au scrutin de liste (1870-1876, 1885-1889). Sans lui, `84` donnait toutes les faces aux quartiers et les vingt cantons de Paris sortaient de la carte. 20 rattachements retirés, 217 posés (`p119_trace`, `p119_modif`). Défaire (`-v defaire=1`) avant un rejeu isolé de `103` | après `103` |
 | `104_seine_cantons_1955_1967.sql` | prolonge le canton de 1954 des 80 communes de banlieue jusqu'en 1968 — **une hypothèse**, dite comme telle | après `87`, `103` |
 | `64_composition_1815_stage.sql` | dépose `c15_composition` (découpages 1815-1870 lus dans Gaudillère). N'écrit rien d'autre ; entré dans le script le 4 octobre, un rebuild l'ayant emporté sans rien signaler | avant `105`-`107` |
 | `105_yonne_1815_1870.sql` | l'Yonne avant 1870, cantons et circonscriptions, bornée par la vie ANR de chaque atome | après `64`, `82` |
@@ -253,8 +262,13 @@ avant lui.
 | `107_cantons_1815_1870.sql` | les **cantons 1815-1870**, France entière en un appel : le canton de 1870 remonté, sauf les exceptions de l'atlas. Se retire par `-v retirer=1` | comme `106` |
 | `108_villes_aurillac_falaise_saintflour.sql` | ce que la découpe de trois villes a montré : Falaise-Nord et -Sud rétablis de 1815 à 1941, Aurillac 1973-1985 (`a_inscrire_en_base.md` n° 97, 103, 104) | après `107`, **avant `98`** |
 | `109_ville_angouleme.sql` | Angoulême en deux fractions de 1941 à 1982, noms de 1973 et 1982 (n° 77) | après `107`, **avant `98`** |
+| `112_villes_date_du_decret.sql` | premier lot de `a_inscrire_en_base.md` (25 entrées : n° 3, 8, 9, 11, 12, 13, 16, 18, 19, 30, 36, 48, 49, 80, 81, 83 à 86, 88 à 91, 95, 99) : les villes que la base date du COG et que le JO date du décret — 98 périodes posées, 4 retirées, 6 changées d'unité, 18 noms ; aucune unité ni fraction créée (`p112_trace`) | après `107`, **avant `98`** |
 | `101_paris_fractions_quartier.sql` | les quartiers de Paris coupés entre deux circonscriptions : atomes-fraction `PQnn#<côté>` | après `52`-`57`, **avant `98`** |
-| `98_coupe_ville.sql` | les villes multicantonales : lit `cartes/coupes_ville.csv` et ses ancres, juge chaque ville, fournit `carte_coupe_ville()` | après `iris_ville`, `101`, `108`, `109` |
+| `114_villes_lot_2.sql` | deuxième lot de `a_inscrire_en_base.md` (38 entrées) : 165 périodes posées, 22 retirées (atome entier à côté de ses fractions, fractions de 1968 rangées sous un autre canton, Wattrelos, Lamécourt), 35 changées d'unité (Rennes 1815-1941, Javrezac, Nice-VII), 13 bornes (Aubagne au 2004-03-21), 33 noms ; aucune unité ni fraction créée (`p114_trace`) | après `112`, **avant `98`** |
+| `115_villes_nomenclature.sql` | troisième lot : les régimes de 1973 (1961, 1967, 1976) portés par l'unité du régime suivant qui hérite de la plus grande part (arbitrage du 13 octobre 2026) — Antibes, Cannes, Manosque, Chambéry, Bourg, Gap, Sarcelles, Montluçon-Nord, Caen-Nord : 61 périodes posées, 22 noms (`p115_trace`) ; ancres datées dans `coupes_ville_ancres.csv` | après `114`, **avant `98`** |
+| `116_villes_couverture_1941.sql` | couverture du trou de 1941 pour les fractions de 61 villes : 188 périodes posées (mêmes fractions en 1940 et en 1968 ; ou fin de régime connue : Tours, Angers, Le Havre, Toulon, Versailles, Le Mans, Caen, Metz, Marseille, Nantes, Montpellier, Chalon, Montluçon, La Rochelle, Rouen ; Moulins 1941-1985), 4 retraits (`p116_trace`) | après `115`, **avant `98`** |
+| `117_creations_caen_rochefort_bourg_larochelle.sql` | créations (accord du 13 octobre 2026) : fraction `6530#1441` (Caen-V de 1973), unités `C17-Rochefort` (1815-1852) et `C01-Bourg-Couronne` (1982-1985), sept fractions `29365#…` ; 38 appartenances de La Rochelle passent de l'atome de Laleu à celui de la ville ; 9 bornes (Rochefort au 1852-06-29), 44 poses (`p117_trace`) | après `116`, **avant `98`** |
+| `98_coupe_ville.sql` | les villes multicantonales : lit `cartes/coupes_ville.csv` et ses ancres, juge chaque ville, fournit `carte_coupe_ville()` | après `iris_ville`, `101`, `108`, `109`, `112`, `114`, `115`, `116`, `117` |
 | `84_carte_partition.sql` | (déjà au § `84`) ne modifie rien : fonctions de la carte | après tout ce qui pose |
 | `99_partition_coupes.sql` | remplace `carte_partition_atome` de `84` par une version qui découpe les villes à lignes. **À rejouer après tout rejeu de `84`**, sans quoi la carte redevient hachurée sans que rien n'échoue | après `84` et `98` |
 
@@ -267,6 +281,12 @@ avant lui.
 |---|---|---|---|---|
 | y | `110_pose_lecture_jo.sql` | pose dans les TROUS les JO lus à la main (13 transferts, 73 cantons recomposés 1949-1968, Corse 1975) et les **tables analytiques annuelles du JO** (93 transferts isolés datés, nature `transfert_table`). Date d'effet : règle C — lendemain de la parution pour un transfert, premier tour du renouvellement suivant pour une recomposition. Premier passage réel le 11 octobre 2026 : **691 périodes** — recompositions 207, Corse 325, transferts lus 17, tables 142 | `p110_trace`, `p110_qualite` | **`poser=on`**, pas de `-1` |
 | z | `111_corrige_transferts.sql` | **raccourcit** les périodes que ces transferts démentent : coupe à l'effet et pose la suite au canton d'arrivée (cas A), ou fait commencer à l'effet et rend l'avant au canton de départ (cas B). Essai du 11 octobre 2026 : 20 périodes (15 A, 5 B) | `p111_trace` (bornes d'avant), `p111_qualite` | **`poser=on`**, `defaire=on`, pas de `-1` |
+| z bis | `120_trous_par_dela_1968.sql` | comble les trous que `93`, `95`, `97` ne voient pas — ceux qui **traversent 1968**, faute de bout au jalon (Belley) — par l'accord des deux bouts, et les désaccords qu'un seul acte lu explique en ouvrant le bout droit (Civrieux), par le **chaînage** (`chainage_large` décidé par Adrien). 19 octobre 2026 : **5 451 périodes, 178 361 atome-années** ; le reste dans `p120_reste` | `p120_trace`, `p120_qualite` | **`poser=on`**, `chainage_large=on`, pas de `-1`, depuis la racine |
+
+| — | `113_circo_1958.sql` | les **circonscriptions de 1958-1986** hors de la Seine, d'après les cartes de Gaudillère (`circo/regles_1958_1986.py` → `circo/composition_1958.py` → deux CSV). Pose les départements « posables » (68 le 13 octobre, 73 le 19 après `120`), par le canton de l'atome au 1ᵉʳ décembre 1958, à défaut son premier canton connu (`repli`, tracé ligne à ligne). 13 octobre 2026 : **27 883 rattachements, 251 unités**, dont 2 158 par repli | `circo_1958_trace` | `-1 -v appliquer=1` ; `defaire=1`, `sans_repli=1`, `dep=XX` |
+
+`113` lit les cantons et ne pose que des circonscriptions : il passe après
+`111` et `120` (et `circo/composition_1958.py` se rejoue avant lui), et se rejoue seul sans rien défaire d'autre.
 
 **Pourquoi en dernier, après le bloc ANR et `98`.** `110` ne remplit que les
 trous que les reports (`79`, `81`, `93`, `95`, `97`) et `103` à `109` ont
