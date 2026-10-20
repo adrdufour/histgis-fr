@@ -124,13 +124,20 @@ WITH fen AS (                       -- la vie cantonale de l'atome dans la fenê
       FROM t113_div d
       JOIN membership m ON m.niveau = 'canton' AND m.unit_id = d.canton_id
                        AND m.periode && daterange(d.du, d.au, '[)')
-), vie AS (                         -- quand l'atome a un canton, quel qu'il soit
-    SELECT m.atom_id, min(m.valid_from) AS ne, max(m.valid_to) AS mort
+), vie AS (                         -- quand l'atome a un canton DU DÉPARTEMENT
+    -- Dans le département de la division seulement : Genay et Montanay
+    -- passent de l'Ain au Rhône le 20 avril 1969 (canton 6925) et gardaient
+    -- jusqu'en 1986 la 3e circonscription de l'Ain — la carte de l'Ain les
+    -- dessinait en blanc, sans canton (20 octobre 2026). La Corse change de
+    -- code en 1976 (20 → 2A, 2B) sans changer de département.
+    SELECT m.atom_id, u.dep2 AS dep, min(m.valid_from) AS ne, max(m.valid_to) AS mort
       FROM membership m
+      JOIN (SELECT unit_id, CASE WHEN dep IN ('2A', '2B') THEN '20' ELSE dep::text END AS dep2
+              FROM unit WHERE niveau = 'canton') u USING (unit_id)
      WHERE m.niveau = 'canton'
        AND m.atom_id IN (SELECT atom_id FROM fen)
        AND m.periode && daterange('1958-01-01', :'fin'::date, '[)')
-     GROUP BY 1
+     GROUP BY 1, 2
 ), premier AS (                     -- premier canton connu dans la fenêtre
     SELECT DISTINCT ON (m.atom_id) m.atom_id, m.unit_id
       FROM membership m
@@ -152,7 +159,7 @@ WITH fen AS (                       -- la vie cantonale de l'atome dans la fenê
 SELECT c.atom_id, c.dep, c.circo AS unit_id, c.repli,
        greatest(c.du, v.ne)   AS valid_from,
        least(c.au, v.mort)    AS valid_to
-  FROM choix c JOIN vie v USING (atom_id)
+  FROM choix c JOIN vie v ON v.atom_id = c.atom_id AND v.dep = c.dep
  WHERE greatest(c.du, v.ne) < least(c.au, v.mort)
 \if :{?sans_repli}
    AND NOT c.repli

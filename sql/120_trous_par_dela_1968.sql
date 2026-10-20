@@ -316,7 +316,7 @@ ALTER TABLE p120_trou
 
 UPDATE p120_trou t SET
     n_nomme = (SELECT count(DISTINCT (n.effet, n.canton)) FROM p120_nom n
-                WHERE n.insee = t.insee AND n.effet > t.valid_from AND n.effet <= t.valid_to),
+                WHERE n.insee = t.insee AND n.effet > t.valid_from AND (n.effet <= t.valid_to OR n.date_acte < t.valid_to)),
     nom_g = pg_temp.nom_a(t.unit_g, t.valid_from - 1),
     nom_d = pg_temp.nom_a(t.unit_d, t.valid_to);
 UPDATE p120_trou t SET
@@ -324,10 +324,16 @@ UPDATE p120_trou t SET
     canton_nomme = n.canton
 FROM (SELECT DISTINCT ON (x.atom_id, x.valid_from) x.atom_id, x.valid_from, n.effet, n.canton
         FROM p120_trou x JOIN p120_nom n
-          ON n.insee = x.insee AND n.effet > x.valid_from AND n.effet <= x.valid_to
+          ON n.insee = x.insee AND n.effet > x.valid_from AND (n.effet <= x.valid_to OR n.date_acte < x.valid_to)
        WHERE x.n_nomme = 1
        ORDER BY x.atom_id, x.valid_from, n.origine) n
 WHERE n.atom_id = t.atom_id AND n.valid_from = t.valid_from;
+
+-- « Nommé dans le trou » : l'effet tombe dans le trou, OU l'acte est signé
+-- avant la fin du trou et prend effet après — le bout droit a alors été posé
+-- à la date du décret ou de sa parution, et non au scrutin qui suit (`117` :
+-- Bourg-Couronne au 1982-01-26 ; `75` dirait 1982-03-14). Vandeins, nommé
+-- par le n° 82-77, restait sinon `desaccord_sans_acte` (20 octobre 2026).
 
 -- les actes du département qui prennent effet DANS le trou, hors celui qui
 -- ouvre le bout droit ; et ceux d'entre eux qui ne sont pas « lus en entier »
@@ -351,7 +357,7 @@ UPDATE p120_trou t SET verdict = CASE
     WHEN t.unit_g = t.unit_d AND t.n_nomme = 0      THEN 'accord'
     WHEN t.unit_g = t.unit_d AND NOT EXISTS (
             SELECT 1 FROM p120_nom n
-             WHERE n.insee = t.insee AND n.effet > t.valid_from AND n.effet <= t.valid_to
+             WHERE n.insee = t.insee AND n.effet > t.valid_from AND (n.effet <= t.valid_to OR n.date_acte < t.valid_to)
                AND NOT pg_temp.meme(n.canton, t.nom_d))
      AND pg_temp.meme(t.nom_g, t.nom_d)             THEN 'accord_confirme'
     WHEN t.unit_g = t.unit_d                        THEN 'accord_nomme'

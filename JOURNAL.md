@@ -10051,3 +10051,24 @@ identique, `113` est juste.
 Ain, après tout cela : Belley, Civrieux, **Miribel (Montluel jusqu'en 1982,
 puis Miribel)**, **Servas (Bourg-III, Bourg-Couronne, Péronnas)** et
 Saint-Just pourvus sur toute la période.
+
+### Le soir du 20 octobre — les trois communes blanches de l'Ain
+
+La carte dessine l'union des deux couches : une commune blanche a une
+circonscription et pas de canton. Dans l'Ain, de 1969 à 1985, il en restait
+trois.
+
+- **Genay, Montanay** passent au Rhône le 20 avril 1969 (canton 6925), et `113`
+  leur laissait la 3e circonscription de l'Ain jusqu'en 1986. `113` borne
+  désormais la vie cantonale d'un atome aux cantons du département de la
+  division (la Corse ramenée à 20). Trois communes en France : ces deux-là et
+  Ytres (Somme → Pas-de-Calais, 1970).
+- **Vandeins** : le n° 82-77 la nomme dans Bourg-Couronne, mais `117` pose ce
+  canton à la parution (1982-01-26) et `75` daterait l'effet au 1982-03-14 —
+  `120` la croyait non nommée. « Nommé dans le trou » couvre maintenant l'acte
+  signé avant la fin du trou et effectif après. −74 `desaccord_sans_acte`,
+  +23 chaînages ; 5 485 périodes.
+
+Ain réexporté : **aucune commune blanche de 1941 à 1985**. De 1986 à 1997, sept
+(Béard-Géovreissiat, Belmont-Luthézieu, Birieux, Culoz, Nivollet-Montgriffon,
+Oncieu, Saint-Rambert-en-Bugey) : des désaccords sans acte lu, de la lecture.
