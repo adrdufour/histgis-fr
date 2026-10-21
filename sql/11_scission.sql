@@ -63,7 +63,7 @@
 -- ---------------------------------------------------------
 -- Le pari ci-dessus prolonge l'unité que la commune elle-même rejoint à sa
 -- création. HAC — *Des villages de Cassini aux communes d'aujourd'hui* — nomme
--- sa MÈRE, pour 444 créations de la fenêtre sur 447 (`hac/hac_filiation.py`).
+-- sa MÈRE, pour 444 créations de la fenêtre sur 447 (`annexes/hac/hac_filiation.py`).
 -- Il était tentant de bâtir sur ce fait plutôt que sur un pari : recopier la
 -- chronologie de la mère, année par année, et ne garder le pari qu'en repli.
 --

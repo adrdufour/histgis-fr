@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-trfgis_extract.py — nomenclatures COG_COMMUNES_YYYY.txt (TRF-GIS) vers
+extraction/trfgis_extract.py — nomenclatures COG_COMMUNES_YYYY.txt (TRF-GIS) vers
 tables normalisées prêtes pour COPY dans le schéma histgis.
 
 Deux commandes :
@@ -9,8 +9,8 @@ Deux commandes :
     build   compaction en intervalles + tables unit / membership / atom
 
 Usage :
-    python3 trfgis_extract.py check ./sources/trfgis/communes/Nomenclatures
-    python3 trfgis_extract.py build ./sources/trfgis/communes/Nomenclatures --out ./build
+    python3 extraction/trfgis_extract.py check ./sources/trfgis/communes/Nomenclatures
+    python3 extraction/trfgis_extract.py build ./sources/trfgis/communes/Nomenclatures --out ./build
 
 Notes de format, tirées de l'inspection réelle des fichiers :
   - séparateur virgule, en-tête nommé en première ligne, encodage latin-1 ;

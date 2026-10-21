@@ -95,8 +95,8 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
     rurales inchangées : Le Tholonet, Saint-Marc-Jaumegarde, Vauvenargues, Venelles / Éguilles,
     Meyreuil).
 - **Ligne Nord / Sud : non tracée, faute de texte.** Rien dans `cantons/`, `jorf_txt/` (37
-  fichiers citent Aix), `circo/`, `gaudillere/`, `cog1954/`, `cog1968/`, `sources/trfgis`, ni
-  sur les photos 24-26 de `photo_1815_1870/`. Le décret 82-119 remplace les deux cantons sans les
+  fichiers citent Aix), `circo/`, `annexes/gaudillere/`, `cog1954/`, `cog1968/`, `sources/trfgis`, ni
+  sur les photos 24-26 de `photos/1815_1870/`. Le décret 82-119 remplace les deux cantons sans les
   décrire ; Gaudillère ne divise Aix entre circonscriptions qu'en 1986. Source à fournir : arrêté
   du 17 frimaire an X, ou plan annexé au décret 82-119 (préfecture).
 - Le décret 82-119 est absent de `cantons/communes_coupees_1973_1984.csv`.
@@ -1813,7 +1813,7 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
   Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 82-132 du 5 février 1982 (JO du 6 février 1982, p. 489-490,
-  `JORF/JORF_19820206_31.pdf`, déposé le 7 octobre 2026 ; pas encore dans `jorf_txt/`).
+  `sources/JORF/JORF_19820206_31.pdf`, déposé le 7 octobre 2026 ; pas encore dans `jorf_txt/`).
   Décret n° 73-763 du 2 août 1973 (`jorf_txt/JORF_19730804_180_col.txt`) : « Canton de Caen IV
   comprenant les communes d'Hérouville-Saint-Clair et de Mondeville ».
 - **Base** :
@@ -1896,7 +1896,7 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
   - décret n° 73-763 du 2 août 1973 (JO du 4 août 1973, p. 8533-8534,
     `jorf_txt/JORF_19730804_180_col.txt`, l. 2239-2298) : Caen-I à VI ;
   - décret n° 82-132 du 5 février 1982 (JO du 6 février 1982, p. 489-490,
-    `JORF/JORF_19820206_31.pdf` ; pas dans `jorf_txt/` ni dans
+    `sources/JORF/JORF_19820206_31.pdf` ; pas dans `jorf_txt/` ni dans
     `cantons/communes_coupees_1973_1984.csv`) : dix cantons ;
   - décret du 26 août 1998 (JO du 28 août 1998, `jorf_txt/JORF_19980828_198_col.txt`,
     l. 1600-1680) : l'axe du boulevard Georges-Pompidou devient la limite Caen-I / Caen-III
@@ -3201,7 +3201,7 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ### 113. Brive : la ville entière jusqu'en 1982 malgré Brive-Nord / Brive-Sud (1951), communes rurales trouées, régime 1982-1985 absent, Cosnac et Malemort sans canton en 1982-1985
 
 - **Sources** : décret du 13 septembre 1951 (JO du 14 septembre 1951, p. 9548 ;
-  `JORF/JORF_19510914_217.pdf` p. 4 ; `jorf_txt/JORF_19510914_217_col.txt`, l. 553-572) : Brive-Nord
+  `sources/JORF/JORF_19510914_217.pdf` p. 4 ; `jorf_txt/JORF_19510914_217_col.txt`, l. 553-572) : Brive-Nord
   = la ville au nord de la ligne avenue de Bordeaux … avenue Thiers, « n° 680 », + Dampniat, Ussac,
   Varetz, Venarsal ; Brive-Sud = le reste + Cosnac, La Chapelle-aux-Brocs, Estivals,
   Jugeals-Nazareth, Malemort, Noailles, Nespouls. Décret n° 82-120 du 2 février 1982 (JO du
@@ -3522,10 +3522,10 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ### 126. Vernon de 1982 à 1992 : la ville sans fraction, alors que ses communes rurales sont déjà partagées ; Vernon-Nord sous le nom « Vernon » jusqu'en 1999
 
 - **Source** : décret n° 82-56 du 20 janvier 1982, art. 2 (JO du 22 janvier 1982, p. 337 ;
-  `jorf_txt/JORF_19820122_18_col.txt`, l. 631-647, relu sur `JORF/JORF_19820122_18.pdf` p. 5) —
+  `jorf_txt/JORF_19820122_18_col.txt`, l. 631-647, relu sur `sources/JORF/JORF_19820122_18.pdf` p. 5) —
   même décret que Louviers (n° 122) et Évreux (n° 71) : Vernon est divisé en Vernon-Nord et
   Vernon-Sud. Le décret 2014-241 remet la ville entière dans le canton de Vernon. Rien dans
-  `gaudillere/`.
+  `annexes/gaudillere/`.
 - **Base** : atome 39507 entier dans 2736 jusqu'au 1982-03-14 ; fractions `39507#2736` (Nord) et
   `39507#2740` (Sud) du 1992-03-22 au 2013-01-01 seulement ; **rien pour la ville du 1982-03-14 au
   1992-03-22**, alors que les communes rurales y sont déjà partagées au 1985-01-01 (7 dans 2736 :
@@ -3555,7 +3555,7 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
   `cantons/communes_coupees_1973_1984.csv`) ; décret 82-27 du 15 janvier 1982 (JO du 16 janvier
   1982, `jorf_txt/JORF_19820116_13_col.txt`, l. 1145-1179 ; `communes_coupees_1973_1984.csv`
   l. 412-414) ; décret de 2014 (Dreux-1), lu sur la seule transcription de Wikipédia, qui reprend
-  la ligne Ouest / Est de 1982 en traduisant les anciens noms. Rien dans `gaudillere/`.
+  la ligne Ouest / Est de 1982 en traduisant les anciens noms. Rien dans `annexes/gaudillere/`.
 - **Base** : 12219 entière dans 2813 jusqu'au 1973-09-23 ; rien pour la ville ni pour ses communes
   rurales du 1973-09-23 au 1982-03-14 ; communes rurales dans 2813 / 2827 / 2828 dès le
   1982-03-14, mais fractions `12219#2813`, `#2827`, `#2828` seulement à partir du 1998-03-15 ;

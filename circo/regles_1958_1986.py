@@ -2,7 +2,7 @@
 """
 regles_1958_1986.py — les circonscriptions de 1958 à 1986, d'après Gaudillère
 
-Transcrit depuis les photos des CARTES de l'atlas (Photos-1-001/, 139 photos
+Transcrit depuis les photos des CARTES de l'atlas (photos/1940_1995/, 139 photos
 du 13 octobre 2026). Le numéro de photo est le rang dans l'ordre alphabétique
 des fichiers PXL_20261013_*.jpg (1 = PXL_20261013_181321691.jpg).
 
@@ -147,7 +147,7 @@ REGLES_1958 = {
 
 "13": {"nom": "Bouches-du-Rhône", "photo": 15, "depuis": 1958, "jusqu": 1986, "circos": {
     # Hors Marseille (1re à 7e, et une part de la 8e) : voir
-    # gaudillere/marseille_complet.md. Note de l'atlas : « le canton de
+    # annexes/gaudillere/marseille_complet.md. Note de l'atlas : « le canton de
     # Marseille-XII était divisé : sa partie urbaine et la commune de
     # Plan-de-Cuques faisaient partie de la 8e circonscription, qui se trouvait
     # d'ailleurs séparée en deux tronçons ; la commune d'Allauch était

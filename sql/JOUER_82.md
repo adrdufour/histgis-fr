@@ -9,7 +9,7 @@ dans `atom_geom` : `82` crée ses propres tables et se défait par un `DROP`.
 cd ~/Téléchargements/projet_carte
 
 ogr2ogr -f PostgreSQL PG:"dbname=histgis" \
-    ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg geometries_only_processed \
+    sources/ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg geometries_only_processed \
     -nln histgis.anr_commune -nlt MULTIPOLYGON \
     -lco GEOMETRY_NAME=geom -lco FID=gid -a_srs EPSG:2154 -overwrite \
     -lco SPATIAL_INDEX=NONE -lco UNLOGGED=YES \

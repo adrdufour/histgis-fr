@@ -58,7 +58,7 @@
 -- Géométrie ALPAGE, couche 42 (atlas Perrot sur plans Vasserot). Base sous
 -- ODbL, **cartes produites sous CC-BY-SA 2.0 obligatoire**, crédit nominatif
 -- « © ALPAGE : Anne-Laure Bethe ». Voir
--- `42-Vasserot_quartiers_v1L93/LICENCE_ET_CREDIT.md`.
+-- `sources/42-Vasserot_quartiers_v1L93/LICENCE_ET_CREDIT.md`.
 --
 -- Réversible : `paris_1815_trace`, section 6.
 -- ============================================================================

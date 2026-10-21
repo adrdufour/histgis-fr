@@ -140,7 +140,7 @@ def communes():
     """{code INSEE: nombre de coupes}, depuis le repérage."""
     if not LISTE.exists():
         sys.exit(f"absent : {LISTE}\n"
-                 "  (produit par le repérage, voir docs/note_outre_mer.md §5)")
+                 "  (produit par le repérage, voir annexes/docs/note_outre_mer.md §5)")
     with LISTE.open(encoding="utf-8") as f:
         lignes = list(csv.DictReader(f))
     return ({l["insee"]: int(l["coupes"]) for l in lignes},

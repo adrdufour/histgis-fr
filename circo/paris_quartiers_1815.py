@@ -20,7 +20,7 @@ Cette frontière tombe ici.
 La source
 ---------
 Consortium **ALPAGE**, couche 42 « Quartiers du temps de Vasserot », déposée
-dans `42-Vasserot_quartiers_v1L93/`. Limites reprises de l'*Atlas pittoresque
+dans `sources/42-Vasserot_quartiers_v1L93/`. Limites reprises de l'*Atlas pittoresque
 des quarante-huit quartiers de Paris* d'A.-M. Perrot, repositionnées sur les
 plans d'îlots Vasserot (1810-1836) géoréférencés. Lambert-93.
 
@@ -29,7 +29,7 @@ compte ici — « toutes les cartes produites à partir de la base ALPAGE doiven
 être placées sous CC-BY-SA 2.0 ». Une carte tirée de ces géométries est donc
 publiable sur Commons et Wikipédia, et doit y porter cette licence. Crédit
 obligatoire et nominatif : **© ALPAGE : Anne-Laure Bethe**. Détail dans
-`42-Vasserot_quartiers_v1L93/LICENCE_ET_CREDIT.md`.
+`sources/42-Vasserot_quartiers_v1L93/LICENCE_ET_CREDIT.md`.
 
 Ce que la couche n'est pas
 --------------------------
@@ -58,7 +58,7 @@ from pathlib import Path
 import psycopg2
 
 RACINE = Path(__file__).resolve().parent.parent
-SHP = RACINE / "42-Vasserot_quartiers_v1L93" / "VASSEROT_QUARTIERS_Project.shp"
+SHP = RACINE / "sources/42-Vasserot_quartiers_v1L93" / "VASSEROT_QUARTIERS_Project.shp"
 GEOJSON = RACINE / "circo" / "sorties" / "vasserot_quartiers.geojson"
 
 

@@ -902,7 +902,7 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   jeter le morceau dont le début est la fin, `ST_LineMerge` du reste.
 - **Un rebuild en cours** (Louviers, 20 octobre 2026) : `cible_ville`, `coupe_ville` et
   `atom_geom_anr` peuvent manquer pendant des dizaines de minutes. On peut tracer quand même :
-  lire le polygone ANR dans `ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg`
+  lire le polygone ANR dans `sources/ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg`
   (`-where "id_com='<atome cassini>'"`) vers `public.<ville>_cible`, et remplacer
   `histgis.cible_ville(...)` par cette table dans le script de tracé. `pose_coupe.py` et
   `--ecrire` attendent la fin de `rejouer_apres_rebuild.sh` (`pgrep -f "[r]ejouer_apres"`), qui

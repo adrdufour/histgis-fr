@@ -2,7 +2,7 @@
 
 ## Ce qu'on a
 
-- `JORF/tables/TABLE_ANALYTIQUE_JORF_1941…1990.pdf` : les 50 tables annuelles (4,4 Go),
+- `sources/JORF/tables/TABLE_ANALYTIQUE_JORF_1941…1990.pdf` : les 50 tables annuelles (4,4 Go),
   téléchargées depuis Légifrance (`/download/file/<id>/TB`).
 - `jorf_txt/TABLE_ANALYTIQUE_JORF_AAAA_col.txt` : leur texte, colonnes séparées.
 

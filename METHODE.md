@@ -104,8 +104,8 @@ incohérences, et elles ont été validées sur les vraies données.
 | **CONTOURS-IRIS** (INSEE-IGN) | trame de découpe des villes, et les 80 quartiers de Paris | Licence Ouverte 2.0 |
 
 DOI, URL et pièges de lecture de chaque source : `sources/`, `LISEZMOI.md`, et
-les notes de chantier (`docs/note_circonscriptions.md`,
-`cog1954/note_1954.md`, `cog1968/note_1968.md`, `ANR_COMMUNES_22042026/README.md`).
+les notes de chantier (`annexes/docs/note_circonscriptions.md`,
+`cog1954/note_1954.md`, `cog1968/note_1968.md`, `sources/ANR_COMMUNES_22042026/README.md`).
 
 **Contrainte de licence, qui commande tout le reste** : le projet alimente
 Wikipédia et Wikidata. Toute source doit être **CC BY-SA ou Licence Ouverte /
@@ -143,9 +143,9 @@ variables. Dépendances et ordre de rejeu dans **`sql/README.md`**, section
 
 ```bash
 # une seule fois : extraction et téléchargements
-python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
+python3 extraction/trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
     --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee
-python3 trfgis_fetch_inspect.py fetch repro \
+python3 extraction/trfgis_fetch_inspect.py fetch repro \
     --match '^COMMUNE\.(SHP|SHX|DBF|PRJ)$' --dest ./geofla
 curl -O https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv
 createdb histgis
@@ -582,7 +582,7 @@ ramené à 26 km².
 
 ### 7.3 HAC — la filiation que `11` ne connaissait pas
 
-`hac/hac_filiation.py`, `sql/45_controle_hac.sql`. **Il ne contient aucun
+`annexes/hac/hac_filiation.py`, `sql/45_controle_hac.sql`. **Il ne contient aucun
 `INSERT`, `DELETE` ni `UPDATE`** : corriger la base d'après HAC lui ferait perdre
 son indépendance, exactement comme recopier Gay la ferait perdre au contrôle
 géométrique.

@@ -1,6 +1,6 @@
 # Gaudillère 1815-1870, seconde série — points à vérifier
 
-Lecture des 120 photos de `photo_1815_1870/` (seconde série, 4 octobre 2026), transcrite dans `circo/regles_1815_restants.py` et chargée par `circo/remonte_1815.py`. **Toutes les partitions sont complètes** (87 départements, 14 257 lignes dans `composition_1815_1870.csv`). Les numéros de photo sont le rang alphabétique des fichiers (1 = `PXL_20261004_131505689.jpg`).
+Lecture des 120 photos de `photos/1815_1870/` (seconde série, 4 octobre 2026), transcrite dans `circo/regles_1815_restants.py` et chargée par `circo/remonte_1815.py`. **Toutes les partitions sont complètes** (87 départements, 14 257 lignes dans `composition_1815_1870.csv`). Les numéros de photo sont le rang alphabétique des fichiers (1 = `PXL_20261004_131505689.jpg`).
 
 ## Ce que contient la série
 

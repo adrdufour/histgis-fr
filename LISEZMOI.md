@@ -20,13 +20,13 @@ Quatre documents font foi. Dans cet ordre :
 | **`RESTE_A_FAIRE.md`** | la file d'attente, par valeur et non par facilité, avec le blocage quand il y en a un. |
 | **`JOURNAL.md`** | le récit chronologique, seul document tenu **par ajouts**. C'est lui qui porte l'historique : rien n'a besoin d'être répété ailleurs pour être conservé. |
 
-`BASE_POUR_QGIS.md` est une note de passation pour un agent qui aurait QGIS et
+`annexes/docs/BASE_POUR_QGIS.md` est une note de passation pour un agent qui aurait QGIS et
 devrait cartographier les villes multicantonales.
 
 Les notes de chantier vivent auprès de leur dossier : `sql/CHAINE.md`
 (inventaire des 130 fichiers), `sql/README.md` (dépendances et ordre de rejeu),
-`cog1954/note_1954.md`, `cog1968/note_1968.md`, `docs/note_1943_2012.md`,
-`docs/note_circonscriptions.md`, `docs/note_outre_mer.md`, `circo/note_paris.md`.
+`cog1954/note_1954.md`, `cog1968/note_1968.md`, `annexes/docs/note_1943_2012.md`,
+`annexes/docs/note_circonscriptions.md`, `annexes/docs/note_outre_mer.md`, `circo/note_paris.md`.
 
 Depuis octobre 2026 s'y ajoutent : `cartes/web/LISEZMOI.md` (la carte
 interactive, l'export, le dépôt sur Wikimedia Commons),
@@ -46,35 +46,39 @@ déroulé d'une découpe), `circo/verif_1815_21_63.md` et
 
 ```
 projet_carte/                              55 Go au total, relevé le 11 octobre 2026
-│
+│                                          (réorganisé le 21 octobre 2026)
 ├─ METHODE.md  ETAT.md  RESTE_A_FAIRE.md  JOURNAL.md   les documents qui font foi
-├─ BASE_POUR_QGIS.md                                    note de passation
-├─ trfgis_extract.py                                    tête de chaîne : TRF-GIS → build/
-├─ trfgis_fetch_inspect.py                              récupération du dépôt de reproduction
-├─ geom_correspondance.csv                              lu par sql/02_load.sql, doit rester ici
+├─ LISEZMOI.md  environment.yml
+├─ geom_correspondance.csv     lu par sql/02_load.sql, doit rester ici
 │
-├─ sorties/                   33 Go   exports de la carte, rapports — RÉGÉNÉRABLES, hors git
-├─ JORF/                     7,6 Go   PDF des Journaux officiels, dont tables/ (4,4 Go) — reçus
-├─ cartes/web/donnees/       7,1 Go   la carte servie — RÉGÉNÉRABLE, hors git
-├─ cartes/sorties/           3,3 Go   voirie BD TOPO par ville (3,2 Go), tableau des villes — hors git
-├─ sources/                  1,8 Go   DONNÉES REÇUES — jamais modifiées, hors git
-├─ ANR_COMMUNES_22042026/    1,2 Go   trame communale historique 1790-2020 — reçue
-├─ build/                    614 Mo   sortie de trfgis_extract.py, journaux, un pg_dump (591 Mo)
-├─ photo_1815_1870/          348 Mo   120 photos de l'atlas — NI REÇUES NI RÉGÉNÉRABLES, hors git
-├─ Photos-1-001/             393 Mo   139 photos de l'atlas, 1940-1995 — NI REÇUES NI RÉGÉNÉRABLES, hors git
+├─ sources/            1,8 Go + 9 Go   DONNÉES REÇUES — jamais modifiées, hors git
+│  ├─ JORF/                  7,6 Go   PDF des Journaux officiels, dont tables/ (4,4 Go)
+│  ├─ ANR_COMMUNES_22042026/ 1,2 Go   trame communale historique 1790-2020
+│  ├─ polynesie/              93 Mo   BD ADMIN Polynésie française
+│  ├─ nouvelle_caledonie/     36 Mo   BD ADMIN Nouvelle-Calédonie (DITTT)
+│  ├─ 42-Vasserot_quartiers_v1L93/    ALPAGE, ODbL — lu par circo/paris_quartiers_1815.py
+│  └─ trfgis/ rp1968/ geofla/ rp1954/ cog/ outremer/ modif_canton/ arrondissement/
+├─ photos/                   741 Mo   photos de l'atlas — NI REÇUES NI RÉGÉNÉRABLES, hors git
+│  ├─ 1815_1870/             348 Mo   120 photos, source de circo/regles_1815_*.py
+│  └─ 1940_1995/             393 Mo   139 photos, source de circo/regles_1958_1986.py
+├─ sorties/                           exports de la carte, rapports — RÉGÉNÉRABLES, hors git
+├─ build/                    1,9 Go   sortie de extraction/trfgis_extract.py, journaux, pg_dump
 ├─ jorf_txt/                 301 Mo   texte des JO ; *_raw, *_col et tables annuelles hors git
-├─ polynesie/                 93 Mo   BD ADMIN Polynésie française — reçue
-├─ nouvelle_caledonie/        36 Mo   BD ADMIN Nouvelle-Calédonie (DITTT) — reçue
 │
+├─ extraction/           tête de chaîne : trfgis_extract.py (TRF-GIS → build/),
+│                        trfgis_fetch_inspect.py (dépôt de reproduction)
 ├─ sql/                  la chaîne de chargement : 130 fichiers numérotés 01 à 111
 ├─ cantons/              registre des mouvements cantonaux, décrets, annexe VII,
 │  └─ wikipedia/         récolte Wikipédia, lecture des JO, complément au registre
 ├─ circo/                circonscriptions législatives, tout Paris, 1815-1870
 ├─ cog1954/  cog1968/    les recensements, extraction et contrôle
 ├─ cartes/               découpe des villes, export et page web
-├─ gaudillere/           Marseille : protocole de géoréférencement
-├─ hac/                  filiation communale extraite de HAC
-├─ docs/                 notes thématiques
+│  ├─ web/               la carte interactive ; donnees/ (7,1 Go) régénérable, hors git
+│  └─ sorties/           voirie BD TOPO par ville, dossiers de découpe — hors git
+├─ annexes/              les petits chantiers et les notes
+│  ├─ docs/              notes thématiques, BASE_POUR_QGIS.md (note de passation)
+│  ├─ gaudillere/        Marseille : protocole de géoréférencement
+│  └─ hac/               filiation communale extraite de HAC
 ├─ .claude/skills/       decoupe-ville : le déroulé d'une découpe de ville
 ├─ archives/             ce qui ne sert ni la base ni la carte web : voir archives/LISEZMOI.md
 └─ _to_delete/           antichambre de la corbeille — hors git, se vide à la main
@@ -103,15 +107,16 @@ retélécharger et de recommencer.
 Le tableau de 2012 traînait à la racine jusqu'au 2 septembre 2026 ; aucun
 script ne le lit par son chemin.
 
-Reçus mais hors de `sources/`, pour des raisons historiques : `JORF/` (PDF des
-Journaux officiels), `ANR_COMMUNES_22042026/` (Zenodo
-`10.5281/zenodo.3727274`), `42-Vasserot_quartiers_v1L93/` (ODbL, inutilisable —
-gardé pour référence), `polynesie/`, `nouvelle_caledonie/` (BD ADMIN du DITTT,
-avec ses CGU et son lisez-moi).
+Reçus hors de `sources/` jusqu'au 21 octobre 2026, et rangés depuis dans
+`sources/` : `JORF/` (PDF des Journaux officiels), `ANR_COMMUNES_22042026/`
+(Zenodo `10.5281/zenodo.3727274`), `42-Vasserot_quartiers_v1L93/` (ODbL,
+inutilisable pour Wikipédia — gardé pour référence), `polynesie/`,
+`nouvelle_caledonie/` (BD ADMIN du DITTT, avec ses CGU et son lisez-moi).
 
 > **La règle qui les visait leur échappait.** `.gitignore` ne connaissait que
 > `sources/` : ces quatre dossiers, 4 Go, n'étaient ni suivis ni ignorés, donc
-> à un `git add -A` d'entrer dans le dépôt. Chacun a désormais sa ligne.
+> à un `git add -A` d'entrer dans le dépôt. Chacun a eu sa ligne, jusqu'à ce
+> que leur rangement dans `sources/` les fasse tomber sous la règle commune.
 > **Corollaire : une donnée reçue qui n'arrive pas dans `sources/` doit être
 > ignorée nommément, le jour même.**
 
@@ -140,9 +145,9 @@ de ce tableau n'est lu par la chaîne.
 | `sorties/part_2026-10-04_1815/` | 5,0 Go | export du 4 octobre ; a servi le 6 à recopier l'outre-mer | nul |
 | `sorties/part_2026-09-24_propre/` | 4,6 Go | export du 24 septembre | nul |
 | `sorties/donnees_avant_84/` | 3,3 Go | la carte d'avant `84`, mise de côté le 2 septembre | nul pour la chaîne ; c'est le seul témoin de la carte d'avant la partition |
-| `JORF/tables/` | 4,4 Go | les 50 tables annuelles du JO en PDF | faible — Légifrance les redonne ; les garder tant que la mise en colonnes de 1941-1957 est à refaire |
+| `sources/JORF/tables/` | 4,4 Go | les 50 tables annuelles du JO en PDF | faible — Légifrance les redonne ; les garder tant que la mise en colonnes de 1941-1957 est à refaire |
 | `cartes/sorties/voirie/` | 3,2 Go | voirie BD TOPO, 4 GeoJSON par ville | faible — `cartes/recupere_voirie.py` la retélécharge ; ôter d'abord les villes écrites |
-| `ANR_COMMUNES_22042026/` | 1,2 Go | trame ANR, déjà en base par `82` | faible — Zenodo `10.5281/zenodo.3727274` ; **exigée par un rebuild** |
+| `sources/ANR_COMMUNES_22042026/` | 1,2 Go | trame ANR, déjà en base par `82` | faible — Zenodo `10.5281/zenodo.3727274` ; **exigée par un rebuild** |
 | `sources/trfgis/`, `sources/rp1968/` | 905 + 680 Mo | reçus, dépouillés | faible — DOI dans `METHODE.md` § 3 ; `trfgis` exigé par un rebuild |
 | `build/histgis_avant_chaine_2026-09-22.dump` | 591 Mo | sauvegarde d'avant la reconstruction par la chaîne | à remplacer par un `pg_dump -Fc` du jour avant de l'ôter |
 
@@ -151,10 +156,11 @@ Les cinq premières lignes font **25 Go** et ne demandent aucune précaution.
 `cartes/web/donnees/` (7,1 Go) la carte servie : ils diffèrent, **on garde les
 deux** tant que l'un n'a pas été promu à la place de l'autre.
 
-**Ce qu'il ne faut pas ôter sans copie ailleurs : `photo_1815_1870/`.** Ces 120
-photos de l'atlas sont la source de `circo/regles_1815_*.py` ; elles ne sont ni
-téléchargeables ni régénérables, et git les ignore (`*.jpg`). C'est le seul
-dossier du projet dont la perte serait définitive.
+**Ce qu'il ne faut pas ôter sans copie ailleurs : `photos/`.** Les 259
+photos de l'atlas sont la source de `circo/regles_1815_*.py` et de
+`circo/regles_1958_1986.py` ; elles ne sont ni téléchargeables ni
+régénérables, et git les ignore. C'est le seul dossier du projet dont la perte
+serait définitive.
 
 Hors du dossier : le schéma `public` de la base porte 317 tables de travail des
 découpes de villes (285 Mo, `nice_*`, `nimes_*`, `istres_*`…).
@@ -168,7 +174,7 @@ Si un de ces fichiers manque ou paraît douteux, il se refait. Rien n'y est sais
 
 | fichier | commande |
 |---|---|
-| `build/*.csv` | `python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee` |
+| `build/*.csv` | `python3 extraction/trfgis_extract.py build sources/trfgis/communes/Nomenclatures --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee` |
 | toute la base | `sql/rebuild.sh` puis `sql/rejouer_apres_rebuild.sh` — **destructif**, il repart de zéro |
 | `sorties/rapport_chargement.txt` | `sql/load.sh` |
 | `sorties/rapport_controle_gay.txt`, `controle_gay.gpkg` | `sql/controle_gay.sh` |
@@ -194,8 +200,8 @@ binaires et les gros fichiers sont isolés.
 | `circo/` | circonscriptions 1958/1986/2009, et tout Paris : 80 quartiers reconstruits par union d'IRIS, 386 circos sur 15 divisions de 1863 à 1986 | actif |
 | `cog1954/`, `cog1968/` | extraction des deux recensements. 1954 : 3 créations cantonales établies par trois voies indépendantes. 1968 : 86 fascicules, rappel 91,4 % | acquis, perfectible |
 | `cartes/` | couverture des découpages modernes, trame IRIS des 119 villes à découper, et **l'export de la carte web** | actif |
-| `hac/` | filiation communale extraite de HAC — le troisième contrôle indépendant | acquis |
-| `gaudillere/` | protocole de géoréférencement de Marseille — le cas d'école des onze coupes internes | à exécuter |
+| `annexes/hac/` | filiation communale extraite de HAC — le troisième contrôle indépendant | acquis |
+| `annexes/gaudillere/` | protocole de géoréférencement de Marseille — le cas d'école des onze coupes internes | à exécuter |
 | `jorf_txt/` | texte OCR des JO. Les `*_raw.txt` sont l'OCR brut, hors dépôt | dépouillé |
 | `archives/` | exploration ancienne, planches imprimables, filets de sécurité — voir `archives/LISEZMOI.md` | inactif |
 

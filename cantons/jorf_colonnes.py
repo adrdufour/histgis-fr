@@ -37,10 +37,10 @@ sont exactement les mêmes octets, remis dans l'ordre de lecture.
 *Une réparation qui repasse par la source rend une source différente.* Ici, il
 ne fallait pas relire la page : il fallait la déplier.
 
-    python3 cantons/jorf_colonnes.py                 # tous les PDF de JORF/
+    python3 cantons/jorf_colonnes.py                 # tous les PDF de sources/JORF/
     python3 cantons/jorf_colonnes.py --mesure        # ne rien écrire, comparer
     python3 cantons/jorf_colonnes.py --methode boite # l'essai abandonné
-    python3 cantons/jorf_colonnes.py JORF/xxx.pdf    # un seul
+    python3 cantons/jorf_colonnes.py sources/JORF/xxx.pdf    # un seul
 
 Sortie : `jorf_txt/<nom>_col.txt`. **On n'écrase pas les fichiers existants** —
 la règle du dépôt est qu'on signale et qu'on ne supprime pas, et les deux
@@ -68,7 +68,7 @@ import sys
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
-PDF_DIR = RACINE / "JORF"
+PDF_DIR = RACINE / "sources" / "JORF"
 TXT_DIR = RACINE / "jorf_txt"
 
 # « Décret n° 82-92 », « Décret n" 82-56 », « Décret n°  73-651 » — l'OCR

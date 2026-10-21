@@ -228,7 +228,7 @@ fi
 etape "Paris — trames et rattachements (scripts Python)"
 python3 "$RACINE/circo/paris_quartiers.py"
 python3 "$RACINE/circo/paris_circo.py"
-if [ -d "$RACINE/42-Vasserot_quartiers_v1L93" ]; then
+if [ -d "$RACINE/sources/42-Vasserot_quartiers_v1L93" ]; then
     python3 "$RACINE/circo/paris_quartiers_1815.py"
     python3 "$RACINE/circo/paris_circo_1815.py"
 else
@@ -260,7 +260,7 @@ $PSQL -v appliquer=1 -f "$ICI/55_paris_circo_serie.sql"
 
 # --- Marseille, SOUS CONDITION -----------------------------------------------
 # `32` était appelé sans condition, et il ne pouvait PAS passer : son entrée est
-# `gaudillere/marseille_cantons.gpkg`, la digitalisation à la main que le § 2 de
+# `annexes/gaudillere/marseille_cantons.gpkg`, la digitalisation à la main que le § 2 de
 # `RESTE_A_FAIRE.md` décrit comme « le plus gros chantier manuel restant, et
 # rien n'est commencé ». **Le fichier n'existe pas**, et les deux `ogr2ogr` qui
 # l'importeraient ne vivaient que dans l'en-tête de `32`.
@@ -274,7 +274,7 @@ $PSQL -v appliquer=1 -f "$ICI/55_paris_circo_serie.sql"
 # était sur le disque et la commande en commentaire. Ici la donnée reste à
 # produire, et le fichier est sauté en le disant — comme `49`, `51`, `46`
 # et l'outre-mer.
-MARS_GPKG="$RACINE/gaudillere/marseille_cantons.gpkg"
+MARS_GPKG="$RACINE/annexes/gaudillere/marseille_cantons.gpkg"
 if [ -f "$MARS_GPKG" ]; then
     etape "Marseille — les deux couches du GeoPackage (prérequis de 32)"
     ogr2ogr -f PostgreSQL "PG:$PG_DSN" "$MARS_GPKG" \
@@ -286,10 +286,10 @@ if [ -f "$MARS_GPKG" ]; then
     etape "32 — géométrie des cantons de Marseille"
     $PSQL -1 -f "$ICI/32_marseille_geom.sql"
 else
-    echo "  gaudillere/marseille_cantons.gpkg absent — 32 sauté." >&2
+    echo "  annexes/gaudillere/marseille_cantons.gpkg absent — 32 sauté." >&2
     echo "  C'est un chantier de SAISIE, pas un fichier égaré : géoréférencer" >&2
     echo "  et digitaliser dans QGIS, protocole dans" >&2
-    echo "  gaudillere/protocole_georeferencement.md (RESTE_A_FAIRE § 2)." >&2
+    echo "  annexes/gaudillere/protocole_georeferencement.md (RESTE_A_FAIRE § 2)." >&2
     echo "  Conséquence, connue et déclarée : les douze atomes-fractions de" >&2
     echo "  Marseille gardent le polygone de la ville entière, d'où 1 176 km²" >&2
     echo "  comptés en trop en 1870 et 2 587 en 1940 — le premier poste du" >&2
@@ -377,14 +377,14 @@ $PSQL -f "$ICI/42_rattachement_arriere.sql"
 etape "44 — absorptions anciennes"
 $PSQL -f "$ICI/44_absorption_ancienne.sql"
 
-# 46 a besoin de hac/hac_filiation.csv, et `\copy` résout depuis le répertoire
+# 46 a besoin de annexes/hac/hac_filiation.csv, et `\copy` résout depuis le répertoire
 # de lancement : le chemin est passé explicitement, comme pour 11.
-if [ -f "$RACINE/hac/hac_filiation.csv" ]; then
+if [ -f "$RACINE/annexes/hac/hac_filiation.csv" ]; then
     etape "46 — communes nées pendant la série, filiation HAC"
-    $PSQL -v hac="$RACINE/hac/hac_filiation.csv" -f "$ICI/46_creation_serie.sql"
+    $PSQL -v hac="$RACINE/annexes/hac/hac_filiation.csv" -f "$ICI/46_creation_serie.sql"
 else
     echo "  hac_filiation.csv absent — 46 sauté." >&2
-    echo "  Pour l'engendrer : python3 hac/hac_filiation.py" >&2
+    echo "  Pour l'engendrer : python3 annexes/hac/hac_filiation.py" >&2
 fi
 
 # 47 avant 40, pour la même raison qui met 46 avant lui : la filiation est une
@@ -397,7 +397,7 @@ fi
 # présent, la branche n'a jamais été prise. *Une étape conditionnelle rend
 # conditionnel tout ce qui lit sa sortie, et cela ne se voit pas tant que la
 # condition est vraie.*
-if [ -f "$RACINE/hac/hac_filiation.csv" ]; then
+if [ -f "$RACINE/annexes/hac/hac_filiation.csv" ]; then
     etape "47 — circo de la mère, quand les voisins se taisent"
     $PSQL -f "$ICI/47_circo_mere.sql"
 else
@@ -569,7 +569,7 @@ $PSQL -1 -f "$ICI/97_report_deux_bouts_1941_1967.sql"
 # 550 Mo, 34 millions de sommets, de dix minutes à une demi-heure. C'est
 # l'étape la plus longue de la chaîne — `SPATIAL_INDEX=NONE` est le gros gain,
 # `82` ne faisant AUCUN prédicat spatial sur cette table.
-ANR_GPKG="$RACINE/ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg"
+ANR_GPKG="$RACINE/sources/ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg"
 if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
     etape "ANR — la couche geometries_only_processed (prérequis de 82)"
     echo "  550 Mo : compter dix minutes à une demi-heure."

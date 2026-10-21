@@ -1,6 +1,6 @@
 # Lecture des JO du complément — 11 octobre 2026
 
-28 numéros du JO déposés dans `JORF/` par Adrien, convertis en texte
+28 numéros du JO déposés dans `sources/JORF/` par Adrien, convertis en texte
 (`pdftotext -layout`, puis `jorf_colonnes.py`) : `jorf_txt/<nom>.txt` et
 `<nom>_col.txt`. Tous ont une couche texte, y compris ceux de 1946-1951.
 

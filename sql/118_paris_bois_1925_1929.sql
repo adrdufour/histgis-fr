@@ -28,7 +28,7 @@
 -- Sources : notices « Bois de Boulogne » et « Bois de Vincennes » de
 -- Wikipédia, recoupées pour 1925 par les notices de voies des Archives
 -- nationales (« territoire de Boulogne-Billancourt annexé à Paris par décret
--- du 3 avril 1925 »). Les JO de 1925 et 1929 ne sont pas dans `JORF/` : les
+-- du 3 avril 1925 »). Les JO de 1925 et 1929 ne sont pas dans `sources/JORF/` : les
 -- deux dates sont à confronter au texte.
 --
 -- ANR ne le voit pas non plus : il retire le bois aux communes dès 1860 et

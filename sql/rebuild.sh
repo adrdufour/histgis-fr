@@ -32,7 +32,7 @@ command -v ogr2ogr >/dev/null || { echo "ogr2ogr introuvable (apt install gdal-b
 SHP="$(find "$RACINE/sources/geofla" -iname 'COMMUNE.SHP' -print -quit 2>/dev/null || true)"
 [[ -n "$SHP" ]] || {
     echo "COMMUNE.SHP introuvable sous $RACINE/sources/geofla" >&2
-    echo "  python3 trfgis_fetch_inspect.py fetch repro \\" >&2
+    echo "  python3 extraction/trfgis_fetch_inspect.py fetch repro \\" >&2
     echo "      --match '^COMMUNE\\.(SHP|SHX|DBF|PRJ)\$' --dest ./sources/geofla" >&2
     exit 1
 }

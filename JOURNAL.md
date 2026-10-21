@@ -10304,3 +10304,23 @@ fractions sortent entières, superposées et hachurées, en 1910-1940 comme en
 1958-1998. Lisieux 1973-1986 : les fractions n'ont pas de canton (Lisieux-3
 naît en 1973), rien n'est posé ; Nice 7e à 14e restent sans circonscription
 avant 1986 ; Chartres 1986-1998 sans canton.
+
+## 21 octobre 2026 — rangement et réorganisation du dossier
+
+Trois passes, trois commits. **La racine** : les cinq tables du JO de 1976 à
+1988, en double de `JORF/tables/`, vont dans `_to_delete/` ;
+`symbology-style.db`, déposé par QGIS, dans `archives/`. **Les sous-dossiers** :
+les planches imprimables (`cartes_cantons.py`, `cartes_paris.py`,
+`carte_villes_multicantonales.py`) et les `.avant_*` des recensements passent
+dans `archives/planches/` et `archives/filets/`, que décrit
+`archives/LISEZMOI.md`.
+
+**La réorganisation** : tout ce qui est reçu est désormais sous `sources/`
+(`JORF/`, `ANR_COMMUNES_22042026/`, `polynesie/`, `nouvelle_caledonie/`,
+`42-Vasserot_quartiers_v1L93/`) ; les deux séries de photos de l'atlas sous
+`photos/1815_1870/` et `photos/1940_1995/` (ex-`photo_1815_1870/` et
+`Photos-1-001/`), ignorées nommément ; les deux scripts TRF-GIS sous
+`extraction/` ; `docs/`, `gaudillere/`, `hac/` et `BASE_POUR_QGIS.md` sous
+`annexes/`. Les chemins sont réécrits dans le code, le SQL et les documents,
+`coupes_ville.csv` compris (ses citations de `JORF/`). Ce journal, tenu par
+ajouts, garde les anciens noms au-dessus de cette entrée.

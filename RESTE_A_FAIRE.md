@@ -523,7 +523,7 @@ source à trouver.
 
 | tâche | valeur | blocage |
 |---|---|---|
-| **Marseille** : géoréférencer et digitaliser dans QGIS | forte | travail à la main ; protocole dans `gaudillere/protocole_georeferencement.md` |
+| **Marseille** : géoréférencer et digitaliser dans QGIS | forte | travail à la main ; protocole dans `annexes/gaudillere/protocole_georeferencement.md` |
 | Puis lancer `sql/32_marseille_geom.sql` | — | dépend du précédent |
 | Mesurer le **taux de reprise réel** ville par ville | forte | disposer d'une ligne n'est pas disposer de la bonne |
 | Les 118 autres villes | forte | même travail |

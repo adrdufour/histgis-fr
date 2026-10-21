@@ -584,7 +584,7 @@ consolidé compte **723 démembrements réels, dont 559 datés au décret (77 %)
 de Gaudillère ne consigne pas, et que le registre Légifrance ignore faute de
 texte indexé avant 1990 — **sont datés pour 97 d'entre eux** depuis le
 11 octobre 2026, par les **tables analytiques annuelles du JO** (1941-1990,
-`JORF/tables/`) : chaque commune n'y paraît qu'une année, avec la page et le
+`sources/JORF/tables/`) : chaque commune n'y paraît qu'une année, avec la page et le
 plus souvent la date du décret (`cantons/dates_par_tables_jo.csv`). La date de
 parution est estimée par la page : écart médian d'un jour sur 236 actes connus.
 93 sont entrés par `110` (73 posés dans un trou) et `111` (18 corrigés sur une
@@ -793,7 +793,7 @@ d'attribution, qui portent sur des communes entières, concluent.
 
 ### 3.3 HAC — la filiation que `11` ne connaissait pas
 
-`hac/hac_filiation.py`, `sql/45_controle_hac.sql`, **qui ne contient aucun
+`annexes/hac/hac_filiation.py`, `sql/45_controle_hac.sql`, **qui ne contient aucun
 `INSERT`, `DELETE` ni `UPDATE`** : corriger la base d'après HAC lui ferait
 perdre son indépendance.
 
@@ -922,7 +922,7 @@ Renvois vers `METHODE.md` § 6, où chacune est détaillée et mesurée.
    La trame d'accrochage est en base (`iris_ville`, 4 219 IRIS, 211 coupes sur
    214 pourvues) ; le travail de digitalisation dans QGIS reste entier.
    Marseille est le cas d'école, protocole dans
-   `gaudillere/protocole_georeferencement.md`.
+   `annexes/gaudillere/protocole_georeferencement.md`.
 4. **Six départements que le report ne rattrape pas** — 94, 95, 62, 77, 29, 91 :
    trop d'actes intercalés pour se résoudre contre 1999. Il leur faudrait un
    jalon intermédiaire, un recensement ou un acte que le registre ignore.

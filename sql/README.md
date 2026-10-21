@@ -1,6 +1,6 @@
 # Chargement PostGIS — histgis
 
-Charge les CSV de `build/` (sortie de `trfgis_extract.py`) dans un schéma
+Charge les CSV de `build/` (sortie de `extraction/trfgis_extract.py`) dans un schéma
 PostgreSQL/PostGIS `histgis`. Cette passe couvre **les attributions**, pas
 encore les géométries.
 
@@ -211,7 +211,7 @@ psql:sql/27_circo_2012.sql:76: error: :: Aucun fichier ou dossier de ce nom
 | `27_circo_2012.sql` | `circo` | `circo/circo_2012.csv` |
 | `28_circo_1986.sql` | `circo` | `circo/circo_1986.csv` |
 | `40_outremer.sql` | `circo_om` | `circo/circo_outremer_1986_2012.csv` |
-| `45`, `46` | `hac` | `hac/hac_filiation.csv` — **ont un défaut** |
+| `45`, `46` | `hac` | `annexes/hac/hac_filiation.csv` — **ont un défaut** |
 
 `\copy` résout les chemins relatifs depuis le répertoire de LANCEMENT, pas
 depuis le fichier `.sql` : passer des chemins absolus. `rejouer_apres_rebuild.sh`
@@ -327,7 +327,7 @@ La perte puis le retour de l'Alsace-Moselle apparaissent au bon endroit : 89
 
 ## La 3e colonne d'`atom.csv` : deux formats possibles
 
-Le loader accepte les deux sorties de `trfgis_extract.py` et range la valeur
+Le loader accepte les deux sorties de `extraction/trfgis_extract.py` et range la valeur
 dans la bonne colonne :
 
 | build lancé avec | contenu de la colonne | colonne remplie |
@@ -339,7 +339,7 @@ Les deux ne peuvent pas être remplies en même temps — l'extracteur n'écrit
 qu'une colonne. Pour la géométrie c'est `insee` qu'il faut :
 
 ```bash
-python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
+python3 extraction/trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
     --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee
 ```
 
@@ -349,7 +349,7 @@ sont plus éclatés et les 333 atomes-fractions disparaissent.
 ## Pourquoi `com_act` n'était pas le bon choix
 
 `atom.csv` porte une colonne intitulée `insee` qui vaut 1, 2 ou 3 — ce n'est
-pas un code commune. `trfgis_extract.py` utilise `CLE_GEOM = "com_act"` pour
+pas un code commune. `extraction/trfgis_extract.py` utilise `CLE_GEOM = "com_act"` pour
 le rattachement à la trame GEOFLA 2011, or le codebook TRF-GIS définit
 `com_act` comme un **statut** :
 
@@ -385,7 +385,7 @@ lui correspondent exactement. Elle est livrée dans le dépôt de reproduction d
 TRF-GIS, ce qui évite de dépendre du catalogue IGN :
 
 ```bash
-python3 trfgis_fetch_inspect.py fetch repro \
+python3 extraction/trfgis_fetch_inspect.py fetch repro \
     --match '^COMMUNE\.(SHP|SHX|DBF|PRJ)$' --dest ./geofla --dry-run
 ```
 

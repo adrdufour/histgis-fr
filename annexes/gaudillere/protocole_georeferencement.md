@@ -129,7 +129,7 @@ peuvent donc différer sans qu'aucune limite n'ait bougé.
 
 ### Étape 4 — livrer
 
-Un GeoPackage `gaudillere/marseille_cantons.gpkg` en **EPSG:2154**, deux
+Un GeoPackage `annexes/gaudillere/marseille_cantons.gpkg` en **EPSG:2154**, deux
 couches : `lignes` et `etiquettes`. `sql/32_marseille_geom.sql` fait le reste —
 découpage, vérifications, ingestion.
 
