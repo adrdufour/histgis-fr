@@ -71,12 +71,12 @@ projet_carte/                              55 Go au total, relevé le 11 octobre
 │  └─ wikipedia/         récolte Wikipédia, lecture des JO, complément au registre
 ├─ circo/                circonscriptions législatives, tout Paris, 1815-1870
 ├─ cog1954/  cog1968/    les recensements, extraction et contrôle
-├─ cartes/               planches, découpe des villes, export et page web
+├─ cartes/               découpe des villes, export et page web
 ├─ gaudillere/           Marseille : protocole de géoréférencement
 ├─ hac/                  filiation communale extraite de HAC
 ├─ docs/                 notes thématiques
 ├─ .claude/skills/       decoupe-ville : le déroulé d'une découpe de ville
-├─ archives/             exploration ancienne, gardée pour mémoire, plus utilisée
+├─ archives/             ce qui ne sert ni la base ni la carte web : voir archives/LISEZMOI.md
 └─ _to_delete/           antichambre de la corbeille — hors git, se vide à la main
 ```
 
@@ -173,10 +173,10 @@ Si un de ces fichiers manque ou paraît douteux, il se refait. Rien n'y est sais
 | `sorties/rapport_chargement.txt` | `sql/load.sh` |
 | `sorties/rapport_controle_gay.txt`, `controle_gay.gpkg` | `sql/controle_gay.sh` |
 | `cartes/web/donnees/` | `python3 cartes/export_web.py --jobs N` |
-| `cartes/sorties/dep_NN.pdf` | `python3 cartes/cartes_cantons.py` (`--un-seul`, `--2025`) |
-| `cartes/sorties/villes_multicantonales.*` | `python3 cartes/carte_villes_multicantonales.py` |
+| `archives/planches/sorties/dep_NN.pdf` | `python3 archives/planches/cartes_cantons.py` (`--un-seul`, `--2025`) |
+| `archives/planches/sorties/villes_multicantonales.*` | `python3 archives/planches/carte_villes_multicantonales.py` |
 | `cartes/sorties/iris_villes.geojson` | `python3 cartes/recupere_iris.py --charger` |
-| `circo/sorties/paris_circo.pdf` | `python3 circo/cartes_paris.py` |
+| `archives/planches/sorties/paris_circo.pdf` | `python3 archives/planches/cartes_paris.py` |
 | `cog1954/ocr_brut/`, `cog1968/ocr_brut/` | `python3 cog1954/extrait_1954.py --pdf …` — **des heures**, conservé exprès |
 
 Les **CSV de travail restent auprès de leur script**, pas dans `sorties/` : ils se
@@ -193,11 +193,11 @@ binaires et les gros fichiers sont isolés.
 | `cantons/` | registre consolidé des mouvements cantonaux — 723 démembrements dont 559 datés au décret (77 %) — et 343 actes moissonnés, 1 212 cantons dépouillés des JO | actif |
 | `circo/` | circonscriptions 1958/1986/2009, et tout Paris : 80 quartiers reconstruits par union d'IRIS, 386 circos sur 15 divisions de 1863 à 1986 | actif |
 | `cog1954/`, `cog1968/` | extraction des deux recensements. 1954 : 3 créations cantonales établies par trois voies indépendantes. 1968 : 86 fascicules, rappel 91,4 % | acquis, perfectible |
-| `cartes/` | planches départementales, couverture des découpages modernes, trame IRIS des 119 villes à découper, et **l'export de la carte web** | actif |
+| `cartes/` | couverture des découpages modernes, trame IRIS des 119 villes à découper, et **l'export de la carte web** | actif |
 | `hac/` | filiation communale extraite de HAC — le troisième contrôle indépendant | acquis |
 | `gaudillere/` | protocole de géoréférencement de Marseille — le cas d'école des onze coupes internes | à exécuter |
 | `jorf_txt/` | texte OCR des JO. Les `*_raw.txt` sont l'OCR brut, hors dépôt | dépouillé |
-| `archives/` | exploration ancienne, gardée pour mémoire | inactif |
+| `archives/` | exploration ancienne, planches imprimables, filets de sécurité — voir `archives/LISEZMOI.md` | inactif |
 
 ---
 

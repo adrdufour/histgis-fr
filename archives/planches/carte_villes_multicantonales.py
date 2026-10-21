@@ -3,7 +3,7 @@
 """
 carte_villes_multicantonales.py — les communes qui attendent une coupe
 
-    /usr/bin/python3 cartes/carte_villes_multicantonales.py
+    /usr/bin/python3 archives/planches/carte_villes_multicantonales.py
 
 Produit dans `cartes/` :
     villes_multicantonales.gpkg  deux couches : `villes` et `fond_communes`
@@ -266,7 +266,7 @@ def planche(projet, couches, fond, villes, n_villes, n_coupes, n_etiq,
           "livrees en arrondissements : geometrie reconstituee "
           "(atom_geom.source = union_prefixe).\n"
           "Source : histgis — atom, atom_geom, noms_geofla, geofla_commune. "
-          "Lambert 93. Genere par cartes/carte_villes_multicantonales.py",
+          "Lambert 93. Genere par archives/planches/carte_villes_multicantonales.py",
           12, 400, 8, coul="#555555", boite=(273, 16))
 
     projet.layoutManager().addLayout(mise)

@@ -248,7 +248,7 @@ Géométrie communale : le shapefile GEOFLA ED111 sous
 
 ## 7. Pour aller plus loin
 
-* `cartes/cartes_cantons.py` produit déjà des planches A3 par département
+* `archives/planches/cartes_cantons.py` produit déjà des planches A3 par département
   (1870, 1940, 1999, et 2025 avec `--2025`). Il **hachure en rouge** les
   communes revendiquées par plusieurs cantons : c'est la convention établie du
   projet, à réutiliser.

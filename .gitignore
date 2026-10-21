@@ -34,7 +34,7 @@ sources/
 /42-Vasserot_quartiers_v1L93/
 
 # --- sorties régénérables ---------------------------------------------
-# Régénérées par cartes_cantons.py, cartes_paris.py, recupere_iris.py…
+# Régénérées par recupere_iris.py, export_web.py, archives/planches/…
 # Voir LISEZMOI.md pour la commande qui refait chacune.
 sorties/
 *.pdf

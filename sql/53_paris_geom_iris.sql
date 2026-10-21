@@ -40,7 +40,7 @@
 -- compris. GEOFLA 2011 en perdait un demi.
 --
 -- **Coût** : l'empreinte du polygone change, et c'est la clé de regroupement de
--- la carte (`md5(ST_AsEWKB(geom))`, cf. `cartes_cantons.py` — « un code est une
+-- la carte (`md5(ST_AsEWKB(geom))`, cf. `archives/planches/cartes_cantons.py` — « un code est une
 -- reconstruction, l'empreinte est un fait »). Les groupes parisiens seront
 -- recalculés au prochain export. Rien à faire, mais il faut le savoir.
 --

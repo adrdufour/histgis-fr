@@ -34,7 +34,7 @@ ville par ville dans QGIS, Marseille en premier — ses onze lignes de 1870,
 
 Dépendances
 -----------
-`psycopg2` seul, déjà utilisé par `cartes_cantons.py` et
+`psycopg2` seul, déjà utilisé par `archives/planches/cartes_cantons.py` et
 `consolide_registre.py`. Pas de pyproj, pas de pyshp : la reprojection et
 l'intersection sont faites par PostGIS, qui les fait mieux.
 

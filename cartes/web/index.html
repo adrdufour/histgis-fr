@@ -1045,7 +1045,7 @@ function dessine() {
         if (noms.length === 1) {
           pose(p[0], p[1], nom, "etiq etiq-commune");
         } else {
-          // Empilés, comme dans `cartes_cantons.py` : un « A / B / C » sur une
+          // Empilés, comme dans `archives/planches/cartes_cantons.py` : un « A / B / C » sur une
           // ligne déborde et se confond avec le nom du voisin.
           const t = document.createElementNS(NS, "text");
           t.setAttribute("x", p[0]);
@@ -1336,7 +1336,7 @@ function nomA(c, annee) {
 //
 // La règle du projet est de grouper par la géométrie, jamais par un code :
 // « un code est une reconstruction, l'empreinte est un fait »
-// (`cartes/cartes_cantons.py`). Deux atomes de même empreinte occupent
+// (`archives/planches/cartes_cantons.py`). Deux atomes de même empreinte occupent
 // exactement le même terrain — les dessiner séparément les empile en silence.
 //
 // Une fois groupés, deux situations très différentes se cachaient sous le même

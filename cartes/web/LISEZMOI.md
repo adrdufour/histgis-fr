@@ -322,7 +322,7 @@ lequel des deux cas s'applique et pourquoi.
 > recouvrement, et la carte le montre maintenant commune par commune.
 
 **Le regroupement passe par l'empreinte du polygone, jamais par le code
-INSEE** — même règle que `cartes_cantons.py` : « un code est une reconstruction,
+INSEE** — même règle que `archives/planches/cartes_cantons.py` : « un code est une reconstruction,
 l'empreinte est un fait ». Elle est nécessaire dans les deux sens : Lyon et
 Marseille portent des codes différents pour un même terrain
 (`atom_geom.source = 'union_prefixe'`), et trois communes fondues portent un

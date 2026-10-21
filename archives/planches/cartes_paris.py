@@ -3,9 +3,9 @@
 """
 cartes_paris.py — les circonscriptions législatives de Paris, planche par division
 
-    python3 circo/cartes_paris.py
+    python3 archives/planches/cartes_paris.py
 
-Produit `circo/paris_circo.pdf`, une page par division électorale, de 1863 à
+Produit `archives/planches/sorties/paris_circo.pdf`, une page par division électorale, de 1863 à
 1986, dans l'ordre chronologique. Chaque planche superpose :
 
 * les circonscriptions, en aplats colorés, étiquetées de leur numéro ;
@@ -42,11 +42,12 @@ from matplotlib.backends.backend_pdf import PdfPages     # noqa: E402
 from matplotlib.patches import PathPatch                 # noqa: E402
 from shapely import wkb                                  # noqa: E402
 
-RACINE = Path(__file__).resolve().parent.parent
-SORTIE = RACINE / "circo" / "sorties" / "paris_circo.pdf"
+ICI = Path(__file__).resolve().parent
+RACINE = ICI.parents[1]
+SORTIE = ICI / "sorties" / "paris_circo.pdf"
 SORTIE.parent.mkdir(exist_ok=True)
 
-sys.path.insert(0, str(RACINE / "cartes"))
+sys.path.insert(0, str(ICI))
 sys.path.insert(0, str(RACINE / "circo"))
 from cartes_cantons import vers_path                     # noqa: E402
 from paris_quartiers import connexion                    # noqa: E402
