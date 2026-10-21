@@ -6,6 +6,10 @@ chaîne s'était arrêtée après `24`, la couche des circonscriptions était re
 vide, et le contrôle indépendant n'en avait rien dit — il ne regarde que 1870 et
 1940.
 
+**Recompté le 21 octobre 2026 : 142 fichiers `.sql`**, numérotés de `01` à
+`123`, dont 18 `diag_*` et 2 `banc_*_donnees` ; `112` à `123` sont décrits
+plus bas, à leur numéro.
+
 **Recompté le 11 octobre 2026 : 130 fichiers `.sql`**, numérotés de `01` à
 `111`, dont 19 `diag_*` et 2 `banc_*_donnees`. L'inventaire du § 1 c s'arrêtait
 à `93` : `94` à `109` y sont entrés ce jour-là, relevés dans les en-têtes des
