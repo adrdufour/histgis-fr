@@ -216,8 +216,15 @@ la paire soudée désigne la jonction qui fuit.
 depuis le centre de la commune ; c'est la lecture du nom du canton. Quand le nom ne dit rien
 (« 1er canton », « Nord-Centre ») : `ATOME=POINT(x y)`, un point choisi en regardant la carte.
 
-Puis rédiger la note (§ ci-dessous) dans un fichier et relancer avec
-`--note-fichier <note.txt> --ecrire`. Le script refuse d'écrire une découpe non conforme, et
+**Écrire systématiquement — règle d'Adrien, 13 octobre 2026.** Dès que la découpe est CONFORME à
+blanc et que l'image a été regardée, on écrit, sans demander l'accord : rédiger la note
+(§ ci-dessous) dans un fichier, relancer avec `--note-fichier <note.txt> --ecrire`, puis faire
+toute la suite d'un trait (contrôle `carte_coupe_ville` à une date de chaque régime,
+`a_inscrire_en_base.md`, `REMARQUES` de `tableau_villes.py` et régénération du xlsx, pièges du
+jour dans ce skill, sources rangées hors du scratchpad, tables `public.<ville>_*` supprimées).
+Les lectures douteuses ne retardent pas l'écriture : elles sont dans la note, chiffrées, et dans
+le compte rendu comme questions ; une ligne se réécrit. Si la session refuse une écriture
+(permissions), le dire et donner la commande prête, sans la contourner. Le script refuse d'écrire une découpe non conforme, et
 imprime la ligne de recette de la ville : **lire la recette, pas le code de retour** — une ligne
 qui ne ferme pas rend zéro comme une ligne juste.
 
@@ -273,7 +280,8 @@ signaler dans le compte rendu (« ajouté à `a_inscrire_en_base.md` : … »).
 
 Court, en français : un tableau des fractions avec leurs hectares, la méthode en deux phrases, les
 approximations en liste, et **les questions qui restent** (une page, une date, un morceau à
-attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
+attribuer). Envoyer la capture. Le compte rendu vient APRÈS l'écriture (règle du 13 octobre 2026),
+pas pour la demander. Ne pas commiter sans qu'il le demande.
 
 ## Pièges déjà rencontrés
 
@@ -465,7 +473,8 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
   suivie jusqu'au bord, la donnait au 4e.
 - **Plusieurs villes en parallèle** (3 octobre 2026) : un agent par ville, qui trace et éprouve À
   BLANC sans toucher au dépôt (ni `--ecrire`, ni CSV, ni `98`), et rend la commande conforme, les
-  `.wkt`, les notes et une image. L'écriture se fait ensuite ville après ville, par une seule main :
+  `.wkt`, les notes et une image. L'écriture se fait ensuite ville après ville, par une seule main
+(la session principale, dès le retour de chaque agent, sans attendre d'accord) :
   deux `--ecrire` ou deux `98` en même temps se marchent dessus. Si `98` rend une erreur de
   syntaxe inattendue, regarder sa date de modification : il peut être en cours d'édition dans une
   autre session ; attendre et rejouer.
@@ -523,9 +532,9 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
 - **Un texte qui nomme un quartier ou un parc sans le borner** (Nice : « parc Liserb », « quartier
   Liserb supérieur », « quartier de l'Ariane ») : aucune donnée ne le délimite. Tracer la lecture
   la plus simple, chiffrer l'enjeu, et demander le plan annexé au décret.
-- **Les agents en parallèle ne peuvent pas écrire, et la session non plus sans accord** : l'écriture
-  dans les CSV et `98` sous `appliquer` demandent l'accord explicite d'Adrien dans la conversation
-  (9 octobre 2026). Une fois donné, tout faire : CSV, `98`, `a_inscrire_en_base.md`,
+- **Les agents en parallèle ne peuvent pas écrire ; la session principale écrit sans demander**
+  (règle du 13 octobre 2026, qui remplace l'accord explicite exigé le 9 octobre). Tout faire :
+  CSV, `98`, `a_inscrire_en_base.md`,
   `tableau_villes.py` (dictionnaire `REMARQUES`, et `REVISEES` si la ville est reprise), ce skill,
   et le nettoyage des tables `public.<ville>_*`.
 - **Un arrêté de l'an X qui nomme des parties sans les borner** (10 octobre 2026 — Saint-Flour :
@@ -538,8 +547,9 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
   (`insee.fr/fr/statistiques/fichier/<n>/dep<NN>.pdf`, jusqu'au 1er janvier 2014), à comparer aux
   populations des IRIS : à Saint-Flour, deux IRIS nommés « Nord » et « Sud », 38,4 % au Nord des
   deux côtés. La ligne s'écrit alors sous la source `iris` (Saint-Flour) ou `main` (Falaise), la
-  note commence par ce qui est du texte et ce qui ne l'est pas. À essayer sur Confolens, Tartas,
-  Le Quesnoy, Avesnes.
+  note commence par ce qui est du texte et ce qui ne l'est pas. À essayer sur Tartas, Le Quesnoy,
+  Avesnes — mais LIRE D'ABORD l'arrêté : celui de Confolens (9 pluviôse an X, arrêté rectificatif)
+  bornait les deux parts par la Vienne.
 - **Nord et Sud ne sont pas toujours des directions** : le « Nord » de Saint-Flour est le faubourg,
   l'est et le sud de la commune ; le « Nord » de Falaise est un coin nord-est de 320 ha. Ancres par
   points, et ne pas déduire l'orientation du partage des seules communes voisines (l'entrée n° 97
@@ -590,6 +600,215 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
 - **Une voie longue citée comme simple raccord** (« rue de Bordeaux » entre le pont et l'avenue de
   Cognac) : `trace_mixte` la suit sur 485 m puis revient, une épingle sans surface. Regarder l'image.
 
+- **Gallica bloqué : archive.org a souvent le même texte** (13 octobre 2026). La *Collection générale
+  des lois* de Rondonneau reproduit les arrêtés de l'an X avec leur référence au Bulletin
+  (Confolens, t. 8, p. 696) ; les exemplaires Google du Bulletin des lois ont un OCR `_djvu.txt`
+  (Rochefort, loi du 29 juin 1852). La recherche plein texte d'archive.org les trouve par une suite
+  de noms de communes ; l'image d'une page se lit par
+  `https://archive.org/download/<id>/page/n<feuillet>_w1400.jpg` (le feuillet vient de
+  `fulltext/inside.php`, pas du numéro de page de l'OCR). Lire l'IMAGE, pas l'OCR, et demander
+  quand même à Adrien la page Gallica pour collationner.
+- **Une loi de 1852 peut donner la limite** (Rochefort) : « section urbaine » et « section foraine »
+  décrites en circuits d'îlots. La limite est la voie commune aux deux circuits ; ce qu'aucun
+  circuit ne contient (l'arsenal) reste sans texte, et une formule comme « en deçà de la route de
+  Saint-Malo » laisse sans attribution ce qui est au-delà (environ 365 ha) : tracer les deux
+  lectures et les chiffrer.
+- **Un nom de rue ancien peut exister aujourd'hui ailleurs** : la « rue de la République » de
+  Rochefort en 1852 est l'ancienne rue Royale (avenue Charles-de-Gaulle), pas la rue actuelle du
+  même nom, perpendiculaire. Les listes de rues des monographies (dans l'ordre, par sens) font la
+  concordance.
+- **« Ligne imaginaire dans l'axe de la rue jusqu'au pont »** (Cognac) : deux `("point", x, y)`
+  consécutifs dans `trace_mixte` font un segment droit ; comparer son azimut à celui de la rue
+  identifie le pont quand la BD TOPO ne le nomme pas. Les culées (« rive droite ») sont dans
+  `BDTOPO_V3:construction_lineaire` (nature « Pont ») ; un pont peut aussi n'être qu'un tronçon
+  sans nom, à trouver en croisant l'axe de l'eau avec les tronçons.
+- **Canal et rivière parallèles** (Cognac : canal Jean-Simon et Charente) : `("eau", "charente")`
+  ne prend pas le canal. Dire dans la note de quel côté tombe l'île, et ce qu'elle pèse.
+- **Une place réduite à un anneau de rond-point** : « côté Sud-est » se force en donnant les sommets
+  de l'anneau en `("point", …)`. Et le premier tronçon d'un boulevard peut porter le nom de l'avenue
+  voisine (boulevard de Javrezac / avenue de Saintes) : regarder l'alignement.
+- **`("commune", insee)` en départ peut prendre un sommet intérieur** (tolérance de 60 m, départ à
+  44 m du bord) : quand la voie touche le bord, donner son bout exact en `("point", x, y)`.
+- **`trace_eau` laisse un bout le long du bord** quand l'axe et le contour ANR coïncident (Confolens,
+  214 m) : mesurer la part de la ligne à moins de 2 m du bord, puis `--rogner 10`.
+- **Deux voies du texte qui ne se touchent plus** après un réaménagement (Rochefort, port de
+  plaisance) : tracer les deux raccords, les chiffrer en logements. Un canal sans toponyme se
+  reconnaît à la rue qui porte son nom (canal des Sœurs).
+- **`cible_ville()` dans un `WHERE` ou une jointure est réévaluée à chaque ligne** (plus de deux
+  minutes, vu trois fois le même jour) : la matérialiser d'abord dans `public.<ville>_cible`. Et
+  les contacts avec les voisines se mesurent sur `atom_geom_anr`, pas sur `atom_geom` (contour
+  GEOFLA généralisé : Vergeroux 482 m contre 1 881 m).
+- **Populations légales par fraction cantonale** : `insee.fr/fr/statistiques/fichier/2119747/dep<NN>.pdf`
+  (en vigueur au 1er janvier 2014, population 2011) et `2119780` (2013, population 2010) ; `2387611`
+  est déjà en cantons de 2015.
+- **`get_feature(bbox=…)` veut un tuple de quatre nombres** ; une chaîne finissant par `,EPSG:2154`
+  rend un HTTP 400, comme les couches `toponymie_*`.
+- **zsh : `rm -f g_*.geojson` sans correspondance arrête toute la chaîne `&&`** (« no matches
+  found ») : les fichiers écrits plus loin dans la même commande ne le sont pas.
+- **Des tables `public.<ville>_*` d'un essai antérieur peuvent traîner** : préfixer les siennes et
+  ne pas écraser celles qu'on n'a pas créées.
+- **Un arrêté de l'an X peut borner la ville par des rues** (Saintes, 27 brumaire an X, comme La
+  Rochelle dans le même arrêté ; Rondonneau, t. 8, p. 575-578) : le lire avant de supposer que la
+  rivière sépare. À Saintes la Charente traverse la ville et n'est pas la limite du texte ;
+  Wikipédia (« Canton de Saintes-Nord ») affirme le contraire sans source.
+- **Les noms révolutionnaires (« rue de la Commune », « rue de la Préfecture »)** se retrouvent dans
+  les dictionnaires de rues des sociétés savantes (Saintes : Dangibeaud, Bulletin de la Société des
+  archives historiques de Saintonge et d'Aunis, t. 25-26, sur archive.org). Un même nom a pu
+  désigner deux rues : la géométrie tranche (§ 3).
+- **Un texte qui s'arrête « à la rivière » ne dit rien de l'autre rive** (Saintes an X : 1 029 ha) :
+  regarder si le texte suivant reprend un tronçon de la rivière (1985 : « de la hauteur de la place
+  Blair à la limite des Gonds ») et ce que la chronologie dit de la filiation (« division de
+  Saintes-Nord »). L'écrire comme une déduction, chiffrée.
+- **Une rivière qui est d'abord limite communale** : `("commune", insee)` en départ prend un sommet
+  sur le tronçon où l'axe et le bord coïncident (834 m le long du bord à Saintes). Calculer le point
+  où l'axe quitte le bord (`ST_Difference(axe, ST_Buffer(bord, 10))`, début de la plus longue partie
+  intérieure) et le donner en `("point", x, y)`.
+- **Deux `("point", …)` en tête de `trace_mixte` : le premier est perdu** (Saintes, deux fois).
+  Vérifier « bouts au bord » dans le rapport et rajouter le point en SQL (`ST_AddPoint(l, p, 0)`).
+- **Un nom BD TOPO peut couvrir deux voies disjointes** (« Passage Gambetta » : une ruelle et le
+  passage sous la voie ferrée) : vérifier sur l'image lequel a été pris.
+- **« Chemin vicinal n° N » n'a pas de numéro dans la BD TOPO** : chercher la départementale qui
+  naît à la limite de la commune nommée et la voie qui y mène depuis l'élément précédent ; chiffrer
+  l'autre candidat.
+- **archive.org rend parfois une erreur 500 à la place d'un `_djvu.txt`** (sept lignes de HTML) :
+  contrôler `wc -l` avant de conclure qu'un mot est absent.
+- **`ST_Union(…, 'LINESTRING EMPTY')` sans SRID échoue** (« mixed SRID ») dans la requête § 6 quand
+  un régime n'a qu'une ligne : `ST_SetSRID(…, 2154)`.
+- **Une voie ferrée déposée** (Bourges, ligne de Gien) : `("fer",)` ne la connaît pas. Chercher le
+  tronçon « Non exploité » resté dans `<insee>_fer.geojson` (parfois hors de la commune), puis les
+  chemins sans nom dans son alignement (comparer les azimuts). Ce que rien ne porte se trace en
+  droite et se chiffre.
+- **Le texte suivant dit où chaque voie s'arrête** (Bourges) : 1973 énumère « avenue de la
+  Libération, rue Gustave-Eiffel, rue Jean-Moulin », 1982 ajoute « jusqu'à la rue… » à chacune.
+  L'avenue de la Libération, 1 100 m, n'est limite que sur 227 m. Et la jonction d'une ligne de 1982
+  avec une ligne de 1973 n'est pas toujours au carrefour qu'on croit (86 m plus au sud) : mesurer.
+- **Un boulevard courbe** (Lamarck) : le plus court chemin entre ses bouts coupe par les rues
+  intérieures. Donner un ou deux points de passage sur son tracé.
+- **Une route nommée a parfois une contre-allée du même nom** (route de la Charité, 85 m au nord) :
+  vérifier `importance` des tronçons au bord, finir par un `("point", …)` sur la chaussée.
+- **Un cours d'eau sans toponyme** (Yévrette, ancien canal de Berry) : `("eau", nom)` ne le trouve
+  pas ; le repérer par ce que le texte en dit, puis `_plus_court` sur un réseau d'eau filtré par
+  emprise. Deux chenaux parallèles : tracer l'un, chiffrer l'autre.
+- **Un nom de voie seulement « collaboratif »** (RPE MARCEAU) : `elements()` ne lit que
+  `nom_voie_ban` ; chercher aussi `nom_collaboratif_gauche` dans les tronçons.
+- **Des cantons tous urbains mais bornés par le texte** (« et les limites des communes de … ») :
+  l'attribution n'a pas besoin du plan ; le contrôle est la liste des voisines de chaque morceau,
+  à comparer mot pour mot au texte.
+- **Sans IRIS** : la part des logements BD TOPO par morceau contre la part de population INSEE par
+  fraction (2,5 points d'écart au plus à Bourges) attrape une inversion de cantons, pas une limite
+  déplacée de quelques rues.
+- **Un nom de voie peut n'exister que dans `nom_collaboratif_gauche/droite` des tronçons** (La
+  Rochelle : avenue du Président-Wilson, avenue de Lisbonne, quai du Carénage, viaduc
+  Christian-Morch). Chercher là avant de déclarer un nom disparu, puis tracer sur une copie
+  augmentée de la voirie en redéfinissant `VOIRIE` dans le script. Et une voie « non dénommée »
+  d'un décret peut l'être encore : `voie_nommee` porte des objets au nom vide
+  (`coalesce(nom_voie_ban,'') = ''`, pas `IS NULL`).
+- **Le décret de 1982 peut réciter l'an X** (La Rochelle : Abreuvoir, Fromentin, Dupaty, Grille,
+  Ferté, quai Maubec) : il donne alors la concordance des noms de 1801.
+- **Chercher la loi d'annexion** (La Rochelle, loi du 21-29 mai 1858 : « la situation cantonale
+  […] reste la même ») : la limite hors les murs est alors l'ancien contour communal (ANR d'avant
+  la fusion), composé avec la ligne de la ville par `ST_LineSubstring` de l'anneau. Duvergier,
+  *Collection complète des lois*, est sur archive.org par année. Des communes supprimées peuvent
+  n'avoir aucun atome (Cognehors, Saint-Maurice) : la différence des unions d'ANR montre le trou,
+  pas la limite entre elles ; une ligne sans texte s'écrit sous la source `main`, et sa note
+  commence par « HYPOTHESE ».
+- **Ouest peut vouloir dire nord** (La Rochelle an X : « à la gauche de la ligne » en partant de la
+  porte de l'Ouest). Lire le sens de parcours, ancrer par points.
+- **Le polygone ANR d'une voisine peut ne pas être jointif** (Puilboreau à 133 m du contour de La
+  Rochelle sur 2,5 km) : mesurer les contacts avec une tolérance de 150 m, et ne pas finir une
+  ligne par `("commune", insee)` sur une telle voisine.
+- **Le plus court chemin dans tout le réseau ferré fait un détour par les voies de service** :
+  router sur `nature = 'Voie ferrée principale'` et joindre la voie désaffectée par un segment.
+- **Divers** : `ST_Union(bord, NULL)` rend NULL dans la requête § 6 pour un essai à une ligne
+  (`coalesce`) ; `grep 17300 coupes_ville.csv` trouve des coordonnées, chercher `^17300` ;
+  `pgrep -f` dans une boucle d'attente se trouve lui-même (motif `[q]gis_sans_ihm`) ; huit lignes
+  par `trace_mixte` prennent quatre minutes, à lancer en arrière-plan avec un journal.
+
+- **Un nom de rue disparu n'a pas forcément été donné à la voie qu'on croit** (Vierzon, 16 octobre
+  2026) : la « rue Romain-Rolland » de 1973 semblait être la rue François-Mitterrand (axe de
+  l'ancienne RN 20) ; c'était la rue des Ponts, revenue à son nom ancien (histoire locale, puis le
+  décret 2014-206 : « rue Voltaire, rue des Ponts, cours du Cher »). Lire le texte de 2014 AVANT de
+  deviner une concordance ; la population départage (2,4 points contre 5,2 ; 21 ha en jeu).
+- **Légifrance se lit par WebFetch** (`curl` : 403) ; le résumé ne cite que quelques mots :
+  demander « la liste ordonnée des voies, noms seuls », puis comparer à la transcription Wikipédia.
+- **« Jusqu'au deuxième bras … bordé par le quai »** : compter les bras que la rue franchit ; l'île
+  entre les deux reste du côté d'où vient la rue (Vierzon, 3,6 ha, 34 logements).
+- **« La limite emprunterait la place dont l'axe coïncide avec celui du tunnel »** : le tunnel est
+  dans `<insee>_fer.geojson` (`position_par_rapport_au_sol = -1`) ; suivre la place, raccorder aux
+  portails.
+- **`trace_mixte` perd aussi un `("point", …)` de tête suivi d'une `("route", …)`** : vérifier le
+  premier sommet du WKT, `ST_AddPoint(l, p, 0)`.
+- **Un faisceau ferré en gare** : assembler en SQL une chaîne de « Voie ferrée principale »
+  (`ST_LineMerge`, `ST_LineSubstring`) et dire la largeur du faisceau laissée d'un côté (Vierzon,
+  78 m, 3,7 ha).
+
+- **Une fraction fantôme peut venir d'une coquille du COG 1968** (Dinan, 16 octobre 2026 :
+  `11851#2219` « Lannion », sans géométrie, parce que la ligne de Caouënnec porte le code 050 de
+  Dinan dans `cog1968/communes_1968_fusion.csv`). Avant de croire à un canton de plus, chercher la
+  ligne dans le COG 1968 ; tester à une date hors de la période fautive, et consigner.
+- **Populations légales et IRIS d'accord ne prouvent pas la limite du texte** (Dinan : l'INSEE
+  compte tout l'intra-muros à l'Est, l'arrêté de l'an X en met le nord à l'Ouest, environ
+  600 habitants) : ils disent ce que l'INSEE compte. Le texte fait foi ; chiffrer l'écart.
+- **Une porte de ville disparue** se localise par le récit de sa démolition (« on a fait une
+  place ») et par un bâtiment « près de la vieille porte » encore debout.
+- **Gallica renvoie un 403 Cloudflare à `curl`** (16 octobre 2026), pas seulement un captcha :
+  lire sur archive.org (Rondonneau) et demander à Adrien de collationner.
+
+- **Un `("point", …)` final après une voie, à plus de 30 m, se rejoint « par les rues »**
+  (Brive, 16 octobre 2026) : « rue Bouyssonie (et son prolongement jusqu'à la Corrèze) » a fait
+  1 468 m de détour. Finir sur la voie (son bout le plus éloigné de la précédente) et ajouter le
+  point du prolongement à la main.
+- **`P(J)` en tête de `trace_mixte` ne garantit pas que la ligne parte de J** : elle part du
+  sommet de la première voie (Jouvenel : 120 m du pont de la Bouvie). Lister les bouts de chaque
+  ligne contre les points de jonction avant `pose_coupe.py`, et `ST_AddPoint(l, J, 0)`.
+- **Un pont n'est pas dans `voie_nommee`** : le boulevard Mirabeau s'arrête aux culées ; le pont
+  de la Bouvie n'est qu'un tronçon au `nom_collaboratif` « PONT DE LA BOUVIE ». Point de jonction
+  = croisement de ce tronçon avec l'axe de l'eau.
+- **Des lotissements et une usine nommés par le décret** (Brive 1985 : « limite séparative
+  entre les lotissements Yemaux et Ma Maison ») : le cadastre (WFS
+  `CADASTRALPARCELS.PARCELLAIRE_EXPRESS:parcelle`, `get_feature(bbox=…)`) donne les limites ; les
+  enchaîner par `ST_Intersection` des unions de parcelles de part et d'autre. Les noms ne sont
+  pas dans les données : le dire.
+- **Les codes d'un régime ancien peuvent être ceux de son successeur** (Brive : 1906 = Brive-Nord
+  et 1930 = Brive-Sud de 1951 à 1982 pour les communes rurales, alors que la ville reste entière
+  dans 1906) : lire les appartenances des communes rurales pour ancrer une ligne de régime absent
+  (`--morceaux N --ancres-datees`, ancres sur ces codes).
+- **Un chemin rural nommé par ses deux hameaux, qui ne touche plus la commune voisine que le texte
+  lui fait couper** : la carte IGN type 1950 (WMTS Géoplateforme
+  `GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN50.1950`, zoom 15 au plus ; superposer les couches après
+  passage en Web Mercator) montre les routes d'alors ; tracer la lecture la plus simple et
+  chiffrer les autres.
+
+- **Le canton « mère » d'une division de 1973 peut garder son ancien nom** (18 octobre 2026 :
+  Guéret-Nord 2319, Périgueux-Centre 2427, Montbéliard-Est 2514) : pas de `unit_version` entre 1941
+  et 1999, le repli affiche « Guéret ». Le nom n'affecte pas le tirage ; le consigner.
+- **Un canal latéral qui porte le nom de la rivière** (Périgueux : « l'Isle » est aussi le canal,
+  2 285 m) : `trace_eau` et `("eau", …)` prennent le raccourci par le canal (traversée fausse de
+  6,3 km). Lister les tronçons du toponyme, repérer le lit que borde le contour ou que longe un
+  « chemin de halage », et l'extraire en SQL entre les points où il quitte et rejoint le bord.
+- **« Rue X, prolongée » peut être une rue nommée après le décret** (Périgueux, rue Jean-Secret au
+  bout exact de la rue Trarieux) : regarder quelle voie part du bout de la rue citée avant de
+  prolonger dans l'axe, et chiffrer la droite (7,5 ha).
+- **« RN n appelée en ce lieu route d'X » : la voie homonyme actuelle peut être ailleurs**
+  (Montbéliard : la « Route d'Hericourt » de la BAN est à 519 m du texte ; la RN 438 de 1973 est la
+  rue de la Seigneurie-d'Héricourt, la D438 actuelle est une déviation postérieure). Prendre la voie
+  qui touche la limite nommée et la rue suivante.
+- **Dater une voie par l'orthophoto historique** : WMS `data.geopf.fr/wms-r/wms`, couches
+  `ORTHOIMAGERY.ORTHOPHOTOS.1950-1965`, `.1965-1980`, `.1980-1995`, en `FORMAT=image/png` (le jpeg
+  est refusé), un `.pgw` à côté, la BD TOPO par-dessus dans un `QgsMapSettings`. A montré à
+  Montbéliard quelles rues existaient en 1973.
+- **Un décret qui décrit le périmètre du canton, pas celui de la fraction** (Montbéliard : « suit
+  la limite de Bethoncourt jusqu'à la RN ») : si la commune rurale est du même canton, cette limite
+  n'est pas interne. La ligne commence où le texte quitte la limite communale.
+- **`("commune", insee)` en arrivée coupe aussi** (Montbéliard, 44 m de la rue des Vignes en
+  droite) : quand la dernière voie finit sur le bord, finir par `("point", x, y)` sur son bout.
+- **Un `("point", …)` intermédiaire (centre d'un rond-point) fait un aller-retour** quand l'élément
+  suivant passe à côté (Guéret, place Arfeuillère, 25 m) : ne pas donner la place en point si la
+  rue ou le cours d'eau la traverse déjà, ou retirer le sommet (`ST_RemovePoint`).
+- **Une ancre au centroïde apparent peut tomber hors de la commune** (contour découpé, Guéret) :
+  `pose_coupe.py` dit « morceau None ». Prendre un point près du centroïde qu'il imprime.
+- **Les GeoJSON de `get_feature` se déclarent en WGS84 avec des coordonnées en Lambert 93**
+  (bâtiments, zones d'activité) : `ogr2ogr -a_srs EPSG:2154`, pas `-t_srs` (« Invalid latitude »).
 - **Numéroter un fichier SQL** : vérifier le numéro libre dans `sql/` *et* dans l'inventaire de
   `sql/diag_passages.sql`. `98_coupe_ville.sql` avait d'abord été écrit sous `97`, réservé : son
   `DELETE` a vidé la trace d'un autre fichier.
@@ -600,3 +819,189 @@ attribuer). Envoyer la capture. Ne pas commiter sans qu'il le demande.
   trame ; un polygone en meurt.
 - **Les CSV sont la vérité, pas la base** : `98` les recharge à chaque passage. Une correction faite
   dans la base seule sera perdue.
+
+- **Une rivière qui se jette dans un canal de dérivation** (Montélimar, 18 octobre 2026) : dans la
+  BD TOPO, « le Roubion » s'arrête sur l'axe du canal du Rhône (CNR, 1957), et `trace_eau` dit « ne
+  traverse pas ». Prolonger par l'« Ancien Lit <rivière> » sur une copie filtrée de
+  `<insee>_eau.geojson` où les deux toponymes sont renommés pareil (`VOIRIE` redéfini dans le
+  script), et chiffrer ce qui est au-delà du canal (547 et 221 ha).
+- **Trois toponymes pour une rivière** (« le Roubion », « Ancien Lit Roubion », « Canal du
+  Roubion ») : `("eau", "roubion")` de `trace_mixte` les prendrait tous, `trace_eau` filtre le
+  toponyme exact. Lister `cpx_toponyme_de_cours_d_eau ~* '<mot>'` avant de tracer.
+- **Populations par IRIS pour une ville COG** (Romans, 18 octobre 2026) : les contours se lisent au
+  WFS (`get_feature('STATISTICALUNITS.IRIS:contours_iris', cql="code_insee='<insee>'")`,
+  `ogr2ogr -a_srs EPSG:2154`) ; la population 2012 est dans
+  `insee.fr/fr/statistiques/fichier/2028582/infra-population-2012.zip` (un .xls de 70 Mo : passer
+  par `soffice --headless --convert-to csv`, extraire la commune, effacer le reste). Les logements
+  seuls s'écartaient de 6,6 points (centre ancien contre pavillons) ; pondérés par IRIS, 0,1 point.
+- **« Route de <commune voisine> » absente de la BAN** (Romans : « route de Génissieux ») : c'est la
+  départementale qui prolonge la voie précédente vers cette commune, où elle porte souvent le nom
+  inverse (« route de Romans »). Si elle longe ensuite le bord, la ligne s'arrête où elle le touche.
+- **Une avenue à giratoires** (Émile-Zola, chaussée double) : `trace_mixte` y laisse des boucles et
+  rend une ligne non simple. Assembler en SQL les parties de `ST_Dump(voie)` dans l'ordre, un seul
+  côté de chaque giratoire (`cartes/sorties/decoupe_romans/assemble.sql`), et chiffrer les îlots.
+- **Rondonneau t. 8 : feuillet = page + 58** (Saintes p. 577 = n635, Confolens p. 696 = n754, Crest
+  p. 616 = n674) : `page/n<p+58>_w1400.jpg` directement. L'OCR peut se tromper de numéro d'acte
+  (Crest : « 1106 » dans l'OCR, 1206 sur l'image) : citer l'image.
+- **`trace_eau` laisse le lit hors traversée au morceau voisin, même à contre-rive** (Crest : 3,9 ha
+  de lit sans bâtiment). Pour le chiffrer, polygoniser le contour avec TOUT l'axe dans la commune
+  et regarder de quel côté de l'axe tombe chaque miette ; le dire dans la note.
+- **Une voisine mal placée en 1968 peut venir d'un doublon OCR qui prend son code** (Saou : la ligne
+  « Saurzet » 26336, doublon de Sauzet, l'envoie à Marsanne ; Saou est sous 26536). Chercher la
+  voisine par son NOM dans `cog1968/communes_1968_fusion.csv`, pas par son code.
+
+- **Un régime qui reprend les voies du précédent** (Dijon 1973, 18 octobre 2026 : Bossuet, Godrans,
+  Liberté, Jeannin, Strasbourg, Pasteur, cours du Parc déjà dans A-B et C-D de 1907) : reprendre la
+  GÉOMÉTRIE de l'ancienne ligne (`ST_LineSubstring` entre les points de jonction, lus sur la ligne
+  elle-même : bouts de la partie commune `ST_Intersection(ST_Snap(ab, cd, 0.5), cd)`, croisement
+  avec la voie ferrée, `ST_ClosestPoint` sur la voie suivante), pas la retracer. Mêmes voies, même
+  ligne d'un régime à l'autre, et les jonctions tombent à 0,00 m. Huit cantons : sept lignes
+  enchaînées par leurs nœuds (point de rencontre de trois cantons) suffisent.
+- **Les routes de Dijon Métropole sont numérotées M** depuis 2015 (M974 = ex-RN 74, M107 = ex-RD 107) :
+  lister `cpx_numero` avant de chercher une « route départementale ». Et une RD de 1973 a pu changer
+  de tracé : la carte IGN de 1950 (`SCAN50.1950`, WMS `wms-r`, superposée à la BD TOPO avec un
+  `.pgw`) a montré que la D 107 allait par le hameau de Mirande vers Chevigny, pas par la rue Sully.
+- **Un nom introuvable du décret de 1973 peut être dans le décret de 2014** (« rue de Courtrai » =
+  rue de Bruges, décret 2014-175, même limite de Fontaine-lès-Dijon) : la page Wikipédia des cantons
+  transcrit les délimitations de 2015 ; la lire avant de deviner.
+- **Le SCAN 50 de 1950 est généralisé** (cimetière dessiné à 100 m de sa place) : il dit l'ordre et
+  l'allure des chemins ; l'orthophoto `1950-1965` donne leur position. Relever les chemins disparus
+  sur l'orthophoto.
+- **Un traceur lancé par `( … ) &` dans une commande en arrière-plan ne prévient pas à la fin**, et
+  son `print` reste en tampon : écrire `FIN` dans le journal en dernier et attendre ce mot
+  (`timeout 500 sh -c 'until grep -q "^FIN" trace.log; do sleep 5; done'`).
+- **Polygoniser à la main des lignes qui finissent « sur » le bord** ne coupe pas (pas de nœud
+  exact) : pour contrôler les morceaux hors de `98`, `ST_Difference(cible, ST_Buffer(lignes, 0.05))`
+  avec un `ST_ShortestLine` au bord pour chaque bout à moins de 10 m.
+
+- **Une rivière à îles et à canal** (Besançon, 18 octobre 2026) : la BD TOPO porte « le Doubs »,
+  « le Doubs/Canal du Rhône au Rhin » et « Canal du Rhône au Rhin » ; `trace_eau` filtre le toponyme
+  exact et `("eau", …)` prend le plus court bras. Choisir les bras à la main sur une image étiquetée
+  par `ogc_fid`, les fusionner en SQL (`ST_LineMerge(ST_Union(ST_SnapToGrid(g, 0.01)))` sur la
+  liste), couper la traversée par `ST_LineSubstring` entre les points où l'axe quitte le tampon de
+  15 m du bord. Les îles se chiffrent par `ST_Polygonize(ST_Node(…))` de tous les bras.
+- **« L'île X exclue » d'un côté sans rien de l'autre** : le décret de 2014 peut dire
+  « incluse » dans le canton d'en face (île Saint-Pierre, décret 2014-240). Le lire avant de
+  donner l'île au troisième canton ; dire l'aire en jeu dans la note.
+- **Le traceur peut préférer une rue parallèle à la rue nommée** et l'écrire quand même dans son
+  rapport (« rue Henri-et-Maurice-Baigue 851 m » sur la rue Narcisse-Lanchy) : seule l'image le
+  montre. Poser la rue en SQL depuis `ST_Dump(ST_LineMerge(voie))` entre ses deux carrefours.
+- **zsh n'exécute rien d'une commande mal citée** : une apostrophe (« jusqu'a ») dans un `sed`
+  entre apostrophes fait échouer TOUTE la commande, y compris les `cat <<EOF` qui la précèdent.
+  Écrire les notes par l'outil d'écriture ou par Python.
+- **Une ligne de Gaudillère posée sans date peut être celle de l'an X** (Saint-Brieuc, 18 octobre
+  2026 : posée 1870-1982 faute de date). L'arrêté de réduction des justices de paix du département
+  (Rondonneau t. 8, `grep -n "<Ville> sera divisée"` dans l'OCR) la décrit souvent avec les noms de
+  1801 : « fontaine à Loup » (passage de la Fontaine-à-Loups), « grande route de Brest » (une suite
+  de rues actuelles, pas la rue de Brest d'aujourd'hui). Mesurer la distance de chaque repère à la
+  ligne posée ; à 0 m, prolonger la ligne au jour de l'arrêté plutôt que d'en tracer une autre.
+- **Un escalier nommé par un décret** (« escalier du boulevard de la Chalotais ») est un tronçon
+  BD TOPO de nature `Escalier`, sous le nom d'un passage (`nom_collaboratif_gauche`) : chercher par
+  `nature ~* 'escalier'` autour de la voie citée.
+- **Retirer une boucle d'une ligne** : `ST_Dump(ST_UnaryUnion(ligne))` la coupe à ses recoupements ;
+  jeter le morceau dont le début est la fin, `ST_LineMerge` du reste.
+- **Un rebuild en cours** (Louviers, 20 octobre 2026) : `cible_ville`, `coupe_ville` et
+  `atom_geom_anr` peuvent manquer pendant des dizaines de minutes. On peut tracer quand même :
+  lire le polygone ANR dans `ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg`
+  (`-where "id_com='<atome cassini>'"`) vers `public.<ville>_cible`, et remplacer
+  `histgis.cible_ville(...)` par cette table dans le script de tracé. `pose_coupe.py` et
+  `--ecrire` attendent la fin de `rejouer_apres_rebuild.sh` (`pgrep -f "[r]ejouer_apres"`), qui
+  rejoue `98` lui-même.
+- **« La rivière X » sans bornes en tête d'une liste de rues** (Louviers : « la rivière Eure et
+  rue des Bigards… ») : deux tronçons possibles, l'amont ou l'aval de la première rue. La
+  population tranche (48,4 % au Nord contre 48,8 % légal ; l'amont donnait 70,8 %).
+- **Un `("point", …)` intermédiaire est rejoint en droite**, pas par les rues (320 m à Louviers) :
+  pour suivre un chemin réel, substituer sa géométrie en SQL. Et `("voie", nom)` d'un nom présent
+  seulement dans les tronçons peut faire un détour (1 059 m).
+- **Un bord tenu tout entier par une commune d'un troisième canton** (Louviers, Tostes) : pas de
+  point triple, l'arrivée d'un prolongement sans texte reste libre ; chiffrer la variante.
+- **L'OCR du JO de 1985 écrit « Bemay »** (rn lu m, Bernay) : `grep -i <ville>` ne trouve rien.
+  Chercher par un canton voisin du même décret, ou par le numéro du décret dans
+  `TABLE_ANALYTIQUE_JORF_<année>.txt`.
+- **Une rue « jusqu'à la voie ferrée » au-dessus d'un tunnel** (Bernay, rue Lemoing) : le
+  croisement est son passage sur le tunnel (`position_par_rapport_au_sol = -1`) ; chiffrer la
+  poche entre le tunnel et les rues (1,68 ha).
+- **Une route nationale déclassée dont le numéro a disparu de la BD TOPO** (CD 834 de Bernay,
+  ex-RN 834) : la page Wikipédia « Route nationale <n> » donne l'itinéraire.
+- **Une avenue renommée sur son dernier tronçon après le décret** (Valence : l'avenue de la Marne
+  de 1984 continue en avenue du Colonel-Arnaud-Beltrame, nom postérieur à 2018) : lire les noms
+  des tronçons qui la prolongent avant de raccorder au bord.
+- **Un décret qui place un repère « sur la limite » alors qu'il est en pleine ville** (Valence
+  1973 : le centre hospitalier, à 1,9 km du bord) ou qui nomme la mauvaise voisine (« limite de
+  Saint-Marcel » pour Chabeuil ou Montélier) : le décret suivant donne la lecture, les contacts
+  le montrent ; chiffrer l'autre lecture.
+- **Un canal sans toponyme cité par un décret** (canal des Moulins, Valence) : le prendre en SQL
+  par `ST_LineSubstring` du tronçon d'eau entre les deux rues qu'il coupe ; `("eau", "")`
+  prendrait toute l'eau sans nom.
+- **Peu d'IRIS (20 à Saint-Brieuc)** : le prorata des surfaces écartait de 3,5 points ; répartir
+  la population des seuls IRIS coupés au prorata des logements BD TOPO (bbox de ces IRIS, deux
+  minutes) a ramené l'écart à 0,9.
+- **Une rue limite communale avant de devenir limite de canton** (Chartres 1973, rue du
+  Faubourg-Saint-Jean, 353 m sur la limite de Mainvilliers) : les tronçons dont
+  `nom_collaboratif_gauche` et `_droite` diffèrent le montrent ; la ligne commence où les deux
+  noms redeviennent égaux.
+- **Un nom disparu de `voie_nommee` survit sur un tronçon résiduel** (Chartres, « boulevard de la
+  Résistance » : 47 m collés au bd Maurice-Viollette) : chercher `nom_collaboratif_gauche` dans une
+  boîte autour de la suite du texte. Une « rue X » qui ne touche plus le carrefour cité a pu être
+  renommée sur sa partie utile (rue du Repos = rue du Souvenir-Français) : prendre la voie qui part
+  du carrefour exact.
+- **Pendant une reconstruction, `iris_ville` et `cible_ville` manquent** : recharger les IRIS dans
+  `public.<ville>_iris` (`ogr2ogr -where "code_insee='…'"` sur `cartes/sorties/iris_villes.geojson`)
+  pour éprouver, et attendre la fin (`pg_stat_activity`, processus `rebuild.sh` /
+  `rejouer_apres_rebuild.sh`) avant tout `--ecrire` ou `98`.
+- **Les WMS d'ortho anciennes** (`ORTHOPHOTOS.1965-1980` vide sur une ville, `1950-1965` en 502 au
+  premier essai) : réessayer avant de conclure.
+- **Un nom disparu de la BAN survit en alias** (Vernon, « AV THIERS » = avenue
+  Pierre-Mendès-France) : chercher dans tous les champs texte de `<insee>_troncons.geojson`
+  (`alias_gauche`, `alias_droit`), pas seulement `nom_voie_ban` et `nom_collaboratif`.
+- **« Rue Latérale » est un nom commun** (Vernon 1982 : une voie le long d'une voie ferrée). Entre
+  deux voies ferrées (la ligne principale et une ligne déposée, visible sur l'ortho 1950-1965),
+  tracer les deux lectures et trancher par la population (34,5 % contre 46,1 %, légale 33,9 %).
+- **« Au Nord d'une ligne » qui quitte une rue avant son bout** (Vernon : 240 m de la rue de
+  Montigny non suivis) peut faire passer tout un quartier de l'autre côté (le vieux centre au Sud) :
+  regarder de quel côté tombe chaque quartier avant de croire le nom du canton.
+- **Pendant une reconstruction, `atom_geom_anr` disparaît aussi** : exporter la cible en WKT au
+  départ, et compter les populations en Python / OGR plutôt que dans une table `public.*`.
+  `pgrep -f "[r]ejouer_apres"` dans une boucle d'attente écrite dans un fichier (pas un `sh -c` avec
+  des `\x27` entre guillemets doubles, qui a échoué en silence).
+- **OGR sous `/usr/bin/python3`** : `GetGeometryRef().Clone()` avant d'utiliser une géométrie hors de
+  la boucle, sinon segfault (139). PIL est dans le python système, ni shapely ni PIL dans miniforge.
+- **Un chemin rural sans trait BD TOPO** (Dreux 1982 : chemin rural 66, sente rurale 74) reste
+  souvent visible au cadastre comme une bande non parcellisée de 3 à 6 m : parcelles de la bbox
+  (PCI Express WFS), `ST_Difference(bbox, ST_Union(ST_Buffer(parcelles, 0.2)))`, axe du polygone
+  allongé. Des numéros de parcelles cités en 1982 peuvent exister encore (AK 132 / AK 25 / AI 11).
+- **Le décret de 2014 traduit les anciens noms** (Dreux-1 : sente 74 → Pershing / Voisin, La Fayette
+  → Grande-Falaise, « limite de Montreuil » pour « Chérisy ») : le lire, chiffrer l'écart.
+- **Un JO de 1973 porte plusieurs décrets du même jour** : relever le numéro sur l'en-tête du
+  département (`JORF_19730725_171` : Eure-et-Loir 73-719 l. 1294, Ille-et-Vilaine 73-723 l. 2041) ;
+  Chartres a été écrit d'abord sous le mauvais numéro.
+
+- **Un « jusqu'au numéro N » se localise par la BAN** (Alès, 21 octobre 2026) :
+  `api-adresse.data.gouv.fr/search/?q=311A avenue Youri Gagarine&citycode=30007`. Des numéros
+  restés à une voie (le 311 B, 80 m plus loin) désignent l'ancien tracé d'un chemin disparu
+  (chemin rural n° 27). Le sens de la numérotation se lit sur deux numéros.
+- **`_plus_court` fait des détours énormes où la BD TOPO manque un lien** (Alès : 1 415 m pour
+  520 m à vol d'oiseau) : lister la longueur de chaque tronçon avant d'assembler, mettre en ligne
+  droite le lien qui manque, et le dire.
+- **Une ligne reprise d'un régime à l'autre suit le texte du nouveau régime** : le décret de 1973
+  nomme le Grabieux là où Gaudillère dit « quai du 8-Mai » (Alès, 0,97 ha qui changent de canton
+  en 1973) ; la note chiffre l'écart.
+- **Grande ville : `trace_mixte` est trop lent** (Toulouse, 21 octobre 2026, 121 Mo de tronçons).
+  Charger la BD TOPO dans `public.<ville>_*` et router en PostGIS + Python : le Dijkstra « en
+  couches » (nœud, voie k, voie entamée) de `cartes/sorties/decoupe_toulouse/route.py` impose
+  chaque voie dans l'ordre. Sans l'état « voie entamée », il sautait des voies entières (route de
+  Saint-Simon sur 3,4 km à la place de cinq voies).
+- **Une autoroute à échangeur ne se route pas par son numéro seul** (rocade de Toulouse) : les
+  chaussées ne sont pas reliées aux bretelles ; donner des points de passage sur l'axe.
+- **« La voie ferrée » au croisement d'une rue peut être la mauvaise ligne** (faubourg Bonnefoy :
+  ligne principale de Matabiau au lieu de la ligne de Lexos) : prendre le point de la voie ferrée
+  le plus proche du bout de la voie suivante.
+- **Une route qui touche une voisine puis revient** (Nîmes, route de Saint-Gilles : limite de
+  Caissargues, puis de nouveau dans Nîmes 2,4 km plus loin) : `("voie", …)` a tracé 13 km. Finir au
+  point où la voie touche la limite.
+- **Les numéros de départementales changent entre deux décrets** (Nîmes : CD 40 en 1973, CD 540
+  en 1982 pour la même route ; « CD 133 » introuvable) : la topologie identifie la route, pas le
+  numéro.
+- **Un régime dont la loi n'est pas lue peut se déduire du suivant** (Nîmes 1880 : les communes
+  rurales du 1er passent à I et V en 1973, celles du 3e à III et IV ; la limite 1/3 est donc
+  I/IV + IV/V) : l'écrire sous la source `main`, note commençant par « HYPOTHESE ».

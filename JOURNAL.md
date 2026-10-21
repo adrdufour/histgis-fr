@@ -10072,3 +10072,198 @@ trois.
 Ain réexporté : **aucune commune blanche de 1941 à 1985**. De 1986 à 1997, sept
 (Béard-Géovreissiat, Belmont-Luthézieu, Birieux, Culoz, Nivollet-Montgriffon,
 Oncieu, Saint-Rambert-en-Bugey) : des désaccords sans acte lu, de la lecture.
+
+### Saint-Rambert-en-Bugey : trois lectures qui se portaient garantes
+
+Signalée par Adrien en 1988. Le jalon de 1968 lit « 26 » (Pont-de-Vaux, en
+Bresse) pour Saint-Rambert-en-Bugey, Oncieu et Nivollet-Montgriffon au lieu
+de « 28 » (Saint-Rambert). `96` ne les jugeait pas : l'emprise de 0126
+contenait ces trois lectures, et chacune « touchait » Pont-de-Vaux par les
+deux autres. Le désaccord avec 1940 et 1999 laissait ensuite le trou vide de
+1941 à 1998.
+
+`96` § 3 bis : une lecture qu'aucun bout ne confirme ne se fait garantir que
+par une grappe de voisines rattachée à un membre SÛR du canton (1940, 1999, un
+autre fichier, une lecture confirmée) ; un canton sans aucun membre sûr garde
+l'ancien régime. +14 lectures absurdes en 1954, +187 en 1968 ; sur les
+nouvelles, 929 corrigées par les trois arbitres (Léguevin lue dans Grenade,
+Iholdy dans Lagor, Sèvres dans Palaiseau, Escobecques dans Dunkerque-Ouest…)
+et 183 retirées.
+
+`114` faisait à la main deux de ces corrections (Cognac et Javrezac lues dans
+Confolens-Sud, n° 105 et 106) : il retire de sa pose ce que la base porte déjà
+au même canton, et ses garde-fous comptent ce que `96` a fait en amont.
+
+Rebuild du 20 octobre au soir (`build/rebuild_2026-10-20h.log`, `FIN rc=0`).
+Comparé au passage précédent : 1945 +60, 1960 +196, 1975 +139 et 22 cantons
+corrigés, 1990 +73, 1998 et 2005 identiques ; en 1968, 184 cantons corrigés
+et 3 lectures retirées (Thizay, Brives, Laboissière-en-Thelle).
+`composition_1958.py` régénéré : identique.
+
+Ain réexporté : aucune commune blanche de 1941 à 1985 ; de 1986 à 1997, quatre
+(Béard-Géovreissiat, Belmont-Luthézieu, Birieux, Culoz).
+
+### 21 octobre — l'Ain : les communes qui sortaient de la carte (`121`)
+
+Signalé par Adrien : Belmont-Luthézieu sans canton en 1990, et des communes de
+l'Ain qui disparaissent puis reviennent. La carte ne dessine une commune que si
+elle a un canton OU une circonscription du département : une vingtaine d'atomes de l'Ain
+sortaient en 1955 ou en 1973. Trois causes, corrigées à la main dans `121`.
+
+- **La cession au Rhône.** Loi n° 67-1205 du 29 décembre 1967 (lue dans le JO
+  du 30, p. 12980), effet au 1967-12-31 (COG, mouvement 41). Seules six
+  communes de l'Ain changent de département : Genay, Montanay, Sathonay-Camp,
+  Sathonay-Village, Rillieux et Crépieux-la-Pape. Les quatre dernières
+  n'avaient plus de canton de 1955 à 1985. Posé : Montluel ou Trévoux jusqu'à
+  la cession, puis le canton de Rillieux (6939) ; la date de ce canton vient
+  de Wikipédia, le décret qui le crée n'est pas lu. Genay et Montanay restent
+  à Trévoux jusqu'au décret du 12 avril 1969 (table 1969, p. 3861), qui les met
+  à Neuville-sur-Saône : la loi maintenait les « anciens cantons ». La loi ne
+  cède qu'une portion de Montanay (le reste va à Mionnay) : la trame ne le
+  dessine pas.
+- **Le jalon de 1968 mal apparié.** Trois lignes de `c68_src` portent un code
+  INSEE qui n'est pas le leur : 01045 est Beynost (Birieux mise à Montluel),
+  01138 Cressin-Rochefort (Culoz mise à Belley), et une ligne de
+  Saint-Maurice-de-Rémens coupait Viriat en deux fractions, Bourg et Chalamont.
+  1954 et 1999 s'accordant contre 1968, `97` laissait 1955-1967 vide. Aucun
+  acte dans l'Ain de 1955 à 1967 : le canton de 1954 vaut jusqu'en 1968, et les
+  communes absorbées le gardent jusqu'à leur fusion (dates du COG).
+  **Cette forme d'erreur — psm4/psm6 — n'a été cherchée que dans l'Ain.**
+- **Le plancher de `79` en 1998.** Les quatre décrets de limites de l'Ain
+  (1990, 9 sept., 7 oct. et 17 déc. 1996), lus sur Légifrance, n'échangent que
+  des parcelles (Crozet, Viriat, Bellegarde, Oyonnax). Birieux, Culoz et
+  Béard-Géovreissiat gardent leur canton de 1973 à 1998. Belmont et Luthézieu
+  fusionnent le 1974-11-01 ; le COG de 1999 met la commune à Champagne et
+  aucun acte ne l'y porte depuis : **Champagne dès la fusion, par inférence**.
+  Amareins, Cesseins et Moëns, coupées au 1973-09-23, vont jusqu'à leur fusion.
+
+`121` : 53 périodes posées, 19 retirées (`build/p121.log`). Ain, après : plus
+aucune commune absente des deux couches une année où la trame la dessine,
+1941-1998, hors fusions, cessions et fractions des villes.
+
+### 21 octobre — l'erreur d'appariement de 1968, dans toute la France
+
+`cog1968/controle_nom_code.py` (22 août) signalait 991 codes suspects, mais il
+lisait la première passe (`communes_1968.csv`) et les noms de GEOFLA 2011, et
+rien dans la chaîne ne lisait sa liste. `cog1968/controle_nom_code_base.py`
+refait le contrôle sur `c68_lien`, donc sur ce que `59` a posé, avec pour
+référence les noms du COG 2012 (toutes les communes depuis 1943). Lecture
+seule ; sortie `cog1968/c68_suspects_base.csv`, `build/c68_suspects_base.log`.
+
+    lignes de c68_lien        33 864   (723 codes absents du COG)
+    nom conforme au code      32 063   96,7 %
+    nom abîmé, sans meilleur     449
+    nom d'une AUTRE commune      629    1,9 %
+      en_base                    325   canton lu en base en 1968, ni celui de 1954 ni celui de 1999
+      ecartee                    249   retiré en amont (96, contesté) ; 33 laissent l'atome sans canton en 1968
+      a_juger                      9
+      inoffensif                  46   même canton que la commune du code
+
+Sur les 325 erreurs en base, 286 viennent de lignes `fraction` : le code
+apparaît deux fois, et la commune est coupée en deux fausses fractions, l'une
+au canton de la commune qu'on a lue. Durée : 1968-1973 pour 286, jusqu'en
+1976, 1982 ou 1985 pour les autres ; 2 162 atome-années. 266 sur 325 sont
+confirmées par le canton de la commune nommée. Les 59 autres ont un nom qui
+désigne bien une autre commune, mais dont le canton n'est pas celui de la
+ligne : le code et le canton sont faux tous les deux (Corse surtout). 44
+communes nommées par ces lignes n'ont pas de canton en 1968.
+Dans l'Ain, restent Buellas (ligne « Bouvent ») et Trévoux (ligne
+« Romanèche ») : `121` n'a traité que Birieux, Culoz et Viriat.
+
+Rien n'est corrigé. Le point de correction naturel est `58` (une table de
+codes corrigés appliquée au dépôt), puis la chaîne depuis `59`.
+
+### 21 octobre — la correction dans `58`, et le rebuild
+
+Décidé par Adrien : corriger au dépôt, et rejouer la chaîne. 
+`controle_nom_code_base.py --ecrire-corrections` écrit
+`cog1968/c68_codes_corriges.csv` sur la base d'AVANT correction (rejoué
+après, il ne verrait plus ces lignes). Règles :
+
+- seules les lignes `en_base` et `ecartee` sont touchées ;
+- canton de la ligne = canton de la commune nommée : la ligne lui est RENDUE
+  (77), sauf si cette commune a déjà sa ligne (403 retirées) ;
+- sinon la ligne est RETIRÉE (94) : le nom désigne une autre commune, et le
+  canton n'est celui d'aucune des deux.
+
+`58` § 1 bis applique le fichier juste après le `\copy`, et s'arrête si une
+correction ne désigne pas exactement une ligne du dépôt. Une commune qui perd
+ainsi sa seule ligne n'a plus de lecture en 1968 : les reports (`97`, `95`,
+`120`) la traitent comme les autres absentes.
+
+`121` rendu robuste à cette chaîne : il ignore le vidage d'une fraction qui
+n'existe plus (Viriat), et coupe en deux une période qui déborde une fenêtre
+des deux côtés au lieu de s'arrêter (essayé à la main sur Luthézieu, puis
+défait). Il entre dans `rejouer_apres_rebuild.sh` après `113`.
+
+Rebuild du 21 octobre (`build/rebuild_2026-10-21.log`) : arrêté sur `114`,
+« RETRAIT : 20 ligne(s), 22 attendues ». L'entrée n° 87 retirait la fausse
+fraction de Carcassonne sous Castelnaudary-Nord (`6912#1109`) : c'était une
+ligne de Cenne-Monestiés lue sous le code de Carcassonne, et `58` la retire
+désormais. Carcassonne arrive entière dans 1107 en 1968 ; `114` retire donc
+l'atome entier (deux lignes : le compte de 22 tient) et pose les deux
+fractions de 1968-1973, 1107 et 1108. La chaîne a repris à `114`
+(`build/rebuild_2026-10-21_reprise114.log`), par un script fait de l'en-tête
+de `rejouer_apres_rebuild.sh` et de sa suite à partir de `114`.
+
+Contrôle après la reprise : plus aucune erreur `en_base` ; restent les 9
+`a_juger` et les 46 `inoffensif`, laissés. Mais 21 communes touchées n'ont
+plus de canton en 1968, dont 8 qui en avaient un : Laon, Dax,
+Château-Gontier, Hinges, Barbazan-Debat, Théza (leur seule ligne, mal codée,
+que `96` corrigeait par ses arbitres), Charbuy et Argenteuil (canton faux
+auparavant). Règle ajoutée (`garder_dernieres`) : une ligne `ecartee` qui est
+la dernière de son code reste au dépôt. 574 → **392 corrections** (77 rendues,
+315 retirées). Deuxième rebuild : `build/rebuild_2026-10-21b.log`.
+
+Deuxième rebuild du 21 octobre (`build/rebuild_2026-10-21b.log`, `FIN rc=0`,
+34 min, sans reprise). `58` : 77 rendues, 315 retirées. `121` : 53 posées,
+16 retirées ; aucune commune de l'Ain hors des deux couches de 1941 à 1998.
+`composition_1958.py` régénéré : identique au précédent (Rillieux compris).
+Contrôle nom / code sur la base (`build/c68_suspects_apres.log`,
+`cog1968/c68_suspects_apres.csv`) : **0 erreur en base** (325 avant) ;
+182 lignes `ecartee` gardées exprès, 9 `a_juger`, 46 `inoffensif`.
+Communes touchées sans canton en 1968 : 23 ; seules Charbuy et Argenteuil
+en avaient un auparavant — faux. Aucun export n'a tourné.
+
+### 21 octobre, soir — 1945-1958 au scrutin départemental, les fractions de Bourg et d'Oyonnax, l'export à plus de deux processus
+
+Deux corrections d'Adrien, vues sur la carte.
+
+**1945-1958 : le scrutin de liste départemental.** Hors de la Seine, la base
+n'avait AUCUNE circonscription de 1945 à 1958 (37 483 atomes à canton sans
+circo en 1946). `122_circo_1945_1958.sql` pose une unité `L<dep>01@1945`,
+régime `liste`, par département (89), sur [1945-01-01, 1958-01-01), les
+bornes de la Seine. Nom de 1945, avec les deux changements de la période
+(Loire-Inférieure → Loire-Atlantique 1957, Seine-Inférieure →
+Seine-Maritime 1955). **37 582 rattachements** ; plus un seul atome à canton
+sans circonscription en 1946, 1951, 1956, 1957. 1941-1945 reste vide : pas
+d'élection, c'est `ABSENCES_CIRCO`. Non confronté aux textes : les
+départements que la IVᵉ a divisés en plusieurs circonscriptions (Nord,
+Pas-de-Calais, Seine-et-Oise… à vérifier sur l'ordonnance du 17 août 1945 et
+la loi du 5 octobre 1946) sont posés d'un seul tenant ; `-v sauf=` les
+écartera. `122` passe APRÈS `121`, qui pose des cantons dès 1955 dans l'Ain
+(premier passage avant lui : 17 atomes de l'Ain sans circo en 1957).
+
+**Les fractions de Bourg et d'Oyonnax sans circonscription.** `113` donne à
+un atome la circonscription de son canton au 1er décembre 1958, ou de son
+premier canton connu. Une fraction née après 1958 sous un canton NEUF
+(Oyonnax-Nord et -Sud, 1973 ; Bourg-Nord-Centre, 1982) n'a ni l'un ni
+l'autre dans l'atlas, et restait blanche jusqu'en 1986. Règle `commune`
+ajoutée : elle prend la circonscription des autres atomes de sa commune, si
+elle est unique (une ville déjà partagée en 1958 ne lègue rien).
+**158 rattachements** en France, dont les trois de l'Ain (`25988#0141` →
+2e, `5260#0137`, `5260#0138` → 1re). `113` : 30 514 rattachements, 271
+unités, 423 par repli, 158 par la commune. Rejoué dans l'ordre `121`
+défait → `113` → `121` → `122`.
+
+Reste, hors de cette correction : les départements que `113` ne pose pas
+(06, 13, 2A, 2B, 33, 37, 38, 39, 44, 59, 62, 68, 69, 70, 76, 78, 83, 90)
+sont toujours blancs de 1958 à 1986.
+
+**L'export à plus de deux processus.** Le plafond était dans
+`export_partition.sh` (`JOBS=2`, lots de 4 : 8 h 20 la nuit du 18 octobre).
+`--jobs` se règle désormais sur la mémoire disponible (3 Go par processus, mesuré : 0,7 Go au plus par backend à six de front, ×4,5 ;
+`GO_PAR_JOB`, plafonné à la moitié des cœurs), un lot vaut trois fois
+`--jobs`, et un lot perdu sur la connexion divise `--jobs` par deux pour la
+suite. `--refaire` est devenu reprenable : un témoin `.refaire_depuis` dans la
+sortie, effacé quand tout est fait.

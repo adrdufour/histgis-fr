@@ -883,6 +883,24 @@ etape "113 — circonscriptions 1958-1986 (cartes de Gaudillère)"
       -f "$ICI/113_circo_1958.sql" > "$RACINE/build/p113.log" 2>&1 ) \
     || { echo "  113 refusé — voir build/p113.log" >&2; exit 1; }
 
+# Ajouté le 21 octobre 2026. `121` corrige à la main l'Ain : la cession au
+# Rhône de 1967, le jalon de 1968 mal apparié, les communes absorbées, le trou
+# 1973-1998. Il retire des périodes de `59` et de `113` : il passe après tout.
+etape "121 — Ain : cessions au Rhône et trous 1955-1998"
+( cd "$RACINE" && $PSQL -P pager=off -v poser=on \
+      -f "$ICI/121_ain_cessions_trous.sql" > "$RACINE/build/p121.log" 2>&1 ) \
+    || { echo "  121 refusé — voir build/p121.log" >&2; exit 1; }
+
+# Ajouté le 21 octobre 2026. `122` pose le scrutin de liste départemental de
+# 1945-1958 (une unité `L<dep>01@1945` par département hors de la Seine) sur
+# tout atome qui a un canton du département dans la fenêtre. Il LIT les
+# cantons, y compris ceux que `121` pose dès 1955 dans l'Ain : il passe après
+# lui. Rejouer `121` seul (défaire, poser) demande de rejouer `122` ensuite.
+etape "122 — circonscriptions 1945-1958 : scrutin de liste départemental"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/122_circo_1945_1958.sql" > "$RACINE/build/p122.log" 2>&1 \
+    || { echo "  122 refusé — voir build/p122.log" >&2; exit 1; }
+
 # ============================================================================
 # LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026
 # ============================================================================

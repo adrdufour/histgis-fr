@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "carte-web",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["cartes/web/servir.py", "8765", "--sans-navigateur"],
+      "port": 8765
+    }
+  ]
+}

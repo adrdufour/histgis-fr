@@ -1,0 +1,630 @@
+verdict,dep,insee_lu,nom_du_code,nom_lu,insee_propose,nom_propose,ressemblance_code,ressemblance_propose,ecart,accord,atome,canton_lu,canton_54,canton_68,canton_99,propose_68,nom_confirme
+en_base,01,01065,Buellas,Bouvent,01055,Bouvent,0.43,1.0,10,fraction,6212,0125,0105,0105+0125,0143,0123,non
+en_base,01,01427,Trévoux,KRomanèche,01327,Romanèche,0.24,0.95,100,fraction,38196,0107,0134,0107+0134,0134,0107,oui
+en_base,02,02265,Dohis,Erlon,02283,Erlon,0.2,1.0,18,fraction,11897,0219,0226,0219+0226,0226,0219,oui
+en_base,02,02458,Marchais-en-Brie,Maizy,02453,Maizy,0.32,1.0,5,fraction,21022,0221,0210,0210+0221,0210,0221,oui
+en_base,02,02478,Merlieux-et-Fouquerolles,Hérie {La),02378,La Hérie,0.34,0.83,100,fraction,22113,0217,0201,0201+0217,0201,0217,oui
+en_base,02,02495,Mondrepuis,Housset,02385,Housset,0.35,1.0,110,fraction,22897,0227,0217,0217+0227,0217,0227,oui
+en_base,02,02504,Montescourt-Lizerolles,Fère (La),02304,La Fère,0.24,1.0,200,fraction,23369,0214,0229,0214+0229,0229,0214,oui
+en_base,02,02546,La Neuville-en-Beine,Iron,02386,Iron,0.21,1.0,160,fraction,24896,0216,0209,0209+0216,0209,0216,oui
+en_base,02,02603,Pisseleux,Ville-aux-Bois-lés-Pontavert (La),02803,La Ville-aux-Bois-lès-Pontavert,0.3,1.0,200,fraction,26942,0221,0236,0221+0236,,0221,oui
+en_base,02,02628,Puiseux-en-Retz,Prisces,02623,Prisces,0.4,1.0,5,fraction,28230,0234,0236,0234+0236,0236,0234,oui
+en_base,02,02682,Saint-Mard,Quincy-Basse,02632,Quincy-Basse,0.3,1.0,50,fraction,33166,0211,0204,0204+0211,0204,0211,oui
+en_base,02,02706,Septmonts,Selve (La),02705,La Selve,0.29,1.0,1,fraction,36049,0230,0231,0230+0231,0241,0230,oui
+en_base,04,04053,Châteauneuf-Val-Saint-Donat,Bréole {La},04033,La Bréole,0.19,0.86,20,fraction,8669,0412,0430,0412+0430,0430,0412,oui
+en_base,04,04125,Montblanc,Mison,04123,Mison,0.43,1.0,2,600,23208,0427,0409,0409+0427,,0427,oui
+en_base,04,04151,Pierrerue,Montpezat,04131,Montpezat,0.22,1.0,20,fraction,26835,0421,0410,0410+0421,0410,,oui
+en_base,04,04155,Prads-Haute-Bléone,Poil (Le),04153,Le Poil,0.2,1.0,2,fraction,27882,0425,0411,0411+0425,0411,0425,oui
+en_base,04,04187,Saint-Lions,Robine (La),04168,Robion,0.25,0.83,19,fraction,32985,0408,0405,0405+0408,0405,0406,non
+en_base,05,05068,Jarjayes,Grave (La),05063,La Grave,0.46,1.0,5,canton_conteste,17761,0510,0523,0510+0523,0523,0510,oui
+en_base,06,06068,Gourdon,o Canton,06031,Cantaron,0.43,0.8,37,fraction,15813,0632,0602,0602+0632,0602,0607,non
+en_base,06,06096,Pierlas,Puget-Rostang,06098,Puget-Rostang,0.42,1.0,2,canton_conteste,26771,0618,0629,0618,0629,0618,oui
+en_base,06,06155,Vallauris,Sigale,06135,Sigale,0.27,1.0,20,fraction,38705,0620,0601,0601+0620,0635,0620,oui
+en_base,08,08050,Barricourt,Auge,08030,Auge,0.29,1.0,20,fraction,2746,0829,0803,0803+0829,,0829,oui
+en_base,08,08106,Charnois,MÉZIÈRES (1) Mézières,08290,Mézières,0.25,1.0,184,fraction,8484,0815,0811,0811+0815,0811,,oui
+en_base,08,08399,Sapogne-sur-Marche,KRegniowez,08355,Regniowez,0.23,0.95,44,600,35330,0824,0804,0804+0824,0804,0824,oui
+en_base,08,08425,Sommerance,Sivry-lès-Buzancy,08423,Sivry-lès-Buzancy,0.4,1.0,2,fraction,36511,0803,0812,0803+0812,0812,0803,oui
+en_base,08,08428,Sorcy-Bauthémont,Sivry-lés-Buzancy,08423,Sivry-lès-Buzancy,0.27,1.0,5,fraction,36581,0803,0819,0803+0819,0819,0803,oui
+en_base,09,09257,Sainte-Croix-Volvestre,Puch (Le),09237,Le Puch,0.08,1.0,20,psm6,31325,0913,0914,0913+0914,0914,0913,oui
+en_base,10,10285,Perthes-lès-Brienne,Plancy,10290,Planty,0.26,0.83,5,fraction,26564,1014,1006,1006+1014,1006,1013,non
+en_base,11,11058,Cailhau,Besséde-de-Sault,11038,Bessède-de-Sault,0.19,1.0,20,fraction,6558,1105,1101,1101+1105,1101,1103,non
+en_base,11,11060,Cailla,Caudeval,11080,Caudeval,0.43,1.0,20,canton_conteste,6560,1111,1103,1103+1111,1103,1111,oui
+en_base,11,11158,Gaja-et-Villedieu,Force (Lai,11153,La Force,0.1,1.0,5,fraction,14968,1116,1120,1116+1120,1120,1116,oui
+en_base,12,12004,Almont-les-Junies,Albres (Les),12003,Les Albres,0.38,1.0,1,600,523,1206,1210,1206+1210,1210,1206,oui
+en_base,12,12006,Alrance,Cresse (La),12086,La Cresse,0.31,1.0,80,fraction,533,1223,1237,1223+1237,1237,1223,oui
+en_base,14,14058,Bellou,Auvillars,14033,Auvillars,0.27,1.0,25,fraction,3579,1410,1423,1410+1423,1423,1410,oui
+en_base,14,14069,Beuvillers,Berniéres-le-Patry,14065,Bernières-le-Patry,0.46,1.0,4,fraction,4091,1436,1421,1421+1436,1421,1436,oui
+en_base,14,14145,Cauvicourt,Cossesseville,14183,Cossesseville,0.17,1.0,38,fraction,7290,1431,1407,1407+1431,1407,1431,oui
+en_base,14,14188,Coulvain,Canon,14133,Canon,0.46,1.0,55,fraction,10575,1424,1401,1401+1424,1401,1424,oui
+en_base,14,14418,Le Mesnil-Durand,Grandchamp-le-Château,14313,Grandchamp-le-Château,0.26,1.0,105,fraction,22228,1424,1423,1423+1424,1423,1424,oui
+en_base,14,14434,Le Molay,Écots,14234,Écots,0.33,1.0,200,fraction,22720,1429,,1402+1429,,1429,oui
+en_base,14,14435,Les Monceaux,Honfleur,14333,Honfleur,0.5,1.0,102,fraction,22828,1419,1422,1419+1422,1449,1419,oui
+en_base,14,14488,Ouistreham,Mittois,14433,Mittois,0.35,1.0,55,fraction,25910,1429,1414,1414+1429,1448,1429,oui
+en_base,14,14538,Rocquancourt,Louvigny,14383,Louvigny,0.2,1.0,155,fraction,29307,1409,1406,1406+1409,1406,1409,oui
+en_base,14,14561,Saint-Aubin-sur-Algot,Saint-Germain-d'Ectot,14581,Saint-Germain-d'Ectot,0.56,1.0,20,fraction,30572,1411,1424,1411+1424,,1411,oui
+en_base,14,14617,Sainte-Marie-aux-Anglais,Soulangy,14677,Soulangy,0.34,1.0,60,fraction,12173,1417,1424,1417+1424,,1417,oui
+en_base,15,15025,Albepierre-Bredons,Bournoncles,15023,Bournoncles,0.36,1.0,2,fraction,5683,1516,1512,1512+1516,1512,1516,oui
+en_base,15,15062,Drignac,Junhac,15082,Junhac,0.46,1.0,20,fraction,12224,1511,1514,1511+1514,,1511,oui
+en_base,15,15259,Vieillespesse,Tourniac,15239,Tourniac,0.1,1.0,20,fraction,39793,1514,1519,1514+1519,1519,1514,oui
+en_base,16,16061,Brie,Chapelle (La),16081,La Chapelle,0.17,1.0,20,fraction,5907,1625,1622,1622+1625,1622,1625,oui
+en_base,16,16068,Cellefrouin,Chassors,16088,Chassors,0.21,1.0,20,fraction,7414,1617,1618,1617+1618,1618,1617,oui
+en_base,16,16080,Chantrezac,Barret,16030,Barret,0.38,1.0,50,fraction,8121,1606,1626,1606+1626,,1606,oui
+en_base,16,16159,Graves,Fleurac,16139,Fleurac,0.31,1.0,20,fraction,16089,1617,1612,1612+1617,,1617,oui
+en_base,16,16276,Reignac,Richemont,16278,Richemont,0.38,1.0,2,fraction,28814,1613,1605,1605+1613,1605,1613,oui
+en_base,16,16285,Rougnac,Moutardon,16235,Moutardon,0.38,1.0,50,fraction,29789,1624,1628,1624+1628,1628,1624,oui
+en_base,17,17258,Neuillac,Meux,17233,Meux,0.33,1.0,25,600,24765,1711,1702,1711,1702,1711,oui
+en_base,17,17271,Paillé,Saint-Denis-du-Pin,17277,Saint-Denis-du-Pin,0.29,1.0,6,canton_conteste,26038,1729,1704,1729,1704,1729,oui
+en_base,17,17456,Vallet,Taillebourg,17436,Taillebourg,0.47,1.0,20,fraction,38733,1733,1717,1717+1733,,1733,oui
+en_base,17,17466,Vérines,Vergne (La),17464,Vergné,0.77,1.0,2,fraction,39558,1729,1710,1710+1729,1710,1712,non
+en_base,18,18188,Primelles,Pondy (Le),18183,Le Pondy,0.14,1.0,5,fraction,28069,1807,1808,1807+1808,1808,1807,oui
+en_base,18,18193,Rezay,PFondy (Le),18183,Le Pondy,0.18,0.91,10,fraction,28965,1807,1811,1807+1811,1811,1807,oui
+en_base,19,19056,Clergoux,Chamberet,19036,Chamberet,0.35,1.0,20,fraction,9681,1924,1920,1920+1924,1920,1924,oui
+en_base,19,19086,Goulles,Chabrignac,19035,Chabrignac,0.12,1.0,51,fraction,15794,1912,1916,1912+1916+1925,1916,1912,oui
+en_base,19,19086,Goulles,Chameryrat,19038,Chameyrat,0.12,0.95,48,fraction,15794,1925,1916,1912+1916+1925,1916,,non
+en_base,20,20006,Alata,Albitreccia,20008,Albitreccia,0.5,1.0,2,fraction,350,2048,2001,2001+2048,2A73,,non
+en_base,20,20060,Cannelle,Castifao,20080,Castifao,0.25,1.0,20,fraction,6804,2015,2051,2015+2051,2A51,,non
+en_base,20,20071,Casalabriva,Castellare-di-Casinces,20077,Castellare-di-Casinca,0.52,0.92,6,fraction,7013,2059,2034,2034+2059,2A34,,non
+en_base,20,20087,Cervione,Biguglia,20037,Biguglia,0.12,1.0,50,fraction,7549,2006,2016,2006+2016,2B16,,non
+en_base,20,20089,Ciamannacce,HBisinchi,20039,Bisinchi,0.3,0.94,50,fraction,9464,2025,2062,2025+2062,2A62,,non
+en_base,20,20097,Costa,Biguglia,20037,Biguglia,0.15,1.0,60,fraction,10426,2006,2005,2005+2006,2B05,,non
+en_base,20,20115,Foce,Ficaja,20113,Ficaja,0.4,1.0,2,majorite,14095,2039,2053,2039+2053,2A53,,non
+en_base,20,20138,Lavatoggio,Guitera-les-Bains,20133,Guitera-les-Bains,0.16,1.0,5,fraction,18993,2062,2027,2027+2062,2B05,,non
+en_base,20,20155,Matra,Manso,20153,Manso,0.4,1.0,2,accord,21582,2011,2024,2011+2024,2B24,,non
+en_base,20,20157,Mazzola,Lano,20137,Lano,0.36,1.0,20,accord,21790,2044,2054,2044+2054,2B54,,non
+en_base,20,20160,Moca-Croce,Novella,20180,Novella,0.25,1.0,20,fraction,22649,2005,2034,2005+2034,2A34,,non
+en_base,20,20165,Moncale,Oletta,20185,Oletta,0.46,1.0,20,fraction,22810,2029,2011,2011+2029,2B11,,non
+en_base,20,20195,Ortiporio,Omessa,20193,Omessa,0.13,1.0,2,fraction,25807,2042,2013,2013+2042,2B14,,non
+en_base,20,20251,Prunelli-di-Fiumorbo,Pigna,20231,Pigna,0.17,1.0,20,fraction,28158,2020,2041,2020+2041,2B41,,non
+en_base,20,20261,Rogliano,Sisco,20281,Sisco,0.31,1.0,20,fraction,29453,2009,2042,2009+2042,2B42,,non
+en_base,20,20292,Sant'Andréa-di-Bozio,Soccia,20282,Soccia,0.26,1.0,10,fraction,26760,2056,2054,2054+2056,2B54,,non
+en_base,20,20358,Zévaco,Ville-di-Pietrabugno,20353,Ville-di-Pietrabugno,0.25,1.0,5,accord,41451,2045,2062,2045+2062,2A62,,non
+en_base,21,21159,La Chaume,Champeau,21141,Champrenault,0.71,0.8,18,fraction,8904,2131,2122,2122+2131,2122,2137,non
+en_base,21,21261,Fauverney,Fontenelle,21281,Fontenelle,0.42,1.0,20,fraction,13545,2113,2114,2113+2114,2114,2113,oui
+en_base,21,21369,Magny-Saint-Médard,Marey-sur-Tille,21385,Marey-sur-Tille,0.34,1.0,16,fraction,20610,2117,2120,2117+2120,2120,2117,oui
+en_base,21,21403,Ménessaire,Goulles (Les),21303,Les Goulles,0.24,1.0,100,fraction,21949,2122,2119,2119+2122,2119,2122,oui
+en_base,21,21526,Rochefort-sur-Brévon,Koche-Vanneau (Lai),21528,La Roche-Vanneau,0.4,0.92,2,fraction,29343,2136,2101,2101+2136,2101,2136,oui
+en_base,21,21559,Sainte-Marie-sur-Ouche,Lantenay,21339,Lantenay,0.37,1.0,220,fraction,2444,2111,2135,2111+2135,2135,2111,oui
+en_base,21,21595,Savolles,Savilly,21593,Savilly,0.67,1.0,2,fraction,35710,2119,2120,2119+2120,2120,2119,oui
+en_base,22,22068,Grâce-Uzel,lIllifaut,22083,Illifaut,0.11,0.94,15,fraction,15898,2225,2248,2225+2248,2248,2225,oui
+en_base,23,23063,Clairavaux,Chard,23053,Chard,0.4,1.0,10,fraction,9673,2303,2312,2303+2312,2312,2303,oui
+en_base,23,23065,Colondannes,Chard,23053,Chard,0.25,1.0,12,fraction,9951,2303,,2303+2314,2314,2303,oui
+en_base,23,23125,Le Mas-d'Artige,Mars (Les),23123,Les Mars,0.43,1.0,2,fraction,21489,2303,2312,2303+2312,2312,2303,oui
+en_base,23,23155,Pontarion,Pigerolles,23153,Pigerolles,0.32,1.0,2,fraction,27493,2317,2321,2317+2321,2321,2317,oui
+en_base,24,24072,Cadouin,Campagnac-lés-Quercy,24075,Campagnac-lès-Quercy,0.24,1.0,3,fraction,6525,2447,2407,2407+2447,,2447,oui
+en_base,24,24156,La Douze,Coulounieix-Chamiers,24138,Coulounieix-Chamiers,0.25,1.0,18,fraction,18289,2427,2434,2427+2434,2434,2427,oui
+en_base,24,24185,Fongalop,Fleurac,24183,Fleurac,0.27,1.0,2,psm4,14134,2405,2402,2402+2405,,2405,oui
+en_base,24,24553,Tocane-Saint-Apre,Ponteyraud,24333,Ponteyraud,0.32,1.0,220,600,37699,2431,2421,2421+2431,2421,2431,oui
+en_base,25,25060,Bians-les-Usiers,Boujeons,25080,Boujeons,0.27,1.0,20,fraction,6463,2517,2511,2511+2517,2511,2517,oui
+en_base,25,25065,Blarians,Bouverans,25085,Bouverans,0.59,1.0,20,fraction,4467,2520,2513,2513+2520,2513,2520,oui
+en_base,25,25159,Colombier-Fontaine,Chaux {La),25139,La Chaux,0.17,0.83,20,fraction,9934,2515,2521,2515+2521,2521,2515,oui
+en_base,25,25206,Droitfontaine,Durnes,25208,Durnes,0.42,1.0,2,fraction,12230,2518,,2512+2518,,2518,oui
+en_base,25,25258,Franois,Fessevillers,25238,Fessevillers,0.21,1.0,20,fraction,14619,2512,2502,2502+2512,2502,2512,oui
+en_base,25,25365,Mancenans,Mambouhans,25363,Mambouhans,0.53,1.0,2,fraction,20861,2521,2510,2510+2521,2510,2521,oui
+en_base,25,25561,Thoraise,Valentin,25581,Valentin,0.25,1.0,20,fraction,37527,2513,2507,2507+2513,2507,2513,oui
+en_base,25,25571,Trévillers,Mésandans,25377,Mésandans,0.21,1.0,194,fraction,38191,2523,2512,2512+2523,2512,2523,oui
+en_base,25,25599,Vennans,Taillecourt,25555,Taillecourt,0.11,1.0,44,fraction,38576,2503,2524,2503+2524,2524,2503,oui
+en_base,26,26226,Le Pègue,Pennes-le-Sec,26228,Pennes-le-Sec,0.38,1.0,2,fraction,26371,2614,2612,2612+2614,2612,2614,oui
+en_base,26,26287,Roynac,Pilhon (Le),26237,Le Pilhon,0.33,1.0,50,fraction,29471,2614,2615,2614+2615,2615,2614,oui
+en_base,27,27060,Berthenonville,Boissy-sur-Damrville,27080,Boissy-sur-Damville,0.44,0.97,20,fraction,3879,2713,2714,2713+2714,2714,2713,oui
+en_base,27,27066,Bézu-la-Forêt,Bosc-Renoull-en-Ouche,27088,Bosc-Renoult-en-Ouche,0.28,0.94,22,fraction,4164,2705,2722,2705+2722,2722,2703,non
+en_base,27,27356,Jonquerets-de-Livet,Heunière (Lai,27336,La Heunière,0.32,1.0,20,fraction,17882,2736,2703,2703+2736,2703,2736,oui
+en_base,27,27365,Léry,Lendin (Le),27363,Le Landin,0.4,0.86,2,fraction,19251,2730,2728,2728+2730,2743,2730,oui
+en_base,27,27455,Piencourt,Neuville-sur-Authou,27433,Neuville-sur-Authou,0.31,1.0,22,fraction,26743,2709,2734,2709+2734,2734,2709,oui
+en_base,27,27502,Rugles,Gros-Theïil (Le),27302,Le Gros-Theil,0.25,0.95,200,fraction,30024,2701,2731,2701+2731,2731,2701,oui
+en_base,27,27506,Saint-Amand-des-Hautes-Terres,Guitry,27308,Guitry,0.19,1.0,198,fraction,30300,2714,2701,2701+2714,2701,2714,oui
+en_base,27,27566,Sainte-Marguerite-en-Ouche,Saint-Pierre-d'Autils,27588,Saint-Pierre-d'Autils,0.44,1.0,22,fraction,31480,2736,2703,2703+2736,2703,2736,oui
+en_base,27,27638,Le Thuit-Signol,Hogues (Les),27338,Les Hogues,0.24,1.0,300,fraction,37586,2722,2701,2701+2722,2701,2722,oui
+en_base,27,27682,Vesly,Thil (Le),27632,Le Thil,0.22,1.0,50,fraction,39642,2715,2720,2715+2720,2720,2715,oui
+en_base,28,28151,Fessanvilliers-Mattanvilliers,Dommerville,28131,Dommerville,0.31,1.0,20,fraction,13790,2816,2805,2805+2816,2805,2816,oui
+en_base,28,28188,Le Gué-de-Longroi,Grandville-Gaudreville,28186,Grandville-Gaudreville,0.4,1.0,2,fraction,30869,2816,2802,2802+2816,2802,2816,oui
+en_base,28,28421,Voise,Voves,28422,Voves,0.6,1.0,1,fraction,40974,2824,2802,2802+2824,2802,2824,oui
+en_base,29,29092,Kernével,Esquibien,29052,Esquibien,0.24,1.0,40,fraction,18150,2933,2902,2902+2933,,2933,oui
+en_base,30,30066,Cannes-et-Clairan,Collorgues,30086,Collorgues,0.24,1.0,20,fraction,6807,3026,3021,3021+3026,3021,3026,oui
+en_base,30,30196,Le Pin,Plantiers (Les),30198,Les Plantiers,0.33,1.0,2,accord,26886,3025,3007,3007+3025,3007,3025,oui
+en_base,30,30208,Puechredon,Portes,30203,Portes,0.25,1.0,5,fraction,28189,3011,3031,3011+3031,3031,3011,oui
+en_base,31,31141,Ciadoux,Fauga (Le),31181,Le Fauga,0.33,1.0,40,fraction,9463,3123,3106,3106+3123,3106,3123,oui
+en_base,31,31219,Gensac-sur-Garonne,Laréole,31275,Laréole,0.26,1.0,56,fraction,15327,3101,3127,3101+3127,3127,3107,non
+en_base,31,31450,Renneville,Mauressac,31330,Mauressac,0.21,1.0,120,fraction,28937,3103,3138,3103+3138,3138,3103,oui
+en_base,31,31538,Savères,Saubens,31533,Saubens,0.57,1.0,5,fraction,35655,3125,3126,3125+3126,3126,3123,non
+en_base,31,31566,Vallègue,Villeneuve-Lécussan,31586,Villeneuve-Lécussan,0.38,1.0,20,fraction,38748,3122,3138,3122+3138,3138,3122,oui
+en_base,33,33065,Bouliac,Camblanes-et-Meynac,33085,Camblanes-et-Meynac,0.33,1.0,20,fraction,5118,3323,3319,3319+3323,3358,3323,oui
+en_base,33,33085,Camblanes-et-Meynac,Bayon,33028,Baron,0.36,0.8,57,fraction,6648,3315,3323,3315+3323,3323,3316,non
+en_base,33,33392,Sainte-Croix-du-Mont,Réole (La) (2),33352,La Réole,0.18,1.0,40,fraction,31337,3346,3317,3317+3346,3317,3338,non
+en_base,33,33484,Saint-Symphorien,Saint-Loubèés,33433,Saint-Loubès,0.52,0.96,51,fraction,34796,3319,3345,3319+3345,3345,3319,oui
+en_base,33,33500,Samonac,Marcheprime,33555,Marcheprime,0.33,1.0,55,fraction,35232,3302,3315,3302+3315,3315,3302,oui
+en_base,34,34158,Minerve,Mafelles (Les),34153,Les Matelles,0.4,0.88,5,fraction,22542,3418,3427,3418+3427,3427,3418,oui
+en_base,34,34209,Portiragnes,Plans (Les),34205,Les Plans,0.5,1.0,4,fraction,27676,3415,3404,3404+3415,3405,3415,oui
+en_base,35,35205,Noyal-sous-Bazouges,Nouaye (La),35203,La Nouaye,0.43,1.0,2,fraction,25309,3525,3501,3501+3525,3501,3523,non
+en_base,35,35208,Orgères,Nouaye (La),35203,La Nouaye,0.31,1.0,5,fraction,25690,3523,,3523+3532,3547,3523,oui
+en_base,35,35267,Saint-Étienne-en-Coglès,Saint-Lunaire,35287,Saint-Lunaire,0.44,1.0,20,fraction,31680,3510,3536,3510+3536,3536,3510,oui
+en_base,37,37050,Chambray-lès-Tours,Boulay (Le),37030,Le Boulay,0.27,1.0,20,fraction,7810,3706,3714,3706+3714,3734,3706,oui
+en_base,37,37183,Perrusson,FPouzay,37188,Pouzay,0.25,0.92,5,canton_conteste,26554,3720,3713,3713+3715+3720,3713,3720,oui
+en_base,38,38306,Pinsot,Pin (Le),38305,Le Pin,0.67,1.0,1,fraction,26916,3843,3801,3801+3843,3801,3843,oui
+en_base,38,38396,Saint-Honoré,Saint-Jean-d'Avelanne,38398,Saint-Jean-d'Avelanne,0.41,1.0,2,fraction,32352,3821,3820,3820+3821,3820,3821,oui
+en_base,38,38464,Saint-Victor-de-Cessieu,Serpaize,38484,Serpaize,0.29,1.0,20,canton_conteste,34933,3838,3833,3833+3838,3833,3838,oui
+en_base,39,39066,Bornay,Bouchoux (Les),39068,Les Bouchoux,0.29,1.0,2,fraction,4949,3905,3915,3905+3915,3934,3905,oui
+en_base,39,39216,Étival,Lanéria,39276,Lanéria,0.15,1.0,60,fraction,13235,3927,3916,3916+3927,3916,3927,oui
+en_base,39,39254,Gillois,Foucherans,39233,Foucherans,0.24,1.0,21,fraction,15494,3913,3920,3913+3920,3920,3913,oui
+en_base,39,39259,Grange-de-Vaivre,Frasnée (La),39239,La Frasnée,0.48,1.0,20,600,16029,3910,3931,3910+3931,3931,3910,oui
+en_base,39,39283,Lavancia-Epercy,Latette (La),39282,La Latette,0.38,1.0,1,fraction,2120,3920,3926,3920+3926,3926,3920,oui
+en_base,39,39316,Marpain,Martigna,39318,Martigna,0.67,1.0,2,fraction,21320,3916,,3916+3918,,3916,oui
+en_base,39,39365,Mont-sous-Vaudrey,Nenon,39383,Nenon,0.2,1.0,18,fraction,23898,3924,3917,3917+3924,3917,3924,oui
+en_base,39,39385,Neublans-Abergement,Nenon,39383,Nenon,0.35,1.0,2,fraction,24726,3924,3908,3908+3924,3908,3924,oui
+en_base,39,39418,Picarreau,Pesse (La),39413,La Pesse,0.29,1.0,5,fraction,26754,3905,3923,3905+3923,3923,3905,oui
+en_base,39,39461,Rix,Nans (Les) (1),39381,Les Nans,0.0,1.0,80,fraction,29281,3906,3920,3906+3920,3920,3906,oui
+en_base,39,39483,Saint-Hymetière,Poisoux,39433,Poisoux,0.1,1.0,50,fraction,32337,3925,3902,3902+3925,3902,3925,oui
+en_base,39,39495,Saint-Thiébaud,Saint-Maurice-en-Montagne,39481,Saint-Germain-en-Montagne,0.4,0.82,14,fraction,34822,3926,3929,3926+3929,3929,3906,non
+en_base,39,39512,Sergenon,Marigna-sur-Valouse,39312,Marigna-sur-Valouse,0.16,1.0,200,fraction,36097,3902,3907,3902+3907,3907,3902,oui
+en_base,39,39586,Aresches,Treffay,39536,Treffay,0.27,1.0,50,fraction,1167,3922,3929,3922+3929,3929,3922,oui
+en_base,40,40156,Liposthey,Lacrabe,40138,Lacrabe,0.25,1.0,18,fraction,19679,4006,4017,4006+4017,4017,4008,non
+en_base,41,41188,Rhodon,Membrolles,41133,Membrolles,0.25,1.0,55,fraction,29061,4116,4123,4116+4123,4123,4116,oui
+en_base,42,42060,Chenereilles,Cula (La),42080,La Cula,0.25,1.0,20,fraction,9144,4215,4229,4215+4229,4229,4215,oui
+en_base,43,43065,Chastel,Cubelles,43083,Cubelles,0.4,1.0,18,fraction,8728,4325,4317,4317+4325,4317,4325,oui
+en_base,43,43255,Vazeilles-près-Saugues,Sanssac-l'Église,43233,Sanssac-l'Église,0.35,1.0,22,fraction,39692,4312,4325,4312+4325,4325,4312,oui
+en_base,46,46116,Frontenac,Loupiac,46178,Loupiac,0.38,1.0,62,fraction,14884,4622,4604,4604+4622,4604,4622,oui
+en_base,47,47161,Massels,Mazières-Naresse,47164,Mazières-Naresse,0.45,1.0,3,fraction,21540,4735,4726,4726+4735,4726,4735,oui
+en_base,48,48136,Saint-André-de-Lancize,Saint-Bonnet-de-Chirac,48138,Saint-Bonnet-de-Chirac,0.58,1.0,2,fraction,30400,4812,4822,4812+4822,4822,4812,oui
+en_base,48,48151,Saint-Frézal-d'Albuges,Kozier (Le),48131,Le Rozier,0.16,0.83,20,fraction,31809,4815,4803,4803+4815,4803,4815,oui
+en_base,49,49226,Noëllet,Noyant,49228,Noyant,0.46,1.0,2,fraction,25090,4922,4924,4922+4924,4924,4922,oui
+en_base,49,49231,Nuaillé,Pellerine (Lai),49237,La Pellerine,0.38,1.0,6,fraction,25358,4922,,4912+4922,4912,4922,oui
+en_base,49,49259,Rochefort-sur-Loire,FParnay,49235,Parnay,0.17,0.92,24,fraction,29351,4929,4908,4908+4929,4908,4929,oui
+en_base,49,49357,Trèves-Cunault,Soucelles,49337,Soucelles,0.27,1.0,20,fraction,38184,4933,4915,4915+4933,,4933,oui
+en_base,50,50057,Biville,Bazoge (La),50037,La Bazoge,0.31,1.0,20,fraction,4364,5019,5004,5004+5019,5004,5019,oui
+en_base,50,50067,La Boulouze,Brix,50087,Brix,0.17,1.0,20,fraction,18220,5041,5013,5013+5041,,5047,non
+en_base,50,50251,Huberville,Joboursg,50257,Jobourg,0.22,0.93,6,fraction,17363,5004,5047,5004+5047,5047,5004,oui
+en_base,50,50255,Hyenville,Haye-d'Ectot (La),50235,La Haye-d'Ectot,0.42,1.0,20,canton_conteste,17433,5003,5023,5003+5023,5023,5003,oui
+en_base,50,50285,Magneville,Luzerne (La),50283,La Luzerne,0.24,1.0,2,fraction,20564,5035,5007,5007+5035,5007,5035,oui
+en_base,50,50385,Omonville-la-Petite,Octeville,50383,Octeville,0.46,1.0,2,fraction,25587,5025,5004,5004+5025,5004,5025,oui
+en_base,50,50398,Le Perron,Morsalines,50358,Morsalines,0.25,1.0,40,fraction,26549,5030,5046,5030+5046,5046,5030,oui
+en_base,50,50458,Saint-Côme-du-Mont,Ronde-Have (Lai),50438,La Ronde-Haye,0.17,0.89,20,fraction,31032,5040,5009,5009+5040,5009,5040,oui
+en_base,50,50483,Saint-Gilles,Octeville,50383,Octeville,0.5,1.0,100,fraction,32170,5025,5021,5021+5025,5021,5025,oui
+en_base,50,50501,Saint-Léger,Mesnil-Amand (Le),50301,Le Mesnil-Amand,0.1,1.0,200,fraction,32900,5014,,5014+5017,,5014,oui
+en_base,50,50526,Saint-Michel-des-Loups,Mesnil-Villeman (Le),50326,Le Mesnil-Villeman,0.24,1.0,200,fraction,33719,5014,5042,5014+5042,,5014,oui
+en_base,50,50535,Sainte-Pience,Sainte-Suzanne-en-Bauptois,50555,Sainte-Suzanne-en-Bauptois,0.46,1.0,20,fraction,31556,5016,5017,5016+5017,5017,5016,oui
+en_base,50,50561,Saint-Ursin,Soulles,50581,Soulles,0.35,1.0,20,fraction,34867,5008,,5008+5017,,5008,oui
+en_base,51,51083,Braux-Saint-Remy,Baizil (Le),51033,Le Baizil,0.3,1.0,50,fraction,5631,5118,5123,5118+5123,5123,5118,oui
+en_base,51,51269,Giffaumont-Champaubert,Gaye,51265,Gaye,0.24,1.0,4,canton_conteste,15466,5125,5124,5124+5125,5124,5125,oui
+en_base,51,51276,Gourgançon,Grandes-Loges (Les),51278,Les Grandes-Loges,0.45,1.0,2,fraction,15821,5106,5113,5106+5113,5113,,oui
+en_base,51,51400,Neuville-sous-Arzillières,JIsle-sur-Marne,51300,Isle-sur-Marne,0.44,0.96,100,fraction,24837,5126,5124,5124+5126,,5128,non
+en_base,51,51455,Reims-la-Brûlée,Plichancourt,51433,Plichancourt,0.24,1.0,22,fraction,28832,5126,5128,5126+5128,5128,5128,non
+en_base,51,51555,Soudé,Marsangis,51353,Marsangis,0.14,1.0,202,fraction,36655,5101,5126,5101+5126,5126,5101,oui
+en_base,51,51559,Suippes,Mairy-sur-Marne,51339,Mairy-sur-Marne,0.3,1.0,220,fraction,36876,5110,5127,5110+5127,5127,5110,oui
+en_base,52,52054,Blancheville,Bonnecourt,52059,Bonnecourt,0.27,1.0,5,fraction,4426,5220,5201,5201+5220,,5220,oui
+en_base,52,52145,Coublanc,Corgirnon,52143,Corgirnon,0.35,1.0,2,fraction,10460,5212,5223,5212+5223,5223,,oui
+en_base,52,52215,Genrupt,Genevrières,52213,Genevrières,0.44,1.0,2,fraction,15314,5212,5204,5204+5212,,5212,oui
+en_base,52,52224,Gonaincourt,Gilles,52223,Gilley,0.24,0.83,1,fraction,15756,5212,5205,5205+5212,,5212,oui
+en_base,52,52254,Lachapelle-en-Blaisy,Jorquenay,52252,Jorquenay,0.3,1.0,2,fraction,8147,5216,5214,5214+5216,5214,5216,oui
+en_base,52,52258,Laferté-sur-Aube,Harricourt,52238,Harricourt,0.33,1.0,20,fraction,13776,5214,5206,5206+5214,5206,,oui
+en_base,52,52345,Musseau,Morteau,52343,Morteau,0.57,1.0,2,accord,24460,5201,,5201+5203,,5201,oui
+en_base,52,52359,Nully,Montsaon,52339,Montsaon,0.15,1.0,20,fraction,24778,5207,5211,5207+5211,5211,,non
+en_base,52,52369,Orquevaux,Pierrefontaines,52389,Pierrefontaines,0.17,1.0,20,fraction,25784,5217,5224,5217+5224,5224,5217,oui
+en_base,52,52445,Saint-Broingt-le-Bois,Sailly,52443,Sailly,0.33,1.0,2,fraction,30800,5222,5217,5217+5222,5217,5222,oui
+en_base,52,52446,Saint-Broingt-les-Fosses,Perthes,52386,Perthes,0.29,1.0,60,fraction,6028,5225,5223,5223+5225,5223,5225,oui
+en_base,52,52498,Tronchoy,Tornay,52493,Tornay,0.57,1.0,5,psm6,38297,5212,,5212+5220,,5212,oui
+en_base,53,53058,La Chapelle-Craonnaise,Boissière (La),53033,La Boissière,0.3,1.0,25,fraction,8208,5309,5307,5307+5309,5307,5309,oui
+en_base,53,53178,Peuton,Pallu (La),53173,La Pallu,0.36,1.0,5,canton_conteste,26639,5306,5307,5306+5307,5307,5308,non
+en_base,53,53268,Vaucé,Trans,53266,Trans,0.2,1.0,2,fraction,39167,5308,5301,5301+5308,,5303,non
+en_base,54,54201,Fontenoy-la-Joûte,Lalœuf,54291,Lalœuf,0.29,1.0,90,canton_conteste,14311,5429,5403,5403+5429,5403,5429,oui
+en_base,54,54254,Haucourt-Moulaine,Hénaménil,54258,Hénaménil,0.16,1.0,4,fraction,16732,5418,5416,5416+5418,5430,5418,oui
+en_base,54,54285,Juvrecourt,Goviller,54235,Goviller,0.22,1.0,50,fraction,18086,5429,5401,5401+5429,5401,5429,oui
+en_base,54,54488,Saint-Sauveur,Rosières-en-Haye,54463,Rosières-en-Haye,0.08,1.0,25,fraction,34552,5412,5409,5409+5412,5409,5412,oui
+en_base,54,54518,Thiaucourt-Regniéville,Liverdun,54318,Liverdun,0.14,1.0,200,fraction,37412,5412,5426,5412+5426,5426,5412,oui
+en_base,55,55086,Bulainville,Beauclair,55036,Beauclair,0.5,1.0,50,fraction,6259,5520,5521,5520+5521,,5520,oui
+en_base,55,55151,Deuxnouds-aux-Bois,Cousances-au-Boïs,55131,Cousances-au-Bois,0.58,1.0,20,fraction,11764,5505,,5505+5527,,5505,oui
+en_base,55,55158,Dommary-Baroncourt,Culey,55138,Culey,0.18,1.0,20,fraction,5468,5511,5519,5511+5519,5519,,oui
+en_base,55,55186,Fains-Véel,Culery,55138,Culey,0.13,0.91,48,fraction,13435,5511,5502,5502+5511,5502,,oui
+en_base,55,55187,Flabas,Cuisy,55137,Cuisy,0.18,1.0,50,fraction,13901,5512,5506,5506+5512,,5512,oui
+en_base,55,55208,Gesnes-en-Argonne,Génicourt-sous-Condé,55203,Génicourt-sous-Condé,0.42,1.0,5,fraction,15412,5525,5512,5512+5525,5512,,non
+en_base,55,55236,Haudainville,Haumont-lés-Lachaussée,55238,Haumont-lès-Lachaussée,0.38,1.0,2,fraction,16738,5521,5526,5521+5526,5526,5527,non
+en_base,55,55285,Lavoye,Nixéville,55126,Corniéville,0.13,0.8,159,fraction,19042,5518,5521,5518+5521,5521,5505,non
+en_base,55,55306,Louppy-sur-Loison,Loxeéville,55308,Loxéville,0.24,0.95,2,fraction,20134,5505,5514,5505+5514,5514,,oui
+en_base,55,55402,Parois,Longeville-en-Barrois,55302,Longeville-en-Barrois,0.4,1.0,100,fraction,26227,5502,5504,5502+5504,,5502,oui
+en_base,55,55413,Rampont,Malancourt,55313,Malancourt,0.35,1.0,100,fraction,28604,5522,5518,5518+5522,,5522,oui
+en_base,55,55415,Ranzières,Rampont,55413,Rampont,0.38,1.0,2,fraction,28680,5518,5517,5517+5518,5517,5518,oui
+en_base,55,55437,Romagne-sous-les-Côtes,Mesnil-sous-les-Cütes,55337,Mesnil-sous-les-Côtes,0.7,0.94,100,accord,29498,5509,5506,5506+5509,5506,,oui
+en_base,55,55441,Rosières-en-Blois,Moirey,55359,Morley,0.19,0.83,82,fraction,29970,5506,5510,5506+5510,,5513,non
+en_base,55,55466,Salmagne,Seraucourt,55486,Seraucourt,0.22,1.0,20,fraction,35172,5521,5511,5511+5521,5511,5521,oui
+en_base,55,55482,Senoncourt-les-Maujouy,Rignaucourt,55432,Rignaucourt,0.39,1.0,50,fraction,36006,5525,5518,5518+5525,5518,5523,non
+en_base,55,55524,Vacon,Marville,55324,Marville,0.15,1.0,200,fraction,38544,5514,,5514+5528,,5514,oui
+en_base,55,55542,Véel,Mondrecourt,55342,Mondrecourt,0.13,1.0,200,accord,39186,5521,,5502+5521,,5521,oui
+en_base,55,55548,Vertuzey,Velaines,55543,Velaines,0.38,1.0,5,fraction,39613,5511,,5505+5511,,5511,oui
+en_base,55,55552,Vigneul-sous-Montmédy,Menaucourt,55332,Menaucourt,0.14,1.0,220,fraction,39937,5511,5514,5511+5514,5514,5511,oui
+en_base,55,55561,Villers-devant-Dun,Neuville-lès-Vaucouleurs,55381,Neuville-lès-Vaucouleurs,0.47,1.0,180,fraction,40464,5524,5507,5507+5524,5507,5524,oui
+en_base,55,55565,Villers-sous-Pareid,Woinville,55585,Woinville,0.38,1.0,20,fraction,40533,5517,5509,5509+5517,5509,5517,oui
+en_base,56,56058,Férel,Carentoir,56033,Carentoir,0.29,1.0,25,canton_conteste,13693,5608,5631,5608+5631,5631,5608,oui
+en_base,57,57228,Fossieux,Folpersviller,57223,Folpersviller,0.29,1.0,5,fraction,14425,5730,5707,5707+5730,5707,5750,oui
+en_base,57,57270,Val-de-Bride,Guénestroff,57265,Guébestroff,0.19,0.91,5,600,16333,5706,5708,5706,5708,5708,non
+en_base,57,57285,Halling-lès-Boulay,Hagondange,57283,Hagondange,0.38,1.0,2,fraction,16576,5747,,5703+5747,,5737,non
+en_base,57,57654,Silly-sur-Nied,Soucht,57658,Soucht,0.22,1.0,4,fraction,36356,5726,5723,5723+5726,5723,5726,oui
+en_base,57,57656,Sorbey,Soucht,57658,Soucht,0.33,1.0,2,600,36573,5726,5723,5723+5726,5723,5726,oui
+en_base,57,57698,Vatimont,Vaudoncourt,57699,Vaudoncourt,0.53,1.0,1,fraction,38956,5723,5709,5709+5723,5709,5723,oui
+en_base,57,57724,Vitry-sur-Orne,Voimhaut,57728,Voimhaut,0.2,1.0,4,fraction,40883,5709,5722,5709+5722,5722,5709,oui
+en_base,57,57755,Xocourt,Volstroff,57733,Volstroff,0.25,1.0,22,fraction,41369,5721,5707,5707+5721,5707,5721,oui
+en_base,57,57756,Xouaxange,Haute-Vutz,57758,Haute-Yutz,0.22,0.89,2,fraction,41373,5738,5729,5729+5738,5729,5738,oui
+en_base,58,58256,Saint-Martin-sur-Nohain,Saint-Éloi,58238,Saint-Éloi,0.48,1.0,18,fraction,33263,5816,5818,5816+5818,5818,5816,oui
+en_base,59,59064,Bellaing,Blaringhem,59084,Blaringhem,0.67,1.0,20,fraction,3486,5929,5966,5929+5966,5966,5929,oui
+en_base,59,59214,Estrées,Grand-Fort-Philippe,59272,Grand-Fort-Philippe,0.17,1.0,58,fraction,13271,5921,5901,5901+5921,5901,5927,non
+en_base,59,59239,Flines-lez-Raches,Flers-lez-Lille (1),59235,Flers-lez-Lille,0.57,1.0,4,600,14046,5933,5922,5922+5933,5922,5933,oui
+en_base,59,59248,Fort-Mardyck,Fontaine-au-Pire,59243,Fontaine-au-Pire,0.4,1.0,5,fraction,14403,5915,5926,5915+5926,5973,5915,oui
+en_base,59,59355,Lomme,Locquignol,59353,Locquignol,0.27,1.0,2,fraction,19872,5949,5928,5928+5949,5974,5949,oui
+en_base,59,59469,Pradelles,Masnières,59389,Masnières,0.44,1.0,80,fraction,27856,5943,5930,5930+5943,5930,5943,oui
+en_base,59,59471,Préseau,Maisnil (Le),59371,Le Maisnil,0.14,1.0,100,fraction,27990,5928,5965,5928+5965,5965,5928,oui
+en_base,59,59478,Quaëdypre,Marcg-en-Barœul (2),59378,Marcq-en-Barœul,0.27,0.92,100,fraction,28360,5970,5909,5909+5970,5909,5970,oui
+en_base,59,59515,Rouvignies,Houdain-lez-Bavay,59315,Houdain-lez-Bavay,0.4,1.0,200,fraction,29873,5908,5967,5908+5967,5967,5908,oui
+en_base,59,59609,Vendeville,KRombhies-et-Marchipont,59505,Rombies-et-Marchipont,0.13,0.95,104,fraction,39266,5969,5957,5957+5969,5978,5965,non
+en_base,60,60092,Boullarre,Rouvillers,60553,Rouvillers,0.53,1.0,461,fraction,5155,6033,6005,6005+6033,6005,6033,oui
+en_base,60,60165,Le Coudray-sur-Thelle,Cormeilles,60163,Cormeilles,0.54,1.0,2,fraction,10491,6015,6028,6015+6028,6028,6013,non
+en_base,60,60306,Hécourt,Hémévillers,60308,Hémévillers,0.33,1.0,2,fraction,16880,6014,6035,6014+6035,6035,6014,oui
+en_base,60,60526,Ravenel,Jaux,60325,Jaux,0.18,1.0,201,fraction,28686,6009,6033,6009+6033,6033,6009,oui
+en_base,60,60551,Rousseloy,Labosse,60331,Labosse,0.5,1.0,220,fraction,29835,6010,6024,6010+6024,6024,6010,oui
+en_base,60,60599,Saint-Thibault,Kouvroy-les-Merles,60555,Rouvroy-les-Merles,0.14,0.94,44,fraction,34819,6006,6017,6006+6017,6017,6006,oui
+en_base,62,62134,Bimont,Sachin,62732,Sachin,0.33,1.0,598,fraction,4295,6227,6229,6227+6229,6229,6227,oui
+en_base,62,62464,Hulluch,Graincourt-lés-Havrincourt,62384,Graincourt-lès-Havrincourt,0.13,1.0,80,fraction,17388,6235,6231,6235+6250,6268,6235,oui
+en_base,62,62468,Humières,Landrethun-lès-Ardres,62488,Landrethun-lès-Ardres,0.44,1.0,20,fraction,17399,6202,6243,6202+6243,6243,6202,oui
+en_base,62,62566,Menneville,MONTREUIL,62588,Montreuil,0.53,1.0,22,fraction,21996,6237,6221,6221+6237,6221,6237,oui
+en_base,62,62593,Morval,Guemps,62393,Guemps,0.17,1.0,200,fraction,24072,6206,6209,6206+6209,6209,6206,oui
+en_base,62,62660,Plouvain,Waast (Le),62880,Le Wast,0.15,0.89,220,fraction,27251,6221,6246,6221+6246,6246,6221,oui
+en_base,62,62662,Polincove,Quilen,62682,Quilen,0.27,1.0,20,canton_conteste,27381,6229,6206,6206+6229,6206,6229,oui
+en_base,62,62684,Racquinghem,Westbécourt,62884,Westbécourt,0.09,1.0,200,fraction,28651,6234,6201,6201+6234,6201,6234,oui
+en_base,62,62687,Ranchicourt,Widehem,62887,Widehem,0.11,1.0,200,fraction,28612,6222,,6222+6228,,6222,oui
+en_base,62,62715,Rocquigny,Robecd,62713,Robecq,0.4,0.83,2,fraction,29426,6233,6211,6211+6233,6211,6233,oui
+en_base,62,62865,Vitry-en-Artois,Galametz,62365,Galametz,0.19,1.0,500,fraction,40889,6239,6246,6239+6246,6246,6239,oui
+en_base,63,63409,Saurier,Rochefort-Montagne,63305,Rochefort-Montagne,0.25,1.0,104,fraction,35536,6335,6308,6308+6335,6308,6335,oui
+en_base,63,63415,Sauxillanges,Vassel,63445,Vassel,0.22,1.0,30,fraction,35625,6347,6344,6344+6347,6344,6347,oui
+en_base,63,63454,Vertolaye,Tourssur-Meymont,63434,Tours-sur-Meymont,0.25,1.0,20,fraction,39604,6339,6327,6327+6339,6327,6339,oui
+en_base,64,64085,Aydius,ÂAraux,64033,Araux,0.33,0.91,52,fraction,2249,6424,6401,6401+6424,6401,6424,oui
+en_base,64,64245,Goès,Garlin,64233,Garlin,0.2,1.0,12,canton_conteste,15659,6411,6427,6411+6427,6427,6411,oui
+en_base,64,64366,Mascaraàs-Haron,Momry,64388,Momy,0.21,0.89,22,fraction,21496,6419,6411,6411+6419,6411,6418,non
+en_base,64,64472,Saint-Castin,Maure,64372,Maure,0.12,1.0,100,fraction,30824,6422,6423,6422+6423,6423,6422,oui
+en_base,64,64553,Viellenave-sur-Bidouze,Louvie-Juzon,64353,Louvie-Juzon,0.32,1.0,200,fraction,39821,6404,6409,6404+6409,,6404,oui
+en_base,65,65051,Aventignan,Bareilles,65064,Bareilles,0.32,1.0,13,fraction,2150,6506,6519,6506+6519,6519,6506,oui
+en_base,66,66068,Escaro,Enveitg,66066,Enveitg,0.15,1.0,2,fraction,12911,6613,6607,6607+6613,6607,6613,oui
+en_base,66,66081,Fontrabiouse,Caldégas,66031,Caldégas,0.2,1.0,50,fraction,14332,6613,6606,6606+6613,6606,6613,oui
+en_base,67,67195,Hessenheim,Hérmerswiller,67193,Hermerswiller,0.26,1.0,2,fraction,17087,6726,6712,6712+6726,6712,6726,oui
+en_base,67,67465,Sessenheim,Struth,67483,Struth,0.25,1.0,18,fraction,36230,6717,6703,6703+6717,6703,6717,oui
+en_base,67,67548,Wiwersheim,Wisches,67543,Wisches,0.59,1.0,5,fraction,41324,6723,6731,6723+6731,6731,6723,oui
+en_base,68,68008,Appenwihr,Altenbach,68003,Altenbach,0.44,1.0,5,fraction,1000,6822,6819,6819+6822,6819,6822,oui
+en_base,68,68159,Jungholtz,Ingersheim,68155,Ingersheim,0.32,1.0,4,fraction,18033,6812,6824,6812+6824,6824,6812,oui
+en_base,70,70151,Chevigney,Charentenay,70131,Charentenay,0.6,1.0,20,fraction,9279,7006,7019,7006+7019,7019,7008,non
+en_base,70,70378,Navenne,Morey,70077,Borey,0.17,0.8,301,fraction,24591,7028,7026,7026+7028,7026,7018,non
+en_base,70,70456,Ruhans,Saint-Andoche,70458,Saint-Andoche,0.22,1.0,2,fraction,22513,7004,7017,7004+7017,7017,,oui
+en_base,70,70477,Saulnot,Nantouard,70377,Nantouard,0.25,1.0,100,fraction,35497,7009,,7009+7011,7011,7009,oui
+en_base,70,70495,Suaucourt-et-Pisseloup,Sorans-lés-Breurey,70493,Sorans-lès-Breurey,0.28,1.0,2,fraction,36851,7021,7004,7004+7021,,7021,oui
+en_base,79,79188,Moutiers-sous-Chantemerle,Moulins {l),79186,Moulins,0.26,0.93,2,fraction,24326,7909,7918,7909+7918,7918,7909,oui
+en_base,79,79248,Saint-Florent,Saint-Coutant,79243,Saint-Coutant,0.67,1.0,5,fraction,31771,7913,7921,7913+7921,,7913,oui
+en_base,79,79266,Saint-Liguaire,Saint-Paul-en-Gâtine,79286,Saint-Paul-en-Gâtine,0.47,1.0,20,fraction,32981,7918,7921,7918+7921,,7918,oui
+en_base,80,80064,Beaucourt-en-Santerre,Bernapré,80085,Bernâtre,0.52,0.88,21,600,4790,8042,8028,8028+8042,8028,8012,non
+en_base,80,80257,Dreuil-lès-Molliens,Démuin,80237,Démuin,0.43,1.0,20,fraction,12218,8028,8026,8026+8028,,8028,oui
+en_base,80,80363,Frettemolle,Goyencourt,80383,Goyencourt,0.19,1.0,20,fraction,14815,8036,8035,8035+8036,,8038,non
+en_base,80,80475,Liéramont,Gamaches,80373,Gamaches,0.24,1.0,102,fraction,19479,8022,8036,8022+8036,8036,8022,oui
+en_base,80,80559,Montagne-Fayel,Fouquescourt,80339,Fouquescourt,0.16,1.0,220,fraction,23059,8037,8026,8026+8037,8026,8037,oui
+en_base,80,80785,Vecquemont,Senlis-le-Sec,80733,Senlis-le-Sec,0.19,1.0,52,fraction,39178,8005,8018,8005+8018,8018,8003,non
+en_base,80,80809,Vismes,Fieffes,80309,Fieffes,0.46,1.0,500,fraction,40849,8020,8022,8020+8022,8022,8020,oui
+en_base,81,81069,Cordes-sur-Ciel,Faussergues,81089,Faussergues,0.25,1.0,20,fraction,10288,8133,8109,8109+8133,8109,8133,oui
+en_base,81,81091,Ferrières,Bez (Lei,81031,Le Bez,0.17,1.0,60,fraction,13752,8104,8131,8104,8131,8104,oui
+en_base,81,81152,Mailhoc,Lalbaréde,81121,Lacabarède,0.12,0.84,31,fraction,20627,8135,8102,8102+8135,8137,8128,non
+en_base,81,81155,Marsal,Laparrouquial,81135,Laparrouquial,0.42,1.0,20,fraction,21366,8120,8136,8120+8136,8136,8120,oui
+en_base,83,83015,Bauduen,Bastide (La),83013,La Bastide,0.57,1.0,2,fraction,2968,8308,8301,8301+8308,8301,8308,oui
+en_base,85,85068,La Claye,Fenouiller (Le),85088,Le Fenouiller,0.13,1.0,20,fraction,9641,8526,8513,8513+8526,8513,8526,oui
+en_base,85,85081,Dompierre-sur-Yon,BEoupére (Le),85031,Le Boupère,0.43,0.93,50,fraction,12007,8521,8506,8506+8521,8506,8521,oui
+en_base,85,85159,Nalliers,Mazeau (Le),85139,Le Mazeau,0.29,1.0,20,canton_conteste,24515,8512,8509,8509+8512,8509,8512,oui
+en_base,85,85179,Poiroux,Pineaux (Les),85175,Les Pineaux,0.57,1.0,4,fraction,27340,8513,8530,8513+8530,8530,8513,oui
+en_base,87,87096,La Meyze,Milhaguet,87098,Milhaguet,0.29,1.0,2,fraction,18452,8727,8718,8718+8727,8718,8706,non
+en_base,87,87098,Milhaguet,Masléon,87093,Masléon,0.38,1.0,5,fraction,22505,8706,,8706+8727,,8706,oui
+en_base,88,88106,Ban-sur-Meurthe-Clefcy,Clerjus (Le),88108,Le Clerjus,0.23,1.0,2,fraction,9651,8829,8813,8813+8829,8813,8829,oui
+en_base,88,88173,Florémont,Forges (Les),88178,Les Forges,0.53,1.0,5,fraction,14066,8812,8805,8805+8812,8805,8812,oui
+en_base,88,88402,Roville-aux-Chênes,Ménil (Le),88302,Le Ménil,0.19,1.0,100,fraction,29925,8827,8821,8821+8827,8821,8827,oui
+en_base,88,88458,Socourt,Salle (La),88438,La Salle,0.17,1.0,20,fraction,36428,8824,8805,8805+8824,8805,8824,oui
+en_base,89,89083,Charbuy,Beauvoir,89033,Beauvoir,0.27,1.0,50,canton_conteste,8398,8933,8904,8933,8941,8933,oui
+en_base,89,89288,Paroy-en-Othe,Lucy-sur-Cure,89233,Lucy-sur-Cure,0.18,1.0,55,accord,26234,8934,8907,8907+8934,8907,8934,oui
+en_base,89,89459,Villeneuve-la-Dondagre,Sainte-Colombhe,89339,Sainte-Colombe,0.18,0.96,120,fraction,40352,8918,8911,8911+8918,8911,8918,oui
+en_base,89,89481,Vireaux,Vassy,89291,Passy,0.33,0.8,190,fraction,40809,8917,8902,8902+8917,8902,8929,non
+en_base,90,90079,Petitmagny,Offemont (1),90075,Offemont,0.33,1.0,4,fraction,20609,9006,9004,9004+9006,9004,9006,oui
+en_base,91,91148,Chauffour-lès-Étréchy,Chäteaufort,91143,Châteaufort,0.53,1.0,5,fraction,8887,9103,7811,9103+9109,9109,,non
+en_base,93,93015,Coubron,Bourget (Le),93013,Le Bourget,0.43,1.0,2,fraction,10464,9309,7833,9309+9315,9315,9309,oui
+en_base,94,94017,Champigny-sur-Marne,Joinville-le-Pont,94042,Joinville-le-Pont,0.19,1.0,25,canton_conteste,7959,9415,7512,9404+9415,9404+9406+9435+9441,9415,oui
+en_base,95,95018,Argenteuil,de Bezons,95063,Bezons,0.22,0.86,45,600,1196,9504,7801,9504,9501+9502+9536,9504,oui
+a_juger,20,20269,Sari-Solenzara,Sari-di-Porto-Vecchio,20247,Porto-Vecchio,0.39,0.8,22,psm6,35362,2040,2040,2040,2A40,,non
+a_juger,27,27173,Corneville-la-Fouquetière,Courbépine,27179,Courbépine,0.3,1.0,6,accord,10354,2705,2705,2705,2741,2705,oui
+a_juger,35,35210,Pacé,Paré,35214,Parcé,0.75,0.89,4,accord,26012,3530,3530,3530,3531,3513,non
+a_juger,42,42239,Saint-Jean-Saint-Maurice-sur-Loire,Saint-Jean-le-Puy,42200,Saint-André-le-Puy,0.51,0.83,39,accord,32571,4216,4216,4216,4234,4223,non
+a_juger,49,49214,Montreuil-Juigné,Montreuil-Belfroy,49215,Montreuil-Bellay,0.65,0.84,1,accord,23808,4902,4902,4902,4939,4920,non
+a_juger,60,60074,Blaincourt-lès-Précy,Elaincourt,60195,Delincourt,0.64,0.9,121,accord,4539,6011,6011,6011,6039,6007,non
+a_juger,62,62178,Bruay-la-Buissière,Bruay-en-Artois,62379,Gouy-en-Artois,0.55,0.8,201,accord,6106,6247,6228,6247,6228+6247,6210,non
+a_juger,70,70312,Luze,Lure,70310,Lure,0.75,1.0,2,psm4,20444,7011,7011,7011,7030,7013,non
+a_juger,94,94017,Champigny-sur-Marne,Bry-sur-Marne,94015,Bry-sur-Marne,0.64,1.0,2,canton_conteste,7959,9404,7512,9404+9415,9404+9406+9435+9441,9404,oui
+ecartee,01,01015,Arbignieu,Arandas,01013,Arandas,0.38,1.0,2,accord,1049,0128,0104,0104,0104,0128,oui
+ecartee,01,01045,Birieux,Beynost,01043,Beynost,0.29,1.0,2,psm4,4325,0120,0135,0135,0135,0120,oui
+ecartee,01,01089,Château-Gaillard,Béon,01039,Béon,0.11,1.0,50,canton_conteste,8648,0109,0101,0101,0101,0109,oui
+ecartee,01,01138,Culoz,Cressin-Rochefort,01133,Cressin-Rochefort,0.19,1.0,5,psm6,11340,0104,0131,0131,0131,0104,oui
+ecartee,01,01326,Rillieux,KRomans,01328,Romans,0.13,0.92,2,600,29181,0110,0120,6939,6939,0110,oui
+ecartee,01,01451,Viriat,A O1 379 Saint-Maurice-de-Rémens,01379,Saint-Maurice-de-Rémens,0.21,0.95,72,fraction,40820,0108,0105,0105,0143,0101,non
+ecartee,02,02046,Barenton-Bugny,Barenton-sur-Serre,02048,Barenton-sur-Serre,0.62,1.0,2,majorite,2664,0215,0213,0213,0213,0213,non
+ecartee,02,02098,Bonneil,Bonnesvalyn,02099,Bonnesvalyn,0.67,1.0,1,canton_conteste,4831,0222,0208,0208,0208,0222,oui
+ecartee,02,02408,Laon,Landifay-et-Bertaignemont,02403,Landifay-et-Bertaignemont,0.3,1.0,5,psm4,18722,0227,0218,0218,0218+0238,0227,oui
+ecartee,02,02632,Quincy-Basse,Wiège-Faty,02832,Wiège-Faty,0.2,1.0,200,majorite,28491,0227,0211,0211,0211,0227,oui
+ecartee,02,02698,Sancy-les-Cheminots,Saint-Rémy-Elanzy (1),02693,Saint-Rémy-Blanzy,0.31,0.93,5,canton_conteste,35265,0224,0232,0232,0232,0224,oui
+ecartee,02,02714,Sermoise,Vendelles,02774,Vendelles,0.24,1.0,60,canton_conteste,36136,0233,0204,0204,0204,0233,oui
+ecartee,03,03185,Montluçon,Lalizolle,03135,Lalizolle,0.22,1.0,50,majorite,23649,0309,0320+0321,0320+0321,0320+0321+0331+0332+0334,0309,oui
+ecartee,03,03260,Saint-Sornin,Terjat,03280,Terjat,0.24,1.0,20,canton_conteste,34707,0317,0319,0319,0319,0317,oui
+ecartee,04,04196,Saint-Symphorien,Saint-Vincent-les-Forts,04198,Saint-Vincent-les-Forts,0.46,1.0,2,600,34781,0412,,,,0412,oui
+ecartee,06,06055,Duranus,Carros,06033,Carros,0.31,1.0,22,psm4,12305,0628,0612,0612,0612,0628,oui
+ecartee,07,07018,Astet,Ardoix,07013,Ardoix,0.18,1.0,5,canton_conteste,1553,0721,0723,0723,0723,0721,oui
+ecartee,07,07040,Boucieu-le-Roi,Devesset,07080,Devesset,0.2,1.0,40,psm6,5065,0715,0724,0724,0724,0715,oui
+ecartee,07,07146,Lyas,Malbosc,07148,Malbosc,0.36,1.0,2,600,20458,0727,0713,0713,0713,0727,oui
+ecartee,07,07175,Le Plagnal,Péreyres,07173,Péreyres,0.13,1.0,2,600,26974,0705,0716,0716,0716,0705,oui
+ecartee,08,08123,Chuffilly-Roche,Chooz,08122,Chooz,0.32,1.0,1,canton_conteste,9455,0811,0802,0802,0802,0811,oui
+ecartee,08,08125,Cliron,Chuffilly-Roche,08123,Chuffilly-Roche,0.4,1.0,2,600,9738,0802,0822,0822,0822,0802,oui
+ecartee,08,08157,Étion,Damourzy,08137,Damouzy,0.15,0.93,20,600,13234,0805,,,,0805,oui
+ecartee,08,08273,Marby,Marquigny,08278,Marquigny,0.57,1.0,5,accord,20993,0830,0825,0825,0825,0830,oui
+ecartee,08,08499,Wasigny,Tannay,08439,Tannay,0.46,1.0,60,canton_conteste,41210,0808,0819,0819,0819,0808,oui
+ecartee,11,11006,Albas,Alairac,11005,Alairac,0.5,1.0,1,canton_conteste,362,1122,1115,1115,1115,1122,oui
+ecartee,11,11069,Carcassonne,Cenne-Monestiés,11089,Cenne-Monestiés,0.32,1.0,20,canton_conteste,6912,1109,1107+1108,1107+1108,1107+1108+1132+1135,1109,oui
+ecartee,11,11135,La Fajolle,Fajac-en-Val,11133,Fajac-en-Val,0.47,1.0,2,psm4,13419,1118,1104,1104,1104,1118,oui
+ecartee,11,11354,Saint-Martin-des-Puits,Sainte-Camelle,11334,Sainte-Camelle,0.38,1.0,20,psm4,33424,1129,1118,1118,1118,1129,oui
+ecartee,13,13081,Rognac,Destrousse (La),13031,La Destrousse,0.25,1.0,50,canton_conteste,29454,1329,1306,1306,1306,1329,oui
+ecartee,14,14050,La Bazoque,Authie (1),14030,Authie,0.46,1.0,20,canton_conteste,3091,1439,1402,1402,1402,1439,oui
+ecartee,14,14095,Brécy,Branville,14093,Branville,0.43,1.0,2,accord,5677,1415,,,,1415,oui
+ecartee,14,14268,Fierville-Bray,Fresne-Camilly (Le),14288,Le Fresne-Camilly,0.46,1.0,20,canton_conteste,13856,1413,1407,1407,1407,1413,oui
+ecartee,14,14286,Fourneville,Fournet (Le),14285,Le Fournet,0.67,1.0,1,accord,14516,1410,1419,1419,1419,1410,oui
+ecartee,14,14351,La Lande-Vaumont,Hiéville,14331,Hiéville,0.2,1.0,20,fraction,18398,1429,1438,,,1429,oui
+ecartee,14,14368,Lisores,Maisoncelles-la-Jourdan,14388,Maisoncelles-la-Jourdan,0.36,1.0,20,canton_conteste,19695,1436,1423,1423,1423,1438,non
+ecartee,14,14436,Monceaux-en-Bessin,Mondrainville,14438,Mondrainville,0.41,1.0,2,canton_conteste,22823,1432,1403,1403,1403,1432,oui
+ecartee,14,14438,Mondrainville,Mittois,14433,Mittois,0.3,1.0,5,canton_conteste,22895,1429,1432,1432,1432,1429,oui
+ecartee,14,14464,Neuville,Ouily-du-Houley,14484,Ouilly-du-Houley,0.48,0.96,20,600,24852,1421,,,,1421,oui
+ecartee,14,14636,Saint-Ouen-des-Besaces,Saint-Ouen-le-Houx,14638,Saint-Ouen-le-Houx,0.59,1.0,2,600,33857,1423,1404,1404,1404,1423,oui
+ecartee,14,14704,Le Tourneur,Villers-sur-Mer,14754,Villers-sur-Mer,0.52,1.0,50,accord,37883,1435,1404,1404,1404,1435,oui
+ecartee,14,14736,Venoix,Verson,14738,Verson,0.5,1.0,2,accord,39306,1416,,,,1416,oui
+ecartee,16,16081,La Chapelle,Barro,16031,Barro,0.15,1.0,50,accord,8141,1624,1625,1625,1625,1624,oui
+ecartee,16,16417,Viville,Saint-Fraigne,16317,Saint-Fraigne,0.32,1.0,100,canton_conteste,40928,1601,1612,1612,1612,1601,oui
+ecartee,17,17022,Asnières-la-Giraud,Ballon,17032,Ballon,0.18,1.0,10,majorite,1493,1701,1729,1729,1729,1701,oui
+ecartee,17,17315,Saint-Christophe,Saint-Nazaire-sur-Charente,17375,Saint-Nazaire-sur-Charente,0.47,1.0,60,psm6,30897,1726,1710,1710,1710,1726,oui
+ecartee,17,17444,Thénac,Saint-Hilalire-de-Villefranche,17344,Saint-Hilaire-de-Villefranche,0.24,0.98,100,accord,37348,1728,1735,1735,1735,1728,oui
+ecartee,17,17486,La Brée-les-Bains,Taillebourg,17436,Taillebourg,0.17,1.0,50,psm6,N17486,1733,1731,1731,1731,1733,oui
+ecartee,19,19036,Chamberet,Chabrignac,19035,Chabrignac,0.53,1.0,1,majorite,7758,1912,1924,1924,1924,1912,oui
+ecartee,19,19268,Toy-Viam,Voutezac,19288,Voutezac,0.27,1.0,20,600,37572,1912,1907,1907,1907,1912,oui
+ecartee,20,20023,Asco,Arro,20022,Arro,0.5,1.0,1,600,1475,2051,2015,,2B25,,non
+ecartee,20,20045,Bustanico,Brando,20043,Brando,0.53,1.0,2,psm4,6418,2009,2054,2054,2B54,,non
+ecartee,20,20062,Carbuccia,Castineta,20082,Castineta,0.44,1.0,20,600,6907,2025,2006,2006,2A06,,non
+ecartee,20,20156,Mausoléo,Lama,20136,Lama,0.33,1.0,20,canton_conteste,21672,2021,2031,2031,2B05,,non
+ecartee,20,20159,Meria,Lecci,20139,Lecci,0.4,1.0,20,majorite,22074,2040,2023,,2B42,,non
+ecartee,20,20236,Poggio-di-Nazza,Poggio-di-Venaco,20238,Poggio-di-Venaco,0.74,1.0,2,majorite,28196,2058,2019,2019,2B19,,non
+ecartee,21,21025,Arrans,Arnay-le-Duc,21023,Arnay-le-Duc,0.38,1.0,2,canton_conteste,1345,2102,2118,2118,2121,2102,oui
+ecartee,21,21076,Binges,Bissey-la-Pierre,21078,Bissey-la-Pierre,0.3,1.0,2,accord,4300,2118,2125,2125,2125,2118,oui
+ecartee,21,21081,Blaisy-Haut,Aubigny-en-Plaine,21031,Aubigny-en-Plaine,0.32,1.0,50,psm4,4410,2129,2135,2135,2135,2129,oui
+ecartee,21,21086,Bligny-lès-Beaune,d44 Mosson,21444,Mosson,0.18,0.92,358,fraction,4535,2153,2106,2106,2106,2108,non
+ecartee,22,22182,Plélo,Lohuec,22132,Lohuec,0.36,1.0,50,majorite,27961,2205,2207,2207,2207,2205,oui
+ecartee,23,23053,Chard,Brionne (La),23033,La Brionne,0.17,1.0,20,canton_conteste,8406,2324,2303,2303,2303,2324,oui
+ecartee,24,24195,Gaugeac,Gageac-et-Rouillac,24193,Gageac-et-Rouillac,0.52,1.0,2,psm4,15165,2438,2420,2420,2420,2438,oui
+ecartee,24,24208,Grun-Bordas,Graulges (Les),24203,Les Graulges,0.44,1.0,5,majorite,16292,2419,2443,2443,2443,2419,oui
+ecartee,24,24290,Montferrand-du-Périgord,Larzac,24230,Larzac,0.15,1.0,60,psm4,22923,2402,2401,2401,2401,2402,oui
+ecartee,24,24404,Saint-Félix-de-Reillac-et-Mortemart,Saint-Félix-de-Bourdeilles,24403,Saint-Félix-de-Bourdeilles,0.68,1.0,1,600,31744,2419,2405,2405,2405,2419,oui
+ecartee,24,24520,Sarlat-la-Canéda,Payzac,24320,Payzac,0.3,1.0,200,canton_conteste,35368,2418,2436,2436,2436,2418,oui
+ecartee,25,25006,Adam-lès-Passavant,Aibre,25008,Aibre,0.19,1.0,2,600,119,2514,2504,2504,2504,2514,oui
+ecartee,25,25168,Coulans-sur-Lizon,Corcelle-Mieslot,25163,Corcelle-Mieslot,0.4,1.0,5,psm6,9850,2513,2501,,,2513,oui
+ecartee,25,25246,Fontaine-lès-Clerval,Fontenelles {Les),25248,Les Fontenelles,0.62,0.88,2,canton_conteste,14155,2525,2508,2508,2508,2525,oui
+ecartee,25,25259,Frasne,Feule,25239,Feule,0.36,1.0,20,600,14637,2521,2511,2511,2511,2521,oui
+ecartee,25,25594,Velesmes-Essarts,Mondon,25384,Mondon,0.1,1.0,210,600,39207,2523,2507,2507,2507,2523,oui
+ecartee,25,25596,Vellerot-lès-Vercel,Montferney,25396,Montferney,0.22,1.0,200,600,39223,2523,2519,2519,2519,2523,oui
+ecartee,26,26051,Bézaudun-sur-Bîne,Bâtie-Rolland (La),26031,La Bâtie-Rolland,0.3,1.0,20,600,3930,2615,2601,2601,2601,2615,oui
+ecartee,26,26081,Châteaudouble,Bâtie-Rolland (La),26031,La Bâtie-Rolland,0.4,1.0,50,accord,8641,2615,2604,2604,2604,2615,oui
+ecartee,26,26196,Montéléger,Montélimar,26198,Montélimar,0.7,1.0,2,accord,23626,2616,2629,,2634,2616,oui
+ecartee,26,26266,Rimon-et-Savel,Rochebaudin,26268,Rochebaudin,0.35,1.0,2,canton_conteste,29202,2610,2622,2622,2622,2610,oui
+ecartee,26,26336,Saou,Saurzet,26338,Sauzet,0.55,0.92,2,canton_conteste,35321,2615,2608,2608,2608,2615,oui
+ecartee,27,27083,Bonneville-Aptot,Bacquepuis,27033,Bacquepuis,0.24,1.0,50,600,4869,2716,2723,2723,2723,2716,oui
+ecartee,27,27125,Calleville,Caillouet-Orgeville,27123,Caillouet-Orgeville,0.71,1.0,2,canton_conteste,6601,2726,2709,2709,2709,2726,oui
+ecartee,27,27254,Fontaine-sous-Jouy,Fontaine-la-Louvet,27252,Fontaine-la-Louvet,0.62,1.0,2,fraction,14219,2744,2717,2717,2737,2734,non
+ecartee,27,27345,La Houssaye,Mandres,27383,Mandres,0.27,1.0,38,canton_conteste,17339,2735,2704,2704,2704,2735,oui
+ecartee,27,27415,Morainville-Jouveaux,Montfort-sur-Risle,27413,Montfort-sur-Risle,0.34,1.0,2,canton_conteste,23932,2723,2712,2712,2712,2723,oui
+ecartee,27,27498,Rouge-Perriers,Renneville,27488,Renneville,0.43,1.0,10,canton_conteste,29783,2718,2704,2704,2704,2718,oui
+ecartee,29,29157,Penhars,Logonna-Daoulas,29137,Logonna-Daoulas,0.29,1.0,20,accord,26405,2912,2935,,,2912,oui
+ecartee,29,29283,Tréboul,Trégunc,29293,Trégunc,0.57,1.0,10,psm6,38027,2910,,,,2910,oui
+ecartee,30,30198,Les Plantiers,Générac,30128,Générac,0.42,1.0,70,psm6,33149,3027,3025,3025,3025,3027,oui
+ecartee,30,30256,Saint-Gervais,Saint-Bresson,30238,Saint-Bresson,0.58,1.0,18,fraction,32138,3053,3007,3007,3007,3033,non
+ecartee,30,30258,Saint-Gilles,Saint-Florent-sur-Auzonnet,30253,Saint-Florent-sur-Auzonnet,0.47,1.0,5,canton_conteste,32180,3024,3027,3027,3027,3024,oui
+ecartee,30,30338,Vallérargues,Uchaud,30333,Uchaud,0.11,1.0,5,psm6,38721,3037,3015,3015,3015,,oui
+ecartee,31,31048,Baziège,Balesta,31043,Balesta,0.43,1.0,5,accord,3065,3122,3121,3121,3121,3122,oui
+ecartee,31,31049,Bazus,Bachas,31039,Bachas,0.55,1.0,10,psm6,3105,3102,3119,3119,3119,3102,oui
+ecartee,31,31064,Benque-Dessous-et-Dessus,Boussens,31084,Boussens,0.41,1.0,20,600,3692,3111,3104,3104,3104,3111,oui
+ecartee,31,31106,Caraman,Cardeilhac,31108,Cardeilhac,0.47,1.0,2,600,6897,3106,3108,3108,3108,3106,oui
+ecartee,31,31258,Lacaugne,Huos,31238,Huos,0.17,1.0,20,psm4,7239,3105,3127,3127,3127,3105,oui
+ecartee,31,31441,Prunet,Merville,31341,Merville,0.14,1.0,100,psm4,28159,3115,3108,3108,3108,3115,oui
+ecartee,31,31524,Salles-et-Pratviel,Martres-Tolosane,31324,Martres-Tolosane,0.32,1.0,200,accord,35144,3111,3104,3104,3104,3111,oui
+ecartee,31,31586,Villeneuve-Lécussan,Saux-et-Pomarède,31536,Saux-et-Pomarède,0.12,1.0,50,canton_conteste,40311,3129,3122,3122,3122,3129,oui
+ecartee,32,32381,Saint-Jean-le-Comtal,Freignan,32331,Preignan,0.24,0.88,50,majorite,32570,3202,3203,3203,3231,3202,oui
+ecartee,32,32427,Sembouès,Pouy-Loubrin,32327,Pouy-Loubrin,0.21,1.0,100,psm6,35921,3227,3214,3214,3214,3227,oui
+ecartee,32,32450,Tourdun,Sère,32430,Sère,0.18,1.0,20,canton_conteste,37844,3215,3214,3214,3214,3215,oui
+ecartee,33,33061,Bonnetan,Cadiilac,33081,Cadillac,0.12,0.88,20,psm4,4845,3317,3323,3323,3323,3317,oui
+ecartee,33,33188,Giscos,Gauriaguet,33183,Gauriaguet,0.25,1.0,5,psm6,15559,3389,3318,3318,3318,3339,non
+ecartee,33,33363,Sadirac,Saint-Christoly-Médoc,33383,Saint-Christoly-Médoc,0.31,1.0,20,psm4,30153,3329,3323,3323,3323,3329,oui
+ecartee,33,33368,Saint-André-du-Garn,Sadirac,33363,Sadirac,0.43,1.0,5,accord,30415,3323,3338,,,3323,oui
+ecartee,33,33466,Saint-Quentin-de-Baron,Saint-Vincent-de-Pertignas,33488,Saint-Vincent-de-Pertignas,0.57,1.0,22,fraction,34349,3397,3316,3316,3316,3337,non
+ecartee,33,33469,Saint-Romain-de-Vignague,Saint-Vivien-de-Blave,33489,Saint-Vivien-de-Blaye,0.56,0.94,20,600,34476,3344,3347,,,3344,oui
+ecartee,33,33511,Sendets,Vensac,33541,Vensac,0.46,1.0,30,canton_conteste,35970,3346,3325,3325,3325,3346,oui
+ecartee,33,33513,Sillas,Parsac,33313,Parsac,0.33,1.0,200,psm6,36343,3331,3325,3325,3325,3331,oui
+ecartee,34,34146,Lunel-Viel,Maraussan,34148,Maraussan,0.22,1.0,2,psm4,20352,3405,3417,3417,3417,3405,oui
+ecartee,34,34208,Popian,Pinet,34203,Pinet,0.55,1.0,5,600,27627,3411,3414,3414,3414,3411,oui
+ecartee,35,35058,La Chapelle-Chaussée,Bréal-sous-Vitré (1),35038,Bréal-sous-Vitré,0.33,1.0,20,majorite,8207,3542,3504,3504,3504,3542,oui
+ecartee,36,36005,Ardentes,Ambrault,36003,Ambrault,0.38,1.0,2,canton_conteste,33280,3613,3602,3602,3602,3613,oui
+ecartee,36,36046,La Châtre,Chavin,36048,Chavin,0.5,1.0,2,accord,8848,3603,3609,3609,3609,3603,oui
+ecartee,36,36095,Lignerolles,Chaillac,36035,Chaillac,0.32,1.0,60,600,19535,3617,3620,3620,3620,3617,oui
+ecartee,36,36175,Rouvres-les-Bois,KRosnay,36173,Rosnay,0.29,0.92,2,psm4,29894,3605,3614,3614,3614,3605,oui
+ecartee,37,37008,Athée-sur-Cher,Amboise,37003,Amboise,0.32,1.0,5,canton_conteste,1559,3701,3703,3703,3703,3701,oui
+ecartee,38,38228,Merlas,Maubec (1),38223,Maubec,0.33,1.0,5,canton_conteste,22102,3804,3827,3827,3827,3804,oui
+ecartee,38,38305,Le Pin,Pierre (La),38303,La Pierre,0.44,1.0,2,majorite,26879,3810,3843,3843,3843,3810,oui
+ecartee,38,38398,Saint-Jean-d'Avelanne,Saint-Hilaire-debla-Côte,38393,Saint-Hilaire-de-la-Côte,0.41,0.98,5,majorite,32454,3807,3821,3821,3821,3807,oui
+ecartee,38,38477,Savel,Saint-Clair-de-la-Tour,38377,Saint-Clair-de-la-Tour,0.35,1.0,100,600,35647,3833,3820,,,3833,oui
+ecartee,38,38484,Serpaize,Saint-Ondras,38434,Saint-Ondras,0.32,1.0,50,majorite,36144,3843,3838,3838,3838,3843,oui
+ecartee,39,39025,Augea,Aubépin (L'),39023,L'Aubépin,0.5,1.0,2,majorite,1774,3925,3903,3903,3903,3925,oui
+ecartee,40,40088,Dax,Eergouey,40038,Bergouey,0.0,0.88,50,accord,11662,4014,4004,4004,4004+4029,4014,oui
+ecartee,40,40126,Hinx,Horsarrieu,40128,Horsarrieu,0.29,1.0,2,600,17161,4006,4012,4012,4012,4008,non
+ecartee,40,40331,Villeneuve-de-Marsan,Urgons,40321,Urgons,0.25,1.0,10,600,40314,4006,4028,4028,4028,4006,oui
+ecartee,41,41008,Avaray,Areines,41003,Areines,0.31,1.0,5,canton_conteste,2129,4124,4110,4110,4110,,oui
+ecartee,41,41182,Pray,Méhers,41132,Méhers,0.2,1.0,50,psm4,27914,4118,4123,4123,4123,4118,oui
+ecartee,41,41237,Sassay,Saint-Quentin-lès-Troo,41227,Saint-Quentin-lès-Troo,0.24,1.0,10,600,35419,4112,4104,4104,4104,4112,oui
+ecartee,42,42128,Machézal,Maclas,42129,Maclas,0.57,1.0,1,accord,20491,4213,4232,4232,4232,4213,oui
+ecartee,42,42296,Salt-en-Donzy,Sauvain,42298,Sauvain,0.33,1.0,2,canton_conteste,30177,4225,4207,4207,4207,4225,oui
+ecartee,43,43056,Chanteuges,Chapelle-d'Aurec (La),43058,La Chapelle-d'Aurec,0.42,1.0,2,600,8112,4314,4310,4310,4310,4314,oui
+ecartee,44,44018,Bouaye,Besné,44013,Besné,0.36,1.0,5,accord,4781,4431,4404,4404,4404,4431,oui
+ecartee,45,45043,Bou,Boësse,45033,Boësses,0.44,0.92,10,600,4774,4530,,,4538,4530,oui
+ecartee,45,45098,Cléry-Saint-André,Chevilly (1),45093,Chevilly,0.26,1.0,5,accord,25231,4501,4510,4510,4510,4501,oui
+ecartee,45,45335,Vienne-en-Val,Vennecy,45333,Vennecy,0.56,1.0,2,psm6,39840,4520,4515,4515,4515,4520,oui
+ecartee,46,46046,Calamane,Calviac,46048,Calviac,0.53,1.0,2,600,6585,4650,4606,4606,4606,4630,non
+ecartee,46,46144,Lacave,Marminiac,46184,Marminiac,0.27,1.0,40,canton_conteste,18239,4607,4628,4628,4628,4607,oui
+ecartee,46,46165,Lavergne,Laval-de-Cère,46163,Laval-de-Cère,0.63,1.0,2,600,19015,4601,4611,4611,4611,4601,oui
+ecartee,46,46168,Lentillac-Saint-Blaise,Laval-de-Cère,46163,Laval-de-Cère,0.32,1.0,5,canton_conteste,19202,4601,4608,4608,4608,4601,oui
+ecartee,47,47136,Laperche,Montesquieu,47186,Montesquieu,0.21,1.0,50,600,26442,4718,4717,4717,4717,4718,oui
+ecartee,47,47164,Mazières-Naresse,Mauvezin-sur-Gupie,47163,Mauvezin-sur-Gupie,0.45,1.0,1,majorite,24592,4731,4735,4735,4735,,oui
+ecartee,47,47194,Moustier,Lamontioie,47133,Lamontjoie,0.56,0.9,61,fraction,24289,4799,4711,4711,4711,4712,non
+ecartee,47,47261,Saint-Nazaire,Saint-Urcisse,47281,Saint-Urcisse,0.58,1.0,20,psm4,33762,4729,4717,,,4729,oui
+ecartee,49,49027,Bégrolles-en-Mauges,Bourg-d'Iré (Le),49037,Le Bourg-d'Iré,0.38,1.0,10,600,3418,4930,4906,4906,4906,4930,oui
+ecartee,49,49228,Noyant,Mürs-Erigné,49223,Mûrs-Erigné,0.12,1.0,5,accord,25315,4923,4922,4922,4922,4923,oui
+ecartee,49,49255,Quincé,Puy-Notre-Dame (Le),49253,Le Puy-Notre-Dame,0.33,1.0,2,accord,28478,4920,4932,,,4920,oui
+ecartee,49,49353,Trélazé,Selches-sur-le-Loir,49333,Seiches-sur-le-Loir,0.26,0.94,20,canton_conteste,38088,4951,4903,,4936,4931,non
+ecartee,50,50025,Avranches,Auvers,50023,Auvers,0.53,1.0,2,psm4,2213,5009,5001,5001,5001,5009,oui
+ecartee,50,50155,Crollon,Cretteville,50153,Cretteville,0.44,1.0,2,canton_conteste,11184,5016,5013,5013,5013,5016,oui
+ecartee,50,50235,La Haye-d'Ectot,Hautteville-Bocage,50233,Hautteville-Bocage,0.3,1.0,2,canton_conteste,16850,5041,5003,5003,5003,5041,oui
+ecartee,50,50465,Saint-Ébremond-de-Bonfossé,Saint-Denis-le-Gast,50463,Saint-Denis-le-Gast,0.51,1.0,2,canton_conteste,31259,5014,5008,5008,5008,5014,oui
+ecartee,50,50604,Tréauville,Montsurvent,50354,Montsurvent,0.38,1.0,250,fraction,38016,5096,5028,5028,5028,5036,non
+ecartee,50,50626,Ver,Saint-Michel-des-Loups,50526,Saint-Michel-des-Loups,0.09,1.0,100,psm6,39336,5042,5014,5014,5014,5014,oui
+ecartee,51,51265,Gaye,Fromentières,51263,Fromentières,0.12,1.0,2,canton_conteste,15197,5117,5125,5125,5125,5117,oui
+ecartee,51,51278,Les Grandes-Loges,Givry-lés-Loisy,51273,Givry-lès-Loisy,0.56,1.0,5,majorite,15972,5129,5106,,5135,5129,oui
+ecartee,51,51456,Remicourt,Pogny,51436,Pogny,0.14,1.0,20,canton_conteste,28867,5116,5108,,5108,5116,oui
+ecartee,51,51505,Saint-Masmes,Janvry,51305,Janvry,0.24,1.0,200,psm6,33509,5151,5104,5104,5104,5131,non
+ecartee,51,51615,Vésigneul-sur-Coole,Verzenay,51613,Verzenay,0.32,1.0,2,600,39635,5130,5110,,,5130,oui
+ecartee,51,51659,Wargemoulin-Hurlus,Vourzy,51655,Vouzy,0.26,0.91,4,600,38907,5129,5132,5132,5132,5129,oui
+ecartee,52,52060,Bourbonne-les-Bains,Brouthières,52080,Brouthières,0.43,1.0,20,accord,5223,5222,5204,5204,5204,5222,oui
+ecartee,52,52443,Sailly,Soyers,52483,Soyers,0.33,1.0,40,accord,30188,5215,5222,5222,5222,5215,oui
+ecartee,53,53051,Champéon,Bigottière (La),53031,La Bigottière,0.11,1.0,20,psm4,7925,5305,5314,5314,5314,5305,oui
+ecartee,53,53062,Château-Gontier,Courbeveille,53082,Courbeveille,0.23,1.0,20,600,8652,5317,5306,5306,5306+5331,5317,oui
+ecartee,53,53065,Châtres-la-Forêt,Crennes-sur-Fraubée,53085,Crennes-sur-Fraubée,0.26,1.0,20,psm4,8619,5327,5311,5311,5311,5327,oui
+ecartee,53,53081,Courberie,Bigottiére (La),53031,La Bigottière,0.32,1.0,50,600,10597,5305,5314,,,5305,oui
+ecartee,53,53088,Cuillé,Boissière (La),53033,La Boissière,0.27,1.0,55,canton_conteste,11308,5309,5307,5307,5307,5309,oui
+ecartee,54,54174,Écrouves,Drouville,54173,Drouville,0.59,1.0,1,600,12476,5417,5427,5427,5427,5417,oui
+ecartee,54,54235,Goviller,O21 Armaucourt,54021,Armaucourt,0.21,0.95,214,psm4,15891,5453,5429,5429,5429,5423,non
+ecartee,54,54295,Landres,Landécourt,54293,Landécourt,0.59,1.0,2,600,18567,5405,5402,5402,5402,5405,oui
+ecartee,54,54318,Liverdun,Létricourt,54313,Létricourt,0.44,1.0,5,majorite,19720,5425,5412,5412,5412,5423,non
+ecartee,54,54539,Vacqueville,Malzéville,54339,Malzéville,0.67,1.0,200,majorite,38552,5419,5403,5403,5403,5419,oui
+ecartee,54,54598,Xivry-Circourt,Neuviller-lès-Badonviller,54398,Neuviller-lès-Badonviller,0.11,1.0,200,canton_conteste,41368,5404,5402,5402,5402,5404,oui
+ecartee,55,55564,Villers-sous-Bonchamp,Mouzay,55364,Mouzay,0.24,1.0,200,600,40526,5520,5509,,,5520,oui
+ecartee,56,56005,Arzon,Arradon,56003,Arradon,0.67,1.0,2,canton_conteste,1471,5656,5635,5635,5635,5638,non
+ecartee,56,56041,Cléguérec,Cournon,56044,Cournon,0.38,1.0,3,600,9656,5608,5605,5605,5605,5608,oui
+ecartee,57,57059,Bellange,Augny,57039,Augny,0.31,1.0,20,psm6,3489,5720,5706,5706,5706,5720,oui
+ecartee,57,57497,Nelling,Lutzelbourg,57427,Lutzelbourg,0.33,1.0,70,psm6,25161,5724,5728,5728,5728,5724,oui
+ecartee,57,57548,Pontoy,Pierrevillers,57543,Pierrevillers,0.11,1.0,5,canton_conteste,27594,5742,5733,5733,5733,5742,oui
+ecartee,57,57586,Rochonvillers,Laudrefang,57386,Laudrefang,0.17,1.0,200,canton_conteste,29411,5709,5711,5711,5711,5709,oui
+ecartee,57,57592,Romelfing,Richemont,57582,Richemont,0.33,1.0,10,canton_conteste,29530,5739,5710,5710,5710,,non
+ecartee,57,57628,Sarralbe,Oron,57528,Oron,0.17,1.0,100,majorite,35337,5707,5728,5728,5728,5707,oui
+ecartee,57,57658,Soucht,Schœneck,57638,Schœneck,0.43,1.0,20,majorite,36862,5712,5726,5726,5726,5712,oui
+ecartee,57,57728,Voimhaut,Virming,57723,Virming,0.4,1.0,5,canton_conteste,40953,5701,5709,5709,5709,5701,oui
+ecartee,57,57757,Yutz,Vulmont,57737,Vulmont,0.36,1.0,20,600,17581,5733,5732,,5738,5733,oui
+ecartee,58,58089,Couloutre,Brèves,58039,Brèves,0.27,1.0,50,600,10571,5805,5809,5809,5809,5805,oui
+ecartee,59,59036,Avesnes-sur-Helpe,Avesnes-le-Sec,59038,Avesnes-le-Sec,0.67,1.0,2,canton_conteste,2166,5911,,,5903+5904,5911,oui
+ecartee,59,59259,Ghissignies,Flines-lez-Râches,59239,Flines-lez-Raches,0.31,1.0,20,canton_conteste,15444,5922,5949,5949,5949,5922,oui
+ecartee,60,60411,Monneville,Hérelle (La),60311,La Hérelle,0.47,1.0,100,canton_conteste,21333,6006,6007,6007,6007,6006,oui
+ecartee,60,60662,Le Vauroux,Saint-Léger-aux-Bois,60582,Saint-Léger-aux-Bois,0.38,1.0,80,fraction,39073,6052,6010,6010,6010,6032,non
+ecartee,62,62191,Caffiers,oains-en-Gohelle,62737,Sains-en-Gohelle,0.27,0.93,546,fraction,6533,6291,6225,6225,6225,6251,non
+ecartee,62,62454,Hinges,Herlière (La),62434,La Herlière,0.29,1.0,20,canton_conteste,17155,6210,6212,6212,6270,6210,oui
+ecartee,62,62644,Ouve-Wirquin,Offekerque,62634,Offekerque,0.48,1.0,10,psm4,25966,6206,6234,6234,6234,6206,oui
+ecartee,62,62654,Peuplingues,Villers-au-Bois,62854,Villers-au-Bois,0.25,1.0,200,600,26638,6245,6215,6215,6215,6245,oui
+ecartee,62,62812,Thiembronne,Estrée,62312,Estrée,0.35,1.0,500,canton_conteste,37428,6222,6223,6223,6223,6222,oui
+ecartee,62,62909,Ytres,Liettres,62509,Liettres,0.62,1.0,400,majorite,17666,6236,8016,8016,6211,6238,non
+ecartee,64,64081,Aussurucq,Arancou,64031,Arancou,0.38,1.0,50,accord,1943,6409,6420,6420,6420,6409,oui
+ecartee,64,64181,Castillon (Canton d'Arthez-de-Béarn),Biron,64131,Biron,0.43,1.0,50,accord,7164,6415,6403,6403,6403,6415,oui
+ecartee,64,64372,Maure,Mendive,64379,Mendive,0.33,1.0,7,canton_conteste,21636,6435,6422,6422,6422,6435,oui
+ecartee,64,64395,Monségur,Monein,64393,Monein,0.57,1.0,2,600,23009,6421,6422,6422,6422,6421,oui
+ecartee,64,64397,Montagut,Momas,64387,Momas,0.46,1.0,10,600,23085,6419,6405,6405,6405,6419,oui
+ecartee,65,65062,Barbazan-Debat,Berbérust-Lias,65082,Berbérust-Lias,0.38,1.0,20,600,2614,6512,6522,6522,6522,6512,oui
+ecartee,65,65168,Esquièze-Sère,Esbareich,65158,Esbareich,0.38,1.0,10,canton_conteste,13055,6515,6513,6513,6513,6515,oui
+ecartee,65,65344,Ossun,Sailhan,65384,Sailhan,0.33,1.0,40,canton_conteste,25857,6526,6516,6516,6516,6526,oui
+ecartee,65,65366,Poueyferré,Poury,65368,Pouy,0.53,0.89,2,psm4,27301,6506,6512,6512,6527,6508,non
+ecartee,65,65478,Viscos,Ricaud,65378,Ricaud,0.33,1.0,100,canton_conteste,40844,6523,6513,6513,6513,6523,oui
+ecartee,66,66153,Prunet-et-Belpuig,Palau-del-Vidre,66133,Palau-del-Vidre,0.36,1.0,20,canton_conteste,28162,6601,6618,6618,6618,6601,oui
+ecartee,66,66155,Py,Prunet-et-Belpuig,66153,Prunet-et-Belpuig,0.12,1.0,2,accord,28358,6618,6607,6607,6607,6618,oui
+ecartee,66,66208,Théza,Taulis,66203,Taulis,0.36,1.0,5,600,37399,6602,6608,6608,6628,6602,oui
+ecartee,67,67018,Balbronn,Asswiller,67013,Asswiller,0.35,1.0,5,psm6,2506,6706,6733,6733,6733,6706,oui
+ecartee,67,67081,Dahlenheim,Bernardswiller,67031,Bernardswiller,0.25,1.0,50,canton_conteste,11469,6716,6733,6733,6733,6716,oui
+ecartee,67,67205,Hœrdt,Hochstett,67203,Hochstett,0.29,1.0,2,psm6,17195,6709,6705,6705,6705,6709,oui
+ecartee,67,67239,Kintzheim,Reitwiller,67393,Reitwiller,0.21,1.0,154,fraction,18136,6791,6724,6724,6724,6731,non
+ecartee,67,67328,Niedermodern,Niedernai,67329,Niedernai,0.67,1.0,1,psm4,25008,6716,6704,6704,6704,6716,oui
+ecartee,67,67451,Schleithal,Salenthal,67431,Salenthal,0.74,1.0,20,canton_conteste,35759,6713,6734,6734,6734,6713,oui
+ecartee,69,69145,Odenas,Neuville-sur-Saône,69143,Neuville-sur-Saône,0.18,1.0,2,majorite,25445,6925,6905,6905,6905,6925,oui
+ecartee,69,69146,Oingt,Orliénas,69148,Orliénas,0.46,1.0,2,600,25497,6924,6906,6906,6906,6924,oui
+ecartee,69,69211,Saint-Jean-d'Ardières,Genas (1),69277,Genas,0.35,1.0,66,fraction,32447,6957,6905,6905,6905,,non
+ecartee,69,69278,Genay,Corbas (1),69273,Corbas,0.18,1.0,5,600,15247,6938,0134,0134,6925,6938,oui
+ecartee,70,70541,Velorcey,Velleclaire,70531,Velleclaire,0.42,1.0,10,600,39235,7010,7023,7023,7023,7010,oui
+ecartee,79,79045,Bouin,Bouillé-Loretz,79043,Bouillé-Loretz,0.44,1.0,2,psm6,5143,7902,7910,7910,7910,7902,oui
+ecartee,79,79055,Brieuil-sur-Chizé,Breuil-sous-Argenton (Le),79053,Le Breuil-sous-Argenton,0.61,1.0,2,majorite,5922,7902,7905,7905,7905,7902,oui
+ecartee,79,79084,Chenay,Chail,79064,Chail,0.55,1.0,20,psm6,9130,7916,7913,7913,7913,7916,oui
+ecartee,79,79094,Clessé,Bessines,79034,Bessines,0.57,1.0,60,psm4,9717,7912,7918,7918,7918,7912,oui
+ecartee,79,79250,Sainte-Gemme,Rom,79230,Rom,0.14,1.0,20,accord,31393,7918,7927,7927,7927,7913,non
+ecartee,80,80025,Argoules,Andechy,80023,Andechy,0.27,1.0,2,canton_conteste,1230,8027,8039,8039,8039,8027,oui
+ecartee,80,80091,Berny-sur-Noye,Bailleul,80051,Bailleul,0.3,1.0,40,psm6,3834,8023,,,,8023,oui
+ecartee,80,80141,Brie,Cayeux-en-Santerre,80181,Cayeux-en-Santerre,0.1,1.0,40,canton_conteste,5903,8028,8033,8033,8033,8028,oui
+ecartee,80,80151,Buire-sur-l'Ancre,Boves,80131,Boves,0.32,1.0,20,psm4,6243,8013,8006,8006,8006,8013,oui
+ecartee,80,80158,Buverchy,Bus-lès-Artois,80153,Bus-lès-Artois,0.4,1.0,5,canton_conteste,6432,8009,8030,8030,8030,8003,non
+ecartee,80,80271,Épehy,Éramecourt,80277,Éramecourt,0.27,1.0,6,canton_conteste,12704,8035,8036,8036,8036,,oui
+ecartee,80,80567,Mont-Saint-Quentin,Frise,80367,Frise,0.19,1.0,200,psm4,23873,8014,8033,,,8014,oui
+ecartee,80,80603,Ochancourt,Villers-lès-Rovye,80803,Villers-lès-Roye,0.08,0.97,200,psm4,25430,8038,8011,,8046,8038,oui
+ecartee,80,80615,Ovillers-la-Boisselle,Vron,80815,Vron,0.26,1.0,200,majorite,25980,8039,8006,8006,8006,8039,oui
+ecartee,80,80625,Pierrepont-sur-Avre,Warvillers,80823,Warvillers,0.3,1.0,198,fraction,26832,8057,8028,8028,8028,8037,non
+ecartee,80,80659,Raincheval,Quesnoy-sur-Airaines,80655,Quesnoy-sur-Airaines,0.36,1.0,4,psm4,28562,8026,8003,8003,8003,,oui
+ecartee,80,80817,Wanel,Fleury,80317,Fleury,0.18,1.0,500,psm6,41176,8017,,,,8017,oui
+ecartee,82,82048,Dieupentale,Donzac,82049,Donzac,0.35,1.0,1,psm4,11825,8201,8207,8207,8207,8201,oui
+ecartee,85,85075,Croix-de-Vie,Corpe,85073,Corpe,0.4,1.0,2,psm4,11164,8513,,,,8513,oui
+ecartee,87,87060,Dournazac,Jouac,87080,Jouac,0.57,1.0,20,accord,12153,8728,8727,8727,8727,8728,oui
+ecartee,87,87085,Limoges,Laurière,87083,Laurière,0.4,1.0,2,canton_conteste,19609,8710,,,8711+8712+8713+8714+8730+8731+8732+8733+8734+8735+8736+8737+8739+8740+8741+8742,8710,oui
+ecartee,88,88085,Champdray,Châtenoiïs,88095,Châtenois,0.32,0.95,10,600,7910,8807,8808,8808,8808,8807,oui
+ecartee,88,88269,Liézey,Martigny-les-Bains,88289,Martigny-les-Bains,0.18,1.0,20,accord,19513,8815,8814,8814,8814,8815,oui
+ecartee,88,88448,Sauville,Sartes,88443,Sartes,0.43,1.0,5,600,35617,8818,8804,8804,8804,8818,oui
+ecartee,89,89018,Armeau,Appoigny,89013,Appoigny,0.14,1.0,5,canton_conteste,1267,8904,8937,8937,8937,8904,oui
+ecartee,89,89258,Milly,Migé,89256,Migé,0.44,1.0,2,psm4,22532,8912,8909,,,8912,oui
+ecartee,89,89266,Montillot,Parly,89286,Parly,0.14,1.0,20,fraction,23586,8943,8935,8935,8935,8933,non
+ecartee,89,89469,Perceneige,Villiers-Bonneux,89474,Villiers-Vineux,0.32,0.83,5,majorite,40664,8981,8931,8931,8931,8916,non
+ecartee,90,90059,Lacollonge,Grosne,90055,Grosne,0.25,1.0,4,600,9886,9002,9003,9003,9003,9002,oui
+inoffensif,01,01245,Bohas-Meyriat-Rignat,Mevyriat,01293,Peyriat,0.54,0.8,48,accord,22405,0107,0107,0107,0107,0116,non
+inoffensif,06,06039,Châteauneuf-Villevieille,Châteauneuf-de-Contes,06040,Châteauneuf-d'Entraunes,0.62,0.85,1,accord,8679,0607,0607,0607,0607,0611,non
+inoffensif,06,06088,Nice,1er Canton,06134,Séranon,0.17,0.8,46,600,24984,0614,0614+0615+0616+0617,0614+0615+0616+0617,0614+0615+0616+0617+0632+0633+0637+0638+0639+0640+0641+0642+0643+0644,0621,non
+inoffensif,06,06088,Nice,> Canton,06031,Cantaron,0.2,0.86,57,600,24984,0615,0614+0615+0616+0617,0614+0615+0616+0617,0614+0615+0616+0617+0632+0633+0637+0638+0639+0640+0641+0642+0643+0644,0607,non
+inoffensif,06,06088,Nice,8° Canton,06031,Cantaron,0.2,0.86,57,600,24984,0616,0614+0615+0616+0617,0614+0615+0616+0617,0614+0615+0616+0617+0632+0633+0637+0638+0639+0640+0641+0642+0643+0644,0607,non
+inoffensif,07,07112,Labastide-sur-Bésorgues,Labastide-de-Juvinas,07113,Labastide-de-Virac,0.62,0.82,1,accord,18201,0702,0702,0702,0702,0726,non
+inoffensif,07,07216,Saint-Barthélemy-Grozon,Saint-Barthélemy-le-Pin,07217,Saint-Barthélemy-le-Plain,0.78,0.95,1,accord,30642,0710,0710,0710,0710,0724,non
+inoffensif,07,07270,Saint-Martin-sur-Lavezon,Saint-Martin-le-Supérieur,07271,Saint-Martin-l'Inférieur,0.65,0.84,1,accord,33479,0714,0714,0714,0714,,oui
+inoffensif,08,08319,Neuville-lez-Beaulieu,Neuville-aux-Tourneurs (La),08318,La Neuville-aux-Joûtes,0.62,0.81,1,accord,24888,0829,0829,0829,0829,0829,oui
+inoffensif,17,17332,Saint-Georges-Antignac,Saint-Georges-de-Cubillac,17338,Saint-Georges-du-Bois,0.71,0.8,6,accord,31941,1727,1727,1727,1727,1737,non
+inoffensif,18,18188,Primelles,Lunery,18133,Lunery,0.27,1.0,55,fraction,28069,1808,1808,1807+1808,1808,1808,oui
+inoffensif,19,19260,Sioniac,Végennes,19280,Végennes,0.13,1.0,20,majorite,36388,1903,1903,1903,1903,1903,oui
+inoffensif,21,21084,Source-Seine,Blessey,21251,Essey,0.33,0.83,167,accord,4511,2136,2136,2136,2136,2126,non
+inoffensif,21,21305,Grancey-sur-Ource,Goulles (Les),21303,Les Goulles,0.36,1.0,2,accord,15934,2122,2122,2122,2122,2122,oui
+inoffensif,21,21433,Montigny-Mornay-Villeneuve-sur-Vingeanne,Montigny-sur-Vingeanne,21053,Beaumont-sur-Vingeanne,0.71,0.8,380,accord,23583,2113,2113,2113,2113,2120,non
+inoffensif,22,22179,Fréhel,Pléhérel,22178,Pléhédel,0.57,0.88,1,accord,27073,2224,2224,2224,2224,2239,non
+inoffensif,22,22345,Trébry,Trédaniel,22346,Trédaniel,0.4,1.0,1,accord,38031,2226,2226,2226,2226,2226,oui
+inoffensif,28,28196,Illiers-Combray,lIlliers,28102,Clévilliers,0.64,0.84,94,accord,17527,2815,2815,2815,2815,2807,non
+inoffensif,31,31591,Escoulis,Saleich,31521,Saleich,0.4,1.0,70,accord,N31591,3132,3132,3132,3132,3132,oui
+inoffensif,32,32043,Belmont,Bazian,32033,Bazian,0.31,1.0,10,accord,3601,3229,3229,3229,3229,3229,oui
+inoffensif,33,33063,Bordeaux,4 Canton,33229,Lanton,0.14,0.83,166,600,4923,3311,3308+3309+3310+3311+3312+3313+3314,3308+3309+3310+3311+3312+3313+3314,3308+3309+3310+3311+3312+3313+3314+3353,3302,non
+inoffensif,33,33063,Bordeaux,7 Canton,33229,Lanton,0.14,0.83,166,600,4923,3314,3308+3309+3310+3311+3312+3313+3314,3308+3309+3310+3311+3312+3313+3314,3308+3309+3310+3311+3312+3313+3314+3353,3302,non
+inoffensif,39,39010,Andelot-Morval,Andelot-lès-Saint-Amour,39378,Nanc-lès-Saint-Amour,0.61,0.81,368,accord,745,3927,3927,3927,3927,3925,non
+inoffensif,39,39493,Saint-Maurice-Crillat,Saint-Maurice-en-Montagne,39481,Saint-Germain-en-Montagne,0.63,0.82,12,accord,33546,3928,3928,3928,3928,3906,non
+inoffensif,44,44156,Corcoué-sur-Logne,Saint-Étienne-de-Corcoué,44167,Saint-Jean-de-Corcoué,0.39,0.82,11,accord,31649,4415,4415,4415,4415,4415,oui
+inoffensif,46,46167,Lentillac-du-Causse,Lentillac-Lauzès,46303,Sénaillac-Lauzès,0.75,0.87,136,accord,19201,4616,4616,4616,4616,4616,oui
+inoffensif,47,47067,Clermont-Soubiran,Clermont-Dessus,47066,Clermont-Dessous,0.67,0.97,1,accord,9696,4729,4729,4729,4729,4727,non
+inoffensif,47,47152,Lougratte,Lalandusse,47132,Lalandusse,0.32,1.0,20,accord,20107,4709,4709,4709,4709,4709,oui
+inoffensif,49,49078,Charcé-Saint-Ellier-sur-Aubance,Charrcé,49060,Chacé,0.35,0.83,18,accord,8399,4932,4932,4932,4932,4929,non
+inoffensif,51,51108,Châlons-en-Champagne,CHALONS-SUR-MARNE,51136,Châtillon-sur-Marne,0.67,0.88,28,accord,7728,5106,5106,5106,5106+5135+5136+5143,5107,non
+inoffensif,51,51415,Omey,Omer,51465,Romery,0.75,0.8,50,accord,25579,5116,5116,5116,5116,5103,non
+inoffensif,52,52194,Eurville-Bienville,Eurvile,52286,Leurville,0.58,0.88,92,600,11396,5208,5208,5208,5208,5224,non
+inoffensif,52,52388,Pierremont-sur-Amance,Pierrefaites,52389,Pierrefontaines,0.52,0.81,1,accord,26789,5215,5215,5215,5215,5217,non
+inoffensif,52,52413,Rachecourt-Suzémont,Rachecourt-sur-Blaise,52414,Rachecourt-sur-Marne,0.7,0.81,1,accord,28547,5228,5228,5228,5228,5208,non
+inoffensif,55,55358,Chanteraine,Morlaincourt,55216,Gouraincourt,0.35,0.83,142,accord,23999,5511,5511,5511,5511,5519,non
+inoffensif,55,55442,Raival,Rosnes,55436,Les Roises,0.17,0.83,6,accord,29699,5525,5525,5525,5525,5510,non
+inoffensif,55,55517,Seuil-d'Argonne,Triaucourt-en-Argonne,55082,Brocourt-en-Argonne,0.5,0.83,435,accord,38209,5521,5521,5521,5521,5504,non
+inoffensif,59,59631,Walincourt-Selvigny,Wäalincourt,59372,Malincourt,0.69,0.86,259,accord,41160,5918,5918,5918,5918,5918,oui
+inoffensif,63,63242,Moriat,Mauriat,63202,Madriat,0.77,0.86,40,accord,21657,6340,6340,6340,6340,6303,non
+inoffensif,65,65379,Ris,caud,65378,Ricaud,0.0,0.8,1,psm6,29230,6506,6506,6506,6506,6523,non
+inoffensif,70,70101,Broye-Aubigney-Montseugny,Brove-lès-Pesmes,70048,Bard-lès-Pesmes,0.38,0.81,53,accord,6099,7019,7019,7019,7019,7019,oui
+inoffensif,70,70247,Fouvent-Saint-Andoche,Fouvent-le-Haut,70246,Fouvent-le-Bas,0.5,0.8,1,accord,14541,7004,7004,7004,7004,7004,oui
+inoffensif,70,70271,Gouhenans,Granges-le-Bourg,70277,Granges-le-Bourg,0.35,1.0,6,accord,15784,7027,7027,7027,7027,7027,oui
+inoffensif,79,79336,Vançais,Vanzay,79338,Vanzay,0.62,1.0,2,accord,38804,7913,7913,7913,7913,7913,oui
+inoffensif,86,86233,Valdivienne,Saint-Martin-la-Rivière,86234,Saint-Martin-l'Ars,0.45,0.8,1,accord,33456,8604,8604,8604,8604,8601,non
+inoffensif,89,89067,Cézy,Céry,89132,Cry,0.75,0.86,65,accord,7600,8919,8919,8919,8919,8902,non

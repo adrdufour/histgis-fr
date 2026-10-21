@@ -114,6 +114,71 @@ CREATE TABLE c68_src (
 
 \copy c68_src FROM 'cog1968/communes_1968_fusion.csv' WITH (FORMAT csv, HEADER true)
 
+-- ---------------------------------------------------------------------------
+-- 1 bis. Les lignes dont le NOM désigne une autre commune que le CODE
+--
+-- Ajouté le 21 octobre 2026. `cog1968/controle_nom_code_base.py` a trouvé
+-- 629 lignes du dépôt portant le nom d'une autre commune du département que
+-- celle de leur code, dont 325 qui mettaient en base un canton faux en 1968 —
+-- 286 sous forme de FAUSSES FRACTIONS : le code apparaît deux fois, et `59`
+-- coupe la commune en deux (Viriat, Buellas, Trévoux dans l'Ain ; Suippes, Le
+-- Pin…). `cog1968/c68_codes_corriges.csv` dit, ligne à ligne :
+--   rendre   la ligne passe au code de la commune nommée, qui n'en avait pas
+--            et dont c'est bien le canton (`insee_ocr` garde le code lu) ;
+--   retirer  la commune nommée a déjà sa ligne, ou le canton n'est celui
+--            d'aucune des deux communes — sauf la DERNIÈRE ligne d'un code
+--            dont la lecture était déjà écartée en aval : elle reste, `96` la
+--            corrige (sans elle, Laon, Dax, Château-Gontier… perdaient leur
+--            canton de 1968). 392 lignes : 77 rendues, 315 retirées.
+-- Les lignes sont reconnues par (dep, code lu, canton, nom lu, page) : une
+-- correction qui ne trouve pas exactement UNE ligne arrête tout, parce qu'un
+-- fichier source modifié ne doit pas recevoir en silence les corrections d'un
+-- autre. Le détail est gardé dans `c68_correction`.
+-- ---------------------------------------------------------------------------
+DROP TABLE IF EXISTS c68_correction;
+CREATE TABLE c68_correction (
+    dep text, insee_lu char(5), canton text, nom_lu text, page text,
+    action text CHECK (action IN ('rendre', 'retirer')),
+    insee_corrige char(5), nom_corrige text, verdict text, motif text
+);
+\copy c68_correction FROM 'cog1968/c68_codes_corriges.csv' WITH (FORMAT csv, HEADER true)
+
+DO $$
+DECLARE n bigint;
+BEGIN
+    SELECT count(*) INTO n FROM c68_correction c
+     WHERE (SELECT count(*) FROM c68_src s
+             WHERE s.dep = c.dep AND s.insee = c.insee_lu AND s.canton = c.canton
+               AND s.nom = c.nom_lu AND s.page IS NOT DISTINCT FROM c.page) <> 1;
+    IF n > 0 THEN
+        RAISE EXCEPTION 'CORRECTIONS 1968 : % ligne(s) de c68_codes_corriges.csv ne '
+                        'désignent pas exactement une ligne du dépôt.', n;
+    END IF;
+    SELECT count(*) INTO n FROM c68_correction
+     WHERE action = 'rendre' AND (insee_corrige IS NULL OR left(insee_corrige, 2) <> dep);
+    IF n > 0 THEN
+        RAISE EXCEPTION 'CORRECTIONS 1968 : % ligne(s) à rendre sans code valable.', n;
+    END IF;
+END $$;
+
+DELETE FROM c68_src s USING c68_correction c
+ WHERE c.action = 'retirer'
+   AND s.dep = c.dep AND s.insee = c.insee_lu AND s.canton = c.canton
+   AND s.nom = c.nom_lu AND s.page IS NOT DISTINCT FROM c.page;
+
+UPDATE c68_src s
+   SET insee_ocr = coalesce(s.insee_ocr, s.insee),
+       insee     = c.insee_corrige,
+       insee3    = right(c.insee_corrige, 3)
+  FROM c68_correction c
+ WHERE c.action = 'rendre'
+   AND s.dep = c.dep AND s.insee = c.insee_lu AND s.canton = c.canton
+   AND s.nom = c.nom_lu AND s.page IS NOT DISTINCT FROM c.page;
+
+\echo ''
+\echo '-- 1 bis. corrections nom / code appliquées'
+SELECT action, count(*) AS lignes FROM c68_correction GROUP BY action ORDER BY action;
+
 \echo ''
 \echo '-- 1. dépôt'
 SELECT count(*)                              AS lignes,

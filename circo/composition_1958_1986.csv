@@ -2414,7 +2414,7 @@ dep,departement,depuis,jusqu,reference,circonscription,canton_atlas,canton_id,ca
 69,Rhône,1973,1986,1973-12-01,13,"communes:Bron:Bron,Vaulx",,,divisé
 69,Rhône,1973,1986,1973-12-01,6,Villeurbanne,,,sans unité en base
 69,Rhône,1973,1986,1973-12-01,7,Neuville,6925,Neuville-sur-Saône,préfixe
-69,Rhône,1973,1986,1973-12-01,7,Rillieux,,,sans unité en base
+69,Rhône,1973,1986,1973-12-01,7,Rillieux,6939,Rillieux-la-Pape,préfixe
 69,Rhône,1973,1986,1973-12-01,9,Lamure,6909,Lamure-sur-Azergues,préfixe
 69,Rhône,1973,1986,1973-12-01,10,Villefranche,6932,Villefranche-sur-Saône,préfixe
 71,Saône-et-Loire,1958,1986,1958-12-01,1,Saint-Gengoux-le-National,7141,Saint-Gengoux-le-National,

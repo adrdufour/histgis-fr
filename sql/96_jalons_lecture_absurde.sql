@@ -261,6 +261,64 @@ WHERE  a.d IN (DATE '1940-06-01', DATE '1999-06-01')
 GROUP  BY a.d ORDER BY 1;
 
 -- ---------------------------------------------------------------------------
+-- 3 bis. LES LECTURES QUI SE PORTENT GARANTES LES UNES DES AUTRES
+--
+-- Ajouté le 20 octobre 2026, sur Saint-Rambert-en-Bugey. Le jalon de 1968 lit
+-- « 26 » (Pont-de-Vaux, en Bresse) pour trois voisines du Bugey —
+-- Saint-Rambert, Oncieu, Nivollet-Montgriffon — au lieu de « 28 »
+-- (Saint-Rambert). L'emprise de 0126 contenait donc ces trois lectures, et
+-- chacune « touchait » Pont-de-Vaux par les deux autres : classées `contigu`,
+-- jamais jugées. Saint-Rambert restait sans canton de 1941 à 1998.
+--
+-- Règle : une lecture qu'AUCUN bout ne confirme ne se fait garantir que par
+-- un voisin SÛR — ligne de 1940, de 1999, d'un autre fichier, ou lecture de
+-- jalon confirmée. Les lectures non confirmées d'un même canton forment des
+-- grappes de voisines ; une grappe est rattachée si l'un de ses membres touche
+-- l'emprise SÛRE du canton. Si le canton n'a aucun membre sûr (créé entre
+-- 1954 et 1968 et disparu avant 1999), rien ne change : ses lectures se
+-- garantissent entre elles, comme avant.
+-- ---------------------------------------------------------------------------
+DROP TABLE IF EXISTS p96_ligne_conf;
+CREATE TABLE p96_ligne_conf AS
+SELECT l.*, g.geom,
+       EXISTS (SELECT 1 FROM p96_etat e
+                WHERE e.base = l.atom_id AND e.d <> l.d AND e.unit_id = l.unit_lu
+                  AND e.d IN (DATE '1940-06-01', DATE '1954-06-01',
+                              DATE '1968-06-01', DATE '1999-06-01')) AS confirme
+FROM   p96_ligne l LEFT JOIN atom_geom g ON g.atom_id = l.atom_id
+WHERE  l.atom_id NOT LIKE '%#%';
+
+DROP TABLE IF EXISTS p96_emprise_sure;
+CREATE TABLE p96_emprise_sure AS
+SELECT DISTINCT e.unit_id, e.base, g.geom
+FROM   p96_etat e JOIN atom_geom g ON g.atom_id = e.base
+WHERE  NOT EXISTS (SELECT 1 FROM p96_ligne_conf c
+                    WHERE c.d = e.d AND c.atom_id = e.atom_id AND c.unit_lu = e.unit_id
+                      AND NOT c.confirme);
+CREATE INDEX p96_emprise_sure_u_idx ON p96_emprise_sure (unit_id);
+CREATE INDEX p96_emprise_sure_g_idx ON p96_emprise_sure USING gist (geom);
+
+DROP TABLE IF EXISTS p96_grappe;
+CREATE TABLE p96_grappe AS
+SELECT jalon, d, atom_id, unit_lu, geom,
+       ST_ClusterDBSCAN(geom, eps := :seuil_contigu, minpoints := 1)
+           OVER (PARTITION BY jalon, unit_lu) AS grappe
+FROM   p96_ligne_conf WHERE NOT confirme AND geom IS NOT NULL;
+ALTER TABLE p96_grappe ADD COLUMN rattachee boolean;
+UPDATE p96_grappe x SET rattachee = EXISTS (
+    SELECT 1 FROM p96_grappe y JOIN p96_emprise_sure b
+      ON b.unit_id = y.unit_lu AND b.base <> y.atom_id
+     AND ST_DWithin(y.geom, b.geom, :seuil_contigu)
+    WHERE y.jalon = x.jalon AND y.unit_lu = x.unit_lu AND y.grappe = x.grappe)
+  OR NOT EXISTS (SELECT 1 FROM p96_emprise_sure b
+                  WHERE b.unit_id = x.unit_lu AND b.base <> x.atom_id);
+
+\echo ''
+\echo '-- 3 bis. lectures non confirmées dont la grappe ne touche aucun membre sûr'
+SELECT jalon, count(*) AS lignes, count(DISTINCT (unit_lu, grappe)) AS grappes
+FROM   p96_grappe WHERE NOT rattachee GROUP BY 1 ORDER BY 1;
+
+-- ---------------------------------------------------------------------------
 -- 4. La mesure, ligne à ligne
 -- ---------------------------------------------------------------------------
 DROP TABLE IF EXISTS p96_mesure;
@@ -273,7 +331,12 @@ WITH l AS (
            EXISTS (SELECT 1 FROM p96_emprise b
                     WHERE b.unit_id = l.unit_lu
                       AND b.base <> l.atom_id
-                      AND ST_DWithin(g.geom, b.geom, :seuil_contigu)) AS proche,
+                      AND ST_DWithin(g.geom, b.geom, :seuil_contigu))
+           -- 3 bis : une lecture non confirmée dont la grappe n'est rattachée
+           -- à aucun membre sûr n'est pas « proche »
+           AND NOT EXISTS (SELECT 1 FROM p96_grappe x
+                            WHERE x.jalon = l.jalon AND x.atom_id = l.atom_id
+                              AND NOT x.rattachee)                AS proche,
            ARRAY(SELECT DISTINCT e.unit_id FROM p96_etat e
                   WHERE e.base = l.atom_id AND e.d <> l.d
                     AND e.d IN (DATE '1940-06-01', DATE '1954-06-01',

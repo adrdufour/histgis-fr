@@ -70,7 +70,7 @@ dep,departement,depuis,jusqu,circos,cantons_base,posable,raison,atlas_sans_unite
 67,Bas-Rhin,1958,1986,6,31,oui,,
 68,Haut-Rhin,1958,1986,5,26,non,"en base, absents de la lecture : Belfort, Delle ; 6 cantons de l'atlas sur 30 sans unité en base",
 69,Rhône,1958,1973,5,21,non,"cantons divisés ; en base, absents de la lecture : Vaugneray",
-69,Rhône,1973,1986,8,23,non,"cantons divisés ; en base, absents de la lecture : Bron, Vaugneray",
+69,Rhône,1973,1986,8,24,non,"cantons divisés ; en base, absents de la lecture : Bron, Vaugneray",
 71,Saône-et-Loire,1958,1986,5,49,oui,,"Le Creusot, Montceau-les-Mines"
 72,Sarthe,1958,1986,5,32,oui,,Montfort-le-Rotrou
 73,Savoie,1958,1986,3,28,oui,,Aix-les-Bains

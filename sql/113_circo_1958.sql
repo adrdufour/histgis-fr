@@ -32,6 +32,10 @@
 --   * La transcription est une LECTURE DE CARTE sur photo, avec une trentaine
 --     de « DOUTE » notés dans `regles_1958_1986.py`. Le tableau annexé à
 --     l'ordonnance n° 58-945 du 13 octobre 1958 n'a pas été confronté.
+--   * COMMUNE : un atome qu'aucune des deux règles ne trouve (fraction d'une
+--     ville coupée après 1958 sous un canton neuf) prend la circonscription
+--     des autres atomes de sa commune, si elle est unique. Recette 2,
+--     `dont_commune` ; `-v sans_commune=1` ne les pose pas.
 --   * Les cantons de ville que la base n'a pas en 1958 (Brest-1 et -3,
 --     Toulon-1 à -3, Reims-2…) ne reçoivent rien : colonne `atlas_sans_unite`
 --     de l'état.
@@ -59,9 +63,11 @@ SET search_path TO histgis, public;
 CREATE TABLE IF NOT EXISTS circo_1958_trace (
     dep  text NOT NULL, quoi text NOT NULL, cle text NOT NULL,
     repli boolean NOT NULL DEFAULT false,
+    commune boolean NOT NULL DEFAULT false,
     pose_le timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (quoi, cle)
 );
+ALTER TABLE circo_1958_trace ADD COLUMN IF NOT EXISTS commune boolean NOT NULL DEFAULT false;
 
 DROP TABLE IF EXISTS t113_comp;
 CREATE TEMP TABLE t113_comp (
@@ -165,11 +171,60 @@ SELECT c.atom_id, c.dep, c.circo AS unit_id, c.repli,
    AND NOT c.repli
 \endif
 ;
+ALTER TABLE t113_pose ADD COLUMN commune boolean NOT NULL DEFAULT false;
+
+-- HÉRITAGE PAR LA COMMUNE — ajouté le 21 octobre 2026, signalé par Adrien
+-- (Bourg-en-Bresse, Oyonnax). Une ville coupée APRÈS 1958 entre un canton de
+-- 1958 et un canton neuf (Oyonnax-Nord et -Sud en 1973, Bourg-Nord-Centre en
+-- 1982) a une fraction dont aucun canton n'est dans l'atlas : ni la date de
+-- référence ni le repli ne la trouvent, et elle restait sans circonscription
+-- jusqu'en 1986. Or le découpage de 1958 ne suit pas les cantons créés ensuite :
+-- le territoire reste dans la circonscription où il était. Une telle fraction
+-- prend donc celle des autres atomes de sa commune — si elle est UNIQUE. Une
+-- ville déjà partagée entre deux circonscriptions en 1958 ne lègue rien : il
+-- faudrait savoir de quel côté vient la fraction. `-v sans_commune=1` pour ne
+-- pas poser ces rattachements ; ils sont comptés à part (recette 2).
+\if :{?sans_commune}
+\else
+INSERT INTO t113_pose (atom_id, dep, unit_id, repli, valid_from, valid_to, commune)
+WITH bornes AS (
+    SELECT dep, min(du) AS du, max(au) AS au FROM t113_div GROUP BY dep
+), vie AS (                         -- comme plus haut : canton DU DÉPARTEMENT
+    SELECT m.atom_id, a.cassini, u.dep2 AS dep,
+           min(m.valid_from) AS ne, max(m.valid_to) AS mort
+      FROM membership m
+      JOIN atom a USING (atom_id)
+      JOIN (SELECT unit_id, CASE WHEN dep IN ('2A', '2B') THEN '20' ELSE dep::text END AS dep2
+              FROM unit WHERE niveau = 'canton') u USING (unit_id)
+     WHERE m.niveau = 'canton'
+       AND m.periode && daterange('1958-01-01', :'fin'::date, '[)')
+       AND m.atom_id NOT IN (SELECT atom_id FROM t113_pose)
+     GROUP BY 1, 2, 3
+), legue AS (                       -- la circonscription unique de la commune
+    SELECT a.cassini, p.dep, min(p.unit_id) AS unit_id
+      FROM t113_pose p JOIN atom a USING (atom_id)
+     GROUP BY 1, 2
+    HAVING count(DISTINCT p.unit_id) = 1
+)
+SELECT v.atom_id, v.dep, l.unit_id, false,
+       greatest(b.du, v.ne), least(b.au, v.mort), true
+  FROM vie v
+  JOIN bornes b ON b.dep = v.dep
+  JOIN legue l ON l.cassini = v.cassini AND l.dep = v.dep
+ WHERE greatest(b.du, v.ne) < least(b.au, v.mort)
+   AND NOT EXISTS (SELECT 1 FROM membership x
+                    WHERE x.atom_id = v.atom_id AND x.niveau = 'circo'
+                      AND x.periode && daterange('1958-01-01', :'fin'::date, '[)')
+                      AND NOT EXISTS (SELECT 1 FROM circo_1958_trace t
+                                       WHERE t.quoi = 'membership'
+                                         AND t.cle = x.membership_id::text));
+\endif
 
 \echo ''
 \echo '=== 2. Ce que chaque département recevra ==='
 SELECT dep, count(DISTINCT unit_id) AS circos, count(*) AS rattachements,
        count(*) FILTER (WHERE repli) AS dont_repli,
+       count(*) FILTER (WHERE commune) AS dont_commune,
        count(*) FILTER (WHERE valid_from > '1958-01-01') AS nes_apres,
        count(*) FILTER (WHERE valid_to < :'fin'::date AND dep <> '20') AS morts_avant
   FROM t113_pose GROUP BY 1 ORDER BY 1;
@@ -287,8 +342,8 @@ BEGIN
         INSERT INTO membership (atom_id, unit_id, niveau, valid_from, valid_to)
         VALUES (r.atom_id, r.unit_id, 'circo', r.valid_from, r.valid_to)
         RETURNING membership_id INTO id;
-        INSERT INTO circo_1958_trace (dep, quoi, cle, repli)
-        VALUES (r.dep, 'membership', id::text, r.repli);
+        INSERT INTO circo_1958_trace (dep, quoi, cle, repli, commune)
+        VALUES (r.dep, 'membership', id::text, r.repli, r.commune);
     END LOOP;
 END $$;
 
@@ -297,6 +352,7 @@ ANALYZE membership;
 \echo ''
 \echo '=== 5. Pose ==='
 SELECT quoi, count(*), count(*) FILTER (WHERE repli) AS dont_repli,
+       count(*) FILTER (WHERE commune) AS dont_commune,
        count(DISTINCT dep) AS departements
   FROM circo_1958_trace GROUP BY quoi ORDER BY quoi;
 

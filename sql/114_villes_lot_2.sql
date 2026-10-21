@@ -19,7 +19,7 @@
 --   retiré   l'atome entier là où la ville a ses fractions (artefact du COG
 --            de 1968), ou une fraction rangée sous le code d'un autre canton
 --            (Douai sous Dunkerque-Est, Valenciennes sous Hautmont, Boulogne
---            sous Calais-Nord-Ouest, Carcassonne sous Castelnaudary-Nord,
+--            sous Calais-Nord-Ouest, Carcassonne entière en 1968,
 --            Cognac sous Confolens-Sud), ou une appartenance sans objet
 --            (Wattrelos à Roubaix-Ouest après 1892, Lamécourt de l'Oise dans
 --            Sedan-Est) ;
@@ -92,7 +92,7 @@ TRUNCATE p114_trace;
 SELECT quoi, count(*) FROM p114_trace GROUP BY 1 ORDER BY 1;
 \endif
 
-DROP TABLE IF EXISTS t114_unite, t114_retire, t114_pose, t114_nom, t114_borne, t114_retire_v;
+DROP TABLE IF EXISTS t114_unite, t114_retire, t114_pose, t114_nom, t114_borne, t114_retire_v, t114_deja, t114_fait_amont;
 
 -- ---------------------------------------------------------------------------
 -- 1. Ce qui change d'unité
@@ -135,7 +135,12 @@ INSERT INTO t114_retire_v VALUES
   ( 27, '38657#5969', '5969', '1968-01-01', '1982-03-14'),   -- Valenciennes sous Hautmont
   ( 53, '12105#5925', '5925', '1968-01-01', '1982-03-14'),   -- Douai sous Dunkerque-Est
   ( 31, '5200#6215',  '6215', '1968-01-01', '1973-09-23'),   -- Boulogne sous Calais-Nord-Ouest
-  ( 87, '6912#1109',  '1109', '1968-01-01', '1973-09-23'),   -- Carcassonne sous Castelnaudary-Nord
+  -- Carcassonne : jusqu'au 21 octobre 2026, une ligne de Cenne-Monestiés lue sous le
+  -- code de Carcassonne (Castelnaudary-Nord) la coupait en deux fractions, #1107 et
+  -- #1109, et l'on retirait #1109. `58` retire désormais cette ligne
+  -- (`cog1968/c68_codes_corriges.csv`) : Carcassonne arrive ENTIÈRE dans 1107, et
+  -- c'est l'atome entier qu'on retire, ses fractions 1107 et 1108 étant posées au § 4.
+  ( 87, '6912',       '1107', '1968-01-01', '1973-09-23'),   -- Carcassonne entière dans Carcassonne-I
   ( 28, '41221#5954', '5954', '1892-01-01', '1941-01-01'),   -- Wattrelos à Roubaix-Ouest après 1892
   ( 83, '18451',      '0827', '1973-09-23', '1982-03-14');   -- Lamécourt (Oise) dans Sedan-Est
 CREATE TEMP TABLE t114_retire AS
@@ -273,6 +278,7 @@ INSERT INTO t114_pose VALUES
   ( 79, '6809#0634',  '0634', '1982-03-14', '1998-03-15'),
   ( 79, '6809#0646',  '0646', '1982-03-14', '1998-03-15'),
   -- 87 — Carcassonne : la limite II / III change en 1985
+  ( 87, '6912#1107',  '1107', '1968-01-01', '1973-09-23'),   -- voir § 2 : depuis la correction de `58`
   ( 87, '6912#1108',  '1108', '1968-01-01', '1973-09-23'),
   ( 87, '6912#1107',  '1107', '1973-09-23', '1998-03-15'),
   ( 87, '6912#1108',  '1108', '1973-09-23', '1985-03-10'),
@@ -395,6 +401,52 @@ INSERT INTO t114_nom VALUES
   (109, '1834', 'Bourges-V',                                '1982-03-14', '1999-01-01');
 
 \echo ''
+-- ---------------------------------------------------------------------------
+-- Ce que `96` a déjà fait — 20 octobre 2026
+--
+-- `96` juge désormais aussi les lectures de 1968 qui se portaient garantes les
+-- unes des autres, et corrige Cognac et Javrezac lues dans Confolens-Sud
+-- (1615) : 1613, exactement les n° 105 et 106. Leurs poses sont alors déjà
+-- portées par la base au même canton (`95`, `97` reportent le jalon corrigé),
+-- et les lignes à changer ou à retirer n'existent plus. On retire de la pose
+-- ce qui est déjà porté au MÊME canton, et les garde-fous comptent ce qui a
+-- été fait en amont ; tout autre écart reste refusé.
+-- ---------------------------------------------------------------------------
+CREATE TEMP TABLE t114_deja AS
+SELECT p.* FROM t114_pose p
+WHERE  NOT EXISTS (SELECT 1 FROM membership m
+                    WHERE m.atom_id = p.atom_id AND m.niveau = 'canton'
+                      AND m.periode && daterange(p.du, p.au, '[)') AND m.unit_id <> p.unit_id)
+  AND  (SELECT sum(upper(m.periode * daterange(p.du, p.au, '[)')) - lower(m.periode * daterange(p.du, p.au, '[)')))
+          FROM membership m
+         WHERE m.atom_id = p.atom_id AND m.niveau = 'canton' AND m.unit_id = p.unit_id
+           AND m.periode && daterange(p.du, p.au, '[)')
+           AND NOT EXISTS (SELECT 1 FROM p114_trace t
+                            WHERE t.quoi = 'membership_pose' AND t.cle = m.membership_id::text))
+       = p.au - p.du;
+DELETE FROM t114_pose p USING t114_deja d
+ WHERE d.atom_id = p.atom_id AND d.du = p.du AND d.unit_id = p.unit_id;
+
+-- les changements d'unité et retraits du n° 105-106 que `96` a rendus sans objet
+CREATE TEMP TABLE t114_fait_amont AS
+SELECT 'unite'::text AS quoi, count(*)::int AS n FROM membership m
+ WHERE m.niveau = 'canton' AND m.atom_id = '17815' AND m.unit_id = '1613'
+   AND m.periode <@ daterange(DATE '1968-01-01', DATE '1973-09-23', '[)')
+   AND EXISTS (SELECT 1 FROM p96_trace t WHERE t.atom_id = '17815' AND t.unit_pose = '1613')
+UNION ALL
+SELECT 'retrait', count(*)::int FROM membership m
+ WHERE m.niveau = 'canton' AND m.atom_id = '9804' AND m.unit_id = '1613'
+   AND m.periode <@ daterange(DATE '1968-01-01', DATE '1973-09-23', '[)')
+   AND EXISTS (SELECT 1 FROM p96_trace t WHERE t.atom_id = '9804' AND t.unit_pose = '1613')
+   AND NOT EXISTS (SELECT 1 FROM membership x WHERE x.niveau = 'canton'
+                    AND x.atom_id = '9804' AND x.unit_id = '1615'
+                    AND x.periode <@ daterange(DATE '1968-01-01', DATE '1973-09-23', '[)'));
+
+\echo ''
+\echo '=== 0. Déjà fait en amont par `96` (retiré de ce passage) ==='
+SELECT par, atom_id, unit_id, du, au FROM t114_deja ORDER BY par, atom_id;
+SELECT * FROM t114_fait_amont;
+
 \echo '=== 1. Ce qui sera fait, par entrée ==='
 SELECT par, 'change d unité' AS quoi, count(*) AS lignes, min(valid_from) AS du, max(valid_to) AS au
 FROM t114_unite GROUP BY 1
@@ -417,10 +469,10 @@ BEGIN
         RETURN;
     END IF;
 
-    SELECT count(*) INTO n FROM t114_unite;
+    SELECT count(*) + (SELECT f.n FROM t114_fait_amont f WHERE f.quoi = 'unite') INTO n FROM t114_unite;
     IF n <> 35 THEN RAISE EXCEPTION 'UNITÉ : % ligne(s) à changer, 35 attendues '
                                     '(30 à Rennes, 2 pour Javrezac, 3 à Nice).', n; END IF;
-    SELECT count(*) INTO n FROM t114_retire;
+    SELECT count(*) + (SELECT f.n FROM t114_fait_amont f WHERE f.quoi = 'retrait') INTO n FROM t114_retire;
     IF n <> 22 THEN RAISE EXCEPTION 'RETRAIT : % ligne(s), 22 attendues.', n; END IF;
     SELECT count(*) INTO n FROM t114_borne;
     IF n <> 13 THEN RAISE EXCEPTION 'AUBAGNE : % borne(s) à déplacer, 13 attendues.', n; END IF;

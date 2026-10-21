@@ -701,15 +701,31 @@ BEGIN
     SELECT v.atom_id,
            v.fraction,
            v.dedans,
-           coalesce(r.geom, ga.geom, ag.geom)              AS geom,
+           coalesce(r.geom, ga.geom, gc.geom, ag.geom)     AS geom,
            CASE WHEN r.atom_id IS NOT NULL THEN 'reprise'
                 WHEN ga.atom_id IS NOT NULL THEN 'anr'
+                WHEN gc.geom IS NOT NULL THEN 'anr'
                 WHEN ag.atom_id IS NOT NULL THEN 'repli'
                 ELSE 'sans_geom' END                       AS source
     FROM   vivant v
     LEFT   JOIN rep r ON r.atom_id = v.atom_id
     LEFT   JOIN atom_geom_anr ga
            ON ga.atom_id = v.atom_id AND ga.periode @> p_date
+    -- LA COMMUNE FUSIONNÉE QUI GARDE SON APPARTENANCE — 13 octobre 2026, arbitrage
+    -- d'Adrien : « les communes fusionnées on garde leur appartenance pour tracer
+    -- leur chemin mais il faut modifier la carte en conséquence ». Goux, réunie à
+    -- Dole en 1973, garde son canton jusqu'en 1999 ; son ANR est close, et son
+    -- repli est le polygone du SUCCESSEUR — Dole entière. En 1980 la carte lui
+    -- donnait 3 719 ha, superposés aux deux fractions de Dole. Un atome vivant
+    -- dont l'ANR s'est tue avant la date, et qu'aucune reprise ne sert, est donc
+    -- dessiné sur son DERNIER polygone ANR : source datée, plus petite que celle
+    -- de la commune qui l'a absorbée, elle gagne ses faces au § (d) et la ville
+    -- sort diminuée d'autant — le sol n'est compté qu'une fois.
+    LEFT   JOIN LATERAL (
+        SELECT x.geom FROM atom_geom_anr x
+        WHERE  x.atom_id = v.atom_id AND NOT v.fraction
+          AND  upper(x.periode) <= p_date
+        ORDER  BY upper(x.periode) DESC LIMIT 1) gc ON ga.atom_id IS NULL AND r.atom_id IS NULL
     LEFT   JOIN atom_geom ag ON ag.atom_id = v.atom_id;
 
     -- Le second verrou de la même trappe, et il ne fait pas double emploi : le

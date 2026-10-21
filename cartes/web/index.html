@@ -2082,6 +2082,8 @@ function nomModerne(dep) {
 // sur-Saône-2) » pour une ville partagée non découpée, « Lisieux () ».
 const ordinal = n => (+n === 1 ? "1re" : `${+n}e`);
 function nomCommons(u) {
+  const s = SECTEURS_SEINE[u.id];
+  if (s) return `${s[0] < 4 ? "Paris" : "Seine"} ${ordinal(s[0])} circonscription (${s[1].toLowerCase()})`;
   let n = String(u.nom || u.code || "");
   let m = /^[0-9AB]+e circonscription n° 0*(\d+)$/.exec(n);
   if (m) {
@@ -2114,9 +2116,16 @@ function nomCommons(u) {
 //  - Les codes TRF-GIS 80 et au-delà (`0380`) ne sont pas des numéros : c'est
 //    une ville partagée entre circonscriptions et laissée entière. On pose les
 //    numéros des circonscriptions qu'elle mêle (« 3-4 »), ou rien.
+//  - Au scrutin de liste, rien quand le département forme une seule
+//    circonscription ; quand il en forme plusieurs (1919-1928 : Seine,
+//    Aveyron, Calvados…), leur numéro, le `L` du code ôté (`L7504` → 4).
 function etiquetteCourte(u) {
-  const c = String(u.code || "");
-  if (u.regime === "liste" || /^L/.test(c)) return "";
+  if (SECTEURS_SEINE[u.id]) return String(SECTEURS_SEINE[u.id][0]);
+  let c = String(u.code || "");
+  if (u.regime === "liste" || /^L/.test(c)) {
+    if (!S.cfgCirco || S.cfgCirco.unites.filter(w => w.g).length < 2) return "";
+    c = c.replace(/^L/, "");
+  }
   const tiret = c.includes("-");
   const reste = tiret ? c.slice(c.indexOf("-") + 1)
               : (c.startsWith(S.dep) ? c.slice(S.dep.length) : c);
@@ -2140,6 +2149,21 @@ function etiquetteCourte(u) {
   if (m && m[1] !== "département") return m[1];
   return reste;
 }
+
+// La Seine de 1919-1928 : quatre circonscriptions au scrutin de liste, trois
+// secteurs de Paris et la banlieue. La base les tient sous deux séries de
+// codes (`75-1` à `75-3` pour Paris, `L7504` « Seine-4 » pour la banlieue) ;
+// on leur rend leur numéro et leur nom d'usage.
+//   1 Nord : 8e, 9e, 10e, 17e, 18e, 19e arrondissements
+//   2 Est : 1er à 4e, 11e, 12e, 20e
+//   3 Sud : 5e, 6e, 7e, 13e à 16e
+const SECTEURS_SEINE = {
+  "Q1919_1928#1": [1, "Nord"], "Q1919_1928#2": [2, "Est"],
+  "Q1919_1928#3": [3, "Sud"], "L7504@1919": [4, "Banlieue"],
+};
+// L'étiquette posée sur l'image : le numéro seul, secteurs compris — le nom
+// du secteur reste dans la description.
+const etiquetteCarte = etiquetteCourte;
 
 // ---------------------------------------------------------------------------
 // Période de validité du découpage affiché
@@ -2375,17 +2399,19 @@ function etiquetteCanton(u) {
   if (n) return n === 1 ? "1er" : n + "e";
   return String(u.nom || "");
 }
-// Taille et coupure d'un nom de canton : le plus grand corps qui tienne dans
-// le disque libre autour du point d'étiquette (`d`, en pixels), sur une ligne,
-// ou sur deux en coupant à un tiret ou une espace près du milieu quand le
-// nom y gagne nettement.
-function miseEnLignes(t, d) {
+// Taille et coupure d'une étiquette : le plus grand corps qui tienne dans le
+// disque libre autour du point d'étiquette (`d`, en pixels), sans dépasser
+// `max`, sur une ligne, ou sur deux en coupant à un tiret ou une espace près
+// du milieu quand l'étiquette y gagne nettement. Les numéros des
+// circonscriptions de Paris (« 1/20 ») passent aussi par là : à 28 px fixes,
+// ils débordaient de leur demi-arrondissement et se chevauchaient.
+function miseEnLignes(t, d, { max = 15, min = 7, coupe = 9 } = {}) {
   d = d || 10;
-  const corps = lignes => Math.min(15,
+  const corps = lignes => Math.min(max,
     (1.9 * d) / (0.58 * Math.max(...lignes.map(s => s.length))),
     (1.6 * d) / (1.15 * lignes.length));
   let lignes = [t], f = corps(lignes);
-  if (t.length > 9) {
+  if (t.length > coupe) {
     const coupes = [...t.matchAll(/[- ]/g)].map(m => m.index);
     if (coupes.length) {
       const i = coupes.reduce((a, b) =>
@@ -2395,7 +2421,7 @@ function miseEnLignes(t, d) {
       if (f2 > f * 1.15) { lignes = deux; f = f2; }
     }
   }
-  return { lignes, taille: Math.max(7, Math.round(f * 2) / 2) };
+  return { lignes, taille: Math.max(min, Math.round(f * 2) / 2) };
 }
 
 function fabriqueSVG(o) {
@@ -2464,14 +2490,15 @@ function fabriqueSVG(o) {
   if (o.numeros) {
     const lis = [], txt = [];
     for (const u of unites) {
-      const t = canton ? etiquetteCanton(u) : etiquetteCourte(u);
+      const t = canton ? etiquetteCanton(u) : etiquetteCarte(u);
       if (!t) continue;
       const p = poleInterieur(u.g, P);
       if (!p) continue;
       const sur = u === cible;
-      let taille, lignes = [t];
-      if (canton) ({ taille, lignes } = miseEnLignes(t, p.d));
-      else taille = /^\d+$/.test(t) ? 34 : /^[\d\/-]+$/.test(t) ? 28 : (t.length > 12 ? 19 : 23);
+      const { taille, lignes } = canton ? miseEnLignes(t, p.d)
+        : miseEnLignes(t, p.d, { min: 9, coupe: 5,
+            max: /^\d+$/.test(t) ? 34 : /^[\d\/-]+$/.test(t) ? 28
+               : (t.length > 12 ? 19 : 23) });
       const x = p[0].toFixed(1), y = p[1].toFixed(1);
       let pos, corps;
       if (lignes.length === 1) {
@@ -2482,7 +2509,9 @@ function fabriqueSVG(o) {
         corps = lignes.map((l, k) => `<tspan x="${x}" dy="${k ? "1.1em"
           : (0.35 - 0.55 * (lignes.length - 1)).toFixed(2) + "em"}">${xmlEsc(l)}</tspan>`).join("");
       }
-      lis.push(`<text ${pos} stroke="${sur ? COMMONS.rougeTrait : "#ffffff"}">${corps}</text>`);
+      // Le liseré suit le corps : 5 px autour d'un numéro de 12 px le noient.
+      const ep = canton ? "" : ` stroke-width="${Math.max(2, Math.min(5, taille * 0.17)).toFixed(1)}"`;
+      lis.push(`<text ${pos} stroke="${sur ? COMMONS.rougeTrait : "#ffffff"}"${ep}>${corps}</text>`);
       txt.push(`<text ${pos} fill="${sur ? "#ffffff" : "#1d1c1a"}">${corps}</text>`);
     }
     L.push(`<g id="${canton ? "noms" : "numeros"}" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" ` +
@@ -2534,8 +2563,9 @@ function cantonsParCirco() {
   if (!c) return null;
   const r = new Map();
   for (const [cx, l] of c.cantonsDe)
-    r.set(cx, l.map(e => e.u.nom + (e.partie ? " (partie)" : ""))
-      .sort((a, b) => a.localeCompare(b, "fr")));
+    r.set(cx, l.map(e => (cantonParis(e.u) ? etiquetteCanton(e.u) + " arrondissement" : e.u.nom) +
+                         (e.partie ? " (partie)" : ""))
+      .sort((a, b) => a.localeCompare(b, "fr", { numeric: true })));
   return r;
 }
 
@@ -2675,7 +2705,7 @@ const etListe = l => l.length <= 1 ? (l[0] || "") : l.slice(0, -1).join(", ") + 
 // d'arrondissement de 1876-1919 : « Beaune-1 », « Semur »).
 function affCirco(u) {
   const nc = nomCommons(u);
-  const m = /(\d+)(?:re|er|e) circonscription$/.exec(nc);
+  const m = /(\d+)(?:re|er|e) circonscription(?: \([^()]*\))?$/.exec(nc);
   if (m) return { n: +m[1], court: `${ordinal(m[1])} circonscription`,
                   prose: `${ordinal(m[1])} circonscription` };
   const v = /^(.+)-(\d+)$/.exec(nc);
@@ -2751,17 +2781,26 @@ function propositionCirco(o, plage) {
   const kx = S.cfgCirco;
   const unites = unitesDe("circo");
   const liste = unites.length === 1 && unites[0].regime === "liste";
+  const listes = !liste && unites.every(u => u.regime === "liste" || /^L/.test(String(u.code || "")));
   const elections = COMMONS.elections.filter(a => a >= a0 && a <= a1);
   const chambreFr = per ? per[3] : "Chambre des députés";
   const chambreEn = per ? per[4] : "Chamber of Deputies";
   const cpc = cantonsParCirco();
   const cible = o.type === "situation" ? kx.unites.find(u => u.id === o.unite) : null;
 
+  // À Paris, les atomes sont les quartiers administratifs (`PQ01`…), pas des
+  // communes : on les compte à part.
+  const quartiers = new Map();
+  for (const [aid, uid] of Object.entries(kx.rattachement))
+    if (/^PQ/.test(aid)) quartiers.set(uid, (quartiers.get(uid) || 0) + 1);
   const ligneUnite = u => {
     const ks = cpc && cpc.get(u.id);
     const t = etiquetteCourte(u);
+    const q = quartiers.get(u.id) || 0, nc = u.n - q;
+    const compte = [q ? `${q} quartier${q > 1 ? "s" : ""}` : "",
+                    nc || !q ? `${nc} commune${nc > 1 ? "s" : ""}` : ""].filter(Boolean).join(" et ");
     return `* ${t && /^[\d\/-]+$/.test(t) ? "n° " + t + " — " : ""}${nomCommons(u)} : ` +
-           `${u.n} commune${u.n > 1 ? "s" : ""}` +
+           compte +
            (ks && ks.length ? ` ; canton${ks.length > 1 ? "s" : ""} : ${ks.join(", ")}` : "");
   };
 
@@ -2772,11 +2811,13 @@ function propositionCirco(o, plage) {
     fr = `Carte des circonscriptions électorales (${chambreFr}) du département ` +
          `${deDep(nomEpoque)}, découpage en vigueur ${deLaPeriode}` +
          (liste ? ` : scrutin de liste départemental, le département forme une seule circonscription.`
-                : ` : ${unites.length} circonscription${unites.length > 1 ? "s" : ""}, un député par circonscription.`);
+          : listes ? ` : ${unites.length} circonscriptions, les députés de chacune élus au scrutin de liste.`
+                   : ` : ${unites.length} circonscription${unites.length > 1 ? "s" : ""}, un député par circonscription.`);
     en = `Map of the electoral constituencies (${chambreEn}) of the ${nomEpoque} ` +
          `department, France, ${enPeriode}` +
          (liste ? ` (department-wide list voting, one single constituency).`
-                : ` (${unites.length} single-member constituencies).`);
+          : listes ? ` (${unites.length} multi-member constituencies, list voting).`
+                   : ` (${unites.length} single-member constituencies).`);
     if (!liste) fr += "\n" + unites.map(ligneUnite).join("\n");
   } else {
     nom = `${nomCommons(cible)} ${periodeTxt} (localisation).svg`;
@@ -3025,9 +3066,11 @@ function wikiCantons(o, X, lister) {
       : `${per}, le ${nomCanton(cible)} comprend ${lettres(cs.length || cible.n)} commune` +
         `${(cs.length || cible.n) > 1 ? "s" : ""}` +
         (cs.length ? ` : ${etListe(cs.map(lienCommune))}.` : ".");
-    // Au scrutin de liste, la circonscription est le département : rien à dire.
+    // Au scrutin de liste départemental, la circonscription est le
+    // département : rien à dire. Pas quand il en forme plusieurs (1919-1928).
+    const seule = unitesDe("circo").length < 2;
     const xs = croise && (croise.circosDe.get(cible.id) || [])
-      .filter(e => e.u.regime !== "liste" && !/^L/.test(String(e.u.code || "")));
+      .filter(e => !seule || (e.u.regime !== "liste" && !/^L/.test(String(e.u.code || ""))));
     if (xs && xs.length) {
       const l = xs.map(e => "la " + lienCirco(e.u, X));
       t += xs.length === 1

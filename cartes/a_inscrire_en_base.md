@@ -14,11 +14,25 @@ Le trou général des appartenances cantonales 1941-1998 est suivi ailleurs
 partout, puis de 1973 à la date COG de la fraction (1982 à 1998 selon la ville). Ici, seulement
 ce qui est propre à une ville découpée, avec sa source.
 
+**Couverture de 1941 — `sql/116_villes_couverture_1941.sql`, 13 octobre 2026.** Arbitrage
+d'Adrien : « la base doit couvrir le maximum entre 1815 et 2025 ». Les fractions de 61 villes sont
+posées de 1941 à la reprise de leur régime : jusqu'en 1968 quand la ville a les mêmes fractions des
+deux côtés (119 fractions), jusqu'à la fin connue du régime pour Tours (1956), Angers, Le Havre,
+Toulon, Versailles (1964), Le Mans (1967), Caen, Metz (1968), Marseille, Nantes, Montpellier,
+Chalon, Montluçon, La Rochelle (1973), Rouen (1982), et pour Moulins (1973, puis 1985). Dans les
+entrées ci-dessous, « les fractions de 1941 à 1968 » est donc fait ; restent les régimes
+intermédiaires (Le Mans 1967-1982, Le Havre 1964-1992, Tours 1956-1968, Angers 1964-1973…), qui
+demandent leurs lignes, les communes rurales, et les villes dont les fractions diffèrent en 1940
+et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, Brest, Amiens…).
+
 ---
 
 ## Bourg-en-Bresse (01053)
 
 ### 1. Les cantons Bourg-en-Bresse-I, II et III (1973-1982) n'existent pas
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : I sous 0137 (Nord-Centre), II sous 0105 (Est), III sous 0138 (Sud), du 1973-09-23 au 1982-01-26, avec Polliat, Saint-Denis-lès-Bourg, Viriat, Buellas, Lent, Montagnat, Montcet, Montracol, Péronnas, Saint-André-sur-Vieux-Jonc et Saint-Rémy ; les ancres non datées de 1982 servent aux deux régimes. Reste : Servas et Saint-Just (déjà rangés, non revus) ; Bourg-Couronne (point 2).
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Source** : décret n° 73-810 du 16 août 1973 (JO du 17 août 1973),
   `cantons/communes_coupees_1973_1984.csv`.
@@ -43,6 +57,8 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 2. Bourg-Couronne (1982) n'a pas d'unité
 
+- **Inscrit par `sql/117_creations_caen_rochefort_bourg_larochelle.sql` (13 octobre 2026, accord d'Adrien)** : unité `C01-Bourg-Couronne` créée, ses onze communes du 1982-01-26 au 1985-03-10 (le canton est supprimé le 24 décembre 1984) ; Viriat dans 0143 de 1985 à 1998. Entrée close.
+
 - **Source** : décret n° 82-77 du 25 janvier 1982 (JO du 26 janvier 1982, art. 1er) :
   Péronnas, Buellas, Lent, Montcet, Montracol, Polliat, Saint-André-sur-Vieux-Jonc,
   Saint-Rémy, Servas, Vandeins, Viriat ; chef-lieu Péronnas.
@@ -52,29 +68,12 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Oyonnax (01283)
-
-### 3. Oyonnax-Nord et Oyonnax-Sud commencent en 1998 dans la base, en 1982 dans le JO
-
-- **Source** : décret n° 82-77 du 25 janvier 1982 (JO du 26 janvier 1982, art. 2).
-- **Base** : fractions `25988#0123` (Nord) et `25988#0141` (Sud) à partir du **1998-03-15**.
-  L'atome entier 25988 est dans 0123 jusqu'au 1973-09-23, puis dans rien. La chronologie
-  cantonale (`cantons/chronologie_cantonale.csv`) donne une troisième date : 1984-12-24.
-- **À inscrire** :
-  - 25988 dans 0123 (Oyonnax, non divisé) de 1973-09-23 à 1982-01-26 ;
-  - les deux fractions de **1982-01-26** à 1998-03-15 ;
-  - communes rurales : Nord = Dortan, Arbent, Belleydoux, Échallon ; Sud = Martignat,
-    Groissiat, Bellignat, Géovreissiat.
-- **Ligne** : `01283-1` vaut depuis le 1982-03-14. Si l'inscription retient le 1982-01-26, avancer
-  la ligne à la même date (comme Bourg), pour que les deux régimes s'enchaînent.
-- **Noté, sans suite** : le décret du 17 décembre 1996 (JO du 24 décembre 1996) échange
-  2 a 7 ca et 1 a 60 ca entre Oyonnax et Arbent.
-
----
-
 ## Aix-en-Provence (13001)
 
 ### 4. Les trois cantons de 1982 commencent en 1992 dans la base
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les fractions Nord / Sud sur 1941-1968 et 1973-1982, les trois fractions de 1982-03-14 à 1992 ; Éguilles et Meyreuil dans 1302 de 1973 à 1992 ; les noms Nord-Est, Sud-Ouest, Centre dès 1982. Reste : la ligne Nord / Sud, faute de texte ; les communes rurales de 1301 et 1347 après 1982.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 82-119 du 2 février 1982 (JO du 4 février 1982, p. 454-455) : Centre,
   Nord-Est et Sud-Ouest remplacent Aix-Nord et Aix-Sud.
@@ -149,60 +148,6 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Troyes (10387)
-
-### 8. Les sept cantons de 1973 n'ont pas de fraction de Troyes avant 1988
-
-- **Source** : décret n° 73-652 du 13 juillet 1973 (JO du 17 juillet 1973, p. 7702-7703), art. 1er à 3 ;
-  `jorf_txt/JORF_19730717_164_col.txt` ; `cantons/communes_coupees_1973_1984.csv`. Sept cantons
-  Troyes-I à VII par division des trois anciens. Le décret n° 85-71 du 22 janvier 1985 (JO du
-  23 janvier 1985) ne change rien dans Troyes (canton de La Chapelle-Saint-Luc seul, point 85).
-- **Base** : les fractions `38334#1022`, `#1023`, `#1024` s'arrêtent au 1973-09-23 ; les sept
-  fractions `#1022`, `#1023`, `#1024`, `#1029`, `#1030`, `#1031`, `#1032` ne commencent qu'au
-  1988-09-25 (date COG). Entre les deux, la ville n'a aucun canton, alors que les communes
-  rurales sont bien dans 1022, 1023 et 1029 dès le 1973-09-23. Aucune appartenance non plus de
-  1941 à 1968.
-- **À inscrire** : les sept fractions du 1973-09-23 au 1988-09-25, sous les mêmes unités :
-  1022 = Troyes-I, 1023 = Troyes-II, 1024 = Troyes-III, 1029 = Troyes-IV, 1030 = Troyes-V,
-  1031 = Troyes-VI, 1032 = Troyes-VII (correspondance établie par les communes de banlieue de
-  1990). Attention : `#1022`, `#1023`, `#1024` ne désignent pas le même secteur avant et après
-  1973 (Troyes-2 d'avant 1973 est l'ouest, Troyes-II d'après 1973 le nord-est).
-- **Chronologie fausse** : `cantons/chronologie_cantonale.csv` date du 1985-01-22 la création de
-  Troyes-3 à 7 ; c'est 1973 (déjà dit au point 85).
-- **Cible avant 1856** : l'ANR de 38334 passe de 1 033,6 ha à 1 329,1 ha au 1856-01-01 (l'ouest,
-  295 ha). Aucun atome ne couvre ce territoire avant 1856 : commune annexée à retrouver, avec
-  son canton.
-- **Échange de 1986 absent de l'ANR** : décret du 24 juin 1986 (JO du 28 juin 1986,
-  `jorf_txt/JORF_19860628_149_col.txt`), 1 ha 20 a 16 ca de Saint-Julien-les-Villas (Troyes-VII)
-  rattachés à Troyes (Troyes-V). Un seul état ANR 1856-2020.
-- **Tracé** (écrit le 9 octobre 2026) : lignes `10387-1` à `-3` avancées à 1815 (1815-01-01 →
-  1973-09-23), ancres datées `#1022` (780693.65 6800566.03), `#1023` (779547 6802204), `#1024`
-  (780110.6 6798429.39) ; lignes `10387-4` à `-10` (1973-09-23 → 2013-01-01), ancres datées
-  `#1022` (781471 6799542), `#1023` (780812 6801151), `#1024` (778310 6800755), `#1029`
-  (779163 6801593), `#1030` (780528 6798937), `#1031` (779733 6798179), `#1032`
-  (780119 6797503). Conforme en 1815, 1856, 1972, 1988 et 2005 ; les ancres de 1973 joueront
-  dès 1973 le jour où les appartenances seront inscrites.
-- **À vérifier sur le plan du décret** : le bout de la rue du Grand-Véon (nord retenu : Troyes-II
-  borde alors Saint-Parres, canton I, sur 1 159 m) ; le bassin du canal entre les quais La
-  Fontaine et du Comte-Henri (2,1 ha, donné à Troyes-V sur une seule ligne).
-
----
-
-## Soissons (02722)
-
-### 9. Le nom de Soissons-Nord de 1973 à 1999
-
-- **Source** : décret n° 73-712 du 23 juillet 1973 (JO du 25 juillet 1973), article 5 remplacé
-  par le décret n° 73-826 du 18 août 1973 (JO du 19 août 1973) : « Soissons-Nord » et
-  « Soissons-Sud ».
-- **Base** : les appartenances sont justes (`36448#0231` et `#0241` depuis le 1973-09-23). Mais
-  `unit_version` nomme 0231 « Soissons » de 1973 à 1999, et « Soissons-Nord » seulement à partir
-  de 1999.
-- **À inscrire** : le nom « Soissons-Nord » pour 0231 à partir du 1973-09-23.
-- Aucune ligne n'en dépend : `02722-1` est posée et conforme.
-
----
-
 ## Laon (02408)
 
 ### 10. L'échange de territoire de 1997 avec Athies-sous-Laon n'est pas dans l'ANR
@@ -217,56 +162,13 @@ ce qui est propre à une ville découpée, avec sa source.
   sinon, signaler l'échange comme non représenté. Le canton de la part reçue par Laon n'est pas
   dit : sans doute Laon-Sud, qui borde Athies.
 
-### 11. Le nom de Laon-Nord de 1973 à 1999
-
-- **Source** : décret n° 73-712 du 23 juillet 1973 (JO du 25 juillet 1973, art. 3) :
-  « Laon-Nord » et « Laon-Sud ».
-- **Base** : `unit_version` nomme 0218 « Laon » de 1973 à 1999 (même cas que Soissons, point 9).
-- **À inscrire** : le nom « Laon-Nord » pour 0218 à partir du 1973-09-23.
-
 ---
-
-## Saint-Quentin (02691)
-
-### 12. Le nom de Saint-Quentin-Centre de 1973 à 1999 — et une règle générale probable
-
-- **Source** : décret n° 73-826 du 18 août 1973 (JO du 19 août 1973), article 4 :
-  Saint-Quentin-Centre, -Nord, -Sud.
-- **Base** : 0228 s'appelle « Saint-Quentin » de 1973 à 1999, et « Saint-Quentin-Centre »
-  seulement ensuite. Les appartenances des trois fractions sont justes depuis le 1973-09-23.
-- **Constat général** : troisième cas dans l'Aisne après Soissons (point 9) et Laon (point 11).
-  Pour chaque canton dédoublé en 1973, l'unité qui garde le numéro de l'ancien canton garde aussi
-  son ancien nom jusqu'en 1999. C'est probablement systématique (`unit_version` alimenté par le
-  COG 1999). À vérifier sur toute la France avant de corriger au cas par cas.
-
----
-
-## Vichy (03310)
-
-### 13. Vichy-Nord et Vichy-Sud de 1973 à 1985 : absents, et leurs communes mal rangées
-
-- **Sources** :
-  - décret n° 73-713 du 23 juillet 1973 (JO du 25 juillet 1973) : Vichy-Nord (partie de la ville
-    seule) et Vichy-Sud (Abrest, Saint-Yorre, Le Vernet et le reste de la ville) ;
-  - décret n° 85-82 du 23 janvier 1985 (JO du 24 janvier 1985), qui les remplace : Vichy-Nord et
-    Vichy-Sud ne gardent que la ville, et Abrest, Saint-Yorre et Le Vernet passent à Cusset-Sud.
-- **Base** :
-  - fractions `39750#0329` et `#0330` seulement à partir du **1985-03-10** ; l'atome entier
-    39750 n'a aucun canton de 1973-09-23 à 1985 ;
-  - Abrest et Le Vernet sont dans **0335 Cusset-Sud dès 1973-09-23**, alors que ce canton est créé
-    en 1985 : ils devraient être dans 0330 Vichy-Sud de 1973 à 1985 (Saint-Yorre à vérifier) ;
-  - la chronologie cantonale date le dédoublement du 1982-01-15, sans texte à l'appui : c'est le
-    décret de Montluçon (82-22) du même jour.
-- **À inscrire** :
-  - les deux fractions de Vichy de 1973-09-23 à 1985-03-10 ;
-  - Abrest, Le Vernet (et Saint-Yorre) dans 0330 sur la même période.
-- **Déjà prêt** : ligne `03310-2` (1973-09-23 → 1985-03-10), rangée sans ancre. Ancres à poser :
-  Nord `POINT(732378 6559673)`, Sud `POINT(733365 6557954)`. La ligne `03310-1` (1985-2013) est
-  posée et conforme.
 
 ## Moulins (03190)
 
 ### 14. Moulins-Ouest et Moulins-Sud de 1973 à 1985, et un texte qui diverge de la ligne posée
+
+- **13 octobre 2026** : réponse d'Adrien : « Moulins une ligne distincte ». Ligne `03190-2` écrite (1973-09-23 → 1985-03-10, décret 73-713) ; `03190-1` s'arrête au 1973-09-23 et sa géométrie est reprise sous `03190-3` de 1985 à 2013. Le décret donne toute la rive gauche à Moulins-Ouest : Sud 404,2 ha, Ouest 465,8 ha, contre 475,4 et 394,6 par Gaudillère (71 ha). Fractions inscrites par `sql/116` : Est / Ouest de 1941 à 1973, Sud / Ouest de 1973 à 1985. Reste : la limite d'après 1985 (aucun texte lu ; Gaudillère reprise faute de mieux) ; la berge de la rive gauche, tracée en trois segments.
 
 - **Source** : décret n° 73-713 du 23 juillet 1973 (JO du 25 juillet 1973). Moulins-Sud (Bressolles,
   Toulon-sur-Allier et une partie de la ville) est délimité « du Nord au Sud » par la rue de
@@ -286,6 +188,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Gap (05061)
 
 ### 15. Gap-Centre, Gap-Est, Gap-Ouest et Gap-Campagne de 1973 à 1982 : absents de la ville
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Campagne 0509, Centre 0526, Est sous 0529 (Sud-Est), Ouest sous 0530 (Sud-Ouest), du 1973-09-23 au 1982-03-14 ; ancres datées par régime. Reste : rien pour la ville.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Sources** :
   - décret n° 73-651 du 13 juillet 1973 (JO du 17 juillet 1973), art. 2 : le canton de Gap est
@@ -315,37 +220,12 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Briançon (05023)
-
-### 16. Briançon-Nord et Briançon-Sud de 1973 à 1982, et Puy-Saint-Pierre compté deux fois de 1974 à 1988
-
-- **Source** : décret n° 73-651 du 13 juillet 1973 (JO du 17 juillet 1973), art. 1er :
-  Briançon-Nord (Névache, Val-des-Prés, Montgenèvre et le nord de la ville), Briançon-Sud
-  (Puy-Saint-André, Puy-Saint-Pierre, Villar-Saint-Pancrace, Cervières et le reste de la ville).
-  Aucun texte ne change la limite ensuite.
-- **Base** :
-  - l'atome entier 5879 est dans 0506 jusqu'au 1973-09-23. Les fractions `5879#0506` et
-    `#0525` ne commencent qu'au **1982-03-14** : **de 1973 à 1982, la ville n'a aucun canton**,
-    alors que les communes rurales (Puy-Saint-Pierre dans 0525, par exemple) en ont un dès 1973 ;
-  - 0506 s'appelle « Briançon » jusqu'en 1999, et « Briançon-Nord » seulement ensuite : même
-    cas que les points 9, 11, 12 et 15 ;
-  - Puy-Saint-Pierre a été réunie à Briançon du 1er juin 1974 au 1er janvier 1989 (INSEE). La
-    cible de Briançon l'inclut de 1974-01-01 à 1988-01-01 (ANR), et l'atome de Puy-Saint-Pierre
-    garde son appartenance à 0525 sur la même période. **L'ancienne commune est donc tirée deux
-    fois** : comme atome propre et dans la fraction Sud de Briançon. Les deux sont dans 0525, si
-    bien que la carte des cantons n'est pas fausse. Mais l'aire de 0525 compte deux fois environ
-    740 ha. À trancher : retirer l'atome pendant la fusion, ou borner la cible de Briançon.
-- **À inscrire** : les deux fractions de Briançon de 1973-09-23 à 1982-03-14.
-- **Déjà prêt** : la ligne `05023-1` (1973-09-23 → 2013) et ses ancres (Nord
-  `POINT(987500 6431000)`, Sud `POINT(988400 6427500)`) couvrent déjà le trou. Les ancres de
-  1982 jouent, parce que leur appartenance chevauche la période de la ligne. La ligne `05023-2`
-  (1974-01-01 → 1988-01-01) suit l'ancienne limite de Puy-Saint-Pierre pendant la fusion.
-
----
-
 ## Manosque (04112)
 
 ### 17. Manosque de 1973 à 1988 : un trou de quinze ans, pour la ville et pour ses communes rurales
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Nord 0413 et Sud sous 0432 (Sud-Est) de 1973 à 1985, les trois fractions de 1985 à 1988 ; Corbières, Sainte-Tulle, Montfuron et Pierrevert (0432, puis 0433 pour les deux dernières en 1985) ; ancres datées, une ancre Nord dans Saint-Martin-les-Eaux pour 1974-1980. Reste : l'appartenance de Saint-Martin-les-Eaux (double compte à trancher) ; la chronologie.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Sources** :
   - décret n° 73-714 du 23 juillet 1973 (JO du 25 juillet 1973), art. 3 : Manosque-Nord
@@ -385,64 +265,12 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Digne-les-Bains (04070)
-
-### 18. Digne de 1973 à 1988 : la ville et Digne-Est absentes, Digne-Ouest présent
-
-- **Sources** :
-  - décret n° 73-714 du 23 juillet 1973 (JO du 25 juillet 1973), art. 1er : Digne-Est (Entrages,
-    Les Dourbes, Marcoux, La Robine-sur-Galabre et l'est de la ville) et Digne-Ouest (onze
-    communes et l'ouest de la ville) ;
-  - décret n° 85-127 du 29 janvier 1985 (JO du 30 janvier 1985), art. 2 : une portion de la ville
-    passe de Digne-Ouest à Digne-Est. La chronologie cantonale date ce changement du « 20.2.1986
-    (fix. limites) » ; comme pour Manosque (point 17), le décret de ce jour-là ne concerne pas
-    Digne.
-- **Base** :
-  - l'atome 11835 est dans 0408 jusqu'au 1973-09-23. Les fractions `#0408` et `#0431` ne
-    commencent qu'au **1988-09-25** : de 1973 à 1988, **la ville n'a aucun canton** ;
-  - **Digne-Ouest est complet** : Aiglun, Champtercier, Le Chaffaut-Saint-Jurson et Thoard sont
-    dans 0431 dès le 1973-09-23 ;
-  - **Digne-Est ne l'est pas** : Entrages, La Robine-sur-Galabre et Marcoux n'ont aucun canton de
-    1973-09-23 à 1988-09-25 ;
-  - 0408 s'appelle « Digne » jusqu'en 1999, et non « Digne-Est » : septième cas de la règle du
-    point 12 ;
-  - Les Dourbes, réunie à Digne le 1er mars 1974, est déjà dans la cible de Digne en 1973
-    (même cas que Romette à Gap, point 15).
-- **À inscrire** :
-  - les fractions de Digne-Est (0408) et Digne-Ouest (0431) de 1973-09-23 à 1988-09-25 ;
-  - Entrages, La Robine-sur-Galabre et Marcoux dans 0408 sur la même période.
-- **Déjà prêt** :
-  - `04070-1` (1985-03-10 → 2013), ancrée. Elle couvre déjà 1985-1988.
-  - `04070-2` (1973-09-23 → 1985-03-10), rangée sans ancre. Ancres à poser : Est
-    `POINT(962000 6338000)`, Ouest `POINT(956300 6339400)`.
-
----
-
-## Cusset (03095)
-
-### 19. Le canton de Cusset de 1973 à 1985 : la ville et quatre communes sans canton
-
-- **Source** : décret n° 85-82 du 23 janvier 1985 (JO du 24 janvier 1985), art. 1er : Cusset,
-  Vichy-Nord et Vichy-Sud sont remplacés par Cusset-Nord, Cusset-Sud, Vichy-Nord et Vichy-Sud.
-  Avant 1985, Cusset est une commune entière du canton de Cusset (0306), non coupée.
-- **Base** :
-  - l'atome entier 11413 (Cusset) n'a **aucun canton de 1973-09-23 à 1985-03-10**. Il est
-    pourtant dans 0306 avant et, par ses fractions, après ;
-  - Busset, Mariol et Molles n'ont aucun canton sur la même période, alors que Bost et les deux
-    Creuzier sont bien dans 0306. La Chapelle n'en a aucun avant 1985 ;
-  - Abrest, Le Vernet et Saint-Yorre sont dans 0335 dès 1973 : voir le point 13 ;
-  - 0306 s'appelle « Cusset » jusqu'en 1999, et « Cusset-Nord » seulement ensuite : huitième cas
-    de la règle du point 12.
-- **À inscrire** : l'atome 11413, Busset, Mariol, Molles et La Chapelle dans 0306, de 1973-09-23
-  à 1985-03-10 (La Chapelle : vérifier son canton d'avant 1973).
-- **Déjà prêt** : la ligne `03095-1` (1985-03-10 → 2013), ancrée et conforme. Elle part
-  exactement du bout de la ligne de Vichy `03310-1` sur la limite des deux communes.
-
----
-
 ## Antibes (06004)
 
 ### 20. Antibes, Biot et Vallauris de 1973 à 1998 : vingt-cinq ans sans canton
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Nord sous 0601 (Antibes-Biot), Sud sous 0647 (Antibes-Centre) de 1973 à 1985, les trois fractions de 1985 à 1998 ; Biot dans 0601, Vallauris dans 0647 puis 0635 ; ancres datées. Reste : le texte qui renomme Antibes-Sud en Antibes-Centre ; Vallauris en double en 1969-1973.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Sources** :
   - décret n° 73-811 du 16 août 1973 (JO du 17 août 1973), art. 2 : Antibes-Nord (Biot et le
@@ -477,6 +305,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 21. Le canton de Cagnes de 1973 à 1998 : un trou en trois temps
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les cinq communes dans 0605 de 1973 à 1982 ; Est et Ouest de 1982 à 1985, Centre, Ouest, Est de 1985 à 1998 ; Saint-Laurent-du-Var dans 0605 jusqu'en 1998 ; les noms. Reste : l'ancre de `06027-3`.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** :
   - décret n° 82-79 du 25 janvier 1982 (JO du 26 janvier 1982), art. 1er : Cagnes-Est
     (Saint-Laurent-du-Var et l'est de la ville) et Cagnes-Ouest (Villeneuve-Loubet,
@@ -508,6 +339,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Cannes (06029)
 
 ### 22. Cannes, Mandelieu et Théoule de 1973 à 1998 : vingt-cinq ans sans canton
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Ouest sous 0649 (Cannes-Centre), Est et Lérins sous 0606 de 1973 à 1985, les trois fractions de 1985 à 1998 ; Mandelieu et Théoule dans 0649 puis 0636 ; ancres datées. Reste : rien.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Sources** :
   - décret n° 73-811 du 16 août 1973 (JO du 17 août 1973), art. 3 : Cannes-Ouest
@@ -569,6 +403,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 24. Roubaix-Ouest manque dans Roubaix de 1968 à 1982
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `29736#5954` dans 5954 de 1968 au 1982-03-14. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : une seule limite
   pour 1892-1982, en deux lignes (A-B : rues Langevin, de Lille, Foch, Grand-Place, Grande-Rue ;
   C-D : boulevard de la République, rue d'Alsace, chemin de fer, place de la Gare, avenue
@@ -590,6 +427,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Tourcoing (59599)
 
 ### 25. Tourcoing-Nord-Est manque dans Tourcoing de 1968 à 1982
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `38378#5962` dans 5962 de 1968 au 1982-03-14. Reste : 1941-1968 et 1982-1994.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : limites de 1895, en
   deux lignes (A-B : rues de Paris … Racine ; B-C : rues de Dunkerque … de Mouscron). Trois
@@ -639,6 +479,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 27. Valenciennes-Est manque dans Valenciennes de 1968 à 1982
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `38657#5965` dans 5965 de 1968 au 1982-03-14 ; la fraction existait, rangée sous Hautmont (`38657#5969`, retirée). Reste : 1941-1968 et 1982-1994.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : découpage de 1801,
   « n'a subi que d'imperceptibles modifications à la fin du XIXe siècle », sans texte de loi.
   Deux lignes : A-B (avenue Dampierre … rue de Paris) et C-D (avenue de Reims … le
@@ -659,6 +502,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Wattrelos (59650)
 
 ### 28. Une fraction de Roubaix-Ouest à Wattrelos après 1892, que le texte ne connaît pas
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : l'appartenance de `41221#5954` à Roubaix-Ouest close au 1892-01-01 ; `98` rend la ville conforme. Reste : 1968-1982 et les deux points à vérifier.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : limite de 1892, une
   seule ligne (rues Carnot, Jean-Jaurès, Lebas, cours Saint-Liévin, rue Jules-Guesde) entre
@@ -683,6 +529,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Beauvais (60057)
 
 ### 29. Beauvais n'a aucune fraction de 1941 à 1998
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Nord-Est et Sud-Ouest de 1941 au 1982-03-14 (l'atome entier retiré du Sud-Ouest), les trois fractions de 1982 à 1998. Reste : les quatre communes rurales de 1973 à 1982.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - Gaudillère, extrait donné par Adrien le 27 septembre 2026 : limite Nord-Est / Sud-Ouest
@@ -716,29 +565,12 @@ ce qui est propre à une ville découpée, avec sa source.
   le décret. Environ 50 ha passent du Sud-Ouest au Nord-Ouest en 1982.
 ---
 
-## Creil (60175)
-
-### 30. Creil-Nogent-sur-Oise et Creil-Sud de 1973 à 1998 : absents
-
-- **Source** : décret n° 73-668 du 13 juillet 1973 (JO du 17 juillet 1973), art. 2. Le canton de
-  Creil est divisé en quatre : Creil-Nogent-sur-Oise (Nogent-sur-Oise, Villers-Saint-Paul et la
-  ville au nord de l'Oise), Creil-Sud (la ville au sud de l'Oise), Montataire, Chantilly.
-- **Base** :
-  - jusqu'au 23 septembre 1973 : l'atome entier `10978` dans 6011 « Creil » ;
-  - de 1973 à 1998 : rien, ni pour la ville, ni pour Nogent-sur-Oise et Villers-Saint-Paul ;
-  - à partir du 15 mars 1998 : `10978#6011` (nommé « Creil » jusqu'en 1999, puis
-    « Creil-Nogent-sur-Oise ») et `10978#6038` Creil-Sud.
-- **À inscrire** : les deux fractions, ainsi que Nogent-sur-Oise et Villers-Saint-Paul, à partir du
-  23 septembre 1973 ; le nom Creil-Nogent-sur-Oise pour 6011 dès 1973.
-- **Tracé** : `60175-1` (l'Oise, bras principal ; l'île Saint-Maurice au Sud, précision
-  d'Adrien), du 23 septembre 1973 au 1er janvier 2013, avec des ancres datées. Elles jouent déjà
-  sur 1973-1998 par la règle du chevauchement.
-
----
-
 ## Boulogne-sur-Mer (62160)
 
 ### 31. Boulogne-Nord de 1968 à 1973 rangé sous « Calais-Nord-Ouest »
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `5200#6213` de 1968 à 1973 à la place de `5200#6215` (Calais-Nord-Ouest, retirée) ; Nord et Sud de 1973 à 1985 ; Nord-Est, Sud, Nord-Ouest de 1985 à 1992 ; le nom Nord-Est dès 1985. `98` rend la ville conforme. Reste : les communes rurales.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : limite Nord / Sud
   1958-1986 (rues de Saint-Omer, de Porte-Neuve, boulevard Mariette, Grande-Rue, rue de la
@@ -772,6 +604,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 32. Avion et Rouvroy à Méricourt de 1985 à 1992 : absents
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions du 1985-03-10 au 1992-03-22. Reste : 1973-1985 (Avion, à vérifier).
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 84-1236 du 24 décembre 1984 (JO du 30 décembre 1984), art. 1er. Il crée
   le canton de Rouvroy (Drocourt, Rouvroy et la partie de Méricourt à l'est d'une ligne : voie
   ferrée Hénin-Beaumont - Lens, rues Pierre-Simon … Raoul-Briquet, déviation du C.D. 40, C.D. 50 E).
@@ -792,6 +627,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Meaux (77284)
 
 ### 33. Meaux-Nord et Meaux-Sud de 1976 à 1994 : absents
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : la ville entière dans 7717 de 1955 au 1976-03-07, les deux fractions jusqu'en 1994, le nom Meaux-Nord dès 1976. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret du 28 octobre 1975 (JO du 9 novembre 1975, p. 11516-11517,
   `jorf_txt/JORF_19751109_261_col.txt`), art. 4. Le canton de Meaux est divisé en Meaux-Nord et
@@ -816,6 +654,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 34. Melun-Nord et Melun-Sud de 1941 à 1994 : absents de la ville
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions du 1976-03-07 à 1994. Reste : 1941-1976, dont la limite n'a pas de texte.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret du 28 octobre 1975 (JO du 9 novembre 1975), art. 1er. Il recrée Melun-Nord
   et Melun-Sud avec une nouvelle limite dans la ville (rue de la Chasse … rue de Vaux), et crée
   Perthes et Savigny-le-Temple sur leurs communes rurales.
@@ -830,6 +671,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Niort (79191)
 
 ### 35. Niort de 1941 à 1973 : l'atome entier dans Niort-1
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Niort-1 et Niort-2 en fractions de 1941 à 1973 (l'atome entier retiré), les noms Niort-Nord et Niort-Ouest dès 1973. Reste : la limite de 1964-1973.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - Gaudillère, extrait donné par Adrien le 27 septembre 2026, sans date : la limite Niort-1 /
@@ -856,26 +700,12 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Mayenne (53147)
-
-### 36. Mayenne de 1941 à 1992 : l'atome entier dans l'Ouest, puis rien
-
-- **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : « la Mayenne » sépare
-  Mayenne-Est et Mayenne-Ouest. La chronologie donne ces deux cantons depuis le 16 mars 1802, sans
-  changement ensuite.
-- **Base** :
-  - 1870-1941 et 1992-2013 : `21721#5320` Est, `21721#5321` Ouest ;
-  - 1968-1973 : **l'atome entier `21721` dans Mayenne-Ouest** ;
-  - 1973-1992 : rien.
-- **À inscrire** : les deux fractions de 1941 à 1992, à la place de l'atome entier en 1968-1973.
-- **Tracé** : `53147-1` (la Mayenne), du 16 mars 1802 au 1er janvier 2013, avec des ancres datées.
-  Elles jouent aussi sur 1973-1992.
-
----
-
 ## Tulle (19272)
 
 ### 37. Tulle de 1941 à 1985 : l'atome entier dans Tulle-Sud, puis les cantons urbains en retard
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions de 1941 à 1982 (l'atome entier retiré), puis les cantons urbains de 1982 à 1985 sous leurs noms. Reste : la fraction `15794#1925` et `15506#1926` de 1968-1982, accrochées à d'autres atomes (Gimel ?), à examiner.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - Gaudillère, extrait donné par Adrien le 27 septembre 2026 : « la Corrèze » sépare Tulle-Nord
@@ -970,6 +800,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 40. Chambéry de 1941 à 1985, et les terres annexées en 1961
 
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Nord et Sud de 1941 au 1973-09-23 ; les terres annexées en 1961 ancrées à Chambéry-Nord (arbitrage d'Adrien), plus de morceau vide. Reste : le régime de 1973-1985.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
+
 - **Sources** :
   - Gaudillère, extrait donné par Adrien le 28 septembre 2026 : limite Nord / Sud de 1860 à
     1973, décrite dans la commune d'avant l'annexion de Bissy et de Chambéry-le-Vieux (6 mai
@@ -1000,6 +833,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Saumur (49328)
 
 ### 41. Saumur de 1941 à 1985, et la limite Nord-Est / Nord-Ouest d'avant 1963
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Nord-Ouest et Sud de 1941 à 1985, Nord-Est de 1941 au 1963-05-30 (l'atome entier retiré). Reste : la limite Nord-Est / Nord-Ouest d'avant 1963.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - Gaudillère, extrait donné par Adrien le 29 septembre 2026 : « la Loire (les îles appartenant
@@ -1142,11 +978,24 @@ ce qui est propre à une ville découpée, avec sa source.
   POINT(785000 6336500) et Est POINT(787000 6339000). La même ligne vaut après 1973 (le décret
   ne divise que l'Est) : à prolonger jusqu'en 2013 quand la limite Nord-Est / Sud-Est sera
   tracée (décret 73-721 ; ancre prête pour le Sud-Est : POINT(788500 6336000), non éprouvée).
+- **Tracé après 1973 (écrit le 21 octobre 2026)** : `30007-2` (Ouest / reste, reprise de `30007-1`
+  avec l'axe du Grabieux que nomme le décret 73-721 au lieu du quai du 8-Mai, 0,97 ha) et `30007-3`
+  (Nord-Est / Sud-Est, décret 73-721), 1973-09-23 → 2013-01-01, ancres datées Ouest
+  POINT(785000 6336500), Nord-Est `347#3002` POINT(787500 6338700), Sud-Est `347#3041`
+  POINT(788500 6336000) ; CONFORME au 2000-01-01 et au 1980-01-01 (`--morceaux 3`). Aucun texte ne
+  change ces limites avant le décret 2014-226. Reste à inscrire : les trois fractions de
+  1973-09-23 à 1992-03-22 (communes rurales du décret : Nord-Est = Rousson,
+  Saint-Julien-les-Rosiers, Saint-Martin-de-Valgalgues ; Sud-Est = Les Plans, Méjannes-lès-Alès,
+  Mons, Saint-Hilaire-de-Brethmas, Saint-Privat-des-Vieux, Salindres, Servas), et le nom
+  « Alès-Nord-Est » de `#3002` dès 1973 (la base dit « Alès-Est » jusqu'en 1999).
 ---
 
 ## Évreux (27229)
 
 ### 71. Évreux : décret 82-56, à inscrire dès 1982
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Nord et Sud de 1941 à 1968, les quatre fractions de 1982 à 1992. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : Gaudillère, Évreux 1863-1870 ; décret n° 82-56 du 20 janvier 1982 (JO du
   22 janvier ; `jorf_txt/JORF_19820122_18_col.txt`, lignes 599-630), qui divise le canton Sud en
@@ -1179,6 +1028,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 67. Toulouse : Centre et Ouest absents de 1968 à 1973, et 1941-1968
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Centre et Ouest de 1968 à 1973. Reste : 1941-1968.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** : Gaudillère, Toulouse 1801-1973 (extrait donné par Adrien le 3 octobre 2026) ;
   chronologie : Toulouse-1 à 15 créés le 16 août 1973.
 - **Base** : `37818#3133` Centre, `#3134` Nord, `#3135` Ouest, `#3136` Sud de 1870 à 1941 ; de 1968
@@ -1188,6 +1040,26 @@ ce qui est propre à une ville découpée, avec sa source.
   1801 → 1973-09-23 ; ancres datées Ouest POINT(571000 6278000), Nord POINT(572500 6283000),
   Centre POINT(576500 6282000), Sud POINT(575000 6275000). Avant 1806 la cible est autre
   (11 125 ha), non éprouvée.
+
+### 128. Toulouse : quinze cantons de 1973 à 1998, sans fraction en base
+
+- **Sources** : décret n° 73-815 du 16 août 1973, JO du 17 août 1973
+  (`jorf_txt/JORF_19730817_190_col.txt`, l. 1620-1800), qui décrit chacun des quinze cantons avec
+  tous ses voisins ; décret du 26 février 1997 (`JORF_19970227_49`), communes rurales seules.
+- **Base** : aucune fraction de 31555 entre le 23 septembre 1973 et le 15 mars 1998 ; du
+  15 mars 1998 au 1er janvier 1999, `#3133` à `#3136` portent encore les noms Centre, Nord, Ouest,
+  Sud au lieu de Toulouse-I à IV.
+- **À inscrire** : les quinze fractions (`#3133`-`#3136`, `#3140`-`#3150` = Toulouse-I à XV) du
+  23 septembre 1973 au 15 mars 1998, et les communes rurales de 1973 (VIII : Balma, Beaupuy,
+  Drémil-Lafage, Flourens, Mondouzil, Mons, Montrabé, Pin-Balma, Quint ; IX : Ramonville ; XI :
+  Portet ; XII : Cugnaux, Tournefeuille ; XIII : Beauzelle, Blagnac, Colomiers, Cornebarrieu,
+  Mondonville ; XIV : Aucamville, Castelginest, Fenouillet, Fonbeauzard, Gagnac, Launaguet,
+  Saint-Alban ; XV : Castelmaurou, Montberon, Pechbonnieu, Rouffiac, Saint-Geniès-Bellevue,
+  Saint-Jean, Saint-Loup, L'Union) ; les noms Toulouse-I à IV dès 1973.
+- **Tracé (écrit le 21 octobre 2026)** : `31555-1973-G`, `-AB`, `-CD` (lignes de Gaudillère
+  reprises) et `-L1` à `-L12`, 1973-09-23 → 2013-01-01 ; ancres datées (points dans
+  `cartes/sorties/decoupe_toulouse/commande.sh`), qui joueront quand les appartenances 1973-1998
+  seront inscrites. CONFORME au 2000-01-01 (15 morceaux) et au 1980-01-01 (`--morceaux 15`).
 ---
 
 ## Tours (37261)
@@ -1228,36 +1100,12 @@ ce qui est propre à une ville découpée, avec sa source.
   de Gaudillère pour 1933, ou décret.
 ---
 
-## La Roche-sur-Yon (85191)
-
-### 48. La Roche-sur-Yon : le nom du canton Nord de 1973 à 1999
-
-- **Source** : décret 73-773 du 2 août 1973 (JO du 4 août), qui crée La Roche-sur-Yon-Nord et
-  La Roche-sur-Yon-Sud.
-- **Base** : `29394#8523` porte le nom « La Roche-sur-Yon » de 1973 à 1999, puis
-  « Roche-sur-Yon-Nord » ; `#8531` porte « Roche-sur-Yon-Sud » dès 1973.
-- **À inscrire** : nommer l'unité 8523 « La Roche-sur-Yon-Nord » dès le 23 septembre 1973.
-- **Tracé** : `85191-1`, de 1973 à 2013, conforme.
----
-
-## Poitiers (86194)
-
-### 49. Poitiers : Nord et Sud de 1941 à 1973
-
-- **Sources** : chronologie p. 821 : limites de Poitiers-Nord et Poitiers-Sud fixées le 16 avril
-  1862 ; Poitiers-1 à 5 créés le 13 juillet 1973.
-- **Base** :
-  - `27358#8621` Nord et `#8622` Sud de 1870 à 1941 ;
-  - de 1968 à 1973, l'atome entier `27358` dans le Sud ;
-  - rien de 1941 à 1968.
-- **À inscrire** : Nord et Sud de 1862 (ou 1870) au 13 juillet 1973, à la place de l'atome entier
-  dans le Sud en 1968-1973.
-- **Tracé** : `86194-1`, de 1862 à 1973, ancres datées.
----
-
 ## Meudon (92048)
 
 ### 50. Meudon : Issy-les-Moulineaux-Ouest et Meudon de 1967 à 1998
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions de 1968 à 1998. Reste : avant 1967.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret 67-590 du 20 juillet 1967 (Hauts-de-Seine, JO du 22 juillet 1967,
   `jorf_txt/JORF_19670722_169_col.txt`, articles 29 et 30). Le décret 84-1241 du 24 décembre
@@ -1276,6 +1124,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Bourgoin-Jallieu (38053)
 
 ### 60. Bourgoin-Jallieu : décret 85-92, à inscrire dès 1985
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : la ville dans 3804 de 1973 à 1985, les deux fractions de 1985 à 1998, le nom Bourgoin-Jallieu-Sud. Reste : le canton de L'Isle-d'Abeau et Saint-Alban-de-Roche.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : décret n° 85-92 du 24 janvier 1985, art. 4 et 5 (JO du 25 janvier 1985 ;
   `jorf_txt/JORF_19850125_21_col.txt`, lignes 1871-1889) ; Gaudillère l'abrège.
@@ -1296,6 +1147,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Fontaine (38169)
 
 ### 59. Fontaine : décret 85-92, à inscrire dès 1985
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : la ville, Seyssinet-Pariset, Seyssins, Engins et Saint-Nizier dans 3832 de 1973 à 1985 ; les deux fractions, Seyssinet et Seyssins (3856) de 1985 à 1998 ; les noms. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : décret n° 85-92 du 24 janvier 1985 (JO du 25 janvier 1985, p. 1045 ;
   `jorf_txt/JORF_19850125_21_col.txt`, lignes 1663-1665 et 1727-1740) ; Gaudillère l'abrège.
@@ -1318,6 +1172,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 51. Gentilly : entière à Arcueil de 1976 à 1985, coupée de 1985 à 1994
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Gentilly et Arcueil dans 9434 de 1976 à 1985 (Arcueil jusqu'en 1994), les deux fractions de 1985 à 1994. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** :
   - décret de janvier 1976 (JO du 29 janvier 1976, `jorf_txt/JORF_19760129_24_col.txt`,
     art. 3) : « Les communes d'Arcueil et de Gentilly forment un nouveau canton » ;
@@ -1337,21 +1194,38 @@ ce qui est propre à une ville découpée, avec sa source.
 ### 69. Chartres : 1941-1968, et le régime de 1973-1998
 
 - **Sources** : Gaudillère, Chartres 1928-1940 (extrait donné par Adrien le 4 octobre 2026) ;
-  décret 73-723 du 23 juillet 1973 (`jorf_txt/JORF_19730725_171_col.txt`, lignes 1314-1381), qui
+  décret 73-719 du 23 juillet 1973 (`jorf_txt/JORF_19730725_171_col.txt`, lignes 1314-1381), qui
   reprend la même suite des Épars à « rue Jean-Mermoz et route de Paris » et crée Chartres-
-  Nord-Ouest, Nord-Est, Sud-Ouest et Sud-Est ; décret 82-27 (JO du 16 janvier 1982), qui dédouble
-  le Nord-Ouest en Lucé et Mainvilliers.
+  Nord-Ouest, Nord-Est, Sud-Ouest et Sud-Est ; décret 82-27 du 15 janvier 1982
+  (`jorf_txt/JORF_19820116_13_col.txt`, lignes 1131-1143), qui dédouble le Nord-Ouest en Lucé et
+  Mainvilliers : la part de Chartres passe à Mainvilliers avec les mêmes limites (Fbg-St-Jean,
+  impasse St-Jean, Rechèvres, voie ferrée Paris-Brest). Rien d'autre avant le décret de 2014.
 - **Base** : `8537#2807` (Nord) et `#2808` (Sud) de 1870 à 1941 et de 1968 au 23 septembre 1973 ;
-  rien de 1941 à 1968 ; rien pour Chartres ni Lucé de 1973 à 1998 ; Chartres-Nord-Ouest absent ;
-  le décret de 1973 manque dans `cantons/communes_coupees_1973_1984.csv`.
-- **À inscrire** : les deux fractions de 1941 à 1968 ; les quatre cantons de 1973 et ceux de 1982.
+  rien de 1941 à 1968. Puis `#2807` (Nord-Est, sans `unit_version` entre 1941 et 1999 : affiché
+  « Chartres-Nord »), `#2825` (Sud-Est), `#2826` (Sud-Ouest) et `#2830` (Mainvilliers) du
+  1998-03-15 au 2013 seulement : rien pour la ville du 1973-09-23 au 1998-03-15, alors que les
+  communes rurales sont dans 2807, 2825, 2826 dès 1973 et dans 2829 / 2830 dès 1982. L'unité
+  Chartres-Nord-Ouest n'existe pas : Lucé, Mainvilliers, Amilly, Cintray, Lèves, Bailleau et
+  Saint-Aubin n'ont aucun canton de 1973 à 1982. Bascule de 1982 au 03-14, le décret est au JO du
+  01-16. Le décret 73-719 manque dans `cantons/communes_coupees_1973_1984.csv`.
+- **À inscrire** : les deux fractions de 1941 à 1968 ; les quatre fractions du 1973-09-23 au
+  1998-03-15, avec Chartres-Nord-Ouest (unité, communes rurales, fraction) jusqu'en 1982 ; le nom
+  Chartres-Nord-Est pour 2807 de 1973 à 1999.
 - **Tracé** : `28085-1`, 1870 → 1973-09-23 ; ancres datées Nord POINT(590688 6818227) et Sud
-  POINT(589846 6816676).
+  POINT(589846 6816676). `28085-2` (NO/SO, NE/SO, NE/SE), `28085-3` (NO/NE) et `28085-4` (SO/SE),
+  1973-09-23 → 2013-01-01 (21 octobre 2026) ; ancres datées `#2807` Nord-Est, `#2825` Sud-Est,
+  `#2826` Sud-Ouest, `#2830` Mainvilliers, posée dès 1973 sur la part du Nord-Ouest (à redater
+  au 1982 si une unité Chartres-Nord-Ouest est inscrite sous un autre code). Question ouverte :
+  l'« impasse Saint-Jean », introuvable — couloir le long de la voie ferrée retenu, autres lectures
+  de 0,7 à 10,9 ha ; le plan annexé au décret trancherait.
 ---
 
 ## Douai (59178)
 
 ### 53. Douai : Douai-Ouest absent de la ville de 1968 à 1982, et 1941-1968
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `12105#5923` dans 5923 de 1968 au 1982-03-14 ; la fraction existait, rangée sous Dunkerque-Est (`12105#5925`, retirée). Reste : 1941-1968.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - Gaudillère, découpage de 1922 (extrait donné par Adrien le 3 octobre 2026) : la Scarpe, et
@@ -1426,6 +1300,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Nancy (54395)
 
 ### 55. Nancy : Nancy-Est absent de 1968 à 1973, et 1941-1968
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `24537#5419` de 1968 à 1973. Reste : 1941-1968.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : Gaudillère, Nancy 1801-1879 (extrait donné par Adrien le 3 octobre 2026).
 - **Base** :
@@ -1525,6 +1402,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 64. Rennes : communes rurales de 1870-1941 rangées sous le mauvais code
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les communes rurales de 1815-1941 remises sous le bon canton (30 lignes : 3530 → 3531 → 3532 → 3530) ; `28930#3529` de 1968 à 1973. Reste : 1941-1968.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** : Gaudillère, Rennes 1801-1973 (extrait donné par Adrien le 3 octobre 2026, titré
   « Reims » par erreur) ; chronologie : Rennes-I à X créés le 23 juillet 1973.
 - **Base** :
@@ -1575,6 +1455,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 52. Sarcelles : 1964-1985
 
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Est sous 9523 (Nord-Est) et Saint-Brice sous 9533 (Sud-Ouest) du 1976-03-07 au 1985-03-10, ancres datées. Reste : 1964-1976 ; la commune de Saint-Brice.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
+
 - **Sources** :
   - décret 67-593 du 20 juillet 1967 (JO du 22 juillet 1967) : canton de Sarcelles, la commune
     entière ;
@@ -1597,6 +1480,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 72. Dijon : 1941-1968, et Nord et Sud absents de 1968 à 1973
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : Nord et Sud de 1968 à 1973. Reste : 1941-1968.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** : Gaudillère, Dijon 1907-1973 (extrait donné par Adrien le 4 octobre 2026).
 - **Base** : `11845#2109` (Est), `#2110` (Nord), `#2111` (Ouest), `#2112` (Sud) de 1907 à 1941 ;
   rien de 1941 à 1968 ; de 1968 à 1973, Est et Ouest seulement.
@@ -1604,10 +1490,34 @@ ce qui est propre à une ville découpée, avec sa source.
 - **Tracé** : `21231-1` (A-B) et `21231-2` (C-D), 1907-1973, ancres datées sur la même période.
   De 1968 à 1973, les morceaux du Nord (1 457 ha) et du Sud (979 ha) ne sont pas tirés, faute de
   fraction. Sud (sud-est) et Ouest (sud-ouest) sont attribués par les noms : à confirmer sur le plan.
+- Constat du 18 octobre 2026 : la base porte désormais les quatre fractions de 1941 à 1968
+  (`sql/116_villes_couverture_1941.sql`, vraisemblablement) ; le « Reste » ci-dessus est à vérifier.
+
+### 120. Dijon : les noms de 2109, 2110, 2111 de 1973 à 1999 (Dijon-I, II, III)
+
+- **Source** : décret n° 73-813 du 16 août 1973 (JO du 17 août 1973,
+  `jorf_txt/JORF_19730817_190_col.txt`, l. 1336-1457).
+- **Base** : de 1973-09-23 à 1999-01-01, `unit_version` nomme 2109, 2110, 2111 « Dijon-Est »,
+  « Dijon-Nord », « Dijon-Ouest » ; 2112 est déjà « Dijon-IV » (entrée 98).
+- **Vérifié par les communes rurales en 1980** : 2109 porte Saint-Apollinaire (21540), Ruffey (21535) et
+  six autres communes (= Dijon-I du décret) ; 2110 porte Quetigny (21515),
+  Chevigny-Saint-Sauveur (21171), Sennecey (21605) et cinq autres (= Dijon-II) ; 2111 n'a que Dijon (= Dijon-III,
+  sans commune rurale au décret). 2139 porte Corcelles-les-Monts (21192) et six autres (= Dijon-V).
+- **À inscrire** : les noms « Dijon-I », « Dijon-II », « Dijon-III » pour 2109, 2110, 2111 du
+  1973-09-23 au 1999-01-01 (et, si on veut, « Dijon-V » à « Dijon-VIII » pour 2139-2142 sur la même
+  période, au lieu de « Dijon 5e … 8e Canton »).
+- **Tracé** : `21231-1973-L1` à `L7`, 1973-09-23 → 2013-01-01, écrits le 18 octobre 2026, ancres
+  datées sur la même période. Le nom n'affecte pas le tirage. 2140, 2141, 2142 sont rattachés aux
+  morceaux VI, VII, VIII par leurs seuls noms de 1999 (6e, 7e, 8e Canton) : rien dans la base ne
+  le confirme (aucune commune rurale), et le contrôle par les logements ne départage pas ces trois
+  morceaux de tailles voisines.
 
 ## Saint-Brieuc (22278)
 
 ### 73. Saint-Brieuc : 1941-1982
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions de 1941 à 1982. Reste : `30713#2244`, fraction de 1968-1982 accrochée à un autre atome (commune 22276). Les limites de 1982 sont tracées le 18 octobre 2026 (`22278-1982-ouest-nord`, `-nord-sud`, `-ouest-sud`, 1982-03-14 → 2013, ancres datées `#2244` POINT(275800 6839800), `#2245` POINT(276000 6838500), `#2252` POINT(273000 6839500)) ; `22278-1` est prolongée au 1801-10-27 (arrêté du 5 brumaire an X, même ligne). Nom : 2244 et 2245 s'appellent « Saint-Brieuc-1 » et « -2 » de 1982 à 1999 (repli), alors que le décret 82-54 les nomme Saint-Brieuc-Nord et Saint-Brieuc-Sud.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : Gaudillère, Saint-Brieuc (extrait donné par Adrien le 4 octobre 2026).
 - **Base** : `30795#2244` (canton 1, Nord) et `#2245` (canton 2, Midi) de 1870 à 1941 ; rien de
@@ -1631,6 +1541,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Bordeaux (33063)
 
 ### 75. Bordeaux : La Bastide avant 1865, Caudéran après 1965, 1941-1968, et les 2ᵉ et 6ᵉ de 1968 à 1973
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les 2ᵉ et 6ᵉ de 1968 à 1973. Reste : la rive droite avant 1865, 1941-1968, Caudéran 1955-1965, les huit cantons de 1982.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : Gaudillère, Bordeaux, organisation cantonale 1801-1973 (extrait donné par Adrien
   le 4 octobre 2026) : « les terrains […] sur la rive droite de la Garonne ont été détachés de la
@@ -1677,9 +1590,30 @@ ce qui est propre à une ville découpée, avec sa source.
     Bouillargues et Caissargues, du 3e canton) : position du point B sur le plan ;
   - C-D donne à Nîmes-3 un lobe de 67 ha au nord (Mont Duplan), relié par un goulot de 185 m.
 
+- **Textes lus et tracé écrit (21 octobre 2026)** : décret 73-721 du 23 juillet 1973 (JO du
+  25 juillet 1973, `jorf_txt/JORF_19730725_171_col.txt` l. 1620) : Nîmes-I, III, IV, V « en
+  remplacement des premier et troisième cantons » ; IV avec Caissargues et Garons, III avec
+  Bouillargues et Rodilhan, V avec Milhaud ; le 2e inchangé. Décret 82-57 du 20 janvier 1982 (JO du
+  22 janvier 1982, `JORF_19820122_18_col.txt` l. 680) : III, IV, V, VI et La Vistrenque (Milhaud,
+  Caissargues, Garons, Bouillargues, Rodilhan, et la part de Nîmes au sud du CD 135), en
+  remplacement de III, IV et V ; I et 2 inchangés.
+- **À inscrire** : 1973-09-23 → 1982-03-14 : Nîmes-I = `#3017`, 2 = `#3018`, III = `#3019`
+  (+ Bouillargues, Rodilhan), IV = `#3042` (+ Caissargues, Garons), V = `#3043` (+ Milhaud) ;
+  1982-03-14 → 1992-03-22 : les sept fractions de 1992 (`#3045` = La Vistrenque, chef-lieu
+  Bouillargues). Base : Caissargues reste à 3019 et Milhaud à 3017 jusqu'au 1973-09-23 seulement ;
+  Bouillargues et Rodilhan n'ont rien de 1973 à 1992.
+- **Tracé** : `30189-3`/`-4` (1880-1973, HYPOTHESE, source `main` : la loi du 13 mars 1880 n'a pas
+  été lue ; limite 1/3 prise sur I/IV + IV/V de 1973), `-5` à `-8` (1973-1982, `--morceaux 5`),
+  `-9` à `-14` (1982-2013). Lignes, notes, commandes : `cartes/sorties/decoupe_nimes/`.
+- **Les deux « à vérifier » de 1801** : le sud au-delà du Vistre est à Nîmes-V en 1973 (ancien
+  1er) et à La Vistrenque en 1982 ; le lobe du Mont Duplan (Rangueil, Crucimèle, Bonfa, Rostand,
+  Vincent-Faïta) est récité tel quel par IV en 1973 et en 1982.
+- **Reste à lire** : loi du 13 mars 1880, JO du 14 mars 1880 (Gallica et HathiTrust : 403).
 ## Dole (39198)
 
 ### 78. Goux, fusionnée en 1973, garde une appartenance propre à Dole-Nord-Est jusqu'en 1999
+
+- **13 octobre 2026** : réponse d'Adrien : « les communes fusionnées on garde leur appartenance pour tracer leur chemin mais il faut modifier la carte en conséquence ». L'appartenance de Goux reste ; `sql/84` dessine désormais une commune fusionnée encore vivante sur son dernier polygone ANR et la retranche de la ville. En 1980 : Goux 581 ha (3 719 avant), `11908#3913` 2 463 ha, `11908#3933` 702 ha. Vaut pour Puy-Saint-Pierre (déjà servie par la reprise), Saint-Martin-les-Eaux, Saint-Dézery, La Tourette, Saint-Étienne 1969-1973. Entrée close.
 
 - **Source** : décret n° 73-659 du 13 juillet 1973 (JO du 17 juillet 1973,
   `cantons/communes_coupees_1973_1984.csv`), qui range Goux dans Dole-Nord-Est.
@@ -1696,6 +1630,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Le Cannet (06030)
 
 ### 79. Le canton du Cannet de 1955 à 1998 : deux trous, et les fractions de 1982 qui commencent en 1998
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les quatre communes dans 0634 de 1973 à 1982, les deux fractions de 1982 à 1998. Reste : 1955-1968 (décret de 1957 non vu).
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - chronologie cantonale : « Cr. Le Cannet (division Cannes) », 21 octobre 1957 ;
@@ -1720,55 +1657,12 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Grasse (06069)
-
-### 80. Grasse de 1973 à 1998 : la ville sans canton, Grasse-Nord qui commence en 1998
-
-- **Sources** : décret n° 85-143 du 31 janvier 1985 (JO du 1er février 1985,
-  `jorf_txt/JORF_19850201_27_col.txt`), art. 6 : création de Grasse-Nord (le nord de la ville
-  seul) ; le canton de Grasse devient Grasse-Sud.
-- **Base** :
-  - l'atome `16069` est dans 0610 jusqu'au 1973-09-23 ; les fractions `16069#0610` et
-    `16069#0651` ne commencent qu'au **1998-03-15** : de 1973 à 1998, **la ville n'a aucun
-    canton**, alors qu'Auribeau-sur-Siagne et Pégomas restent dans 0610 sans interruption ;
-  - 0610 s'appelle « Grasse » jusqu'en 1941, n'a pas de nom ensuite, puis « Grasse-Sud » en 1999 ;
-    0651 n'a pas de nom avant 1999 (règle du point 12).
-- **À inscrire** :
-  - la ville entière dans 0610 de 1973-09-23 au 1985-03-10 ;
-  - les deux fractions dès le 1985-03-10, et les noms Grasse-Sud / Grasse-Nord à cette date.
-- **Déjà prêt** : `06069-1` (1985-03-10 → 2013), ancrée ; elle couvre déjà 1985-1998.
-- **À trancher par Adrien** : le point d'arrivée de la « ligne droite » finale. Retenu : la cote
-  290,4 du texte (sommet du chemin du Piéchal sur la limite de Châteauneuf, 1019834 6292356).
-  Le toponyme BD TOPO « la fontaine de l'ormeau » est 740 m plus au sud-est, à 252 m
-  d'altitude ; le prendre déplacerait 32,5 ha de Grasse-Sud vers Grasse-Nord.
-
----
-
-## Menton (06083)
-
-### 81. Le canton de Menton de 1973 à 1998 : la ville et trois communes sans canton
-
-- **Sources** : décret du 21 février 1997 (NOR INTA9700038D, JO du 23 février 1997,
-  `jorf_txt/JORF_19970223_46_col.txt`), art. 1er : création de Menton-Ouest (Gorbio,
-  Roquebrune-Cap-Martin, Sainte-Agnès et l'ouest de la ville) ; Menton devient Menton-Est. Effet
-  au renouvellement de mars 1998 : la date de la base est la bonne.
-- **Base** :
-  - **Menton (atome `22015`), Gorbio, Roquebrune-Cap-Martin et Sainte-Agnès n'ont aucun canton
-    de 1973-09-23 à 1998-03-15** ; seule Castellar reste dans 0613 sans interruption ;
-  - 0613 s'appelle « Menton » jusqu'en 1941, n'a pas de nom ensuite, puis « Menton-Est » en 1999
-    (règle du point 12).
-- **À inscrire** : les quatre communes dans 0613 de 1973-09-23 au 1998-03-15 (canton entier,
-  aucune coupe à ces dates).
-- **Déjà prêt** : `06083-1` (1998-03-15 → 2013), ancrée.
-- **À confirmer par Adrien** : la « route de Sainte-Agnès » est lue comme la D22 ; l'autre
-  lecture (quitter l'avenue de Prades dès qu'elle croise la ligne à 63 kV) déplace 5,3 ha de
-  l'Ouest vers l'Est. La part de Menton-Ouest fait 128 ha, 9 % de la commune.
-
----
-
 ## Montluçon (03185)
 
 ### 82. Montluçon de 1973 à 1985 : quatre puis cinq cantons que la base ne connaît qu'à partir de 1985
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Nord de 1973 sous 0331 (Nord-Est) avec Domérat, Saint-Victor et Vaux ; `#0320`, `#0321`, `#0332` de 1973 à 1985 ; `#0331` et `#0334` de 1982 à 1985 (Domérat dans 0334). Reste : rien.
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Sources** :
   - décret n° 73-713 du 23 juillet 1973 (JO du 25 juillet 1973), art. 1er : Montluçon-Nord-I
@@ -1791,98 +1685,12 @@ ce qui est propre à une ville découpée, avec sa source.
   ancres datées posées pour les cinq fractions. Ancre à poser pour le Nord de 1973-1982 :
   `POINT(669000 6584300)` (554,8 ha). La ligne `03185-1` (le Cher) s'arrête désormais au 1973-09-23.
 
-## Sedan (08409)
-
-### 83. Sedan de 1973 à 1982 : la ville sans canton, et « Sedan-Sud » qui est Sedan-Est
-
-- **Source** : décret n° 73-715 du 23 juillet 1973 (JO du 25 juillet 1973), art. 3 : « en remplacement
-  des cantons de Sedan-Nord et Sedan-Sud, il est créé trois cantons » : Sedan-Nord, Sedan-Ouest,
-  Sedan-Est.
-- **Base** :
-  - fractions `35814#0826` et `#0827` sans canton du 1973-09-23 au 1982-03-14 ; `#0836` (Ouest)
-    seulement à partir du 1982-03-14, alors que Donchery et Wadelincourt sont dans 0836 dès 1973-09-23 ;
-  - l'unité 0827 s'appelle « Sedan-Sud » jusqu'en 1999, puis « Sedan-Est » : le décret la nomme
-    Sedan-Est dès 1973.
-- **À inscrire** : les trois fractions du 1973-09-23 au 1982-03-14 ; le nom Sedan-Est pour 0827 à
-  partir de 1973.
-- **Déjà prêt** : lignes `08409-1` à `08409-3` (1973-09-23 → 2013), ancres datées posées.
-- **Manque** : la limite Nord / Sud de 1870 à 1973 (aucun texte dans le dépôt ; Frénois réunie en 1965).
-
-## Romilly-sur-Seine (10323)
-
-### 84. Romilly-I et Romilly-II commencent en 1988 dans la base, en 1973 dans le JO
-
-- **Source** : décret n° 73-652 du 13 juillet 1973 (JO du 17 juillet 1973), art. 4 ;
-  `cantons/communes_coupees_1973_1984.csv`, `jorf_txt/JORF_19730717_164_col.txt`. Romilly-II n'a
-  aucune commune rurale.
-- **Base** :
-  - l'atome entier 29547 est dans 1020 jusqu'au 1973-09-23, puis dans rien ;
-  - les fractions `29547#1020` (I) et `29547#1027` (II) ne commencent qu'au **1988-09-25** (COG) ;
-  - `unit_version` n'a rien pour 1020 entre 1941 et 1999 (« Romilly-sur-Seine », puis « 1er
-    Canton »), et rien pour 1027 avant 1999.
-- **À inscrire** : `29547#1020` dans 1020 et `29547#1027` dans 1027 du 1973-09-23 au 1988-09-25 ;
-  les noms Romilly-sur-Seine-I et -II dès 1973.
-- **Déjà prêt** : ligne `10323-1` (1973-09-23 → 2013-01-01), ancres non datées
-  `POINT(755000 6824800)` pour I et `POINT(752000 6824000)` pour II. Rien à retoucher une fois
-  les appartenances inscrites.
-- **À confirmer** (dit dans la note de la coupe) : « la limite Ouest de la Petite-Béchère », lue
-  comme le côté ouest du parc de la Béchère ; le tracé de 1973 de la rue du Général-de-Gaulle
-  (triangle de 3,5 ha au canton I).
-
-## La Chapelle-Saint-Luc (10081)
-
-### 85. Le canton de La Chapelle-Saint-Luc commence en 1988 dans la base, en 1985 dans le JO
-
-- **Source** : décret n° 85-71 du 22 janvier 1985 (JO du 23 janvier 1985), art. 1er ;
-  `jorf_txt/JORF_19850123_19_col.txt` : canton de La Chapelle-Saint-Luc = Les Noës-près-Troyes
-  et la partie de La Chapelle à l'ouest de l'axe des avenues René-Coty et Roger-Salengro ;
-  Troyes-IV et Sainte-Savine modifiés par voie de conséquence.
-- **Base** :
-  - l'atome entier 8317 est dans 1029 (Troyes-IV) du 1973-09-23 au 1985-03-10 ;
-  - les fractions `8317#1029` et `8317#1033` ne commencent qu'au **1988-09-25** : de 1985-03-10
-    à 1988-09-25, la commune n'a aucun canton ;
-  - Les Noës-près-Troyes (atome 25092) : dans 1023 jusqu'au 1973-09-23, puis rien jusqu'au
-    1988-09-25 (1033 ensuite) ;
-  - le canton 1028 (Sainte-Savine) n'a aucun membre du 1973-09-23 au 1988-09-25 ;
-  - `unit_version` ne connaît 1033 (« Chapelle-Saint-Luc », sans « La ») et 1028 qu'à partir de 1999.
-- **À inscrire** :
-  - `8317#1033` dans 1033 et `8317#1029` dans 1029, du 1985-03-10 au 1988-09-25 ;
-  - Les Noës-près-Troyes dans 1028 du 1973-09-23 au 1985-03-10 (décret 73-652, art. 2 : « Canton
-    de Sainte-Savine, comprenant les communes de Macey, Montgueux, Noes-près-Troyes, la
-    Rivière-de-Corps, Sainte-Savine, et de Torvilliers »), puis dans 1033 ;
-  - les autres communes du canton de Sainte-Savine dans 1028 dès 1973.
-- **Chronologie fausse** : `cantons/chronologie_cantonale.csv` date du 1985-01-22 la création de
-  Troyes-3, Troyes-4 et Sainte-Savine, et celle de Troyes-5 à 7 ; c'est le décret 73-652 du
-  13 juillet 1973 (art. 2 et 3). Seule la création de La Chapelle-Saint-Luc est de 1985.
-- **Déjà prêt** : ligne `10081-1` (1985-03-10 → 2013-01-01), ancres ouest (`8317#1033`) et est
-  (`8317#1029`), non datées.
-
-## Pamiers (09225)
-
-### 86. Pamiers : la ville sans canton de 1955 à 1985, et « Pamiers-Ouest » nommé en 1999
-
-- **Source** : décret n° 84-1223 du 24 décembre 1984 (JO du 30 décembre 1984, p. 4146-4147),
-  art. 1er ; `jorf_txt/JORF_19841230_305_col.txt` : création de Pamiers-Est ; le canton de
-  Pamiers « prend la dénomination de Pamiers-Ouest ».
-- **Base** :
-  - fractions `26103#0912` et `26103#0922` à partir du 1985-03-10 : juste ;
-  - l'atome entier 26103 est dans 0912 jusqu'au 1955-01-01, puis dans rien jusqu'au 1985-03-10 ;
-  - `unit_version` n'a rien pour 0912 entre 1941 et 1999, puis « Pamiers-Ouest ».
-- **À inscrire** : l'atome 26103 dans 0912 de 1955 à 1985 (canton non divisé) ; le nom
-  Pamiers-Ouest pour 0912 dès le 1985-03-10.
-- **Noté, sans suite pour la ville** : décret n° 98-722 du 18 août 1998 (JO du 21 août 1998),
-  27 ha 32 a 89 ca de Saint-Victor-Rouzaud (Pamiers-Ouest) rattachés à Artix (Varilhes) ; il ne
-  touche pas la limite interne.
-- **Déjà prêt** : ligne `09225-1` (1985-03-10 → 2013-01-01), ancres est (`26103#0922`) et ouest
-  (`26103#0912`).
-- **À confirmer** (dit dans la note de la coupe) : le « canal des usines », reconnu à sa seule
-  géométrie ; la « rue de l'Hospice-de-Loumet », prise pour la rue de Loumet.
-
----
-
 ## Carcassonne (11069)
 
 ### 87. Carcassonne : l'Ouest de 1968-1973 sous « Castelnaudary-Nord », rien de 1973 à 1998, et le décret de 1997 absent de la chronologie
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : `6912#1108` de 1968 à 1973 à la place de `6912#1109` (retirée) ; les trois fractions et Pennautier de 1973 à 1998 ; les noms Carcassonne-I, II, III, II-Nord, II-Sud. Reste : le décret de 1997 dans la chronologie.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - arrêté du 11 messidor an X (30 juin 1802), *Bulletin des lois* an XI, n° 228 bis, p. 137 :
@@ -1934,125 +1742,12 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ---
 
-## Narbonne (11262)
-
-### 88. Narbonne de 1973 à 1998 : la ville et Bages sans canton, les noms Est / Ouest / Sud en 1999
-
-- **Sources** : décret n° 73-653 du 13 juillet 1973, art. 3 (JO du 17 juillet 1973,
-  p. 7703-7704, `jorf_txt/JORF_19730717_164_col.txt`) : le canton de Narbonne est remplacé par
-  Narbonne-Est (partie de la ville), Narbonne-Sud (Bages et partie de la ville) et
-  Narbonne-Ouest (Bizanet, Canet, Marcorignan, Montredon, Moussan, Névian, Raissac-d'Aude,
-  Villedaigne et le reste de la ville). Décret n° 85-72 du 22 janvier 1985, art. 1er (JO du
-  23 janvier 1985, `jorf_txt/JORF_19850123_19_col.txt`) : une portion de Narbonne-Ouest passe à
-  Narbonne-Sud.
-- **Base** :
-  - jusqu'au 23 septembre 1973 : l'atome entier `24587` dans 1124 « Narbonne » ;
-  - de 1973 à 1998 : rien pour la ville ; rien non plus pour Bages (`2358`), qui ne reparaît
-    dans 1134 qu'au 15 mars 1998. Les huit communes de Narbonne-Ouest sont bien dans 1133 dès le
-    23 septembre 1973 ;
-  - à partir du 15 mars 1998 : `24587#1124`, `24587#1133`, `24587#1134` ; 1124 s'appelle
-    « Narbonne » jusqu'en 1999 ;
-  - Bizanet (`4369`) n'a aucun canton de 1955 à 1973 (constat de l'agent, à revérifier).
-- **À inscrire** : les trois fractions de la ville et Bages (dans 1134) à partir du
-  23 septembre 1973 ; les noms Narbonne-Est (1124), Narbonne-Ouest (1133) et Narbonne-Sud
-  (1134) dès 1973 ; Bizanet dans 1124 de 1955 à 1973.
-- **Déjà prêt** (écrit le 6 octobre 2026, ancres datées) : `11262-1` (limite de l'Est) et
-  `11262-2` (Sud / Ouest de 1973), du 23 septembre 1973 au 10 mars 1985 ; `11262-3` (limite de
-  l'Est, même géométrie) et `11262-4` (Sud / Ouest de 1985), du 10 mars 1985 au 1er janvier
-  2013. Ancres : Est `POINT(708674 6229804)`, Sud `POINT(701347 6225374)`, Ouest
-  `POINT(697340 6229713)`. Est 7 263,0 ha ; Sud 3 210,1 puis 3 301,7 ha ; Ouest 7 025,6 puis
-  6 934,0 ha.
-- **À confirmer** : en 1985, « l'axe du boulevard de 1848 (jusqu'à la voie de chemin de fer
-  Béziers-Narbonne) » — le boulevard actuel est à l'est de la voie ferrée et la Robine à 337 m
-  à l'ouest ; tracé par le prolongement de son axe sur 300 m (variante : 0,7 ha). Plan à la
-  préfecture de l'Aude.
-
-## Millau (12145)
-
-### 89. Millau-Est et Millau-Ouest commencent au COG (1988), pas au décret (1973)
-
-- **Source** : décret n° 73-762 du 2 août 1973, art. 1er (JO du 4 août 1973),
-  `jorf_txt/JORF_19730804_180_col.txt` l. 2137-2150, `cantons/communes_coupees_1973_1984.csv`.
-- **Base** : l'atome entier 22497 est dans 1217 « Millau » jusqu'au 1973-09-23, puis dans rien
-  jusqu'au 1988-09-25 ; les fractions `22497#1217` et `22497#1244` n'ont d'appartenance qu'à
-  partir du 1988-09-25 (date COG). Les communes rurales, elles, basculent bien au 1973-09-23.
-- **À inscrire** : appartenances `22497#1217` → 1217 et `22497#1244` → 1244 du
-  **1973-09-23 au 1988-09-25**.
-- **Nom** : l'unité 1217 s'appelle « Millau » de 1988 à 1999 et n'a pas de version de nom entre
-  1941 et 1999 ; le décret la nomme « Millau-Est » dès 1973 (1244 n'a de version qu'à partir de
-  1999 aussi).
-- **Déjà prêt** : ligne `12145-1` (1973-09-23 → 2013-01-01) et ancres non datées
-  `22497#1244` = POINT(703500.25 6333414.25), `22497#1217` = POINT(713633.97 6332042.15) :
-  elles joueront dès que les appartenances existeront. Ouest 6 968,7 ha, Est 10 048,4 ha.
-- **À confirmer** : au sud du pont Lerouge le décret ne cite plus de voie ; la ligne suit la
-  RN 9 (D809 actuelle) sur 16 km jusqu'à La Cavalerie, lecture de « située à l'Ouest de la route
-  nationale n° 9 ». 1 948,9 ha en jeu. Plan à la préfecture de l'Aveyron.
-
----
-
-## Rodez (12202)
-
-### 90. Les cantons de Rodez n'ont pas de fraction de la ville de 1973 à 1988
-
-- **Source** : décret n° 73-762 du 2 août 1973 (JO du 4 août 1973, p. 8532-8533,
-  `jorf_txt/JORF_19730804_180_col.txt` l. 2151-2169) ; décret n° 82-24 du 15 janvier 1982
-  (JO du 16 janvier 1982, `jorf_txt/JORF_19820116_13_col.txt` l. 874-901).
-- **Base** : atome entier 29437 dans 1228 « Rodez » jusqu'au 1973-09-23, puis rien ; fractions
-  `29437#1228`, `#1245`, `#1246` à partir du 1988-09-25 seulement (date COG). L'unité 1228
-  s'appelle « Rodez » jusqu'en 1999 (aucune version « Rodez-Est » avant), et 1245 / 1246
-  n'ont de version nommée qu'à partir de 1999. Le Monastère, Sainte-Radegonde et
-  Onet-le-Château n'ont aucun canton de 1973-09-23 à 1988-09-25 ; Olemps aucun de 1982-03-14
-  à 1988-09-25.
-- **À inscrire** :
-  - 1973-09-23 → 1982-03-14 : `29437#1245` dans Rodez-Ouest (avec Druelle, Luc, Olemps) ;
-    `29437#1228` dans Rodez-Est (avec Sébazac-Concourès, Sainte-Radegonde, Onet-le-Château,
-    Le Monastère) ;
-  - 1982-03-14 → 1988-09-25 : `29437#1245` Rodez-Ouest (Olemps, Luc, Druelle) ; `29437#1228`
-    Rodez-Est (Le Monastère, Sainte-Radegonde) ; `29437#1246` Rodez-Nord (Onet-le-Château,
-    Sébazac-Concourès) ;
-  - versions de nom « Rodez-Est » pour 1228 dès 1973-09-23, « Rodez-Nord » pour 1246 dès 1982.
-- **Déjà prêt** : lignes `12202-1` (1973-09-23 → 1982-03-14), `12202-2` et `12202-3`
-  (1982-03-14 → 2013-01-01) ; ancres datées Est `POINT(667195.38 6361448.45)`, Ouest
-  `POINT(665231.04 6361971.85)`, Nord `POINT(664334.01 6363466.55)` (Nord depuis 1982
-  seulement). 1973 : Ouest 766,6 ha, Est 359,0 ha ; 1982 : Ouest 446,1, Est 359,0, Nord 320,5 ha.
-- **À confirmer** : le décret de 1982 ne nomme que « RN 88 », « route 140 » et « CD 994 ». La
-  RN 140 est lue depuis le carrefour de la gare (avenues du Maréchal-Joffre et de la Gineste) ;
-  lue depuis la limite nord-ouest (avenue de Decazeville), Rodez-Nord n'aurait que 104,4 ha
-  (variante gardée dans `public.rodez_alt_coin_nord_ouest`). Plan à la préfecture de l'Aveyron.
-
----
-
-## Istres (13047)
-
-### 91. Le canton d'Istres de 1973 à 1992 : quatre communes sans canton, et Miramas à dater
-
-- **Source** : décret n° 91-209 du 27 février 1991 (JO du 28 février 1991, p. 2900-2901,
-  `jorf_txt/JORF_19910228_51_col.txt`), art. 1er : « En remplacement des cantons d'Istres et de
-  Berre-l'Étang », création d'Istres-Nord (Miramas et le nord d'Istres), d'Istres-Sud
-  (Fos-sur-Mer, Saint-Mitre-les-Remparts et le reste d'Istres), de Berre-l'Étang et de Vitrolles.
-  Effet « pour le prochain renouvellement des conseils généraux » (22 mars 1992).
-- **Base** :
-  - l'atome entier `17661` (Istres), Fos-sur-Mer (`14545`) et Saint-Mitre-les-Remparts (`33741`)
-    sont dans 1311 jusqu'au 1973-09-23, puis **n'ont aucun canton jusqu'au 1992-03-22** ;
-  - Miramas (`22570`) est dans 1332 Salon-de-Provence jusqu'au 1973-09-23, n'a rien ensuite, et
-    reparaît dans 1311 au 1992-03-22. Le décret de 1991 la compte pourtant dans l'ancien canton
-    d'Istres : son passage de Salon à Istres, entre 1973 et 1991, reste à dater (texte non
-    cherché) ;
-  - les fractions `17661#1311` et `17661#1349` commencent au 1992-03-22 : la date est juste ;
-  - `unit_version` n'a aucun nom pour 1311 de 1941 à 1999, puis « Istres-Nord » ; aucun nom pour
-    1349 avant 1999. Il faudrait « Istres » jusqu'au 1992-03-22, puis « Istres-Nord » et
-    « Istres-Sud » dès cette date.
-- **À inscrire** : Istres (atome entier), Fos-sur-Mer et Saint-Mitre-les-Remparts dans 1311 de
-  1973-09-23 à 1992-03-22 ; Miramas dans 1332 puis 1311 selon le texte à trouver ; les noms
-  ci-dessus.
-- **Ligne** : `13047-1` écrite le 7 octobre 2026 (1992-03-22 → 2013-01-01, conforme). Aucune
-  ligne ne dépend du trou 1973-1992 : la ville n'était pas divisée.
-
----
-
 ## Aubagne (13005)
 
 ### 92. Aubagne-Est et Aubagne-Ouest commencent en 2005 dans la base, en mars 2004 d'après le décret
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : la bascule au 2004-03-21 pour la ville et les cinq communes d'Aubagne-Est (13 bornes). Reste : La Ciotat, la décision du Conseil d'État.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 2003-156 du 27 février 2003 (NOR INTA0300039D, JORF n° 50 du
   28 février 2003, texte n° 3, art. 2 et 4) ;
@@ -2096,6 +1791,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 94. Arles-Est et Arles-Ouest : trous 1941-1968 et 1973-1992
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions sur 1941-1968 et 1973-1992. Reste : rien pour le n° 94.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : arrêté du 17 frimaire an X (Bulletin des lois, 3e série, t. 5, n° 158,
   p. 209-213 ; Gallica, ark:/12148/bpt6k6515730s, vues 232-233) ; aucun texte postérieur trouvé
   (décrets 91-209 et 2003-156 sans Arles).
@@ -2107,35 +1805,12 @@ ce qui est propre à une ville découpée, avec sa source.
   (7,1 ha en jeu avec la rue du Président-Wilson) et canal de Craponne suivi hors texte de la
   rue au Vigueirat (56,7 ha en jeu) : « telle quelle », arbitrage d'Adrien du 7 octobre 2026.
 
-## Martigues (13056)
-
-### 95. Le canton de Martigues de 1973 à 1992 : Martigues et Port-de-Bouc sans canton ; noms de 1992
-
-- **Source** : décret n° 91-209 du 27 février 1991 (JO du 28 février 1991, p. 2900-2901,
-  `jorf_txt/JORF_19910228_51_col.txt`), art. 5 : création de Martigues-Ouest (Port-de-Bouc et
-  l'ouest de Martigues) ; « le canton de Martigues est modifié par voie de conséquence et prend
-  la dénomination de Martigues-Est ». Effet au renouvellement de mars 1992. Pour 1973 : décret
-  n° 73-812 du 16 août 1973 (JO du 17 août 1973, `jorf_txt/JORF_19730817_190_col.txt`, art. 2
-  et 3) : création de Marignane par division de Martigues, « les limites du canton de Martigues
-  sont modifiées par voie de conséquence ».
-- **Base** :
-  - l'atome entier `21437` (Martigues) et Port-de-Bouc (`27653`) sont dans 1325 jusqu'au
-    1973-09-23, puis **n'ont aucun canton jusqu'au 1992-03-22** ;
-  - les fractions `21437#1325` et `21437#1350` commencent au 1992-03-22 : la date est juste ;
-  - `unit_version` n'a aucun nom pour 1325 de 1941 à 1999 (puis « Martigues-Est ») ; aucun nom
-    pour 1350 avant 1999.
-- **À inscrire** : Martigues (atome entier) et Port-de-Bouc dans 1325 de 1973-09-23 à
-  1992-03-22 ; noms « Martigues » jusqu'au 1992-03-22, puis « Martigues-Est » (1325) et
-  « Martigues-Ouest » (1350) dès cette date.
-- **Ligne** : `13056-1` écrite le 7 octobre 2026 (1992-03-22 → 2013-01-01, source `texte`,
-  conforme) ; ancres `21437#1350` = POINT(863500 6259500), `21437#1325` = POINT(866500 6260500)
-  et POINT(866792 6253859). Aucune ligne ne dépend du trou 1973-1992 : la ville n'était pas
-  divisée. À confirmer sur plan : la « bretelle d'accès direct » (4,99 ha en jeu avec l'avenue
-  du Moulin-de-France) et le chemin du Maroc (1,8 ha).
-
 ## Hérouville-Saint-Clair (14327)
 
 ### 96. Les deux fractions de 1982 commencent en 1998 dans la base ; 1973-1982 est vide
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : la ville entière dans 1440 (Caen-IV) de 1973 à 1982, les deux fractions de 1982 à 1998, les noms. Reste : le décret 82-132 dans `communes_coupees`.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 82-132 du 5 février 1982 (JO du 6 février 1982, p. 489-490,
   `JORF/JORF_19820206_31.pdf`, déposé le 7 octobre 2026 ; pas encore dans `jorf_txt/`).
@@ -2161,6 +1836,9 @@ ce qui est propre à une ville découpée, avec sa source.
 
 ### 98. Le nom de Dijon-IV de 1973 à 1999
 
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : le nom « Dijon-IV » pour 2112 de 1973 à 1999. Reste : I, II, III après vérification.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 73-813 du 16 août 1973 (JO du 17 août 1973,
   `jorf_txt/JORF_19730817_190_col.txt`, l. 1398-1405 et 1459-1468) : Dijon-I à Dijon-VIII,
   Chenôve et Fontaine-lès-Dijon remplacent Dijon-Est, -Nord, -Ouest et -Sud.
@@ -2176,35 +1854,8 @@ ce qui est propre à une ville découpée, avec sa source.
   conforme) ; ancres `9176#2112` = nord (65,4 ha), `9176#2138` = sud (680,3 ha). Le
   « boulevard du Nord » du décret est introuvable : pris pour le nord du boulevard Henri-Bazin.
 - Les lignes de Dijon du régime 1973 (huit cantons, même décret, l. 1336-1457 du même fichier)
-  ne sont pas tracées : `21231-1` et `21231-2` ne valent que pour 1907-1973.
-
-## Ussel (19275)
-
-### 99. Ussel de 1955 à 1985 : la ville sans canton, et le nom d'Ussel-Est
-
-- **Source** : décret n° 85-129 du 29 janvier 1985 (JO du 30 janvier 1985, p. 1275 déduite des
-  en-têtes voisins, `jorf_txt/JORF_19850130_25_col.txt`, l. 2510-2528), art. 2 ;
-  `cantons/mouvements_cantonaux.csv` l. 315-316.
-- **Base** :
-  - l'atome entier 38492 est dans 1927 « Ussel » jusqu'au 1955-01-01, puis dans rien jusqu'au
-    1985-03-10 ;
-  - Chaveroche (9026), Lignareix (19527), Saint-Angel (30432) et Saint-Pardoux-le-Vieux (33945)
-    sont dans 1927 jusqu'au 1982-03-14, puis dans rien jusqu'au 1985-03-10 (1937 Ussel-Ouest
-    ensuite) ;
-  - Saint-Dézery (31183) et La Tourette (37851), fusionnées en 1972 et 1976 d'après l'ANR,
-    gardent une appartenance propre à 1927 jusqu'au 1982-03-14 ;
-  - `38492#1927` s'appelle « Ussel » de 1985 à 1999 et « Ussel-Est » seulement depuis 1999,
-    alors que le décret dit « prend la dénomination d'Ussel-Est » dès 1985.
-- **À inscrire** : l'atome 38492 dans 1927 de 1955 à 1985 ; les quatre communes rurales dans
-  1927 de 1982-03-14 à 1985-03-10 ; le nom Ussel-Est dès 1985 ; décider si la bascule est au
-  décret (1985-01-29) ou au 1985-03-10.
-- **Lignes** : `19275-1` (limite de Saint-Dézery) et `19275-2` (C.D. 159 … Sarsonne … R.N. 89)
-  écrites le 7 octobre 2026 (1985-03-10 → 2013-01-01, source `texte`, conformes) ; ancres
-  `38492#1937` = `POINT(644500 6495000)`, `38492#1927` = `POINT(647500 6493000)` et
-  `POINT(648700 6498200)` (Saint-Dézery).
-- **Lecture non tranchée** : Saint-Dézery (367,9 ha) est à Ussel-Est si « la limite de la
-  commune associée » est sa limite intérieure (lecture écrite). Si c'est son bord extérieur,
-  retirer `19275-1` et la seconde ancre de `#1927` : Ussel-Ouest passe de 3 067,8 à 3 435,7 ha.
+  sont tracées depuis le 18 octobre 2026 (`21231-1973-L1` à `L7`) ; la correspondance 2109-2111 =
+  Dijon-I à III est vérifiée par les communes rurales (entrée 120).
 
 ## Beaune (21054)
 
@@ -2233,6 +1884,11 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Caen (14118)
 
 ### 101. Caen de 1967 à 2013 : trois régimes tracés, un seul en base à ses dates
+
+- **Inscrit par `sql/117_creations_caen_rochefort_bourg_larochelle.sql` (13 octobre 2026, accord d'Adrien)** : fraction `6530#1441` créée pour Caen-V de 1973 (unité 1441, nommée « Caen-V » de 1973 à 1982), ancre datée POINT(456000 6902400) ; `#1408`, `#1409`, `#1439`, `#1442` de 1973 à 1982 ; les neuf fractions de 1982 à 1998. Par `sql/116` : Est / Ouest de 1941 au 1967-09-24, puis les quatre cantons de 1967. Reste : les onze communes de banlieue de 1973 à 1998, Saint-Germain et Ifs avant 1973, le décret de 1998 dans la chronologie, Est / Ouest de 1815 à 1967 à tracer (texte).
+
+- **Inscrit par `sql/115_villes_nomenclature.sql` (13 octobre 2026)** : Caen-Nord de 1967 : `6530#1439` de 1968 à 1973, ancre datée. Reste : tout le reste de l'entrée (1973-1998, Caen-V, communes de banlieue).
+  Règle de nomenclature du 13 octobre 2026 (Adrien) : pas d'unité nouvelle, le canton disparu est porté par l'unité du régime suivant qui hérite de la plus grande part de son territoire dans la ville.
 
 - **Sources** :
   - décret du 8 août 1967 (n° 67-668 d'après Wikipédia ; JO du 9 août 1967,
@@ -2304,6 +1960,9 @@ ce qui est propre à une ville découpée, avec sa source.
 ## Nice (06088)
 
 ### 102. Nice de 1973 à 1998 : vingt-cinq ans sans canton, et les cantons 5 et 6 de 1955 absents
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les onze fractions de 1973 à 1982, les quatorze de 1982 à 1998 ; Falicon, Saint-André, La Trinité dans 0637 de 1973 à 1982. `98` dit « ligne qui ne ferme pas » en 1973 : les cantons I à III n'ont pas de limite tracée, les huit autres se tirent (6 315 ha). Reste : 1955-1973, 1919-1941 à confronter au JO.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** :
   - décret n° 73-811 du 16 août 1973 (JO du 17 août 1973, p. 8916-8917 ;
@@ -2549,6 +2208,1372 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
   - Sens de la Charente (aval) et prolongement au-delà de 1919 : déductions, à confirmer par
     Adrien ; 1870-1876 reste sans coupe.
   - Reste à tracer : les limites du décret 82-25 (1982-2013).
+
+## Oyonnax (01283)
+
+### 3. FAIT (11 octobre 2026, `sql/112`) — Oyonnax-Nord et Oyonnax-Sud commencent en 1998 dans la base, en 1982 dans le JO
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : la ville entière dans 0123 du 1973-09-23 au 1982-03-14, puis `25988#0123` et `25988#0141` jusqu'au 1998-03-15 ; Bellignat, Groissiat, Martignat et Géovreisset dans 0123 puis 0141 aux mêmes dates. Date retenue : 1982-03-14, celle des communes rurales du canton et de la ligne `01283-1` (tirée au 1990-01-01 : Nord 1 761 ha, Sud 1 845 ha).
+- **Reste** : le JO écrit « Géovreissiat » (01170, canton de Nantua) ; c'est Géovreisset (01171, limitrophe d'Oyonnax) que le COG met dans Oyonnax-Sud, et c'est elle qui est inscrite — à confirmer sur un rectificatif ; la date 1984-12-24 de la chronologie cantonale reste sans texte.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 82-77 du 25 janvier 1982 (JO du 26 janvier 1982, art. 2).
+- **Base** : fractions `25988#0123` (Nord) et `25988#0141` (Sud) à partir du **1998-03-15**.
+  L'atome entier 25988 est dans 0123 jusqu'au 1973-09-23, puis dans rien. La chronologie
+  cantonale (`cantons/chronologie_cantonale.csv`) donne une troisième date : 1984-12-24.
+- **À inscrire** :
+  - 25988 dans 0123 (Oyonnax, non divisé) de 1973-09-23 à 1982-01-26 ;
+  - les deux fractions de **1982-01-26** à 1998-03-15 ;
+  - communes rurales : Nord = Dortan, Arbent, Belleydoux, Échallon ; Sud = Martignat,
+    Groissiat, Bellignat, Géovreissiat.
+- **Ligne** : `01283-1` vaut depuis le 1982-03-14. Si l'inscription retient le 1982-01-26, avancer
+  la ligne à la même date (comme Bourg), pour que les deux régimes s'enchaînent.
+- **Noté, sans suite** : le décret du 17 décembre 1996 (JO du 24 décembre 1996) échange
+  2 a 7 ca et 1 a 60 ca entre Oyonnax et Arbent.
+
+## Troyes (10387)
+
+### 8. FAIT (11 octobre 2026, `sql/112`) — Les sept cantons de 1973 n'ont pas de fraction de Troyes avant 1988
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : les sept fractions du 1973-09-23 au 1988-09-25 ; communes lues au décret 73-652 : Saint-Parres-aux-Tertres (1022), Villeloup (1029), Laines-aux-Bois, Saint-André-les-Vergers, Saint-Germain (1031), Bréviandes, Saint-Julien-les-Villas, Rosières (1032). Tirée au 1980-01-01 : sept morceaux, 1 329,1 ha.
+- **Reste** : les trois fractions de 1941 à 1968 ; la chronologie (1985 pour 1973) ; la cible d'avant 1856 ; l'échange de 1986 dans l'ANR ; les deux points à vérifier sur le plan.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-652 du 13 juillet 1973 (JO du 17 juillet 1973, p. 7702-7703), art. 1er à 3 ;
+  `jorf_txt/JORF_19730717_164_col.txt` ; `cantons/communes_coupees_1973_1984.csv`. Sept cantons
+  Troyes-I à VII par division des trois anciens. Le décret n° 85-71 du 22 janvier 1985 (JO du
+  23 janvier 1985) ne change rien dans Troyes (canton de La Chapelle-Saint-Luc seul, point 85).
+- **Base** : les fractions `38334#1022`, `#1023`, `#1024` s'arrêtent au 1973-09-23 ; les sept
+  fractions `#1022`, `#1023`, `#1024`, `#1029`, `#1030`, `#1031`, `#1032` ne commencent qu'au
+  1988-09-25 (date COG). Entre les deux, la ville n'a aucun canton, alors que les communes
+  rurales sont bien dans 1022, 1023 et 1029 dès le 1973-09-23. Aucune appartenance non plus de
+  1941 à 1968.
+- **À inscrire** : les sept fractions du 1973-09-23 au 1988-09-25, sous les mêmes unités :
+  1022 = Troyes-I, 1023 = Troyes-II, 1024 = Troyes-III, 1029 = Troyes-IV, 1030 = Troyes-V,
+  1031 = Troyes-VI, 1032 = Troyes-VII (correspondance établie par les communes de banlieue de
+  1990). Attention : `#1022`, `#1023`, `#1024` ne désignent pas le même secteur avant et après
+  1973 (Troyes-2 d'avant 1973 est l'ouest, Troyes-II d'après 1973 le nord-est).
+- **Chronologie fausse** : `cantons/chronologie_cantonale.csv` date du 1985-01-22 la création de
+  Troyes-3 à 7 ; c'est 1973 (déjà dit au point 85).
+- **Cible avant 1856** : l'ANR de 38334 passe de 1 033,6 ha à 1 329,1 ha au 1856-01-01 (l'ouest,
+  295 ha). Aucun atome ne couvre ce territoire avant 1856 : commune annexée à retrouver, avec
+  son canton.
+- **Échange de 1986 absent de l'ANR** : décret du 24 juin 1986 (JO du 28 juin 1986,
+  `jorf_txt/JORF_19860628_149_col.txt`), 1 ha 20 a 16 ca de Saint-Julien-les-Villas (Troyes-VII)
+  rattachés à Troyes (Troyes-V). Un seul état ANR 1856-2020.
+- **Tracé** (écrit le 9 octobre 2026) : lignes `10387-1` à `-3` avancées à 1815 (1815-01-01 →
+  1973-09-23), ancres datées `#1022` (780693.65 6800566.03), `#1023` (779547 6802204), `#1024`
+  (780110.6 6798429.39) ; lignes `10387-4` à `-10` (1973-09-23 → 2013-01-01), ancres datées
+  `#1022` (781471 6799542), `#1023` (780812 6801151), `#1024` (778310 6800755), `#1029`
+  (779163 6801593), `#1030` (780528 6798937), `#1031` (779733 6798179), `#1032`
+  (780119 6797503). Conforme en 1815, 1856, 1972, 1988 et 2005 ; les ancres de 1973 joueront
+  dès 1973 le jour où les appartenances seront inscrites.
+- **À vérifier sur le plan du décret** : le bout de la rue du Grand-Véon (nord retenu : Troyes-II
+  borde alors Saint-Parres, canton I, sur 1 159 m) ; le bassin du canal entre les quais La
+  Fontaine et du Comte-Henri (2,1 ha, donné à Troyes-V sur une seule ligne).
+
+## Soissons (02722)
+
+### 9. FAIT (11 octobre 2026, `sql/112`) — Le nom de Soissons-Nord de 1973 à 1999
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : le nom « Soissons-Nord » pour 0231 du 1973-09-23 au 1999-01-01.
+- **Reste** : rien.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-712 du 23 juillet 1973 (JO du 25 juillet 1973), article 5 remplacé
+  par le décret n° 73-826 du 18 août 1973 (JO du 19 août 1973) : « Soissons-Nord » et
+  « Soissons-Sud ».
+- **Base** : les appartenances sont justes (`36448#0231` et `#0241` depuis le 1973-09-23). Mais
+  `unit_version` nomme 0231 « Soissons » de 1973 à 1999, et « Soissons-Nord » seulement à partir
+  de 1999.
+- **À inscrire** : le nom « Soissons-Nord » pour 0231 à partir du 1973-09-23.
+- Aucune ligne n'en dépend : `02722-1` est posée et conforme.
+
+## Laon (02408)
+
+### 11. FAIT (11 octobre 2026, `sql/112`) — Le nom de Laon-Nord de 1973 à 1999
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : le nom « Laon-Nord » pour 0218 du 1973-09-23 au 1999-01-01.
+- **Reste** : rien (l'entrée 10, l'échange de 1997, n'est pas faite).
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-712 du 23 juillet 1973 (JO du 25 juillet 1973, art. 3) :
+  « Laon-Nord » et « Laon-Sud ».
+- **Base** : `unit_version` nomme 0218 « Laon » de 1973 à 1999 (même cas que Soissons, point 9).
+- **À inscrire** : le nom « Laon-Nord » pour 0218 à partir du 1973-09-23.
+
+## Saint-Quentin (02691)
+
+### 12. FAIT (11 octobre 2026, `sql/112`) — Le nom de Saint-Quentin-Centre de 1973 à 1999 — et une règle générale probable
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : le nom « Saint-Quentin-Centre » pour 0228 du 1973-09-23 au 1999-01-01.
+- **Reste** : la règle générale : `unit_version` n'a rien entre 1941 et 1999 pour ces unités, et c'est `unit.nom` (le nom de 1940) qui s'affiche. À vérifier sur toute la France.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-826 du 18 août 1973 (JO du 19 août 1973), article 4 :
+  Saint-Quentin-Centre, -Nord, -Sud.
+- **Base** : 0228 s'appelle « Saint-Quentin » de 1973 à 1999, et « Saint-Quentin-Centre »
+  seulement ensuite. Les appartenances des trois fractions sont justes depuis le 1973-09-23.
+- **Constat général** : troisième cas dans l'Aisne après Soissons (point 9) et Laon (point 11).
+  Pour chaque canton dédoublé en 1973, l'unité qui garde le numéro de l'ancien canton garde aussi
+  son ancien nom jusqu'en 1999. C'est probablement systématique (`unit_version` alimenté par le
+  COG 1999). À vérifier sur toute la France avant de corriger au cas par cas.
+
+## Vichy (03310)
+
+### 13. FAIT (11 octobre 2026, `sql/112`) — Vichy-Nord et Vichy-Sud de 1973 à 1985 : absents, et leurs communes mal rangées
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `39750#0329` et `39750#0330` du 1973-09-23 au 1985-03-10 ; Abrest, Saint-Yorre et Le Vernet passent de 0335 à 0330 sur la même période (6 lignes). La ligne `03310-2` se tire avec les ancres non datées déjà posées (1980-01-01 : Nord 357 ha, Sud 233 ha) : aucune ancre à ajouter.
+- **Reste** : le nom « Vichy-Nord » pour 0329 dès 1973 ; la date 1982-01-15 de la chronologie.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Sources** :
+  - décret n° 73-713 du 23 juillet 1973 (JO du 25 juillet 1973) : Vichy-Nord (partie de la ville
+    seule) et Vichy-Sud (Abrest, Saint-Yorre, Le Vernet et le reste de la ville) ;
+  - décret n° 85-82 du 23 janvier 1985 (JO du 24 janvier 1985), qui les remplace : Vichy-Nord et
+    Vichy-Sud ne gardent que la ville, et Abrest, Saint-Yorre et Le Vernet passent à Cusset-Sud.
+- **Base** :
+  - fractions `39750#0329` et `#0330` seulement à partir du **1985-03-10** ; l'atome entier
+    39750 n'a aucun canton de 1973-09-23 à 1985 ;
+  - Abrest et Le Vernet sont dans **0335 Cusset-Sud dès 1973-09-23**, alors que ce canton est créé
+    en 1985 : ils devraient être dans 0330 Vichy-Sud de 1973 à 1985 (Saint-Yorre à vérifier) ;
+  - la chronologie cantonale date le dédoublement du 1982-01-15, sans texte à l'appui : c'est le
+    décret de Montluçon (82-22) du même jour.
+- **À inscrire** :
+  - les deux fractions de Vichy de 1973-09-23 à 1985-03-10 ;
+  - Abrest, Le Vernet (et Saint-Yorre) dans 0330 sur la même période.
+- **Déjà prêt** : ligne `03310-2` (1973-09-23 → 1985-03-10), rangée sans ancre. Ancres à poser :
+  Nord `POINT(732378 6559673)`, Sud `POINT(733365 6557954)`. La ligne `03310-1` (1985-2013) est
+  posée et conforme.
+
+## Briançon (05023)
+
+### 16. FAIT (11 octobre 2026, `sql/112`) — Briançon-Nord et Briançon-Sud de 1973 à 1982, et Puy-Saint-Pierre compté deux fois de 1974 à 1988
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `5879#0506` et `5879#0525` du 1973-09-23 au 1982-03-14 (tirée au 1975-01-01 : Nord 1 475 ha, Sud 2 136 ha, Puy-Saint-Pierre comprise).
+- **Reste** : le double compte de Puy-Saint-Pierre de 1974 à 1988, à trancher ; le nom « Briançon-Nord » pour 0506 dès 1973.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-651 du 13 juillet 1973 (JO du 17 juillet 1973), art. 1er :
+  Briançon-Nord (Névache, Val-des-Prés, Montgenèvre et le nord de la ville), Briançon-Sud
+  (Puy-Saint-André, Puy-Saint-Pierre, Villar-Saint-Pancrace, Cervières et le reste de la ville).
+  Aucun texte ne change la limite ensuite.
+- **Base** :
+  - l'atome entier 5879 est dans 0506 jusqu'au 1973-09-23. Les fractions `5879#0506` et
+    `#0525` ne commencent qu'au **1982-03-14** : **de 1973 à 1982, la ville n'a aucun canton**,
+    alors que les communes rurales (Puy-Saint-Pierre dans 0525, par exemple) en ont un dès 1973 ;
+  - 0506 s'appelle « Briançon » jusqu'en 1999, et « Briançon-Nord » seulement ensuite : même
+    cas que les points 9, 11, 12 et 15 ;
+  - Puy-Saint-Pierre a été réunie à Briançon du 1er juin 1974 au 1er janvier 1989 (INSEE). La
+    cible de Briançon l'inclut de 1974-01-01 à 1988-01-01 (ANR), et l'atome de Puy-Saint-Pierre
+    garde son appartenance à 0525 sur la même période. **L'ancienne commune est donc tirée deux
+    fois** : comme atome propre et dans la fraction Sud de Briançon. Les deux sont dans 0525, si
+    bien que la carte des cantons n'est pas fausse. Mais l'aire de 0525 compte deux fois environ
+    740 ha. À trancher : retirer l'atome pendant la fusion, ou borner la cible de Briançon.
+- **À inscrire** : les deux fractions de Briançon de 1973-09-23 à 1982-03-14.
+- **Déjà prêt** : la ligne `05023-1` (1973-09-23 → 2013) et ses ancres (Nord
+  `POINT(987500 6431000)`, Sud `POINT(988400 6427500)`) couvrent déjà le trou. Les ancres de
+  1982 jouent, parce que leur appartenance chevauche la période de la ligne. La ligne `05023-2`
+  (1974-01-01 → 1988-01-01) suit l'ancienne limite de Puy-Saint-Pierre pendant la fusion.
+
+## Digne-les-Bains (04070)
+
+### 18. FAIT (11 octobre 2026, `sql/112`) — Digne de 1973 à 1988 : la ville et Digne-Est absentes, Digne-Ouest présent
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `11835#0408` et `11835#0431` du 1973-09-23 au 1988-09-25 ; Entrages, La Robine-sur-Galabre et Marcoux dans 0408 sur la même période. Tirée au 1980-01-01 (Est 3 587 ha, Ouest 7 383 ha) et au 1986-06-01 (5 442 et 5 528 ha).
+- **Reste** : le nom « Digne-Est » pour 0408 dès 1973 ; Marcoux de 1955 à 1973 (trou général) ; la date de la chronologie.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Sources** :
+  - décret n° 73-714 du 23 juillet 1973 (JO du 25 juillet 1973), art. 1er : Digne-Est (Entrages,
+    Les Dourbes, Marcoux, La Robine-sur-Galabre et l'est de la ville) et Digne-Ouest (onze
+    communes et l'ouest de la ville) ;
+  - décret n° 85-127 du 29 janvier 1985 (JO du 30 janvier 1985), art. 2 : une portion de la ville
+    passe de Digne-Ouest à Digne-Est. La chronologie cantonale date ce changement du « 20.2.1986
+    (fix. limites) » ; comme pour Manosque (point 17), le décret de ce jour-là ne concerne pas
+    Digne.
+- **Base** :
+  - l'atome 11835 est dans 0408 jusqu'au 1973-09-23. Les fractions `#0408` et `#0431` ne
+    commencent qu'au **1988-09-25** : de 1973 à 1988, **la ville n'a aucun canton** ;
+  - **Digne-Ouest est complet** : Aiglun, Champtercier, Le Chaffaut-Saint-Jurson et Thoard sont
+    dans 0431 dès le 1973-09-23 ;
+  - **Digne-Est ne l'est pas** : Entrages, La Robine-sur-Galabre et Marcoux n'ont aucun canton de
+    1973-09-23 à 1988-09-25 ;
+  - 0408 s'appelle « Digne » jusqu'en 1999, et non « Digne-Est » : septième cas de la règle du
+    point 12 ;
+  - Les Dourbes, réunie à Digne le 1er mars 1974, est déjà dans la cible de Digne en 1973
+    (même cas que Romette à Gap, point 15).
+- **À inscrire** :
+  - les fractions de Digne-Est (0408) et Digne-Ouest (0431) de 1973-09-23 à 1988-09-25 ;
+  - Entrages, La Robine-sur-Galabre et Marcoux dans 0408 sur la même période.
+- **Déjà prêt** :
+  - `04070-1` (1985-03-10 → 2013), ancrée. Elle couvre déjà 1985-1988.
+  - `04070-2` (1973-09-23 → 1985-03-10), rangée sans ancre. Ancres à poser : Est
+    `POINT(962000 6338000)`, Ouest `POINT(956300 6339400)`.
+
+## Cusset (03095)
+
+### 19. FAIT (11 octobre 2026, `sql/112`) — Le canton de Cusset de 1973 à 1985 : la ville et quatre communes sans canton
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : l'atome 11413, Busset, Mariol, Molles et La Chapelle dans 0306 du 1973-09-23 au 1985-03-10 (La Chapelle était bien dans 0306 jusqu'en 1955).
+- **Reste** : La Chapelle de 1955 à 1973 (trou général) ; le nom « Cusset-Nord » pour 0306 dès 1985.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 85-82 du 23 janvier 1985 (JO du 24 janvier 1985), art. 1er : Cusset,
+  Vichy-Nord et Vichy-Sud sont remplacés par Cusset-Nord, Cusset-Sud, Vichy-Nord et Vichy-Sud.
+  Avant 1985, Cusset est une commune entière du canton de Cusset (0306), non coupée.
+- **Base** :
+  - l'atome entier 11413 (Cusset) n'a **aucun canton de 1973-09-23 à 1985-03-10**. Il est
+    pourtant dans 0306 avant et, par ses fractions, après ;
+  - Busset, Mariol et Molles n'ont aucun canton sur la même période, alors que Bost et les deux
+    Creuzier sont bien dans 0306. La Chapelle n'en a aucun avant 1985 ;
+  - Abrest, Le Vernet et Saint-Yorre sont dans 0335 dès 1973 : voir le point 13 ;
+  - 0306 s'appelle « Cusset » jusqu'en 1999, et « Cusset-Nord » seulement ensuite : huitième cas
+    de la règle du point 12.
+- **À inscrire** : l'atome 11413, Busset, Mariol, Molles et La Chapelle dans 0306, de 1973-09-23
+  à 1985-03-10 (La Chapelle : vérifier son canton d'avant 1973).
+- **Déjà prêt** : la ligne `03095-1` (1985-03-10 → 2013), ancrée et conforme. Elle part
+  exactement du bout de la ligne de Vichy `03310-1` sur la limite des deux communes.
+
+## Creil (60175)
+
+### 30. FAIT (11 octobre 2026, `sql/112`) — Creil-Nogent-sur-Oise et Creil-Sud de 1973 à 1998 : absents
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `10978#6011` et `10978#6038` du 1973-09-23 au 1998-03-15 ; Nogent-sur-Oise et Villers-Saint-Paul dans 6011 sur la même période ; le nom « Creil-Nogent-sur-Oise » pour 6011 du 1973-09-23 au 1999-01-01.
+- **Reste** : Villers-Saint-Paul de 1955 à 1973 (trou général).
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-668 du 13 juillet 1973 (JO du 17 juillet 1973), art. 2. Le canton de
+  Creil est divisé en quatre : Creil-Nogent-sur-Oise (Nogent-sur-Oise, Villers-Saint-Paul et la
+  ville au nord de l'Oise), Creil-Sud (la ville au sud de l'Oise), Montataire, Chantilly.
+- **Base** :
+  - jusqu'au 23 septembre 1973 : l'atome entier `10978` dans 6011 « Creil » ;
+  - de 1973 à 1998 : rien, ni pour la ville, ni pour Nogent-sur-Oise et Villers-Saint-Paul ;
+  - à partir du 15 mars 1998 : `10978#6011` (nommé « Creil » jusqu'en 1999, puis
+    « Creil-Nogent-sur-Oise ») et `10978#6038` Creil-Sud.
+- **À inscrire** : les deux fractions, ainsi que Nogent-sur-Oise et Villers-Saint-Paul, à partir du
+  23 septembre 1973 ; le nom Creil-Nogent-sur-Oise pour 6011 dès 1973.
+- **Tracé** : `60175-1` (l'Oise, bras principal ; l'île Saint-Maurice au Sud, précision
+  d'Adrien), du 23 septembre 1973 au 1er janvier 2013, avec des ancres datées. Elles jouent déjà
+  sur 1973-1998 par la règle du chevauchement.
+
+## Mayenne (53147)
+
+### 36. FAIT (11 octobre 2026, `sql/112`) — Mayenne de 1941 à 1992 : l'atome entier dans l'Ouest, puis rien
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `21721#5320` et `21721#5321` du 1941-01-01 au 1992-03-22 ; l'atome entier 21721 quitte Mayenne-Ouest sur 1968 → 1973-09-23.
+- **Reste** : rien.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : Gaudillère, extrait donné par Adrien le 27 septembre 2026 : « la Mayenne » sépare
+  Mayenne-Est et Mayenne-Ouest. La chronologie donne ces deux cantons depuis le 16 mars 1802, sans
+  changement ensuite.
+- **Base** :
+  - 1870-1941 et 1992-2013 : `21721#5320` Est, `21721#5321` Ouest ;
+  - 1968-1973 : **l'atome entier `21721` dans Mayenne-Ouest** ;
+  - 1973-1992 : rien.
+- **À inscrire** : les deux fractions de 1941 à 1992, à la place de l'atome entier en 1968-1973.
+- **Tracé** : `53147-1` (la Mayenne), du 16 mars 1802 au 1er janvier 2013, avec des ancres datées.
+  Elles jouent aussi sur 1973-1992.
+
+## La Roche-sur-Yon (85191)
+
+### 48. FAIT (11 octobre 2026, `sql/112`) — La Roche-sur-Yon : le nom du canton Nord de 1973 à 1999
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : le nom « La Roche-sur-Yon-Nord » pour 8523 du 1973-09-23 au 1999-01-01.
+- **Reste** : rien.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret 73-773 du 2 août 1973 (JO du 4 août), qui crée La Roche-sur-Yon-Nord et
+  La Roche-sur-Yon-Sud.
+- **Base** : `29394#8523` porte le nom « La Roche-sur-Yon » de 1973 à 1999, puis
+  « Roche-sur-Yon-Nord » ; `#8531` porte « Roche-sur-Yon-Sud » dès 1973.
+- **À inscrire** : nommer l'unité 8523 « La Roche-sur-Yon-Nord » dès le 23 septembre 1973.
+- **Tracé** : `85191-1`, de 1973 à 2013, conforme.
+
+## Poitiers (86194)
+
+### 49. FAIT (11 octobre 2026, `sql/112`) — Poitiers : Nord et Sud de 1941 à 1973
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `27358#8621` et `27358#8622` du 1941-01-01 au 1973-09-23 ; l'atome entier 27358 quitte Poitiers-Sud sur 1968 → 1973-09-23.
+- **Reste** : le régime de 1973-1982 (Poitiers-1 à 5) : la base ne reprend qu'au 1982-03-14, avec sept cantons.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Sources** : chronologie p. 821 : limites de Poitiers-Nord et Poitiers-Sud fixées le 16 avril
+  1862 ; Poitiers-1 à 5 créés le 13 juillet 1973.
+- **Base** :
+  - `27358#8621` Nord et `#8622` Sud de 1870 à 1941 ;
+  - de 1968 à 1973, l'atome entier `27358` dans le Sud ;
+  - rien de 1941 à 1968.
+- **À inscrire** : Nord et Sud de 1862 (ou 1870) au 13 juillet 1973, à la place de l'atome entier
+  dans le Sud en 1968-1973.
+- **Tracé** : `86194-1`, de 1862 à 1973, ancres datées.
+
+## Grasse (06069)
+
+### 80. FAIT (11 octobre 2026, `sql/112`) — Grasse de 1973 à 1998 : la ville sans canton, Grasse-Nord qui commence en 1998
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : la ville entière dans 0610 du 1973-09-23 au 1985-03-10 ; `16069#0610` et `16069#0651` du 1985-03-10 au 1998-03-15 ; le nom « Grasse-Sud » pour 0610 du 1985-03-10 au 1999-01-01.
+- **Reste** : le point d'arrivée de la « ligne droite », à trancher par Adrien.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Sources** : décret n° 85-143 du 31 janvier 1985 (JO du 1er février 1985,
+  `jorf_txt/JORF_19850201_27_col.txt`), art. 6 : création de Grasse-Nord (le nord de la ville
+  seul) ; le canton de Grasse devient Grasse-Sud.
+- **Base** :
+  - l'atome `16069` est dans 0610 jusqu'au 1973-09-23 ; les fractions `16069#0610` et
+    `16069#0651` ne commencent qu'au **1998-03-15** : de 1973 à 1998, **la ville n'a aucun
+    canton**, alors qu'Auribeau-sur-Siagne et Pégomas restent dans 0610 sans interruption ;
+  - 0610 s'appelle « Grasse » jusqu'en 1941, n'a pas de nom ensuite, puis « Grasse-Sud » en 1999 ;
+    0651 n'a pas de nom avant 1999 (règle du point 12).
+- **À inscrire** :
+  - la ville entière dans 0610 de 1973-09-23 au 1985-03-10 ;
+  - les deux fractions dès le 1985-03-10, et les noms Grasse-Sud / Grasse-Nord à cette date.
+- **Déjà prêt** : `06069-1` (1985-03-10 → 2013), ancrée ; elle couvre déjà 1985-1998.
+- **À trancher par Adrien** : le point d'arrivée de la « ligne droite » finale. Retenu : la cote
+  290,4 du texte (sommet du chemin du Piéchal sur la limite de Châteauneuf, 1019834 6292356).
+  Le toponyme BD TOPO « la fontaine de l'ormeau » est 740 m plus au sud-est, à 252 m
+  d'altitude ; le prendre déplacerait 32,5 ha de Grasse-Sud vers Grasse-Nord.
+
+## Menton (06083)
+
+### 81. FAIT (11 octobre 2026, `sql/112`) — Le canton de Menton de 1973 à 1998 : la ville et trois communes sans canton
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : Menton, Gorbio, Roquebrune-Cap-Martin et Sainte-Agnès dans 0613 du 1973-09-23 au 1998-03-15.
+- **Reste** : la lecture de la « route de Sainte-Agnès ».
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Sources** : décret du 21 février 1997 (NOR INTA9700038D, JO du 23 février 1997,
+  `jorf_txt/JORF_19970223_46_col.txt`), art. 1er : création de Menton-Ouest (Gorbio,
+  Roquebrune-Cap-Martin, Sainte-Agnès et l'ouest de la ville) ; Menton devient Menton-Est. Effet
+  au renouvellement de mars 1998 : la date de la base est la bonne.
+- **Base** :
+  - **Menton (atome `22015`), Gorbio, Roquebrune-Cap-Martin et Sainte-Agnès n'ont aucun canton
+    de 1973-09-23 à 1998-03-15** ; seule Castellar reste dans 0613 sans interruption ;
+  - 0613 s'appelle « Menton » jusqu'en 1941, n'a pas de nom ensuite, puis « Menton-Est » en 1999
+    (règle du point 12).
+- **À inscrire** : les quatre communes dans 0613 de 1973-09-23 au 1998-03-15 (canton entier,
+  aucune coupe à ces dates).
+- **Déjà prêt** : `06083-1` (1998-03-15 → 2013), ancrée.
+- **À confirmer par Adrien** : la « route de Sainte-Agnès » est lue comme la D22 ; l'autre
+  lecture (quitter l'avenue de Prades dès qu'elle croise la ligne à 63 kV) déplace 5,3 ha de
+  l'Ouest vers l'Est. La part de Menton-Ouest fait 128 ha, 9 % de la commune.
+
+## Sedan (08409)
+
+### 83. FAIT (11 octobre 2026, `sql/112`) — Sedan de 1973 à 1982 : la ville sans canton, et « Sedan-Sud » qui est Sedan-Est
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `35814#0826`, `#0827` et `#0836` du 1973-09-23 au 1982-03-14 ; le nom « Sedan-Est » pour 0827 du 1973-09-23 au 1999-01-01.
+- **Reste** : la limite Nord / Sud de 1870 à 1973 ; et, vu en passant, **Lamécourt (60345, Oise) est dans 0827 du 1973-09-23 au 1982-03-14** — sans doute prise pour Rubécourt-et-Lamécourt (08371) : **retirée par `sql/114`** (13 octobre 2026).
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-715 du 23 juillet 1973 (JO du 25 juillet 1973), art. 3 : « en remplacement
+  des cantons de Sedan-Nord et Sedan-Sud, il est créé trois cantons » : Sedan-Nord, Sedan-Ouest,
+  Sedan-Est.
+- **Base** :
+  - fractions `35814#0826` et `#0827` sans canton du 1973-09-23 au 1982-03-14 ; `#0836` (Ouest)
+    seulement à partir du 1982-03-14, alors que Donchery et Wadelincourt sont dans 0836 dès 1973-09-23 ;
+  - l'unité 0827 s'appelle « Sedan-Sud » jusqu'en 1999, puis « Sedan-Est » : le décret la nomme
+    Sedan-Est dès 1973.
+- **À inscrire** : les trois fractions du 1973-09-23 au 1982-03-14 ; le nom Sedan-Est pour 0827 à
+  partir de 1973.
+- **Déjà prêt** : lignes `08409-1` à `08409-3` (1973-09-23 → 2013), ancres datées posées.
+- **Manque** : la limite Nord / Sud de 1870 à 1973 (aucun texte dans le dépôt ; Frénois réunie en 1965).
+
+## Romilly-sur-Seine (10323)
+
+### 84. FAIT (11 octobre 2026, `sql/112`) — Romilly-I et Romilly-II commencent en 1988 dans la base, en 1973 dans le JO
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `29547#1020` et `29547#1027` du 1973-09-23 au 1988-09-25 ; les noms « Romilly-sur-Seine-I » et « -II » du 1973-09-23 au 1999-01-01.
+- **Reste** : les deux points à confirmer de la note.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-652 du 13 juillet 1973 (JO du 17 juillet 1973), art. 4 ;
+  `cantons/communes_coupees_1973_1984.csv`, `jorf_txt/JORF_19730717_164_col.txt`. Romilly-II n'a
+  aucune commune rurale.
+- **Base** :
+  - l'atome entier 29547 est dans 1020 jusqu'au 1973-09-23, puis dans rien ;
+  - les fractions `29547#1020` (I) et `29547#1027` (II) ne commencent qu'au **1988-09-25** (COG) ;
+  - `unit_version` n'a rien pour 1020 entre 1941 et 1999 (« Romilly-sur-Seine », puis « 1er
+    Canton »), et rien pour 1027 avant 1999.
+- **À inscrire** : `29547#1020` dans 1020 et `29547#1027` dans 1027 du 1973-09-23 au 1988-09-25 ;
+  les noms Romilly-sur-Seine-I et -II dès 1973.
+- **Déjà prêt** : ligne `10323-1` (1973-09-23 → 2013-01-01), ancres non datées
+  `POINT(755000 6824800)` pour I et `POINT(752000 6824000)` pour II. Rien à retoucher une fois
+  les appartenances inscrites.
+- **À confirmer** (dit dans la note de la coupe) : « la limite Ouest de la Petite-Béchère », lue
+  comme le côté ouest du parc de la Béchère ; le tracé de 1973 de la rue du Général-de-Gaulle
+  (triangle de 3,5 ha au canton I).
+
+## La Chapelle-Saint-Luc (10081)
+
+### 85. FAIT (11 octobre 2026, `sql/112`) — Le canton de La Chapelle-Saint-Luc commence en 1988 dans la base, en 1985 dans le JO
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `8317#1029` et `8317#1033` du 1985-03-10 au 1988-09-25 ; Les Noës-près-Troyes dans 1028 du 1973-09-23 au 1985-03-10 puis dans 1033 ; Macey, Montgueux, La Rivière-de-Corps, Sainte-Savine et Torvilliers dans 1028 du 1973-09-23 au 1988-09-25.
+- **Reste** : Torvilliers de 1955 à 1973 (trou général) ; la chronologie ; les noms de 1028 et 1033 avant 1999 (« Chapelle-Saint-Luc », sans « La »).
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 85-71 du 22 janvier 1985 (JO du 23 janvier 1985), art. 1er ;
+  `jorf_txt/JORF_19850123_19_col.txt` : canton de La Chapelle-Saint-Luc = Les Noës-près-Troyes
+  et la partie de La Chapelle à l'ouest de l'axe des avenues René-Coty et Roger-Salengro ;
+  Troyes-IV et Sainte-Savine modifiés par voie de conséquence.
+- **Base** :
+  - l'atome entier 8317 est dans 1029 (Troyes-IV) du 1973-09-23 au 1985-03-10 ;
+  - les fractions `8317#1029` et `8317#1033` ne commencent qu'au **1988-09-25** : de 1985-03-10
+    à 1988-09-25, la commune n'a aucun canton ;
+  - Les Noës-près-Troyes (atome 25092) : dans 1023 jusqu'au 1973-09-23, puis rien jusqu'au
+    1988-09-25 (1033 ensuite) ;
+  - le canton 1028 (Sainte-Savine) n'a aucun membre du 1973-09-23 au 1988-09-25 ;
+  - `unit_version` ne connaît 1033 (« Chapelle-Saint-Luc », sans « La ») et 1028 qu'à partir de 1999.
+- **À inscrire** :
+  - `8317#1033` dans 1033 et `8317#1029` dans 1029, du 1985-03-10 au 1988-09-25 ;
+  - Les Noës-près-Troyes dans 1028 du 1973-09-23 au 1985-03-10 (décret 73-652, art. 2 : « Canton
+    de Sainte-Savine, comprenant les communes de Macey, Montgueux, Noes-près-Troyes, la
+    Rivière-de-Corps, Sainte-Savine, et de Torvilliers »), puis dans 1033 ;
+  - les autres communes du canton de Sainte-Savine dans 1028 dès 1973.
+- **Chronologie fausse** : `cantons/chronologie_cantonale.csv` date du 1985-01-22 la création de
+  Troyes-3, Troyes-4 et Sainte-Savine, et celle de Troyes-5 à 7 ; c'est le décret 73-652 du
+  13 juillet 1973 (art. 2 et 3). Seule la création de La Chapelle-Saint-Luc est de 1985.
+- **Déjà prêt** : ligne `10081-1` (1985-03-10 → 2013-01-01), ancres ouest (`8317#1033`) et est
+  (`8317#1029`), non datées.
+
+## Pamiers (09225)
+
+### 86. FAIT (11 octobre 2026, `sql/112`) — Pamiers : la ville sans canton de 1955 à 1985, et « Pamiers-Ouest » nommé en 1999
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : l'atome 26103 dans 0912 du 1955-01-01 au 1985-03-10 ; le nom « Pamiers-Ouest » pour 0912 du 1985-03-10 au 1999-01-01.
+- **Reste** : les deux points à confirmer de la note.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 84-1223 du 24 décembre 1984 (JO du 30 décembre 1984, p. 4146-4147),
+  art. 1er ; `jorf_txt/JORF_19841230_305_col.txt` : création de Pamiers-Est ; le canton de
+  Pamiers « prend la dénomination de Pamiers-Ouest ».
+- **Base** :
+  - fractions `26103#0912` et `26103#0922` à partir du 1985-03-10 : juste ;
+  - l'atome entier 26103 est dans 0912 jusqu'au 1955-01-01, puis dans rien jusqu'au 1985-03-10 ;
+  - `unit_version` n'a rien pour 0912 entre 1941 et 1999, puis « Pamiers-Ouest ».
+- **À inscrire** : l'atome 26103 dans 0912 de 1955 à 1985 (canton non divisé) ; le nom
+  Pamiers-Ouest pour 0912 dès le 1985-03-10.
+- **Noté, sans suite pour la ville** : décret n° 98-722 du 18 août 1998 (JO du 21 août 1998),
+  27 ha 32 a 89 ca de Saint-Victor-Rouzaud (Pamiers-Ouest) rattachés à Artix (Varilhes) ; il ne
+  touche pas la limite interne.
+- **Déjà prêt** : ligne `09225-1` (1985-03-10 → 2013-01-01), ancres est (`26103#0922`) et ouest
+  (`26103#0912`).
+- **À confirmer** (dit dans la note de la coupe) : le « canal des usines », reconnu à sa seule
+  géométrie ; la « rue de l'Hospice-de-Loumet », prise pour la rue de Loumet.
+
+## Narbonne (11262)
+
+### 88. FAIT (11 octobre 2026, `sql/112`) — Narbonne de 1973 à 1998 : la ville et Bages sans canton, les noms Est / Ouest / Sud en 1999
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `24587#1124`, `#1133`, `#1134` et Bages (dans 1134) du 1973-09-23 au 1998-03-15 ; les noms Narbonne-Est, -Ouest et -Sud du 1973-09-23 au 1999-01-01.
+- **Reste** : Bizanet de 1955 à 1973 (trou général, constaté : 1124 jusqu'en 1955, 1133 depuis 1973) ; le boulevard de 1848.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Sources** : décret n° 73-653 du 13 juillet 1973, art. 3 (JO du 17 juillet 1973,
+  p. 7703-7704, `jorf_txt/JORF_19730717_164_col.txt`) : le canton de Narbonne est remplacé par
+  Narbonne-Est (partie de la ville), Narbonne-Sud (Bages et partie de la ville) et
+  Narbonne-Ouest (Bizanet, Canet, Marcorignan, Montredon, Moussan, Névian, Raissac-d'Aude,
+  Villedaigne et le reste de la ville). Décret n° 85-72 du 22 janvier 1985, art. 1er (JO du
+  23 janvier 1985, `jorf_txt/JORF_19850123_19_col.txt`) : une portion de Narbonne-Ouest passe à
+  Narbonne-Sud.
+- **Base** :
+  - jusqu'au 23 septembre 1973 : l'atome entier `24587` dans 1124 « Narbonne » ;
+  - de 1973 à 1998 : rien pour la ville ; rien non plus pour Bages (`2358`), qui ne reparaît
+    dans 1134 qu'au 15 mars 1998. Les huit communes de Narbonne-Ouest sont bien dans 1133 dès le
+    23 septembre 1973 ;
+  - à partir du 15 mars 1998 : `24587#1124`, `24587#1133`, `24587#1134` ; 1124 s'appelle
+    « Narbonne » jusqu'en 1999 ;
+  - Bizanet (`4369`) n'a aucun canton de 1955 à 1973 (constat de l'agent, à revérifier).
+- **À inscrire** : les trois fractions de la ville et Bages (dans 1134) à partir du
+  23 septembre 1973 ; les noms Narbonne-Est (1124), Narbonne-Ouest (1133) et Narbonne-Sud
+  (1134) dès 1973 ; Bizanet dans 1124 de 1955 à 1973.
+- **Déjà prêt** (écrit le 6 octobre 2026, ancres datées) : `11262-1` (limite de l'Est) et
+  `11262-2` (Sud / Ouest de 1973), du 23 septembre 1973 au 10 mars 1985 ; `11262-3` (limite de
+  l'Est, même géométrie) et `11262-4` (Sud / Ouest de 1985), du 10 mars 1985 au 1er janvier
+  2013. Ancres : Est `POINT(708674 6229804)`, Sud `POINT(701347 6225374)`, Ouest
+  `POINT(697340 6229713)`. Est 7 263,0 ha ; Sud 3 210,1 puis 3 301,7 ha ; Ouest 7 025,6 puis
+  6 934,0 ha.
+- **À confirmer** : en 1985, « l'axe du boulevard de 1848 (jusqu'à la voie de chemin de fer
+  Béziers-Narbonne) » — le boulevard actuel est à l'est de la voie ferrée et la Robine à 337 m
+  à l'ouest ; tracé par le prolongement de son axe sur 300 m (variante : 0,7 ha). Plan à la
+  préfecture de l'Aude.
+
+## Millau (12145)
+
+### 89. FAIT (11 octobre 2026, `sql/112`) — Millau-Est et Millau-Ouest commencent au COG (1988), pas au décret (1973)
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `22497#1217` et `22497#1244` du 1973-09-23 au 1988-09-25 ; le nom « Millau-Est » pour 1217 du 1973-09-23 au 1999-01-01.
+- **Reste** : la lecture de la RN 9.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-762 du 2 août 1973, art. 1er (JO du 4 août 1973),
+  `jorf_txt/JORF_19730804_180_col.txt` l. 2137-2150, `cantons/communes_coupees_1973_1984.csv`.
+- **Base** : l'atome entier 22497 est dans 1217 « Millau » jusqu'au 1973-09-23, puis dans rien
+  jusqu'au 1988-09-25 ; les fractions `22497#1217` et `22497#1244` n'ont d'appartenance qu'à
+  partir du 1988-09-25 (date COG). Les communes rurales, elles, basculent bien au 1973-09-23.
+- **À inscrire** : appartenances `22497#1217` → 1217 et `22497#1244` → 1244 du
+  **1973-09-23 au 1988-09-25**.
+- **Nom** : l'unité 1217 s'appelle « Millau » de 1988 à 1999 et n'a pas de version de nom entre
+  1941 et 1999 ; le décret la nomme « Millau-Est » dès 1973 (1244 n'a de version qu'à partir de
+  1999 aussi).
+- **Déjà prêt** : ligne `12145-1` (1973-09-23 → 2013-01-01) et ancres non datées
+  `22497#1244` = POINT(703500.25 6333414.25), `22497#1217` = POINT(713633.97 6332042.15) :
+  elles joueront dès que les appartenances existeront. Ouest 6 968,7 ha, Est 10 048,4 ha.
+- **À confirmer** : au sud du pont Lerouge le décret ne cite plus de voie ; la ligne suit la
+  RN 9 (D809 actuelle) sur 16 km jusqu'à La Cavalerie, lecture de « située à l'Ouest de la route
+  nationale n° 9 ». 1 948,9 ha en jeu. Plan à la préfecture de l'Aveyron.
+
+## Rodez (12202)
+
+### 90. FAIT (11 octobre 2026, `sql/112`) — Les cantons de Rodez n'ont pas de fraction de la ville de 1973 à 1988
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : `29437#1228` et `#1245` du 1973-09-23 au 1988-09-25 (une ligne par régime), `#1246` du 1982-03-14 au 1988-09-25 ; Le Monastère et Sainte-Radegonde dans 1228 ; Onet-le-Château et Sébazac-Concourès dans 1228 puis 1246 ; Olemps dans 1245 de 1982 à 1988 ; le nom « Rodez-Est » pour 1228 dès 1973.
+- **Reste** : Moyrazès (1228 jusqu'en 1973, 1239 depuis 1988), que ni le décret de 1973 ni celui de 1982 ne nomme dans les cantons de Rodez ; la lecture de la RN 140.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 73-762 du 2 août 1973 (JO du 4 août 1973, p. 8532-8533,
+  `jorf_txt/JORF_19730804_180_col.txt` l. 2151-2169) ; décret n° 82-24 du 15 janvier 1982
+  (JO du 16 janvier 1982, `jorf_txt/JORF_19820116_13_col.txt` l. 874-901).
+- **Base** : atome entier 29437 dans 1228 « Rodez » jusqu'au 1973-09-23, puis rien ; fractions
+  `29437#1228`, `#1245`, `#1246` à partir du 1988-09-25 seulement (date COG). L'unité 1228
+  s'appelle « Rodez » jusqu'en 1999 (aucune version « Rodez-Est » avant), et 1245 / 1246
+  n'ont de version nommée qu'à partir de 1999. Le Monastère, Sainte-Radegonde et
+  Onet-le-Château n'ont aucun canton de 1973-09-23 à 1988-09-25 ; Olemps aucun de 1982-03-14
+  à 1988-09-25.
+- **À inscrire** :
+  - 1973-09-23 → 1982-03-14 : `29437#1245` dans Rodez-Ouest (avec Druelle, Luc, Olemps) ;
+    `29437#1228` dans Rodez-Est (avec Sébazac-Concourès, Sainte-Radegonde, Onet-le-Château,
+    Le Monastère) ;
+  - 1982-03-14 → 1988-09-25 : `29437#1245` Rodez-Ouest (Olemps, Luc, Druelle) ; `29437#1228`
+    Rodez-Est (Le Monastère, Sainte-Radegonde) ; `29437#1246` Rodez-Nord (Onet-le-Château,
+    Sébazac-Concourès) ;
+  - versions de nom « Rodez-Est » pour 1228 dès 1973-09-23, « Rodez-Nord » pour 1246 dès 1982.
+- **Déjà prêt** : lignes `12202-1` (1973-09-23 → 1982-03-14), `12202-2` et `12202-3`
+  (1982-03-14 → 2013-01-01) ; ancres datées Est `POINT(667195.38 6361448.45)`, Ouest
+  `POINT(665231.04 6361971.85)`, Nord `POINT(664334.01 6363466.55)` (Nord depuis 1982
+  seulement). 1973 : Ouest 766,6 ha, Est 359,0 ha ; 1982 : Ouest 446,1, Est 359,0, Nord 320,5 ha.
+- **À confirmer** : le décret de 1982 ne nomme que « RN 88 », « route 140 » et « CD 994 ». La
+  RN 140 est lue depuis le carrefour de la gare (avenues du Maréchal-Joffre et de la Gineste) ;
+  lue depuis la limite nord-ouest (avenue de Decazeville), Rodez-Nord n'aurait que 104,4 ha
+  (variante gardée dans `public.rodez_alt_coin_nord_ouest`). Plan à la préfecture de l'Aveyron.
+
+## Istres (13047)
+
+### 91. FAIT (11 octobre 2026, `sql/112`) — Le canton d'Istres de 1973 à 1992 : quatre communes sans canton, et Miramas à dater
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : Istres, Fos-sur-Mer et Saint-Mitre-les-Remparts dans 1311 du 1973-09-23 au 1992-03-22 ; le nom « Istres-Nord » pour 1311 du 1992-03-22 au 1999-01-01.
+- **Reste** : Miramas (texte à trouver) ; Saint-Chamas, dans 1311 jusqu'en 1973 et dans 1306 depuis 1992, sans canton entre les deux.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 91-209 du 27 février 1991 (JO du 28 février 1991, p. 2900-2901,
+  `jorf_txt/JORF_19910228_51_col.txt`), art. 1er : « En remplacement des cantons d'Istres et de
+  Berre-l'Étang », création d'Istres-Nord (Miramas et le nord d'Istres), d'Istres-Sud
+  (Fos-sur-Mer, Saint-Mitre-les-Remparts et le reste d'Istres), de Berre-l'Étang et de Vitrolles.
+  Effet « pour le prochain renouvellement des conseils généraux » (22 mars 1992).
+- **Base** :
+  - l'atome entier `17661` (Istres), Fos-sur-Mer (`14545`) et Saint-Mitre-les-Remparts (`33741`)
+    sont dans 1311 jusqu'au 1973-09-23, puis **n'ont aucun canton jusqu'au 1992-03-22** ;
+  - Miramas (`22570`) est dans 1332 Salon-de-Provence jusqu'au 1973-09-23, n'a rien ensuite, et
+    reparaît dans 1311 au 1992-03-22. Le décret de 1991 la compte pourtant dans l'ancien canton
+    d'Istres : son passage de Salon à Istres, entre 1973 et 1991, reste à dater (texte non
+    cherché) ;
+  - les fractions `17661#1311` et `17661#1349` commencent au 1992-03-22 : la date est juste ;
+  - `unit_version` n'a aucun nom pour 1311 de 1941 à 1999, puis « Istres-Nord » ; aucun nom pour
+    1349 avant 1999. Il faudrait « Istres » jusqu'au 1992-03-22, puis « Istres-Nord » et
+    « Istres-Sud » dès cette date.
+- **À inscrire** : Istres (atome entier), Fos-sur-Mer et Saint-Mitre-les-Remparts dans 1311 de
+  1973-09-23 à 1992-03-22 ; Miramas dans 1332 puis 1311 selon le texte à trouver ; les noms
+  ci-dessus.
+- **Ligne** : `13047-1` écrite le 7 octobre 2026 (1992-03-22 → 2013-01-01, conforme). Aucune
+  ligne ne dépend du trou 1973-1992 : la ville n'était pas divisée.
+
+## Martigues (13056)
+
+### 95. FAIT (11 octobre 2026, `sql/112`) — Le canton de Martigues de 1973 à 1992 : Martigues et Port-de-Bouc sans canton ; noms de 1992
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : Martigues et Port-de-Bouc dans 1325 du 1973-09-23 au 1992-03-22 ; le nom « Martigues-Est » pour 1325 du 1992-03-22 au 1999-01-01.
+- **Reste** : les huit autres communes de l'ancien canton (Marignane, Saint-Victoret, Carry-le-Rouet, Châteauneuf-les-Martigues, Ensuès-la-Redonne, Gignac-la-Nerthe, Le Rove, Sausset-les-Pins), sans canton de 1973 à 1992 : décret 73-812 à relire.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 91-209 du 27 février 1991 (JO du 28 février 1991, p. 2900-2901,
+  `jorf_txt/JORF_19910228_51_col.txt`), art. 5 : création de Martigues-Ouest (Port-de-Bouc et
+  l'ouest de Martigues) ; « le canton de Martigues est modifié par voie de conséquence et prend
+  la dénomination de Martigues-Est ». Effet au renouvellement de mars 1992. Pour 1973 : décret
+  n° 73-812 du 16 août 1973 (JO du 17 août 1973, `jorf_txt/JORF_19730817_190_col.txt`, art. 2
+  et 3) : création de Marignane par division de Martigues, « les limites du canton de Martigues
+  sont modifiées par voie de conséquence ».
+- **Base** :
+  - l'atome entier `21437` (Martigues) et Port-de-Bouc (`27653`) sont dans 1325 jusqu'au
+    1973-09-23, puis **n'ont aucun canton jusqu'au 1992-03-22** ;
+  - les fractions `21437#1325` et `21437#1350` commencent au 1992-03-22 : la date est juste ;
+  - `unit_version` n'a aucun nom pour 1325 de 1941 à 1999 (puis « Martigues-Est ») ; aucun nom
+    pour 1350 avant 1999.
+- **À inscrire** : Martigues (atome entier) et Port-de-Bouc dans 1325 de 1973-09-23 à
+  1992-03-22 ; noms « Martigues » jusqu'au 1992-03-22, puis « Martigues-Est » (1325) et
+  « Martigues-Ouest » (1350) dès cette date.
+- **Ligne** : `13056-1` écrite le 7 octobre 2026 (1992-03-22 → 2013-01-01, source `texte`,
+  conforme) ; ancres `21437#1350` = POINT(863500 6259500), `21437#1325` = POINT(866500 6260500)
+  et POINT(866792 6253859). Aucune ligne ne dépend du trou 1973-1992 : la ville n'était pas
+  divisée. À confirmer sur plan : la « bretelle d'accès direct » (4,99 ha en jeu avec l'avenue
+  du Moulin-de-France) et le chemin du Maroc (1,8 ha).
+
+## Ussel (19275)
+
+### 99. FAIT (11 octobre 2026, `sql/112`) — Ussel de 1955 à 1985 : la ville sans canton, et le nom d'Ussel-Est
+
+- **Inscrit par `sql/112_villes_date_du_decret.sql`** : l'atome 38492 dans 1927 du 1955-01-01 au 1985-03-10 ; Chaveroche, Lignareix, Saint-Angel et Saint-Pardoux-le-Vieux dans 1927 du 1982-03-14 au 1985-03-10 ; le nom « Ussel-Est » du 1985-03-10 au 1999-01-01. Bascule au 1985-03-10, règle des recompositions.
+- **Reste** : Saint-Dézery et La Tourette, fusionnées, qui gardent une appartenance propre ; la lecture non tranchée de la limite de Saint-Dézery.
+
+Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
+
+- **Source** : décret n° 85-129 du 29 janvier 1985 (JO du 30 janvier 1985, p. 1275 déduite des
+  en-têtes voisins, `jorf_txt/JORF_19850130_25_col.txt`, l. 2510-2528), art. 2 ;
+  `cantons/mouvements_cantonaux.csv` l. 315-316.
+- **Base** :
+  - l'atome entier 38492 est dans 1927 « Ussel » jusqu'au 1955-01-01, puis dans rien jusqu'au
+    1985-03-10 ;
+  - Chaveroche (9026), Lignareix (19527), Saint-Angel (30432) et Saint-Pardoux-le-Vieux (33945)
+    sont dans 1927 jusqu'au 1982-03-14, puis dans rien jusqu'au 1985-03-10 (1937 Ussel-Ouest
+    ensuite) ;
+  - Saint-Dézery (31183) et La Tourette (37851), fusionnées en 1972 et 1976 d'après l'ANR,
+    gardent une appartenance propre à 1927 jusqu'au 1982-03-14 ;
+  - `38492#1927` s'appelle « Ussel » de 1985 à 1999 et « Ussel-Est » seulement depuis 1999,
+    alors que le décret dit « prend la dénomination d'Ussel-Est » dès 1985.
+- **À inscrire** : l'atome 38492 dans 1927 de 1955 à 1985 ; les quatre communes rurales dans
+  1927 de 1982-03-14 à 1985-03-10 ; le nom Ussel-Est dès 1985 ; décider si la bascule est au
+  décret (1985-01-29) ou au 1985-03-10.
+- **Lignes** : `19275-1` (limite de Saint-Dézery) et `19275-2` (C.D. 159 … Sarsonne … R.N. 89)
+  écrites le 7 octobre 2026 (1985-03-10 → 2013-01-01, source `texte`, conformes) ; ancres
+  `38492#1937` = `POINT(644500 6495000)`, `38492#1927` = `POINT(647500 6493000)` et
+  `POINT(648700 6498200)` (Saint-Dézery).
+- **Lecture non tranchée** : Saint-Dézery (367,9 ha) est à Ussel-Est si « la limite de la
+  commune associée » est sa limite intérieure (lecture écrite). Si c'est son bord extérieur,
+  retirer `19275-1` et la seconde ancre de `#1927` : Ussel-Ouest passe de 3 067,8 à 3 435,7 ha.
+
+## Cognac (16102)
+
+### 105. Cognac de 1955 à 1982 : la ville sans canton, puis sous Confolens-Sud, puis sans fraction jusqu'en 1982
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : la ville dans 1613 de 1955 à 1973 (retirée de Confolens-Sud), les deux fractions dès 1973, les noms. Reste : Reignac.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
+- **Source** : décret n° 73-654 du 13 juillet 1973 (JO du 17 juillet 1973, art. 2 ;
+  `jorf_txt/JORF_19730717_164_col.txt`, l. 1232-1250 ; `cantons/communes_coupees_1973_1984.csv`,
+  l. 20-21) : « Le canton de Cognac est divisé en deux cantons », Cognac-Nord (Cherves-de-Cognac,
+  Boutiers, Saint-Sulpice, Saint-Brice, Bréville, Mesnac, Richemont et une portion de Cognac) et
+  Cognac-Sud (Châteaubernard, Merpins, Javrezac, Saint-Laurent, Ars, Louzac, Gimeux, Saint-André
+  et le reste de Cognac). `cantons/chronologie_cantonale.csv` : 1973-07-13.
+- **Base** (atome `9804`) :
+  - 1815-1955 : dans 1613 (Cognac) ;
+  - 1955-1968 : **aucun canton** ;
+  - 1968 → 1973-09-23 : **dans 1615 (Confolens-Sud)** ;
+  - 1973-09-23 → 1982-03-14 : **rien** (ni l'atome, ni les fractions), alors que les communes
+    rurales sont réparties entre 1613 et 1633 dès le 1973-09-23 ;
+  - à partir du 1982-03-14 : `9804#1613` et `9804#1633` ; 1613 s'appelle « Cognac » jusqu'en 1999
+    (`unit_version` n'a « Cognac-Nord » et « Cognac-Sud » qu'à partir de 1999).
+  - Aussi : Javrezac (atome 17815) absente de 1613 de 1955 à 1973, et dans 1615 de 1968 à 1973 ;
+    Reignac (canton de Baignes) dans 1613 de 1968 à 1973.
+- **À inscrire** :
+  - `9804` dans 1613 de 1955 au 1973-09-23, à la place de 1615 en 1968-1973 ;
+  - `9804#1613` et `9804#1633` dès le 1973-09-23 (aujourd'hui 1982-03-14) ;
+  - les noms Cognac-Nord (1613) et Cognac-Sud (1633) dès le 1973-09-23 ;
+  - à vérifier : Javrezac 1955-1973, Reignac 1968-1973.
+- **Ligne** : `16102-1` écrite le 13 octobre 2026 (1973-09-23 → 2013-01-01, source `texte`,
+  conforme au 1982-03-14) ; ancres datées `9804#1613` POINT(440985.47 6517020.4), 836,5 ha, et
+  `9804#1633` POINT(440324.55 6515296.2), 652,4 ha. `carte_coupe_ville` la tire déjà en 1975 par
+  les ancres datées. Logements BD TOPO au Nord 48,7 %, population INSEE 2011 de la fraction Nord
+  47,0 % (8 746 / 9 865). Travail : `cartes/sorties/decoupe_cognac/`.
+- **Lectures non tranchées** : (a) « pont de Crouin » pris pour le pont de la D941 sur la
+  Charente, « rivière la Charente » pour le bras est : l'île entre canal et rivière (21,3 ha,
+  90 logements) est au Nord, elle irait au Sud si la rivière du texte était le canal ; (b) « rue
+  des Allées » prise pour l'allée Bernard-Guionnet d'après le décret n° 2014-195, lu sur
+  Wikipédia et non collationné sur Légifrance (2,3 ha et 26 logements en jeu avec les allées de
+  la Corderie) ; (c) le régime de 2015 a une autre limite à Crouin (îlots de 2,6 et 1,7 ha).
+
+## Confolens (16106)
+
+### 106. Confolens-Nord et Confolens-Sud : deux fractions en continu de 1802 à 2015 ; Abzac sans canton de 1955 à 1982
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions sur 1941-1968 et 1973-1982 ; Abzac dans 1615 de 1955 à 1982 ; Javrezac dans 1613 de 1955 à 1973. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
+- **Source** : arrêté du 9 pluviôse an X (29 janvier 1802), Bulletin des lois (Gallica
+  ark:/12148/bpt6k6566855n/f192 ; page fournie en image par Adrien le 13 octobre 2026, collationnée),
+  lu d'abord dans Rondonneau, Collection générale des lois, t. 8, p. 696 (archive.org
+  bub_gb_A25OAAAAYAAJ, feuillet n754 ; `cartes/sorties/decoupe_confolens/ocr/`) : Confolens (Nord)
+  = « la partie de cette commune située sur la rive gauche de la Vienne » + Ansac, Lessac,
+  Ambernac, Hiesse, Epenède, Pleuville, Manot ; Confolens (Sud) = « la partie de Confolens située
+  sur la rive droite de la Vienne » + Saint-Germain, Abzac, Oradour-Fanais, Brillac, Esse,
+  Lesterps, Saint-Christophe, Montrollet, Saint-Maurice, Brigueil. Aucun acte ensuite avant le
+  décret de 2014 (`cantons/chronologie_cantonale.csv`). INSEE, populations légales de la
+  Charente : 1 360 (Nord) et 1 351 (Sud) habitants en 2010.
+- **Base** : `10142#1614` et `10142#1615` sur 1815-1941, 1968 → 1973-09-23 et 1982-03-14 → 2013 ;
+  rien de 1941 à 1968 ni du 1973-09-23 au 1982-03-14. Abzac (atome 55) n'a aucun canton du
+  1955-01-01 au 1982-03-14. Cognac (9804) et Javrezac (17815) sont dans l'unité 1615
+  « Confolens-Sud » du 1968-01-01 au 1973-09-23 (voir n° 105).
+- **À inscrire** : les deux fractions sur 1941 → 1968 et 1973-09-23 → 1982-03-14 ; Abzac dans 1615
+  sur 1955 → 1982-03-14 ; Cognac et Javrezac hors de 1615 en 1968-1973.
+- **Ligne** : `16106-1` écrite le 13 octobre 2026 (1815-01-01 → 2013-01-01, source `texte`, axe de
+  la Vienne, 2 879 m, conforme) ; ancres non datées `10142#1614` POINT(519685 6549141) (rive
+  gauche, Saint-Barthélemy, 1 192,0 ha), `10142#1615` POINT(520010 6548734) (rive droite,
+  Saint-Maxime, 708,0 ha). Elle se tirera dans les trous dès que les appartenances y seront.
+
+## Rochefort (17299)
+
+### 107. Rochefort : fractions trop tôt (1815-1852), absentes de 1941 à 1985, atome entier au Nord en 1968-1973, Sud vidé de ses communes en 1973
+
+- **Inscrit par `sql/117_creations_caen_rochefort_bourg_larochelle.sql` (13 octobre 2026, accord d'Adrien)** : point (a) : unité `C17-Rochefort` créée, la ville entière et ses sept communes y sont de 1815 au 1852-06-29 ; les fractions et les communes ne commencent dans Rochefort-Nord et -Sud qu'à cette date. Reste : (d) Yves, (e) les noms.
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : points (b) et (c) : les deux fractions de 1941 à 1985 (l'atome entier retiré), Fouras, Saint-Laurent-de-la-Prée, Vergeroux et l'Île-d'Aix dans 1722 jusqu'en 1985. Reste : (a) avant 1852, (d) Yves, (e) les noms.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
+- **Sources** : loi du 29 juin 1852 (Bulletin des lois, Xe série, t. 9, bull. 546, n° 4177, p. 1529 ;
+  Gallica ark:/12148/bpt6k486128d/f1578, collationnée le 13 octobre 2026 sur l'image fournie par
+  Adrien ; lue d'abord sur l'OCR archive.org bub_gb_KEmBvs4jnukC, extrait dans `cartes/sorties/decoupe_rochefort/ocr/`) : Nord = section
+  urbaine nord + Breuil-Magné, Loire ; Sud = section urbaine sud + Saint-Laurent-de-la-Prée,
+  Fouras, Île-d'Aix, Yves, Vergeroux. Décret n° 85-128 du 29 janvier 1985, art. 2
+  (`jorf_txt/JORF_19850130_25_col.txt`, l. 2362-2421) : « en remplacement des cantons de
+  Rochefort-Nord et Sud », Centre (fraction seule), Nord (Breuil-Magné, Fouras, Île-d'Aix,
+  Loire-les-Marais, Saint-Laurent-de-la-Prée, Vergeroux, Yves + fraction), Sud (fraction seule).
+  `cantons/chronologie_cantonale.csv` : rien entre 1852 et 1985.
+- **Base** : `29352#1721` et `29352#1722` de 1815 à 1941 puis du 1985-03-10 à 2013 ; atome entier
+  `29352` dans 1721 de 1968 au 1973-09-23 ; rien de 1941 à 1968 ni de 1973-09-23 à 1985-03-10.
+  Fouras, Saint-Laurent-de-la-Prée, Vergeroux : dans 1722 jusqu'au 1973-09-23, puis sans canton
+  jusqu'au 1985-03-10. Île-d'Aix : sans canton de 1941 à 1985. Yves : dans 1722 jusqu'en 1941,
+  dans 1721 dès 1968. Noms de 1721 et 1722 absents de `unit_version` de 1941 à 1999, celui de
+  1747 avant 1999.
+- **À inscrire** : (a) avant le 29 juin 1852, un seul canton de Rochefort (la ville entière et les
+  sept communes) : les deux fractions ne commencent qu'en 1852 ; (b) les deux fractions en continu
+  de 1852-06-29 à 1985-03-10, sans l'atome entier en 1968-1973 (artefact du COG) ; (c) Fouras,
+  Île-d'Aix, Saint-Laurent-de-la-Prée, Vergeroux dans Rochefort-Sud jusqu'au 1985-03-10 (aucun
+  acte en 1973) ; (d) Yves : Sud d'après la loi de 1852, Nord dans la base dès 1968 — à
+  vérifier ; (e) les noms.
+- **Lignes écrites** le 13 octobre 2026 : `17299-1985-nord` et `17299-1985-sud` (1985-03-10 →
+  2013-01-01, source `texte`, conformes), ancres datées `29352#1721` POINT(393738 6547733),
+  525,1 ha ; `29352#1747` POINT(393100 6545400), 574,7 ha ; `29352#1722` POINT(391671 6544819),
+  1 098,7 ha. INSEE 2011 : 11,7 / 46,8 / 41,5 % ; logements BD TOPO : 10,4 / 48,3 / 41,3 %.
+  Lecture non tranchée : raccord avenue William-Ponty / rue des Broussailles par le quai de la
+  Louisiane (écrit) ou la rue d'Orléans (`var_p2_orleans.wkt`, 3,0 ha et 23 logements de plus
+  au Centre).
+- **Ligne écrite** le 13 octobre 2026 : `17299-1852` (1852-06-29 → 1985-03-10, source `texte`,
+  conforme), ancres datées `29352#1721` POINT(393150 6545350), 917,1 ha, et `29352#1722`
+  POINT(393150 6544750), 1 281,5 ha. Texte collationné sur la page du Bulletin fournie par Adrien.
+  `carte_coupe_ville` la tire en 1852, 1900, 1940 et, par les ancres datées, en 1970.
+  Lectures non tranchées : (1) « le côté nord de la grande rue du faubourg, en deçà de la route
+  de Saint-Malo » — ce qui est au-delà de la route et au nord du faubourg est donné au Sud ;
+  l'autre lecture, non tracée, déplace de l'ordre de 365 ha ; (2) « rue de la République » de
+  1852 = avenue Charles-de-Gaulle (ancienne rue Royale, d'après Thomas 1828 et Viaud 1845),
+  l'avenue La Fayette déplaçant 2,7 ha et 230 logements (`var_a_lafayette_texte.wkt`).
+
+## Saintes (17415)
+
+### 108. Saintes : fractions absentes de 1941 à 1968 et de 1973 à 1985, communes rurales sans canton, nom de 1735 de 1985 à 1999
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les deux fractions sur 1941-1968 et 1973-1985, les neuf communes rurales, le nom Saintes-Ouest dès 1985. Reste : rien en base.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
+- **Sources** : arrêté du 27 brumaire an X (18 novembre 1801), Bulletin des lois, 3e série, n° 146,
+  n° 1126 (lu sur l'image de Rondonneau, Collection générale des lois, t. 8, p. 577-578, archive.org
+  bub_gb_A25OAAAAYAAJ, feuillets n635-n636, copies dans `cartes/sorties/decoupe_saintes/ocr/` ;
+  Gallica ark:/12148/bpt6k6515730s/f37 À COLLATIONNER) : la ville divisée « par la route de
+  Rochefort […] en suivant la rue de la Commune, celle de la Préfecture, jusqu'à la rivière, au
+  port appelé le Petit-Saint-Jean », gauche = Nord (Bussac, Chaniers, La Chapelle-des-Pots, Le
+  Douhet, Fontcouverte, Saint-Vaize, Vénérand), droite = Sud (Chermignac, Colombiers, Courcoury,
+  Écurat, Saint-Georges, Les Gonds, La Jard, Nieul, Pessines, Préguillac, Thénac, Varzay).
+  Décret n° 85-128 du 29 janvier 1985, art. 3 (`jorf_txt/JORF_19850130_25_col.txt`, l. 2423-2457) :
+  « en remplacement des cantons de Saintes-Nord et Sud », Est, Nord, Ouest.
+  `cantons/chronologie_cantonale.csv` : rien entre l'an X et 1985.
+- **Base** : `31580#1734` (Nord) et `31580#1735` (Sud) de 1815 à 1941, de 1968 au 1973-09-23, puis
+  du 1985-03-10 à 2013 ; `31580#1751` (Est) du 1985-03-10 à 2013 ; rien de 1941 à 1968 ni du
+  1973-09-23 au 1985-03-10 (aucun acte en 1973 pour Saintes). Communes rurales (`membership`,
+  relevé du 13 octobre 2026) : sans canton du 1973-09-23 au 1985-03-10, Chaniers, La
+  Chapelle-des-Pots (1734), Colombiers, Courcoury (1735) ; sans canton de 1955 au 1985-03-10,
+  Saint-Vaize (1734), Écurat, Thénac, La Jard, Les Gonds (1735). `unit_version` nomme 1735
+  « Saintes-Sud » de 1985 à 1999 et « Saintes-Ouest » ensuite.
+- **À inscrire** : (a) les deux fractions en continu de l'an X (ou 1815) au 1985-03-10 ; (b) les
+  neuf communes rurales ci-dessus dans leur canton de l'an X jusqu'au 1985-03-10 ; (c) le nom
+  « Saintes-Ouest » pour 1735 dès le 1985-03-10.
+- **Lignes écrites** le 13 octobre 2026 : `17415-1801` (1801-11-18 → 1985-03-10, source `texte`,
+  conforme), ancres datées `31580#1734` POINT(417750 6523870), 2 223,1 ha, et `31580#1735`
+  POINT(415350 6521270), 2 360,9 ha ; `17415-1985-est` et `17415-1985-ouest` (1985-03-10 →
+  2013-01-01, source `texte`, conformes), ancres datées `31580#1751` POINT(419100 6521750),
+  798,5 ha ; `31580#1734` POINT(417000 6524950), 1 659,9 ha ; `31580#1735` POINT(414750 6520870),
+  2 125,7 ha. INSEE 2011 : 27,5 / 41,3 / 31,1 % ; logements BD TOPO : 27,9 / 43,7 / 28,4 %.
+  Lectures non tranchées : (1) la rive droite en 1801, que le texte ne nomme pas, donnée au Nord
+  par la Charente vers l'amont (1 029 ha, 5 425 logements actuels ; appui : le décret de 1985
+  borne Saintes-Ouest par le même tronçon de Charente et tire Saintes-Est de Saintes-Nord) ;
+  (2) « chemin vicinal 17 » de 1985 = rue de la Côte-de-Beauté (environ 19 ha et 8 logements en
+  jeu par la rue du Champ-de-Tir et la rue de Bellegarde, variante non tracée) ; (3) de la rue de
+  la Préfecture au Petit-Saint-Jean par la rue Saint-Maur et la place Blair (1,7 ha, 42 logements
+  par la rue Monconseil, `var_1801_monconseil.wkt`).
+
+## Bourges (18033)
+
+### 109. Bourges de 1973 à 1982 : quatre cantons sans fraction, et quatre communes voisines sans canton
+
+- **Inscrit par `sql/114_villes_lot_2.sql` (13 octobre 2026)** : les quatre fractions de 1973 à 1982, les noms Bourges-I à V, Saint-Doulchard, La Chapelle-Saint-Ursin et Marmagne dans 1820, Fussy dans 1823. Reste : les lectures à confirmer.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
+- **Sources** : décret n° 73-764 du 2 août 1973 (JO du 4 août 1973, p. 8534 ;
+  `jorf_txt/JORF_19730804_180_col.txt`, l. 2313-2420) : Bourges-I à IV, la ville seule ;
+  décret n° 82-52 du 20 janvier 1982 (JO du 22 janvier 1982, p. 335 ;
+  `jorf_txt/JORF_19820122_18_col.txt`, l. 245-300) : Bourges-V détaché de Bourges-I (art. 1er),
+  canton de Saint-Doulchard (Saint-Doulchard, La Chapelle-Saint-Ursin, Marmagne) détaché de
+  Mehun-sur-Yèvre (art. 2). Copie : `cartes/sorties/decoupe_bourges/sources.txt`. Textes lus sur
+  l'OCR du JO, non collationnés sur Légifrance.
+- **Base** : atome entier `5289` dans 1805 de 1815 au 1973-09-23 ; **aucune appartenance
+  cantonale de Bourges du 1973-09-23 au 1982-03-14** ; cinq fractions `5289#1805`, `#1831`,
+  `#1832`, `#1833`, `#1834` du 1982-03-14 à 2013, justes (attribution par le texte, contacts
+  vérifiés). `unit_version` : 1805 n'a pas de nom entre 1941 et 1999 (le repli donne « Bourges »
+  de 1982 à 1999, alors que c'est Bourges-I depuis 1973) ; 1831 à 1834 n'ont de version qu'à
+  partir de 1999. Saint-Doulchard (31231), La Chapelle-Saint-Ursin (8331) et Marmagne (21269)
+  n'ont aucun canton du 1973-09-23 au 1982-03-14 (Mehun-sur-Yèvre, 1820, jusqu'en 1982) ;
+  Fussy (14943) n'en a aucun de 1955 à 1982 (Saint-Martin-d'Auxigny, 1823).
+- **À inscrire** : `5289#1805` (I), `#1831` (II), `#1832` (III), `#1833` (IV) sur
+  1973-09-23 → 1982-03-14 ; noms Bourges-I à IV dès 1973, Bourges-V dès le 1982-03-14 ; les trois
+  communes dans 1820 de 1973 à 1982 ; Fussy dans 1823 de 1955 à 1982.
+- **Lignes écrites** le 13 octobre 2026 : `18033-1` à `-3` (1973-09-23 → 1982-03-14,
+  `--morceaux 4`, régime absent de la base), ancres datées `5289#1805` = POINT(654500 6668500),
+  1 470,6 ha ; `#1831` = POINT(656500 6664000), 1 894,4 ha ; `#1832` = POINT(654500 6661500),
+  2 603,2 ha ; `#1833` = POINT(652000 6665000), 888,2 ha ; `18033-4` à `-7` (1982-03-14 →
+  2013-01-01, conformes), mêmes ancres plus `#1834` = POINT(656000 6666000), 472,7 ha, le I
+  réduit à 997,9 ha. Les ancres de 1973 joueront dès que les fractions existeront. INSEE 2011 :
+  13,5 / 18,4 / 29,8 / 22,4 / 16,0 % ; logements BD TOPO : 11,2 / 19,8 / 28,1 / 24,9 / 16,1 %.
+- **Reste** : la « jonction en aval » de l'Auron et du canal de Berry, le choix du chenal (4,5 ha,
+  2 logements), le carrefour du Beugnon, les 392 m de l'ancienne voie Bourges-Gien et la sortie
+  est de la RN 151 (chaussée ou contre-allée, 3 à 4 ha) sont des lectures ; le plan annexé aux
+  décrets (préfecture du Cher) les trancherait.
+
+## La Rochelle (17300)
+
+### 110. La Rochelle : fractions de 1985 accrochées à Laleu, régimes de 1973 et 1982 absents, Est / Ouest absents de 1941 à 1973, Cognehors et Saint-Maurice sans atome
+
+- **Inscrit par `sql/117_creations_caen_rochefort_bourg_larochelle.sql` (13 octobre 2026, accord d'Adrien)** : points (a) et (c) : les neuf fractions de 1985 passent de l'atome de Laleu (`18407`) à celui de La Rochelle (`29365`), ancres comprises ; cantons I à IV de 1973 et I à VI de 1982 posés par numéro (I = 1723 … VI = 1745). Par `sql/116` : Est / Ouest de 1941 à 1973, l'atome entier de Laleu retiré. Reste : les communes rurales de 1973 et 1982, (d) Cognehors et Saint-Maurice, (e) les noms, le plan de 1858.
+
+- **Sources** : arrêté du 27 brumaire an X (Bulletin des lois, 3e série, bull. 146, n° 1126 ; lu sur
+  l'image de Rondonneau, Collection générale des lois, t. 8, p. 575-576, archive.org
+  bub_gb_A25OAAAAYAAJ, `cartes/sorties/decoupe_larochelle/ocr/` ; Gallica
+  ark:/12148/bpt6k6515730s/f37 À COLLATIONNER) : Est = Angoulins, Aytré, Cognehors, Dompierre,
+  Lagord, Périgny, La Rochelle (part sud) ; Ouest = Esnandes, L'Houmeau, Laleu, Marsilly,
+  Saint-Maurice, Nieul, La Rochelle (part nord), Saint-Xandre. Loi du 21-29 mai 1858 (Bulletin des
+  lois, XIe série, bull. 605, n° 5607 ; lue sur l'OCR SEUL de Duvergier, archive.org
+  bub_gb_BtUxAAAAIAAJ, NON COLLATIONNÉE) : Saint-Maurice et Cognehors supprimées, partagées entre
+  La Rochelle, Laleu, Lagord, Périgny, Dompierre ; Puilboreau créée ; art. 3, la situation
+  cantonale reste la même, sauf la section 6 de Saint-Maurice passée à Lagord (canton Est).
+  Décrets 73-655 (JO du 17 juillet 1973), 82-26 (JO du 16 janvier 1982), 85-128 (JO du 30 janvier
+  1985), tous dans `jorf_txt/`.
+- **Base** : `29365` (La Rochelle) porte `29365#1723` et `#1724` de 1815 à 1941, rien ensuite.
+  `18407` (Laleu, ANR close en 1880) porte l'atome entier dans 1723 de 1968 au 1973-09-23, puis
+  les neuf fractions `18407#1723` … `#1750` du 1985-03-10 à 2013. Aucune fraction de 1941 à 1968
+  ni du 1973-09-23 au 1985-03-10. Lagord, L'Houmeau, Nieul : dans 1750 dès le 1982-03-14 (ils
+  étaient du canton I de 1982) ; L'Houmeau, Saint-Xandre sans canton de 1955 à 1982 ; aucune
+  commune rurale du 1973-09-23 à 1982. Cognehors et Saint-Maurice n'ont pas d'atome : 1 219 ha
+  sans commune avant 1858. Noms de 1723 et 1724 de 1985 à 1999 : « La Rochelle-Est » et
+  « La Rochelle-Ouest » (ce sont La Rochelle-I et II).
+- **À inscrire** : (a) les neuf fractions de 1985 sur l'atome de La Rochelle (`29365`) et non de
+  Laleu, ou dire pourquoi ; (b) Est / Ouest en continu de 1801 au 1973-09-23, sans l'atome entier
+  de 1968-1973 ; (c) les cantons I à IV de 1973 et I à VI de 1982, avec leurs communes (1973 : II
+  = Dompierre, Esnandes, Lagord, L'Houmeau, Marsilly, Nieul, Puilboreau, Saint-Xandre ; IV =
+  Angoulins, Aytré, Châtelaillon, Périgny ; 1982 : I = L'Houmeau, Lagord, Nieul ; V = Esnandes,
+  Marsilly, Saint-Xandre, Puilboreau, Dompierre, Périgny ; VI = Aytré, Angoulins, Châtelaillon) ;
+  décider sous quels codes (les ancres de 1973 et 1982 sont posées par numéro de canton, I = 1723,
+  II = 1724, III = 1741, IV = 1742, V = 1744, VI = 1745 : à réécrire si la base choisit les codes
+  des successeurs) ; (d) les communes de Cognehors (Est) et de Saint-Maurice (Ouest) jusqu'en
+  1858, Puilboreau créée en 1858 ; (e) les noms.
+- **Lignes écrites** le 13 octobre 2026 (commandes dans
+  `cartes/sorties/decoupe_larochelle/commandes.sh`) : `17300-1985-A` à `-H` (1985-03-10 → 2013,
+  source `texte`, conformes), ancres datées `18407#1723` POINT(376500 6570600), 712,6 ha ; `#1724`
+  POINT(377000 6571800), 118,5 ha ; `#1741` POINT(378700 6571600), 155,4 ha ; `#1742`
+  POINT(378800 6570700), 279,9 ha ; `#1744` POINT(380500 6572200), 135,3 ha ; `#1745`
+  POINT(380000 6569000), 543,9 ha ; `#1748` POINT(381200 6571200), 336,8 ha ; `#1749`
+  POINT(382300 6569800), 89,2 ha ; `#1750` POINT(375500 6572500), 640,0 ha ; `17300-1982-A` à `-F`
+  (1982-03-14 → 1985-03-10, `--morceaux 6`, régime absent) ; `17300-1973-A` à `-C` (1973-09-23 →
+  1982-03-14, `--morceaux 4`, régime absent) ; `17300-1858-ville` et `17300-1858-nord` (1858-01-01
+  → 1973-09-23, source `main`) ; `17300-an10` (1801-11-18 → 1858-01-01, source `texte`), ancres
+  `29365#1723` POINT(379650 6570560) et `29365#1724` POINT(379700 6570950).
+- **`17300-1858-nord` est une HYPOTHÈSE, pas un texte** : la limite Saint-Maurice / Cognehors, de
+  l'enceinte à Lagord, est sur le plan annexé à la loi de 1858, qui n'a pas été vu ; le tracé
+  retenu est celui du décret de 1973 (avenue du 11-Novembre-1918, Champ-de-Mars, Porte-Dauphine,
+  1 037 m). Si c'était le ruisseau de Lafond, plusieurs dizaines d'hectares de Fétilly
+  changeraient de côté (non chiffré). À réécrire au vu du plan ou du cadastre (AD 17).
+  `17300-1858-ville` est la ligne de l'an X prolongée par l'ancien contour communal (ANR
+  1790-1858), lecture de l'art. 3 ; ce contour passe jusqu'à 320 m à l'ouest du chemin des
+  Remparts (au plus 43,7 ha et 244 logements en jeu).
+- **Lectures non tranchées** : rocade Nord / avenue Raymond-Poincaré en 1982, reliées par la voie
+  non dénommée du décret de 1985 (l'autre lecture : 29 ha, 500 logements de Laleu vers le III) ;
+  chemin rural 7 et chemin vicinal 16 en 1982 (non identifiés, ligne finie par la rue de la
+  Tour-Carrée) ; La Faucherie (12,4 ha, sans logement) ; jonction de la gare des marchandises et
+  quai du bassin à flot extérieur (1973, 1982) ; viaduc et môle d'escale au canton I en 1985
+  (18,6 ha) ; Laleu réunie en 1880, supposée restée à l'Ouest (texte de la réunion non lu).
+
+---
+
+## Vierzon (18279)
+
+### 111. Vierzon de 1973 à 1982 : la ville sans canton, ses communes rurales déjà dans Vierzon-II
+
+- **Sources** : décret n° 73-764 du 2 août 1973, art. 2 et 3 (JO du 4 août 1973, p. 8534-8535 ;
+  `jorf_txt/JORF_19730804_180_col.txt`, l. 2421-2453 ; `cantons/communes_coupees_1973_1984.csv`) :
+  le canton de Vierzon est divisé en Vierzon-I (la ville seule, au nord de la ligne) et Vierzon-II
+  (Nançay, Neuvy-sur-Barangeon, Vouzeron, Saint-Laurent, Vignoux-sur-Barangeon, Massay,
+  Saint-Hilaire-de-Court, Méry-sur-Cher, Thénioux et le reste de la ville) ; Saint-Laurent passe
+  de Mehun-sur-Yèvre à Vierzon-II (art. 3). Aucun autre texte jusqu'au décret n° 2014-206.
+  Copie : `cartes/sorties/decoupe_vierzon/sources.txt`. Texte lu sur l'OCR du JO.
+- **Base** : atome entier `39847` dans 1829 de 1815 au 1973-09-23 ; **aucune appartenance
+  cantonale de Vierzon du 1973-09-23 au 1982-03-14** ; fractions `39847#1829` et `#1830` du
+  1982-03-14 à 2013, justes (1830 porte les neuf communes rurales du texte dès le 1973-09-23 ;
+  1829 n'en porte aucune, comme le texte). `unit_version` : 1829 n'a pas de nom de 1941 à 1999
+  (le repli donne « Vierzon » de 1982 à 1999, alors que c'est Vierzon-I depuis 1973) ; 1830 n'a
+  de version qu'à partir de 1999.
+- **À inscrire** : `39847#1829` (Vierzon-I) et `39847#1830` (Vierzon-II) sur 1973-09-23 →
+  1982-03-14 ; noms Vierzon-I et Vierzon-II dès le 1973-09-23 (« 1er Canton », « 2e Canton » du
+  COG de 1999 = les mêmes unités).
+- **Ligne écrite** le 16 octobre 2026 : `18279-1` (1973-09-23 → 2013-01-01, conforme au 1990-01-01), ancres non
+  datées `39847#1829` = POINT(630000 6685000), 5 702,5 ha ; `39847#1830` = POINT(629500 6678500),
+  1 761,9 ha. Les mêmes ancres joueront de 1973 à 1982 quand les fractions y seront.
+- **Reste** : la « place de la République » (prolongement de l'ancien canal) n'est pas localisée,
+  l'axe du canal est suivi jusqu'à la rue des Ponts ; la concordance rue Romain-Rolland = rue des
+  Ponts vient d'un site d'histoire locale (vierzonitude.fr), à confirmer (plan annexé au décret,
+  préfecture du Cher, ou délibération municipale).
+
+## Dinan (22050)
+
+### 112. Dinan : fraction fantôme `11851#2219` (« Lannion ») en 1968-1982, Caouënnec absente de Lannion ; trou 1941-1968
+
+- **Source** : arrêté des consuls du 5 brumaire an X (27 octobre 1801), Bulletin des lois, 3e série,
+  B. 125, n° 967 (selon Rondonneau ; Wikipédia donne « n° 225 ») ; lu sur l'image dans Rondonneau,
+  Collection générale des lois, t. 8 (1818), p. 482-484 (archive.org bub_gb_A25OAAAAYAAJ, feuillets
+  n540-n542 ; `cartes/sorties/decoupe_dinan/sources/`). Deux justices de paix, Dinan (Est) = le midi
+  de la ville + Saint-Hélen, Lanvallay, Léhon, Pleudihen, Saint-Solain, Tressaint ; Dinan (Ouest) =
+  le nord + Aucaleuc, Bobital, Brusvily, Calorguen, Saint-Carné, le Hinglé, Plouër, Quévert,
+  Saint-Samson, Taden, Trélivan, Trévron. Aucun acte ensuite pour la ville avant le décret 2014-150
+  (`cantons/chronologie_cantonale.csv` : seulement le découpage d'origine). Gallica (Duvergier,
+  t. XIII, p. 108, bpt6k54934475/f119) : bloqué (Cloudflare, 16 octobre 2026), non collationné.
+  Source du fantôme : `cog1968/communes_1968.600.csv` (et `communes_1968_fusion.csv`, l. 8255) :
+  la ligne `22,22050,,050,8,19,Caouënnec,327` porte le code 050 de Dinan au lieu de celui de
+  Caouënnec (22030 en GEOFLA) — lecture OCR.
+- **Base** : `11851#2211` (Dinan-Est) et `11851#2212` (Dinan-Ouest) sur 1815-1941 et 1968-2013,
+  rien de 1941 à 1968. En 1968-01-01 → 1982-03-14, une troisième fraction `11851#2219`, unité 2219
+  « Lannion », sans `atom_geom` ; Caouënnec-Lanvézéac (22030) n'a PAS l'unité 2219 sur cette
+  période (Lannion : Dinan, Lannion, L'Hermitage-Lorge, Ploubezre, Ploulec'h, Rospez). Le même
+  défaut touche peut-être L'Hermitage-Lorge (`17035#2219`, Lannion, 1968-1982, à vérifier). La
+  fraction en trop empêche sans doute la règle A de `116` (mêmes fractions au 31 décembre 1940 et
+  au 1er janvier 1968) de couvrir Dinan en 1941-1968.
+- **À inscrire** : retirer `11851#2219` (1968-01-01 → 1982-03-14) ; mettre Caouënnec (22030) dans
+  2219 sur la même période (vérifier dans le COG 1968 imprimé : Caouënnec et Lanvézéac séparées
+  avant leur fusion) ; poser `11851#2211` et `#2212` de 1941 à 1968 (même régime de 1801 à 2015).
+- **Ligne** : `22050-1801` écrite le 16 octobre 2026 (1801-10-27 → 2013-01-01, source `texte`, 2 337 m, conforme à
+  blanc à 1830, 1900, 1990, 2005) ; ancres non datées `11851#2211` POINT(327350 6828300) (midi,
+  157,3 ha), `11851#2212` POINT(327400 6829800) (nord, 236,9 ha). En 1968-1982 la recette dira
+  « FRACTION SANS ANCRE (base) » pour `#2219` tant qu'elle n'est pas retirée.
+- **Écart de population à signaler** (pas une correction de base) : les populations légales 2011
+  (Est 4 727, Ouest 6 124) suivent les IRIS (nord 101-104 : 6 146 en 2012), donc toute la ville
+  intra-muros à l'Est ; la ligne de l'an X donne à l'Ouest le nord de l'intra-muros (14,1 ha,
+  494 logements, environ 600 habitants).
+
+## Brive-la-Gaillarde (19031)
+
+### 113. Brive : la ville entière jusqu'en 1982 malgré Brive-Nord / Brive-Sud (1951), communes rurales trouées, régime 1982-1985 absent, Cosnac et Malemort sans canton en 1982-1985
+
+- **Sources** : décret du 13 septembre 1951 (JO du 14 septembre 1951, p. 9548 ;
+  `JORF/JORF_19510914_217.pdf` p. 4 ; `jorf_txt/JORF_19510914_217_col.txt`, l. 553-572) : Brive-Nord
+  = la ville au nord de la ligne avenue de Bordeaux … avenue Thiers, « n° 680 », + Dampniat, Ussac,
+  Varetz, Venarsal ; Brive-Sud = le reste + Cosnac, La Chapelle-aux-Brocs, Estivals,
+  Jugeals-Nazareth, Malemort, Noailles, Nespouls. Décret n° 82-120 du 2 février 1982 (JO du
+  4 février 1982, p. 456-457 ; `jorf_txt/JORF_19820204_29_col.txt`, l. 596-668) : Brive-Centre,
+  -Nord-Est, -Nord-Ouest, -Sud-Est (+ Cosnac), -Sud-Ouest (+ Noailles, Nespouls, Estivals,
+  Jugeals-Nazareth), Malemort (Varetz, Ussac, Malemort, Venarsal, La Chapelle-aux-Brocs,
+  Dampniat). Décret n° 85-129 du 29 janvier 1985 (JO du 30 janvier 1985, p. 1275 ;
+  `jorf_txt/JORF_19850130_25_col.txt`, l. 2472-2508) : limite Nord-Ouest / Sud-Ouest déplacée.
+  Copie : `cartes/sorties/decoupe_brive/sources.txt`, images `sources/jo_*.png`.
+- **Base** : atome `6008` entier dans 1906 (« Brives ») de 1815 au 1982-03-14 ; **rien du
+  1982-03-14 au 1985-03-10** ; fractions `6008#1906` (NE), `#1930` (SE), `#1931` (Centre),
+  `#1932` (NO), `#1933` (SO) du 1985-03-10 à 2013 (`fraction_cog`). Communes rurales :
+  Ussac, Dampniat, Varetz, Venarsal dans 1906 jusqu'en 1982 (= Brive-Nord, juste) ; Cosnac,
+  Jugeals, Malemort, Noailles, Estivals, Nespouls quittent 1906 le 1951-09-13 mais ne sont dans
+  1930 (= Brive-Sud) que sur [1954-01-01, 1955-01-01) et [1968-01-01, 1982-03-14) : **trous
+  1951-09-13 → 1954 et 1955 → 1968** ; La Chapelle-aux-Brocs dans 1930 seulement en 1954-1955
+  (trou 1955 → 1982). 1982-1985 : Jugeals, Noailles, Estivals, Nespouls → 1933, Ussac, Dampniat,
+  Varetz, Venarsal, La Chapelle → 1934 (justes) ; **Cosnac (1930) et Malemort (1934) sans canton
+  du 1982-03-14 au 1985-03-10**. `unit_version` : 1906 s'appelle « Brives » jusqu'en 1999
+  (Brive-Nord de 1951 à 1982, Brive-Nord-Est ensuite) ; 1930 à 1934 n'ont de nom qu'à partir de
+  1999 (1930 = Brive-Sud de 1951 à 1982).
+- **À inscrire** : `6008#1906` (Brive-Nord) et `6008#1930` (Brive-Sud) sur 1951-09-13 →
+  1982-03-14, à la place de `6008` entier dans 1906 ; combler les trous de 1930 pour les sept
+  communes de Brive-Sud (1951-09-13 → 1982-03-14) ; les cinq fractions `6008#1906`, `#1930`,
+  `#1931`, `#1932`, `#1933` sur 1982-03-14 → 1985-03-10 ; Cosnac dans 1930 et Malemort dans 1934
+  sur 1982-03-14 → 1985-03-10 ; noms Brive-Nord / Brive-Sud (1951-1982), Brive-Nord-Est,
+  -Sud-Est, -Centre, -Nord-Ouest, -Sud-Ouest, Malemort (1982-1999).
+- **Lignes écrites** le 16 octobre 2026 : `19031-51`
+  (1951-09-13 → 1982-03-14, `--morceaux 2`), ancres datées `6008#1906` = POINT(583500 6453500)
+  1 498,3 ha, `6008#1930` = POINT(583500 6449500) 3 360,1 ha ; `19031-82-A` à `-H`
+  (1982-03-14 → 1985-03-10, `--morceaux 5`) et `19031-85-A` à `-H` (1985-03-10 → 2013-01-01),
+  ancres datées NE POINT(585800 6453200), SE POINT(585800 6450500), Centre POINT(584700 6452050),
+  NO POINT(583000 6453500), SO POINT(581500 6449000). Surfaces 1982 : NE 558,7, SE 2 110,7,
+  Centre 139,8, NO 447,9, SO 1 601,3 ha ; 1985 : NO 766,0, SO 1 283,2 ha (les autres inchangées).
+- **Reste** : le « chemin rural de Bassaler au Tilleul (depuis son intersection avec la limite
+  communale de Noailles) » ne touche plus Noailles ; prolongé par déduction (Siorat, le Mas) :
+  +211,9 ha au Sud-Ouest par la D920, −228,7 ha par Lagorse. « n° 680 » du texte de 1951 non
+  identifié. Lotissements Yemaux, Ma Maison et usine Vendôme (1985) identifiés par le cadastre
+  actuel. Le plan annexé aux décrets (« plans des lieux », préfecture de la Corrèze) trancherait.
+
+## Guéret (23096)
+
+### 114. Guéret-Nord de 1973 à 1999 : l'unité 2319 garde le nom « Guéret »
+
+- **Source** : décret n° 73-717 du 23 juillet 1973 (JO du 25 juillet 1973, p. 8079 ;
+  `jorf_txt/JORF_19730725_171_col.txt` ; `cantons/communes_coupees_1973_1984.csv`), art. 1er : « le
+  canton de Guéret est divisé en trois cantons ». Guéret-Nord = Saint-Fiel, Glénic, Ajain, Jouillat,
+  Ladapeyre + la ville au nord de la voie ferrée Bordeaux-Genève ; Guéret-Sud-Ouest = Saint-Victor,
+  La Chapelle-Taillefert, Saint-Christophe, Savennes + la ville à l'ouest de l'axe route de Limoges,
+  avenues du Limousin, de la Sénatorerie, de Laure, place Arfeuillère, ruisseau des Chers ;
+  Guéret-Sud-Est = Sainte-Feyre, Saint-Laurent, La Saunière + le reste. Le décret vise un « plan des
+  lieux » déposé à la préfecture de la Creuse (non vu).
+- **Base** : fractions `16355#2319`, `#2326`, `#2327` de 1973-09-23 à 2013-01-01, communes rurales
+  conformes au décret. Mais l'unité 2319 n'a pas de `unit_version` de 1941 à 1999 (versions :
+  « Guéret » 1815-1941, « Guéret-Nord » 1999-2013) : elle s'affiche sous le nom de `unit`,
+  « Guéret », de 1973 à 1999.
+- **À inscrire** : `unit_version` 2319 « Guéret-Nord » sur [1973-09-23, 1999-01-01) ; « Guéret » sur
+  [1941-01-01, 1973-09-23), où le canton est entier.
+- **Lignes** : `23096-1` (voie ferrée) et `23096-2` (D940, Limousin, Sénatorerie, Laure, Arfeuillère,
+  Chers) écrites le 18 octobre 2026 (1973-09-23 → 2013-01-01, source `texte`) ; ancres non datées
+  `16355#2319` POINT(612800 6565500), `#2327` POINT(611800 6562500), `#2326` POINT(613400 6562300).
+  Le nom n'affecte pas le tirage.
+
+## Périgueux (24322)
+
+### 115. Périgueux-Centre de 1973 à 1999 : l'unité 2427 garde le nom « Périgueux »
+
+- **Source** : décret n° 73-656 du 13 juillet 1973 (JO du 17 juillet 1973 ;
+  `jorf_txt/JORF_19730717_164_col.txt` ; `cantons/communes_coupees_1973_1984.csv`), art. 2 :
+  Périgueux-Nord-Est = Trélissac, Château-l'Évêque, Champcevinel + le quartier Saint-Georges (rive
+  gauche de l'Isle) ; Périgueux-Centre = la ville délimitée du pont de Coutras à Champcevinel (voie
+  ferrée, cimetière, rues Louis-Blanc … Trarieux prolongée) ; Périgueux-Ouest = Chancelade, Marsac,
+  Coulounieix-Chamiers + le reste de la ville.
+- **Base** : fractions `26489#2427`, `#2449`, `#2450` de 1973-09-23 à 2013-01-01, communes rurales
+  conformes au décret (Boulazac et Notre-Dame-de-Sanilhac restent à Saint-Pierre-de-Chignac, 2434).
+  L'unité 2427 n'a pas de `unit_version` de 1941 à 1999 (« Périgueux » jusqu'en 1941,
+  « Périgueux-Centre » de 1999 à 2013) : elle s'affiche « Périgueux » de 1973 à 1999. Même cas que
+  Guéret-Nord (n° 114) et Bergerac (2403). Les unités 2449 et 2450 n'ont de version qu'à partir de
+  1999, mais le repli sur le nom de `unit` est juste.
+- **À inscrire** : `unit_version` 2427 « Périgueux-Centre » sur [1973-09-23, 1999-01-01) ;
+  « Périgueux » sur [1941-01-01, 1973-09-23).
+- **Lignes** : `24322-1` (l'Isle, lit de la rivière et non le canal) et `24322-2` (pont de Coutras,
+  voie ferrée, cimetière, rues jusqu'à Champcevinel) écrites le 18 octobre 2026 (1973-09-23 →
+  2013-01-01, source `texte`) ; ancres non datées `26489#2449` POINT(521900 6456300), `#2427`
+  POINT(520900 6456900), `#2450` POINT(519300 6458500). Le nom n'affecte pas le tirage.
+
+## Montbéliard (25388)
+
+### 116. Montbéliard de 1955 à 1982 : la ville sans canton, Bethoncourt sans canton de 1973 à 1982, noms de 1973
+
+- **Source** : décret n° 73-814 du 16 août 1973, art. 2 (JO du 17 août 1973, p. 8921-8922 ;
+  `jorf_txt/JORF_19730817_190_col.txt`, l. 1558-1594 ; `cantons/communes_coupees_1973_1984.csv`) :
+  le canton de Montbéliard est divisé en Montbéliard-Est (Bethoncourt et la partie est de la
+  ville) et Montbéliard-Ouest (Aibre, Allondans, Bart, Bavans, Beutal, Bretigney, Désandans, Dung,
+  Échenans, Issans, Laire, Lougres, Présentevillers, Raynans, Saint-Julien-lès-Montbéliard,
+  Sainte-Marie, Sainte-Suzanne, Semondans, Le Vernoy et le reste de la ville). Aucun autre texte
+  jusqu'au décret de 2014 (82-55 ne touche pas la ville ; en 2015 la ville est entière dans le
+  canton de Montbéliard). Le décret renvoie aux « plans des lieux » déposés à la préfecture du Doubs
+  (non vus). Copie : `cartes/sorties/decoupe_montbeliard/sources.txt`.
+- **Base** : atome entier `23194` dans 2514 jusqu'au 1955-01-01, puis **aucune appartenance
+  cantonale de la ville du 1955-01-01 au 1982-03-14** (ses communes rurales sont dans 2514 sans
+  trou de 1955 à 1973) ; fractions `23194#2514` et `#2530` (source `fraction_cog`) du 1982-03-14 à
+  2013. Bethoncourt (atome 4019) dans 2514 jusqu'au 1973-09-23, **sans canton du 1973-09-23 au
+  1982-03-14**, puis dans 2514. Les dix-neuf communes rurales de l'Ouest sont dans 2530 dès le
+  1973-09-23 (juste). `unit_version` : 2514 n'a pas de version de 1941 à 1999 (le repli donne
+  « Montbéliard » de 1982 à 1999, alors que c'est Montbéliard-Est depuis 1973) ; 2530 n'a de
+  version qu'à partir de 1999 (repli juste).
+- **À inscrire** : atome `23194` dans 2514 du 1955-01-01 au 1973-09-23 ; `23194#2514`
+  (Montbéliard-Est) et `23194#2530` (Montbéliard-Ouest) du 1973-09-23 au 1982-03-14 ; Bethoncourt
+  dans 2514 du 1973-09-23 au 1982-03-14 ; nom Montbéliard-Est (2514) dès le 1973-09-23.
+- **Ligne** : `25388-1` écrite le 18 octobre 2026 (1973-09-23 → 2013-01-01, source `texte`, 3 962 m,
+  conforme au 1982-03-14, 1990 et 2005) ; ancres non datées `23194#2514` POINT(986400 6718800),
+  910,5 ha ; `23194#2530` POINT(983800 6721000), 588,8 ha. Elles joueront de 1973 à 1982 quand les
+  fractions y seront.
+- **Reste** : concordances déduites, à confirmer sur le plan du décret : route d'Héricourt = rue de
+  la Seigneurie-d'Héricourt ; rue du Bois-d'Allondans = rue Louis-Pardonnet entre les rues
+  Joseph-Rossel et de Horbourg ; rue de Cheneau-Prolongée entre Horbourg et Vignes (la route
+  d'Allondans donnerait 1,65 ha et 25 logements à l'Ouest).
+
+## Montélimar (26198)
+
+### 117. Montélimar de 1973 à 1985 : la ville, Ancône et La Touche sans canton ; Montélimar-I sans nom jusqu'en 1999
+
+- **Source** : décret n° 73-718 du 23 juillet 1973, art. 3 (JO du 25 juillet 1973, p. 8080 ;
+  `jorf_txt/JORF_19730725_171_col.txt` ; `cantons/communes_coupees_1973_1984.csv`) : le canton de
+  Montélimar est divisé en Montélimar-I (Ancône et la ville « au Nord de la rivière le Roubion ») et
+  Montélimar-II (Allan, Châteauneuf-du-Rhône, Espeluche, Malataverne, Montboucher-sur-Jabron,
+  Portes-en-Valdaine, Puygiron, Rochefort-en-Valdaine, La Touche et la ville au Sud du Roubion).
+  Aucun autre texte jusqu'au décret 2014-191, qui reprend « au nord / au sud du Roubion ».
+- **Base** : atome `23337` entier dans 2616 jusqu'au 1973-09-23, puis **aucune appartenance de la
+  ville du 1973-09-23 au 1985-03-10** ; fractions `23337#2616` et `#2633` (`fraction_cog`) du
+  1985-03-10 au 2013-01-01. Ancône (atome 722) et La Touche (atome 18869) **sans canton du
+  1973-09-23 au 1985-03-10** ; les huit autres communes du II sont dans 2633 dès le 1973-09-23
+  (juste). `unit_version` : 2616 n'a pas de version avant 1999 (le repli affiche « Montélimar » de
+  1985 à 1999, alors que c'est Montélimar-I depuis 1973).
+- **À inscrire** : `23337#2616` (Montélimar-I) et `23337#2633` (Montélimar-II) du 1973-09-23 au
+  1985-03-10 ; Ancône dans 2616 et La Touche dans 2633 sur la même période ; nom Montélimar-I
+  (2616) dès le 1973-09-23.
+- **Ligne** : `26198-1` écrite le 18 octobre 2026 (1973-09-23 → 2013-01-01, source `texte`,
+  9 292 m, conforme au 1985-03-10 et en 2005) ; ancres non datées `23337#2616` nord, 2 297,2 ha ;
+  `23337#2633` sud, 2 340,1 ha. Elles joueront de 1973 à 1985 quand les fractions y seront.
+- **Reste** : à l'ouest du canal de dérivation (1957), la ligne suit l'« Ancien Lit Roubion » ;
+  547 ha au I et 221 ha au II en dépendent (plan du décret non vu).
+
+## Romans-sur-Isère (26281)
+
+### 118. Romans de 1973 à 1985 : la ville sans fraction, Montmiral sans canton
+
+- **Source** : décret n° 73-718 du 23 juillet 1973, art. 2 (JO du 25 juillet 1973, p. 8079-8080 ;
+  `jorf_txt/JORF_19730725_171_col.txt`, l. 1250-1265 ; `cantons/communes_coupees_1973_1984.csv`) :
+  Romans-sur-Isère-I = Clérieux, Saint-Bardoux, Peyrins, Mours-Saint-Eusèbe, Geyssans + la ville à
+  l'ouest de l'axe rue des Remparts-Saint-Nicolas, rue Nugues, rue François-Pouzin, avenue
+  Émile-Zola, route de Génissieux ; Romans-sur-Isère-II = Saint-Paul-lès-Romans, Génissieux,
+  Triors, Châtillon-Saint-Jean, Saint-Bonnet-de-Valclérieux, Le Chalon, Saint-Laurent-d'Onay,
+  Saint-Michel, Parnans, Crépol, Miribel, Montmiral + le reste de la ville. Aucun autre texte
+  avant le décret de 2014. Copie : `cartes/sorties/decoupe_romans/sources.txt`.
+- **Base** : atome entier `29521` dans 2621 jusqu'au 1973-09-23 ; **aucune appartenance
+  cantonale de la ville du 1973-09-23 au 1985-03-10** ; fractions `29521#2621` (I) et `#2635`
+  (II) du 1985-03-10 au 2013-01-01, justes (communes rurales conformes au décret dès le
+  1973-09-23, populations INSEE 2011 à 0,1 point de la ligne). **Montmiral (atome 23686) n'a
+  pas de canton du 1973-09-23 au 1985-03-10** (2635 seulement à partir de 1985). `unit_version` :
+  2621 s'appelle « Romans-sur-Isère » de 1985 à 1999 (repli), « 1er Canton » ensuite.
+- **À inscrire** : `29521#2621` (Romans-sur-Isère-I) et `29521#2635` (Romans-sur-Isère-II) sur
+  1973-09-23 → 1985-03-10 ; Montmiral dans 2635 sur la même période ; nom
+  « Romans-sur-Isère-I » pour 2621 dès le 1973-09-23 (« Romans-sur-Isère » sur [1941, 1973-09-23)).
+- **Ligne** : `26281-1` écrite le 18 octobre 2026 (1973-09-23 → 2013-01-01, source `texte`,
+  2 241 m, conforme au 1990-01-01 et au 2005-01-01) ; ancres non datées `29521#2621` =
+  POINT(860000 6442000), 2 419,7 ha ; `29521#2635` = POINT(864000 6441000), 930,1 ha. Elles
+  joueront de 1973 à 1985 quand les fractions y seront.
+- **Reste** : le passage de la voie ferrée entre la rue François-Pouzin et l'avenue Émile-Zola
+  (29 m en droite) suppose un passage à niveau en 1973, non vérifié.
+
+## Crest (26108)
+
+### 119. Crest : fractions absentes de 1973 à 1985 ; Aouste, Gigors et Saou sans canton de 1955 à 1985 ; Saou à Marsanne en 1968-1973
+
+- **Source** : arrêté des consuls du 9 frimaire an X (30 novembre 1801), Bulletin des lois B. 156,
+  n° 1206 ; lu sur l'image de Rondonneau, *Collection générale des lois*, t. 8, p. 615-616
+  (archive.org `bub_gb_A25OAAAAYAAJ`, feuillets n673-n674 ; copie dans
+  `cartes/sorties/decoupe_crest/src/`) : « La rivière de Drôme servira de ligne de démarcation » ;
+  Nord sur la rive droite, Sud sur la rive gauche. Aucun acte ensuite jusqu'au décret 2014-191 (la
+  commune entière dans le canton de Crest). Gallica (`bpt6k6515730s/f202`) non collationné.
+- **Base** : fractions `11045#2607` (Nord) et `#2608` (Sud) de 1815 au 1973-09-23 et du 1985-03-10
+  à 2013, **aucune appartenance du 1973-09-23 au 1985-03-10**, alors que les unités 2607 et 2608 y
+  ont leurs communes rurales. Aouste-sur-Sye (atome 991) et Gigors-et-Lozeron (15483) **sans canton
+  du 1955-01-01 au 1985-03-10** (absentes de `cog1968/communes_1968_fusion.csv` pour la Drôme).
+  Saou (35321) **sans canton en 1955-1968 et 1973-1985, et dans 2615 (Marsanne) en 1968-1973** :
+  coquille du COG 1968, où Saou porte le code 26536 et où la ligne 26336 « Saurzet » (1 110 hab.,
+  canton 15) est un doublon OCR de Sauzet.
+- **À inscrire** : `11045#2607` → 2607 et `11045#2608` → 2608 sur [1973-09-23, 1985-03-10) ;
+  Aouste-sur-Sye et Gigors-et-Lozeron dans 2607 sur [1955-01-01, 1985-03-10) ; Saou dans 2608 sur
+  [1955-01-01, 1985-03-10) (au lieu de 2615 en 1968-1973).
+- **Ligne** : `26108-1` écrite le 18 octobre 2026 (1801-11-30 → 2013-01-01, source `texte`,
+  3 725 m, conforme en 1820, 1900, 1990 et 2010) ; ancres non datées `11045#2607` =
+  POINT(860136 6406754), 1 557,5 ha ; `11045#2608` = POINT(859906 6404002), 809,8 ha. Elles
+  joueront de 1973 à 1985 quand les fractions y seront.
+
+## Besançon (25056)
+
+### 121. Besançon de 1973 à 1982 : la ville sans canton, Chalezeule et Chalèze sans canton ; Nord-Est sous le nom « Besançon-Nord » jusqu'en 1999
+
+- **Source** : décret n° 73-814 du 16 août 1973, art. 1er (JO du 17 août 1973, p. 8921 ;
+  `jorf_txt/JORF_19730817_190_col.txt`, l. 1520-1556) : Besançon-Nord est divisé en trois
+  cantons, Besançon-Est (Chalezeule, Chalèze, Arcier et la partie est de la ville),
+  Besançon-Ouest (la partie ouest de la ville, sans commune rurale) et Besançon-Nord (le reste de
+  l'ancien Nord dans la ville). Décret n° 82-55 du 20 janvier 1982 (JO du 22 janvier 1982,
+  p. 336-337 ; `jorf_txt/JORF_19820122_18_col.txt`, l. 495-536) : Nord → Nord-Est et Nord-Ouest,
+  Ouest → Ouest et Planoise, tous sans commune rurale. Le Sud n'est touché par aucun des deux.
+- **Base** : fractions `3928#2505` (Nord) et `#2506` (Sud) de 1815 au 1973-09-23 ; **aucune
+  appartenance cantonale de la ville du 1973-09-23 au 1982-03-14** ; six fractions du 1982-03-14
+  à 2013 (`#2505`, `#2506` en `geofla`, `#2528` Est, `#2529` Ouest, `#2532` Nord-Ouest, `#2533`
+  Planoise en `fraction_cog`), justes (populations INSEE 2011 à 0,7 point au plus des morceaux).
+  **Chalezeule (25112) et Chalèze (25111) n'ont pas de canton du 1973-09-23 au 1982-03-14**
+  (2505 avant, 2528 après). Beure (Sud) est continu. `unit_version` : 2505 s'appelle
+  « Besançon-Nord » de 1982 à 1999 (version de 1870), alors que c'est Besançon-Nord-Est depuis le
+  décret 82-55 ; 2528, 2529, 2532, 2533 n'ont de version qu'à partir de 1999 (repli juste).
+- **À inscrire** : `3928#2505` (Nord), `#2506` (Sud), `#2528` (Est), `#2529` (Ouest) sur
+  1973-09-23 → 1982-03-14 ; Chalezeule et Chalèze dans 2528 sur la même période (et Arcier si la
+  base l'a encore comme commune) ; nom « Besançon-Nord-Est » pour 2505 dès le 1982-03-14.
+- **Lignes** : écrites le 18 octobre 2026, source `texte`. `25056-1801-doubs` (1801-10-19 →
+  1973-09-23) ; `25056-1973-doubs`, `-est-ouest`, `-est-nord`, `-ouest-nord` (1973-09-23 →
+  1982-03-14, quatre morceaux) ; `25056-1982-doubs`, `-est-ouest`, `-est-nordest`, `-ouest-nord`,
+  `-vesoul`, `-kennedy` (1982-03-14 → 2013-01-01). Ancres datées 1973-1982, prêtes pour quand les
+  fractions y seront : `#2505` POINT(928500 6689500), 3 397,8 ha ; `#2506` POINT(928700 6686000),
+  475,5 ha ; `#2528` POINT(929700 6687300), 698,5 ha ; `#2529` POINT(927200 6685000), 1 936,4 ha.
+- **Reste** : l'île Saint-Pierre est mise à l'Ouest à partir de 1973 sur la foi du décret
+  2014-240 (« île Saint-Pierre incluse » dans Besançon-6), le décret de 1973 ne l'excluant que de
+  l'Est ; le plan des lieux de 1973 (préfecture du Doubs) trancherait. Arrêté de l'an X lu dans
+  Rondonneau, à collationner sur Gallica (ark:/12148/bpt6k6566479p/f206).
+
+## Louviers (27375)
+
+### 122. Louviers de 1982 à 1992 : la ville sans fraction, alors que ses communes rurales sont déjà partagées ; Louviers-Nord sous le nom « Louviers » jusqu'en 1999
+
+- **Source** : décret n° 82-56 du 20 janvier 1982, art. 3 (JO du 22 janvier 1982, p. 337 ;
+  `jorf_txt/JORF_19820122_18_col.txt`, l. 648-666) — le même décret que pour Évreux (n° 71) :
+  Louviers est divisé en Louviers-Nord et Louviers-Sud. Wikipédia (« Liste des cantons de
+  l'Eure ») : un seul canton de 1801 à 1982 ; le décret 2014-241 remet la ville entière dans le
+  canton de Louviers.
+- **Base (rebuild du 20 octobre 2026)** : atome 20191 entier dans 2721 jusqu'au 1982-03-14 ;
+  fractions `20191#2721` (Louviers-Nord) et `20191#2739` (Louviers-Sud) du 1992-03-22 au
+  2013-01-01 seulement ; **rien pour la ville du 1982-03-14 au 1992-03-22**, alors que les
+  communes rurales y sont déjà partagées (6 dans 2721, 12 dans 2739 au 1985-01-01). Même trou
+  qu'à Évreux. `unit_version` de 2721 : « Louviers » jusqu'en 1941, rien ensuite, « Louviers-Nord »
+  à partir de 1999 seulement ; le repli affichera « Louviers » de 1982 à 1999 (comme Guéret-Nord,
+  n° 114).
+- **À inscrire** : `20191#2721` → 2721 et `20191#2739` → 2739 du 1982-03-14 au 1992-03-22.
+  Communes du décret — Nord : Andé, Heudebouville, Incarville, Saint-Étienne-du-Vauvray,
+  Saint-Pierre-du-Vauvray, Vironvay ; Sud : Acquigny, Amfreville-sur-Iton (« Anfreville »),
+  Crasville (« Crosville » au JO), La Haye-le-Comte, La Haye-Malherbe, Hondouville,
+  Le Mesnil-Jourdain, Pinterville, Quatremare, Surtauville, Surville, La Vacherie.
+  Nom « Louviers-Nord » pour 2721 dès le 1982-03-14.
+- **Lignes** : `27375-1` écrite le 20 octobre 2026, source `texte`, 1982-03-14 → 2013-01-01,
+  ancres non datées `#2721` POINT(565000 6905500), 1 527,2 ha, `#2739` POINT(566500 6901800),
+  1 181,2 ha ; elles joueront dès l'inscription.
+
+## Bernay (27056)
+
+### 123. Bernay-Est / Bernay-Ouest commencent en 1992 au lieu de 1985 ; la ville sans canton de 1982 à 1985
+
+- **Source** : décret n° 85-145 du 31 janvier 1985, art. 2 (JO du 1er février 1985, p. 1380 ;
+  `jorf_txt/JORF_19850201_27_col.txt`, l. 1382-1424 — l'OCR écrit « Bemay »). Wikipédia
+  (« Liste des cantons de l'Eure ») : un seul canton de l'an X à 1985 ; le décret 2014-241 remet
+  la ville entière dans le canton de Bernay.
+- **Base (rebuild du 20 octobre 2026)** : atome 3797 entier dans 2705 jusqu'au 1982-03-14, puis
+  **sans canton jusqu'au 1985-03-10** ; fractions `3797#2705` (Ouest) et `3797#2741` (Est)
+  seulement à partir du 1992-03-22. Les communes rurales de Bernay-Est (Carsix,
+  Corneville-la-Fouquetière, Fontaine-l'Abbé, Menneval, Saint-Aubin-le-Vertueux,
+  Saint-Clair-d'Arcey, Saint-Léger-de-Rôtes, Serquigny) sont dans 2741 dès le 1985-03-10.
+  `unit_version` ne nomme 2741 « Bernay-Est » et 2705 « Bernay-Ouest » qu'à partir de 1999.
+- **À inscrire** : 3797 dans 2705 du 1982-03-14 au 1985-03-10 ; `3797#2705` et `3797#2741` du
+  1985-03-10 au 1992-03-22 ; les noms Bernay-Ouest / Bernay-Est dès le 1985-03-10.
+- **Ligne** : `27056-1` écrite le 20 octobre 2026, source `texte`, 1985-03-10 → 2013-01-01,
+  ancres non datées `#2705` POINT(522100 6892000), 1 234,5 ha, `#2741` POINT(527100 6889500),
+  1 176,8 ha ; elles joueront dès l'inscription.
+
+### 124. Fraction fantôme de Bézu-la-Forêt dans le canton de Bernay (1968-1982)
+
+- **Base** : `4164#2705` (Bézu-la-Forêt, canton 2705 Bernay) du 1968-01-01 au 1982-03-14, à côté
+  de `4164#2722` (Lyons).
+- **Cause** : `cog1968/communes_1968_fusion.csv` l. 10492, « Bosc-Renoull-en-Ouche », doublon
+  OCR de Bosc-Renoult-en-Ouche (27088, l. 10512), porte le code 066 de Bézu-la-Forêt et le
+  canton 05 de Bernay (même cas que Saou / « Saurzet », n° 119).
+- **À inscrire** : supprimer `4164#2705` ; Bézu-la-Forêt entière dans 2722 de 1968 à 1982.
+
+## Valence (26362)
+
+### 125. Valence : régimes 1964 (Nord / Sud) et 1973 (I à III) absents ; Bourg-lès-Valence et Saint-Marcel sans canton de 1973 à 1985
+
+- **Sources** : décret du 28 janvier 1964 (JO du 30 janvier 1964, p. 1092 ;
+  `jorf_txt/JORF_19640130_25_col.txt`, l. 2124-2161) ; décret n° 73-718 du 23 juillet 1973,
+  art. 1er (JO du 25 juillet 1973, p. 8079-8080 ; `JORF_19730725_171_col.txt`, l. 1192-1240) ;
+  décret n° 84-1224 du 24 décembre 1984 (JO du 30 décembre 1984, p. 4147 ;
+  `JORF_19841230_305_col.txt`, l. 14493-14568).
+- **Base (rebuild du 20 octobre 2026)** : la ville entière dans 2629 de 1955 au 1973-09-23 ;
+  aucune fraction du 1973-09-23 au 1985-03-10 ; fractions `38655#2629`, `#2630`, `#2631`,
+  `#2636` (I à IV) du 1985-03-10 au 2013-01-01, justes (populations 2011 à 0,5 point des
+  morceaux).
+- **À inscrire** :
+  a) 1964-03-08 → 1973-09-23 : `38655#2629` (Valence-Nord) et `#2630` (Valence-Sud) au lieu de
+     38655 entier. Codes lus sur les communes rurales : Bourg et Saint-Marcel en 2629 ; Beaumont,
+     Beauvallon, Étoile, Portes en 2630 (« Valence 2e canton ») en 1968-1973. Pour 1964-1968,
+     mettre les communes du Sud en 2630 : Beaumont, Beauvallon et Portes n'ont aucun canton de
+     1955 à 1968, Étoile aucun de 1941 à 1968, Montéléger aucun de 1955 à 1973. Noms
+     Valence-Nord / Valence-Sud de 2629 / 2630 pour 1964-1973 absents de `unit_version`.
+  b) 1973-09-23 → 1985-03-10 : `38655#2629` (Valence-I), `#2630` (II), `#2631` (III), sans
+     commune rurale. Bourg-lès-Valence et Saint-Marcel-lès-Valence n'ont aucun canton de 1973 à
+     1985 : canton 2632 Bourg-lès-Valence au décret 73-718. Correspondance I/II/III =
+     2629/2630/2631 SUPPOSÉE, à vérifier avant inscription.
+- **Lignes** : écrites le 20 octobre 2026, source `texte`. `26362-1964-ns` (1964-03-08 →
+  1973-09-23) ; `26362-1973-i`, `-1973-ii-iii` (→ 1985-03-10) ; `26362-1985-i`, `-1985-iii-iv`,
+  `-1985-ii-iv` (→ 2013-01-01). Ancres datées prêtes : 1964 `#2629` POINT(850500 6428800),
+  2 024,5 ha, `#2630` POINT(849000 6424500), 1 644,9 ha ; 1973 `#2629` POINT(849000 6427800),
+  341,5 ha, `#2630` POINT(848500 6424800), 1 400,9 ha, `#2631` POINT(852000 6427000), 1 927,0 ha.
+
+## Vernon (27681)
+
+### 126. Vernon de 1982 à 1992 : la ville sans fraction, alors que ses communes rurales sont déjà partagées ; Vernon-Nord sous le nom « Vernon » jusqu'en 1999
+
+- **Source** : décret n° 82-56 du 20 janvier 1982, art. 2 (JO du 22 janvier 1982, p. 337 ;
+  `jorf_txt/JORF_19820122_18_col.txt`, l. 631-647, relu sur `JORF/JORF_19820122_18.pdf` p. 5) —
+  même décret que Louviers (n° 122) et Évreux (n° 71) : Vernon est divisé en Vernon-Nord et
+  Vernon-Sud. Le décret 2014-241 remet la ville entière dans le canton de Vernon. Rien dans
+  `gaudillere/`.
+- **Base** : atome 39507 entier dans 2736 jusqu'au 1982-03-14 ; fractions `39507#2736` (Nord) et
+  `39507#2740` (Sud) du 1992-03-22 au 2013-01-01 seulement ; **rien pour la ville du 1982-03-14 au
+  1992-03-22**, alors que les communes rurales y sont déjà partagées au 1985-01-01 (7 dans 2736 :
+  Chambray, La Chapelle-Réanville, Sainte-Colombe-près-Vernon, Saint-Just, Saint-Marcel,
+  Saint-Pierre-d'Autils, Villez-sous-Bailleul ; 6 dans 2740 : Douains, Houlbec-Cocherel,
+  La Heunière, Mercey, Rouvray, Saint-Vincent-des-Bois — conformes au décret). `unit_version` de
+  2736 : « Vernon » jusqu'en 1941, rien ensuite, « Vernon-Nord » à partir de 1999. À côté :
+  Blaru et Port-Villez (unité 7802, Yvelines) portent le nom « Arpajon » en 1995.
+- **À inscrire** : `39507#2736` → 2736 et `39507#2740` → 2740 du 1982-03-14 au 1992-03-22 ; noms
+  « Vernon-Nord » pour 2736 et « Vernon-Sud » pour 2740 dès le 1982-03-14.
+- **Lignes** : `27681-1` écrite le 21 octobre 2026, source `texte`, 1982-03-14 → 2013-01-01,
+  ancres non datées `#2736` POINT(590000 6890000), 1 561,0 ha, `#2740` POINT(588500 6888000),
+  1 864,7 ha ; elles joueront dès l'inscription. Questions ouvertes : la « rue Latérale » (lue :
+  cité des Champsbourgs et rue du Colonel-Léo-Levasseur, le long de la voie Paris-Le Havre ;
+  population au Nord 34,5 % contre 33,9 % légale ; l'autre lecture, rue Claude-Monet, 46,1 %) ;
+  le prolongement sans texte jusqu'à Port-Villez par la voie ferrée (variante par la rue du
+  Croquet : 9,1 ha, 64 logements). Fichiers de travail : `cartes/sorties/decoupe_vernon/`.
+
+---
+
+## Dreux (28134)
+
+### 127. Dreux : régime de 1973 (Nord-Est / Sud-Ouest) absent ; fractions de 1982 seulement depuis 1998
+
+- **Sources** : décret 73-719 du 23 juillet 1973 (JO du 25 juillet 1973,
+  `jorf_txt/JORF_19730725_171_col.txt`, l. 1294-1401, art. 2 l. 1382-1400 ; absent de
+  `cantons/communes_coupees_1973_1984.csv`) ; décret 82-27 du 15 janvier 1982 (JO du 16 janvier
+  1982, `jorf_txt/JORF_19820116_13_col.txt`, l. 1145-1179 ; `communes_coupees_1973_1984.csv`
+  l. 412-414) ; décret de 2014 (Dreux-1), lu sur la seule transcription de Wikipédia, qui reprend
+  la ligne Ouest / Est de 1982 en traduisant les anciens noms. Rien dans `gaudillere/`.
+- **Base** : 12219 entière dans 2813 jusqu'au 1973-09-23 ; rien pour la ville ni pour ses communes
+  rurales du 1973-09-23 au 1982-03-14 ; communes rurales dans 2813 / 2827 / 2828 dès le
+  1982-03-14, mais fractions `12219#2813`, `#2827`, `#2828` seulement à partir du 1998-03-15 ;
+  pas de nom « Dreux-Est » pour 2813 avant 1999.
+- **À inscrire** : les unités Dreux-Nord-Est et Dreux-Sud-Ouest (1973-09-23 → 1982-03-14), leurs
+  communes (SO : Allainville, Aunay-sous-Crécy, Boissy-en-Drouais, Crécy-Couvé, Garancières,
+  Garnay, Louvilliers, Luray, Marville-Moutiers-Brûlé, Saulnières, Tréon, Vernouillet ; NE :
+  La Chapelle-Forainvilliers, Charpont, Chérisy, Écluzelles, Germainville, Mézières-en-Drouais,
+  Montreuil, Ouerre, Sainte-Gemme-Moronval, Vert-en-Drouais) et les deux fractions de Dreux ; les
+  trois fractions de 1982 dès le 1982-03-14 ; le nom Dreux-Est de 2813 dès 1982.
+- **Lignes** : écrites le 21 octobre 2026, source `texte`. `28134-1` (1973-09-23 → 1982-03-14,
+  sans ancre ; points proposés SO POINT(580900 6848300), NE POINT(578500 6851500)) ; `28134-2`
+  (Ouest / Est) et `28134-3` (Sud), 1982-03-14 → 2013-01-01, ancres datées `#2827` Ouest
+  POINT(577500 6851500), `#2813` Est POINT(581200 6849700), `#2828` Sud POINT(580900 6848300).
+  Logements BD TOPO à 1,8 point au plus des populations légales 2011. Questions ouvertes : le
+  départ sur la limite de Montreuil (lecture de 2014) alors que 1982 dit Chérisy ; la sente 74 et
+  la « rue La Fayette » (1,44 ha, 10 logements), que les plans du décret, à la préfecture,
+  trancheraient. Fichiers de travail : `cartes/sorties/decoupe_dreux/`.
 
 ---
 

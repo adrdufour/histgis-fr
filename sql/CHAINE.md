@@ -205,7 +205,7 @@ chaîne, et à aucun autre.
 | # | fichier | rôle | trace | `-v` |
 |---|---|---|---|---|
 | a | `57_paris_circo_1848.sql` | 1848-1852 : le département EST la circonscription | `paris_1848_trace` | **`appliquer`** |
-| c | `58_cog1968_stage.sql` | dépôt et résolution du recensement de 1968. N'écrit pas dans `membership` | `c68_trace` | lancer depuis la RACINE |
+| c | `58_cog1968_stage.sql` | dépôt et résolution du recensement de 1968. N'écrit pas dans `membership`. Depuis le 21 octobre 2026, applique au dépôt `cog1968/c68_codes_corriges.csv` (392 lignes dont le nom désigne une autre commune que le code : 77 rendues, 315 retirées ; produit par `cog1968/controle_nom_code_base.py --ecrire-corrections`) | `c68_trace`, `c68_correction` | lancer depuis la RACINE |
 | d | `59_cog1968_membership.sql` | **JALON 1968** — 32 659 rattachements, 2 899 cantons | `c68_trace`, `c68_qualite` | `-1` |
 | e | `60_canton_forbach2.sql` | Forbach-II, canton que `59` délègue explicitement | `c60_trace` | — |
 | f | `65`, `66`, `69` | noms de 1954, dépôt du recensement, pont Seine-et-Oise | — | RACINE |
@@ -283,10 +283,16 @@ avant lui.
 | z | `111_corrige_transferts.sql` | **raccourcit** les périodes que ces transferts démentent : coupe à l'effet et pose la suite au canton d'arrivée (cas A), ou fait commencer à l'effet et rend l'avant au canton de départ (cas B). Essai du 11 octobre 2026 : 20 périodes (15 A, 5 B) | `p111_trace` (bornes d'avant), `p111_qualite` | **`poser=on`**, `defaire=on`, pas de `-1` |
 | z bis | `120_trous_par_dela_1968.sql` | comble les trous que `93`, `95`, `97` ne voient pas — ceux qui **traversent 1968**, faute de bout au jalon (Belley) — par l'accord des deux bouts, et les désaccords qu'un seul acte lu explique en ouvrant le bout droit (Civrieux), par le **chaînage** (`chainage_large` décidé par Adrien). 19 octobre 2026 : **5 451 périodes, 178 361 atome-années** ; le reste dans `p120_reste` | `p120_trace`, `p120_qualite` | **`poser=on`**, `chainage_large=on`, pas de `-1`, depuis la racine |
 
-| — | `113_circo_1958.sql` | les **circonscriptions de 1958-1986** hors de la Seine, d'après les cartes de Gaudillère (`circo/regles_1958_1986.py` → `circo/composition_1958.py` → deux CSV). Pose les départements « posables » (68 le 13 octobre, 73 le 19 après `120`), par le canton de l'atome au 1ᵉʳ décembre 1958, à défaut son premier canton connu (`repli`, tracé ligne à ligne). 13 octobre 2026 : **27 883 rattachements, 251 unités**, dont 2 158 par repli | `circo_1958_trace` | `-1 -v appliquer=1` ; `defaire=1`, `sans_repli=1`, `dep=XX` |
+| — | `113_circo_1958.sql` | les **circonscriptions de 1958-1986** hors de la Seine, d'après les cartes de Gaudillère (`circo/regles_1958_1986.py` → `circo/composition_1958.py` → deux CSV). Pose les départements « posables » (68 le 13 octobre, 73 le 19 après `120`), par le canton de l'atome au 1ᵉʳ décembre 1958, à défaut son premier canton connu (`repli`, tracé ligne à ligne). 13 octobre 2026 : **27 883 rattachements, 251 unités**, dont 2 158 par repli. 21 octobre 2026 : règle `commune` — une fraction d'une ville coupée après 1958 sous un canton neuf (Bourg, Oyonnax) prend la circonscription unique des autres atomes de sa commune : **30 514 rattachements, 271 unités, dont 423 repli et 158 commune** | `circo_1958_trace` | `-1 -v appliquer=1` ; `defaire=1`, `sans_repli=1`, `sans_commune=1`, `dep=XX` |
+
+| z ter | `121_ain_cessions_trous.sql` | corrections **à la main**, Ain seul, signalées sur la carte le 21 octobre 2026 : la cession au Rhône de Rillieux, Crépieux et des deux Sathonay (loi du 29 déc. 1967, effet 1967-12-31, canton de Rillieux ensuite), le jalon de 1968 mal apparié (Birieux, Culoz, Viriat), les communes absorbées 1955-1975 gardées jusqu'à leur fusion, et le trou 1973-1998 de quatre communes (Belmont-Luthézieu à Champagne dès la fusion de 1974, par inférence). Pose aussi la circonscription de 1958 du canton. 21 octobre 2026 : **53 périodes posées, 19 retirées** | `p121_trace` (lignes retirées entières, bornes d'avant, insertions) | **`poser=on`**, `defaire=on`, pas de `-1`, en DERNIER : défaire avant de rejouer `58`/`59`, `79`, `97`, `110`, `113`, `120` |
+
+| z quater | `122_circo_1945_1958.sql` | le **scrutin de liste départemental de 1945-1958** (correction d'Adrien, 21 octobre 2026) : une unité `L<dep>01@1945`, régime `liste`, par département hors de la Seine, sur [1945-01-01, 1958-01-01), rattachée à tout atome qui a un canton du département dans la fenêtre. Les départements divisés sous la IVᵉ (Nord, Pas-de-Calais…) ne sont pas confrontés aux textes : posés d'un seul tenant. 21 octobre 2026 : **37 582 rattachements, 89 unités**, plus aucun atome à canton sans circonscription de 1946 à 1957 | `circo_1945_trace` | `-1 -v appliquer=1` ; `defaire=1`, `dep=XX`, `sauf="'59','62'"` ; APRÈS `121`, qui pose des cantons dès 1955 |
 
 `113` lit les cantons et ne pose que des circonscriptions : il passe après
 `111` et `120` (et `circo/composition_1958.py` se rejoue avant lui), et se rejoue seul sans rien défaire d'autre.
+`121` passe après `113` : il retire des circonscriptions que `113` a posées.
+`122` passe après `121` : il lit les cantons que `121` pose dans l'Ain dès 1955.
 
 **Pourquoi en dernier, après le bloc ANR et `98`.** `110` ne remplit que les
 trous que les reports (`79`, `81`, `93`, `95`, `97`) et `103` à `109` ont

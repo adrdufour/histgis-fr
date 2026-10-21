@@ -1,0 +1,393 @@
+dep,insee_lu,canton,nom_lu,page,action,insee_corrige,nom_corrige,verdict,motif
+01,01065,25,Bouvent,22,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+01,01427,07,KRomanèche,28,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02265,19,Erlon,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02458,21,Maizy,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02478,17,Hérie {La),17,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02495,27,Housset,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02504,14,Fère (La),15,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02546,16,Iron,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02603,21,Ville-aux-Bois-lés-Pontavert (La),26,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02628,34,Prisces,22,retirer,,,en_base,la commune nommée a déjà sa ligne
+02,02682,11,Quincy-Basse,22,rendre,02632,Quincy-Basse,en_base,canton de la ligne = canton de la commune nommée
+02,02706,30,Selve (La),23,retirer,,,en_base,la commune nommée a déjà sa ligne
+04,04053,12,Bréole {La},9,retirer,,,en_base,la commune nommée a déjà sa ligne
+04,04125,27,Mison,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+04,04151,21,Montpezat,11,rendre,04131,Montpezat,en_base,canton de la ligne = canton de la commune nommée
+04,04155,25,Poil (Le),12,retirer,,,en_base,la commune nommée a déjà sa ligne
+04,04187,08,Robine (La),12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+05,05068,10,Grave (La),9,retirer,,,en_base,la commune nommée a déjà sa ligne
+06,06068,32,o Canton,11,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+06,06096,18,Puget-Rostang,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+06,06155,20,Sigale,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+08,08050,29,Auge,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+08,08106,15,MÉZIÈRES (1) Mézières,11,rendre,08290,Mézières,en_base,canton de la ligne = canton de la commune nommée
+08,08399,24,KRegniowez,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+08,08425,03,Sivry-lès-Buzancy,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+08,08428,03,Sivry-lés-Buzancy,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+09,09257,13,Puch (Le),13,retirer,,,en_base,la commune nommée a déjà sa ligne
+10,10285,14,Plancy,14,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+11,11058,05,Besséde-de-Sault,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+11,11060,11,Caudeval,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+11,11158,16,Force (Lai,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+12,12004,06,Albres (Les),9,retirer,,,en_base,la commune nommée a déjà sa ligne
+12,12006,23,Cresse (La),10,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14058,10,Auvillars,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14069,36,Berniéres-le-Patry,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14145,31,Cossesseville,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14188,24,Canon,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14418,24,Grandchamp-le-Château,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14434,29,Écots,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14435,19,Honfleur,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14488,29,Mittois,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14538,09,Louvigny,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14561,11,Saint-Germain-d'Ectot,21,retirer,,,en_base,la commune nommée a déjà sa ligne
+14,14617,17,Soulangy,23,retirer,,,en_base,la commune nommée a déjà sa ligne
+15,15025,16,Bournoncles,8,retirer,,,en_base,la commune nommée a déjà sa ligne
+15,15062,11,Junhac,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+15,15259,14,Tourniac,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+16,16061,25,Chapelle (La),15,rendre,16081,La Chapelle,en_base,canton de la ligne = canton de la commune nommée
+16,16068,17,Chassors,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+16,16080,06,Barret,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+16,16159,17,Fleurac,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+16,16276,13,Richemont,20,retirer,,,en_base,la commune nommée a déjà sa ligne
+16,16285,24,Moutardon,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+17,17258,11,Meux,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+17,17271,29,Saint-Denis-du-Pin,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+17,17456,33,Taillebourg,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+17,17466,29,Vergne (La),19,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+18,18188,07,Pondy (Le),11,rendre,18183,Le Pondy,en_base,canton de la ligne = canton de la commune nommée
+18,18193,07,PFondy (Le),11,rendre,18183,Le Pondy,en_base,canton de la ligne = canton de la commune nommée
+19,19056,24,Chamberet,9,rendre,19036,Chamberet,en_base,canton de la ligne = canton de la commune nommée
+19,19086,12,Chabrignac,9,rendre,19035,Chabrignac,en_base,canton de la ligne = canton de la commune nommée
+19,19086,25,Chameryrat,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20006,48,Albitreccia,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20060,15,Castifao,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20071,59,Castellare-di-Casinces,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20087,06,Biguglia,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20089,25,HBisinchi,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20097,06,Biguglia,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20115,39,Ficaja,11,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20138,62,Guitera-les-Bains,11,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20155,11,Manso,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20157,44,Lano,11,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20160,05,Novella,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20165,29,Oletta,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20195,42,Omessa,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20251,20,Pigna,13,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20261,09,Sisco,15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20292,56,Soccia,15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+20,20358,45,Ville-di-Pietrabugno,16,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+21,21159,31,Champeau,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+21,21261,13,Fontenelle,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+21,21369,17,Marey-sur-Tille,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+21,21403,22,Goulles (Les),15,retirer,,,en_base,la commune nommée a déjà sa ligne
+21,21526,36,Koche-Vanneau (Lai),20,retirer,,,en_base,la commune nommée a déjà sa ligne
+21,21559,11,Lantenay,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+21,21595,19,Savilly,21,retirer,,,en_base,la commune nommée a déjà sa ligne
+22,22068,25,lIllifaut,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+23,23063,03,Chard,9,rendre,23053,Chard,en_base,canton de la ligne = canton de la commune nommée
+23,23065,03,Chard,9,rendre,23053,Chard,en_base,canton de la ligne = canton de la commune nommée
+23,23125,03,Mars (Les),10,retirer,,,en_base,la commune nommée a déjà sa ligne
+23,23155,17,Pigerolles,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+24,24072,47,Campagnac-lés-Quercy,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+24,24156,27,Coulounieix-Chamiers,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+24,24185,05,Fleurac,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+24,24553,31,Ponteyraud,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25060,17,Boujeons,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25065,20,Bouverans,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25159,15,Chaux {La),12,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25206,18,Durnes,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25258,12,Fessevillers,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25365,21,Mambouhans,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25561,13,Valentin,21,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25571,23,Mésandans,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+25,25599,03,Taillecourt,21,retirer,,,en_base,la commune nommée a déjà sa ligne
+26,26226,14,Pennes-le-Sec,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+26,26287,14,Pilhon (Le),14,retirer,,,en_base,la commune nommée a déjà sa ligne
+27,27060,13,Boissy-sur-Damrville,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+27,27066,05,Bosc-Renoull-en-Ouche,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+27,27356,36,Heunière (Lai,17,rendre,27336,La Heunière,en_base,canton de la ligne = canton de la commune nommée
+27,27365,30,Lendin (Le),17,rendre,27363,Le Landin,en_base,canton de la ligne = canton de la commune nommée
+27,27455,09,Neuville-sur-Authou,19,rendre,27433,Neuville-sur-Authou,en_base,canton de la ligne = canton de la commune nommée
+27,27502,01,Gros-Theïil (Le),16,retirer,,,en_base,la commune nommée a déjà sa ligne
+27,27506,14,Guitry,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+27,27566,36,Saint-Pierre-d'Autils,23,retirer,,,en_base,la commune nommée a déjà sa ligne
+27,27638,22,Hogues (Les),17,retirer,,,en_base,la commune nommée a déjà sa ligne
+27,27682,15,Thil (Le),24,rendre,27632,Le Thil,en_base,canton de la ligne = canton de la commune nommée
+28,28151,16,Dommerville,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+28,28188,16,Grandville-Gaudreville,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+28,28421,24,Voves,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+29,29092,33,Esquibien,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+30,30066,26,Collorgues,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+30,30196,25,Plantiers (Les),13,rendre,30198,Les Plantiers,en_base,canton de la ligne = canton de la commune nommée
+30,30208,11,Portes,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+31,31141,23,Fauga (Le),20,retirer,,,en_base,la commune nommée a déjà sa ligne
+31,31219,01,Laréole,22,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+31,31450,03,Mauressac,23,retirer,,,en_base,la commune nommée a déjà sa ligne
+31,31538,25,Saubens,28,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+31,31566,22,Villeneuve-Lécussan,29,rendre,31586,Villeneuve-Lécussan,en_base,canton de la ligne = canton de la commune nommée
+33,33065,23,Camblanes-et-Meynac,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+33,33085,15,Bayon,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+33,33392,46,Réole (La) (2),17,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+33,33484,19,Saint-Loubèés,19,rendre,33433,Saint-Loubès,en_base,canton de la ligne = canton de la commune nommée
+33,33500,02,Marcheprime,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+34,34158,18,Mafelles (Les),12,retirer,,,en_base,la commune nommée a déjà sa ligne
+34,34209,15,Plans (Les),15,retirer,,,en_base,la commune nommée a déjà sa ligne
+35,35205,25,Nouaye (La),15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+35,35208,23,Nouaye (La),15,rendre,35203,La Nouaye,en_base,canton de la ligne = canton de la commune nommée
+35,35267,10,Saint-Lunaire,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+37,37050,06,Boulay (Le),8,retirer,,,en_base,la commune nommée a déjà sa ligne
+37,37183,20,FPouzay,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+38,38306,43,Pin (Le),16,rendre,38305,Le Pin,en_base,canton de la ligne = canton de la commune nommée
+38,38396,21,Saint-Jean-d'Avelanne,18,rendre,38398,Saint-Jean-d'Avelanne,en_base,canton de la ligne = canton de la commune nommée
+38,38464,38,Serpaize,19,rendre,38484,Serpaize,en_base,canton de la ligne = canton de la commune nommée
+39,39066,05,Bouchoux (Les),10,rendre,39068,Les Bouchoux,en_base,canton de la ligne = canton de la commune nommée
+39,39216,27,Lanéria,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39254,13,Foucherans,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39259,10,Frasnée (La),13,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39283,20,Latette (La),14,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39316,16,Martigna,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39365,24,Nenon,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39385,24,Nenon,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39418,05,Pesse (La),18,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39461,06,Nans (Les) (1),17,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39483,25,Poisoux,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39495,26,Saint-Maurice-en-Montagne,19,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+39,39512,02,Marigna-sur-Valouse,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+39,39586,22,Treffay,20,retirer,,,en_base,la commune nommée a déjà sa ligne
+40,40156,06,Lacrabe,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+41,41188,16,Membrolles,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+42,42060,15,Cula (La),10,rendre,42080,La Cula,en_base,canton de la ligne = canton de la commune nommée
+43,43065,25,Cubelles,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+43,43255,12,Sanssac-l'Église,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+46,46116,22,Loupiac,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+47,47161,35,Mazières-Naresse,12,rendre,47164,Mazières-Naresse,en_base,canton de la ligne = canton de la commune nommée
+48,48136,12,Saint-Bonnet-de-Chirac,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+48,48151,15,Kozier (Le),11,retirer,,,en_base,la commune nommée a déjà sa ligne
+49,49226,22,Noyant,14,rendre,49228,Noyant,en_base,canton de la ligne = canton de la commune nommée
+49,49231,22,Pellerine (Lai),14,retirer,,,en_base,la commune nommée a déjà sa ligne
+49,49259,29,FParnay,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+49,49357,33,Soucelles,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50057,19,Bazoge (La),9,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50067,41,Brix,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+50,50251,04,Joboursg,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50255,03,Haye-d'Ectot (La),14,rendre,50235,La Haye-d'Ectot,en_base,canton de la ligne = canton de la commune nommée
+50,50285,35,Luzerne (La),15,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50385,25,Octeville,17,rendre,50383,Octeville,en_base,canton de la ligne = canton de la commune nommée
+50,50398,30,Morsalines,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50458,40,Ronde-Have (Lai),19,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50483,25,Octeville,17,rendre,50383,Octeville,en_base,canton de la ligne = canton de la commune nommée
+50,50501,14,Mesnil-Amand (Le),16,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50526,14,Mesnil-Villeman (Le),16,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50535,16,Sainte-Suzanne-en-Bauptois,22,retirer,,,en_base,la commune nommée a déjà sa ligne
+50,50561,08,Soulles,22,retirer,,,en_base,la commune nommée a déjà sa ligne
+51,51083,18,Baizil (Le),9,retirer,,,en_base,la commune nommée a déjà sa ligne
+51,51269,25,Gaye,16,rendre,51265,Gaye,en_base,canton de la ligne = canton de la commune nommée
+51,51276,06,Grandes-Loges (Les),16,rendre,51278,Les Grandes-Loges,en_base,canton de la ligne = canton de la commune nommée
+51,51400,26,JIsle-sur-Marne,17,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+51,51455,26,Plichancourt,20,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+51,51555,01,Marsangis,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+51,51559,10,Mairy-sur-Marne,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52054,20,Bonnecourt,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52145,12,Corgirnon,11,rendre,52143,Corgirnon,en_base,canton de la ligne = canton de la commune nommée
+52,52215,12,Genevrières,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52224,12,Gilles,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52254,16,Jorquenay,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52258,14,Harricourt,13,rendre,52238,Harricourt,en_base,canton de la ligne = canton de la commune nommée
+52,52345,01,Morteau,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52359,07,Montsaon,15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+52,52369,17,Pierrefontaines,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52445,22,Sailly,17,rendre,52443,Sailly,en_base,canton de la ligne = canton de la commune nommée
+52,52446,25,Perthes,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+52,52498,12,Tornay,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+53,53058,09,Boissière (La),8,retirer,,,en_base,la commune nommée a déjà sa ligne
+53,53178,06,Pallu (La),12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+53,53268,08,Trans,14,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+54,54201,29,Lalœuf,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+54,54254,18,Hénaménil,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+54,54285,29,Goviller,13,rendre,54235,Goviller,en_base,canton de la ligne = canton de la commune nommée
+54,54488,12,Rosières-en-Haye,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+54,54518,12,Liverdun,15,rendre,54318,Liverdun,en_base,canton de la ligne = canton de la commune nommée
+55,55086,20,Beauclair,8,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55151,05,Cousances-au-Boïs,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55158,11,Culey,11,rendre,55138,Culey,en_base,canton de la ligne = canton de la commune nommée
+55,55186,11,Culery,11,rendre,55138,Culey,en_base,canton de la ligne = canton de la commune nommée
+55,55187,12,Cuisy,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55208,25,Génicourt-sous-Condé,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+55,55236,21,Haumont-lés-Lachaussée,13,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+55,55285,18,Nixéville,17,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+55,55306,05,Loxeéville,15,rendre,55308,Loxéville,en_base,canton de la ligne = canton de la commune nommée
+55,55402,02,Longeville-en-Barrois,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55413,22,Malancourt,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55415,18,Rampont,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55437,09,Mesnil-sous-les-Cütes,15,rendre,55337,Mesnil-sous-les-Côtes,en_base,canton de la ligne = canton de la commune nommée
+55,55441,06,Moirey,15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+55,55466,21,Seraucourt,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55482,25,Rignaucourt,18,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+55,55524,14,Marville,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55542,21,Mondrecourt,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55548,11,Velaines,20,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55552,11,Menaucourt,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55561,24,Neuville-lès-Vaucouleurs,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+55,55565,17,Woinville,21,retirer,,,en_base,la commune nommée a déjà sa ligne
+56,56058,08,Carentoir,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+57,57228,30,Folpersviller,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+57,57270,06,Guénestroff,15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+57,57285,47,Hagondange,15,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+57,57654,26,Soucht,24,rendre,57658,Soucht,en_base,canton de la ligne = canton de la commune nommée
+57,57656,26,Soucht,24,rendre,57658,Soucht,en_base,canton de la ligne = canton de la commune nommée
+57,57698,23,Vaudoncourt,25,retirer,,,en_base,la commune nommée a déjà sa ligne
+57,57724,09,Voimhaut,26,rendre,57728,Voimhaut,en_base,canton de la ligne = canton de la commune nommée
+57,57755,21,Volstroff,26,retirer,,,en_base,la commune nommée a déjà sa ligne
+57,57756,38,Haute-Vutz,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+58,58256,16,Saint-Éloi,23,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59064,29,Blaringhem,11,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59214,21,Grand-Fort-Philippe,16,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+59,59239,33,Flers-lez-Lille (1),15,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59248,15,Fontaine-au-Pire,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59355,49,Locquignol,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59469,43,Masnières,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59471,28,Maisnil (Le),18,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59478,70,Marcg-en-Barœul (2),18,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59515,08,Houdain-lez-Bavay,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+59,59609,69,KRombhies-et-Marchipont,21,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+60,60092,33,Rouvillers,20,retirer,,,en_base,la commune nommée a déjà sa ligne
+60,60165,15,Cormeilles,12,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+60,60306,14,Hémévillers,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+60,60526,09,Jaux,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+60,60551,10,Labosse,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+60,60599,06,Kouvroy-les-Merles,20,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62134,27,Sachin,24,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62464,35,Graincourt-lés-Havrincourt,17,rendre,62384,Graincourt-lès-Havrincourt,en_base,canton de la ligne = canton de la commune nommée
+62,62468,02,Landrethun-lès-Ardres,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62566,37,MONTREUIL,21,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62593,06,Guemps,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62660,21,Waast (Le),27,rendre,62880,Le Wast,en_base,canton de la ligne = canton de la commune nommée
+62,62662,29,Quilen,23,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62684,34,Westbécourt,28,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62687,22,Widehem,28,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62715,33,Robecd,24,retirer,,,en_base,la commune nommée a déjà sa ligne
+62,62865,39,Galametz,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+63,63409,35,Rochefort-Montagne,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+63,63415,47,Vassel,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+63,63454,39,Tourssur-Meymont,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+64,64085,24,ÂAraux,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+64,64245,11,Garlin,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+64,64366,19,Momry,16,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+64,64472,22,Maure,16,rendre,64372,Maure,en_base,canton de la ligne = canton de la commune nommée
+64,64553,04,Louvie-Juzon,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+65,65051,06,Bareilles,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+66,66068,13,Enveitg,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+66,66081,13,Caldégas,8,retirer,,,en_base,la commune nommée a déjà sa ligne
+67,67195,26,Hérmerswiller,13,retirer,,,en_base,la commune nommée a déjà sa ligne
+67,67465,17,Struth,19,retirer,,,en_base,la commune nommée a déjà sa ligne
+67,67548,23,Wisches,20,retirer,,,en_base,la commune nommée a déjà sa ligne
+68,68008,22,Altenbach,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+68,68159,12,Ingersheim,12,retirer,,,en_base,la commune nommée a déjà sa ligne
+70,70151,06,Charentenay,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+70,70378,28,Morey,16,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+70,70456,04,Saint-Andoche,18,rendre,70458,Saint-Andoche,en_base,canton de la ligne = canton de la commune nommée
+70,70477,09,Nantouard,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+70,70495,21,Sorans-lés-Breurey,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+79,79188,09,Moulins {l),21,retirer,,,en_base,la commune nommée a déjà sa ligne
+79,79248,13,Saint-Coutant,23,retirer,,,en_base,la commune nommée a déjà sa ligne
+79,79266,18,Saint-Paul-en-Gâtine,24,retirer,,,en_base,la commune nommée a déjà sa ligne
+80,80064,42,Bernapré,11,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+80,80257,28,Démuin,15,retirer,,,en_base,la commune nommée a déjà sa ligne
+80,80363,36,Goyencourt,18,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+80,80475,22,Gamaches,18,retirer,,,en_base,la commune nommée a déjà sa ligne
+80,80559,37,Fouquescourt,17,retirer,,,en_base,la commune nommée a déjà sa ligne
+80,80785,05,Senlis-le-Sec,26,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+80,80809,20,Fieffes,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+81,81069,33,Faussergues,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+81,81091,04,Bez (Lei,8,rendre,81031,Le Bez,en_base,canton de la ligne = canton de la commune nommée
+81,81152,35,Lalbaréde,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+81,81155,20,Laparrouquial,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+83,83015,08,Bastide (La),8,retirer,,,en_base,la commune nommée a déjà sa ligne
+85,85068,26,Fenouiller (Le),10,retirer,,,en_base,la commune nommée a déjà sa ligne
+85,85081,21,BEoupére (Le),8,retirer,,,en_base,la commune nommée a déjà sa ligne
+85,85159,12,Mazeau (Le),11,retirer,,,en_base,la commune nommée a déjà sa ligne
+85,85179,13,Pineaux (Les),13,retirer,,,en_base,la commune nommée a déjà sa ligne
+87,87096,27,Milhaguet,10,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+87,87098,06,Masléon,10,retirer,,,en_base,la commune nommée a déjà sa ligne
+88,88106,29,Clerjus (Le),10,retirer,,,en_base,la commune nommée a déjà sa ligne
+88,88173,12,Forges (Les),11,retirer,,,en_base,la commune nommée a déjà sa ligne
+88,88402,27,Ménil (Le),14,retirer,,,en_base,la commune nommée a déjà sa ligne
+88,88458,24,Salle (La),17,retirer,,,en_base,la commune nommée a déjà sa ligne
+89,89083,33,Beauvoir,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+89,89288,34,Lucy-sur-Cure,14,retirer,,,en_base,la commune nommée a déjà sa ligne
+89,89459,18,Sainte-Colombhe,16,retirer,,,en_base,la commune nommée a déjà sa ligne
+89,89481,17,Vassy,18,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+90,90079,06,Offemont (1),9,retirer,,,en_base,la commune nommée a déjà sa ligne
+91,91148,03,Chäteaufort,9,retirer,,,en_base,"nom d'une autre commune, canton d'aucune des deux"
+93,93015,09,Bourget (Le),9,retirer,,,en_base,la commune nommée a déjà sa ligne
+94,94017,15,Joinville-le-Pont,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+95,95018,04,de Bezons,9,retirer,,,en_base,la commune nommée a déjà sa ligne
+01,01015,28,Arandas,21,rendre,01013,Arandas,ecartee,canton de la ligne = canton de la commune nommée
+01,01451,08,A O1 379 Saint-Maurice-de-Rémens,29,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+02,02632,27,Wiège-Faty,27,retirer,,,ecartee,la commune nommée a déjà sa ligne
+07,07175,05,Péreyres,14,rendre,07173,Péreyres,ecartee,canton de la ligne = canton de la commune nommée
+08,08123,11,Chooz,12,retirer,,,ecartee,la commune nommée a déjà sa ligne
+08,08125,02,Chuffilly-Roche,12,rendre,08123,Chuffilly-Roche,ecartee,canton de la ligne = canton de la commune nommée
+11,11069,09,Cenne-Monestiés,10,retirer,,,ecartee,la commune nommée a déjà sa ligne
+14,14351,29,Hiéville,16,retirer,,,ecartee,la commune nommée a déjà sa ligne
+14,14436,32,Mondrainville,18,rendre,14438,Mondrainville,ecartee,canton de la ligne = canton de la commune nommée
+14,14438,29,Mittois,18,retirer,,,ecartee,la commune nommée a déjà sa ligne
+16,16081,24,Barro,14,retirer,,,ecartee,la commune nommée a déjà sa ligne
+16,16417,01,Saint-Fraigne,21,rendre,16317,Saint-Fraigne,ecartee,canton de la ligne = canton de la commune nommée
+19,19036,12,Chabrignac,9,rendre,19035,Chabrignac,ecartee,canton de la ligne = canton de la commune nommée
+20,20156,21,Lama,11,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+21,21076,18,Bissey-la-Pierre,10,rendre,21078,Bissey-la-Pierre,ecartee,canton de la ligne = canton de la commune nommée
+21,21086,53,d44 Mosson,18,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+23,23053,24,Brionne (La),8,retirer,,,ecartee,la commune nommée a déjà sa ligne
+26,26051,15,Bâtie-Rolland (La),8,rendre,26031,La Bâtie-Rolland,ecartee,canton de la ligne = canton de la commune nommée
+26,26081,15,Bâtie-Rolland (La),8,rendre,26031,La Bâtie-Rolland,ecartee,canton de la ligne = canton de la commune nommée
+27,27254,44,Fontaine-la-Louvet,15,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+30,30198,27,Générac,11,retirer,,,ecartee,la commune nommée a déjà sa ligne
+30,30256,53,Saint-Bresson,14,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+30,30338,37,Uchaud,16,rendre,30333,Uchaud,ecartee,canton de la ligne = canton de la commune nommée
+31,31049,02,Bachas,17,rendre,31039,Bachas,ecartee,canton de la ligne = canton de la commune nommée
+31,31064,11,Boussens,18,rendre,31084,Boussens,ecartee,canton de la ligne = canton de la commune nommée
+31,31524,11,Martres-Tolosane,23,rendre,31324,Martres-Tolosane,ecartee,canton de la ligne = canton de la commune nommée
+31,31586,29,Saux-et-Pomarède,28,retirer,,,ecartee,la commune nommée a déjà sa ligne
+33,33363,29,Saint-Christoly-Médoc,18,retirer,,,ecartee,la commune nommée a déjà sa ligne
+33,33368,23,Sadirac,17,rendre,33363,Sadirac,ecartee,canton de la ligne = canton de la commune nommée
+33,33466,97,Saint-Vincent-de-Pertignas,20,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+38,38305,10,Pierre (La),16,retirer,,,ecartee,la commune nommée a déjà sa ligne
+38,38398,07,Saint-Hilaire-debla-Côte,18,retirer,,,ecartee,la commune nommée a déjà sa ligne
+38,38484,43,Saint-Ondras,18,rendre,38434,Saint-Ondras,ecartee,canton de la ligne = canton de la commune nommée
+41,41008,24,Areines,8,rendre,41003,Areines,ecartee,canton de la ligne = canton de la commune nommée
+42,42128,13,Maclas,11,rendre,42129,Maclas,ecartee,canton de la ligne = canton de la commune nommée
+44,44018,31,Besné,9,rendre,44013,Besné,ecartee,canton de la ligne = canton de la commune nommée
+47,47164,31,Mauvezin-sur-Gupie,12,retirer,,,ecartee,la commune nommée a déjà sa ligne
+47,47194,99,Lamontioie,11,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+49,49228,23,Mürs-Erigné,14,retirer,,,ecartee,la commune nommée a déjà sa ligne
+50,50235,41,Hautteville-Bocage,14,rendre,50233,Hautteville-Bocage,ecartee,canton de la ligne = canton de la commune nommée
+50,50465,14,Saint-Denis-le-Gast,19,rendre,50463,Saint-Denis-le-Gast,ecartee,canton de la ligne = canton de la commune nommée
+50,50604,96,Montsurvent,17,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+51,51265,17,Fromentières,15,retirer,,,ecartee,la commune nommée a déjà sa ligne
+51,51278,29,Givry-lés-Loisy,16,retirer,,,ecartee,la commune nommée a déjà sa ligne
+52,52443,15,Soyers,18,retirer,,,ecartee,la commune nommée a déjà sa ligne
+54,54235,53,O21 Armaucourt,9,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+54,54318,25,Létricourt,15,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+54,54598,04,Neuviller-lès-Badonviller,17,rendre,54398,Neuviller-lès-Badonviller,ecartee,canton de la ligne = canton de la commune nommée
+57,57658,12,Schœneck,24,retirer,,,ecartee,la commune nommée a déjà sa ligne
+57,57728,01,Virming,26,retirer,,,ecartee,la commune nommée a déjà sa ligne
+57,57757,33,Vulmont,26,rendre,57737,Vulmont,ecartee,canton de la ligne = canton de la commune nommée
+60,60662,52,Saint-Léger-aux-Bois,21,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+62,62191,91,oains-en-Gohelle,24,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+64,64181,15,Biron,11,rendre,64131,Biron,ecartee,canton de la ligne = canton de la commune nommée
+64,64372,35,Mendive,16,retirer,,,ecartee,la commune nommée a déjà sa ligne
+65,65478,23,Ricaud,15,rendre,65378,Ricaud,ecartee,canton de la ligne = canton de la commune nommée
+66,66153,01,Palau-del-Vidre,10,retirer,,,ecartee,la commune nommée a déjà sa ligne
+66,66155,18,Prunet-et-Belpuig,11,rendre,66153,Prunet-et-Belpuig,ecartee,canton de la ligne = canton de la commune nommée
+67,67018,06,Asswiller,9,rendre,67013,Asswiller,ecartee,canton de la ligne = canton de la commune nommée
+67,67081,16,Bernardswiller,9,rendre,67031,Bernardswiller,ecartee,canton de la ligne = canton de la commune nommée
+67,67239,91,Reitwiller,17,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+69,69211,57,Genas (1),11,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+80,80615,39,Vron,28,rendre,80815,Vron,ecartee,canton de la ligne = canton de la commune nommée
+80,80625,57,Warvillers,28,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
+80,80659,26,Quesnoy-sur-Airaines,25,rendre,80655,Quesnoy-sur-Airaines,ecartee,canton de la ligne = canton de la commune nommée
+87,87060,28,Jouac,9,rendre,87080,Jouac,ecartee,canton de la ligne = canton de la commune nommée
+89,89266,43,Parly,15,retirer,,,ecartee,"nom d'une autre commune, canton d'aucune des deux"
