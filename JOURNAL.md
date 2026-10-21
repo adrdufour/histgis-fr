@@ -10267,3 +10267,40 @@ sont toujours blancs de 1958 à 1986.
 `--jobs`, et un lot perdu sur la connexion divise `--jobs` par deux pour la
 suite. `--refaire` est devenu reprenable : un témoin `.refaire_depuis` dans la
 sortie, effacé quand tout est fait.
+
+### 21 octobre, nuit — les villes partagées entre circonscriptions (`123`)
+
+Adrien a commencé `partition_ville.csv` : pour une ville coupée entre
+plusieurs cantons, la circonscription de chaque canton, par période. Remis au
+propre dans `circo/partition_ville.csv` — une ligne par (canton, période),
+code de canton de la base, années incluses, `jusqu` vide pour le découpage de
+1986 — et confronté ligne à ligne à la base par `123`.
+
+**Ce que la base avait déjà.** Tout 1986 (Nice, Charleville-Mézières, Troyes,
+Aix, Caen, Angoulême, Royan, Bourges, Ajaccio, Dijon, Besançon, Évreux,
+Chartres), Tulle 1820-1821, Évreux 1863-1870, Troyes, Dijon et Lisieux
+1958-1986 : aucune ligne en désaccord.
+
+**Ce qui manquait : 1876-1940.** La base portait la circonscription d'une
+ville partagée sur l'atome-mère, dans une unité fusionnée (« Moulins (1-2) »),
+les cantons sur les fractions. `123` pose `<ville>-<n>` sur chaque fraction et
+retire la mère de l'unité fusionnée, tout ou rien par ville : Montluçon,
+Moulins, Nice (1910-1919, 1928-1940), Troyes, Angoulême, Tulle, Dijon
+(1928-1940), Saint-Brieuc, Chartres (1928-1940). 51 rattachements, 22
+morceaux retirés ; onze unités fusionnées restent sans appartenance. Deux
+unités créées : Nice-2 de 1910 et Nice-1 de 1928, que la base ne connaissait
+qu'à travers « Nice (1-2) » et « Nice (1-2-3) ». Saint-Brieuc garde sa mère
+fusionnée de 1876 à 1881 : le CSV commence en 1881.
+
+**Nice en 1958.** Le 06 n'était pas posable (« Nice-Est absent de la
+lecture ») : la base nomme ainsi le 1er canton. Le CSV lève le DOUTE de la
+lecture de l'atlas (1er, 2e, 3e → 1re ; 4e, 5e → 2e ; 6e → 3e). Alias dans
+`composition_1958.py`, puis `121` défait → `113` → `121` → `122` : 74
+départements, 277 unités, 30 683 rattachements. `123` comble Nice 5e et 6e
+(nés en 1973) de 1973 à 1986.
+
+**Ce qui reste.** Nice n'a aucune ligne dans `coupes_ville.csv` : ses
+fractions sortent entières, superposées et hachurées, en 1910-1940 comme en
+1958-1998. Lisieux 1973-1986 : les fractions n'ont pas de canton (Lisieux-3
+naît en 1973), rien n'est posé ; Nice 7e à 14e restent sans circonscription
+avant 1986 ; Chartres 1986-1998 sans canton.

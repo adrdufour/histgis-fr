@@ -74,6 +74,10 @@ ALIAS = {
     # Metz : les fractions de la ville posées par `116` portent les cantons
     # Metz-1 à 3 ; Metz-Ville et Metz-Campagne sont dans la même circonscription.
     ("57", "Metz-Ville"): ["Metz-1", "Metz-2", "Metz-3"],
+    # Nice : la base nomme « Nice-Est » le 1er canton (0614). Le DOUTE de
+    # `regles_1958_1986.py` (« V et I ne se lisent pas sûrement ») est levé par
+    # `circo/partition_ville.csv` (Adrien, 21 octobre 2026) : 1er, 2e, 3e → 1re.
+    ("06", "Nice-1"): ["Nice-Est"],
 }
 
 

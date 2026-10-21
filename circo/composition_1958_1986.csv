@@ -155,6 +155,7 @@ dep,departement,depuis,jusqu,reference,circonscription,canton_atlas,canton_id,ca
 05,Hautes-Alpes,1958,1986,1958-12-01,1,Laragne-Montéglin,0512,Laragne,préfixe
 05,Hautes-Alpes,1958,1986,1958-12-01,2,Le Monêtier,0513,Le Monêtier-les-Bains,préfixe
 05,Hautes-Alpes,1958,1986,1958-12-01,2,Savines-le-Lac,0521,Savines,préfixe
+06,Alpes-Maritimes,1958,1986,1958-12-01,1,Nice-1,0614,Nice-Est,
 06,Alpes-Maritimes,1958,1986,1958-12-01,1,Nice-2,0615,Nice-2,
 06,Alpes-Maritimes,1958,1986,1958-12-01,1,Nice-3,0616,Nice-3,
 06,Alpes-Maritimes,1958,1986,1958-12-01,2,Nice-4,0617,Nice-4,
@@ -180,7 +181,6 @@ dep,departement,depuis,jusqu,reference,circonscription,canton_atlas,canton_id,ca
 06,Alpes-Maritimes,1958,1986,1958-12-01,6,Coursegoules,0608,Coursegoules,
 06,Alpes-Maritimes,1958,1986,1958-12-01,6,Vence,0628,Vence,
 06,Alpes-Maritimes,1958,1986,1958-12-01,6,Grasse,0610,Grasse,
-06,Alpes-Maritimes,1958,1986,1958-12-01,1,Nice-1,,,sans unité en base
 06,Alpes-Maritimes,1958,1986,1958-12-01,2,Nice-5,,,sans unité en base
 06,Alpes-Maritimes,1958,1986,1958-12-01,3,Nice-6,,,sans unité en base
 06,Alpes-Maritimes,1958,1986,1958-12-01,4,Tende,,,sans unité en base

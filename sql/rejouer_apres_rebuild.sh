@@ -901,6 +901,16 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/122_circo_1945_1958.sql" > "$RACINE/build/p122.log" 2>&1 \
     || { echo "  122 refusé — voir build/p122.log" >&2; exit 1; }
 
+# Ajouté le 21 octobre 2026. `123` lit `circo/partition_ville.csv` : la
+# circonscription de chaque canton d'une ville partagée. 1876-1940 : il la pose
+# sur les fractions et retire l'atome-mère des unités fusionnées (« Moulins
+# (1-2) ») ; après 1958 il comble les fractions nées sous un canton neuf. Il
+# passe APRÈS `113`, dont il lit les unités de 1958. Depuis la racine : \copy.
+etape "123 — villes partagées entre plusieurs circonscriptions"
+( cd "$RACINE" && $PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/123_circo_villes_partagees.sql" > "$RACINE/build/p123.log" 2>&1 ) \
+    || { echo "  123 refusé — voir build/p123.log" >&2; exit 1; }
+
 # ============================================================================
 # LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026
 # ============================================================================

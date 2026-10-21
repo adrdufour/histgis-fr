@@ -4,7 +4,7 @@ dep,departement,depuis,jusqu,circos,cantons_base,posable,raison,atlas_sans_unite
 03,Allier,1958,1986,4,29,oui,,
 04,Alpes-de-Haute-Provence,1958,1986,2,30,oui,,
 05,Hautes-Alpes,1958,1986,2,24,oui,,
-06,Alpes-Maritimes,1958,1986,6,30,non,"en base, absents de la lecture : Nice-Est",
+06,Alpes-Maritimes,1958,1986,6,30,oui,,"Nice-5, Nice-6, Tende, Le Cannet"
 07,Ardèche,1958,1986,3,31,oui,,
 08,Ardennes,1958,1986,3,31,oui,,
 09,Ariège,1958,1986,2,20,oui,,

@@ -292,7 +292,10 @@ avant lui.
 `113` lit les cantons et ne pose que des circonscriptions : il passe après
 `111` et `120` (et `circo/composition_1958.py` se rejoue avant lui), et se rejoue seul sans rien défaire d'autre.
 `121` passe après `113` : il retire des circonscriptions que `113` a posées.
+| z quinquies | `123_circo_villes_partagees.sql` | les **villes partagées entre plusieurs circonscriptions**, d'après `circo/partition_ville.csv` (Adrien, 21 octobre 2026, en cours). Une ligne par (canton, période), confrontée à la base : 1876-1940, la fraction reçoit `<ville>-<n>` et l'atome-mère sort de l'unité fusionnée (« Moulins (1-2) »), tout ou rien par ville ; après 1958, comble les fractions nées sous un canton neuf (Nice 5e et 6e). Ne remplace rien : un désaccord est montré (recette 2). Crée Nice-2 de 1910 et Nice-1 de 1928. 21 octobre 2026 : **53 rattachements, 22 morceaux fusionnés retirés, 2 unités** ; 1986, 1820, 1863 déjà en base | `circo_ville_trace` (pose, reste, retire, unit) | `-1 -v appliquer=1` ; `defaire=1` ; APRÈS `113` |
+
 `122` passe après `121` : il lit les cantons que `121` pose dans l'Ain dès 1955.
+`123` passe après `113` : il comble des fractions dans les unités de 1958.
 
 **Pourquoi en dernier, après le bloc ANR et `98`.** `110` ne remplit que les
 trous que les reports (`79`, `81`, `93`, `95`, `97`) et `103` à `109` ont
