@@ -34,18 +34,21 @@ Les quatre fichiers s'enchaînent seuls, mais restent lançables un par un :
 
 ## Inventaire complet : `CHAINE.md`
 
-**`sql/CHAINE.md` dresse les 84 fichiers** — ce que chacun fait, ce qu'il écrit,
+**`sql/CHAINE.md` dresse les fichiers de la chaîne** (142 `.sql` au
+21 octobre 2026) — ce que chacun fait, ce qu'il écrit,
 sa table de trace, les variables qu'il attend, et l'ordre d'exécution. Il
 distingue trois familles : construction, diagnostic en lecture seule, et
 l'espace séparé de l'outre-mer. Il nomme aussi ce qui ne sert plus. À lire en
 premier.
 
-> **`rejouer_apres_rebuild.sh` est périmé — lire `CHAINE.md` § 0 avant tout
-> `rebuild.sh`.** Il s'arrête à `40_scission_circo.sql` : quatorze fichiers qui
-> écrivent dans la base ne sont appelés par aucun script — tout le chantier
-> 1943-1999 et la trame ANR. Ils ont été joués à la main, et une reconstruction
-> ne les remontera pas. `CHAINE.md` § 1 c en donne la liste ordonnée, qui tient
-> lieu de procédure en attendant que le script soit complété.
+> **`rejouer_apres_rebuild.sh` va jusqu'à `123`.** L'avertissement qui
+> figurait ici (« il s'arrête à `40` ») datait d'août 2026. Le script a été
+> complété le 6 septembre, puis à chaque fichier nouveau ; la chaîne a été
+> jouée de bout en bout le 20 octobre 2026 (`rebuild.sh` puis
+> `rejouer_apres_rebuild.sh`, `FIN rc=0`), et de nouveau le 21
+> (`build/rebuild_2026-10-21*.log`). Les fichiers `112` à `123`, et la place
+> que le script leur donne, sont décrits au § 4 ci-dessous. `CHAINE.md` § 0
+> garde le détail.
 
 ## Qu'est-ce qui est réellement en base ?
 
@@ -221,6 +224,17 @@ le fait ; un lancement à la main doit y penser.
 autres non. C'est une incohérence à corriger : un fichier qui échoue faute d'un
 argument devrait le DIRE, pas produire « :: Aucun fichier ».
 
+**D'autres lisent un CSV par un chemin relatif écrit en dur**, sans variable :
+ils ne marchent que lancés **depuis la racine du dépôt**, et
+`rejouer_apres_rebuild.sh` les appelle dans un `( cd "$RACINE" && … )`.
+
+| fichier | lit |
+|---|---|
+| `110`, `111` | `cantons/*.csv` |
+| `113_circo_1958.sql` | `circo/composition_1958_1986.csv`, `circo/composition_1958_etat.csv` |
+| `120_trous_par_dela_1968.sql` | `cantons/transferts_complement.csv`, `cantons/transferts_tables_jo.csv` |
+| `123_circo_villes_partagees.sql` | `circo/partition_ville.csv` |
+
 ### 3. Un fichier qui MODIFIE les périodes d'un autre : `111`
 
 Jusqu'au 11 octobre 2026, chaque fichier n'écrivait que dans des fenêtres
@@ -255,6 +269,51 @@ région de la chaîne :
 
 `rejouer_apres_rebuild.sh` les joue en dernier, après tout le reste, pour ces
 raisons.
+
+### 4. `112` à `123` : où chacun se place, et pourquoi
+
+Écrits du 11 au 21 octobre 2026. Tous ont leur table de trace, retirent leur
+passage précédent avant de reposer, et ne commettent qu'avec un drapeau : à
+blanc, ils calculent, affichent leurs recettes et font ROLLBACK. Deux
+conventions coexistent, et il faut savoir laquelle s'applique :
+
+* **`-1 -v appliquer=1`** : `112` à `119`, `122`, `123`. Ceux qui
+  acceptent `-v defaire=1` (`113`, `118`, `119`, `122`, `123`) se retirent
+  seuls ; `112`, `114` à `117` se défont en se rejouant (leur § 0).
+* **`-v poser=on`, sans `-1`** : `120` et `121`, qui ouvrent et ferment leur
+  propre transaction, comme `110` et `111`. `121` prend `-v defaire=on`.
+
+| fichier | ce qu'il fait | écrit | trace | place dans `rejouer_apres_rebuild.sh` |
+|---|---|---|---|---|
+| `112_villes_date_du_decret` | 25 entrées de `cartes/a_inscrire_en_base.md` : les fractions de ville commencent au décret, pas au COG | `membership`, `unit_version` | `p112_trace` | après `107` à `109`, **avant `98`** |
+| `114_villes_lot_2` | 38 entrées : fractions oubliées ou rangées sous un autre canton, Rennes 1815-1941, Aubagne au 2004-03-21 | `membership`, `unit_version` | `p114_trace` | après `112`, avant `98` |
+| `115_villes_nomenclature` | les régimes de 1973 portés par l'unité du régime suivant (Antibes, Cannes, Bourg, Gap…) ; noms dans `unit_version` | `membership`, `unit_version` | `p115_trace` | après `114`, avant `98` |
+| `116_villes_couverture_1941` | les fractions de 61 villes de 1941 à la reprise de leur régime ; Moulins 1941-1985 | `membership`, `unit_version` | `p116_trace` | après `115`, avant `98` |
+| `117_creations_caen_rochefort_bourg_larochelle` | **crée** la fraction Caen-V, `C17-Rochefort`, `C01-Bourg-Couronne` ; La Rochelle passe de l'atome de Laleu à `29365` | `atom`, `atom_geom`, `unit`, `unit_version`, `membership` | `p117_trace` | après `116`, avant `98` |
+| `118_paris_bois_1925_1929` | les bois de Boulogne et de Vincennes restent aux communes riveraines jusqu'aux décrets de 1925 et 1929 | `atom_geom_anr` (fenêtres datées des communes riveraines) | `p118_trace` | après `84`, `99`, `103` ; **après `102`**, qu'il prolonge |
+| `119_paris_cantons_1870_1940` | les cantons de Paris 1876-1940 portés par les quartiers, comme `103` après 1941 | `membership` | `p119_trace` | après `118`, **après `103`** |
+| `120_trous_par_dela_1968` | les trous qui traversent 1968 (Belley) par l'accord des deux bouts, et les désaccords qu'un acte lu explique (Civrieux) ; `-v chainage_large=on` | `membership` (trous seulement) | `p120_trace` | **après `110` et `111`**, avant `113` |
+| `113_circo_1958` | les circonscriptions 1958-1986 de 68 départements, d'après les cartes de Gaudillère | `unit`, `unit_version`, `membership` | `circo_1958_trace` | après `120` : il lit les cantons du 1er décembre 1958 |
+| `121_ain_cessions_trous` | l'Ain à la main : cession au Rhône de 1967, jalon de 1968 mal apparié, trous 1955-1998 | `membership` (retire des périodes de `59` et de `113`) | `p121_trace` | après `113` : **en dernier parmi ceux qui touchent aux cantons** |
+| `122_circo_1945_1958` | le scrutin de liste départemental de la IVe République : une unité `L<dep>01@1945` par département hors de la Seine | `unit`, `unit_version`, `membership` | `circo_1945_trace` | après `121`, dont il lit les cantons |
+| `123_circo_villes_partagees` | `circo/partition_ville.csv` : la circonscription de chaque canton d'une ville partagée ; 1876-1940, il retire la mère des unités fusionnées ; crée Nice-2 de 1910 et Nice-1 de 1928 | `unit`, `unit_version`, `membership` | `circo_ville_trace` | après `113`, dont il lit les unités de 1958 ; dernier fichier `.sql` du script |
+
+**Ce qu'il faut rejouer quand on en rejoue un seul :**
+
+1. **`112` à `117`** se jouent avant `98`, qui juge les villes sur les
+   appartenances de leurs fractions. En rejouer un après coup demande de
+   rejouer `98` ensuite.
+2. **`102` seul** : défaire `118` d'abord (`-v defaire=1`), puis le rejouer
+   ensuite. **`103` seul** : défaire `119` d'abord, de même.
+3. **Tout ce qui pose ou corrige des cantons** (`93`, `95`, `97`, `110`,
+   `111`, `120`, `121`) **après coup** : rejouer ensuite `113`, `122` et
+   `123`, qui lisent les cantons. Si la trame cantonale de 1958 a changé,
+   relancer `python3 circo/composition_1958.py` avant `113` : il écrit les
+   identifiants d'unité dans le CSV, et `113` refuse (recette 1 bis) quand
+   l'un d'eux a disparu.
+4. **`121` seul** (défaire, poser) : rejouer `122` ensuite.
+5. **`110` ou `111` seuls** : la séquence du § 3, puis `120`, `113`, `121`,
+   `122` et `123` dans cet ordre.
 
 ### La règle générale
 
