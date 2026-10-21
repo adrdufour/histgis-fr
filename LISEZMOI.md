@@ -61,6 +61,7 @@ projet_carte/                              55 Go au total, relevé le 11 octobre
 ├─ ANR_COMMUNES_22042026/    1,2 Go   trame communale historique 1790-2020 — reçue
 ├─ build/                    614 Mo   sortie de trfgis_extract.py, journaux, un pg_dump (591 Mo)
 ├─ photo_1815_1870/          348 Mo   120 photos de l'atlas — NI REÇUES NI RÉGÉNÉRABLES, hors git
+├─ Photos-1-001/             393 Mo   139 photos de l'atlas, 1940-1995 — NI REÇUES NI RÉGÉNÉRABLES, hors git
 ├─ jorf_txt/                 301 Mo   texte des JO ; *_raw, *_col et tables annuelles hors git
 ├─ polynesie/                 93 Mo   BD ADMIN Polynésie française — reçue
 ├─ nouvelle_caledonie/        36 Mo   BD ADMIN Nouvelle-Calédonie (DITTT) — reçue

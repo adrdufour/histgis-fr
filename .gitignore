@@ -111,6 +111,10 @@ venv/
 # doublons. Rien n'y est lu par un script ; se vide à la main.
 /_to_delete/
 
+# Base de styles que QGIS dépose dans le dossier d'où on le lance : ni
+# donnée ni code. Rangée dans archives/ le 21 octobre 2026.
+symbology-style.db
+
 # --- système -----------------------------------------------------------
 # Verrous de LibreOffice (`.~lock.fichier.xlsx#`), posés tant qu'il est ouvert.
 .~lock.*#
