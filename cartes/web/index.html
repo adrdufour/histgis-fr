@@ -174,7 +174,8 @@
   .cle { display: flex; gap: 8px; align-items: center; margin: 4px 0; font-size: 12px; }
   .cle svg { width: 26px; height: 10px; flex: none; }
   #chargement { position: absolute; inset: 0; display: none; place-items: center;
-                background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris); }
+                background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris);
+                padding: 0 15%; text-align: center; }
   @media (max-width: 900px) { aside { display: none; } }
   /* ---- Dialogue d'export vers Commons -------------------------------- */
   dialog#commons { width: min(1180px, 96vw); max-height: 94vh; padding: 0;
@@ -428,7 +429,13 @@ async function charge(url) {
     if (!r.ok) throw new Error(url + " : " + r.status);
     return r.json();
   });
+  // Un échec ne se met pas en cache. Le 23 octobre 2026, un export de l'Aisne
+  // (qui vide `dep/02/` puis le réécrit pendant dix-huit minutes) a servi des
+  // 404 à une page ouverte : la promesse rejetée restait dans le cache, chaque
+  // retour sur ces années échouait sans bruit, et la carte restait sur 1972
+  // pendant que le curseur affichait 2002.
   cache.set(url, p);
+  p.catch(() => { if (cache.get(url) === p) cache.delete(url); });
   return p;
 }
 
@@ -569,6 +576,7 @@ function teinteDe(i, total) {
 // ===========================================================================
 async function chargeDepartement(dep) {
   const j = ++S.jeton;
+  $("#chargement").textContent = "chargement…";
   $("#chargement").style.display = "grid";
   try {
     const [idx, com, cont] = await Promise.all([
@@ -1798,8 +1806,26 @@ async function majAnnee(annee, redessine = true) {
   S.annee = annee;
   $("#annee-aff").textContent = annee;
   $("#curseur").value = annee;
-  const ok = await chargeAnnee(annee);
-  if (ok && redessine) dessine();
+  // Une année qui ne se charge pas ne doit pas laisser à l'écran celle d'avant
+  // sous le millésime de la nouvelle : la page le dit, en plein milieu.
+  let ok;
+  try {
+    ok = await chargeAnnee(annee);
+  } catch (err) {
+    console.error(err);
+    const ch = $("#chargement");
+    ch.textContent = `${annee} n'a pas pu être chargée (${err.message}). ` +
+      `La carte montre encore une autre année. Un export est peut-être en ` +
+      `cours : recharger la page quand il sera fini.`;
+    ch.style.display = "grid";
+    lien();
+    return;
+  }
+  if (ok) {
+    $("#chargement").textContent = "chargement…";
+    $("#chargement").style.display = "none";
+    if (redessine) dessine();
+  }
   lien();
 }
 
