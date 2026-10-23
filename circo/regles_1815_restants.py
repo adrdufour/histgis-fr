@@ -641,7 +641,8 @@ REGLES_RESTANTS = {
     # rectifiée » : découpage identique en 1852, 1857, 1863 et 1869.
     {"depuis": 1852, "jusqu": 1870, "base": "1876", "circos": {
         "2": {"reprend": ["Saint-Quentin-1", "Saint-Quentin-2"]},
-        "3": {"reprend": ["Vervins-1", "Vervins-2"], "plus": ["Marle"]},
+        "3": {"reprend": ["Vervins-1", "Vervins-2"],
+              "plus": ["Marle", "Rozoy-sur-Serre"]},
         "4": {"reprend": ["Soissons", "Château-Thierry"]},
         "1": {"reste": True}}},
   ]},
