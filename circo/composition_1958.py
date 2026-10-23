@@ -70,7 +70,9 @@ ALIAS = {
     # Les jalons de 1954 et 1968 rangent sept communes au sud de Brive sous
     # l'unité de 1999 « Brive-la-Gaillarde-Sud-Est » ; `120` la fait vivre de
     # 1955 à 1968. Brive-Nord et Brive-Sud sont dans la même circonscription.
-    ("19", "Brive-Sud"): ["Brives", "Brive-la-Gaillarde-Sud-Est"],
+    # Depuis `124` (23 octobre 2026), la ville est en fractions de 1951 à 1982 :
+    # Brive-Sud n'est plus que 1930, « Brives » (1906) est Brive-Nord.
+    ("19", "Brive-Sud"): ["Brive-la-Gaillarde-Sud-Est"],
     # Metz : les fractions de la ville posées par `116` portent les cantons
     # Metz-1 à 3 ; Metz-Ville et Metz-Campagne sont dans la même circonscription.
     ("57", "Metz-Ville"): ["Metz-1", "Metz-2", "Metz-3"],

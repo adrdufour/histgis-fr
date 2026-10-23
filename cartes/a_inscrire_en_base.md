@@ -1043,6 +1043,9 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 
 ### 128. Toulouse : quinze cantons de 1973 à 1998, sans fraction en base
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : les quinze fractions du 1973-09-23 au 1998-03-15 ; Ramonville (IX), Portet (XI), Cugnaux, Tournefeuille (XII), Saint-Loup (XV) ; Beauzelle, Blagnac, Colomiers, Cornebarrieu, Mondonville passent de 3151 (Blagnac, canton de 1997) à 3148 (Toulouse-XIII) ; Mondonville dans Toulouse-Ouest de 1955 à 1973 ; noms Toulouse-I à XV de 1973 à 1999. Reste : Portet, Cugnaux et Tournefeuille sans canton du 1998-03-15 au 1998-04-01 (leur canton de 1998 commence au COG) ; les onze fractions nées en 1973 n'ont pas de circonscription avant 1986 (le découpage de 1958 suit les quatre cantons de 1958, comme pour Nice).
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** : décret n° 73-815 du 16 août 1973, JO du 17 août 1973
   (`jorf_txt/JORF_19730817_190_col.txt`, l. 1620-1800), qui décrit chacun des quinze cantons avec
   tous ses voisins ; décret du 26 février 1997 (`JORF_19970227_49`), communes rurales seules.
@@ -1494,6 +1497,9 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
   (`sql/116_villes_couverture_1941.sql`, vraisemblablement) ; le « Reste » ci-dessus est à vérifier.
 
 ### 120. Dijon : les noms de 2109, 2110, 2111 de 1973 à 1999 (Dijon-I, II, III)
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : noms Dijon-I, II, III et V (2109, 2110, 2111, 2139) de 1973 à 1999. Reste : VI à VIII (2140-2142), que rien dans la base ne confirme.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 73-813 du 16 août 1973 (JO du 17 août 1973,
   `jorf_txt/JORF_19730817_190_col.txt`, l. 1336-1457).
@@ -3137,6 +3143,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 111. Vierzon de 1973 à 1982 : la ville sans canton, ses communes rurales déjà dans Vierzon-II
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `39847#1829` et `#1830` du 1973-09-23 au 1982-03-14 ; noms Vierzon-I et Vierzon-II de 1973 à 1999. Reste : la place de la République et la concordance rue Romain-Rolland = rue des Ponts.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Sources** : décret n° 73-764 du 2 août 1973, art. 2 et 3 (JO du 4 août 1973, p. 8534-8535 ;
   `jorf_txt/JORF_19730804_180_col.txt`, l. 2421-2453 ; `cantons/communes_coupees_1973_1984.csv`) :
   le canton de Vierzon est divisé en Vierzon-I (la ville seule, au nord de la ligne) et Vierzon-II
@@ -3164,6 +3173,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Dinan (22050)
 
 ### 112. Dinan : fraction fantôme `11851#2219` (« Lannion ») en 1968-1982, Caouënnec absente de Lannion ; trou 1941-1968
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `11851#2219` retiré (1968-1982) ; `#2211` et `#2212` de 1941 à 1968. Caouënnec était déjà dans 2219 (`120`). `17035#2219` (L'Hermitage-Lorge dans Lannion) retiré aussi, avec `17035#2234`, qui doublait l'atome entier dans 2234 : même défaut du COG de 1968. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : arrêté des consuls du 5 brumaire an X (27 octobre 1801), Bulletin des lois, 3e série,
   B. 125, n° 967 (selon Rondonneau ; Wikipédia donne « n° 225 ») ; lu sur l'image dans Rondonneau,
@@ -3199,6 +3211,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Brive-la-Gaillarde (19031)
 
 ### 113. Brive : la ville entière jusqu'en 1982 malgré Brive-Nord / Brive-Sud (1951), communes rurales trouées, régime 1982-1985 absent, Cosnac et Malemort sans canton en 1982-1985
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `6008` entier dans 1906 arrêté au 1951-09-13 (lignes de 1968-1982 retirées) ; `#1906` et `#1930` de 1951 à 1982, les cinq fractions de 1982 à 1985 ; les sept communes de Brive-Sud dans 1930 du 1951-09-13 au 1954 (le trou 1955-1968 et Cosnac 1982-1985 étaient comblés par `120`) ; Malemort dans 1934 de 1982 à 1985 ; noms Brive-Nord, Brive-Sud (1951-1982), Brive-la-Gaillarde-Nord-Est (1982-1999). Alias de `circo/composition_1958.py` corrigé (Brive-Sud → 1930 seul). Reste : le chemin de Bassaler au Tilleul, le « n° 680 ».
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : décret du 13 septembre 1951 (JO du 14 septembre 1951, p. 9548 ;
   `sources/JORF/JORF_19510914_217.pdf` p. 4 ; `jorf_txt/JORF_19510914_217_col.txt`, l. 553-572) : Brive-Nord
@@ -3246,6 +3261,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 114. Guéret-Nord de 1973 à 1999 : l'unité 2319 garde le nom « Guéret »
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : noms « Guéret » (1941-1973) et « Guéret-Nord » (1973-1999) pour 2319. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 73-717 du 23 juillet 1973 (JO du 25 juillet 1973, p. 8079 ;
   `jorf_txt/JORF_19730725_171_col.txt` ; `cantons/communes_coupees_1973_1984.csv`), art. 1er : « le
   canton de Guéret est divisé en trois cantons ». Guéret-Nord = Saint-Fiel, Glénic, Ajain, Jouillat,
@@ -3269,6 +3287,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 115. Périgueux-Centre de 1973 à 1999 : l'unité 2427 garde le nom « Périgueux »
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : noms « Périgueux » (1941-1973) et « Périgueux-Centre » (1973-1999) pour 2427. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 73-656 du 13 juillet 1973 (JO du 17 juillet 1973 ;
   `jorf_txt/JORF_19730717_164_col.txt` ; `cantons/communes_coupees_1973_1984.csv`), art. 2 :
   Périgueux-Nord-Est = Trélissac, Château-l'Évêque, Champcevinel + le quartier Saint-Georges (rive
@@ -3291,6 +3312,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Montbéliard (25388)
 
 ### 116. Montbéliard de 1955 à 1982 : la ville sans canton, Bethoncourt sans canton de 1973 à 1982, noms de 1973
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `23194` dans 2514 de 1955 à 1973 ; `#2514` et `#2530` de 1973 à 1982 ; nom Montbéliard-Est dès 1973. Bethoncourt était déjà comblé par `120`. Reste : les concordances de rues.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 73-814 du 16 août 1973, art. 2 (JO du 17 août 1973, p. 8921-8922 ;
   `jorf_txt/JORF_19730817_190_col.txt`, l. 1558-1594 ; `cantons/communes_coupees_1973_1984.csv`) :
@@ -3325,6 +3349,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 117. Montélimar de 1973 à 1985 : la ville, Ancône et La Touche sans canton ; Montélimar-I sans nom jusqu'en 1999
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `23337#2616` et `#2633` de 1973 à 1985 ; noms Montélimar-I et Montélimar-II. Ancône et La Touche étaient déjà comblées par `120`. Reste : l'ancien lit du Roubion.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 73-718 du 23 juillet 1973, art. 3 (JO du 25 juillet 1973, p. 8080 ;
   `jorf_txt/JORF_19730725_171_col.txt` ; `cantons/communes_coupees_1973_1984.csv`) : le canton de
   Montélimar est divisé en Montélimar-I (Ancône et la ville « au Nord de la rivière le Roubion ») et
@@ -3349,6 +3376,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Romans-sur-Isère (26281)
 
 ### 118. Romans de 1973 à 1985 : la ville sans fraction, Montmiral sans canton
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `29521#2621` et `#2635` de 1973 à 1985 ; noms Romans-sur-Isère (1941-1973), Romans-sur-Isère-I et -II (1973-1999). Montmiral était déjà dans 2635 (`120`). Reste : le passage à niveau.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 73-718 du 23 juillet 1973, art. 2 (JO du 25 juillet 1973, p. 8079-8080 ;
   `jorf_txt/JORF_19730725_171_col.txt`, l. 1250-1265 ; `cantons/communes_coupees_1973_1984.csv`) :
@@ -3378,6 +3408,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 119. Crest : fractions absentes de 1973 à 1985 ; Aouste, Gigors et Saou sans canton de 1955 à 1985 ; Saou à Marsanne en 1968-1973
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `11045#2607` et `#2608` de 1973 à 1985. Aouste, Gigors et Saou étaient déjà comblées par `120`, Saou dans 2608 (plus dans Marsanne). Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : arrêté des consuls du 9 frimaire an X (30 novembre 1801), Bulletin des lois B. 156,
   n° 1206 ; lu sur l'image de Rondonneau, *Collection générale des lois*, t. 8, p. 615-616
   (archive.org `bub_gb_A25OAAAAYAAJ`, feuillets n673-n674 ; copie dans
@@ -3402,6 +3435,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Besançon (25056)
 
 ### 121. Besançon de 1973 à 1982 : la ville sans canton, Chalezeule et Chalèze sans canton ; Nord-Est sous le nom « Besançon-Nord » jusqu'en 1999
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `3928#2505`, `#2506`, `#2528`, `#2529` de 1973 à 1982 ; Chalezeule et Chalèze dans 2528 ; nom Besançon-Nord-Est de 1982 à 1999. Arcier n'est plus une commune en base (Vaire-Arcier, canton 2513) : rien posé. Reste : l'île Saint-Pierre.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 73-814 du 16 août 1973, art. 1er (JO du 17 août 1973, p. 8921 ;
   `jorf_txt/JORF_19730817_190_col.txt`, l. 1520-1556) : Besançon-Nord est divisé en trois
@@ -3436,6 +3472,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 122. Louviers de 1982 à 1992 : la ville sans fraction, alors que ses communes rurales sont déjà partagées ; Louviers-Nord sous le nom « Louviers » jusqu'en 1999
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `20191#2721` et `#2739` de 1982 à 1992 ; nom Louviers-Nord dès 1982. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 82-56 du 20 janvier 1982, art. 3 (JO du 22 janvier 1982, p. 337 ;
   `jorf_txt/JORF_19820122_18_col.txt`, l. 648-666) — le même décret que pour Évreux (n° 71) :
   Louviers est divisé en Louviers-Nord et Louviers-Sud. Wikipédia (« Liste des cantons de
@@ -3462,6 +3501,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 123. Bernay-Est / Bernay-Ouest commencent en 1992 au lieu de 1985 ; la ville sans canton de 1982 à 1985
 
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `3797` dans 2705 de 1982 à 1985 ; `#2705` et `#2741` de 1985 à 1992 ; noms Bernay-Ouest et Bernay-Est dès 1985. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
+
 - **Source** : décret n° 85-145 du 31 janvier 1985, art. 2 (JO du 1er février 1985, p. 1380 ;
   `jorf_txt/JORF_19850201_27_col.txt`, l. 1382-1424 — l'OCR écrit « Bemay »). Wikipédia
   (« Liste des cantons de l'Eure ») : un seul canton de l'an X à 1985 ; le décret 2014-241 remet
@@ -3480,6 +3522,8 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ### 124. Fraction fantôme de Bézu-la-Forêt dans le canton de Bernay (1968-1982)
 
+- **Fait en amont (constaté le 23 octobre 2026)** : `4164#2705` n'est plus en base ; Bézu-la-Forêt est entière dans 2722 de 1941 à 1999 (`96`, lecture de 1968 corrigée). Entrée close.
+
 - **Base** : `4164#2705` (Bézu-la-Forêt, canton 2705 Bernay) du 1968-01-01 au 1982-03-14, à côté
   de `4164#2722` (Lyons).
 - **Cause** : `cog1968/communes_1968_fusion.csv` l. 10492, « Bosc-Renoull-en-Ouche », doublon
@@ -3490,6 +3534,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Valence (26362)
 
 ### 125. Valence : régimes 1964 (Nord / Sud) et 1973 (I à III) absents ; Bourg-lès-Valence et Saint-Marcel sans canton de 1973 à 1985
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : a) `38655` entier arrêté au 1964-03-08 (lignes 1968-1973 retirées), `#2629` et `#2630` de 1964 à 1973 ; Étoile (dès 1941), Beaumont, Beauvallon, Portes (dès 1955) dans 2629 jusqu'en 1964, puis 2630 jusqu'en 1968 ; Montéléger 2629 puis 2630 jusqu'en 1973. b) `#2629`, `#2630`, `#2631` de 1973 à 1985 ; la correspondance I / II / III = 2629 / 2630 / 2631 est retenue (le décret 84-1224 garde la même géographie, et les codes de 1985 suivent ses numéros) ; Bourg-lès-Valence et Saint-Marcel dans 2632. Noms Valence-Nord / -Sud (1964-1973), Valence-I à IV. Reste : rien.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Sources** : décret du 28 janvier 1964 (JO du 30 janvier 1964, p. 1092 ;
   `jorf_txt/JORF_19640130_25_col.txt`, l. 2124-2161) ; décret n° 73-718 du 23 juillet 1973,
@@ -3520,6 +3567,9 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 ## Vernon (27681)
 
 ### 126. Vernon de 1982 à 1992 : la ville sans fraction, alors que ses communes rurales sont déjà partagées ; Vernon-Nord sous le nom « Vernon » jusqu'en 1999
+
+- **Inscrit par `sql/124_villes_lot_3.sql` (23 octobre 2026)** : `39507#2736` et `#2740` de 1982 à 1992 ; noms Vernon-Nord et Vernon-Sud dès 1982. Reste : la rue Latérale, le prolongement vers Port-Villez.
+  Ce qui suit est l'entrée d'avant l'inscription.
 
 - **Source** : décret n° 82-56 du 20 janvier 1982, art. 2 (JO du 22 janvier 1982, p. 337 ;
   `jorf_txt/JORF_19820122_18_col.txt`, l. 631-647, relu sur `sources/JORF/JORF_19820122_18.pdf` p. 5) —

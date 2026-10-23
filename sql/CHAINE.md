@@ -8,7 +8,8 @@ vide, et le contrôle indépendant n'en avait rien dit — il ne regarde que 187
 
 **Recompté le 21 octobre 2026 : 142 fichiers `.sql`**, numérotés de `01` à
 `123`, dont 18 `diag_*` et 2 `banc_*_donnees` ; `112` à `123` sont décrits
-plus bas, à leur numéro.
+plus bas, à leur numéro. `124` (23 octobre 2026) s'y ajoute, entre `117`
+et `98`.
 
 **Recompté le 11 octobre 2026 : 130 fichiers `.sql`**, numérotés de `01` à
 `111`, dont 19 `diag_*` et 2 `banc_*_donnees`. L'inventaire du § 1 c s'arrêtait
@@ -272,7 +273,8 @@ avant lui.
 | `115_villes_nomenclature.sql` | troisième lot : les régimes de 1973 (1961, 1967, 1976) portés par l'unité du régime suivant qui hérite de la plus grande part (arbitrage du 13 octobre 2026) — Antibes, Cannes, Manosque, Chambéry, Bourg, Gap, Sarcelles, Montluçon-Nord, Caen-Nord : 61 périodes posées, 22 noms (`p115_trace`) ; ancres datées dans `coupes_ville_ancres.csv` | après `114`, **avant `98`** |
 | `116_villes_couverture_1941.sql` | couverture du trou de 1941 pour les fractions de 61 villes : 188 périodes posées (mêmes fractions en 1940 et en 1968 ; ou fin de régime connue : Tours, Angers, Le Havre, Toulon, Versailles, Le Mans, Caen, Metz, Marseille, Nantes, Montpellier, Chalon, Montluçon, La Rochelle, Rouen ; Moulins 1941-1985), 4 retraits (`p116_trace`) | après `115`, **avant `98`** |
 | `117_creations_caen_rochefort_bourg_larochelle.sql` | créations (accord du 13 octobre 2026) : fraction `6530#1441` (Caen-V de 1973), unités `C17-Rochefort` (1815-1852) et `C01-Bourg-Couronne` (1982-1985), sept fractions `29365#…` ; 38 appartenances de La Rochelle passent de l'atome de Laleu à celui de la ville ; 9 bornes (Rochefort au 1852-06-29), 44 poses (`p117_trace`) | après `116`, **avant `98`** |
-| `98_coupe_ville.sql` | les villes multicantonales : lit `cartes/coupes_ville.csv` et ses ancres, juge chaque ville, fournit `carte_coupe_ville()` | après `iris_ville`, `101`, `108`, `109`, `112`, `114`, `115`, `116`, `117` |
+| `124_villes_lot_3.sql` | quatrième lot de `a_inscrire_en_base.md` (23 octobre 2026, entrées 111 à 128 sauf 124 et 127) : fractions sur le régime du décret (Vierzon, Brive 1951-1985, Montbéliard, Montélimar, Romans, Crest, Besançon, Louviers, Bernay, Valence 1964-1985, Vernon, Toulouse I à XV 1973-1998, Dinan 1941-1968) ; 79 périodes posées, 10 retirées (Brive et Valence entières, fantômes du COG de 1968 dans Lannion), 5 changées d'unité (Toulouse-XIII), 2 bornes, 46 noms ; aucune unité ni fraction créée (`p124_trace`). Rejoué seul : `98`, puis `123` et `121` défaits, `113`, `121`, `122`, `123` | après `117`, **avant `98`** |
+| `98_coupe_ville.sql` | les villes multicantonales : lit `cartes/coupes_ville.csv` et ses ancres, juge chaque ville, fournit `carte_coupe_ville()` | après `iris_ville`, `101`, `108`, `109`, `112`, `114`, `115`, `116`, `117`, `124` |
 | `84_carte_partition.sql` | (déjà au § `84`) ne modifie rien : fonctions de la carte | après tout ce qui pose |
 | `99_partition_coupes.sql` | remplace `carte_partition_atome` de `84` par une version qui découpe les villes à lignes. **À rejouer après tout rejeu de `84`**, sans quoi la carte redevient hachurée sans que rien n'échoue | après `84` et `98` |
 

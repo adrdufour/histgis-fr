@@ -727,6 +727,16 @@ if [ -f "$ANR_GPKG" ] && [ -f "$RACINE/build/anr_variantes.csv" ]; then
           -f "$ICI/117_creations_caen_rochefort_bourg_larochelle.sql" > "$RACINE/build/p117.log" 2>&1 \
         || { echo "  117 refusé — voir build/p117.log" >&2; exit 1; }
 
+    # Ajouté le 23 octobre 2026. `124` inscrit le quatrième lot (entrées 111 à
+    # 128) : fractions de ville sur le régime du décret (Vierzon, Brive,
+    # Montbéliard, Valence, Toulouse…), fantômes du COG de 1968 dans Lannion,
+    # Toulouse-XIII de 1973 à 1998, 46 noms. Ne crée ni unité ni atome. Après
+    # `117`, avant `98`.
+    etape "124 — villes : quatrième lot de a_inscrire_en_base.md"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/124_villes_lot_3.sql" > "$RACINE/build/p124.log" 2>&1 \
+        || { echo "  124 refusé — voir build/p124.log" >&2; exit 1; }
+
     # --- les villes multicantonales -----------------------------------------
     # Cinquième prérequis hors chaîne, découvert le 23 septembre 2026 :
     # `iris_ville` — 4 219 IRIS, la trame d'accrochage des 119 villes à

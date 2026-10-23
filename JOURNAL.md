@@ -10324,3 +10324,51 @@ dans `archives/planches/` et `archives/filets/`, que décrit
 `annexes/`. Les chemins sont réécrits dans le code, le SQL et les documents,
 `coupes_ville.csv` compris (ses citations de `JORF/`). Ce journal, tenu par
 ajouts, garde les anciens noms au-dessus de cette entrée.
+
+### 23 octobre — `124`, quatrième lot de `a_inscrire_en_base.md`
+
+Demande d'Adrien : « met à jour la base avec inscrire en base ». Les entrées
+111 à 128, écrites du 14 au 21 octobre en découpant les villes, n'avaient
+jamais été inscrites. `124_villes_lot_3.sql`, même modèle que `114`, après
+`117` et avant `98` : **79 périodes posées, 10 retirées, 5 changées d'unité,
+2 bornes, 46 noms**, aucune unité ni fraction créée (`p124_trace`).
+
+**La base avait bougé depuis les entrées.** `120` avait comblé la plupart des
+communes rurales qu'elles signalaient (Bethoncourt, Ancône, La Touche,
+Montmiral, Aouste, Gigors, Saou, Cosnac, Caouënnec) ; `96` avait rendu
+Bézu-la-Forêt entière à Lyons (n° 124, close sans rien poser). Le fichier ne
+pose que ce qui manquait au 23 octobre ; ses garde-fous refusent toute période
+occupée.
+
+**Ce qui est posé** : les fractions sur le régime du décret — Vierzon,
+Montbéliard, Montélimar, Romans, Crest, Besançon (1973), Louviers, Vernon,
+Bernay (1982-1985), Valence (Nord / Sud dès 1964, I à III dès 1973), Brive
+(Nord / Sud dès le 13 septembre 1951, cinq cantons en 1982), Dinan 1941-1968,
+Toulouse I à XV de 1973 à 1998. Brive et Valence entières sont arrêtées au
+décret qui les coupe. Deux fantômes du COG de 1968 dans Lannion retirés
+(`11851#2219`, `17035#2219`) avec `17035#2234`, qui doublait l'atome entier
+de L'Hermitage-Lorge. Toulouse-XIII : Beauzelle, Blagnac, Colomiers,
+Cornebarrieu et Mondonville étaient sous 3151 (Blagnac, canton de 1997) dès
+1973 ; ils passent sous 3148. Valence 1973 : la correspondance I / II / III =
+2629 / 2630 / 2631, « supposée » dans l'entrée, est retenue — le décret
+84-1224 garde la même géographie.
+
+**`98` rejoué** : les seize villes « conforme » ; au milieu de chaque régime,
+les surfaces sont celles des entrées (Toulouse 15 morceaux en 1980, Brive 2
+puis 5, Valence 2 puis 3).
+
+**Circonscriptions** : `124` pose des cantons en 1945-1986, il fallait
+rejouer `113`, `122`, `123` (règle 3 du § 4 de `sql/README.md`). Séquence :
+`123` défait, `121` défait, `113`, `121`, `122`, `123`. Avant, l'alias de
+Brive dans `circo/composition_1958.py` : Brive-Sud renvoyait aussi à
+« Brives » (1906), qui portait la ville entière ; c'est maintenant Brive-Nord
+seul, Brive-Sud → 1930. Le script rapproche le nom de `unit`, pas celui de
+`unit_version` : l'alias reste nécessaire. Résultat : 30 692 rattachements
+de 1958 (277 unités), 37 676 de 1945. Toutes les poses d'avant 1986 ont leur
+circonscription, **sauf les onze fractions de Toulouse nées en 1973**, comme
+Nice 7e à 14e : le découpage de 1958 suit les quatre cantons de 1958.
+
+**Reste** : Dreux (n° 127, deux unités de 1973 à créer) ; Dijon VI à VIII ;
+Portet, Cugnaux et Tournefeuille sans canton du 1998-03-15 au 1998-04-01 ;
+les entrées antérieures qui attendent une ligne ou un arbitrage. Export web
+non refait.

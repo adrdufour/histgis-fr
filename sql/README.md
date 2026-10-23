@@ -41,12 +41,12 @@ distingue trois familles : construction, diagnostic en lecture seule, et
 l'espace séparé de l'outre-mer. Il nomme aussi ce qui ne sert plus. À lire en
 premier.
 
-> **`rejouer_apres_rebuild.sh` va jusqu'à `123`.** L'avertissement qui
+> **`rejouer_apres_rebuild.sh` va jusqu'à `124`.** L'avertissement qui
 > figurait ici (« il s'arrête à `40` ») datait d'août 2026. Le script a été
 > complété le 6 septembre, puis à chaque fichier nouveau ; la chaîne a été
 > jouée de bout en bout le 20 octobre 2026 (`rebuild.sh` puis
 > `rejouer_apres_rebuild.sh`, `FIN rc=0`), et de nouveau le 21
-> (`build/rebuild_2026-10-21*.log`). Les fichiers `112` à `123`, et la place
+> (`build/rebuild_2026-10-21*.log`). Les fichiers `112` à `124`, et la place
 > que le script leur donne, sont décrits au § 4 ci-dessous. `CHAINE.md` § 0
 > garde le détail.
 
@@ -270,16 +270,16 @@ région de la chaîne :
 `rejouer_apres_rebuild.sh` les joue en dernier, après tout le reste, pour ces
 raisons.
 
-### 4. `112` à `123` : où chacun se place, et pourquoi
+### 4. `112` à `124` : où chacun se place, et pourquoi
 
-Écrits du 11 au 21 octobre 2026. Tous ont leur table de trace, retirent leur
+Écrits du 11 au 23 octobre 2026. Tous ont leur table de trace, retirent leur
 passage précédent avant de reposer, et ne commettent qu'avec un drapeau : à
 blanc, ils calculent, affichent leurs recettes et font ROLLBACK. Deux
 conventions coexistent, et il faut savoir laquelle s'applique :
 
-* **`-1 -v appliquer=1`** : `112` à `119`, `122`, `123`. Ceux qui
+* **`-1 -v appliquer=1`** : `112` à `119`, `122` à `124`. Ceux qui
   acceptent `-v defaire=1` (`113`, `118`, `119`, `122`, `123`) se retirent
-  seuls ; `112`, `114` à `117` se défont en se rejouant (leur § 0).
+  seuls ; `112`, `114` à `117` et `124` se défont en se rejouant (leur § 0).
 * **`-v poser=on`, sans `-1`** : `120` et `121`, qui ouvrent et ferment leur
   propre transaction, comme `110` et `111`. `121` prend `-v defaire=on`.
 
@@ -290,6 +290,7 @@ conventions coexistent, et il faut savoir laquelle s'applique :
 | `115_villes_nomenclature` | les régimes de 1973 portés par l'unité du régime suivant (Antibes, Cannes, Bourg, Gap…) ; noms dans `unit_version` | `membership`, `unit_version` | `p115_trace` | après `114`, avant `98` |
 | `116_villes_couverture_1941` | les fractions de 61 villes de 1941 à la reprise de leur régime ; Moulins 1941-1985 | `membership`, `unit_version` | `p116_trace` | après `115`, avant `98` |
 | `117_creations_caen_rochefort_bourg_larochelle` | **crée** la fraction Caen-V, `C17-Rochefort`, `C01-Bourg-Couronne` ; La Rochelle passe de l'atome de Laleu à `29365` | `atom`, `atom_geom`, `unit`, `unit_version`, `membership` | `p117_trace` | après `116`, avant `98` |
+| `124_villes_lot_3` | entrées 111 à 128 : fractions sur le régime du décret (Brive, Valence, Toulouse…), fantômes du COG de 1968 dans Lannion, Toulouse-XIII 1973-1998, noms | `membership`, `unit_version` | `p124_trace` | après `117`, avant `98` |
 | `118_paris_bois_1925_1929` | les bois de Boulogne et de Vincennes restent aux communes riveraines jusqu'aux décrets de 1925 et 1929 | `atom_geom_anr` (fenêtres datées des communes riveraines) | `p118_trace` | après `84`, `99`, `103` ; **après `102`**, qu'il prolonge |
 | `119_paris_cantons_1870_1940` | les cantons de Paris 1876-1940 portés par les quartiers, comme `103` après 1941 | `membership` | `p119_trace` | après `118`, **après `103`** |
 | `120_trous_par_dela_1968` | les trous qui traversent 1968 (Belley) par l'accord des deux bouts, et les désaccords qu'un acte lu explique (Civrieux) ; `-v chainage_large=on` | `membership` (trous seulement) | `p120_trace` | **après `110` et `111`**, avant `113` |
@@ -300,17 +301,22 @@ conventions coexistent, et il faut savoir laquelle s'applique :
 
 **Ce qu'il faut rejouer quand on en rejoue un seul :**
 
-1. **`112` à `117`** se jouent avant `98`, qui juge les villes sur les
+1. **`112` à `117` et `124`** se jouent avant `98`, qui juge les villes sur les
    appartenances de leurs fractions. En rejouer un après coup demande de
    rejouer `98` ensuite.
 2. **`102` seul** : défaire `118` d'abord (`-v defaire=1`), puis le rejouer
    ensuite. **`103` seul** : défaire `119` d'abord, de même.
 3. **Tout ce qui pose ou corrige des cantons** (`93`, `95`, `97`, `110`,
-   `111`, `120`, `121`) **après coup** : rejouer ensuite `113`, `122` et
-   `123`, qui lisent les cantons. Si la trame cantonale de 1958 a changé,
-   relancer `python3 circo/composition_1958.py` avant `113` : il écrit les
+   `111`, `120`, `121`, et les lots de villes `112` à `117`, `124`) **après
+   coup** : rejouer ensuite `113`, `122` et `123`, qui lisent les cantons.
+   Si la trame cantonale de 1958 a changé, relancer
+   `python3 circo/composition_1958.py` avant `113` : il écrit les
    identifiants d'unité dans le CSV, et `113` refuse (recette 1 bis) quand
-   l'un d'eux a disparu.
+   l'un d'eux a disparu. Il rapproche les noms de l'atlas du nom de `unit`
+   (pas de `unit_version`) : un nom posé dans `unit_version` ne dispense pas
+   d'un ALIAS. Séquence jouée le 23 octobre 2026 après `124` : `123` défait
+   (`-v defaire=1`), `121` défait (`-v defaire=on`, il rend des périodes
+   de `113`), puis `113`, `121`, `122`, `123`.
 4. **`121` seul** (défaire, poser) : rejouer `122` ensuite.
 5. **`110` ou `111` seuls** : la séquence du § 3, puis `120`, `113`, `121`,
    `122` et `123` dans cet ordre.
