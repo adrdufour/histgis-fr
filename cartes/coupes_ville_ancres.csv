@@ -669,3 +669,40 @@ PQ67#86E,"quartier PQ67, cote NE (109.9 ha) : 75-17@1986",POINT(649618 6865706),
 25041#3043,canton Nîmes  5e  Canton (point explicite),POINT(809500 6301500),1982-03-14,2013-01-01
 25041#3044,canton Nîmes  6e  Canton (point explicite),POINT(807000 6301500),1982-03-14,2013-01-01
 25041#3045,canton Vistrenque (point explicite),POINT(809500 6297500),1982-03-14,2013-01-01
+339#2A01,canton Ajaccio  1er Canton (point explicite),POINT(1172000 6107500),1973-09-23,1982-03-14
+339#2A63,canton Ajaccio  2e  Canton (point explicite),POINT(1176650 6108100),1973-09-23,1982-03-14
+339#2A64,canton Ajaccio  3e  Canton (point explicite),POINT(1176450 6108900),1973-09-23,1982-03-14
+339#2A65,canton Ajaccio  4e  Canton (point explicite),POINT(1173000 6110500),1973-09-23,1982-03-14
+339#2A66,canton Ajaccio  5e  Canton (point explicite),POINT(1178500 6109800),1973-09-23,1982-03-14
+339#2A01,canton Ajaccio  1er Canton (point explicite),POINT(1172000 6107500),1982-03-14,2013-01-01
+339#2A63,canton Ajaccio  2e  Canton (point explicite),POINT(1176650 6108100),1982-03-14,2013-01-01
+339#2A64,canton Ajaccio  3e  Canton (point explicite),POINT(1176450 6108900),1982-03-14,2013-01-01
+339#2A65,canton Ajaccio  4e  Canton (point explicite),POINT(1173000 6110500),1982-03-14,2013-01-01
+339#2A66,canton Ajaccio  5e  Canton (point explicite),POINT(1175800 6110400),1982-03-14,2013-01-01
+339#2A72,canton Ajaccio  6e  Canton (point explicite),POINT(1178500 6109800),1982-03-14,2013-01-01
+339#2A73,canton Ajaccio  7e  Canton (point explicite),POINT(1179685 6112241),1982-03-14,2013-01-01
+28471#2935,canton Quimper (point explicite),POINT(171000 6792000),1973-09-23,1985-03-10
+28471#2948,canton Quimper  2e  Canton (point explicite),POINT(172500 6787500),1973-09-23,1985-03-10
+28471#2935,canton Quimper  1er Canton (point explicite),POINT(171000 6792000),1985-03-10,2013-01-01
+28471#2948,canton Quimper  2e  Canton (point explicite),POINT(172500 6787500),1985-03-10,2013-01-01
+28471#2952,canton Quimper  3e  Canton (point explicite),POINT(169000 6788500),1985-03-10,2013-01-01
+28471#2952,canton Quimper  3e  Canton (point explicite),POINT(172057 6783863),1985-03-10,2013-01-01
+5761#2903,canton Brest-Ville (point explicite),POINT(141795 6835134),1992-03-22,2013-01-01
+5761#2954,canton Brest-Saint-Pierre (point explicite),POINT(143227 6835762),1992-03-22,2013-01-01
+5761#2904,canton Brest-2 (point explicite),POINT(145060 6835778),1992-03-22,2013-01-01
+5761#2944,canton Brest-Cavale-Blanche-Bohars-Guilers (point explicite),POINT(143686 6837183),1992-03-22,2013-01-01
+5761#2944,canton Brest-Cavale-Blanche-Bohars-Guilers (point explicite),POINT(146512 6841885),1992-03-22,2013-01-01
+5761#2945,canton Brest-Bellevue (point explicite),POINT(144930 6837745),1992-03-22,2013-01-01
+5761#2905,canton Brest-3 (point explicite),POINT(146721 6836103),1992-03-22,2013-01-01
+5761#2947,canton Brest-Lambezellec (point explicite),POINT(145776 6838679),1992-03-22,2013-01-01
+5761#2950,canton Brest-Kerichen (point explicite),POINT(147689 6837882),1992-03-22,2013-01-01
+5761#2953,canton Brest-Saint-Marc (point explicite),POINT(149034 6836462),1992-03-22,2013-01-01
+5761#2946,canton Brest-L'Hermitage-Gouesnou (point explicite),POINT(147503 6839488),1992-03-22,2013-01-01
+5761#2903,canton Brest-Ville (point explicite),POINT(141795 6835134),1985-03-10,1992-03-22
+5761#2904,canton Brest-2 (point explicite),POINT(145060 6835778),1985-03-10,1992-03-22
+5761#2905,canton Brest-3 (point explicite),POINT(146721 6836103),1985-03-10,1992-03-22
+5761#2945,canton Brest-Bellevue (point explicite),POINT(144930 6837745),1985-03-10,1992-03-22
+5761#2903,canton Brest-Ville (point explicite),POINT(141795 6835134),1973-09-23,1985-03-10
+5761#2904,canton Brest-2 (point explicite),POINT(145060 6835778),1973-09-23,1985-03-10
+5761#2905,canton Brest-3 (point explicite),POINT(146721 6836103),1973-09-23,1985-03-10
+5761#2945,canton Brest-Bellevue (point explicite),POINT(144930 6837745),1973-09-23,1985-03-10

@@ -3627,6 +3627,87 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Ajaccio (2A004)
+
+### 129. Ajaccio : régime de 1973 (Ajaccio-I à V) absent ; Alata, Villanova, Appietto, Afa, Bastelicaccia sans canton de 1973 à 1982
+
+- **Sources** : décret 73-825 du 18 août 1973 (JO du 19 août 1973, p. 9014-9015,
+  `jorf_txt/JORF_19730819_192_col.txt`, l. 940-1080) : le canton d'Ajaccio est remplacé par
+  Ajaccio-I (Ouest-Ville), II (Vieille-Ville-Sud), III (Centre-Ville-Nord), IV (Nord, avec Alata et
+  Villanova) et V (Est, avec Appietto, Afa et Bastelicaccia). Décret 82-121 du 2 février 1982 (JO
+  du 4 février 1982, p. 457-458, `jorf_txt/JORF_19820204_29_col.txt`, l. 728-822) : crée VI et VII,
+  redélimite IV et V. C'est le point « Corse 1975 : 7 communes sans unité » de `sql/110` § 6 bis.
+- **Base** : Ajaccio entière dans 2001 jusqu'au 1973-09-23 ; fractions `339#2A01`, `#2A63`,
+  `#2A64`, `#2A65`, `#2A66`, `#2A72`, `#2A73` seulement à partir du 1982-03-14 (date du scrutin,
+  cohérente avec le décret 82-121) ; Alata, Villanova, Appietto, Afa et Bastelicaccia sans canton
+  du 1973-09-23 au 1982-03-14.
+- **À inscrire** : les unités Ajaccio-I à V du 1973-09-23 au 1982-03-14 (codes 20xx jusqu'au
+  1976-01-01, puis 2Axx — sans doute 2A01, 2A63 à 2A66 comme ensuite), les appartenances des cinq
+  fractions sur cette période, et les communes rurales : Alata et Villanova au IV, Appietto, Afa et
+  Bastelicaccia au V.
+- **Lignes** : écrites le 23 octobre 2026, source `texte`. Passe 1973 (`2A004-1973-*`, cinq
+  lignes, `--morceaux 5`) avec ancres datées prêtes : I POINT(1172000 6107500), II POINT(1176650
+  6108100), III POINT(1176450 6108900), IV POINT(1173000 6110500), V POINT(1178500 6109800). Passe
+  1982 (`2A004-1982-*`, sept lignes). La limite IV / V de 1973 est une DÉDUCTION des listes de voies
+  du décret (27,2 ha d'écart avec 1982). Fichiers de travail : `cartes/sorties/decoupe_ajaccio/`.
+
+---
+
+## Quimper (29232)
+
+### 130. Quimper : aucune appartenance de 1955 à 1992 ; régimes de 1973 (I / II) et 1985 (I / II / III) absents
+
+- **Sources** : décret 73-720 du 23 juillet 1973 (JO du 25 juillet 1973,
+  `jorf_txt/JORF_19730725_171_col.txt`, l. 1433-1458) ; décret 85-74 du 22 janvier 1985 (JO du
+  23 janvier 1985, p. 932-933, `jorf_txt/JORF_19850123_19_col.txt`, l. 3526-3553) ; décret
+  2014-151 (transcription Wikipédia, non collationnée), qui confirme le centre de 1985.
+- **Base** : l'atome `28471` n'a aucune appartenance cantonale du 1955-01-01 au 1992-03-22. Les
+  atomes absorbés le 13 février 1960 (`12839` Ergué-Armel, `18125` Kerfeunteun, `26405` Penhars)
+  s'arrêtent en 1955. Ergué-Gabéric (`12840`), Plomelin (`27177`) et Pluguffan (`27265`) n'ont rien
+  du 1973-09-23 au 1992-03-22. Le nom de 2935 reste « Quimper » de 1992 à 1999.
+- **À inscrire** : 1955-1973, Quimper entière (et les trois communes jusqu'en 1960) dans 2935 ;
+  1973-09-23 → 1985-03-10, fractions `28471#2935` (Quimper-I, avec Plomelin et Pluguffan) et
+  `28471#2948` (Quimper-II, avec Ergué-Gabéric), codes déduits de `cantons/mouvements_cantonaux.csv`
+  et non lus dans le COG ; 1985-03-10 → 1992-03-22, les trois fractions telles qu'en 1992
+  (Ergué-Gabéric en 2948, Plomelin et Pluguffan en 2952).
+- **Lignes** : écrites le 23 octobre 2026, source `texte`. `29232-1` (1973-09-23 → 1985-03-10,
+  `--morceaux 2`, ancres datées I POINT(171000 6792000) au nord, II POINT(172500 6787500) au sud :
+  lecture de « à gauche » d'une ligne parcourue d'ouest en est, à confirmer) ; `29232-2` et
+  `29232-3` (1985-03-10 → 2013-01-01 ; III ancré deux fois, lobe sud de 193 ha). Logements BD TOPO
+  à 1,2 point au plus des populations légales 2011. Fichiers : `cartes/sorties/decoupe_quimper/`.
+
+---
+
+## Brest (29019)
+
+### 131. Brest : rien de 1973 à 1992 ; cantons IV, VI, VII, VIII sans unité ; noms de 1991 ; atome entier sous Brest-3 de 1968 à 1973
+
+- **Sources** : arrêté du 7 brumaire an X (Rondonneau t. 8 p. 512, feuillet n570) ; décret 73-720
+  (JO du 25 juillet 1973) ; décret 85-74 (JO du 23 janvier 1985) ; décret 91-211 du 27 février 1991
+  (texte intégral lu sur Légifrance, `cartes/sorties/decoupe_brest/decret_91-211.txt`).
+- **Base** : trois fractions de 1815 à 1941 sur 573 ha ; aucune fraction entre 1941 et 1973, et
+  l'atome 5761 entier sous Brest-3 de 1968-01-01 à 1973-09-23 (artefact : trois cantons après la
+  fusion du 29 avril 1945) ; aucune appartenance pour Brest, Bohars, Guilers, Gouesnou, Guipavas,
+  Le Relecq-Kerhuon et Plouzané du 1973-09-23 au 1992-03-22 ; 2903 nommé « Brest-Ville », 2904 et
+  2905 « Brest-2 », « Brest-3 » de 1992 à 1999.
+- **À inscrire** : les unités Brest-IV, VI, VII et VIII (I, II, III, V = 2903, 2904, 2905, 2945,
+  déjà ancrés) ; 1973 : Plouzané et Guilers dans I, Bohars, Gouesnou, Guipavas, Le Relecq-Kerhuon
+  dans VII ; 1985 : Guilers passe à VII, canton de Guipavas créé (Guipavas, Le Relecq-Kerhuon) ;
+  une `unit_version` au 1992-03-22 pour les noms de l'art. 3 du décret 91-211 (Brest-Plouzané,
+  Brest-Recouvrance, Brest-Centre, Brest-Bellevue). Ancres à poser le jour de l'inscription :
+  1985 IV POINT(149034 6836462), VI POINT(146060 6838588), VII nord POINT(146810 6840987), VII sud
+  POINT(143686 6837183), VIII POINT(147883 6838123) ; 1973 IV POINT(149034 6836462), VI
+  POINT(146663 6838642), VII POINT(146829 6840978).
+- **Sans texte** : la 4e section de l'an X (limite Brest-1 / Brest-2) et le régime 1945-1973.
+  Hypothèse pour ce dernier : Brest-3 = ouest de la Penfeld (Recouvrance et ancienne
+  Saint-Pierre-Quilbignon, 1 879 ha, ligne 1991-L4) ; ligne `29019-1801-P` prête, non écrite.
+- **Lignes** : écrites le 23 octobre 2026, source `texte` : dix lignes 1991 (1992-03-22 →
+  2013-01-01), dix 1985 (`--morceaux 9 --vides-admis 5`), six 1973 (`--morceaux 7 --vides-admis 3`).
+  Population des IRIS au prorata des surfaces à 0,7 point au plus des fractions 2011. Fichiers :
+  `cartes/sorties/decoupe_brest/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :

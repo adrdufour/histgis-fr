@@ -1005,3 +1005,31 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **Un régime dont la loi n'est pas lue peut se déduire du suivant** (Nîmes 1880 : les communes
   rurales du 1er passent à I et V en 1973, celles du 3e à III et IV ; la limite 1/3 est donc
   I/IV + IV/V) : l'écrire sous la source `main`, note commençant par « HYPOTHESE ».
+
+- **Un décret qui ÉNUMÈRE des voies par canton au lieu de décrire une limite** (Ajaccio 1973,
+  23 octobre 2026) : la ligne passe entre les voies des deux listes ; numéros et côtés de rue se
+  réduisent à l'axe, chaque rue coupée se chiffre. Le décret suivant (1982) et celui de 2014
+  donnent de vraies limites, qui reprennent souvent l'ancienne : les lire d'abord.
+- **« Passant au Sud des lieux-dits A, B, C » dans le maquis** : seuls des points à une centaine
+  de mètres des toponymes BD TOPO (`zone_d_habitation`, `detail_orographique` : Punta, Bocca, Col)
+  sont possibles ; chiffrer l'écart avec un tracé par les lieux-dits eux-mêmes (70 ha à Ajaccio).
+- **Un nom de résidence peut couvrir des immeubles aux noms trompeurs** : les immeubles
+  « Napoléon, Lucien, Laetitia » de la BD TOPO sont aux Jardins de l'Empereur, pas dans la
+  « résidence Napoléon » du décret. Le contour `zone_d_habitation` de la résidence sert de limite.
+- **Le routeur PostGIS par voie imposée** (`cartes/sorties/decoupe_ajaccio/route.py`) fait des
+  épingles quand un point de passage n'est pas un nœud : le remplacer par le nœud le plus proche
+  (sauf aux bouts et aux droites), puis `desboucle.py`.
+- **Une voie ferrée déposée peut survivre comme route sans nom** (Quimper, ligne de Pont-l'Abbé) :
+  absente de `<insee>_fer`, son emprise porte des tronçons routiers sans nom ; les repérer sur
+  l'ortho 1950-1965, les ajouter comme pseudo-voie dans une copie de `<insee>_voies.geojson`
+  (`VOIRIE` redéfini) et tracer par `("voie", …)`.
+- **Une route qui franchit une anse où le contour ANR se pince** (Quimper, D34) détache un morceau :
+  une deuxième ancre pour la même fraction.
+- **`--morceaux N` avec des ancres partielles** (Brest 1973 et 1985 : quatre cantons sur huit ont
+  une unité) : `--vides-admis` = nombre de morceaux sans ancre, sinon NON CONFORME.
+- **Légifrance par le navigateur intégré** : WebFetch n'en rend qu'un résumé ; `navigate` puis
+  `get_page_text` rend le décret entier (Brest, décret 91-211).
+- **Un décret qui borne par renvoi** (« limites des cantons de Brest-II et Brest-V ») : les limites
+  non redécrites restent en vigueur ; les reprendre sous l'identifiant de chaque régime.
+- **Agents en parallèle : un sous-dossier du scratchpad par ville** ; le scratchpad est partagé.
+- **WFS `batiment` filtré en CQL** : `BBOX(geometrie, …, 'EPSG:2154')`, cinquième argument compris.
