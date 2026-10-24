@@ -10422,5 +10422,6 @@ avant), `122` pour le 05. Logs `build/p110.log`, `build/p111.log`,
     Champcella ..... Guillestre -> 1978-02-25 -> L'Argentière ; plus de trou
 
 Les deux dates sont des **estimations** de parution : à relire au JO quand le
-numéro sera là. **Non réexporté** : la carte web garde les trous jusqu'au
-prochain export.
+numéro sera là. **Réexporté le même jour** : `export_web.py 05 --partition
+--role histgis_carte` (742 s, log `build/export_05_2026-10-24.log`) ; contrôlé
+dans les fichiers servis, Fressinières à 0502 dès 1949, Champcella dès 1978.
