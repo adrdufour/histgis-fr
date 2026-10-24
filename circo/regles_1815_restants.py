@@ -497,11 +497,14 @@ REGLES_RESTANTS = {
         "3": {"cantons": ["Serrières", "Annonay", "Satillieu",
                           "Saint-Félicien", "Saint-Agrève"]},
         "4": {"reprend": ["Largentière-1", "Largentière-2"]}}},
-    # DOUTE : Le Cheylard et Saint-Pierreville sont cernés d'un trait épais
-    # au nord (Saint-Martin, Lamastre, Vernoux) ET au sud (Privas) ; ils ne
-    # tiennent à la 1re que par Antraigues (trait fin). Rangés dans la 1re.
+    # DOUTE : Le Cheylard est cerné d'un trait épais au nord (Saint-Martin,
+    # Lamastre, Vernoux) ET au sud (Privas) ; il ne tient à la 1re que par
+    # Antraigues (trait fin). Rangé dans la 1re.
+    # Saint-Pierreville est dans la 3e d'après le texte de Gaudillère
+    # (corrigé le 24 octobre 2026 ; la carte l'avait fait ranger dans la 1re).
     {"depuis": 1852, "jusqu": 1870, "base": "1876", "circos": {
-        "3": {"reprend": ["Tournon-1", "Tournon-2"], "moins": ["Le Cheylard"]},
+        "3": {"reprend": ["Tournon-1", "Tournon-2"], "moins": ["Le Cheylard"],
+              "plus": ["Saint-Pierreville"]},
         "2": {"reprend": ["Largentière-1", "Largentière-2"]},
         "1": {"reste": True}}},
   ]},

@@ -58,7 +58,7 @@ Lecture des 120 photos de `photos/1815_1870/` (seconde série, 4 octobre 2026), 
 ## Doutes de lecture
 
 - **01 Ain** : Villars n'est dessiné sur aucune carte, rangé avec Saint-Trivier-sur-Moignans. Corrigé le 10 octobre 2026 : Villars est créé le 18 juillet 1868 sur Saint-Trivier-sur-Moignans, Chalamont, Meximieux et Châtillon-sur-Chalaronne ; ses communes suivent leur ancien canton (`cantons/changements_communes_1815_1870.csv`), ce qui fait passer Birieux, Marlieux, Saint-Germain-sur-Renon et Saint-Paul-de-Varax dans la 2e circonscription en 1820-1821. Corrigé aussi le 10 octobre 2026 : Poncin est dans la 3e en 1852-1870 (cerné d'un trait épais côté Izernore, Brénod et Pont-d'Ain), il avait été laissé dans la 2e avec l'arrondissement de Nantua.
-- **07 Ardèche 1852-1870** : Le Cheylard et Saint-Pierreville, cernés au nord et au sud, rangés dans la 1re.
+- **07 Ardèche 1852-1870** : Le Cheylard et Saint-Pierreville, cernés au nord et au sud, rangés dans la 1re. Corrigé le 24 octobre 2026 : Saint-Pierreville est dans la 3e d'après le texte de Gaudillère. Le Cheylard reste dans la 1re, qu'il touche par Antraigues (7,7 km de limite commune en base).
 - **11 Aude 1852-1869** : deux morceaux marqués « 2 » (Limoux et Narbonne) séparés par la 1re ; coquille possible.
 - **13 Bouches-du-Rhône 1863-1869** : Berre à la 3e, Martigues à la 2e (inverse de 1852 et 1869).
 - **17 Charente-Maritime 1821-1831** : Cozes rangé dans la 4e (Jonzac).

@@ -881,6 +881,18 @@ etape "120 — trous par-delà 1968, et chaînage par l'acte"
       -f "$ICI/120_trous_par_dela_1968.sql" > "$RACINE/build/p120.log" 2>&1 ) \
     || { echo "  120 refusé — voir build/p120.log" >&2; exit 1; }
 
+# Ajouté le 24 octobre 2026. `127` rend à la Seine-et-Oise ses cantons de 1955
+# à 1967 : le jalon de 1954 (ou le canton de 1940 pour les communes absentes du
+# jalon), les rattachements de 1951 à 1964, puis les décrets du 28 janvier
+# 1964. Il retire les 59 périodes que `110` avait posées en 1964 sous des
+# unités des 91 à 95 (et les rend s'il est défait) : il passe après `110` et
+# `120`, et AVANT `113`, qui lit les cantons de 1958 et borne la vie des atomes
+# par leurs cantons du département. Depuis la racine : son \copy lit `cantons/`.
+etape "127 — Seine-et-Oise : cantons 1955-1967"
+( cd "$RACINE" && $PSQL -P pager=off -v poser=on \
+      -f "$ICI/127_seine_et_oise_1955_1967.sql" > "$RACINE/build/p127.log" 2>&1 ) \
+    || { echo "  127 refusé — voir build/p127.log" >&2; exit 1; }
+
 # Ajouté le 13 octobre 2026. `113` pose les circonscriptions de 1958-1986 des
 # 68 départements « posables » de `circo/composition_1958_etat.csv`, par le
 # canton que chaque atome a au 1er décembre 1958. Il LIT les cantons : il passe
@@ -921,6 +933,32 @@ etape "123 — villes partagées entre plusieurs circonscriptions"
       -f "$ICI/123_circo_villes_partagees.sql" > "$RACINE/build/p123.log" 2>&1 ) \
     || { echo "  123 refusé — voir build/p123.log" >&2; exit 1; }
 
+# Ajouté le 24 octobre 2026 (nuit). `130` pose les cantons des communes ENTIÈRES
+# des 92, 93, 94 que les décrets de 1976 et 1984 placent et que la lecture
+# avait manquées (Pierrefitte, Villepinte, Chevilly-Larue…). Il pose des
+# CANTONS : avant `125` et `128`, qui en lisent.
+etape "130 — cantons des communes entières des 92, 93, 94 (1968-1998)"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/130_cantons_petite_couronne_1968_1998.sql" > "$RACINE/build/p130.log" 2>&1 \
+    || { echo "  130 refusé — voir build/p130.log" >&2; exit 1; }
+
+# Ajouté le 25 octobre 2026. `131` (91, 95), `132` (noms des codes 7801-7839,
+# Seine-et-Oise puis Yvelines) et `133` (78) : la suite de `130` pour la
+# grande couronne, décrets de 1967, 1975-1976, 1982, 1985 et 1991. Des
+# cantons : avant `125` et `128`.
+etape "131 — cantons des communes entières de l'Essonne et du Val-d'Oise (1968-1998)"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/131_cantons_essonne_val_oise_1968_1998.sql" > "$RACINE/build/p131.log" 2>&1 \
+    || { echo "  131 refusé — voir build/p131.log" >&2; exit 1; }
+etape "132 — noms des cantons des Yvelines (codes repris de la Seine-et-Oise)"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/132_noms_cantons_yvelines.sql" > "$RACINE/build/p132.log" 2>&1 \
+    || { echo "  132 refusé — voir build/p132.log" >&2; exit 1; }
+etape "133 — cantons des communes entières des Yvelines (1968-1994)"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/133_cantons_yvelines_1968_1994.sql" > "$RACINE/build/p133.log" 2>&1 \
+    || { echo "  133 refusé — voir build/p133.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `125` pose les circonscriptions de la loi du
 # 12 juillet 1966 dans les 92, 93 et 94, de 1968 au 24 novembre 1986, commune
 # par commune (Gaudillère). Il LIT les cantons pour choisir les atomes qui
@@ -931,6 +969,14 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/125_circo_1967_petite_couronne.sql" > "$RACINE/build/p125.log" 2>&1 \
     || { echo "  125 refusé — voir build/p125.log" >&2; exit 1; }
 
+# Ajouté le 24 octobre 2026 (nuit). `128` : la loi du 12 juillet 1966 dans les
+# 78, 91, 95, par le canton de chaque commune au 31 décembre 1967 — ceux que
+# `127` pose. Après `127` et `125`.
+etape "128 — circonscriptions 1967-1986 des Yvelines, Essonne, Val-d'Oise"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/128_circo_1967_grande_couronne.sql" > "$RACINE/build/p128.log" 2>&1 \
+    || { echo "  128 refusé — voir build/p128.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
@@ -940,8 +986,14 @@ if $PSQL -Atc "SELECT to_regclass('histgis.om_atom') IS NOT NULL" | grep -q t; t
     $PSQL -P pager=off -1 -v appliquer=1 \
           -f "$ICI/126_outremer_circo_1946_1986.sql" > "$RACINE/build/p126.log" 2>&1 \
         || { echo "  126 refusé — voir build/p126.log" >&2; exit 1; }
+    # `129` : les villes d'outre-mer partagées entre cantons ou circonscriptions,
+    # en unités réunies (« Saint-Denis (ville à plusieurs cantons…) »).
+    etape "129 — villes partagées d'outre-mer"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/129_outremer_villes_partagees.sql" > "$RACINE/build/p129.log" 2>&1 \
+        || { echo "  129 refusé — voir build/p129.log" >&2; exit 1; }
 else
-    echo "  om_atom absente — 126 sauté." >&2
+    echo "  om_atom absente — 126 et 129 sautés." >&2
 fi
 
 # ============================================================================

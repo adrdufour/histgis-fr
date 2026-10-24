@@ -280,8 +280,8 @@ conventions coexistent, et il faut savoir laquelle s'applique :
 * **`-1 -v appliquer=1`** : `112` à `119`, `122` à `124`. Ceux qui
   acceptent `-v defaire=1` (`113`, `118`, `119`, `122`, `123`) se retirent
   seuls ; `112`, `114` à `117` et `124` se défont en se rejouant (leur § 0).
-* **`-v poser=on`, sans `-1`** : `120` et `121`, qui ouvrent et ferment leur
-  propre transaction, comme `110` et `111`. `121` prend `-v defaire=on`.
+* **`-v poser=on`, sans `-1`** : `120`, `121` et `127`, qui ouvrent et ferment leur
+  propre transaction, comme `110` et `111`. `121` et `127` prennent `-v defaire=on`.
 
 | fichier | ce qu'il fait | écrit | trace | place dans `rejouer_apres_rebuild.sh` |
 |---|---|---|---|---|
@@ -294,6 +294,7 @@ conventions coexistent, et il faut savoir laquelle s'applique :
 | `118_paris_bois_1925_1929` | les bois de Boulogne et de Vincennes restent aux communes riveraines jusqu'aux décrets de 1925 et 1929 | `atom_geom_anr` (fenêtres datées des communes riveraines) | `p118_trace` | après `84`, `99`, `103` ; **après `102`**, qu'il prolonge |
 | `119_paris_cantons_1870_1940` | les cantons de Paris 1876-1940 portés par les quartiers, comme `103` après 1941 | `membership` | `p119_trace` | après `118`, **après `103`** |
 | `120_trous_par_dela_1968` | les trous qui traversent 1968 (Belley) par l'accord des deux bouts, et les désaccords qu'un acte lu explique (Civrieux) ; `-v chainage_large=on` | `membership` (trous seulement) | `p120_trace` | **après `110` et `111`**, avant `113` |
+| `127_seine_et_oise_1955_1967` | la S&O de 1955 à 1967 : jalon de 1954 (ou canton de 1940), rattachements 1951-1964, décrets du 28 janvier 1964 ; unités du 78 (27 `C78-…` créées) à la place des 59 périodes de `110` sous des unités des 91 à 95 | `unit`, `unit_version`, `membership` (retire des périodes de `110`) | `p127_trace` | après `110` et `120`, **avant `113`** ; depuis la racine |
 | `113_circo_1958` | les circonscriptions 1958-1986 de 68 départements, d'après les cartes de Gaudillère | `unit`, `unit_version`, `membership` | `circo_1958_trace` | après `120` : il lit les cantons du 1er décembre 1958 |
 | `121_ain_cessions_trous` | l'Ain à la main : cession au Rhône de 1967, jalon de 1968 mal apparié, trous 1955-1998 | `membership` (retire des périodes de `59` et de `113`) | `p121_trace` | après `113` : **en dernier parmi ceux qui touchent aux cantons** |
 | `122_circo_1945_1958` | le scrutin de liste départemental de la IVe République : une unité `L<dep>01@1945` par département hors de la Seine | `unit`, `unit_version`, `membership` | `circo_1945_trace` | après `121`, dont il lit les cantons |
@@ -318,6 +319,10 @@ conventions coexistent, et il faut savoir laquelle s'applique :
    (`-v defaire=1`), `121` défait (`-v defaire=on`, il rend des périodes
    de `113`), puis `113`, `121`, `122`, `123`.
 4. **`121` seul** (défaire, poser) : rejouer `122` ensuite.
+4 bis. **`127`** (Seine-et-Oise, 24 octobre 2026) pose des cantons et en
+   retire à `110` : le défaire (`-v defaire=on`) avant de rejouer `110` ou
+   `120`, le reposer ensuite, puis la séquence du point 3. Il change la trame
+   de 1958 du 78 : `python3 circo/composition_1958.py` avant `113`.
 5. **`110` ou `111` seuls** : la séquence du § 3, puis `120`, `113`, `121`,
    `122` et `123` dans cet ordre.
 

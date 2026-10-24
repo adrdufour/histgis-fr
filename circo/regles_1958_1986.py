@@ -1152,24 +1152,43 @@ REGLES_1958 = {
     "2": ["Giromagny", "Rougemont-le-Château", "Fontaine", "Delle",
           "communes:Belfort:Bavilliers,Cravanche,Essert,Salbert"]}},
 
-# Seine-et-Oise, 1958-1967 (photo 107) : dix-huit circonscriptions. La carte
-# est trop dense autour de Versailles et d'Argenteuil pour être lue sûrement
-# sur la photo ; seules les NOTES, qui sont du texte, sont transcrites. Les
-# cantons entiers restent à lire sur l'original.
-"78": {"nom": "Seine-et-Oise", "photo": 107, "depuis": 1958, "jusqu": 1967,
-       "incomplet": True, "circos": {
+# Seine-et-Oise, 1958-1967 (photo 107) : dix-huit circonscriptions.
+# Lecture du 24 octobre 2026 (Claude), à l'agrandissement (photo tournée de
+# 90°, `convert -rotate -90 -crop`), canton par canton ; les NOTES de la
+# planche donnent les six cantons divisés. Confrontée à la page Wikipédia
+# « Liste des circonscriptions législatives de Seine-et-Oise » (qui cite
+# l'ordonnance n° 58-945) : mêmes dix-huit compositions, à une graphie près —
+# elle met « Sarcelles » dans la 10e, canton qui n'existe qu'en 1964 ; la carte
+# y met GONESSE (traits fins vers Écouen et Luzarches, trait épais vers
+# Aulnay). Les cantons divisés se lisent commune par commune
+# (`composition_1958.py`, COMMUNES) : jetons « communes:<canton>:<communes> »
+# et « reste:<canton> ».
+# Bornes : la carte dit 1958-1967 ; la loi du 12 juillet 1966 a joué aux
+# législatives de mars 1967, mais la base garde la Seine de 1958 jusqu'au
+# 1er janvier 1968 (`88`) et pose les circonscriptions de 1967 des 92, 93 et
+# 94 à partir de cette date (`125`) : « jusqu » 1968, pour s'y raccorder.
+"78": {"nom": "Seine-et-Oise", "photo": 107, "depuis": 1958, "jusqu": 1968, "circos": {
     # « le canton d'Argenteuil était divisé : les communes d'Argenteuil,
-    #   Bezons et Sannois formaient la 1re ; le reste était rattaché à la 2e »
+    #   Bezons et Sannois formaient la 1re ; le reste du canton était
+    #   rattaché à la 2e »
     "1": ["communes:Argenteuil:Argenteuil,Bezons,Sannois"],
-    "2": ["reste:Argenteuil"],
+    "2": ["Maisons-Laffitte", "reste:Argenteuil"],
     # « le canton de Marly était divisé : la commune de Rueil appartenait à
     #   la 3e ; le reste du canton était rattaché à la 5e »
-    "3": ["communes:Marly:Rueil"],
+    "3": ["Saint-Germain-en-Laye", "communes:Marly:Rueil"],
     # « le canton de Versailles-Ouest était divisé : la partie de la ville de
     #   Versailles appartenant à ce canton et la commune du Chesnay étaient
-    #   rattachées à la 4e ; le reste était inclus dans la 5e »
-    "4": ["ville:Versailles-Ouest", "commune:Le Chesnay"],
-    "5": ["reste:Marly", "reste:Versailles-Ouest"],
+    #   rattachées à la 4e ; le reste était inclus dans la 5e ». La flèche
+    #   du 4 vise Sèvres ; celle du 5, Versailles-Nord.
+    "4": ["Sèvres", "communes:Versailles-Ouest:Versailles,Le Chesnay"],
+    "5": ["reste:Marly", "reste:Versailles-Ouest", "Versailles-Nord"],
+    "6": ["Palaiseau", "Versailles-Sud"],
+    "7": ["Meulan", "Poissy"],
+    "8": ["L'Isle-Adam", "Marines", "Pontoise"],
+    "9": ["Aulnay-sous-Bois"],
+    "10": ["Écouen", "Gonesse", "Luzarches"],
+    "11": ["Le Raincy"],
+    "12": ["Montmorency", "Taverny"],
     # « le canton de Corbeil était divisé : les communes de Corbeil, Étiolles,
     #   Morsang, Saint-Germain, Saint-Pierre, Saintry, Soisy et Tigery étaient
     #   rattachées à la 13e ; le reste était inclus dans la 14e »
@@ -1177,13 +1196,17 @@ REGLES_1958 = {
     #   Valenton et Villeneuve appartenaient à la 16e ; le reste à la 13e »
     "13": ["communes:Corbeil:Corbeil,Étiolles,Morsang,Saint-Germain,"
            "Saint-Pierre,Saintry,Soisy,Tigery", "reste:Villeneuve-Saint-Georges"],
-    "14": ["reste:Corbeil", "La Ferté-Alais", "Milly", "Méréville"],
+    # Arpajon : trait fin vers La Ferté-Alais, épais vers Longjumeau et Limours.
+    "14": ["reste:Corbeil", "Arpajon", "Étampes", "La Ferté-Alais", "Milly",
+           "Méréville"],
     # « le canton de Longjumeau était divisé : les communes d'Ablon et
     #   Villeneuve-le-Roi appartenaient à la 16e ; le reste constituait la 15e »
     "15": ["reste:Longjumeau"],
     "16": ["Boissy-Saint-Léger",
            "communes:Villeneuve-Saint-Georges:Valenton,Villeneuve",
            "communes:Longjumeau:Ablon,Villeneuve-le-Roi"],
+    "17": ["Chevreuse", "Dourdan-Nord", "Dourdan-Sud", "Limours",
+           "Montfort-l'Amaury", "Rambouillet"],
     "18": ["Magny", "Bonnières", "Limay", "Mantes", "Houdan"]}},
 
 }

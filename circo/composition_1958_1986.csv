@@ -2633,28 +2633,53 @@ dep,departement,depuis,jusqu,reference,circonscription,canton_atlas,canton_id,ca
 77,Seine-et-Marne,1958,1986,1958-12-01,4,Montereau-fault-Yonne,,,sans unité en base
 77,Seine-et-Marne,1958,1986,1958-12-01,5,La Chapelle,7703,La Chapelle-la-Reine,préfixe
 77,Seine-et-Marne,1958,1986,1958-12-01,5,Lorrez,7716,Lorrez-le-Bocage,préfixe
-78,Seine-et-Oise,1958,1967,1958-12-01,1,"communes:Argenteuil:Argenteuil,Bezons,Sannois",,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,2,reste:Argenteuil,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,3,communes:Marly:Rueil,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,4,ville:Versailles-Ouest,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,4,commune:Le Chesnay,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,5,reste:Marly,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,5,reste:Versailles-Ouest,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,13,"communes:Corbeil:Corbeil,Étiolles,Morsang,Saint-Germain,Saint-Pierre,Saintry,Soisy,Tigery",,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,13,reste:Villeneuve-Saint-Georges,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,14,reste:Corbeil,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,15,reste:Longjumeau,,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,16,Boissy-Saint-Léger,7804,Boissy-Saint-Léger,
-78,Seine-et-Oise,1958,1967,1958-12-01,16,"communes:Villeneuve-Saint-Georges:Valenton,Villeneuve",,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,16,"communes:Longjumeau:Ablon,Villeneuve-le-Roi",,,divisé
-78,Seine-et-Oise,1958,1967,1958-12-01,14,La Ferté-Alais,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,14,Milly,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,14,Méréville,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,18,Magny,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,18,Bonnières,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,18,Limay,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,18,Mantes,,,sans unité en base
-78,Seine-et-Oise,1958,1967,1958-12-01,18,Houdan,,,sans unité en base
+78,Seine-et-Oise,1958,1968,1958-12-01,1,"communes:Argenteuil:Argenteuil,Bezons,Sannois",,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,2,Maisons-Laffitte,7821,Maisons-Laffitte,
+78,Seine-et-Oise,1958,1968,1958-12-01,2,reste:Argenteuil,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,3,Saint-Germain-en-Laye,7835,Saint-Germain-en-Laye,
+78,Seine-et-Oise,1958,1968,1958-12-01,3,communes:Marly:Rueil,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,4,Sèvres,7836,Sèvres,
+78,Seine-et-Oise,1958,1968,1958-12-01,4,"communes:Versailles-Ouest:Versailles,Le Chesnay",,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,5,reste:Marly,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,5,reste:Versailles-Ouest,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,5,Versailles-Nord,7838,Versailles-Nord,
+78,Seine-et-Oise,1958,1968,1958-12-01,6,Palaiseau,7830,Palaiseau,
+78,Seine-et-Oise,1958,1968,1958-12-01,6,Versailles-Sud,7840,Versailles-Sud,
+78,Seine-et-Oise,1958,1968,1958-12-01,7,Meulan,7826,Meulan,
+78,Seine-et-Oise,1958,1968,1958-12-01,7,Poissy,7831,Poissy,
+78,Seine-et-Oise,1958,1968,1958-12-01,8,L'Isle-Adam,7815,L'Isle-Adam,
+78,Seine-et-Oise,1958,1968,1958-12-01,8,Marines,7823,Marines,
+78,Seine-et-Oise,1958,1968,1958-12-01,8,Pontoise,7832,Pontoise,
+78,Seine-et-Oise,1958,1968,1958-12-01,9,Aulnay-sous-Bois,7803,Aulnay-sous-Bois,
+78,Seine-et-Oise,1958,1968,1958-12-01,10,Écouen,7810,Écouen,
+78,Seine-et-Oise,1958,1968,1958-12-01,10,Gonesse,7813,Gonesse,
+78,Seine-et-Oise,1958,1968,1958-12-01,10,Luzarches,7819,Luzarches,
+78,Seine-et-Oise,1958,1968,1958-12-01,11,Le Raincy,7833,Le Raincy,
+78,Seine-et-Oise,1958,1968,1958-12-01,12,Montmorency,7829,Montmorency,
+78,Seine-et-Oise,1958,1968,1958-12-01,12,Taverny,7837,Taverny,
+78,Seine-et-Oise,1958,1968,1958-12-01,13,"communes:Corbeil:Corbeil,Étiolles,Morsang,Saint-Germain,Saint-Pierre,Saintry,Soisy,Tigery",,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,13,reste:Villeneuve-Saint-Georges,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,14,reste:Corbeil,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,14,Arpajon,7802,Arpajon,
+78,Seine-et-Oise,1958,1968,1958-12-01,14,Étampes,7811,Étampes,
+78,Seine-et-Oise,1958,1968,1958-12-01,14,La Ferté-Alais,7812,La Ferté-Alais,
+78,Seine-et-Oise,1958,1968,1958-12-01,14,Milly,7827,Milly,
+78,Seine-et-Oise,1958,1968,1958-12-01,14,Méréville,7825,Méréville,
+78,Seine-et-Oise,1958,1968,1958-12-01,15,reste:Longjumeau,,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,16,Boissy-Saint-Léger,7804,Boissy-Saint-Léger,
+78,Seine-et-Oise,1958,1968,1958-12-01,16,"communes:Villeneuve-Saint-Georges:Valenton,Villeneuve",,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,16,"communes:Longjumeau:Ablon,Villeneuve-le-Roi",,,divisé
+78,Seine-et-Oise,1958,1968,1958-12-01,17,Chevreuse,7806,Chevreuse,
+78,Seine-et-Oise,1958,1968,1958-12-01,17,Dourdan-Nord,7808,Dourdan-Nord,
+78,Seine-et-Oise,1958,1968,1958-12-01,17,Dourdan-Sud,7809,Dourdan-Sud,
+78,Seine-et-Oise,1958,1968,1958-12-01,17,Limours,7817,Limours,
+78,Seine-et-Oise,1958,1968,1958-12-01,17,Montfort-l'Amaury,7828,Montfort-l'Amaury,
+78,Seine-et-Oise,1958,1968,1958-12-01,17,Rambouillet,7834,Rambouillet,
+78,Seine-et-Oise,1958,1968,1958-12-01,18,Limay,7816,Limay,
+78,Seine-et-Oise,1958,1968,1958-12-01,18,Houdan,7814,Houdan,
+78,Seine-et-Oise,1958,1968,1958-12-01,18,Magny,7820,Magny-en-Vexin,préfixe
+78,Seine-et-Oise,1958,1968,1958-12-01,18,Bonnières,7805,Bonnières-sur-Seine,préfixe
+78,Seine-et-Oise,1958,1968,1958-12-01,18,Mantes,7822,Mantes-Gassicourt,préfixe
 79,Deux-Sèvres,1958,1986,1958-12-01,1,Niort-1,7920,Niort-1,
 79,Deux-Sèvres,1958,1986,1958-12-01,1,Niort-2,7921,Niort-2,
 79,Deux-Sèvres,1958,1986,1958-12-01,1,Frontenay-Rohan-Rohan,7912,Frontenay-Rohan-Rohan,

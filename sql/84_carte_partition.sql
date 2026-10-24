@@ -249,6 +249,19 @@ COMMENT ON TABLE p84_trace IS
 --
 --      *Une boîte englobante est une approximation du voisinage qui empire
 --      avec la densité — c'est-à-dire là où l'on peut le moins se le permettre.*
+--
+--      CORRIGÉ LE 23 OCTOBRE 2026 : GEOFLA SEUL NE SUFFIT PAS. GEOFLA dit qui
+--      est voisin EN 2011. Arconsat (63) porte Chabreloche jusqu'en 1876 et
+--      touche alors Saint-Romain-d'Urfé (42) ; en 2011 elles sont à 1 634 m.
+--      Saint-Romain manquait donc à l'anneau du 63, le bout de son sol qui
+--      déborde dans le cadre y paraissait vide, et le comblement le donnait à
+--      Arconsat : 18 667 m² dessinés deux fois, toute la « couture entre
+--      départements » de 0,019 km² (JOURNAL, 23 octobre). Le voisinage se
+--      cherche désormais aussi sur les polygones ANR À LA DATE, dans les deux
+--      sens : le socle comme les candidats.
+--
+--      *Le voisinage d'aujourd'hui n'est pas celui de 1870 : un référentiel de
+--      position ne vaut que là où les communes n'ont pas changé de forme.*
 -- ---------------------------------------------------------------------------
 CREATE FUNCTION partition_voisinage(p_date date, p_dep text DEFAULT NULL)
 RETURNS TABLE (atom_id text)
@@ -263,6 +276,12 @@ LANGUAGE sql STABLE AS $$
         SELECT ag.geom
         FROM   dedans d
         JOIN   atom_geom ag ON ag.atom_id = d.atom_id
+        UNION ALL
+        -- La forme d'époque : c'est elle que le treillis découpe.
+        SELECT an.geom
+        FROM   dedans d
+        JOIN   atom_geom_anr an ON an.atom_id = d.atom_id
+                               AND an.periode @> p_date
     )
     -- Le département lui-même, y compris les atomes sans polygone GEOFLA que
     -- le test de voisinage ne pourrait pas trouver.
@@ -271,13 +290,19 @@ LANGUAGE sql STABLE AS $$
     -- Puis l'anneau. La jointure part de `socle`, qui est petit, et sonde
     -- l'index gist de `atom_geom` : quelques centaines de recherches indexées
     -- au lieu d'un balayage des 38 000 polygones du pays.
-    SELECT DISTINCT v.atom_id
+    SELECT v.atom_id
     FROM   socle s
-    JOIN   atom_geom v ON ST_DWithin(v.geom, s.geom, 100);
+    JOIN   atom_geom v ON ST_DWithin(v.geom, s.geom, 100)
+    UNION
+    -- Et les voisins d'époque, par l'index gist de `atom_geom_anr`.
+    SELECT v.atom_id
+    FROM   socle s
+    JOIN   atom_geom_anr v ON ST_DWithin(v.geom, s.geom, 100)
+                          AND v.periode @> p_date;
 $$;
 
 COMMENT ON FUNCTION partition_voisinage(date, text) IS
-    'Le département et son anneau de contexte réel — les atomes limitrophes, pas une boîte englobante. Rend tout quand p_dep est NULL n''a pas de sens : appeler avec un département.';
+    'Le département et son anneau de contexte réel — les atomes limitrophes en 2011 (GEOFLA) ou à la date (ANR), pas une boîte englobante. Rend tout quand p_dep est NULL n''a pas de sens : appeler avec un département.';
 
 
 -- LA RÈGLE HISTORIQUE, CONSERVÉE COMME CODE VIVANT ET NON COMME COMMENTAIRE.
@@ -1076,7 +1101,7 @@ BEGIN
     SELECT 'dont couture entre départements, km²',
            round((coalesce(sum(s.aire) FILTER (WHERE NOT s.meme_dep), 0)
                   / 1e6)::numeric, 3),
-           '0,019 les 3 et 5 sept. 2026 ; 0,000 le 2, avant l''anneau réel. Sans objet sur un seul département'
+           '0,000 depuis le 23 oct. 2026 (anneau GEOFLA + ANR à la date) ; 0,019 du 3 sept. au 23 oct., Arconsat / Saint-Romain-d''Urfé. Sans objet sur un seul département'
     FROM  (SELECT ST_Area(ST_Intersection(a.geom, b.geom)) AS aire,
                   (a.dep IS NOT DISTINCT FROM b.dep) AS meme_dep
              FROM t84_chk a

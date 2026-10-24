@@ -52,7 +52,7 @@ bas](#carte-dune-liste-de-communes-aop-intercommunalité) :
 
 | image | contenu | nom proposé |
 |---|---|---|
-| **carte du département** | circonscriptions coloriées et numérotées, limites cantonales et communales en trait fin | `Circonscriptions législatives de la Côte-d'Or (1852-1869).svg` |
+| **carte du département** | circonscriptions coloriées et numérotées — nommées quand elles ont un nom (« Belley », « Bourg-1 », 1876-1936), la description aussi —, limites cantonales et communales en trait fin | `Circonscriptions législatives de la Côte-d'Or (1852-1869).svg` |
 | **situation d'une circonscription** | le département en grisé, la circonscription choisie en rouge | `Côte-d'Or 2e circonscription 1852-1869 (localisation).svg` |
 | **carte des cantons** | cantons coloriés et nommés, circonscriptions en trait épais, communes en trait fin | `Cantons de la Côte-d'Or (1875-1891).svg` |
 | **situation d'un canton** | le département en grisé, le canton choisi en rouge | `Canton de Mirebeau (Côte-d'Or) 1875-1891 (localisation).svg` |
@@ -403,9 +403,10 @@ Ce qui a changé avec la trame datée :
   identiques sous deux noms. *Une signature d'entrée dit ce qu'il faut
   recalculer, une signature de sortie ce qu'il faut réécrire.*
 * **Le repli est écrit, pas subi.** Chaque version porte `r`, chaque unité porte
-  `n_anr` et `n_repli`, et la page affiche séparément l'export sans épaisseur,
-  les communes en repli à cette année, et celles qu'aucune source ne sait
-  dessiner. Une carte hybride qui ne dit pas où elle est hybride ment par
+  `n_anr`, `n_repli` et `n_repris`, et la page affiche séparément l'export sans
+  épaisseur, les communes en repli à cette année, celles qu'aucune source ne
+  sait dessiner, et celles que `84` reconstitue par différence — avec les
+  unités dont le contour en dépend. Une carte hybride qui ne dit pas où elle est hybride ment par
   omission.
 * **`--jobs N`** : un processus par département, la connexion ouverte *après* le
   fork (contexte `spawn`). Le découpage s'arrête au département parce que c'est

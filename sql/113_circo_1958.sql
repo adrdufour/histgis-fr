@@ -43,7 +43,11 @@
 -- NON POSÉS — voir `composition_1958_etat.csv`, colonne `raison`
 -- ==========================================================
 --   * cantons divisés entre deux circonscriptions (13, 33, 37, 38, 62, 69,
---     76, 78, 90) : il faut descendre à l'atome ;
+--     76, 90) : il faut descendre à l'atome. La Seine-et-Oise (78), dont
+--     les six cantons divisés le sont par COMMUNES, est posée depuis le
+--     24 octobre 2026 : `composition_1958.py` la descend à la commune
+--     (`circo/composition_1958_communes.csv`, colonne `insee` de `t113_div`),
+--     sur les cantons que `127` lui a rendus ;
 --   * trame cantonale de 1958 absente de la base (61, 71, 72, 73, 74, 77) ;
 --   * lecture qui ne fait pas une partition (06, 44, 59, 68, 2A, 2B) ;
 --   * 39 et 70 : non photographiés. 75 : déjà en base.
@@ -82,7 +86,17 @@ CREATE TEMP TABLE t113_etat (
     cantons_base int, posable text, raison text, atlas_sans_unite text);
 \copy t113_etat FROM 'circo/composition_1958_etat.csv' WITH (FORMAT csv, HEADER true)
 
--- la division : canton de la base → unité de circonscription
+-- Les cantons divisés résolus à la commune (Seine-et-Oise, 24 octobre 2026) :
+-- une ligne par (canton, code INSEE de l'atome), voir `composition_1958.py`.
+DROP TABLE IF EXISTS t113_comm;
+CREATE TEMP TABLE t113_comm (
+    dep text, departement text, depuis int, jusqu int, reference date,
+    circonscription text, jeton_atlas text, canton_id text, canton_base text,
+    insee text);
+\copy t113_comm FROM 'circo/composition_1958_communes.csv' WITH (FORMAT csv, HEADER true)
+
+-- la division : canton de la base → unité de circonscription ; `insee` n'est
+-- renseigné que pour un canton divisé, rangé commune par commune
 DROP TABLE IF EXISTS t113_div;
 CREATE TEMP TABLE t113_div AS
 SELECT DISTINCT c.dep, c.departement, c.reference, c.canton_id,
@@ -93,8 +107,12 @@ SELECT DISTINCT c.dep, c.departement, c.reference, c.canton_id,
        c.departement || ' ' || c.circonscription
            || CASE WHEN c.circonscription = '1' THEN 're' ELSE 'e' END
            || ' circonscription'                                    AS nom,
-       c.depuis
-  FROM t113_comp c
+       c.depuis, c.insee
+  FROM (SELECT dep, departement, depuis, jusqu, reference, circonscription,
+               canton_id, NULL::text AS insee FROM t113_comp
+        UNION ALL
+        SELECT dep, departement, depuis, jusqu, reference, circonscription,
+               canton_id, insee FROM t113_comm) c
   JOIN t113_etat e ON e.dep = c.dep AND e.depuis = c.depuis AND e.posable = 'oui'
  WHERE c.canton_id <> ''
 \if :{?dep}
@@ -130,6 +148,8 @@ WITH fen AS (                       -- la vie cantonale de l'atome dans la fenê
       FROM t113_div d
       JOIN membership m ON m.niveau = 'canton' AND m.unit_id = d.canton_id
                        AND m.periode && daterange(d.du, d.au, '[)')
+      JOIN atom a ON a.atom_id = m.atom_id
+     WHERE d.insee IS NULL OR d.insee = a.insee_geofla
 ), vie AS (                         -- quand l'atome a un canton DU DÉPARTEMENT
     -- Dans le département de la division seulement : Genay et Montanay
     -- passent de l'Ain au Rhône le 20 avril 1969 (canton 6925) et gardaient

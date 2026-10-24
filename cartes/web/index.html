@@ -424,11 +424,18 @@ const CONTENU_ADRESSE = /\/[cx]_[0-9a-f]{12}\.json$/;
 
 async function charge(url) {
   if (cache.has(url)) return cache.get(url);
-  const opts = CONTENU_ADRESSE.test(url) ? {} : { cache: "no-cache" };
-  const p = fetch(url, opts).then(r => {
-    if (!r.ok) throw new Error(url + " : " + r.status);
-    return r.json();
-  });
+  const immuable = CONTENU_ADRESSE.test(url);
+  const opts = immuable ? {} : { cache: "no-cache" };
+  // Un serveur antérieur au 23 octobre 2026 marquait aussi ses 404 « immutable,
+  // un an » : le navigateur rejoue alors l'absence sans rien demander, même
+  // après rechargement. Un fichier adressé par son contenu qui manque est donc
+  // redemandé une fois au serveur, cache court-circuité.
+  const p = fetch(url, opts)
+    .then(r => (!r.ok && immuable) ? fetch(url, { cache: "reload" }) : r)
+    .then(r => {
+      if (!r.ok) throw new Error(url + " : " + r.status);
+      return r.json();
+    });
   // Un échec ne se met pas en cache. Le 23 octobre 2026, un export de l'Aisne
   // (qui vide `dep/02/` puis le réécrit pendant dix-huit minutes) a servi des
   // 404 à une page ouverte : la promesse rejetée restait dans le cache, chaque
@@ -1215,6 +1222,30 @@ function panneau() {
       dessinée${cp.sansGeom>1?"s":""}</b> : aucune source ne sait où
       ${cp.sansGeom>1?"elles sont":"elle est"} à cette date. Le rattachement est
       connu, la forme non — le trou est dans la trame, pas dans la composition.</p>`;
+  }
+
+  // `repris` — le quatrième fait, posé par l'export depuis `84` et que la page
+  // ignorait. Une commune reprise n'est ni ANR ni en repli : ANR ne la pourvoit
+  // pas à cette date, et `partition_reprise` lui donne la part que son voisin
+  // perd l'année où elle apparaît chez ANR (`84` § 4). Le contour de l'unité
+  // en dépend, et rien sur la carte ne le distingue d'un contour attesté :
+  // c'est donc ici, unité par unité, qu'il doit se dire. La couche cantonale
+  // d'abord, la circonscription quand il n'y a pas de canton — les deux comptent
+  // les mêmes atomes.
+  const kr = kc || kx;
+  const reprises = kr ? kr.unites.filter(u => u.repris) : [];
+  if (reprises.length) {
+    const n = reprises.reduce((s, u) => s + u.repris, 0);
+    const MAX = 8;
+    const liste = reprises.slice(0, MAX).map(u =>
+      `${echappe(u.nom)} (${u.repris} sur ${u.n})`).join(", ") +
+      (reprises.length > MAX ? `, et ${reprises.length - MAX} autre${reprises.length - MAX > 1 ? "s" : ""}` : "");
+    h += `<p class="note"><b>${n} commune${n>1?"s":""} reconstituée${n>1?"s":""}
+      par différence</b> : ANR-COMMUNES ne ${n>1?"les":"la"} pourvoit pas en
+      ${S.annee}, et ${n>1?"leur":"sa"} forme est la part que perd ${n>1?"un voisin":"son voisin"}
+      l'année où ${n>1?"elles apparaissent":"elle apparaît"} chez ANR. Le contour
+      ${reprises.length>1?"des unités suivantes en dépend":"de l'unité suivante en dépend"} —
+      déduit, non attesté : ${liste}.</p>`;
   }
 
   if (sansGeom) {
@@ -2133,8 +2164,10 @@ function nomCommons(u) {
   return n.replace(/ \(\)$/, "");
 }
 
-// Le libellé court posé sur la carte : « 1 » pour `21-01` ou `2101`,
-// « Beaune » pour un collège d'arrondissement, rien pour un scrutin de liste.
+// Le libellé court posé sur la carte : « 1 » pour `21-01`, le nom quand la
+// circonscription en a un (« Belley », « Bourg-1 » pour `0101`, `0102` en
+// 1876-1936 ; « Beaune » pour un collège d'arrondissement), rien pour un
+// scrutin de liste.
 //  - Un code à suffixe littéral (`75-nord`, `75-sud`, `75-tout` : la
 //    banlieue de la Seine) ne dit rien du numéro : on le prend dans le nom
 //    (« Seine 13e circonscription — Sceaux » → 13 ; « collège de
@@ -2156,12 +2189,20 @@ function etiquetteCourte(u) {
   const reste = tiret ? c.slice(c.indexOf("-") + 1)
               : (c.startsWith(S.dep) ? c.slice(S.dep.length) : c);
   if (/^\d+$/.test(reste)) {
-    if (tiret || +reste < 80) return String(+reste);
-    const m = /^(.+?) \(([^()]*)\)$/.exec(String(u.nom || ""));
+    if (tiret) return String(+reste);
+    // Code TRF-GIS : quand la circonscription a un nom (« Belley »,
+    // « Bourg-1 », 1876-1936), c'est lui qu'on pose, pas le rang du code.
+    const nom = String(u.nom || "");
+    const nomme = u.regime !== "liste" && nom && !/circonscription/.test(nom);
+    if (+reste < 80) return nomme ? nom : String(+reste);
+    const m = /^(.+?) \(([^()]*)\)$/.exec(nom);
     if (!m) return "";
     const t = m[2].split("-"), i = t.findIndex(x => /^\d+$/.test(x));
     const ville = i > 0 ? `${m[1]}-${t.slice(0, i).join("-")}` : m[1];
-    const nums = t.filter(x => /^\d+$/.test(x)).map(k => {
+    const ks = t.filter(x => /^\d+$/.test(x));
+    // ville laissée entière : son nom, la description dit lesquelles elle mêle
+    if (nomme) return ks.length ? ville : "";
+    const nums = ks.map(k => {
       const v = S.cfgCirco.unites.find(w => w.nom === `${ville}-${k}`);
       return v ? etiquetteCourte(v) : null;
     });
@@ -2735,9 +2776,10 @@ function affCirco(u) {
   if (m) return { n: +m[1], court: `${ordinal(m[1])} circonscription`,
                   prose: `${ordinal(m[1])} circonscription` };
   const v = /^(.+)-(\d+)$/.exec(nc);
-  if (v) return { n: null, court: nc, prose: `${ordinal(v[2])} circonscription de ${v[1]}` };
+  const de = s => { const { prep, nom } = deLieu(s); return prep + nom; };
+  if (v) return { n: null, court: nc, prose: `${ordinal(v[2])} circonscription ${de(v[1])}` };
   if (/circonscription|collège/.test(nc)) return { n: null, court: nc, prose: `circonscription « ${nc} »` };
-  return { n: null, court: nc, prose: `circonscription de ${nc}` };
+  return { n: null, court: nc, prose: `circonscription ${de(nc)}` };
 }
 
 // ---------------------------------------------------------------------------
