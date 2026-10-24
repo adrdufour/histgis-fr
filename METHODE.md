@@ -736,7 +736,7 @@ deux colonnes attribue au hasard · 13.8 Une réparation qui repasse par la sour
 rend une source différente · 13.9 On ne réduit pas le nombre de preuves, on
 écarte celles qui n'en sont pas · 13.10 Remonter la chaîne jusqu'à la source
 avant d'accuser un maillon · 13.11 Le référentiel bouge et se déguise en
-événement
+événement · 13.12 Une carte d'atlas lit son découpage, pas son fond
 
 **§ 14 — Territoires, atomes et clés**
 14.1 Interroger un atome ne renseigne pas sur un territoire ·
@@ -1305,6 +1305,27 @@ créations tardives, elles en inventaient 120. Même piège que les 22 atomes
 C'est aussi le recodage qui a fait échapper Chisa et Butry-sur-Oise à `15`
 (§ 6.2 quater) : la résolution des codes doit être **transitive** — quatre codes
 sont recodés deux fois de suite.
+
+### 13.12 Une carte d'atlas lit son découpage, pas son fond
+
+Gaudillère dessine **toutes** ses périodes, 1815 comprise, sur un seul fond
+cantonal, et ce fond est postérieur à 1978. Son canton de L'Argentière
+(Hautes-Alpes, p. 102) descend jusqu'à Orcières et Embrun : il contient
+Fressinières et Champcella dès 1815. Or elles étaient au canton de Guillestre,
+arrondissement d'Embrun, jusqu'à leur rattachement à L'Argentière : Fressinières
+en 1949 (table du JO, p. 10066), Champcella par le décret du 22 février 1978.
+Prise au pied de la lettre, la carte les met au collège de Briançon en 1815 et
+dans la circonscription de Briançon de 1876 à 1919. La base, qui suit les
+cantons de l'époque, les met à Embrun, et c'est elle qui a raison (JOURNAL,
+24 octobre 2026).
+
+> Ce que l'atlas affirme, c'est **quels cantons** forment une circonscription,
+> pas **quelles communes** forment un canton.
+
+Les règles de `circo/` se lisent donc par nom de canton, jamais par le tracé.
+Un écart commune par commune entre la carte servie et une planche de
+Gaudillère est d'abord à chercher dans un transfert de commune entre la date
+de la planche et 1978, avant d'accuser la base.
 
 ---
 
