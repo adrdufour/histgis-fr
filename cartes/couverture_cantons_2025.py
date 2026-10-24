@@ -30,11 +30,11 @@ neuf et rien ne l'impose. Le gain attendu n'est pas la coïncidence mais le
 stock : des coupes déjà propres, calées sur des rues et des cours d'eau
 réels, où l'on choisit au lieu de dessiner. Le taux de coïncidence se jugera
 ville par ville dans QGIS, Marseille en premier — ses onze lignes de 1870,
-1886 et 1901 sont décrites dans `gaudillere/protocole_georeferencement.md`.
+1886 et 1901 sont décrites dans `annexes/gaudillere/protocole_georeferencement.md`.
 
 Dépendances
 -----------
-`psycopg2` seul, déjà utilisé par `cartes_cantons.py` et
+`psycopg2` seul, déjà utilisé par `archives/planches/cartes_cantons.py` et
 `consolide_registre.py`. Pas de pyproj, pas de pyshp : la reprojection et
 l'intersection sont faites par PostGIS, qui les fait mieux.
 

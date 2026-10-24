@@ -3,11 +3,11 @@
 """
 cartes_cantons.py — une planche cantonale par département et par borne
 
-    python3 cartes/cartes_cantons.py            # tous les départements
-    python3 cartes/cartes_cantons.py 01 13 69   # une sélection
+    python3 archives/planches/cartes_cantons.py            # tous les départements
+    python3 archives/planches/cartes_cantons.py 01 13 69   # une sélection
 
-Produit `cartes/dep_NN.pdf`, trois pages : 1870, 1940, 1999.
-Avec `--un-seul`, tout va dans `cartes/cantons_tous.pdf`, une
+Produit `archives/planches/sorties/dep_NN.pdf`, trois pages : 1870, 1940, 1999.
+Avec `--un-seul`, tout va dans `archives/planches/sorties/cantons_tous.pdf`, une
 planche par page : plus commode pour comparer les departements.
 Avec `--2025`, une quatrieme planche par departement, tiree de la table
 `can2025` (ADMIN EXPRESS v4) : la seule des quatre qui coupe les villes.
@@ -378,7 +378,7 @@ def projection_1815():
     Rend {dep: [(cle_source, [cles_resultants]), ...]} pour les départements
     éligibles. Les autres sont écartés, avec la raison.
     """
-    reg = (FsPath(__file__).resolve().parent.parent
+    reg = (FsPath(__file__).resolve().parents[2]
            / "cantons" / "mouvements_cantonaux.csv")
     if not reg.exists():
         return {}, {}

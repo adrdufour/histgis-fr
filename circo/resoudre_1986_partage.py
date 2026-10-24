@@ -154,6 +154,16 @@ REGLES = [
          phrase="colombier et la jard, enclavées entre pons et gémozac, "
                 "placées dans la 4eme ; le reste du canton dans la 3eme"),
 
+    # Le Bourget : le seul canton à TROIS circonscriptions possibles chez le
+    # ministère (3, 4 et 5). Le § 5 n'en dit rien : la carte « 1986 » de la
+    # Seine-Saint-Denis (photo 131, fond communal) ne divise que Saint-Denis,
+    # et range Dugny et Le Bourget avec Le Blanc-Mesnil et Stains (4e), Drancy
+    # avec Bobigny (5e). Lu le 24 octobre 2026.
+    dict(canton='9309', label='Le Bourget', reste=None,
+         nommees={'93-04': ['Le Bourget', 'Dugny'], '93-05': ['Drancy']},
+         phrase="(carte 1986, pas de texte) dugny et le bourget 4eme, "
+                "drancy 5eme"),
+
     dict(canton='2613', label='Loriol', reste='26-02',
          nommees={'26-03': ['Ambonil']},
          phrase="ambonil, enclavé dans le canton de crest nord, "

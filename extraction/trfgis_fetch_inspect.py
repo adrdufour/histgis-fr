@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-trfgis_fetch_inspect.py — récupération et inspection des dépôts TRF-GIS
+extraction/trfgis_fetch_inspect.py — récupération et inspection des dépôts TRF-GIS
 (Victor Gay, Harvard Dataverse, CC BY 4.0).
 
 Sans dépendance : urllib + stdlib. Parseur DBF minimal (en-tête seul).
 
 Usage :
-    python3 trfgis_fetch_inspect.py list cantons
-    python3 trfgis_fetch_inspect.py fetch communes --match COG_COMMUNES_1870
-    python3 trfgis_fetch_inspect.py fetch communes --match COG_COMMUNES --years 1870,1900,1940
-    python3 trfgis_fetch_inspect.py inspect ./trfgis > rapport_entetes.txt
+    python3 extraction/trfgis_fetch_inspect.py list cantons
+    python3 extraction/trfgis_fetch_inspect.py fetch communes --match COG_COMMUNES_1870
+    python3 extraction/trfgis_fetch_inspect.py fetch communes --match COG_COMMUNES --years 1870,1900,1940
+    python3 extraction/trfgis_fetch_inspect.py inspect ./trfgis > rapport_entetes.txt
 
 Le rapport produit par `inspect` est ce qu'il faut relire avant d'écrire
 le chargeur : ne jamais se fier aux noms de colonnes de la data paper,

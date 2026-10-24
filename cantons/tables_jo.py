@@ -2,7 +2,7 @@
 qu'elles disent des cantons.
 
 Entrée : jorf_txt/TABLE_ANALYTIQUE_JORF_AAAA_col.txt (pdftotext -layout, puis
-cantons/jorf_colonnes.py), produits depuis JORF/tables/*.pdf.
+cantons/jorf_colonnes.py), produits depuis sources/JORF/tables/*.pdf.
 
 Méthode. La table est une suite d'articles qui finissent tous par un renvoi à
 la page du JO (« p. 2585. »). On découpe le texte sur ces renvois ; un article

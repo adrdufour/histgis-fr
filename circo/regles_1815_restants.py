@@ -3,7 +3,7 @@
 regles_1815_restants.py — règles Gaudillère 1815-1870, seconde série
 
 Départements 01 à 20 (sauf l'Aveyron, non photographié), 64 à 73 et le Var
-(83), transcrits depuis les photos des CARTES de l'atlas (photo_1815_1870/,
+(83), transcrits depuis les photos des CARTES de l'atlas (photos/1815_1870/,
 seconde série du 4 octobre 2026, 120 photos, pages 99 à 664 environ).
 Les numéros de photo cités sont le rang dans l'ordre alphabétique des
 fichiers PXL_20261004_*.jpg (1 = PXL_20261004_131505689.jpg).
@@ -288,7 +288,7 @@ REGLES_RESTANTS = {
   # suit Arles-Est partout.
   # LIMITE — VILLE DE MARSEILLE. L'atlas dessine la commune en deux ou
   # trois morceaux selon les périodes, sans nommer les cantons. Lecture
-  # approchée, à reprendre à l'atome (gaudillere/marseille_cantons.md) :
+  # approchée, à reprendre à l'atome (annexes/gaudillere/marseille_cantons.md) :
   #   * morceau ouest (littoral nord)  -> Marseille-1 ;
   #   * morceau sud (1831-1848)        -> Marseille-5, Marseille-6 ;
   #   * le reste (centre et est)       -> Marseille-2, -3, -4 (et -5, -6
@@ -497,11 +497,14 @@ REGLES_RESTANTS = {
         "3": {"cantons": ["Serrières", "Annonay", "Satillieu",
                           "Saint-Félicien", "Saint-Agrève"]},
         "4": {"reprend": ["Largentière-1", "Largentière-2"]}}},
-    # DOUTE : Le Cheylard et Saint-Pierreville sont cernés d'un trait épais
-    # au nord (Saint-Martin, Lamastre, Vernoux) ET au sud (Privas) ; ils ne
-    # tiennent à la 1re que par Antraigues (trait fin). Rangés dans la 1re.
+    # DOUTE : Le Cheylard est cerné d'un trait épais au nord (Saint-Martin,
+    # Lamastre, Vernoux) ET au sud (Privas) ; il ne tient à la 1re que par
+    # Antraigues (trait fin). Rangé dans la 1re.
+    # Saint-Pierreville est dans la 3e d'après le texte de Gaudillère
+    # (corrigé le 24 octobre 2026 ; la carte l'avait fait ranger dans la 1re).
     {"depuis": 1852, "jusqu": 1870, "base": "1876", "circos": {
-        "3": {"reprend": ["Tournon-1", "Tournon-2"], "moins": ["Le Cheylard"]},
+        "3": {"reprend": ["Tournon-1", "Tournon-2"], "moins": ["Le Cheylard"],
+              "plus": ["Saint-Pierreville"]},
         "2": {"reprend": ["Largentière-1", "Largentière-2"]},
         "1": {"reste": True}}},
   ]},
@@ -641,7 +644,8 @@ REGLES_RESTANTS = {
     # rectifiée » : découpage identique en 1852, 1857, 1863 et 1869.
     {"depuis": 1852, "jusqu": 1870, "base": "1876", "circos": {
         "2": {"reprend": ["Saint-Quentin-1", "Saint-Quentin-2"]},
-        "3": {"reprend": ["Vervins-1", "Vervins-2"], "plus": ["Marle"]},
+        "3": {"reprend": ["Vervins-1", "Vervins-2"],
+              "plus": ["Marle", "Rozoy-sur-Serre"]},
         "4": {"reprend": ["Soissons", "Château-Thierry"]},
         "1": {"reste": True}}},
   ]},

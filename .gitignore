@@ -18,23 +18,23 @@ sources/
 /modif_canton/
 /arrondissement/
 
-# Reçus mais hors de sources/, pour des raisons historiques. Même
-# principe, même poids : 4 Go de données qui ne changent pas et n'ont
-# aucun historique à raconter. Sans ces lignes, un seul `git add -A`
-# suffisait à les faire entrer dans le dépôt.
-#   2,6 Go — PDF des Journaux officiels
+# JORF/, ANR_COMMUNES_22042026/, polynesie/, nouvelle_caledonie/ et
+# 42-Vasserot_quartiers_v1L93/ étaient reçus hors de sources/ et ignorés
+# chacun par son nom. Rangés dans sources/ le 21 octobre 2026, ils tombent
+# sous la règle ci-dessus. Les anciens chemins restent, pour les vieux commits.
 /JORF/
-#   1,2 Go — trame communale 1790-2020, Zenodo 10.5281/zenodo.3727274
 /ANR_COMMUNES_22042026/
-#    93 Mo — BD ADMIN Polynésie française
 /polynesie/
-#    36 Mo — BD ADMIN Nouvelle-Calédonie (DITTT), avec ses CGU et son lisez-moi
 /nouvelle_caledonie/
-#   ODbL, inutilisable — gardé pour référence
 /42-Vasserot_quartiers_v1L93/
 
+# --- photos de l'atlas : ni reçues ni régénérables ---------------------
+# Source des transcriptions de circo/regles_*.py. Jamais suivies (poids),
+# mais SANS AUTRE COPIE : à sauvegarder à part.
+/photos/
+
 # --- sorties régénérables ---------------------------------------------
-# Régénérées par cartes_cantons.py, cartes_paris.py, recupere_iris.py…
+# Régénérées par recupere_iris.py, export_web.py, archives/planches/…
 # Voir LISEZMOI.md pour la commande qui refait chacune.
 sorties/
 *.pdf
@@ -54,7 +54,7 @@ cog1954/ocr_brut/
 jorf_txt/*_raw.txt
 
 # Même raison pour les `_col.txt` : c'est `cantons/jorf_colonnes.py` qui les
-# refait à partir des PDF de JORF/, en quelques minutes. 35 Mo pour une sortie
+# refait à partir des PDF de sources/JORF/, en quelques minutes. 35 Mo pour une sortie
 # de script, alors que le script, lui, est versionné.
 # Les `.txt` nus RESTENT dans le dépôt : ils viennent d'une extraction
 # antérieure dont le résultat dépend de la version de tesseract, et ne se
@@ -62,7 +62,7 @@ jorf_txt/*_raw.txt
 jorf_txt/*_col.txt
 
 # Tables analytiques annuelles du JO, 1941-1990 : leurs `.txt` nus ne viennent
-# PAS de tesseract mais de `pdftotext -layout` sur les PDF de `JORF/tables/`
+# PAS de tesseract mais de `pdftotext -layout` sur les PDF de `sources/JORF/tables/`
 # (voir l'en-tête de `cantons/tables_jo.py`) — refaits à l'identique en
 # quelques minutes, et 94 Mo, plus que tout le dépôt. La règle ci-dessus
 # (« les .txt nus restent ») ne vaut donc pas pour eux. Ce que les scripts en
@@ -110,6 +110,10 @@ venv/
 # Ce qu'on a écarté sans oser le supprimer : pages téléchargées par erreur,
 # doublons. Rien n'y est lu par un script ; se vide à la main.
 /_to_delete/
+
+# Base de styles que QGIS dépose dans le dossier d'où on le lance : ni
+# donnée ni code. Rangée dans archives/ le 21 octobre 2026.
+symbology-style.db
 
 # --- système -----------------------------------------------------------
 # Verrous de LibreOffice (`.~lock.fichier.xlsx#`), posés tant qu'il est ouvert.

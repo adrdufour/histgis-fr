@@ -2,7 +2,7 @@
 """
 regles_1815_21_63.py — règles Gaudillère 1815-1870, départements 21 à 63
 
-Transcrites depuis les photos des CARTES de l'atlas (photo_1815_1870/,
+Transcrites depuis les photos des CARTES de l'atlas (photos/1815_1870/,
 pages 216 à 478), et non depuis un texte « par rapport à » : chaque carte
 donne la composition entière d'une période. On l'écrit donc, autant que
 possible, par circonscriptions entières de 1876 (`reprend`) ou par listes

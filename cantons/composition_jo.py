@@ -187,6 +187,11 @@ def liste_communes(texte, alerte=None):
         return []
     out = []
     for n in SEPARE.split(segment):
+        # Un nom de commune ne contient jamais « . » suivi d'un blanc. `FIN`
+        # n'arrête la liste qu'avant une majuscule ; quand la page enchaîne sur
+        # son pied (« …Saint-Rémy et Servas. 30 décembre 1984 », décret
+        # n° 84-1222), le dernier nom emportait la date et ne s'appariait plus.
+        n = re.split(r"\.\s", n)[0]
         n = n.strip(" .;:'’")
         # Les numeros d'article imprimes en marge du JO — « 28 Canton de… » —
         # restent colles au nom quand la colonne les emporte. Ils n'ont jamais
@@ -199,6 +204,15 @@ def liste_communes(texte, alerte=None):
         # Saint-Aubin-d'Arquenay au canton d'Ouistreham-Riva-Bella : le nom
         # ne commencait plus par une majuscule, et le test le rejetait.
         n = re.sub(r"^[^\wÀ-ÿ]+", "", n)
+        # « …, Beynost, Thil et de Miribel. » — `SEPARE` coupe sur « et » et
+        # laisse « de Miribel », qui ne commence pas par une majuscule : le
+        # dernier nom tombait sans un mot, et c'est souvent le chef-lieu
+        # (Miribel, Montluel, décret n° 82-77). Trouvé le 19 octobre 2026.
+        # « du » et « des » sont des articles contractés : « et du Mesnil-
+        # Saint-Denis » est Le Mesnil-Saint-Denis, « et des Mureaux » Les Mureaux.
+        n = re.sub(r"^du\s+(?=[A-ZÀ-Ÿ])", "Le ", n)
+        n = re.sub(r"^des\s+(?=[A-ZÀ-Ÿ])", "Les ", n)
+        n = re.sub(r"^de\s+(?=[A-ZÀ-Ÿ])|^d['’]\s*(?=[A-ZÀ-Ÿ])", "", n)
         n = re.sub(r"\s*-\s*", "-", n)
         n = re.sub(r"\s+", " ", n)
         if 2 < len(n) < 45 and re.match(r"[A-ZÀ-Ÿ]", n):
@@ -560,6 +574,25 @@ def main():
                                    appariement="fraction seule", attribution=multi,
                                    legifrance_url=d0["legifrance_url"]))
                 continue
+            # Un nom composé coupé par une virgule d'OCR : « L’Isle, d’Espa-
+            # gnac » (décret n° 82-25, canton de Ruelle) est L'Isle-d'Espagnac.
+            # Depuis que le « d’ » de tête est retiré, la seconde moitié
+            # s'appariait hors du département (Espagnac, Corrèze) et `75` la
+            # posait en Charente — rebuild du 19 octobre 2026. On recolle deux
+            # voisins quand le nom recollé est une commune EXACTE du
+            # département et que la seconde moitié seule n'en est pas une.
+            recolle = []
+            for n in noms:
+                if recolle and cle(n) not in vivantes.get(dep, {}):
+                    for liant in ("-d'", "-de-", "-du-", "-des-"):
+                        if cle(recolle[-1] + liant + n) in vivantes.get(dep, {}):
+                            recolle[-1] = recolle[-1] + liant + n
+                            break
+                    else:
+                        recolle.append(n)
+                else:
+                    recolle.append(n)
+            noms = recolle
             for n in noms:
                 insee, ref, q = apparie(n, dep, vivantes, disparues, prefixes)
                 # « prefixe ambigu » renvoie la LISTE des candidats dans `ref` :

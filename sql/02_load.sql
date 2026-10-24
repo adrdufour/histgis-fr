@@ -1,5 +1,5 @@
 -- ============================================================================
--- histgis — 02_load.sql : chargement des CSV produits par trfgis_extract.py
+-- histgis — 02_load.sql : chargement des CSV produits par extraction/trfgis_extract.py
 --
 -- Usage :
 --   psql -v racine=/chemin/projet_carte -f 02_load.sql
@@ -18,7 +18,7 @@ SET search_path TO histgis, public;
 -- 1. Tables de transit
 -- ---------------------------------------------------------------------------
 -- La 3e colonne des CSV atom/membership dépend du --geom-col passé à
--- trfgis_extract.py : code INSEE à 5 caractères avec --geom-col insee,
+-- extraction/trfgis_extract.py : code INSEE à 5 caractères avec --geom-col insee,
 -- statut 1/2/3 avec --geom-col com_act. On la lit en texte et on la range
 -- dans la bonne colonne au moment de l'insertion.
 CREATE TEMP TABLE stg_atom (

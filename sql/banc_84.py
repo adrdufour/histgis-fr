@@ -104,7 +104,7 @@ from shapely.strtree import STRtree
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = os.path.join(RACINE, 'cartes', 'web', 'donnees', 'dep')
-GPKG = os.path.join(RACINE, 'ANR_COMMUNES_22042026', 'COMMUNES_22042026.gpkg')
+GPKG = os.path.join(RACINE, 'sources/ANR_COMMUNES_22042026', 'COMMUNES_22042026.gpkg')
 
 MOTIFS = ('unique', 'source_datee', 'departage', 'comblement')
 

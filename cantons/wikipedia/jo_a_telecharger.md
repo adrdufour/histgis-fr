@@ -5,7 +5,7 @@ Dressé le 10 octobre 2026 depuis `cantons/decrets_complement.csv`.
 Légifrance protège le téléchargement des JO numérisés (bouton « accès protégé ») :
 il faut passer par le navigateur, à la main. Pour chaque ligne : ouvrir le lien,
 cliquer sur « Journal officiel … (version papier numérisée) », et enregistrer le
-PDF dans `JORF/` **sous le nom de la première colonne** (`JORF_AAAAMMJJ_NNN.pdf`),
+PDF dans `sources/JORF/` **sous le nom de la première colonne** (`JORF_AAAAMMJJ_NNN.pdf`),
 qui est l'identifiant que Légifrance donne lui-même au fichier.
 
 | fichier | page(s) | dép. | ce qu'il faut y lire | lien |

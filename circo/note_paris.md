@@ -76,7 +76,7 @@ décide de rien, seul le référentiel officiel tranchera, par jointure.
 > La troisième, `mont de piétémarais` (ligne 225, période 1857-1863,
 > 6ᵉ circonscription), a été corrigée **directement dans
 > `paris_decoupage.csv`**, dédoublée en `mont-de-piété` et `marais`.
-> Sauvegarde de l'état antérieur : `paris_decoupage.csv.avant_virgule`.
+> Sauvegarde de l'état antérieur : `archives/filets/circo/paris_decoupage.csv.avant_virgule`.
 >
 > Critère retenu, celui du projet : les deux formes existent ailleurs dans le
 > fichier, cinq fois chacune. Ce n'est pas une reconstitution, c'est un

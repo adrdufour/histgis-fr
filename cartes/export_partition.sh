@@ -3,8 +3,10 @@
 # export_partition.sh — la passe nationale de `--partition`, par lots, reprenable
 #
 #     bash cartes/export_partition.sh                      # tout ce qui manque
-#     bash cartes/export_partition.sh --lot 4 --jobs 2      # plus prudent
+#     bash cartes/export_partition.sh --jobs 6              # six de front
+#     bash cartes/export_partition.sh --lot 4 --jobs 2      # l'ancien réglage
 #     bash cartes/export_partition.sh 52 04 12             # une sélection
+#     bash cartes/export_partition.sh --refaire            # tout refaire, reprenable
 #
 # POURQUOI CE SCRIPT EXISTE
 # -------------------------
@@ -36,6 +38,25 @@
 # coûteux à lui seul, et deux processus valent mieux que huit sur une machine
 # de 30 Go où tourne aussi un navigateur.
 #
+# PLUS DE DEUX PROCESSUS — 21 octobre 2026. Deux processus et des lots de
+# quatre, c'était huit heures vingt pour la France (18-19 octobre). Deux
+# changements, et une sécurité :
+#
+#   * `--jobs` se règle par défaut sur la MÉMOIRE DISPONIBLE et non plus sur
+#     une constante : un processus par tranche de GO_PAR_JOB Go libres (3 ;
+#     mesuré le 21 octobre 2026 à six de front sur l'Ain et cinq voisins :
+#     0,7 Go au plus par backend, jamais moins de 20 Go libres, ×4,5),
+#     plafonné à la moitié des cœurs. C'est la mémoire qui a tué le cluster le
+#     3 septembre, pas les cœurs ;
+#   * un lot vaut par défaut TROIS fois `--jobs`. Chaque lot attend son
+#     département le plus lent avant de passer au suivant : avec des lots de
+#     la taille du pool, la moitié des processus attendaient l'Aisne les bras
+#     croisés. Plus le lot est grand, moins cette attente pèse — mais plus un
+#     lot perdu coûte ;
+#   * un lot qui échoue sur la CONNEXION (le serveur a coupé : OOM, le plus
+#     souvent) divise `--jobs` par deux pour la suite de la nuit, au lieu de
+#     reproduire la même panne lot après lot.
+#
 # Il ne remplace pas `export_web.py`, il l'appelle. Toute la logique d'export
 # reste là-bas ; ici il n'y a qu'une boucle et de la patience.
 #
@@ -53,8 +74,9 @@ RACINE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$RACINE"
 
 SORTIE="sorties/part"
-LOT=4
-JOBS=2
+LOT=""
+JOBS=""
+GO_PAR_JOB="${GO_PAR_JOB:-3}"   # Go de mémoire disponible par processus
 ROLE="histgis_carte"
 BASE="histgis"
 PYTHON="${PYTHON:-python3}"
@@ -74,6 +96,20 @@ done
 
 JOURNAL="$SORTIE/../part_lots.log"
 mkdir -p "$SORTIE"
+
+# --- combien de front --------------------------------------------------------
+# Lu une fois, au départ : le navigateur ouvert ou fermé au moment de lancer
+# compte, et c'est voulu.
+if [[ -z "$JOBS" ]]; then
+    dispo_go=$(awk '/MemAvailable/ {print int($2 / 1048576)}' /proc/meminfo)
+    coeurs=$(nproc)
+    JOBS=$(( dispo_go / GO_PAR_JOB ))
+    (( JOBS > coeurs / 2 )) && JOBS=$(( coeurs / 2 ))
+    (( JOBS < 1 )) && JOBS=1
+    echo "  --jobs $JOBS : ${dispo_go} Go disponibles / ${GO_PAR_JOB} Go par" \
+         "processus, $coeurs cœurs" | tee -a "$JOURNAL"
+fi
+[[ -z "$LOT" ]] && LOT=$(( JOBS * 3 ))
 
 # --- l'interpréteur, AVANT la boucle ----------------------------------------
 # Le 3 septembre 2026, ce script a lancé 23 lots en deux secondes, chacun mort
@@ -142,9 +178,20 @@ fi
 # Reprise : un département dont l'index existe déjà est considéré comme fait.
 # C'est le fichier écrit EN DERNIER par `exporte_departement`, donc sa présence
 # vaut preuve que le département est allé au bout.
+#
+# `--refaire` EST REPRENABLE LUI AUSSI (21 octobre 2026). Il refaisait tout à
+# chaque lancement : une nuit interrompue à 4 h repartait de l'Ain. Le premier
+# lancement pose un témoin daté dans la sortie ; un département dont l'index
+# est PLUS RÉCENT que le témoin est fait. Le témoin s'efface quand tout est
+# fait — relancer la même commande reprend donc là où la nuit s'est arrêtée.
+TEMOIN="$SORTIE/.refaire_depuis"
+if [[ -n "${REFAIRE:-}" && ! -f "$TEMOIN" ]]; then
+    touch "$TEMOIN"
+fi
 A_FAIRE=()
 for d in "${DEPS[@]}"; do
-    if [[ -z "${REFAIRE:-}" && -f "$SORTIE/dep/$d/index.json" ]]; then
+    f="$SORTIE/dep/$d/index.json"
+    if [[ -f "$f" ]] && { [[ -z "${REFAIRE:-}" ]] || [[ "$f" -nt "$TEMOIN" ]]; }; then
         continue
     fi
     A_FAIRE+=("$d")
@@ -155,6 +202,7 @@ echo "=== $(date '+%F %T') — ${#A_FAIRE[@]} département(s) à faire sur ${#DE
 
 if [[ ${#A_FAIRE[@]} -eq 0 ]]; then
     echo "Rien à faire : tout est déjà dans $SORTIE." | tee -a "$JOURNAL"
+    rm -f "$TEMOIN"
     exit 0
 fi
 
@@ -183,9 +231,19 @@ while [[ $i -lt ${#A_FAIRE[@]} ]]; do
         # qui n'écrit RIEN, en revanche, échoue avant même de travailler.
         ecrits=0
         for d in "${lot[@]}"; do
-            [[ -f "$SORTIE/dep/$d/index.json" ]] && ecrits=$((ecrits + 1))
+            f="$SORTIE/dep/$d/index.json"
+            if [[ -f "$f" ]] && { [[ -z "${REFAIRE:-}" ]] || [[ "$f" -nt "$TEMOIN" ]]; }; then
+                ecrits=$((ecrits + 1))
+            fi
         done
         perdus+=("${lot[@]}")
+        # Le serveur a coupé : moins de front pour la suite. `export_web.py`
+        # l'écrit en toutes lettres quand un échec vient de la connexion.
+        if [[ $JOBS -gt 1 ]] && tail -40 "$JOURNAL" | grep -q "vient de la CONNEXION"; then
+            JOBS=$(( JOBS / 2 ))
+            echo "    connexion perdue : --jobs ramené à $JOBS pour la suite" \
+                | tee -a "$JOURNAL"
+        fi
         if [[ $ecrits -gt 0 ]]; then
             echo "    échec partiel ($ecrits écrits) — repris au prochain passage" \
                 | tee -a "$JOURNAL"
@@ -213,12 +271,16 @@ done
 # --- ce qui manque encore ----------------------------------------------------
 manquants=()
 for d in "${DEPS[@]}"; do
-    [[ -f "$SORTIE/dep/$d/index.json" ]] || manquants+=("$d")
+    f="$SORTIE/dep/$d/index.json"
+    if [[ ! -f "$f" ]] || { [[ -n "${REFAIRE:-}" ]] && ! [[ "$f" -nt "$TEMOIN" ]]; }; then
+        manquants+=("$d")
+    fi
 done
 
 echo "=== $(date '+%F %T') — terminé ===" | tee -a "$JOURNAL"
 if [[ ${#manquants[@]} -eq 0 ]]; then
     echo "Les ${#DEPS[@]} départements sont dans $SORTIE." | tee -a "$JOURNAL"
+    rm -f "$TEMOIN"
     exit 0
 fi
 echo "${#manquants[@]} département(s) manquent encore :" | tee -a "$JOURNAL"

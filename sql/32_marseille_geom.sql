@@ -2,9 +2,9 @@
 -- histgis — 32_marseille_geom.sql : donner aux cantons de Marseille
 --                                   leur vraie géométrie (1870-1940)
 --
---   ogr2ogr -f PostgreSQL PG:dbname=histgis gaudillere/marseille_cantons.gpkg \
+--   ogr2ogr -f PostgreSQL PG:dbname=histgis annexes/gaudillere/marseille_cantons.gpkg \
 --           -nln histgis.gaud_lignes      -nlt LINESTRING   lignes
---   ogr2ogr -f PostgreSQL PG:dbname=histgis gaudillere/marseille_cantons.gpkg \
+--   ogr2ogr -f PostgreSQL PG:dbname=histgis annexes/gaudillere/marseille_cantons.gpkg \
 --           -nln histgis.gaud_etiquettes  -nlt POINT        etiquettes
 --   psql -d histgis -1 -f 32_marseille_geom.sql
 --

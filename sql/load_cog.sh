@@ -73,5 +73,11 @@ $PSQL -c "CREATE INDEX cog_commune_idx ON histgis.cog_commune_src (annee, dep, c
           CREATE INDEX cog_canton_idx  ON histgis.cog_canton_src  (annee, dep, canton);
           ANALYZE histgis.cog_commune_src; ANALYZE histgis.cog_canton_src;"
 
+# `commune_moderne` sort de `21` juste avant : sans statistiques, le § 5 de
+# `23` la joint à cog_rat par une boucle imbriquée, et la requête a tourné
+# plus de trente minutes au rebuild du 19 octobre 2026 (quelques millisecondes
+# une fois analysée). L'autovacuum ne passe pas toujours à temps.
+$PSQL -c "ANALYZE histgis.commune_moderne;"
+
 echo "=== 3/3 diagnostic ==="
 $PSQL -f "$ICI/23_cog_diag.sql"

@@ -83,7 +83,7 @@
 -- 3 945 km² comptés deux fois en métropole n'existe pas ici. Codes INSEE
 -- identiques au fichier du ministère, 112/112 dans les quatre DOM. Trame
 -- communale stable de 1999 à 2012 à deux communes près, Saint-Barthélemy et
--- Saint-Martin, détachées en 2007. Voir `docs/note_outre_mer.md` et
+-- Saint-Martin, détachées en 2007. Voir `annexes/docs/note_outre_mer.md` et
 -- `sources/outremer/recette_outremer.py`.
 -- ============================================================================
 

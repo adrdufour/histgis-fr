@@ -174,7 +174,8 @@
   .cle { display: flex; gap: 8px; align-items: center; margin: 4px 0; font-size: 12px; }
   .cle svg { width: 26px; height: 10px; flex: none; }
   #chargement { position: absolute; inset: 0; display: none; place-items: center;
-                background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris); }
+                background: rgba(247,245,240,.6); font-size: 13px; color: var(--gris);
+                padding: 0 15%; text-align: center; }
   @media (max-width: 900px) { aside { display: none; } }
   /* ---- Dialogue d'export vers Commons -------------------------------- */
   dialog#commons { width: min(1180px, 96vw); max-height: 94vh; padding: 0;
@@ -423,12 +424,25 @@ const CONTENU_ADRESSE = /\/[cx]_[0-9a-f]{12}\.json$/;
 
 async function charge(url) {
   if (cache.has(url)) return cache.get(url);
-  const opts = CONTENU_ADRESSE.test(url) ? {} : { cache: "no-cache" };
-  const p = fetch(url, opts).then(r => {
-    if (!r.ok) throw new Error(url + " : " + r.status);
-    return r.json();
-  });
+  const immuable = CONTENU_ADRESSE.test(url);
+  const opts = immuable ? {} : { cache: "no-cache" };
+  // Un serveur antérieur au 23 octobre 2026 marquait aussi ses 404 « immutable,
+  // un an » : le navigateur rejoue alors l'absence sans rien demander, même
+  // après rechargement. Un fichier adressé par son contenu qui manque est donc
+  // redemandé une fois au serveur, cache court-circuité.
+  const p = fetch(url, opts)
+    .then(r => (!r.ok && immuable) ? fetch(url, { cache: "reload" }) : r)
+    .then(r => {
+      if (!r.ok) throw new Error(url + " : " + r.status);
+      return r.json();
+    });
+  // Un échec ne se met pas en cache. Le 23 octobre 2026, un export de l'Aisne
+  // (qui vide `dep/02/` puis le réécrit pendant dix-huit minutes) a servi des
+  // 404 à une page ouverte : la promesse rejetée restait dans le cache, chaque
+  // retour sur ces années échouait sans bruit, et la carte restait sur 1972
+  // pendant que le curseur affichait 2002.
   cache.set(url, p);
+  p.catch(() => { if (cache.get(url) === p) cache.delete(url); });
   return p;
 }
 
@@ -569,6 +583,7 @@ function teinteDe(i, total) {
 // ===========================================================================
 async function chargeDepartement(dep) {
   const j = ++S.jeton;
+  $("#chargement").textContent = "chargement…";
   $("#chargement").style.display = "grid";
   try {
     const [idx, com, cont] = await Promise.all([
@@ -1045,7 +1060,7 @@ function dessine() {
         if (noms.length === 1) {
           pose(p[0], p[1], nom, "etiq etiq-commune");
         } else {
-          // Empilés, comme dans `cartes_cantons.py` : un « A / B / C » sur une
+          // Empilés, comme dans `archives/planches/cartes_cantons.py` : un « A / B / C » sur une
           // ligne déborde et se confond avec le nom du voisin.
           const t = document.createElementNS(NS, "text");
           t.setAttribute("x", p[0]);
@@ -1209,6 +1224,30 @@ function panneau() {
       connu, la forme non — le trou est dans la trame, pas dans la composition.</p>`;
   }
 
+  // `repris` — le quatrième fait, posé par l'export depuis `84` et que la page
+  // ignorait. Une commune reprise n'est ni ANR ni en repli : ANR ne la pourvoit
+  // pas à cette date, et `partition_reprise` lui donne la part que son voisin
+  // perd l'année où elle apparaît chez ANR (`84` § 4). Le contour de l'unité
+  // en dépend, et rien sur la carte ne le distingue d'un contour attesté :
+  // c'est donc ici, unité par unité, qu'il doit se dire. La couche cantonale
+  // d'abord, la circonscription quand il n'y a pas de canton — les deux comptent
+  // les mêmes atomes.
+  const kr = kc || kx;
+  const reprises = kr ? kr.unites.filter(u => u.repris) : [];
+  if (reprises.length) {
+    const n = reprises.reduce((s, u) => s + u.repris, 0);
+    const MAX = 8;
+    const liste = reprises.slice(0, MAX).map(u =>
+      `${echappe(u.nom)} (${u.repris} sur ${u.n})`).join(", ") +
+      (reprises.length > MAX ? `, et ${reprises.length - MAX} autre${reprises.length - MAX > 1 ? "s" : ""}` : "");
+    h += `<p class="note"><b>${n} commune${n>1?"s":""} reconstituée${n>1?"s":""}
+      par différence</b> : ANR-COMMUNES ne ${n>1?"les":"la"} pourvoit pas en
+      ${S.annee}, et ${n>1?"leur":"sa"} forme est la part que perd ${n>1?"un voisin":"son voisin"}
+      l'année où ${n>1?"elles apparaissent":"elle apparaît"} chez ANR. Le contour
+      ${reprises.length>1?"des unités suivantes en dépend":"de l'unité suivante en dépend"} —
+      déduit, non attesté : ${liste}.</p>`;
+  }
+
   if (sansGeom) {
     h += `<p class="avert">${sansGeom} atome${sansGeom>1?"s":""} sans géométrie :
       l'unité concernée est incomplète, pas fausse.</p>`;
@@ -1336,7 +1375,7 @@ function nomA(c, annee) {
 //
 // La règle du projet est de grouper par la géométrie, jamais par un code :
 // « un code est une reconstruction, l'empreinte est un fait »
-// (`cartes/cartes_cantons.py`). Deux atomes de même empreinte occupent
+// (`archives/planches/cartes_cantons.py`). Deux atomes de même empreinte occupent
 // exactement le même terrain — les dessiner séparément les empile en silence.
 //
 // Une fois groupés, deux situations très différentes se cachaient sous le même
@@ -1798,8 +1837,26 @@ async function majAnnee(annee, redessine = true) {
   S.annee = annee;
   $("#annee-aff").textContent = annee;
   $("#curseur").value = annee;
-  const ok = await chargeAnnee(annee);
-  if (ok && redessine) dessine();
+  // Une année qui ne se charge pas ne doit pas laisser à l'écran celle d'avant
+  // sous le millésime de la nouvelle : la page le dit, en plein milieu.
+  let ok;
+  try {
+    ok = await chargeAnnee(annee);
+  } catch (err) {
+    console.error(err);
+    const ch = $("#chargement");
+    ch.textContent = `${annee} n'a pas pu être chargée (${err.message}). ` +
+      `La carte montre encore une autre année. Un export est peut-être en ` +
+      `cours : recharger la page quand il sera fini.`;
+    ch.style.display = "grid";
+    lien();
+    return;
+  }
+  if (ok) {
+    $("#chargement").textContent = "chargement…";
+    $("#chargement").style.display = "none";
+    if (redessine) dessine();
+  }
   lien();
 }
 
@@ -2082,6 +2139,8 @@ function nomModerne(dep) {
 // sur-Saône-2) » pour une ville partagée non découpée, « Lisieux () ».
 const ordinal = n => (+n === 1 ? "1re" : `${+n}e`);
 function nomCommons(u) {
+  const s = SECTEURS_SEINE[u.id];
+  if (s) return `${s[0] < 4 ? "Paris" : "Seine"} ${ordinal(s[0])} circonscription (${s[1].toLowerCase()})`;
   let n = String(u.nom || u.code || "");
   let m = /^[0-9AB]+e circonscription n° 0*(\d+)$/.exec(n);
   if (m) {
@@ -2105,8 +2164,10 @@ function nomCommons(u) {
   return n.replace(/ \(\)$/, "");
 }
 
-// Le libellé court posé sur la carte : « 1 » pour `21-01` ou `2101`,
-// « Beaune » pour un collège d'arrondissement, rien pour un scrutin de liste.
+// Le libellé court posé sur la carte : « 1 » pour `21-01`, le nom quand la
+// circonscription en a un (« Belley », « Bourg-1 » pour `0101`, `0102` en
+// 1876-1936 ; « Beaune » pour un collège d'arrondissement), rien pour un
+// scrutin de liste.
 //  - Un code à suffixe littéral (`75-nord`, `75-sud`, `75-tout` : la
 //    banlieue de la Seine) ne dit rien du numéro : on le prend dans le nom
 //    (« Seine 13e circonscription — Sceaux » → 13 ; « collège de
@@ -2114,19 +2175,34 @@ function nomCommons(u) {
 //  - Les codes TRF-GIS 80 et au-delà (`0380`) ne sont pas des numéros : c'est
 //    une ville partagée entre circonscriptions et laissée entière. On pose les
 //    numéros des circonscriptions qu'elle mêle (« 3-4 »), ou rien.
+//  - Au scrutin de liste, rien quand le département forme une seule
+//    circonscription ; quand il en forme plusieurs (1919-1928 : Seine,
+//    Aveyron, Calvados…), leur numéro, le `L` du code ôté (`L7504` → 4).
 function etiquetteCourte(u) {
-  const c = String(u.code || "");
-  if (u.regime === "liste" || /^L/.test(c)) return "";
+  if (SECTEURS_SEINE[u.id]) return String(SECTEURS_SEINE[u.id][0]);
+  let c = String(u.code || "");
+  if (u.regime === "liste" || /^L/.test(c)) {
+    if (!S.cfgCirco || S.cfgCirco.unites.filter(w => w.g).length < 2) return "";
+    c = c.replace(/^L/, "");
+  }
   const tiret = c.includes("-");
   const reste = tiret ? c.slice(c.indexOf("-") + 1)
               : (c.startsWith(S.dep) ? c.slice(S.dep.length) : c);
   if (/^\d+$/.test(reste)) {
-    if (tiret || +reste < 80) return String(+reste);
-    const m = /^(.+?) \(([^()]*)\)$/.exec(String(u.nom || ""));
+    if (tiret) return String(+reste);
+    // Code TRF-GIS : quand la circonscription a un nom (« Belley »,
+    // « Bourg-1 », 1876-1936), c'est lui qu'on pose, pas le rang du code.
+    const nom = String(u.nom || "");
+    const nomme = u.regime !== "liste" && nom && !/circonscription/.test(nom);
+    if (+reste < 80) return nomme ? nom : String(+reste);
+    const m = /^(.+?) \(([^()]*)\)$/.exec(nom);
     if (!m) return "";
     const t = m[2].split("-"), i = t.findIndex(x => /^\d+$/.test(x));
     const ville = i > 0 ? `${m[1]}-${t.slice(0, i).join("-")}` : m[1];
-    const nums = t.filter(x => /^\d+$/.test(x)).map(k => {
+    const ks = t.filter(x => /^\d+$/.test(x));
+    // ville laissée entière : son nom, la description dit lesquelles elle mêle
+    if (nomme) return ks.length ? ville : "";
+    const nums = ks.map(k => {
       const v = S.cfgCirco.unites.find(w => w.nom === `${ville}-${k}`);
       return v ? etiquetteCourte(v) : null;
     });
@@ -2140,6 +2216,21 @@ function etiquetteCourte(u) {
   if (m && m[1] !== "département") return m[1];
   return reste;
 }
+
+// La Seine de 1919-1928 : quatre circonscriptions au scrutin de liste, trois
+// secteurs de Paris et la banlieue. La base les tient sous deux séries de
+// codes (`75-1` à `75-3` pour Paris, `L7504` « Seine-4 » pour la banlieue) ;
+// on leur rend leur numéro et leur nom d'usage.
+//   1 Nord : 8e, 9e, 10e, 17e, 18e, 19e arrondissements
+//   2 Est : 1er à 4e, 11e, 12e, 20e
+//   3 Sud : 5e, 6e, 7e, 13e à 16e
+const SECTEURS_SEINE = {
+  "Q1919_1928#1": [1, "Nord"], "Q1919_1928#2": [2, "Est"],
+  "Q1919_1928#3": [3, "Sud"], "L7504@1919": [4, "Banlieue"],
+};
+// L'étiquette posée sur l'image : le numéro seul, secteurs compris — le nom
+// du secteur reste dans la description.
+const etiquetteCarte = etiquetteCourte;
 
 // ---------------------------------------------------------------------------
 // Période de validité du découpage affiché
@@ -2375,17 +2466,19 @@ function etiquetteCanton(u) {
   if (n) return n === 1 ? "1er" : n + "e";
   return String(u.nom || "");
 }
-// Taille et coupure d'un nom de canton : le plus grand corps qui tienne dans
-// le disque libre autour du point d'étiquette (`d`, en pixels), sur une ligne,
-// ou sur deux en coupant à un tiret ou une espace près du milieu quand le
-// nom y gagne nettement.
-function miseEnLignes(t, d) {
+// Taille et coupure d'une étiquette : le plus grand corps qui tienne dans le
+// disque libre autour du point d'étiquette (`d`, en pixels), sans dépasser
+// `max`, sur une ligne, ou sur deux en coupant à un tiret ou une espace près
+// du milieu quand l'étiquette y gagne nettement. Les numéros des
+// circonscriptions de Paris (« 1/20 ») passent aussi par là : à 28 px fixes,
+// ils débordaient de leur demi-arrondissement et se chevauchaient.
+function miseEnLignes(t, d, { max = 15, min = 7, coupe = 9 } = {}) {
   d = d || 10;
-  const corps = lignes => Math.min(15,
+  const corps = lignes => Math.min(max,
     (1.9 * d) / (0.58 * Math.max(...lignes.map(s => s.length))),
     (1.6 * d) / (1.15 * lignes.length));
   let lignes = [t], f = corps(lignes);
-  if (t.length > 9) {
+  if (t.length > coupe) {
     const coupes = [...t.matchAll(/[- ]/g)].map(m => m.index);
     if (coupes.length) {
       const i = coupes.reduce((a, b) =>
@@ -2395,7 +2488,7 @@ function miseEnLignes(t, d) {
       if (f2 > f * 1.15) { lignes = deux; f = f2; }
     }
   }
-  return { lignes, taille: Math.max(7, Math.round(f * 2) / 2) };
+  return { lignes, taille: Math.max(min, Math.round(f * 2) / 2) };
 }
 
 function fabriqueSVG(o) {
@@ -2464,14 +2557,15 @@ function fabriqueSVG(o) {
   if (o.numeros) {
     const lis = [], txt = [];
     for (const u of unites) {
-      const t = canton ? etiquetteCanton(u) : etiquetteCourte(u);
+      const t = canton ? etiquetteCanton(u) : etiquetteCarte(u);
       if (!t) continue;
       const p = poleInterieur(u.g, P);
       if (!p) continue;
       const sur = u === cible;
-      let taille, lignes = [t];
-      if (canton) ({ taille, lignes } = miseEnLignes(t, p.d));
-      else taille = /^\d+$/.test(t) ? 34 : /^[\d\/-]+$/.test(t) ? 28 : (t.length > 12 ? 19 : 23);
+      const { taille, lignes } = canton ? miseEnLignes(t, p.d)
+        : miseEnLignes(t, p.d, { min: 9, coupe: 5,
+            max: /^\d+$/.test(t) ? 34 : /^[\d\/-]+$/.test(t) ? 28
+               : (t.length > 12 ? 19 : 23) });
       const x = p[0].toFixed(1), y = p[1].toFixed(1);
       let pos, corps;
       if (lignes.length === 1) {
@@ -2482,7 +2576,9 @@ function fabriqueSVG(o) {
         corps = lignes.map((l, k) => `<tspan x="${x}" dy="${k ? "1.1em"
           : (0.35 - 0.55 * (lignes.length - 1)).toFixed(2) + "em"}">${xmlEsc(l)}</tspan>`).join("");
       }
-      lis.push(`<text ${pos} stroke="${sur ? COMMONS.rougeTrait : "#ffffff"}">${corps}</text>`);
+      // Le liseré suit le corps : 5 px autour d'un numéro de 12 px le noient.
+      const ep = canton ? "" : ` stroke-width="${Math.max(2, Math.min(5, taille * 0.17)).toFixed(1)}"`;
+      lis.push(`<text ${pos} stroke="${sur ? COMMONS.rougeTrait : "#ffffff"}"${ep}>${corps}</text>`);
       txt.push(`<text ${pos} fill="${sur ? "#ffffff" : "#1d1c1a"}">${corps}</text>`);
     }
     L.push(`<g id="${canton ? "noms" : "numeros"}" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" ` +
@@ -2534,8 +2630,9 @@ function cantonsParCirco() {
   if (!c) return null;
   const r = new Map();
   for (const [cx, l] of c.cantonsDe)
-    r.set(cx, l.map(e => e.u.nom + (e.partie ? " (partie)" : ""))
-      .sort((a, b) => a.localeCompare(b, "fr")));
+    r.set(cx, l.map(e => (cantonParis(e.u) ? etiquetteCanton(e.u) + " arrondissement" : e.u.nom) +
+                         (e.partie ? " (partie)" : ""))
+      .sort((a, b) => a.localeCompare(b, "fr", { numeric: true })));
   return r;
 }
 
@@ -2675,13 +2772,14 @@ const etListe = l => l.length <= 1 ? (l[0] || "") : l.slice(0, -1).join(", ") + 
 // d'arrondissement de 1876-1919 : « Beaune-1 », « Semur »).
 function affCirco(u) {
   const nc = nomCommons(u);
-  const m = /(\d+)(?:re|er|e) circonscription$/.exec(nc);
+  const m = /(\d+)(?:re|er|e) circonscription(?: \([^()]*\))?$/.exec(nc);
   if (m) return { n: +m[1], court: `${ordinal(m[1])} circonscription`,
                   prose: `${ordinal(m[1])} circonscription` };
   const v = /^(.+)-(\d+)$/.exec(nc);
-  if (v) return { n: null, court: nc, prose: `${ordinal(v[2])} circonscription de ${v[1]}` };
+  const de = s => { const { prep, nom } = deLieu(s); return prep + nom; };
+  if (v) return { n: null, court: nc, prose: `${ordinal(v[2])} circonscription ${de(v[1])}` };
   if (/circonscription|collège/.test(nc)) return { n: null, court: nc, prose: `circonscription « ${nc} »` };
-  return { n: null, court: nc, prose: `circonscription de ${nc}` };
+  return { n: null, court: nc, prose: `circonscription ${de(nc)}` };
 }
 
 // ---------------------------------------------------------------------------
@@ -2751,17 +2849,26 @@ function propositionCirco(o, plage) {
   const kx = S.cfgCirco;
   const unites = unitesDe("circo");
   const liste = unites.length === 1 && unites[0].regime === "liste";
+  const listes = !liste && unites.every(u => u.regime === "liste" || /^L/.test(String(u.code || "")));
   const elections = COMMONS.elections.filter(a => a >= a0 && a <= a1);
   const chambreFr = per ? per[3] : "Chambre des députés";
   const chambreEn = per ? per[4] : "Chamber of Deputies";
   const cpc = cantonsParCirco();
   const cible = o.type === "situation" ? kx.unites.find(u => u.id === o.unite) : null;
 
+  // À Paris, les atomes sont les quartiers administratifs (`PQ01`…), pas des
+  // communes : on les compte à part.
+  const quartiers = new Map();
+  for (const [aid, uid] of Object.entries(kx.rattachement))
+    if (/^PQ/.test(aid)) quartiers.set(uid, (quartiers.get(uid) || 0) + 1);
   const ligneUnite = u => {
     const ks = cpc && cpc.get(u.id);
     const t = etiquetteCourte(u);
+    const q = quartiers.get(u.id) || 0, nc = u.n - q;
+    const compte = [q ? `${q} quartier${q > 1 ? "s" : ""}` : "",
+                    nc || !q ? `${nc} commune${nc > 1 ? "s" : ""}` : ""].filter(Boolean).join(" et ");
     return `* ${t && /^[\d\/-]+$/.test(t) ? "n° " + t + " — " : ""}${nomCommons(u)} : ` +
-           `${u.n} commune${u.n > 1 ? "s" : ""}` +
+           compte +
            (ks && ks.length ? ` ; canton${ks.length > 1 ? "s" : ""} : ${ks.join(", ")}` : "");
   };
 
@@ -2772,11 +2879,13 @@ function propositionCirco(o, plage) {
     fr = `Carte des circonscriptions électorales (${chambreFr}) du département ` +
          `${deDep(nomEpoque)}, découpage en vigueur ${deLaPeriode}` +
          (liste ? ` : scrutin de liste départemental, le département forme une seule circonscription.`
-                : ` : ${unites.length} circonscription${unites.length > 1 ? "s" : ""}, un député par circonscription.`);
+          : listes ? ` : ${unites.length} circonscriptions, les députés de chacune élus au scrutin de liste.`
+                   : ` : ${unites.length} circonscription${unites.length > 1 ? "s" : ""}, un député par circonscription.`);
     en = `Map of the electoral constituencies (${chambreEn}) of the ${nomEpoque} ` +
          `department, France, ${enPeriode}` +
          (liste ? ` (department-wide list voting, one single constituency).`
-                : ` (${unites.length} single-member constituencies).`);
+          : listes ? ` (${unites.length} multi-member constituencies, list voting).`
+                   : ` (${unites.length} single-member constituencies).`);
     if (!liste) fr += "\n" + unites.map(ligneUnite).join("\n");
   } else {
     nom = `${nomCommons(cible)} ${periodeTxt} (localisation).svg`;
@@ -3025,9 +3134,11 @@ function wikiCantons(o, X, lister) {
       : `${per}, le ${nomCanton(cible)} comprend ${lettres(cs.length || cible.n)} commune` +
         `${(cs.length || cible.n) > 1 ? "s" : ""}` +
         (cs.length ? ` : ${etListe(cs.map(lienCommune))}.` : ".");
-    // Au scrutin de liste, la circonscription est le département : rien à dire.
+    // Au scrutin de liste départemental, la circonscription est le
+    // département : rien à dire. Pas quand il en forme plusieurs (1919-1928).
+    const seule = unitesDe("circo").length < 2;
     const xs = croise && (croise.circosDe.get(cible.id) || [])
-      .filter(e => e.u.regime !== "liste" && !/^L/.test(String(e.u.code || "")));
+      .filter(e => !seule || (e.u.regime !== "liste" && !/^L/.test(String(e.u.code || ""))));
     if (xs && xs.length) {
       const l = xs.map(e => "la " + lienCirco(e.u, X));
       t += xs.length === 1

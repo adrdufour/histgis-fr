@@ -1,6 +1,6 @@
 # Chargement PostGIS — histgis
 
-Charge les CSV de `build/` (sortie de `trfgis_extract.py`) dans un schéma
+Charge les CSV de `build/` (sortie de `extraction/trfgis_extract.py`) dans un schéma
 PostgreSQL/PostGIS `histgis`. Cette passe couvre **les attributions**, pas
 encore les géométries.
 
@@ -34,18 +34,21 @@ Les quatre fichiers s'enchaînent seuls, mais restent lançables un par un :
 
 ## Inventaire complet : `CHAINE.md`
 
-**`sql/CHAINE.md` dresse les 84 fichiers** — ce que chacun fait, ce qu'il écrit,
+**`sql/CHAINE.md` dresse les fichiers de la chaîne** (142 `.sql` au
+21 octobre 2026) — ce que chacun fait, ce qu'il écrit,
 sa table de trace, les variables qu'il attend, et l'ordre d'exécution. Il
 distingue trois familles : construction, diagnostic en lecture seule, et
 l'espace séparé de l'outre-mer. Il nomme aussi ce qui ne sert plus. À lire en
 premier.
 
-> **`rejouer_apres_rebuild.sh` est périmé — lire `CHAINE.md` § 0 avant tout
-> `rebuild.sh`.** Il s'arrête à `40_scission_circo.sql` : quatorze fichiers qui
-> écrivent dans la base ne sont appelés par aucun script — tout le chantier
-> 1943-1999 et la trame ANR. Ils ont été joués à la main, et une reconstruction
-> ne les remontera pas. `CHAINE.md` § 1 c en donne la liste ordonnée, qui tient
-> lieu de procédure en attendant que le script soit complété.
+> **`rejouer_apres_rebuild.sh` va jusqu'à `124`.** L'avertissement qui
+> figurait ici (« il s'arrête à `40` ») datait d'août 2026. Le script a été
+> complété le 6 septembre, puis à chaque fichier nouveau ; la chaîne a été
+> jouée de bout en bout le 20 octobre 2026 (`rebuild.sh` puis
+> `rejouer_apres_rebuild.sh`, `FIN rc=0`), et de nouveau le 21
+> (`build/rebuild_2026-10-21*.log`). Les fichiers `112` à `124`, et la place
+> que le script leur donne, sont décrits au § 4 ci-dessous. `CHAINE.md` § 0
+> garde le détail.
 
 ## Qu'est-ce qui est réellement en base ?
 
@@ -211,7 +214,7 @@ psql:sql/27_circo_2012.sql:76: error: :: Aucun fichier ou dossier de ce nom
 | `27_circo_2012.sql` | `circo` | `circo/circo_2012.csv` |
 | `28_circo_1986.sql` | `circo` | `circo/circo_1986.csv` |
 | `40_outremer.sql` | `circo_om` | `circo/circo_outremer_1986_2012.csv` |
-| `45`, `46` | `hac` | `hac/hac_filiation.csv` — **ont un défaut** |
+| `45`, `46` | `hac` | `annexes/hac/hac_filiation.csv` — **ont un défaut** |
 
 `\copy` résout les chemins relatifs depuis le répertoire de LANCEMENT, pas
 depuis le fichier `.sql` : passer des chemins absolus. `rejouer_apres_rebuild.sh`
@@ -220,6 +223,17 @@ le fait ; un lancement à la main doit y penser.
 **Les trois derniers portent un `\if :{?var}` avec une valeur par défaut**, les
 autres non. C'est une incohérence à corriger : un fichier qui échoue faute d'un
 argument devrait le DIRE, pas produire « :: Aucun fichier ».
+
+**D'autres lisent un CSV par un chemin relatif écrit en dur**, sans variable :
+ils ne marchent que lancés **depuis la racine du dépôt**, et
+`rejouer_apres_rebuild.sh` les appelle dans un `( cd "$RACINE" && … )`.
+
+| fichier | lit |
+|---|---|
+| `110`, `111` | `cantons/*.csv` |
+| `113_circo_1958.sql` | `circo/composition_1958_1986.csv`, `circo/composition_1958_etat.csv` |
+| `120_trous_par_dela_1968.sql` | `cantons/transferts_complement.csv`, `cantons/transferts_tables_jo.csv` |
+| `123_circo_villes_partagees.sql` | `circo/partition_ville.csv` |
 
 ### 3. Un fichier qui MODIFIE les périodes d'un autre : `111`
 
@@ -255,6 +269,62 @@ région de la chaîne :
 
 `rejouer_apres_rebuild.sh` les joue en dernier, après tout le reste, pour ces
 raisons.
+
+### 4. `112` à `124` : où chacun se place, et pourquoi
+
+Écrits du 11 au 23 octobre 2026. Tous ont leur table de trace, retirent leur
+passage précédent avant de reposer, et ne commettent qu'avec un drapeau : à
+blanc, ils calculent, affichent leurs recettes et font ROLLBACK. Deux
+conventions coexistent, et il faut savoir laquelle s'applique :
+
+* **`-1 -v appliquer=1`** : `112` à `119`, `122` à `124`. Ceux qui
+  acceptent `-v defaire=1` (`113`, `118`, `119`, `122`, `123`) se retirent
+  seuls ; `112`, `114` à `117` et `124` se défont en se rejouant (leur § 0).
+* **`-v poser=on`, sans `-1`** : `120`, `121` et `127`, qui ouvrent et ferment leur
+  propre transaction, comme `110` et `111`. `121` et `127` prennent `-v defaire=on`.
+
+| fichier | ce qu'il fait | écrit | trace | place dans `rejouer_apres_rebuild.sh` |
+|---|---|---|---|---|
+| `112_villes_date_du_decret` | 25 entrées de `cartes/a_inscrire_en_base.md` : les fractions de ville commencent au décret, pas au COG | `membership`, `unit_version` | `p112_trace` | après `107` à `109`, **avant `98`** |
+| `114_villes_lot_2` | 38 entrées : fractions oubliées ou rangées sous un autre canton, Rennes 1815-1941, Aubagne au 2004-03-21 | `membership`, `unit_version` | `p114_trace` | après `112`, avant `98` |
+| `115_villes_nomenclature` | les régimes de 1973 portés par l'unité du régime suivant (Antibes, Cannes, Bourg, Gap…) ; noms dans `unit_version` | `membership`, `unit_version` | `p115_trace` | après `114`, avant `98` |
+| `116_villes_couverture_1941` | les fractions de 61 villes de 1941 à la reprise de leur régime ; Moulins 1941-1985 | `membership`, `unit_version` | `p116_trace` | après `115`, avant `98` |
+| `117_creations_caen_rochefort_bourg_larochelle` | **crée** la fraction Caen-V, `C17-Rochefort`, `C01-Bourg-Couronne` ; La Rochelle passe de l'atome de Laleu à `29365` | `atom`, `atom_geom`, `unit`, `unit_version`, `membership` | `p117_trace` | après `116`, avant `98` |
+| `124_villes_lot_3` | entrées 111 à 128 : fractions sur le régime du décret (Brive, Valence, Toulouse…), fantômes du COG de 1968 dans Lannion, Toulouse-XIII 1973-1998, noms | `membership`, `unit_version` | `p124_trace` | après `117`, avant `98` |
+| `118_paris_bois_1925_1929` | les bois de Boulogne et de Vincennes restent aux communes riveraines jusqu'aux décrets de 1925 et 1929 | `atom_geom_anr` (fenêtres datées des communes riveraines) | `p118_trace` | après `84`, `99`, `103` ; **après `102`**, qu'il prolonge |
+| `119_paris_cantons_1870_1940` | les cantons de Paris 1876-1940 portés par les quartiers, comme `103` après 1941 | `membership` | `p119_trace` | après `118`, **après `103`** |
+| `120_trous_par_dela_1968` | les trous qui traversent 1968 (Belley) par l'accord des deux bouts, et les désaccords qu'un acte lu explique (Civrieux) ; `-v chainage_large=on` | `membership` (trous seulement) | `p120_trace` | **après `110` et `111`**, avant `113` |
+| `127_seine_et_oise_1955_1967` | la S&O de 1955 à 1967 : jalon de 1954 (ou canton de 1940), rattachements 1951-1964, décrets du 28 janvier 1964 ; unités du 78 (27 `C78-…` créées) à la place des 59 périodes de `110` sous des unités des 91 à 95 | `unit`, `unit_version`, `membership` (retire des périodes de `110`) | `p127_trace` | après `110` et `120`, **avant `113`** ; depuis la racine |
+| `113_circo_1958` | les circonscriptions 1958-1986 de 68 départements, d'après les cartes de Gaudillère | `unit`, `unit_version`, `membership` | `circo_1958_trace` | après `120` : il lit les cantons du 1er décembre 1958 |
+| `121_ain_cessions_trous` | l'Ain à la main : cession au Rhône de 1967, jalon de 1968 mal apparié, trous 1955-1998 | `membership` (retire des périodes de `59` et de `113`) | `p121_trace` | après `113` : **en dernier parmi ceux qui touchent aux cantons** |
+| `122_circo_1945_1958` | le scrutin de liste départemental de la IVe République : une unité `L<dep>01@1945` par département hors de la Seine | `unit`, `unit_version`, `membership` | `circo_1945_trace` | après `121`, dont il lit les cantons |
+| `123_circo_villes_partagees` | `circo/partition_ville.csv` : la circonscription de chaque canton d'une ville partagée ; 1876-1940, il retire la mère des unités fusionnées ; crée Nice-2 de 1910 et Nice-1 de 1928 | `unit`, `unit_version`, `membership` | `circo_ville_trace` | après `113`, dont il lit les unités de 1958 ; dernier fichier `.sql` du script |
+
+**Ce qu'il faut rejouer quand on en rejoue un seul :**
+
+1. **`112` à `117` et `124`** se jouent avant `98`, qui juge les villes sur les
+   appartenances de leurs fractions. En rejouer un après coup demande de
+   rejouer `98` ensuite.
+2. **`102` seul** : défaire `118` d'abord (`-v defaire=1`), puis le rejouer
+   ensuite. **`103` seul** : défaire `119` d'abord, de même.
+3. **Tout ce qui pose ou corrige des cantons** (`93`, `95`, `97`, `110`,
+   `111`, `120`, `121`, et les lots de villes `112` à `117`, `124`) **après
+   coup** : rejouer ensuite `113`, `122` et `123`, qui lisent les cantons.
+   Si la trame cantonale de 1958 a changé, relancer
+   `python3 circo/composition_1958.py` avant `113` : il écrit les
+   identifiants d'unité dans le CSV, et `113` refuse (recette 1 bis) quand
+   l'un d'eux a disparu. Il rapproche les noms de l'atlas du nom de `unit`
+   (pas de `unit_version`) : un nom posé dans `unit_version` ne dispense pas
+   d'un ALIAS. Séquence jouée le 23 octobre 2026 après `124` : `123` défait
+   (`-v defaire=1`), `121` défait (`-v defaire=on`, il rend des périodes
+   de `113`), puis `113`, `121`, `122`, `123`.
+4. **`121` seul** (défaire, poser) : rejouer `122` ensuite.
+4 bis. **`127`** (Seine-et-Oise, 24 octobre 2026) pose des cantons et en
+   retire à `110` : le défaire (`-v defaire=on`) avant de rejouer `110` ou
+   `120`, le reposer ensuite, puis la séquence du point 3. Il change la trame
+   de 1958 du 78 : `python3 circo/composition_1958.py` avant `113`.
+5. **`110` ou `111` seuls** : la séquence du § 3, puis `120`, `113`, `121`,
+   `122` et `123` dans cet ordre.
 
 ### La règle générale
 
@@ -327,7 +397,7 @@ La perte puis le retour de l'Alsace-Moselle apparaissent au bon endroit : 89
 
 ## La 3e colonne d'`atom.csv` : deux formats possibles
 
-Le loader accepte les deux sorties de `trfgis_extract.py` et range la valeur
+Le loader accepte les deux sorties de `extraction/trfgis_extract.py` et range la valeur
 dans la bonne colonne :
 
 | build lancé avec | contenu de la colonne | colonne remplie |
@@ -339,7 +409,7 @@ Les deux ne peuvent pas être remplies en même temps — l'extracteur n'écrit
 qu'une colonne. Pour la géométrie c'est `insee` qu'il faut :
 
 ```bash
-python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
+python3 extraction/trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
     --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee
 ```
 
@@ -349,7 +419,7 @@ sont plus éclatés et les 333 atomes-fractions disparaissent.
 ## Pourquoi `com_act` n'était pas le bon choix
 
 `atom.csv` porte une colonne intitulée `insee` qui vaut 1, 2 ou 3 — ce n'est
-pas un code commune. `trfgis_extract.py` utilise `CLE_GEOM = "com_act"` pour
+pas un code commune. `extraction/trfgis_extract.py` utilise `CLE_GEOM = "com_act"` pour
 le rattachement à la trame GEOFLA 2011, or le codebook TRF-GIS définit
 `com_act` comme un **statut** :
 
@@ -385,7 +455,7 @@ lui correspondent exactement. Elle est livrée dans le dépôt de reproduction d
 TRF-GIS, ce qui évite de dépendre du catalogue IGN :
 
 ```bash
-python3 trfgis_fetch_inspect.py fetch repro \
+python3 extraction/trfgis_fetch_inspect.py fetch repro \
     --match '^COMMUNE\.(SHP|SHX|DBF|PRJ)$' --dest ./geofla --dry-run
 ```
 

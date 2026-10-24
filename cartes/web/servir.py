@@ -49,6 +49,10 @@ class Gestionnaire(SimpleHTTPRequestHandler):
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=str(RACINE), **kw)
 
+    def send_response(self, code, message=None):
+        self._code = code
+        super().send_response(code, message)
+
     def end_headers(self):
         # Deux régimes de cache, et les confondre coûte cher.
         #
@@ -69,8 +73,15 @@ class Gestionnaire(SimpleHTTPRequestHandler):
         # péremption.
         #
         # Règle : ne mettre en cache que ce dont le nom garantit le contenu.
+        #
+        # Et seulement s'il a été TROUVÉ. Le nom garantit le contenu, pas sa
+        # présence : le 23 octobre 2026, un 404 servi pendant un export de
+        # l'Aisne (qui vide `dep/02/` avant de le réécrire) est parti avec
+        # « immutable, un an », et le navigateur a refusé 1870 même après
+        # rechargement, alors que le fichier était revenu sur le disque.
         nom = os.path.basename(self.path.split("?", 1)[0])
-        if nom.startswith(("c_", "x_")) and nom.endswith(".json"):
+        if (nom.startswith(("c_", "x_")) and nom.endswith(".json")
+                and getattr(self, "_code", 200) == 200):
             self.send_header("Cache-Control", "public, max-age=31536000, immutable")
         else:
             self.send_header("Cache-Control", "no-cache")

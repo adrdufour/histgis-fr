@@ -838,7 +838,7 @@ def sql_communes(dico, geofla, mvt, anr_nom=False):
     requêtes suivantes, parce qu'un atome en porte désormais plusieurs et qu'on
     ne va pas répéter son nom et son code à chaque version.
     """
-    # Chaîne de repli identique à `cartes/cartes_cantons.py` : le nom GEOFLA
+    # Chaîne de repli identique à `archives/planches/cartes_cantons.py` : le nom GEOFLA
     # 2011, puis le `libelle_av` du fichier de mouvements pour les communes
     # disparues avant 2011, puis le code entre crochets. « Ce qui n'a de nom
     # nulle part est signalé comme tel, pas maquillé. »
@@ -1619,7 +1619,7 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr,
             "d": 1 if disparue else 0,
             # Chronologie géométrique. Chaque version porte son empreinte `k` —
             # la clé de regroupement du projet : « un code est une
-            # reconstruction, l'empreinte est un fait » (`cartes_cantons.py`).
+            # reconstruction, l'empreinte est un fait » (`archives/planches/cartes_cantons.py`).
             # Elle est maintenant DATÉE : deux atomes peuvent partager un
             # polygone en 1870 et en avoir deux distincts en 1900, ce que la
             # trame de 2011 était incapable de dire.

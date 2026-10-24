@@ -52,7 +52,7 @@ bas](#carte-dune-liste-de-communes-aop-intercommunalité) :
 
 | image | contenu | nom proposé |
 |---|---|---|
-| **carte du département** | circonscriptions coloriées et numérotées, limites cantonales et communales en trait fin | `Circonscriptions législatives de la Côte-d'Or (1852-1869).svg` |
+| **carte du département** | circonscriptions coloriées et numérotées — nommées quand elles ont un nom (« Belley », « Bourg-1 », 1876-1936), la description aussi —, limites cantonales et communales en trait fin | `Circonscriptions législatives de la Côte-d'Or (1852-1869).svg` |
 | **situation d'une circonscription** | le département en grisé, la circonscription choisie en rouge | `Côte-d'Or 2e circonscription 1852-1869 (localisation).svg` |
 | **carte des cantons** | cantons coloriés et nommés, circonscriptions en trait épais, communes en trait fin | `Cantons de la Côte-d'Or (1875-1891).svg` |
 | **situation d'un canton** | le département en grisé, le canton choisi en rouge | `Canton de Mirebeau (Côte-d'Or) 1875-1891 (localisation).svg` |
@@ -314,7 +314,7 @@ lequel des deux cas s'applique et pourquoi.
 > GEOFLA. Résidu nommé : Notre-Dame-de-Briançon 93,6 km², Tours 6,9. **L'ocre
 > penché, lui, ne bouge pas** : ANR livre le polygone de la commune-mère entière
 > et ne sait pas la découper entre deux cantons. Les 333 fractions restent à
-> tracer, et c'est toujours le chantier de `BASE_POUR_QGIS.md`.
+> tracer, et c'est toujours le chantier de `annexes/docs/BASE_POUR_QGIS.md`.
 >
 > Gain non cherché : **l'empreinte de regroupement devient datée.** Deux atomes
 > que la trame de 2011 confondait sous un même polygone peuvent en avoir deux
@@ -322,7 +322,7 @@ lequel des deux cas s'applique et pourquoi.
 > recouvrement, et la carte le montre maintenant commune par commune.
 
 **Le regroupement passe par l'empreinte du polygone, jamais par le code
-INSEE** — même règle que `cartes_cantons.py` : « un code est une reconstruction,
+INSEE** — même règle que `archives/planches/cartes_cantons.py` : « un code est une reconstruction,
 l'empreinte est un fait ». Elle est nécessaire dans les deux sens : Lyon et
 Marseille portent des codes différents pour un même terrain
 (`atom_geom.source = 'union_prefixe'`), et trois communes fondues portent un
@@ -403,9 +403,10 @@ Ce qui a changé avec la trame datée :
   identiques sous deux noms. *Une signature d'entrée dit ce qu'il faut
   recalculer, une signature de sortie ce qu'il faut réécrire.*
 * **Le repli est écrit, pas subi.** Chaque version porte `r`, chaque unité porte
-  `n_anr` et `n_repli`, et la page affiche séparément l'export sans épaisseur,
-  les communes en repli à cette année, et celles qu'aucune source ne sait
-  dessiner. Une carte hybride qui ne dit pas où elle est hybride ment par
+  `n_anr`, `n_repli` et `n_repris`, et la page affiche séparément l'export sans
+  épaisseur, les communes en repli à cette année, celles qu'aucune source ne
+  sait dessiner, et celles que `84` reconstitue par différence — avec les
+  unités dont le contour en dépend. Une carte hybride qui ne dit pas où elle est hybride ment par
   omission.
 * **`--jobs N`** : un processus par département, la connexion ouverte *après* le
   fork (contexte `spawn`). Le découpage s'arrête au département parce que c'est

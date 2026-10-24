@@ -2,7 +2,7 @@
 -- histgis — 82_anr_geom.sql : la trame communale historique entre en base
 --
 --   ogr2ogr -f PostgreSQL PG:"dbname=histgis" \
---       ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg geometries_only_processed \
+--       sources/ANR_COMMUNES_22042026/COMMUNES_22042026.gpkg geometries_only_processed \
 --       -nln histgis.anr_commune -nlt MULTIPOLYGON \
 --       -lco GEOMETRY_NAME=geom -lco FID=gid -a_srs EPSG:2154 -overwrite \
 --       -lco SPATIAL_INDEX=NONE -lco UNLOGGED=YES \
