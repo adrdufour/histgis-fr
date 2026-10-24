@@ -835,7 +835,7 @@ fi
 # LES JO LUS, ET LEURS TABLES ANNUELLES — ajouté le 11 octobre 2026
 # ============================================================================
 # `110` pose dans les TROUS ce que disent les JO lus à la main
-# (`cantons/transferts_complement.csv` : 13 transferts ;
+# (`cantons/transferts_complement.csv` : 15 transferts, dont 2 lus dans les tables ;
 # `composition_complement.csv` : 73 cantons recomposés, 1949-1968 ;
 # `corse_1975.csv` : la Corse de la loi 75-356) et les tables analytiques
 # annuelles du JO (`transferts_tables_jo.csv` : 93 transferts isolés datés).

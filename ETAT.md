@@ -534,7 +534,7 @@ rendre : elle a été appariée parce que son canton concordait.
 | 66 transferts de commune | 30 datés au jour près par l'INSEE | `77` |
 | 1987-1999 par report arrière depuis 1999 | inférence validée (§ 3.4) | `79` |
 | 1969 → premier acte du département | inférence validée, **posée le 6 sept. 2026** | `81` |
-| 1941-1998, dans les trous | JO lus à la main (13 transferts, 73 cantons recomposés 1949-1968, Corse 1975) et **tables annuelles du JO** (93 transferts isolés). Convention de date (règle C), **posé le 11 oct. 2026** : 691 périodes | `110` |
+| 1941-1998, dans les trous | JO lus à la main (13 transferts, plus 2 lus dans les tables le 24 oct. 2026, 73 cantons recomposés 1949-1968, Corse 1975) et **tables annuelles du JO** (93 transferts isolés). Convention de date (règle C), **posé le 11 oct. 2026** : 691 périodes | `110` |
 | périodes démenties par ces transferts | raccourcies, l'avant ou l'après rendu au bon canton : 20 périodes de `79`, `81` et de la base d'origine. Posé, défait le 11 oct. 2026 pour éprouver le retour arrière, **puis rejoué : la base le porte** — `p111_trace` compte 40 lignes (20 `modifie`, 20 `insere`), mesuré le 11 oct. au soir. La carte servie, exportée avant, ne le montre pas encore | `111` |
 
 **Asymétrie à connaître avant toute lecture.** L'incertitude de date ne pèse que

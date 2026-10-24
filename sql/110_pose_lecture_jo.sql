@@ -19,7 +19,9 @@
 --
 -- LES SOURCES
 -- ===========
---   cantons/transferts_complement.csv   13 communes changées de canton, 1946-1969
+--   cantons/transferts_complement.csv   15 communes changées de canton, 1946-1978
+--       (13 lues au JO ; Fressinières 1949 et Champcella 1978 lues dans les
+--       tables analytiques, que cantons/transferts_tables.py avait perdues)
 --   cantons/composition_complement.csv  73 cantons créés ou recomposés, 1949-1968
 --   cantons/corse_1975.csv              la Corse entière au 15 mai 1975 (loi 75-356)
 --   cantons/transferts_tables_jo.csv    93 communes changées de canton, 1941-1990,

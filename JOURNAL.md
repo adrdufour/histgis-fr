@@ -10372,3 +10372,55 @@ Nice 7e à 14e : le découpage de 1958 suit les quatre cantons de 1958.
 Portet, Cugnaux et Tournefeuille sans canton du 1998-03-15 au 1998-04-01 ;
 les entrées antérieures qui attendent une ligne ou un arbitrage. Export web
 non refait.
+
+---
+
+## 24 octobre 2026 — Fressinières et Champcella : le canton de L'Argentière, et quand
+
+Adrien signale que l'appartenance cantonale des deux communes diffère de
+Gaudillère. **C'est Gaudillère qui a tort, mais la base avait deux trous.**
+
+**Gaudillère.** Ses cartes des Hautes-Alpes (p. 102, photos 45-46 de
+`photos/1815_1870/`) dessinent le canton de L'Argentière dans ses limites
+d'après 1978 : il descend jusqu'à Orcières et Embrun, et range Fressinières et
+Champcella du côté de Briançon dès 1815. Un fond de carte moderne, pas un fait.
+Les deux communes étaient au canton de Guillestre (arrondissement d'Embrun) :
+
+    Fressinières ... « Freissinières au canton de l'Argentière (Hautes-Alpes),
+                     p. 10066 » — table analytique du JO 1949, sans date d'acte
+    Champcella ..... « Commune de Champcella (Hautes-Alpes). Rattachement au
+                     canton de L'Argentière-la-Bessée. — D. 22 fév. 1978,
+                     p. NC 1660 » — table analytique du JO 1978
+
+Le recensement de 1954 le confirme pour Fressinières : canton 02, avec renvoi
+de note (`cog1954/communes_1954_redecoupe.csv`).
+
+**Pourquoi la base les avait perdues.** `cantons/transferts_tables.py` ne les
+voyait pas : en 1949, l'OCR a mêlé la ligne à la colonne voisine (« Haules-Alpes »,
+au milieu de l'article sur Équilly) ; en 1978, la page est celle du numéro
+complémentaire (« NC 1660 »), que l'estimateur ne sait pas dater —
+`dates_par_tables_jo.csv` avait bien Champcella, page vide, donc écartée, et
+lui prêtait le décret du 11 janvier 1978, qui est celui d'Aubagne, ligne du dessus.
+Résultat : Fressinières sans canton de 1941 à 1954 (et sans circonscription de
+1945 à 1954), Champcella sans canton du 23 septembre 1973 au 14 mars 1982.
+
+**La correction.** Deux lignes ajoutées à `cantons/transferts_complement.csv`,
+nature `transfert_table` (source « table analytique… »), règle C :
+
+    Fressinières ... parution estimée 1949-10-07 par la page (date_jo de
+                     transferts_tables.py) -> effet 1949-10-08
+    Champcella ..... parution estimée 1978-02-24 par la pagination NC (dernier
+                     acte signé avant elle : D. 24 fév., p. NC 1621 ; D. 27 fév.
+                     vient p. NC 1695) -> effet 1978-02-25
+
+Rejoué selon `sql/README.md` : `111` défait, `110` posé (665 -> 669 périodes,
+les quatre moitiés de trou), `111` reposé (21 modifiées, 21 insérées, comme
+avant), `122` pour le 05. Logs `build/p110.log`, `build/p111.log`,
+`build/p122_05.log`.
+
+    Fressinières ... Guillestre -> 1949-10-08 -> L'Argentière ; L0501@1945 dès 1945
+    Champcella ..... Guillestre -> 1978-02-25 -> L'Argentière ; plus de trou
+
+Les deux dates sont des **estimations** de parution : à relire au JO quand le
+numéro sera là. **Non réexporté** : la carte web garde les trous jusqu'au
+prochain export.
