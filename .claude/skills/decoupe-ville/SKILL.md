@@ -1033,6 +1033,19 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   non redécrites restent en vigueur ; les reprendre sous l'identifiant de chaque régime.
 - **Agents en parallèle : un sous-dossier du scratchpad par ville** ; le scratchpad est partagé.
 - **WFS `batiment` filtré en CQL** : `BBOX(geometrie, …, 'EPSG:2154')`, cinquième argument compris.
+- **Le décret de 2014 donne des coordonnées Lambert 93** (Bastia, 2014-255 : lignes et segments
+  chiffrés) que la transcription Wikipédia saute : lire Légifrance avant de router un
+  « prolongement » ou une « ligne de N mètres ».
+- **Un décret-liste (1973) se trace par un Voronoi des voies listées** (Bastia : densifier à 8 m,
+  contours des lieux-dits, `cartes/sorties/decoupe_bastia/construit_1973.sh`), puis contrôle de
+  population ; les contraintes d'un autre texte (2014, 1982) s'appliquent après.
+- **Un décret qui divise un canton borne l'ancien** : le périmètre du VI de 1982 donne la limite
+  nord du V de 1973 (Bastia).
+- **Les parcelles citées en 1982 ne survivent pas au cadastre renuméroté** : des numéros
+  identiques dans une section moderne trompent (Bastia, BC 172 / 173, 27 m²).
+- **archive.org plein texte trouve des cantons urbains dans des revues médicales et des thèses
+  d'hygiène** (Bastia 1873, 1921) quand aucun texte de limite n'existe.
+- **`$(echo $VAR)` coupe les `POINT(x y)`** dans les arguments : écrire les ancres en toutes lettres.
 
 - **Le routeur en couches dépasse le départ d'une ligne fermée** (Béziers-I, 24 octobre 2026) :
   il s'accroche à un autre tronçon et revient. Couper l'anneau au premier retour à moins de 0,5 m ;

@@ -167,6 +167,7 @@ REMARQUES = {
     "2A004": "Décret 73-825 (I à V, listes de voies par canton ; IV / V déduite, 27 ha d'écart avec 1982 ; régime absent de la base, ancres datées prêtes) et décret 82-121 (I à VII), 1973-2013, huit lignes. Limites du maquis (I / IV, V / VI, VI / VII) en droites au large des lieux-dits (70, 25 et 60 ha en jeu) ; H.L.M. Saint-Jean et Algajola non localisés. Plans des décrets à demander.",
     "29232": "Décrets 73-720 (I nord / II sud, « à gauche » de la ligne lu au nord, à confirmer) et 85-74 (I / II / III), 1973-2013, trois lignes : Odet, voie ferrée de Pont-l'Abbé déposée suivie sur son emprise (ortho 1950-1965), rues du centre. Rien en base de 1955 à 1992.",
     "29019": "Décrets 73-720 (7 cantons), 85-74 (8) et 91-211 (10), 1973-2013, 26 lignes ; 1973-1992 absent de la base (IV, VI, VII, VIII sans unité). CD 105 « de Traon-Bihan à Pont-Cabioch » lu par le chemin de Kergoff (44 ha en jeu). An X et 1945-1973 sans texte de limite : non tracés.",
+    "2B033": "Avant 1973 HYPOTHÈSE (Terravecchia / Terranova sur le Guadello, sans texte de limite). Décret 73-825 (I à V, listes de voies : lignes à mi-distance, bornées par 2014 et 1982 ; régime absent de la base) et décret 82-53 (V / VI : Lupino, droite de 434 m pour des parcelles renumérotées). Macchione (34 ha) au III / IV contre la liste de 1973.",
 }
 
 # Remarques de REMARQUES révisées après coup (la ville a été reprise) : elles

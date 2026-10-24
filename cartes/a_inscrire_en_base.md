@@ -3760,6 +3760,38 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Bastia (2B033)
+
+### 132. Bastia : rien de 1941 à 1982 ; régime de 1973 (Bastia-I à V) absent ; Furiani sous Terravecchia de 1954 à 1973
+
+- **Sources** : décret 73-825 du 18 août 1973, art. 2 (JO du 19 août 1973,
+  `jorf_txt/JORF_19730819_192_col.txt`, l. 1079-1139) : Bastia-I (Centre), II (Fango), III
+  (Turette), IV (Cimbalo), V (Montesoro, avec Furiani), par listes de voies et de quartiers. Décret
+  82-53 du 20 janvier 1982 (JO du 22 janvier 1982, `jorf_txt/JORF_19820122_18_col.txt`,
+  l. 346-364) : divise le V en V-Lupino et VI-Furiani-Montesoro. Loi 75-356 : son tableau imprime
+  « Bastia (cantons I à IV) » alors que sa liste des circonscriptions en compte cinq. C'est le
+  point « Corse 1975 » de `sql/110` § 6 bis. Avant 1973 : aucun texte de limite (le décret de 1811
+  ne borne pas) ; un recueil médical de 1873 et une thèse de 1921 (archive.org) placent la limite
+  aux ponts du Guadello.
+- **Base** : `2849#2003` (Terravecchia) et `#2004` (Terranova) seulement du 1815-01-01 au
+  1941-01-01 ; aucune fraction du 1941-01-01 au 1982-03-14. Furiani en 2004 jusqu'en 1941, sans
+  canton de 1941 à 1954, en 2003 (Terravecchia) de 1954 au 1973-09-23 (le recueil de 1873 la met à
+  Terranova), puis sans canton jusqu'en 1982.
+- **À inscrire** : la ville en deux fractions (2003, 2004) de 1941 au 1973-09-23, et Furiani en
+  2004 sur cette période, à vérifier ; les unités Bastia-I à V du 1973-09-23 au 1982-03-14 (codes
+  20xx jusqu'en 1976, puis 2B03, 2B04, 2B67, 2B68, 2B69), leurs cinq fractions, et Furiani au V.
+- **Lignes** : écrites le 23 octobre 2026. `2B033-1815-TV-TN` (1815 → 1973-09-23, source `main`,
+  HYPOTHESE : limite de 1973 entre {I, II} et {III, IV, V}, sur le Guadello en ville ; ancres
+  datées 2003 POINT(1228300 6199500), 2004 POINT(1227500 6196500)). Passe 1973 (`--morceaux 5`,
+  ancres datées I POINT(1228480 6199200), II POINT(1227800 6199850), III POINT(1227367 6198266),
+  IV POINT(1228760 6198640), V POINT(1227500 6196500)). Passe 1982, six lignes. Lignes de 1973
+  tracées à mi-distance des voies listées (Voronoi), bornées par la limite Bastia-1 / 2 de 2014 et
+  le V de 1982 ; population à 1,4 point au plus des fractions 2011. Questions : le Macchione
+  (33,6 ha, environ 907 habitants) donné au III / IV contre la liste de 1973 ; les parcelles de
+  1982 (droite de 434 m). Fichiers : `cartes/sorties/decoupe_bastia/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :
