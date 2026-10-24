@@ -1422,6 +1422,26 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 - **Tracé** : `35238-1` (A-B) et `-2` (C-D, la Vilaine), 1801 → 1973-09-23 ; ancres datées posées
   par les noms des cantons, que le plan de Gaudillère confirme. Le lobe sud, que la rue de Nantes
   retraverse, est tout au Sud-Est sur le plan : pas de ligne dessus.
+- **Constats du 24 octobre 2026 (tracé de 1973 et 1982)** :
+  - sources : décret 73-723 (`jorf_txt/JORF_19730725_171_col.txt` l. 2041-2163), décret 82-80
+    (`JORF_19820126_21` l. 727-791 : VIII-1 rural, VIII-2 urbain, VII coupé par bd Oscar-Leroux,
+    bd Léon-Grimault, rue de Vern), décret du 16 janvier 1985 (`JORF_19850118_15_col.txt`
+    l. 1792-1804 : noms seuls), décret 91-214 (Cesson-Sévigné et Betton, communes rurales seules) ;
+  - aucune fraction de Rennes entre 1973-09-23 et 1992-03-22. À inscrire : Rennes-I à X de 1973 à
+    1982 (`28930#3529` I, `#3530` II, `#3531` III, `#3532` IV, `#3544` V, `#3545` VI, `#3546` VII,
+    `#3551` VIII, `#3548` IX, `#3549` X — codes à valider : la base met Noyal et Châtillon sous
+    3547 (Bruz) de 1973 à 1982 et il n'y a pas d'atome `28930#3547`), puis les onze fractions de
+    1982 (`#3550` VII-2) à 1992 ;
+  - communes rurales sous le code de leur successeur de 1991, de 1973 à 1992 : Betton, Montgermont,
+    Saint-Grégoire sous 3552 (Betton) au lieu de 3532 (Rennes-IV) ; Cesson-Sévigné sous 3553 au lieu
+    de 3545 (Rennes-VI). Chantepie, Saint-Jacques et Vezin sans appartenance de 1973 à 1992 ;
+  - de 1992 à 1999, pas d'`unit_version` : 3529 à 3532 s'affichent sous les noms de 1815
+    (Nord-Est…), en double avec 3544, 3546 et 3549 ;
+  - un atome 22672 (insee 35182, sans nom) a une ANR en 1980 qui touche Rennes sur 1,5 km, sans
+    appartenance : à vérifier.
+- **Tracé (24 octobre 2026)** : `35238-1973-*` (17 lignes, 1973-09-23 → 1982-03-14,
+  `--morceaux 10`) et `35238-1982-*` (18 lignes, 1982-03-14 → 2013-01-01) ; ancres datées dans
+  `cartes/sorties/decoupe_rennes/COMMANDES.sh`.
 ---
 
 ## Béziers (34032)
@@ -1437,6 +1457,20 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 - **Tracé** : `34032-1`, 1801 → 1973-09-23 ; ancres datées Béziers-1 (nord) POINT(718275 6250736)
   et Béziers-2 (sud) POINT(718497 6247627). Béziers-1 au nord : confirmé par Adrien le 3 octobre
   2026 (Villeneuve et Cers, de Béziers-1, ne touchent pourtant que le morceau sud).
+- **Constats du 24 octobre 2026 (tracé de 1973 et 1985)** :
+  - décret 73-722 (JO du 25 juillet 1973, `jorf_txt/JORF_19730725_171_col.txt` l. 1895-2006) et
+    décret 85-146 du 31 janvier 1985 (JO du 1er février, `jorf_txt/JORF_19850201_27_col.txt`
+    l. 1450-1488 : art. 1, la poche de IV à l'ouest de la ligne Wilson … Castelbon passe à I ;
+    art. 2, Lespignan passe de IV à III) ;
+  - aucune fraction de Béziers du 1973-09-23 au 1992-03-22, alors que les communes rurales passent
+    à 3405, 3438, 3439 dès le 1973-09-23. À inscrire : `4149#3404` (I, îlot central, sans commune
+    rurale), `#3405` (II), `#3438` (III), `#3439` (IV), de 1973-09-23 à 1992-03-22 ;
+  - Lespignan sans canton du 1985-03-10 au 1992-03-22 : à mettre dans 3438 (Béziers-III) ;
+  - le code 3404, Béziers-1 au nord jusqu'en 1973, devient l'îlot central Béziers-I : ancres datées.
+- **Tracé (24 octobre 2026)** : `34032-1973-I`, `-II-III`, `-III-IV`, `-II-IV` (1973-09-23 →
+  1985-03-10, `--morceaux 4`) et `34032-1985-*` (1985-03-10 → 2013-01-01) ; ancres datées
+  3404 POINT(718091 6249702), 3405 POINT(722094 6251772), 3438 POINT(714500 6250500),
+  3439 POINT(717500 6246500). Sources et scripts : `cartes/sorties/decoupe_beziers/`.
 ---
 
 ## Montpellier (34172)
@@ -1452,6 +1486,24 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 - **Tracé** : `34172-1` (contour fermé du 1er canton), `-2` (A-B), `-3` (C-D, par l'ancienne voie ferrée de Paulhan
   d'après le plan), 1801 → 1973-09-23 ;
   ancres datées 1er POINT(770750 6279500), 2e POINT(773000 6280000), 3e POINT(768000 6278500).
+- **Constats du 24 octobre 2026 (tracé de 1973 et 1985)** :
+  - correction : la base a désormais `#3422` à `#3424` de 1941 au 1973-09-23 ;
+  - sources : décret 73-722 (JO du 25 juillet 1973), décret 85-146 (JO du 1er février 1985,
+    art. 4), décret 91-213 du 27 février 1991 (JO du 28 février, p. 2903 : Castelnau-le-Lez,
+    Lattes, Pignan, communes rurales seules ; la ville garde les limites de 1985 jusqu'en 2015) ;
+  - aucune fraction de Montpellier du 1973-09-23 au 1992-03-22. À inscrire : du 1973-09-23 au
+    1985-03-10, `23741#3422` (I), `#3423` (II), `#3424` (III), `#3440` à `#3445` (IV à IX) ; du
+    1985-03-10 au 1992-03-22, `#3422` à `#3446` (X) ;
+  - communes rurales de 1973 à 1992 : Castelnau-le-Lez et Le Crès sans canton (à mettre au III,
+    3424) ; Lattes, Palavas, Pérols sous 3448 « Lattes » dès 1973 alors qu'elles sont au V (3441)
+    jusqu'au 1992-03-22 ; Grabels et Juvignac sans canton (IX, 3445, de 1973 à 1985, puis X, 3446) ;
+    Cournonsec, Cournonterral, Fabrègues, Lavérune, Murviel, Pignan, Saint-Georges-d'Orques,
+    Saint-Jean-de-Védas, Saussan sans canton (VIII, 3444, de 1973 à 1992). Clapiers et Montferrier
+    bien sous 3423 ;
+  - `unit_version` des unités 3440 à 3449 ne commence qu'en 1999.
+- **Tracé (24 octobre 2026)** : `34172-1973-*` (12 lignes, 1973-09-23 → 1985-03-10,
+  `--morceaux 10`) et `34172-1985-*` (18 lignes, 1985-03-10 → 2013-01-01) ; ancres datées dans
+  `cartes/sorties/decoupe_montpellier/cmd_1973.sh` et `cmd_1985.sh`.
 ---
 
 ## Sarcelles (95585)

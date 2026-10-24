@@ -1033,3 +1033,29 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   non redécrites restent en vigueur ; les reprendre sous l'identifiant de chaque régime.
 - **Agents en parallèle : un sous-dossier du scratchpad par ville** ; le scratchpad est partagé.
 - **WFS `batiment` filtré en CQL** : `BBOX(geometrie, …, 'EPSG:2154')`, cinquième argument compris.
+
+- **Le routeur en couches dépasse le départ d'une ligne fermée** (Béziers-I, 24 octobre 2026) :
+  il s'accroche à un autre tronçon et revient. Couper l'anneau au premier retour à moins de 0,5 m ;
+  ne pas passer `route.nettoie()` sur une ligne fermée, il la réduit à un point. Une étape
+  facultative (place citée en 2014 seulement) crée un aller-retour : la retirer de la liste.
+- **Une voie communale coupée par une autoroute postérieure** (VC 12 et A75 à Béziers) : le plus
+  court chemin fait 2,3 km de détour ; mettre une droite entre les deux bouts et chiffrer.
+- **« Ligne droite dans le prolongement » (2014) qui ne rencontre pas le bord** : l'axe du dernier
+  tronçon peut partir à l'opposé ; droite au plus court, dite dans la note.
+- **Un ancien nom de 1973 survit dans `alias_gauche`** (Rennes, « AV DE L ILE DE FRANCE » =
+  avenue Tillon) alors qu'aucune voie BAN ne le porte.
+- **« Limites des terrains de X et Y »** quand deux emprises se touchent (CHR et facultés à
+  Rennes) : prendre les morceaux du contour de l'une à moins de 8 m de l'autre
+  (`zone_d_activite_ou_d_interet`), bout à bout.
+- **Une rocade à deux chaussées** (N136) : router par le numéro fait des détours et rend une ligne
+  non simple ; prendre une seule chaussée (`ST_LineMerge(ST_Union(ST_SnapToGrid(...)))`).
+- **Un décret de renommage (Rennes 1985) n'est qu'un tableau de noms, et un décret « portant
+  création de cantons » (91-213, 91-214) peut ne détacher que des communes rurales** : le lire
+  avant de supposer un nouveau découpage urbain ; les lignes de 1982 ou 1985 tiennent alors
+  jusqu'en 2015 en une seule passe.
+- **Une voie rapide en tranchée** (Montpellier, avenue de la Liberté sous la Tour-Buffel) : la règle
+  anti-boucle de `nettoie()` efface une épingle sans le dire dans le rapport ; seule l'image le
+  montre. Prendre l'axe BAN à la main entre les deux carrefours.
+- **Quand les IRIS suivent un régime presque partout** (Montpellier 1985 : 92 à 100 %), un accord
+  très bas sur une ligne (1,4 % pour I/VI) désigne une divergence texte / INSEE à chiffrer.
+- **`from outils import *` n'importe pas les noms en `_`** (`_pt`) : les importer à part.

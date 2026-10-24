@@ -706,3 +706,54 @@ PQ67#86E,"quartier PQ67, cote NE (109.9 ha) : 75-17@1986",POINT(649618 6865706),
 5761#2904,canton Brest-2 (point explicite),POINT(145060 6835778),1973-09-23,1985-03-10
 5761#2905,canton Brest-3 (point explicite),POINT(146721 6836103),1973-09-23,1985-03-10
 5761#2945,canton Brest-Bellevue (point explicite),POINT(144930 6837745),1973-09-23,1985-03-10
+4149#3404,canton Béziers-1 (point explicite),POINT(718091 6249702),1973-09-23,1985-03-10
+4149#3405,canton Béziers-2 (point explicite),POINT(722094 6251772),1973-09-23,1985-03-10
+4149#3438,canton Béziers  3e  Canton (point explicite),POINT(714500 6250500),1973-09-23,1985-03-10
+4149#3439,canton Béziers  4e  Canton (point explicite),POINT(717500 6246500),1973-09-23,1985-03-10
+4149#3404,canton Béziers  1er Canton (point explicite),POINT(718091 6249702),1985-03-10,2013-01-01
+4149#3405,canton Béziers  2e  Canton (point explicite),POINT(722094 6251772),1985-03-10,2013-01-01
+4149#3438,canton Béziers  3e  Canton (point explicite),POINT(714500 6250500),1985-03-10,2013-01-01
+4149#3439,canton Béziers  4e  Canton (point explicite),POINT(717500 6246500),1985-03-10,2013-01-01
+28930#3529,canton Rennes-Centre (point explicite),POINT(352456 6789084),1982-03-14,2013-01-01
+28930#3530,canton Rennes-Centre-Ouest (point explicite),POINT(349833 6789244),1982-03-14,2013-01-01
+28930#3531,canton Rennes-Nord-Ouest (point explicite),POINT(348877 6791268),1982-03-14,2013-01-01
+28930#3532,canton Rennes-Nord (point explicite),POINT(351412 6791281),1982-03-14,2013-01-01
+28930#3544,canton Rennes-Nord-Est (point explicite),POINT(354429 6791837),1982-03-14,2013-01-01
+28930#3545,canton Rennes-Est (point explicite),POINT(354511 6790072),1982-03-14,2013-01-01
+28930#3546,canton Rennes-Sud-Est (point explicite),POINT(354517 6787598),1982-03-14,2013-01-01
+28930#3550,canton Rennes-le-Blosne (point explicite),POINT(353253 6786314),1982-03-14,2013-01-01
+28930#3551,canton Rennes-Brequigny (point explicite),POINT(351154 6786524),1982-03-14,2013-01-01
+28930#3548,canton Rennes-Centre-Sud (point explicite),POINT(352174 6787712),1982-03-14,2013-01-01
+28930#3549,canton Rennes-Sud-Ouest (point explicite),POINT(348156 6787640),1982-03-14,2013-01-01
+28930#3529,canton Rennes-Nord-Est (point explicite),POINT(352456 6789084),1973-09-23,1982-03-14
+28930#3530,canton Rennes-Nord-Ouest (point explicite),POINT(349833 6789244),1973-09-23,1982-03-14
+28930#3531,canton Rennes-Sud-Est (point explicite),POINT(348877 6791268),1973-09-23,1982-03-14
+28930#3532,canton Rennes-Sud-Ouest (point explicite),POINT(351412 6791281),1973-09-23,1982-03-14
+28930#3544,canton Rennes-Nord-Est (point explicite),POINT(354429 6791837),1973-09-23,1982-03-14
+28930#3545,canton Rennes-Est (point explicite),POINT(354511 6790072),1973-09-23,1982-03-14
+28930#3546,canton Rennes-Sud-Est (point explicite),POINT(354517 6787598),1973-09-23,1982-03-14
+28930#3551,canton Rennes-Brequigny (point explicite),POINT(351154 6786524),1973-09-23,1982-03-14
+28930#3548,canton Rennes-Centre-Sud (point explicite),POINT(352174 6787712),1973-09-23,1982-03-14
+28930#3549,canton Rennes-Sud-Ouest (point explicite),POINT(348156 6787640),1973-09-23,1982-03-14
+23741#3422,canton Montpellier-1 (point explicite),POINT(770750 6279500),1973-09-23,1985-03-10
+23741#3423,canton Montpellier-2 (point explicite),POINT(769600 6282100),1973-09-23,1985-03-10
+23741#3424,canton Montpellier-3 (point explicite),POINT(771270 6281450),1973-09-23,1985-03-10
+23741#3440,canton Montpellier  4e  Canton (point explicite),POINT(773990 6279300),1973-09-23,1985-03-10
+23741#3440,canton Montpellier  4e  Canton (point explicite),POINT(771540 6278740),1973-09-23,1985-03-10
+23741#3441,canton Montpellier  5e  Canton (point explicite),POINT(771690 6277370),1973-09-23,1985-03-10
+23741#3442,canton Montpellier  6e  Canton (point explicite),POINT(769940 6276800),1973-09-23,1985-03-10
+23741#3443,canton Montpellier  7e  Canton (point explicite),POINT(769900 6279000),1973-09-23,1985-03-10
+23741#3444,canton Montpellier  8e  Canton (point explicite),POINT(768110 6278300),1973-09-23,1985-03-10
+23741#3445,canton Montpellier  9e  Canton (point explicite),POINT(767240 6280910),1973-09-23,1985-03-10
+23741#3422,canton Montpellier-1 (point explicite),POINT(770900 6279300),1985-03-10,2013-01-01
+23741#3423,canton Montpellier-2 (point explicite),POINT(769600 6282100),1985-03-10,2013-01-01
+23741#3424,canton Montpellier-3 (point explicite),POINT(771270 6281450),1985-03-10,2013-01-01
+23741#3440,canton Montpellier  4e  Canton (point explicite),POINT(773990 6279300),1985-03-10,2013-01-01
+23741#3440,canton Montpellier  4e  Canton (point explicite),POINT(771540 6278740),1985-03-10,2013-01-01
+23741#3441,canton Montpellier  5e  Canton (point explicite),POINT(771690 6277370),1985-03-10,2013-01-01
+23741#3442,canton Montpellier  6e  Canton (point explicite),POINT(769940 6276800),1985-03-10,2013-01-01
+23741#3443,canton Montpellier  7e  Canton (point explicite),POINT(769610 6279560),1985-03-10,2013-01-01
+23741#3444,canton Montpellier  8e  Canton (point explicite),POINT(768110 6278300),1985-03-10,2013-01-01
+23741#3445,canton Montpellier  9e  Canton (point explicite),POINT(767000 6280400),1985-03-10,2013-01-01
+23741#3446,canton Montpellier 10e  Canton (point explicite),POINT(768600 6281600),1985-03-10,2013-01-01
+23741#3446,canton Montpellier 10e  Canton (point explicite),POINT(766800 6278600),1985-03-10,2013-01-01
