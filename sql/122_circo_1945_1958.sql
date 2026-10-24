@@ -65,16 +65,29 @@ CREATE TABLE IF NOT EXISTS circo_1945_trace (
 -- La trace est retirée AVANT le calcul : la pose se compare à la base sans
 -- elle, sans quoi un second passage se verrait lui-même au garde-fou 3.
 \if :{?retirer}
+-- Avec `-v dep=XX`, seule la trace de ce département est retirée. Sans ce
+-- filtre, le passage du 24 octobre 2026 (`-v dep=05`, Hautes-Alpes) a retiré
+-- les 89 départements et n'en a reposé qu'un : la France entière sans
+-- circonscription de 1945 à 1958 jusqu'au rejeu complet du même soir.
+\if :{?dep}
+\set dep_retrait :dep
+\else
+\set dep_retrait '*'
+\endif
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM circo_1945_trace t
-                WHERE t.quoi = 'membership' AND t.cle = m.membership_id::text);
+                WHERE t.quoi = 'membership' AND t.cle = m.membership_id::text
+                  AND (:'dep_retrait' = '*' OR t.dep = :'dep_retrait'));
 DELETE FROM unit_version v
  WHERE EXISTS (SELECT 1 FROM circo_1945_trace t
-                WHERE t.quoi = 'unit' AND t.cle = v.unit_id);
+                WHERE t.quoi = 'unit' AND t.cle = v.unit_id
+                  AND (:'dep_retrait' = '*' OR t.dep = :'dep_retrait'));
 DELETE FROM unit u
  WHERE EXISTS (SELECT 1 FROM circo_1945_trace t
-                WHERE t.quoi = 'unit' AND t.cle = u.unit_id);
-DELETE FROM circo_1945_trace;
+                WHERE t.quoi = 'unit' AND t.cle = u.unit_id
+                  AND (:'dep_retrait' = '*' OR t.dep = :'dep_retrait'));
+DELETE FROM circo_1945_trace
+ WHERE :'dep_retrait' = '*' OR dep = :'dep_retrait';
 \endif
 
 \if :{?defaire}

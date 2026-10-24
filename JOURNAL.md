@@ -10425,3 +10425,98 @@ Les deux dates sont des **estimations** de parution : à relire au JO quand le
 numéro sera là. **Réexporté le même jour** : `export_web.py 05 --partition
 --role histgis_carte` (742 s, log `build/export_05_2026-10-24.log`) ; contrôlé
 dans les fichiers servis, Fressinières à 0502 dès 1949, Champcella dès 1978.
+
+## 24 octobre 2026 (soir) — petite couronne et outre-mer : les circonscriptions de 1946 à 1986
+
+Demande d'Adrien : « occupe-toi des DOM-TOM et de la banlieue parisienne qui a
+encore des villes manquantes / sans canton / circo entre 1940 et 1999 ».
+Mesure : `build/diag/petite_couronne_trous.sql`, sortie après coup dans
+`build/diag/petite_couronne_trous_2026-10-24.txt`.
+
+### D'abord un accident : `122 -v dep=05` avait vidé la France de 1945 à 1958
+
+En mesurant, la Seine-et-Oise sortait sans circonscription de 1945 à 1958, et
+Versailles aussi. `circo_1945_trace` ne contenait plus que le 05 : le rejeu du
+matin (Fressinières, `122 -v dep=05`) retirait **toute** la trace avant de ne
+reposer qu'un département. 339 atomes avaient une circonscription au
+1er juin 1950, contre ~37 600. Aucun export n'en est sorti (seul le 05 a été
+réexporté, et il était reposé).
+
+Correctif dans `122` : avec `-v dep`, le retrait ne porte que sur la trace de
+ce département. Puis `122` reposé en entier (`build/p122_2026-10-24_reprise.log`) :
+**37 587 rattachements, 89 unités, zéro atome à canton sans circonscription**
+aux quatre dates de la recette — les chiffres du 23 octobre au rattachement près.
+
+### `125` — la loi du 12 juillet 1966 dans les 92, 93 et 94
+
+Les 123 communes n'avaient aucune circonscription de 1968 à 1986. Gaudillère
+les donne (photos 130 à 132, cartes « 1967-1986 », fond communal, aucune
+commune divisée) : lues commune par commune, 13 + 9 + 8 circonscriptions,
+36 / 40 / 47 communes sans absente ni double. Lectures à l'agrandissement :
+Vaucresson en 9e (le trait fort la sépare de Rueil et de Garches, pas de
+Marnes) ; Stains en 3e (trait fin vers La Courneuve) ; Joinville en 5e avec
+Saint-Maur, Champigny en 6e avec Nogent.
+
+Bornes : [1968-01-01, 1986-11-24). **La loi a joué en mars 1967** ; la base
+garde 1967 dans la Seine de 1958 (`88`) parce qu'une unité `dep = 92` portée
+par des atomes encore rangés dans la Seine referait le 99 fantôme. Écart
+connu, écrit dans l'en-tête.
+
+Le choix des atomes : ceux qui ont un canton à la date ; dans un trou cantonal
+(Colombes de 1968 à 1998, Saint-Denis de 1976 à 1998…), ceux qui portent la
+circonscription de 1986 — 60 lignes de la recette 3. **30 unités, 189
+rattachements ; 0 commune sans circonscription de 1968 à 1986.**
+
+### Le Bourget, Dugny, Drancy en 1986
+
+Canton 9309, le seul que le ministère donne sur TROIS circonscriptions (3, 4,
+5), laissé indéterminé par `49`. La carte « 1986 » de la Seine-Saint-Denis ne
+divise que Saint-Denis : Dugny et Le Bourget en 4e (avec Le Blanc-Mesnil,
+Stains), Drancy en 5e. Règle ajoutée à `circo/resoudre_1986_partage.py`, CSV
+régénéré (+3 lignes), `49` rejoué : 118 → 121 rattachements.
+
+### `126` — outre-mer, 1946-1986
+
+Rien avant 1986. Posé :
+* [1946-03-19, 1958-01-01) : une liste départementale par DOM, comme `122` ;
+* [1958-01-01, 1986-11-24) : Guadeloupe 3, Martinique 3, La Réunion 3
+  (Gaudillère, photos 134, 136, 139, communes entières ; les îles par les
+  notes de la planche), Guyane une seule. Les 112 noms lus concordent avec la
+  trame par code INSEE (recette 1 bis vide).
+
+**14 unités, 224 rattachements.** Plus aucune commune des quatre DOM sans
+circonscription de 1946 à 1986. Mayotte (pas département avant 2011) reste
+vide, à raison.
+
+`125` et `126` sont dans `rejouer_apres_rebuild.sh`, après `123`.
+
+### Ce qui reste, et pourquoi ce n'est pas fait
+
+* **L'ex-Seine-et-Oise de 1955 à 1967** (9 communes du 92, 16 du 93, 18 du 94) :
+  23 sans canton de 1955 à 1967, et 40 sans circonscription de 1955 ou 1958 à
+  1967. La carte de 1958 (photo 107) est AU CANTON et trop dense autour de
+  Paris ; et la base n'a presque pas de cantons de Seine-et-Oise entre le
+  jalon de 1954 et 1968 (Chaville, Garches, Meudon : Sèvres en 1954, Chaville
+  en 1968, rien entre). Il faut d'abord les décrets cantonaux de S&O
+  (1959-1966, dont le n° 66-338), puis toute la S&O de 1958 dans `113`.
+* **Les cantons des villes découpées** : 1968-1997 pour Colombes, Levallois,
+  Malakoff, Puteaux, Aubervilliers, La Courneuve, L'Haÿ, Ivry… ; 1976-1997
+  (décrets n° 76-76 et 76-77) pour Saint-Denis, Montreuil, Pantin, Créteil,
+  Saint-Maur, Vitry… ; 1985-1997 (n° 84-1241) pour 19 communes du 92. Ce sont
+  des coupes de rue (`decoupe-ville`), décret par décret ; les textes ne sont
+  pas en base (`texte_integral = non`).
+* **Fort-de-France de 1986 à 2012** : divisée entre deux circonscriptions,
+  inexprimable dans `om_*` (un atome par commune) — même famille que
+  Saint-Denis de La Réunion en 2012.
+* **Les cantons d'outre-mer** : 27 communes multicantonales sans canton, et les
+  85 autres portent dès 1946 le canton de GEOFLA 2015 : l'histoire cantonale
+  des DOM de 1946 à 1999 n'est pas transcrite.
+
+**Réexporté le même soir** : `export_web.py 92|93|94 --partition --role
+histgis_carte` (86, 76 et 114 s) et `--outremer` (logs
+`build/export_{92,93,94,om}_2026-10-24.log`, avec `/usr/bin/python3` : le
+`python3` du shell n'a pas psycopg2). Contrôlé dans les fichiers servis : le 93
+en 1975 et le 92 en 1980 portent les circonscriptions de 1967, la Martinique en
+1962 celles de 1958, La Réunion en 1950 sa liste départementale. Les autres
+départements ne sont pas réexportés : la restauration de `122` ne change rien à
+ce qu'ils servent (l'effacement n'avait été exporté nulle part).

@@ -617,7 +617,8 @@ onze annexées dans les circos parisiennes. Voir `circo/note_seine.md` et
 | Rendre le sol à la mère jusqu'à la naissance de la fille | moyenne | **mesuré le 6 sept. : 367 atomes, 4 572,2 km².** Le report arrière de `11` n'est PAS à fermer — il comble ; c'est l'identité du dessin qu'il faut corriger, pas la couverture. Voir `sql/diag_report_arriere.sql` |
 | Belleville en 1857-1863 | faible | l'atlas déclare sa propre ligne « purement arbitraire » ; à laisser nommée et non attribuée |
 | 1941-1945 — l'Occupation | faible | rien de transcrit, ni Paris ni banlieue |
-| 1968-1985 — la banlieue passe aux 92, 93, 94 | moyenne | ces départements n'ont aucune couche circo |
+| 1955-1967 — l'ex-Seine-et-Oise des 92, 93, 94 | moyenne | 43 communes sans canton et/ou sans circonscription (JOURNAL, 24 octobre 2026 au soir). Les 1968-1986 sont posées par `125` ; restent les décrets cantonaux de Seine-et-Oise (1959-1966) puis la S&O de 1958 dans `113` |
+| Cantons des villes découpées des 92, 93, 94 | moyenne | 1968-1997, 1976-1997 (n° 76-76, 76-77), 1985-1997 (n° 84-1241) : coupes de rue, textes à trouver |
 | Renommer « Paris 1e à 3e » de 1945-1958 en « Seine » | faible | aucun, mais c'est modifier de la donnée existante : passage à part |
 
 ---

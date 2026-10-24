@@ -921,6 +921,29 @@ etape "123 — villes partagées entre plusieurs circonscriptions"
       -f "$ICI/123_circo_villes_partagees.sql" > "$RACINE/build/p123.log" 2>&1 ) \
     || { echo "  123 refusé — voir build/p123.log" >&2; exit 1; }
 
+# Ajouté le 24 octobre 2026. `125` pose les circonscriptions de la loi du
+# 12 juillet 1966 dans les 92, 93 et 94, de 1968 au 24 novembre 1986, commune
+# par commune (Gaudillère). Il LIT les cantons pour choisir les atomes qui
+# dessinent chaque commune, et les circonscriptions de 1986 en repli : il passe
+# après tout ce qui en pose, `49` compris.
+etape "125 — circonscriptions 1967-1986 des Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/125_circo_1967_petite_couronne.sql" > "$RACINE/build/p125.log" 2>&1 \
+    || { echo "  125 refusé — voir build/p125.log" >&2; exit 1; }
+
+# Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
+# 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
+# dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
+# s'il est passé.
+if $PSQL -Atc "SELECT to_regclass('histgis.om_atom') IS NOT NULL" | grep -q t; then
+    etape "126 — circonscriptions d'outre-mer 1946-1986"
+    $PSQL -P pager=off -1 -v appliquer=1 \
+          -f "$ICI/126_outremer_circo_1946_1986.sql" > "$RACINE/build/p126.log" 2>&1 \
+        || { echo "  126 refusé — voir build/p126.log" >&2; exit 1; }
+else
+    echo "  om_atom absente — 126 sauté." >&2
+fi
+
 # ============================================================================
 # LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026
 # ============================================================================
