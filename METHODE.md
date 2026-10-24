@@ -1319,6 +1319,14 @@ dans la circonscription de Briançon de 1876 à 1919. La base, qui suit les
 cantons de l'époque, les met à Embrun, et c'est elle qui a raison (JOURNAL,
 24 octobre 2026).
 
+Le fond simplifie aussi, ce qui ne tient pas à sa date. Montselgues (Ardèche)
+est une **enclave** du canton de Valgorge : Sablières, du canton de Joyeuse, la
+sépare du reste du canton. Gaudillère dessine Valgorge d'un seul tenant (p. 114-116,
+photo 38) et laisse Montselgues dans la masse de Joyeuse, sans trait. Le
+recensement de 1954, le COG de 1968 et la table de 1986 la donnent tous à
+Valgorge, et la base aussi, de 1815 à 2013. Ici sans effet : Valgorge et
+Joyeuse ne sont jamais dans deux circonscriptions différentes.
+
 > Ce que l'atlas affirme, c'est **quels cantons** forment une circonscription,
 > pas **quelles communes** forment un canton.
 
