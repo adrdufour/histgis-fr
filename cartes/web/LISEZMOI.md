@@ -18,6 +18,10 @@ ensuite avec `python3 cartes/export_web.py --outremer`, sans quoi le groupe
 `sorties/part_2026-10-04_1815` (l'ancien index est gardé dans
 `donnees/index.avant_outremer.json`).
 
+**Le Pacifique sort par le même `--outremer`** (987, 988), à condition que
+`bash sql/charger_pacifique.sh` puis `135_pacifique.sql` aient été joués ; le
+premier demande l'environnement `histgis` (shapely ≥ 2.1).
+
 Pour la carte d'une liste de communes (export Commons, ci-dessous), une fois
 après chaque export : `python3 cartes/web/noms_cog.py` puis
 `python3 cartes/web/fonds_communes.py`.

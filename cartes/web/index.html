@@ -447,6 +447,29 @@ async function charge(url) {
 }
 
 // ===========================================================================
+// Les trames d'outre-mer : un instantané chacune, et chacune sa licence
+//
+// `40` dessine les DOM avec GEOFLA 2015 ; `135` le Pacifique avec la trame de
+// l'ISPF et celle du gouvernement calédonien. Toutes trois sont sans épaisseur
+// temporelle — c'est ce qui les rassemble ici —, mais elles n'ont ni le même
+// auteur ni la même licence, et une carte qui les confond cite à tort. La clé
+// est `om_atom_geom.source`, que l'export recopie dans `trame`.
+// ===========================================================================
+const TRAMES_OM = {
+  geofla2015: { nom: "GEOFLA 2015",
+                fond: "IGN, GEOFLA 2015 (Licence Ouverte)" },
+  ispf2021:   { nom: "la trame de l'ISPF (2021)",
+                fond: "Institut de la statistique de la Polynésie française " +
+                      "(ISPF), limites géographiques administratives, 2021 " +
+                      "(ODbL)" },
+  gnc2024:    { nom: "la trame du gouvernement de la Nouvelle-Calédonie (2024)",
+                fond: "Gouvernement de la Nouvelle-Calédonie, limites " +
+                      "communales terrestres simplifiées (BDADMIN-NC), 2024 " +
+                      "(Licence Ouverte 2.0)" },
+};
+const trameOM = () => TRAMES_OM[S.trame] || null;
+
+// ===========================================================================
 // La géométrie d'une commune a une épaisseur temporelle
 //
 // Jusqu'au 1er septembre 2026, `communes.json` donnait un polygone par atome,
@@ -1197,13 +1220,13 @@ function panneau() {
       l'année : le curseur déplace les rattachements, pas les formes.
       Réexporter avec <code>python3 cartes/export_web.py</code> sur une base où
       <code>sql/82_anr_geom.sql</code> a été joué.</p>`;
-  } else if (cp.repli && S.trame === "geofla2015") {
+  } else if (cp.repli && trameOM()) {
     // Outre-mer : le repli n'est pas un manque d'ANR, c'est l'absence d'ANR.
     // Servir ici les « trois causes » de la métropole nommerait une source qui
     // ne couvre pas ce territoire, et laisserait croire à un défaut réparable
     // par un réexport. *Un message juste ailleurs est un message faux ici.*
     h += `<p class="note"><b>Trame sans épaisseur temporelle.</b> Les
-      ${cp.repli} communes affichées sont dessinées par GEOFLA 2015, le même
+      ${cp.repli} communes affichées sont dessinées par ${trameOM().nom}, le même
       instantané à toutes les dates : ANR-COMMUNES ne couvre pas l'outre-mer, et
       <code>sql/84_carte_partition.sql</code> non plus. Les rattachements, eux,
       suivent le curseur. La forme est juste, sa <i>date</i> n'est pas
@@ -1547,9 +1570,9 @@ function ficheCommune(aid) {
   h += `</table>`;
   if (c.v) {
     const vg = versionA(c, S.annee);
-    if (vg && vg.r && S.trame === "geofla2015") {
-      h += `<p class="note">Forme prise à GEOFLA 2015, la seule trame dont
-        l'outre-mer dispose : elle vaut à toutes les dates. La commune est bien
+    if (vg && vg.r && trameOM()) {
+      h += `<p class="note">Forme prise à ${trameOM().nom}, la seule trame
+        dont ce territoire dispose : elle vaut à toutes les dates. La commune est bien
         où la base la met ; sa <i>forme</i> n'est pas datée, et aucune source du
         projet ne la date aujourd'hui.</p>`;
     } else if (vg && vg.r) {
@@ -2055,6 +2078,20 @@ const COMMONS = {
     [1986, 2012, "Ministère de l'Intérieur, tableaux de correspondance " +
                  "communes-cantons-circonscriptions (Licence Ouverte)"],
   ],
+  // Source de la COMPOSITION électorale du Pacifique, qui n'est dans aucun
+  // fichier du ministère : les tableaux annexés aux lois, lus par `135`.
+  sourcesParDep: {
+    "987": [[1945, 1977, "circonscription unique : le territoire entier " +
+                         "élit un député"],
+            [1978, 1985, "loi n° 77-1340 du 8 décembre 1977, tableau annexé"],
+            [1986, 2011, "loi n° 86-1197 du 24 novembre 1986, tableau n° 2"],
+            [2012, 2012, "ordonnance n° 2009-935 du 29 juillet 2009, " +
+                         "tableau n° 1 bis"]],
+    "988": [[1945, 1977, "circonscription unique : le territoire entier " +
+                         "élit un député"],
+            [1978, 1985, "loi n° 77-1340 du 8 décembre 1977, tableau annexé"],
+            [1986, 2012, "loi n° 86-1197 du 24 novembre 1986, tableau n° 2"]],
+  },
   // Source de la COMPOSITION cantonale, par période.
   sourcesCantons: [
     [1870, 1940, "TRF-GIS (V. Gay), Harvard Dataverse, CC BY 4.0"],
@@ -2127,7 +2164,8 @@ function periodeDe(annee) {
   return COMMONS.periodes.find(([a, b]) => annee >= a && annee <= b) || null;
 }
 function sourceDe(annee) {
-  const s = COMMONS.sources.find(([a, b]) => annee >= a && annee <= b);
+  const s = (COMMONS.sourcesParDep[S.dep] || COMMONS.sources)
+    .find(([a, b]) => annee >= a && annee <= b);
   return s ? s[2] : "base ''histgis''";
 }
 function nomModerne(dep) {
@@ -2799,8 +2837,8 @@ function contexte(plage) {
 
 function fondCommunal(k) {
   const repli = k.unites.reduce((s, u) => s + (u.repli || 0), 0);
-  return S.trame === "geofla2015"
-    ? "IGN, GEOFLA 2015 (Licence Ouverte)"
+  return trameOM()
+    ? trameOM().fond
     : "ANR-COMMUNES, trame communale historique datée (Zenodo)" +
       (repli ? " ; IGN, GEOFLA 2011 (Licence Ouverte) pour " + repli +
                " commune" + (repli > 1 ? "s" : "") + " non pourvue" + (repli > 1 ? "s" : "") : "");

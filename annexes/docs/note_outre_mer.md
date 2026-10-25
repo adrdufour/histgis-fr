@@ -140,6 +140,13 @@ millésime GEOFLA 1999 de la Guadeloupe les contient encore, sous leurs codes
 
 ## 3. Le Pacifique — la trame existe, la licence bloque
 
+> **Levé le 25 octobre 2026** (`sql/135_pacifique.sql`, récit dans
+> `JOURNAL.md`). Nouvelle-Calédonie : le jeu simplifié de data.gouv.nc est en
+> Licence Ouverte 2.0 ; c'est lui qui est chargé, pas le `.gdb` du DITTT, dont
+> les CGU excluent l'exploitation commerciale. Polynésie : l'ODbL est
+> acceptée, les cartes rendues étant des « œuvres produites » qui citent
+> l'ISPF. Ce qui suit est l'état du 16 août.
+
 **Polynésie française.** Le jeu « Limites géographiques administratives » de
 l'ISPF sur data.gouv.fr donne communes, communes associées et îles en shapefile,
 avec la hiérarchie complète. Il est publié en **ODbL**. C'est exactement le mur
@@ -398,7 +405,9 @@ Trois points d'attention, tous du même genre que ceux déjà rencontrés :
 6. Écrire le `.sql` qui pose les 129 communes en atomes 4326, avec les
    85 rattachements cantonaux acquis et les circonscriptions 1986 et 2012 de
    `circo/circo_outremer_1986_2012.csv`.
-7. Trancher la Nouvelle-Calédonie sur la licence de BDADMIN-NC.
+7. ~~Trancher la Nouvelle-Calédonie sur la licence de BDADMIN-NC~~ **fait** le
+   25 octobre 2026 : BDADMIN-NC écarté, jeu Licence Ouverte de data.gouv.nc
+   chargé, Polynésie en ODbL avec lui (`135`).
 8. L'Algérie, au niveau départemental, plus tard.
 
 Tout ce qui se télécharge est sur le disque, sauf la trame IRIS, dont le script

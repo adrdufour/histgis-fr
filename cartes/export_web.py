@@ -294,10 +294,16 @@ NOMS_DEP = {
     # parce que c'est un fait de calendrier et non un fait de nom.
     #
     # Pas de `975` : Saint-Pierre-et-Miquelon n'est pas dans les cinq lots que
-    # `40_outremer.sql` charge. Le Pacifique et l'Algérie sont bloqués par la
-    # licence de leurs sources (`ETAT.md`, § 2.7).
+    # `40_outremer.sql` charge. L'Algérie est bloquée par la licence de ses
+    # sources (`ETAT.md`, § 2.7) ; le Pacifique ne l'est plus depuis `135`.
     "971": "Guadeloupe", "972": "Martinique", "973": "Guyane",
     "974": "La Réunion", "976": "Mayotte",
+    # Les Établissements français de l'Océanie prennent le nom de Polynésie
+    # française par le décret du 22 juillet 1957 — avant la planche de
+    # décembre 1957, donc 1957 est déjà polynésienne.
+    "987": [(AN_MIN, 1956, "Établissements français de l'Océanie"),
+            (1957, AN_MAX, "Polynésie française")],
+    "988": "Nouvelle-Calédonie",
 }
 
 
@@ -378,6 +384,15 @@ BORNES_MOTIF = {
     "974": ("département par la loi du 19 mars 1946", None),
     "976": ("département depuis le 31 mars 2011 seulement — collectivité "
             "territoriale auparavant", None),
+    # Ni l'un ni l'autre n'est un département : ce sont des territoires (puis
+    # une collectivité, et un statut propre pour la Nouvelle-Calédonie), sans
+    # cantons. La borne est le premier député, pas un statut.
+    "987": ("premier député élu le 21 octobre 1945, à la première "
+            "Constituante — pas de siège auparavant. Territoire sans cantons",
+            None),
+    "988": ("premier député élu le 21 octobre 1945, à la première "
+            "Constituante — pas de siège auparavant. Territoire sans cantons",
+            None),
 }
 
 # Première année où chaque territoire d'outre-mer est un DÉPARTEMENT.
@@ -404,6 +419,10 @@ AN_DEBUT_DOM = {
     # auparavant, et c'est aussi pourquoi elle est absente du fichier du
     # ministère de 1986 et de 2012 qui pose les rattachements.
     "976": 2011,
+    # Le Pacifique n'est pas départementalisé : sa borne est celle de son
+    # premier député, le 21 octobre 1945 (`135`). La planche de décembre 1945
+    # le montre donc déjà.
+    "987": 1945, "988": 1945,
 }
 AN_DOM = 1946        # repli, pour un code d'outre-mer que la table ignore
 
@@ -1242,6 +1261,15 @@ def sql_par_date(anr, partition=False):
 # la latitude ne l'entame pas d'un pouce.
 DEG_PAR_M = 1.0 / 111320.0
 
+# Le Pacifique n'a pas besoin de la grille, et elle lui nuit. Ses deux trames
+# sont déjà une couverture propre, allégée à 20 m par `sql/trame_pacifique.py`
+# avec des sommets partagés à l'identique : il n'y a aucune coïncidence à
+# rétablir. Accrochés à 25 m, ses traits encore sinueux se referment en
+# boucles que `ST_MakeValid` change en trous — 1 554 en Nouvelle-Calédonie
+# sur la trame brute, contre zéro dans les DOM. Un mètre suffit : c'est déjà
+# ce que fait l'arrondi à cinq décimales du GeoJSON.
+PAS_TRAME_M = {"ispf2021": 1.0, "gnc2024": 1.0}
+
 # Les atomes d'un département d'outre-mer. Sept colonnes dans le même ordre que
 # `sql_communes()`, pour que la boucle d'écriture soit la même des deux côtés.
 #
@@ -1364,6 +1392,15 @@ GROUP  BY u.unit_id, coalesce(uv.nom, u.nom, u.unit_id), u.code, u.regime
 # instantané : l'emprise est la même à toutes les dates, et une seule entrée
 # suffit. Elle est écrite sous la première année servie — ou sous 1946, l'année
 # où les DOM deviennent départements, quand la base ne sert aucune année.
+# La trame d'un territoire, lue sur la forme et non supposée. `40` n'écrit que
+# `geofla2015` ; `135` écrit `ispf2021` (Polynésie) et `gnc2024`
+# (Nouvelle-Calédonie). Un territoire qui en mêlerait deux le dirait.
+SQL_OM_TRAME = """
+SELECT string_agg(DISTINCT g.source, '+' ORDER BY g.source)
+FROM   om_atom_geom g JOIN om_atom a ON a.atom_id = g.atom_id
+WHERE  a.dep = %(dep)s
+"""
+
 SQL_OM_CONTOUR = f"""
 SELECT ST_AsGeoJSON(
            ST_MakeValid(ST_UnaryUnion(ST_Collect({sql_om_geom('g.geom')}))),
@@ -1771,7 +1808,10 @@ def exporte_departement_om(cur, dep, grille, prec, sortie):
     """
     t0 = time.time()
     base = sortie / "dep" / dep
-    params = {"dep": dep, "pas": grille * DEG_PAR_M, "prec": prec}
+    cur.execute(SQL_OM_TRAME, {"dep": dep})
+    trame = (cur.fetchone() or [None])[0] or "geofla2015"
+    pas_m = min(grille, PAS_TRAME_M.get(trame, grille))
+    params = {"dep": dep, "pas": pas_m * DEG_PAR_M, "prec": prec}
     an_debut = AN_DEBUT_DOM.get(dep, AN_DOM)
 
     def par_annee_signature(niveau):
@@ -1923,7 +1963,7 @@ def exporte_departement_om(cur, dep, grille, prec, sortie):
         # La page lit d'abord la trame du DÉPARTEMENT, l'index racine ensuite :
         # c'est ce qui lui permet de dire « GEOFLA 2015 » ici et « partition »
         # sur l'Ain sans se contredire.
-        "trame": "geofla2015",
+        "trame": trame,
         "annees_geom": None,
         # Déclaré dans le fichier plutôt que déduit par la page : l'outre-mer
         # est un autre espace de la base, et une carte qui ne dit pas d'où elle
@@ -2399,7 +2439,8 @@ def main():
           f"(×{cumul/ecoule:.1f} sur {jobs} processus).")
     if args.outremer and n_com:
         vides = [r["dep"] for r in rapport if not r["bornes"]]
-        print(f"Trame GEOFLA 2015 : les {n_com} communes d'outre-mer sont "
+        print(f"Trames GEOFLA 2015, ISPF et data.gouv.nc : les {n_com} "
+              f"communes d'outre-mer sont "
               f"dessinées par un instantané sans épaisseur temporelle — toutes "
               f"portent `r: 1`, et c'est exact.")
         if vides:

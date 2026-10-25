@@ -677,8 +677,12 @@ territoires, et ne sont écartés que par une barrière de date.
 
 Rouvert le 16 août 2026, dans un espace séparé (`om_*`, `40_outremer.sql`), sans
 mélange avec la métropole. Circonscriptions DOM déjà sur disque, GEOFLA
-2015-03-04 pour les trames, CONTOURS-IRIS couvrant 61 coupes sur 61. Pacifique
-et Algérie restent bloqués par la licence.
+2015-03-04 pour les trames, CONTOURS-IRIS couvrant 61 coupes sur 61. L'Algérie
+reste bloquée par la licence. **Le Pacifique ne l'est plus depuis le
+25 octobre 2026** (`135_pacifique.sql`) : Polynésie française sur la trame de
+l'ISPF (ODbL, cartes rendues en « œuvre produite »), Nouvelle-Calédonie sur
+celle de data.gouv.nc (Licence Ouverte 2.0), circonscriptions 1945-2012 tirées
+des lois de 1977, 1986 et de l'ordonnance de 2009. Récit dans `JOURNAL.md`.
 
 **`40_outremer.sql` n'est toujours pas joué** — son prérequis `om_commune_src`
 vient de `charger_outremer.sh`, que rien n'appelait jusqu'au 2 septembre (§ 6).

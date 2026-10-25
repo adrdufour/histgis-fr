@@ -10881,3 +10881,103 @@ Les trois fichiers entrent dans la chaîne après `130`, avant `125` et `128`.
 Les villes coupées (Versailles, Saint-Germain-en-Laye, Poissy, Argenteuil,
 Sarcelles, Corbeil-Essonnes, Évry, Massy, Savigny…), les communes mortes, et
 1941-1954 (jalon de 1954). La Seine-et-Marne n'est pas commencée.
+
+## 25 octobre 2026 (nuit, suite) — la Polynésie française et la Nouvelle-Calédonie
+
+« Il nous manque encore les cartes de la Polynésie et de Nouvelle-Calédonie. »
+Elles sont dans la carte web, avec leurs circonscriptions de 1945 à 2012 :
+`sql/charger_pacifique.sh` (trames), `sql/trame_pacifique.py` (recouture et
+allègement), `sql/135_pacifique.sql` (atomes et circonscriptions, dans
+l'espace `om_*`), puis `export_web.py --outremer`.
+
+### Les deux murs de licence, et comment ils sont tombés
+
+* **Nouvelle-Calédonie.** Le `BDADMIN-NC.gdb` du DITTT, reçu en août, est sous
+  CGU de juillet 2017 qui « excluent toute exploitation commerciale » : Commons
+  fermé. Mais le portail data.gouv.nc publie les communes tirées de la même
+  BDADMIN-NC (« limites communales terrestres simplifiées ») sous **Licence
+  Ouverte 2.0** — l'API du portail, muette le 16 août, a répondu. Téléchargé
+  avec ses métadonnées dans `sources/nouvelle_caledonie/communes_gnc/`. Le
+  `.gdb` n'est pas lu.
+* **Polynésie.** L'ISPF reste en ODbL, seule trame qui existe. Tranché par
+  Adrien : une carte rendue est une « œuvre produite » au sens de l'ODbL
+  (§ 4.5), qu'on peut licencier en CC BY-SA 4.0 en citant la base ; seule la
+  base dérivée serait soumise au partage à l'identique, et on ne la diffuse
+  pas. La page cite l'ISPF et l'ODbL dans le fond communal de chaque fichier
+  Commons.
+
+### Les circonscriptions, toutes tirées des textes
+
+| période | Polynésie | Nouvelle-Calédonie | source |
+|---|---|---|---|
+| 1945-10-21 → 1978-03-12 | unique (48) | unique (33) | premier député à la première Constituante |
+| 1978-03-12 → 1986-11-24 | 1re « Ouest et Sud » 20, 2e « Est » 28 | 1re « Est-Loyauté » 14, 2e « Ouest » 19 | loi n° 77-1340 du 8 déc. 1977, tableau annexé |
+| 1986-11-24 → 2012-06-10 | 1re 17, 2e 31 | 1re 5, 2e 28 (jusqu'en 2013) | loi n° 86-1197, tableau n° 2 |
+| 2012-06-10 → | 1re 27, 2e 12, 3e 9 | inchangée | ordonnance n° 2009-935, tableau n° 1 bis |
+
+Le tableau de 1977 est lu dans le texte de l'Assemblée du 6 octobre 1977
+(Sénat n° 7, 1977-1978) ; le Sénat a voté son article « conforme » le
+27 octobre (T.A. n° 6), le rapport de la commission (n° 34) donne les cartes
+et les populations. Celui de 1986 dans le texte définitif (Sénat, T.A. n° 6,
+1986-1987). Les cinq PDF sont gardés dans `sources/outremer/textes_pacifique/`.
+Le tableau polynésien de 1977 procède en partie par subdivisions
+(Îles Sous-le-Vent et Australes d'un côté, Tuamotu-Gambier et Marquises de
+l'autre) : la trame de l'ISPF porte la subdivision de chaque commune, c'est
+elle qui tranche. Les bornes suivent `113`, `126` et `40` : 1986 au
+24 novembre, la proportionnelle de mars 1986 n'est pas posée ; 1978 et 2012
+au premier tour du renouvellement.
+
+Kouaoua (98833), détachée de Canala le 28 avril 1995, suit Canala avant : son
+atome est dans Est-Loyauté de 1978 à 1986. Les noms sont ceux du COG et des
+lois (« Faaa », « Bora-Bora »), pas ceux de l'ISPF (« Faa'a », « Bora Bora »).
+
+### La trame calédonienne était décousue
+
+Le portail a simplifié chaque commune pour elle-même : **26 communes sur 33
+n'ont plus de limite commune avec leurs voisines**. La réunion portait
+292 trous ; l'accrochage à 25 m de l'export en faisait 1 554 (7,4 km²), soit
+un liseré blanc le long de chaque limite. GEOFLA, dans les DOM : zéro.
+
+`trame_pacifique.py` recoud : toutes les limites nouées ensemble, le plan
+découpé en 2 443 faces, chaque face rendue à une commune — 220 chevauchements
+et 214 interstices à la commune qui partage avec eux la plus longue limite,
+78 trous bordés par une seule commune laissés tels quels (trous de la
+source). Puis `shapely.coverage_simplify` à 20 m sur les deux trames, qui
+allège sans défaire le partage des limites — PostGIS 3.2 n'a pas
+`ST_CoverageSimplify`, d'où Python (shapely 2.1, environnement `histgis`).
+Polynésie : 987 142 → 121 263 sommets, −0,05 % de surface ; Calédonie :
+425 297 → 111 498, −0,00 %. Écrit dans `geom_carte`, la source restant dans
+`geom`.
+
+**Et l'export ne les accroche plus à 25 m.** Essai fait : poser les sommets
+sur la grille dans le script crée 617 trous à lui seul ; accrocher à l'export
+en crée des centaines (boucles des traits sinueux refermées par
+`ST_MakeValid`). Une couverture déjà propre n'a pas de coïncidence à rétablir :
+`PAS_TRAME_M` donne 1 m à `ispf2021` et `gnc2024`, ce que fait déjà
+l'arrondi à cinq décimales. Résultat : 78 trous en Calédonie, exactement ceux
+de la source, 0 km² de recouvrement.
+
+### Ce que l'export et la page disent de plus
+
+* `om_atom_geom.source` accepte `ispf2021` et `gnc2024` (contrainte élargie par
+  `135`, pas retirée) ; l'index de chaque territoire porte sa vraie trame, que
+  l'export lit sur la forme. Le dossier mêle désormais quatre trames.
+* `NOMS_DEP` : « Établissements français de l'Océanie » jusqu'en 1956
+  (décret du 22 juillet 1957), « Polynésie française » ensuite. `AN_DEBUT_DOM`
+  et `BORNES_MOTIF` : 1945, premier député.
+* La page nomme la trame (`TRAMES_OM`) au lieu de supposer GEOFLA 2015, et cite
+  la composition électorale du Pacifique par territoire
+  (`COMMONS.sourcesParDep`) — ni l'un ni l'autre n'est dans le fichier du
+  ministère.
+
+Poids : 987 16,7 Mo, 988 9,7 Mo (40 et 25 Mo avant allègement) ;
+`communes.json` à 3 Mo, la moitié du Finistère.
+
+Vérifié dans la page : 988 en 1980 (Est-Loyauté et Ouest), 987 en 1950
+(« Établissements français de l'Océanie », circonscription unique), 1980
+(20 + 28) et 2012 (Tahiti partagée entre les trois). Aucune erreur en console.
+
+**Pas fait** : Wallis-et-Futuna (ni commune de droit ni trame ouverte) ; la
+proportionnelle de 1986 (comme partout dans la base) ; les « ressortissants
+français des Nouvelles-Hébrides » rattachés à Est-Loyauté en 1978, qui n'ont
+pas de territoire à dessiner.

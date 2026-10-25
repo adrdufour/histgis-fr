@@ -993,7 +993,7 @@ if $PSQL -Atc "SELECT to_regclass('histgis.om_atom') IS NOT NULL" | grep -q t; t
           -f "$ICI/129_outremer_villes_partagees.sql" > "$RACINE/build/p129.log" 2>&1 \
         || { echo "  129 refusé — voir build/p129.log" >&2; exit 1; }
 else
-    echo "  om_atom absente — 126 et 129 sautés." >&2
+    echo "  om_atom absente — 126, 129 et 135 sautés." >&2
 fi
 
 # ============================================================================
@@ -1002,6 +1002,19 @@ fi
 # `export_web.py --role histgis_carte` et `cartes/export_partition.sh`
 # descendent dans ce rôle, qui n'a que SELECT : c'est ce qui rend au moteur la
 # garantie qu'un export n'écrit rien (voir `connecte()` dans export_web.py).
+    # Ajouté le 25 octobre 2026. `135` : la Polynésie française et la
+    # Nouvelle-Calédonie, atomes et circonscriptions 1945-2012. Il lit deux
+    # trames que `charger_pacifique.sh` charge ; sans elles, il est sauté.
+    if $PSQL -Atc "SELECT to_regclass('histgis.om_pf_src') IS NOT NULL
+                      AND to_regclass('histgis.om_nc_src') IS NOT NULL" | grep -q t; then
+        etape "135 — Polynésie française et Nouvelle-Calédonie"
+        $PSQL -P pager=off -1 -v appliquer=1 \
+              -f "$ICI/135_pacifique.sql" > "$RACINE/build/p135.log" 2>&1 \
+            || { echo "  135 refusé — voir build/p135.log" >&2; exit 1; }
+    else
+        echo "  trames du Pacifique absentes — 135 sauté" \
+             "(bash sql/charger_pacifique.sh)." >&2
+    fi
 #
 # Ces droits portent sur le SCHÉMA, et `rebuild.sh` fait `DROP SCHEMA histgis
 # CASCADE` : ils partent avec lui, en silence. Les droits sur la BASE
