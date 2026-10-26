@@ -3792,6 +3792,67 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Pessac (33318)
+
+### 133. Pessac de 1973 à 1982 : la ville sans canton, et les communes du canton de Villenave-d'Ornon sous le code de Pessac
+
+- **Source** : décret 73-657 du 13 juillet 1973 (JO du 17 juillet 1973, p. 7705-7706,
+  `jorf_txt/JORF_19730717_164_col.txt`, l. 1509-1521) : art. 4, création du canton de
+  Villenave-d'Ornon (Villenave-d'Ornon, Gradignan, Canéjan, Cestas) ; art. 5, l'ancien canton de
+  Pessac « est composé de la seule commune de Pessac ».
+- **Base**, du 1973-09-23 au 1982-03-14 : Villenave-d'Ornon (40291), Gradignan (15901), Canéjan
+  (6784) et Cestas (7577) sous le code 3335 (Pessac) ; Pessac (26588) sans appartenance cantonale.
+  Mineur : `unit_version` ne nomme pas 3335 / 3362 entre 1941 et 1999 (3335 s'affiche « Pessac »
+  en 1982 au lieu de Pessac-I).
+- **À inscrire** : 40291, 15901, 6784, 7577 en 3357 (Villenave-d'Ornon) du 1973-09-23 au
+  1982-03-14 ; 26588 entier en 3335 sur la même période.
+- **Lignes** : aucune n'en dépend. `33318-1` (décret 82-29, 1982-03-14 → 2013-01-01) écrite le
+  25 octobre 2026, ancres 26588#3335 POINT(413500 6418500), 26588#3362 POINT(406000 6417000).
+  Fichiers : `cartes/sorties/decoupe_pessac/`.
+
+---
+
+## Mérignac (33281)
+
+### 134. Mérignac sans canton de 1955 à 1968 et de 1973 à 1982 (à vérifier)
+
+- **Source** : canton de Mérignac détaché de celui de Pessac par le décret du 24 septembre 1957
+  (référence relevée par l'agent de découpe, non collationnée) ; décret 82-29 du 15 janvier 1982,
+  art. 4 (JO du 16 janvier 1982, `jorf_txt/JORF_19820116_13_col.txt`, l. 1285-1297) pour la
+  division en Mérignac-I / II.
+- **Base** : `22085` (Mérignac) en 3351, atome entier, de 1968 au 1973-09-23 ; aucune
+  appartenance de 1955 à 1968 ni du 1973-09-23 au 1982-03-14. Fractions `22085#3351` (I) et
+  `#3361` (II) du 1982-03-14 au 2013-01-01.
+- **À inscrire** (après lecture du décret de 1957 et de celui de 1973 pour la Gironde) : la
+  commune entière en 3351 sur les périodes manquantes, si les textes le confirment.
+- **Lignes** : aucune n'en dépend. `33281-1` (1982-03-14 → 2013-01-01) écrite le 25 octobre 2026,
+  ancres 22085#3351 = nord, 22085#3361 = sud. Fichiers : `cartes/sorties/decoupe_merignac/`.
+
+---
+
+## Auch (32013)
+
+### 135. Auch de 1973 à 1985 : quatre fractions sans canton, alors que les communes rurales sont déjà partagées ; noms de 1941 jusqu'en 1999
+
+- **Source** : décret 73-765 du 2 août 1973 (JO du 4 août 1973,
+  `jorf_txt/JORF_19730804_180_col.txt`, l. 2464-2560) : Auch-Nord-Est, Nord-Ouest, Sud-Est,
+  Sud-Ouest (avec une enclave du Sud-Ouest dans le Sud-Est). Décret du 16 janvier 1985 (JO du
+  18 janvier 1985, p. 686) : Auch-Sud-Est devient Auch-Sud-Est-Seissan.
+- **Base** : `1709#3202`, `#3203`, `#3230`, `#3231` sans appartenance du 1973-09-23 au
+  1985-03-10 ; les communes rurales sont pourtant en 3202, 3203, 3230, 3231 dès 1973. Pas
+  d'`unit_version` entre 1941 et 1999 : 3202 s'affiche « Auch-Nord » (Nord-Est depuis 1973),
+  3203 « Auch-Sud » (Sud-Est en 1973, Sud-Est-Seissan en 1985).
+- **À inscrire** : les quatre fractions en 3202, 3203, 3230, 3231 du 1973-09-23 au 1985-03-10 ;
+  les noms de 1973 et de 1985.
+- **Lignes** : écrites le 25 octobre 2026, ancres datées. `32013-1801-nord-sud` (1801-10-31 →
+  1817-11-19) et `32013-1817-nord-sud` (→ 1973-09-23), même géométrie, ancres 3202
+  POINT(506400 6289300), 3203 POINT(504000 6284000). Passe 1973 (→ 2013-01-01), quatre lignes,
+  ancres 3202 POINT(508000 6288500), 3203 POINT(507500 6284500), 3230 POINT(500000 6286000),
+  3231 POINT(504000 6284000) : elles joueront dès l'inscription. Fichiers :
+  `cartes/sorties/decoupe_auch/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :

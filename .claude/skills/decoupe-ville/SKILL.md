@@ -1072,3 +1072,31 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **Quand les IRIS suivent un régime presque partout** (Montpellier 1985 : 92 à 100 %), un accord
   très bas sur une ligne (1,4 % pour I/VI) désigne une divergence texte / INSEE à chiffrer.
 - **`from outils import *` n'importe pas les noms en `_`** (`_pt`) : les importer à part.
+
+- **Une liste qui commence par des voies de limite communale** (Mérignac, 25 octobre 2026 : avenues
+  d'Arès et de Mérignac le long de Bordeaux) : les tronçons dont `insee_commune_gauche` et
+  `_droite` diffèrent le montrent ; la ligne commence à la première voie intérieure.
+- **Une voie suivie en partie seulement** (« avenue de la Marne, rue Alfred-de-Vigny… », la Marne
+  jusqu'à Vigny) laisse une poche (47 ha à Mérignac) : la laisser du côté que la lettre lui donne,
+  chiffrer la lecture « d'un trait ».
+- **Un texte qui finit en pleine ville devant un aéroport** (Mérignac, avenue Kennedy à 2 km du
+  bord) : prolongement au plus court par les routes vers le point triple, écrit comme hypothèse,
+  avec les lectures IRIS et axe chiffrées ; la population ne tranche pas des hectares vides.
+- **La dernière voie coupée par une rocade postérieure** (Pessac, chemin du Pontet) : l'orthophoto
+  1950-1965 montre l'ancien chemin ; suivre ses restes (allée Newton, antenne « Voie Romaine »),
+  franchir la rocade en droite, remplacer la queue en SQL. Le plus court chemin prenait l'avenue
+  parallèle (2,56 ha).
+- **WMS `ORTHOPHOTOS.1980-1995` peut rendre une image toute blanche sans erreur** (Pessac) :
+  regarder l'image avant de conclure qu'une voie n'existait pas.
+- **Un canton créé en 1973 dont les communes restent sous le code du canton mère** (Villenave-
+  d'Ornon sous Pessac, 1973-1982, et Pessac sans canton) : lire l'article « l'ancien canton… est
+  composé de… » du décret, et consigner.
+- **Une enclave bornée par une route que le texte donne à l'autre canton** (Auch 1973, route du
+  Garros) : réduite à l'axe, l'enclave touche le reste de son canton ; pas de boucle fermée, la
+  limite en fait le tour. La population la confirme (943 logements).
+- **Bulletin des lois de 1817** (7e série, t. 5) sur archive.org, `bub_gb_9CUUAAAAYAAJ` (p. 408 =
+  n449) ; l'OCR se trompe de numéro d'acte (3509 pour 3309) et de nom : citer l'image.
+- **Une commune qui en entoure une autre** (Auch autour de Duran) : le contrôle « chaque morceau
+  touche surtout son canton » ne vaut plus ; le dire dans la note.
+- **Les IRIS d'une ville COG se lisent au WFS** et peuvent être presque emboîtés dans les cantons
+  (Mérignac 23 sur 27, Pessac 18 sur 22) : contrôle utile même sans `iris_ville`.

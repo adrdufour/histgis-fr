@@ -770,3 +770,15 @@ PQ67#86E,"quartier PQ67, cote NE (109.9 ha) : 75-17@1986",POINT(649618 6865706),
 23741#3445,canton Montpellier  9e  Canton (point explicite),POINT(767000 6280400),1985-03-10,2013-01-01
 23741#3446,canton Montpellier 10e  Canton (point explicite),POINT(768600 6281600),1985-03-10,2013-01-01
 23741#3446,canton Montpellier 10e  Canton (point explicite),POINT(766800 6278600),1985-03-10,2013-01-01
+26588#3335,canton Pessac (point explicite),POINT(413500 6418500),,
+26588#3362,canton Pessac  2e  Canton (point explicite),POINT(406000 6417000),,
+22085#3351,canton Mérignac  1er Canton (nord),POINT(410741.4 6422899.100000001),,
+22085#3361,canton Mérignac  2e  Canton (sud),POINT(409814.82 6420755.15),,
+1709#3202,canton Auch-Nord (point explicite),POINT(506400 6289300),1801-10-31,1817-11-19
+1709#3203,canton Auch-Sud (point explicite),POINT(504000 6284000),1801-10-31,1817-11-19
+1709#3202,canton Auch-Nord (point explicite),POINT(506400 6289300),1817-11-19,1973-09-23
+1709#3203,canton Auch-Sud (point explicite),POINT(504000 6284000),1817-11-19,1973-09-23
+1709#3202,canton Auch-Nord (point explicite),POINT(508000 6288500),1973-09-23,2013-01-01
+1709#3203,canton Auch-Sud (point explicite),POINT(507500 6284500),1973-09-23,2013-01-01
+1709#3230,canton Auch-Nord-Ouest (point explicite),POINT(500000 6286000),1973-09-23,2013-01-01
+1709#3231,canton Auch-Sud-Ouest (point explicite),POINT(504000 6284000),1973-09-23,2013-01-01
