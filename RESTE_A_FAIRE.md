@@ -34,7 +34,7 @@ une source à trouver : ce sont des commandes à lancer et des sorties à lire.
 | 6 | **Rendre au banc de `84` une entrée qui ne soit pas sa propre sortie** | son entrée est devenue sa sortie ; il ne peut plus rien réfuter. Les règles se mesurent en SQL contre la base |
 | 7 | **Var : ranger Toulon-Est et Toulon-Ouest dans les circonscriptions de 1958** | sorti de `113` le 19 octobre 2026 : les fractions de Toulon posées par `116` portent ces deux cantons en 1958, que l'atlas (Toulon-1 en 4e, Toulon-2 en 3e) ne range pas. Adrien tranchera en faisant le Var : un alias dans `circo/composition_1958.py`, puis ce script et `113` rejoués |
 
-**Avant et après chaque point, `psql -d histgis -f sql/diag_passages.sql`** —
+**Avant et après chaque point, `psql -d histgis -f sql/diag/diag_passages.sql`** —
 lecture seule. Il dit quels fichiers sont réellement passés, lesquels ont une
 trace vide, et relit `38` et `39` par leur effet — seconde lecture, indépendante
 de leurs traces.
@@ -136,7 +136,7 @@ secondaire, plus gênant que le premier : **la Meurthe de 1870 est coupée en
 deux**, ses cantons dans le 54, sa circonscription dans un 99 sans cantons.
 
 ```bash
-psql -d histgis -f sql/diag_passages.sql        # avant, lecture seule
+psql -d histgis -f sql/diag/diag_passages.sql        # avant, lecture seule
 psql -d histgis -f sql/92_meurthe_circo.sql     # sans `-1` : transaction propre
 ```
 
@@ -613,7 +613,7 @@ réunit les deux périodes.
 | **`circo/seine_second_empire.csv` n'est lu par rien** | moyenne | relevé le 6 septembre : aucun `.sql` ni `.py` du dépôt ne le charge. Soit il double une source déjà posée par `91` et il faut le dire, soit il porte une transcription qui n'est jamais entrée en base — les deux se ressemblent tant qu'on ne l'a pas ouvert |
 | Confirmer la stabilité cantonale 1945-1968 | moyenne | la composition n'est lue qu'à 1954 et projetée ; 17 communes sur 80 en dépendent en 1958, les 80 en 1945-1958 |
 | **L'anneau vide de 1860-1863** | moyenne | les annexées meurent en 1859, la division parisienne de 1857-1863 porte sur les 48 quartiers de Vasserot : 24 km² non dessinés. Basculer Paris sur la trame des 80 au 1ᵉʳ janvier 1860 — changement dans `55` |
-| Rendre le sol à la mère jusqu'à la naissance de la fille | moyenne | **mesuré le 6 sept. : 367 atomes, 4 572,2 km².** Le report arrière de `11` n'est PAS à fermer — il comble ; c'est l'identité du dessin qu'il faut corriger, pas la couverture. Voir `sql/diag_report_arriere.sql` |
+| Rendre le sol à la mère jusqu'à la naissance de la fille | moyenne | **mesuré le 6 sept. : 367 atomes, 4 572,2 km².** Le report arrière de `11` n'est PAS à fermer — il comble ; c'est l'identité du dessin qu'il faut corriger, pas la couverture. Voir `sql/diag/diag_report_arriere.sql` |
 | Belleville en 1857-1863 | faible | l'atlas déclare sa propre ligne « purement arbitraire » ; à laisser nommée et non attribuée |
 | 1941-1945 — l'Occupation | faible | rien de transcrit, ni Paris ni banlieue |
 | ~~1955-1967 — l'ex-Seine-et-Oise des 92, 93, 94~~ | — | **Fait le 24 octobre 2026 (nuit)** : `127`, puis la S&O de 1958 dans `113`. Plus aucun trou 1955-1967 pour les 43 communes |

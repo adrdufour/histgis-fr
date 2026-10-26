@@ -64,7 +64,7 @@
 --    polygones datés, une soustraction, et une frontière d'époque au lieu
 --    d'une frontière de 2011.
 --
---    DEUX RÈGLES FAUSSES ONT PRÉCÉDÉ CELLE-LÀ, et `sql/banc_84.py` garde le
+--    DEUX RÈGLES FAUSSES ONT PRÉCÉDÉ CELLE-LÀ, et `sql/bancs/banc_84.py` garde le
 --    détail des deux échecs. En bref :
 --
 --    — *Le repli n'est pas le territoire de la fille.* Lui faire garder son
@@ -117,7 +117,7 @@
 -- rien, et sur le Val-de-Marne elle prenait toute l'Île-de-France. Le § 3 bis
 -- raconte la correction.
 --
--- CHIFFRES ATTENDUS, mesurés hors base par `sql/banc_84.py` sur l'export web
+-- CHIFFRES ATTENDUS, mesurés hors base par `sql/bancs/banc_84.py` sur l'export web
 -- (WGS84, grille 25 m — les COMPTES sont exacts, les km² approchés à ±0,3 %).
 --
 -- TOUS AU 1ᵉʳ DÉCEMBRE, comme `export_web.py` (`MOIS_JOUR`). Les comparer à un
@@ -309,7 +309,7 @@ COMMENT ON FUNCTION partition_voisinage(date, text) IS
 -- Elle n'est appelée par rien : `partition_un_dep` appelle `partition_reprise`,
 -- définie plus bas, qui porte la règle en vigueur depuis le 5 septembre 2026.
 -- On la garde pour que la comparaison des deux reste jouable à toute date —
--- c'est ce que fait `sql/86_reprise_mosaique.sql`. *Une règle remplacée dont on
+-- c'est ce que fait `sql/diag/86_reprise_mosaique.sql`. *Une règle remplacée dont on
 -- ne garde que la prose ne se compare plus à rien.*
 --
 -- SON DÉFAUT, EN UNE PHRASE : `ST_Dump` ne sépare que les composantes
@@ -443,7 +443,7 @@ LANGUAGE sql STABLE AS $$
 $$;
 
 COMMENT ON FUNCTION partition_reprise_morceau(date, text) IS
-    'RÈGLE HISTORIQUE, plus appelée : le morceau connexe entier va à la fille dont le repli le recouvre le plus. Conservée pour comparaison (sql/86_reprise_mosaique.sql).';
+    'RÈGLE HISTORIQUE, plus appelée : le morceau connexe entier va à la fille dont le repli le recouvre le plus. Conservée pour comparaison (sql/diag/86_reprise_mosaique.sql).';
 
 
 -- ---------------------------------------------------------------------------
@@ -476,7 +476,7 @@ COMMENT ON FUNCTION partition_reprise_morceau(date, text) IS
 --      mot pour mot. *Une règle existante rendue à la portée où elle a un sens
 --      n'est pas une règle nouvelle.*
 --
---      MESURÉ EN BASE LE 5 SEPTEMBRE 2026 (`sql/86_reprise_mosaique.sql`) :
+--      MESURÉ EN BASE LE 5 SEPTEMBRE 2026 (`sql/diag/86_reprise_mosaique.sql`) :
 --
 --        servies ................. 435  →  447   (+12, les muettes connues)
 --        sol repris, en union .... 5 469,9  →  5 469,9 km²   INCHANGÉ
@@ -1003,7 +1003,7 @@ COMMENT ON FUNCTION carte_partition(date, text, text) IS
 -- ---------------------------------------------------------------------------
 -- LA DATE PAR DÉFAUT EST LE 1ᵉʳ DÉCEMBRE, ET CE N'EST PAS UN DÉTAIL.
 -- `cartes/export_web.py` observe l'année au 1ᵉʳ décembre (`MOIS_JOUR`), et
--- `sql/banc_84.py` en hérite. Cette recette a d'abord porté `1870-01-01` : ses
+-- `sql/bancs/banc_84.py` en hérite. Cette recette a d'abord porté `1870-01-01` : ses
 -- chiffres attendus, tirés du banc, décrivaient donc une carte observée onze
 -- mois plus tard que celle qu'elle mesurait. Sur l'Aveyron l'écart s'est vu —
 -- 19 reprises contre 18, 3 replis résiduels contre 1 — et rien dans la sortie
@@ -1210,11 +1210,11 @@ COMMENT ON PROCEDURE partition_journalise(date, text) IS
 --      ~158 km². Aucune recette ne l'attrapait, LA SOMME ÉTANT CONSERVÉE.
 --      Partager un morceau connexe au prorata serait un SEUIL dans un
 --      algorithme qui revendique de n'en avoir aucun : à décider en le disant,
---      jamais en silence. Le § 7 g de `sql/diag_sans_geometrie.sql` porte la
+--      jamais en silence. Le § 7 g de `sql/diag/diag_sans_geometrie.sql` porte la
 --      mesure et la liste nominative.
 --
 --      MESURÉ DE BOUT EN BOUT LE MÊME JOUR, SUR LA CARTE ET NON SUR LA RÈGLE
---      (`sql/diag_fratrie_carte2.sql`) : des six filles de Tournon-d'Agenais,
+--      (`sql/diag/diag_fratrie_carte2.sql`) : des six filles de Tournon-d'Agenais,
 --      **une seule est dessinée**. Bourlens garde 73,518 km² pour un repli de
 --      15,578 ; Anthé, Cazideroque, Thézac, Masquières et Courbiac ne gagnent
 --      aucune face et SORTENT DU RÉSULTAT — elles rejoignent les 318 du § 8 de
@@ -1231,7 +1231,7 @@ COMMENT ON PROCEDURE partition_journalise(date, text) IS
 --      haut — « le repli redevient ce qu'il sait faire, un indice de position,
 --      jamais une mesure de surface » — appliquée à la FACE au lieu du MORCEAU.
 --      Ce n'en est pas moins un changement de règle : il se décide en le
---      disant, et s'éprouve à `sql/banc_84.py` avant la base.
+--      disant, et s'éprouve à `sql/bancs/banc_84.py` avant la base.
 --
 --      Les mesures : `diag_reprise_nulle.sql` donne la distribution — 4
 --      reprises sous 1 m², 540 au-dessus de 1 km², RIEN entre les deux, six

@@ -151,7 +151,7 @@ d'époque au lieu d'une frontière de 2011. Les frontières sont ensuite nouées
 polygonisées : une face, un propriétaire, donc **recouvrement impossible par
 construction** plutôt que corrigé après coup.
 
-Mesuré par `sql/banc_84.py` sur la vraie géométrie de l'export :
+Mesuré par `sql/bancs/banc_84.py` sur la vraie géométrie de l'export :
 
 | à 1870 | avant | après |
 |---|---|---|
@@ -222,7 +222,7 @@ garantissait qu'une lisière disputée tombe du même côté. Elle tombe du mêm
 côté partout. *Un découpage qui ne laisse pas de trace de lui-même est une
 propriété du résultat, pas de la méthode qui l'a obtenu — et elle se vérifie.*
 
-**Les 84 replis résiduels sont nommés** (`sql/diag_partition.sql`), et il n'y a
+**Les 84 replis résiduels sont nommés** (`sql/diag/diag_partition.sql`), et il n'y a
 pas une surprise dans le lot :
 
 | | n | km² | ce que c'est |
@@ -276,7 +276,7 @@ somme. *Une recette qui mesure un total ne voit pas une permutation.*
 `partition_reprise` est `LANGUAGE sql STABLE`, sans table temporaire, et son
 `p_dep` accepte `NULL` : appelée sans département, elle fait la France entière
 — c'est `partition_un_dep` qui exige un département, pas elle. Au 1ᵉʳ décembre
-1870 (`sql/diag_sans_geometrie.sql` § 7 g) :
+1870 (`sql/diag/diag_sans_geometrie.sql` § 7 g) :
 
 | | n | lecture |
 |---|---|---|
@@ -326,7 +326,7 @@ déclaré.
 > ci-dessous.
 
 **SIX COMMUNES ENTRENT, UNE SEULE EST DESSINÉE** — mesuré de bout en bout le
-5 septembre 2026 par `sql/diag_fratrie_carte2.sql`, sur la carte elle-même et
+5 septembre 2026 par `sql/diag/diag_fratrie_carte2.sql`, sur la carte elle-même et
 non sur l'appel national :
 
 | mère | fille | repli | sur la carte |
@@ -387,7 +387,7 @@ sur la ligne « couture entre départements » de `check_partition`.
 > ne tombe plus du même côté dans les deux cadres depuis que l'anneau épouse le
 > voisinage réel. Mais **une fratrie à cheval recevant deux fois le même morceau
 > se lirait au même endroit**, et 1,9 ha ne suffit pas à trancher entre les
-> deux : il faut nommer les paires. C'est le § 9 de `sql/diag_partition.sql`,
+> deux : il faut nommer les paires. C'est le § 9 de `sql/diag/diag_partition.sql`,
 > écrit pour ça, avec une colonne `deux_reprises` qui sépare les deux lectures.
 >
 > *La non-régression de l'anneau avait été vérifiée département par
@@ -797,7 +797,7 @@ d'attribution, qui portent sur des communes entières, concluent.
 
 ### 3.3 HAC — la filiation que `11` ne connaissait pas
 
-`annexes/hac/hac_filiation.py`, `sql/45_controle_hac.sql`, **qui ne contient aucun
+`annexes/hac/hac_filiation.py`, `sql/diag/45_controle_hac.sql`, **qui ne contient aucun
 `INSERT`, `DELETE` ni `UPDATE`** : corriger la base d'après HAC lui ferait
 perdre son indépendance.
 
@@ -942,7 +942,7 @@ crus résolus.
 **Ils se tranchent en une commande** :
 
 ```bash
-psql -d histgis -f sql/diag_passages.sql     # lecture seule
+psql -d histgis -f sql/diag/diag_passages.sql     # lecture seule
 ```
 
 Elle confronte l'inventaire des tables de trace **attendues** à ce que la base

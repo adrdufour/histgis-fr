@@ -84,7 +84,7 @@
 --
 -- C'est exactement ce que le report arrière de `11` ne fait pas, et c'est
 -- délibéré : `11` comble un trou de couverture au prix de l'identité du
--- dessin (voir `sql/diag_report_arriere.sql`, 367 atomes, 4 572,2 km²). Ici
+-- dessin (voir `sql/diag/diag_report_arriere.sql`, 367 atomes, 4 572,2 km²). Ici
 -- il n'y a pas de trou à combler — la commune n'existait pas, et sa mère est
 -- dessinée à sa place par la trame ANR.
 --

@@ -1074,7 +1074,7 @@ défaire plutôt qu'expliquer. La commande est en fin de `46`.
 
 La recette PROPRE à la complétion du 6 septembre 2026 :
 
-    psql -f sql/diag_passages.sql
+    psql -f sql/diag/diag_passages.sql
     psql -f sql/85_conflit_38_79.sql      # instruit, n'écrit pas
 
 `diag_passages` doit désormais trouver une trace pour TOUTES les étapes, y

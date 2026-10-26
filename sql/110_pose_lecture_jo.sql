@@ -33,7 +33,7 @@
 --       canton du bord gauche, sur la foi de la table, qui ne signale aucun autre
 --       acte pour cette commune entre les deux bords. Nature : `transfert_table`.
 -- Lues au JO : cantons/wikipedia/lecture_jo.md. Confrontées à la base, en
--- lecture seule, par sql/diag_lecture_jo.sql.
+-- lecture seule, par sql/diag/diag_lecture_jo.sql.
 --
 -- LA DATE D'EFFET — règle C, décidée par Adrien le 11 octobre 2026
 -- ================================================================

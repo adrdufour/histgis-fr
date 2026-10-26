@@ -32,7 +32,7 @@
 * `cantons/transferts_complement.csv` — 13 communes changées de canton ;
 * `cantons/corse_1975.csv` — 360 communes, 41 cantons, 360 codes INSEE
   distincts, tous appariés ;
-* `sql/diag_lecture_jo.sql` — la confrontation avec la base, en lecture seule.
+* `sql/diag/diag_lecture_jo.sql` — la confrontation avec la base, en lecture seule.
 
 Produits par `composition_complement.py` puis `lecture_jo.py`.
 

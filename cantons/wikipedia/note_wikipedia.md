@@ -129,7 +129,7 @@ codes INSEE des communes nommées, et `a_lire = oui`. Construit par
 **Pourquoi ce n'est pas versé dans `72`.** `75` date l'effet d'un acte par
 `scrutin_cantonal`, qui commence en 1961 : un acte de 1946 y recevrait l'effet
 du 4 juin 1961. Et un acte ajouté au registre raccourcit les reports de `79`.
-D'où un diagnostic en lecture seule d'abord : `sql/diag_registre_complement.sql`.
+D'où un diagnostic en lecture seule d'abord : `sql/diag/diag_registre_complement.sql`.
 
 **À télécharger** : `jo_a_telecharger.md`, 28 numéros du JO (le
 téléchargement Légifrance est protégé, il se fait à la main). Gallica a les

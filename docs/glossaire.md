@@ -169,7 +169,7 @@ avant de le jouer sur la vraie base.
 problème sans rien modifier.
 
 **Trace** (`*_trace`). Une table où chaque fichier de la chaîne enregistre ce
-qu'il a posé. `sql/diag_passages.sql` s'en sert pour savoir quels fichiers ont
+qu'il a posé. `sql/diag/diag_passages.sql` s'en sert pour savoir quels fichiers ont
 réellement été joués.
 
 **Contrôle indépendant.** Une comparaison avec une source qui n'a pas servi à

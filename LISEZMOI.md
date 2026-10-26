@@ -199,7 +199,7 @@ binaires et les gros fichiers sont isolés.
 
 | dossier | ce qu'on y trouve | état |
 |---|---|---|
-| `sql/` | 142 fichiers `.sql` numérotés 01 à 123 (dont 18 `diag_*`), plus `load.sh`, `rebuild.sh`, `rejouer_apres_rebuild.sh`, `rejouer_circo.sh`, `load_cog.sh`, `charger_outremer.sh`, `controle_gay.sh` et six bancs d'essai (`banc_*`). **Lire `sql/CHAINE.md` puis `sql/README.md`.** | chaîne complète 1815-2012 |
+| `sql/` | les 113 fichiers `.sql` de la chaîne, numérotés 01 à 135, avec `load.sh`, `rebuild.sh`, `rejouer_apres_rebuild.sh`, `rejouer_circo.sh`, `load_cog.sh`, `charger_outremer.sh`, `charger_pacifique.sh`, `controle_gay.sh`. Les 38 diagnostics qu'aucun script ne joue sont dans `sql/diag/`, les bancs d'essai dans `sql/bancs/`. **Lire `sql/CHAINE.md` puis `sql/README.md`.** | chaîne complète 1815-2012 |
 | `cantons/` | registre consolidé des mouvements cantonaux — 723 démembrements dont 559 datés au décret (77 %) — et 343 actes moissonnés, 1 212 cantons dépouillés des JO | actif |
 | `circo/` | circonscriptions 1958/1986/2009, et tout Paris : 80 quartiers reconstruits par union d'IRIS, 386 circos sur 15 divisions de 1863 à 1986 | actif |
 | `cog1954/`, `cog1968/` | extraction des deux recensements. 1954 : 3 créations cantonales établies par trois voies indépendantes. 1968 : 86 fascicules, rappel 91,4 % | acquis, perfectible |
@@ -295,7 +295,7 @@ conda activate histgis
 Il déclare `psycopg2`, `shapely` ≥ 2, `pyshp` (importé sous le nom
 `shapefile`), `matplotlib-base`, `openpyxl`, `xlrd`, `pandas`, et — en
 `pip:`, faute d'exister sur conda-forge — `pgserver`, dont dépendent les
-bancs `sql/banc_*.sh`. Côté outils appelés en sous-processus : GDAL
+bancs `sql/bancs/banc_*.sh`. Côté outils appelés en sous-processus : GDAL
 (`ogr2ogr`), `poppler` (`pdftoppm`, `pdftotext`, `pdfinfo`), `tesseract`
 avec `tesseract-data-fra`, ImageMagick (`magick`/`convert`, pour le seul
 `archives/essais/essai_ocr.py`) et `unzip`.

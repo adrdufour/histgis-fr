@@ -582,7 +582,7 @@ ramené à 26 km².
 
 ### 7.3 HAC — la filiation que `11` ne connaissait pas
 
-`annexes/hac/hac_filiation.py`, `sql/45_controle_hac.sql`. **Il ne contient aucun
+`annexes/hac/hac_filiation.py`, `sql/diag/45_controle_hac.sql`. **Il ne contient aucun
 `INSERT`, `DELETE` ni `UPDATE`** : corriger la base d'après HAC lui ferait perdre
 son indépendance, exactement comme recopier Gay la ferait perdre au contrôle
 géométrique.
@@ -1668,7 +1668,7 @@ dans un `DO`.
 livrés sans avoir été exécutés, faute de PostgreSQL dans l'environnement
 d'écriture. La réserve était portée au journal, ce qui était honnête, mais elle
 reportait sur Adrien le travail de trouver les erreurs de syntaxe.
-`sql/banc_75.sh` monte un PostgreSQL embarqué (`pip install pgserver`), y pose le
+`sql/bancs/banc_75.sh` monte un PostgreSQL embarqué (`pip install pgserver`), y pose le
 **schéma réel** et joue les fichiers sur les **vrais** CSV. Il a rendu trois
 défauts qu'aucune relecture n'avait vus, dont un qui produisait un résultat
 cohérent et faux. `banc_81.sh` et `banc_82.sh` suivent le même dispositif ;
@@ -1686,7 +1686,7 @@ de recommencer. `38_decret_1982_ain.sql` et `39_meurthe_1870.sql` ont été les
 deux dernières exceptions, et elles ont coûté cher : rien dans la base ne disait
 s'ils étaient passés, et `39` a été défait par un `rebuild.sh` sans que rien ne
 le signale pendant quinze jours. **Dette soldée le 2 septembre 2026** —
-`p38_trace`, `p39_trace`, éprouvées par `sql/banc_38_39.sh`. Trois choses
+`p38_trace`, `p39_trace`, éprouvées par `sql/bancs/banc_38_39.sh`. Trois choses
 apprises en les écrivant :
 
 * **Une trace se cale sur ce qui NE bouge PAS.** `39` change le département des

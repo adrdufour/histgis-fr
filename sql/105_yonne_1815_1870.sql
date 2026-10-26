@@ -12,7 +12,7 @@
 -- POURQUOI ON PEUT ÉCRIRE, ALORS QUE `64` S'Y REFUSAIT
 -- ====================================================
 -- `64` (22 août) : « les communes ont bougé de 1815 à 1870, et nous n'avons
--- aucune source ». ANR en est une depuis `82`. `sql/diag_yonne_1815.sql`,
+-- aucune source ». ANR en est une depuis `82`. `sql/diag/diag_yonne_1815.sql`,
 -- joué le 4 octobre 2026, a mesuré ce qu'elle dit pour le 89 :
 --
 --   * 481 communes ANR en 1815, AUCUNE disparue avant 1870 ; 473 au polygone

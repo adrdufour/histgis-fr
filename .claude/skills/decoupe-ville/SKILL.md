@@ -269,7 +269,7 @@ Quand il demande explicitement l'inscription (10 octobre 2026, `sql/108`, Aurill
 Saint-Flour) : un fichier numéroté sur le modèle de `104` (à blanc par défaut, `-v appliquer=1`,
 table de trace qui garde l'ancienne unité et le contenu de ce qui est retiré, garde-fous sur l'état
 fautif, recette lue depuis le modèle), déclaré dans `sql/rejouer_apres_rebuild.sh` (avant `98`) et
-dans l'inventaire de `sql/diag_passages.sql` ; puis `98` sous `appliquer`, le tableau, et l'export
+dans l'inventaire de `sql/diag/diag_passages.sql` ; puis `98` sous `appliquer`, le tableau, et l'export
 des départements touchés. Relire les décrets avant d'écrire : les codes (1502 = Aurillac-I) se
 vérifient sur les communes rurales que la base leur donne à une date sûre. Une fraction garde son
 code quand ses communes changent d'unité : ce sont les ancres de la ligne qu'on réécrit.
@@ -810,7 +810,7 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **Les GeoJSON de `get_feature` se déclarent en WGS84 avec des coordonnées en Lambert 93**
   (bâtiments, zones d'activité) : `ogr2ogr -a_srs EPSG:2154`, pas `-t_srs` (« Invalid latitude »).
 - **Numéroter un fichier SQL** : vérifier le numéro libre dans `sql/` *et* dans l'inventaire de
-  `sql/diag_passages.sql`. `98_coupe_ville.sql` avait d'abord été écrit sous `97`, réservé : son
+  `sql/diag/diag_passages.sql`. `98_coupe_ville.sql` avait d'abord été écrit sous `97`, réservé : son
   `DELETE` a vidé la trace d'un autre fichier.
 - **`histgis.iris_ville` disparaît au `rebuild.sh`** ; `rejouer_apres_rebuild.sh` la recharge
   depuis `cartes/sorties/iris_villes.geojson`. Si elle manque, la recharger avant tout.

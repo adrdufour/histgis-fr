@@ -58,7 +58,7 @@ par département. **L'Ain a montré que la saisie était inutile.**
 La base porte déjà le rattachement cantonal de chaque commune en 1940
 (TRF-GIS) et en 1999 (COG). Les `unit_id` sont partagés entre les deux couches,
 le code Insee fait le pont, et le différentiel se calcule :
-`sql/33_diff_cantonal.sql`, paramétré par département.
+`sql/diag/33_diff_cantonal.sql`, paramétré par département.
 
 Ce que la machine ne sait pas produire, c'est la **date**. Le registre ne
 consigne donc plus des événements dictés, mais les bornes temporelles
@@ -269,7 +269,7 @@ sépare et qu'il ne faut pas dater d'un seul coup.
 
 #### Le trou 1941-1998 avale aussi des communes entières
 
-`sql/34_orphelines_1941.sql` est né d'une observation d'Adrien : une commune
+`sql/diag/34_orphelines_1941.sql` est né d'une observation d'Adrien : une commune
 présente dans une sortie de `33` mais introuvable sur la carte engendrée.
 
 Le diagnostic a d'abord été mauvais — j'ai cru à un défaut de classement — et

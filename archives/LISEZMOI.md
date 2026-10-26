@@ -71,3 +71,8 @@ La saisie à la main du registre, remplacée par `cantons/consolide_registre.py`
   cantonale lue dans les seuls segments à commune coupée (1 295 lignes).
   `cantons/composition_jo.py` relit tout le JO (4 706 lignes) ;
   `cantons/controle_composition.py` le juge désormais par défaut.
+
+## `sql/` — `diag_marseille.sql`
+
+Diagnostic ponctuel de Marseille, remplacé par `sql/diag/31_marseille_inventaire.sql`
+(`sql/CHAINE.md` § 4 le disait déjà mort).

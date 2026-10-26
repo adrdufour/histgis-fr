@@ -142,7 +142,7 @@ sans conséquence.
 ## Le banc, si vous préférez voir avant
 
 ```bash
-bash sql/banc_82.sh
+bash sql/bancs/banc_82.sh
 ```
 
 PostgreSQL jetable, sans postgis, où la géométrie devient l'empreinte MD5 du WKB

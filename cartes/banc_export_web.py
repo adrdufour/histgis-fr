@@ -9,7 +9,7 @@ Ce que ce banc peut contrôler, et ce qu'il ne peut pas
 -----------------------------------------------------
 Il ne touche ni à PostgreSQL ni au disque. Il ne dira donc RIEN sur la justesse
 d'un contour dissous, sur la coïncidence des limites cantonales et communales,
-ni sur le coût d'une requête — c'est exactement la limite que `sql/banc_82.sh`
+ni sur le coût d'une requête — c'est exactement la limite que `sql/bancs/banc_82.sh`
 s'était reconnue, et qui lui avait fait manquer les trois pièges de coût du § 7.
 
 Ce qu'il contrôle est la chose que la base ne peut PAS contrôler à notre place :

@@ -21,7 +21,7 @@ Mieux vaut trois planches honnêtes que dix qui laissent croire.
 
 À quoi ça sert
 --------------
-À dater les mouvements que `sql/33_diff_cantonal.sql` a calculés. Le script
+À dater les mouvements que `sql/diag/33_diff_cantonal.sql` a calculés. Le script
 dit *quoi*, les cartes de Gaudillère disent *quand*, et ces planches-ci
 permettent de les superposer sans relire des listes de communes.
 

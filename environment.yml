@@ -55,7 +55,7 @@ dependencies:
   - pip
   - pip:
       # Serveur PostgreSQL éphémère embarqué, utilisé UNIQUEMENT par les bancs
-      # d'essai sql/banc_*.sh (75, 81, 82, 84). Absent de conda-forge.
+      # d'essai sql/bancs/banc_*.sh (75, 81, 82, 84). Absent de conda-forge.
       - pgserver
 
 # --- Le serveur de base, et le piège de la socket -------------------------

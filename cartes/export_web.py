@@ -1067,7 +1067,7 @@ def chronologies(cur, dep):
 # source continue, et rien dans son format ne le dit.*
 #
 # Fonction pure : elle ne touche ni à la base ni au disque, et le banc de
-# `sql/banc_82.sh` a son équivalent Python dans `sorties/anr/`.
+# `sql/bancs/banc_82.sh` a son équivalent Python dans `sorties/anr/`.
 # ---------------------------------------------------------------------------
 def construit_versions(segments, repli, an_min=AN_MIN, an_max=AN_MAX):
     """[(an_debut, an_fin_exclu, gj, pt)] + repli -> [{a, k, c, g, r}, …].

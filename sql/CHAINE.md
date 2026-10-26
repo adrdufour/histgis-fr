@@ -38,7 +38,7 @@ du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 > `rejouer_apres_rebuild.sh`, `FIN rc=0`, 29 minutes), après cinq corrections
 > d'ordre — `ANALYZE` avant `23`, `90`/`91` avant `102`, `118`/`119` après
 > `84`/`99`, `103` après les fractions de quartier, `112` tolérant une pose
-> déjà portée au même canton. `diag_passages.sql` : 60 passées, 0 absente ;
+> déjà portée au même canton. `diag/diag_passages.sql` : 60 passées, 0 absente ;
 > `85` : zéro fraction à libérer. Détail : `JOURNAL.md`, 20 octobre.
 
 > **`rejouer_apres_rebuild.sh` va désormais jusqu'à `84`.** Complété le
@@ -57,7 +57,7 @@ du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 >
 > **Deux recettes propres à cette complétion**, à lire au premier passage :
 >
-> * `diag_passages.sql` doit trouver une trace pour **toutes** les étapes, `25`,
+> * `diag/diag_passages.sql` doit trouver une trace pour **toutes** les étapes, `25`,
 >   `37` et `40` compris ;
 > * `85_conflit_38_79.sql`, joué sans `-v`, doit trouver **zéro** fraction à
 >   libérer. Il n'existe que parce que `79` a été joué après `38` hors de toute
@@ -90,7 +90,7 @@ du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 >
 > Ce que le 2 septembre change, et ce qu'il ne change pas : `38` et `39` ont
 > maintenant une trace, donc un `rebuild.sh` qui les emporte se **voit**
-> désormais dans `diag_passages.sql`. Il ne les remonte toujours pas pour
+> désormais dans `diag/diag_passages.sql`. Il ne les remonte toujours pas pour
 > autant. Une trace signale une perte, elle ne la répare pas.
 >
 > **Trois manques ont été comblés dans le script le 2 septembre 2026**, et ils
@@ -116,7 +116,7 @@ du § 1 s'arrêtait à `47` et laissait hors tableau tout le chantier 1943-1999
 > pouvait donc pas dépasser `25`.** Tout ce qui porte une trace au-delà a été
 > joué à la main — c'est établi par l'état de la base, pas seulement soupçonné.
 >
-> Ce qui est en base se vérifie par `psql -d histgis -f sql/diag_passages.sql`.
+> Ce qui est en base se vérifie par `psql -d histgis -f sql/diag/diag_passages.sql`.
 > **Ces trois correctifs, eux, ne sont vérifiés par rien tant que le script n'a
 > pas tourné** : une chaîne ne se relit pas, elle se joue.
 
@@ -217,7 +217,7 @@ chaîne, et à aucun autre.
 | g | `67_cantons_1949_1951.sql` | les trois cantons créés entre 1940 et 1954 | `c67_trace` | `-1` |
 | h | `68_cog1954_membership.sql` | **JALON 1954** — 30 035 atomes, 2 946 cantons | `c54_trace`, `c54_qualite` | `-1` |
 | i | `72_registre_actes.sql` | registre des 343 décrets, `acte_composition`, `acte_silence` | — | — |
-| j | `73_recette_1967.sql` | juge les décrets de 1967 par le jalon de 1968 | — | — |
+| j | `diag/73_recette_1967.sql` | juge les décrets de 1967 par le jalon de 1968 | — | — |
 | k | `74_yvelines_1967.sql` | Yvelines 1968, fascicule manquant — date d'effet = un FAIT | `y67_trace` | — |
 | l | `75_composition_1973_1982.sql` | les deux grosses salves. **Première date conventionnelle** | `p75_trace`, `p75_qualite` | `-1` |
 | m | `76_composition_salves_restantes.sql` | la longue traîne, même convention | `p76_trace`, `p76_qualite` | `-1` |
@@ -238,8 +238,8 @@ en trouve, c'est l'ordre du script qui est faux. Écrit le 5 septembre 2026,
 joué le même jour sur la base d'alors — où le conflit, lui, existait bel et
 bien.
 
-`64_composition_1815_stage.sql`, `70_report_1940_1954.sql` et
-`71_desaccords_report_geometrie.sql` sont en lecture seule et se lancent à la
+`64_composition_1815_stage.sql`, `diag/70_report_1940_1954.sql` et
+`diag/71_desaccords_report_geometrie.sql` sont en lecture seule et se lancent à la
 demande ; ils ne figurent pas ici pour cette raison.
 
 #### `94` à `109` — entrés dans le script du 23 septembre au 10 octobre 2026
@@ -356,38 +356,43 @@ n'échoue**. C'est à cela que sert `43_circo_fraction.sql`.
 Aucun n'écrit dans la base. Ils se lancent à la demande et ne font pas partie
 de la reconstruction.
 
+Depuis le 26 octobre 2026, ceux qu'aucun script ne joue sont rangés dans
+`sql/diag/` ; ceux que la chaîne appelle quand même (`04`, `08`, `09`, `10`,
+`23`, `36`, `83`, `84`) restent dans `sql/`. Les bancs d'essai (`banc_*`) et
+leurs données sont dans `sql/bancs/`.
+
 | fichier | ce qu'il répond | `-v` |
 |---|---|---|
 | `04_checks.sql` | rapport de recette après chargement | — |
 | `08_controle_gay.sql` | **le contrôle indépendant** : cantons dissous de Victor Gay, IoU, conformité | `mapping` |
 | `09_ecart_detail.sql` | d'où viennent les écarts avec Gay ; score du pari de `11` | — |
 | `10_couverture.sql` | territoire non couvert, commune par commune | — |
-| `12_conflit_successeur.sql` | désaccords résiduels sur les atomes `successeur` | `date_ref` |
-| `13_double_comptage.sql` | surface comptée deux fois, par deux méthodes | `date_ref` |
-| `14_cle_partage.sql` | pourquoi les deux méthodes de `13` diffèrent de 108 km² | `date_ref` |
+| `diag/12_conflit_successeur.sql` | désaccords résiduels sur les atomes `successeur` | `date_ref` |
+| `diag/13_double_comptage.sql` | surface comptée deux fois, par deux méthodes | `date_ref` |
+| `diag/14_cle_partage.sql` | pourquoi les deux méthodes de `13` diffèrent de 108 km² | `date_ref` |
 | `23_cog_diag.sql` | le COG chargé concorde-t-il avec `commune_moderne` | — |
-| `26_controle_ign.sql` | **contrôle indépendant de 1999-2012** : la couche CANTON de GEOFLA (édition ED141, 2014). *Pas* ADMIN EXPRESS — l'en-tête du fichier le dit, cette ligne l'a affirmé à tort jusqu'au 2 septembre 2026 | `date_ref` |
-| `29_villes_a_verifier.sql` | villes dont le découpage cantonal est douteux | — |
-| `30_stabilite_cantonale.sql` | stabilité d'un canton dans le temps | `dep` |
-| `31_marseille_inventaire.sql` | état des lieux Marseille avant `32` | — |
-| `33_diff_cantonal.sql` | différentiel cantonal entre deux dates | `dep` |
-| `34_orphelines_1941.sql` | communes éteintes avant 1999, sans canton moderne | `dep` |
-| `35_atomes_hors_departement.sql` | atomes dont le polygone est dans un autre département | — |
+| `diag/26_controle_ign.sql` | **contrôle indépendant de 1999-2012** : la couche CANTON de GEOFLA (édition ED141, 2014). *Pas* ADMIN EXPRESS — l'en-tête du fichier le dit, cette ligne l'a affirmé à tort jusqu'au 2 septembre 2026 | `date_ref` |
+| `diag/29_villes_a_verifier.sql` | villes dont le découpage cantonal est douteux | — |
+| `diag/30_stabilite_cantonale.sql` | stabilité d'un canton dans le temps | `dep` |
+| `diag/31_marseille_inventaire.sql` | état des lieux Marseille avant `32` | — |
+| `diag/33_diff_cantonal.sql` | différentiel cantonal entre deux dates | `dep` |
+| `diag/34_orphelines_1941.sql` | communes éteintes avant 1999, sans canton moderne | `dep` |
+| `diag/35_atomes_hors_departement.sql` | atomes dont le polygone est dans un autre département | — |
 | `36_recette_annexe_vi.sql` | recette de l'annexe VI (découpages électoraux) | — |
-| `45_controle_hac.sql` | **second contrôle indépendant** : HAC nomme la mère | `hac` |
-| `48_diag_mere_muette.sql` | quand les voisins de canton se taisent, la mère HAC répond-elle ? Mesure la classe avant d'écrire un correctif | — |
-| `70_report_1940_1954.sql` | peut-on REPORTER une composition d'une date à l'autre ? | — |
-| `71_desaccords_report_geometrie.sql` | la géométrie arbitre les désaccords de `70` | — |
-| `73_recette_1967.sql` | juge les décrets de 1967 par le jalon de 1968 — cinq mois d'écart, le contrôle le plus serré du trou | — |
-| `78_report_1999_arriere_diag.sql` | mesure le report arrière avant de l'écrire. **Se lit après `79`** | — |
-| `80_report_1968_avant_diag.sql` | idem pour le report avant, et **porte la validation du registre** (§ 6 quinquies) | — |
+| `diag/45_controle_hac.sql` | **second contrôle indépendant** : HAC nomme la mère | `hac` |
+| `diag/48_diag_mere_muette.sql` | quand les voisins de canton se taisent, la mère HAC répond-elle ? Mesure la classe avant d'écrire un correctif | — |
+| `diag/70_report_1940_1954.sql` | peut-on REPORTER une composition d'une date à l'autre ? | — |
+| `diag/71_desaccords_report_geometrie.sql` | la géométrie arbitre les désaccords de `70` | — |
+| `diag/73_recette_1967.sql` | juge les décrets de 1967 par le jalon de 1968 — cinq mois d'écart, le contrôle le plus serré du trou | — |
+| `diag/78_report_1999_arriere_diag.sql` | mesure le report arrière avant de l'écrire. **Se lit après `79`** | — |
+| `diag/80_report_1968_avant_diag.sql` | idem pour le report avant, et **porte la validation du registre** (§ 6 quinquies) | — |
 | `83_anr_ecart_couverture.sql` | pourquoi 486 atomes et non 40 — devenu le **troisième contrôle indépendant** | `date` |
 | `84_carte_partition.sql` | la trame nettoyée : sans trou ni superposition hors fractions. **Ne modifie aucune donnée** — que des fonctions, une trace et une procédure ; il est à ce titre dans les deux listes, ici parce qu'on l'interroge, en `1 c` parce qu'un `DROP SCHEMA` emporte ses fonctions. Joué et contrôlé les 3, 5 et 6 septembre 2026 : anneau de voisinage réel, trappe du vide, règle mosaïque de fratrie, recouvrement 0,000 km² | `date`, `dep` |
-| `86_reprise_mosaique.sql` | compare les deux règles de partage d'une fratrie, l'en-vigueur et l'historique, toutes deux vivantes dans `84`. A servi à décider, sert à contrôler que la décision tient | `date` |
-| `diag_partition.sql` | interroge la trame nettoyée sans la recalculer — replis nommés, motifs d'arbitrage, atomes que rien ne dessine (§ 8) | `date` |
-| `diag_titre_composition.sql` | le titre d'un décret juge le découpage du JO | — |
-| `diag_passages.sql` | **quels fichiers sont réellement passés sur cette base** — l'inventaire des traces attendues contre ce que la base porte | — |
-| `diag_sans_geometrie.sql` | **les atomes que rien ne dessine, et l'unique échec de la reprise.** Sépare le défaut de chaîne de la limite de source par une colonne, et instruit La Guérinière. Ne recalcule PAS la partition — quelques secondes contre plusieurs minutes. Écrit le 5 septembre 2026, **jamais joué** | `date` |
+| `diag/86_reprise_mosaique.sql` | compare les deux règles de partage d'une fratrie, l'en-vigueur et l'historique, toutes deux vivantes dans `84`. A servi à décider, sert à contrôler que la décision tient | `date` |
+| `diag/diag_partition.sql` | interroge la trame nettoyée sans la recalculer — replis nommés, motifs d'arbitrage, atomes que rien ne dessine (§ 8) | `date` |
+| `diag/diag_titre_composition.sql` | le titre d'un décret juge le découpage du JO | — |
+| `diag/diag_passages.sql` | **quels fichiers sont réellement passés sur cette base** — l'inventaire des traces attendues contre ce que la base porte | — |
+| `diag/diag_sans_geometrie.sql` | **les atomes que rien ne dessine, et l'unique échec de la reprise.** Sépare le défaut de chaîne de la limite de source par une colonne, et instruit La Guérinière. Ne recalcule PAS la partition — quelques secondes contre plusieurs minutes. Écrit le 5 septembre 2026, **jamais joué** | `date` |
 
 **`45` ne modifie rien, et c'est délibéré.** Corriger la base d'après HAC lui
 ferait perdre son indépendance — comme recopier Gay la ferait perdre au
@@ -413,10 +418,10 @@ même préfixe alors qu'ils n'ont rien à voir. À renuméroter.
 
 | fichier | verdict |
 |---|---|
-| `diag_marseille.sql` | **mort** — diagnostic ponctuel, remplacé par `31_marseille_inventaire.sql`. Aucun script ne l'appelle. |
+| `../archives/sql/diag_marseille.sql` | **archivé le 26 octobre 2026** — diagnostic ponctuel, remplacé par `diag/31_marseille_inventaire.sql`. |
 | `23_cog_diag.sql` | **mal placé** — c'est un diagnostic, mais `load_cog.sh` le joue en dernier et son `RAISE EXCEPTION` fait échouer tout le chargement. Un diagnostic ne devrait pas bloquer une construction. |
 | `43_circo_fraction.sql` | **conditionnel** — inutile dans une chaîne complète, indispensable après un rejeu isolé de `24`. |
-| `38_decret_1982_ain.sql` | **doté d'une trace le 2 septembre 2026** (`p38_trace`, trois catégories distinctes). Il était jusque-là le seul fichier qui posait des rattachements sans pouvoir les défaire, et c'est lui qui a bloqué la reconstruction de `24`. Il **nomme désormais l'occupant** quand la fenêtre 1982-1999 est prise, au lieu de se taire. Éprouvé avec `39` par `sql/banc_38_39.sh` — six scénarios, dont les deux façons dont la fenêtre peut être prise. |
+| `38_decret_1982_ain.sql` | **doté d'une trace le 2 septembre 2026** (`p38_trace`, trois catégories distinctes). Il était jusque-là le seul fichier qui posait des rattachements sans pouvoir les défaire, et c'est lui qui a bloqué la reconstruction de `24`. Il **nomme désormais l'occupant** quand la fenêtre 1982-1999 est prise, au lieu de se taire. Éprouvé avec `39` par `sql/bancs/banc_38_39.sh` — six scénarios, dont les deux façons dont la fenêtre peut être prise. |
 | `39_meurthe_1870.sql` | **doté d'une trace le 2 septembre 2026** (`p39_trace`). Cette ligne disait « sans trace, et ce n'est PAS sans risque » : il est idempotent, oui ; mais un `rebuild.sh` l'a défait le 15 août et **personne ne l'a su avant le 30**, parce que rien dans la base ne disait s'il était passé. L'idempotence protège du rejeu, pas de l'oubli. Sa trace vise l'`unit_id` `99xx`, jamais le département `99` — sans quoi elle serait vide sur une base déjà conforme, et le diagnostic crierait au faux. |
 
 ### Trous à combler dans la chaîne elle-même
@@ -500,7 +505,7 @@ si la liste des actes de l'intervalle est complète.
 `RESTE_A_FAIRE.md` réclamait — **et pas son autorisation** : un silence est une
 absence d'acte dans notre liste, pas une preuve de stabilité.
 
-`73_recette_1967.sql` juge les décrets de 1967 par le jalon de 1968 déjà en
+`diag/73_recette_1967.sql` juge les décrets de 1967 par le jalon de 1968 déjà en
 base. Sa particularité : **cinq mois séparent les deux sources**, là où le
 contrôle habituel regarde trente ans plus tard. Un désaccord ne peut donc pas
 être imputé au monde — il accuse l'une des deux lectures. C'est le contrôle le
@@ -606,8 +611,8 @@ désignerait la mère. 1968 sert de diagnostic (§ 8), jamais de résolution.
 
 ### Trois défauts trouvés par le banc d'essai, et non par la relecture
 
-`sql/banc_75.sh` monte un PostgreSQL jetable, y pose le schéma réel et une
-couche de 1999 synthétique (`sql/banc_75_donnees.sql`), puis joue `72` et `75`
+`sql/bancs/banc_75.sh` monte un PostgreSQL jetable, y pose le schéma réel et une
+couche de 1999 synthétique (`sql/bancs/banc_75_donnees.sql`), puis joue `72` et `75`
 sur les **vrais** CSV. Il a rendu trois défauts qu'aucune lecture n'avait vus :
 
 1. **`\set` avale le commentaire de fin de ligne.** `\set fin_serie '1999-01-01'
@@ -670,9 +675,9 @@ avant de rejouer `24`.
 
 ---
 
-## `diag_titre_composition.sql` — le titre juge le découpage du JO
+## `diag/diag_titre_composition.sql` — le titre juge le découpage du JO
 
-Lecture seule, hors chaîne, comme `diag_marseille.sql`. Ne crée que des tables
+Lecture seule, hors chaîne, comme `../archives/sql/diag_marseille.sql`. Ne crée que des tables
 `dtc_*`. Prérequis : `72`.
 
 Né d'un refus de `75` le 28 août 2026. Le § 9 avait écarté « Evreux-Ouest » pour
@@ -764,7 +769,7 @@ non les refus eux-mêmes.
 Ordre : `72` → `73` → `74` → `75` → `76`. Table de trace `p76_trace`. **`76`
 référence les unités de `24`**, comme `74` et `75`.
 
-Éprouvé par `sql/banc_75.sh`, qui joue désormais `74`, `75` et `76` dans le
+Éprouvé par `sql/bancs/banc_75.sh`, qui joue désormais `74`, `75` et `76` dans le
 même banc — puis `75` et `76` une seconde fois — et vérifie qu'aucun des trois
 ne recouvre les autres.
 
@@ -845,7 +850,7 @@ référence les unités de `24`**, comme `74`, `75` et `76`.
 
 ## 78 — le report EN ARRIÈRE depuis 1999, mesuré avant d'être posé
 
-`sql/78_report_1999_arriere_diag.sql`, **lecture seule**, sur le modèle de
+`sql/diag/78_report_1999_arriere_diag.sql`, **lecture seule**, sur le modèle de
 `70`/`71` : on mesure la méthode avant d'écrire quoi que ce soit.
 
 **L'idée.** Les décrets de 1990-1999 sont épuisés comme veine — `72` les a tous
@@ -1419,7 +1424,7 @@ deux listes — Sébazac-Concourès, Goutrens, Roches-Prémarie-Andillé, pourvu
 une fenêtre qui s'arrête avant 1870. *Deux questions voisines n'ont pas la même
 réponse, et c'est la question qu'il faut lire, pas le nombre.*
 
-**`banc_82.sh`** l'éprouve sur un PostgreSQL jetable, sans postgis : la
+**`bancs/banc_82.sh`** l'éprouve sur un PostgreSQL jetable, sans postgis : la
 géométrie y devient l'empreinte MD5 du WKB réel, ce qui permet d'exercer R2 et
 les aires pour de vrai. Il a trouvé deux défauts que la relecture n'avait pas
 vus — voir `JOURNAL.md` au 1ᵉʳ septembre.
@@ -1448,8 +1453,8 @@ n'est pas dans `check_geom_anr`, qui joint `atom_geom_anr` à elle-même :
 et n'en référence aucune ; comme `82`, il n'entre pas dans la liste « Qui dépend
 de qui » de `README.md`.
 
-**`banc_84.py` l'éprouve hors base**, sur `cartes/web/donnees/` — un algorithme
-topologique ne s'éprouve pas sur des empreintes MD5 comme `banc_82.sh`, il lui
+**`bancs/banc_84.py` l'éprouve hors base**, sur `cartes/web/donnees/` — un algorithme
+topologique ne s'éprouve pas sur des empreintes MD5 comme `bancs/banc_82.sh`, il lui
 faut de la vraie géométrie. Il a trouvé les deux règles fausses que le fichier
 raconte, et le piège du cadre départemental (478 km² de Seine offerts à la
 Seine-et-Oise). Les comptes qu'il rend sont exacts, ses km² approchés à ±0,3 %.

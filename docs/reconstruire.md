@@ -110,7 +110,7 @@ est incomplète.
 ### Vérifier ce qui est réellement passé
 
 ```bash
-psql -d histgis -f sql/diag_passages.sql     # lecture seule
+psql -d histgis -f sql/diag/diag_passages.sql     # lecture seule
 ```
 
 Cette requête compare les tables de trace attendues à celles que la base

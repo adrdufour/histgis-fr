@@ -53,7 +53,7 @@ premier.
 ## Qu'est-ce qui est réellement en base ?
 
 ```bash
-psql -d histgis -f sql/diag_passages.sql     # lecture seule
+psql -d histgis -f sql/diag/diag_passages.sql     # lecture seule
 ```
 
 Il confronte l'inventaire des tables de trace **attendues** à ce que la base
@@ -127,10 +127,10 @@ le résultat serait cohérent. `78` (lecture seule) se lance quand on veut.
 de justesse comme pour `79` — les deux reports ne peuvent pas se rencontrer,
 `79` s'arrêtant au dernier acte et `81` au premier — mais un témoin absent rend
 la recette 11 b muette au lieu de fausse, ce qui est pire. Vérifié au banc :
-`bash sql/banc_81.sh` joue la chaîne entière jusqu'à `81`, deux fois, et compte
+`bash sql/bancs/banc_81.sh` joue la chaîne entière jusqu'à `81`, deux fois, et compte
 les chevauchements (zéro).
 
-`80_report_1968_avant_diag.sql` est en lecture seule lui aussi et se lance quand
+`diag/80_report_1968_avant_diag.sql` est en lecture seule lui aussi et se lance quand
 on veut, mais il se lit **après** `79` : son § 4 sépare l'occupation venue de
 `79` de celle venue des décrets, et son § 5 mesure la JONCTION des deux reports.
 Joué avant `79`, il n'est pas faux — il mesure une opportunité au lieu d'un
@@ -700,14 +700,14 @@ Entièrement réversible — `scission_trace` garde les `membership_id` posés, 
 la fin du rapport donne la commande pour les retirer. Le script retire ses
 propres lignes avant de recommencer, il est donc rejouable.
 
-### Les désaccords résiduels : `12_conflit_successeur.sql`
+### Les désaccords résiduels : `diag/12_conflit_successeur.sql`
 
 Après correctifs, 148 atomes de 1870 restent rangés ailleurs par Gay, dont 138
 en `source = 'successeur'`. Ce script teste s'il s'agit d'erreurs d'attribution
 ou d'un artefact de la trame, **avant** d'envisager quoi que ce soit.
 
 ```bash
-psql -d histgis -f sql/12_conflit_successeur.sql     # après controle_gay.sh
+psql -d histgis -f sql/diag/12_conflit_successeur.sql     # après controle_gay.sh
 ```
 
 L'hypothèse : une commune A de 1870 absorbée depuis par B reçoit le polygone de
@@ -765,7 +765,7 @@ pris par les cantons de Meurthe-et-Moselle.
 le département est justement ce que le fichier change. Une trace calée sur ce
 qu'on modifie est vide dès que le travail est fait.
 
-Les deux fichiers sont éprouvés par `sql/banc_38_39.sh` : six scénarios sur un
+Les deux fichiers sont éprouvés par `sql/bancs/banc_38_39.sh` : six scénarios sur un
 PostgreSQL jetable, dont la base déjà conforme, les deux façons dont la fenêtre
 1982-1999 peut être prise, et l'ordre réel de la chaîne où `24` crée la trace
 avant que `38` ne l'utilise.
