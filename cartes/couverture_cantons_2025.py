@@ -30,7 +30,7 @@ neuf et rien ne l'impose. Le gain attendu n'est pas la coïncidence mais le
 stock : des coupes déjà propres, calées sur des rues et des cours d'eau
 réels, où l'on choisit au lieu de dessiner. Le taux de coïncidence se jugera
 ville par ville dans QGIS, Marseille en premier — ses onze lignes de 1870,
-1886 et 1901 sont décrites dans `annexes/gaudillere/protocole_georeferencement.md`.
+1886 et 1901 sont décrites dans `docs/gaudillere/protocole_georeferencement.md`.
 
 Dépendances
 -----------

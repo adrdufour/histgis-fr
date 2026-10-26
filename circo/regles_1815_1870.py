@@ -398,7 +398,7 @@ REGLES_1815_1870 = {
   # suit Arles-Est partout.
   # LIMITE — VILLE DE MARSEILLE. L'atlas dessine la commune en deux ou
   # trois morceaux selon les périodes, sans nommer les cantons. Lecture
-  # approchée, à reprendre à l'atome (annexes/gaudillere/marseille_cantons.md) :
+  # approchée, à reprendre à l'atome (docs/gaudillere/marseille_cantons.md) :
   #   * morceau ouest (littoral nord)  -> Marseille-1 ;
   #   * morceau sud (1831-1848)        -> Marseille-5, Marseille-6 ;
   #   * le reste (centre et est)       -> Marseille-2, -3, -4 (et -5, -6

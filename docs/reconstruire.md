@@ -158,7 +158,7 @@ du suivi git :
 
 | pièce | utilisée par | conséquence |
 |---|---|---|
-| `sorties/anr/anr_variantes_verdict.py` et sa sortie `build/anr_variantes.csv` | étape `82` (trame ANR) | sans elles, `82` et ce qui en dépend (`84`, `89`-`91`, la carte partitionnée) sont sautés |
+| `extraction/anr/anr_variantes_verdict.py` et sa sortie `build/anr_variantes.csv` | étape `82` (trame ANR) | sans elles, `82` et ce qui en dépend (`84`, `89`-`91`, la carte partitionnée) sont sautés |
 | `sources/outremer/telecharger_outremer.sh` | `charger_outremer.sh`, étape `40_outremer` | l'outre-mer doit être téléchargé à la main |
 | `cog/fetch_cog.sh` | `load_cog.sh` | les 14 millésimes du COG doivent être téléchargés à la main dans `sources/cog/` |
 | `42-Vasserot_quartiers_v1L93/` (ALPAGE-Vasserot) | `circo/paris_quartiers_1815.py`, `paris_circo_1815.py` | donnée reçue mais sous licence ODbL, donc non diffusée : les étapes « Paris 1815 » sont sautées |

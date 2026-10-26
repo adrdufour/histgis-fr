@@ -25,13 +25,13 @@ Quatre documents font foi. Dans cet ordre :
 | **`RESTE_A_FAIRE.md`** | la file d'attente, par valeur et non par facilité, avec le blocage quand il y en a un. |
 | **`JOURNAL.md`** | le récit chronologique, seul document tenu **par ajouts**. C'est lui qui porte l'historique : rien n'a besoin d'être répété ailleurs pour être conservé. |
 
-`annexes/docs/BASE_POUR_QGIS.md` est une note de passation pour un agent qui aurait QGIS et
+`docs/BASE_POUR_QGIS.md` est une note de passation pour un agent qui aurait QGIS et
 devrait cartographier les villes multicantonales.
 
 Les notes de chantier vivent auprès de leur dossier : `sql/CHAINE.md`
-(inventaire des 142 fichiers `.sql`), `sql/README.md` (dépendances et ordre de rejeu),
-`cog1954/note_1954.md`, `cog1968/note_1968.md`, `annexes/docs/note_1943_2012.md`,
-`annexes/docs/note_circonscriptions.md`, `annexes/docs/note_outre_mer.md`, `circo/note_paris.md`.
+(inventaire des fichiers `.sql`), `sql/README.md` (dépendances et ordre de rejeu),
+`cog1954/note_1954.md`, `cog1968/note_1968.md`, `docs/note_1943_2012.md`,
+`docs/note_circonscriptions.md`, `docs/note_outre_mer.md`, `circo/note_paris.md`.
 
 Depuis octobre 2026 s'y ajoutent : `archives/LISEZMOI.md` (ce qui ne sert ni
 la base ni la carte, et comment rejouer les planches imprimables),
@@ -66,15 +66,19 @@ projet_carte/                              26 Go au total, relevé et réorganis
 │  ├─ 42-Vasserot_quartiers_v1L93/    ALPAGE, ODbL — lu par circo/paris_quartiers_1815.py
 │  └─ trfgis/ rp1968/ geofla/ rp1954/ cog/ outremer/ modif_canton/ arrondissement/
 ├─ photos/                   740 Mo   photos de l'atlas — NI REÇUES NI RÉGÉNÉRABLES, hors git
-│  ├─ 1815_1870/             348 Mo   120 photos, source de circo/regles_1815_*.py
+│  ├─ 1815_1870/             348 Mo   120 photos, source de circo/regles_1815_1870.py
 │  └─ 1940_1995/             393 Mo   139 photos, source de circo/regles_1958_1986.py
-├─ sorties/                   22 Mo   rapports, diagnostics — RÉGÉNÉRABLES, hors git
+├─ sorties/                   22 Mo   rapports, diagnostics — RÉGÉNÉRABLES, hors git (aucun script de la chaîne)
 ├─ build/                    1,9 Go   sortie de extraction/trfgis_extract.py, journaux, trois pg_dump
 ├─ jorf_txt/                 301 Mo   texte des JO ; *_raw, *_col et tables annuelles hors git
 │
 ├─ extraction/           tête de chaîne : trfgis_extract.py (TRF-GIS → build/),
-│                        trfgis_fetch_inspect.py (dépôt de reproduction)
-├─ sql/                  la chaîne de chargement : 142 fichiers .sql numérotés 01 à 123
+│  │                     trfgis_fetch_inspect.py (dépôt de reproduction)
+│  ├─ anr/               règles et arbitrage des variantes ANR (→ build/anr_variantes.csv, lu par 82)
+│  └─ hac/               filiation communale extraite de HAC (→ hac_filiation.csv, lu par 46)
+├─ sql/                  la chaîne de chargement : 113 fichiers .sql numérotés 01 à 135
+│  ├─ diag/              les diagnostics qu'aucun script ne joue
+│  └─ bancs/             les bancs d'essai sur base jetable
 ├─ cantons/              registre des mouvements cantonaux, décrets, annexe VII,
 │  └─ wikipedia/         récolte Wikipédia, lecture des JO, complément au registre
 ├─ circo/                circonscriptions législatives, tout Paris, 1815-1870
@@ -82,10 +86,10 @@ projet_carte/                              26 Go au total, relevé et réorganis
 ├─ cartes/               découpe des villes, export et page web
 │  ├─ web/               la carte interactive ; donnees/ (7,4 Go) régénérable, hors git
 │  └─ sorties/           4,3 Go : voirie BD TOPO par ville (3,5 Go), dossiers de découpe — hors git
-├─ annexes/              les petits chantiers et les notes
-│  ├─ docs/              notes thématiques, BASE_POUR_QGIS.md (note de passation)
-│  ├─ gaudillere/        Marseille : protocole de géoréférencement
-│  └─ hac/               filiation communale extraite de HAC
+├─ docs/                 glossaire, modèle de données, reconstruction ; notes thématiques
+│  │                     (1943-2012, circonscriptions, outre-mer) et BASE_POUR_QGIS.md
+│  └─ gaudillere/        Marseille : protocole de géoréférencement
+├─ outils/               le code partagé : connexion à la base, clé des noms
 ├─ .claude/skills/       decoupe-ville : le déroulé d'une découpe de ville
 ├─ archives/             ce qui ne sert ni la base ni la carte web : voir archives/LISEZMOI.md
 └─ _to_delete/           antichambre de la corbeille — hors git, se vide à la main (absente quand vide)
@@ -204,8 +208,8 @@ binaires et les gros fichiers sont isolés.
 | `circo/` | circonscriptions 1958/1986/2009, et tout Paris : 80 quartiers reconstruits par union d'IRIS, 386 circos sur 15 divisions de 1863 à 1986 | actif |
 | `cog1954/`, `cog1968/` | extraction des deux recensements. 1954 : 3 créations cantonales établies par trois voies indépendantes. 1968 : 86 fascicules, rappel 91,4 % | acquis, perfectible |
 | `cartes/` | couverture des découpages modernes, trame IRIS des 119 villes à découper, et **l'export de la carte web** | actif |
-| `annexes/hac/` | filiation communale extraite de HAC — le troisième contrôle indépendant | acquis |
-| `annexes/gaudillere/` | protocole de géoréférencement de Marseille — le cas d'école des onze coupes internes | à exécuter |
+| `extraction/hac/` | filiation communale extraite de HAC — le troisième contrôle indépendant | acquis |
+| `docs/gaudillere/` | protocole de géoréférencement de Marseille — le cas d'école des onze coupes internes | à exécuter |
 | `jorf_txt/` | texte OCR des JO. Les `*_raw.txt` sont l'OCR brut, hors dépôt | dépouillé |
 | `outils/` | le code partagé entre dossiers : `base.connexion()` (la base histgis, `PGDATABASE` respecté) et `noms.cle()` (clé de rapprochement des noms) | actif |
 | `archives/` | exploration ancienne, planches imprimables, filets de sécurité — voir `archives/LISEZMOI.md` | inactif |

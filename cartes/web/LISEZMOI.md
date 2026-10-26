@@ -318,7 +318,7 @@ lequel des deux cas s'applique et pourquoi.
 > GEOFLA. Résidu nommé : Notre-Dame-de-Briançon 93,6 km², Tours 6,9. **L'ocre
 > penché, lui, ne bouge pas** : ANR livre le polygone de la commune-mère entière
 > et ne sait pas la découper entre deux cantons. Les 333 fractions restent à
-> tracer, et c'est toujours le chantier de `annexes/docs/BASE_POUR_QGIS.md`.
+> tracer, et c'est toujours le chantier de `docs/BASE_POUR_QGIS.md`.
 >
 > Gain non cherché : **l'empreinte de regroupement devient datée.** Deux atomes
 > que la trame de 2011 confondait sous un même polygone peuvent en avoir deux

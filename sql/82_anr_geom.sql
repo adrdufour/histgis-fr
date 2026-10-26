@@ -210,7 +210,7 @@ CREATE TABLE a82_trace (
 --      Le calcul demande de mesurer, pour chaque variante, la part de sa
 --      surface que revendique une commune TIERCE valide sur la même fenêtre.
 --      C'est une mesure de voisinage, pas une règle : elle est faite par
---      `sorties/anr/anr_variantes_verdict.py`, elle est relisible ligne à
+--      `extraction/anr/anr_variantes_verdict.py`, elle est relisible ligne à
 --      ligne, et elle entre ici comme une donnée.
 -- ---------------------------------------------------------------------------
 CREATE TABLE anr_variante (

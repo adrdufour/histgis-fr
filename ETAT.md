@@ -134,7 +134,7 @@ passe par `snapshot_geom_anr()` ou par l'export web bénéficie de la correction
 Le pont est une jointure d'entiers : `id_com` d'ANR **est** l'identifiant
 Cassini de `atom.cassini`. 99,91 % des atomes non-fraction retrouvés, 99,66 %
 d'accord sur les noms. Cinq règles de sélection, aucune n'arbitrant une
-frontière, dans `sorties/anr/anr_regles.py` et `sql/82_anr_geom.sql`.
+frontière, dans `extraction/anr/anr_regles.py` et `sql/82_anr_geom.sql`.
 
 ### 2.1 bis Trame nettoyée — écrite, mesurée hors base, PAS ENCORE JOUÉE
 
@@ -797,7 +797,7 @@ d'attribution, qui portent sur des communes entières, concluent.
 
 ### 3.3 HAC — la filiation que `11` ne connaissait pas
 
-`annexes/hac/hac_filiation.py`, `sql/diag/45_controle_hac.sql`, **qui ne contient aucun
+`extraction/hac/hac_filiation.py`, `sql/diag/45_controle_hac.sql`, **qui ne contient aucun
 `INSERT`, `DELETE` ni `UPDATE`** : corriger la base d'après HAC lui ferait
 perdre son indépendance.
 
@@ -926,7 +926,7 @@ Renvois vers `METHODE.md` § 6, où chacune est détaillée et mesurée.
    La trame d'accrochage est en base (`iris_ville`, 4 219 IRIS, 211 coupes sur
    214 pourvues) ; le travail de digitalisation dans QGIS reste entier.
    Marseille est le cas d'école, protocole dans
-   `annexes/gaudillere/protocole_georeferencement.md`.
+   `docs/gaudillere/protocole_georeferencement.md`.
 4. **Six départements que le report ne rattrape pas** — 94, 95, 62, 77, 29, 91 :
    trop d'actes intercalés pour se résoudre contre 1999. Il leur faudrait un
    jalon intermédiaire, un recensement ou un acte que le registre ignore.

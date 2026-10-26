@@ -63,7 +63,7 @@ Un `state = 'idle in transaction'` qui dure, ou un verrou, dit autre chose.
 jeu ANR change :
 
 ```bash
-python3 sorties/anr/anr_variantes_verdict.py     # écrit build/anr_variantes.csv
+python3 extraction/anr/anr_variantes_verdict.py     # écrit build/anr_variantes.csv
 ```
 
 ## 3. Jouer le fichier, en une transaction

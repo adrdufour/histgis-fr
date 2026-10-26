@@ -3,8 +3,8 @@
 """
 hac_filiation.py — extraire de HAC la filiation des communes créées 1870-1941.
 
-    python3 annexes/hac/hac_filiation.py            # écrit annexes/hac/hac_filiation.csv
-    python3 annexes/hac/hac_filiation.py --dep 57   # limité à un département
+    python3 extraction/hac/hac_filiation.py            # écrit extraction/hac/hac_filiation.csv
+    python3 extraction/hac/hac_filiation.py --dep 57   # limité à un département
 
 À quoi ça sert
 --------------
@@ -43,7 +43,7 @@ reconstruction.
 
 Sortie
 ------
-`annexes/hac/hac_filiation.csv` — une ligne par création résolue :
+`extraction/hac/hac_filiation.csv` — une ligne par création résolue :
 
     cassini_fille, nom_fille, dep, annee, nom_mere_hac, cassini_mere, voie
 
@@ -64,7 +64,7 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parents[2]
 HAC = RACINE / "sources" / "geofla" / "repro" / "source_data" / "HAC"
 NOMENCLATURE = RACINE / "sources" / "trfgis" / "communes" / "Nomenclatures"
-SORTIE = RACINE / "annexes" / "hac" / "hac_filiation.csv"
+SORTIE = RACINE / "extraction" / "hac" / "hac_filiation.csv"
 
 AN_MIN, AN_MAX = 1870, 1941
 

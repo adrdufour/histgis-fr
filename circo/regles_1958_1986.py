@@ -147,7 +147,7 @@ REGLES_1958 = {
 
 "13": {"nom": "Bouches-du-Rhône", "photo": 15, "depuis": 1958, "jusqu": 1986, "circos": {
     # Hors Marseille (1re à 7e, et une part de la 8e) : voir
-    # annexes/gaudillere/marseille_complet.md. Note de l'atlas : « le canton de
+    # docs/gaudillere/marseille_complet.md. Note de l'atlas : « le canton de
     # Marseille-XII était divisé : sa partie urbaine et la commune de
     # Plan-de-Cuques faisaient partie de la 8e circonscription, qui se trouvait
     # d'ailleurs séparée en deux tronçons ; la commune d'Allauch était

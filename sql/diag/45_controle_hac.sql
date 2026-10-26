@@ -1,7 +1,7 @@
 -- ============================================================================
 -- 45_controle_hac.sql — confronter les paris de `11` à la filiation de HAC
 --
---   python3 annexes/hac/hac_filiation.py            # produit le CSV
+--   python3 extraction/hac/hac_filiation.py            # produit le CSV
 --   psql -d histgis -f sql/diag/45_controle_hac.sql   # depuis la RACINE du dépôt
 --
 -- **CE FICHIER NE MODIFIE RIEN.** Aucun INSERT, aucun DELETE, aucun UPDATE sur
@@ -18,7 +18,7 @@
 -- Gay ; `METHODE.md` note que ces quatre « se tranchent sur pièces d'archives ».
 --
 -- HAC nomme la mère. Pour 444 créations de la fenêtre 1870-1941 sur 447, la
--- filiation est résolue de façon unique (`annexes/hac/hac_filiation.py`, 99,3 %). C'est
+-- filiation est résolue de façon unique (`extraction/hac/hac_filiation.py`, 99,3 %). C'est
 -- une voie indépendante : `11` raisonne par voisinage cantonal, HAC lit un acte.
 --
 -- La question posée
@@ -47,7 +47,7 @@
 \set ON_ERROR_STOP on
 SET search_path TO histgis, public;
 
--- Chemin du CSV produit par `annexes/hac/hac_filiation.py`.
+-- Chemin du CSV produit par `extraction/hac/hac_filiation.py`.
 --
 -- `\copy` résout les chemins relatifs depuis le répertoire d'où `psql` est
 -- lancé, PAS depuis le fichier .sql — d'où le défaut relatif à la racine du
@@ -60,7 +60,7 @@ SET search_path TO histgis, public;
 --     psql -d histgis -v hac=/chemin/hac_filiation.csv -f sql/diag/45_controle_hac.sql
 \if :{?hac}
 \else
-  \set hac 'annexes/hac/hac_filiation.csv'
+  \set hac 'extraction/hac/hac_filiation.csv'
 \endif
 
 DO $$

@@ -262,4 +262,4 @@ limite cantonale de 1870 figure parmi les lignes offertes. Les IRIS sont calés
 sur la voirie et les îlots — sauf à Paris, où l'INSEE les cale explicitement
 sur les limites de quartier. Le taux de reprise réel se mesurera ville par
 ville dans QGIS, Marseille en premier puisque ses onze lignes sont décrites
-dans `annexes/gaudillere/protocole_georeferencement.md`.
+dans `docs/gaudillere/protocole_georeferencement.md`.

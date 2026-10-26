@@ -2,7 +2,7 @@
 -- 46_creation_serie.sql — les communes nées PENDANT la série que `11` ne peut
 --                          pas prolonger, rattachées par la filiation HAC
 --
---   python3 annexes/hac/hac_filiation.py
+--   python3 extraction/hac/hac_filiation.py
 --   psql -d histgis -f sql/46_creation_serie.sql      # depuis la RACINE
 --
 -- Le trou, et pourquoi il résiste à tout le reste
@@ -70,7 +70,7 @@
 --
 -- Réversible : `creation_serie_trace`, section 5.
 -- Rejouable : retire son propre passage avant de recommencer.
--- Prérequis : `11` et `15` joués, `annexes/hac/hac_filiation.csv` engendré.
+-- Prérequis : `11` et `15` joués, `extraction/hac/hac_filiation.csv` engendré.
 -- ============================================================================
 
 \set ON_ERROR_STOP on
@@ -78,7 +78,7 @@ SET search_path TO histgis, public;
 
 \if :{?hac}
 \else
-  \set hac 'annexes/hac/hac_filiation.csv'
+  \set hac 'extraction/hac/hac_filiation.csv'
 \endif
 
 -- ---------------------------------------------------------------------------

@@ -1408,7 +1408,7 @@ après elle, se défait par un `DROP`, et ne touche ni `membership` ni
 
 **Prérequis** : charger la couche `geometries_only_processed` du GeoPackage ANR
 avec `ogr2ogr` (commande dans l'en-tête du fichier), et avoir `build/anr_variantes.csv`
-— produit par `sorties/anr/anr_variantes_verdict.py`, qui doit être relancé si le
+— produit par `extraction/anr/anr_variantes_verdict.py`, qui doit être relancé si le
 jeu ANR change.
 
 **Il ne crée aucune unité et n'en référence aucune** : les deux pièges de rejeu

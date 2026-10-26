@@ -214,7 +214,7 @@ psql:sql/27_circo_2012.sql:76: error: :: Aucun fichier ou dossier de ce nom
 | `27_circo_2012.sql` | `circo` | `circo/circo_2012.csv` |
 | `28_circo_1986.sql` | `circo` | `circo/circo_1986.csv` |
 | `40_outremer.sql` | `circo_om` | `circo/circo_outremer_1986_2012.csv` |
-| `45`, `46` | `hac` | `annexes/hac/hac_filiation.csv` — **ont un défaut** |
+| `45`, `46` | `hac` | `extraction/hac/hac_filiation.csv` — **ont un défaut** |
 
 `\copy` résout les chemins relatifs depuis le répertoire de LANCEMENT, pas
 depuis le fichier `.sql` : passer des chemins absolus. `rejouer_apres_rebuild.sh`

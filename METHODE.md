@@ -104,7 +104,7 @@ incohérences, et elles ont été validées sur les vraies données.
 | **CONTOURS-IRIS** (INSEE-IGN) | trame de découpe des villes, et les 80 quartiers de Paris | Licence Ouverte 2.0 |
 
 DOI, URL et pièges de lecture de chaque source : `sources/`, `LISEZMOI.md`, et
-les notes de chantier (`annexes/docs/note_circonscriptions.md`,
+les notes de chantier (`docs/note_circonscriptions.md`,
 `cog1954/note_1954.md`, `cog1968/note_1968.md`, `sources/ANR_COMMUNES_22042026/README.md`).
 
 **Contrainte de licence, qui commande tout le reste** : le projet alimente
@@ -582,7 +582,7 @@ ramené à 26 km².
 
 ### 7.3 HAC — la filiation que `11` ne connaissait pas
 
-`annexes/hac/hac_filiation.py`, `sql/diag/45_controle_hac.sql`. **Il ne contient aucun
+`extraction/hac/hac_filiation.py`, `sql/diag/45_controle_hac.sql`. **Il ne contient aucun
 `INSERT`, `DELETE` ni `UPDATE`** : corriger la base d'après HAC lui ferait perdre
 son indépendance, exactement comme recopier Gay la ferait perdre au contrôle
 géométrique.

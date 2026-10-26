@@ -95,7 +95,7 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
     rurales inchangées : Le Tholonet, Saint-Marc-Jaumegarde, Vauvenargues, Venelles / Éguilles,
     Meyreuil).
 - **Ligne Nord / Sud : non tracée, faute de texte.** Rien dans `cantons/`, `jorf_txt/` (37
-  fichiers citent Aix), `circo/`, `annexes/gaudillere/`, `cog1954/`, `cog1968/`, `sources/trfgis`, ni
+  fichiers citent Aix), `circo/`, `docs/gaudillere/`, `cog1954/`, `cog1968/`, `sources/trfgis`, ni
   sur les photos 24-26 de `photos/1815_1870/`. Le décret 82-119 remplace les deux cantons sans les
   décrire ; Gaudillère ne divise Aix entre circonscriptions qu'en 1986. Source à fournir : arrêté
   du 17 frimaire an X, ou plan annexé au décret 82-119 (préfecture).
@@ -3627,7 +3627,7 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
   `jorf_txt/JORF_19820122_18_col.txt`, l. 631-647, relu sur `sources/JORF/JORF_19820122_18.pdf` p. 5) —
   même décret que Louviers (n° 122) et Évreux (n° 71) : Vernon est divisé en Vernon-Nord et
   Vernon-Sud. Le décret 2014-241 remet la ville entière dans le canton de Vernon. Rien dans
-  `annexes/gaudillere/`.
+  `docs/gaudillere/`.
 - **Base** : atome 39507 entier dans 2736 jusqu'au 1982-03-14 ; fractions `39507#2736` (Nord) et
   `39507#2740` (Sud) du 1992-03-22 au 2013-01-01 seulement ; **rien pour la ville du 1982-03-14 au
   1992-03-22**, alors que les communes rurales y sont déjà partagées au 1985-01-01 (7 dans 2736 :
@@ -3657,7 +3657,7 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
   `cantons/communes_coupees_1973_1984.csv`) ; décret 82-27 du 15 janvier 1982 (JO du 16 janvier
   1982, `jorf_txt/JORF_19820116_13_col.txt`, l. 1145-1179 ; `communes_coupees_1973_1984.csv`
   l. 412-414) ; décret de 2014 (Dreux-1), lu sur la seule transcription de Wikipédia, qui reprend
-  la ligne Ouest / Est de 1982 en traduisant les anciens noms. Rien dans `annexes/gaudillere/`.
+  la ligne Ouest / Est de 1982 en traduisant les anciens noms. Rien dans `docs/gaudillere/`.
 - **Base** : 12219 entière dans 2813 jusqu'au 1973-09-23 ; rien pour la ville ni pour ses communes
   rurales du 1973-09-23 au 1982-03-14 ; communes rurales dans 2813 / 2827 / 2828 dès le
   1982-03-14, mais fractions `12219#2813`, `#2827`, `#2828` seulement à partir du 1998-03-15 ;
