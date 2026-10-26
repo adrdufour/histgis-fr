@@ -5,7 +5,7 @@ controle_composition.py — juger l'extraction des décrets par le COG de 1999
 
     python3 cantons/controle_composition.py
 
-Produit `cantons/controle_composition.csv`.
+Produit `cantons/controle_composition_jo.csv`.
 
 Le principe
 -----------
@@ -51,9 +51,9 @@ import csv
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
-EXTRAIT = RACINE / "cantons" / "composition_decrets.csv"
+EXTRAIT = RACINE / "cantons" / "composition_jo.csv"
 COG = RACINE / "sources" / "cog" / "1999" / "comsimp1999.txt"
-SORTIE = RACINE / "cantons" / "controle_composition.csv"
+SORTIE = RACINE / "cantons" / "controle_composition_jo.csv"
 
 # En deçà de trois communes entières, l'appariement par recouvrement ne
 # distingue plus rien : deux cantons voisins partagent facilement une commune.
@@ -76,8 +76,11 @@ def cog_1999():
 
 
 def main():
-    # Le contrôle vaut pour toute extraction qui rend les mêmes colonnes.
-    # `composition_jo.py` en est une seconde ; on ne duplique pas le juge.
+    # Le contrôle vaut pour toute extraction qui rend les mêmes colonnes. Il
+    # jugeait d'abord `composition_decrets.py`, rangé dans `archives/remplaces/`
+    # le 26 octobre 2026 : `composition_jo.py` lit tous les cantons du JO, pas
+    # seulement ceux qui portent une commune coupée. C'est lui qu'il juge par
+    # défaut ; `--source cantons/composition_legifrance.csv` juge 1990-1999.
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", default=str(EXTRAIT))
     ap.add_argument("--sortie", default=str(SORTIE))
@@ -85,7 +88,7 @@ def main():
     globals()["EXTRAIT"] = Path(args.source)
     globals()["SORTIE"] = Path(args.sortie)
     if not EXTRAIT.exists():
-        raise SystemExit("Lancer d'abord composition_decrets.py.")
+        raise SystemExit(f"{EXTRAIT} absent : lancer d'abord l'extraction.")
     par_commune, par_canton = cog_1999()
     print(f"COG 1999 : {len(par_commune)} communes, "
           f"{len(par_canton)} cantons\n")

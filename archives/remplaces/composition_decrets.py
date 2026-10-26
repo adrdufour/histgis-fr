@@ -3,8 +3,8 @@
 """
 composition_decrets.py — la composition cantonale, tirée du texte des décrets
 
-    python3 cantons/composition_decrets.py
-    python3 cantons/composition_decrets.py --decret 82-77   # un seul décret
+    python3 archives/remplaces/composition_decrets.py
+    python3 archives/remplaces/composition_decrets.py --decret 82-77   # un seul décret
 
 Produit `cantons/composition_decrets.csv` — une ligne par (décret, canton,
 commune) — et `cantons/composition_non_appariees.csv` pour ce qui résiste.
@@ -78,12 +78,12 @@ import sys
 import unicodedata
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
 SOURCE = RACINE / "cantons" / "communes_coupees_1973_1984.csv"
 NOMS = RACINE / "build" / "noms_geofla.csv"
 MVT = RACINE / "sources" / "v_mvt_commune_2025.csv"
-SORTIE = RACINE / "cantons" / "composition_decrets.csv"
-RESTE = RACINE / "cantons" / "composition_non_appariees.csv"
+SORTIE = RACINE / "archives" / "remplaces" / "composition_decrets.csv"
+RESTE = RACINE / "archives" / "remplaces" / "composition_non_appariees.csv"
 
 # Seuil de ressemblance. Choisi avant de mesurer, et non ajusté ensuite : le
 # régler sur le résultat reviendrait à fabriquer le taux qu'on veut lire.

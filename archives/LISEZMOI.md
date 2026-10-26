@@ -66,3 +66,8 @@ La saisie à la main du registre, remplacée par `cantons/consolide_registre.py`
   confirme-t-il le code, sur la première passe de 1968 (`communes_1968.csv`,
   qui n'existe plus). `cog1968/controle_nom_code_base.py` le refait sur ce que
   la base a chargé.
+* `composition_decrets.py`, avec `composition_decrets.csv`,
+  `composition_non_appariees.csv` et `controle_composition.csv` : la composition
+  cantonale lue dans les seuls segments à commune coupée (1 295 lignes).
+  `cantons/composition_jo.py` relit tout le JO (4 706 lignes) ;
+  `cantons/controle_composition.py` le juge désormais par défaut.

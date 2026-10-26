@@ -29,7 +29,7 @@
 --   * `geofla_commune` / `noms_geofla` — les communes encore là en 2011 ;
 --   * `insee_mvt.libelle_av` — le libellé AVANT mouvement, donc le nom que
 --     portait une commune au moment où elle a disparu. C'est le dispositif que
---     `cantons/composition_decrets.py` utilise déjà, et que `note_1954.md`
+--     `archives/remplaces/composition_decrets.py` utilise déjà, et que `note_1954.md`
 --     signale comme « à reprendre tel quel pour 1954 ».
 --
 -- CE QUE CE RÉFÉRENTIEL NE RÈGLE PAS

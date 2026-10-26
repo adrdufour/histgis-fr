@@ -472,8 +472,8 @@ Fichiers produits : `cantons/composition_jo.csv` (4 706 lignes),
 `cantons/composition_jo_non_appariees.csv` (151 rejets), 
 `cantons/controle_composition_jo.csv` (le contrôle par le COG 1999).
 
-Script : `cantons/composition_jo.py`. Contrôle : `cantons/controle_composition.py
---source cantons/composition_jo.csv`.
+Script : `cantons/composition_jo.py`. Contrôle : `cantons/controle_composition.py`
+(qui juge `composition_jo.csv` par défaut depuis le 26 octobre 2026).
 
 ---
 
