@@ -56,3 +56,13 @@ lecture `psm6_brut` d'avant correction des codes. Seule leur fusion,
 
 La saisie à la main du registre, remplacée par `cantons/consolide_registre.py`
 (voir `cantons/note_registre.md`). Gardée comme témoin.
+
+## `remplaces/` — des contrôles qu'un successeur a rendus inutiles
+
+* `controle_1958.py` : la partition de la transcription de 1958, sans les
+  ALIAS. `circo/composition_1958.py` fait le même contrôle avec eux et l'écrit
+  dans `composition_1958_etat.csv`.
+* `controle_nom_code.py` et sa sortie `communes_1968_suspects.csv` : le nom
+  confirme-t-il le code, sur la première passe de 1968 (`communes_1968.csv`,
+  qui n'existe plus). `cog1968/controle_nom_code_base.py` le refait sur ce que
+  la base a chargé.

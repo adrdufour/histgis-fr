@@ -981,7 +981,7 @@ Contrôle : COG INSEE 1999. Dépouillé le 28 août 2026.
 | fichier | quoi |
 |---|---|
 | `cantons/tables_jo.py` → `tables_jo_actes.csv` | tout ce que les tables disent des cantons : 567 lignes (275 rattachements de communes, 213 créations, 36 changements de nom…) |
-| `cantons/rappel_tables.py` → `rappel_tables.csv` | contrôle : les actes connus par ailleurs (registre Légifrance + complément) que les tables retrouvent |
+| `cantons/tables_jo.py --rappel` → `rappel_tables.csv` | contrôle : les actes connus par ailleurs (registre Légifrance + complément) que les tables retrouvent |
 | `cantons/dater_par_tables.py` → `dates_par_tables_jo.csv` | les mouvements non datés de `mouvements_cantonaux.csv` cherchés dans les tables |
 | `cantons/transferts_tables.py` → `transferts_tables_jo.csv`, `jo_page_date.csv` | les transferts datés, au format de `transferts_complement.csv`, avec la date de parution estimée par la page |
 

@@ -3,8 +3,8 @@
 """
 controle_nom_code.py — le nom confirme-t-il le code INSEE ?
 
-    python3 cog1968/controle_nom_code.py
-    python3 cog1968/controle_nom_code.py --dep 62 --detail
+    python3 archives/remplaces/controle_nom_code.py
+    python3 archives/remplaces/controle_nom_code.py --dep 62 --detail
 
 Produit `cog1968/communes_1968_suspects.csv` : une ligne par rattachement dont
 le NOM désigne une autre commune que son CODE.
@@ -55,10 +55,10 @@ import difflib
 import sys
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
 LU = RACINE / "cog1968" / "communes_1968.csv"
 NOMS = RACINE / "build" / "noms_geofla.csv"
-SORTIE = RACINE / "cog1968" / "communes_1968_suspects.csv"
+SORTIE = RACINE / "archives" / "remplaces" / "communes_1968_suspects.csv"
 
 sys.path.insert(0, str(RACINE / "circo"))
 from extrait_paris import cle                            # noqa: E402

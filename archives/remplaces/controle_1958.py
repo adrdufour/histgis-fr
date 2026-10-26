@@ -3,8 +3,8 @@
 """
 controle_1958.py — la transcription de 1958 forme-t-elle une partition ?
 
-    python3 circo/controle_1958.py            # tous les départements
-    python3 circo/controle_1958.py 59 62      # ceux-là
+    python3 archives/remplaces/controle_1958.py            # tous les départements
+    python3 archives/remplaces/controle_1958.py 59 62      # ceux-là
 
 Lecture seule. Pour chaque département de regles_1958_1986.py, compare les
 cantons nommés à ceux que la base porte à la date de l'ordonnance : un nom
@@ -13,7 +13,9 @@ sans canton, un canton nommé deux fois, un canton oublié. Les jetons
 un canton divisé et comptent pour ce canton.
 """
 import collections, subprocess, sys, unicodedata
-from regles_1958_1986 import REGLES_1958
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "circo"))
+from regles_1958_1986 import REGLES_1958  # noqa: E402
 
 def cle(s):
     s = unicodedata.normalize("NFD", s.lower().replace("œ", "oe"))
