@@ -977,6 +977,16 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/128_circo_1967_grande_couronne.sql" > "$RACINE/build/p128.log" 2>&1 \
     || { echo "  128 refusé — voir build/p128.log" >&2; exit 1; }
 
+# Ajouté le 25 octobre 2026. `134` : les cantons d'Allos, Saint-Paul et Senez
+# (04) de 1973 à 1988, Vesseaux (07) de 1955 à 1986, et six communes de
+# l'ancienne Seine-et-Oise ramenées du 1967-09-24 au 1968-01-01. Il allonge
+# des périodes de `113` et `127` : après `128`, tant que `128` lit les cantons
+# du 31 décembre 1967 tels que `110` les avait laissés.
+etape "134 — correctifs 04 (1973-1988), Vesseaux, bascule de 1967"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/134_correctifs_04_07_1967.sql" > "$RACINE/build/p134.log" 2>&1 \
+    || { echo "  134 refusé — voir build/p134.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
@@ -992,16 +1002,6 @@ if $PSQL -Atc "SELECT to_regclass('histgis.om_atom') IS NOT NULL" | grep -q t; t
     $PSQL -P pager=off -1 -v appliquer=1 \
           -f "$ICI/129_outremer_villes_partagees.sql" > "$RACINE/build/p129.log" 2>&1 \
         || { echo "  129 refusé — voir build/p129.log" >&2; exit 1; }
-else
-    echo "  om_atom absente — 126, 129 et 135 sautés." >&2
-fi
-
-# ============================================================================
-# LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026
-# ============================================================================
-# `export_web.py --role histgis_carte` et `cartes/export_partition.sh`
-# descendent dans ce rôle, qui n'a que SELECT : c'est ce qui rend au moteur la
-# garantie qu'un export n'écrit rien (voir `connecte()` dans export_web.py).
     # Ajouté le 25 octobre 2026. `135` : la Polynésie française et la
     # Nouvelle-Calédonie, atomes et circonscriptions 1945-2012. Il lit deux
     # trames que `charger_pacifique.sh` charge ; sans elles, il est sauté.
@@ -1015,6 +1015,16 @@ fi
         echo "  trames du Pacifique absentes — 135 sauté" \
              "(bash sql/charger_pacifique.sh)." >&2
     fi
+else
+    echo "  om_atom absente — 126, 129 et 135 sautés." >&2
+fi
+
+# ============================================================================
+# LES DROITS DU RÔLE DE LA CARTE — ajouté le 22 septembre 2026
+# ============================================================================
+# `export_web.py --role histgis_carte` et `cartes/export_partition.sh`
+# descendent dans ce rôle, qui n'a que SELECT : c'est ce qui rend au moteur la
+# garantie qu'un export n'écrit rien (voir `connecte()` dans export_web.py).
 #
 # Ces droits portent sur le SCHÉMA, et `rebuild.sh` fait `DROP SCHEMA histgis
 # CASCADE` : ils partent avec lui, en silence. Les droits sur la BASE

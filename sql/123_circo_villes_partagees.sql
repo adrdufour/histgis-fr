@@ -53,6 +53,19 @@
 -- 6e, 1973) : il passe APRÈS `113`. 1986, 1820, 1863 : la base avait déjà
 -- tout, le fichier le vérifie.
 --
+-- 25 OCTOBRE 2026 : 44 villes de plus (Brest à Mulhouse), mises au propre par
+-- `circo/partition_ville_propre.py`. Trois ajouts :
+--   * `circo_ville` : le nom de la circonscription quand ce n'est pas celui de
+--     la ville (Roubaix dans « Lille-7 », Lens dans « Béthune-2 ») ;
+--   * `circonscription` = « 2-3 » : canton PARTAGÉ entre deux circonscriptions
+--     (Bordeaux 5e en 1928-1940) ; la fraction prend l'unité fusionnée de sa
+--     mère, en 1871-1940 seulement ;
+--   * quatorze unités créées comme celles de Nice (`U<dep>V<n>`), et deux
+--     graphies d'unité fusionnée reconnues (« Tourcoing () »,
+--     « Strasbourg (Ville-1-Ville-2) »).
+-- Avant 1871, la saisie a d'abord corrigé `circo/regles_1815_*.py` (puis `64`,
+-- `106`) : ce fichier ne fait que vérifier ces périodes.
+--
 -- Réversible : `circo_ville_trace` (pose, reste, retire, unit). Le fichier
 -- retire sa trace avant de reposer, et se rejoue sans risque.
 -- ============================================================================
@@ -72,14 +85,32 @@ DROP TABLE IF EXISTS t123_csv;
 CREATE TEMP TABLE t123_csv (
     n serial,                  -- rang dans le CSV, en-tête non compté
     dep text, insee text, ville text, canton_id text, canton text,
-    circonscription int, depuis int, jusqu int, etat text, note text);
-\copy t123_csv (dep, insee, ville, canton_id, canton, circonscription, depuis, jusqu, etat, note) FROM 'circo/partition_ville.csv' WITH (FORMAT csv, HEADER true)
+    circonscription text, depuis int, jusqu int, etat text, note text,
+    circo_ville text);
+\copy t123_csv (dep, insee, ville, canton_id, canton, circonscription, depuis, jusqu, etat, note, circo_ville) FROM 'circo/partition_ville.csv' WITH (FORMAT csv, HEADER true)
 
 DROP TABLE IF EXISTS t123_unit_neuve;
 CREATE TEMP TABLE t123_unit_neuve AS
 SELECT * FROM (VALUES
     ('U0604@1910', '06', '0604', 'Nice-2', 1910, date '1910-01-01', date '1919-01-01'),
-    ('U0603@1928', '06', '0603', 'Nice-1', 1928, date '1928-01-01', date '1941-01-01')
+    ('U0603@1928', '06', '0603', 'Nice-1', 1928, date '1928-01-01', date '1941-01-01'),
+    -- 25 octobre 2026 : le numéro que l'unité fusionnée de la ville avait pris
+    -- (« Toulouse (1-2) », « Roubaix (6-7) »…). Pas d'identifiant numérique
+    -- libre : `U<dep>V<n>`.
+    ('U31V1@1876', '31', '3101', 'Toulouse-1', 1876, date '1876-01-01', date '1919-01-01'),
+    ('U31V1@1928', '31', '3101', 'Toulouse-1', 1928, date '1928-01-01', date '1941-01-01'),
+    ('U44V1@1876', '44', '4401', 'Nantes-1', 1876, date '1876-01-01', date '1885-01-01'),
+    ('U44V1@1910', '44', '4401', 'Nantes-1', 1910, date '1910-01-01', date '1941-01-01'),
+    ('U33V1@1876', '33', '3301', 'Bordeaux-1', 1876, date '1876-01-01', date '1881-01-01'),
+    ('U33V2@1876', '33', '3302', 'Bordeaux-2', 1876, date '1876-01-01', date '1881-01-01'),
+    ('U33V4@1928', '33', '3304', 'Bordeaux-4', 1928, date '1928-01-01', date '1941-01-01'),
+    ('U59V1@1889', '59', '5901', 'Lille-1', 1889, date '1889-01-01', date '1893-01-01'),
+    ('U59V2@1902', '59', '5902', 'Lille-2', 1902, date '1902-01-01', date '1919-01-01'),
+    ('U59V2@1928', '59', '5902', 'Lille-2', 1928, date '1928-01-01', date '1941-01-01'),
+    ('U59V7@1893', '59', '5907', 'Lille-7', 1893, date '1893-01-01', date '1902-01-01'),
+    ('U59V7@1902', '59', '5907', 'Lille-7', 1902, date '1902-01-01', date '1919-01-01'),
+    ('U67V1@1928', '67', '6701', 'Strasbourg-Ville-1', 1928, date '1928-01-01', date '1941-01-01'),
+    ('U67V2@1928', '67', '6702', 'Strasbourg-Ville-2', 1928, date '1928-01-01', date '1941-01-01')
 ) v(unit_id, dep, code, nom, segment, du, au);
 
 -- ---------------------------------------------------------------------------
@@ -137,10 +168,12 @@ SELECT n.unit_id, n.dep, n.code, n.segment, n.nom, daterange(n.du, n.au)
   FROM t123_unit_neuve n
  WHERE NOT EXISTS (SELECT 1 FROM unit u WHERE u.unit_id = n.unit_id);
 
--- Une unité fusionnée : « Moulins (1-2) », « Nice (1-2-3) ».
+-- Une unité fusionnée : « Moulins (1-2) », « Nice (1-2-3) », et deux graphies
+-- de l'export de 1876-1940 : « Strasbourg (Ville-1-Ville-2) », « Tourcoing () ».
 DROP TABLE IF EXISTS t123_fusion;
 CREATE TEMP TABLE t123_fusion AS
-SELECT unit_id FROM unit WHERE niveau = 'circo' AND nom ~ ' \(\d+(-\d+)+\)$';
+SELECT unit_id FROM unit WHERE niveau = 'circo'
+   AND (nom ~ ' \((Ville-)?\d+(-(Ville-)?\d+)+\)$' OR nom ~ ' \(\)$');
 
 -- Le morceau attendu : fenêtre ∩ version de l'unité ∩ vie cantonale de la fraction.
 --   1871-1940 : l'unité porte le nom `<ville>-<n>` ;
@@ -158,11 +191,25 @@ SELECT l.n, l.fraction, l.mere, v.unit_id, l.depuis,
   JOIN t123_version v
     ON v.dep = l.dep AND v.periode && l.fenetre
    AND CASE WHEN l.depuis BETWEEN 1871 AND 1940
-            THEN v.nom = l.ville || '-' || l.circonscription
-            ELSE v.code = l.dep || '-' || lpad(l.circonscription::text, 2, '0')
+            THEN v.nom = coalesce(nullif(l.circo_ville, ''), l.ville) || '-' || l.circonscription
+            ELSE v.code = l.dep || '-' || lpad(l.circonscription, 2, '0')
                  AND (l.depuis < 1958 OR v.segment_depuis = l.depuis) END
   LEFT JOIN vie ON vie.atom_id = l.fraction
- WHERE l.fraction IS NOT NULL;
+ WHERE l.fraction IS NOT NULL AND l.circonscription !~ '-'
+UNION ALL
+-- Un canton PARTAGÉ (« 2-3 » : Bordeaux 5e en 1928, coupé par la rue
+-- Sainte-Catherine) va dans l'unité fusionnée de sa mère, là où elle y est :
+-- la seule chose vraie à l'échelle de la fraction. Hors 1871-1940, rien.
+SELECT l.n, l.fraction, l.mere, m.unit_id, l.depuis,
+       datemultirange(l.fenetre * m.periode) * coalesce(vie.mr, '{}'),
+       datemultirange(l.fenetre * m.periode) - coalesce(vie.mr, '{}')
+  FROM t123_ligne l
+  JOIN membership m ON m.atom_id = l.mere AND m.niveau = 'circo'
+   AND m.periode && l.fenetre
+   AND m.unit_id IN (SELECT unit_id FROM t123_fusion)
+  LEFT JOIN vie ON vie.atom_id = l.fraction
+ WHERE l.fraction IS NOT NULL AND l.circonscription ~ '-'
+   AND l.depuis BETWEEN 1871 AND 1940;
 
 -- Ce que la base dit déjà, pour la fraction et pour sa mère.
 DROP TABLE IF EXISTS t123_bilan;

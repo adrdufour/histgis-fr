@@ -10882,6 +10882,161 @@ Les villes coupées (Versailles, Saint-Germain-en-Laye, Poissy, Argenteuil,
 Sarcelles, Corbeil-Essonnes, Évry, Massy, Savigny…), les communes mortes, et
 1941-1954 (jalon de 1954). La Seine-et-Marne n'est pas commencée.
 
+**Mesure après coup** (`build/diag/idf_trous_2026-10-25b.txt`), communes sans
+canton : Yvelines 1968-1993 de 74-81 à 9-11 ; Essonne 1976-1997 de 38 à 5-6 ;
+Val-d'Oise 1976-1984 de 31 à 3. Ce qui reste, ce sont les villes coupées et
+les communes mortes. **Réexporté** 78, 91, 95 (`build/export_*_2026-10-25b.log`,
+sans erreur) ; dans les fichiers servis, le 78 de 1980 nomme Houdan et
+Versailles-Ouest et ne nomme plus « Dourdan-Nord ».
+
+## 25 octobre 2026 (soir) — Alpes-de-Haute-Provence 1973-1988, Vesseaux, Saint-Pierreville en 1821, la petite couronne en 1967
+
+Signalement d'Adrien : des cantons manquent dans les Alpes-de-Haute-Provence
+de 1986 à 1988, le canton de Saint-Paul et ses communes disparaissent ; en
+Ardèche il manque des changements de circonscription, et Vesseaux a un
+problème de circonscription en 1984 ; la petite couronne a encore un problème
+en 1967. Mesure : `build/diag/trous_dep.sql` (nouveau, `-v dep=XX`), qui
+liste les trous entre deux périodes d'un même atome.
+
+### `134` — trois correctifs
+
+**Alpes-de-Haute-Provence.** Les cantons d'Allos, de Saint-Paul et de Senez
+s'arrêtaient au 1973-09-23 et leurs communes reparaissaient au 1988-09-25 :
+quinze ans sans canton ni circonscription, donc absentes de la carte (d'où
+la « disparition », et les huit communes à circonscription sans canton de
+1986 à 1988). Relus dans l'OCR : n° 73-714 (Saint-Martin-les-Eaux à
+Manosque-Nord), n° 85-127 (Allos à Colmars, qui devient Allos-Colmars, au
+10 mars 1985), n° 86-251 (Saint-Paul à Barcelonnette ; Senez supprimé,
+Majastres à Mézel), joué aux cantonales du 25 septembre 1988 comme les
+décrets n° 88-514 et 88-891, non lus. Marcoux, au canton de Digne aux deux
+bouts, comblée de 1955 à 1973. Circonscriptions de 1958 jusqu'au
+1986-11-24. Une version « Allos-Colmars » de 1985 à 1999 sur l'unité 0407.
+
+**Vesseaux** n'avait rien entre le jalon de 1954 et 1973 pour le canton, et
+rien de 1955 à 1986 pour la circonscription : Aubenas jusqu'en 1973, la 3e
+de 1958 jusqu'en 1986 (comme les seize autres atomes d'Aubenas et les sept de
+Vals-les-Bains).
+
+**1967.** Le Raincy, Saint-Cloud, Sèvres, Chennevières, Juvisy et l'atome
+95014 entraient dans les cantons des nouveaux départements au 1967-09-24,
+sans circonscription jusqu'au 1968-01-01 : au 1er décembre 1967, la carte du
+92 n'avait que Saint-Cloud et Sèvres, celles du 93 et du 94 une commune
+chacune. Ramenés au 1968-01-01 comme le reste de la petite couronne (`125`,
+`127`) ; bornes déplacées en place, anciennes valeurs dans `p134_trace`.
+
+Posé (`build/p134.log`) : 25 rattachements, 6 raccourcis, 12 allongés, une
+version. Après coup, `trous_dep.sql` ne laisse dans le 04 que Mirabeau
+(Les Mées en 1941, Digne au jalon de 1954, acte non daté) et Saint-Martin-
+les-Eaux pendant sa réunion à Manosque (1975-1980) ; rien dans le 07. Communes
+du 04 à canton au 1er décembre : 194 → 202 de 1974 à 1984. Aucun atome des 91
+à 95 dans une unité de ces départements au 1er décembre 1967. Dans la chaîne
+après `128`.
+
+### L'Ardèche de 1821-1831 : Saint-Pierreville dans la 2e
+
+La carte « 1821-1831 » (photo 39, agrandie) fait passer le trait épais au sud
+de Saint-Pierreville, entre lui et Antraigues, Privas : il est dans la 2e avec
+l'arrondissement de Tournon et La Voulte. La règle ne prenait que La Voulte.
+`regles_1815_restants.py` corrigé, `remonte_1815.py --csv` (une ligne change),
+`64` rechargé, `106 -v dep=07` rejoué (`build/p106_07.log`, contrôle 7 vide).
+
+### Ce qui n'est pas fait
+
+* **Les autres « changements de circonscription » de l'Ardèche** : les cartes
+  1815-1852 et 1852-1870 concordent avec la base ; la IIIe République
+  (unités de 1876 et 1889, rien en 1893-1914, les unités de 1889 reprises en
+  1928) et 2012 (identique à 1986, comme `circo_2012.csv`) n'ont pas été
+  confrontées à une source.
+* **Le trou de 1958-1986 hors Île-de-France** : au 1er décembre 1967,
+  36 896 atomes ont un canton et 30 964 une circonscription. `113` ne couvre
+  que 75 départements.
+
+## 25 octobre 2026 (nuit) — `partition_ville` : 44 villes de plus
+
+Adrien a continué `archives/partition_ville_saisie_2026-10-21.csv` : 67 → 355
+lignes, de Brest à Mulhouse, de 1820 à 1986. « Continue de le mettre au propre
+et d'inclure les modifications à la base. »
+
+### La mise au propre : `circo/partition_ville_propre.py`
+
+Nouveau script : il lit les lignes 68 et suivantes de la saisie et résout
+chaque libellé (« toulouse nord, sud, ouest », « Nantes 1, 6, 7 »,
+« saint-etienne nord-ouest 1 & 2 ») en fractions de la base, **à la date de la
+ligne** — les noms changent (Rennes-Centre devient Rennes-Nord-Est,
+Orléans-Nord-Est devient Orléans-Bannier). 288 lignes de saisie → **558 lignes
+propres** ajoutées à `circo/partition_ville.csv` (147 → 705), avec une colonne
+`circo_ville` (Roubaix et Tourcoing votent dans « Lille-n », Lens dans
+« Béthune-n », Strasbourg dans « Strasbourg-Ville-n »).
+
+* **Datation.** La saisie date comme Gaudillère : « 1820-1831 », « 1889-1893 »
+  finissent au début du découpage suivant. Sans correction, « 1889-1893 » et
+  « 1893-1919 » se chevauchaient en 1893 (le premier essai de `123` a buté
+  dessus, transaction annulée). `jusqu` = fin − 1 quand la fin est le début
+  d'un découpage ; 1940 et 1986 restent incluses.
+* **Tranché à la main** (`CORRESPONDANCE`, avec la raison) : Brest 1 = Brest-
+  Ville ; Grenoble-Nord, Saumur-Nord, Boulogne-Nord sous leurs noms de base ;
+  Saint-Étienne « est/ouest » de 1857 = deux cantons chacun ; Carmes et
+  Bourgogne (Orléans 1986) = Ouest et Est, même circonscription que la base.
+  **Coquilles présumées** (le seul canton que la saisie ne nomme pas) :
+  Orléans « sud ouest » 1958 = Nord-Ouest ; Laval « sud-est » 1986 =
+  Sud-Ouest ; Douai « est » = Nord ; Clermont « oust » = Ouest.
+* **Écartés** : Brest 1986 (cantons numérotés absents de la base avant 1992),
+  Nantes 13e (absent), Metz 1831-1848 (pas de fraction avant 1870), Pau 1986
+  (partition 3/1/2 concordante avec la base, numérotation non résolue).
+* **Partagés** (un canton nommé dans deux circonscriptions) : Bordeaux 5e en
+  1928-1940 (rue Sainte-Catherine), Lille-Est en 1928-1940 et 1958-1986,
+  Roubaix-Centre en 1986. Écrits une fois, « 2-3 ».
+
+### Avant 1871 : les règles, pas `123`
+
+`123` ne fait que vérifier ces périodes ; 29 lignes y contredisaient la base,
+toutes sur des cantons urbains que les règles marquaient DOUTE ou LIMITE.
+Corrigé dans `regles_1815_21_63.py` et `regles_1815_restants.py`, ancienne
+lecture en commentaire : Nîmes II dans la 2e (1863) ; Toulouse-Centre dans la
+2e et Nord, Sud, Ouest dans la 1re (1852-1863 — **l'inverse de la carte, à
+revoir**), Toulouse-Nord dans la 2e (1863-1870) ; Bordeaux en trois
+circonscriptions, 1-2 / 3-4 / 5-6 (1831-1848 et 1869-1870 : la LIMITE notée) ;
+Tours-Sud dans la 3e (1852-1869) ; Saint-Étienne-Sud-Ouest dans la 1re
+(1863) ; Lille-Nord-Est dans la 4e (1821), Lille-Sud-Ouest dans la 2e (1831),
+Ouest, Sud-Ouest, Sud-Est dans la 2e et Nord-Est, Centre dans la 3e (1863) ;
+Strasbourg Ouest et Sud dans la 2e (1831). `remonte_1815.py --csv` (24
+lignes changent, toutes partitions complètes), `64`, `106` pour 30, 31, 33,
+37, 42, 59, 67 (contrôle 7 vide partout). Les 2e et 3e de Gironde et la 2e du
+Bas-Rhin de 1831, purement urbaines, n'existaient pas : `106` les crée.
+
+### `123` étendu, puis posé
+
+Colonne `circo_ville` ; « 2-3 » range la fraction dans l'unité fusionnée de sa
+mère ; deux graphies d'unité fusionnée de plus (« Tourcoing () »,
+« Strasbourg (Ville-1-Ville-2) ») ; quatorze unités créées, le numéro que
+l'unité fusionnée avait pris : Toulouse-1 (1876, 1928), Nantes-1 (1876, 1910),
+Bordeaux-1 et 2 (1876), Bordeaux-4 (1928), Lille-1 (1889), Lille-2 (1902,
+1928), Lille-7 (1893, 1902), Strasbourg-Ville-1 et 2 (1928), sous des
+identifiants `U<dep>V<n>`.
+
+Posé (`build/p123_2026-10-25.log`) : **251 rattachements** (51 avant), 74
+morceaux retirés aux mères, 15 unités. État des 558 lignes, reporté dans la
+colonne `etat` : 308 déjà en base, 173 posées, 46 sans rien à poser (canton
+pas encore né, ou 1958 dans un département sans circonscriptions de 1958),
+20 bloquées, 10 en désaccord.
+
+### Ce qui reste, et pourquoi
+
+* **Quatre villes bloquées** (tout ou rien : une fraction vivante sans ligne)
+  — il manque un canton dans la saisie : Bordeaux 7e (né en 1888) pour
+  1889-1919 ; Nancy-Sud (1879) pour 1876-1885 ; Lille-Est, -Nord, -Sud (1889)
+  pour 1889-1893 ; Nantes 7e (1908) pour 1889-1910.
+* **Désaccords après 1958, laissés à la base** : Angers-Sud-Est (base 1re,
+  saisie 2e), Metz-3 (base 1re, saisie 2e), Beauvais-Sud-Ouest (base 5e,
+  saisie 2e) en 1958-1986 ; Strasbourg 1986, où la saisie échange la 1re et
+  la 2e par rapport aux données du ministère.
+* **1958-1986 dans les 33, 38, 44, 59, 62, 67** : pas d'unité de 1958, les
+  lignes de la saisie attendent `113`.
+
+**Réexport** : 30, 31, 33, 34, 35, 37, 42, 43, 44, 45, 49, 51, 53, 54, 57, 59,
+62, 63, 66, 67, lancé à la suite de celui du 04-07-78-91-95
+(`build/export_villes_partagees_2026-10-25.log`).
+
 ## 25 octobre 2026 (nuit, suite) — la Polynésie française et la Nouvelle-Calédonie
 
 « Il nous manque encore les cartes de la Polynésie et de Nouvelle-Calédonie. »
@@ -10981,3 +11136,17 @@ Vérifié dans la page : 988 en 1980 (Est-Loyauté et Ouest), 987 en 1950
 proportionnelle de 1986 (comme partout dans la base) ; les « ressortissants
 français des Nouvelles-Hébrides » rattachés à Est-Loyauté en 1978, qui n'ont
 pas de territoire à dessiner.
+
+**Réexport du 04, 07, 78, 91-95** (`build/export_04_07_78_91-95_2026-10-25c.log`,
+rc 0, 2 389 s). Contrôlé dans les fichiers servis : Larche, Saint-Paul au
+canton de Saint-Paul, Senez et Majastres à Senez en 1976, 1980, 1987 ; Allos à
+Allos-Colmars en 1987 ; Vesseaux dans la 3e en 1984 ; Saint-Pierreville dans la
+2e en 1825 ; les 92, 93, 94 ne servent plus 1967, Sèvres et Saint-Cloud sont
+dans la carte du 78 en 1967 avec la 4e de Seine-et-Oise.
+
+**Réexport des 20 départements des villes partagées**
+(`build/export_villes_partagees_2026-10-25.log`, rc 0, 16 704 s, 2,0 Go).
+Contrôlé dans les fichiers servis : Bordeaux en trois circonscriptions en
+1835, le 5e canton dans « Bordeaux (1-2-3-4) » en 1930 ; Toulouse-1 et -2 en
+1880 ; Strasbourg-Ville-1 et -2 en 1930 ; Roubaix dans Lille-6 et Lille-7 en
+1895.
