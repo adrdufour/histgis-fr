@@ -61,7 +61,7 @@ echo "Dossier de travail : $SORTIE"
 
 # 6 octobre 2026 : étendu à tous les départements qu'ont touchés `106`
 # (seconde série : 01-20, 64-73, 83) et `107` (cantons 1815-1870, dont
-# l'Aveyron, qui n'a que des cantons). Sans 75 ni 57.
+# l'Aveyron, qui a ses circos depuis le 26 octobre). Sans 75 ni 57.
 DEPS=(01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20
       21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
       41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 58 59 60 61 62 63

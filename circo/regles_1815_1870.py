@@ -11,8 +11,8 @@ circonscriptions entières de 1876 (`reprend`) ou par listes de cantons
 Deux séries de photos, toutes deux du 4 octobre 2026 :
 
 * **départements 21 à 63** (et la Meurthe, 99) — pages 216 à 478 ;
-* **départements 01 à 20** (sauf l'Aveyron, non photographié), **64 à 73 et
-  le Var (83)** — seconde série, 120 photos, pages 99 à 664 environ. Les
+* **départements 01 à 20** (sauf l'Aveyron, photographié à part le 26
+  octobre 2026), **64 à 73 et le Var (83)** — seconde série, 120 photos, pages 99 à 664 environ. Les
   numéros de photo cités pour cette série sont le rang dans l'ordre
   alphabétique des fichiers PXL_20261004_*.jpg
   (1 = PXL_20261004_131505689.jpg).
@@ -391,6 +391,50 @@ REGLES_1815_1870 = {
   ]},
 
 "13": {
+"12": {
+  "nom": "Aveyron",
+  # Atlas : « Asprières » = Capdenac-Gare ; « Marcillac » =
+  # Marcillac-Vallon ; « Cassagnes » = Cassagnes-Bégonhès ; « Vezins » =
+  # Vézins-de-Lévézou ; « Saint-Amans » = Saint-Amans-des-Cots ;
+  # « Saint-Chély » = Saint-Chély-d'Aubrac ; « Saint-Sernin » =
+  # Saint-Sernin-sur-Rance ; « Belmont » = Belmont-sur-Rance. Pages 141-142,
+  # photographiées le 26 octobre 2026 (hors des deux séries du 4 octobre :
+  # photos/1815_1870/aveyron_p141.jpg et aveyron_p142.jpg).
+  "periodes": [
+    # Les cinq collèges de 1815 sont les circonscriptions de 1876, Rodez et
+    # Villefranche réunies : La Salvetat et Conques à Rodez, Salles-Curan,
+    # Laissac et Campagnac à Millau, Saint-Rome-de-Tarn à Saint-Affrique.
+    {"depuis": 1815, "jusqu": 1820, "base": "1876", "fusionner": [
+        (["Rodez-1", "Rodez-2"], "Rodez"),
+        (["Villefranche-1", "Villefranche-2"], "Villefranche-de-Rouergue")]},
+    {"depuis": 1820, "jusqu": 1831, "base": "1876", "circos": {
+        "1": {"reprend": ["Espalion"],
+              "plus": ["Marcillac-Vallon", "Bozouls", "Rodez",
+                       "Pont-de-Salars", "Cassagnes-Bégonhès", "Laissac",
+                       "Campagnac"]},
+        "2": {"reprend": ["Villefranche-1", "Villefranche-2"],
+              "plus": ["Conques", "Rignac", "Sauveterre", "La Salvetat",
+                       "Naucelle", "Réquista"]},
+        "3": {"reste": True}}},
+    # « Même découpage qu'en 1815 : 1re Rodez, 2e Saint-Affrique,
+    # 3e Espalion, 4e Millau, 5e Villefranche-de-Rouergue »
+    {"depuis": 1831, "jusqu": 1848, "base": "1815", "renommer": {
+        "Rodez": "1", "Saint-Affrique": "2", "Espalion": "3", "Millau": "4",
+        "Villefranche-de-Rouergue": "5"}},
+    # Sauveterre, cerné d'un trait épais côté Rodez, Cassagnes et Naucelle,
+    # est à la 3e avec Rignac et Conques. La Salvetat est à la 1re : le trait
+    # la sépare de Rieupeyroux et de Najac.
+    {"depuis": 1852, "jusqu": 1869, "base": "1876", "circos": {
+        "2": {"reprend": ["Millau", "Saint-Affrique"]},
+        "3": {"reprend": ["Villefranche-1", "Villefranche-2"],
+              "plus": ["Conques", "Rignac", "Sauveterre"]},
+        "1": {"reste": True}}},
+    # Seul changement de 1869 : La Salvetat passe à la 3e (le trait la
+    # sépare désormais de Naucelle).
+    {"depuis": 1869, "jusqu": 1870, "base": "1852", "deplacer": [
+        (["La Salvetat"], "3")]},
+  ]},
+
   "nom": "Bouches-du-Rhône",
   # Atlas : « Peyrolles » = Peyrolles-en-Provence ; « Berre-l'Étang » ;
   # « Saintes-Maries » = Saintes-Marie-de-la-Mer (graphie de la base).

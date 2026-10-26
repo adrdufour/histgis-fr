@@ -12,7 +12,7 @@
 --   for d in 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 \
 --            42 43 44 45 46 47 48 49 50 51 52 53 55 56 58 59 60 61 62 63 99; do
 --   # seconde série (4 octobre 2026, `circo/regles_1815_1870.py`) :
---   #   01 à 11, 13 à 20, 64 à 73, 83 — l'Aveyron (12) n'est pas photographié.
+--   #   01 à 20, 64 à 73, 83 — l'Aveyron (12) depuis le 26 octobre 2026.
 --     psql -d histgis -P pager=off -1 -v appliquer=1 -v dep=$d \
 --          -f sql/106_circo_1815_1870.sql > build/p106_$d.log || break
 --   done

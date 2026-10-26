@@ -31,8 +31,7 @@
 --   * début = la première division de `c15_composition` où figure son canton
 --     (1815 presque partout ; 1860 pour la Savoie, la Haute-Savoie et le comté
 --     de Nice ; 1820 pour Montbéliard et Audincourt, doubistes en 1816) ; à
---     défaut, la première division du département ; à défaut (l'Aveyron, non
---     photographié), 1815 ;
+--     défaut, la première division du département ; à défaut, 1815 ;
 --   * naissance = celle de `106` (premier polygone ANR, commune-mère pour les
 --     fractions, mères de `creation_trace` pour les atomes N). Un atome sans
 --     naissance connue n'est pas posé.
@@ -337,7 +336,7 @@ SELECT dep, count(*) AS atomes, count(DISTINCT canton_id) AS cantons,
        string_agg(DISTINCT debut_lu, ', ')                         AS debut_lu
   FROM t107_atome GROUP BY dep ORDER BY dep;
 -- debut_max > debut_min : des cantons commencent plus tard (Savoie, Nice,
--- Grasse 1863, Montbéliard 1820). « 1815 par défaut » : l'Aveyron, et tout
+-- Grasse 1863, Montbéliard 1820). « 1815 par défaut » : tout
 -- département que c15 ne connaît pas — à regarder.
 
 \echo ''
@@ -742,7 +741,7 @@ SELECT d, dep,
 HAVING coalesce(max(n) FILTER (WHERE niveau = 'canton'), 0)
     <> coalesce(max(n) FILTER (WHERE niveau = 'circo'), 0)
  ORDER BY 2, 1;
--- Attendu : l'Aveyron (cantons sans circos), la Seine (circos sans cantons),
+-- Attendu : la Seine (circos sans cantons),
 -- les départements rognés en recette 4, Grasse avant 1863 (ni l'un ni
 -- l'autre) — et rien d'autre. Un écart ailleurs = un atome que 106 a posé et
 -- pas 107, ou l'inverse : le chercher.
