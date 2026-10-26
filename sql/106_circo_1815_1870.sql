@@ -11,7 +11,7 @@
 --   # sans la Moselle), d'un coup ; la boucle s'arrête au premier refus :
 --   for d in 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 \
 --            42 43 44 45 46 47 48 49 50 51 52 53 55 56 58 59 60 61 62 63 99; do
---   # seconde série (4 octobre 2026, `circo/regles_1815_restants.py`) :
+--   # seconde série (4 octobre 2026, `circo/regles_1815_1870.py`) :
 --   #   01 à 11, 13 à 20, 64 à 73, 83 — l'Aveyron (12) n'est pas photographié.
 --     psql -d histgis -P pager=off -1 -v appliquer=1 -v dep=$d \
 --          -f sql/106_circo_1815_1870.sql > build/p106_$d.log || break
@@ -44,11 +44,11 @@
 --     Trois-Châteaux (Drôme, avant 1852), Étables (Côtes-du-Nord, avant 1831),
 --     Calais-Sud-Est (Pas-de-Calais). Ils sont rangés dans la circonscription
 --     du canton dont ils sont issus — c'est une approximation, notée dans
---     `circo/regles_1815_21_63.py` ;
+--     `circo/regles_1815_1870.py` ;
 --   * cantons PARTAGÉS entre deux circonscriptions (Bordeaux 1820-1848,
 --     Orléans-Sud 1857-1870, Thouarcé 1820-1831, Prayssas et Lavardac
 --     1820-1831) : posés entiers d'un seul côté. À reprendre à l'atome.
--- Voir `circo/verif_1815_21_63.md`.
+-- Voir `circo/verif_1815_1870.md`.
 --
 -- LES COMMUNES QUI ONT CHANGÉ DE CANTON, LUES COMMUNE PAR COMMUNE
 -- ===============================================================
@@ -174,7 +174,7 @@ DROP TABLE IF EXISTS t106_absent;
 CREATE TEMP TABLE t106_absent (dep text, depuis int, canton text);
 INSERT INTO t106_absent VALUES
     ('25', 1815, 'Montbéliard'), ('25', 1815, 'Audincourt'),
-    -- seconde série (6 octobre 2026) : les `absents` de regles_1815_restants,
+    -- seconde série (6 octobre 2026) : les `absents` de regles_1815_1870,
     -- que cette table n'avait pas reçus — le 06 était refusé en 2 bis et la
     -- boucle s'arrêtait là, sans poser 07 à 20, 64 à 73 ni 83.
     -- L'arrondissement de Grasse, varois jusqu'en 1860 et représenté par la

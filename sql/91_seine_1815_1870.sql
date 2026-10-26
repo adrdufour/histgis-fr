@@ -23,7 +23,7 @@
 --
 -- 1848-1852 manque à cette liste : c'est `90`, une seule circonscription
 -- départementale, Paris compris. Lecture complète dans
--- `circo/note_seine_1815_1870.md`.
+-- `circo/note_seine.md` (partie 1815-1870).
 --
 -- LA BASCULE DE 1863 EST CELLE DE L'ANNEXION
 -- ===========================================

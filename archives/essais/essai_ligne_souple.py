@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """essai_ligne_souple.py — le couple arrondissement/canton, lu plus souplement.
 
-    python3 cog1954/essai_ligne_souple.py                  # 01, 09, 39, 70
-    python3 cog1954/essai_ligne_souple.py --deps 01,02,03
-    python3 cog1954/essai_ligne_souple.py --tous
-    python3 cog1954/essai_ligne_souple.py --deps 01 --montre 40
+    python3 archives/essais/essai_ligne_souple.py                  # 01, 09, 39, 70
+    python3 archives/essais/essai_ligne_souple.py --deps 01,02,03
+    python3 archives/essais/essai_ligne_souple.py --tous
+    python3 archives/essais/essai_ligne_souple.py --deps 01 --montre 40
 
 LECTURE SEULE. N'écrit aucun fichier, ne touche ni au CSV ni à la base.
 
@@ -76,7 +76,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-ICI = Path(__file__).resolve().parent
+ICI = Path(__file__).resolve().parents[2] / "cog1954"
 BRUT = ICI / "ocr_brut"
 CSV = ICI / "communes_1954_redecoupe.csv"
 CORPS = range(83, 889)          # hors liminaires (15-82) et annexes (892-935)

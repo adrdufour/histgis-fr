@@ -39,10 +39,10 @@ la base ni la carte, et comment rejouer les planches imprimables),
 interactive, l'export, le dépôt sur Wikimedia Commons),
 `cartes/a_inscrire_en_base.md` (ce que la découpe des villes a montré de faux
 dans la base, entrée par entrée), `.claude/skills/decoupe-ville/SKILL.md` (le
-déroulé d'une découpe), `circo/verif_1815_21_63.md` et
-`circo/verif_1815_restants.md` (lecture des photos de l'atlas, 1815-1870),
+déroulé d'une découpe), `circo/verif_1815_1870.md`
+(lecture des photos de l'atlas, 1815-1870),
 `cantons/wikipedia/note_wikipedia.md`, `cantons/wikipedia/lecture_jo.md` et
-`cantons/tables_jo.md` (le trou 1941-1998 par le Journal officiel).
+`cantons/note_decrets.md` (partie « Les tables analytiques du JO ») (le trou 1941-1998 par le Journal officiel).
 
 ---
 
@@ -297,7 +297,7 @@ Il déclare `psycopg2`, `shapely` ≥ 2, `pyshp` (importé sous le nom
 bancs `sql/banc_*.sh`. Côté outils appelés en sous-processus : GDAL
 (`ogr2ogr`), `poppler` (`pdftoppm`, `pdftotext`, `pdfinfo`), `tesseract`
 avec `tesseract-data-fra`, ImageMagick (`magick`/`convert`, pour le seul
-`cog1968/essai_ocr.py`) et `unzip`.
+`archives/essais/essai_ocr.py`) et `unzip`.
 
 **Cette liste a été relevée sur les imports réels, et elle corrige celle qui
 figurait ici.** `pyproj` y était annoncé alors qu'aucun script ne l'importe —

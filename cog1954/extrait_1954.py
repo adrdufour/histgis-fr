@@ -372,7 +372,7 @@ def page_texte(chemin_pdf, p, dpi=300, langue="fra", psm="6"):
     n'est plus un choix implicite mais un choix mesuré pour 1954 — c'est-à-dire
     un choix NON mesuré, faute d'un banc d'essai pour cette campagne.
 
-    Mesuré le 22 août 2026 sur 1968 (`cog1968/essai_ocr.py`), trois fascicules,
+    Mesuré le 22 août 2026 sur 1968 (`archives/essais/essai_ocr.py`), trois fascicules,
     toutes leurs pages, contre un référentiel de codes INSEE réels :
 
         département        psm 6       psm 4

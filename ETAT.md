@@ -593,7 +593,7 @@ artefacts de la base ou noms que l'OCR a trop abîmés. Les tables retrouvent
 228 des 233 décrets de création et de recomposition connus par ailleurs : leur
 silence, pour un département et une année, vaut désormais présomption
 d'absence d'acte (moins sûrement pour les rattachements avant 1958, dont la
-mise en colonnes est encore mêlée). Détail : `cantons/tables_jo.md`.
+mise en colonnes est encore mêlée). Détail : `cantons/note_decrets.md` (partie « Les tables analytiques du JO »).
 S'y ajoutent les **48 cantons créés entre 1986 et 1999**, nommés un par un mais
 non datés faute de source couvrant la fenêtre.
 

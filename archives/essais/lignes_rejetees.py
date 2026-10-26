@@ -3,8 +3,8 @@
 """
 lignes_rejetees.py — montrer ce que la grammaire de `extrait_1968.py` REFUSE.
 
-    python3 cog1968/lignes_rejetees.py --dep 13
-    python3 cog1968/lignes_rejetees.py --dep 13 --pages 9-12 --tout
+    python3 archives/essais/lignes_rejetees.py --dep 13
+    python3 archives/essais/lignes_rejetees.py --dep 13 --pages 9-12 --tout
 
 Pourquoi
 --------
@@ -54,7 +54,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(RACINE / "cog1968"))
 sys.path.insert(0, str(RACINE / "cog1954"))
 
 # La chaîne OCR du projet : pdftoppm -r 300 -gray puis tesseract -l fra --psm 6.

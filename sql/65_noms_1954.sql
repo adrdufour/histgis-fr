@@ -119,6 +119,6 @@ SELECT voie, count(*) FROM n54_commune GROUP BY voie ORDER BY count(*) DESC;
 \echo 'cog1954/noms_1954.csv écrit.'
 \echo ''
 \echo 'Relancer ensuite le banc :'
-\echo '   python3 cog1954/essai_troisieme_1954.py --dep 09 --dep 34 --dep 90'
+\echo '   python3 archives/essais/essai_troisieme_1954.py --dep 09 --dep 34 --dep 90'
 \echo 'Le `bruit` y deviendra interprétable — aujourd''hui il compte comme'
 \echo 'fautives les communes disparues entre 1954 et 2011.'

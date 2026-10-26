@@ -355,7 +355,7 @@ chaque département aussi. Les 118 pages absentes du CSV sont les liminaires
 `4 22 → 4 2:`, `1 31 → 1: 31`, `1 01 → 1 Ot`. S'y ajoute le point final du nom,
 rendu en virgule ou absent.
 
-**Mesuré pour de bon le 6 septembre** par `cog1954/essai_ligne_souple.py`,
+**Mesuré pour de bon le 6 septembre** par `archives/essais/essai_ligne_souple.py`,
 lecture seule, qui relâche ce seul séparateur dans la vraie `LIGNE` et vérifie
 d'abord que la règle actuelle reproduit le CSV (31 272 retrouvées, **0 en trop**) :
 
@@ -603,8 +603,8 @@ Leur géométrie, elle, ne manque pas. Voir `circo/note_seine.md`.
 
 **Acquis le 6 septembre 2026** : `87` à `91` joués. La Seine est continue de
 1815 à 2012 ; 1866 rend 479,64 km², la Seine entière ; les planches nomment les
-onze annexées dans les circos parisiennes. Voir `circo/note_seine.md` et
-`circo/note_seine_1815_1870.md`.
+onze annexées dans les circos parisiennes. Voir `circo/note_seine.md`, qui
+réunit les deux périodes.
 
 | tâche | valeur | blocage |
 |---|---|---|

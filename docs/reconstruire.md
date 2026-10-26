@@ -58,7 +58,7 @@ Les chemins ci-dessous sont ceux qu'attendent les scripts.
 | `ANR_COMMUNES_22042026/` | `COMMUNES_22042026.gpkg`, trame communale datée | Zenodo, `10.5281/zenodo.3727274` |
 | `sources/outremer/` | trames et circonscriptions d'outre-mer | IGN (GEOFLA DOM) ; `polynesie/` et `nouvelle_caledonie/` pour les BD ADMIN locales |
 | `sources/rp1954/`, `sources/rp1968/` | volumes des recensements de 1954 et 1968 (PDF) | BnSP (`bnsp.insee.fr`) : nécessaires seulement pour refaire l'OCR, dont le résultat est déjà versionné |
-| `JORF/` | PDF des Journaux officiels | Gallica, Légifrance : liste dans `cantons/pdf_a_telecharger.md`. Seulement pour refaire l'OCR, dont le texte est déjà dans `jorf_txt/` |
+| `JORF/` | PDF des Journaux officiels | Gallica, Légifrance : liste dans `cantons/note_registre.md` (partie « Datation des 64 cantons post_1986 »). Seulement pour refaire l'OCR, dont le texte est déjà dans `jorf_txt/` |
 
 Exemple pour TRF-GIS et la trame communale :
 

@@ -49,7 +49,7 @@ dependencies:
   - poppler               # pdftoppm, pdftotext, pdfinfo : chaîne OCR des COG
   - tesseract >=5.0       # OCR des COG 1954 et 1968
   - tesseract-data-fra    # `-l fra` : sans ce paquet, l'OCR est inutilisable
-  - imagemagick           # `magick`/`convert`, seulement pour cog1968/essai_ocr.py
+  - imagemagick           # `magick`/`convert`, seulement pour archives/essais/essai_ocr.py
   - unzip                 # décompression des livraisons IGN/INSEE
 
   - pip

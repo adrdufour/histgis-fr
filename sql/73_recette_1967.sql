@@ -254,7 +254,7 @@ FROM   r67_transfert ORDER BY date_acte, dep;
 \echo ''
 \echo '   Si `place_libre` vaut partout `t` et `atome` n''est jamais NULL, il ne'
 \echo '   manque que la convention de date d''effet pour poser ces cinq lignes.'
-\echo '   Voir cantons/note_entree_en_base.md § 4.'
+\echo '   Voir cantons/note_decrets.md (partie « Ce qui peut entrer en base ») § 4.'
 
 ANALYZE r67_canton;
 

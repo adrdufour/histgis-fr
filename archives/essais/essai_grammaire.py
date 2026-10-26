@@ -3,8 +3,8 @@
 """
 essai_grammaire.py — la grammaire élargie gagne-t-elle plus qu'elle ne coûte ?
 
-    python3 cog1968/essai_grammaire.py --dep 45
-    python3 cog1968/essai_grammaire.py --dep 45 --dep 10 --dep 54 --dep 21
+    python3 archives/essais/essai_grammaire.py --dep 45
+    python3 archives/essais/essai_grammaire.py --dep 45 --dep 10 --dep 54 --dep 21
 
 Le défaut mesuré
 ----------------
@@ -76,7 +76,7 @@ import sys
 import time
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RACINE / "cog1954"))
 sys.path.insert(0, str(RACINE / "cog1968"))
 from extrait_1968 import LIGNE, EXCLUS, index, PSM        # noqa: E402

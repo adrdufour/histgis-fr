@@ -3238,7 +3238,7 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
   Saint-Samson, Taden, Trélivan, Trévron. Aucun acte ensuite pour la ville avant le décret 2014-150
   (`cantons/chronologie_cantonale.csv` : seulement le découpage d'origine). Gallica (Duvergier,
   t. XIII, p. 108, bpt6k54934475/f119) : bloqué (Cloudflare, 16 octobre 2026), non collationné.
-  Source du fantôme : `cog1968/communes_1968.600.csv` (et `communes_1968_fusion.csv`, l. 8255) :
+  Source du fantôme : `archives/passes_1968/communes_1968.600.csv` (et `communes_1968_fusion.csv`, l. 8255) :
   la ligne `22,22050,,050,8,19,Caouënnec,327` porte le code 050 de Dinan au lieu de celui de
   Caouënnec (22030 en GEOFLA) — lecture OCR.
 - **Base** : `11851#2211` (Dinan-Est) et `11851#2212` (Dinan-Ouest) sur 1815-1941 et 1968-2013,

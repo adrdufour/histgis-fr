@@ -46,6 +46,6 @@ cantons de Rennes et d'Auch) : mis en page en tableau, illisible tel quel.
 
 `sql/110_pose_lecture_jo.sql` a posé ces lectures dans les trous le 11 octobre
 (règle C ; 691 périodes avec les transferts des tables du JO, voir
-`cantons/tables_jo.md`). Toussus-le-Noble et Châteaufort, que la base gardait
+`cantons/note_decrets.md` (partie « Les tables analytiques du JO »)). Toussus-le-Noble et Châteaufort, que la base gardait
 à Bièvres jusqu'en 1976, sont corrigées par `sql/111_corrige_transferts.sql` :
 Versailles-Sud dès le 29 novembre 1969.

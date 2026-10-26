@@ -3,9 +3,9 @@
 """
 essai_ocr.py — quelle chaîne de lecture rend le plus de communes JUSTES ?
 
-    python3 cog1968/essai_ocr.py --dep 79
-    python3 cog1968/essai_ocr.py --dep 79 --grille long
-    python3 cog1968/essai_ocr.py --dep 79 --meilleures   # pour comparer
+    python3 archives/essais/essai_ocr.py --dep 79
+    python3 archives/essais/essai_ocr.py --dep 79 --grille long
+    python3 archives/essais/essai_ocr.py --dep 79 --meilleures   # pour comparer
 
 Pourquoi
 --------
@@ -51,7 +51,7 @@ import tempfile
 import time
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RACINE / "cog1954"))
 sys.path.insert(0, str(RACINE / "cog1968"))
 from extrait_1968 import LIGNE, EXCLUS, index, SOSIES_1968   # noqa: E402

@@ -317,7 +317,7 @@ joués même quand celui-ci est sauté.
 « Qui dépend de qui », § 3, dans `README.md`.
 
 Sources et méthode : `cantons/wikipedia/note_wikipedia.md`,
-`cantons/wikipedia/lecture_jo.md`, `cantons/tables_jo.md`.
+`cantons/wikipedia/lecture_jo.md`, `cantons/note_decrets.md` (partie « Les tables analytiques du JO »).
 
 
 ### Contraintes d'ordre, mesurées en les violant
@@ -525,7 +525,7 @@ transferts attendent une décision qui n'est pas technique : les décrets de 197
 renouvelaient par moitié — « le prochain renouvellement » d'un canton dépend de
 sa série, que nous n'avons pas. `73` § 5 simule la pose des cinq transferts et
 montre que la place est libre. Il ne manque que la convention. Voir
-`cantons/note_entree_en_base.md` § 4.
+`cantons/note_decrets.md` (partie « Ce qui peut entrer en base ») § 4.
 
 ---
 
@@ -856,7 +856,7 @@ registre des actes est complet, alors pour un département dont le dernier acte
 date de 1988, **rien n'a bougé de 1988 à 1999**, et la composition du COG vaut
 pour toute la fenêtre.
 
-C'est le § 5 de `cantons/note_entree_en_base.md` — « étendre là où un acte borne
+C'est le § 5 de `cantons/note_decrets.md` (partie « Ce qui peut entrer en base ») — « étendre là où un acte borne
 l'intervalle des deux côtés » — pris par l'autre bout de la chaîne. Et il est
 mieux placé là qu'autour de 1968 : le test propre y était déclaré indisponible
 parce que les deux côtés venaient d'un OCR ; ici le haut est le COG, qui n'est

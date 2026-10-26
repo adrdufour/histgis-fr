@@ -14,7 +14,7 @@
 -- complet, alors pour un département dont le dernier acte date de 1988, RIEN
 -- n'a bougé de 1988 à 1999 — et la composition de 1999 vaut pour 1988.
 --
--- C'est le report du § 5 de `cantons/note_entree_en_base.md`, mais pris par
+-- C'est le report du § 5 de `cantons/note_decrets.md` (partie « Ce qui peut entrer en base »), mais pris par
 -- l'autre bout de la chaîne : « étendre là où un acte borne l'intervalle des
 -- deux côtés ». Ici les deux bornes sont des faits — le COG en haut, un acte
 -- daté en bas — là où l'extension du jalon de 1968 n'avait qu'un OCR de chaque

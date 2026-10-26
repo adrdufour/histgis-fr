@@ -23,7 +23,7 @@
 --
 -- `valid_from = 1968-01-01` est donc un FAIT JURIDIQUE, pas un choix. C'est ce
 -- qui distingue ce fichier des compositions de 1973, 1982 et 1985, qui attendent
--- toujours qu'on tranche leur date d'effet (cf. `cantons/note_entree_en_base.md`
+-- toujours qu'on tranche leur date d'effet (cf. `cantons/note_decrets.md` (partie « Ce qui peut entrer en base »)
 -- § 4). Ici il n'y a rien à trancher.
 --
 -- LA BORNE HAUTE, ET LE CHOIX QU'ELLE ENGAGE

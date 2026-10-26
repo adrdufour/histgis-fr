@@ -19,7 +19,7 @@
 --
 -- C'est donc la colonne vertébrale de tout ce qui suivra, et c'est aussi la
 -- seule chose qui puisse être posée sans trancher la convention de date
--- d'effet (cf. § 5 et `cantons/note_entree_en_base.md`).
+-- d'effet (cf. § 5 et `cantons/note_decrets.md` (partie « Ce qui peut entrer en base »)).
 --
 -- LES TROIS TABLES
 -- ================
@@ -54,8 +54,8 @@
 -- Prérequis : `20_commune_moderne.sql` (cm_atome).
 -- Sources : cantons/decrets_cantonaux.csv, composition_jo.csv,
 --           composition_legifrance.csv, transferts_legifrance.csv
---           — voir cantons/note_moisson_legifrance.md, note_composition_jo.md
---           et note_legifrance_1990_1999.md.
+--           — voir cantons/note_decrets.md (partie « Moissonnage Légifrance »), note_decrets.md (partie « Dépouillement des JO numérisés »)
+--           et note_decrets.md (partie « 1990-1999 sur Légifrance »).
 -- ============================================================================
 
 \set ON_ERROR_STOP on
@@ -126,7 +126,7 @@ FROM   acte_cantonal GROUP BY objet ORDER BY actes DESC;
 --   'legifrance'  le texte intégral natif, 1991-1997
 -- Elles n'ont ni le même point d'entrée ni le même découpage ; là où elles
 -- traitent le même canton, 277 listes sur 283 sont identiques et aucune ne
--- diverge (cf. note_composition_jo.md § 4).
+-- diverge (cf. note_decrets.md (partie « Dépouillement des JO numérisés ») § 4).
 -- ---------------------------------------------------------------------------
 CREATE TABLE acte_composition (
     id            bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -457,5 +457,5 @@ ANALYZE acte_departement; ANALYZE acte_sans_effet;
 \echo ' Le registre est posé. Aucun membership n''a été touché.'
 \echo ' Suite : 73 (recette 1967 contre le COG 1968), puis la pose'
 \echo ' des compositions — qui demande d''abord de trancher la'
-\echo ' convention de date d''effet (note_entree_en_base.md § 4).'
+\echo ' convention de date d''effet (note_decrets.md (partie « Ce qui peut entrer en base ») § 4).'
 \echo '============================================================'

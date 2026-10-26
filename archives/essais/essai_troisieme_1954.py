@@ -3,7 +3,7 @@
 """
 essai_troisieme_1954.py — la redondance paie-t-elle aussi pour 1954 ?
 
-    python3 cog1954/essai_troisieme_1954.py --dep 09 --dep 34 --dep 90
+    python3 archives/essais/essai_troisieme_1954.py --dep 09 --dep 34 --dep 90
 
 Ce que 1968 a montré, et ce qui reste à vérifier ici
 -----------------------------------------------------
@@ -56,7 +56,7 @@ import sys
 import time
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RACINE / "cog1954"))
 from extrait_1954 import (LIGNE, RENVOI, TOTAUX, page_texte,   # noqa: E402
                           nettoie_nom)

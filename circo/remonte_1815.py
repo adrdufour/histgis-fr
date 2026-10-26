@@ -508,15 +508,10 @@ REGLES = {
 }
 
 
-# Départements 21 à 63, lus sur les cartes photographiées (octobre 2026).
+# Les autres départements, lus sur les cartes photographiées (4 octobre 2026).
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from regles_1815_21_63 import REGLES_21_63  # noqa: E402
-REGLES.update(REGLES_21_63)
-
-# Départements 01 à 20, 64 à 73 et le Var, lus sur les cartes photographiées
-# (seconde série, 4 octobre 2026).
-from regles_1815_restants import REGLES_RESTANTS  # noqa: E402
-REGLES.update(REGLES_RESTANTS)
+from regles_1815_1870 import REGLES_1815_1870  # noqa: E402
+REGLES.update(REGLES_1815_1870)
 
 
 def composition_1876(dep, date=None):

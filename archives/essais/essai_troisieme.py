@@ -3,7 +3,7 @@
 """
 essai_troisieme.py — une TROISIÈME lecture apporterait-elle quelque chose ?
 
-    python3 cog1968/essai_troisieme.py --dep 43 --dep 21 --dep 92
+    python3 archives/essais/essai_troisieme.py --dep 43 --dep 21 --dep 92
 
 La question, et pourquoi elle ne se règle pas à l'intuition
 ------------------------------------------------------------
@@ -59,7 +59,7 @@ import sys
 import time
 from pathlib import Path
 
-RACINE = Path(__file__).resolve().parent.parent
+RACINE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RACINE / "cog1954"))
 sys.path.insert(0, str(RACINE / "cog1968"))
 from extrait_1968 import LIGNE, LIGNE_SUITE, EXCLUS, index, SOSIES_1968  # noqa: E402

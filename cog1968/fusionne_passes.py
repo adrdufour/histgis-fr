@@ -97,10 +97,14 @@ D = RACINE / "cog1968"
 # défaut d'`extrait_1968.py` — n'apparaît plus ici : il désignait tantôt psm 6,
 # tantôt psm 4, selon la dernière passe lancée, et c'est exactement ainsi qu'on
 # écrase six heures d'OCR sans s'en apercevoir.
+#
+# Les trois passes sont rangées dans `archives/passes_1968/` depuis le 26 octobre
+# 2026 : le recensement est acquis, seule la fusion est chargée (`sql/58`).
+P = RACINE / "archives" / "passes_1968"
 PASSES = [
-    ("psm6", D / "communes_1968.psm6_corrige.csv"),
-    ("psm4", D / "communes_1968.psm4_corrige.csv"),
-    ("600",  D / "communes_1968.600.csv"),
+    ("psm6", P / "communes_1968.psm6_corrige.csv"),
+    ("psm4", P / "communes_1968.psm4_corrige.csv"),
+    ("600",  P / "communes_1968.600.csv"),
 ]
 SORTIE = D / "communes_1968_fusion.csv"
 

@@ -71,7 +71,7 @@
 --     42  C42-Saint-Étienne-Ouest  < 1863  Saint-Étienne-Nord-Ouest + -Sud-Ouest
 --     68  C68-Mulhouse             < 1863  Mulhouse-Nord + Mulhouse-Sud
 --   Saint-Étienne : SEE = NE + SE, SEO = NO + SO est l'approximation de
---   `regles_1815_21_63.py`, pas une lecture.
+--   `regles_1815_1870.py`, pas une lecture.
 --
 -- LES COMMUNES QUI ONT CHANGÉ DE CANTON, LUES COMMUNE PAR COMMUNE
 -- ================================================================

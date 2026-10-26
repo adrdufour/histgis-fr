@@ -33,3 +33,26 @@ Les copies que `apparie_noms.py`, `seine_et_oise.py`, `corrige_codes.py`,
 passes de 1968. Les deux recensements sont acquis : ces filets ne servent plus
 qu'à défaire une passe ancienne. Un nouveau passage des scripts les réécrit à
 leur place d'origine. Hors git (`*.avant_*`, `*.log`).
+
+## `essais/` — les bancs d'essai de l'OCR des recensements
+
+Rangés ici le 26 octobre 2026. Lecture seule, chacun a répondu à sa question
+et la réponse est dans `JOURNAL.md` et dans les docstrings d'`extrait_1954.py`,
+`extrait_1968.py` et `fusionne_passes.py` : `essai_ocr.py`,
+`essai_grammaire.py`, `essai_troisieme.py`, `lignes_rejetees.py` (1968),
+`essai_troisieme_1954.py`, `essai_ligne_souple.py` (1954). Ils restent
+rejouables depuis la racine : leurs chemins pointent vers `cog1954/` et
+`cog1968/`. `essai_troisieme_1954.py` demande le Python de `histgis`
+(openpyxl, par `circo/extrait_paris.py`).
+
+## `passes_1968/` — les trois lectures OCR du recensement de 1968
+
+`communes_1968.psm6_corrige.csv`, `.psm4_corrige.csv`, `.600.csv`, et la
+lecture `psm6_brut` d'avant correction des codes. Seule leur fusion,
+`cog1968/communes_1968_fusion.csv`, est chargée (`sql/58`) ;
+`cog1968/fusionne_passes.py` les lit ici pour la refaire.
+
+## `mouvements_cantonaux.saisie_manuelle.csv`
+
+La saisie à la main du registre, remplacée par `cantons/consolide_registre.py`
+(voir `cantons/note_registre.md`). Gardée comme témoin.
