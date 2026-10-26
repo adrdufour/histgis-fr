@@ -241,9 +241,11 @@ REGLES_1815_1870 = {
     {"depuis": 1820, "jusqu": 1821, "base": "1876", "circos": {
         "2": {"reprend": ["Tournon-1", "Tournon-2"]},
         "1": {"reste": True}}},
+    # Saint-Pierreville est dans la 2e : le trait épais passe à son sud, entre
+    # lui et Antraigues, Privas (photo 39, agrandie le 25 octobre 2026).
     {"depuis": 1821, "jusqu": 1831, "base": "1876", "circos": {
         "2": {"reprend": ["Tournon-1", "Tournon-2"],
-              "plus": ["La Voulte-sur-Rhône"]},
+              "plus": ["La Voulte-sur-Rhône", "Saint-Pierreville"]},
         "1": {"reste": True}}},
     {"depuis": 1831, "jusqu": 1848, "base": "1876", "circos": {
         "1": {"reprend": ["Privas-1", "Privas-2"]},
@@ -1112,8 +1114,10 @@ REGLES_1815_1870 = {
               "plus": ["La Grand-Combe"]},
         "1": {"reste": True}}},
     # Nîmes I, cerné de traits épais, est désigné 3 par une flèche.
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Nîmes II dans la 2e (la base
+    # le laissait dans la 1re avec Nîmes III).
     {"depuis": 1863, "jusqu": 1869, "base": "1876", "circos": {
-        "2": {"reprend": ["Uzès"]},
+        "2": {"reprend": ["Uzès"], "plus": ["Nimes-2"]},
         "3": {"reprend": ["Alais-2"], "plus": ["Alès-Est", "Alès-Ouest",
                                                 "Nimes-1"]},
         "4": {"reprend": ["Le Vigan"],
@@ -1163,30 +1167,39 @@ REGLES_1815_1870 = {
         "4": {"reprend": ["Muret"]},
         "5": {"reprend": ["Saint-Gaudens-1", "Saint-Gaudens-2"]},
         "6": {"reprend": ["Villefranche"]}}},
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Toulouse-Centre dans la 2e,
+    # Nord, Sud, Ouest dans la 1re — l'inverse de la lecture de la carte
+    # (Centre avec Fronton dans la 1re). À revoir sur l'original.
     {"depuis": 1852, "jusqu": 1863, "base": "1876", "circos": {
         "1": {"cantons": ["Fronton", "Villemur-sur-Tarn",
-                          "Montastruc-la-Conseillère", "Toulouse-Centre",
+                          "Montastruc-la-Conseillère", "Toulouse-Nord",
+                          "Toulouse-Ouest", "Toulouse-Sud",
                           "Verfeil", "Lanta", "Caraman", "Revel", "Villefranche"]},
-        "2": {"cantons": ["Cadours", "Grenade", "Léguevin", "Toulouse-Nord",
-                          "Toulouse-Ouest", "Toulouse-Sud", "Castanet-Tolosan",
-                          "Saint-Lys", "Muret"]},
+        "2": {"cantons": ["Cadours", "Grenade", "Léguevin", "Toulouse-Centre",
+                          "Castanet-Tolosan", "Saint-Lys", "Muret"]},
         "4": {"reprend": ["Saint-Gaudens-1", "Saint-Gaudens-2"]},
         "3": {"reste": True}}},
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Toulouse-Nord dans la 2e avec
+    # Toulouse-Ouest (la carte le mettait dans la 1re).
     {"depuis": 1863, "jusqu": 1869, "base": "1876", "circos": {
         "1": {"cantons": ["Cadours", "Grenade", "Fronton", "Villemur-sur-Tarn",
-                          "Montastruc-la-Conseillère", "Toulouse-Nord",
+                          "Montastruc-la-Conseillère",
                           "Toulouse-Centre", "Verfeil", "Lanta", "Caraman"]},
-        "2": {"cantons": ["Léguevin", "Toulouse-Ouest", "Saint-Lys", "Muret",
+        "2": {"cantons": ["Léguevin", "Toulouse-Nord", "Toulouse-Ouest",
+                          "Saint-Lys", "Muret",
                           "Rieumes", "Le Fousseret", "L'Isle-en-Dodon",
                           "Cazères"]},
         "4": {"reprend": ["Saint-Gaudens-1", "Saint-Gaudens-2"],
               "moins": ["L'Isle-en-Dodon"]},
         "3": {"reste": True}}},
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : comme en
+    # 1863, Toulouse-Nord dans la 2e (la ligne de saisie couvre 1863-1870).
     {"depuis": 1869, "jusqu": 1870, "base": "1876", "circos": {
         "1": {"cantons": ["Cadours", "Grenade", "Fronton", "Villemur-sur-Tarn",
-                          "Montastruc-la-Conseillère", "Toulouse-Nord",
+                          "Montastruc-la-Conseillère",
                           "Toulouse-Centre", "Verfeil"]},
-        "2": {"cantons": ["Léguevin", "Toulouse-Ouest", "Saint-Lys", "Muret",
+        "2": {"cantons": ["Léguevin", "Toulouse-Nord", "Toulouse-Ouest",
+                          "Saint-Lys", "Muret",
                           "Rieumes", "Le Fousseret", "L'Isle-en-Dodon",
                           "Aurignac", "Cazères"]},
         "4": {"reprend": ["Saint-Gaudens-1", "Saint-Gaudens-2"],
@@ -1254,9 +1267,14 @@ REGLES_1815_1870 = {
         "4": {"reprend": ["Libourne"]},
         "5": {"reprend": ["Bazas", "La Réole"]},
         "2": {"reste": True}}},
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : la ville forme les trois
+    # premières : Bordeaux-1 et 2 dans la 1re, 3 et 4 dans la 2e, 5 et 6 dans
+    # la 3e. Lève la LIMITE ci-dessus (les cantons débordent toujours sur la
+    # banlieue).
     {"depuis": 1831, "jusqu": 1848, "base": "1815", "circos": {
-        "1": {"cantons": ["Bordeaux-1", "Bordeaux-2", "Bordeaux-3",
-                          "Bordeaux-4", "Bordeaux-5", "Bordeaux-6"]},
+        "1": {"cantons": ["Bordeaux-1", "Bordeaux-2"]},
+        "2": {"cantons": ["Bordeaux-3", "Bordeaux-4"]},
+        "3": {"cantons": ["Bordeaux-5", "Bordeaux-6"]},
         "5": {"reprend": ["Bazas"]},
         "6": {"reprend": ["Blaye"]},
         "7": {"reprend": ["Lesparre"]},
@@ -1282,12 +1300,15 @@ REGLES_1815_1870 = {
         "5": {"reprend": ["Libourne-1", "Libourne-2"]},
         "2": {"reste": True}}},
     {"depuis": 1869, "jusqu": 1870, "base": "1876", "circos": {
+        # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Bordeaux-1 et 2 dans
+        # la 1re, 3 et 4 dans la 2e, 5 et 6 dans la 3e : le partage probable.
         "1": {"reprend": ["Lesparre"],
               "plus": ["Castelnau-de-Médoc", "Blanquefort", "Bordeaux-1",
-                       "Bordeaux-2", "Bordeaux-3", "Bordeaux-4", "Bordeaux-5",
-                       "Bordeaux-6"]},
-        "2": {"cantons": ["Pessac", "Audenge", "La Teste", "Belin", "Labrède"]},
-        "3": {"cantons": ["Carbon-Blanc", "Créon", "Podensac", "Targon"]},
+                       "Bordeaux-2"]},
+        "2": {"cantons": ["Pessac", "Audenge", "La Teste", "Belin", "Labrède",
+                          "Bordeaux-3", "Bordeaux-4"]},
+        "3": {"cantons": ["Carbon-Blanc", "Créon", "Podensac", "Targon",
+                          "Bordeaux-5", "Bordeaux-6"]},
         "4": {"reprend": ["Blaye"],
               "plus": ["Saint-André-de-Cubzac", "Fronsac", "Guîtres",
                        "Coutras"]},
@@ -1432,10 +1453,12 @@ REGLES_1815_1870 = {
         "4": {"reprend": ["Chinon"], "plus": ["Château-la-Vallière"]}}},
     # DOUTE : Tours-Centre, posé dans la 1re (le trait épais contourne la
     # pastille « Tc » côté nord).
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Tours-Sud dans la 3e (la carte
+    # le joignait à Chinon dans la 2e).
     {"depuis": 1852, "jusqu": 1869, "base": "1876", "circos": {
         "1": {"reprend": ["Tours-2"], "moins": ["Amboise", "Bléré"],
               "plus": ["Tours-Nord", "Tours-Centre"]},
-        "2": {"reprend": ["Chinon"], "plus": ["Tours-Sud"]},
+        "2": {"reprend": ["Chinon"]},
         "3": {"reste": True}}},
     {"depuis": 1869, "jusqu": 1870, "base": "1876", "circos": {
         "1": {"reprend": ["Tours-2"], "moins": ["Amboise", "Bléré"],
@@ -1645,8 +1668,10 @@ REGLES_1815_1870 = {
     {"depuis": 1863, "jusqu": 1869, "base": "1876", "circos": {
         "4": {"reprend": ["Roanne-1", "Roanne-2"]},
         "3": {"reprend": ["Montbrison-1", "Montbrison-2"]},
+        # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Nord-Ouest et Sud-Ouest
+        # dans la 1re, Nord-Est et Sud-Est dans la 2e.
         "2": {"cantons": ["Saint-Étienne-Nord-Est", "Saint-Étienne-Sud-Est",
-                          "Saint-Étienne-Sud-Ouest", "Le Chambon-Feugerolles",
+                          "Le Chambon-Feugerolles",
                           "Saint-Genest-Malifaux", "Bourg-Argental"]},
         "1": {"reste": True}}},
     # DOUTE : la flèche du 2 vise Saint-Héand et la ville ; Le Chambon,
@@ -2283,9 +2308,10 @@ REGLES_1815_1870 = {
     {"depuis": 1821, "jusqu": 1831, "base": "1820", "circos": {
         "3": {"cantons": ["Quesnoy-sur-Deûle", "Tourcoing-Nord",
                           "Tourcoing-Sud", "Roubaix-Est", "Roubaix-Ouest",
-                          "Lannoy", "Lille-Ouest", "Lille-Centre",
-                          "Lille-Nord-Est"]},
-        "4": {"reprend": ["4"], "plus": ["Lille-Sud-Est", "Lille-Sud-Ouest"],
+                          "Lannoy", "Lille-Ouest", "Lille-Centre"]},
+        # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Lille-Nord-Est dans la 4e.
+        "4": {"reprend": ["4"], "plus": ["Lille-Sud-Est", "Lille-Sud-Ouest",
+                                         "Lille-Nord-Est"],
               "moins": ["Quesnoy-sur-Deûle", "Tourcoing-Nord",
                         "Tourcoing-Sud", "Roubaix-Est", "Roubaix-Ouest",
                         "Lannoy"]},
@@ -2296,8 +2322,9 @@ REGLES_1815_1870 = {
     # vers LNE) = LNE, LSE. Arleux, isolé, est désigné 5 : la 5e est en deux
     # morceaux (Orchies-Marchiennes et Arleux).
     {"depuis": 1831, "jusqu": 1848, "base": "1876", "circos": {
-        "1": {"cantons": ["Lille-Ouest", "Lille-Centre", "Lille-Sud-Ouest"]},
-        "2": {"cantons": ["Lille-Nord-Est", "Lille-Sud-Est"]},
+        # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Lille-Sud-Ouest dans la 2e.
+        "1": {"cantons": ["Lille-Ouest", "Lille-Centre"]},
+        "2": {"cantons": ["Lille-Nord-Est", "Lille-Sud-Est", "Lille-Sud-Ouest"]},
         "4": {"cantons": ["Douai-Nord", "Douai-Ouest", "Douai-Sud"]},
         "5": {"cantons": ["Orchies", "Marchiennes", "Arleux"]},
         "6": {"cantons": ["Dunkerque-Ouest", "Dunkerque-Est"]},
@@ -2332,15 +2359,16 @@ REGLES_1815_1870 = {
     {"depuis": 1863, "jusqu": 1870, "base": "1876", "circos": {
         "1": {"reprend": ["Dunkerque-1", "Dunkerque-2"],
               "plus": ["Cassel", "Hazebrouck-Nord", "Hazebrouck-Sud"]},
+        # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : Lille-Ouest, Sud-Ouest,
+        # Sud-Est dans la 2e ; Nord-Est et Centre dans la 3e.
         "2": {"cantons": ["Steenvoorde", "Bailleul-Sud-Ouest",
                           "Bailleul-Nord-Est", "Armentières",
-                          "Quesnoy-sur-Deûle", "Lille-Ouest", "Lille-Centre",
-                          "Lille-Nord-Est", "Lannoy"]},
+                          "Quesnoy-sur-Deûle", "Lille-Ouest", "Lille-Sud-Ouest",
+                          "Lille-Sud-Est", "Lannoy"]},
         "3": {"cantons": ["Merville", "La Bassée", "Haubourdin",
-                          "Lille-Sud-Ouest", "Pont-à-Marcq"]},
+                          "Lille-Nord-Est", "Lille-Centre", "Pont-à-Marcq"]},
         "4": {"cantons": ["Tourcoing-Nord", "Tourcoing-Sud", "Roubaix-Est",
-                          "Roubaix-Ouest", "Cysoing", "Lille-Sud-Est",
-                          "Seclin"]},
+                          "Roubaix-Ouest", "Cysoing", "Seclin"]},
         "5": {"reprend": ["Douai-1", "Douai-2"]},
         "6": {"reprend": ["Valenciennes-1", "Valenciennes-2"],
               "moins": ["Bouchain"]},
@@ -2651,9 +2679,11 @@ REGLES_1815_1870 = {
     # circonscriptions (« 1 & 2 ») ; la carte ne dit pas comment. Les quatre
     # cantons urbains sont posés dans la 1re — FAUX pour la 2e, à reprendre
     # à l'atome (comme Bordeaux).
+    # SAISIE (Adrien, partition_ville_saisie, 25 octobre 2026) : la ville forme les deux
+    # premières : Est et Nord dans la 1re, Ouest et Sud dans la 2e.
     {"depuis": 1831, "jusqu": 1848, "base": "1876", "circos": {
-        "1": {"cantons": ["Strasbourg-Est", "Strasbourg-Nord",
-                          "Strasbourg-Ouest", "Strasbourg-Sud"]},
+        "1": {"cantons": ["Strasbourg-Est", "Strasbourg-Nord"]},
+        "2": {"cantons": ["Strasbourg-Ouest", "Strasbourg-Sud"]},
         "3": {"cantons": ["Haguenau", "Bischwiller", "Brumath",
                           "Truchtersheim", "Wasselonne", "Molsheim",
                           "Schiltigheim", "Geispolsheim"]},
