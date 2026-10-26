@@ -43,7 +43,7 @@ isoler ce qui ne tombera pas tout seul.
 
 import csv
 import datetime
-import unicodedata
+import sys
 from pathlib import Path
 
 import openpyxl
@@ -70,26 +70,10 @@ RECOLLE = {
     "jardin-des-plantes val-de-grace": "jardin-des-plantes, val-de-grace",
 }
 
-# Coquilles de saisie. Chacune est justifiée par une preuve INTERNE : les deux
-# formes coexistent dans le fichier et désignent le même quartier. Aucune
-# n'est corrigée de mémoire — le nom canonique viendra de la jointure avec la
-# couche officielle. Ici on ne fait que réunir ce qui est déjà réuni ailleurs.
-# Noter que la coquille est souvent PLUS fréquente que la forme correcte :
-# la fréquence ne décide de rien.
-COQUILLES = {
-    "artetmetiers": "artsetmetiers",
-    "chaussedantin": "chausseedantin",
-    "enfantrouges": "enfantsrouges",
-    "faubourgmontmarte": "faubourgmontmartre",
-    "lavilette": "lavillette",
-    "maisonsblanche": "maisonblanche",
-    "marche": "marches",
-    "montmarte": "montmartre",
-    "portesaintdenis": "portedesaintdenis",
-    "rochechouar": "rochechouart",
-    "saintaveye": "saintavoye",
-    "saintmarguerite": "saintemarguerite",
-}
+# Les coquilles de saisie et la clé sont dans `outils/noms.py`, que
+# `cog1968/` emprunte aussi.
+sys.path.insert(0, str(RACINE))
+from outils.noms import cle  # noqa: E402
 
 
 def lire_numero(v, par_arrondissement):
@@ -117,14 +101,6 @@ def quartiers(cellule):
     for faux, vrai in RECOLLE.items():
         s = s.replace(faux, vrai)
     return [q.strip() for q in s.split(",") if q.strip()]
-
-
-def cle(nom):
-    """Clé de rapprochement : sans accent, sans tiret, sans espace."""
-    n = unicodedata.normalize("NFD", nom.lower())
-    n = "".join(c for c in n if unicodedata.category(c) != "Mn")
-    n = "".join(c for c in n if c.isalnum())
-    return COQUILLES.get(n, n)
 
 
 def main():

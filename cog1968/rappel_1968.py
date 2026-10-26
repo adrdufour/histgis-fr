@@ -46,8 +46,8 @@ import psycopg2
 RACINE = Path(__file__).resolve().parent.parent
 LU = RACINE / "cog1968" / "communes_1968.csv"
 
-sys.path.insert(0, str(RACINE / "circo"))
-from paris_quartiers import connexion                    # noqa: E402
+sys.path.insert(0, str(RACINE))
+from outils.base import connexion                        # noqa: E402
 
 DATE = "1968-01-01"
 

@@ -48,23 +48,16 @@ de trier, pas de mesurer.
 """
 
 import csv
-import os
 import re
 import sys
 import unicodedata
 from pathlib import Path
 
-import psycopg2
-
 RACINE = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RACINE))
+from outils.base import connexion  # noqa: E402
 SRC = RACINE / "cantons" / "annexe_vii.csv"
 DEBUT, FIN = "1941-01-01", "1999-01-01"
-
-DSN_CANDIDATS = [
-    "dbname=histgis host=/var/run/postgresql",
-    "dbname=histgis",
-    "dbname=histgis host=localhost",
-]
 
 ROMAINS = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7,
            "VIII": 8, "IX": 9, "X": 10, "XI": 11, "XII": 12, "XIII": 13,
@@ -84,17 +77,6 @@ SELECT dep,
        count(DISTINCT unit_id) FILTER (WHERE d = '1999-06-01') AS n1999
 FROM   etat GROUP BY dep ORDER BY dep
 """
-
-
-def connexion():
-    if os.environ.get("HISTGIS_DSN"):
-        return psycopg2.connect(os.environ["HISTGIS_DSN"])
-    for dsn in DSN_CANDIDATS:
-        try:
-            return psycopg2.connect(dsn)
-        except psycopg2.OperationalError:
-            pass
-    raise SystemExit("Connexion impossible. Définir HISTGIS_DSN.")
 
 
 def nombre(jeton):

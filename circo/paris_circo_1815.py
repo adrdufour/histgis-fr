@@ -56,7 +56,8 @@ VOCAB = RACINE / "circo" / "paris_vocab_1815.csv"
 SORTIE = RACINE / "circo" / "paris_circo_1815.csv"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from extrait_paris import cle                           # noqa: E402
+sys.path.insert(0, str(RACINE))
+from outils.noms import cle                             # noqa: E402
 
 # Les cinq divisions antérieures à 1860, dans l'ordre, avec leurs bornes.
 # Chaque division court jusqu'au début de la suivante ; les dates sont celles

@@ -61,8 +61,8 @@ sys.path.insert(0, str(RACINE / "cog1954"))
 from extrait_1954 import (LIGNE, RENVOI, TOTAUX, page_texte,   # noqa: E402
                           nettoie_nom)
 
-sys.path.insert(0, str(RACINE / "circo"))
-from extrait_paris import cle                                   # noqa: E402
+sys.path.insert(0, str(RACINE))
+from outils.noms import cle                                   # noqa: E402
 
 PDF = RACINE / "sources" / "rp1954" / \
       "master_RP_1954_POP_DEP_-ARROND_CANT_COMMU.pdf"

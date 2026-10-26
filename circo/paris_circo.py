@@ -57,7 +57,8 @@ DECOUPAGE = RACINE / "circo" / "paris_decoupage.csv"
 SORTIE = RACINE / "circo" / "paris_circo_controle.csv"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from extrait_paris import cle                          # noqa: E402
+sys.path.insert(0, str(RACINE))
+from outils.noms import cle                            # noqa: E402
 from paris_quartiers import appariement, connexion     # noqa: E402
 
 # La trame des 80 ne vaut qu'à partir de 1860 : le bois de Boulogne n'entre

@@ -207,6 +207,7 @@ binaires et les gros fichiers sont isolés.
 | `annexes/hac/` | filiation communale extraite de HAC — le troisième contrôle indépendant | acquis |
 | `annexes/gaudillere/` | protocole de géoréférencement de Marseille — le cas d'école des onze coupes internes | à exécuter |
 | `jorf_txt/` | texte OCR des JO. Les `*_raw.txt` sont l'OCR brut, hors dépôt | dépouillé |
+| `outils/` | le code partagé entre dossiers : `base.connexion()` (la base histgis, `PGDATABASE` respecté) et `noms.cle()` (clé de rapprochement des noms) | actif |
 | `archives/` | exploration ancienne, planches imprimables, filets de sécurité — voir `archives/LISEZMOI.md` | inactif |
 
 ---

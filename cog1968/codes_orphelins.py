@@ -83,8 +83,8 @@ RACINE = Path(__file__).resolve().parent.parent
 LU = RACINE / "cog1968" / "communes_1968_fusion.csv"
 NOMS = RACINE / "build" / "noms_geofla.csv"
 
-sys.path.insert(0, str(RACINE / "circo"))
-from extrait_paris import cle                            # noqa: E402
+sys.path.insert(0, str(RACINE))
+from outils.noms import cle                            # noqa: E402
 
 SEUIL = 0.85          # plus strict que corrige_codes.py (0,80) : ici le code
                       # n'apporte aucune confirmation, le nom porte seul.

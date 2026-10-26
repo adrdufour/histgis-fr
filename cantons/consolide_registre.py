@@ -59,23 +59,16 @@ reste la référence pour l'histoire, ce fichier-ci pour la géométrie.
 """
 
 import csv
-import os
 import re
 import sys
 import unicodedata
 from pathlib import Path
 
-import psycopg2
-
 RACINE = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RACINE))
+from outils.base import connexion  # noqa: E402
 ANNEXE = RACINE / "cantons" / "annexe_vii.csv"
 SORTIE = RACINE / "cantons" / "mouvements_cantonaux.csv"
-
-DSN_CANDIDATS = [
-    "dbname=histgis host=/var/run/postgresql",
-    "dbname=histgis",
-    "dbname=histgis host=localhost",
-]
 
 CHAMPS = ["dep", "type", "date_debut", "date_fin", "date_retenue", "certitude",
           "canton_source", "cantons_resultants", "communes", "source", "remarque"]
@@ -91,17 +84,6 @@ LEFT   JOIN unit_version uv ON uv.unit_id = u.unit_id AND uv.periode @> d::date
 WHERE  a.insee_geofla IS NOT NULL
 GROUP  BY 1, 2, 3, 4
 """
-
-
-def connexion():
-    if os.environ.get("HISTGIS_DSN"):
-        return psycopg2.connect(os.environ["HISTGIS_DSN"])
-    for dsn in DSN_CANDIDATS:
-        try:
-            return psycopg2.connect(dsn)
-        except psycopg2.OperationalError:
-            pass
-    raise SystemExit("Connexion impossible. Définir HISTGIS_DSN.")
 
 
 CARDINAUX = {"n": "n", "nord": "n", "s": "s", "sud": "s", "e": "e", "est": "e",
