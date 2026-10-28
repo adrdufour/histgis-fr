@@ -11259,3 +11259,11 @@ Adrien signale Bouconville-Vauclerc (02) manquant en 1922. Il y avait en fait de
 - `muet_absorbe` traite les trous d'avant 1941 de trois ans au plus, entre la fusion et la fin du polygone ANR : la commune reçoit les rattachements de celle qui la recouvre. Seule Vauclerc est dans ce cas. Les autres trous d'avant 1941 sont l'Alsace-Moselle allemande (1871-1918) et la banlieue parisienne d'avant 1860.
 
 Le § 8 en tire les circonscriptions d'après 1945. Il reste 396 périodes de communes muettes, contre 427 avant. La colonne `departement` de `diag_communes_muettes.sql` était fausse : le filtre `LIKE atome || '%'` prenait aussi d'autres atomes (Aschbach classée en 14), il est remplacé par `split_part`. Les 15 départements touchés sont réexportés.
+
+## 28 octobre 2026 (suite) — rattachements posés après une fusion (`138`)
+
+Adrien voit deux Moussy-Verneuil (02) en 1996. ANR décrit les fusions dans le `poly_id` : `1923_0_<IGN>` et `1923_1_<IGN>` sont les morceaux d'avant 1923 du polygone `COMMUNE_<IGN>`. Les jalons, qui lisent par code INSEE, avaient posé Craonne de 1968 à 2013 sur Moussy-sur-Aisne (24286), morte en 1923. Faute de polygone ANR, l'export lui prêtait le contour GEOFLA, par-dessus Verneuil devenue Moussy-Verneuil (39485). La règle `muet_meme_commune` de `137` avait en plus rattaché 39485. Elle était juste, mais rendait le doublon visible.
+
+`138` coupe ou retire tout rattachement posé après la fin de vie ANR d'un atome, quand ANR désigne un successeur : un polygone qui couvre plus de la moitié du dernier polygone de l'atome et porte le même numéro IGN. Le successeur reçoit ce qui lui manque à ce niveau. Bilan : 1 638 lignes coupées, 369 retirées, 68 posées, sur 866 atomes dont la plupart sont des fusions de 1971-1973.
+
+Rien n'est touché quand le successeur a une autre unité au même niveau, ou quand il n'y a pas de successeur. Ce sont les communes associées restées dans leur ancien canton jusqu'en 1973 ou 1982 (Aurent, Ascq, Petite-Synthe…), et les communes rattachées à Paris en 1925-1929. Ces 154 lignes sont dans `build/fantomes_divergents.csv`, à relire. `138` est réversible par `p138_trace` et s'ajoute dans `rejouer_apres_rebuild.sh` après `137`. Export complet relancé.

@@ -1006,6 +1006,14 @@ $PSQL -P pager=off -v poser=on \
       -f "$ICI/137_trous_par_l_acte.sql" > "$RACINE/build/p137.log" 2>&1 \
     || { echo "  137 refusé — voir build/p137.log" >&2; exit 1; }
 
+# Ajouté le 28 octobre 2026. `138` : les rattachements posés sur une commune
+# après sa fin dans ANR (fusion) sont ramenés sur le successeur qu'ANR désigne
+# (même numéro IGN dans `poly_id`) ; le reste dans build/fantomes_divergents.csv.
+etape "138 — rattachements après fusion ramenés sur le successeur ANR"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/138_fantomes_apres_fusion.sql" > "$RACINE/build/p138.log" 2>&1 \
+    || { echo "  138 refusé — voir build/p138.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
