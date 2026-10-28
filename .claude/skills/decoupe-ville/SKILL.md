@@ -547,9 +547,10 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   (`insee.fr/fr/statistiques/fichier/<n>/dep<NN>.pdf`, jusqu'au 1er janvier 2014), à comparer aux
   populations des IRIS : à Saint-Flour, deux IRIS nommés « Nord » et « Sud », 38,4 % au Nord des
   deux côtés. La ligne s'écrit alors sous la source `iris` (Saint-Flour) ou `main` (Falaise), la
-  note commence par ce qui est du texte et ce qui ne l'est pas. À essayer sur Tartas, Le Quesnoy,
-  Avesnes — mais LIRE D'ABORD l'arrêté : celui de Confolens (9 pluviôse an X, arrêté rectificatif)
-  bornait les deux parts par la Vienne.
+  note commence par ce qui est du texte et ce qui ne l'est pas. À essayer sur Le Quesnoy, Avesnes
+  — mais LIRE D'ABORD l'arrêté : celui de Confolens (9 pluviôse an X, arrêté rectificatif) bornait
+  les deux parts par la Vienne, celui de Tartas (27 vendémiaire an X) par la « rivière de Douze »,
+  c'est-à-dire la Midouze.
 - **Nord et Sud ne sont pas toujours des directions** : le « Nord » de Saint-Flour est le faubourg,
   l'est et le sud de la commune ; le « Nord » de Falaise est un coin nord-est de 320 ha. Ancres par
   points, et ne pas déduire l'orientation du partage des seules communes voisines (l'entrée n° 97

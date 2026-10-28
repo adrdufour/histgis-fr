@@ -4147,6 +4147,21 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Tartas (40313)
+
+### 149. Tartas de 1968 à 1973 : la commune entière à Tartas-Est en plus des deux fractions
+
+- **Sources** : arrêté du 27 vendémiaire an X (Rondonneau, t. 8, p. 454-455) : Est et Ouest de la
+  Midouze (« rivière de Douze »).
+- **Base** : `37107#4026` (Est) et `#4027` (Ouest) de 1815 à 2013 sans interruption ; en plus,
+  l'atome entier `37107` est à Tartas-Est (4026) de 1968-01-01 à 1973-09-23 : la commune y compte
+  deux fois.
+- **À inscrire** : retirer l'appartenance de `37107` entier de 1968 à 1973.
+- **Lignes** : `40313-1` (Midouze), 1801-10-19 → 2013-01-01, ancres Est `=est`, Ouest
+  POINT(392805 6312000), écrite le 28 octobre 2026. Fichiers : `cartes/sorties/decoupe_tartas/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :
