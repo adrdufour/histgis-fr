@@ -1188,4 +1188,11 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **`voies()` d'un routeur entre deux voies parallèles** (rue Léo-Lagrange le long de la Voie Est-Ouest) :
   la jonction calculée par `ST_ClosestPoint` tombe n'importe où sur le parallélisme. Partir du
   carrefour nommé par le texte (Stalingrad), pas d'une jonction calculée.
+- **Une avenue que le décret contourne par une rue** (Saint-Martin-d'Hères 1985 : « avenue Potié, rue
+  Edmond-Rostand et avenue Potié ») : l'avenue d'aujourd'hui est continue, celle de 1985 ne l'était
+  pas. `voies()` rend alors 0 m sur la rue du milieu (ses deux jonctions avec l'avenue sont le même
+  point le plus proche) : poser les deux carrefours et un point de passage sur la rue.
+- **Les codes INSEE de la base pour les voisines** : chercher par le nom dans
+  `cog1968/communes_1968_fusion.csv` avant de mesurer un contact (Poisat est 38309, pas 38317) ;
+  un contact nul avec une voisine que le texte nomme est presque toujours un mauvais code.
 

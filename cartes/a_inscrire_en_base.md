@@ -4094,6 +4094,27 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Saint-Martin-d'Hères (38421)
+
+### 146. Saint-Martin-d'Hères de 1973 à 1998 : au canton d'Eybens au lieu du sien, puis sans fractions
+
+- **Sources** : décret 73-766 du 2 août 1973 (JO du 4 août 1973, `jorf_txt/JORF_19730804_180_col.txt`
+  l. 2667-2672 : canton de Saint-Martin-d'Hères = Gières, Herbeys, Poisat, Saint-Martin-d'Hères,
+  Venon) ; décret 85-92 du 24 janvier 1985, art. 2 (JO du 25 janvier 1985, p. 1046,
+  `jorf_txt/JORF_19850125_21_col.txt` l. 1778-1797 : Nord et Sud ; canton d'Eybens = Eybens,
+  Gières, Herbeys, Poisat, Venon).
+- **Base** : `21449` entier à Grenoble-Sud (3814) jusqu'au 1973-09-23, puis à Eybens (3855) de
+  1973 à 1985, alors que le canton d'Eybens n'est créé qu'en 1985 ; aucun canton de 1985-03-10 à
+  1998-03-15 ; fractions `21449#3852` (Nord) et `#3859` (Sud) seulement de 1998 à 2013.
+- **À inscrire** : de 1973 à 1985, un canton de Saint-Martin-d'Hères (Gières, Herbeys, Poisat,
+  Saint-Martin-d'Hères, Venon ; voir aussi n° 143 pour Poisat) au lieu de 3855 ; de 1985 à 1998,
+  les fractions Nord et Sud.
+- **Lignes** : `38421-1`, 1985-03-10 → 2013-01-01, ancres Nord `21449#3852=nord`, Sud
+  `21449#3859=sud`, écrite le 28 octobre 2026 ; elle jouera de 1985 à 1998 quand les fractions
+  seront inscrites. Fichiers : `cartes/sorties/decoupe_smh/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :
