@@ -11251,3 +11251,11 @@ Incident : `137` était assemblé dans le répertoire temporaire de la session,
 vidé dans la nuit ; l'assemblage suivant a tronqué le fichier. Reconstruit
 depuis l'historique des fichiers de Claude Code, essai identique à la pose de
 la veille. Il ne vit plus qu'en un seul morceau, dans `sql/`.
+
+## 28 octobre 2026 — même canton avant et après : la commune n'a pas bougé (`137`)
+
+Adrien signale Bouconville-Vauclerc (02) manquant en 1922. Il y avait en fait deux trous : Vauclerc-et-la-Vallée-Foulon (atome 38988), fusionnée en 1921 mais dessinée par ANR jusqu'en 1923, et Bouconville elle-même, sans rien de 1941 à 1968, alors qu'elle était au canton de Craonne avant et après. Deux règles ont été ajoutées au § 7 bis de `137` :
+- `muet_meme_canton_autour` comble un trou ouvert avant les actes de 1973 quand le canton est le même juste avant et juste après, sauf si un acte relu le contredit (`p137_juge` non posé). 30 communes, 547 commune-années. Bué (18) reste ouverte parce qu'un acte la contredit. Après 1973, Mézidon, Lisieux-2, Maxéville et Idron restent à relire pour la même raison.
+- `muet_absorbe` traite les trous d'avant 1941 de trois ans au plus, entre la fusion et la fin du polygone ANR : la commune reçoit les rattachements de celle qui la recouvre. Seule Vauclerc est dans ce cas. Les autres trous d'avant 1941 sont l'Alsace-Moselle allemande (1871-1918) et la banlieue parisienne d'avant 1860.
+
+Le § 8 en tire les circonscriptions d'après 1945. Il reste 396 périodes de communes muettes, contre 427 avant. La colonne `departement` de `diag_communes_muettes.sql` était fausse : le filtre `LIKE atome || '%'` prenait aussi d'autres atomes (Aschbach classée en 14), il est remplacé par `split_part`. Les 15 départements touchés sont réexportés.

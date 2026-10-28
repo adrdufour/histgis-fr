@@ -643,6 +643,59 @@ JOIN   membership m ON m.atom_id = g.atom_id AND m.niveau = 'canton' AND m.valid
 WHERE  upper(g.p) = g.fin
   AND  NOT EXISTS (SELECT 1 FROM p137_mpose x WHERE x.atom_id = g.atom_id);
 
+-- Ajouté le 28 octobre 2026, après Bouconville-Vauclair (02), sans canton de
+-- 1941 à 1968 et à Craonne des deux côtés :
+--   * `muet_meme_canton_autour` — même canton juste avant et juste après le
+--     trou, trou ouvert avant les actes de 1973 (les jalons de 1941, 1954,
+--     1968 ne la lisaient pas) : elle n'a pas bougé. Les trous qu'un acte
+--     relu contredit (`p137_juge` non posé, le futur `p137_reste`) n'y
+--     entrent pas ;
+--   * `muet_absorbe` — avant 1941 : une commune absorbée dont le canton
+--     s'arrête à la fusion et qu'ANR dessine encore au plus trois ans (Vauclerc,
+--     fusionnée en 1921 avec Bouconville, dessinée jusqu'en 1923) reçoit les
+--     rattachements de la commune qui la recouvre ensuite. Les trous plus longs
+--     d'avant 1941 sont l'Alsace-Moselle allemande et la banlieue de Paris
+--     d'avant 1860 : ils ne sont pas des oublis.
+WITH can AS (SELECT atom_id, unit_id, valid_from, valid_to FROM membership WHERE niveau = 'canton'
+             UNION ALL
+             SELECT atom_id, unit_id, valid_from, valid_to FROM p137_mpose WHERE niveau = 'canton'),
+reste AS (SELECT g.atom_id,
+                 unnest(datemultirange(g.p) - coalesce((SELECT range_agg(daterange(x.valid_from, x.valid_to))
+                                                         FROM p137_mpose x WHERE x.atom_id = g.atom_id),
+                                                        '{}'::datemultirange)) AS p
+            FROM p137_mgap g)
+INSERT INTO p137_mpose
+SELECT g.atom_id, av.unit_id, 'canton', lower(g.p), upper(g.p), 'muet_meme_canton_autour'
+FROM   reste g
+JOIN   can av ON av.atom_id = g.atom_id AND av.valid_to = lower(g.p)
+JOIN   can ap ON ap.atom_id = g.atom_id AND ap.valid_from = upper(g.p)
+WHERE  ap.unit_id = av.unit_id AND lower(g.p) < DATE '1973-09-23'
+  AND  NOT EXISTS (SELECT 1 FROM p137_juge r WHERE r.atom_id = g.atom_id AND NOT r.pose
+                     AND daterange(r.valid_from, r.valid_to) && g.p);
+
+WITH vie AS (SELECT atom_id, range_agg(periode) * datemultirange(daterange('1815-01-01', '1941-01-01')) AS mr,
+                    max(upper(periode)) AS fin
+               FROM atom_geom_anr GROUP BY 1),
+rat AS (SELECT split_part(atom_id, '#', 1) AS mere, range_agg(periode) AS mr FROM membership GROUP BY 1),
+trou AS (SELECT v.atom_id, v.fin, unnest(v.mr - coalesce(r.mr, '{}'::datemultirange)) AS p
+           FROM vie v JOIN atom a USING (atom_id) LEFT JOIN rat r ON r.mere = v.atom_id
+          WHERE NOT a.fraction AND v.atom_id NOT LIKE '%#%'),
+absorbe AS (
+    SELECT t.atom_id, t.p,
+           (SELECT o.atom_id FROM atom_geom_anr s, atom_geom_anr o
+             WHERE s.atom_id = t.atom_id AND upper(s.periode) = t.fin
+               AND o.atom_id <> t.atom_id AND o.atom_id NOT LIKE '%#%' AND o.periode @> t.fin
+               AND o.geom && s.geom
+             ORDER BY ST_Area(ST_Intersection(o.geom, s.geom)) DESC LIMIT 1) AS hote
+    FROM trou t
+    WHERE upper(t.p) = t.fin AND upper(t.p) - lower(t.p) <= 3 * 366
+      AND EXISTS (SELECT 1 FROM membership m WHERE m.atom_id = t.atom_id AND m.niveau = 'canton'
+                     AND m.valid_to = lower(t.p)))
+INSERT INTO p137_mpose
+SELECT b.atom_id, m.unit_id, m.niveau,
+       greatest(lower(b.p), m.valid_from), least(upper(b.p), m.valid_to), 'muet_absorbe'
+FROM   absorbe b JOIN membership m ON m.atom_id = b.hote AND m.periode && b.p;
+
 \echo ''
 \echo '-- 7 bis. les muets réglés par règle'
 SELECT regle, niveau, count(*) AS lignes, count(DISTINCT atom_id) AS atomes,
