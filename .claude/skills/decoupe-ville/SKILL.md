@@ -1170,4 +1170,22 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   `ST_LineSubstring` aux points triples, ne pas reposer le tronçon intérieur.
 - **Une ancienne voie ferrée reprise par un tramway** (Tours, ligne des Sables) : `nature = 'Tramway'`
   de `<insee>_fer` donne l'axe, l'ortho 1950-1965 le confirme.
+- **Un rempart de fort cité par un décret** (Grenoble 1973, « la ligne intérieure des remparts du fort
+  de la Bastille ») : la couche BD TOPO `construction_lineaire` (natures `Mur`, `Mur de soutènement`)
+  donne les murs ; les enchaîner par `ogc_fid`, vérifier le sens de chacun (un mur à l'envers fait une
+  épingle), `desboucle.py` ensuite.
+- **Les bâtiments de grands ensembles n'ont souvent aucun logement dans la BD TOPO** (l'Arlequin de la
+  Villeneuve : « Indifférencié », 0 logement). Un IRIS sans logement doit retomber sur le prorata des
+  surfaces, pas disparaître du calcul : la première version de la requête l'avait omis, et VI
+  perdait 1 700 habitants.
+- **Une ancienne voie ferrée devenue voie urbaine** (Grenoble, ligne de Chambéry = « Voie Est-Ouest »,
+  piste cyclable en 1985) : chercher le nom dans `voie_nommee` avant l'orthophoto.
+- **Une voie de 1985 renommée dans un grand ensemble** (« avenue du Général-de-Gaulle » de la
+  Villeneuve) : le décret de 2014, qui passe devant les mêmes équipements (bourse du travail,
+  école d'architecture), donne le nom actuel (avenue de l'Europe). Les équipements se trouvent dans
+  `zone_d_activite_ou_d_interet` ; un équipement disparu (école d'architecture partie) peut y rester
+  sous le nom de son successeur (« Cned »).
+- **`voies()` d'un routeur entre deux voies parallèles** (rue Léo-Lagrange le long de la Voie Est-Ouest) :
+  la jonction calculée par `ST_ClosestPoint` tombe n'importe où sur le parallélisme. Partir du
+  carrefour nommé par le texte (Stalingrad), pas d'une jonction calculée.
 

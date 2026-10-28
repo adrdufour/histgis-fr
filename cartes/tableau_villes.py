@@ -179,6 +179,7 @@ REMARQUES = {
     "36044": "Décrets 73-658 (Centre, Est, Ouest, Sud) et 85-133 (Centre agrandi), dix lignes, deux passes ; 1973-1985 absent de la base (--morceaux 4, ancres datées). Indre lue au bras principal ; quai de l'Abattoir introuvable. Population 1985 : Centre +2,3 points, Sud −2,0 contre légal.",
     "37122": "Décret 84-1227 (JO 30/12/1984) : Nord au nord de l'axe CD 751 (D751C, bd des Bretonnières) / bd Jean-Jaurès / bd de Chinon ; une ligne 1985-2013 ; IRIS emboîtés, 49,27 % au Nord contre 49,24 % légal.",
     "38151": "Décret 85-92 (JO 25 janvier 1985), une ligne 1985-2013 (ville entière en 1973). Voie expresse U-2 prise pour la N87 (chaussée sud) et rond-point Duclos pour l'échangeur 8-Mai / N87 (à confirmer). Jonction voie ferrée - Grugliasco par l'avenue d'Honhoue ; droite de 354 m du bout de la rue Guy-Môquet à Jarrie. Fractions en base à partir de 1998 seulement.",
+    "38185": "Décret 73-766 (Grenoble-I à V, cinq lignes) et 85-92 (VI, sept lignes) au JO ; rempart de la Bastille par les murs BD TOPO ; ancienne ligne de Chambéry = Voie Est-Ouest ; « avenue du Général-de-Gaulle » de 1985 = avenue de l'Europe (lecture par 2014). Population 1985 : VI -2,3 points (Vigny-Musset coupé). 1801-1973 non tracé (an X, loi de 1891). Base : deux fractions seulement de 1973 à 1998.",
 }
 
 # Remarques de REMARQUES révisées après coup (la ville a été reprise) : elles

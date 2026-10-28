@@ -4057,6 +4057,43 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Grenoble (38185)
+
+### 145. Grenoble : Nord absent de 1941 à 1973 ; cinq puis six cantons réduits à deux de 1973 à 1998 ; 1801-1973 non tracé
+
+- **Sources** : arrêté du 9 brumaire an X (Bulletin des lois, an X, p. 433 ; Rondonneau, *Collection
+  générale des lois*, t. 8, p. 527-528, archive.org `bub_gb_A25OAAAAYAAJ`, OCR dans
+  `cartes/sorties/decoupe_grenoble/rondonneau_t8_djvu.txt`) ; loi du 14 avril 1891 (JO du 16 avril
+  1891 ; Bulletin des lois 1891, 1er semestre, p. 541), « fixation des limites » des trois cantons,
+  non lue ; décret 73-766 du 2 août 1973 (JO du 4 août, p. 8535-8536) ; décret 85-92 du
+  24 janvier 1985, art. 3 (JO du 25 janvier, p. 1045-1046).
+- **Base** :
+  - `16147#3812` Est, `#3813` Nord, `#3814` Sud de 1815 à 1941 ; de 1941 à 1973, Est et Sud
+    seulement (Nord manque) ;
+  - de 1973-09-23 à 1998-03-15, seulement `#3812` et `#3814`, sous les noms Grenoble-Est et
+    Grenoble-Sud, alors que le décret 73-766 crée Grenoble-I à V (1973-1985) et le décret 85-92
+    Grenoble-VI (1985) ;
+  - les six fractions (`#3812` 1er … `#3857` 6e) n'existent qu'à partir de 1998-03-15, et 1998
+    garde encore Est, Nord, Sud comme noms.
+- **À inscrire** :
+  - Nord (`#3813`) de 1941 à 1973 ;
+  - de 1973-09-23 à 1985-03-10, cinq fractions : I `#3812`, II `#3813`, III `#3814`, IV `#3848`,
+    V `#3849` (codes de 1999, à vérifier sur les décrets) ;
+  - de 1985-03-10 à 1998-03-15, les six, avec VI `#3857` ;
+  - les noms Grenoble-I à VI de 1973 à 1999.
+- **Lignes** : `38185-1973-a` à `-e` (1973-09-23 → 1985-03-10, `--morceaux 5`) et `38185-1985-a`
+  à `-g` (1985-03-10 → 2013-01-01), ancres datées, écrites le 28 octobre 2026 : I POINT(915000
+  6457500), II POINT(914300 6457800), III POINT(914300 6455800) en 1973 et POINT(914300 6456200)
+  en 1985, IV POINT(913750 6457600), V POINT(912406 6457905), VI POINT(913300 6455300). Fichiers :
+  `cartes/sorties/decoupe_grenoble/`.
+- **1801-1973** : l'arrêté de l'an X décrit le Nord et l'Est par une ligne de rues de la ville
+  close (chemin de la Bastille, montée de Chalemont, pont de bois, rue Marchande, Poissonnerie,
+  Pérollerie, Sainte-Claire, Perrière ?, rue Neuve, jusqu'au Gouvernement) et donne au troisième
+  arrondissement les faubourgs et tout le territoire entre le Drac et l'Isère hors les murs. Il
+  faut l'enceinte de 1801 et la loi de 1891 pour tracer ; non fait.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :
