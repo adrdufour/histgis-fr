@@ -1149,3 +1149,25 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **`("commune", insee)` en tête quand la première rue longe la limite** (rue de la
   Fontaine-Saint-Germain, le long de l'Indre) : le départ tombe au milieu de la rue, 700 m perdus.
   Partir de `("point", x, y)` au bout de la rue.
+
+- **Un boulevard à deux tracés sous le même nom** (Joué-lès-Tours, 28 octobre 2026 : bd Jean-Jaurès
+  par le pont sur la voie ferrée ou par l'ancien passage à niveau) : `trace_mixte` prend le pont,
+  les IRIS l'ancienne route. L'ortho 1965-1980 dit lequel existait ; chiffrer la poche (3,3 ha).
+  Un « C.D. 751 » de 1984 peut être la D751C actuelle, pas la voie rapide M751 postérieure :
+  lister `cpx_numero ~ '<n>'` et dater par l'ortho.
+- **Un nom de projet routier** (« voie expresse U-2 », Échirolles 1985) n'est dans aucune donnée :
+  la seule voie rapide qui joint les voies voisines du texte (N87). Une voie rapide à deux
+  chaussées entre échangeurs : `("route", …)` fait des centaines de mètres de raccords et des
+  boucles ; prendre une chaussée en SQL et la couper entre la voie d'avant et celle d'après.
+- **`("point", P)` suivi d'une voie qui continue des deux côtés de P** : le traceur part du mauvais
+  côté (Échirolles, 1 265 m au lieu de 320). Commencer au carrefour suivant, poser le tronçon en SQL.
+  Et `ST_EndPoint(ST_GeometryN(geom, n))` n'est pas le bout d'une voie : `ST_Dump(ST_LineMerge(voie))`.
+- **Un décret qui sectionne « par quartiers » avec renvoi au plan des lieux** (Tours, 4 août 1956,
+  dans `jorf_txt`) ne donne aucune ligne : ne pas tracer, demander le plan.
+- **Un canton « seul inchangé » après une annexion** (Tours, Centre-I de 1973 après Saint-Symphorien
+  1964) : prolonger son ancienne ligne par l'ancienne limite communale pour lui garder sa surface.
+  Un rattachement (84-1227) rend intérieure une partie d'une ligne reprise : la couper par
+  `ST_LineSubstring` aux points triples, ne pas reposer le tronçon intérieur.
+- **Une ancienne voie ferrée reprise par un tramway** (Tours, ligne des Sables) : `nature = 'Tramway'`
+  de `<insee>_fer` donne l'axe, l'ortho 1950-1965 le confirme.
+

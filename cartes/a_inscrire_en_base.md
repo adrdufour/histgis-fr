@@ -1083,6 +1083,36 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 - **Tracé** : `37261-1` (C-D, bras nord de la Loire) et `37261-2` (A-B), 1801 → 1956-08-04 ; ancres
   datées Nord POINT(525600 6702750), Centre POINT(525800 6701900), Sud POINT(525500 6700000).
   Le régime de 1956-1968 (Est et Ouest issus du Sud) demande un autre texte.
+
+### 144. Tours : régimes 1973, 1982 et 1985 ; Val-du-Cher et Nord-Ouest manquants ; 1956 sans limite
+
+- **Sources** : D. 73-724 du 23 juillet 1973 (JO du 25 juillet, p. 8085,
+  `jorf_txt/JORF_19730725_171_col.txt`), rectifié par D. 74-595 du 17 juin 1974 (JO du 22 juin,
+  p. 6636 : noms des voisines de Nord-III seulement) ; D. 82-58 du 20 janvier 1982 (JO du
+  22 janvier, p. 338) ; D. 84-1227 du 24 décembre 1984, art. 5 (JO du 30 décembre) ; décret du
+  4 août 1956 (JO du 5 août 1956, p. 7380, `jorf_txt/JORF_19560805_181_col.txt`).
+- **Base** :
+  - 1973-09-23 → 1985-03-10 : cinq fractions (Centre `37911#3721`, Nord `#3722`, Sud `#3723`,
+    Ouest `#3725`, Est `#3726`) ; Tours-Val-du-Cher-VI (`#3727`), créé par 73-724, n'apparaît
+    qu'en 1985 ;
+  - 1982-03-14 → 1985-03-10 : ni Tours-Nord-Ouest (`#3733`) ni Tours-Nord-Est (`#3722` reste
+    « Tours-Nord », nom « Tours-Nord-Est » seulement depuis 1999) ;
+  - pas de noms numérotés (Centre-I, Est-II, Nord-III, Ouest-IV, Sud-V, Val-du-Cher-VI) de 1973
+    à 2015 ;
+  - chronologie p. 799 (1973-07-23) : « Tours-S.O. » est une coquille, le décret dit Tours-Sud.
+- **À inscrire** : `#3727` Tours-Val-du-Cher-VI de 1973-09-23 à 1985-03-10 ; `#3733`
+  Tours-Nord-Ouest et le nom Tours-Nord-Est pour `#3722` de 1982-03-14 à 1985-03-10 ; les noms
+  numérotés de 1973.
+- **1956-1973** : le décret du 4 août 1956 sectionne Tours-Sud par QUARTIERS (Sud : Prébendes,
+  Liberté, Blaise-Pascal, Beaujardin ; Ouest : La Riche-Lamartine, Rabelais + Berthenay, Joué,
+  La Riche, Saint-Genouph, Savonnières, Villandry ; Est : la Fuye + Larçay, Montlouis,
+  Saint-Avertin, Saint-Pierre-des-Corps, Véretz, La Ville-aux-Dames), sans limite, « vu le plan
+  des lieux » : pas traçable sans le plan. Est et Ouest manquent toujours de 1956 à 1968 (n° 63).
+- **Lignes** : `37261-1973-*` (6), `37261-1982-*` (7), `37261-1985-*` (10), ancres datées par
+  régime, écrites le 28 octobre 2026 : Centre POINT(525800 6701900), Nord / Nord-Est
+  POINT(527500 6704500), Nord-Ouest POINT(525300 6705500), Ouest POINT(524000 6700500), Sud
+  POINT(525500 6700300), Est POINT(526800 6700900), Val-du-Cher POINT(526500 6698500).
+  Fichiers : `cartes/sorties/decoupe_tours_1973/`.
 ---
 
 ## Avignon (84007)
@@ -3977,6 +4007,53 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
   1985-03-10 : Centre POINT(600500 6635400), Est POINT(602500 6635500), Ouest POINT(598000
   6635000), Sud POINT(600000 6633000)) et `36044-1985-*` (mêmes points), écrites le 27 octobre
   2026. Fichiers : `cartes/sorties/decoupe_chateauroux/`.
+
+---
+
+## Joué-lès-Tours (37122)
+
+### 142. Joué-lès-Tours de 1976 à 1985 : la commune sans canton ; le canton de 1973-1982 sous le nom de Ballan-Miré
+
+- **Sources** : décret 84-1227 du 24 décembre 1984 (JO du 30 décembre 1984,
+  `jorf_txt/JORF_19841230_305_col.txt`, l. 14686) ; décret 73-724 du 23 juillet 1973 modifié par
+  74-595 ; décret 82-58 modifié par 82-133 (d'après Wikipédia, « Liste des cantons
+  d'Indre-et-Loire », non relus au JO).
+- **Base** : l'atome 17916 n'a aucun canton du 1976-03-07 au 1985-03-10. Le canton de 1973-1982
+  est en base sous l'unité 3731, affichée « Ballan-Miré », alors que ce canton n'est créé qu'en
+  1982, détaché de celui de Joué.
+- **À inscrire** : la commune entière au canton de Joué-lès-Tours sur 1976-1985 (de 1973 à 1982
+  avec Berthenay, La Riche, Saint-Genouph, Savonnières et Villandry ; de 1982 à 1985, Joué seule) ;
+  le nom « Joué-lès-Tours » pour 3731 de 1973 à 1982 ; vérifier ce que vaut la coupure du
+  1976-03-07.
+- **Lignes** : `37122-1`, 1985-03-10 → 2013-01-01, ancres Nord `17916#3728=nord`, Sud
+  `17916#3735=sud`, écrite le 28 octobre 2026 ; aucune ligne ne dépend de l'inscription (la ville
+  est entière avant 1985). Fichiers : `cartes/sorties/decoupe_joue/`.
+
+---
+
+## Échirolles (38151)
+
+### 143. Échirolles de 1973 à 1998 : la ville sans canton, puis sans fractions ; Bresson, Eybens et Poisat mal placés
+
+- **Sources** : décret n° 73-766 du 2 août 1973 (JO du 4 août 1973,
+  `jorf_txt/JORF_19730804_180_col.txt`, l. 2667-2672 : canton d'Échirolles = Bresson, Échirolles,
+  Eybens ; canton de Saint-Martin-d'Hères = Gières, Herbeys, Poisat, Saint-Martin-d'Hères, Venon) ;
+  décret n° 85-92 du 24 janvier 1985, art. 2 (JO du 25 janvier 1985, p. 1045-1046,
+  `jorf_txt/JORF_19850125_21_col.txt`, l. 1743-1771).
+- **Base** :
+  - `12421` entier à Grenoble-Sud (3814) jusqu'au 23 septembre 1973, puis aucun canton jusqu'au
+    15 mars 1998 ;
+  - fractions `12421#3847` (Échirolles-Est) et `#3854` (Échirolles-Ouest) de 1998 à 2013 seulement ;
+  - Bresson (`5758`) en 3814 de 1973 à 1985 (au lieu du canton d'Échirolles), puis 3847 dès 1985 ;
+  - Eybens (`13370`) sans canton de 1973 à 1985, 3855 dès 1985 ;
+  - Poisat (`27341`) en 3855 (Eybens, créé en 1985) dès 1973, au lieu de Saint-Martin-d'Hères ;
+  - unités 3847 et 3854 : versions seulement depuis 1999 (nom « Échirolles » de 1973-1985 absent).
+- **À inscrire** : Échirolles, Bresson et Eybens au canton d'Échirolles (3847 probable, nommé
+  « Échirolles ») de 1973 à 1985 ; Poisat à Saint-Martin-d'Hères de 1973 à 1985 ; les deux
+  fractions d'Échirolles de 1985 à 1998 ; noms Échirolles-Est / -Ouest dès 1985.
+- **Lignes** : `38151-1`, 1985-03-10 → 2013-01-01, ancres Ouest `12421#3854` POINT(912300 6453000),
+  Est `12421#3847` POINT(914700 6453400), écrite le 28 octobre 2026. La recette juge la ville au
+  15 mars 1998 tant que le trou reste. Fichiers : `cartes/sorties/decoupe_echirolles/`.
 
 ---
 
