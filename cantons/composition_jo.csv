@@ -243,7 +243,7 @@ JORF_19670722_169,67-594,1967-07-20,78,Versailles-Sud,,,,,fraction seule,ancre,h
 JORF_19670722_169,67-594,1967-07-20,78,Viroflay,Viroflay,78686,VIROFLAY,78,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701877
 JORF_19670722_169,67-594,1967-07-20,78,Viroflay,Vélizy-Villacoublay,78640,VELIZY-VILLACOUBLAY,78,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701877
 JORF_19670722_169,67-594,1967-07-20,78,Vésinet,Montesson,78418,MONTESSON,78,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701877
-JORF_19670722_169,67-594,1967-07-20,78,Vésinet,Vésinet,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701877
+JORF_19670722_169,67-594,1967-07-20,78,Vésinet,Vésinet,78650,LE VESINET,78,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701877
 JORF_19670722_169,67-589,1967-07-20,91,Arpajon,Arpajon,91021,ARPAJON,91,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701731
 JORF_19670722_169,67-589,1967-07-20,91,Arpajon,Avrainville,91041,AVRAINVILLE,91,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701731
 JORF_19670722_169,67-589,1967-07-20,91,Arpajon,Bruyères-le-Châtel,91115,BRUYERES-LE-CHATEL,91,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701731
@@ -468,7 +468,7 @@ JORF_19670722_169,67-591,1967-07-20,93,Aubervilliers-Est,,,,,fraction seule,ancr
 JORF_19670722_169,67-591,1967-07-20,93,Aulnay-sous-Bois Nord,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Aulnay-sous-Bois Sud,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Bagnolet,Bagnolet,93006,BAGNOLET,93,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
-JORF_19670722_169,67-591,1967-07-20,93,Blanc-Mesnil,Blanc-Mesnil,93007,LE BLANC-MESNIL,93,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
+JORF_19670722_169,67-591,1967-07-20,93,Blanc-Mesnil,Blanc-Mesnil,93007,LE BLANC-MESNIL,93,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Bobigny,Bobigny,93008,BOBIGNY,93,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Bondy,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Bourget,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
@@ -490,7 +490,7 @@ JORF_19670722_169,67-591,1967-07-20,93,Noisy-le-Sec,Noisyle-Sec,93053,NOISY-LE-S
 JORF_19670722_169,67-591,1967-07-20,93,Pavillons-sous-Bois,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Pré-Saint-Gervais,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Raincy,Clichy-sous-Bois,93014,CLICHY-SOUS-BOIS,93,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
-JORF_19670722_169,67-591,1967-07-20,93,Raincy,Raincy,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
+JORF_19670722_169,67-591,1967-07-20,93,Raincy,Raincy,93062,LE RAINCY,93,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Romainville,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Rosny-sous-Bois,Rosny-sous-Bois,93064,ROSNY-SOUS-BOIS,93,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
 JORF_19670722_169,67-591,1967-07-20,93,Saint-Denis-Nord-Est,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876542
@@ -520,13 +520,13 @@ JORF_19670722_169,67-592,1967-07-20,94,Fontenay-sous-Bois,Fontenay-sous-Bois,940
 JORF_19670722_169,67-592,1967-07-20,94,Ivry-sur-Seine-Ouest,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Joinville-le-Pont,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Kremlin-Bicêtre,Gentilly,94037,GENTILLY,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
-JORF_19670722_169,67-592,1967-07-20,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,94,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
+JORF_19670722_169,67-592,1967-07-20,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,94,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,L'Haÿ-les-Roses,Fresnes,94034,FRESNES,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,L'Haÿ-les-Roses,L'Haÿ-les-Roses,94038,L'HAY-LES-ROSES,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Maisons-Alfort-Nord,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Nogent-sur-Marne,Nogent-sur-Marne,94052,NOGENT-SUR-MARNE,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Orly,Orly,94054,ORLY,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
-JORF_19670722_169,67-592,1967-07-20,94,Perreux-sur-Marne,Perreux-sur-Marne,94058,LE PERREUX-SUR-MARNE,94,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
+JORF_19670722_169,67-592,1967-07-20,94,Perreux-sur-Marne,Perreux-sur-Marne,94058,LE PERREUX-SUR-MARNE,94,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Saint-Mandé,Saint-Mandé,94067,SAINT-MANDE,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Saint-Maur-des-Fossés - Centre,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
 JORF_19670722_169,67-592,1967-07-20,94,Saint-Maur-des-Fossés - Ouest,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000876543
@@ -865,7 +865,7 @@ JORF_19730717_164,73-652,1973-07-13,10,Romilly-sur-Seine-I,Saint-Loup-de-Buffign
 JORF_19730717_164,73-652,1973-07-13,10,Romilly-sur-Seine-I,Saint-Martin-de-Bossenay,10351,SAINT-MARTIN-DE-BOSSENAY,10,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
 JORF_19730717_164,73-652,1973-07-13,10,Sainte-Savine,Macey,10211,MACEY,10,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
 JORF_19730717_164,73-652,1973-07-13,10,Sainte-Savine,Montgueux,10248,MONTGUEUX,10,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
-JORF_19730717_164,73-652,1973-07-13,10,Sainte-Savine,Noes-près-Troyes,10265,LES NOES-PRES-TROYES,10,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
+JORF_19730717_164,73-652,1973-07-13,10,Sainte-Savine,Noes-près-Troyes,10265,LES NOES-PRES-TROYES,10,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
 JORF_19730717_164,73-652,1973-07-13,10,Sainte-Savine,Sainte-Savine,10362,SAINTE-SAVINE,10,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
 JORF_19730717_164,73-652,1973-07-13,10,Troyes-I,Saint-Parrèsaux-Tertres,10357,SAINT-PARRES-AUX-TERTRES,10,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
 JORF_19730717_164,73-652,1973-07-13,10,Troyes-I,Villechétif,10412,VILLECHETIF,10,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681692
@@ -981,7 +981,7 @@ JORF_19730717_164,73-657,1973-07-13,33,Bordeaux-V,,,,,fraction seule,ancre,https
 JORF_19730717_164,73-657,1973-07-13,33,Bordeaux-VI,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
 JORF_19730717_164,73-657,1973-07-13,33,Bordeaux-VII,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
 JORF_19730717_164,73-657,1973-07-13,33,Bordeaux-VIII,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
-JORF_19730717_164,73-657,1973-07-13,33,Bouscat,Bouscat,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
+JORF_19730717_164,73-657,1973-07-13,33,Bouscat,Bouscat,33069,LE BOUSCAT,33,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
 JORF_19730717_164,73-657,1973-07-13,33,Bouscat,Bruges,33075,BRUGES,33,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
 JORF_19730717_164,73-657,1973-07-13,33,Bègles,Bègles,33039,BEGLES,33,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
 JORF_19730717_164,73-657,1973-07-13,33,Talence,Talence,33522,TALENCE,33,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500390
@@ -1074,7 +1074,7 @@ JORF_19730717_164,73-661,1973-07-13,41,Blois-IV,Saint-Bohaire,41203,SAINT-BOHAIR
 JORF_19730717_164,73-661,1973-07-13,41,Blois-IV,Saint-Lubin-en-Vergonnois,41223,SAINT-LUBIN-EN-VERGONNOIS,41,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858267
 JORF_19730717_164,73-661,1973-07-13,41,Blois-IV,Saint-Sulpice,41230,Saint-Sulpice,41,disparue,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858267
 JORF_19730717_164,73-661,1973-07-13,41,Romilly-sur-Seine-II,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858267
-JORF_19730717_164,73-662,1973-07-13,42,Chambon-Feugerolles,Chambon-Feugerolles,42044,LE CHAMBON-FEUGEROLLES,42,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307733
+JORF_19730717_164,73-662,1973-07-13,42,Chambon-Feugerolles,Chambon-Feugerolles,42044,LE CHAMBON-FEUGEROLLES,42,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307733
 JORF_19730717_164,73-662,1973-07-13,42,Chambon-Feugerolles,La Ricamarie,42183,LA RICAMARIE,42,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307733
 JORF_19730717_164,73-662,1973-07-13,42,Firminy,Caloire,42031,CALOIRE,42,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307733
 JORF_19730717_164,73-662,1973-07-13,42,Firminy,Firminy,42095,FIRMINY,42,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307733
@@ -1415,16 +1415,16 @@ JORF_19730717_164,73-675,1973-07-13,81,Castres-Sud,Navès,81195,NAVES,81,exact,a
 JORF_19730717_164,73-675,1973-07-13,81,Castres-Sud,Saïx,81273,SAIX,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Boissezon,81034,BOISSEZON,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Pont-de-l'Arn,81209,PONT-DE-LARN,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
-JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Rialet,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
+JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Rialet,81223,LE RIALET,81,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Saint-Salvy-de-la-Balme,81269,SAINT-SALVY-DE-LA-BALME,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
-JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Vintrou,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
+JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Nord-Est,Vintrou,81321,LE VINTROU,81,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Sud-Ouest,Aiguefonde,81002,AIGUEFONDE,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Sud-Ouest,Aussillon,81021,AUSSILLON,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-675,1973-07-13,81,Mazamet-Sud-Ouest,Caucalières,81066,CAUCALIERES,81,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000682437
 JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-I,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
 JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-II,Albefeuille-Lagarde,82001,ALBEFEUILLE-LAGARDE,82,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
 JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-II,Barry-d'Islemade,82011,BARRY-D'ISLEMADE,82,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
-JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-II,Barthes,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
+JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-II,Barthes,82012,LES BARTHES,82,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
 JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-II,Labastide-du-Temple,82080,LABASTIDE-DU-TEMPLE,82,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
 JORF_19730717_164,73-676,1973-07-13,82,Castelsarrasin-II,Meauzac,82108,MEAUZAC,82,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
 JORF_19730717_164,73-676,1973-07-13,82,Moissac-I,Boudou,82019,BOUDOU,82,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307735
@@ -1777,7 +1777,7 @@ JORF_19730725_171,73-721,1973-07-23,30,Alès - Nord-Est,Saint-Julien-les-Rosiers
 JORF_19730725_171,73-721,1973-07-23,30,Alès - Nord-Est,Saint-Martin-de-Valgalgues,30284,SAINT-MARTIN-DE-VALGALGUES,30,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
 JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Mejannes-lès-Alès,30165,MEJANNES-LES-ALES,30,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
 JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Mons,30173,MONS,30,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
-JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Plans,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
+JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Plans,30197,LES PLANS,30,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
 JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Saint-Hilaire-de-Brethmas,30259,SAINT-HILAIRE-DE-BRETHMAS,30,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
 JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Saint-Privatdes-Vieux,30294,SAINT-PRIVAT-DES-VIEUX,30,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
 JORF_19730725_171,73-721,1973-07-23,30,Alès - Sud-Est,Salindres,30305,SALINDRES,30,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681262
@@ -1912,7 +1912,7 @@ JORF_19730725_171,73-727,1973-07-23,49,Angers-I,Ecouflant,49129,ECOUFLANT,49,exa
 JORF_19730725_171,73-727,1973-07-23,49,Angers-I,Pellouailles-les-Vignes,49238,PELLOUAILLES-LES-VIGNES,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Angers-I,Saint-Sylvain-d'Anjou,49323,SAINT-SYLVAIN-D'ANJOU,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Angers-I,Villevêque,49377,VILLEVEQUE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
-JORF_19730725_171,73-727,1973-07-23,49,Angers-II,Plessis-Grammoire,49241,LE PLESSIS-GRAMMOIRE,49,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
+JORF_19730725_171,73-727,1973-07-23,49,Angers-II,Plessis-Grammoire,49241,LE PLESSIS-GRAMMOIRE,49,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Angers-II,Saint-Barthélemy-d'Anjou,49267,SAINT-BARTHELEMY-D'ANJOU,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Angers-IV,Andard,49004,ANDARD,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Angers-IV,Brain-sur-l'Authion,49042,BRAIN-SUR-L'AUTHION,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
@@ -1929,7 +1929,7 @@ JORF_19730725_171,73-727,1973-07-23,49,Angers-VII,Le Plessis-Macé,49242,LE PLES
 JORF_19730725_171,73-727,1973-07-23,49,Angers-VII,Montreuil-Juigné,49214,MONTREUIL-JUIGNE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Angers-VII,Saint-Lambert-la-Potherie,49294,SAINT-LAMBERT-LA-POTHERIE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Cholet-I,Saint-Léger-sous-Cholet,49299,SAINT-LEGER-SOUS-CHOLET,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
-JORF_19730725_171,73-727,1973-07-23,49,Cholet-II,Cerqueuxde-Maulévrier,49058,Les Cerqueux-de-Maulévrier,49,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
+JORF_19730725_171,73-727,1973-07-23,49,Cholet-II,Cerqueuxde-Maulévrier,49058,Les Cerqueux-de-Maulévrier,49,disparue sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Cholet-II,Chanteloup-les-Bois,49070,CHANTELOUP-LES-BOIS,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Cholet-II,Maulévrier,49192,MAULEVRIER,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
 JORF_19730725_171,73-727,1973-07-23,49,Cholet-II,Mazières-en-Mauges,49195,MAZIERES-EN-MAUGES,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000307523
@@ -1970,7 +1970,7 @@ JORF_19730725_171,73-729,1973-07-23,65,Aureilhan,Oursbelille,65350,OURSBELILLE,6
 JORF_19730725_171,73-729,1973-07-23,65,Aureilhan,Pintac,65364,PINTAC,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
 JORF_19730725_171,73-729,1973-07-23,65,Aureilhan,Sarniguet,65406,SARNIGUET,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
 JORF_19730725_171,73-729,1973-07-23,65,Aureilhan,Tarasteix,65439,TARASTEIX,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
-JORF_19730725_171,73-729,1973-07-23,65,Lourdes-Est,Angles,,,,ambigu hors departement,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
+JORF_19730725_171,73-729,1973-07-23,65,Lourdes-Est,Angles,65011,LES ANGLES,65,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
 JORF_19730725_171,73-729,1973-07-23,65,Lourdes-Est,Arcizac-ez-Angles,65020,ARCIZAC-EZ-ANGLES,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
 JORF_19730725_171,73-729,1973-07-23,65,Lourdes-Est,Arrayou-Lahitte,65247,ARRAYOU-LAHITTE,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
 JORF_19730725_171,73-729,1973-07-23,65,Lourdes-Est,Arrodets-ez-Angles,65033,ARRODETS-EZ-ANGLES,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000681265
@@ -2258,7 +2258,7 @@ JORF_19730804_180,73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Fragnes,71
 JORF_19730804_180,73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,La Loyère,71265,LA LOYERE,71,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
 JORF_19730804_180,73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Sassenay,71502,SASSENAY,71,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
 JORF_19730804_180,73-769,1973-08-02,71,Chalon-sur-Saône-périphérie,Virey-le-Grand,71585,VIREY-LE-GRAND,71,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
-JORF_19730804_180,73-769,1973-08-02,71,Creusot-Est,Breuil,,,,ambigu hors departement,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
+JORF_19730804_180,73-769,1973-08-02,71,Creusot-Est,Breuil,71059,LE BREUIL,71,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
 JORF_19730804_180,73-769,1973-08-02,71,Creusot-Est,Saint-Firmin,71413,SAINT-FIRMIN,71,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
 JORF_19730804_180,73-769,1973-08-02,71,Creusot-Est,Saint-Sernin-du-Bois,71479,SAINT-SERNIN-DU-BOIS,71,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
 JORF_19730804_180,73-769,1973-08-02,71,Creusot-Ouest,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303371
@@ -2332,7 +2332,7 @@ JORF_19730804_180,73-771,1973-08-02,83,La Valette,La Valette,83144,LA VALETTE-DU
 JORF_19730804_180,73-771,1973-08-02,83,La Valette,Le Pradet,83098,LE PRADET,83,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-771,1973-08-02,83,La Valette,Le Revest,83103,LE REVEST-LES-EAUX,83,prefixe,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-771,1973-08-02,83,Muy,Le Puget-sur-Argens,83099,PUGET-SUR-ARGENS,83,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
-JORF_19730804_180,73-771,1973-08-02,83,Muy,Muy,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
+JORF_19730804_180,73-771,1973-08-02,83,Muy,Muy,83086,LE MUY,83,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-771,1973-08-02,83,Muy,Roquebrunesur-Argens,83107,ROQUEBRUNE-SUR-ARGENS,83,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-771,1973-08-02,83,Saint-Mandrier,Saint-Mandrier,83153,Saint-Mandrier,83,disparue,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-771,1973-08-02,83,Saint-Raphaël,Saint-Raphaël,83118,SAINT-RAPHAEL,83,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
@@ -2345,7 +2345,7 @@ JORF_19730804_180,73-771,1973-08-02,83,Toulon-VI,,,,,fraction seule,ancre,https:
 JORF_19730804_180,73-771,1973-08-02,83,Toulon-VII,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-771,1973-08-02,83,Toulon-VIII,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303372
 JORF_19730804_180,73-772,1973-08-02,84,Avignon-Est,Morières-lès-Avignon,84081,MORIERES-LES-AVIGNON,84,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858749
-JORF_19730804_180,73-772,1973-08-02,84,Avignon-Nord,Pontet,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858749
+JORF_19730804_180,73-772,1973-08-02,84,Avignon-Nord,Pontet,84092,LE PONTET,84,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858749
 JORF_19730804_180,73-772,1973-08-02,84,Avignon-Ouest,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858749
 JORF_19730804_180,73-772,1973-08-02,84,Avignon-Sud,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000858749
 JORF_19730804_180,73-773,1973-08-02,85,La Roche-sur-Yon-Nord,Mouilleron-le-Captif,85155,MOUILLERON-LE-CAPTIF,85,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000500855
@@ -2628,7 +2628,7 @@ JORF_19730817_190,73-818,1973-08-16,62,Béthune-Sud,Labeuvrière,62479,LABEUVRIE
 JORF_19730817_190,73-818,1973-08-16,62,Béthune-Sud,Lapugnoy,62489,LAPUGNOY,62,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
 JORF_19730817_190,73-818,1973-08-16,62,Béthune-Sud,Verquigneul,62847,VERQUIGNEUL,62,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
 JORF_19730817_190,73-818,1973-08-16,62,Béthune-Sud,Verquin,62848,VERQUIN,62,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
-JORF_19730817_190,73-818,1973-08-16,62,Calais-Centre,Atta ques,,,,aucun,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
+JORF_19730817_190,73-818,1973-08-16,62,Calais-Centre,Atta ques,62043,LES ATTAQUES,62,exact sans article,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
 JORF_19730817_190,73-818,1973-08-16,62,Calais-Centre,Coulogne,62244,COULOGNE,62,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
 JORF_19730817_190,73-818,1973-08-16,62,Calais-Est,Marck,62548,MARCK,62,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
 JORF_19730817_190,73-818,1973-08-16,62,Cambrin,Annequin,62034,ANNEQUIN,62,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000693761
@@ -2771,7 +2771,7 @@ JORF_19730817_190,73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Aureil,8700
 JORF_19730817_190,73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Feytiat,87065,FEYTIAT,87,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
 JORF_19730817_190,73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Panazol,87114,PANAZOL,87,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
 JORF_19730817_190,73-821,1973-08-16,87,Limoges-Panazol (Limoges-XII),Saint-Just-le-Martel,87156,SAINT-JUST-LE-MARTEL,87,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
-JORF_19730817_190,73-821,1973-08-16,87,Limôges-Le Palais (Limoges-X),Palais-sur-Vienne,87113,LE PALAIS-SUR-VIENNE,87,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
+JORF_19730817_190,73-821,1973-08-16,87,Limôges-Le Palais (Limoges-X),Palais-sur-Vienne,87113,LE PALAIS-SUR-VIENNE,87,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
 JORF_19730817_190,73-821,1973-08-16,87,Saint-Junien-Est,Javerdat,87078,JAVERDAT,87,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
 JORF_19730817_190,73-821,1973-08-16,87,Saint-Junien-Est,Oradour-sur-Glane,87110,ORADOUR-SUR-GLANE,87,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
 JORF_19730817_190,73-821,1973-08-16,87,Saint-Junien-Est,Saint-Bricesur-Vienne,87140,SAINT-BRICE-SUR-VIENNE,87,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303618
@@ -2842,7 +2842,7 @@ JORF_19730819_192,73-825,1973-08-18,20,Tallano-Scopamène,Sorbollano,20285,Sorbo
 JORF_19730819_192,73-825,1973-08-18,20,Tallano-Scopamène,Zerubia,20357,Zérubia,20,disparue,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303619
 JORF_19730819_192,73-825,1973-08-18,20,Tallano-Scopamène,Zoza,20363,Zoza,20,disparue,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000303619
 JORF_19740622_146,74-595,1974-06-17,37,Tours-Nord-III,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000304603
-JORF_19740911_213,74-769,1974-09-02,65,Lourdes-Est,Angles,,,,ambigu hors departement,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000857738
+JORF_19740911_213,74-769,1974-09-02,65,Lourdes-Est,Angles,65011,LES ANGLES,65,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000857738
 JORF_19740911_213,74-769,1974-09-02,65,Lourdes-Est,Arcizac-ez-Angles,65020,ARCIZAC-EZ-ANGLES,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000857738
 JORF_19740911_213,74-769,1974-09-02,65,Lourdes-Est,Arrayou-Lahitte,65247,ARRAYOU-LAHITTE,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000857738
 JORF_19740911_213,74-769,1974-09-02,65,Lourdes-Est,Arrodets-ez-Angles,65033,ARRODETS-EZ-ANGLES,65,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000857738
@@ -2895,7 +2895,7 @@ JORF_19751019_244,75-955,1975-10-16,49,Angers-I,Ecouflant,49129,ECOUFLANT,49,exa
 JORF_19751019_244,75-955,1975-10-16,49,Angers-I,Pellouailles-les-Vignes,49238,PELLOUAILLES-LES-VIGNES,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Angers-I,Saint-Sylvain-d'Anjou,49323,SAINT-SYLVAIN-D'ANJOU,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Angers-I,Villevêque,49377,VILLEVEQUE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
-JORF_19751019_244,75-955,1975-10-16,49,Angers-II,Plessis-Grammoire,49241,LE PLESSIS-GRAMMOIRE,49,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
+JORF_19751019_244,75-955,1975-10-16,49,Angers-II,Plessis-Grammoire,49241,LE PLESSIS-GRAMMOIRE,49,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Angers-II,Saint-Barthélemy-d'Anjou,49267,SAINT-BARTHELEMY-D'ANJOU,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Angers-III,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Angers-IV,Andard,49004,ANDARD,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
@@ -2910,7 +2910,7 @@ JORF_19751019_244,75-955,1975-10-16,49,Angers-VII,Cantenay-Epinard,49055,CANTENA
 JORF_19751019_244,75-955,1975-10-16,49,Angers-VII,Montreuil-Juigné,49214,MONTREUIL-JUIGNE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Angers-VII,Saint-Lambert-la-Potherie,49294,SAINT-LAMBERT-LA-POTHERIE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Cholet-I,Saint-Léger-sous-Cholet,49299,SAINT-LEGER-SOUS-CHOLET,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
-JORF_19751019_244,75-955,1975-10-16,49,Cholet-II,Cerqueux-de-Maulévrier,49058,Les Cerqueux-de-Maulévrier,49,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
+JORF_19751019_244,75-955,1975-10-16,49,Cholet-II,Cerqueux-de-Maulévrier,49058,Les Cerqueux-de-Maulévrier,49,disparue sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Cholet-II,Chanteloup-les-Bois,49070,CHANTELOUP-LES-BOIS,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Cholet-II,Maulévrier,49192,MAULEVRIER,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
 JORF_19751019_244,75-955,1975-10-16,49,Cholet-II,Mazièresen-Mauges,49195,MAZIERES-EN-MAUGES,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000689913
@@ -2980,12 +2980,12 @@ JORF_19751109_261,75-1033,1975-10-28,77,Tournan-en-Brie,Tournan-en-Brie,77470,TO
 JORF_19751109_261,75-1033,1975-10-28,77,Vaires-sur-Marne,Brou-sur-Chantereine,77055,BROU-SUR-CHANTEREINE,77,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000694250
 JORF_19751109_261,75-1033,1975-10-28,77,Vaires-sur-Marne,Vaires-sur-Marne,77479,VAIRES-SUR-MARNE,77,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000694250
 JORF_19760122_18,76-57,1976-01-15,78,Saint-Germain-en-Laye Sud),,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000305141
-JORF_19760129_24,76-76,1976-01-20,93,Bondy Nord-Ouest. « Le canton des Pavillons-sous-Bois,Pavillons-sous-Bois,93057,LES PAVILLONS-SOUS-BOIS,93,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
+JORF_19760129_24,76-76,1976-01-20,93,Bondy Nord-Ouest. « Le canton des Pavillons-sous-Bois,Pavillons-sous-Bois,93057,LES PAVILLONS-SOUS-BOIS,93,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
 JORF_19760129_24,76-76,1976-01-20,93,Bondy qui prend le nom de Bondy Sud-Est,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
 JORF_19760129_24,76-76,1976-01-20,93,Montreuil Est,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
 JORF_19760129_24,76-76,1976-01-20,93,Pantin qui prend le nom de Pantin Est,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
 JORF_19760129_24,76-76,1976-01-20,93,Pré-Saint-Gervais qui prend le nom de canton des Lilas,Le Pré-Saint-Gervais,93061,LE PRE-SAINT-GERVAIS,93,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
-JORF_19760129_24,76-76,1976-01-20,93,Pré-Saint-Gervais qui prend le nom de canton des Lilas,Lilas,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
+JORF_19760129_24,76-76,1976-01-20,93,Pré-Saint-Gervais qui prend le nom de canton des Lilas,Lilas,93045,LES LILAS,93,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
 JORF_19760129_24,76-76,1976-01-20,93,Romainville,Romainville,93063,ROMAINVILLE,93,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688992
 JORF_19760129_24,76-77,1976-01-20,94,Bry-sur-Marne,Brysur-Marne,94015,BRY-SUR-MARNE,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
 JORF_19760129_24,76-77,1976-01-20,94,Cachan,Cachan,94016,CACHAN,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
@@ -2995,7 +2995,7 @@ JORF_19760129_24,76-77,1976-01-20,94,Chennevières-sur-Marne,Noiseau,94053,NOISE
 JORF_19760129_24,76-77,1976-01-20,94,Créteil-Nord,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
 JORF_19760129_24,76-77,1976-01-20,94,Créteil-Sud,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
 JORF_19760129_24,76-77,1976-01-20,94,Joinville-le-Pont,Joinville-le-Pont,94042,JOINVILLE-LE-PONT,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
-JORF_19760129_24,76-77,1976-01-20,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,94,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
+JORF_19760129_24,76-77,1976-01-20,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,94,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
 JORF_19760129_24,76-77,1976-01-20,94,L'Haÿ-les-Roses,L'Haÿles-Roses,94038,L'HAY-LES-ROSES,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
 JORF_19760129_24,76-77,1976-01-20,94,Orly,Orly,94054,ORLY,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
 JORF_19760129_24,76-77,1976-01-20,94,Thiais,Chevilly-Larue,94021,CHEVILLY-LARUE,94,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000688995
@@ -3063,7 +3063,7 @@ JORF_19820116_13,82-23,1982-01-15,08,Villers-Semeuse,Saint-Lau rent,08385,SAINT-
 JORF_19820116_13,82-23,1982-01-15,08,Villers-Semeuse,Ville-sur-Lumes,08483,VILLE-SUR-LUMES,08,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000700962
 JORF_19820116_13,82-23,1982-01-15,08,Villers-Semeuse,Villers-Semeuse,08480,VILLERS-SEMEUSE,08,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000700962
 JORF_19820116_13,82-23,1982-01-15,08,Villers-Semeuse,Vivier-au-Court,08488,VIVIER-AU-COURT,08,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000700962
-JORF_19820116_13,82-24,1982-01-15,12,Rodez-Est,Monas tère,12146,LE MONASTERE,12,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516886
+JORF_19820116_13,82-24,1982-01-15,12,Rodez-Est,Monas tère,12146,LE MONASTERE,12,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516886
 JORF_19820116_13,82-24,1982-01-15,12,Rodez-Est,Sainte-Radegonde,12241,SAINTE-RADEGONDE,12,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516886
 JORF_19820116_13,82-24,1982-01-15,12,Rodez-Nord,Onet-le-Château,12176,ONET-LE-CHATEAU,12,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516886
 JORF_19820116_13,82-24,1982-01-15,12,Rodez-Nord,Sébazac-Concourès,12264,SEBAZAC-CONCOURES,12,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516886
@@ -3098,7 +3098,7 @@ JORF_19820116_13,82-26,1982-01-15,17,La Rochelle-V,Saint-Xandre,17414,SAINT-XAND
 JORF_19820116_13,82-26,1982-01-15,17,La Rochelle-VI,Angoulins,17010,ANGOULINS,17,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701316
 JORF_19820116_13,82-26,1982-01-15,17,La Rochelle-VI,Aytré,17028,AYTRE,17,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701316
 JORF_19820116_13,82-26,1982-01-15,17,La Rochelle-VI,Châtelaillon-Plage,17094,CHATELAILLON-PLAGE,17,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000701316
-JORF_19820116_13,82-27,1982-01-15,28,Dreux-Est,Chapelle-Forainvilliers,28076,LA CHAPELLE-FORAINVILLIERS,28,ressemblance,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516891
+JORF_19820116_13,82-27,1982-01-15,28,Dreux-Est,Chapelle-Forainvilliers,28076,LA CHAPELLE-FORAINVILLIERS,28,exact sans article,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516891
 JORF_19820116_13,82-27,1982-01-15,28,Dreux-Est,Charpont,28082,CHARPONT,28,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516891
 JORF_19820116_13,82-27,1982-01-15,28,Dreux-Est,Cherisy,28098,CHERISY,28,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516891
 JORF_19820116_13,82-27,1982-01-15,28,Dreux-Est,Ecluzelles,28136,ECLUZELLES,28,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000516891
@@ -3168,7 +3168,7 @@ JORF_19820116_13,82-29,1982-01-15,33,Lormont,Lormont,33249,LORMONT,33,exact,vote
 JORF_19820116_13,82-29,1982-01-15,33,Lormont,Saint-Louis-de-Montferrand,33434,SAINT-LOUIS-DE-MONTFERRAND,33,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
 JORF_19820116_13,82-29,1982-01-15,33,Pessac-I,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
 JORF_19820116_13,82-29,1982-01-15,33,Pessac-II,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
-JORF_19820116_13,82-29,1982-01-15,33,Saint-Médard-en-Jalles,Haillan,,,,aucun,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
+JORF_19820116_13,82-29,1982-01-15,33,Saint-Médard-en-Jalles,Haillan,33200,LE HAILLAN,33,exact sans article,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
 JORF_19820116_13,82-29,1982-01-15,33,Saint-Médard-en-Jalles,Saint-Aubin-de-Médoc,33376,SAINT-AUBIN-DE-MEDOC,33,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
 JORF_19820116_13,82-29,1982-01-15,33,Saint-Médard-en-Jalles,Saint-Médarden-Jalles,33449,SAINT-MEDARD-EN-JALLES,33,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
 JORF_19820116_13,82-29,1982-01-15,33,Saint-Médard-en-Jalles,Taillan,,,,aucun,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000333529
@@ -3221,7 +3221,7 @@ JORF_19820116_13,82-35,1982-01-15,62,Liévin-Sud,Angres,62032,ANGRES,62,exact,an
 JORF_19820116_13,82-35,1982-01-15,62,Liévin-Sud,Eleu dit-Leauwette,62291,ELEU-DIT-LEAUWETTE,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
 JORF_19820116_13,82-35,1982-01-15,62,Outreau,Equihen-Plage,62300,EQUIHEN-PLAGE,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
 JORF_19820116_13,82-35,1982-01-15,62,Outreau,Outreau,62643,OUTREAU,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
-JORF_19820116_13,82-35,1982-01-15,62,Outreau,Portel,11295,Portel,11,autre departement,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
+JORF_19820116_13,82-35,1982-01-15,62,Outreau,Portel,62667,LE PORTEL,62,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
 JORF_19820116_13,82-35,1982-01-15,62,Samer,Carly,62214,CARLY,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
 JORF_19820116_13,82-35,1982-01-15,62,Samer,Condette,62235,CONDETTE,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
 JORF_19820116_13,82-35,1982-01-15,62,Samer,Dannes,62264,DANNES,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
@@ -3242,7 +3242,7 @@ JORF_19820116_13,82-35,1982-01-15,62,Samer,Verlincthun,62845,VERLINCTHUN,62,exac
 JORF_19820116_13,82-35,1982-01-15,62,Samer,Wierre-au-Bois,62888,WIERRE-AU-BOIS,62,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880300
 JORF_19820116_13,82-36,1982-01-15,67,Bischheim,Bischheim,67043,BISCHHEIM,67,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880303
 JORF_19820116_13,82-36,1982-01-15,67,Bischheim,Hoenheim,67204,HOENHEIM,67,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000880303
-JORF_19820116_13,82-38,1982-01-15,78,Plaisir,Clayes-sous-Bois,78165,LES CLAYES-SOUS-BOIS,78,ressemblance,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000335803
+JORF_19820116_13,82-38,1982-01-15,78,Plaisir,Clayes-sous-Bois,78165,LES CLAYES-SOUS-BOIS,78,exact sans article,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000335803
 JORF_19820116_13,82-38,1982-01-15,78,Plaisir,Plaisir,78490,PLAISIR,78,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000335803
 JORF_19820116_13,82-38,1982-01-15,78,Plaisir,Thivernal-Grignon,78615,THIVERVAL-GRIGNON,78,ressemblance,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000335803
 JORF_19820116_13,82-37,1982-01-15,88,Saint-Dié-Est,Ban-de-Laveline,88032,BAN-DE-LAVELINE,88,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000517247
@@ -3329,7 +3329,7 @@ JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,La Trinité,27659,LA TRINITE,27,
 JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,Miserey,27410,MISEREY,27,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
 JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,Saint-Vigor,27611,SAINT-VIGOR,27,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
 JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,Sassey,27615,SASSEY,27,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
-JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,Val-David,27668,LE VAL-DAVID,27,ressemblance,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
+JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,Val-David,27668,LE VAL-DAVID,27,exact sans article,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
 JORF_19820122_18,82-56,1982-01-20,27,Evreux-Est,Viel-Evreux,,,,aucun,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
 JORF_19820122_18,82-56,1982-01-20,27,Evreux-Ouest,Arnièressur-Iton,27020,ARNIERES-SUR-ITON,27,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
 JORF_19820122_18,82-56,1982-01-20,27,Evreux-Ouest,Aulnay-sur-Iton,27023,AULNAY-SUR-ITON,27,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000699082
@@ -3443,7 +3443,7 @@ JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,Cantenay-Epinard,49055,CANTENAY-
 JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,La Meignanne,49196,LA MEIGNANNE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
 JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,La Membrolle-sur-Longuenée,49200,LA MEMBROLLE-SUR-LONGUENEE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
 JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,Montreuil-Juigné,49214,MONTREUIL-JUIGNE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
-JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,Plessis-Macé,49242,LE PLESSIS-MACE,49,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
+JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,Plessis-Macé,49242,LE PLESSIS-MACE,49,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
 JORF_19820122_18,82-61,1982-01-20,49,Angers-VII,Saint-Lambert-la-Potherie,49294,SAINT-LAMBERT-LA-POTHERIE,49,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
 JORF_19820122_18,82-61,1982-01-20,49,Angers-VIII,Avrilllé,49015,AVRILLE,49,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336754
 JORF_19820122_18,82-62,1982-01-20,56,Lanester,Lanester,56098,LANESTER,56,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000336757
@@ -4442,7 +4442,7 @@ JORF_19841230_305,84-1242,1984-12-24,94,Créteil-Nord,,,,,fraction seule,vote (a
 JORF_19841230_305,84-1242,1984-12-24,94,Créteil-Ouest,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,Créteil-Sud,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,Fontenay-sous-Bois-Ouest,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
-JORF_19841230_305,84-1242,1984-12-24,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,94,ressemblance,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
+JORF_19841230_305,84-1242,1984-12-24,94,Kremlin-Bicêtre,Kremlin-Bicêtre,94043,LE KREMLIN-BICETRE,94,exact sans article,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,L'Haÿ-les-Roses,L'Haÿ-les-Roses,94038,L'HAY-LES-ROSES,94,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,Saint-Maur-La Varenne,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,Sucy-en-Brie,Sucyen-Brie,94071,SUCY-EN-BRIE,94,exact,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
@@ -4458,7 +4458,7 @@ JORF_19841230_305,84-1242,1984-12-24,94,Vincennes-Est,,,,,fraction seule,vote (a
 JORF_19841230_305,84-1242,1984-12-24,94,Vitry-sur-Seinc-Est,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,Vitry-sur-Seine-Nord,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
 JORF_19841230_305,84-1242,1984-12-24,94,Vitry-sur-Seine-Ouest,,,,,fraction seule,vote (ancre contredite),https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000332691
-JORF_19850123_19,85-71,1985-01-22,10,La Chapelle-Saint-Luc,Noës-près-Troyes,10265,LES NOES-PRES-TROYES,10,ressemblance,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000508624
+JORF_19850123_19,85-71,1985-01-22,10,La Chapelle-Saint-Luc,Noës-près-Troyes,10265,LES NOES-PRES-TROYES,10,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000508624
 JORF_19850123_19,85-73,1985-01-22,15,Aurillac-I,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000886911
 JORF_19850123_19,85-73,1985-01-22,15,Aurillac-II,Paul-des-Landes,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000886911
 JORF_19850123_19,85-73,1985-01-22,15,Aurillac-II,Saint-,,,,prefixe ambigu,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000886911
@@ -4579,7 +4579,7 @@ JORF_19850124_20,85-83,1985-01-23,91,Grigny,Grigny,91286,GRIGNY,91,exact,ancre,h
 JORF_19850124_20,85-83,1985-01-23,91,Juvisy-sur-Orge,Juvisy-sur-Orge,91326,JUVISY-SUR-ORGE,91,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000501924
 JORF_19850124_20,85-83,1985-01-23,91,Massy-Est,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000501924
 JORF_19850124_20,85-83,1985-01-23,91,Savigny-sur-Orge,,,,,fraction seule,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000501924
-JORF_19850124_20,85-83,1985-01-23,91,Ulis,Ulis,,,,aucun,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000501924
+JORF_19850124_20,85-83,1985-01-23,91,Ulis,Ulis,91692,LES ULIS,91,exact sans article,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000501924
 JORF_19850124_20,85-83,1985-01-23,91,Viry-Châtillon,Viry-Châtillon,91687,VIRY-CHATILLON,91,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000501924
 JORF_19850125_21,85-92,1985-01-24,38,Bourgoin-Jallieu-Nord,Ruy,38348,RUY,38,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000323359
 JORF_19850125_21,85-92,1985-01-24,38,Bourgoin-Jallieu-Nord,Saint-Chef,38374,SAINT-CHEF,38,exact,ancre,https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000323359

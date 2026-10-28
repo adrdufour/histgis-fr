@@ -303,6 +303,18 @@ def apparie(nom, dep, vivantes, disparues, prefixes=None, interdits=()):
         if libre(i):
             return i, n, "disparue"
 
+    # L'ARTICLE PERDU — ajouté le 26 octobre 2026, après Le Portel. Le décret
+    # écrit « Portel », GEOFLA « LE PORTEL » : rien ne trouvait la commune dans
+    # le Pas-de-Calais, et le repli national rendait Portel-des-Corbières
+    # (Aude), dont le trou de 1973-1998 restait bloqué par deux actes qui ne la
+    # concernent pas. Même département, correspondance exacte seulement.
+    for art in ("le", "la", "les", "l"):
+        for source, q in ((vivantes, "exact"), (disparues, "disparue")):
+            if art + k in source.get(dep, {}):
+                i, n = source[dep][art + k]
+                if libre(i):
+                    return i, n, q + " sans article"
+
     # --- LE PRÉFIXE AVANT LA RESSEMBLANCE -----------------------------------
     # Ajouté le 28 août 2026, après Colleville / Cléville.
     #

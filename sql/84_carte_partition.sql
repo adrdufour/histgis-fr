@@ -767,6 +767,34 @@ BEGIN
     -- jour ; s'il en paraît un, le remède est dans le `coalesce`, pas ici.
     DELETE FROM t84_src WHERE geom IS NULL OR ST_IsEmpty(geom);
 
+    -- LES MUETS — 27 octobre 2026, signalé par Adrien (Missy-aux-Bois, 02).
+    -- Une commune qu'ANR dessine à la date mais qui n'a AUCUN rattachement
+    -- n'entrait pas dans `vivant` : son sol devenait un trou interne, et le
+    -- comblement (§ e) le donnait au voisin. Missy, sans canton de 1941 à
+    -- 1968, était dessinée par Saconin-et-Breuil (11,7 km² au lieu de 8,7) :
+    -- l'erreur de la base devenait invisible sur la carte, de 177 à 655
+    -- communes par année entre 1945 et 1985. *Le comblement est fait pour les
+    -- interstices du dessin, pas pour les trous de la base.*
+    -- Le muet entre dans le treillis pour y tenir son sol, et n'en sort pas
+    -- (`dedans` faux) : sa place reste BLANCHE, et `check_partition` la compte.
+    -- Garde : un polygone qu'un atome vivant recouvre à plus de 5 % n'est pas
+    -- un muet mais un ancien contour (fusion, rétablissement) — il reste dehors.
+    INSERT INTO t84_src (atom_id, fraction, dedans, geom, source)
+    SELECT g.atom_id, false, false, g.geom, 'muet'
+    FROM   atom_geom_anr g
+    JOIN   atom a ON a.atom_id = g.atom_id
+    WHERE  g.periode @> p_date
+      AND  NOT a.fraction AND g.atom_id NOT LIKE '%#%'
+      AND  NOT ST_IsEmpty(g.geom)
+      AND  g.geom && (SELECT ST_Extent(s.geom) FROM t84_src s WHERE s.dedans)
+      AND  NOT EXISTS (SELECT 1 FROM t84_src s WHERE s.atom_id = g.atom_id)
+      AND  NOT EXISTS (SELECT 1 FROM membership m
+                        WHERE (m.atom_id = g.atom_id OR m.atom_id LIKE g.atom_id || '#%')
+                          AND m.periode @> p_date)
+      AND  NOT EXISTS (SELECT 1 FROM t84_src s
+                        WHERE s.geom && g.geom AND ST_Intersects(s.geom, g.geom)
+                          AND ST_Area(ST_Intersection(s.geom, g.geom)) > 0.05 * ST_Area(g.geom));
+
     -- La mère se réduit à ce qu'elle garde. Sans cela, le treillis verrait la
     -- fille ET sa mère revendiquer le même sol, et `source_datee` donnerait le
     -- sol à la mère — le contraire de ce que la reprise vient d'établir.

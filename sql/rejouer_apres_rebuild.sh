@@ -987,6 +987,25 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/134_correctifs_04_07_1967.sql" > "$RACINE/build/p134.log" 2>&1 \
     || { echo "  134 refusé — voir build/p134.log" >&2; exit 1; }
 
+# Ajouté le 26 octobre 2026. `136` : Harly (02), Lettret (05), Torvilliers,
+# Fontaine-les-Grès et les cantons de Troyes de 1973 (10), Castelnaudary,
+# Portel-des-Corbières, Laprade, Mas-des-Cours (11). Il retire deux lignes du
+# jalon de 1968 et coupe deux lignes de `113` : après `134`, même nature.
+etape "136 — trous 02, 05, 10, 11 relus dans les JO"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/136_trous_aisne_alpes_aube_aude.sql" > "$RACINE/build/p136.log" 2>&1 \
+    || { echo "  136 refusé — voir build/p136.log" >&2; exit 1; }
+
+# Ajouté le 26 octobre 2026. `137` : les trous cantonaux que `120` laissait,
+# suivis acte par acte ; puis toute circonscription manquante 1945-1986 (atlas
+# des départements que `113` refusait en bloc, canton de 1958, canton voisin).
+# Il crée des unités `<dep>-NN@1958` : si un jour `113` pose l'un de ces
+# départements, défaire `137` d'abord (son § 1 retire tout ce qu'il a posé).
+etape "137 — trous suivis acte par acte, circonscriptions 1945-1986"
+$PSQL -P pager=off -v poser=on \
+      -f "$ICI/137_trous_par_l_acte.sql" > "$RACINE/build/p137.log" 2>&1 \
+    || { echo "  137 refusé — voir build/p137.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement

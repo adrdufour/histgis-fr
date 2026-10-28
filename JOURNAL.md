@@ -11150,3 +11150,104 @@ Contrôlé dans les fichiers servis : Bordeaux en trois circonscriptions en
 1835, le 5e canton dans « Bordeaux (1-2-3-4) » en 1930 ; Toulouse-1 et -2 en
 1880 ; Strasbourg-Ville-1 et -2 en 1930 ; Roubaix dans Lille-6 et Lille-7 en
 1895.
+
+## 26 octobre 2026 — trous signalés dans l'Aisne, les Hautes-Alpes, l'Aube et l'Aude (`136`)
+
+Signalés par Adrien sur la carte : Harly, Lettret, Torvilliers, les cantons de
+Troyes sans circonscription ; Fontaine-les-Grès, Mas-des-Cours,
+Castelnaudary, Portel-des-Corbières, Laprade sans canton. Tous étaient dans
+`p120_reste` — vus par `120`, laissés faute de règle. Relus un à un dans les JO
+(sources dans l'en-tête de `136`) ; la circonscription suit le canton de 1958.
+
+Trois choses apprises :
+
+* **Un appariement « autre departement » peut bloquer un trou ailleurs.**
+  « Portel » (Le Portel, 62) était rapporté à Portel-des-Corbières (11) faute
+  de trouver « LE PORTEL » dans le Pas-de-Calais ; deux actes étrangers
+  rangeaient ainsi la commune de l'Aude en `accord_nomme`. `apparie()` essaie
+  désormais l'article (le, la, les, l') dans le département avant le repli
+  national : 37 lignes changent — 16 qui n'étaient pas appariées (Le
+  Vésinet, Le Raincy, Le Bouscat, Les Lilas, Le Muy…), 2 fausses (Portel),
+  19 par ressemblance devenues exactes. Les CSV sont refaits ;
+  en base, seules les deux lignes de Portel ont été corrigées — le reste
+  attend le prochain rebuild, qui fera rejouer `120` sur ces lectures.
+* **Le jalon de 1968 lisait Lettret au canton « 28 »**, hors bornes, contesté
+  (autre lecture : Tallard). La base en avait fait Gap-Nord-Ouest, canton de
+  1982. Deux lignes retirées.
+* **La règle de `113` (circonscription du canton de 1958) ne vaut pas pour une
+  fraction dont le sol change.** Les fractions de Troyes de 1973 tombent
+  chacune à 100 % dans un canton d'avant 1973 : Troyes-2 de 1973 est sur le sol
+  de l'ancien Troyes-1, Troyes-3 sur celui de l'ancien Troyes-2. `113` leur
+  gardait la circonscription de 1958 jusqu'en 1986 ; coupées en 1973. Le même
+  défaut existe vraisemblablement dans d'autres villes recoupées en 1973 ; non
+  mesuré.
+
+Reste dans `p120_reste` : environ 2 600 trous de même nature, dans toute la
+France — ceux-ci n'en sont qu'un échantillon.
+
+## 26 octobre 2026 (suite) — les trous restants, suivis acte par acte (`137`)
+
+Demandé par Adrien : « corriger les 2 600 trous restants ». Mesuré à nouveau
+avec la logique de `120` : 2 192 trous cantonaux intérieurs à [1941, 1999]
+(une partie de `p120_reste` avait été comblée depuis). `137` en pose 1 814,
+segment par segment, en SUIVANT la commune du bout gauche au bout droit :
+chaque acte lu qui la nomme la fait passer, à son effet, dans le canton nommé
+(reconnu par son nom dans le département : même nom, une lettre d'OCR, ou nom
+tronqué — toujours unique) ; arrivé au bout, si l'on n'est pas dans le canton
+de droite, c'est qu'il NAÎT au bout droit (personne d'autre dedans pendant le
+trou) ou que celui où l'on est DISPARAÎT avant. Règles comptées dans
+`p137_qualite` : acte 820, naissance 349, fraction au même canton 338, même
+canton 259, acte+naissance 29, disparition 19.
+
+**Le risque accepté**, et c'est un changement de règle par rapport à `120` :
+franchir un acte du département dont la composition n'est pas lue. `120` s'y
+refusait ; `137` présume qu'une commune qu'aucun acte lu ne nomme n'a pas
+bougé. 1 271 lignes franchissent un tel acte (`n_actes` > 0 dans
+`p137_qualite`) — c'est là qu'il faut regarder si une carte paraît fausse.
+
+**Restent 378 trous** (`p137_reste`) : 269 `coexistent` (deux cantons vivants,
+rien de lu ne dit quand la commune a changé — souvent une lecture du jalon de
+1954 ou 1968 à reprendre, comme Lettret), 73 cantons nommés introuvables, 28
+codes réutilisés pour un autre canton, 8 fractions en désaccord.
+
+**Les circonscriptions 1958-1986 étaient le vrai trou** : quelque 6 300 communes
+sans circonscription chaque année, parce que `113` refusait un département
+entier dès qu'un canton y était divisé ou absent de la lecture (Nord pour le
+seul Douai-Nord, Pas-de-Calais, Gironde, Seine-Maritime, Isère, Rhône…).
+`137` y pose, depuis la même transcription de l'atlas, chaque canton rangé
+dans une seule circonscription (18 138 rattachements, 96 unités créées), puis
+comble le reste par le canton de 1958 (963) ou les voisins du canton (691,
+dont 634 listes départementales de 1945-1958). Restent blancs le Jura et la
+Haute-Saône (aucune photo de la carte de 1958 ; le tableau de l'ordonnance
+n° 58-945 n'a pas été trouvé en ligne), les cantons divisés et les villes.
+
+## 27 octobre 2026 — les communes muettes : la carte les cachait (`84`, `137`)
+
+Signalé par Adrien : Missy-aux-Bois (02) « recouverte par Saconin-et-Breuil »
+de 1941 à 1968. Ce n'était pas une fusion : sans aucun rattachement, Missy
+n'entrait pas dans `84`, son sol devenait un trou du dessin et le
+**comblement** (§ e, depuis le 2 septembre) le donnait au voisin. De 177 à
+655 communes par année entre 1945 et 1985 étaient ainsi absorbées en
+silence — *une erreur de la base rendue invisible par la carte qui devait la
+montrer.*
+
+* `84` : bloc « LES MUETS ». Une commune qu'ANR dessine et que la base ne
+  rattache à rien entre dans le treillis pour tenir son sol, et n'en sort pas :
+  sa place reste BLANCHE. Garde : un polygone recouvert à plus de 5 % par une
+  commune rattachée est un ancien contour, il reste dehors.
+* `sql/diag/diag_communes_muettes.sql` → `build/communes_sans_rattachement.csv` :
+  la liste, avec la même garde. 994 périodes avant `137` § 7 bis, 427 après.
+* Missy elle-même : la table analytique de 1950 (p. 10456) la met au canton de
+  Soissons ; `transferts_tables.py` ne convertissait que les transferts qui
+  avaient un bord gauche en base. `cantons/transferts_tables_trous.py` en
+  récupère 83, lus par `137`. Trous cantonaux restants : 378 → 357.
+* `137` § 7 bis : `muet_jusqu_a_fusion` (572 communes absorbées gardent leur
+  dernier canton jusqu'à la fin de leur polygone ANR) et `muet_meme_commune`
+  (31 atomes orphelins d'une commune portée par deux atomes — Bouconville-
+  Vauclair, dont le code INSEE était donné à l'atome de Vauclerc — reçoivent
+  les rattachements de l'autre).
+
+Incident : `137` était assemblé dans le répertoire temporaire de la session,
+vidé dans la nuit ; l'assemblage suivant a tronqué le fichier. Reconstruit
+depuis l'historique des fichiers de Claude Code, essai identique à la pose de
+la veille. Il ne vit plus qu'en un seul morceau, dans `sql/`.
