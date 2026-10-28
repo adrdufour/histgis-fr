@@ -181,6 +181,7 @@ REMARQUES = {
     "38151": "Décret 85-92 (JO 25 janvier 1985), une ligne 1985-2013 (ville entière en 1973). Voie expresse U-2 prise pour la N87 (chaussée sud) et rond-point Duclos pour l'échangeur 8-Mai / N87 (à confirmer). Jonction voie ferrée - Grugliasco par l'avenue d'Honhoue ; droite de 354 m du bout de la rue Guy-Môquet à Jarrie. Fractions en base à partir de 1998 seulement.",
     "38185": "Décret 73-766 (Grenoble-I à V, cinq lignes) et 85-92 (VI, sept lignes) au JO ; rempart de la Bastille par les murs BD TOPO ; ancienne ligne de Chambéry = Voie Est-Ouest ; « avenue du Général-de-Gaulle » de 1985 = avenue de l'Europe (lecture par 2014). Population 1985 : VI -2,3 points (Vigny-Musset coupé). 1801-1973 non tracé (an X, loi de 1891). Base : deux fractions seulement de 1973 à 1998.",
     "38421": "Décret 85-92 (JO 25 janvier 1985) : avenue Potié, crochet par la rue Edmond-Rostand, voie ferrée jusqu'à la rue Massenet, trois droites jusqu'au point triple Gières / Herbeys / Poisat ; une ligne 1985-2013. Population : 68,9 % au Nord contre 68,0 % légal. Base : canton d'Eybens au lieu de Saint-Martin-d'Hères en 1973-1985, fractions seulement depuis 1998.",
+    "38567": "Commune créée en 1989 : la limite Domène / Vizille est l'ancienne limite ANR de Saint-Martin-d'Uriage (source main), 1989-2013. Logements 35,3 % à Domène contre 34,8 % de la population légale. Base : Vizille de 1815 à 1941 alors que la commune n'existait pas.",
 }
 
 # Remarques de REMARQUES révisées après coup (la ville a été reprise) : elles

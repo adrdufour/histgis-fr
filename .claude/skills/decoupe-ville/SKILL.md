@@ -1195,4 +1195,13 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **Les codes INSEE de la base pour les voisines** : chercher par le nom dans
   `cog1968/communes_1968_fusion.csv` avant de mesurer un contact (Poisat est 38309, pas 38317) ;
   un contact nul avec une voisine que le texte nomme est presque toujours un mauvais code.
+- **Une commune créée avec des parties de communes de cantons différents** (Chamrousse, 1989 :
+  Saint-Martin-d'Uriage au canton de Domène, Séchilienne et Vaulnaveys-le-Haut à celui de Vizille) :
+  pas de texte de rues ; la limite est la traversée de la nouvelle commune par l'ancien contour ANR
+  de la partie seule de son canton (`ST_Difference(ST_Intersection(ST_Boundary(ancien), cible),
+  ST_Buffer(ST_Boundary(cible), 2))`). Source `main`. Le contour ANR de la nouvelle commune peut être
+  grossier (arêtes droites) : ne garder que la traversée.
+- **`rendu_sans_ihm` plante sur une couche vide** (`'NoneType' object has no attribute 'setSymbol'`,
+  ici le `<insee>_fer.geojson` d'une commune sans voie ferrée) : filtrer les couches invalides ou
+  vides avant `rendu()`.
 

@@ -4115,6 +4115,24 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Chamrousse (38567)
+
+### 147. Chamrousse : un canton avant d'exister, et sans fractions de 1989 à 1998
+
+- **Sources** : `insee_mvt` (mod 20, 1989-02-15 : création avec des parties de Saint-Martin-d'Uriage,
+  Séchilienne et Vaulnaveys-le-Haut) ; populations légales 2011 par fraction cantonale (Domène 160,
+  Vizille 300).
+- **Base** : l'atome `N38567` (source `creation_arriere`) est à Vizille (3844) de 1815 à 1941, alors
+  que la commune n'existe qu'en 1989 ; rien de 1941 à 1998 ; fractions `N38567#3809` (Domène) et
+  `#3844` (Vizille) de 1998-03-15 à 2013.
+- **À inscrire** : retirer l'appartenance de 1815-1941 (ou la justifier) ; les deux fractions de
+  1989-02-15 à 1998-03-15.
+- **Lignes** : `38567-1` (source `main` : ancienne limite ANR de Saint-Martin-d'Uriage), 1989-02-15 →
+  2013-01-01, ancres Domène POINT(927015 6452072), Vizille POINT(927413 6450538), écrite le
+  28 octobre 2026. Fichiers : `cartes/sorties/decoupe_chamrousse/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :
