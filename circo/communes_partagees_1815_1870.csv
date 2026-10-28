@@ -1,0 +1,46 @@
+dep,depuis,jusqu,canton,cassini,commune,circonscription,source
+02,1820,1831,La Fère,93,Achery,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,866,Anguilcourt-le-Sart,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,3329,Beautor,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,13488,Fargniers,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,13689,La Fère,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,19512,Liez,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,21727,Mayot,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,21993,Mennessis,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,28421,Quessy,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,37227,Tergnier,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,38008,Travecy,2,note de la carte Gaudillère p.90-91
+02,1820,1831,La Fère,41025,Vouël,2,note de la carte Gaudillère p.90-91
+19,1820,1821,Tulle-Sud,38367,Tulle,1,note de l'atlas (partie de la ville de Tulle)
+19,1821,1831,Tulle-Sud,38367,Tulle,1,note de l'atlas (partie de la ville de Tulle)
+33,1820,1831,Bordeaux-1,5395,Le Bouscat,2,note de l'atlas (communes hors de Bordeaux)
+33,1820,1831,Bordeaux-1,6121,Bruges,2,note de l'atlas (communes hors de Bordeaux)
+33,1820,1831,Bordeaux-2,7232,Caudéran,2,note de l'atlas (communes hors de Bordeaux)
+33,1820,1831,Bordeaux-4,37019,Talence,2,note de l'atlas (communes hors de Bordeaux)
+33,1820,1831,Bordeaux-6,3414,Bègles,2,note de l'atlas (communes hors de Bordeaux)
+45,1857,1870,Orléans-Sud,25536,Olivet,2,note de l'atlas (communes hors d'Orléans)
+45,1857,1870,Orléans-Sud,31101,Saint-Cyr-en-Val,2,note de l'atlas (communes hors d'Orléans)
+45,1857,1870,Orléans-Sud,31167,Saint-Denis-en-Val,2,note de l'atlas (communes hors d'Orléans)
+45,1857,1870,Orléans-Sud,32290,Saint-Hilaire-Saint-Mesmin,2,note de l'atlas (communes hors d'Orléans)
+45,1857,1870,Orléans-Sud,32566,Saint-Jean-le-Blanc,2,note de l'atlas (communes hors d'Orléans)
+45,1857,1870,Orléans-Sud,34320,Saint-Pryvé-Saint-Mesmin,2,note de l'atlas (communes hors d'Orléans)
+49,1820,1831,Thouarcé,38984,Vauchrétien,2,note de l'atlas (nommée)
+49,1820,1831,Thouarcé,466,Notre-Dame-d'Allençon,2,note de l'atlas (nommée)
+49,1820,1831,Thouarcé,8999,Chavagnes,2,note de l'atlas (nommée)
+49,1820,1831,Thouarcé,6000,Brissac,2,note de l'atlas (plus à l'est que Vauchrétien)
+49,1820,1831,Thouarcé,28478,Quincé,2,note de l'atlas (plus à l'est que Vauchrétien)
+49,1820,1831,Thouarcé,473,Les Alleuds,2,note de l'atlas (plus à l'est que Vauchrétien)
+49,1820,1831,Thouarcé,8399,Charcé,2,note de l'atlas (plus à l'est que Vauchrétien)
+49,1820,1831,Thouarcé,20330,Luigné,2,note de l'atlas (plus à l'est que Vauchrétien)
+49,1820,1831,Thouarcé,31450,Saint-Ellier,2,note de l'atlas (plus à l'est que Vauchrétien)
+49,1820,1831,Thouarcé,35461,Saulgé-l'Hôpital,2,note de l'atlas (plus à l'est que Vauchrétien)
+65,1834,1848,Tarbes-Sud,37084,Tarbes,1,note de l'atlas (partie de la ville de Tarbes)
+83,1820,1821,Draguignan,690,Ampus,1,note de l'atlas (autres communes que Draguignan)
+83,1820,1821,Draguignan,13970,Flayosc,1,note de l'atlas (autres communes que Draguignan)
+83,1820,1821,Draguignan,24110,La Motte,1,note de l'atlas (autres communes que Draguignan)
+83,1820,1821,Draguignan,37996,Trans-en-Provence,1,note de l'atlas (autres communes que Draguignan)
+83,1821,1831,Draguignan,690,Ampus,1,note de l'atlas (« divisé comme en 1820 »)
+83,1821,1831,Draguignan,13970,Flayosc,1,note de l'atlas (« divisé comme en 1820 »)
+83,1821,1831,Draguignan,24110,La Motte,1,note de l'atlas (« divisé comme en 1820 »)
+83,1821,1831,Draguignan,37996,Trans-en-Provence,1,note de l'atlas (« divisé comme en 1820 »)
+83,1820,1821,Fréjus,24478,Le Muy,1,note de l'atlas (nommée)

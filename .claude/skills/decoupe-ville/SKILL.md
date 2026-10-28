@@ -1100,3 +1100,52 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   touche surtout son canton » ne vaut plus ; le dire dans la note.
 - **Les IRIS d'une ville COG se lisent au WFS** et peuvent être presque emboîtés dans les cantons
   (Mérignac 23 sur 27, Pessac 18 sur 22) : contrôle utile même sans `iris_ville`.
+
+- **Une fusion qui renomme les cantons sans toucher aux limites** (Saint-Malo, 26 octobre 2026 :
+  décret du 26 octobre 1967, « les cantons de Saint-Malo et de Saint-Servan prennent
+  respectivement les noms de Saint-Malo-Nord et Saint-Malo-Sud ») : la limite est l'ancienne
+  limite communale, partie commune des ANR d'avant la fusion, sans BD TOPO. Elle vaut jusqu'au
+  texte suivant, à travers les trous de la base. Les codes d'IRIS suivent les anciennes
+  communes, pas les cantons : répartir au prorata des logements, ne pas regrouper par code.
+- **Une commune à part d'étang** (Sète, 4 068 ha avec l'étang de Thau) : le « point des limites
+  de X et Y » est un sommet du bord en pleine eau. Le point triple du § 7 (centroïde des tampons)
+  tombait à 1,8 km ; prendre le morceau du bord à moins de 2 m de la voisine qui touche le moins.
+- **Un « quai X prolongé » réduit à un moignon BD TOPO** (Sète, 98 m) : le prolongement réel
+  porte un autre nom (quai de la Daurade) ; regarder l'orthophoto.
+- **Une ligne qui descend une voie et revient par une parallèle** (Sète, Carrières puis
+  Joliot-Curie) laisse à la lettre une poche à l'autre canton (11 ha) : la dire, pas la corriger.
+- **Un segment du routeur qui part d'un point à 30 m du réseau** (centroïde d'une chapelle) fait
+  une boucle : arriver par une droite à un sommet du tronçon voisin.
+- **Sans texte de limite, les résultats par bureau de vote** (Fougères, 26 octobre 2026) :
+  les cantonales se renouvelant par moitié, chaque fichier data.gouv (CN08, CN11) ne porte que
+  les bureaux d'un des deux cantons d'une ville coupée, DP15 donne le partage de 2015. Si les
+  rues du décret de 2014 suivent une limite de bureaux, l'ancienne ligne = celle de 2014 aux
+  bureaux qui ont changé de côté près. Les contours de bureaux « méthode INSEE »
+  (`contours-bureaux-vote.json`, TopoJSON de 105 Mo,
+  `ogr2ogr -s_srs EPSG:4326 -t_srs EPSG:2154 -where "codeCommune='…'"`) sont des Voronoi
+  d'adresses : ils coupent les îlots et font des crochets. Écrire sous `main`, note « HYPOTHESE ».
+- **La recherche plein texte d'archive.org** passe aussi par
+  `https://be-api.us.archive.org/fts/v1/search?q=…` quand `advancedsearch` refuse `sin=TXT`.
+- **L'extrait IRIS en CSV a une première colonne entre guillemets** : `grep "^35115"` ne rend
+  rien ; filtrer en Python, virgules décimales comprises (`cut -d,` les tronque).
+
+- **Des cantons Est / Ouest dont la part urbaine est nord / sud** (Vitré, 27 octobre 2026 : la loi
+  du 19 juillet 1845 renomme Sud en Est et Nord en Ouest, mais donne « Vitré partie sud » à l'Est).
+  Ancrer par points, jamais par la direction du nom.
+- **Un arrêté rectificatif de l'an X peut remplacer le texte de la ville** (Issoudun : le 26 floréal
+  « au lieu de … lisez » substitue une ligne de rues aux « quatre sections » du 9 fructidor an IX).
+  La note de bas de page de l'arrêté de réduction annonce les rectifications.
+- **Les communes rurales de la base peuvent contredire l'arrêté** (Issoudun 1815-1941 : 3612 / 3613
+  intervertis) : ancrer par le texte, pas par les contacts, et consigner.
+- **La base peut placer dès 1973 des communes que le décret de 1985 transfère** (Châteauroux :
+  Coings, Diors, Luant, La Pérouille) pendant que la ville est sans canton : à vérifier pour toute
+  ville dont le régime 1973-1985 manque.
+- **Deux passes non datées à ancres par direction** (`=nord`) : la seconde remplace les points
+  résolus par la première. Vérifier que les points de la dernière passe tombent dans le bon morceau
+  à chaque état de l'ANR (Issoudun : avant et après Les Bordes, 1912), puis `carte_coupe_ville` à
+  une date de chaque régime.
+- **Une impasse citée comme jonction** qui ne touche pas la rue précédente (Châteauroux, impasse
+  Alapetite) : le plus court chemin fait 400 m de détour ; droite dans l'axe de l'impasse, chiffrée.
+- **`("commune", insee)` en tête quand la première rue longe la limite** (rue de la
+  Fontaine-Saint-Germain, le long de l'Indre) : le départ tombe au milieu de la rue, 700 m perdus.
+  Partir de `("point", x, y)` au bout de la rue.

@@ -102,11 +102,12 @@ REGLES_1815_1870 = {
     # Note de l'atlas : « le canton de La Fère était divisé : les communes
     # d'Achery, Anguilcourt, Beautor, Fargniers, La Fère, Liez, Mayot,
     # Mennessis, Quessy, Tergnier, Travecy et Vouel étaient rattachées à la
-    # 2e circonscription, et les autres à la 1re ». LIMITE — La Fère posé
-    # entier dans la 2e, à reprendre à l'atome.
+    # 2e circonscription, et les autres à la 1re ». Le canton suit ici la
+    # 1re (par le reste) ; les douze communes vont à la 2e par
+    # circo/communes_partagees_1815_1870.csv, lu par sql/106.
     {"depuis": 1820, "jusqu": 1831, "base": "1876", "circos": {
         "2": {"reprend": ["Saint-Quentin-1", "Saint-Quentin-2"],
-              "plus": ["Chauny", "La Fère"]},
+              "plus": ["Chauny"]},
         "3": {"reprend": ["Vervins-1", "Vervins-2"],
               "plus": ["Rozoy-sur-Serre"]},
         "4": {"reprend": ["Soissons", "Château-Thierry"],
@@ -390,7 +391,6 @@ REGLES_1815_1870 = {
         "1": {"reste": True}}},
   ]},
 
-"13": {
 "12": {
   "nom": "Aveyron",
   # Atlas : « Asprières » = Capdenac-Gare ; « Marcillac » =
@@ -435,6 +435,7 @@ REGLES_1815_1870 = {
         (["La Salvetat"], "3")]},
   ]},
 
+"13": {
   "nom": "Bouches-du-Rhône",
   # Atlas : « Peyrolles » = Peyrolles-en-Provence ; « Berre-l'Étang » ;
   # « Saintes-Maries » = Saintes-Marie-de-la-Mer (graphie de la base).
@@ -698,8 +699,9 @@ REGLES_1815_1870 = {
         "1": {"reste": True}}},
     # Note de l'atlas : « le canton de Tulle-Sud était divisé : la partie de
     # la ville appartenant à ce canton était rattachée à la 1re
-    # circonscription, et les autres communes à la 2e ». LIMITE — Tulle-Sud
-    # posé entier dans la 2e, à reprendre à l'atome.
+    # circonscription, et les autres communes à la 2e ». Tulle-Sud est posé
+    # dans la 2e ; sa fraction de Tulle va à la 1re (1820-1821 et 1821-1831)
+    # par circo/communes_partagees_1815_1870.csv.
     {"depuis": 1821, "jusqu": 1831, "base": "1820", "deplacer": [
         (["Saint-Privat"], "2")]},
     {"depuis": 1831, "jusqu": 1848, "base": "1876", "circos": {
@@ -1286,8 +1288,9 @@ REGLES_1815_1870 = {
   #  * 1820-1831 : note de l'atlas, « les cantons de Bordeaux-1, 2, 4 et 6
   #    étaient divisés : la partie de la ville appartenant à ces cantons était
   #    rattachée à la 1re circonscription, et les autres communes à la 2e ».
-  #    Ici, les six cantons entiers vont à la 1re : les cinq communes de
-  #    banlieue sont à tort dans la 1re.
+  #    Les six cantons vont à la 1re ; Le Bouscat, Bruges, Caudéran, Talence
+  #    et Bègles vont à la 2e par circo/communes_partagees_1815_1870.csv
+  #    (levé le 26 octobre 2026).
   #  * 1831-1848 : la ville forme les circonscriptions 1 à 3 ; la carte ne
   #    dit pas comment. Les six cantons sont posés en « 1 » — FAUX pour 2 et 3.
   #  * 1869-1870 : la ville est dessinée dans la 1re, mais la 3e (Carbon-
@@ -1882,8 +1885,9 @@ REGLES_1815_1870 = {
         "1": {"reste": True}}},
     # « Le canton d'Orléans-Sud était divisé : la partie de la ville
     # appartenant à ce canton était rattachée à la 1re circonscription, et
-    # les autres communes à la 2e. » Orléans-Sud est posé entier dans la
-    # 1re — LIMITE, à reprendre à l'échelle de l'atome.
+    # les autres communes à la 2e. » Orléans-Sud est posé dans la 1re ; ses
+    # six communes rurales vont à la 2e par
+    # circo/communes_partagees_1815_1870.csv.
     {"depuis": 1857, "jusqu": 1870, "base": "1876", "circos": {
         "3": {"reprend": ["Montargis"],
               "plus": ["Malesherbes", "Puiseaux", "Beaune-la-Rolande"]},
@@ -1926,7 +1930,9 @@ REGLES_1815_1870 = {
     # Cantons divisés (note de l'atlas) : Prayssas (13 communes, dont le
     # chef-lieu, à la 3e, les autres à la 1re) et Lavardac (7 communes, dont
     # le chef-lieu, à la 1re, les autres à la 2e). Chacun est posé ENTIER du
-    # côté de son chef-lieu — LIMITE, à reprendre à l'échelle de l'atome.
+    # côté de son chef-lieu — LIMITE, à reprendre à l'échelle de l'atome :
+    # la transcription ne nomme pas les communes (et Prayssas n'en a que 9
+    # en 1870, pas 13). Il faut relire la note sur l'original.
     {"depuis": 1820, "jusqu": 1831, "base": "1876", "circos": {
         "2": {"reprend": ["Marmande"], "moins": ["Castelmoron-sur-Lot"],
               "plus": ["Casteljaloux", "Damazan", "Houeillès"]},
@@ -1988,8 +1994,11 @@ REGLES_1815_1870 = {
         "Beaupréau": {"reprend": ["Cholet-1", "Cholet-2"]}}},
     # « Le canton de Thouarcé était divisé : Vauchrétien, Notre-Dame-
     # d'Alençon, Chavagnes et les communes situées plus à l'est appartenaient
-    # à la 2e ; toutes les autres à la 3e. » Thouarcé posé entier dans la 3e
-    # (son chef-lieu est à l'ouest de la ligne) — LIMITE.
+    # à la 2e ; toutes les autres à la 3e. » Thouarcé est posé dans la 3e
+    # (son chef-lieu est à l'ouest de la ligne) ; les trois communes nommées
+    # et les sept dont le centroïde est à l'est de Vauchrétien (Brissac,
+    # Quincé, Les Alleuds, Charcé, Luigné, Saint-Ellier, Saulgé-l'Hôpital)
+    # vont à la 2e par circo/communes_partagees_1815_1870.csv.
     {"depuis": 1820, "jusqu": 1831, "base": "1876", "circos": {
         "1": {"cantons": ["Angers-Nord-Ouest", "Angers-Nord-Est",
                           "Angers-Sud-Est", "Saint-Georges-sur-Loire",
@@ -2662,9 +2671,10 @@ REGLES_1815_1870 = {
         "1": {"reste": True}}},
     # Loi du 22 mai 1834. Note : « Tarbes-Sud était divisé : la partie de la
     # ville appartenant à ce canton était rattachée à la 1re circonscription,
-    # et les communes rurales à la 2e ». LIMITE — Tarbes-Sud posé entier
-    # dans la 2e, à reprendre à l'atome ; à l'échelle du canton, la carte
-    # est celle de 1831.
+    # et les communes rurales à la 2e ». Tarbes-Sud est posé dans la 2e ;
+    # sa fraction de Tarbes va à la 1re par
+    # circo/communes_partagees_1815_1870.csv. À l'échelle du canton, la
+    # carte est celle de 1831.
     {"depuis": 1834, "jusqu": 1848, "base": "1831", "copie": True},
     {"depuis": 1852, "jusqu": 1870, "base": "1876", "circos": {
         "2": {"reprend": ["Bagnères-de-Bigorre"],
@@ -3112,14 +3122,16 @@ REGLES_1815_1870 = {
     # Notes de l'atlas : « le canton de Draguignan était divisé : la commune
     # de Draguignan était rattachée à la 2e, les autres communes à la 1re » ;
     # « le canton de Fréjus était divisé : la commune du Muy appartenait à
-    # la 1re, les autres à la 2e ». LIMITE — Draguignan et Fréjus posés
-    # entiers dans la 2e, à reprendre à l'atome.
+    # la 1re, les autres à la 2e ». Draguignan et Fréjus sont posés dans la
+    # 2e ; les quatre autres communes du canton de Draguignan et Le Muy vont
+    # à la 1re par circo/communes_partagees_1815_1870.csv.
     {"depuis": 1820, "jusqu": 1821, "base": "1876", "circos": {
         "2": {"cantons": ["Comps-sur-Artuby", "Callas", "Fayence",
                           "Draguignan", "Fréjus"]},
         "3": {"reprend": ["Toulon-1", "Toulon-2"]},
         "1": {"reste": True}}},
-    # « Le canton de Draguignan était divisé comme en 1820 » (même LIMITE).
+    # « Le canton de Draguignan était divisé comme en 1820 » (mêmes lignes
+    # du CSV, pour 1821-1831).
     {"depuis": 1821, "jusqu": 1831, "base": "1820", "deplacer": [
         (["Fréjus"], "1")]},
     {"depuis": 1831, "jusqu": 1848, "base": "1876", "circos": {

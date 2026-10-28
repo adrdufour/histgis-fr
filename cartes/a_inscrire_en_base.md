@@ -3853,6 +3853,133 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Sète (34301)
+
+### 136. Sète de 1973 à 1992 : la ville sans fraction ; 3436 nommé « Cette » jusqu'en 1999
+
+- **Source** : décret 73-722 du 23 juillet 1973, art. 3 (JO du 25 juillet 1973, p. 8084,
+  `jorf_txt/JORF_19730725_171_col.txt`, l. 2008-2027) : Sète-I et Sète-II ; décret 85-146 du
+  31 janvier 1985, art. 3 (JO du 1er février 1985, p. 1380, `jorf_txt/JORF_19850201_27_col.txt`,
+  l. 1489-1505) : la limite I / II déplacée au sud du mont Saint-Clair.
+- **Base** : `7580` entier en 3436 « Cette » jusqu'au 1973-09-23 ; aucune appartenance jusqu'au
+  1992-03-22 ; `7580#3436` et `#3437` (fraction_cog) de 1992 à 2013. `unit_version` nomme 3436
+  « Cette » de 1992 à 1999 (Sète-I).
+- **À inscrire** : `7580#3436` (Sète-I) et `7580#3437` (Sète-II) du 1973-09-23 au 1992-03-22 ;
+  le nom Sète-I pour 3436 dès 1973.
+- **Lignes** : `34301-1973` (1973-09-23 → 1985-03-10, `--morceaux 2`) et `34301-1985`
+  (→ 2013-01-01), écrites le 26 octobre 2026, ancres datées 3436 POINT(756700 6256300), 3437
+  POINT(754500 6257000) : celles de 1973 joueront dès l'inscription. Fichiers :
+  `cartes/sorties/decoupe_sete/`.
+
+---
+
+## Saint-Malo (35288)
+
+### 137. Saint-Malo de 1967 à 1992 : atome entier au Nord, puis rien ; noms Nord / Sud absents ; Paramé et Saint-Servan sans canton de 1955 à 1967
+
+- **Source** : décret du 26 octobre 1967 (JO du 29 octobre 1967, p. 10644,
+  `jorf_txt/JORF_19671029_253_col.txt`, l. 671-696) : fusion de Saint-Malo, Paramé et
+  Saint-Servan-sur-Mer ; « Les cantons de Saint-Malo et de Saint-Servan prennent respectivement
+  les noms de Saint-Malo-Nord et Saint-Malo-Sud », limites inchangées. Décret 2014-177 pour 2015.
+- **Base** : `33086` entier en 3537 jusqu'au 1973-09-23 (l'ancien Saint-Servan compris) ; rien
+  jusqu'au 1992-03-22 (les communes rurales de 3539, La Gouesnière et Saint-Jouan, n'ont pas ce
+  trou) ; fractions `#3537` et `#3539` de 1992 à 2013. Pas d'`unit_version` pour 3537 de 1941 à
+  1999 (« Saint-Malo » au lieu de Saint-Malo-Nord) ; 3539 « Saint-Servan-sur-Mer » de 1992 à
+  1999. Paramé (32365) et Saint-Servan (34632) sans appartenance de 1955 à 1967. L'ANR de la
+  commune fusionnée commence au 1967-01-01, dix mois avant le décret (Paramé et Saint-Servan
+  finissent ce jour-là).
+- **À inscrire** : `33086#3537` (Nord) et `#3539` (Sud) du 1967-10-26 au 1992-03-22, à la place
+  de l'atome entier et du trou ; 32365 en 3537 et 34632 en 3539 de 1955 à 1967 ; les noms
+  Saint-Malo-Nord / Sud dès 1967 ; les dates de l'ANR de 1967.
+- **Lignes** : `35288-1` (ancienne limite communale de Saint-Servan, 1967-10-26 → 2013-01-01),
+  écrite le 26 octobre 2026, ancres 3537 POINT(333672 6850905), 3539 POINT(333032 6847484).
+  Fichiers : `cartes/sorties/decoupe_saintmalo/`.
+
+---
+
+## Fougères (35115)
+
+### 138. Fougères : transfert de 1,46 ha à Lécousse en 2000 absent des ANR
+
+- **Source** : décret du 28 février 2000 (JO n° 51 du 1er mars 2000, JORFTEXT000000763643) :
+  1 ha 46 a 30 ca de Fougères (canton Nord) rattachés à Lécousse (canton Sud).
+- **Base** : une seule ANR pour l'atome 14453, 1790-2020, 1 043 ha ; le transfert n'y figure pas.
+- **À inscrire** : à voir avec la trame ANR (mineur).
+- **Lignes** : aucune n'en dépend. `35115-1` (HYPOTHÈSE, bureaux de vote, 1815 → 2013) écrite le
+  26 octobre 2026. Fichiers : `cartes/sorties/decoupe_fougeres/`.
+
+---
+
+## Vitré (35360)
+
+### 139. Vitré : atome entier dans Vitré-Ouest de 1968 à 1973 ; noms Nord / Sud absents avant 1845
+
+- **Sources** : arrêté du 27 brumaire an X (Rondonneau, t. 8, p. 580 ; archive.org
+  `bub_gb_A25OAAAAYAAJ`, OCR seul) ; loi du 19 juillet 1845 (Bulletin des lois 1845, 2e sem.,
+  p. 309-310 ; archive.org `bub_gb_6iQtAAAAYAAJ` ; Gallica `bpt6k486432d/f340` à collationner).
+- **Base** : l'atome 40875 (Vitré entier) est dans 3543 Vitré-Ouest du 1968-01-01 au 1973-09-23, en
+  plus des fractions 40875#3542 et #3543 (probablement le COG 1968, à vérifier). Dès 1815, la base
+  donne les compositions de 1845 sous les noms Est / Ouest (Balazé à l'Est en 1830).
+- **À inscrire** : retirer l'appartenance de 40875 entier en 1968-1973. Avant le 1845-07-19 :
+  Vitré-Nord (Balazé, Champeaux, Izé, Landavran, Marpiré, Mecé, Saint-M'Hervé,
+  Montreuil-sous-Pérouse, Taillis, partie de Vitré) et Vitré-Sud (Saint-Aubin-des-Landes, Bréal,
+  la Chapelle-Erbrée, Châtillon-en-Vendelais, Saint-Christophe, Cornillé, Erbrée, Mondevert,
+  Montautour, Montreuil-des-Landes, Pocé, Princé, partie de Vitré). Nord devient Ouest et Sud
+  devient Est : la ligne et les ancres valent pour les deux régimes.
+- **Lignes** : `35360-1` (HYPOTHÈSE, bureaux de vote, 1815 → 2013), écrite le 27 octobre 2026,
+  ancres 3543 POINT(386856 6790239), 3542 POINT(387500 6787500). Fichiers :
+  `cartes/sorties/decoupe_vitre/`.
+
+---
+
+## Issoudun (36088)
+
+### 140. Issoudun : communes rurales de Nord et Sud interverties de 1815 à 1941, trous de 1941 à 1985 ; Les Bordes
+
+- **Sources** : arrêté rectificatif du 26 floréal an X (III, B. 228 bis, n° 11 ; Rondonneau, t. 8,
+  p. 908-909, images n966-n967 dans `cartes/sorties/decoupe_issoudun/` ; Gallica
+  `bpt6k6566855n/f175` à collationner) ; décret 85-133 (JO du 30 janvier 1985).
+- **Base, 1850-1930** : 3612 Issoudun-Nord = Ambrault, Bommiers, Brives, Chouday, Condé,
+  Meunet-Planches, Migny, Pruniers, Saint-Aubin, Saint-Georges, Ségry, Thizay, Vouillon (et Les
+  Bordes dès 1870) ; 3613 Issoudun-Sud = Diou, la Champenoise, Lizeray, Neuvy-Pailloux, Paudy,
+  Reuilly, Saint-Aoustrille, Sainte-Fauste, Sainte-Lizaigne, Saint-Valentin.
+- **Arrêté de l'an X** : Nord-est (= Nord) = Saint-Aoustrille, la Champenoise, Diou,
+  Sainte-Lizaigne, Lizeray, Paudy, Reuilly, Saint-Valentin, Saint-Georges, Migny ; Sud-ouest
+  (= Sud) = Ambrault, Saint-Aubin, Bommiers, Brives, Chouday, Condé, Meunet-Planches, Pruniers,
+  Ségry, Vouillon, Sainte-Fauste, Neuvy-Pailloux, Thizay. La base ressemble à la liste du
+  9 fructidor an IX, codes intervertis : réinscrire 1815-1941 selon l'arrêté de 1802.
+- **1941-1985** : appartenances incomplètes (1950 : seules Les Bordes, Migny, Saint-Georges en
+  3612, Neuvy-Pailloux et Sainte-Fauste en 3613 ; 1960 : manquent Diou, Reuilly, Brives, Chouday,
+  Condé, Meunet, Ségry, Thizay, Vouillon ; 1980 : manquent Brives et Thizay).
+- **Les Bordes (atome 4939)** : contour ANR à partir de 1912 seulement (844 ha détachés
+  d'Issoudun), mais canton 3612 dès 1870 : territoire compté deux fois de 1870 à 1912.
+- **Lignes** : `36088-an10` (1815 → 1985) et `36088-1985` (1985 → 2013), écrites le 27 octobre
+  2026, ancres non datées 3612 = nord, 3613 = sud ; elles ne dépendent pas de ces corrections.
+
+---
+
+## Châteauroux (36044)
+
+### 141. Châteauroux de 1973 à 1985 : quatre fractions sans canton ; communes rurales transférées en 1985 déjà placées dès 1973
+
+- **Sources** : décret 73-658 du 13 juillet 1973 (`jorf_txt/JORF_19730717_164_col.txt`) ; décret
+  85-133 du 29 janvier 1985 (`jorf_txt/JORF_19850130_25_col.txt`, l. 2957).
+- **Base** : 8710 entier dans 3607 jusqu'au 1973-09-23, puis rien jusqu'au 1985-03-10. Pendant ce
+  trou, Déols, Montierchaume (Est en 1973), Saint-Maur, Villers-les-Ormes, Niherne (Ouest) restent
+  dans 3607 « Châteauroux ». Coings est déjà dans Levroux (3614), Diors, Luant et La Pérouille dans
+  Ardentes (3602) dès 1973-09-23, alors que c'est le décret de 1985 (art. 4 et 5) qui les y
+  transfère. 3607 garde le nom « Châteauroux » jusqu'en 1999.
+- **À inscrire, 1973-09-23 → 1985-03-10** : fractions 8710#3607 (Centre), #3624 (Est), #3625
+  (Ouest), #3626 (Sud) ; Est 3624 = Coings, Déols, Diors, Montierchaume + fraction ; Ouest 3625 =
+  Saint-Maur, Villers-les-Ormes, Niherne, Luant, La Pérouille + fraction ; Centre et Sud = une
+  fraction chacun ; nom « Châteauroux-Centre » pour 3607 dès 1973.
+- **Lignes** : `36044-1973-CE/-CS/-CO/-ES/-SO` (`--morceaux 4`, ancres datées 1973-09-23 →
+  1985-03-10 : Centre POINT(600500 6635400), Est POINT(602500 6635500), Ouest POINT(598000
+  6635000), Sud POINT(600000 6633000)) et `36044-1985-*` (mêmes points), écrites le 27 octobre
+  2026. Fichiers : `cartes/sorties/decoupe_chateauroux/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :

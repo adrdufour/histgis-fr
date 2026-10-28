@@ -45,10 +45,21 @@
 --     Calais-Sud-Est (Pas-de-Calais). Ils sont rangés dans la circonscription
 --     du canton dont ils sont issus — c'est une approximation, notée dans
 --     `circo/regles_1815_1870.py` ;
---   * cantons PARTAGÉS entre deux circonscriptions (Bordeaux 1820-1848,
---     Orléans-Sud 1857-1870, Thouarcé 1820-1831, Prayssas et Lavardac
---     1820-1831) : posés entiers d'un seul côté. À reprendre à l'atome.
+--   * cantons PARTAGÉS entre deux circonscriptions dont l'atlas ne dit pas
+--     les communes (Bordeaux 1831-1848, Prayssas et Lavardac 1820-1831) :
+--     posés entiers d'un seul côté. Ceux qu'il nomme sont lus commune par
+--     commune (ci-dessous).
 -- Voir `circo/verif_1815_1870.md`.
+--
+-- LES CANTONS PARTAGÉS, LUS COMMUNE PAR COMMUNE
+-- =============================================
+-- `circo/communes_partagees_1815_1870.csv` : pour une division (depuis,
+-- jusqu) et un canton, les communes (cassini) qui ne suivent PAS la
+-- circonscription du canton dans `c15_composition`, et celle où elles vont.
+-- 26 octobre 2026 : La Fère (02) 1820-1831, Tulle-Sud (19) 1820-1831,
+-- Bordeaux-1, 2, 4, 6 (33) 1820-1831, Orléans-Sud (45) 1857-1870, Thouarcé
+-- (49) 1820-1831, Tarbes-Sud (65) 1834-1848, Draguignan (83) 1820-1831 et
+-- Fréjus (83) 1820-1821.
 --
 -- LES COMMUNES QUI ONT CHANGÉ DE CANTON, LUES COMMUNE PAR COMMUNE
 -- ===============================================================
@@ -209,6 +220,21 @@ CREATE TEMP TABLE t106_ancien (
     canton_apres text, cree text, date_acte date, acte text, source text);
 \copy t106_ancien FROM 'cantons/changements_communes_1815_1870.csv' WITH (FORMAT csv, HEADER true)
 DELETE FROM t106_ancien WHERE dep <> :'dep_u';
+
+-- Les communes des cantons partagés (en-tête).
+DROP TABLE IF EXISTS t106_partage;
+CREATE TEMP TABLE t106_partage (
+    dep text, depuis int, jusqu int, canton text, cassini text, commune text,
+    circonscription text, source text);
+\copy t106_partage FROM 'circo/communes_partagees_1815_1870.csv' WITH (FORMAT csv, HEADER true)
+DELETE FROM t106_partage WHERE dep <> :'dep';
+ALTER TABLE t106_partage ADD COLUMN unit_id text;
+UPDATE t106_partage
+   SET unit_id = :'dep_u' || '-'
+                 || CASE WHEN circonscription ~ '^[0-9]+$'
+                         THEN lpad(circonscription, 2, '0')
+                         ELSE circonscription END
+                 || '@' || depuis;
 
 -- La réparation des noms, une seule fois.
 CREATE OR REPLACE FUNCTION pg_temp.repare(nom text) RETURNS text
@@ -400,6 +426,36 @@ SELECT x.commune, x.canton_avant, x.canton_apres, x.date_acte,
 SELECT * FROM t106_ancien_ko ORDER BY 1;
 -- Attendu : atomes >= 1 sur chaque ligne, et la seconde requête vide.
 
+\echo ''
+\echo '=== 2 quinquies. Le CSV des cantons partagés ==='
+DROP TABLE IF EXISTS t106_partage_ko;
+CREATE TEMP TABLE t106_partage_ko AS
+SELECT x.commune, x.cassini, x.canton, x.depuis,
+       'commune introuvable dans son canton de 1870' AS probleme
+  FROM t106_partage x
+ WHERE NOT EXISTS (SELECT 1 FROM t106_atome a
+                    WHERE a.cassini = x.cassini AND a.canton = x.canton)
+UNION ALL
+SELECT x.commune, x.cassini, x.canton, x.depuis,
+       'division ou circonscription absente de c15_composition'
+  FROM t106_partage x
+ WHERE NOT EXISTS (SELECT 1 FROM t106_div d
+                    WHERE d.depuis = x.depuis AND d.jusqu = x.jusqu
+                      AND d.unit_id = x.unit_id)
+UNION ALL
+SELECT x.commune, x.cassini, x.canton, x.depuis,
+       'la commune suit déjà cette circonscription par son canton'
+  FROM t106_partage x
+ WHERE EXISTS (SELECT 1 FROM t106_div d
+                WHERE d.depuis = x.depuis AND d.canton = x.canton
+                  AND d.unit_id = x.unit_id);
+SELECT x.depuis, x.jusqu, x.canton, x.commune, x.unit_id,
+       (SELECT string_agg(d.unit_id, ', ') FROM t106_div d
+         WHERE d.depuis = x.depuis AND d.canton = x.canton) AS canton_dans
+  FROM t106_partage x ORDER BY 1, 3, 4;
+SELECT * FROM t106_partage_ko ORDER BY 1;
+-- Attendu : la seconde requête vide.
+
 -- ---------------------------------------------------------------------------
 -- 3. Ce qui va être posé
 -- ---------------------------------------------------------------------------
@@ -407,29 +463,34 @@ SELECT * FROM t106_ancien_ko ORDER BY 1;
 -- pour une commune du CSV (l'ancien canton avant l'acte, celui de 1870
 -- après). Deux morceaux qui tombent dans la même circo d'une division se
 -- recollent (min/max) ; sinon le rattachement est coupé à la date de l'acte.
+-- Une commune d'un canton partagé prend, pour la division, l'unité du CSV.
 DROP TABLE IF EXISTS t106_pose;
 CREATE TEMP TABLE t106_pose AS
 WITH morceau AS (
-    SELECT a.atom_id, a.ne_le, a.canton, a.ne_le AS des, :'d70'::date AS jusqua
+    SELECT a.atom_id, a.cassini, a.ne_le, a.canton, a.ne_le AS des,
+           :'d70'::date AS jusqua
       FROM t106_atome a
      WHERE NOT EXISTS (SELECT 1 FROM t106_ancien x
                         WHERE x.cassini = a.cassini AND x.canton_apres = a.canton)
     UNION ALL
-    SELECT a.atom_id, a.ne_le, x.canton_avant, a.ne_le, x.date_acte
+    SELECT a.atom_id, a.cassini, a.ne_le, x.canton_avant, a.ne_le, x.date_acte
       FROM t106_atome a
       JOIN t106_ancien x ON x.cassini = a.cassini AND x.canton_apres = a.canton
     UNION ALL
-    SELECT a.atom_id, a.ne_le, a.canton, greatest(a.ne_le, x.date_acte),
+    SELECT a.atom_id, a.cassini, a.ne_le, a.canton,
+           greatest(a.ne_le, x.date_acte),
            :'d70'::date
       FROM t106_atome a
       JOIN t106_ancien x ON x.cassini = a.cassini AND x.canton_apres = a.canton
 )
 SELECT 'circo'::text AS niveau, d.depuis || '-' || d.jusqu AS division,
-       m.atom_id, d.unit_id,
+       m.atom_id, coalesce(p.unit_id, d.unit_id) AS unit_id,
        min(greatest(d.du, m.des)) AS valid_from,
        max(least(d.au, m.jusqua)) AS valid_to, m.ne_le
   FROM morceau m
   JOIN t106_div d ON d.canton = m.canton
+  LEFT JOIN t106_partage p ON p.depuis = d.depuis AND p.jusqu = d.jusqu
+                          AND p.canton = m.canton AND p.cassini = m.cassini
  WHERE m.ne_le IS NOT NULL                       -- greatest() ignore les NULL
    AND greatest(d.du, m.des) < least(d.au, m.jusqua)
  GROUP BY 1, 2, 3, 4, 7;
@@ -515,6 +576,12 @@ BEGIN
     IF n > 0 THEN
         RAISE EXCEPTION '% problème(s) dans le CSV des communes qui ont changé '
             'de canton. Voir la recette 2 quater.', n;
+    END IF;
+
+    SELECT count(*) INTO n FROM t106_partage_ko;
+    IF n > 0 THEN
+        RAISE EXCEPTION '% problème(s) dans le CSV des cantons partagés. '
+            'Voir la recette 2 quinquies.', n;
     END IF;
 
     SELECT count(*) INTO n
