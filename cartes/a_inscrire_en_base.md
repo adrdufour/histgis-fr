@@ -4133,6 +4133,20 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Dax (40088)
+
+### 148. Dax : le canton Nord sous le nom « Dax » de 1973 à 1999
+
+- **Sources** : décret n° 73-660 du 13 juillet 1973, art. 2 (JO du 17 juillet 1973,
+  `jorf_txt/JORF_19730717_164_col.txt`) : Dax-Nord et Dax-Sud, séparés par l'Adour.
+- **Base** : `11662#4004` porte le nom « Dax » de 1973-09-23 à 1999, « Dax-Nord » ensuite ;
+  `#4029` est Dax-Sud dès 1973.
+- **À inscrire** : le nom Dax-Nord pour 4004 dès 1973-09-23.
+- **Lignes** : `40088-1` (Adour), 1973-09-23 → 2013-01-01, ancres Nord `=nord`, Sud `=sud`, écrite
+  le 28 octobre 2026 ; ne dépend pas de l'inscription. Fichiers : `cartes/sorties/decoupe_dax/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :
