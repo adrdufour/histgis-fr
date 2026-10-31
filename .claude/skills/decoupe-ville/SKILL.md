@@ -1206,3 +1206,17 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   ici le `<insee>_fer.geojson` d'une commune sans voie ferrée) : filtrer les couches invalides ou
   vides avant `rendu()`.
 
+- **Une commune annexée à Paris en 1860, coupée entre deux circonscriptions** (Belleville 1857-1863,
+  29 octobre 2026) : pas d'`insee_geofla`, donc pas de clé de coupe. `coupe_cle()` rend `A` + l'atome
+  (`A3564`) et `coupe_niveau()` le niveau `circo`. `coupe_ville.insee` est en `char(5)` : `AN3564`
+  y échoue, et un atome à cinq chiffres (Grenelle, 16141) n'y tiendrait pas. Les fractions
+  (`3564#5`, `3564#9`) se déclarent dans `circo/seine_annexees_circo.csv`. `91` les crée, avec la
+  géométrie partagée prise à l'ANR de la commune (la commune n'a pas d'`atom_geom`). Il ne les retire
+  pas au rejeu, sinon leurs ancres partiraient en cascade. Ni `pose_coupe.py` ni `trace_mixte()` ne
+  connaissent la clé : charger la voirie de Paris (`75056_*`, `ogr2ogr -spat` sur l'emprise ANR)
+  dans `public.<ville>_*`, éprouver par `ST_Split` en SQL, écrire les CSV à la main.
+- **Les CSV du dépôt sont souvent en CRLF** (`coupes_ville.csv`, `coupes_ville_ancres.csv`,
+  `circo/seine_annexees_circo.csv`). Python `open(…, 'w')` et `csv.writer(lineterminator='\n')`
+  écrivent du LF. Le premier a réécrit les 45 lignes du fichier. Vérifier `grep -c $'\r$'` contre
+  `wc -l` après chaque écriture.
+

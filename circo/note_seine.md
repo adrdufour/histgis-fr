@@ -95,12 +95,13 @@ déduction, et quatre garde-fous le vérifient.
 |---|---|---|
 | circo 1 de Paris | Passy, Auteuil, **Boulogne** | idem |
 | circo 2 de Paris | La Chapelle, Batignolles-Monceau, Montmartre | idem |
-| circo 5 de Paris | — | une partie de Belleville |
-| banlieue nord | Charonne, La Villette, Belleville | Charonne, La Villette |
+| circo 5 de Paris | — | le bas Belleville (`3564#5`) |
+| banlieue nord | Charonne, La Villette, Belleville | Charonne, La Villette, le haut Belleville (`3564#9`) |
 | banlieue sud | Bercy, Grenelle, Vaugirard | idem |
 
-    1852-1857   75-01  3   75-02  3   nord 33   sud 41   = 80, partition
-    1857-1863   75-01  3   75-02  3   nord 32   sud 41   = 79, Belleville coupée
+    1852-1857   75-01  3   75-02  3              nord 33   sud 41   = 80, partition
+    1857-1863   75-01  3   75-02  3   75-05  1   nord 33   sud 41   = 81 (80 communes,
+                                                                     Belleville en deux)
 
 **BOULOGNE-BILLANCOURT N'EST PAS UNE ANNEXÉE.** C'est une commune de la
 banlieue actuelle, que la ligne nord/sud de 1954 place dans l'arrondissement de
@@ -115,18 +116,44 @@ commune que Paris sépare de son arrondissement est précisément celle que Pari
 capte électoralement. **Une anomalie qui confirme une règle peut en annoncer
 une autre, et on cesse de lire dès qu'elle donne raison.**
 
+### Belleville en 1857-1863 : une ligne par défaut
+
+L'atlas le déclare lui-même :
+
+> « la commune de Belleville était divisée : deux bureaux de vote (rue
+> H. Chevreau et rue du Combat, c'est-à-dire rue de Meaux actuelle) étaient
+> inclus dans la 5ᵉ circonscription, et le reste de la commune dans la 9ᵉ.
+> **Faute de précisions supplémentaires, la ligne de séparation cartographiée
+> ci-dessus est purement arbitraire.** »
+
+Belleville est d'abord restée **nommée et non attribuée** (`(coupee)` dans le
+CSV). Le 29 octobre 2026, aucune source en ligne ne situant les deux bureaux
+et la planche n'étant pas photographiée, Adrien a demandé **une ligne par
+défaut**. Elle suit l'avenue Simon-Bolivar, depuis la limite de La Villette,
+puis la rue des Pyrénées jusqu'à la limite de Charonne. Les deux voies se
+joignent sur la rue de Belleville.
+
+| fraction | circonscription | surface |
+|---|---|---|
+| `3564#5`, le bas Belleville | 5ᵉ de Paris (`75-05@1857`) | 126,7 ha (33,5 %) |
+| `3564#9`, le haut Belleville | 9ᵉ de la Seine (`S1857@9`) | 251,5 ha |
+
+La 5ᵉ reçoit la rue Henri-Chevreau et le début de la rue de Meaux, de la place
+du Colonel-Fabien à l'avenue Simon-Bolivar. Au-delà, la rue de Meaux longe la
+limite de La Villette au droit de la 9ᵉ. Les deux voies de la ligne ont été
+percées après 1860 : elles bornent le bas Belleville, elles ne disent rien de
+1857. **C'est une hypothèse, pas une lecture.** La part de population de la
+5ᵉ n'est pas vérifiable : on ne sait pas combien de bureaux comptait la
+commune. Pour la remplacer, il faudrait la planche elle-même, ou les dossiers
+électoraux de 1857 aux Archives nationales (C 1344 et C 1751).
+
+Mécanique : les fractions sont créées par `91` (atome, géométrie partagée
+prise à l'ANR de Belleville). La ligne est dans `cartes/coupes_ville.csv` sous
+la clé `A3564`, et les ancres dans `coupes_ville_ancres.csv`. `98` découpe au
+tirage : `coupe_cle()` donne `A` + l'atome à une commune sans INSEE, et
+`coupe_niveau()` lui donne le niveau `circo`.
+
 ### Ce qui reste non posé
-
-* **Belleville en 1857-1863**, et elle seule. L'atlas le déclare lui-même :
-  > « la commune de Belleville était divisée : deux bureaux de vote (rue
-  > H. Chevreau et rue du Combat, c'est-à-dire rue de Meaux actuelle) étaient
-  > inclus dans la 5ᵉ circonscription, et le reste de la commune dans la 9ᵉ.
-  > **Faute de précisions supplémentaires, la ligne de séparation cartographiée
-  > ci-dessus est purement arbitraire.** »
-
-  Belleville est donc **nommée et non attribuée**, comme les quartiers
-  parisiens coupés par une rue dans `52` et `55` : son `unit_id` vaut
-  `(coupee)` dans le CSV, et un garde-fou refuse qu'on la pose quand même.
 
 * **Les onze annexées, en 1815-1820 et 1831-1848.** Mesuré sur l'export :
   Passy, Auteuil, Montmartre, Belleville, Vaugirard… ne sont dessinées ni à

@@ -34,8 +34,9 @@
 -- rejoint les circos 8 et 9 de Paris.
 --
 -- Les onze annexées sont posées partout où les planches les nomment — voir la
--- section « les exceptions » plus bas — sauf Belleville en 1857-1863, que
--- l'atlas déclare coupée. En 1820-1831 elles n'appellent aucun arbitrage :
+-- section « les exceptions » plus bas. Belleville, que l'atlas déclare coupée
+-- en 1857-1863, l'est en deux fractions sur une ligne par défaut (voir plus
+-- bas). En 1820-1831 elles n'appellent aucun arbitrage :
 -- toute la banlieue y forme une unique circonscription.
 --
 -- LA LIGNE NORD/SUD, ET POURQUOI ELLE N'EST PAS TRACÉE À LA MAIN
@@ -97,7 +98,9 @@
 --
 --     circo 1 de Paris    Passy, Auteuil, BOULOGNE-BILLANCOURT
 --     circo 2 de Paris    La Chapelle, Batignolles-Monceau, Montmartre
---     banlieue nord       Charonne, La Villette, Belleville (1852-1857)
+--     banlieue nord       Charonne, La Villette, Belleville (1852-1857 ;
+--                         en 1857-1863 son haut seulement, `3564#9`)
+--     circo 5 de Paris    le bas Belleville en 1857-1863, `3564#5`
 --     banlieue sud        Bercy, Grenelle, Vaugirard
 --
 -- **BOULOGNE-BILLANCOURT EST LA CORRECTION QUI COMPTE.** Ce n'est pas une
@@ -115,16 +118,26 @@
 -- électoralement. **Une anomalie qui confirme une règle peut en annoncer une
 -- autre, et on cesse de lire dès qu'elle donne raison.**
 --
--- CE QUI N'EST PAS POSÉ, ET POURQUOI
--- ===================================
---   * **Belleville en 1857-1863**, et elle seule. L'atlas se dénonce
---     lui-même : « deux bureaux de vote étaient inclus dans la 5e
---     circonscription, et le reste de la commune dans la 9e. Faute de
---     précisions supplémentaires, la ligne de séparation cartographiée
---     ci-dessus est purement arbitraire. » Elle est donc **nommée et non
---     attribuée**, comme les quartiers parisiens coupés par une rue dans `52`
---     et `55` — son `unit_id` vaut `(coupee)` dans le CSV, et la recette 3
---     l'affiche.
+-- BELLEVILLE EN 1857-1863 : DEUX FRACTIONS, UNE LIGNE PAR DÉFAUT
+-- ==============================================================
+-- L'atlas se dénonce lui-même : « deux bureaux de vote (rue H. Chevreau et
+-- rue du Combat, c'est-à-dire rue de Meaux actuelle) étaient inclus dans la
+-- 5e circonscription, et le reste de la commune dans la 9e. Faute de
+-- précisions supplémentaires, la ligne de séparation cartographiée ci-dessus
+-- est purement arbitraire. » Belleville est d'abord restée **nommée et non
+-- attribuée** (`(coupee)` dans le CSV).
+--
+-- Décision d'Adrien, 29 octobre 2026 : une ligne PAR DÉFAUT, faute de mieux
+-- (aucune source en ligne ne situe les deux bureaux ; la planche n'est pas
+-- photographiée). Le CSV porte deux fractions, `3564#5` (le bas Belleville,
+-- à la 5e de Paris) et `3564#9` (le reste, à la 9e de la Seine). Ce fichier
+-- les crée — atome, géométrie partagée prise à l'ANR de Belleville — comme
+-- `101_paris_fractions_quartier` pour les quartiers ; la ligne est dans
+-- `cartes/coupes_ville.csv` sous la clé `A3564`, et `98` la découpe.
+-- Rejouer `98` après ce fichier.
+--
+-- CE QUI N'EST PAS POSÉ
+-- =====================
 --   * **1848-1852**, posé par `90`.
 --
 -- LE NOM DES UNITÉS DE 1863-1870 CHANGE
@@ -253,7 +266,8 @@ SELECT d.division, d.unit_id, d.provenance, c.atom_id, c.cote,
    -- Un atome nommé par les planches pour cette division ne prend pas son
    -- rattachement du côté nord/sud : le texte prime sur la règle.
    AND NOT EXISTS (SELECT 1 FROM s70_exc e
-                    WHERE e.division = d.division AND e.atom_id = c.atom_id)
+                    WHERE e.division = d.division
+                      AND split_part(e.atom_id, '#', 1) = c.atom_id)
 UNION ALL
 -- Les exceptions, sauf celles dont l'unité vaut `(coupee)` : celles-là sont
 -- nommées et non attribuées.
@@ -264,7 +278,9 @@ SELECT e.division, e.unit_id, 'exception', e.atom_id, 'planche',
   -- que ses bornes, une fois. Un `JOIN` direct dedoublerait chaque exception.
   JOIN (SELECT division, min(du) AS du, max(au) AS au
           FROM s70_div GROUP BY division) d ON d.division = e.division
-  JOIN naissance n ON n.atom_id = e.atom_id
+  -- Une fraction (`3564#5`) n'a pas d'ANR à elle : elle vit et meurt avec sa
+  -- commune.
+  JOIN naissance n ON n.atom_id = split_part(e.atom_id, '#', 1)
  WHERE e.unit_id <> '(coupee)'
    AND n.ne_le < d.au AND n.mort_le > d.du;
 
@@ -288,8 +304,10 @@ SELECT p.division, p.unit_id, min(p.provenance) AS provenance,
 --     1831-1848   S1831@14     31   S1831@13     38            total 69
 --     1852-1857   75-01@1852    3   75-02@1852    3
 --                 S1852@8      33   S1852@9      41            total 80
---     1857-1863   75-01@1857    3   75-02@1857    3
---                 S1857@9      32   S1857@10     41            total 79
+--     1857-1863   75-01@1857    3   75-02@1857    3   75-05@1857 1
+--                 S1857@9      33   S1857@10     41            total 81
+--                 (80 communes, Belleville comptee deux fois : `3564#5`
+--                 a la 5e, `3564#9` dans les 33 de la 9e)
 --     1863-1869   V1863_1869#8 33   V1863_1869#9 38            total 71
 --     1869-1870   V1869_1870#8 33   V1869_1870#9 38            total 71
 --
@@ -299,12 +317,12 @@ SELECT p.division, p.unit_id, min(p.provenance) AS provenance,
 -- 1852-1857 et 1857-1863 sont les seules divisions ou les circonscriptions
 -- PARISIENNES apparaissent : elles recoivent les six annexees de l'ouest et du
 -- nord, plus Boulogne-Billancourt. La banlieue nord y perd donc Boulogne
--- (31 -> 30) et gagne Charonne, La Villette et Belleville (-> 33 en 1852, 32
--- en 1857 ou Belleville est coupee). La banlieue sud gagne Bercy, Grenelle et
--- Vaugirard (38 -> 41).
+-- (31 -> 30) et gagne Charonne, La Villette et Belleville (-> 33 ; en 1857
+-- le haut Belleville seulement, le bas allant a la 5e de Paris). La banlieue
+-- sud gagne Bercy, Grenelle et Vaugirard (38 -> 41).
 --
--- **1852-1857 partitionne les 80.** 1857-1863 en couvre 79, Belleville etant
--- nommee et non attribuee.
+-- **1852-1857 et 1857-1863 partitionnent les 80** — la seconde par 79
+-- communes et les deux fractions de Belleville, que `98` decoupe.
 --
 -- `entrees_en_cours` doit valoir 2 en 1820-1831 (Batignolles-Monceau et
 -- Grenelle, nees en 1830) et 2 en 1863-1869 (Levallois-Perret en 1866 et Les
@@ -318,8 +336,10 @@ SELECT e.division, e.commune, e.atom_id, e.unit_id AS planche,
   FROM s70_exc e
   LEFT JOIN s70_pose p ON p.division = e.division AND p.atom_id = e.atom_id
  ORDER BY e.division, e.unit_id, e.commune;
--- Attendu : 24 lignes, `planche` = `pose` partout SAUF Belleville en
--- 1857-1863, ou `planche` vaut `(coupee)` et `pose` vaut `(non posee)`.
+-- Attendu : 45 lignes, `planche` = `pose` partout. Belleville 1857-1863 y
+-- figure deux fois, `3564#5` (75-05@1857) et `3564#9` (S1857@9). Une ligne
+-- `(coupee)` / `(non posee)` serait une commune que l'atlas declare coupee
+-- et qui n'a pas encore ses fractions.
 --
 -- Un ecart entre les deux colonnes ailleurs voudrait dire que la regle
 -- nord/sud a repris le dessus sur le texte, ce qu'elle ne doit jamais faire.
@@ -496,6 +516,29 @@ UPDATE unit_version v SET nom = d.nom
   FROM s70_div d
  WHERE d.unit_id = v.unit_id AND d.provenance = 'existante';
 
+-- Les fractions des communes coupées (Belleville 1857-1863). Elles ne sont
+-- PAS retirées au rejeu : les retirer emporterait leurs ancres (`98`, ON
+-- DELETE CASCADE). Elles se posent une fois et se mettent à jour ; la trace
+-- les nomme pour qui voudrait les défaire. Géométrie : l'ANR de la commune,
+-- partagée — la ligne est dans `coupes_ville.csv`, `98` découpe au tirage.
+INSERT INTO atom (atom_id, cassini, fraction, insee_geofla)
+SELECT DISTINCT e.atom_id, m.atom_id, true, m.insee_geofla
+  FROM s70_exc e JOIN atom m ON m.atom_id = split_part(e.atom_id, '#', 1)
+ WHERE e.atom_id LIKE '%#%'
+ON CONFLICT (atom_id) DO NOTHING;
+
+INSERT INTO atom_geom (atom_id, geom, source, partagee)
+SELECT DISTINCT ON (e.atom_id) e.atom_id, n.geom, 'anr', true
+  FROM s70_exc e
+  JOIN atom_geom_anr n ON n.atom_id = split_part(e.atom_id, '#', 1)
+ WHERE e.atom_id LIKE '%#%'
+ ORDER BY e.atom_id, lower(n.periode)
+ON CONFLICT (atom_id) DO UPDATE SET geom = EXCLUDED.geom, source = EXCLUDED.source,
+                                    partagee = true;
+
+INSERT INTO seine_1870_trace (quoi, cle)
+SELECT DISTINCT 'atom', atom_id FROM s70_exc WHERE atom_id LIKE '%#%';
+
 WITH ins AS (
     INSERT INTO membership (atom_id, unit_id, niveau, valid_from, valid_to)
     SELECT atom_id, unit_id, 'circo', valid_from, valid_to FROM s70_pose
@@ -510,14 +553,16 @@ ANALYZE membership;
 \echo '=== 5. Pose ==='
 SELECT quoi, count(*) FROM seine_1870_trace GROUP BY quoi ORDER BY quoi;
 -- Attendu : 9 unites neuves, 4 noms d'unite et 4 noms de version changes,
--- et **519 rattachements**, contre 498 au premier jeu. Le detail :
+-- 2 atomes (les fractions de Belleville), et **541 rattachements** au
+-- 29 octobre 2026 — 539 la veille, Belleville 1857-1863 non posee. Le detail :
 --
---     1815-1820   69      1852-1857   80   (69 -> 80, les annexees entrent)
---     1820-1831   80      1857-1863   79   (Belleville coupee)
---     1831-1848   69      1863-1869   71
+--     1815-1820   78      1852-1857   80
+--     1820-1831   80      1857-1863   81   (Belleville en deux fractions)
+--     1831-1848   80      1863-1869   71
 --                         1869-1870   71
 --
--- 69+80+69+80+79+71+71 = 519.
+-- 78+80+80+80+81+71+71 = 541. 1815 et 1831 comptent les annexees depuis
+-- que leurs exceptions sont lues sur les planches (69 au premier jeu).
 
 \echo ''
 \echo '=== 6. La Seine de 1815 a 1870, annee par annee ==='
@@ -535,9 +580,9 @@ SELECT d::date AS a_la_date,
   LEFT JOIN atom a ON a.atom_id = m.atom_id
  WHERE u.unit_id IS NOT NULL
  GROUP BY d ORDER BY d;
--- 1855 et 1858 : 48 + **80** et **79** desormais, et non 69 — les annexees
---   sont rattachees depuis la relecture des planches. 1858 en compte 79 :
---   Belleville y est coupee.
+-- 1855 et 1858 : 48 + **80** et **81** desormais, et non 69 — les annexees
+--   sont rattachees depuis la relecture des planches. 1858 en compte 81 :
+--   79 communes et les deux fractions de Belleville (`3564#5`, `3564#9`).
 -- 1817 et 1840 : 48 quartiers de Vasserot + 69 communes.
 -- 1825 : 48 + **78**, et non 80. Les 80 sont l'effectif de la DIVISION
 --   1820-1831 ; a la date de 1825, Batignolles-Monceau et Grenelle ne sont pas

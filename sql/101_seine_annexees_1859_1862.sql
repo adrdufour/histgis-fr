@@ -46,8 +46,8 @@
 -- ====================================
 -- De 1860 à 1862 ces atomes ne sont plus des COMMUNES : ce sont des morceaux
 -- de Paris qui votent encore dans la circonscription de 1857. L'atome porte un
--- territoire, pas un statut. Belleville reste nommée et non attribuée
--- (« ligne purement arbitraire » selon l'atlas). Les bois de Boulogne et de
+-- territoire, pas un statut. Belleville, coupée selon l'atlas, l'est en deux
+-- fractions sur une ligne par défaut (`91`, 29 octobre 2026). Les bois de Boulogne et de
 -- Vincennes ne sont pas des annexées : s'ils restent sans propriétaire, le
 -- comblement de `84` les donne au voisin de plus long bord, et c'est déclaré.
 --

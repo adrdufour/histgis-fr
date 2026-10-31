@@ -304,14 +304,25 @@ $$ LANGUAGE sql IMMUTABLE;
 --   * `coupe_niveau()` : à quel niveau la clé se partage.
 -- Rien ne change pour les villes : leur clé reste `insee_geofla`, leur niveau
 -- `canton`.
+--
+-- UNE COMMUNE SANS INSEE — 29 octobre 2026, Belleville. Les onze communes
+-- annexées à Paris en 1860 n'ont pas d'`insee_geofla` : elles sont mortes avant
+-- tout code. Belleville est coupée entre deux circonscriptions en 1857-1863
+-- (fractions `3564#5` et `3564#9`, posées par `91`). Sa clé est `A` + l'atome
+-- de la commune (`A3564`), son niveau `circo` : le seul partage connu d'une
+-- annexée est électoral. Une annexée coupée entre deux CANTONS demanderait
+-- un autre préfixe ; un atome à cinq chiffres (Grenelle, 16141) ne tiendrait
+-- pas dans `coupe_ville.insee`, `char(5)`.
 CREATE OR REPLACE FUNCTION coupe_cle(p_cassini text, p_insee_geofla text)
 RETURNS text AS $$
-  SELECT CASE WHEN p_cassini LIKE 'PQ%' THEN p_cassini ELSE p_insee_geofla END;
+  SELECT CASE WHEN p_cassini LIKE 'PQ%' THEN p_cassini
+              WHEN p_insee_geofla IS NULL AND p_cassini IS NOT NULL THEN 'A' || p_cassini
+              ELSE p_insee_geofla END;
 $$ LANGUAGE sql IMMUTABLE;
 
 CREATE OR REPLACE FUNCTION coupe_niveau(p_cle text)
 RETURNS text AS $$
-  SELECT CASE WHEN p_cle LIKE 'PQ%' THEN 'circo' ELSE 'canton' END;
+  SELECT CASE WHEN p_cle LIKE 'PQ%' OR p_cle LIKE 'A%' THEN 'circo' ELSE 'canton' END;
 $$ LANGUAGE sql IMMUTABLE;
 
 -- Le polygone à découper, à la date demandée : ANR s'il parle, `atom_geom` en

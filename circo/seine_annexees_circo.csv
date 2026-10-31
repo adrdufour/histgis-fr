@@ -22,7 +22,8 @@ division,commune,atom_id,unit_id,note
 1857-1863,Bercy,3719,S1857@10,planche : banlieue sud
 1857-1863,Grenelle,16141,S1857@10,planche : banlieue sud
 1857-1863,Vaugirard,39042,S1857@10,planche : banlieue sud
-1857-1863,Belleville,3564,(coupee),partagee entre la 5e (deux bureaux de vote) et la 9e ; ligne declaree arbitraire par l atlas
+1857-1863,Belleville (bas),3564#5,75-05@1857,planche : deux bureaux (rue H. Chevreau et rue du Combat) a la 5e ; ligne de l atlas declaree arbitraire et remplacee par une ligne par defaut (cartes/coupes_ville.csv cle A3564)
+1857-1863,Belleville (haut),3564#9,S1857@9,planche : le reste de la commune a la 9e ; meme ligne par defaut
 1815-1820,Passy,26284,S1815@nord,regle ecrite de la planche 1815 (la Seine a l ouest et la rue de Lagny a l est) ; a confirmer sur la planche
 1815-1820,Auteuil,1960,S1815@nord,regle ecrite de la planche 1815 (la Seine a l ouest et la rue de Lagny a l est) ; a confirmer sur la planche
 1815-1820,Montmartre,23671,S1815@nord,regle ecrite de la planche 1815 (la Seine a l ouest et la rue de Lagny a l est) ; a confirmer sur la planche
