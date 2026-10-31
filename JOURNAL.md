@@ -11267,3 +11267,13 @@ Adrien voit deux Moussy-Verneuil (02) en 1996. ANR décrit les fusions dans le `
 `138` coupe ou retire tout rattachement posé après la fin de vie ANR d'un atome, quand ANR désigne un successeur : un polygone qui couvre plus de la moitié du dernier polygone de l'atome et porte le même numéro IGN. Le successeur reçoit ce qui lui manque à ce niveau. Bilan : 1 638 lignes coupées, 369 retirées, 68 posées, sur 866 atomes dont la plupart sont des fusions de 1971-1973.
 
 Rien n'est touché quand le successeur a une autre unité au même niveau, ou quand il n'y a pas de successeur. Ce sont les communes associées restées dans leur ancien canton jusqu'en 1973 ou 1982 (Aurent, Ascq, Petite-Synthe…), et les communes rattachées à Paris en 1925-1929. Ces 154 lignes sont dans `build/fantomes_divergents.csv`, à relire. `138` est réversible par `p138_trace` et s'ajoute dans `rejouer_apres_rebuild.sh` après `137`. Export complet relancé.
+
+## 31 octobre 2026 — noms d'époque tirés d'ANR, atome par atome
+
+Avant 1923, la carte montrait deux « Moussy-Verneuil ». Le nom d'un atome venait de son code INSEE : le nom GEOFLA, puis les renommages de `insee_mvt`. Moussy-sur-Aisne et Verneuil-Courtonne, toutes deux codées 02531, recevaient donc le nom moderne. `export_web.py` lit maintenant les noms d'ANR atome par atome (`chronologies_anr()`) :
+- un atome qu'ANR ne dessine plus en 2020 prend son nom ANR, en `n` et en `nm` ;
+- un atome vivant qui a plusieurs noms ANR en reçoit la chronologie, avec le nom GEOFLA pour le dernier segment.
+
+`ns: "anr"` signale la source, et la fiche de la page le dit. Sur toute la France, 3 313 atomes ne sont plus dessinés par ANR en 2020 et 1 608 atomes vivants ont plusieurs noms. Dans l'export en place, 2 623 communes changent de nom : les `communes.json` ont été réécrits par la même règle, sans refaire l'export, car seuls ces fichiers bougent.
+
+Incident : PostgreSQL a redémarré le 31 octobre à 22 h 18. `anr_commune` étant UNLOGGED, elle a été vidée. Rechargée depuis le GeoPackage avec `ogr2ogr -append -preserve_fid` dans la table existante : 47 784 lignes. `atom_geom_anr`, journalisée, n'avait pas souffert.

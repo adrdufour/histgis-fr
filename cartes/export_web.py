@@ -1048,6 +1048,42 @@ def chronologies(cur, dep):
     return out
 
 
+# Les noms d'ANR, ATOME PAR ATOME. `chronologies()` lit les renommages de
+# l'Insee par CODE : deux atomes d'un même code (Moussy-sur-Aisne et
+# Verneuil-Courtonne, fondues en 1923 dans Moussy-Verneuil, code 02531) y
+# recevaient le même nom, le nom moderne, et la carte montrait deux
+# « Moussy-Verneuil » avant 1923 (Adrien, 29 octobre 2026). ANR nomme chaque
+# polygone pour sa période : c'est la seule source qui sépare les deux.
+# Elle ne sert que là où elle dit quelque chose de plus que `n` : un atome
+# qu'ANR ne dessine plus en 2020 (commune absorbée), ou dont il connaît
+# plusieurs noms. Pour un atome encore vivant, le dernier segment reprend `n`,
+# la graphie GEOFLA de l'étiquette moderne.
+SQL_NOMS_ANR = """
+SELECT g.atom_id, extract(year FROM lower(g.periode))::int, upper(g.periode) >= DATE '2020-01-01',
+       upper(translate(regexp_replace(c.namecom, '\\s*\\[[^]]*\\]$', ''),
+                       'àâäçéèêëîïôöùûüÿœÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒ',
+                       'aaaceeeeiioouuuyoAAACEEEEIIOOUUUYO'))
+FROM   atom_geom_anr g JOIN anr_commune c USING (poly_id)
+WHERE  g.atom_id = ANY(%(atomes)s)
+ORDER  BY 1, 2
+"""
+
+
+def chronologies_anr(cur, atomes):
+    """atom_id -> ([[annee_debut, nom], …], vivant_en_2020)."""
+    try:
+        cur.execute(SQL_NOMS_ANR, {"atomes": list(atomes)})
+    except psycopg2.Error:
+        return {}
+    out = {}
+    for atom_id, debut, vivant, nom in cur.fetchall():
+        suite, _ = out.setdefault(atom_id, ([], False))
+        if nom and (not suite or suite[-1][1] != nom):
+            suite.append([max(debut, AN_MIN), nom])
+        out[atom_id] = (suite, vivant)
+    return out
+
+
 # ---------------------------------------------------------------------------
 # Construction de la chronologie géométrique d'un atome
 #
@@ -1634,6 +1670,7 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr,
     cur.execute(sql_com, params)
     lignes = cur.fetchall()
     chrono = chronologies(cur, dep)
+    chrono_anr = chronologies_anr(cur, [l[0] for l in lignes if not l[3]]) if anr else {}
     if partition:
         versions = versions_par_atome_partition(
             cur, params, [l[0] for l in lignes], annees_geom)
@@ -1667,6 +1704,19 @@ def exporte_departement(cur, dep, grille, prec, sortie, sql_com, anr,
             n_repli_atomes += 1
         if insee and insee.strip() in chrono:
             communes[atom_id]["nm"] = chrono[insee.strip()]
+        suite, vivant = chrono_anr.get(atom_id, ([], True))
+        if suite and not vivant:
+            communes[atom_id]["n"] = suite[-1][1]
+            if len(suite) > 1 or suite[-1][1] != nom:
+                communes[atom_id]["nm"], communes[atom_id]["ns"] = suite, "anr"
+        elif len(suite) > 1:
+            suite[-1][1] = nom
+            propre = [suite[0]]
+            for seg in suite[1:]:
+                if seg[1] != propre[-1][1]:
+                    propre.append(seg)
+            if len(propre) > 1:
+                communes[atom_id]["nm"], communes[atom_id]["ns"] = propre, "anr"
     poids += ecrit(base / "communes.json", {"dep": dep, "communes": communes})
 
     # --- une configuration par état distinct de ce qui se dessine ----------

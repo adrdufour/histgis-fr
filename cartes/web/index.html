@@ -1384,6 +1384,11 @@ function nomDep(dep, annee) {
 // chronologie rend le nom le plus ancien *connu*, pas le nom de 1885. C'est
 // mieux que le nom moderne et ce n'est pas la vérité — la page le dit dans la
 // fiche plutôt que de laisser croire à une exactitude qu'elle n'a pas.
+//
+// Depuis le 31 octobre 2026, `nm` vient d'ANR, atome par atome, quand ANR en
+// sait plus : commune absorbée (Moussy-sur-Aisne, fondue en 1923 dans
+// Moussy-Verneuil) ou nommée de plusieurs façons au fil de ses polygones.
+// Le code Insee, partagé par les deux atomes, leur donnait le même nom.
 // ===========================================================================
 function nomA(c, annee) {
   if (!c) return null;
@@ -1614,7 +1619,11 @@ function ficheCommune(aid) {
     for (const [a, v] of c.nm)
       h += `<tr><td>${a <= 1815 ? "avant le 1<sup>er</sup> renommage connu"
             : "à partir de " + a}</td><td>${echappe(v)}</td></tr>`;
-    h += `</table><p class="note">Renommages tirés d'<code>insee_mvt</code>
+    h += c.ns === "anr"
+      ? `</table><p class="note">Noms tirés des polygones ANR, période par
+      période, pour cet atome seul : le code Insee peut être partagé avec
+      la commune qui l'a absorbé ou qu'il a absorbée.</p>`
+      : `</table><p class="note">Renommages tirés d'<code>insee_mvt</code>
       (<code>mod = '10'</code>). Le fichier de l'Insee commence en 1943 : le
       premier segment est le nom le plus ancien <i>connu</i>, pas
       nécessairement celui de ${S.annee}.</p>`;
