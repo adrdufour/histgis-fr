@@ -4273,6 +4273,32 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Romorantin-Lanthenay (41194)
+
+### 154. Romorantin-Lanthenay de 1973 à 1992 sans canton, et le Nord sous le nom « Romorantin »
+
+- **Source** : décret n° 84-1228 du 24 décembre 1984, art. 2 (JO du 30 décembre 1984,
+  p. 4148-4149, `jorf_txt/JORF_19841230_305_col.txt` l. 14776-14792) : le canton de
+  Romorantin-Lanthenay est divisé en Nord (Courmemin, Millançay, Veilleins, Vernou-en-Sologne et la
+  ville au nord du bras principal de la Sauldre) et Sud (Loreux, Pruniers, Villeherviers et le reste
+  de la ville).
+- **Base** : la ville (`29551`) est à 4117 jusqu'au 1973-09-23, puis n'a **aucune appartenance**
+  jusqu'au 1992-03-22, date où commencent `29551#4117` et `29551#4129`. Les sept communes rurales
+  sont justes : à 4117 jusqu'au 1985-03-10, puis Loreux, Pruniers et Villeherviers à 4129. 4117
+  n'a pas de `unit_version` entre 1941 et 1999 : de 1985 à 1999, le Nord s'affiche « Romorantin »
+  (comme Guéret-Nord ou Dax).
+- **À inscrire** : la ville entière à 4117 du 1973-09-23 au 1985-03-10 ; `29551#4117` et
+  `29551#4129` du 1985-03-10 au 1992-03-22 ; le nom Romorantin-Lanthenay-Nord pour 4117 dès le
+  1985-03-10 (et Romorantin-Lanthenay pour 1941-1985, la commune ayant absorbé Lanthenay le
+  29 mai 1961).
+- **Déjà écrit** (1er novembre 2026) : `41194-1985-sauldre`, du 1985-03-10 au 2013-01-01, ancres
+  datées Nord `POINT(604629 6699003)`, Sud `POINT(606229 6694175)`. Elles jouent déjà dans le trou
+  de 1985 à 1992 (règle de Boulogne) : `carte_coupe_ville` rend au 1988-06-01 Nord 3 498,0 ha et
+  Sud 1 006,1 ha, comme en 2000. De 1973 à 1985, la ville manque sur la carte. Fichiers :
+  `cartes/sorties/decoupe_romorantin/`.
+
+---
+
 ## Paris (75056) — les quartiers partagés entre deux circonscriptions
 
 Tracé le 3 octobre 2026. Lignes, morceaux, points d'ancre et remarques :

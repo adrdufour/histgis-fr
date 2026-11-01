@@ -1265,3 +1265,22 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   commande lance ensuite `export_web.py` : le shell qui attend porte ce nom dans sa ligne de
   commande et se trouve lui-même, indéfiniment (1er novembre 2026). Attendre un PID précis
   (`while kill -0 $PID`), ou lancer l'étape suivante après la notification de fin.
+
+- **« Le bras principal (Nord) » d'une rivière à plusieurs bras** (Romorantin, 1er novembre 2026) :
+  la BD TOPO classe chaque tronçon (`type_de_bras` : Principal, Secondaire, Inconnu), et nomme les
+  bras secondaires « Bras de la <rivière> ». `trace_eau` filtre le toponyme exact mais prend le plus
+  court chemin, y compris par un bras « Inconnu ». Assembler l'axe « Principal » en SQL
+  (`ST_LineMerge(ST_Intersection(ST_Union(ST_SnapToGrid(ST_Force2D(geom), 0.01)), cible))` sur la
+  liste des `ogc_fid`). Pour peser les îles, polygoniser la commune par TOUS les bras : les axes
+  coupés à la cible donnent des GeometryCollection, et `ST_Node` les refuse. Passer par
+  `ST_CollectionExtract(…, 2)`, `ST_Dump`, puis `ST_UnaryUnion` avec le contour, et `ST_Polygonize`.
+  Population par île (IRIS au prorata des logements) : le bras sud donnait 64,4 % au Nord contre
+  60,9 % légal ; les bras plus au nord que l'axe principal ne bordaient que des îlots sans logement.
+- **Une rivière qui vient d'une commune du canton Sud et repart vers une autre** (Villeherviers puis
+  Pruniers) : le morceau Nord touche surtout des communes du Sud. Le contrôle par les contacts ne
+  vaut rien ici ; le dire dans la note plutôt que chercher un point triple.
+- **Pour éprouver hors de `98` une ligne qui finit à 1 m du bord**, `ST_Split` ne coupe pas :
+  ajouter un `ST_ShortestLine` au bord pour chaque bout, puis `ST_Difference(cible, ST_Buffer(…, 0.05))`.
+- **`--ecrire` pendant l'export d'une autre session sur d'autres départements** (1er novembre 2026) :
+  l'écriture et la recette ont fini sans erreur, et l'export a continué. Ne pas arrêter un export
+  qui n'est pas le sien.
