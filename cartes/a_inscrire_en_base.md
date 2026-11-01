@@ -4215,10 +4215,13 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 - **À inscrire** : les quatre cantons de 1941 à 1973 ; douze fractions de 1973 à 1982 (`#8711`
   Beaupuy … `#8737` Panazol), quatorze de 1982 à 1985 (+ `#8739` Corgnac, `#8740` Puy-las-Rodas),
   seize de 1985 à 1988 (+ `#8741` Grand-Treuil, `#8742` Vigenal) ; les noms de 1973 dès 1973.
-- **Lignes** : 30 lignes `87085-1987-*`, 1987-02-13 → 2013-01-01, ancres datées (points dans
-  `cartes/sorties/decoupe_limoges/commande87.sh`), écrites le 28 octobre 2026. Les régimes 1973,
-  1982 et 1985 restent à tracer : ils reprennent la plupart de ces lignes. Fichiers :
-  `cartes/sorties/decoupe_limoges/`.
+- **Lignes** : 30 lignes `87085-1987-*` (1987-02-13 → 2013-01-01, écrites le 28 octobre 2026),
+  puis le 1er novembre 2026 : 25 lignes `87085-1973-*` (1973-09-23 → 1982-03-14, `--morceaux 12`),
+  27 lignes `87085-1982-*` (→ 1985-03-10, `--morceaux 14`), 29 lignes `87085-1985-*` (→ 1987-02-13,
+  `--morceaux 16`), toutes à ancres datées sur les codes de 1988 (points dans
+  `cartes/sorties/decoupe_limoges/reg.py` et `commande87.sh`). Elles joueront de 1973 à 1988 quand
+  les appartenances seront inscrites. Reste avant 1973 (Nord / Sud, quatre cantons de 1901), sans
+  texte. Fichiers : `cartes/sorties/decoupe_limoges/`.
 
 ---
 
