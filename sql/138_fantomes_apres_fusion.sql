@@ -162,11 +162,24 @@ UPDATE membership m SET valid_to = a.fin
 -- Le successeur reçoit ce qui lui manque à ce niveau
 -- Deux fantômes peuvent avoir le même successeur (Thionville : Garche,
 -- Koeking, Oeutrange) : à recouvrement, le premier par date de début l'emporte.
+-- Une période que portent les FRACTIONS du successeur ne lui manque pas —
+-- signalé par Adrien le 1er novembre 2026 : deux frontières à Gap en 1977.
+-- Romette, absorbée en 1974, rendait l'atome entier 15035 à Gap-Campagne de
+-- 1974 à 1982, par-dessus les quatre fractions de 1973 (`115`) ; `99` prend
+-- alors la mère pour le cas Graville et la ville se dessine deux fois. Même
+-- défaut dans onze autres villes (24 lignes, cantons et circos). Ces 24 lignes,
+-- toutes entièrement couvertes par les fractions, ont été retirées le même jour
+-- de `membership` et de `p138_trace`, sans rejouer le script : un rejeu
+-- complet retirerait aussi, par la règle `jumeau`, la circo 1928-1940 de PQ61
+-- (Auteuil, fin ANR 1925-04-03, même circo que PQ62), question restée ouverte.
 WITH manque AS (
     SELECT a.succ, a.unit_id, a.niveau, a.membership_id,
            unnest(datemultirange(a.apres)
                   - coalesce((SELECT range_agg(o.periode) FROM membership o
-                               WHERE o.atom_id = a.succ AND o.niveau = a.niveau),
+                               WHERE (o.atom_id = a.succ OR o.atom_id IN
+                                      (SELECT f.atom_id FROM atom f
+                                        WHERE f.cassini = a.succ AND f.atom_id LIKE '%#%'))
+                                 AND o.niveau = a.niveau),
                              '{}'::datemultirange)) AS p
       FROM t138_agir a WHERE a.meme_ign AND NOT a.divergent),
 num AS (SELECT *, row_number() OVER (PARTITION BY succ, niveau ORDER BY lower(p), membership_id) AS rang
