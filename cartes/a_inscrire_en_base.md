@@ -4200,6 +4200,28 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 
 ---
 
+## Limoges (87085)
+
+### 150. Limoges de 1941 à 1988 sans canton, et les noms de 1988-1999
+
+- **Sources** : décret 73-821 du 16 août 1973 (JO du 17 août 1973, p. 8926-8928 : douze cantons) ;
+  décret 82-86 du 25 janvier 1982 (JO du 26 janvier, p. 377-378 : Isle → Isle + Puy-las-Rodas,
+  Landouge → Landouge + Corgnac) ; décret 84-1239 du 24 décembre 1984 (JO du 30 décembre : Couzeix →
+  Couzeix + Vigenal, La Bastide → La Bastide + Grand-Treuil) ; décret 87-94 du 9 février 1987 (JO du
+  13 février, p. 1649-1650 : limite Vigenal / La Bastide) ; chronologie : Est et Ouest en 1901.
+- **Base** : Nord et Sud (`19609#8712`, `#8714`) de 1815 à 1901, les quatre cantons de 1901 à 1941 ;
+  aucune appartenance de 1941 au 1988-09-25 ; de 1988 à 1999, `#8711` à `#8714` portent encore les
+  noms Est, Nord, Ouest, Sud alors qu'ils sont Beaupuy, Carnot, Centre, La Bastide depuis 1973.
+- **À inscrire** : les quatre cantons de 1941 à 1973 ; douze fractions de 1973 à 1982 (`#8711`
+  Beaupuy … `#8737` Panazol), quatorze de 1982 à 1985 (+ `#8739` Corgnac, `#8740` Puy-las-Rodas),
+  seize de 1985 à 1988 (+ `#8741` Grand-Treuil, `#8742` Vigenal) ; les noms de 1973 dès 1973.
+- **Lignes** : 30 lignes `87085-1987-*`, 1987-02-13 → 2013-01-01, ancres datées (points dans
+  `cartes/sorties/decoupe_limoges/commande87.sh`), écrites le 28 octobre 2026. Les régimes 1973,
+  1982 et 1985 restent à tracer : ils reprennent la plupart de ces lignes. Fichiers :
+  `cartes/sorties/decoupe_limoges/`.
+
+---
+
 ## Blois (41018)
 
 ### 153. FAIT (1er novembre 2026, `sql/140`) — Blois de 1973 à 1992 : encore Est et Ouest en base, alors que la ville a quatre puis cinq cantons

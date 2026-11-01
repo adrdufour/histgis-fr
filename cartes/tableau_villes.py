@@ -186,6 +186,7 @@ REMARQUES = {
     "38567": "Commune créée en 1989 : la limite Domène / Vizille est l'ancienne limite ANR de Saint-Martin-d'Uriage (source main), 1989-2013. Logements 35,3 % à Domène contre 34,8 % de la population légale. Base : Vizille de 1815 à 1941 alors que la commune n'existait pas.",
     "40088": "Décret 73-660 (JO 17 juillet 1973) : Nord / Sud de l'Adour, axe fictif, traversée de 2,5 km ; une ligne 1973-2013. Nord 106 ha (Sablar) ; logements 10,0 % au Nord contre 8,4 % de la population légale.",
     "40313": "Arrêté du 27 vendémiaire an X (Rondonneau t. 8, p. 454-455) : Est / Ouest de la « rivière de Douze » (Midouze), axe fictif, traversée de 3 km ; une ligne 1801-2013. Ouest 250 ha (la ville) ; logements 45,3 % à l'Ouest contre 41,6 % de la population légale.",
+    "87085": "Régime 1987-2013 seul (décrets 73-821, 82-86, 84-1239, 87-94) : 30 lignes, 16 cantons ; numéros de 1982 par la BAN (Meissonier 120), RN 20 = A20, Rhin-et-Danube par la branche directe. Population : tous les cantons à moins de 0,4 point sauf Grand-Treuil (-0,47). Restent 1973, 1982, 1985 et avant 1973 (Nord / Sud, quatre cantons de 1901).",
 }
 
 # Remarques de REMARQUES révisées après coup (la ville a été reprise) : elles

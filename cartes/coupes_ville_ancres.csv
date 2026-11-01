@@ -841,6 +841,22 @@ N38567#3844,canton Vizille (point explicite),POINT(927413 6450538),,
 11662#4029,canton Dax-Sud (sud),POINT(372457.29 6297583.8),,
 37107#4027,canton Tartas-Ouest (point explicite),POINT(392805 6312000),,
 37107#4026,canton Tartas-Est (est),POINT(395334.63 6309225.5),,
+19609#8711,canton Limoges-Beaupuy (point explicite),POINT(564444 6528894),1987-02-13,2013-01-01
+19609#8712,canton Limoges-Carnot (point explicite),POINT(564964 6528215),1987-02-13,2013-01-01
+19609#8713,canton Limoges-Centre (point explicite),POINT(564570 6527590),1987-02-13,2013-01-01
+19609#8714,canton Limoges-La Bastide (point explicite),POINT(567198 6530941),1987-02-13,2013-01-01
+19609#8730,canton Limoges-Émailleurs (point explicite),POINT(563742 6526158),1987-02-13,2013-01-01
+19609#8731,canton Limoges-Isle (point explicite),POINT(562014 6526024),1987-02-13,2013-01-01
+19609#8732,canton Limoges-Landouge (point explicite),POINT(559811 6529544),1987-02-13,2013-01-01
+19609#8733,canton Limoges-Couzeix (point explicite),POINT(563729 6529273),1987-02-13,2013-01-01
+19609#8734,canton Limoges-Cité (point explicite),POINT(565862 6526925),1987-02-13,2013-01-01
+19609#8735,canton Limoges-Le Palais (point explicite),POINT(567032 6528871),1987-02-13,2013-01-01
+19609#8736,canton Limoges-Condat (point explicite),POINT(565555 6524722),1987-02-13,2013-01-01
+19609#8737,canton Limoges-Panazol (point explicite),POINT(566980 6525529),1987-02-13,2013-01-01
+19609#8739,canton Limoges-Corgnac (point explicite),POINT(563103 6528366),1987-02-13,2013-01-01
+19609#8740,canton Limoges-Puy-las-Rodas (point explicite),POINT(562976 6526834),1987-02-13,2013-01-01
+19609#8741,canton Limoges-Grand-Treuil (point explicite),POINT(565667 6529003),1987-02-13,2013-01-01
+19609#8742,canton Limoges-Vigenal (point explicite),POINT(566953 6534265),1987-02-13,2013-01-01
 3564#5,"Belleville, bas (126.7 ha) : 75-05@1857, 5e de Paris",POINT(654600 6863700),,
 3564#9,"Belleville, haut (251.5 ha) : S1857@9, 9e de la Seine",POINT(655800 6864100),,
 24214#0323,canton Moulins-Est (point explicite),POINT(725058.63 6606585.7),,

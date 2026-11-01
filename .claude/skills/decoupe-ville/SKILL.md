@@ -1205,6 +1205,18 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
 - **`rendu_sans_ihm` plante sur une couche vide** (`'NoneType' object has no attribute 'setSymbol'`,
   ici le `<insee>_fer.geojson` d'une commune sans voie ferrée) : filtrer les couches invalides ou
   vides avant `rendu()`.
+- **Les numéros d'un décret se localisent par la BAN** (Limoges 1982, « numéro 87 de la rue Albert-Thomas
+  au numéro 120 de la rue Meissonnier ») : `api-adresse.data.gouv.fr/search/?q=120 rue Ernest
+  Meissonier&citycode=87085&type=housenumber`. Un numéro absent de la BAN (87 Albert-Thomas) se place
+  au-delà du dernier numéro connu dans le sens de la numérotation.
+- **Une grande ville décrite canton par canton** (Limoges, seize cantons) : ne pas tracer les
+  périmètres, tracer chaque limite commune une seule fois entre ses deux nœuds, les nœuds pris aux
+  carrefours que les deux textes voisins nomment. Trente lignes ont donné seize morceaux au premier
+  essai ; la population par canton a ensuite désigné la seule ligne fausse.
+- **Une rue à deux branches de même nom** (Limoges, rue Rhin-et-Danube) : `voies()` peut prendre la
+  boucle ; l'écart de population (+2 200) l'a montré. Fixer le départ au carrefour de la branche directe.
+- **Un sentier BD TOPO isolé** (passerelle Montjovis) n'est pas relié au réseau : partir du point de la
+  rue voisine le plus proche et poser le point de la passerelle à la main.
 
 - **Une commune annexée à Paris en 1860, coupée entre deux circonscriptions** (Belleville 1857-1863,
   29 octobre 2026) : pas d'`insee_geofla`, donc pas de clé de coupe. `coupe_cle()` rend `A` + l'atome
