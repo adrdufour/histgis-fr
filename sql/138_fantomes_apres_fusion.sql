@@ -28,6 +28,17 @@
 -- `build/fantomes_divergents.csv`, à relire ; de même les atomes sans
 -- successeur ANR, dans le même fichier.
 --
+-- Exception à l'exception, signalée par Adrien le 1er novembre 2026 : Aurent
+-- (04, atome 1891), absorbée par Braux en 1932, était au canton d'Entrevaux
+-- de 1954 à 2013, sans circonscription. Ce n'était pas une commune associée :
+-- elle porte le code GEOFLA 04042 de Castellet-lès-Sausses (7097), à qui
+-- Braux a cédé le hameau en 1961, et les jalons lisant par INSEE avaient posé
+-- sur les deux atomes la ligne de Castellet. D'où le cas `jumeau` : une ligne
+-- ouverte APRÈS la fin de vie, que porte aussi, sur toute sa durée, un atome
+-- vivant de même code GEOFLA, est celle du jumeau. Elle est retirée, même
+-- divergente, et rien n'est donné au successeur. Les lignes ouvertes avant la
+-- fin (quartiers de Paris rognés par les bois en 1925) n'en sont pas.
+--
 -- Réversible : `p138_trace`. Rejouable. Après `137`, dont il corrige la règle
 -- `muet_meme_commune` sans la défaire (le successeur garde ce qu'elle lui a
 -- donné : c'était juste ; c'est le fantôme qui était de trop).
@@ -95,19 +106,28 @@ SELECT m.membership_id, m.atom_id, m.unit_id, m.niveau, m.valid_from, m.valid_to
        s.succ, coalesce(s.meme_ign, false) AS meme_ign,
        EXISTS (SELECT 1 FROM membership o
                 WHERE o.atom_id = s.succ AND o.niveau = m.niveau AND o.unit_id <> m.unit_id
-                  AND o.periode && daterange(greatest(m.valid_from, v.fin), m.valid_to)) AS divergent
+                  AND o.periode && daterange(greatest(m.valid_from, v.fin), m.valid_to)) AS divergent,
+       m.valid_from >= v.fin AND EXISTS (
+           SELECT 1 FROM atom j JOIN membership o ON o.atom_id = j.atom_id
+            WHERE j.insee_geofla = a.insee_geofla AND j.atom_id <> m.atom_id
+              AND o.niveau = m.niveau AND o.unit_id = m.unit_id
+              AND o.periode @> daterange(m.valid_from, m.valid_to)
+              AND EXISTS (SELECT 1 FROM atom_geom_anr g
+                           WHERE g.atom_id = j.atom_id AND g.periode @> m.valid_from)) AS jumeau
 FROM   membership m
 JOIN   t138_vie v ON v.atom_id = m.atom_id
+JOIN   atom a ON a.atom_id = m.atom_id
 LEFT   JOIN t138_succ s ON s.atom_id = m.atom_id
 WHERE  m.valid_to > v.fin;
 
 DROP TABLE IF EXISTS t138_agir;
 CREATE TEMP TABLE t138_agir AS
-SELECT * FROM t138_ligne WHERE meme_ign AND NOT divergent;
+SELECT * FROM t138_ligne WHERE (meme_ign AND NOT divergent) OR jumeau;
 
 \echo ''
 \echo '-- lignes au-delà de la fin de vie ANR'
-SELECT CASE WHEN succ IS NULL THEN 'sans_successeur'
+SELECT CASE WHEN jumeau THEN 'jumeau'
+            WHEN succ IS NULL THEN 'sans_successeur'
             WHEN NOT meme_ign THEN 'successeur_autre_ign'
             WHEN divergent THEN 'divergent'
             ELSE 'ramene' END AS cas,
@@ -116,11 +136,16 @@ SELECT CASE WHEN succ IS NULL THEN 'sans_successeur'
 FROM   t138_ligne GROUP BY 1, 2 ORDER BY 1, 2;
 
 \echo ''
+\echo '-- témoin : Aurent (1891), jumeau GEOFLA de Castellet-lès-Sausses (7097)'
+SELECT atom_id, niveau, unit_id, valid_from, valid_to, fin FROM t138_agir
+ WHERE atom_id = '1891' ORDER BY niveau, valid_from;
+
+\echo ''
 \echo '-- témoin : Moussy-sur-Aisne (24286) → Moussy-Verneuil (39485)'
 SELECT atom_id, succ, niveau, unit_id, valid_from, valid_to, fin FROM t138_agir
  WHERE atom_id = '24286' ORDER BY niveau, valid_from;
 
-\copy (SELECT (SELECT trim(u.dep::text) FROM unit u WHERE u.unit_id = l.unit_id) AS departement, (SELECT c.namecom FROM atom_geom_anr g JOIN anr_commune c USING (poly_id) WHERE g.atom_id = l.atom_id ORDER BY upper(g.periode) DESC LIMIT 1) AS commune, l.atom_id AS atome, l.fin AS fin_anr, (SELECT c.namecom FROM atom_geom_anr g JOIN anr_commune c USING (poly_id) WHERE g.atom_id = l.succ AND g.periode @> l.fin) AS successeur, l.succ AS atome_successeur, l.niveau, l.unit_id || ' ' || coalesce((SELECT u.nom FROM unit u WHERE u.unit_id = l.unit_id), '') AS unite_fantome, (SELECT string_agg(DISTINCT o.unit_id || ' ' || coalesce(u.nom, ''), ' ; ') FROM membership o JOIN unit u USING (unit_id) WHERE o.atom_id = l.succ AND o.niveau = l.niveau AND o.periode && l.apres) AS unite_successeur, lower(l.apres) AS du, upper(l.apres) AS au, CASE WHEN l.succ IS NULL THEN 'sans_successeur' WHEN NOT l.meme_ign THEN 'successeur_autre_ign' ELSE 'divergent' END AS cas, '' AS decision, '' AS note FROM t138_ligne l WHERE NOT (l.meme_ign AND NOT l.divergent) ORDER BY 1, 2, 7, 10) TO 'build/fantomes_divergents.csv' WITH (FORMAT csv, HEADER true)
+\copy (SELECT (SELECT trim(u.dep::text) FROM unit u WHERE u.unit_id = l.unit_id) AS departement, (SELECT c.namecom FROM atom_geom_anr g JOIN anr_commune c USING (poly_id) WHERE g.atom_id = l.atom_id ORDER BY upper(g.periode) DESC LIMIT 1) AS commune, l.atom_id AS atome, l.fin AS fin_anr, (SELECT c.namecom FROM atom_geom_anr g JOIN anr_commune c USING (poly_id) WHERE g.atom_id = l.succ AND g.periode @> l.fin) AS successeur, l.succ AS atome_successeur, l.niveau, l.unit_id || ' ' || coalesce((SELECT u.nom FROM unit u WHERE u.unit_id = l.unit_id), '') AS unite_fantome, (SELECT string_agg(DISTINCT o.unit_id || ' ' || coalesce(u.nom, ''), ' ; ') FROM membership o JOIN unit u USING (unit_id) WHERE o.atom_id = l.succ AND o.niveau = l.niveau AND o.periode && l.apres) AS unite_successeur, lower(l.apres) AS du, upper(l.apres) AS au, CASE WHEN l.succ IS NULL THEN 'sans_successeur' WHEN NOT l.meme_ign THEN 'successeur_autre_ign' ELSE 'divergent' END AS cas, '' AS decision, '' AS note FROM t138_ligne l WHERE NOT (l.meme_ign AND NOT l.divergent) AND NOT l.jumeau ORDER BY 1, 2, 7, 10) TO 'build/fantomes_divergents.csv' WITH (FORMAT csv, HEADER true)
 
 \if :{?appliquer}
 -- Coupe ou retrait côté fantôme
@@ -143,7 +168,7 @@ WITH manque AS (
                   - coalesce((SELECT range_agg(o.periode) FROM membership o
                                WHERE o.atom_id = a.succ AND o.niveau = a.niveau),
                              '{}'::datemultirange)) AS p
-      FROM t138_agir a),
+      FROM t138_agir a WHERE a.meme_ign AND NOT a.divergent),
 num AS (SELECT *, row_number() OVER (PARTITION BY succ, niveau ORDER BY lower(p), membership_id) AS rang
           FROM manque WHERE NOT isempty(p)),
 seul AS (
