@@ -1056,6 +1056,17 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/142_liste_1945_apres_trous.sql" > "$RACINE/build/p142.log" 2>&1 \
     || { echo "  142 refusé — voir build/p142.log" >&2; exit 1; }
 
+# Ajouté le 1er novembre 2026. `143` : la mère qui tient une couche quand ses
+# fractions tiennent l'autre (Menton, Aubagne, Istres, Martigues, Monéteau
+# 1986-1998, Rochefort 1815-1852) reçoit la couche de ses fractions ; et
+# Tende, La Brigue (1947) et Pont-de-Buis (1965), sans rattachement avant la
+# couche moderne, reçoivent canton et circonscription. Après `142`, dont il
+# ne touche pas les lignes.
+etape "143 — Menton, Tende : une commune sans l'une de ses deux couches"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/143_menton_tende.sql" > "$RACINE/build/p143.log" 2>&1 \
+    || { echo "  143 refusé — voir build/p143.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
