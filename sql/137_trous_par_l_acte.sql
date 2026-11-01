@@ -74,6 +74,13 @@
 -- (cantons divisés, ou un canton absent de la lecture), l'atlas lui-même :
 -- chaque canton qu'il range dans une seule circonscription — `circo_atlas_partiel`.
 -- Les unités de ces circonscriptions sont créées ici et tracées.
+-- Les trois règles ne prennent QUE dans le département du canton du trou
+-- (la Corse ramenée à 20) — la garde de `113` du 20 octobre 2026. Sans elle,
+-- le canton de 1958 d'une commune passée dans un autre département lui
+-- rendait la circonscription de l'ancien : Rillieux, les Sathonay, Genay,
+-- Montanay dans la 3e de l'Ain jusqu'en 1986, cinq communes cédées par
+-- l'Isère dans la 5e de l'Isère, Ytres dans la 5e de la Somme (corrigé le
+-- 1er novembre 2026 ; la base l'a été par `141`).
 --
 -- Prérequis : ceux de `120`, et `120` lui-même. Passe après `136`.
 -- ============================================================================
@@ -772,12 +779,22 @@ WHERE  c.canton_id <> ''
 
 CREATE TEMP TABLE p137_cpose (atom_id text, p daterange, wn text, circo text, regle text);
 
+-- Le département de chaque unité, la Corse ramenée à 20 : les trois règles
+-- ne prennent que dans celui du canton du trou (garde de `113`).
+CREATE TEMP TABLE p137_udep AS
+SELECT unit_id, CASE WHEN dep::text IN ('2A', '2B') THEN '20' ELSE dep::text END AS dep
+FROM   unit;
+CREATE INDEX ON p137_udep (unit_id);
+
 INSERT INTO p137_cpose
 SELECT DISTINCT ON (g.atom_id, g.p, d.fen) g.atom_id, g.p * d.fen, g.wn, d.circo, 'circo_atlas_partiel'
 FROM   p137_cgap g
+JOIN   p137_udep ug ON ug.unit_id = g.canton
 LEFT JOIN membership r0 ON r0.atom_id = g.atom_id AND r0.niveau = 'canton'
                        AND r0.periode @> DATE '1958-12-01'
+                       AND EXISTS (SELECT 1 FROM p137_udep ur WHERE ur.unit_id = r0.unit_id AND ur.dep = ug.dep)
 JOIN   p137_div d ON d.canton_id = coalesce(r0.unit_id, g.canton) AND d.fen && g.p
+                 AND CASE WHEN d.dep IN ('2A', '2B') THEN '20' ELSE d.dep END = ug.dep
 WHERE  g.wn = '1958'
 ORDER  BY g.atom_id, g.p, d.fen;
 DELETE FROM p137_cpose WHERE isempty(p);
@@ -810,6 +827,8 @@ SELECT g.atom_id, g.p, g.wn, f.circo, 'circo_canton_1958'
 FROM   p137_cgap g
 JOIN   membership r0 ON r0.atom_id = g.atom_id AND r0.niveau = 'canton' AND r0.periode @> DATE '1958-12-01'
 JOIN   p137_ref f ON f.canton = r0.unit_id
+JOIN   p137_udep ug ON ug.unit_id = g.canton
+JOIN   p137_udep ur ON ur.unit_id = r0.unit_id AND ur.dep = ug.dep
 WHERE  g.wn = '1958'
   AND  NOT EXISTS (SELECT 1 FROM p137_cpose x WHERE x.atom_id = g.atom_id AND x.p && g.p);
 
@@ -819,6 +838,8 @@ SELECT g.atom_id, g.p, g.wn, r.circo, 'circo_meme_canton'
 FROM   p137_cgap g
 CROSS JOIN LATERAL (
     SELECT min(c.circo) AS circo FROM p137_cc c
+      JOIN p137_udep ux ON ux.unit_id = c.circo
+      JOIN p137_udep ug ON ug.unit_id = g.canton AND ug.dep = ux.dep
      WHERE c.canton = g.canton AND c.atom_id <> g.atom_id AND c.r && g.p
     HAVING count(DISTINCT c.circo) = 1) r
 WHERE  NOT EXISTS (SELECT 1 FROM p137_cpose x WHERE x.atom_id = g.atom_id AND x.p && g.p);

@@ -83,7 +83,8 @@
 -- circonscription de 1958 (vérifié en 1962) ; ce fichier pose donc la
 -- circonscription du canton sur les périodes qu'il remplit, de 1958 jusqu'à
 -- la fin de la vie de l'atome dans l'Ain ou 1986-11-24. Rien n'est posé au
--- Rhône entre 1968 et 1986 : `113` n'y en pose pas non plus.
+-- Rhône entre 1968 et 1986 : `113` n'y en pose pas non plus. (Depuis `141`,
+-- 1er novembre 2026 : la 7e du Rhône de 1973 à 1986, d'après l'atlas.)
 --
 -- MÉCANIQUE
 -- =========

@@ -74,8 +74,9 @@ DELETE FROM membership m
 DELETE FROM unit_version v
  WHERE EXISTS (SELECT 1 FROM p140_trace t
                 WHERE t.quoi = 'unit_version' AND t.cle = v.unit_version_id::text);
-INSERT INTO membership (atom_id, unit_id, niveau, valid_from, valid_to)
-SELECT atom_id, unit_id, niveau, ancien_from, ancien_to
+INSERT INTO membership (membership_id, atom_id, unit_id, niveau, valid_from, valid_to)
+OVERRIDING SYSTEM VALUE
+SELECT cle::bigint, atom_id, unit_id, niveau, ancien_from, ancien_to
   FROM p140_trace WHERE quoi = 'retire';
 DELETE FROM p140_trace;
 \endif

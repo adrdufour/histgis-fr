@@ -1033,6 +1033,18 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/140_blois_1973_1992.sql" > "$RACINE/build/p140.log" 2>&1 \
     || { echo "  140 refusé — voir build/p140.log" >&2; exit 1; }
 
+# Ajouté le 1er novembre 2026. `141` : les circonscriptions que `137` § 8
+# donnait d'après le canton de 1958 à des communes passées depuis dans un autre
+# département (Rillieux, Sathonay, Genay, Montanay dans l'Ain ; Meyzieu et
+# Saint-Symphorien-d'Ozon dans l'Isère ; Ytres dans la Somme), remplacées par
+# celle de l'atlas du nouveau département. `137` est corrigé : sur une chaîne
+# rejouée, `141` ne trouve rien et ne fait rien. Rejouer `137` seul : défaire
+# `141` d'abord.
+etape "141 — circonscriptions hors du département du canton"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/141_circo_hors_departement.sql" > "$RACINE/build/p141.log" 2>&1 \
+    || { echo "  141 refusé — voir build/p141.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement

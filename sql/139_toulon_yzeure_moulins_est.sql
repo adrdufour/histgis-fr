@@ -72,8 +72,9 @@ CREATE TABLE IF NOT EXISTS p139_trace (
 DELETE FROM membership m
  WHERE EXISTS (SELECT 1 FROM p139_trace t
                 WHERE t.quoi = 'membership' AND t.cle = m.membership_id::text);
-INSERT INTO membership (atom_id, unit_id, niveau, valid_from, valid_to)
-SELECT atom_id, unit_id, niveau, ancien_from, ancien_to
+INSERT INTO membership (membership_id, atom_id, unit_id, niveau, valid_from, valid_to)
+OVERRIDING SYSTEM VALUE
+SELECT cle::bigint, atom_id, unit_id, niveau, ancien_from, ancien_to
   FROM p139_trace WHERE quoi = 'retire';
 DELETE FROM p139_trace;
 \endif
