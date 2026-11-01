@@ -183,6 +183,25 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 - **Question pour Adrien** : faut-il une ligne 1973-1985 sur le texte du décret, distincte de
   celle de Gaudillère ? Les deux textes décrivent-ils la même limite avec des noms différents ?
 
+### 151. Toulon-sur-Allier et Yzeure, communes rurales de Moulins-Est, sans canton ou à Neuilly-le-Réal
+
+- **31 octobre 2026** : `sql/139_toulon_yzeure_moulins_est.sql` écrit à la demande d'Adrien,
+  conforme à blanc (4 lignes retirées, 6 posées, aucune collision), déclaré dans
+  `rejouer_apres_rebuild.sh` et `diag_passages.sql`. **Appliqué le 31 octobre 2026**
+  (`p139_trace` : 4 retirées, 6 posées) ; plus aucun trou de canton de 1815 à 2013 ni de
+  circonscription de 1945 à 2012 pour les deux atomes. Export web de l'Allier à refaire.
+- **Sources** : recensement de 1954, canton 23 (`cog1954/ocr_brut/p0114.txt` l. 56,
+  `p0115.txt` l. 38) ; fascicule de 1968 (https://www.bnsp.insee.fr/ark:/12148/bd6t5358311n,
+  f. 15 et 16), « 2 23 286 Toulon-sur-Allier », « 2 23 321 Yzeure », relu sur l'image ; annexe VII
+  (« division Moulins-E., qui disparaît ») ; décret 73-713, art. 2 (Moulins-Sud comprend
+  « Bressoles et Toulon-sur-Allier »).
+- **Base** : Toulon (37813) et Yzeure (17696) sans canton de 1941 à 1968, à Neuilly-le-Réal (0325)
+  de 1968 à 1973 (le « 25 » de `communes_1968_fusion.csv` est un 23 mal lu), Toulon sans canton de
+  1973 à 1985. Pas de circonscription de 1945 à 1968.
+- **139 pose** : les deux à 0323 depuis 1941 (Yzeure jusqu'en 1973, Toulon jusqu'en 1985) ; L0301@1945
+  puis 03-01@1958 jusqu'en 1968. Il retire les quatre lignes 0325.
+- **Reste** : 0323 n'a pas de nom de 1941 à 1999 (« Moulins-Sud » dès 1973), 0333 pas avant 1999.
+
 ---
 
 ## Gap (05061)
@@ -1772,6 +1791,25 @@ et à la reprise sans date connue (Lille, Lyon, Strasbourg, Limoges, Orléans, B
 - **Déjà prêt** : lignes `03185-2` à `03185-5` (1973-09-23 → 2013) et `03185-6` (1982-03-14 → 2013),
   ancres datées posées pour les cinq fractions. Ancre à poser pour le Nord de 1973-1982 :
   `POINT(669000 6584300)` (554,8 ha). La ligne `03185-1` (le Cher) s'arrête désormais au 1973-09-23.
+
+### 152. Montluçon-Est et Montluçon-Ouest datent du 17 mars 1858, pas du 1er janvier 1863
+
+- **Source** : loi du 17 mars 1858 (Bulletin des lois, XIe série, B. n° 586, p. 394-395 ;
+  https://gallica.bnf.fr/ark:/12148/bpt6k97366809/f434.item, page lue par Adrien le 31 octobre
+  2026, référence donnée par « Liste des cantons de l'Allier » sur Wikipédia). Le canton de
+  Montluçon est divisé en deux. Est : Deneuille, Désertines, Chamblet, Saint-Angel, Saint-Victor,
+  Lavault-Sainte-Anne, Verneix, Néris et la ville « sur la rive droite du Cher ». Ouest :
+  Lamaids, Lignerolles, Prémilhat, Quinssaines, Teillet, Vaux, Domérat et la ville sur la rive
+  gauche. Deux ouvrages de 1860 sur archive.org disent déjà « canton de Montluçon Est / Ouest ».
+- **Base** : `C03-Montluçon` (Montluçon) jusqu'au **1863-01-01**, puis 0320 et 0321, pour les
+  quinze communes rurales et les fractions `23649#0320` et `#0321`. La composition de 1863 est
+  exactement celle de la loi : seule la date est fausse. Les deux fractions existent aussi dès
+  1815, toutes deux dans `C03-Montluçon`, alors que la ville n'est pas partagée avant 1858.
+- **À inscrire** : borne du 1863-01-01 ramenée au 1858-03-17 (fin de `C03-Montluçon`, début de
+  0320 et 0321 avec leurs noms) ; avant 1858, l'atome 23649 entier plutôt que deux fractions, si
+  la règle des fractions le permet.
+- **Déjà prêt** : `03185-1` (le Cher) vaut du 1858-03-17 au 1973-09-23 (31 octobre 2026), ancres
+  datées sur la même période. De 1858 à 1863, les deux morceaux se tirent sous le même canton.
 
 ## Carcassonne (11069)
 
@@ -4159,6 +4197,54 @@ Ce qui suit est l'entrée telle qu'elle était avant l'inscription.
 - **À inscrire** : retirer l'appartenance de `37107` entier de 1968 à 1973.
 - **Lignes** : `40313-1` (Midouze), 1801-10-19 → 2013-01-01, ancres Est `=est`, Ouest
   POINT(392805 6312000), écrite le 28 octobre 2026. Fichiers : `cartes/sorties/decoupe_tartas/`.
+
+---
+
+## Blois (41018)
+
+### 153. FAIT (1er novembre 2026, `sql/140`) — Blois de 1973 à 1992 : encore Est et Ouest en base, alors que la ville a quatre puis cinq cantons
+
+- **Sources** : décret n° 73-661 du 13 juillet 1973 (JO du 17 juillet 1973,
+  `jorf_txt/JORF_19730717_164_col.txt`). Blois-Est et Blois-Ouest sont remplacés par Blois-I à IV.
+  I a Villerbon, Villebarou, Saint-Denis-sur-Loire et La Chaussée-Saint-Victor ; II les communes
+  au sud de la Loire et la ville au sud du fleuve ; III la ville seule ; IV Marolles, Fossé,
+  Saint-Bohaire, Saint-Lubin et Saint-Sulpice. Puis le décret n° 82-60 du 20 janvier 1982 (JO du
+  22 janvier 1982) crée Blois-V à partir de Blois-IV. Enfin le décret n° 84-1228 (JO du 30 décembre
+  1984) crée Vineuil avec trois communes de Blois-II, sans toucher à la ville.
+- **Base** : `4549#4101` et `#4102` sont nommés Blois-Est et Blois-Ouest de 1815 à 1999, sans
+  coupure en 1973. `#4125`, `#4126` et `#4127` (3e, 4e et 5e cantons) ne commencent qu'au
+  **1992-03-22** (date du COG). De 1973 à 1992, la ville n'a donc que deux fractions au lieu de
+  quatre puis cinq. Les cinq communes rurales de IV sont en revanche déjà à **4127** dès 1973 :
+  l'ancien IV y est l'unité 4127, que `cantons/controle_composition_jo.csv` apparie à 41-27, et
+  qui devient V en 1982 avec les mêmes communes. Le IV de 1982, réduit à la ville, est 4126.
+  Correspondance : I = 4101, II = 4102, III = 4125, IV de 1973 = 4127, IV de 1982 = 4126,
+  V = 4127. Saint-Claude-de-Diray et Vineuil sont à Blois-I (4101) de 1973 à 1985 ; le décret
+  les met à Blois-II (`cantons/composition_jo.csv`).
+- **Appliqué le 1er novembre 2026** à la demande d'Adrien (`build/p140.log`), puis `98` rejoué
+  (recette 41018 conforme) : `sql/140_blois_1973_1992.sql`, déclaré
+  dans `rejouer_apres_rebuild.sh` et `diag_passages.sql`. Il pose `#4125` et `#4127` du
+  1973-09-23 au 1992-03-22, `#4126` du 1982-03-14 au 1992-03-22, avec la 1re circonscription
+  (41-01@1958) jusqu'au 1986-11-24. Il déplace Saint-Claude-de-Diray et Vineuil de 4101 à 4102
+  de 1973 à 1985, et pose les noms Blois-I à V de 1973 à 1999. À blanc, il ne rencontre aucune
+  collision. Essayé dans une transaction annulée : le tirage rend I à IV en 1980 et I à V en
+  1985 et 1990, avec les surfaces ci-dessous. Contrôlé en base après application : compositions de
+  1980, 1984 et 1990 conformes aux décrets, tirage I 436,2 / II 647,1 / III 1 878,5 / IV 796,2 ha
+  en 1980, puis IV 150,3 / V 645,9 ha de 1982 à 2013, sous les noms Blois-I à V.
+- **Déjà écrit** : `41018-1`, la grande rue de l'an X, du 1815-01-01 au 1973-09-23, ancres
+  datées. `41018-1973-grande-rue`, `-loire` et `-III-IV`, du 1973-09-23 au 1982-03-14
+  (`--morceaux 4`), avec des ancres datées pour I à IV : I `POINT(575206.69 6723417.3)`,
+  II `POINT(575300 6721500)`, III `POINT(572197.46 6721350.55)`, IV (`#4127`)
+  `POINT(571500 6723000)` (corrigée le 1er novembre 2026 : l'ancre était d'abord sur `#4126`).
+  Elles joueront quand `#4125` et `#4127` auront un canton. **En attendant**, le tirage de 1973 à
+  1982 ne rend que I (436,2 ha) et II (647,1 ha), sous les noms Blois-Est et Blois-Ouest ; III et
+  IV (2 674,7 ha) n'ont pas de fraction et manquent sur la carte (vérifié le 1er novembre 2026).
+  Régime de 1982 écrit le 1er novembre 2026 : les trois lignes de 1973 reprises sous
+  `41018-1982-grande-rue`, `-loire` et `-III-IV`, plus `41018-1982-IV-V`, du 1982-03-14 au
+  2013-01-01 (`--morceaux 5`). Ancres datées : I, II et III aux mêmes points qu'en 1973,
+  IV `POINT(573300 6722350)`, V `#4127` `POINT(571500 6723000)`. Éprouvé au 2000-06-01, où la
+  base a les cinq fractions : I 436,2 ha, II 647,1, III 1 878,5, IV 150,3, V 645,9. De 1982 à
+  1992, la carte ne montrait que I et II avant `140`.
+  Fichiers : `cartes/sorties/decoupe_blois/`.
 
 ---
 

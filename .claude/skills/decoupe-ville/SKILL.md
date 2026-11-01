@@ -1215,8 +1215,41 @@ pas pour la demander. Ne pas commiter sans qu'il le demande.
   pas au rejeu, sinon leurs ancres partiraient en cascade. Ni `pose_coupe.py` ni `trace_mixte()` ne
   connaissent la clé : charger la voirie de Paris (`75056_*`, `ogr2ogr -spat` sur l'emprise ANR)
   dans `public.<ville>_*`, éprouver par `ST_Split` en SQL, écrire les CSV à la main.
+- **Une ligne posée « depuis 1870 » peut valoir avant** (Moulins, Montluçon, 31 octobre 2026) :
+  la colonne « Partage en base non couvert » du tableau désigne ces trous. L'ANR d'une ville sans
+  annexion n'a souvent qu'un état (1790-2020) : éprouver la même ligne à une date d'avant
+  (`--date-test 1850-06-01`), réécrire avec le nouveau `--de` sous le même `--coupe-id`. La date
+  de division se lit dans l'historique de la page Wikipédia du département ; elle peut contredire
+  la base (Montluçon : loi du 17 mars 1858, base 1863).
+- **Des parcelles de 1973 dans une section qui n'existe plus** (Blois, section AD : cadastre
+  renuméroté) : le décret de 2014 peut redécrire la même limite avec un repère du terrain
+  (« lisière de la forêt, allée de Bégon »). Prendre le contour BD TOPO `zone_de_vegetation`
+  entre ses deux points d'accroche (`ST_LineSubstring` de l'anneau), et vérifier sur l'orthophoto
+  1950-1965 que la lisière était déjà là. Un étang disparu se cherche sur la même orthophoto.
+- **Une ligne de l'an X qu'un décret de 1973 récite** (Blois : la « grande rue », limite I / III
+  de 73-661) : écrire la ligne de 1973 comme une sous-chaîne exacte de celle de l'an X
+  (`ST_LineSubstring` jusqu'à la Loire), pour que les deux régimes tombent au même endroit.
+- **Arrêter un export avant `--ecrire` sur le même département** : l'export sera à refaire de
+  toute façon. `kill` du processus, puis `pg_cancel_backend` de sa requête restée dans
+  `pg_stat_activity` ; le dossier `dep/NN` est effacé au départ de l'export et manque jusqu'au
+  suivant.
 - **Les CSV du dépôt sont souvent en CRLF** (`coupes_ville.csv`, `coupes_ville_ancres.csv`,
   `circo/seine_annexees_circo.csv`). Python `open(…, 'w')` et `csv.writer(lineterminator='\n')`
   écrivent du LF. Le premier a réécrit les 45 lignes du fichier. Vérifier `grep -c $'\r$'` contre
   `wc -l` après chaque écriture.
 
+- **Un décret qui ne divise qu'un canton** (Blois, 82-60 : IV en IV et V) laisse les autres
+  limites en place. Reprendre les lignes de l'ancien régime sous des `coupe_id` du nouveau
+  (`41018-1982-loire`…), du même WKT, en une passe datée du nouveau régime. Ne pas prolonger les
+  anciennes : leurs ancres datées (celle de l'ancien IV tombe dans le nouveau V) seraient fausses
+  après la division. Éprouver à une date où la base a toutes les fractions (Blois : 2000), même
+  si le régime commence plus tôt.
+- **Lire ensemble les descriptions des deux cantons qui se partagent la ville.** À Blois, V finit
+  sur la « rue Nouvelle » puis sur Saint-Sulpice, et IV a pour limite ouest la rue Paul-Mahoudeau,
+  qui finit sur l'Arrou. Seule une limite IV / V qui quitte la D201 vers la rue Mahoudeau
+  respecte les deux textes. Suivre la rue de la Picardière vers l'ouest aurait mis la rue
+  Mahoudeau à l'intérieur de IV.
+- **Attendre la fin d'un processus avec `pgrep -f "[e]xport_web.py"`** échoue quand la même
+  commande lance ensuite `export_web.py` : le shell qui attend porte ce nom dans sa ligne de
+  commande et se trouve lui-même, indéfiniment (1er novembre 2026). Attendre un PID précis
+  (`while kill -0 $PID`), ou lancer l'étape suivante après la notification de fin.

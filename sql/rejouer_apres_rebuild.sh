@@ -1014,6 +1014,25 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/138_fantomes_apres_fusion.sql" > "$RACINE/build/p138.log" 2>&1 \
     || { echo "  138 refusé — voir build/p138.log" >&2; exit 1; }
 
+# Ajouté le 31 octobre 2026. `139` : Toulon-sur-Allier et Yzeure à Moulins-Est
+# de 1941 à 1973 (le « 25 » du jalon de 1968 était un 23 mal lu), Toulon à
+# Moulins-Sud de 1973 à 1985 (décret 73-713). Il retire quatre lignes du jalon
+# de 1968 : après `136`-`138`, même nature.
+etape "139 — Toulon-sur-Allier et Yzeure, Moulins-Est 1941-1973"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/139_toulon_yzeure_moulins_est.sql" > "$RACINE/build/p139.log" 2>&1 \
+    || { echo "  139 refusé — voir build/p139.log" >&2; exit 1; }
+
+# Ajouté le 1er novembre 2026. `140` : Blois de 1973 à 1992, quatre puis cinq
+# cantons (décrets 73-661 et 82-60) au lieu d'Est et Ouest : fractions #4125,
+# #4126 et #4127, noms Blois-I à V, Saint-Claude-de-Diray et Vineuil rendus à
+# Blois-II. Les ancres datées de `98` qui l'attendent ne jouent qu'au tirage
+# (`carte_coupe_ville`) : qu'il passe après `98` ne change rien.
+etape "140 — Blois 1973-1992, cantons I à V"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/140_blois_1973_1992.sql" > "$RACINE/build/p140.log" 2>&1 \
+    || { echo "  140 refusé — voir build/p140.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
