@@ -1045,6 +1045,17 @@ $PSQL -P pager=off -1 -v appliquer=1 \
       -f "$ICI/141_circo_hors_departement.sql" > "$RACINE/build/p141.log" 2>&1 \
     || { echo "  141 refusé — voir build/p141.log" >&2; exit 1; }
 
+# Ajouté le 1er novembre 2026. `142` : la liste départementale de 1945-1958
+# (`L<dep>01@1945`) sur les périodes de canton que `137` a comblées après
+# `122` — 198 atomes en 1957 (Seine-et-Marne, Moselle, Belfort, Orne…), dont
+# la liste s'arrêtait au 1er janvier 1955. Ne pose que dans des trous : il
+# passe après tout ce qui pose des cantons de 1945-1958. Rejouer `122` ou
+# `137` seul : défaire `142` d'abord.
+etape "142 — liste de 1945 sur les cantons comblés après 122"
+$PSQL -P pager=off -1 -v appliquer=1 \
+      -f "$ICI/142_liste_1945_apres_trous.sql" > "$RACINE/build/p142.log" 2>&1 \
+    || { echo "  142 refusé — voir build/p142.log" >&2; exit 1; }
+
 # Ajouté le 24 octobre 2026. `126` pose les circonscriptions des quatre DOM de
 # 1946 à 1986 (liste départementale, puis 1958 commune par commune). Il écrit
 # dans les tables `om_*` que `40` recrée : il passe après lui, et seulement
