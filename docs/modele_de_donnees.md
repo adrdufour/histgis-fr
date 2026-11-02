@@ -15,28 +15,72 @@ SET search_path TO histgis, public;
 
 ## Le principe : géométrie et appartenance séparées
 
+```mermaid
+erDiagram
+    atom ||--o{ membership : "est rattaché par"
+    unit ||--o{ membership : "regroupe par"
+    unit ||--|{ unit_version : "porte les noms de"
+    atom ||--o| atom_geom : "a pour forme de 2011"
+    atom ||--o{ atom_geom_anr : "a pour formes datées"
+
+    atom {
+        text atom_id PK "Cassini, ou cassini#canton pour une fraction"
+        text cassini "commune d'époque"
+        bool fraction "morceau de commune ?"
+        text insee_geofla "code INSEE 2011, pour le polygone"
+    }
+    membership {
+        text atom_id FK
+        text unit_id FK
+        text niveau "canton ou circo"
+        date valid_from "début, inclus"
+        date valid_to "fin, exclue"
+        daterange periode "indexé GiST"
+    }
+    unit {
+        text unit_id PK "DDNN, ou L/U + code + @année"
+        text niveau "canton ou circo"
+        text dep "département"
+        text regime "liste ou uninominal"
+    }
+    unit_version {
+        text unit_id FK
+        text nom "nom d'époque"
+        daterange periode
+    }
+    atom_geom {
+        text atom_id FK
+        text source "geofla, successeur, hac…"
+        bool partagee
+        geometry geom "Lambert-93"
+    }
+    atom_geom_anr {
+        text atom_id FK
+        text poly_id "identifiant ANR"
+        daterange periode
+        geometry geom "Lambert-93"
+    }
 ```
- ┌──────────────┐        ┌──────────────────────┐        ┌───────────────┐
- │    atom      │ 1    n │      membership      │ n    1 │     unit      │
- │──────────────│────────│──────────────────────│────────│───────────────│
- │ atom_id (PK) │        │ atom_id              │        │ unit_id (PK)  │
- │ cassini      │        │ unit_id, niveau      │        │ niveau        │
- │ fraction     │        │ valid_from, valid_to │        │ dep           │
- │ insee_geofla │        │ periode (daterange)  │        │ regime …      │
- └──────┬───────┘        └──────────────────────┘        └──────┬────────┘
-        │ 1                                                     │ 1
-        │                                                       │
-        │ 0..1  ┌───────────────┐                         n     │
-        ├───────│  atom_geom    │  polygone GEOFLA 2011   ┌─────┴─────────┐
-        │       └───────────────┘                         │ unit_version  │
-        │ 0..n  ┌───────────────┐                         │ nom, période  │
-        └───────│ atom_geom_anr │  polygones datés (ANR)  └───────────────┘
-                └───────────────┘
-```
+
+Lecture : un atome a autant de lignes de `membership` qu'il a connu de
+rattachements successifs, à chaque niveau ; une unité a autant de lignes de
+`unit_version` qu'elle a porté de noms. Les deux tables de géométrie sont
+indépendantes des rattachements.
 
 La carte d'une date se calcule ainsi : on prend les rattachements
 (`membership`) valides à cette date, on récupère le polygone de chaque atome
-**valide à cette date**, et on réunit les polygones par unité. Rien n'est
+**valide à cette date**, et on réunit les polygones par unité.
+
+```mermaid
+flowchart LR
+    D(["date"]) --> M["<b>membership</b><br/>periode @> date<br/>et niveau voulu"]
+    M --> G{"atom_geom_anr<br/>a une forme<br/>à cette date ?"}
+    G -->|oui| A["forme d'époque"]
+    G -->|non| R["repli : forme 2011<br/>(atom_geom)"]
+    A & R --> U["ST_Union<br/>par unit_id"]
+    V["<b>unit_version</b><br/>nom à cette date"] --> U
+    U --> C(["une ligne par unité :<br/>unit_id, nom, geom"])
+``` Rien n'est
 pré-calculé, ce qui permet de corriger une attribution ou de changer de fond
 géométrique sans rien reconstruire d'autre.
 

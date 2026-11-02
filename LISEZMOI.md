@@ -88,6 +88,7 @@ projet_carte/                              26 Go au total, relevé et réorganis
 │  └─ sorties/           4,3 Go : voirie BD TOPO par ville (3,5 Go), dossiers de découpe — hors git
 ├─ docs/                 glossaire, modèle de données, reconstruction ; notes thématiques
 │  │                     (1943-2012, circonscriptions, outre-mer) et BASE_POUR_QGIS.md
+│  ├─ images/            l'illustration du README et le script qui la dessine
 │  └─ gaudillere/        Marseille : protocole de géoréférencement
 ├─ outils/               le code partagé : connexion à la base, clé des noms
 ├─ .claude/skills/       decoupe-ville : le déroulé d'une découpe de ville
