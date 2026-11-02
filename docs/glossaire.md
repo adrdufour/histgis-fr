@@ -57,6 +57,21 @@ et pour reconstituer les quartiers de Paris.
 **Lambert-93 (EPSG:2154).** La projection officielle de la France
 métropolitaine. Toute la base l'emploie.
 
+**Comment ces échelons s'emboîtent.** En principe, chacun est fait de
+morceaux entiers de l'échelon du dessous. En pratique, deux exceptions
+structurent tout le projet : une grande ville peut être partagée entre
+plusieurs cantons (d'où les *fractions*), et un canton peut être partagé
+entre plusieurs circonscriptions (la fonction `check_nesting` les compte).
+
+```mermaid
+flowchart TB
+    D["<b>Département</b><br/>01, 13, 2A…"] --> C["<b>Circonscription législative</b><br/>élit un député ; au scrutin de liste,<br/>le département entier"]
+    C --> K["<b>Canton</b><br/>élit un conseiller général"]
+    K --> M["<b>Commune</b>"]
+    M -.->|"ville partagée entre<br/>plusieurs cantons"| F["<b>Fraction de commune</b><br/>limite le long des rues"]
+    C -.->|"canton partagé entre<br/>plusieurs circonscriptions"| K
+```
+
 ---
 
 ## 2. Les sources, par leur nom court

@@ -51,30 +51,31 @@ Les chemins ci-dessous sont ceux qu'attendent les scripts.
 
 | emplacement | contenu | où le trouver |
 |---|---|---|
-| `sources/trfgis/` | TRF-GIS : nomenclatures communes (`doi:10.7910/DVN/LZTZWE`), cantons (`doi:10.7910/DVN/U85RSZ`), circonscriptions (`doi:10.7910/DVN/L2LGDW`), dépôt de reproduction (`doi:10.7910/DVN/6FCK3W`) | Harvard Dataverse, via `trfgis_fetch_inspect.py` |
+| `sources/trfgis/` | TRF-GIS : nomenclatures communes (`doi:10.7910/DVN/LZTZWE`), cantons (`doi:10.7910/DVN/U85RSZ`), circonscriptions (`doi:10.7910/DVN/L2LGDW`), dépôt de reproduction (`doi:10.7910/DVN/6FCK3W`) | Harvard Dataverse, via `extraction/trfgis_fetch_inspect.py` |
 | `sources/geofla/` | GEOFLA 2011 (`COMMUNE.SHP`) et GEOFLA 2014 (`CANTON.SHP`) | IGN, `data.geopf.fr/telechargement/resource/GEOFLA` ; `COMMUNE.SHP` figure aussi dans le dépôt de reproduction TRF-GIS |
-| racine du dépôt | `v_mvt_commune_2025.csv`, mouvements de communes | `https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv` |
+| `sources/` | `v_mvt_commune_2025.csv`, mouvements de communes | `https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv` |
 | `sources/cog/` | COG 1999 à 2012, communes et cantons | INSEE (Code officiel géographique, millésimes antérieurs) |
-| `ANR_COMMUNES_22042026/` | `COMMUNES_22042026.gpkg`, trame communale datée | Zenodo, `10.5281/zenodo.3727274` |
-| `sources/outremer/` | trames et circonscriptions d'outre-mer | IGN (GEOFLA DOM) ; `polynesie/` et `nouvelle_caledonie/` pour les BD ADMIN locales |
+| `sources/ANR_COMMUNES_22042026/` | `COMMUNES_22042026.gpkg`, trame communale datée | Zenodo, `10.5281/zenodo.3727274` |
+| `sources/outremer/` | trames et circonscriptions d'outre-mer | IGN (GEOFLA DOM) ; `sources/polynesie/` et `sources/nouvelle_caledonie/` pour les BD ADMIN locales (Pacifique) |
 | `sources/rp1954/`, `sources/rp1968/` | volumes des recensements de 1954 et 1968 (PDF) | BnSP (`bnsp.insee.fr`) : nécessaires seulement pour refaire l'OCR, dont le résultat est déjà versionné |
-| `JORF/` | PDF des Journaux officiels | Gallica, Légifrance : liste dans `cantons/note_registre.md` (partie « Datation des 64 cantons post_1986 »). Seulement pour refaire l'OCR, dont le texte est déjà dans `jorf_txt/` |
+| `sources/JORF/` | PDF des Journaux officiels | Gallica, Légifrance : liste dans `cantons/note_registre.md` (partie « Datation des 64 cantons post_1986 »). Seulement pour refaire l'OCR, dont le texte est déjà dans `jorf_txt/` |
 
 Exemple pour TRF-GIS et la trame communale :
 
 ```bash
-python3 trfgis_fetch_inspect.py fetch repro \
+python3 extraction/trfgis_fetch_inspect.py fetch repro \
     --match '^COMMUNE\.(SHP|SHX|DBF|PRJ)$' --dest ./sources/geofla
-curl -O https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv
+curl -o sources/v_mvt_commune_2025.csv \
+    https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv
 ```
 
-`python3 trfgis_fetch_inspect.py --help` liste les autres commandes et jeux
+`python3 extraction/trfgis_fetch_inspect.py --help` liste les autres commandes et jeux
 disponibles.
 
 Ce qui est **déjà dans le dépôt** et n'a pas besoin d'être refait : les
 dépouillements des recensements (`cog1954/`, `cog1968/`), le registre des
 décrets (`cantons/`), les circonscriptions saisies (`circo/*.csv`), la
-filiation HAC (`hac/hac_filiation.csv`), les coupes de villes
+filiation HAC (`extraction/hac/hac_filiation.csv`), les coupes de villes
 (`cartes/coupes_ville.csv`) et le texte OCR des Journaux officiels
 (`jorf_txt/`).
 
@@ -82,9 +83,25 @@ filiation HAC (`hac/hac_filiation.csv`), les coupes de villes
 
 ## 3. Rejouer la chaîne
 
+```mermaid
+flowchart TD
+    P["<b>1. Prérequis</b><br/>PostgreSQL + PostGIS + btree_gist<br/>environnement conda"] --> S["<b>2. Sources</b><br/>rangées sous <code>sources/</code>"]
+    S --> X["<b>extraction/trfgis_extract.py</b><br/>TRF-GIS → CSV de <code>build/</code>"]
+    S --> V["<b>extraction/anr/anr_variantes_verdict.py</b><br/>→ <code>build/anr_variantes.csv</code>"]
+    X --> R["<b>sql/rebuild.sh</b> — DESTRUCTIF<br/>01 → 07, 11, 15 : 1870-1940,<br/>trame GEOFLA, communes disparues"]
+    R --> A["<b>sql/rejouer_apres_rebuild.sh</b><br/>tout le reste, dans l'ordre ;<br/>saute avec un message ce dont<br/>la donnée manque"]
+    V --> A
+    A --> D{"<b>sql/diag/diag_passages.sql</b><br/>chaque fichier<br/>est-il passé ?"}
+    D -->|non| L["lire la sortie de l'étape sautée,<br/>fournir la donnée, rejouer"]
+    L --> A
+    D -->|oui| C["<b>4. Cartes</b><br/>QGIS, <code>cartes/export_web.py</code>"]
+    D -.->|facultatif| G["<b>sql/controle_gay.sh</b><br/>contrôle indépendant"]
+```
+
+
 ```bash
 # 1. Extraire les nomenclatures TRF-GIS vers build/
-python3 trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
+python3 extraction/trfgis_extract.py build sources/trfgis/communes/Nomenclatures \
     --out build --mapping sources/trfgis/cantons/Nomenclatures --geom-col insee
 
 # 2. Charger : attributions 1870-1940, trame GEOFLA, communes disparues
@@ -138,11 +155,10 @@ bruit :
 python3 cartes/export_web.py --jobs 4
 python3 cartes/web/servir.py                # http://127.0.0.1:8765/index.html
 
-# Planches PDF par département
-python3 cartes/cartes_cantons.py
-
-# Paris
-python3 circo/cartes_paris.py
+# Planches PDF imprimables (par département, et Paris) : scripts archivés,
+# voir archives/LISEZMOI.md pour les rejouer
+python3 archives/planches/cartes_cantons.py
+python3 archives/planches/cartes_paris.py
 ```
 
 Pour une carte ponctuelle, le plus simple est d'ouvrir la base dans QGIS et
@@ -158,16 +174,16 @@ du suivi git :
 
 | pièce | utilisée par | conséquence |
 |---|---|---|
-| `extraction/anr/anr_variantes_verdict.py` et sa sortie `build/anr_variantes.csv` | étape `82` (trame ANR) | sans elles, `82` et ce qui en dépend (`84`, `89`-`91`, la carte partitionnée) sont sautés |
+| `build/anr_variantes.csv`, sortie de `extraction/anr/anr_variantes_verdict.py` (versionné) | étape `82` (trame ANR) | à engendrer avant de rejouer : sans lui, `82` et ce qui en dépend (`84`, `89`-`91`, la carte partitionnée) sont sautés |
 | `sources/outremer/telecharger_outremer.sh` | `charger_outremer.sh`, étape `40_outremer` | l'outre-mer doit être téléchargé à la main |
 | `cog/fetch_cog.sh` | `load_cog.sh` | les 14 millésimes du COG doivent être téléchargés à la main dans `sources/cog/` |
 | `42-Vasserot_quartiers_v1L93/` (ALPAGE-Vasserot) | `circo/paris_quartiers_1815.py`, `paris_circo_1815.py` | donnée reçue mais sous licence ODbL, donc non diffusée : les étapes « Paris 1815 » sont sautées |
 
-Les trois premières lignes sont des oublis à corriger : il faudrait versionner
-ces scripts ou en documenter le remplacement. La dernière découle d'un choix de
-licence.
+La première ligne est une étape à ne pas oublier ; les deux suivantes sont des
+oublis à corriger : il faudrait versionner ces scripts ou en documenter le
+remplacement. La dernière découle d'un choix de licence.
 
 Une autre étape est sautée pour une raison différente : `32` (cantons internes
-de Marseille) attend `gaudillere/marseille_cantons.gpkg`, une digitalisation
+de Marseille) attend `docs/gaudillere/marseille_cantons.gpkg`, une digitalisation
 **qui n'a pas encore été faite**. Le protocole est dans
-`gaudillere/protocole_georeferencement.md`.
+[`gaudillere/protocole_georeferencement.md`](gaudillere/protocole_georeferencement.md).
